@@ -42,6 +42,8 @@
     "audit:tool-quality": "node scripts/audit-tool-quality.mjs",
     "audit:tool-depth": "node scripts/audit-tool-depth.mjs --check",
     "tool-depth:gaps": "node scripts/audit-tool-depth.mjs --gaps",
+    "tool:refresh:batch": "node scripts/tool-refresh-batch.mjs",
+    "tool:refresh:batch:check": "node scripts/tool-refresh-batch-check.mjs",
     "audit:company": "node scripts/audit-company.mjs --check",
     "company:gaps": "node scripts/audit-company.mjs --gaps",
     "audit:bestof-quality": "node scripts/audit-bestof-quality.mjs",

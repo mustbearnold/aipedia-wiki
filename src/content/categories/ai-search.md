@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 18, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 22, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-18
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -38,7 +38,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [ChatGPT](/tools/chatgpt/) when search is only one part of the workflow.** ChatGPT Search is the better Perplexity alternative when the buyer also wants writing, coding, file analysis, images, voice, data analysis, projects, and everyday assistant work.
 
-**Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region, while Gemini API grounding carries separate per-query pricing after the shared Gemini 3 monthly search-grounding allowance. The June 15 Gemini check keeps the Google-native search lane intact, but API buyers should still price the exact model, grounding, and account route rather than assuming app-plan search limits transfer to production workloads.
+**Use [Gemini](/tools/gemini/) and Google AI Mode when the buyer already lives in Google.** Google's current AI Mode and AI Overviews updates focus on helping users find relevant websites, deep insights, and original content across the web. Google AI Plans connect Gemini, Deep Research, AI Mode, Workspace, NotebookLM, and Chrome features depending on plan and region, while Gemini API grounding carries separate per-query pricing after the shared Gemini 3 monthly search-grounding allowance. The June 22 Gemini check keeps the Google-native search lane intact, but API buyers should still price the exact model, grounding, account route, and standard versus priority mode rather than assuming app-plan search limits transfer to production workloads.
 
 **June 15 AI search liability update:** [The June 15 news desk](/news/2026-06-15-ai-news-desk/) adds the German AI Overviews liability ruling and Google's Gemini-related phishing lawsuit coverage to this category's buyer checklist, while the companion [Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) turns it into procurement questions. The takeaway is not "avoid AI search." It is that source logs, visible citations, review paths, abuse controls, and budget caps matter whenever AI search or generated summaries become customer-facing or publishable output.
 
@@ -150,9 +150,9 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Perplexity security](https://www.perplexity.ai/hub/security) (verified 2026-06-15)
 - [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-12)
 - [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-12)
-- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-15)
-- [Gemini Grounding with Google Search](https://ai.google.dev/gemini-api/docs/google-search) (verified 2026-06-15)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-15)
+- [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-22)
+- [Gemini Grounding with Google Search](https://ai.google.dev/gemini-api/docs/google-search) (verified 2026-06-22)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-22)
 - [AiPedia June 15 AI news desk](/news/2026-06-15-ai-news-desk/) (verified 2026-06-15)
 - [AiPedia Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) (verified 2026-06-15)
 - [WIRED AI Overviews liability report](https://www.wired.com/story/a-court-has-ruled-that-google-is-liable-for-false-statements-generated-by-ai-overviews/) (verified 2026-06-15)

@@ -16,7 +16,7 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 - `.agents/` and `skills-lock.json` are gitignored local agent/plugin artifacts. `check-smart` default dirty-path discovery also ignores them, while still treating canonical `.agent/` docs as project changes.
 - The live comparison inventory is 46 policy-aligned pages. `scripts/guard-content.mjs` now protects it with a 41-page floor after accepted Guard Challenge review.
 - Current next selected cluster is `amazon-q-vs-github-copilot`.
-- Current freshness state: 0 due-now items after the Presentations.AI, MiniMax, Claude, and Claude Code passes. June 22 hotfixes filled the June 18 through June 22 `/news/` gap, replaced the visible blue/cyan brand regression with the selected lantern logo, hardened homepage decision-path evidence so featured cards must be registered, current, and high confidence, fixed the 319 px homepage portal overflow, restyled the homepage `Recently verified` panel away from the ugly orange-brown wash, tightened homepage text density into one-line decision copy, and compacted plus spaced the overcrowded homepage decision-card evidence rails for 319 px mobile. Top-layer visual work also fixed non-home horizontal squeeze, `/guides/` and `/news/` filter overflow, and shared mobile breadcrumb spread on `/explore/` and sibling top routes. The detail page width parity hotfix extends the same narrow-mobile canvas discipline to tool, comparison, guide, workflow, category, company, answer, trend, and news detail routes, and gives structured detail layouts the shared 1040 px desktop shell. The visual layout precision standard now requires disciplined grid math, card containment, balanced text-to-card ratios, and no broken wrapping across mobile, tablet, and desktop. The News and Market Change loop now requires missed-date checks for broad AI news and AI tools or tool-control news, plus `/news/`, homepage latest-news, assets, affected links, crawl surfaces, and mobile/tablet/desktop route QA. The next freshness queue starts with Gemini due-soon facts unless a fresh loop recommendation makes the Amazon Q vs GitHub Copilot decision cycle higher leverage.
+- Current freshness state: 0 due-now items after the Presentations.AI, MiniMax, Claude, Claude Code, Gemini, GitHub Copilot, Grammarly, Qwen, Hailuo, HeyGen, and Adobe Firefly passes. June 22 hotfixes filled the June 18 through June 22 `/news/` gap, replaced the visible blue/cyan brand regression with the selected lantern logo, hardened homepage decision-path evidence so featured cards must be registered, current, and high confidence, fixed the 319 px homepage portal overflow, restyled the homepage `Recently verified` panel away from the ugly orange-brown wash, tightened homepage text density into one-line decision copy, and compacted plus spaced the overcrowded homepage decision-card evidence rails for 319 px mobile. Top-layer visual work also fixed non-home horizontal squeeze, `/guides/` and `/news/` filter overflow, and shared mobile breadcrumb spread on `/explore/` and sibling top routes. The detail page width parity hotfix extends the same narrow-mobile canvas discipline to tool, comparison, guide, workflow, category, company, answer, trend, and news detail routes, and gives structured detail layouts the shared 1040 px desktop shell. The visual layout precision standard now requires disciplined grid math, card containment, balanced text-to-card ratios, and no broken wrapping across mobile, tablet, and desktop. The News and Market Change loop now requires missed-date checks for broad AI news and AI tools or tool-control news, plus `/news/`, homepage latest-news, assets, affected links, crawl surfaces, and mobile/tablet/desktop route QA. Tool refreshes now use batched planning with `npm run tool:refresh:batch -- --limit 4`, `npm run tool:refresh:batch:check` for the fast grouped gate, and one expensive build/route-QA gate per batch. The next freshness queue starts with Augment Code, Base44, BLACKBOX AI, Captions.ai, and Cline unless a fresh loop recommendation makes the Amazon Q vs GitHub Copilot decision cycle higher leverage.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
 - Route QA uses 360, 390, 430, 768, 1024, and 1366 px for rendered route work. Include 319 px for homepage, nav, card grids, and narrow-mobile risk, and include 346 px when reproducing the in-app browser reports from this visual pass.
 
@@ -47,16 +47,21 @@ Run the AiPedia loop system until every tracked website page, volatile fact, sou
 - 2026-06-22: Added the News loop rules standard to canonical operating docs and loop tooling. Future news catch-up work must check each missed date for broad AI news and AI tools or tool-control news when sourceable, keep `/news/`, homepage latest-news, OG assets, affected-tool links, crawl surfaces, and ledger rows aligned, and verify `/news/` across mobile, tablet, and desktop.
 - 2026-06-22: Rebuilt with `npm run build:fast` after the first recorded broad loop correctly flagged stale rendered output. The latest recorded broad loop is back to 7 ok / 0 attention / 0 skipped.
 - 2026-06-22: Fixed the selected lantern logo palette after visual smoke found brownish pixels outside Signal Orange. Regenerated brand sizes and favicons. `npm run smoke:visual` passed 158/158, and `npm run check:smart:run` passed.
+- 2026-06-22: Completed the Gemini tool refresh for the June 22 freshness queue. The Gemini tool page, AI Chatbots, AI Search, AI Coding, AI Infrastructure, Gemini source registry rows, page refresh ledger, and `.agent/loop-runs/2026-06-22-gemini-tool-refresh.md` are updated and verified.
+- 2026-06-22: Completed the GitHub Copilot tool refresh for the June 22 freshness queue. The GitHub Copilot tool page, AI Coding category hub, GitHub Copilot vs Supermaven comparison, GitHub Copilot alternatives guide, Best AI Tools for Developers guide, Copilot source registry rows, page refresh ledger, top-layer parent surfaces, and `.agent/loop-runs/2026-06-22-github-copilot-tool-refresh.md` are updated and verified.
+- 2026-06-22: Completed the Grammarly tool refresh for the June 22 freshness queue. The Grammarly tool page, AI Writing category hub, Grammarly source registry rows, page refresh ledger, and `.agent/loop-runs/2026-06-22-grammarly-tool-refresh.md` are updated and verified through quality, freshness, provenance, ledger, typecheck, build, and route QA.
+- 2026-06-22: Added the batched tool-refresh planner. `npm run tool:refresh:batch -- --limit 4` groups the next tools, source IDs, parent routes, and one combined closeout gate so future refresh work avoids a full build after every single tool.
+- 2026-06-22: Completed the Qwen, Hailuo, HeyGen, and Adobe Firefly batched freshness refresh. The four tool pages, AI Chatbots, AI Video, AI Image, source registry rows, page refresh ledger, and `.agent/loop-runs/2026-06-22-qwen-hailuo-heygen-adobe-firefly-batch.md` are updated and verified. `npm run tool:refresh:batch:check` now provides the fast grouped gate before the single typecheck/build/route-QA closeout.
 
 ### Next
 
-- Treat the rest-of-date operating plan as: rerun and record all loops after any new worktree change, then decide between Gemini freshness and the Amazon Q vs GitHub Copilot decision cycle from the fresh loop recommendations.
+- Treat the rest-of-date operating plan as: rerun and record all loops after any new worktree change, then decide between the next batched freshness tools and the Amazon Q vs GitHub Copilot decision cycle from the fresh loop recommendations.
 - Keep the detail page width parity CSS/layout edits, generated page ledger update, verification notes, and `.agent` receipt together when inspecting history.
 - Regenerate and inspect `PAGE_REFRESH_LEDGER.md`.
 - Run focused smart verification plus mobile and desktop route QA for affected rendered routes.
 - Record a final complete loop receipt only after verification passes.
 - Commit and push only after the batch is solid.
-- Then continue the freshness window with Gemini and the remaining facts due on 2026-06-22.
+- Then continue the freshness window with the next batched queue and the remaining facts due on 2026-06-22.
 - Keep deleting or avoiding invalid different-workflow comparison pages.
 - Record each meaningful cycle in `.agent/loop-runs/`.
 - Keep `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/LOOPS.md` current before each push.
@@ -132,7 +137,7 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 ### Next Improvement Pass
 
 - Rerun `npm run loop:all:record -- --json` after any further dirty worktree change.
-- Then run either the Gemini freshness queue or the `amazon-q-vs-github-copilot` Decision Content cycle, depending on the fresh recorded recommendations and current-source availability.
+- Then run either the Qwen freshness queue or the `amazon-q-vs-github-copilot` Decision Content cycle, depending on the fresh recorded recommendations and current-source availability.
 - After each meaningful cycle, rerun the relevant loop plus `npm run loop:all -- --json` and record whether attention returns.
 - For broad loop-system reviews, use `npm run loop:all:record -- --json` so `.agent/loop-runs/system/latest.json` captures the run, recommendations, built-output freshness, and trend.
 
@@ -215,6 +220,11 @@ Refresh tracked AiPedia pages from oldest to newest, prioritizing tool and buyer
 - `npm run audit:provenance`
 - `npm run check:links`
 - `npm run check:smart`
+
+### Status
+
+- 2026-06-22: Gemini refresh complete.
+- 2026-06-22: GitHub Copilot, Grammarly, Qwen, Hailuo, HeyGen, and Adobe Firefly refreshes complete. The next queue starts with Augment Code, Base44, BLACKBOX AI, Captions.ai, and Cline unless the broad loop runner promotes a decision-content cycle first.
 
 ## Planned: Phase 3 Parallel Surface Agent Orchestration
 

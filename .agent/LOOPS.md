@@ -1,6 +1,6 @@
 # AiPedia Loop Registry
 
-Last updated: 2026-06-21
+Last updated: 2026-06-22
 
 This file explains the repeatable AiPedia loops in plain English. The executable registry lives in `src/data/aipedia-loops.json`, and the runner is `npm run loop:system`.
 
@@ -23,6 +23,9 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:quality -- --json`: run the Quality Pruning loop checks.
 - `npm run loop:performance -- --json`: run the Performance and UX loop checks.
 - `npm run loop:news -- --json`: run the News and Market Change loop checks.
+- `npm run tool:refresh:batch -- --limit 4`: plan the next batched oldest-first tool refresh.
+- `npm run tool:refresh:batch -- --limit 4 --json`: emit the same batch plan in structured form.
+- `npm run tool:refresh:batch:check`: run the fast grouped gate for changed tool files, including per-tool quality, changed provenance, freshness, ledger check, em-dash guard, and `git diff --check`, without build/typecheck/route QA.
 
 Built-output loops depend on fresh `dist-fast/client` output. If the runner skips conversion or performance, run `npm run build:fast`, then rerun the specific loop. If the runner marks built output as stale or unknown, do the same before trusting rendered-output audits.
 
@@ -54,6 +57,8 @@ Primary output: the next same-workflow comparison or buyer-decision cluster, wit
 Use when the question is "what is stale next?" It turns due review dates, stale verification candidates, and baseline pages into a queue.
 
 Primary output: tool/fact refresh candidates ordered by due date and comparison impact.
+
+Default tool-refresh mode is batched. Use `npm run tool:refresh:batch -- --limit 4` to group the next tools, source IDs, parent category routes, and closeout commands. Verify and edit several tools together, run `npm run ledger:pages`, then use `npm run tool:refresh:batch:check` as the fast pre-build gate. Only after that should the batch pay for typecheck, one `npm run build:fast`, and one combined route-QA command. Do not run a full build after every individual tool unless the tool introduces template/layout/runtime changes, a high-risk commercial claim, or a blocker that must be isolated.
 
 ### Trust And Provenance Loop
 
@@ -117,4 +122,4 @@ A loop-system change is done only when:
 - Focused tests for `scripts/aipedia-loops.mjs` pass.
 - `.agent` status docs say which loop to run next.
 
-Latest baseline: 2026-06-22 broad review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast` and the News loop rules update. The News loop checks 410 news files with 0 issues and a minimum of 2 stories per active day. Due-now freshness is 0. Current runner recommendations are `amazon-q-vs-github-copilot` and Gemini due-soon facts, but the paused Claude and Claude Code dirty batch still takes priority before new content work.
+Latest baseline: 2026-06-22 broad review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast` and the News loop rules update. The News loop checks 410 news files with 0 issues and a minimum of 2 stories per active day. Due-now freshness is 0. The latest batched freshness refresh completed Qwen, Hailuo, HeyGen, and Adobe Firefly with `npm run tool:refresh:batch:check`, one typecheck, one `npm run build:fast`, and one combined route QA. Current runner recommendations are `amazon-q-vs-github-copilot` and the next batched freshness queue, which currently starts with Augment Code, Base44, BLACKBOX AI, Captions.ai, and Cline.

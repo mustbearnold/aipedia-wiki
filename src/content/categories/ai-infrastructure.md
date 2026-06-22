@@ -47,7 +47,7 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 
 **Use [OpenRouter](/tools/openrouter/) when you need one API across many model providers.** The current pricing page lists pay-as-you-go access to 400+ models and 60+ providers, with budget controls, activity logs, prompt caching, preferred vendor selections, and model-priced token billing. Its [May 27 funding signal](/news/2026-05-27-openrouter-series-b-model-routing/) makes the category clearer: routing, fallback, governance, and spend visibility are becoming production infrastructure, not just developer convenience.
 
-**Use direct vendor APIs when native features matter.** [OpenAI API](/tools/chatgpt/) is the default direct route for broad multimodal app work. [Claude API](/tools/claude/) is the direct route for long reasoning, writing, code, and document workflows. [Gemini API](/tools/gemini/) matters when Google Cloud, long context, multimodal inputs, or Veo video generation are part of the product.
+**Use direct vendor APIs when native features matter.** [OpenAI API](/tools/chatgpt/) is the default direct route for broad multimodal app work. [Claude API](/tools/claude/) is the direct route for long reasoning, writing, code, and document workflows. [Gemini API](/tools/gemini/) matters when Google Cloud, long context, multimodal inputs, or Veo video generation are part of the product. The June 22 Gemini recheck keeps Gemini 3.5 Flash pricing mode-specific: standard, batch/flex, priority, grounding, tools, and media rows need separate cost modeling.
 
 **Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** The June 15 Mistral check keeps the timeline and cost model honest: Mistral 3 officially launched on December 2, 2025, while Medium 3.5's model-card date is April 28, 2026. Current Mistral pricing lists Large 3 at $0.50/M input and $1.50/M output, Medium 3.5 at $1.50/M and $7.50/M, and Small 4 at $0.10/M and $0.30/M, but the Small 4 model card still lists $0.15/M and $0.60/M, and the pricing FAQ still uses a generic Mistral Large $2/$6 example. Benchmark real prompts, confirm the live Studio quote, and pin exact model IDs before switching because model quality, output length, retries, aliases, and source drift change the bill.
 
@@ -119,7 +119,7 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [AiPedia June 14 AI news desk](/news/2026-06-14-ai-news-desk/) (verified 2026-06-14)
 - [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-14)
 - [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) (verified 2026-06-13)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-12)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-22)
 - [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-15)
 - [Mistral Vibe product page](https://mistral.ai/products/vibe/) (verified 2026-06-15)
 - [Mistral Vibe agent announcement](https://mistral.ai/news/vibe-agent/) (verified 2026-06-15)

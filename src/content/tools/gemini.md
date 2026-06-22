@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-12
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 15, 2026: Gemini 3.5 Flash is stable in the API, Gemini app plans expose Flash-Lite/Flash/Pro access, and unpaid-tier/Google One Gemini Code Assist users need the June 18 Antigravity migration caveat."
+meta_description: "Updated June 22, 2026: Gemini 3.5 Flash remains the stable API route, with standard, batch/flex, and priority pricing separated from Google AI plan limits, Code Assist, and Antigravity guidance."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,133 +34,133 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/models"
     source_label: "Gemini API model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   context_window:
     value: "Gemini app context is 32K tokens without an AI plan, 128K on AI Plus, and 1M on AI Pro/Ultra. API context remains model-specific; verify the exact model ID before quoting production limits."
     source: "https://support.google.com/gemini/answer/16275805"
     source_label: "Gemini Apps limits and upgrades"
     source_id: google-gemini-app-limits
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   pricing_anchor:
-    value: "Free; Google AI Plus with localized pricing; Google AI Pro remains the mainstream paid plan ($19.99/mo in the US, localized elsewhere); Google AI Ultra starts around $99.99/$100/mo with a higher 20x-limits tier around $199.99/$200/mo; Gemini API free and paid tiers are billed separately."
+    value: "Free; Google AI Plus, Google AI Pro, and Google AI Ultra use localized pricing and plan-specific limits; Gemini API free, standard, batch/flex, and priority tiers are billed separately by model and feature."
     source: "https://one.google.com/about/google-ai-plans/"
     source_label: "Gemini subscriptions"
     source_id: google-one-ai-plans
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   gemini_intelligence:
-    value: "Yes: Gemini Intelligence relaunched as the Android-wide assistant on May 12, 2026, with cross-app task completion and on-screen reading; Googlebook AI-laptop line ships fall 2026 with Acer, Asus, Dell, HP, and Lenovo"
-    source: "https://blog.google/products/android/android-show-io-edition-2026/"
-    source_label: "Android Show: I/O Edition 2026"
+    value: "Yes: Gemini Intelligence is Google's Android-wide AI layer, and Googlebook is a Gemini-first laptop category planned for fall 2026 with Acer, ASUS, Dell, HP, and Lenovo partners."
+    source: "https://blog.google/products-and-platforms/platforms/android/meet-googlebook/"
+    source_label: "Googlebook designed for Gemini Intelligence"
     source_id: google-android-show-2026
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   free_plan:
     value: "Yes: $0 Gemini access with a Google Account, 15GB storage, access to 3.5 Flash, varying 3.1 Pro access, image generation/editing, Deep Research, Gemini Live, Canvas, and Gems, with limits"
     source: "https://gemini.google/subscriptions/"
     source_label: "Gemini subscriptions"
     source_id: google-gemini-subscriptions
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   best_paid_tier:
     value: "Google AI Pro for most paid users; AI Ultra 5x/20x only when higher Gemini app, Antigravity, media, NotebookLM, Deep Think, Spark, or Search-agent limits justify the localized price"
     source: "https://one.google.com/about/google-ai-plans/"
     source_label: "Gemini subscriptions"
     source_id: google-one-ai-plans
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   api_available:
     value: "Yes: Gemini API via Google AI Studio and Vertex AI"
     source: "https://ai.google.dev/gemini-api/docs/models"
     source_label: "Gemini API model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   image_generation:
     value: "Yes: Nano Banana 2 and Nano Banana Pro image generation/editing"
     source: "https://ai.google.dev/gemini-api/docs/image-generation"
     source_label: "Gemini image-generation docs"
     source_id: imagen-gemini-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   video_generation:
-    value: "Yes: Veo 3.1 video generation through Gemini API / Google AI plans"
+    value: "Yes: Veo 3.1 video generation is available through the Gemini API, with Google AI plan and Flow access handled separately by subscription and region."
     source: "https://ai.google.dev/gemini-api/docs/video"
     source_label: "Gemini video-generation docs"
     source_id: veo-31-gemini-api-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   real_time_voice:
     value: "Yes: Gemini 3.1 Flash Live is a preview Live API model for high-quality, low-latency real-time dialogue and voice-first applications; Gemini 3.5 Live Translate is a new preview speech-to-speech translation model."
     source: "https://ai.google.dev/gemini-api/docs/models"
     source_label: "Gemini API model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   web_browsing:
     value: "Yes: Grounding with Google Search connects Gemini to real-time web content with citations"
     source: "https://ai.google.dev/gemini-api/docs/google-search"
     source_label: "Gemini Google Search grounding docs"
     source_id: google-gemini-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   coding_agent:
     value: "Yes: Gemini 3.5 Flash is positioned for agentic/coding tasks, Antigravity Agent Preview is a managed sandboxed agent model, and Google AI Pro/Ultra increase limits in AI Studio, Antigravity, Jules, and Android Studio. For unpaid-tier and Google One users, Google's current Code Assist page says Gemini CLI and Gemini Code Assist IDE extensions will be replaced by Antigravity CLI and Antigravity on June 18, 2026."
     source: "https://cloud.google.com/products/gemini/code-assist"
     source_label: "Gemini Code Assist for teams and businesses"
     source_id: gemini-code-assist-business
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   enterprise_controls:
     value: "Workspace and Gemini Enterprise provide admin controls, agent management, data controls, Drive-governed Gemini asset sharing, and Google Cloud security layers such as Model Armor"
     source: "https://workspaceupdates.googleblog.com/2026/04/share-chats-canvases-and-generated-media-from-the-Gemini-app-securely-via-Google-Drive.html"
     source_label: "Google Workspace Gemini Drive sharing"
     source_id: google-gemini-drive-sharing
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   data_retention_or_privacy:
     value: "Qualifying Workspace Gemini use is governed by the organization's Workspace agreement: interactions stay inside the organization, existing Workspace controls apply, and customer prompts/content are not human-reviewed or used to train Google generative AI models outside the domain without permission. Consumer Gemini Apps, connected apps, and third-party services follow different privacy settings and retention paths."
     source: "https://support.google.com/a/answer/15706919"
     source_label: "Google Workspace generative AI privacy hub"
     source_id: google-workspace-ai-privacy-hub
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
   open_source_or_local:
     value: "No for Gemini; Gemma is Google's open-weight sibling family, not the hosted Gemini product"
     source: "https://ai.google.dev/gemini-api/docs/models"
     source_label: "Gemini API model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: low
     confidence: high
   best_for:
@@ -168,7 +168,7 @@ facts:
     source: "https://gemini.google/subscriptions/"
     source_label: "Gemini subscriptions"
     source_id: google-gemini-subscriptions
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: medium
     confidence: high
   watch_out_for:
@@ -176,10 +176,10 @@ facts:
     source: "https://cloud.google.com/products/gemini/code-assist"
     source_label: "Gemini Code Assist for teams and businesses"
     source_id: gemini-code-assist-business
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-22
+    next_review_at: 2026-06-29
 tags: [chatbot, ai-assistant, writing, search, multimodal, google-workspace, deep-research, deep-think, long-context, nano-banana, veo, android]
 best_for:
   - google workspace power users
@@ -192,15 +192,23 @@ not_best_for:
   - users outside the Google ecosystem
   - writing tasks requiring distinctive prose (Claude Opus leads)
 quick_answer: >-
-  Gemini is the widest Google-native multimodal bundle. Pick it for Workspace, Search, Android, NotebookLM, Antigravity/Jules, Veo/Gemini Omni video, Nano Banana image generation, and Google One benefits in one account. If the buyer uses unpaid-tier or Google One Code Assist, plan around Google's June 18, 2026 shift from Gemini CLI/Code Assist IDE extensions to Antigravity CLI and Antigravity. Skip it for Claude Code-style terminal depth or distinctive long-form writing.
+  Gemini is the widest Google-native multimodal bundle. Pick it for Workspace, Search, Android, NotebookLM, Antigravity/Jules, Veo/Gemini Omni video, Nano Banana image generation, and Google One benefits in one account. API buyers should separate Gemini 3.5 Flash standard, batch/flex, and priority pricing before budgeting production workloads. If the buyer uses unpaid-tier or Google One Code Assist, plan around Google's June 18, 2026 shift from Gemini CLI/Code Assist IDE extensions to Antigravity CLI and Antigravity. Skip it for Claude Code-style terminal depth or distinctive long-form writing.
 price_history:
+  - date: 2026-06-22
+    plan: "Gemini 3.5 Flash API pricing recheck"
+    price: "Standard paid tier $1.50/M input and $9/M output; batch/flex is $0.75/M input and $4.50/M output; priority is $2.70/M input and $16.20/M output"
+    source: "https://ai.google.dev/gemini-api/docs/pricing"
+    source_id: google-gemini-api-pricing
+    source_label: "Gemini API pricing"
+    verified_at: 2026-06-22
+    note: "Google's Gemini API pricing page was last updated June 18, 2026. The buyer correction is not a standard-price increase: standard Gemini 3.5 Flash remains lower than priority, and batch/flex remains lower than standard. Production budgets must pin the exact mode, model ID, grounding/tool fees, and account limits."
   - date: 2026-06-15
     plan: "Gemini Code Assist / Antigravity transition check"
     price: "No public price change for Gemini; unpaid-tier and Google One coding surfaces require migration planning"
     source: "https://cloud.google.com/products/gemini/code-assist"
     source_id: gemini-code-assist-business
     source_label: "Gemini Code Assist for teams and businesses"
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     note: "Google's current Code Assist page warns unpaid-tier Gemini Code Assist for individuals and Google One users that Gemini CLI and Gemini Code Assist IDE extensions will be replaced by Antigravity CLI and Antigravity on June 18, 2026. Treat Code Assist Standard/Enterprise, Antigravity, Gemini CLI, and Google One subscription routes as separate buyer paths before recommending a coding setup."
   - date: 2026-06-14
     plan: "Google AI plans, Gemini app limits, and Gemini API model/pricing recheck"
@@ -288,11 +296,13 @@ price_history:
 
 Google DeepMind's multimodal AI assistant. **Gemini 3.5 Flash** is the current stable Gemini API model for sustained frontier performance on agentic and coding tasks, while the consumer Gemini app now describes access as **Flash-Lite**, **Flash**, and **Pro** models that vary by plan. The API model page still lists **Gemini 3.1 Pro** as the Pro preview row, so do not publish "Gemini 3.5 Pro" availability unless it appears in the buyer's account or current API docs.
 
-The subscription story is plan- and region-sensitive. Google AI Pro remains the mainstream paid tier, while Google AI Ultra now starts around **$99.99/$100/mo** and a higher **20x usage** Ultra tier sits around **$199.99/$200/mo** in current official US/I/O language. Gemini is best understood as a Google bundle: Search, Workspace, Android, Veo/Gemini Omni media tools, Nano Banana, Antigravity, Jules, AI Studio, NotebookLM, and Google One benefits all affect the buying decision. For coding buyers, keep the June 18, 2026 transition separate: Google's Code Assist page says unpaid-tier and Google One users should move from Gemini CLI / Gemini Code Assist IDE extensions to Antigravity CLI and Antigravity to avoid disruption.
+The subscription story is plan- and region-sensitive. Google AI Pro remains the mainstream paid tier, while Google AI Ultra is for heavier agent, media, NotebookLM, and Search-agent limits. Gemini is best understood as a Google bundle: Search, Workspace, Android, Veo/Gemini Omni media tools, Nano Banana, Antigravity, Jules, AI Studio, NotebookLM, and Google One benefits all affect the buying decision. API buyers need a separate budget check: standard, batch/flex, priority, grounding, tool, and media rows do not price the same way. For coding buyers, keep the June 18, 2026 transition separate: Google's Code Assist page says unpaid-tier and Google One users should move from Gemini CLI / Gemini Code Assist IDE extensions to Antigravity CLI and Antigravity to avoid disruption.
 
 ## Recent developments (April-June 2026)
 
-Verified 2026-06-15 for Google AI plans, Gemini app limits, Gemini API model/pricing, image/video API docs, Grounding with Google Search, the Code Assist / Antigravity transition, and the Workspace privacy boundary.
+Verified 2026-06-22 for Google AI plans, Gemini app limits, Gemini API model/pricing, image/video API docs, Grounding with Google Search, the Code Assist / Antigravity transition, Gemini Intelligence, and the Workspace privacy boundary.
+
+- **June 22:** Rechecked Gemini's high-volatility buyer facts against official Google sources. The main correction is pricing precision: Gemini 3.5 Flash standard API pricing still differs from batch/flex and priority pricing, so production buyers should not quote one API row for every mode, grounding path, tool call, or media workload.
 
 - **June 15 news desk:** [G7 opened while AI search liability tightened](/news/2026-06-15-ai-news-desk/), with a narrower [Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) for AI Overviews liability and Gemini abuse claims. The buyer update does not change Gemini pricing or model guidance, but it does add a governance caution: Google-native search and assistant rollouts need source logs, review paths, and abuse monitoring before customer-facing use.
 
@@ -358,18 +368,18 @@ Verified 2026-06-15 for Google AI plans, Gemini app limits, Gemini API model/pri
 | **API Pro route** | Gemini 3.1 Pro is preview in current API docs; do not assume a stable Gemini 3.5 Pro API route |
 | **Context window** | Gemini app: 32K without AI plan · 128K AI Plus · 1M AI Pro/Ultra; API context remains model-specific |
 | **API pricing** | Gemini 3.5 Flash standard paid tier: $1.50/M input and $9/M output including thinking tokens; Gemini 3 Pro, media models, grounding, and tools price separately |
-| **Subscription pricing** | Free · AI Plus localized · AI Pro localized / $19.99 US anchor · AI Ultra 5x around $99.99/$100 · AI Ultra 20x around $199.99/$200 |
+| **Subscription pricing** | Free · AI Plus localized · AI Pro localized · AI Ultra 5x and 20x localize by account, country, and checkout route |
 | **Image generation** | Nano Banana 2 (Pro) · Nano Banana Pro (Ultra) |
 | **Video generation** | [Veo 3.1](/tools/veo/) / Flow surfaces plus [Gemini Omni](/tools/gemini-omni/) rollout for Google AI Plus, Pro, and Ultra subscribers |
 | **Workspace integration** | Native in Docs, Sheets, Gmail, Drive, Meet, Chrome; Drive-governed sharing for Gemini chats, canvases, and generated media started June 3, 2026 |
 | **Deep Research / agents** | Deep Research, Daily Brief, Gemini Spark, Search agents, and Managed Agents vary by plan, region, and rollout stage |
 | **Android** | Gemini Intelligence rebrand launched May 12, 2026 with cross-app task completion and on-screen reading; default assistant since March 2026 |
-| **Hardware** | Googlebook AI-laptop line announced May 12, 2026 with Acer, Asus, Dell, HP, Lenovo; ships fall 2026 |
+| **Hardware** | Googlebook AI-laptop line announced May 12, 2026 with Acer, ASUS, Dell, HP, and Lenovo partners; ships fall 2026 |
 | **Storage bundled** | Google One storage included by plan; verify current storage allotments on the Google AI subscriptions page |
 | **Developer / RAG stack** | Antigravity 2.0, Managed Agents in the Gemini API, AI Studio Android support, Gemini Embedding 2 GA, Gemini API File Search multimodal RAG, and a June 18 Antigravity migration path for unpaid-tier / Google One Code Assist users |
 | **Security** | Google Threat Intelligence Group disclosed first AI-authored zero-day exploit thwarted before mass deployment on May 11, 2026 |
 
-Primary model, plan, app-limit, API pricing, media, grounding, Workspace privacy, and Code Assist transition data above was verified against vendor sources on 2026-06-15. See Sources.
+Primary model, plan, app-limit, API pricing, media, grounding, Workspace privacy, Gemini Intelligence, and Code Assist transition data above was verified against vendor sources on 2026-06-22. See Sources.
 
 ## What it actually is
 
@@ -399,17 +409,17 @@ For Google-stack users, switching cost to ChatGPT or Claude isn't about model qu
 
 ## Pricing
 
-Subscription pricing via [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscriptions](https://gemini.google/subscriptions/), and Google's May 19, 2026 I/O subscription update:
+Subscription pricing comes from [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscriptions](https://gemini.google/subscriptions/), and Google's May 19, 2026 I/O subscription update.
 
 | Plan | Price | Models | Storage | Who's it for |
 |---|---|---|---|---|
 | Free | $0 | Gemini Flash-Lite, Flash, and Pro access with standard limits | Varies by Google Account | Casual daily use |
 | AI Plus | Localized pricing | 2x standard Gemini usage, more 3.1 Pro/Deep Research access, Omni in Gemini, Daily Brief, AI Inbox rollout | 400GB on current US plan page | Light users who need more quota than Free |
 | AI Pro | Localized pricing; $19.99/mo US anchor | 4x standard Gemini usage, Pro model access, 1M Gemini app context, Workspace help, more media/search/study/coding limits | 5TB on current US plan page | **Most individuals land here** |
-| AI Ultra 5x | Localized pricing; about $99.99/$100/mo US/I/O anchor | 5x AI Pro limits, higher agent/media/Antigravity/Jules/NotebookLM access | 20TB+ on current plan pages | Power users who need premium agent/media features |
-| AI Ultra 20x | Localized pricing; about $199.99/$200/mo US/I/O anchor | 20x AI Pro limits, highest Gemini app/Antigravity access and top-tier media/agent features | 20TB+ on current plan pages | Heavy creators, developers, and agentic workflows |
+| AI Ultra 5x | Localized pricing | 5x AI Pro limits, higher agent/media/Antigravity/Jules/NotebookLM access | 20TB+ on current plan pages | Power users who need premium agent/media features |
+| AI Ultra 20x | Localized pricing | 20x AI Pro limits, highest Gemini app/Antigravity access and top-tier media/agent features | 20TB+ on current plan pages | Heavy creators, developers, and agentic workflows |
 
-API pricing via [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing):
+API pricing comes from [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing).
 
 | Model | Input ($/MTok) | Output ($/MTok) | Context | Max Output |
 |---|---|---|---|---|
@@ -418,9 +428,9 @@ API pricing via [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/
 | Gemini 3 Pro / Gemini 3.1 models | Model-specific | Model-specific | Model-specific | Tool and feature availability varies |
 | Veo 3.1 / Veo 3 | Per-second video pricing | · | · | Charged only on successful generation where noted |
 
-Subscription and API model/pricing surfaces rechecked 2026-06-15 via [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscription details](https://gemini.google/subscriptions/), [Gemini Apps limits](https://support.google.com/gemini/answer/16275805), [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing), and Google's [May 19 subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Regional plan selectors and Gemini API model rows should be checked before production quoting.
+Subscription and API model/pricing surfaces rechecked 2026-06-22 via [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscription details](https://gemini.google/subscriptions/), [Gemini Apps limits](https://support.google.com/gemini/answer/16275805), [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing), and Google's [May 19 subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/). Regional plan selectors and Gemini API model rows should be checked before production quoting.
 
-Code Assist surfaces rechecked 2026-06-15 via [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist). The current page separates Standard/Enterprise business Code Assist from the unpaid-tier / Google One migration note, so coding buyers should verify whether their account is moving to Antigravity CLI and Antigravity before comparing Gemini against Claude Code, Codex, Cursor, or GitHub Copilot.
+Code Assist surfaces rechecked 2026-06-22 via [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist). The current page separates Standard/Enterprise business Code Assist from the unpaid-tier / Google One migration note, so coding buyers should verify whether their account is moving to Antigravity CLI and Antigravity before comparing Gemini against Claude Code, Codex, Cursor, or GitHub Copilot.
 
 **Verification note:** do not map Gemini app labels directly to API model IDs. Gemini app plan docs describe Flash-Lite, Flash, and Pro access; the current API model page lists Gemini 3.5 Flash stable and Gemini 3.1 Pro preview. Production budgets should be built from the exact API model ID, current tool fees, and current account limits.
 
@@ -448,7 +458,7 @@ Code Assist surfaces rechecked 2026-06-15 via [Gemini Code Assist](https://cloud
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-15 against Google's [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), [Gemini API pricing docs](https://ai.google.dev/gemini-api/docs/pricing), [Gemini Apps limits](https://support.google.com/gemini/answer/16275805), [Google AI plans](https://one.google.com/about/google-ai-plans/), [Gemini subscriptions](https://gemini.google/subscriptions/), [Grounding with Google Search docs](https://ai.google.dev/gemini-api/docs/google-search), [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist), [Gemini image-generation docs](https://ai.google.dev/gemini-api/docs/image-generation), [Gemini video docs](https://ai.google.dev/gemini-api/docs/video), the [Workspace generative AI privacy hub](https://support.google.com/a/answer/15706919), the [June 3 Gemini Drive sharing update](/news/2026-06-03-google-gemini-drive-sharing/), the [May 21 Gemini ADK and Home infrastructure update](/news/2026-05-21-google-adk-kotlin-gemini-home/), the [May 20 Marketing Live update](/news/2026-05-20-google-marketing-live-gemini-ads-commerce-agents/), the [May 19 I/O subscription update](/news/2026-05-19-google-io-gemini-35-search-ai-ultra/), the [May 19 Antigravity and Managed Agents update](/news/2026-05-19-google-antigravity-managed-agents-ai-studio/), and the [May 12 Android Show: I/O Edition coverage](/news/2026-05-12-google-gemini-intelligence-googlebook-android-show/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-22 against Google's Gemini model, pricing, app-limit, grounding, Code Assist, image, video, Workspace privacy, and Gemini Intelligence sources. Supporting timeline checks include the June 3 Gemini Drive sharing update, May 21 Gemini ADK and Home infrastructure update, May 20 Marketing Live update, May 19 I/O subscription update, and May 19 Antigravity and Managed Agents update.
 
 ## FAQ
 
@@ -465,7 +475,7 @@ Pick Gemini for Google ecosystem work: Search, Gmail, Docs, Drive, Android, YouT
 Deep Research is Gemini's autonomous research agent. Perplexity is usually faster for iterative source-first research. Gemini is more valuable when the research output needs to stay inside Google's broader assistant and Workspace ecosystem.
 
 **What changed at I/O 2026?**
-Google launched Gemini 3.5 Flash broadly, made it the default model for AI Mode in Search, announced more agentic Gemini app features, expanded Antigravity and Managed Agents for developers, and reset Google AI Ultra pricing to $100 and $200 tiers. The June 15 check adds a follow-on coding caveat: unpaid-tier and Google One Code Assist users should plan around the June 18 Antigravity migration.
+Google launched Gemini 3.5 Flash broadly, made it the default model for AI Mode in Search, announced more agentic Gemini app features, expanded Antigravity and Managed Agents for developers, and reset Google AI Ultra pricing to lower and higher usage-limit tiers. The June 22 check adds two follow-on caveats: API buyers must separate standard, batch/flex, and priority pricing, and unpaid-tier or Google One Code Assist users should plan around the June 18 Antigravity migration.
 
 ## Related
 

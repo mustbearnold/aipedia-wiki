@@ -79,6 +79,14 @@ Use `npm run loop:system` and `.agent/LOOPS.md` when deciding which repeatable l
 
 The registered loops are Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change. Loop output is a queue or attention signal, not permission to edit volatile facts without current-source verification.
 
+### Batched tool freshness
+
+Tool-page refreshes should run in batches by default. Use `npm run tool:refresh:batch -- --limit 4` to select the next oldest-first batch, then verify sources, edit tool pages, update affected parent hubs, update source registry rows, and regenerate `PAGE_REFRESH_LEDGER.md` across the batch.
+
+During the batch, run cheap per-file checks such as `npm run audit:tool-quality -- --file <path>` as each tool is edited. Once the batch has tool edits, parent hubs, source registry rows, and the page ledger in place, use `npm run tool:refresh:batch:check` for the fast grouped gate. Save expensive gates for the batch closeout: typecheck, one `npm run build:fast`, and one combined `npm run qa:route` for the edited tool routes, parent category routes, `/tools/`, and `/categories/`.
+
+Run a full build after each individual tool only when the tool change affects templates, layout, runtime behavior, generated assets, high-risk commercial claims, or when isolating a failing build. If one tool blocks on source access, remove it from the batch, document the reason in the receipt, and continue with the rest.
+
 Before editing:
 
 1. Inspect the relevant files, data models, routes, templates, components, and tests.

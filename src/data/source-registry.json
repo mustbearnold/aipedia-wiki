@@ -270,7 +270,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-firefly-creative-agent-2026",
@@ -288,7 +288,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-creative-cloud-partner-models",
@@ -297,7 +297,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-firefly-product",
@@ -306,7 +306,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-firefly-current-promotions",
@@ -315,7 +315,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-firefly-faq",
@@ -324,7 +324,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-creative-cloud-generative-ai",
@@ -333,7 +333,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-firefly-api",
@@ -342,7 +342,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-firefly-enterprise",
@@ -351,7 +351,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-firefly-max-2025",
@@ -369,7 +369,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "adobe-affiliates",
@@ -378,7 +378,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "ag2-docs",
@@ -2699,7 +2699,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cline-cli",
@@ -2735,7 +2735,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "cline-auto-approve",
@@ -4709,7 +4709,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
+    },
+    {
+      "id": "github-copilot-product",
+      "label": "GitHub Copilot product page",
+      "url": "https://github.com/features/copilot",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-feature-matrix",
@@ -4718,7 +4727,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-plans",
@@ -4727,7 +4736,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-plan-docs",
@@ -4736,7 +4745,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-ai-credits",
@@ -4745,7 +4754,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-ai-credits-orgs",
@@ -4754,7 +4763,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-ai-credits-announcement",
@@ -4781,7 +4790,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-supported-models",
@@ -4790,7 +4799,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-models-pricing",
@@ -4799,7 +4808,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-context-reasoning",
@@ -4808,7 +4817,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-agent-tasks-api",
@@ -4817,7 +4826,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-fable-5-suspension",
@@ -4826,7 +4835,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-signups-reopening",
@@ -4835,7 +4844,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-app-ga",
@@ -4844,7 +4853,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-usage-metrics-ai-credits",
@@ -4853,7 +4862,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-chat-agent-sessions",
@@ -4862,7 +4871,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-agentic-workflows",
@@ -4871,7 +4880,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-cli-settings",
@@ -4880,7 +4889,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-code-review-controls",
@@ -4889,7 +4898,34 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
+    },
+    {
+      "id": "github-copilot-mai-code-1-flash-surfaces",
+      "label": "GitHub Copilot MAI-Code-1-Flash surface expansion",
+      "url": "https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-22"
+    },
+    {
+      "id": "github-copilot-opus-46-fast-deprecation",
+      "label": "GitHub Copilot Opus 4.6 fast deprecation notice",
+      "url": "https://github.blog/changelog/2026-06-18-upcoming-deprecation-of-opus-4-6-fast/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-22"
+    },
+    {
+      "id": "github-copilot-code-review-agents-md",
+      "label": "GitHub Copilot code review AGENTS.md support",
+      "url": "https://github.blog/changelog/2026-06-18-copilot-code-review-agents-md-support-and-ui-improvements/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-22"
     },
     {
       "id": "github-copilot-code-review-docs",
@@ -5041,7 +5077,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "gemini-omni-official",
@@ -5077,7 +5113,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-14"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "google-gemini-docs",
@@ -5086,7 +5122,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "google-gemini-drive-sharing",
@@ -5122,7 +5158,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "google-gemini-app-limits",
@@ -5131,7 +5167,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "google-stitch-labs",
@@ -5185,7 +5221,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "goose-official",
@@ -5237,7 +5273,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-affiliates",
@@ -5246,7 +5282,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-business",
@@ -5255,7 +5291,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-trust",
@@ -5264,7 +5300,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-expert-review-wired",
@@ -5273,7 +5309,7 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-plans",
@@ -5282,7 +5318,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-pricing",
@@ -5291,7 +5327,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-pro",
@@ -5300,7 +5336,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-pro-support",
@@ -5309,7 +5345,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grammarly-superhuman-suite",
@@ -5318,7 +5354,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-14"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "granola-official",
@@ -5425,7 +5461,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hailuo-23-tool-page",
@@ -5434,7 +5470,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hailuo-pricing",
@@ -5443,7 +5479,16 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
+    },
+    {
+      "id": "hailuo-payment-policy",
+      "label": "Hailuo payment policy",
+      "url": "https://hailuoai.video/doc/payment-policy.html",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-22"
     },
     {
       "id": "hailuo-23-launch",
@@ -5452,7 +5497,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "minimax-video-api",
@@ -5461,7 +5506,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "minimax-video-packages",
@@ -5470,7 +5515,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "minimax-paygo-pricing",
@@ -5479,7 +5524,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "minimax-token-plan",
@@ -5488,7 +5533,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "harvey-blog",
@@ -5704,7 +5749,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-avatar-iv",
@@ -5722,7 +5767,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-avatar-v-report",
@@ -5731,7 +5776,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-avatar-iv-api",
@@ -5740,7 +5785,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-api-pricing",
@@ -5749,7 +5794,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-api-pricing-help",
@@ -5758,7 +5803,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-affiliate-program",
@@ -5767,7 +5812,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-developer-pricing",
@@ -5776,7 +5821,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-liveavatar-help",
@@ -5785,7 +5830,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-pricing",
@@ -5794,7 +5839,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-pricing-help",
@@ -5803,7 +5848,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "heygen-security",
@@ -5812,7 +5857,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "higgsfield-about",
@@ -6055,7 +6100,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "imagen-official",
@@ -9198,7 +9243,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "qwen-official",
@@ -9207,7 +9252,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "qwen-pricing",
@@ -9225,7 +9270,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "qwencloud-qwen37-max-promo",
@@ -9234,7 +9279,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "qwencloud-pricing",
@@ -9243,7 +9288,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "qwencloud-model-releases",
@@ -9252,7 +9297,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "read-ai-official",
@@ -10884,7 +10929,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "veo-31-ingredients",
@@ -11858,11 +11903,11 @@
     {
       "id": "google-android-show-2026",
       "label": "Android Show: I/O Edition 2026",
-      "url": "https://blog.google/products/android/android-show-io-edition-2026/",
+      "url": "https://blog.google/products-and-platforms/platforms/android/meet-googlebook/",
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-14"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "grok-code-fast-pricing",

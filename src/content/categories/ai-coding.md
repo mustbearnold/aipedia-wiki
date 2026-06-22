@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 31
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 21, 2026: compare Cursor, Claude Code, GitHub Copilot, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
+meta_description: "Updated June 22, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-21
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -40,7 +40,7 @@ decision_picks:
       - github-copilot-plan-docs
       - github-copilot-ai-credits
       - github-copilot-app-ga
-    verified_at: 2026-06-20
+    verified_at: 2026-06-22
     confidence: high
 ---
 
@@ -70,9 +70,9 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 5 Cursor-cluster update:** the oldest live Cursor comparison rows now separate Cursor vs Gemini, Cursor vs Lovable, Cursor vs v0, and [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) against current primary sources. Retired adjacent-lane pages now belong in this hub, tool pages, or buyer guides unless the tools are direct substitutes for the same workflow.
 
-**Use [GitHub Copilot](/tools/github-copilot/) when the team already lives in GitHub and wants a safe default.** GitHub's official billing docs and June 1 changelog now make usage-based billing with GitHub AI Credits the active model, and the June 2 [Copilot SDK GA](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/) turns Copilot into an embeddable agent runtime. It remains a strong value for GitHub-native teams that value IDE coverage, policy, pull requests, and enterprise governance, but heavy agentic, SDK, code-review, Spaces, Spark, and cloud-agent use needs modeling. The June 20 DeepSeek vs GitHub Copilot refresh now separates Copilot as the GitHub-native developer workflow from DeepSeek as the low-cost model/backend lane.
+**Use [GitHub Copilot](/tools/github-copilot/) when the team already lives in GitHub and wants a safe default.** GitHub's official billing docs keep usage-based billing with GitHub AI Credits as the active model, and the June 2 [Copilot SDK GA](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/) turns Copilot into an embeddable agent runtime. It remains a strong value for GitHub-native teams that value IDE coverage, policy, pull requests, and enterprise governance, but heavy agentic, SDK, code-review, Spaces, Spark, and cloud-agent use needs modeling. The June 22 Copilot recheck keeps the DeepSeek split intact: Copilot is the GitHub-native developer workflow, while DeepSeek is the low-cost model/backend lane.
 
-**June 20 GitHub Copilot update:** the Copilot page now supersedes the earlier signup-pause caveat with GitHub's June 17 note that Student, Pro, Pro+, and Max sign-ups are reopening gradually. The same refresh adds the generally available GitHub Copilot app, MAI-Code-1-Flash expansion, `AGENTS.md` support in Copilot code review, and the `ai_credits_used` user metric for admins. Keep the Fable 5 suspension warning, AI Credits budgeting, GitHub Enterprise Server caveat, one-million-token context, configurable reasoning, Agent tasks REST API, Chat/agent-session handoff, Agentic Workflows, CLI `/settings`, and code-review controls in the buyer model.
+**June 22 GitHub Copilot update:** the Copilot page still supersedes the earlier signup-pause caveat with GitHub's June 17 note that Student, Pro, Pro+, and Max sign-ups are reopening gradually. The current recheck keeps pricing unchanged, confirms Copilot Free's 2,000 completions and 50 chat requests, keeps Fable 5 unavailable, adds the Opus 4.6 fast June 29 deprecation notice, and keeps MAI-Code-1-Flash expansion, `AGENTS.md` support in Copilot code review, and the `ai_credits_used` user metric in the buyer model. Keep the Fable 5 suspension warning, AI Credits budgeting, GitHub Enterprise Server caveat, one-million-token context, configurable reasoning, Agent tasks REST API, Chat/agent-session handoff, Agentic Workflows, CLI `/settings`, and code-review controls in the buyer model.
 
 **June 5 Copilot comparison follow-up:** the refreshed [GitHub Copilot vs Supermaven](/compare/github-copilot-vs-supermaven/), [GitHub Copilot vs Tabnine](/compare/github-copilot-vs-tabnine/), and GitHub Copilot vs Val Town pages now separate Copilot's real buyer lane from three adjacent intents: Supermaven for fast long-context autocomplete, Tabnine for privacy-first deploy-anywhere code assistance, and Val Town for hosted TypeScript vals, cron jobs, and tiny APIs.
 
@@ -227,15 +227,20 @@ Do not publish stale model-version claims. Coding tools route models and change 
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-15)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-15)
-- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-15)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-22)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-22)
+- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-22)
 - [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-15)
-- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-15)
-- [GitHub Copilot larger context and reasoning](https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/) (verified 2026-06-15)
-- [GitHub Copilot Agent tasks REST API](https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/) (verified 2026-06-15)
-- [GitHub Copilot Claude Fable 5 suspension note](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/) (verified 2026-06-15)
-- [GitHub Copilot code review controls](https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/) (verified 2026-06-15)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-22)
+- [GitHub Copilot larger context and reasoning](https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/) (verified 2026-06-22)
+- [GitHub Copilot Agent tasks REST API](https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/) (verified 2026-06-22)
+- [GitHub Copilot Claude Fable 5 suspension note](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/) (verified 2026-06-22)
+- [GitHub Copilot code review controls](https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/) (verified 2026-06-22)
+- [GitHub Copilot app generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/) (verified 2026-06-22)
+- [GitHub Copilot individual plan sign-ups reopening](https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening/) (verified 2026-06-22)
+- [GitHub Copilot MAI-Code-1-Flash expansion](https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces/) (verified 2026-06-22)
+- [GitHub Copilot Opus 4.6 fast deprecation notice](https://github.blog/changelog/2026-06-18-upcoming-deprecation-of-opus-4-6-fast/) (verified 2026-06-22)
+- [GitHub Copilot AI credits usage metrics API](https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/) (verified 2026-06-22)
 - [OpenAI to acquire Ona](https://openai.com/index/openai-to-acquire-ona/) (verified 2026-06-15)
 - [Ona is joining OpenAI](https://ona.com/stories/ona-joins-openai) (verified 2026-06-15)
 - [AiPedia Disney AI coding token-budget update](/news/2026-06-15-disney-ai-coding-tokenmaxxing/) (verified 2026-06-15)
@@ -339,10 +344,10 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Vercel pricing](https://vercel.com/pricing) (verified 2026-06-14)
 - [Zed pricing](https://zed.dev/pricing) (verified 2026-06-12)
 - [Trae plans and billing](https://docs.trae.ai/ide/new-plans-and-billing) (verified 2026-06-12)
-- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-15)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-15)
-- [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-15)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-15)
+- [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-22)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-22)
+- [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-22)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-22)
 - [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-12)
 - [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-12)
 - [Hex agent credits usage blog](https://hex.tech/blog/agent-credits-usage/) (verified 2026-06-12)

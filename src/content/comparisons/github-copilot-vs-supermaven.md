@@ -8,8 +8,8 @@ winner: depends
 seo_title: "GitHub Copilot vs Supermaven: Which Coding Assistant Should You Use? (June 2026)"
 meta_description: "June 2026 GitHub Copilot vs Supermaven comparison: Copilot wins for GitHub-native chat, agents, PRs, and governance; Supermaven wins for fast long-context autocomplete."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -68,8 +68,8 @@ Avoid pretending Supermaven replaces Copilot's full surface. Also avoid pretendi
 - **GitHub Copilot Pro:** $10/month, 1,500 monthly AI Credits, unlimited paid-plan completions and next-edit suggestions.
 - **GitHub Copilot Pro+:** $39/month, 7,000 monthly AI Credits.
 - **GitHub Copilot Max:** $100/month, 20,000 monthly AI Credits for heavier agent-driven workflows.
-- **GitHub Copilot Business:** $19/user/month, organization policy and pooled AI Credits; existing customers get a promotional 3,000 credits/user/month through September 1, 2026.
-- **GitHub Copilot Enterprise:** $39/user/month, deeper GitHub.com integration and enterprise controls; existing customers get a promotional 7,000 credits/user/month through September 1, 2026.
+- **GitHub Copilot Business:** $19/user/month, organization policy and pooled AI Credits; existing customers get a promotional 3,000 credits/user/month from June 1 to September 1, 2026.
+- **GitHub Copilot Enterprise:** $39/user/month, deeper GitHub.com integration and enterprise controls; existing customers get a promotional 7,000 credits/user/month from June 1 to September 1, 2026.
 - **Supermaven Free:** $0/month with fast suggestions and 7-day data retention.
 - **Supermaven Pro:** $10/month with 1M context, style adaptation, largest model, and $5/month in chat credits.
 - **Supermaven Team:** $10/user/month with Pro features plus centralized management and billing.

@@ -3,7 +3,7 @@ type: use-case
 slug: github-copilot-alternatives
 title: "Best GitHub Copilot Alternatives (June 2026)"
 seo_title: "Best GitHub Copilot Alternatives (June 2026): Cursor, Claude Code, Codex, Gemini"
-meta_description: "Updated June 20, 2026: the best GitHub Copilot alternatives by coding job after Copilot AI Credits, Fable 5 suspension, paused Agent SDK credit changes, one-million-token context, signup eligibility limits, agent APIs, and code-review controls. Cursor for AI-native IDE work, Claude Code for terminal agents, Codex for OpenAI-native repo-agent workflows, Devin Desktop/Windsurf for Cognition-stack IDE work, and Gemini Code Assist for Google-native coding."
+meta_description: "Updated June 22, 2026: the best GitHub Copilot alternatives by coding job after Copilot AI Credits, Fable 5 suspension, Opus 4.6 fast deprecation, paused Agent SDK credit changes, one-million-token context, gradual sign-up reopening, agent APIs, and code-review controls. Cursor for AI-native IDE work, Claude Code for terminal agents, Codex for OpenAI-native repo-agent workflows, Devin Desktop/Windsurf for Cognition-stack IDE work, and Gemini/Antigravity for Google-native coding."
 description: "A current buyer guide to GitHub Copilot alternatives for autocomplete, AI-native IDEs, terminal coding agents, repo-agent workflows, Google-native coding, usage-based billing risk, and team governance."
 tools_mentioned: ["cursor", "claude-code", "windsurf", "codex", "gemini", "github-copilot"]
 guide_picks:
@@ -32,20 +32,20 @@ guide_picks:
       - label: "Codex rate card"
         url: "https://help.openai.com/en/articles/20001106-codex-rate-card"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-20
-last_verified: 2026-06-20
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 ---
 
 # Best GitHub Copilot Alternatives (June 2026)
 
-As of the June 15 full-source pass, with Claude billing corrected on June 20, 2026, the best GitHub Copilot alternative depends on what you want to escape: the editor-plugin workflow, usage-based billing, model-route churn, GitHub policy coupling, signup/upgrade eligibility, or the limits of autocomplete.
+As of the June 22 current-source pass, the best GitHub Copilot alternative depends on what you want to escape: the editor-plugin workflow, usage-based billing, model-route churn, GitHub policy coupling, account-specific signup paths, or the limits of autocomplete.
 
 GitHub Copilot is still one of the safest defaults for teams already living in GitHub, VS Code, JetBrains, Visual Studio, pull requests, and enterprise policy. But GitHub's current docs make AI Credits and usage-based billing the active buyer issue. Heavy agentic coding, code review, premium models, Spaces, Spark, SDK use, one-million-token context, configurable reasoning, and cloud-agent work need cost modeling.
 
-The June 14 update adds a second switching reason: model-route risk. GitHub's live model docs list Claude Fable 5, but GitHub's June 12 editor note says Fable 5 access is suspended across Copilot experiences. That does not make Copilot a bad choice; it means procurement should test fallback routes before standardizing on a specific model.
+The June 22 update keeps model-route risk as the second switching reason. GitHub's supported-model docs still list Claude Fable 5, but GitHub's models-and-pricing docs mark it unavailable and GitHub's June 12 editor note says Fable 5 access is suspended across Copilot experiences. GitHub also says Opus 4.6 fast is scheduled for Copilot-wide deprecation on June 29, 2026. That does not make Copilot a bad choice; it means procurement should test fallback routes before standardizing on a specific model.
 
-The June 15 follow-up adds a third check for new buyers: GitHub's live plan docs still show temporary pauses for new Pro, Pro+, Max, Student, and some self-serve Business signups, while Max is upgrade-only for existing Copilot-plan users. If a team cannot immediately buy the plan it needs, Cursor, Claude Code, Codex, Devin Desktop, or Gemini Code Assist may become a practical fallback even before feature fit is considered.
+The June 17 follow-up adds a third check for new buyers: GitHub says Student, Pro, Pro+, and Max sign-ups are reopening gradually, but account-specific availability still matters. If a team cannot immediately buy the plan it needs, Cursor, Claude Code, Codex, Devin Desktop, or Gemini/Antigravity may become a practical fallback even before feature fit is considered.
 
 AiPedia may earn from some tool links. Rankings are editorial and based on buyer fit, not commission.
 
@@ -70,7 +70,7 @@ AiPedia may earn from some tool links. Rankings are editorial and based on buyer
 | Use OpenAI-native repo agents | [Codex](/tools/codex/) | Good fit for local repo edits, checks, code review, and PR-style agent workflows | Token-based credits need monitoring |
 | Use Cognition's IDE plus Devin path | [Windsurf / Devin Desktop](/tools/windsurf/) | Worth testing if Devin Desktop and cloud-agent handoff are part of the workflow | Old Windsurf-only plan claims are stale |
 | Code inside Google-native workflows | [Gemini Code Assist](/tools/gemini/) | Stronger when coding context lives in Google Cloud, Android, Workspace, or Antigravity | Less direct as a generic Copilot replacement |
-| Stay inside GitHub policy | [GitHub Copilot](/tools/github-copilot/) | Best default for GitHub-native teams that value governance, IDE coverage, cloud agents, and PR workflow | AI Credits, Actions-minute interactions, Fable 5 suspension, long-context/reasoning costs, runner/content controls, and signup/upgrade eligibility need modeling |
+| Stay inside GitHub policy | [GitHub Copilot](/tools/github-copilot/) | Best default for GitHub-native teams that value governance, IDE coverage, cloud agents, and PR workflow | AI Credits, Actions-minute interactions, Fable 5 suspension, Opus 4.6 fast deprecation, long-context/reasoning costs, runner/content controls, and account-specific signup paths need modeling |
 
 ## Why Buyers Are Comparing Alternatives Now
 
@@ -80,7 +80,7 @@ If your team mostly uses inline completions and lightweight chat, Copilot can st
 
 Also compare fallback behavior. Cursor, Claude Code, Codex, Gemini Code Assist, Devin Desktop, and Copilot all route models differently. Copilot's Fable 5 suspension is a useful reminder that "supported model" and "available in this account and surface today" are not always the same thing.
 
-For brand-new teams, compare purchase path too. A public monthly price is less useful if the desired Copilot tier is temporarily paused or upgrade-only for the account that needs it.
+For brand-new teams, compare purchase path too. A public monthly price is less useful if the desired Copilot tier is still unavailable for the account that needs it during the gradual reopening.
 
 ## Ranked Alternatives
 
@@ -154,7 +154,7 @@ Do not let any coding agent merge without tests and human review. The more auton
 Cursor is the best overall alternative for developers who want an AI-native IDE. Claude Code is better when the work is terminal-based repo investigation and multi-file agent tasks.
 
 **Is GitHub Copilot still worth it after AI Credits?**
-It can be, especially for GitHub-native teams and lightweight coding workflows. Heavy agentic usage should be modeled against AI Credits and compared with Cursor, Claude Code, Codex, Devin Desktop, and Gemini Code Assist. Also verify model availability and account eligibility because Fable 5 is currently suspended across Copilot despite still appearing in GitHub's model catalog, and some new paid signup paths remain temporarily constrained.
+It can be, especially for GitHub-native teams and lightweight coding workflows. Heavy agentic usage should be modeled against AI Credits and compared with Cursor, Claude Code, Codex, Devin Desktop, and Gemini/Antigravity. Also verify model availability and account eligibility because Fable 5 is currently suspended across Copilot despite still appearing in GitHub's supported-model docs, Opus 4.6 fast is scheduled for June 29 deprecation, and some paid signup paths may still be account-specific during reopening.
 
 **Which Copilot alternative is best for teams?**
 Cursor, GitHub Copilot, and Devin Desktop are the most direct team IDE choices. Claude Code and Codex are stronger for agent workflows and should be evaluated with usage controls, repo permissions, and review practices.
@@ -163,19 +163,24 @@ Cursor, GitHub Copilot, and Devin Desktop are the most direct team IDE choices. 
 There is no universal cheapest answer because agent tools bill different units. Aider may be cheapest if you bring your own API/local model and are comfortable with CLI workflows; Copilot can still be cheap for light IDE use; Cursor, Claude Code, Codex, and Devin Desktop need real-task cost checks.
 
 **How often is this guide updated?**
-Monthly, and sooner when Copilot billing, signup eligibility, model availability, Cursor pricing, Claude Code access, Codex credits, Devin Desktop packaging, or Gemini Code Assist access changes. Claude billing correction verified June 20, 2026; broader source set last verified June 15, 2026.
+Monthly, and sooner when Copilot billing, signup eligibility, model availability, Cursor pricing, Claude Code access, Codex credits, Devin Desktop packaging, or Gemini/Antigravity access changes. Copilot and Claude billing corrections verified June 22, 2026.
 
 ## Sources
 
-- [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans) (verified 2026-06-15)
-- [GitHub Copilot usage-based billing for individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-15)
-- [GitHub Copilot usage-based billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-15)
-- [GitHub Copilot plans and pricing](https://github.com/features/copilot/plans) (verified 2026-06-15)
-- [GitHub Copilot supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models) (verified 2026-06-15)
-- [GitHub Copilot Claude Fable 5 suspension note](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/) (verified 2026-06-15)
-- [GitHub Copilot larger context and reasoning](https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/) (verified 2026-06-15)
-- [GitHub Copilot Agent tasks REST API](https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/) (verified 2026-06-15)
-- [GitHub Copilot code review controls](https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/) (verified 2026-06-15)
+- [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans) (verified 2026-06-22)
+- [GitHub Copilot usage-based billing for individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-22)
+- [GitHub Copilot usage-based billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-22)
+- [GitHub Copilot plans and pricing](https://github.com/features/copilot/plans) (verified 2026-06-22)
+- [GitHub Copilot supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models) (verified 2026-06-22)
+- [GitHub Copilot models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing) (verified 2026-06-22)
+- [GitHub Copilot Claude Fable 5 suspension note](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/) (verified 2026-06-22)
+- [GitHub Copilot larger context and reasoning](https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/) (verified 2026-06-22)
+- [GitHub Copilot Agent tasks REST API](https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/) (verified 2026-06-22)
+- [GitHub Copilot code review controls](https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/) (verified 2026-06-22)
+- [GitHub Copilot individual plan sign-ups reopening](https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening/) (verified 2026-06-22)
+- [GitHub Copilot MAI-Code-1-Flash expansion](https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces/) (verified 2026-06-22)
+- [GitHub Copilot Opus 4.6 fast deprecation notice](https://github.blog/changelog/2026-06-18-upcoming-deprecation-of-opus-4-6-fast/) (verified 2026-06-22)
+- [GitHub Copilot AI credits usage metrics API](https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/) (verified 2026-06-22)
 - [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-15)
 - [Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan) (verified 2026-06-15)
 - [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-20)

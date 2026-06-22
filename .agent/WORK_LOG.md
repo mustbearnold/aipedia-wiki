@@ -30,6 +30,56 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-22: Qwen, Hailuo, HeyGen, And Adobe Firefly Batch Refresh
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed Qwen, Hailuo, HeyGen, and Adobe Firefly against current June 22 official sources; updated AI Chatbots, AI Video, and AI Image parent hubs; added the Hailuo payment policy source row; refreshed source registry dates; regenerated `PAGE_REFRESH_LEDGER.md`; added `scripts/tool-refresh-batch-check.mjs`; and added `npm run tool:refresh:batch:check` so future tool refreshes can pass a fast grouped gate before one expensive build/route-QA closeout.
+- Verification: `npm run tool:refresh:batch:check -- --file src\content\tools\qwen.md --file src\content\tools\hailuo.md --file src\content\tools\heygen.md --file src\content\tools\adobe-firefly.md --json`; `npm run ledger:pages`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/qwen/ --route /categories/ai-chatbots/ --route /tools/hailuo/ --route /categories/ai-video/ --route /tools/heygen/ --route /tools/adobe-firefly/ --route /categories/ai-image/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: The full build is still expensive because the static site has hundreds of routes plus guard, indexability, commercial CTA, sitemap, and budget checks. The new rule is to pay that cost once per batch unless a template, runtime, layout, generated asset, or high-risk commercial claim requires isolation.
+- Next: Push this batch, then run a fresh loop recommendation and choose between the Amazon Q vs GitHub Copilot decision cycle and the next batched freshness queue.
+
+### 2026-06-22: Grammarly Tool Freshness Refresh
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed `src/content/tools/grammarly.md`, the AI Writing category hub, Grammarly source registry rows, `PAGE_REFRESH_LEDGER.md`, and `.agent/loop-runs/2026-06-22-grammarly-tool-refresh.md`; confirmed Free prompt allowance, Pro prompt allowance and 149-seat cap, Pro pricing, Superhuman suite pricing, Enterprise controls, affiliate cookie status, privacy/trust claims, and Superhuman suite consolidation caveats.
+- Verification: `npm run audit:tool-quality -- --file src/content/tools/grammarly.md`; `npm run audit:provenance:changed -- --json`; `npm run loop:freshness -- --json`; `npm run ledger:pages:check`; `node scripts\guard-em-dashes.mjs`; `git diff --check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/grammarly/ --route /categories/ai-writing/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: This completed Grammarly only at the time. Qwen, Hailuo, HeyGen, and Adobe Firefly were completed in the following batch.
+- Next: See the newer batch entry above for the current queue.
+
+### 2026-06-22: Batched Tool Refresh Planner
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `scripts/tool-refresh-batch.mjs`, `npm run tool:refresh:batch`, and operating-loop documentation that makes batched oldest-first tool refreshes the default. The planner groups due tools by slug, lists due facts and source IDs, infers parent category routes, and prints one combined closeout gate.
+- Verification: `npm run tool:refresh:batch -- --limit 4 --json`; `npm run check:fast`; `npm run audit:commands`.
+- Residual risks: The planner accelerates queue handling and verification grouping, but it does not replace current-source verification or editorial judgment.
+- Next: Use `npm run tool:refresh:batch -- --limit 4` plus `npm run tool:refresh:batch:check` for the next queued batch instead of closing each tool with a full build.
+
+### 2026-06-22: GitHub Copilot Tool Freshness Refresh
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed `src/content/tools/github-copilot.md`, the AI Coding category hub, `github-copilot-vs-supermaven`, `github-copilot-alternatives`, `best-ai-tools-for-developers`, Copilot source registry rows, `PAGE_REFRESH_LEDGER.md`, and `.agent/loop-runs/2026-06-22-github-copilot-tool-refresh.md`; confirmed unchanged plan pricing, Free caps, AI Credits, individual sign-up reopening, Fable 5 unavailability, MAI-Code-1-Flash expansion, Opus 4.6 fast's June 29 deprecation, AGENTS.md code review support, Copilot app GA, and usage metrics.
+- Verification: `npm run audit:tool-quality -- --file src/content/tools/github-copilot.md`; `npm run audit:provenance:changed -- --json`; `npm run loop:freshness -- --json`; `npm run ledger:pages:check`; `node scripts\guard-em-dashes.mjs`; `git diff --check`; `npm run audit:coverage-quality:changed`; `npm run typecheck`; `npm run test:scripts`; `npm run build:fast`; `npm run qa:route -- --route /tools/github-copilot/ --route /categories/ai-coding/ --route /compare/github-copilot-vs-supermaven/ --route /guides/github-copilot-alternatives/ --route /guides/best-ai-tools-for-developers/ --route /tools/ --route /categories/ --route /compare/ --route /guides/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: This completes GitHub Copilot only. The remaining freshness queue starts with Grammarly, Qwen, Hailuo, and HeyGen unless the broad loop runner promotes a decision-content cycle first.
+- Next: Continue oldest-first freshness with Grammarly or run `amazon-q-vs-github-copilot` if the fresh loop recommendation ranks that higher.
+
+### 2026-06-22: Gemini Tool Freshness Refresh
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed `src/content/tools/gemini.md`, affected AI Chatbots, AI Search, AI Coding, and AI Infrastructure category hubs, Gemini source registry rows, `PAGE_REFRESH_LEDGER.md`, and `.agent/loop-runs/2026-06-22-gemini-tool-refresh.md`; clarified Gemini 3.5 Flash standard, batch/flex, and priority API pricing; separated Google AI plan guidance from API billing; updated Gemini Code Assist and Antigravity guidance for June 22.
+- Verification: `npm run audit:tool-quality -- --file src/content/tools/gemini.md`; `npm run audit:provenance:changed -- --json`; `npm run loop:freshness -- --json`; `npm run ledger:pages:check`; `node scripts\guard-em-dashes.mjs`; `git diff --check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/gemini/ --route /categories/ai-chatbots/ --route /categories/ai-search/ --route /categories/ai-coding/ --route /categories/ai-infrastructure/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run test:scripts`; `npm run audit:coverage-quality:changed`.
+- Residual risks: This completes Gemini only. The remaining freshness queue starts with GitHub Copilot, Grammarly, Qwen, Hailuo, and HeyGen unless the broad loop runner promotes a decision-content cycle first.
+- Next: Continue oldest-first freshness with GitHub Copilot or run `amazon-q-vs-github-copilot` if the fresh loop recommendation ranks that higher.
+
 ### 2026-06-22: Detail Page Width Parity Hotfix
 
 - Status: Complete in this batch.
