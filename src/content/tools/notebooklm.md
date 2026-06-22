@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free; paid Google AI, Workspace, and Cloud packaging varies by region"
 status: active
 launched: 2023-07
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,8 +31,8 @@ facts:
     source: "https://notebooklm.google.com"
     source_label: "Google NotebookLM official app"
     source_id: notebooklm-official
-    verified_at: 2026-06-15
-    next_review_at: 2026-06-22
+    verified_at: 2026-06-22
+    next_review_at: 2026-06-29
     volatility: high
     confidence: high
   grounding_surface:
@@ -40,7 +40,7 @@ facts:
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM upgrade help"
     source_id: notebooklm-help
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -48,8 +48,8 @@ facts:
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM upgrade help"
     source_id: notebooklm-pricing
-    verified_at: 2026-06-15
-    next_review_at: 2026-06-22
+    verified_at: 2026-06-22
+    next_review_at: 2026-06-29
     volatility: high
     confidence: high
   workflow_surface:
@@ -57,7 +57,7 @@ facts:
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM upgrade help"
     source_id: notebooklm-help
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: medium
     confidence: high
   watch_out_for:
@@ -65,7 +65,7 @@ facts:
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM upgrade help"
     source_id: notebooklm-help
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -73,13 +73,13 @@ facts:
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM upgrade help"
     source_id: notebooklm-help
-    verified_at: 2026-06-15
-    next_review_at: 2026-06-22
+    verified_at: 2026-06-22
+    next_review_at: 2026-06-29
     volatility: high
     confidence: high
 tags: [research, document-qa, summarization, podcast, audio-overview, google, rag, source-grounding, free]
 seo_title: "NotebookLM: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 15, 2026: Google NotebookLM is a source-grounded research notebook with free Standard access, paid Google AI/Workspace/Cloud limits, Audio/Video Overviews, Deep Research, reports, data tables, and review caveats."
+meta_description: "Updated June 22, 2026: Google NotebookLM is a source-grounded research notebook with free Standard access, paid Google AI/Workspace/Cloud limits, Audio/Video Overviews, Deep Research, reports, data tables, and review caveats."
 author: "aipedia.wiki Editorial"
 best_for:
   - source-grounded document Q&A
@@ -93,12 +93,21 @@ not_best_for:
 quick_answer: >-
   NotebookLM is the strongest free tool for source-grounded document Q&A and study artifacts. Pick it when citation precision matters more than open-ended chat. Upgrade only when source, chat, Audio/Video Overview, Deep Research, or artifact limits block real work, and vet any discovered sources before relying on them.
 price_history:
+  - date: 2026-06-22
+    plan: "NotebookLM Standard / Plus / Pro / Ultra / Enterprise"
+    price: "Standard free; paid Google AI, Workspace, and Cloud packaging varies by region"
+    source: "https://support.google.com/notebooklm/answer/16213268"
+    source_label: "NotebookLM upgrade help"
+    source_id: notebooklm-pricing
+    verified_at: 2026-06-22
+    note: "Rechecked the public help table and data handling notes: Standard remains free, paid routes raise source/chat/overview/artifact limits, consumer data is not used to train NotebookLM unless feedback is provided, and Workspace/Cloud routes add stronger no-human-review/no-training protections."
   - date: 2026-06-15
     plan: "NotebookLM Standard / Plus / Pro / Ultra / Enterprise"
     price: "Standard free; paid Google AI, Workspace, and Cloud packaging varies by region"
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM upgrade help"
     source_id: notebooklm-pricing
+    verified_at: 2026-06-22
     note: "Rechecked the public help table: Standard, Plus, Pro, Ultra 20 TB, and Ultra 30 TB list 50/100/300/500/600 sources per notebook, 3/6/20/100/200 Audio Overviews per day, matching Video Overview limits, Deep Research from 10/month to 200/day, data-table/infographic/slide-deck limit tiers, and Cloud/Workspace data-handling routes."
   - date: 2025-12-01
     plan: "Plus"
@@ -106,6 +115,7 @@ price_history:
     source: "https://notebooklm.google.com"
     source_label: "Source"
     source_id: notebooklm-pricing
+    verified_at: 2026-06-22
     note: "Bundled into Google One AI Premium (now renamed Google AI Pro)"
   - date: 2026-04-15
     plan: "Standard"
@@ -113,6 +123,7 @@ price_history:
     source: "https://notebooklm.google.com"
     source_label: "Source"
     source_id: notebooklm-pricing
+    verified_at: 2026-06-22
     note: "Free tier kept at 100 notebooks, 50 sources each, 3 Audio Overviews/day"
   - date: 2026-06-06
     plan: "Tier structure"
@@ -120,6 +131,7 @@ price_history:
     source: "https://support.google.com/notebooklm/answer/16213268"
     source_label: "NotebookLM Help"
     source_id: notebooklm-help
+    verified_at: 2026-06-22
     note: "Five-column help table live: source caps 50/100/300/500/600 and Audio Overviews 3/6/20/100/200 per day across Standard, Plus, Pro, Ultra 20 TB, and Ultra 30 TB. Google One AI Premium is now Google AI Pro."
 ---
 
@@ -127,9 +139,9 @@ price_history:
 
 Google's source-grounded research assistant, backed by Gemini model access. It ingests PDFs, Google Docs, web URLs, YouTube videos, audio, and other sources, then answers questions with inline citations to specific passages. The Studio panel generates Audio Overviews, Video Overviews, study guides, FAQs, timelines, briefing docs, quizzes, flashcards, mind maps, reports, data tables, infographics, and slide decks from the same sources.
 
-Standard tier (free) covers most individual use. As verified on 2026-06-15, Google's public help table separates **Standard**, **Plus**, **Pro**, **Ultra (20 TB)**, and **Ultra (30 TB)** access through Google AI Plans, Google Cloud, or qualifying Workspace plans. Source caps scale as 50/100/300/500/600 sources per notebook; chat caps scale from 50/day to 5K/day; Audio and Video Overview limits scale from 3/day to 200/day; and Deep Research scales from 10/month on Standard to 200/day on the top Ultra column.
+Standard tier (free) covers most individual use. As verified on 2026-06-22, Google's public help table separates **Standard**, **Plus**, **Pro**, **Ultra (20 TB)**, and **Ultra (30 TB)** access through Google AI Plans, Google Cloud, or qualifying Workspace plans. Source caps scale as 50/100/300/500/600 sources per notebook; chat caps scale from 50/day to 5K/day; Audio and Video Overview limits scale from 3/day to 200/day; and Deep Research scales from 10/month on Standard to 200/day on the top Ultra column.
 
-**June 15 research-workflow refresh:** NotebookLM is no longer just "upload docs and ask questions." The current help table now exposes Deep Research, data tables, infographics, slide decks, and enterprise data-handling paths. Secondary reporting on Google's June update also describes source discovery, Antigravity-backed cloud execution, and richer export formats for eligible Ultra and Workspace users. Buyer rule: use discovery to build a source pack faster, not to skip source review.
+**June 22 research-workflow refresh:** NotebookLM is no longer just "upload docs and ask questions." The current help table exposes Deep Research, data tables, infographics, slide decks, and enterprise data-handling paths. Google also keeps the privacy split explicit: consumer data is not used to train NotebookLM unless feedback is provided, while Workspace and Cloud routes add stronger no-human-review and no-model-training protections. Buyer rule: use discovery to build a source pack faster, not to skip source review.
 
 ## System Verdict
 
@@ -159,7 +171,7 @@ Standard tier (free) covers most individual use. As verified on 2026-06-15, Goog
 | **Grounding** | Best when grounded to reviewed sources; source discovery and Deep Research still need source-quality review |
 | **Data handling** | Consumer feedback can be reviewed; Workspace and Cloud routes add stronger no-human-review/no-model-training protections |
 
-Every data point was verified against vendor docs on 2026-06-15. See Sources.
+Every data point was verified against vendor docs on 2026-06-22. See Sources.
 
 ## What it actually is
 
@@ -198,7 +210,7 @@ The moat: citation precision plus Audio/Video Overviews in one free product. No 
 
 The current help table also lists daily chat, Video Overview, report, quiz, flashcard, mind-map, Deep Research, data-table, infographic, and slide-deck limits. Google notes that usage limits are subject to change, so institutional buyers should verify the live help page before rollout.
 
-*Verified 2026-06-15 via the [NotebookLM Help Center](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), and [NotebookLM](https://notebooklm.google.com).*
+*Verified 2026-06-22 via the [NotebookLM Help Center](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), and [NotebookLM](https://notebooklm.google.com).*
 
 ## Against the alternatives
 
@@ -224,7 +236,7 @@ The current help table also lists daily chat, Video Overview, report, quiz, flas
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-15 against the [NotebookLM Help Center plan comparison](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), [NotebookLM](https://notebooklm.google.com), and secondary reporting on Google's June NotebookLM update.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-22 against the [NotebookLM Help Center plan comparison](https://support.google.com/notebooklm/answer/16213268), [Google AI Plans](https://one.google.com/about/google-ai-plans), [NotebookLM](https://notebooklm.google.com), and secondary reporting on Google's June NotebookLM update.
 
 ## FAQ
 

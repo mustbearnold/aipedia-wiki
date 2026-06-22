@@ -28,17 +28,17 @@ guide_picks:
   pro_team:
     tool: qodo
     label: "Best code-quality governance layer"
-    reason: "Best pick when AI code review needs PR feedback, IDE review, Review v2 rules, privacy controls, dashboards, SSO, and enterprise deployment options; validate Teams seat linking and CLI support before rollout."
+    reason: "Best pick when AI code review needs PR feedback, IDE review, Review v2 rules, privacy controls, dashboards, SSO, and enterprise deployment options; model shared credits and validate CLI support before rollout."
     sources:
       - label: "Qodo Pricing"
         url: "https://www.qodo.ai/pricing/"
       - label: "Qodo Review v2 Docs"
-        url: "https://docs.qodo.ai/qodo-documentation/code-review"
-      - label: "Qodo Subscription Plans"
-        url: "https://docs.qodo.ai/subscription-plans"
+        url: "https://docs.qodo.ai/code-review"
+      - label: "Qodo Pricing and Usage"
+        url: "https://docs.qodo.ai/pricing-and-usage"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: weekly
 ---
 
@@ -69,7 +69,7 @@ Do not let an AI reviewer approve its own work. Use AI review to find bugs, miss
 ## Quick Decision
 
 - **First-pass PR review for most teams:** start with [CodeRabbit](/tools/coderabbit/) because it is the strongest dedicated PR-review workflow for summaries, comments, IDE/CLI review, Knowledge Base, linters, and SAST hooks. Watch per-developer private-repo cost and tune noisy comments.
-- **Enterprise code-quality governance:** start with [Qodo](/tools/qodo/) because it combines PR review, IDE review, Review v2 rules, context, privacy controls, dashboards, SSO, and deployment options. Model licensed-user, Git-account linking, PR limits, and policy scope before rollout, and verify CLI support directly if it matters.
+- **Enterprise code-quality governance:** start with [Qodo](/tools/qodo/) because it combines PR review, IDE review, Review v2 rules, context, privacy controls, dashboards, SSO, and deployment options. Model shared workspace credits, overage caps, enterprise controls, and policy scope before rollout, and verify CLI support directly if it matters.
 - **GitHub-native review inside existing workflow:** start with [GitHub Copilot](/tools/github-copilot/) if the team already pays for Copilot and reviews PRs in GitHub. Watch AI Credits plus Actions-minute consumption for review workflows.
 - **Cursor teams that want bug-focused PR review:** start with [Cursor Bugbot](/tools/cursor/) because it runs on GitHub PRs, uses Cursor workflows, and can route fixes back into Cursor or Background Agent. It fits best only if Cursor is already part of the team workflow.
 - **Senior-engineer agent review:** use [Claude Code](/tools/claude-code/) when the reviewer needs repo investigation, risk review, test suggestions, and bounded patch loops in the terminal. Keep strict scope and human approval before merge.
@@ -100,9 +100,9 @@ Avoid it if the real problem is missing tests, unclear ownership, poor architect
 
 [Qodo](/tools/qodo/) is the better pick when AI code review is part of a broader code-quality program rather than a lightweight PR helper.
 
-Qodo's current pricing page positions it as an AI code review, code quality, and SDLC governance platform. Its current docs describe Qodo Review v2 as a multi-agent PR review system with repository context, pull-request history, organizational standards, and a beta rule system. Use the pricing page and subscription-plan docs to verify current licensed-user, PR feedback, privacy, deployment, and enterprise terms before adopting it across active repositories.
+Qodo's current pricing page positions it as an AI code review, code quality, and SDLC governance platform. Its current docs describe Qodo Review v2 as a multi-agent PR review system with repository context, pull-request history, organizational standards, and a beta rule system. Use the pricing page and pricing-and-usage docs to verify current credit packs, overage policy, PR feedback, privacy, deployment, and enterprise terms before adopting it across active repositories.
 
-The June 15 Qodo check adds two important rollout caveats. First, Teams PR reviews require the developer to have an assigned paid seat and a linked Git account; without both, Qodo falls back to Free-tier behavior. Second, Qodo CLI needs direct validation: the pricing page lists CLI workflows on Enterprise, but current CLI docs also call Qodo CLI legacy and no longer maintained.
+The June 22 Qodo check changes the rollout caveat. The old permanent Developer free tier and old $38/user/month Teams plan are historical. Current Qodo packaging starts with a 14-day trial, then uses workspace-level shared credits priced at $0.012 per credit. Pro Team credit packs start at $30/month and support up to 30 users; Enterprise is the route for SSO/SAML, audit logs, BYOK, single-tenant SaaS, on-prem, air-gapped deployment, priority support, MSA, and DPA terms.
 
 Use Qodo if:
 
@@ -172,7 +172,7 @@ This is slower than an automated PR bot, but it is better for migrations, subtle
 ## What To Buy First
 
 - **Small team with too many PRs:** buy [CodeRabbit Pro](/tools/coderabbit/) first, then consider Pro+ only if CodeRabbit Plan, issue planning, unit-test generation, or merge-conflict help becomes valuable. Use credits only for deliberate burst capacity, not as a substitute for tuning noisy auto-reviews.
-- **Enterprise team worried about AI code quality:** buy [Qodo](/tools/qodo/) when governance, rules, privacy, dashboards, SSO, or deployment control matter. Do not buy it as a solo autocomplete replacement, and do not assume Teams reviews cover every PR until paid seats and Git identities are linked.
+- **Enterprise team worried about AI code quality:** buy [Qodo](/tools/qodo/) when governance, rules, privacy, dashboards, SSO, or deployment control matter. Do not buy it as a solo autocomplete replacement, and model shared credits, overage caps, and Enterprise controls before broad PR rollout.
 - **GitHub-first team already paying for Copilot:** use [GitHub Copilot](/tools/github-copilot/) first, then add budget controls for AI Credits and Actions minutes. Do not enable broad private-repo review until usage is modeled.
 - **Cursor-native product team:** test [Cursor Bugbot](/tools/cursor/) with custom rules and review conventions. Do not buy it if most developers do not use Cursor.
 - **Senior developer reviewing risky diffs:** use [Claude Code](/tools/claude-code/) or [Codex](/tools/codex/) for agent checkpoints with required tests and branch protection. Do not expect the agent to approve its own patch.
@@ -254,14 +254,13 @@ Use CodeRabbit or Qodo for ongoing PR review, and use Claude Code or Codex for s
 - [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-22)
 - [CodeRabbit usage-based add-on docs](https://docs.coderabbit.ai/management/usage-based-addon) (verified 2026-06-22)
 - [CodeRabbit changelog](https://docs.coderabbit.ai/changelog) (verified 2026-06-22)
-- [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-15)
-- [Qodo subscription plans](https://docs.qodo.ai/subscription-plans) (verified 2026-06-15)
-- [Qodo Review v2 docs](https://docs.qodo.ai/qodo-documentation/code-review) (verified 2026-06-15)
-- [Qodo CLI docs](https://docs.qodo.ai/qodo-command) (verified 2026-06-15)
-- [GitHub Copilot models and pricing](https://docs.github.com/copilot/reference/copilot-billing/models-and-pricing) (verified 2026-06-15)
-- [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-15)
-- [GitHub Copilot code review docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/use-copilot-agents/copilot-code-review) (verified 2026-06-15)
-- [GitHub Copilot code review billing changelog](https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/) (verified 2026-06-15)
-- [Cursor Bugbot docs](https://cursor.com/docs/bugbot) (verified 2026-06-15)
-- [Cursor Bugbot pricing update](https://cursor.com/blog/may-2026-bugbot-changes) (verified 2026-06-15)
-- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-15)
+- [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-22)
+- [Qodo pricing and usage docs](https://docs.qodo.ai/pricing-and-usage) (verified 2026-06-22)
+- [Qodo Review v2 docs](https://docs.qodo.ai/code-review) (verified 2026-06-22)
+- [GitHub Copilot models and pricing](https://docs.github.com/copilot/reference/copilot-billing/models-and-pricing) (verified 2026-06-22)
+- [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-22)
+- [GitHub Copilot code review docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/use-copilot-agents/copilot-code-review) (verified 2026-06-22)
+- [GitHub Copilot code review billing changelog](https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/) (verified 2026-06-22)
+- [Cursor Bugbot docs](https://cursor.com/docs/bugbot) (verified 2026-06-22)
+- [Cursor Bugbot pricing update](https://cursor.com/blog/may-2026-bugbot-changes) (verified 2026-06-22)
+- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-22)

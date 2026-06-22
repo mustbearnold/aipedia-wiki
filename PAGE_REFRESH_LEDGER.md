@@ -344,13 +344,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-06-15 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-15 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
+| 2026-06-15 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-15 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-06-15 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
 | 2026-06-15 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
-| 2026-06-15 | /tools/mastra/ | Tool | Yes | frontmatter | src/content/tools/mastra.md |
-| 2026-06-15 | /tools/notebooklm/ | Tool | Yes | frontmatter | src/content/tools/notebooklm.md |
 | 2026-06-15 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
-| 2026-06-15 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
 | 2026-06-15 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
 | 2026-06-15 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-06-16 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
@@ -385,7 +383,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /companies/xai/ | Company | Yes | frontmatter | src/content/companies/xai.md |
 | 2026-06-16 | /tools/hume/ | Tool | Yes | frontmatter | src/content/tools/hume.md |
 | 2026-06-16 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
-| 2026-06-16 | /tools/microsoft-agent-framework/ | Tool | Yes | frontmatter | src/content/tools/microsoft-agent-framework.md |
 | 2026-06-16 | /tools/napkin/ | Tool | Yes | frontmatter | src/content/tools/napkin.md |
 | 2026-06-16 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
 | 2026-06-16 | /tools/tana/ | Tool | Yes | frontmatter | src/content/tools/tana.md |
@@ -393,7 +390,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-16 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-16 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
 | 2026-06-18 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
-| 2026-06-18 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-18 | /companies/cohere/ | Company | Yes | frontmatter | src/content/companies/cohere.md |
 | 2026-06-18 | /dead/stability-ai-clipdrop/ | Dead tool archive | Yes | frontmatter | src/content/dead/stability-ai-clipdrop.md |
 | 2026-06-18 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-meeting-notes.md |
@@ -510,7 +506,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /tools/ideogram/ | Tool | Yes | frontmatter | src/content/tools/ideogram.md |
 | 2026-06-21 | /tools/kimi/ | Tool | Yes | frontmatter | src/content/tools/kimi.md |
 | 2026-06-21 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
-| 2026-06-21 | /tools/midjourney/ | Tool | Yes | frontmatter | src/content/tools/midjourney.md |
 | 2026-06-21 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
 | 2026-06-21 | /tools/mistral-ai/ | Tool | Yes | frontmatter | src/content/tools/mistral-ai.md |
 | 2026-06-21 | /tools/n8n/ | Tool | Yes | frontmatter | src/content/tools/n8n.md |
@@ -523,19 +518,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-06-22 | / | Static page | Yes | git | src/pages/index.astro |
 | 2026-06-22 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
-| 2026-06-22 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-22 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
 | 2026-06-22 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-22 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
 | 2026-06-22 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-06-22 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
+| 2026-06-22 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
 | 2026-06-22 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
-| 2026-06-22 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
-| 2026-06-22 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
-| 2026-06-22 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
+| 2026-06-22 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
+| 2026-06-22 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-22 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-06-22 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-22 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-22 | /compare/github-copilot-vs-supermaven/ | Comparison | Yes | frontmatter | src/content/comparisons/github-copilot-vs-supermaven.md |
 | 2026-06-22 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
-| 2026-06-22 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | working tree | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-22 | /guides/best-ai-for-code-review/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-code-review.md |
 | 2026-06-22 | /guides/best-ai-tools-for-developers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-developers.md |
 | 2026-06-22 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
@@ -548,14 +543,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-22 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
 | 2026-06-22 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
 | 2026-06-22 | /tools/cline/ | Tool | Yes | frontmatter | src/content/tools/cline.md |
-| 2026-06-22 | /tools/coderabbit/ | Tool | Yes | working tree | src/content/tools/coderabbit.md |
-| 2026-06-22 | /tools/cody/ | Tool | Yes | working tree | src/content/tools/cody.md |
-| 2026-06-22 | /tools/comet/ | Tool | Yes | working tree | src/content/tools/comet.md |
-| 2026-06-22 | /tools/d-id/ | Tool | Yes | working tree | src/content/tools/d-id.md |
+| 2026-06-22 | /tools/coderabbit/ | Tool | Yes | frontmatter | src/content/tools/coderabbit.md |
+| 2026-06-22 | /tools/cody/ | Tool | Yes | frontmatter | src/content/tools/cody.md |
+| 2026-06-22 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
+| 2026-06-22 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
 | 2026-06-22 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-06-22 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-22 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
 | 2026-06-22 | /tools/hailuo/ | Tool | Yes | frontmatter | src/content/tools/hailuo.md |
-| 2026-06-22 | /tools/hedra/ | Tool | Yes | working tree | src/content/tools/hedra.md |
+| 2026-06-22 | /tools/hedra/ | Tool | Yes | frontmatter | src/content/tools/hedra.md |
 | 2026-06-22 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
+| 2026-06-22 | /tools/mastra/ | Tool | Yes | working tree | src/content/tools/mastra.md |
+| 2026-06-22 | /tools/microsoft-agent-framework/ | Tool | Yes | working tree | src/content/tools/microsoft-agent-framework.md |
+| 2026-06-22 | /tools/midjourney/ | Tool | Yes | working tree | src/content/tools/midjourney.md |
+| 2026-06-22 | /tools/notebooklm/ | Tool | Yes | working tree | src/content/tools/notebooklm.md |
+| 2026-06-22 | /tools/qodo/ | Tool | Yes | working tree | src/content/tools/qodo.md |
 | 2026-06-22 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |

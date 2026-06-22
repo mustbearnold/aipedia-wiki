@@ -460,6 +460,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Residual risks: Full freshness is still incomplete across the whole tool inventory. Continue the active `/goal` with Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo.
 - Next: Push this batch, then start the next oldest-first five-tool batch.
 
+### 2026-06-22: Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo Batch
+
+- Status: Complete and verified.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo against current June 22 primary sources; updated AI Coding, AI Automation, AI Image, AI Notes, the code-review guide, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\mastra.md --file src\content\tools\microsoft-agent-framework.md --file src\content\tools\midjourney.md --file src\content\tools\notebooklm.md --file src\content\tools\qodo.md --json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/mastra/ --route /categories/ai-coding/ --route /tools/microsoft-agent-framework/ --route /categories/ai-automation/ --route /tools/midjourney/ --route /categories/ai-image/ --route /tools/notebooklm/ --route /categories/ai-notes/ --route /tools/qodo/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: Full freshness is still incomplete across the whole tool inventory.
+- Next: Rerun `npm run tool:refresh:batch -- --limit 5 --json` for the next oldest-first batch.
+
 ### 2026-06-21: Vercel CLI Install And Warning Classification
 
 - Status: Complete.

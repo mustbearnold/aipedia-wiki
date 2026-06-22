@@ -45,7 +45,7 @@ decision_picks:
 
 AI automation now splits into four buyer jobs: deterministic workflow automation, AI-assisted workflow building, delegated agent workforces, and vertical revenue/support automation. Do not buy by hype. Start with the workflow owner, the billing unit, and the failure risk.
 
-**June 16 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases still show dotnet-1.10.0 from June 10 and python-1.8.1 from June 9, with recent breaking or experimental notes, so production teams should pin package versions. Work IQ is now generally available as of June 16: Microsoft's licensing and Partner Center notices say Work IQ API usage draws down Copilot Credits, has no separate Work IQ API SKU/subscription/per-user license, and should be governed with admin billing, access policies, limits, and alerts before custom or third-party agents use Microsoft 365 data. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
+**June 22 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases now show python-1.9.0 from June 18 and dotnet-1.10.0 from June 10, with recent breaking guardrail, file-access, hosting, and approval-flow notes, so production teams should pin package versions. Work IQ is generally available: Microsoft's licensing and Partner Center notices say Work IQ API usage draws down Copilot Credits, has no separate Work IQ API SKU/subscription/per-user license, and should be governed with admin billing, access policies, limits, and alerts before custom or third-party agents use Microsoft 365 data. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
 
 **June 16 Google Cloud data-agent update:** Google's [data-agent rollout](/news/2026-06-16-google-cloud-data-agents/) moves automation deeper into governed analytics and database workflows. Data Engineering Agent and Managed MCP Servers for Databases are now generally available, while Data Science Agent, Data Agent Kit, Looker MCP, Gemini Enterprise Conversational Analytics, Data Insights Agent, Deep Research Agent, QueryData, and UCP Analytics are preview or select-customer routes. Treat this as an automation-control-plane update: verify IAM, `roles/mcp.toolUser`, separate production identities, SQL review, spend limits, job labels, data retention, and GA-versus-preview status before agents touch production data.
 
@@ -359,13 +359,13 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Voiceflow documentation](https://docs.voiceflow.com/documentation/Introduction) (verified 2026-06-10)
 - [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-09)
 - [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-09)
-- [Microsoft Agent Framework GitHub releases](https://github.com/microsoft/agent-framework/releases) (verified 2026-06-16)
-- [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) (verified 2026-06-16)
-- [Microsoft Agent Framework providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/) (verified 2026-06-16)
-- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-16)
-- [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-16)
-- [Microsoft Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability) (verified 2026-06-16)
-- [Microsoft Partner Center Work IQ API and consumptive pricing update](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june) (verified 2026-06-16)
+- [Microsoft Agent Framework GitHub releases](https://github.com/microsoft/agent-framework/releases) (verified 2026-06-22)
+- [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) (verified 2026-06-22)
+- [Microsoft Agent Framework providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/) (verified 2026-06-22)
+- [Microsoft Build 2026 Work IQ and Foundry agent stack](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/) (verified 2026-06-22)
+- [Microsoft Work IQ APIs](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/) (verified 2026-06-22)
+- [Microsoft Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability) (verified 2026-06-22)
+- [Microsoft Partner Center Work IQ API and consumptive pricing update](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june) (verified 2026-06-22)
 - [Google Cloud data agents announcement](https://cloud.google.com/blog/products/data-analytics/new-data-agents-across-the-agentic-data-cloud) (verified 2026-06-16)
 - [Google Cloud Data Engineering Agent docs](https://docs.cloud.google.com/bigquery/docs/data-engineering-agent-pipelines) (verified 2026-06-16)
 - [Google Cloud MCP servers docs](https://docs.cloud.google.com/mcp/manage-mcp-servers) (verified 2026-06-16)

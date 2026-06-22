@@ -16,7 +16,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`, pushed to `origin/master` at `a7f5c41d chore: refresh next June tool batch`; current local batch is verified but not yet pushed.
+- Branch: `master`. Latest completed batch is Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -48,14 +48,21 @@ Completed for June 21-22:
 - Comet.
 - D-ID.
 - Hedra.
+- Mastra.
+- Microsoft Agent Framework.
+- Midjourney.
+- NotebookLM.
+- Qodo.
 
-Next batched freshness queue from `npm run tool:refresh:batch -- --limit 5 --json`:
+Current local batch from `npm run tool:refresh:batch -- --limit 5 --json`:
 
 1. `mastra`: `/tools/mastra/`, parent `/categories/ai-coding/`.
 2. `microsoft-agent-framework`: `/tools/microsoft-agent-framework/`, parent `/categories/ai-automation/`.
 3. `midjourney`: `/tools/midjourney/`, parent `/categories/ai-image/`.
 4. `notebooklm`: `/tools/notebooklm/`, parent `/categories/ai-notes/`.
 5. `qodo`: `/tools/qodo/`, parent `/categories/ai-coding/`.
+
+This batch has content, parent hubs, source registry rows, `PAGE_REFRESH_LEDGER.md`, and the affected code-review guide updated and verified. Rerun `npm run tool:refresh:batch -- --limit 5 --json` to identify the next oldest-first batch.
 
 Use the batched tool refresh flow:
 
@@ -70,12 +77,15 @@ Do not return to one full build per tool unless a template, runtime, layout, gen
 
 ### Oldest-First Tool Freshness
 
-The CodeRabbit, Cody, Comet, D-ID, and Hedra batch is verified locally and ready to push. After push, continue the next five-tool batch above. Update affected parent hubs:
+The Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo batch is verified. It updates:
 
 - `src/content/categories/ai-coding.md`
 - `src/content/categories/ai-automation.md`
 - `src/content/categories/ai-image.md`
 - `src/content/categories/ai-notes.md`
+- `src/content/use-cases/best-ai-for-code-review.md`
+- `src/data/source-registry.json`
+- `PAGE_REFRESH_LEDGER.md`
 - `/tools/` and `/categories/` via ledger/build output
 
 ### Decision Content Flywheel
@@ -90,10 +100,10 @@ Shared width and card-surface work is complete. Future visual work should inspec
 
 Latest completed batched tool refresh passed:
 
-- `npm run tool:refresh:batch:check -- --file src\content\tools\coderabbit.md --file src\content\tools\cody.md --file src\content\tools\comet.md --file src\content\tools\d-id.md --file src\content\tools\hedra.md --json`
+- `npm run tool:refresh:batch:check -- --file src\content\tools\mastra.md --file src\content\tools\microsoft-agent-framework.md --file src\content\tools\midjourney.md --file src\content\tools\notebooklm.md --file src\content\tools\qodo.md --json`
 - `npm run typecheck`
 - `npm run build:fast`
-- `npm run qa:route -- --route /tools/coderabbit/ --route /categories/ai-coding/ --route /tools/cody/ --route /tools/comet/ --route /categories/ai-search/ --route /tools/d-id/ --route /categories/ai-video/ --route /tools/hedra/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
+- `npm run qa:route -- --route /tools/mastra/ --route /categories/ai-coding/ --route /tools/microsoft-agent-framework/ --route /categories/ai-automation/ --route /tools/midjourney/ --route /categories/ai-image/ --route /tools/notebooklm/ --route /categories/ai-notes/ --route /tools/qodo/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
 - `node scripts\guard-em-dashes.mjs`
 - `git diff --check`
 

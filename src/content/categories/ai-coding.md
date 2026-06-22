@@ -94,11 +94,11 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 14 Factory update:** [Factory](/tools/factory/) pricing remains unchanged in current docs: Pro is still $20/month, Plus is $100/month, Max is $200/month, and Teams/Enterprise remain custom. The buyer guidance stays conservative: Pro for serious individual evaluation, Plus only when Droid Computers or roughly 5x Pro usage are already useful, and Max only for heavy individual users who need roughly 10x Pro usage plus early access.
 
-**June 15 Mastra update:** [Mastra](/tools/mastra/) remains the TypeScript-first agent-framework lane, not a no-code app builder. The current pricing page keeps Starter at $0/month, Teams at $250/month, and Enterprise/self-hosted custom, but the June 15 check sharpens the real cost model around observability events, CPU time, data egress, persistent servers, Memory Gateway input/output at market rate plus 5.5%, memory tokens, retrieval storage, platform storage, and outside model-provider spend. Current docs also make Mastra a broader production-agent surface: the model router claims 4,243 models across 124 providers, while June posts added Code Mode, Agent Signals, and ACP delegation to Claude Agent, Codex CLI, Cursor, Gemini CLI, or compatible harnesses. Treat sandbox policy, workspace isolation, tool approvals, and provider-key handling as part of the buying decision.
+**June 22 Mastra update:** [Mastra](/tools/mastra/) remains the TypeScript-first agent-framework lane, not a no-code app builder. The current pricing page keeps Starter at $0/month, Teams at $250/month, and Enterprise/self-hosted custom, but the June 22 check sharpens the real cost model around observability events, CPU time, data egress, persistent servers, Memory Gateway input/output at market rate plus 5.5%, memory tokens, retrieval storage, platform storage, LibSQL/Postgres meters, database storage, and outside model-provider spend. Current docs also make Mastra a broader production-agent surface: the model router claims 4,539 models across 133 providers, while June posts added Code Mode, Agent Signals, ACP delegation, and harness architecture guidance. Treat sandbox policy, workspace isolation, tool approvals, and provider-key handling as part of the buying decision.
 
 **June 22 CodeRabbit update:** [CodeRabbit](/tools/coderabbit/) remains the dedicated PR-review lane for teams that want AI summaries, comments, IDE/CLI review, Knowledge Base, linters, SAST hooks, and human approval before merge. The June 22 check keeps Pro at $24/developer/month annual or $30 monthly, Pro+ at $48 annual or $60 monthly, Slack Agent at $0.50 per active agent minute, and adds sharper capacity guidance: Pro, Pro+, and Enterprise review limits are refillable per-developer allowances, while usage add-on credits are $1 each and cover four reviewed files for eligible over-limit PR/CLI reviews. June changelog updates also matter for coding-agent teams: CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and newer GitLab/GHES review support.
 
-**June 15 Qodo update:** [Qodo](/tools/qodo/) remains the enterprise code-review governance lane, not an autocomplete replacement. Current pricing still lists Developer free, Teams at $38/user/month monthly or $30 annual, and Enterprise custom, but current subscription docs add the operational catch: Teams PR reviews require an assigned paid seat plus a linked Git account, otherwise the developer falls back to Free-tier behavior. Also treat Qodo CLI as sales-verified only: pricing lists CLI workflows on Enterprise, while current CLI docs call the CLI legacy and no longer maintained.
+**June 22 Qodo update:** [Qodo](/tools/qodo/) remains the enterprise code-review governance lane, not an autocomplete replacement. Current pricing no longer shows the old permanent Developer free tier or $38/user/month Teams plan: every workspace starts with a 14-day trial, then Pro Team starts at $30/month with shared credits, overage caps, and support for up to 30 users. Enterprise is the route for SSO/SAML, audit logs, BYOK, advanced analytics, single-tenant SaaS, on-prem, air-gapped deployment, and negotiated contracts. Treat CLI workflows as sales-verified rather than the default reason to buy.
 
 **June 22 BLACKBOX AI update:** [BLACKBOX AI](/tools/blackbox-ai/) remains a low-cost multi-model coding bundle rather than a procurement-safe enterprise default. Current pricing still lists Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom, but the official pricing page conflicts on included model credits: pricing cards say $10/$20/$40 of latest-model value while comparison and mobile rows say $20/$40/$80. Keep Pro Plus as the practical App Builder, multi-agent, coding-agent tier; use Pro Max for team/admin controls; and do not treat the paused Cuelinks CPC listing as an active affiliate CTA.
 
@@ -187,7 +187,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Best debugging guide:** [Best AI for debugging](/guides/best-ai-for-debugging/) is the June 6 verified debugging money page for reproducible bug loops, Cursor IDE fixes, GitHub Copilot inside existing IDEs, Claude Code terminal investigation, Codex checkpoints, Aider BYOK control, and now-live Copilot AI Credits plus Actions-minutes review billing.
 
-**Best code review guide:** [Best AI for code review](/guides/best-ai-for-code-review/) is the June 15 verified review-buyer guide for CodeRabbit, Qodo, GitHub Copilot, Cursor Bugbot, Claude Code, and Codex, with CodeRabbit's refillable review allowances, Qodo Review v2 and Teams seat/linking caveats, Copilot's now-live AI Credits plus Actions-minutes review billing, and agent-review boundaries called out before teams enable broad private-repo review.
+**Best code review guide:** [Best AI for code review](/guides/best-ai-for-code-review/) is the June 22 verified review-buyer guide for CodeRabbit, Qodo, GitHub Copilot, Cursor Bugbot, Claude Code, and Codex, with CodeRabbit's refillable review allowances, Qodo's shared-credit Pro Team packaging, Copilot's now-live AI Credits plus Actions-minutes review billing, and agent-review boundaries called out before teams enable broad private-repo review.
 
 **Best unit-test guide:** [Best AI for unit tests](/guides/best-ai-for-unit-tests/) is the June 6 verified testing workflow guide for Cursor, GitHub Copilot, Claude, Claude Code, Codex, and Aider, with current Cursor usage billing, Copilot AI Credits, Claude Code cost controls, and assertion-quality guardrails separated from generic coverage chasing.
 
@@ -303,14 +303,14 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-14)
 - [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-12)
 - [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-12)
-- [Mastra pricing](https://mastra.ai/pricing) (verified 2026-06-15)
-- [Mastra model router docs](https://mastra.ai/models) (verified 2026-06-15)
-- [Mastra blog](https://mastra.ai/blog) (verified 2026-06-15)
+- [Mastra pricing](https://mastra.ai/pricing) (verified 2026-06-22)
+- [Mastra model router docs](https://mastra.ai/models) (verified 2026-06-22)
+- [Mastra blog](https://mastra.ai/blog) (verified 2026-06-22)
 - [OpenHands pricing](https://openhands.dev/pricing) (verified 2026-06-12)
 - [Pieces pricing](https://pieces.app/pricing) (verified 2026-06-12)
-- [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-15)
-- [Qodo subscription plans](https://docs.qodo.ai/subscription-plans) (verified 2026-06-15)
-- [Qodo Review v2 docs](https://docs.qodo.ai/qodo-documentation/code-review) (verified 2026-06-15)
+- [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-22)
+- [Qodo pricing and usage](https://docs.qodo.ai/pricing-and-usage) (verified 2026-06-22)
+- [Qodo code review docs](https://docs.qodo.ai/code-review) (verified 2026-06-22)
 - [BLACKBOX AI pricing](https://www.blackbox.ai/pricing) (verified 2026-06-22)
 - [BLACKBOX AI security](https://www.blackbox.ai/security) (verified 2026-06-22)
 - [Cuelinks BLACKBOX AI affiliate listing](https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program) (verified 2026-06-22)
