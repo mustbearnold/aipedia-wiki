@@ -30,6 +30,26 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-22: Top-Layer Visual Uplift Slice 1
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added a shared top-layer index polish layer for `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/`; imported it from `BaseLayout`; aligned cards, search controls, trackers, chips, borders, and text containment with the current homepage surface language; widened non-home top-layer index canvases from the inherited 680 px measure to 1040 px on desktop; matched the homepage narrow-mobile frame; converted `/guides/` and `/news/` mobile filters into contained grids; hardened those filters with route-owned mobile rules after live 346 px reports; corrected the page-scoped selectors to avoid the layout-owned `#main-content`; restored the shared active-chip Signal Orange state; fixed shared mobile breadcrumb geometry after `/explore/` showed the current crumb stretching away from `aipedia`; fixed the remaining homepage compact-evidence tint; shortened the visible `/categories/` maintenance paragraph; and expanded the focused Playwright homepage card regression to reject tinted compact evidence metrics.
+- Verification: live in-app browser DOM check for `/`, `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` at 319, 430, 768, and 1366 px; `npm run ledger:pages`; `npm run typecheck`; `node scripts\guard-em-dashes.mjs`; `git diff --check`; `npm run build:fast`; first route QA caught `/guides/` and `/news/` mobile filter overflow; after the filter fix, `npm run build:fast` and `npm run qa:route -- --route / --route /tools/ --route /categories/ --route /compare/ --route /guides/ --route /news/ --route /answers/ --route /trends/ --route /workflows/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client` passed; later live browser and route QA checked `/guides/` and `/news/` at 319, 346, 360, 390, 430, 768, 1024, and 1366 px; follow-up live browser checks confirmed `/explore/`, `/tools/`, `/news/`, `/guides/`, and `/compare/` breadcrumbs stay compact with no overflow at 319, 346, and 430 px; final follow-up `npm run qa:route -- --route /explore/ --route /tools/ --route /categories/ --route /compare/ --route /guides/ --route /news/ --route /answers/ --route /trends/ --route /workflows/ --widths 319,346,360,390,430,768,1024,1366 --site-dir dist-fast/client` passed; earlier slice regression `npx playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs -g "homepage decision cards"` passed.
+- Residual risks: This is a shared-surface and width-math slice, not a full route-by-route content rewrite. The next slice should manually inspect and tune `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` for copy density and page-specific hierarchy.
+- Next: Run top-layer visual uplift slice 2 before starting unrelated visual redesign work, or commit and push this verified June 22 batch first.
+
+### 2026-06-22: Homepage Decision Card Density And Spacing Hotfix
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Fixed the reported overcrowded and cramped homepage decision-path cards at 319 px by compressing the homepage-only evidence rail into one source row plus tiny freshness and confidence signals, then opening up the homepage rhythm around the hero, portals, route section, and decision cards. Kept the strict registered-source, current, high-confidence evidence guard in place. Added a focused Playwright visual smoke regression so the cards cannot quietly return to bulky trust-chip layouts or underspaced rows.
+- Verification: `npm run ledger:pages`; `node scripts\generate-page-refresh-ledger.mjs --check --json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npx playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs --grep "homepage decision cards keep evidence compact and spaced"`; `npm run smoke:visual`; `npm run smoke:api`; `npm run ledger:pages:check`; `node scripts\guard-em-dashes.mjs`; `node scripts\generate-og-svgs.mjs --check --limit 20 --json`; `git diff --check`.
+- Residual risks: The visible in-app browser tab was not exposed through browser automation, so static local output is served at `http://127.0.0.1:4321/` for manual reload. No blocking layout risk remains after route QA and visual smoke.
+- Next: Keep this hotfix with the verified June 22 batch when committing and pushing, then continue the freshness goal from Gemini or the Amazon Q vs GitHub Copilot recommendation.
+
 ### 2026-06-22: Claude And Claude Code Freshness Completion
 
 - Status: Complete in this batch.

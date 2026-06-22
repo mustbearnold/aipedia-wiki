@@ -359,5 +359,30 @@ const collectionItems = sorted.map((item) => ({
     @media (min-width: 600px) {
       .gt-news-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     }
+    @media (max-width: 460px) {
+      .gt-news-filters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        overflow: visible;
+        margin: 0 0 20px;
+        padding: 0;
+      }
+
+      .gt-news-filters .gt-chip {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 8px 10px;
+        font-size: clamp(11.5px, 3.45vw, 13px);
+        white-space: nowrap;
+      }
+
+      .gt-news-filters .gt-chip span {
+        margin-left: auto;
+      }
+    }
   </style>
 </BaseLayout>

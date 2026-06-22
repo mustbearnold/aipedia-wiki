@@ -16,7 +16,7 @@ For plain-English project state, read `.agent/CURRENT_STATUS.md` first. For comp
 - `.agents/` and `skills-lock.json` are gitignored local agent/plugin artifacts. `check-smart` default dirty-path discovery also ignores them, while still treating canonical `.agent/` docs as project changes.
 - The live comparison inventory is 46 policy-aligned pages. `scripts/guard-content.mjs` now protects it with a 41-page floor after accepted Guard Challenge review.
 - Current next selected cluster is `amazon-q-vs-github-copilot`.
-- Current freshness state: 0 due-now items after the Presentations.AI, MiniMax, Claude, and Claude Code passes. June 22 hotfixes filled the June 18 through June 22 `/news/` gap, replaced the visible blue/cyan brand regression with the selected lantern logo, hardened homepage decision-path evidence so featured cards must be registered, current, and high confidence, fixed the 319 px homepage portal overflow, restyled the homepage `Recently verified` panel away from the ugly orange-brown wash, and tightened homepage text density into one-line decision copy. The visual layout precision standard now requires disciplined grid math, card containment, balanced text-to-card ratios, and no broken wrapping across mobile, tablet, and desktop. The News and Market Change loop now requires missed-date checks for broad AI news and AI tools or tool-control news, plus `/news/`, homepage latest-news, assets, affected links, crawl surfaces, and mobile/tablet/desktop route QA. The next freshness queue starts with Gemini due-soon facts unless a fresh loop recommendation makes the Amazon Q vs GitHub Copilot decision cycle higher leverage.
+- Current freshness state: 0 due-now items after the Presentations.AI, MiniMax, Claude, and Claude Code passes. June 22 hotfixes filled the June 18 through June 22 `/news/` gap, replaced the visible blue/cyan brand regression with the selected lantern logo, hardened homepage decision-path evidence so featured cards must be registered, current, and high confidence, fixed the 319 px homepage portal overflow, restyled the homepage `Recently verified` panel away from the ugly orange-brown wash, tightened homepage text density into one-line decision copy, and compacted plus spaced the overcrowded homepage decision-card evidence rails for 319 px mobile. Top-layer visual work also fixed non-home horizontal squeeze, `/guides/` and `/news/` filter overflow, and shared mobile breadcrumb spread on `/explore/` and sibling top routes. The visual layout precision standard now requires disciplined grid math, card containment, balanced text-to-card ratios, and no broken wrapping across mobile, tablet, and desktop. The News and Market Change loop now requires missed-date checks for broad AI news and AI tools or tool-control news, plus `/news/`, homepage latest-news, assets, affected links, crawl surfaces, and mobile/tablet/desktop route QA. The next freshness queue starts with Gemini due-soon facts unless a fresh loop recommendation makes the Amazon Q vs GitHub Copilot decision cycle higher leverage.
 - Current build timing baseline from 2026-06-21: `npm run build:fast` has recently passed in roughly 2 to 3 minutes for normal content runs. The full loop verifier can take about 8 minutes when content, guards, script tests, build, and route QA are all touched.
 - Route QA uses 360, 390, 430, 768, 1024, and 1366 px for rendered route work.
 
@@ -42,6 +42,7 @@ Run the AiPedia loop system until every tracked website page, volatile fact, sou
 - 2026-06-22: Closed the reported 319 px homepage portal overflow by switching very narrow homepage portal grids to two columns and adding text containment to portal labels. Verification passed with ledger regeneration, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, ledger check, `git diff --check`, and live browser DOM geometry inspection.
 - 2026-06-22: Closed the reported homepage `Recently verified` panel style issue by replacing the orange-brown panel wash with neutral charcoal styling, a subtle cool highlight, and a thin amber accent. Verification passed with ledger regeneration, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, ledger check, `git diff --check`, and live browser DOM style and geometry inspection.
 - 2026-06-22: Closed the reported homepage text-density issue by removing visible portal blurbs, news summaries, top-tool taglines, and long catalog blurbs, then replacing featured decision summaries with one-line homepage copy. Verification passed with ledger regeneration, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, stale-copy `rg` sweep, ledger check, em-dash guard, `git diff --check`, and live app-browser DOM inspection.
+- 2026-06-22: Closed the reported overcrowded/cramped homepage decision-card issue by compacting the homepage-only evidence rail into one source row plus tiny freshness and confidence signals, increasing homepage spacing, and keeping the strict registered-source/current/high-confidence build guard. Verification passed with ledger regeneration, ledger check, `npm run typecheck`, `npm run build:fast`, homepage route QA at 319, 360, 390, 430, 768, 1024, and 1366 px, focused Playwright regression, `npm run smoke:visual`, `npm run smoke:api`, OG SVG check, em-dash guard, and `git diff --check`.
 - 2026-06-22: Added the visual layout precision standard to canonical operating docs and loop tooling. Future rendered UI work must check grid math, gutters, card containment, balanced text density, CTA placement, no orphan labels, no broken wrapping, and no horizontal overflow across mobile, tablet, and desktop.
 - 2026-06-22: Added the News loop rules standard to canonical operating docs and loop tooling. Future news catch-up work must check each missed date for broad AI news and AI tools or tool-control news when sourceable, keep `/news/`, homepage latest-news, OG assets, affected-tool links, crawl surfaces, and ledger rows aligned, and verify `/news/` across mobile, tablet, and desktop.
 - 2026-06-22: Rebuilt with `npm run build:fast` after the first recorded broad loop correctly flagged stale rendered output. The latest recorded broad loop is back to 7 ok / 0 attention / 0 skipped.
@@ -51,7 +52,7 @@ Run the AiPedia loop system until every tracked website page, volatile fact, sou
 
 - Commit and push this verified June 22 batch before starting Gemini or another queue item.
 - Treat the rest-of-date operating plan as: push this batch, rerun and record all loops if the worktree changes, then decide between Gemini freshness and the Amazon Q vs GitHub Copilot decision cycle from the fresh loop recommendations.
-- Keep the June 22 news/logo, homepage decision-evidence, homepage mobile portal, homepage verified-panel, homepage copy-density, and layout precision standard changes with their generated assets, ledger updates, tests, and `.agent` receipts when committing.
+- Keep the June 22 news/logo, homepage decision-evidence, homepage mobile portal, homepage verified-panel, homepage copy-density, homepage decision-card density, and layout precision standard changes with their generated assets, ledger updates, tests, and `.agent` receipts when committing.
 - Regenerate and inspect `PAGE_REFRESH_LEDGER.md`.
 - Run focused smart verification plus mobile and desktop route QA for affected rendered routes.
 - Record a final complete loop receipt only after verification passes.
@@ -136,6 +137,27 @@ Keep AiPedia maintenance repeatable without turning it into bureaucracy. The loo
 - Then run either the Gemini freshness queue or the `amazon-q-vs-github-copilot` Decision Content cycle, depending on the fresh recorded recommendations and current-source availability.
 - After each meaningful cycle, rerun the relevant loop plus `npm run loop:all -- --json` and record whether attention returns.
 - For broad loop-system reviews, use `npm run loop:all:record -- --json` so `.agent/loop-runs/system/latest.json` captures the run, recommendations, built-output freshness, and trend.
+
+## Active: Top-Layer Visual Uplift
+
+### Objective
+
+Bring non-homepage top-layer routes up to the current homepage standard: warm-neutral surfaces, clean one-line intent where possible, consistent grid math, contained card copy, no colored-tint drift, and no mobile crowding at 319, 360, 390, 430, 768, 1024, and 1366 px.
+
+### Reviewed Plan
+
+- Keep information architecture, canonical URLs, slugs, schema, and ranking logic unchanged unless a route-specific bug requires it.
+- Use the homepage as the visual reference: charcoal panels, Signal Orange accents, compact trust signals, generous but efficient spacing, and no cyan or blue decorative surfaces.
+- Apply the first reusable layer to top-level index surfaces only: `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/`.
+- Match homepage-like width discipline: non-home top-layer desktop canvases should not force three-card rows into the old 680 px reading measure, and narrow-mobile canvases should not lose usable width compared with the homepage.
+- Fix local copy problems separately when the visible text itself is causing density, starting with the long `/categories/` refresh paragraph.
+- Verify by build, route QA, browser geometry checks, and a focused visual regression for the homepage evidence tint.
+
+### Execution Slices
+
+- Slice 1: Complete 2026-06-22. Removed the remaining homepage compact-evidence tint, added a regression, added shared top-layer card/control polish, widened non-home top-layer index canvases to stop desktop card squeeze, matched the homepage narrow-mobile frame, changed `/guides/` and `/news/` mobile filters to contained grids, hardened those filters with route-owned rules after live 346 px reports, corrected the page-scoped selectors to avoid layout-owned parents, restored the shared active-chip state, shortened the categories refresh line, fixed shared mobile breadcrumb geometry after `/explore/` showed the current crumb stretching away from `aipedia`, and QAed `/`, `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/`.
+- Slice 2: inspect and tune `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` for page-specific hierarchy and copy density now that shared surface and width math are fixed.
+- Slice 3: extend the visual precision checks into loop docs/tests so future page work catches card tint, overflow, cramped density, and broken text ratios before shipping.
 
 ## Recommended Next: Amazon Q Vs GitHub Copilot Comparison Sprint
 

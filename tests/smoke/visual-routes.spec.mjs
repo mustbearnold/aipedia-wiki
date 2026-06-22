@@ -294,6 +294,56 @@ test('homepage primary destination labels are readable', async ({ page }) => {
   expect(clippedLabels).toEqual([]);
 });
 
+test('homepage decision cards keep evidence compact and spaced on narrow mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 319, height: 790 });
+  await page.goto('/');
+
+  const cards = page.locator('.gt-router-path');
+  await expect(cards).toHaveCount(5);
+
+  const gridRowGap = await page.locator('.gt-router-grid').evaluate((node) => (
+    Number.parseFloat(getComputedStyle(node).rowGap)
+  ));
+  expect(gridRowGap).toBeGreaterThanOrEqual(10);
+
+  const crowdedCards = await cards.evaluateAll((nodes) => nodes
+    .map((node) => {
+      const rect = node.getBoundingClientRect();
+      const evidence = node.querySelector('.evidence-rail--compact');
+      const metrics = node.querySelector('.evidence-rail__metrics');
+      const sourceMetric = node.querySelector('.evidence-rail__metric--state');
+      const source = node.querySelector('.evidence-rail__source');
+      const paintedMetric = node.querySelector('.evidence-rail__metric--freshness, .evidence-rail__metric--confidence');
+      const evidenceRect = evidence?.getBoundingClientRect();
+      const metricsRect = metrics?.getBoundingClientRect();
+      const sourceRect = source?.getBoundingClientRect();
+      const metricStyle = paintedMetric ? getComputedStyle(paintedMetric) : null;
+      const cardRight = rect.right + 1;
+
+      return {
+        title: node.querySelector('.gt-router-path-link strong')?.textContent?.trim(),
+        cardHeight: Math.round(rect.height),
+        evidenceHeight: evidenceRect ? Math.round(evidenceRect.height) : 0,
+        metricsHeight: metricsRect ? Math.round(metricsRect.height) : 0,
+        sourceMetricDisplay: sourceMetric ? getComputedStyle(sourceMetric).display : 'missing',
+        metricBackground: metricStyle?.backgroundColor || 'missing',
+        metricBorderWidth: metricStyle ? Number.parseFloat(metricStyle.borderLeftWidth) : -1,
+        sourceEscapesCard: sourceRect ? sourceRect.right > cardRight : true,
+      };
+    })
+    .filter((entry) => (
+      entry.cardHeight > 210
+      || entry.evidenceHeight > 42
+      || entry.metricsHeight > 18
+      || entry.sourceMetricDisplay !== 'none'
+      || !/rgba?\(0,\s*0,\s*0,\s*0\)|transparent|color\(srgb 0 0 0 \/ 0\)/i.test(entry.metricBackground)
+      || entry.metricBorderWidth !== 0
+      || entry.sourceEscapesCard
+    )));
+
+  expect(crowdedCards).toEqual([]);
+});
+
 test('homepage catalog root keeps warm accents out of decorative beams', async ({ page }) => {
   await page.goto('/');
 

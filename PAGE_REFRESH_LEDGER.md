@@ -463,19 +463,30 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-20 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-06-20 | /trends/ | Static page | Yes | git | src/pages/trends/index.astro |
 | 2026-06-20 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-21 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
+| 2026-06-21 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
+| 2026-06-21 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
+| 2026-06-21 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-06-21 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-21 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-21 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-21 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-21 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-06-21 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
 | 2026-06-21 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-21 | /compare/activepieces-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-n8n.md |
 | 2026-06-21 | /compare/activepieces-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-zapier.md |
+| 2026-06-21 | /compare/aider-vs-claude-code/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-claude-code.md |
 | 2026-06-21 | /compare/beautiful-ai-vs-decktopus/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-decktopus.md |
 | 2026-06-21 | /compare/beautiful-ai-vs-gamma/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-gamma.md |
 | 2026-06-21 | /compare/beautiful-ai-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-pitch.md |
 | 2026-06-21 | /compare/beautiful-ai-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-presentations-ai.md |
 | 2026-06-21 | /compare/capacities-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/capacities-vs-obsidian.md |
+| 2026-06-21 | /compare/chatgpt-vs-claude/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-claude.md |
 | 2026-06-21 | /compare/chatgpt-vs-gemini/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-gemini.md |
 | 2026-06-21 | /compare/chatgpt-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-grok.md |
+| 2026-06-21 | /compare/claude-vs-gemini/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-gemini.md |
+| 2026-06-21 | /compare/claude-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-grok.md |
 | 2026-06-21 | /compare/consensus-vs-elicit/ | Comparison | Yes | frontmatter | src/content/comparisons/consensus-vs-elicit.md |
 | 2026-06-21 | /compare/cursor-vs-windsurf/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-windsurf.md |
 | 2026-06-21 | /compare/decktopus-vs-gamma/ | Comparison | Yes | frontmatter | src/content/comparisons/decktopus-vs-gamma.md |
@@ -501,8 +512,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
 | 2026-06-21 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
 | 2026-06-21 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
-| 2026-06-21 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-06-21 | /guides/ai-solo-founder-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-solo-founder-stack.md |
 | 2026-06-21 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
+| 2026-06-21 | /guides/best-ai-coding-assistant/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-coding-assistant.md |
+| 2026-06-21 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
+| 2026-06-21 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-21 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-06-21 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-06-21 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
@@ -513,6 +527,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
 | 2026-06-21 | /tools/cartesia/ | Tool | Yes | frontmatter | src/content/tools/cartesia.md |
 | 2026-06-21 | /tools/castmagic/ | Tool | Yes | frontmatter | src/content/tools/castmagic.md |
+| 2026-06-21 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
+| 2026-06-21 | /tools/claude/ | Tool | Yes | frontmatter | src/content/tools/claude.md |
 | 2026-06-21 | /tools/cline/ | Tool | Yes | frontmatter | src/content/tools/cline.md |
 | 2026-06-21 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-06-21 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
@@ -536,26 +552,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
 | 2026-06-21 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-06-22 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-22 | /answers/best-ai-chatbot-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-chatbot-2026.astro |
-| 2026-06-22 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-coding-tool-2026.astro |
-| 2026-06-22 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | working tree | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-06-22 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-22 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
-| 2026-06-22 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
-| 2026-06-22 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-06-22 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
-| 2026-06-22 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
-| 2026-06-22 | /companies/anthropic/ | Company | Yes | working tree | src/content/companies/anthropic.md |
-| 2026-06-22 | /compare/aider-vs-claude-code/ | Comparison | Yes | working tree | src/content/comparisons/aider-vs-claude-code.md |
-| 2026-06-22 | /compare/chatgpt-vs-claude/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-claude.md |
-| 2026-06-22 | /compare/claude-vs-gemini/ | Comparison | Yes | working tree | src/content/comparisons/claude-vs-gemini.md |
-| 2026-06-22 | /compare/claude-vs-grok/ | Comparison | Yes | working tree | src/content/comparisons/claude-vs-grok.md |
-| 2026-06-22 | /guides/ai-solo-founder-stack/ | Guide | Yes | working tree | src/content/use-cases/ai-solo-founder-stack.md |
-| 2026-06-22 | /guides/best-ai-coding-assistant/ | Guide | Yes | working tree | src/content/use-cases/best-ai-coding-assistant.md |
-| 2026-06-22 | /guides/claude-alternatives/ | Guide | Yes | working tree | src/content/use-cases/claude-alternatives.md |
-| 2026-06-22 | /guides/cursor-alternatives/ | Guide | Yes | working tree | src/content/use-cases/cursor-alternatives.md |
-| 2026-06-22 | /media-kit/ | Static page | Yes | working tree | src/pages/media-kit.astro |
+| 2026-06-22 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-22 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
+| 2026-06-22 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-06-22 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-22 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-06-22 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-22 | /tools/claude-code/ | Tool | Yes | working tree | src/content/tools/claude-code.md |
-| 2026-06-22 | /tools/claude/ | Tool | Yes | working tree | src/content/tools/claude.md |
+| 2026-06-22 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |

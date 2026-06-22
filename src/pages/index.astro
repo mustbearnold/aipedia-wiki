@@ -1487,7 +1487,7 @@ function newsDateFmt(iso: string): string {
       max-width: 920px;
     }
     .gt-wiki-front {
-      margin: 0 0 20px;
+      margin: 0 0 24px;
       padding: 0;
     }
     .gt-wiki-front .gt-livedot,
@@ -1533,7 +1533,7 @@ function newsDateFmt(iso: string): string {
     .gt-wiki-front-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
-      gap: 14px;
+      gap: 16px;
       align-items: stretch;
     }
     .gt-wiki-main {
@@ -1550,7 +1550,7 @@ function newsDateFmt(iso: string): string {
     }
     .gt-wiki-tagline {
       max-width: 64ch;
-      margin: 10px 0 14px;
+      margin: 11px 0 16px;
       color: var(--gt-fg);
       font-size: 16px;
       font-weight: 500;
@@ -1609,8 +1609,8 @@ function newsDateFmt(iso: string): string {
     .gt-wiki-portals {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 8px;
-      margin-top: 14px;
+      gap: 10px;
+      margin-top: 16px;
     }
     .gt-wiki-portal {
       position: relative;
@@ -1656,11 +1656,11 @@ function newsDateFmt(iso: string): string {
       transform: translateY(-1px);
     }
     .gt-buyer-router {
-      margin: 0 0 28px;
+      margin: 0 0 34px;
     }
     .gt-router-head {
       max-width: 760px;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
     }
     .gt-router-kicker {
       display: inline-flex;
@@ -1684,7 +1684,7 @@ function newsDateFmt(iso: string): string {
     }
     .gt-router-head p:not(.gt-router-kicker) {
       max-width: 62ch;
-      margin: 8px 0 0;
+      margin: 9px 0 0;
       color: var(--gt-muted);
       font-size: 14px;
       line-height: 1.55;
@@ -1692,7 +1692,7 @@ function newsDateFmt(iso: string): string {
     .gt-router-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 8px;
+      gap: 12px;
     }
     .gt-router-path {
       position: relative;
@@ -1700,8 +1700,8 @@ function newsDateFmt(iso: string): string {
       min-height: 156px;
       display: grid;
       align-content: start;
-      gap: 8px;
-      padding: 14px 42px 14px 14px;
+      gap: 10px;
+      padding: 16px 44px 16px 16px;
       border: 1px solid var(--gt-line);
       border-left: 3px solid var(--gt-accent);
       border-radius: var(--gt-radius-sm);
@@ -1749,6 +1749,74 @@ function newsDateFmt(iso: string): string {
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    .gt-router-path :global(.evidence-rail--compact) {
+      display: grid;
+      width: 100%;
+      gap: 4px;
+      color: var(--gt-muted);
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__summary) {
+      display: flex;
+      min-width: 0;
+      max-width: 100%;
+      align-items: baseline;
+      gap: 7px;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__kicker) {
+      flex: 0 0 auto;
+      color: var(--gt-subtle);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__source) {
+      min-width: 0;
+      max-width: 100%;
+      color: var(--gt-fg);
+      font-size: 12px;
+      font-weight: 760;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__metrics) {
+      display: flex;
+      width: 100%;
+      min-width: 0;
+      flex-wrap: nowrap;
+      gap: 5px;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__metric) {
+      flex: 0 1 auto;
+      min-width: 0;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__metric--state) {
+      display: none;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__metric dt) {
+      display: none;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__metric dd) {
+      color: var(--gt-muted);
+      font-size: 10.5px;
+      font-weight: 760;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .gt-router-path :global(.evidence-rail--compact .evidence-rail__metric dd::before) {
+      content: '✓ ';
+      color: var(--gt-accent) !important;
+      font-weight: 800;
+    }
     .gt-router-action {
       width: fit-content;
       color: var(--gt-accent);
@@ -1794,14 +1862,14 @@ function newsDateFmt(iso: string): string {
         width: calc(100% + (var(--site-page-gutter) * 2));
         max-width: none;
         margin-inline: calc(var(--site-page-gutter) * -1);
-        padding: 12px 14px 108px;
+        padding: 16px 14px 112px;
       }
       .gt-wiki-front {
-        margin-bottom: 18px;
+        margin-bottom: 24px;
       }
       .gt-wiki-meta {
         gap: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         font-size: 10px;
       }
       .gt-wiki-main h1 {
@@ -1809,12 +1877,12 @@ function newsDateFmt(iso: string): string {
         line-height: 1;
       }
       .gt-wiki-tagline {
-        margin: 7px 0 9px;
+        margin: 8px 0 12px;
         font-size: 13.5px;
         line-height: 1.34;
       }
       .gt-wiki-front-grid {
-        gap: 9px;
+        gap: 12px;
       }
       .gt-wiki-side {
         display: block;
@@ -1846,18 +1914,18 @@ function newsDateFmt(iso: string): string {
       }
       .gt-wiki-portals {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 5px;
-        margin-top: 9px;
+        gap: 7px;
+        margin-top: 12px;
       }
       .gt-wiki-portal {
-        min-height: 54px;
+        min-height: 58px;
         align-content: start;
-        gap: 3px;
-        padding: 8px 20px 8px 8px;
+        gap: 4px;
+        padding: 10px 22px 10px 10px;
       }
       .gt-wiki-portal::after {
-        top: 9px;
-        right: 8px;
+        top: 10px;
+        right: 9px;
         font-size: 12px;
       }
       .gt-wiki-portal span {
@@ -1873,23 +1941,24 @@ function newsDateFmt(iso: string): string {
         max-width: 100%;
         overflow-wrap: anywhere;
       }
-      .gt-buyer-router { margin-bottom: 26px; }
-      .gt-router-head { margin-bottom: 10px; }
+      .gt-buyer-router { margin-bottom: 32px; }
+      .gt-router-head { margin-bottom: 14px; }
       .gt-router-head h2 { font-size: 22px; }
       .gt-router-head p:not(.gt-router-kicker) {
         font-size: 13px;
       }
       .gt-router-grid {
         grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
       }
       .gt-router-path {
         min-height: auto;
-        gap: 6px;
-        padding: 11px 36px 11px 11px;
+        gap: 8px;
+        padding: 13px 38px 13px 13px;
       }
       .gt-router-path::after {
-        top: 11px;
-        right: 11px;
+        top: 13px;
+        right: 13px;
       }
       .gt-router-path-link span {
         font-size: 9px;
@@ -1905,8 +1974,23 @@ function newsDateFmt(iso: string): string {
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
+      .gt-router-path :global(.evidence-rail--compact) {
+        gap: 4px;
+      }
+      .gt-router-path :global(.evidence-rail--compact .evidence-rail__summary) {
+        gap: 6px;
+      }
+      .gt-router-path :global(.evidence-rail--compact .evidence-rail__kicker) {
+        font-size: 9.5px;
+      }
+      .gt-router-path :global(.evidence-rail--compact .evidence-rail__source) {
+        font-size: 11.5px;
+      }
+      .gt-router-path :global(.evidence-rail--compact .evidence-rail__metric dd) {
+        font-size: 10px;
+      }
       .gt-section-head {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
       }
       .gt-section-subline {
         margin-top: 3px;
@@ -1919,8 +2003,8 @@ function newsDateFmt(iso: string): string {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .gt-wiki-portal {
-        min-height: 58px;
-        padding-right: 22px;
+        min-height: 62px;
+        padding-right: 24px;
       }
     }
 
