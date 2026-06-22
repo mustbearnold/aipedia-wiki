@@ -54,7 +54,7 @@ Completed for June 21-22:
 - NotebookLM.
 - Qodo.
 
-Current local batch from `npm run tool:refresh:batch -- --limit 5 --json`:
+Latest completed batch:
 
 1. `mastra`: `/tools/mastra/`, parent `/categories/ai-coding/`.
 2. `microsoft-agent-framework`: `/tools/microsoft-agent-framework/`, parent `/categories/ai-automation/`.
@@ -62,7 +62,15 @@ Current local batch from `npm run tool:refresh:batch -- --limit 5 --json`:
 4. `notebooklm`: `/tools/notebooklm/`, parent `/categories/ai-notes/`.
 5. `qodo`: `/tools/qodo/`, parent `/categories/ai-coding/`.
 
-This batch has content, parent hubs, source registry rows, `PAGE_REFRESH_LEDGER.md`, and the affected code-review guide updated and verified. Rerun `npm run tool:refresh:batch -- --limit 5 --json` to identify the next oldest-first batch.
+Next batched freshness queue from `npm run tool:refresh:batch -- --limit 5 --json` after that push:
+
+1. `capacities`: `/tools/capacities/`, parent `/categories/ai-notes/`.
+2. `beehiiv`: `/tools/beehiiv/`, parent `/categories/ai-writing/`.
+3. `browserbase`: `/tools/browserbase/`, parent `/categories/ai-automation/`.
+4. `castmagic`: `/tools/castmagic/`, parent `/categories/ai-writing/`.
+5. `cloudtalk`: `/tools/cloudtalk/`, parent `/categories/ai-automation/`.
+
+Use the next queue above unless a newer user request supersedes it.
 
 Use the batched tool refresh flow:
 
@@ -77,7 +85,7 @@ Do not return to one full build per tool unless a template, runtime, layout, gen
 
 ### Oldest-First Tool Freshness
 
-The Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo batch is verified. It updates:
+The Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo batch is verified and pushed. It updates:
 
 - `src/content/categories/ai-coding.md`
 - `src/content/categories/ai-automation.md`
@@ -87,6 +95,20 @@ The Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo batch is
 - `src/data/source-registry.json`
 - `PAGE_REFRESH_LEDGER.md`
 - `/tools/` and `/categories/` via ledger/build output
+
+Next active batch:
+
+- `src/content/tools/capacities.md`
+- `src/content/tools/beehiiv.md`
+- `src/content/tools/browserbase.md`
+- `src/content/tools/castmagic.md`
+- `src/content/tools/cloudtalk.md`
+
+Affected parent hubs for the next batch:
+
+- `src/content/categories/ai-notes.md`
+- `src/content/categories/ai-writing.md`
+- `src/content/categories/ai-automation.md`
 
 ### Decision Content Flywheel
 

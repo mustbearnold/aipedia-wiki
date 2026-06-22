@@ -11,7 +11,8 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses batched tool refreshes, not one full build per tool.
 - The just-pushed batch is `coderabbit`, `cody`, `comet`, `d-id`, and `hedra`.
-- The active local freshness batch is `mastra`, `microsoft-agent-framework`, `midjourney`, `notebooklm`, and `qodo`.
+- The latest completed freshness batch is `mastra`, `microsoft-agent-framework`, `midjourney`, `notebooklm`, and `qodo`.
+- The next freshness batch is `capacities`, `beehiiv`, `browserbase`, `castmagic`, and `cloudtalk`.
 - The next Decision Content candidate remains `amazon-q-vs-github-copilot`, but freshness batch work is currently in progress.
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports.
@@ -35,9 +36,9 @@ Keep every volatile tool fact, source-backed claim, commercial surface, affected
 - Batched refresh planner and fast batch check command.
 - CodeRabbit, Cody, Comet, D-ID, and Hedra.
 
-### Active Batch
+### Latest Completed Batch
 
-Current batch from `npm run tool:refresh:batch -- --limit 5 --json`:
+Completed batch:
 
 - `src/content/tools/mastra.md`
 - `src/content/tools/microsoft-agent-framework.md`
@@ -63,6 +64,30 @@ Required closeout:
 - `git diff --check` passed inside batch gate.
 
 Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and running them in parallel can race on `node_modules/.astro/data-store.json`.
+
+### Next Batch
+
+Next batch from `npm run tool:refresh:batch -- --limit 5 --json`:
+
+- `src/content/tools/capacities.md`
+- `src/content/tools/beehiiv.md`
+- `src/content/tools/browserbase.md`
+- `src/content/tools/castmagic.md`
+- `src/content/tools/cloudtalk.md`
+
+Affected parent hubs:
+
+- `src/content/categories/ai-notes.md`
+- `src/content/categories/ai-writing.md`
+- `src/content/categories/ai-automation.md`
+
+Required closeout:
+
+- `npm run ledger:pages`
+- `npm run tool:refresh:batch:check -- --file src\content\tools\capacities.md --file src\content\tools\beehiiv.md --file src\content\tools\browserbase.md --file src\content\tools\castmagic.md --file src\content\tools\cloudtalk.md --json`
+- `npm run typecheck`
+- `npm run build:fast`
+- `npm run qa:route -- --route /tools/capacities/ --route /categories/ai-notes/ --route /tools/beehiiv/ --route /categories/ai-writing/ --route /tools/browserbase/ --route /categories/ai-automation/ --route /tools/castmagic/ --route /tools/cloudtalk/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
 
 ## Active: Decision Content Flywheel
 
