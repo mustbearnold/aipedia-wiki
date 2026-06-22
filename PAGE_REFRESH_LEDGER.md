@@ -551,11 +551,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-21 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
 | 2026-06-21 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
-| 2026-06-22 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-22 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-06-22 | / | Static page | Yes | git | src/pages/index.astro |
+| 2026-06-22 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-22 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-22 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
-| 2026-06-22 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
+| 2026-06-22 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-22 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
-| 2026-06-22 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-06-22 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-22 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |

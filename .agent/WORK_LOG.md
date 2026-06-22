@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-22: Detail Page Width Parity Hotfix
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added a shared `gt-canvas-wide` utility in `src/styles/godtier-tokens.css`, added a global narrow-mobile `gt-canvas` rule for non-home detail pages, opted category, company, comparison, guide, and workflow layouts into the 1040 px structured desktop shell, kept pure prose article layouts on the 680 px desktop reading measure, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-22-detail-page-width-parity-hotfix.md`.
+- Verification: live geometry baseline showed the old 346 px detail route squeeze on `/tools/chatgpt/`, `/compare/chatgpt-vs-claude/`, and `/answers/chatgpt-vs-claude-which-is-better/`; post-fix live geometry confirmed representative tool, comparison, answer, guide, workflow, trend, category, company, and news detail routes share the wider narrow-mobile rail with no positive horizontal overflow; `npm run ledger:pages`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/chatgpt/ --route /compare/chatgpt-vs-claude/ --route /answers/chatgpt-vs-claude-which-is-better/ --route /guides/best-ai-coding-assistant/ --route /workflows/agentic-coding-workflow/ --route /trends/ai-coding-model-arms-race/ --route /categories/ai-chatbots/ --route /companies/anthropic/ --route /news/2026-06-22-ai-news-desk/ --widths 319,346,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: Pure prose answer, trend, and news article pages intentionally stay on the 680 px desktop reading measure, so do not widen those on desktop unless the content model changes. This pass fixes shell width, not every page-specific hierarchy or copy-density issue.
+- Next: Continue either Gemini freshness or `amazon-q-vs-github-copilot` based on the next loop recommendation.
+
 ### 2026-06-22: Top-Layer Visual Uplift Slice 1
 
 - Status: Complete in this batch.
@@ -38,7 +48,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Added a shared top-layer index polish layer for `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/`; imported it from `BaseLayout`; aligned cards, search controls, trackers, chips, borders, and text containment with the current homepage surface language; widened non-home top-layer index canvases from the inherited 680 px measure to 1040 px on desktop; matched the homepage narrow-mobile frame; converted `/guides/` and `/news/` mobile filters into contained grids; hardened those filters with route-owned mobile rules after live 346 px reports; corrected the page-scoped selectors to avoid the layout-owned `#main-content`; restored the shared active-chip Signal Orange state; fixed shared mobile breadcrumb geometry after `/explore/` showed the current crumb stretching away from `aipedia`; fixed the remaining homepage compact-evidence tint; shortened the visible `/categories/` maintenance paragraph; and expanded the focused Playwright homepage card regression to reject tinted compact evidence metrics.
 - Verification: live in-app browser DOM check for `/`, `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` at 319, 430, 768, and 1366 px; `npm run ledger:pages`; `npm run typecheck`; `node scripts\guard-em-dashes.mjs`; `git diff --check`; `npm run build:fast`; first route QA caught `/guides/` and `/news/` mobile filter overflow; after the filter fix, `npm run build:fast` and `npm run qa:route -- --route / --route /tools/ --route /categories/ --route /compare/ --route /guides/ --route /news/ --route /answers/ --route /trends/ --route /workflows/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client` passed; later live browser and route QA checked `/guides/` and `/news/` at 319, 346, 360, 390, 430, 768, 1024, and 1366 px; follow-up live browser checks confirmed `/explore/`, `/tools/`, `/news/`, `/guides/`, and `/compare/` breadcrumbs stay compact with no overflow at 319, 346, and 430 px; final follow-up `npm run qa:route -- --route /explore/ --route /tools/ --route /categories/ --route /compare/ --route /guides/ --route /news/ --route /answers/ --route /trends/ --route /workflows/ --widths 319,346,360,390,430,768,1024,1366 --site-dir dist-fast/client` passed; earlier slice regression `npx playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs -g "homepage decision cards"` passed.
 - Residual risks: This is a shared-surface and width-math slice, not a full route-by-route content rewrite. The next slice should manually inspect and tune `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` for copy density and page-specific hierarchy.
-- Next: Run top-layer visual uplift slice 2 before starting unrelated visual redesign work, or commit and push this verified June 22 batch first.
+- Next: Run top-layer visual uplift slice 2 before starting unrelated visual redesign work.
 
 ### 2026-06-22: Homepage Decision Card Density And Spacing Hotfix
 
@@ -48,7 +58,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Fixed the reported overcrowded and cramped homepage decision-path cards at 319 px by compressing the homepage-only evidence rail into one source row plus tiny freshness and confidence signals, then opening up the homepage rhythm around the hero, portals, route section, and decision cards. Kept the strict registered-source, current, high-confidence evidence guard in place. Added a focused Playwright visual smoke regression so the cards cannot quietly return to bulky trust-chip layouts or underspaced rows.
 - Verification: `npm run ledger:pages`; `node scripts\generate-page-refresh-ledger.mjs --check --json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npx playwright test tests/smoke/visual-routes.spec.mjs --config=playwright.config.mjs --grep "homepage decision cards keep evidence compact and spaced"`; `npm run smoke:visual`; `npm run smoke:api`; `npm run ledger:pages:check`; `node scripts\guard-em-dashes.mjs`; `node scripts\generate-og-svgs.mjs --check --limit 20 --json`; `git diff --check`.
 - Residual risks: The visible in-app browser tab was not exposed through browser automation, so static local output is served at `http://127.0.0.1:4321/` for manual reload. No blocking layout risk remains after route QA and visual smoke.
-- Next: Keep this hotfix with the verified June 22 batch when committing and pushing, then continue the freshness goal from Gemini or the Amazon Q vs GitHub Copilot recommendation.
+- Next: Continue the freshness goal from Gemini or the Amazon Q vs GitHub Copilot recommendation.
 
 ### 2026-06-22: Claude And Claude Code Freshness Completion
 
@@ -58,7 +68,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Completed the paused Claude and Claude Code freshness batch; refreshed Claude/Claude Code, Anthropic, affected category hubs, comparisons, guides, answer pages, source registry, top-layer surfaces, and ledger rows around Fable/Mythos suspension, Opus 4.8, paused Agent SDK credit changes, Claude Code usage/cost guidance, data retention, and web search. Fixed the selected lantern logo palette so brand and favicon rasters stay inside Signal Orange.
 - Verification: stale bad-phrase scan; `npm run audit:provenance:changed -- --json`; `npm run ledger:pages:check`; `npm run loop:freshness -- --json`; affected route QA across Claude, Claude Code, category, comparison, guide, answer, `/tools/`, and `/categories/` routes at 360, 390, 430, 768, 1024, and 1366 px; `node scripts\prep-favicons.mjs --check --json`; `npm run smoke:visual`; `npm run check:smart:run`.
 - Residual risks: None blocking. The site still has due-soon freshness work, with Gemini currently first in the queue.
-- Next: Commit and push this verified June 22 batch, then rerun the loop suite and choose between Gemini freshness and `amazon-q-vs-github-copilot`.
+- Next: Rerun the loop suite after any new dirty worktree change, then choose between Gemini freshness and `amazon-q-vs-github-copilot`.
 
 ### 2026-06-22: News Loop Rules Standard
 

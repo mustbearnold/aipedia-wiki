@@ -26,9 +26,11 @@ The visual layout policy is also strict: every rendered page must keep disciplin
 
 The latest completed maintenance batch fixed the Quality Pruning loop: invalid no-shared-workflow comparison pages were deleted, public links were removed, the comparison-quality audit now enforces workflow lanes, and content inventory guard fixtures were re-anchored through Guard Challenge records. The live comparison inventory is now 46 policy-aligned comparison pages, with a content guard floor of 41.
 
-The June 21 to June 22 site freshness goal is active. The first freshness pass cleared the June 21 due-now queue by refreshing Presentations.AI and MiniMax, including affected parent category hubs, source registry rows, and the page refresh ledger. A June 22 hotfix closed the reported homepage blue-logo regression and filled the June 18, 19, 20, 21, and 22 news gap on `/news/`. Follow-up homepage hotfixes closed the reported decision-evidence fallback labels, the 319 px portal overflow, the ugly orange-brown verified-guide panel styling, the homepage text-density issue, and the overcrowded/cramped decision-card evidence rails. The homepage now keeps direct one-line guidance plus compact trust signals, with more breathing room around the hero, portals, route section, and decision cards. The News and Market Change loop now explicitly requires missed-date coverage checks for both broad AI news and AI tools or tool-control news, plus `/news/`, homepage latest-news, OG assets, affected-tool links, crawl surfaces, and mobile/tablet/desktop layout QA. The Claude and Claude Code freshness batch that was paused on June 21 is now complete after ledger, build, smart verification, route QA, provenance, freshness, and visual smoke checks. This verified June 22 batch is ready to commit and push.
+The June 21 to June 22 site freshness goal is active. The first freshness pass cleared the June 21 due-now queue by refreshing Presentations.AI and MiniMax, including affected parent category hubs, source registry rows, and the page refresh ledger. A June 22 hotfix closed the reported homepage blue-logo regression and filled the June 18, 19, 20, 21, and 22 news gap on `/news/`. Follow-up homepage hotfixes closed the reported decision-evidence fallback labels, the 319 px portal overflow, the ugly orange-brown verified-guide panel styling, the homepage text-density issue, and the overcrowded/cramped decision-card evidence rails. The homepage now keeps direct one-line guidance plus compact trust signals, with more breathing room around the hero, portals, route section, and decision cards. The News and Market Change loop now explicitly requires missed-date coverage checks for both broad AI news and AI tools or tool-control news, plus `/news/`, homepage latest-news, OG assets, affected-tool links, crawl surfaces, and mobile/tablet/desktop layout QA. The Claude and Claude Code freshness batch that was paused on June 21 is complete after ledger, build, smart verification, route QA, provenance, freshness, and visual smoke checks. The previous top-layer visual batch is pushed on `master` at `3a2a5ca5`.
 
-The first top-layer visual uplift slice is complete locally. The homepage compact evidence tint is fixed, and `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` now share a warmer, homepage-aligned index-card and control surface layer. The non-home top-layer pages no longer inherit the old 680 px desktop canvas that made three-card rows feel squeezed; those index canvases now use a 1040 px desktop measure while matching the homepage narrow-mobile frame at 319 and 430 px. `/guides/` and `/news/` filter chips now have both shared and route-owned mobile grid rules, so the old horizontal strip cannot return through Astro CSS ordering. The route-owned rules are rooted on page-owned filter elements, not `#main-content`, because page-scoped Astro CSS cannot reliably match layout-owned parents. The active chip state is Signal Orange again. `/categories/` no longer exposes the long maintenance paragraph as visible copy. A follow-up shared `Hero` fix stopped mobile breadcrumbs from spreading across the row, so `aipedia / Explore` and the same crumb pattern on other top routes stay compact at 319, 346, and 430 px. Route QA passed for the affected top-layer routes at 319, 346, 360, 390, 430, 768, 1024, and 1366 px where relevant.
+The first top-layer visual uplift slice is complete and pushed. The homepage compact evidence tint is fixed, and `/tools/`, `/categories/`, `/compare/`, `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` now share a warmer, homepage-aligned index-card and control surface layer. The non-home top-layer pages no longer inherit the old 680 px desktop canvas that made three-card rows feel squeezed; those index canvases now use a 1040 px desktop measure while matching the homepage narrow-mobile frame at 319 and 430 px. `/guides/` and `/news/` filter chips now have both shared and route-owned mobile grid rules, so the old horizontal strip cannot return through Astro CSS ordering. The route-owned rules are rooted on page-owned filter elements, not `#main-content`, because page-scoped Astro CSS cannot reliably match layout-owned parents. The active chip state is Signal Orange again. `/categories/` no longer exposes the long maintenance paragraph as visible copy. A follow-up shared `Hero` fix stopped mobile breadcrumbs from spreading across the row, so `aipedia / Explore` and the same crumb pattern on other top routes stay compact at 319, 346, and 430 px. Route QA passed for the affected top-layer routes at 319, 346, 360, 390, 430, 768, 1024, and 1366 px where relevant.
+
+The latest follow-up is a detail page width parity hotfix. Tool, comparison, guide, workflow, category, company, answer, trend, and news detail pages now inherit the same narrow-mobile canvas width discipline as the homepage and top-layer routes, so they no longer feel horizontally squashed at 319 to 430 px. Structured detail layouts now opt into the shared 1040 px `gt-canvas-wide` desktop shell. Pure prose article layouts intentionally keep the 680 px desktop reading measure while still receiving the wider narrow-mobile rail.
 
 The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
 
@@ -47,6 +49,12 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
   - Shortened the `/categories/` refresh paragraph into a compact sourced-route status line.
   - Expanded the focused Playwright homepage decision-card regression so it catches colored evidence-chip backgrounds.
   - Recorded `.agent/loop-runs/2026-06-22-top-layer-visual-uplift-slice-1.md`.
+- Detail page width parity hotfix:
+  - Added a global `gt-canvas-wide` utility in `src/styles/godtier-tokens.css` for structured detail layouts that need the same 1040 px desktop shell as top-layer routes.
+  - Added a shared narrow-mobile `gt-canvas` rule so detail routes use the homepage-like rail at 319 to 430 px instead of the old squeezed reading frame.
+  - Opted category, company, comparison, guide, and workflow layouts into `gt-canvas-wide`; tool pages already used that class.
+  - Kept pure prose answer, trend, and news article layouts on the 680 px desktop reading measure while widening their narrow-mobile canvas.
+  - Recorded `.agent/loop-runs/2026-06-22-detail-page-width-parity-hotfix.md`.
 - Homepage decision-card density and spacing hotfix:
   - Compressed the homepage-only compact evidence rail so decision-path cards show one source row plus tiny freshness and confidence signals instead of bulky trust chips.
   - Opened up homepage rhythm by increasing mobile canvas padding, hero-to-portal spacing, portal tile spacing, decision-section spacing, card gaps, and decision-card padding.
@@ -152,11 +160,13 @@ The next selected Decision Content candidate is `amazon-q-vs-github-copilot`.
   - Current attention signals: none.
   - Latest recorded broad review: 7 ok / 0 attention / 0 skipped after `npm run build:fast`.
   - Current runner recommendations: begin `amazon-q-vs-github-copilot`, then refresh Gemini due-soon facts.
-  - Rest-of-date priority order: commit and push this verified June 22 batch, rerun and record the loop suite if the worktree changes, then choose between Gemini freshness and the Amazon Q vs GitHub Copilot decision cycle based on the refreshed queue.
-  - Current freshness queue has 0 due-now items and 465 due-soon facts. Claude and Claude Code are complete locally. Next freshness target is Gemini unless the fresh loop recommendation says a decision-content cycle has higher leverage.
+  - Rest-of-date priority order: rerun and record the loop suite after any new worktree change, then choose between Gemini freshness and the Amazon Q vs GitHub Copilot decision cycle based on the refreshed queue.
+  - Current freshness queue has 0 due-now items and 465 due-soon facts. Claude and Claude Code are complete and pushed. Next freshness target is Gemini unless the fresh loop recommendation says a decision-content cycle has higher leverage.
 - Top-Layer Visual Uplift:
-  - Slice 1 is complete locally.
+  - Slice 1 is complete and pushed.
   - The reported horizontal squeeze on non-home top-layer pages is fixed in the shared polish layer.
+  - The follow-up detail page width parity hotfix is the latest master change.
+  - Tool, comparison, guide, workflow, category, company, answer, trend, and news detail routes now share the homepage-like narrow-mobile canvas rule.
   - Slice 2 should still inspect `/guides/`, `/news/`, `/answers/`, `/trends/`, and `/workflows/` manually in the browser for copy density and section-specific hierarchy after the shared card polish.
   - Slice 3 should move reusable visual precision checks into loop docs or tests so future top-layer changes catch tint drift, cramped cards, and broken text ratios earlier.
 - Phase 3 Parallel Surface Agent Orchestration:
@@ -192,6 +202,16 @@ Latest top-layer visual uplift slice 1 checks:
 - `git diff --check`
 
 Browser verification confirmed the homepage decision evidence metrics now compute to transparent backgrounds with zero-width borders, all checked top-layer cards use the shared warm-neutral card polish, non-home desktop cards are no longer squeezed into 203 px columns, and no checked route has horizontal overflow at 319 px. The first route-QA attempt caught `/guides/` and `/news/` mobile filter overflow; the filters were fixed and route QA then passed. Later live browser reports on `/guides/` and `/news/` at 346 px were closed by rooting page-owned filter grid rules on `.gt-guide-filters` and `.gt-news-filters`, then restoring the shared active-chip override. The follow-up `/explore/` breadcrumb report was closed by changing shared mobile crumb items from growing flex children to compact fit-content items; live checks confirmed `/explore/`, `/tools/`, `/news/`, `/guides/`, and `/compare/` keep a 6 px crumb gap with zero overflow at 319, 346, and 430 px.
+
+Latest detail page width parity checks:
+
+- Live geometry baseline confirmed the old detail canvas squeeze at 346 px before the fix: `/tools/chatgpt/`, `/compare/chatgpt-vs-claude/`, and `/answers/chatgpt-vs-claude-which-is-better/` used a 283 px canvas with about 247 px body/card width.
+- Live geometry verification after the fix confirmed `/tools/chatgpt/`, `/compare/chatgpt-vs-claude/`, `/answers/chatgpt-vs-claude-which-is-better/`, `/guides/best-ai-coding-assistant/`, `/workflows/agentic-coding-workflow/`, `/trends/ai-coding-model-arms-race/`, `/categories/ai-chatbots/`, `/companies/anthropic/`, and `/news/2026-06-22-ai-news-desk/` use a 315 px canvas with about 287 px body/card width at 346 px and no positive horizontal overflow.
+- Live geometry verification at 1366 px confirmed structured detail layouts use a 1040 px canvas while pure prose answer, trend, and news article pages remain on the intentional 680 px reading measure.
+- `npm run ledger:pages`
+- `npm run typecheck`
+- `npm run build:fast`
+- `npm run qa:route -- --route /tools/chatgpt/ --route /compare/chatgpt-vs-claude/ --route /answers/chatgpt-vs-claude-which-is-better/ --route /guides/best-ai-coding-assistant/ --route /workflows/agentic-coding-workflow/ --route /trends/ai-coding-model-arms-race/ --route /categories/ai-chatbots/ --route /companies/anthropic/ --route /news/2026-06-22-ai-news-desk/ --widths 319,346,360,390,430,768,1024,1366 --site-dir dist-fast/client`
 
 Latest Claude and Claude Code completion checks:
 
@@ -323,8 +343,8 @@ The first recorded broad loop caught stale built output after homepage source ed
 
 - `node scripts/audit-site-kpis.mjs --json` still reports `neuronwriter-vs-surfer-seo` under the 700-word comparison KPI threshold. This is an improvement opportunity, not a failing loop signal.
 - Freshness is green for due-now items, but the June 22 queue still needs current-source review before the active site freshness goal can be called complete.
-- The worktree is intentionally dirty with the verified June 22 batch. Commit and push this batch before starting Gemini or Amazon Q vs GitHub Copilot.
-- The June 22 hotfixes, homepage decision-card density fix, top-layer visual uplift slice 1, layout precision standard, News loop rules standard, Claude completion, logo/favicons, generated assets, ledger updates, tests, and `.agent` receipts should stay together when committing.
+- The previous verified June 22 visual batch and the detail page width parity hotfix are expected to be pushed before the next Gemini or Amazon Q vs GitHub Copilot cycle starts.
+- The detail page width parity CSS/layout edits, generated page ledger update, and `.agent` receipt are intentionally grouped together.
 - Historical work-log and archive entries mention deleted comparison routes. Treat those as history, not live routing guidance.
 - Full local verifier runs are reliable but slow. Prefer `npm run check:smart`, focused tests, `npm run build:fast`, and exact `qa:route` unless a full pre-ship gate is needed.
 - CRLF warnings may appear for a few script/test files when Git normalizes line endings. They were non-blocking in the latest checks.
@@ -335,7 +355,7 @@ The first recorded broad loop caught stale built output after homepage source ed
 
 1. Run `git status --short --branch`.
 2. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/WORK_LOG.md`.
-3. If the worktree is still dirty from the verified June 22 batch, read `.agent/loop-runs/2026-06-22-claude-claude-code-freshness-complete.md` and push that batch before starting new work.
+3. Confirm `origin/master` includes the detail page width parity hotfix before starting new work.
 4. Read `.agent/LOOPS.md`, `.agent/PROJECT_MAP.md`, and `.agent/OPERATING_RULES.md`.
 5. Use `npm run loop:system` to pick the right loop, or `npm run loop:next -- --json` to continue Decision Content only after the paused batch is closed.
 6. If editing website content or commercial claims, apply the current-date, ledger, source, top-layer, mobile, SEO, and affiliate rules from `.agent/OPERATING_RULES.md`.
