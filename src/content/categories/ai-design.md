@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 20, 2026: compare Canva AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
+meta_description: "Updated June 22, 2026: compare Canva AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-20
-last_verified: 2026-06-20
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -50,7 +50,7 @@ As of June 20, 2026, start with the job:
 
 **Use [Rork](/tools/rork/) when the app-builder question is mobile or app-store output, not a generic web app.** The June 9 docs check uses Free, Rork Pro, and Rork Max: Free is a public web-app lane with tiny monthly credits, Pro starts at $20/month for Android Kotlin/Compose plus Expo/React Native and web apps, and Max starts at $200/month for SwiftUI iOS plus Apple-device outputs. Treat it as a mobile/app prototype lane that still needs developer review before production.
 
-**Use [Base44](/tools/base44/) when the buyer wants a Wix-owned AI app builder with an all-in-one app path.** Base44's June 15 pricing and billing-docs check keeps the Free, Starter, Builder, Pro, Elite, and Enterprise ladder intact. Plan cards and billing docs list Free at 25 messages plus 100 integration credits/month, but the marketing FAQ still says 500. Builder remains the practical serious tier because it adds backend functions, model selection, custom domains, and GitHub integration.
+**Use [Base44](/tools/base44/) when the buyer wants a Wix-owned AI app builder with an all-in-one app path.** Base44's June 22 pricing, cost-guide, and billing-docs check keeps the Free, Starter, Builder, Pro, Elite, and Enterprise ladder intact. Public prices are $16/$40/$80/$160 per month when billed annually or $20/$50/$100/$200 month-to-month. Plan cards and billing docs list Free at 25 messages plus 100 integration credits/month, but the marketing FAQ still says 500. Builder remains the practical serious tier because it adds backend functions, model selection, custom domains, and GitHub integration.
 
 **Use [v0 by Vercel](/tools/v0/) when the buyer wants a Vercel-native web artifact.** The current v0 docs describe an AI agent for real code, full-stack apps, agents, backend connections, deployments, and PRs. The June 6 pricing check lists Free with $5 monthly credits and a 7-message/day limit, Team at $30/user/month, Business at $100/user/month, Enterprise custom pricing, and model token pricing, including the corrected v0 Max Fast rate of $10 input and $50 output per 1M tokens. Do not buy v0 expecting retired legacy pricing.
 
@@ -79,7 +79,7 @@ As of June 20, 2026, start with the job:
 | Adobe-first image, vector, audio/video, and creative production | [Adobe Firefly](/tools/adobe-firefly/) | Fits Creative Cloud, Firefly Boards, partner models, and credit-based Adobe generation workflows | Compare Firefly plans, Creative Cloud plans, current credit rules, partner-model sharing, and promo exclusions before buying |
 | Full-stack app from prompt | [Lovable](/tools/lovable/) | Strongest single-product path for app, backend, auth, database, and live URL assumptions | Credits and generated backend choices need review before production |
 | Mobile or app-store prototype | [Rork](/tools/rork/) | Pro covers Android, Expo/React Native, and web; Max covers SwiftUI iOS and Apple-device paths | Free projects are public, Max is expensive, and generated mobile architecture still needs review |
-| All-in-one AI app builder under Wix | [Base44](/tools/base44/) | Natural-language app creation with hosted app, data, auth, integrations, and a Free-to-Enterprise plan ladder | Plan docs/cards say Free has 100 integration credits while the FAQ says 500; verify the billing screen before serious free-tier testing |
+| All-in-one AI app builder under Wix | [Base44](/tools/base44/) | Natural-language app creation with hosted app, data, auth, integrations, and a Free-to-Enterprise plan ladder | Builder is $40 annual or $50 month-to-month; plan docs/cards say Free has 100 integration credits while the FAQ says 500 |
 | Vercel-native app or UI workflow | [v0](/tools/v0/) | Strong web artifact loop: prompt, files, Figma, design mode, GitHub, deploys, PRs | Credit/token usage and generated code quality can surprise teams |
 | Browser-based app prototyping | [Bolt.new](/tools/bolt/) | Runs app-building work in the browser with generous free token limits | Larger projects use more tokens because file-system context is part of prompts |
 | Experimental AI-native design canvas | [Google Stitch](/tools/google-stitch/) | Best place to test Google's vibe-design direction and voice/canvas workflow | Labs product: verify access, quotas, export path, and enterprise fit before relying on it |
@@ -108,7 +108,7 @@ As of June 20, 2026, start with the job:
 
 **Best mobile app-builder path: Rork.** Choose Rork when the buyer specifically wants Android, Expo/React Native, SwiftUI iOS, Apple Watch, Vision Pro, native games, widgets, app-store publishing, or GitHub handoff. Do not treat it as the default for ordinary web dashboards.
 
-**Best all-in-one app builder to cross-shop with Lovable and Bolt: Base44.** Choose Base44 when the buyer wants app generation, hosting, data, auth, integrations, and business-app scaffolding in one Wix-owned surface. The June 15 check keeps Builder as the practical serious tier for backend functions, model selection, custom domains, and GitHub integration, but the Free-plan credit mismatch means teams should confirm the account screen before committing.
+**Best all-in-one app builder to cross-shop with Lovable and Bolt: Base44.** Choose Base44 when the buyer wants app generation, hosting, data, auth, integrations, and business-app scaffolding in one Wix-owned surface. The June 22 check keeps Builder as the practical serious tier for backend functions, model selection, custom domains, and GitHub integration, but the Free-plan credit mismatch means teams should confirm the account screen before committing.
 
 **Best Vercel-native builder: v0.** Choose v0 when the buyer cares about Vercel, Next.js, React, Tailwind, shadcn/ui, GitHub, deploys, and PR workflow. It is no longer fair to call v0 only a component generator, but it is also not magic production engineering. Use it for the first strong implementation draft, then review.
 
@@ -128,7 +128,7 @@ Lovable is credit-based and team-friendly. Its pricing page lists Pro at $25/mon
 
 Rork is credit-based and platform-tiered. The June 9 docs list Free at $0 for public web apps, Rork Pro from $20/month for 100 credits or $100/month for 500 credits, and Rork Max from $200/month for 1,000 credits with larger Max packs up to 10,000 credits. The plan decision is platform output first, credit volume second.
 
-Base44 is app-credit and integration-credit aware. Its public pricing page and billing docs list Free, Starter, Builder, Pro, Elite, and Enterprise, but the June 15 check still found inconsistent Free integration-credit language: 100/month in plan cards and billing docs versus 500/month in the pricing FAQ. Verify current in-product limits before choosing it for a client or production app.
+Base44 is app-credit and integration-credit aware. Its public pricing page, cost guide, and billing docs list Free, Starter, Builder, Pro, Elite, and Enterprise, but the June 22 check still found inconsistent Free integration-credit language: 100/month in plan cards and billing docs versus 500/month in the pricing FAQ. Verify current in-product limits before choosing it for a client or production app.
 
 Bolt.new is token-based. Its public pricing page lists Free, Pro at $25/month, Teams at $30/month per member, and Enterprise custom, with token limits and rollover rules. Its supported-technologies docs also make the mobile tradeoff clearer: phone and tablet users can start, chat, and publish, but Code View, project settings, database controls, and site visibility controls need desktop.
 
@@ -233,8 +233,9 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 - [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-12)
 - [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-12)
 - [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-12)
-- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-15)
-- [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans) (verified 2026-06-15)
+- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-22)
+- [Base44 cost guide](https://base44.com/blog/how-much-does-base44-cost) (verified 2026-06-22)
+- [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans) (verified 2026-06-22)
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-14)
 - [Bolt supported technologies](https://support.bolt.new/concepts/supported-technologies) (verified 2026-06-14)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-12)

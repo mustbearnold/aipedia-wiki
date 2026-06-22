@@ -2,7 +2,7 @@
 
 Purpose: append-only record of major work that has actually landed.
 
-Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answer "where are we now?" Use `.agent/PLANS.md` to answer "what is still active?"
+Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answer "where are we now?" Use `.agent/PLANS.md` to answer "what is still active?" For context economy, read the newest entries first and stop once you have the relevant proof trail.
 
 ## Recording Contract
 
@@ -519,3 +519,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: Covered by the associated branch checks and later remediation CI.
 - Residual risks: Historical archived entries are intentionally long. Do not load the archive by default.
 - Next: Keep `.agent/PLANS.md` short and current.
+
+### 2026-06-22: Augment, Base44, BLACKBOX, Captions, Cline Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Cleaned active `.agent` handoff docs, refreshed Augment Code, Base44, BLACKBOX AI, Captions.ai, and Cline against current June 22 sources, updated AI Coding, AI Design, and AI Video hubs, added Base44 cost-guide provenance, normalized historical price-history `verified_at` fields, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-22-augment-base44-blackbox-captions-cline-batch.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\augment-code.md --file src\content\tools\base44.md --file src\content\tools\blackbox-ai.md --file src\content\tools\captions.md --file src\content\tools\cline.md --json`; `npm run build:fast`; `npm run typecheck`; `npm run qa:route -- --route /tools/augment-code/ --route /categories/ai-coding/ --route /tools/base44/ --route /categories/ai-design/ --route /tools/blackbox-ai/ --route /tools/captions/ --route /categories/ai-video/ --route /tools/cline/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `node scripts\guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: `typecheck` and `build:fast` passed only when run sequentially. Running them in parallel caused an Astro `node_modules/.astro/data-store.json` rename race, so the loop docs now warn against parallelizing those two commands.
+- Next: Continue the oldest-first batch with CodeRabbit, Cody, Comet, D-ID, and Hedra.

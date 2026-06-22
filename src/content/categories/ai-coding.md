@@ -100,7 +100,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 15 Qodo update:** [Qodo](/tools/qodo/) remains the enterprise code-review governance lane, not an autocomplete replacement. Current pricing still lists Developer free, Teams at $38/user/month monthly or $30 annual, and Enterprise custom, but current subscription docs add the operational catch: Teams PR reviews require an assigned paid seat plus a linked Git account, otherwise the developer falls back to Free-tier behavior. Also treat Qodo CLI as sales-verified only: pricing lists CLI workflows on Enterprise, while current CLI docs call the CLI legacy and no longer maintained.
 
-**June 15 BLACKBOX AI update:** [BLACKBOX AI](/tools/blackbox-ai/) remains a low-cost multi-model coding bundle rather than a procurement-safe enterprise default. Current pricing still lists Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom, but the official pricing page conflicts on included model credits: pricing cards say $10/$20/$40 of latest-model value while comparison and mobile rows say $20/$40/$80. Keep Pro Plus as the practical App Builder, multi-agent, coding-agent tier; use Pro Max for team/admin controls; and do not treat the paused Cuelinks CPC listing as an active affiliate CTA.
+**June 22 BLACKBOX AI update:** [BLACKBOX AI](/tools/blackbox-ai/) remains a low-cost multi-model coding bundle rather than a procurement-safe enterprise default. Current pricing still lists Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom, but the official pricing page conflicts on included model credits: pricing cards say $10/$20/$40 of latest-model value while comparison and mobile rows say $20/$40/$80. Keep Pro Plus as the practical App Builder, multi-agent, coding-agent tier; use Pro Max for team/admin controls; and do not treat the paused Cuelinks CPC listing as an active affiliate CTA.
 
 **June 20 Replit Agent update:** [Replit Agent](/tools/replit-agent/) should now be evaluated as the current Agent / Agent 4-era browser app-builder surface, not the older Agent 3 session-length story. Current Replit sources keep Lite, Economy, Power, High effort, Pro/Enterprise-only Turbo, Plan Mode, Design Canvas, Web Search, Agent Skills, app self-testing, and task workflows as the buyer frame, while the newer June checks add Custom Instructions, Skills-as-`SKILL.md`, Package Firewall, Starter feature gates, App Testing's web-app-only scope, and Pro credit rollover. Core remains the solo-builder upgrade and Pro is the serious Agent tier, but buyers need usage budgets because Plan Mode/text guidance, third-party API calls, App Testing, High effort, and Turbo can all raise credit burn.
 
@@ -116,7 +116,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The active repository now resolves to `aaif-goose/goose`, Goose itself is Apache-2.0/free, and the real cost is the configured LLM plus local permission/security controls.
 
-**June 15 Cline update:** [Cline](/tools/cline/) is no longer just a "free VS Code extension" buyer lane. Current Cline pages position it as an open-source agent runtime across IDE, CLI, Kanban, SDK, and a separate licensed Spec Driven enterprise platform with LG CNS. Open Source remains free for individual developers, but inference is usage-based or BYOK. Enterprise and Spec Driven are custom/licensed governance and delivery-platform lanes for SSO/RBAC/billing/audit/deployment controls, enterprise context, fixed spec pipelines, and model/deployment boundaries. Teams should review Auto Approve/YOLO plus SDK tool policies before broad automation because unlisted SDK tools default to enabled and auto-approved. Vercel AI Gateway is one supported provider route, not the whole product.
+**June 22 Cline update:** [Cline](/tools/cline/) is no longer just a "free VS Code extension" buyer lane. Current Cline pages position it as an open-source agent runtime across IDE, CLI, Kanban, SDK, and a separate licensed Spec Driven enterprise platform with LG CNS. Open Source remains free for individual developers, but inference is usage-based or BYOK, and the pricing navigation now shows roughly 64k GitHub stars. Enterprise and Spec Driven are custom/licensed governance and delivery-platform lanes for SSO/RBAC/billing/audit/deployment controls, enterprise context, fixed spec pipelines, and model/deployment boundaries. Teams should review Auto Approve/YOLO plus SDK tool policies before broad automation because unlisted SDK tools default to enabled and auto-approved. Vercel AI Gateway is one supported provider route, not the whole product.
 
 **June 15 Cody update:** [Cody](/tools/cody/) remains a Sourcegraph Enterprise-only code-intelligence lane, not a self-serve Copilot alternative. Current Sourcegraph sources keep Enterprise starting at $16K with AI-feature credits, org-wide credit pooling, no monthly credit expiry, and renewal rollover; the VS Code Marketplace now warns Cody is no longer available for non-enterprise users even while the listing still carries stale Cody Pro/model-option copy. Evaluate it only when Sourcegraph code graph, Deep Search, MCP/API/CLI access, Cody Gateway/model controls, and enterprise procurement are part of the platform decision.
 
@@ -134,7 +134,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
-**June 15 Augment Code update:** [Augment Code](/tools/augment-code/) is no longer a clean $20 solo / $60 team / $200 Max comparison in the public pricing surface. The current Augment page centers Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, pay-as-you-go after included usage, and Enterprise custom. Treat Augment as a team usage-balance product, not a simple per-developer Copilot replacement. Its model docs list Claude Fable 5, but Anthropic's Fable/Mythos suspension still makes route verification mandatory before using Fable-specific pilot results.
+**June 22 Augment Code update:** [Augment Code](/tools/augment-code/) is no longer a clean $20 solo / $60 team / $200 Max comparison in the public pricing surface. The current Augment page centers Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, pay-as-you-go after included usage, and Enterprise custom. Treat Augment as a team usage-balance product, not a simple per-developer Copilot replacement. Its model docs list Claude Fable 5, but Anthropic's Fable/Mythos suspension still makes route verification mandatory before using Fable-specific pilot results.
 
 **June 4 maintenance note:** earlier coding-ledger work still informs the lane map: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. Keep adjacent-lane comparisons in hub, tool, guide, or workflow pages unless a standalone page compares direct substitutes. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf/Devin Desktop, Zed, Goose, GLM-5.1, and Glean.
 
@@ -281,17 +281,17 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-18)
 - [Amazon Q Developer end-of-support announcement](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/) (verified 2026-06-18)
 - [Amazon Q Developer quotas](https://docs.aws.amazon.com/general/latest/gr/amazonqdev.html) (verified 2026-06-18)
-- [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-15)
-- [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing) (verified 2026-06-15)
-- [Augment feature availability](https://docs.augmentcode.com/feature-availability) (verified 2026-06-15)
-- [Cline homepage](https://cline.bot/) (verified 2026-06-15)
-- [Cline pricing](https://cline.bot/pricing) (verified 2026-06-15)
-- [Cline docs overview](https://docs.cline.bot/cline-overview) (verified 2026-06-15)
-- [Cline CLI](https://cline.bot/cli) (verified 2026-06-15)
-- [Cline SDK](https://cline.bot/sdk) (verified 2026-06-15)
-- [Cline Spec Driven](https://cline.bot/spec-driven) (verified 2026-06-15)
-- [Cline provider configuration docs](https://docs.cline.bot/provider-config/other-30-plus-providers) (verified 2026-06-15)
-- [Cline SDK permission handling](https://docs.cline.bot/sdk/guides/permission-handling) (verified 2026-06-15)
+- [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-22)
+- [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing) (verified 2026-06-22)
+- [Augment feature availability](https://docs.augmentcode.com/feature-availability) (verified 2026-06-22)
+- [Cline homepage](https://cline.bot/) (verified 2026-06-22)
+- [Cline pricing](https://cline.bot/pricing) (verified 2026-06-22)
+- [Cline docs overview](https://docs.cline.bot/cline-overview) (verified 2026-06-22)
+- [Cline CLI](https://cline.bot/cli) (verified 2026-06-22)
+- [Cline SDK](https://cline.bot/sdk) (verified 2026-06-22)
+- [Cline Spec Driven](https://cline.bot/spec-driven) (verified 2026-06-22)
+- [Cline provider configuration docs](https://docs.cline.bot/provider-config/other-30-plus-providers) (verified 2026-06-22)
+- [Cline SDK permission handling](https://docs.cline.bot/sdk/guides/permission-handling) (verified 2026-06-22)
 - [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-15)
 - [CodeRabbit plans documentation](https://docs.coderabbit.ai/management/plans) (verified 2026-06-15)
 - [CodeRabbit usage-based add-on docs](https://docs.coderabbit.ai/management/usage-based-addon) (verified 2026-06-15)
@@ -311,9 +311,9 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-15)
 - [Qodo subscription plans](https://docs.qodo.ai/subscription-plans) (verified 2026-06-15)
 - [Qodo Review v2 docs](https://docs.qodo.ai/qodo-documentation/code-review) (verified 2026-06-15)
-- [BLACKBOX AI pricing](https://www.blackbox.ai/pricing) (verified 2026-06-15)
-- [BLACKBOX AI security](https://www.blackbox.ai/security) (verified 2026-06-15)
-- [Cuelinks BLACKBOX AI affiliate listing](https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program) (verified 2026-06-15)
+- [BLACKBOX AI pricing](https://www.blackbox.ai/pricing) (verified 2026-06-22)
+- [BLACKBOX AI security](https://www.blackbox.ai/security) (verified 2026-06-22)
+- [Cuelinks BLACKBOX AI affiliate listing](https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program) (verified 2026-06-22)
 - [Replit pricing](https://replit.com/pricing) (verified 2026-06-15)
 - [Replit Agent docs](https://docs.replit.com/references/agent/overview) (verified 2026-06-15)
 - [Replit Agent Modes](https://docs.replit.com/references/agent/agent-modes) (verified 2026-06-15)
@@ -321,8 +321,9 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Replit Custom Skills](https://replit.com/blog/custom-skills) (verified 2026-06-15)
 - [Replit Package Firewall](https://replit.com/blog/package-firewall) (verified 2026-06-15)
 - [Same pricing docs](https://docs.same.new/usage/pricing) (verified 2026-06-12)
-- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-15)
-- [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans) (verified 2026-06-15)
+- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-22)
+- [Base44 cost guide](https://base44.com/blog/how-much-does-base44-cost) (verified 2026-06-22)
+- [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans) (verified 2026-06-22)
 - [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-12)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-18)
 - [Modal pricing](https://modal.com/pricing) (verified 2026-06-12)

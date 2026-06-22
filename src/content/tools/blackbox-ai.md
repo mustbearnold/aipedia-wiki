@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "$10-$40/month; Enterprise custom"
 status: active
 launched: 2021
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 seo_title: "BLACKBOX AI: Features, Pricing & Review (June 2026)"
-meta_description: "BLACKBOX AI pricing rechecked June 15, 2026: Pro $10/mo, Pro Plus $20/mo, Pro Max $40/mo, but included-credit copy conflicts and Cuelinks is paused."
+meta_description: "BLACKBOX AI pricing rechecked June 22, 2026: Pro $10/mo, Pro Plus $20/mo, Pro Max $40/mo, but included-credit copy still conflicts and Cuelinks remains paused."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -24,7 +24,7 @@ affiliate:
   network: null
   link: null
   application_status: none
-  notes: "2026-06-15 audit found no first-party BLACKBOX AI affiliate page. Cuelinks lists a third-party CPC campaign but says the advertiser has paused it, so AiPedia should not present a monetized CTA until network approval and active terms are verified."
+  notes: "2026-06-22 audit found no first-party BLACKBOX AI affiliate page. Cuelinks lists a third-party CPC campaign but says the advertiser has paused it, so AiPedia should not present a monetized CTA until network approval and active terms are verified."
 scores:
   utility: 7
   value: 8
@@ -36,22 +36,22 @@ facts:
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     confidence: high
   best_paid_tier:
     value: "Pro Plus ($20/month) remains the practical developer tier because it adds App Builder, multi-agent execution, coding agent, remote data analysis, Slack, auto-refill, and E2E chat encryption; verify included credits in checkout because the pricing page conflicts on credit amounts"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-15
-    next_review_at: 2026-06-22
+    verified_at: 2026-06-22
+    next_review_at: 2026-06-29
     confidence: high
   best_for:
     value: "Developers who want cheap access to many models and agent surfaces, but can tolerate less enterprise polish than GitHub or Cursor"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-15
+    verified_at: 2026-06-22
     confidence: high
 tags: [ai-coding, coding-agent, app-builder, multi-model, ide, terminal, voice-agent, figma-to-code]
 best_for:
@@ -66,6 +66,22 @@ not_best_for:
 quick_answer: >-
   BLACKBOX AI is compelling if you want a low-cost, multi-model coding platform with lots of surfaces. The tradeoff is trust and polish: it packs in features, but serious teams should test privacy, reliability, and billing clarity before standardizing on it.
 price_history:
+  - date: 2026-06-22
+    plan: "Pro / Pro Plus / Pro Max"
+    price: "$10 / $20 / $40 per month; Enterprise custom"
+    source: "https://www.blackbox.ai/pricing"
+    source_label: "BLACKBOX AI pricing"
+    source_id: blackbox-ai-best-for
+    verified_at: 2026-06-22
+    note: "No material price change. Official pricing still conflicts on included model-credit amounts: cards say $10/$20/$40 while comparison and mobile rows say $20/$40/$80."
+  - date: 2026-06-22
+    plan: "Affiliate availability"
+    price: "No usable current affiliate CTA"
+    source: "https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program"
+    source_label: "Cuelinks BLACKBOX AI affiliate listing"
+    source_id: blackbox-ai-affiliate-cuelinks
+    verified_at: 2026-06-22
+    note: "Cuelinks still lists the BLACKBOX AI campaign as paused by the advertiser. No first-party BLACKBOX affiliate application page was found."
   - date: 2026-06-15
     plan: "Pro / Pro Plus / Pro Max"
     price: "$10 / $20 / $40 per month; Enterprise custom"
@@ -88,6 +104,7 @@ price_history:
     source: "https://www.blackbox.ai/pricing"
     source_label: "Source"
     source_id: blackbox-ai-best-for
+    verified_at: 2026-05-10
     note: "Pricing page lists $20 model credits, all chat models, voice agent, and unlimited free Minimax-M2.5 agent requests"
   - date: 2026-05-10
     plan: "Pro Plus"
@@ -95,6 +112,7 @@ price_history:
     source: "https://www.blackbox.ai/pricing"
     source_label: "Source"
     source_id: blackbox-ai-best-for
+    verified_at: 2026-05-10
     note: "Pricing page lists $40 model credits, App Builder, multi-agent execution, coding agent, remote data analysis, Slack, E2E chat encryption, and auto-refill"
   - date: 2026-05-10
     plan: "Pro Max"
@@ -102,6 +120,7 @@ price_history:
     source: "https://www.blackbox.ai/pricing"
     source_label: "Source"
     source_id: blackbox-ai-best-for
+    verified_at: 2026-05-10
     note: "Pricing page lists $80 model credits, unlimited agent requests, Figma to Code, team collaboration, centralized billing, advanced security, SAML SSO, priority support, and analytics"
   - date: 2026-05-10
     plan: "Affiliate availability"
@@ -109,6 +128,7 @@ price_history:
     source: "https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program"
     source_label: "Source"
     source_id: blackbox-ai-affiliate-cuelinks
+    verified_at: 2026-05-10
     note: "Historical third-party availability signal. Superseded by the June 15, 2026 check showing the current Cuelinks campaign paused by the advertiser."
 ---
 
@@ -118,7 +138,7 @@ BLACKBOX AI is a multi-model AI coding platform. Its pricing page presents a bro
 
 The strongest appeal is obvious: lots of AI coding features at aggressive price points. The risk is also obvious: buyers need to test whether the quality, reliability, privacy posture, and billing mechanics match the headline value.
 
-June 15 check: the plan prices are still $10, $20, and $40 per month, but BLACKBOX AI's own pricing page conflicts on included model-credit amounts. Pricing cards say $10, $20, and $40 of latest-model value, while comparison and mobile pricing rows say $20, $40, and $80. Treat checkout and account billing as the source of truth before heavy model use.
+June 22 check: the plan prices are still $10, $20, and $40 per month, but BLACKBOX AI's own pricing page conflicts on included model-credit amounts. Pricing cards say $10, $20, and $40 of latest-model value, while comparison and mobile pricing rows say $20, $40, and $80. Treat checkout and account billing as the source of truth before heavy model use.
 
 ## System Verdict
 
@@ -148,7 +168,7 @@ June 15 check: the plan prices are still $10, $20, and $40 per month, but BLACKB
 
 BLACKBOX AI is not just a code-completion extension. The current pricing page presents it as a broad AI engineering bundle. Pro includes all chat models, voice agent, and unlimited free Minimax-M2.5 agent requests. Pro Plus adds the pieces that make it more like a coding platform: App Builder, multi-agent execution, coding agent, remote data analysis, Slack integration, E2E chat encryption, and auto-refill. Pro Max adds unlimited agent requests, Figma to Code, team collaboration, centralized billing, advanced security controls, SAML SSO, priority support, and analytics. The included-credit amounts need checkout verification because the same pricing page shows conflicting values.
 
-This makes BLACKBOX AI unusually broad for its price. It competes partly with Cursor, GitHub Copilot, Claude Code, Codeium/Windsurf, Replit Agent, and general multi-model chat routers. That breadth is useful, but it also means the product can feel less focused than best-in-class specialist tools.
+This makes BLACKBOX AI unusually broad for its price. It competes partly with Cursor, GitHub Copilot, Claude Code, Codeium/Windsurf, Replit Agent, and general multi-model chat routers. That breadth is useful, but it also means the product can feel less focused than narrower specialist tools.
 
 The security page is more explicit than the pricing page. It says Zero Data Retention is enabled by default on Pro and above, training opt-out is the default on every plan, Pro Plus adds E2E chat encryption, and Enterprise can add contractual upstream-provider opt-outs, BYOK/CMK, SAML, SCIM, RBAC, audit logs, and dedicated deployment models. Treat those as procurement questions to verify in writing, not as a reason to skip a security review.
 
@@ -182,7 +202,7 @@ The security page is more explicit than the pricing page. It says Zero Data Rete
 
 ## Pricing
 
-BLACKBOX AI pricing was verified from the official pricing page on 2026-06-15:
+BLACKBOX AI pricing was verified from the official pricing page on 2026-06-22:
 
 | Plan | Price | Included-credit caveat | Practical meaning |
 |---|---:|---|---|
@@ -215,7 +235,7 @@ The pricing page also references yearly billing at 20% off. Treat model-credit a
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-15 against BLACKBOX AI pricing, docs, security, and enterprise materials, plus the current Cuelinks affiliate-directory signal.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-22 against BLACKBOX AI pricing, docs, security, and enterprise materials, plus the current Cuelinks affiliate-directory signal.
 
 ## FAQ
 
