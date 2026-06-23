@@ -5,20 +5,20 @@ title: AI Note-Taking & Knowledge Management
 description: AI note-taking, customer-success meeting memory, meeting intelligence, source-grounded research notebooks, personal knowledge systems, and workspace knowledge tools.
 tool_count: 13
 seo_title: "Best AI Note-Taking Tools (June 2026), aipedia.wiki"
-meta_description: "Updated June 22, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Tactiq for no-bot browser capture, Otter for live transcription, NotebookLM for source-grounded research artifacts, Capacities for object PKM and AI connectors, Wispr Flow for voice-to-note dictation, Reflect for encrypted linked notes, Obsidian and Logseq for local-first notes, Readwise for reading retention, and Notion AI for team workspaces."
+meta_description: "Updated June 23, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Tactiq for no-bot browser capture, Otter for live transcription, NotebookLM for source-grounded research artifacts, Capacities for object PKM, AI connectors, image analysis, and bulk import, Wispr Flow for voice-to-note dictation, Reflect for encrypted linked notes, Obsidian and Logseq for local-first notes, Readwise for reading retention, and Notion AI for team workspaces."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 ---
 
 ## Overview
 
-AI note-taking now splits into six buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), [Read AI](/tools/read-ai/), [Granola](/tools/granola/), and [Tactiq](/tools/tactiq/) record or capture calls, produce transcripts/summaries, extract action items, and push meeting context into team workflows. Granola is the no-bot Mac-first lane for people who want private desktop capture and post-call notes rather than a meeting participant bot. Tactiq is the no-bot browser-extension lane for Google Meet, Zoom, and Microsoft Teams; the June 9 check keeps Free at 10 transcripts/month and 5 AI credits, Pro at $8/user/month annual, Team at $16.67, and Business at $29.17 with MCP/Claude Connector betas. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, Deep Research, Audio/Video Overviews, data tables, infographics, slide decks, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/), [Capacities](/tools/capacities/), [Reflect](/tools/reflect/), [Obsidian](/tools/obsidian/), and [Mem](/tools/mem/) help teams or individuals maintain long-lived notes, wikis, docs, databases, objects, personal memory, and personal knowledge graphs. Capacities' June 18 refresh makes the Pro decision more AI-workflow-driven than the old free-tier summary implied: AI Chat Connectors use MCP to expose a selected space to ChatGPT, Claude, Cursor, Le Chat, and compatible clients, while Release 64 adds AI provider choice and recurring tasks. Reflect is the encrypted linked-notes lane for buyers who want backlinks, Google/Outlook calendar context, GPT-4/Whisper AI, Kindle/web capture, export/API, and a simple $10/month annual-billed plan instead of a team workspace. The fourth is **voice-to-note capture**, where [Wispr Flow](/tools/wispr-flow/) turns spoken thoughts into cleaned-up text across apps; it is useful for drafting notes, memos, CRM updates, tickets, and personal knowledge entries, but it is not a meeting recorder or source-grounded notebook. The fifth is **reading capture and retention**, where [Readwise Reader](/tools/readwise/) captures articles, newsletters, PDFs, ebooks, highlights, Ghostreader prompts, exports, and daily review. The sixth is **analytics notebooks and data-team knowledge**, where [Hex](/tools/hex/) brings SQL, Python, apps, Threads, semantic-model-aware agents, and paid-seat AI credits into one governed workspace.
+AI note-taking now splits into six buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), [Read AI](/tools/read-ai/), [Granola](/tools/granola/), and [Tactiq](/tools/tactiq/) record or capture calls, produce transcripts/summaries, extract action items, and push meeting context into team workflows. Granola is the no-bot Mac-first lane for people who want private desktop capture and post-call notes rather than a meeting participant bot. Tactiq is the no-bot browser-extension lane for Google Meet, Zoom, and Microsoft Teams; the June 9 check keeps Free at 10 transcripts/month and 5 AI credits, Pro at $8/user/month annual, Team at $16.67, and Business at $29.17 with MCP/Claude Connector betas. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, Deep Research, Audio/Video Overviews, data tables, infographics, slide decks, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/), [Capacities](/tools/capacities/), [Reflect](/tools/reflect/), [Obsidian](/tools/obsidian/), and [Mem](/tools/mem/) help teams or individuals maintain long-lived notes, wikis, docs, databases, objects, personal memory, and personal knowledge graphs. Capacities' June 23 refresh makes the Pro decision more AI-workflow-driven than the old free-tier summary implied: AI Chat Connectors use MCP to expose a selected space to ChatGPT, Claude, Cursor, Le Chat, and compatible clients, Release 64 adds AI provider choice and recurring tasks, and Release 65 adds Bulk Import for everyone plus Pro image analysis. Reflect is the encrypted linked-notes lane for buyers who want backlinks, Google/Outlook calendar context, GPT-4/Whisper AI, Kindle/web capture, export/API, and a simple $10/month annual-billed plan instead of a team workspace. The fourth is **voice-to-note capture**, where [Wispr Flow](/tools/wispr-flow/) turns spoken thoughts into cleaned-up text across apps; it is useful for drafting notes, memos, CRM updates, tickets, and personal knowledge entries, but it is not a meeting recorder or source-grounded notebook. The fifth is **reading capture and retention**, where [Readwise Reader](/tools/readwise/) captures articles, newsletters, PDFs, ebooks, highlights, Ghostreader prompts, exports, and daily review. The sixth is **analytics notebooks and data-team knowledge**, where [Hex](/tools/hex/) brings SQL, Python, apps, Threads, semantic-model-aware agents, and paid-seat AI credits into one governed workspace.
 
 As of June 22, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, a cloud team workspace, or a local personal vault. The NotebookLM refresh keeps the source-grounded research lane, but adds a sharper rule: use source discovery and Deep Research to speed source-pack building, not to skip source-quality review. NotebookLM's current help table also keeps the privacy split clear: consumer data is not used to train NotebookLM unless feedback is provided, while Workspace and Cloud routes add stronger no-human-review and no-training protections. The refreshed NotebookLM/Obsidian/Otter/Readwise/Notion comparison set separates source-grounded research notebooks, local-first Markdown ownership, live meeting transcription, reading retention, and Notion-native team workspace AI instead of treating every note tool as a generic summarizer.
 
-The June 8 Logseq refresh keeps [Logseq](/tools/logseq/) in the local-first personal knowledge lane, but no longer treats it as a simple "$5 sync add-on" story. The core app remains free/open-source and strong for outliner/block-reference workflows; Sync is better described as beta/paid-support access unless the current checkout confirms otherwise; and the active DB-version work adds markdown mirror, CLI query, graph-view, and sync-hardening signals that buyers should test before migration.
+The June 23 Logseq refresh keeps [Logseq](/tools/logseq/) in the local-first personal knowledge lane, but no longer treats it as a simple "$5 sync add-on" story. The core app remains free/open-source and strong for outliner/block-reference workflows; Sync is better described as beta access tied to Open Collective Sponsor/Backer testing unless the current checkout confirms otherwise; and the active DB-version work adds markdown round-trip, CLI query, graph-view, and sync-hardening signals that buyers should test before migration.
 
 The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh keeps that boundary explicit: ChatGPT is the everyday summary workbench, Claude is the careful long-document synthesis lane, Gemini is the Google-native path, NotebookLM is the source-grounded notebook, Fathom/Fireflies/Otter.ai are meeting-capture routes, and Readwise is the reading-retention summary lane. That means this category should not rank every summary feature as a note-taking product; the source, capture method, retention model, and review risk decide the right tool.
 
@@ -26,16 +26,16 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 
 | Tool | Best For | Buyer Note |
 |------|----------|------------|
-| **[Fathom](/tools/fathom/)** | Individual meeting notes | Best first test because the free plan includes unlimited recordings and transcriptions; June 2026 buyers should also check bot-free Mac capture beta availability and Ask Fathom history limits by plan. |
+| **[Fathom](/tools/fathom/)** | Individual meeting notes | Best first test because the free plan includes unlimited recordings and transcriptions; June 2026 buyers should also check bot-free capture beta availability and Ask Fathom history limits by plan. |
 | **[MeetGeek](/tools/meetgeek/)** | Customer-success meeting memory | Best when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable customer context, CRM/task handoff, AI Chat, and workflow automation. |
-| **[Fireflies](/tools/fireflies/)** | Team meeting intelligence | Best when teams need searchable call history, 100+ language transcription, AI summaries, integrations, analytics, admin controls, and enterprise security options; AI credits are a shared team/account pool for advanced features, not extra transcription minutes. |
+| **[Fireflies](/tools/fireflies/)** | Team meeting intelligence | Best when teams need searchable call history, 100+ language transcription, AI summaries, integrations, analytics, admin controls, and enterprise security options; standard transcription is covered by plan, while advanced features can consume separate AI credits. |
 | **[Otter.ai](/tools/otter-ai/)** | Live transcription and collaboration | Best for live transcription, speaker identification, collaborative transcripts, education, interviews, searchable archives, and teams that value real-time capture. |
 | **[Read AI](/tools/read-ai/)** | Meeting reports, coaching, and search | Best when meeting notes connect to reports, playback, coaching, Search Copilot, workplace context, integrations, upload credits, and productivity workflows. |
 | **[Granola](/tools/granola/)** | Bot-free meeting notes on Mac | Best when the buyer wants private desktop capture, transcript-backed notes, and CRM/workflow handoff without inviting a bot to the meeting. |
 | **[Tactiq](/tools/tactiq/)** | No-bot browser meeting transcripts | Best when Google Meet, Zoom, or Teams notes should come from captions without a meeting bot; Business adds MCP/Claude Connector betas for transcript context in AI tools. |
 | **[NotebookLM](/tools/notebooklm/)** | Source-grounded research notebooks | Best when transcripts or source documents need grounded summaries, Q&A, Deep Research, Audio/Video Overviews, reports, flashcards, mind maps, quizzes, data tables, infographics, slide decks, or study artifacts. |
 | **[Notion AI](/tools/notion-ai/)** | Team knowledge bases and AI workspace | Best when notes, docs, projects, databases, AI Meeting Notes, Enterprise Search, Notion Agent, and agents already live inside Notion. |
-| **[Capacities](/tools/capacities/)** | Object-based personal knowledge management | Best when notes need people, books, projects, meetings, and custom object types, with Pro now more compelling for MCP AI Chat Connectors and provider choice. |
+| **[Capacities](/tools/capacities/)** | Object-based personal knowledge management | Best when notes need people, books, projects, meetings, custom object types, MCP AI Chat Connectors, provider choice, image analysis, and bulk import. |
 | **[Mem](/tools/mem/)** | AI notes, search/chat memory, collections, templates, connected email, API keys, and PDF understanding | Best when the note system itself should be searchable and chat-aware; Free is only a light trial and Teams is custom-priced. |
 | **[Reflect](/tools/reflect/)** | Encrypted linked notes, backlinks, calendar context, Kindle/web capture, and personal AI note search | Best when a solo buyer wants a clean networked notebook at $10/month annual-billed, not a broad team wiki or local plugin system. |
 | **[Wispr Flow](/tools/wispr-flow/)** | Voice-to-note dictation across apps | Best when the user's note bottleneck is typing, not meeting capture or source-grounded analysis. |
@@ -46,7 +46,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 
 ## Our Picks
 
-- **Best AI meeting notetaker:** [Fathom](/tools/fathom/) because the free plan is strong enough for most individuals and paid tiers scale into team search and CRM workflows, with bot-free Mac capture still best treated as a beta feature.
+- **Best AI meeting notetaker:** [Fathom](/tools/fathom/) because the free plan is strong enough for most individuals and paid tiers scale into team search and CRM workflows, with bot-free capture still best treated as a beta feature.
 - **Best customer-success meeting memory:** [MeetGeek](/tools/meetgeek/) because Business combines unlimited transcription, video, team spaces, AI Chat, workflow automation, consent notifications, and CRM/task handoff at SMB-friendly pricing.
 - **Best team meeting intelligence platform:** [Fireflies](/tools/fireflies/) because it is built around unlimited paid transcription, 100+ language capture, AI summaries, searchable meeting history, analytics, integrations, admin controls, and credit-gated advanced features.
 - **Best live transcription workflow:** [Otter.ai](/tools/otter-ai/) because it focuses on live transcription, speaker identification, collaborative capture, searchable archives, Otter MCP, and meeting workflows.
@@ -56,7 +56,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - **Best free source notebook:** [NotebookLM](/tools/notebooklm/) because it turns reviewed sources into grounded research, Audio/Video Overviews, reports, quizzes, flashcards, mind maps, data tables, and study outputs with clear upgrade paths.
 - **Best analytics notebook:** [Hex](/tools/hex/) because data teams can combine notebooks, apps, governed context, and AI agents in one workspace.
 - **Best team knowledge workspace:** [Notion AI](/tools/notion-ai/) because Notion bundles docs, databases, AI Meeting Notes, Enterprise Search, Notion Agent, Custom Agents, and team workspace controls.
-- **Best object-based PKM:** [Capacities](/tools/capacities/) because its object model remains the cleanest structured-PKM default, while Pro is now about AI assistant access, MCP AI Chat Connectors, provider choice, and richer media/AI workflows rather than only extra storage.
+- **Best object-based PKM:** [Capacities](/tools/capacities/) because its object model remains the cleanest structured-PKM default, while Pro is now about AI assistant access, MCP AI Chat Connectors, provider choice, image analysis, and richer media/AI workflows rather than only extra storage.
 - **Best AI note memory system:** [Mem](/tools/mem/) when saved notes, PDF understanding, connected email, collections, templates, API keys, and chat over personal knowledge are the purchase reason.
 - **Best encrypted linked notes app:** [Reflect](/tools/reflect/) when a solo buyer wants backlinks, calendar context, GPT-4/Whisper AI, Kindle/web capture, export/API, and encrypted sync without running a local-first plugin stack.
 - **Best voice-to-note layer:** [Wispr Flow](/tools/wispr-flow/) when fast cross-app dictation matters more than recording meetings or maintaining a full notes graph.
@@ -84,7 +84,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 
 **Use Notion AI if:** the real system of record is a team wiki, project database, doc workspace, meeting-note flow, or company operating system.
 
-**Use Capacities if:** notes are easier to manage as typed objects with properties, backlinks, daily notes, and graph-style relationships than as folders or plain documents. Upgrade only after the object model sticks, then verify whether Pro's AI assistant, MCP AI Chat Connectors, provider choice, recurring tasks, and media workflows are actually part of the habit.
+**Use Capacities if:** notes are easier to manage as typed objects with properties, backlinks, daily notes, and graph-style relationships than as folders or plain documents. Upgrade only after the object model sticks, then verify whether Pro's AI assistant, MCP AI Chat Connectors, provider choice, image analysis, recurring tasks, and media workflows are actually part of the habit.
 
 **Use Mem if:** the buyer wants AI notes, search, chat, collections, templates, connected email, API keys, PDF understanding, and cloud knowledge memory more than a local-first markdown vault. Start on Free only as a tiny trial; Pro is the realistic solo tier at $12/month, while Teams needs a sales/procurement check.
 
@@ -114,47 +114,50 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-12)
-- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-12)
-- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-12)
-- [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-12)
-- [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-12)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-23)
+- [Fathom product updates](https://help.fathom.video/en/articles/6220097) (verified 2026-06-23)
+- [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-23)
+- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-23)
+- [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-23)
+- [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-23)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-23)
 - [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-24)
 - [Read AI product overview](https://www.read.ai/) (verified 2026-05-24)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
 - [MeetGeek AI for Customer Success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-05-26)
 - [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-05-26)
-- [Granola pricing](https://www.granola.ai/pricing) (verified 2026-06-12)
-- [Granola security](https://www.granola.ai/security) (verified 2026-06-12)
-- [Tactiq pricing](https://tactiq.io/buy) (verified 2026-06-12)
-- [Tactiq MCP](https://tactiq.io/mcp) (verified 2026-06-12)
+- [Granola pricing](https://www.granola.ai/pricing) (verified 2026-06-23)
+- [Granola security](https://www.granola.ai/security) (verified 2026-06-23)
+- [Tactiq pricing](https://tactiq.io/buy) (verified 2026-06-23)
+- [Tactiq MCP](https://tactiq.io/mcp) (verified 2026-06-23)
 - [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-22)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-22)
 - [The Verge NotebookLM Gemini 3.5 update](https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update) (verified 2026-06-22)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-12)
-- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-12)
-- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-12)
-- [Notion AI Meeting Notes](https://www.notion.com/help/ai-meeting-notes) (verified 2026-06-12)
-- [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-18)
-- [Capacities docs](https://docs.capacities.io/) (verified 2026-06-18)
-- [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors) (verified 2026-06-18)
-- [Capacities Release 64](https://capacities.io/whats-new/release-64/) (verified 2026-06-18)
-- [Mem pricing](https://get.mem.ai/pricing) (verified 2026-06-12)
-- [Mem product site](https://get.mem.ai/) (verified 2026-06-12)
-- [Reflect Notes](https://reflect.app/) (verified 2026-06-12)
-- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included) (verified 2026-06-12)
-- [Wispr Flow data controls](https://wisprflow.ai/data-controls) (verified 2026-06-12)
-- [Wispr Flow What's New](https://wisprflow.ai/whats-new) (verified 2026-06-12)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-12)
-- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-12)
-- [Logseq official site](https://logseq.com/) (verified 2026-06-12)
-- [Logseq docs](https://docs.logseq.com/) (verified 2026-06-12)
-- [Logseq DB May 2026 changelog](https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2) (verified 2026-06-12)
-- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-12)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-12)
-- [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-12)
-- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-12)
-- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-12)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-23)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-23)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-23)
+- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing) (verified 2026-06-23)
+- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-23)
+- [Notion AI Meeting Notes](https://www.notion.com/help/ai-meeting-notes) (verified 2026-06-23)
+- [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-23)
+- [Capacities docs](https://docs.capacities.io/) (verified 2026-06-23)
+- [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors) (verified 2026-06-23)
+- [Capacities Release 64](https://capacities.io/whats-new/release-64/) (verified 2026-06-23)
+- [Capacities Release 65](https://capacities.io/whats-new/release-65/) (verified 2026-06-23)
+- [Mem pricing](https://get.mem.ai/pricing) (verified 2026-06-23)
+- [Mem product site](https://get.mem.ai/) (verified 2026-06-23)
+- [Reflect Notes](https://reflect.app/) (verified 2026-06-23)
+- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included) (verified 2026-06-23)
+- [Wispr Flow data controls](https://wisprflow.ai/data-controls) (verified 2026-06-23)
+- [Wispr Flow What's New](https://wisprflow.ai/whats-new) (verified 2026-06-23)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-23)
+- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-23)
+- [Logseq official site](https://logseq.com/) (verified 2026-06-23)
+- [Logseq docs](https://docs.logseq.com/) (verified 2026-06-23)
+- [Logseq DB May 2026 update](https://discuss.logseq.com/t/whats-new-with-logseq-db-may-16th-2026/35020) (verified 2026-06-23)
+- [Logseq downloads](https://logseq.com/downloads) (verified 2026-06-23)
+- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-23)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-23)
+- [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-23)
+- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-23)
+- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-23)

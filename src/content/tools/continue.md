@@ -2,17 +2,17 @@
 type: tool
 slug: continue
 title: Continue
-tagline: Open-source AI PR-check and coding-agent stack. Turn repo standards into source-controlled checks that run as GitHub status checks.
+tagline: Open-source coding agent acquired by Cursor. The final 2.0.0 release remains available as CLI, VS Code extension, and JetBrains plugin, but the repository is read-only and no longer actively maintained.
 category: ai-coding
 company: continue-dev
 url: https://continue.dev
 github_url: https://github.com/continuedev/continue
-pricing_model: freemium
-price_range: "$0-$20/seat/month"
+pricing_model: open-source
+price_range: "Open source; old Starter/Team pricing no longer published"
 status: active
 launched: 2023-05
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,224 +27,220 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Engineering teams that want source-controlled AI checks on every pull request, with human-owned standards encoded as markdown checks in the repository."
+    value: "Developers and teams that want to study or self-host the final open-source Continue coding agent, with the understanding that Cursor has acquired Continue and the repository is read-only."
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Continue's published self-serve tiers are Starter at $3 per million input/output tokens, Team at $20/seat/month with $10 in credits per seat, and Company custom with SAML/OIDC, BYOK, commitments, invoicing, and SLA."
+    value: "Continue's old pricing page now redirects to the acquisition announcement, so do not quote the prior Starter, Team, or Company tiers as live purchase options. Treat current availability as open-source/final-release use plus any existing-customer transition guidance from Continue/Cursor."
     source: "https://www.continue.dev/pricing"
     source_label: "Continue pricing"
     source_id: continue-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-23
+    next_review_at: 2026-06-29
     volatility: high
     confidence: high
   model_control:
-    value: "Company tier explicitly includes BYOK, while Starter and Team are built around creating and running agents with purchasable frontier-model credits."
+    value: "The final docs frame Continue as a CLI, VS Code extension, and JetBrains plugin. The repository remains Apache-2.0, but it is read-only and no longer actively maintained, so future model/provider control is a self-maintenance question."
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   team_distribution:
-    value: "Team tier adds private-agent sharing, centralized agent management, controls over which agents the team can use, and Gmail/GitHub SSO login."
+    value: "The prior Team/Company commercial packaging is no longer the buyer anchor because the pricing URL redirects to the acquisition page. New teams should compare Cursor, GitHub Copilot, Claude Code, and self-maintained Continue forks instead of budgeting for old Continue seats."
     source: "https://www.continue.dev/pricing"
-    source_label: "Continue pricing"
+    source_label: "Continue pricing redirect"
     source_id: continue-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Continue is not a no-setup IDE bundle. The value depends on teams writing clear checks, governing agents, and reviewing suggested fixes before merge."
+    value: "The main risk is maintenance. Continue's final 2.0.0 release can still be useful, but the official repository is read-only, the old pricing surface is gone, and buyers should not expect a maintained standalone SaaS roadmap."
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [open-source, ai-checks, pull-request-review, ai-coding, cli, github-status-checks, byok, code-quality]
-seo_title: "Continue.dev Review: Source-Controlled AI PR Checks (June 2026)"
-meta_description: "Continue runs source-controlled AI checks on pull requests. Starter is $3/M tokens, Team is $20/seat with credits, Company adds SSO, BYOK, invoicing, and SLA."
+seo_title: "Continue.dev Review: Cursor Acquisition, Final Release & Pricing (June 2026)"
+meta_description: "Updated June 23, 2026: Continue has been acquired by Cursor. Its final 2.0.0 open-source coding-agent release remains available, but the repo is read-only and old pricing is no longer live."
 author: "aipedia.wiki Editorial"
 best_for:
-  - teams encoding code-review standards as PR checks
-  - engineering leaders standardizing AI quality gates
-  - developers who want open-source Continue CLI workflows
-  - teams needing Company BYOK and SSO paths
-  - repo owners who want suggested fixes but human merge decisions
+  - developers studying open-source coding-agent architecture
+  - teams that can self-maintain a fork or internal deployment
+  - existing Continue users planning migration after the Cursor acquisition
+  - buyers comparing Cursor against open-source coding-agent artifacts
+  - repo owners who want human-owned review around AI-suggested changes
 not_best_for:
   - zero-configuration autocomplete
   - teams that do not want to maintain AI check prompts
   - buyers expecting a full AI-native IDE
 quick_answer: >-
-  Continue is now best treated as source-controlled AI quality control for software teams. Write checks in `.continue/checks/`, run them on pull requests, and let Continue report GitHub status checks with suggested fixes. Pick it for repo-owned standards and agent governance; skip it if you only want plug-and-play autocomplete.
+  Continue is now best treated as a final open-source coding-agent artifact after Cursor acquired the company. The CLI, VS Code extension, and JetBrains plugin remain available, and the Apache-2.0 repository can still be studied or forked, but the official repo is read-only and no longer actively maintained. Do not budget around the old Starter/Team pricing page.
 decision_brief:
   items:
     - label: Start here
-      value: "PR checks"
-      detail: "Turn code-review standards into markdown checks in the repo."
+      value: "Final release"
+      detail: "Use the CLI, VS Code extension, or JetBrains plugin only if self-maintenance is acceptable."
     - label: Upgrade when
-      value: "Teams need agents"
-      detail: "Team adds private agent sharing, controls, SSO, and bundled credits."
+      value: "Use Cursor"
+      detail: "Cursor is the managed commercial path to evaluate after the acquisition."
     - label: Compare against
       value: "Copilot Review"
       detail: "Copilot is packaged; Continue is more standards-as-code."
 price_history:
   - date: 2026-06-04
     plan: "Source-controlled checks refresh"
-    price: "Free OSS + Starter $3/M tokens + Team $20/seat/mo"
+    price: "Historical: Free OSS + Starter $3/M tokens + Team $20/seat/mo"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-12
-    note: "Re-verified for the Continue comparison refresh. Public homepage/docs now position Continue around source-controlled AI checks on every pull request; GitHub repo lists Apache-2.0 license."
+    verified_at: 2026-06-23
+    note: "Historical pricing snapshot. The June 23 check found the pricing URL redirecting to the Cursor acquisition announcement, so these tiers should not be treated as live purchase options."
   - date: 2026-03-01
     plan: "Team"
     price: "$20/seat/mo"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-12
-    note: "Team tier restructured with $10 per-seat frontier-model credits included"
+    verified_at: 2026-06-23
+    note: "Historical Team tier. No longer safe as a live purchase claim after the Cursor acquisition redirect."
   - date: 2026-04-15
     plan: "Solo"
     price: "$0"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-12
-    note: "Solo remains free with full open-source extension access"
+    verified_at: 2026-06-23
+    note: "Historical solo/open-source snapshot. The final open-source artifacts remain available, but the repo is read-only."
   - date: 2026-05-13
     plan: "Starter"
     price: "$3/M tokens"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-12
-    note: "Verified pay-as-you-go Starter tier at $3 per million tokens (input and output) with Slack, Sentry, and Snyk integrations. Team holds at $20/seat with $10 bundled credits; Company stays custom."
+    verified_at: 2026-06-23
+    note: "Historical pay-as-you-go snapshot. The June 23 refresh supersedes this with the acquisition/read-only caveat."
   - date: 2026-06-01
-    plan: "Pricing refresh"
-    price: "Free OSS + Starter $3/M tokens + Team $20/seat/mo"
+    plan: "Acquisition and pricing redirect"
+    price: "Open-source final release; old pricing URL redirects"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-12
-    note: "Re-verified June 1, 2026. Continue remains BYOK/open-source for core IDE use; paid Continue tiers cover managed credits, integrations, shared agents, and team governance."
+    verified_at: 2026-06-23
+    note: "Re-verified June 23, 2026. Continue says it has been acquired by Cursor. Docs say the repository is read-only and no longer actively maintained, with a final 2.0.0 release of the VS Code extension, CLI, and JetBrains plugin."
 ---
 
 # Continue
 
-Continue is an open-source AI quality-control stack for software teams. Its current public docs and homepage put the front door on source-controlled AI checks: write a check as markdown in `.continue/checks/`, open a pull request, and Continue runs that check as a GitHub status check with suggested fixes when code misses the standard.
+Continue is an open-source coding agent that has now been acquired by Cursor. The old product page no longer frames Continue as a normal paid AI PR-check platform; it opens with the acquisition announcement. Current docs say the `continuedev/continue` repository is read-only and no longer actively maintained.
 
-That makes Continue less of a "buy another autocomplete" decision and more of a standards-as-code decision. It is for teams that want AI review behavior to live in the repo, not only in a proprietary IDE sidebar.
+That makes Continue a different buying decision than it was earlier in June. The final 2.0.0 release of the CLI, VS Code extension, and JetBrains plugin remains useful for developers who want to study, fork, or self-maintain an open-source coding agent. New teams should not buy it as a maintained standalone SaaS unless Continue/Cursor publishes a new commercial path.
 
 ## System Verdict
 
-> **Pick Continue when your team wants AI checks that are explicit, source-controlled, and decided by humans.** The best use is turning real review rules such as security, API consistency, dependency hygiene, or internal conventions into repeatable checks that run on every pull request.
+> **Pick Continue only when you are comfortable with a final open-source artifact.** It is still useful for studying a pioneering coding-agent architecture, self-hosting experiments, or forking the Apache-2.0 codebase.
 >
-> **Skip it if you just want first-day autocomplete.** [GitHub Copilot](/tools/github-copilot/) is easier for inline help, and [Cursor](/tools/cursor/) is a stronger all-in-one AI IDE. Continue asks the team to define standards clearly.
+> **Skip it if you need an actively maintained commercial coding assistant.** [Cursor](/tools/cursor/) is the natural managed path after the acquisition, while [GitHub Copilot](/tools/github-copilot/), [Claude Code](/tools/claude-code/), [Cline](/tools/cline/), and [CodeRabbit](/tools/coderabbit/) are better current buying lanes for teams.
 >
-> **Who pays what:** Starter is pay-as-you-go at $3 per million input/output tokens. Team is $20/seat/month with $10 in credits per seat, private-agent sharing, agent controls, and Gmail/GitHub SSO. Company is custom and adds SAML/OIDC, BYOK, commitments, invoicing, and SLA.
+> **Who pays what:** do not use the old Starter/Team/Company tiers as live guidance. The pricing URL redirects to the acquisition announcement, and the current safe buyer guidance is open-source final release or migrate/evaluate alternatives.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Primary job** | Source-controlled AI checks on pull requests |
-| **How checks work** | Markdown files in `.continue/checks/` become GitHub status checks |
+| **Primary job** | Final open-source coding-agent artifact after Cursor acquisition |
+| **Current maintenance status** | Repository is read-only and no longer actively maintained |
 | **Open-source repo** | `continuedev/continue`, Apache-2.0 license |
-| **CLI** | Continue CLI (`cn`) powers AI checks |
-| **Starter pricing** | $3 per million input/output tokens, pay as you go |
-| **Team pricing** | $20/seat/month with $10 in credits per seat |
-| **Company pricing** | Custom pricing with SAML/OIDC, BYOK, commitments, invoicing, and SLA |
-| **Best fit** | Teams standardizing code-review rules, quality gates, and AI-agent behavior |
-| **Main watch-out** | Weak prompts become weak checks; humans still decide whether suggested fixes merge |
+| **Final release** | 2.0.0 release of VS Code extension, CLI, and JetBrains plugin |
+| **Surfaces** | CLI, VS Code extension, JetBrains plugin |
+| **Old pricing page** | Redirects to acquisition announcement; prior paid tiers should be treated as historical |
+| **Best fit** | Developers studying or forking an open-source coding agent |
+| **Main watch-out** | No actively maintained standalone roadmap from the original Continue project |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What It Actually Is
 
-Continue lets a team describe an engineering standard in a markdown check. The official docs show checks with a name, description, and prompt. When a pull request opens, Continue evaluates the diff against those checks and reports the result as a GitHub status check. If a check fails, it can suggest a fix for a human to accept or reject.
+Continue was previously best described as source-controlled AI checks and agent governance. The current source trail changed. The homepage now announces Cursor's acquisition, the docs describe a final 2.0.0 release, and the GitHub repository states that it is no longer actively maintained.
 
-The open-source repository describes the product as source-controlled AI checks powered by the Continue CLI. That is the clearest current buyer framing: Continue is an AI review and agent-governance layer, not a hosted IDE replacement.
-
-The pricing page adds the commercial layer. Starter is usage-based for trying and running agents. Team is the operational tier for private agents, agent controls, and SSO. Company is the enterprise route when BYOK, SAML/OIDC, commitments, invoicing, and SLA matter.
+The open-source codebase still matters. It includes a coding agent, CLI, VS Code extension, and JetBrains plugin under Apache-2.0. But the product is now more like a historical/open-source base to inspect or fork than a fresh standalone product to buy.
 
 ## When To Pick Continue
 
-- **You want review rules in the repo.** Checks in `.continue/checks/` make AI behavior visible, versioned, and auditable.
-- **You want AI review to match your standards.** Continue is stronger for "enforce this rule every PR" than for generic unsolicited code opinions.
-- **You need private team agents.** Team adds private-agent sharing and controls over which agents developers can use.
-- **You need a Company BYOK path.** The pricing page explicitly puts BYOK in the enterprise tier.
-- **You want human-controlled fixes.** Continue can suggest a fix, but review ownership stays with the team.
+- **You want to study an open-source coding agent.** Continue's final release is still a useful reference implementation.
+- **You are comfortable self-maintaining.** Forking or internal use now needs ownership from your team.
+- **You already used Continue and need migration context.** Recheck Continue/Cursor guidance before changing workflows.
+- **You need Apache-2.0 code to inspect.** The repository remains public with Apache-2.0 licensing.
 
 ## When To Pick Something Else
 
+- **Managed AI-native IDE:** [Cursor](/tools/cursor/) is the closest commercial successor path after the acquisition.
 - **Fastest inline coding help:** [GitHub Copilot](/tools/github-copilot/) is simpler for day-one completions, chat, and GitHub-native workflow.
-- **Full AI-native IDE:** [Cursor](/tools/cursor/) is the better pick when the developer wants editor, agents, cloud agents, Bugbot, and usage analytics in one product.
 - **Autonomous ticket delegation:** [Devin](/tools/devin/) fits better when a team wants an agent to work in a sandbox and return a PR.
 - **Terminal-first repo agent:** [Claude Code](/tools/claude-code/) fits deeper local repo investigation, shell work, and long debugging loops.
 - **Hosted TypeScript scripts:** [Val Town](/tools/val-town/) is a runtime for vals, cron jobs, and webhooks, not a code-review stack.
 
 ## Pricing
 
-Pricing via [continue.dev/pricing](https://www.continue.dev/pricing).
+The live [continue.dev/pricing](https://www.continue.dev/pricing) URL now redirects to Continue's acquisition announcement. Treat the old public tiers as historical snapshots, not current buying options.
 
-| Plan | Price | What it adds | Best for |
-|---|---:|---|---|
-| Starter | $3 per million tokens | Create and run AI agents, Slack/Sentry/Snyk integrations, frontier-model credits | Teams testing AI checks or light usage |
-| Team | $20/seat/month | $10 credits per seat, private-agent sharing, agent controls, Gmail/GitHub SSO | Small teams standardizing checks |
-| Company | Custom | SAML/OIDC, BYOK, commitments, invoicing, SLA | Enterprise compliance and procurement |
+| Current path | Price | What it means |
+|---|---:|---|
+| Open-source final release | $0 software license | Apache-2.0 code remains public, but the repo is read-only and no longer actively maintained |
+| Old Starter / Team / Company tiers | Historical | Do not quote as live pricing unless Continue/Cursor republishes them |
+| Managed commercial alternative | Varies | Compare Cursor, Copilot, Claude Code, Cline, and CodeRabbit by buyer job |
 
-The important pricing detail is not only the seat price. Check volume, model choice, agent run length, and how often suggested fixes are generated determine the real bill.
+The important pricing detail is now maintenance, not seat price. If you self-host or fork Continue, model API costs, patching, security review, and migration work are your responsibility.
 
 ## Against The Alternatives
 
 | | Continue | GitHub Copilot | Cursor |
 |---|---|---|---|
-| **Best viewed as** | Source-controlled AI PR checks | GitHub-native AI coding platform | Managed AI-native IDE |
-| **Daily user surface** | PR checks, CLI, agents | IDE, GitHub, CLI, code review, cloud agent | VS Code fork with agents, Tab, Bugbot, Cloud Agents |
-| **Pricing anchor** | $3/M tokens Starter; $20/seat Team | Free; Pro $10; Pro+ $39; Max $100; Business $19; Enterprise $39 | Hobby free; Individual from $20; Teams $40/user |
-| **Governance strength** | Team-owned standards in repo | GitHub policy, org, model, and billing controls | Editor/team admin, privacy mode, usage analytics |
-| **Main risk** | Check quality depends on prompt quality | AI Credits can move costs quickly | Editor lock-in and usage-based model burn |
+| **Best viewed as** | Open-source final coding-agent artifact | GitHub-native AI coding platform | Managed AI-native IDE |
+| **Daily user surface** | CLI, VS Code extension, JetBrains plugin if self-maintained | IDE, GitHub, CLI, code review, cloud agent | VS Code fork with agents, Tab, Bugbot, Cloud Agents |
+| **Pricing anchor** | Open-source code; old pricing no longer live | Free; Pro $10; Pro+ $39; Max $100; Business $19; Enterprise $39 | Hobby free; Individual from $20; Teams $40/user |
+| **Governance strength** | Forkable/self-owned codebase | GitHub policy, org, model, and billing controls | Editor/team admin, privacy mode, usage analytics |
+| **Main risk** | Read-only repo and self-maintenance burden | AI Credits can move costs quickly | Editor lock-in and usage-based model burn |
 
 ## Failure Modes
 
-- **Generic checks create noise.** Continue is strongest when checks are narrow and tied to real team standards.
-- **Human review still matters.** A green AI check is not proof of correctness, security, or architectural fitness.
-- **Pricing can scale with PR volume.** Starter token billing is simple, but large diffs and many checks can add up.
-- **Company BYOK is not the same as free local AI.** Enterprise routing still needs procurement, provider governance, and security review.
-- **It is not a full IDE.** Developers wanting a polished coding environment should compare Cursor, Copilot, Claude Code, and Cline.
+- **Maintenance is the product risk.** The official repository is read-only and no longer actively maintained.
+- **Old pricing is stale.** The pricing URL redirects, so do not budget around historical Starter, Team, or Company tiers.
+- **Security ownership shifts to you.** Forking the codebase means owning dependency updates, model-routing policy, and review controls.
+- **It is not the managed Cursor roadmap.** Cursor is the current commercial path to evaluate after the acquisition.
+- **Human review still matters.** A coding agent can suggest changes, but teams still own correctness, security, and merge decisions.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Continue pricing](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), [Continue homepage](https://www.continue.dev/), and the [Continue GitHub repo](https://github.com/continuedev/continue).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Continue homepage](https://www.continue.dev/), the redirected [Continue pricing URL](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
 
 ## FAQ
 
 **Is Continue free?**
-The open-source repository is public under Apache-2.0. The current commercial pricing page lists Starter at $3 per million tokens, Team at $20/seat/month, and Company custom.
+The open-source repository is public under Apache-2.0, but the official repo is read-only and no longer actively maintained. The old commercial pricing page now redirects to the acquisition announcement.
 
 **Is Continue a GitHub Copilot replacement?**
-Only for some jobs. Copilot is better for inline coding help and GitHub-native assistant workflows. Continue is better when the team wants AI review standards written into the repo.
+No for new buyers. Treat Continue as an open-source final-release artifact. Copilot is a maintained GitHub-native coding platform, and Cursor is the commercial path most directly connected to Continue's acquisition.
 
 **Does Continue support BYOK?**
-Yes, but the current pricing page lists BYOK under Company. Treat BYOK as an enterprise/procurement feature unless the team's self-managed open-source workflow is already proven.
+The old Company-tier BYOK claim is historical unless Continue/Cursor republishes it. For current use, evaluate what the open-source final release can support and whether your team is willing to maintain it.
 
 **What should I test first?**
-Start with one narrow check, such as secrets, input validation, deprecated API use, or a house-style rule. If that check creates useful signal without review noise, expand to more standards.
+If you still want Continue, test the final CLI or extension against a non-sensitive repository and confirm your team can maintain dependencies, model keys, and permissions. New commercial buyers should test Cursor, Copilot, Claude Code, Cline, or CodeRabbit first.
 
 ## Sources
 
-- [Continue homepage](https://www.continue.dev/) - source-controlled AI checks positioning, verified 2026-06-12
-- [Continue docs](https://docs.continue.dev/) - check files and GitHub status-check workflow, verified 2026-06-12
-- [Continue pricing](https://www.continue.dev/pricing) - Starter, Team, Company tiers, verified 2026-06-12
-- [GitHub: continuedev/continue](https://github.com/continuedev/continue) - open-source repository and Apache-2.0 license, verified 2026-06-12
+- [Continue homepage](https://www.continue.dev/) - Cursor acquisition announcement, verified 2026-06-23
+- [Continue docs](https://docs.continue.dev/) - final 2.0.0 release, read-only repository note, and current surfaces, verified 2026-06-23
+- [Continue pricing redirect](https://www.continue.dev/pricing) - old pricing URL redirect behavior, verified 2026-06-23
+- [GitHub: continuedev/continue](https://github.com/continuedev/continue) - read-only open-source repository, Apache-2.0 license, and latest release metadata, verified 2026-06-23
 
 ## Related
 

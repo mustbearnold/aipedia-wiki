@@ -30,6 +30,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-22: Capacities, Beehiiv, Browserbase, Castmagic, CloudTalk Batch
+
+- Status: Complete in this batch.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed Capacities, Beehiiv, Browserbase, Castmagic, and CloudTalk against current June 22 primary sources; updated AI Notes, AI Writing, and AI Automation parent hubs; advanced source registry checks; regenerated `PAGE_REFRESH_LEDGER.md`; and recorded `.agent/loop-runs/2026-06-22-capacities-beehiiv-browserbase-castmagic-cloudtalk-batch.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\capacities.md --file src\content\tools\beehiiv.md --file src\content\tools\browserbase.md --file src\content\tools\castmagic.md --file src\content\tools\cloudtalk.md --json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/capacities/ --route /categories/ai-notes/ --route /tools/beehiiv/ --route /categories/ai-writing/ --route /tools/browserbase/ --route /categories/ai-automation/ --route /tools/castmagic/ --route /tools/cloudtalk/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: This batch is complete, but the global goal remains active. `npm run tool:refresh:batch -- --limit 5 --json` now queues Grok, Cursor, Lindy, n8n, and Mistral AI.
+- Next: Continue the active freshness goal with Grok, Cursor, Lindy, n8n, and Mistral AI.
+
 ### 2026-06-22: Qwen, Hailuo, HeyGen, And Adobe Firefly Batch Refresh
 
 - Status: Complete in this batch.
@@ -549,3 +559,63 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\augment-code.md --file src\content\tools\base44.md --file src\content\tools\blackbox-ai.md --file src\content\tools\captions.md --file src\content\tools\cline.md --json`; `npm run build:fast`; `npm run typecheck`; `npm run qa:route -- --route /tools/augment-code/ --route /categories/ai-coding/ --route /tools/base44/ --route /categories/ai-design/ --route /tools/blackbox-ai/ --route /tools/captions/ --route /categories/ai-video/ --route /tools/cline/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `node scripts\guard-em-dashes.mjs`; `git diff --check`.
 - Residual risks: `typecheck` and `build:fast` passed only when run sequentially. Running them in parallel caused an Astro `node_modules/.astro/data-store.json` rename race, so the loop docs now warn against parallelizing those two commands.
 - Next: Continue the oldest-first batch with CodeRabbit, Cody, Comet, D-ID, and Hedra.
+
+### 2026-06-22: Grok, Cursor, Lindy, n8n, Mistral AI Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Refreshed Grok, Cursor, Lindy, n8n, and Mistral AI against current June 22 sources, updated AI Chatbots, AI Coding, and AI Automation parent hubs, refreshed source-registry rows, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-22-grok-cursor-lindy-n8n-mistral-ai-batch.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\grok.md --file src\content\tools\cursor.md --file src\content\tools\lindy.md --file src\content\tools\n8n.md --file src\content\tools\mistral-ai.md --json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/grok/ --route /categories/ai-chatbots/ --route /tools/cursor/ --route /categories/ai-coding/ --route /tools/lindy/ --route /categories/ai-automation/ --route /tools/n8n/ --route /tools/mistral-ai/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `npm run ledger:pages:check`; `git diff --check`.
+- Residual risks: The goal remains active because the next freshness batch is already queued. Continue current-source checks before editing Argil, Canva, Replit Agent, Claude, and Gemini.
+- Next: Continue the oldest-first batch with Argil, Canva, Replit Agent, Claude, and Gemini.
+
+### 2026-06-22: Argil, Canva, Replit Agent, Claude, Gemini Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Refreshed Argil, Canva, Replit Agent, Claude, and Gemini against current June 22 sources, updated AI Video, AI Design, AI Coding, and AI Chatbots parent hubs, refreshed source-registry rows, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-22-argil-canva-replit-agent-claude-gemini-batch.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\argil.md --file src\content\tools\canva.md --file src\content\tools\replit-agent.md --file src\content\tools\claude.md --file src\content\tools\gemini.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/argil/ --route /categories/ai-video/ --route /tools/canva/ --route /categories/ai-design/ --route /tools/replit-agent/ --route /categories/ai-coding/ --route /tools/claude/ --route /categories/ai-chatbots/ --route /tools/gemini/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: The goal remains active. The next planner queue is due-soon rather than due-now, and starts with Claude, Gemini, Grok, n8n, and Claude Code because short review windows and comparison mentions keep them high priority.
+- Next: Continue the batched freshness loop until every tracked tool page has been refreshed.
+
+### 2026-06-23: Daily Model, Homepage, And News Cadence
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Rebuilt `/trends/model-availability-churn/` as a simple daily availability ledger for frontier and widely used models, set the trend record to `update_frequency: daily`, marked homepage and `/news/` route metadata as daily-refresh surfaces, added hidden `UpdateFrequency` metadata to homepage and news, updated `/trends/`, LLM surfaces, and `PAGE_REFRESH_LEDGER.md`, and created Codex app automation `daily-aipedia-news-and-model-availability-refresh`.
+- Verification: `npm run ledger:pages`; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `node scripts/audit-news-rendering.mjs`; `git diff --check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /trends/model-availability-churn/ --route /trends/ --route / --route /news/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: This pass did not add three June 23 news stories immediately; the new daily automation is what enforces that recurring news-production requirement.
+- Next: Resume the active tool-page freshness goal after the user-facing page-policy interruption.
+
+### 2026-06-23: Claude, Decktopus, Gemini, Grok, n8n Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Refreshed Claude, Decktopus, Gemini, Grok, and n8n against current June 2026 sources, updated AI Chatbots, AI Presentation, and AI Automation parent hubs, refreshed source-registry rows, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-23-claude-decktopus-gemini-grok-n8n-batch.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\claude.md --file src\content\tools\decktopus.md --file src\content\tools\gemini.md --file src\content\tools\grok.md --file src\content\tools\n8n.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/claude/ --route /categories/ai-chatbots/ --route /tools/decktopus/ --route /categories/ai-presentation/ --route /tools/gemini/ --route /tools/grok/ --route /tools/n8n/ --route /categories/ai-automation/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: The goal remains active. The next planner queue is due-soon rather than due-now, and starts with Claude Code, GitHub Copilot, Grammarly, Mistral AI, and Qwen.
+- Next: Continue the batched freshness loop until every tracked tool page has been refreshed.
+
+### 2026-06-23: Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Refreshed Claude Code, GitHub Copilot, Grammarly, Mistral AI, and Qwen against current June 2026 sources, updated AI Coding, AI Writing, and AI Chatbots parent hubs, refreshed source-registry rows, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-23-claude-code-github-copilot-grammarly-mistral-ai-qwen-batch.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\claude-code.md --file src\content\tools\github-copilot.md --file src\content\tools\grammarly.md --file src\content\tools\mistral-ai.md --file src\content\tools\qwen.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/claude-code/ --route /categories/ai-coding/ --route /tools/github-copilot/ --route /tools/grammarly/ --route /categories/ai-writing/ --route /tools/mistral-ai/ --route /categories/ai-chatbots/ --route /tools/qwen/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: The goal remains active. The next planner queue is due-soon rather than due-now, and starts with Capacities, Consensus, Cursor, Hailuo, and HeyGen.
+- Next: Continue the batched freshness loop until every tracked tool page has been refreshed.
+
+### 2026-06-23: MiniMax Speech, Modal, Morphic, Mubert, Murf Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Refreshed MiniMax Speech, Modal, Morphic, Mubert, and Murf against current June 23 sources; updated AI Voice, AI Infrastructure, AI Coding, AI Automation, AI Search, AI Chatbots, AI Music, Best AI Voice Generator for YouTube, Best AI Music Generator, and Suno Alternatives surfaces; refreshed source-registry rows; regenerated `PAGE_REFRESH_LEDGER.md`; and recorded `.agent/loop-runs/2026-06-23-minimax-speech-modal-morphic-mubert-murf-batch.md`.
+- Verification: `npm run tool:refresh:batch:check -- --file src\content\tools\minimax-speech.md --file src\content\tools\modal.md --file src\content\tools\morphic.md --file src\content\tools\mubert.md --file src\content\tools\murf.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/minimax-speech/ --route /tools/modal/ --route /tools/morphic/ --route /tools/mubert/ --route /tools/murf/ --route /categories/ai-voice/ --route /categories/ai-infrastructure/ --route /categories/ai-coding/ --route /categories/ai-automation/ --route /categories/ai-search/ --route /categories/ai-chatbots/ --route /categories/ai-music/ --route /guides/best-ai-voice-youtube/ --route /guides/best-ai-music-generator/ --route /guides/suno-alternatives/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: 127 tracked tool pages remain below the June 23 refresh date. Mubert exact self-serve prices still need live flow confirmation before procurement, as documented in content.
+- Next: Continue with NanoChat, Napkin AI, NeuronWriter, NightCafe, and Notion AI.

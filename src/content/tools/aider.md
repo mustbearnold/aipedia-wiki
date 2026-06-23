@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 + API costs"
 status: active
 launched: 2023-05
-last_updated: 2026-06-14
-last_verified: 2026-06-14
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://aider.chat/"
     source_label: "Aider homepage"
     source_id: aider-official
-    verified_at: 2026-06-14
+    verified_at: 2026-06-23
     next_review_at: 2026-07-14
     volatility: medium
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-06-14
+    verified_at: 2026-06-23
     next_review_at: 2026-07-14
     volatility: medium
     confidence: high
@@ -49,7 +49,7 @@ facts:
     source: "https://github.com/Aider-AI/aider"
     source_label: "Aider GitHub repository"
     source_id: aider-repository
-    verified_at: 2026-06-14
+    verified_at: 2026-06-23
     next_review_at: 2026-07-14
     volatility: medium
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-06-14
+    verified_at: 2026-06-23
     next_review_at: 2026-07-14
     volatility: medium
     confidence: high
@@ -67,7 +67,7 @@ facts:
     source: "https://aider.chat/docs/"
     source_label: "Aider docs"
     source_id: aider-pricing
-    verified_at: 2026-06-14
+    verified_at: 2026-06-23
     next_review_at: 2026-07-14
     volatility: medium
     confidence: medium
@@ -89,6 +89,14 @@ not_best_for:
 quick_answer: >-
   Pick Aider for a free, open-source CLI pair-programmer that edits real files and can commit changes to git. Skip it if a polished GUI matters more; Cursor's $20/mo wins there. BYOK keeps the Aider tool cost at $0, but token spend still depends on provider, model, repo-map size, context, and session length.
 price_history:
+  - date: 2026-06-23
+    plan: "License and BYOK cost model"
+    price: "Free Apache 2.0 tool; model/API usage billed by the provider or router"
+    source: "https://aider.chat/docs/"
+    source_label: "Aider docs"
+    source_id: aider-pricing
+    verified_at: 2026-06-23
+    note: "Rechecked official docs, release history, and GitHub repository. Aider remains a free open-source terminal pair-programmer with provider/API/local model connections; cost depends on the chosen model route and session shape."
   - date: 2026-06-14
     plan: "License and BYOK cost model"
     price: "Free Apache 2.0 tool; model/API usage billed by the provider or router"
@@ -168,7 +176,7 @@ Supports many LLMs via API key: Claude, OpenAI, Gemini, Mistral, OpenAI-compatib
 | **Voice coding** | Yes, via local speech-to-text |
 | **Watch mode** | Yes, auto-applies suggestions as files change |
 
-Every data point above was verified against vendor documentation on 2026-06-14. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -207,7 +215,7 @@ Aider itself is free under Apache 2.0. You pay model usage directly through the 
 | GitHub Copilot connection | $0 + Copilot plan/credit usage | Useful for teams already governed through GitHub, but credit drawdown should be modeled |
 | Ollama or local models | $0 + local hardware cost | Fully offline-capable path; quality depends on the local model |
 
-*License and cost model verified 2026-06-14. Real cost varies with codebase size, repo-map token overhead, provider pricing, model choice, context window, retry loops, and session length. Check live provider pricing before treating any Aider workflow as cheap at scale.*
+*License and cost model verified 2026-06-23. Real cost varies with codebase size, repo-map token overhead, provider pricing, model choice, context window, retry loops, and session length. Check live provider pricing before treating any Aider workflow as cheap at scale.*
 
 ## Against the alternatives
 
@@ -233,7 +241,7 @@ Aider itself is free under Apache 2.0. You pay model usage directly through the 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-14 against [aider.chat docs](https://aider.chat/docs/), [Aider installation docs](https://aider.chat/docs/install.html), the [chat modes reference](https://aider.chat/docs/usage/modes.html), the [repo-map docs](https://aider.chat/docs/repomap.html), and the [Aider GitHub repo](https://github.com/Aider-AI/aider).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [aider.chat docs](https://aider.chat/docs/), [Aider installation docs](https://aider.chat/docs/install.html), the [chat modes reference](https://aider.chat/docs/usage/modes.html), the [repo-map docs](https://aider.chat/docs/repomap.html), [Aider release history](https://aider.chat/HISTORY.html), and the [Aider GitHub repo](https://github.com/Aider-AI/aider).
 
 ## FAQ
 

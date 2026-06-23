@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: $21-$790/month public self-serve; monthly billing higher
 status: active
 launched: 2022-07
-last_updated: 2026-06-21
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   pricing_anchor:
@@ -42,8 +42,8 @@ facts:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-18
-    next_review_at: 2026-09-02
+    verified_at: 2026-06-23
+    next_review_at: 2026-09-22
     volatility: high
     confidence: high
   output_count:
@@ -51,7 +51,7 @@ facts:
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   language_support:
@@ -59,7 +59,7 @@ facts:
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   team_features:
@@ -67,7 +67,7 @@ facts:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   watch_out_for:
@@ -75,7 +75,7 @@ facts:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   current_surface:
@@ -83,28 +83,28 @@ facts:
     source: "https://www.castmagic.io/"
     source_label: "Castmagic overview"
     source_id: castmagic-overview
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
   api_scope:
     value: "Castmagic's public docs describe a JSON transcription API with speaker diarization and English plus 17 additional languages, while content generation is still described as in development."
     source: "https://docs.castmagic.io/"
     source_label: "Castmagic API docs"
     source_id: castmagic-api-docs
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: medium
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
   affiliate_program:
     value: "Castmagic publishes a FirstPromoter affiliate program with 30% recurring commissions and a 90-day cookie window, subject to approval and affiliate terms."
     source: "https://castmagic.firstpromoter.com/"
     source_label: "Castmagic affiliate program"
     source_id: castmagic-affiliate-program
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
 tags: [podcast, content-creation, transcription, show-notes, blog-generation, social-posts, newsletter, repurposing, ai-writing]
 seo_title: 'Castmagic: Features, Pricing & Review (June 2026)'
 meta_description: >-
@@ -124,6 +124,14 @@ not_best_for:
 quick_answer: >-
   Castmagic is a media-to-content workspace for podcasters, creators, agencies, and B2B teams. Drop in a recording or import from a source platform, then turn it into transcripts, show notes, campaign drafts, clips, newsletters, social posts, and searchable library context. Pick it when the bottleneck is distribution writing and repeatable repurposing, not raw editing.
 price_history:
+  - date: 2026-06-23
+    plan: "Hobby / Starter / Business / Scale"
+    price: "$21 / $79 / $790 per month, billed annually; Scale custom"
+    source: "https://www.castmagic.io/pricing"
+    source_label: "Castmagic pricing"
+    source_id: castmagic-pricing
+    verified_at: 2026-06-23
+    note: "Rechecked pricing, overview, API, and affiliate surfaces. No material change found from the June 22 refresh."
   - date: 2026-05-13
     plan: "Hobby"
     price: "$21/mo (annual) · 5 audio hours/mo · 5 seats"
@@ -136,7 +144,7 @@ price_history:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     note: "Re-verified public annual-billing plan cards, 10M+ minutes processed proof point, and 100-content-assets marketing claim."
   - date: 2026-06-18
     plan: "Hobby / Starter / Business / Scale"
@@ -144,7 +152,7 @@ price_history:
     source: "https://www.castmagic.io/pricing"
     source_label: "Castmagic pricing"
     source_id: castmagic-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     note: "Re-verified current plan cards, 5/20/80 monthly transcription-hour quotas, 5/10/20 included seats, 10GB max file size, 5 concurrent uploads, integrations, media library, Studio clipping/audiograms, and custom Scale path."
   - date: 2026-05-13
     plan: "Starter"
@@ -168,6 +176,7 @@ Castmagic is not a transcription tool with extras bolted on. The transcript is a
 
 ## What Changed Since The Last Refresh
 
+- June 23 recheck kept the current pricing and product story stable: Castmagic remains an audio-hour-priced media-to-content workspace with Content Pipeline, Studio, semantic search, iOS recording, MCP, and a public FirstPromoter affiliate route.
 - Castmagic's public positioning has moved from "40+ content assets from one upload" toward a broader content operating workspace: campaign builder, brand voice training, editable templates, workspaces, permissions, folders, custom workflows, commenting, tasks, and approval states.
 - The current site now highlights semantic search across recordings and "Live now" Castmagic MCP for Claude, where transcript libraries become searchable context that Claude can cite and draft from.
 - Studio and mobile are more prominent: the features page calls out unlimited media clipping and audiograms on paid plans, plus Castmagic for iOS to record meetings, voicenotes, and field audio into a workspace.
@@ -199,7 +208,7 @@ Castmagic is not a transcription tool with extras bolted on. The transcript is a
 | **Pricing model** | Audio-hour quota per month (overage requires plan upgrade) |
 | **Underlying model** | Not publicly documented; treat as a closed pipeline with standard LLM behind it |
 
-Every data point above was verified against Castmagic pricing, product, feature, affiliate, and API documentation on 2026-06-18. See Sources.
+Every data point above was verified against Castmagic pricing, product, feature, affiliate, and API documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -248,7 +257,7 @@ Subscription pricing is managed via [castmagic.io/pricing](https://www.castmagic
 
 All public plans include Magic Chat, Longform AI, unlimited re-generations, media clipping, audiogram generation, public sharing, AI image background generation, team collaboration, Zoom, Google Drive, Zapier, RSS, YouTube/TikTok/Instagram URL import, unlimited file uploads, unlimited Spaces, 10GB maximum file size, 5 concurrent uploads, and Media Library. The differences are quota, team, storage, onboarding, and workspace customization.
 
-Prices verified 2026-06-18 via [castmagic.io/pricing](https://www.castmagic.io/pricing). The pricing page still defaults to annual billing with a stated 20% annual saving; check the monthly toggle and checkout before purchase. No public per-hour overage rate is shown on the pricing page.
+Prices verified 2026-06-23 via [castmagic.io/pricing](https://www.castmagic.io/pricing). The pricing page still defaults to annual billing with a stated 20% annual saving; check the monthly toggle and checkout before purchase. No public per-hour overage rate is shown on the pricing page.
 
 ## Against the alternatives
 
@@ -278,7 +287,7 @@ The honest framing: **Castmagic + OpusClip + Descript stacks as one show's post-
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-18 against [Castmagic pricing](https://www.castmagic.io/pricing), the [Castmagic product overview](https://www.castmagic.io/), [Castmagic features](https://www.castmagic.io/features), [Castmagic API docs](https://docs.castmagic.io/), and the [Castmagic affiliate program](https://castmagic.firstpromoter.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Castmagic pricing](https://www.castmagic.io/pricing), the [Castmagic product overview](https://www.castmagic.io/), [Castmagic features](https://www.castmagic.io/features), [Castmagic API docs](https://docs.castmagic.io/), and the [Castmagic affiliate program](https://castmagic.firstpromoter.com/).
 
 ## FAQ
 

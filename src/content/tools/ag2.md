@@ -13,8 +13,8 @@ status: active
 launched: 2024-10
 current_version: "0.13.4"
 current_version_date: 2026-06-12
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://www.ag2.ai/
     source_label: AG2 official site
     source_id: ag2-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -42,16 +42,16 @@ facts:
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
   open_source_or_local:
-    value: AG2 is available as an open-source repository and can be installed for local or self-managed agent development. Latest release verified from GitHub is v0.13.4 (2026-06-12).
+    value: AG2 is available as an open-source repository and can be installed for local or self-managed agent development. Latest release verified from the GitHub API on June 23, 2026 is v0.13.4 (published 2026-06-12).
     source: https://github.com/ag2ai/ag2/releases
     source_label: AG2 releases
     source_id: ag2-releases
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -60,7 +60,7 @@ facts:
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -69,7 +69,7 @@ facts:
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -78,7 +78,7 @@ facts:
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -105,7 +105,7 @@ Formerly Microsoft AutoGen, AG2 spun out as an independent open-source project i
 
 ## What Changed Since The Last Refresh
 
-The prior page still centered v0.13.2 from May 29. The current June 18 check found two newer release steps and a stronger AgentOS positioning story:
+The prior page still centered v0.13.2 from May 29. The current June 23 check found v0.13.4 still latest, two newer release steps than that old page, and a stronger AgentOS positioning story:
 
 - **v0.13.4 is now latest.** GitHub lists v0.13.4 on 2026-06-12, with AG2 Agent-as-MCP-server support, OAuth Resource Server authentication, SkillPlugin support aligned with the agentskills.io spec, a new Amazon Bedrock Beta client, decoupled `UsageEvent` reporting, more reliable beta cookbook examples, and a TealTiger governance integration example.
 - **v0.13.3 changed the architecture story.** The June 5 release added a cross-process Network so agents in separate processes or machines can participate in the same channels. It also added `background_agent_tool`, a Sandbox protocol with `LocalSandbox`, evaluation improvements, A2A fixes, OpenAI reasoning-token mapping, and stream/tool-result bug fixes.
@@ -159,7 +159,7 @@ AG2 is free and open source. No commercial tier. You pay only for:
 - **Security hardening** (sandboxing, secrets handling, permissions, and review)
 - **Engineering time** (agent design, testing, deployment, and maintenance)
 
-Verified 2026-06-18 via [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [AG2 releases page](https://github.com/ag2ai/ag2/releases).
+Verified 2026-06-23 via [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [AG2 releases page](https://github.com/ag2ai/ag2/releases).
 
 ## Buyer fit
 
@@ -215,7 +215,7 @@ AG2's openness is the advantage, but it also means production discipline is the 
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-18 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), the [AG2 releases page](https://github.com/ag2ai/ag2/releases) (v0.13.4 on 2026-06-12), the [AG2 docs](https://docs.ag2.ai/), and [Build with AG2](https://github.com/ag2ai/build-with-ag2).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), the [AG2 releases page](https://github.com/ag2ai/ag2/releases) (v0.13.4 on 2026-06-12), the [AG2 docs](https://docs.ag2.ai/), and [Build with AG2](https://github.com/ag2ai/build-with-ag2).
 
 ## FAQ
 

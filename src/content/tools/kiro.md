@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: "Kiro: Features, Pricing & Review (June 2026)"
 meta_description: "Kiro is a spec-driven agentic IDE and CLI. Free includes 50 credits; Pro is $20/mo with 1,000 credits; Pro+ is $40/mo with 2,000 credits; Power is $200/mo with 10,000 credits."
@@ -33,14 +33,14 @@ facts:
     source: "https://kiro.dev/"
     source_label: "Kiro homepage"
     source_id: kiro-coding-agent
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     confidence: high
   best_paid_tier:
     value: "Pro ($20/month) for regular use; Pro+ ($40/month) if specs/hooks consume credits quickly"
     source: "https://kiro.dev/pricing/"
     source_label: "Kiro pricing"
     source_id: kiro-best-paid-tier
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-07-15
     confidence: high
   best_for:
@@ -48,7 +48,7 @@ facts:
     source: "https://kiro.dev/docs/specs/"
     source_label: "Kiro specs docs"
     source_id: kiro-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     confidence: high
 tags: [ai-coding, ai-ide, coding-agent, spec-driven-development, cli, mcp, vscode-compatible]
 best_for:
@@ -69,6 +69,7 @@ price_history:
     source: "https://kiro.dev/pricing/"
     source_label: "Source"
     source_id: kiro-best-paid-tier
+    verified_at: 2026-06-23
     note: "Perpetual free tier; June 2026 pricing page instead emphasizes a $20 paid-upgrade credit for eligible first upgrades rather than a standing 500-credit signup bonus"
   - date: 2026-04-28
     plan: "Pro"
@@ -76,6 +77,7 @@ price_history:
     source: "https://kiro.dev/pricing/"
     source_label: "Source"
     source_id: kiro-best-paid-tier
+    verified_at: 2026-06-23
     note: "Overage available at $0.04/credit on paid plans"
   - date: 2026-04-28
     plan: "Pro+"
@@ -83,6 +85,7 @@ price_history:
     source: "https://kiro.dev/pricing/"
     source_label: "Source"
     source_id: kiro-best-paid-tier
+    verified_at: 2026-06-23
     note: "Verified on kiro.dev/pricing"
   - date: 2026-04-28
     plan: "Power"
@@ -90,6 +93,7 @@ price_history:
     source: "https://kiro.dev/pricing/"
     source_label: "Source"
     source_id: kiro-best-paid-tier
+    verified_at: 2026-06-23
     note: "Verified on kiro.dev/pricing"
   - date: 2026-05-13
     plan: "All tiers"
@@ -97,6 +101,7 @@ price_history:
     source: "https://kiro.dev/pricing/"
     source_label: "Source"
     source_id: kiro-best-paid-tier
+    verified_at: 2026-06-23
     note: "Reverified 2026-05-13. Free/Pro/Pro+/Power and overage at $0.04/credit unchanged."
   - date: 2026-06-01
     plan: "All tiers"
@@ -104,7 +109,16 @@ price_history:
     source: "https://kiro.dev/pricing/"
     source_label: "Source"
     source_id: kiro-best-paid-tier
+    verified_at: 2026-06-23
     note: "June 1 recheck: Free 50 credits; Pro $20 with 1,000 credits; Pro+ $40 with 2,000 credits; Power $200 with 10,000 credits; paid overage remains $0.04/credit. The Kiro Web 50% promotional credit discount was listed through May 29, 2026, so do not model it as ongoing."
+  - date: 2026-06-23
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://kiro.dev/pricing/"
+    source_label: "Kiro pricing"
+    source_id: kiro-best-paid-tier
+    verified_at: 2026-06-23
+    note: "Reverified Free 50 credits, Pro $20 with 1,000 credits, Pro+ $40 with 2,000 credits, Power $200 with 10,000 credits, overage at $0.04/credit, and billing docs that usage caps renew at the start of the billing cycle while overages are charged at month end."
 ---
 
 # Kiro
@@ -139,7 +153,7 @@ The product is built around a sharp editorial stance: vibe coding is useful for 
 | **Models** | Auto routing plus selectable Claude/open-weight/premium models; availability varies by plan and country |
 | **Autonomous agent** | Preview for Pro, Pro+, and Power users; team access invite-only |
 | **Pricing** | Free $0, Pro $20, Pro+ $40, Power $200, Enterprise custom |
-| **Overage** | $0.04 per additional credit on paid plans when enabled |
+| **Overage** | $0.04 per additional credit on paid plans when enabled; usage caps renew at the start of the billing cycle |
 
 ## What It Actually Is
 
@@ -180,7 +194,7 @@ Pricing via [Kiro pricing](https://kiro.dev/pricing/):
 | Kiro Power | $200/mo | 10,000 | Paid overage available |
 | Enterprise | Custom | Custom | Team billing, analytics, SAML/SCIM SSO, enterprise controls |
 
-Credits are consumed by prompts in vibe mode or spec mode, spec refinement, task execution, and agent hook execution. Paid plans can enable overage at $0.04 per credit. Kiro's pricing page still showed a 50% Kiro Web promotional usage discount through May 29, 2026; because that date has passed, June budgets should assume standard credit burn unless the account dashboard says otherwise.
+Credits are consumed by prompts in vibe mode or spec mode, spec refinement, task execution, and agent hook execution. Kiro's billing docs say usage caps renew at the start of the billing cycle, and overages are billed at month end when enabled. The pricing explainer says spec or steering creation and hooks consume at least one vibe request, with complex prompts able to consume more. Kiro's pricing page still showed a 50% Kiro Web promotional usage discount through May 29, 2026; because that date has passed, June budgets should assume standard credit burn unless the account dashboard says otherwise.
 
 ## Against The Alternatives
 
@@ -202,7 +216,7 @@ Credits are consumed by prompts in vibe mode or spec mode, spec refinement, task
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against primary Kiro sources and the [May 6 ServiceNow + AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against primary Kiro sources, Kiro billing docs, and the [May 6 ServiceNow + AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/).
 
 ## FAQ
 
@@ -210,7 +224,7 @@ This page was produced by the aipedia.wiki editorial pipeline. Scoring follows t
 Kiro turns a feature or bug prompt into structured spec files: requirements or bug analysis, design, and tasks. The agent then uses those artifacts to implement and track the work.
 
 **Is Kiro free?**
-Yes. Kiro Free includes 50 credits per month. New sign-ups receive 500 bonus credits usable within 30 days.
+Yes. Kiro Free includes 50 credits per month. The June pricing page emphasizes eligible first paid upgrades receiving a $20 subscription credit rather than treating a signup bonus as a permanent plan feature.
 
 **How much does Kiro Pro cost?**
 Kiro Pro is $20/month with 1,000 credits. Pro+ is $40/month with 2,000 credits. Power is $200/month with 10,000 credits.
@@ -221,6 +235,7 @@ Kiro's FAQ says users can log in with GitHub, Google, AWS Builder ID, or AWS IAM
 ## Sources
 
 - [Kiro pricing](https://kiro.dev/pricing/): plan prices, credits, overage terms
+- [Kiro billing docs](https://kiro.dev/docs/billing/): billing cycles, usage caps, and overage timing
 - [Kiro homepage](https://kiro.dev/): product positioning, IDE/CLI, models, MCP, steering, autopilot
 - [Kiro specs docs](https://kiro.dev/docs/specs/): spec file structure and workflows
 - [Kiro steering docs](https://kiro.dev/docs/steering/): workspace/global steering, AGENTS.md support, inclusion modes

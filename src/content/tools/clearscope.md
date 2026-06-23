@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "$129-$399/month; Enterprise custom"
 status: active
 launched: 2016-01
-last_updated: 2026-06-20
-last_verified: 2026-06-20
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: quarterly
 seo_title: "Clearscope Review (June 2026): Pricing, AI Visibility, SEO Workflow"
-meta_description: "Clearscope review updated June 20, 2026: Essentials $129/mo, Business $399/mo, Enterprise custom, Tracked Topics, Prompt Tracking, AI citations, content optimization, monitoring, local SEO, and internal links."
+meta_description: "Clearscope review updated June 23, 2026: Essentials $129/mo, Business $399/mo, Enterprise custom, Tracked Topics, Tracked Prompts, AI citations, content optimization, monitoring, local SEO, and internal links."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,16 +34,16 @@ facts:
     source: https://www.clearscope.io/product/optimize
     source_label: Clearscope Optimize
     source_id: clearscope-optimize
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
     next_review_at: 2026-09-20
   pricing_anchor:
-    value: "Clearscope's June 20 pricing check keeps Essentials at $129/month, Business at $399/month, Enterprise custom, unlimited users and projects on all plans, Prompt Tracking on every plan, and add-ons for additional Pages and Drafts."
+    value: "Clearscope's June 23 pricing check keeps Essentials at $129/month, Business at $399/month, Enterprise custom, unlimited users and projects on all plans, 50 Tracked Prompts on Essentials, 300 Tracked Prompts on Business, and add-ons for additional Pages and Drafts."
     source: https://www.clearscope.io/pricing
     source_label: Clearscope pricing
     source_id: clearscope-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
     next_review_at: 2026-08-20
@@ -52,7 +52,7 @@ facts:
     source: https://www.clearscope.io/product/optimize
     source_label: Clearscope Optimize
     source_id: clearscope-optimize
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
     next_review_at: 2026-09-20
@@ -61,7 +61,7 @@ facts:
     source: https://www.clearscope.io/support/getting-started-tracked-topics
     source_label: Clearscope Tracked Topics support
     source_id: clearscope-tracked-topics
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
     next_review_at: 2026-08-20
@@ -70,7 +70,7 @@ facts:
     source: https://www.clearscope.io/pricing
     source_label: Clearscope pricing
     source_id: clearscope-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
     next_review_at: 2026-08-20
@@ -88,8 +88,16 @@ not_best_for:
   - backlink, technical SEO, or rank-tracking workflows
   - teams that want automated publishing instead of editorial guidance
 quick_answer: >-
-  Clearscope is the premium content-optimization and AI-search visibility pick for editorial SEO teams. Pricing is still Essentials $129/month, Business $399/month, and Enterprise custom as of June 20, 2026. The bigger change is product scope: Clearscope now reads less like only an A-F draft grader and more like a content visibility suite with Discover, Write, Optimize, Protect, Localize, Linking, Tracked Topics, AI mentions, AI citations, and query fan-out evidence. Pick it when writer adoption, premium scoring, and AI visibility evidence justify the price. Skip it if you need cheap content scoring, backlink data, technical SEO, or full SEO-suite reporting.
+  Clearscope is the premium content-optimization and AI-search visibility pick for editorial SEO teams. Pricing is still Essentials $129/month, Business $399/month, and Enterprise custom as of June 23, 2026. The bigger change is product scope: Clearscope now reads less like only an A-F draft grader and more like a content visibility suite with Discover, Write, Optimize, Protect, Localize, Linking, Tracked Topics, Tracked Prompts, AI mentions, AI citations, and query fan-out evidence. Pick it when writer adoption, premium scoring, and AI visibility evidence justify the price. Skip it if you need cheap content scoring, backlink data, technical SEO, or full SEO-suite reporting.
 price_history:
+  - date: 2026-06-23
+    plan: "Essentials / Business / Enterprise"
+    price: "$129/mo / $399/mo / custom"
+    source: "https://www.clearscope.io/pricing"
+    source_label: "Clearscope pricing"
+    source_id: clearscope-pricing
+    verified_at: 2026-06-23
+    note: "Rechecked pricing and AI-search visibility limits. No material price change found; official pricing now shows 50 Tracked Prompts on Essentials and 300 Tracked Prompts on Business."
   - date: 2026-04-18
     plan: "Essentials"
     price: "$129/mo"
@@ -120,29 +128,29 @@ price_history:
     source: "https://www.clearscope.io/pricing"
     source_label: "Clearscope pricing"
     source_id: clearscope-pricing
-    verified_at: 2026-06-20
-    note: "Includes 20 Tracked Topics, 50 Pages, 20 monthly Topic Explorations, 20 monthly Drafts, unlimited users/projects, Prompt Tracking, brand visibility tracking, query fan-out awareness, training, support, sharing, and exporting."
+    verified_at: 2026-06-23
+    note: "Includes 20 Tracked Topics, 50 Tracked Prompts, 50 Pages, 20 monthly Topic Explorations, 20 monthly Drafts, unlimited users/projects, brand visibility tracking, query fan-out awareness, training, support, sharing, and exporting."
   - date: 2026-06-20
     plan: "Business"
     price: "$399/mo"
     source: "https://www.clearscope.io/pricing"
     source_label: "Clearscope pricing"
     source_id: clearscope-pricing
-    verified_at: 2026-06-20
-    note: "Includes 50 Tracked Topics, 300 Pages, 50 monthly Topic Explorations, 20 monthly Drafts, dedicated account manager, and priority support."
+    verified_at: 2026-06-23
+    note: "Includes 50 Tracked Topics, 300 Tracked Prompts, 300 Pages, 50 monthly Topic Explorations, 20 monthly Drafts, dedicated account manager, and priority support."
   - date: 2026-06-20
     plan: "Enterprise"
     price: "Custom"
     source: "https://www.clearscope.io/pricing"
     source_label: "Clearscope pricing"
     source_id: clearscope-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     note: "Adds custom credits, custom agreements, crawler whitelisting, and SSO."
 ---
 
 # Clearscope
 
-Clearscope is a premium SEO content platform from Mushi Labs. It is best known for A-F content grading, Google Docs-friendly editorial workflows, and content briefs that writers actually use. The June 20, 2026 refresh keeps the price story stable, but changes the product read: Clearscope now positions itself around SEO plus AI-search visibility across a fuller content lifecycle.
+Clearscope is a premium SEO content platform from Mushi Labs. It is best known for A-F content grading, Google Docs-friendly editorial workflows, and content briefs that writers actually use. The June 23, 2026 recheck keeps the price story stable, but changes the product read: Clearscope now positions itself around SEO plus AI-search visibility across a fuller content lifecycle.
 
 The current product navigation is the clue. Clearscope now separates the workflow into Expand, Discover, Write, Optimize, Protect, Localize, and Linking. That means the buying question is no longer only "does the grader beat Surfer?" It is whether a content team needs topic discovery, writer workflow, AI mentions/citations, Search Console-backed monitoring, local search recommendations, and internal-link suggestions in the same premium system.
 
@@ -152,7 +160,7 @@ Pick Clearscope if the team already knows content quality and writer adoption de
 
 Skip Clearscope if you want the lowest-cost semantic optimizer. [NeuronWriter](/tools/neuronwriter/) and [Frase](/tools/frase/) are better budget choices. Skip it if the real job is backlink research, technical SEO, rank tracking, or broad SEO reporting. [Ahrefs](/tools/ahrefs/) and [Semrush](/tools/semrush/) are stronger for those jobs.
 
-Best plan: start with Essentials only if a small team can live inside 20 Tracked Topics, 50 Pages, 20 monthly Topic Explorations, and 20 monthly Drafts. Business is the practical team tier when 300 Pages, 50 Tracked Topics, and account-manager support matter. Enterprise is the route for custom credits, SSO, crawler whitelisting, and negotiated terms.
+Best plan: start with Essentials only if a small team can live inside 20 Tracked Topics, 50 Tracked Prompts, 50 Pages, 20 monthly Topic Explorations, and 20 monthly Drafts. Business is the practical team tier when 300 Pages, 50 Tracked Topics, 300 Tracked Prompts, and account-manager support matter. Enterprise is the route for custom credits, SSO, crawler whitelisting, and negotiated terms.
 
 ## What Changed Since The Last Refresh
 
@@ -172,11 +180,11 @@ Best plan: start with Essentials only if a small team can live inside 20 Tracked
 | Core job | Content discovery, writing, optimization, monitoring, and AI-search visibility |
 | Signature workflow | A-F content grading against SERP patterns |
 | Current product surfaces | Expand, Discover, Write, Optimize, Protect, Localize, Linking |
-| AI visibility | Prompt Tracking, Tracked Topics, AI mentions, AI citations, web searches used by AI responses |
+| AI visibility | Tracked Prompts, Tracked Topics, AI mentions, AI citations, web searches used by AI responses |
 | Search evidence | Google visibility, Search Console connection, share of voice, pages, citations |
 | Writing surfaces | Clearscope editor, Google Docs, WordPress, Microsoft Word |
-| Essentials | $129/mo, 20 Tracked Topics, 50 Pages, 20 Topic Explorations/mo, 20 Drafts/mo |
-| Business | $399/mo, 50 Tracked Topics, 300 Pages, 50 Topic Explorations/mo, 20 Drafts/mo, dedicated account manager |
+| Essentials | $129/mo, 20 Tracked Topics, 50 Tracked Prompts, 50 Pages, 20 Topic Explorations/mo, 20 Drafts/mo |
+| Business | $399/mo, 50 Tracked Topics, 300 Tracked Prompts, 300 Pages, 50 Topic Explorations/mo, 20 Drafts/mo, dedicated account manager |
 | Enterprise | Custom credits, custom agreements, crawler whitelisting, SSO |
 | Users and projects | Unlimited on all public plans |
 
@@ -215,21 +223,21 @@ The newer AI-search layer changes the reason to buy. Tracked Topics show whether
 
 ## Pricing
 
-Pricing via [clearscope.io/pricing](https://www.clearscope.io/pricing), checked June 20, 2026:
+Pricing via [clearscope.io/pricing](https://www.clearscope.io/pricing), checked June 23, 2026:
 
-| Plan | Price | Tracked Topics | Pages | Topic Explorations | Drafts | Notes |
-|---|---:|---:|---:|---:|---:|---|
-| Essentials | $129/mo | 20 | 50 | 20/mo | 20/mo | Unlimited users and projects, Prompt Tracking, brand visibility tracking, query fan-out awareness |
-| Business | $399/mo | 50 | 300 | 50/mo | 20/mo | Dedicated account manager, priority support, larger tracked-topic and page capacity |
-| Enterprise | Custom | Custom | Custom | Custom | Custom | Custom credits, custom agreements, crawler whitelisting, SSO |
+| Plan | Price | Tracked Topics | Tracked Prompts | Pages | Topic Explorations | Drafts | Notes |
+|---|---:|---:|---:|---:|---:|---:|---|
+| Essentials | $129/mo | 20 | 50 | 50 | 20/mo | 20/mo | Unlimited users and projects, brand visibility tracking, query fan-out awareness |
+| Business | $399/mo | 50 | 300 | 300 | 50/mo | 20/mo | Dedicated account manager, priority support, larger tracked-topic and page capacity |
+| Enterprise | Custom | Custom | Custom | Custom | Custom | Custom | Custom credits, custom agreements, crawler whitelisting, SSO |
 
 Add-ons on the pricing page:
 
 - Additional Pages: 100, 200, 300, 500, 1,000, 2,000, and 5,000 page options. Essentials shows $25/mo, Business shows $15/mo, and Enterprise is custom.
 - Additional Drafts: 10, 20, 30, 50, 100, 200, and 500 draft options. Essentials shows $50, Business shows $20, and Enterprise is custom.
-- Every plan includes Prompt Tracking, brand visibility tracking, query fan-out awareness, search-intent recommendations, training/onboarding, priority support, unlimited sharing/exporting, and flexible plan changes.
+- Every plan includes brand visibility tracking, query fan-out awareness, search-intent recommendations, training/onboarding, priority support, unlimited sharing/exporting, and flexible plan changes.
 
-Do not buy only by sticker price. The real Clearscope budget depends on how many Pages, Drafts, Tracked Topics, Topic Explorations, and refresh workflows the team will run each month.
+Do not buy only by sticker price. The real Clearscope budget depends on how many Pages, Drafts, Tracked Topics, Tracked Prompts, Topic Explorations, and refresh workflows the team will run each month.
 
 ## Clearscope Vs Alternatives
 
@@ -262,7 +270,7 @@ Do not buy only by sticker price. The real Clearscope budget depends on how many
 For enterprise in-house teams and serious agencies, often yes. The value is clean writer adoption, trusted scoring, shareable briefs, AI visibility evidence, and monitoring. For solo creators or small teams, the price premium is usually too high.
 
 **Does Clearscope help with AI-answer visibility?**
-Yes. Clearscope pricing and support pages describe Prompt Tracking and Tracked Topics for AI mentions, AI citations, prompts, model polling, web searches used in AI responses, and full response data from Gemini and GPT.
+Yes. Clearscope pricing and support pages describe Tracked Prompts and Tracked Topics for AI mentions, AI citations, prompts, model polling, web searches used in AI responses, and full response data from Gemini and GPT.
 
 **Does Clearscope replace Ahrefs or Semrush?**
 No. Clearscope is strongest for content workflow and optimization. Ahrefs and Semrush remain better fits for broad SEO research, backlinks, rank tracking, audits, competitive analysis, and reporting.
@@ -278,13 +286,13 @@ Essentials is the small-team test tier. Business is the more realistic team plan
 
 ## Sources
 
-- [Clearscope pricing](https://www.clearscope.io/pricing) (verified 2026-06-20)
-- [Clearscope Optimize](https://www.clearscope.io/product/optimize) (verified 2026-06-20)
-- [Clearscope Expand](https://www.clearscope.io/product/expand) (verified 2026-06-20)
-- [Clearscope Discover](https://www.clearscope.io/product/discover) (verified 2026-06-20)
-- [Clearscope Write](https://www.clearscope.io/product/write) (verified 2026-06-20)
-- [Clearscope Protect](https://www.clearscope.io/product/protect) (verified 2026-06-20)
-- [Clearscope Localize](https://www.clearscope.io/product/local) (verified 2026-06-20)
-- [Clearscope Linking](https://www.clearscope.io/product/internal-linking) (verified 2026-06-20)
-- [Clearscope Tracked Topics support](https://www.clearscope.io/support/getting-started-tracked-topics) (verified 2026-06-20)
-- [Clearscope AI Search 2026 guide](https://www.clearscope.io/blog/optimizing-for-ai-search-in-2026) (verified 2026-06-20)
+- [Clearscope pricing](https://www.clearscope.io/pricing) (verified 2026-06-23)
+- [Clearscope Optimize](https://www.clearscope.io/product/optimize) (verified 2026-06-23)
+- [Clearscope Expand](https://www.clearscope.io/product/expand) (verified 2026-06-23)
+- [Clearscope Discover](https://www.clearscope.io/product/discover) (verified 2026-06-23)
+- [Clearscope Write](https://www.clearscope.io/product/write) (verified 2026-06-23)
+- [Clearscope Protect](https://www.clearscope.io/product/protect) (verified 2026-06-23)
+- [Clearscope Localize](https://www.clearscope.io/product/local) (verified 2026-06-23)
+- [Clearscope Linking](https://www.clearscope.io/product/internal-linking) (verified 2026-06-23)
+- [Clearscope Tracked Topics support](https://www.clearscope.io/support/getting-started-tracked-topics) (verified 2026-06-23)
+- [Clearscope AI Search 2026 guide](https://www.clearscope.io/blog/optimizing-for-ai-search-in-2026) (verified 2026-06-23)

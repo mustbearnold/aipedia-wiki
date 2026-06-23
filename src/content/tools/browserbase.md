@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0, $20/mo, $99/mo, or custom scale plans plus usage"
 status: active
 launched: 2023
-last_updated: 2026-06-21
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: "Browserbase: Features, Pricing & Review (June 2026)"
 meta_description: "Browserbase provides cloud browser infrastructure for AI agents, scraping, QA, and browser automation. June 2026 check: pricing is stable, but Fetch, replay, Stagehand, Model Gateway, and browser-agent positioning changed."
@@ -34,35 +34,35 @@ facts:
     source: "https://www.browserbase.com"
     source_label: "Browserbase website"
     source_id: browserbase-best-for
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     confidence: high
   coding_agent:
     value: "Infrastructure for browser-using agents; integrates with developer automation stacks"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     confidence: high
   best_for:
     value: "Hosted Chromium browsers, Search API, Fetch API, Runtime, Identity, Model Gateway, Observability, Stagehand, and MCP for web agents"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     confidence: high
   pricing_anchor:
     value: "Free remains $0; Developer remains $20/month with 25 concurrent browsers and 100 browser hours; Startup remains $99/month with 100 concurrent browsers and 500 browser hours; Scale remains custom. Usage meters include browser hours, Search, Fetch, proxy bandwidth, and Model Gateway market-price tokens."
     source: "https://www.browserbase.com/pricing"
     source_label: "Browserbase pricing"
     source_id: browserbase-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
   platform_shift:
     value: "Browserbase's June positioning centers the Browserbase Browser as real cloud Chromium wrapped with identity, observability, persistence, and live debugging, with Search, Fetch, Functions, Model Gateway, and Stagehand built around that primitive."
     source: "https://www.browserbase.com/blog/what-is-a-browserbase-browser"
     source_label: "Browserbase Browser explainer"
     source_id: browserbase-browser-blog
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   stagehand_update:
@@ -70,7 +70,7 @@ facts:
     source: "https://www.browserbase.com/changelog"
     source_label: "Browserbase changelog"
     source_id: browserbase-changelog
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [browser-automation, web-agents, ai-infrastructure, playwright, scraping, qa, cloud-browser]
@@ -81,7 +81,7 @@ price_history:
     source: "https://www.browserbase.com/changelog"
     source_label: "Browserbase changelog"
     source_id: browserbase-changelog
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     note: "Free-tier concurrency tripled to make agent prototypes practical without paying."
   - date: 2026-03-11
     plan: "Fetch API"
@@ -89,7 +89,7 @@ price_history:
     source: "https://www.browserbase.com/changelog"
     source_label: "Browserbase changelog"
     source_id: browserbase-changelog
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     note: "Launched as a lightweight alternative to browser sessions for read-only extraction."
   - date: 2026-05-13
     plan: "Platform additions"
@@ -97,7 +97,7 @@ price_history:
     source: "https://www.browserbase.com/pricing"
     source_label: "Browserbase pricing"
     source_id: browserbase-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     note: "Browserbase Functions (Feb), Fetch API (Mar), Search API (Mar), Model Gateway (Apr), Stagehand 3.3.0 (May), improved Downloads API (May) all ship inside existing pricing. Headline plan prices unchanged: Free, Developer $20, Startup $99, Scale custom."
   - date: 2026-06-01
     plan: "Free / Developer / Startup / Scale"
@@ -105,7 +105,7 @@ price_history:
     source: "https://www.browserbase.com/pricing"
     source_label: "Browserbase pricing"
     source_id: browserbase-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     note: "Headline plans remain Free, Developer $20/mo, Startup $99/mo, and Scale custom. The pricing page now frames the platform around Browsers, Web Data APIs, Runtime, Identity, Models, Observability, Stagehand, and MCP."
 best_for:
   - developers building browser-using agents
@@ -184,7 +184,7 @@ The platform has expanded materially in 2026 without changing headline plan pric
 - **February 10:** Browserbase Functions allow direct agent deployment on Browserbase infrastructure with up to 70% lower latency.
 - **January 15:** Session Recordings rebuilt on CDP for pixel-accurate, event-driven playback across multiple tabs.
 
-## Pricing Notes Verified 2026-06-18
+## Pricing Notes Verified 2026-06-23
 
 Browserbase lists four plans. Free includes 3 concurrent browsers, 1 browser hour, 1,000 Search calls, 1,000 Fetch calls, 15-minute sessions, 7-day retention, and $5 in model tokens. Developer is $20/mo with 25 concurrent browsers and 100 browser hours, then $0.12/browser-hour, plus 1,000 included Search calls and 1,000 included Fetch calls. Startup is $99/mo with 100 concurrent browsers and 500 browser hours, then $0.10/browser-hour, plus 1,000 Search calls and 10,000 Fetch calls. Scale is custom with 250+ concurrent browsers and enterprise features such as SSO, DPA/BAA options, verified agents, and advanced CAPTCHA solving.
 

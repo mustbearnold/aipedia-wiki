@@ -9,11 +9,11 @@ category: ai-seo
 company: frase
 url: 'https://frase.io'
 pricing_model: paid
-price_range: $49-$299+/month
+price_range: "$39-$299/month self-serve; Enterprise custom"
 status: active
 launched: 2018-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   workflow_surface:
@@ -41,7 +41,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -49,7 +49,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -66,13 +66,13 @@ facts:
     source: "https://www.frase.io/features"
     source_label: "Frase features"
     source_id: frase-features
-    verified_at: 2026-05-04
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [seo, content-briefs, content-optimization, ai-writing, serp-analysis, on-page-seo, content-strategy]
 seo_title: 'Frase.io: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Frase.io is an AI SEO and GEO platform with Frase Agent, optimization, AI visibility tracking, site audits, API, and MCP access. Plans run $49-$299+/mo.
+  Frase.io is an AI SEO and GEO platform with Frase Agent, optimization, AI visibility tracking, site audits, API, and MCP access. Plans run $39-$299/mo depending on billing, plus Enterprise custom.
 author: "aipedia.wiki Editorial"
 best_for:
   - content managers producing briefs at scale
@@ -83,14 +83,23 @@ not_best_for:
   - workflows requiring native keyword research
   - users wanting deep backlink data
 quick_answer: >-
-  Frase.io is now a broader AI SEO and GEO platform rather than only a brief generator. Starter is $49/mo, Professional is $129/mo, and Scale is $299/mo before annual discounts. Pick it when the team wants research, optimization, AI visibility tracking, audits, and API/MCP access in one workflow. Skip it if you only need the cheapest content score.
+  Frase.io is now a broader AI SEO and GEO platform rather than only a brief generator. Starter is $39/mo billed yearly or $49/mo month to month, Professional is $103/mo yearly or $129/mo month to month, and Scale is $239/mo yearly or $299/mo month to month. Pick it when the team wants research, optimization, AI visibility tracking, audits, and API/MCP access in one workflow. Skip it if you only need the cheapest content score.
+price_history:
+  - date: 2026-06-23
+    plan: "Starter / Professional / Scale"
+    price: "$39/$103/$239 monthly when billed yearly; $49/$129/$299 month to month"
+    source: "https://www.frase.io/pricing"
+    source_label: "Frase pricing"
+    source_id: frase-pricing
+    verified_at: 2026-06-23
+    note: "Rechecked official pricing. Starter includes 1 seat/site, 10 articles, 50 audit pages, ChatGPT and Google AI visibility, and 3 Content Guard pages. Professional adds 3 seats, 5 sites, 40 articles, 250 audit pages, internal links, Perplexity visibility, and 15 Content Guard pages. Scale adds 5 seats, 10 domains, 100 articles, 1,000 audit pages, Claude/Gemini visibility, exports, and 50 Content Guard pages."
 ---
 
 # Frase.io
 
 Frase.io is an AI SEO and GEO content platform built around Frase Agent, content optimization, AI visibility tracking, site audits, publishing, API access, and MCP access. It is no longer accurate to describe the current buyer decision as only "brief generation."
 
-Current self-serve pricing lists Starter at $49/month, Professional at $129/month, and Scale at $299/month, with annual billing saving 20%. Enterprise buyers should model seats, domains, audit pages, visibility prompts, and article volume before switching.
+Current self-serve pricing lists Starter at $39/month billed yearly or $49/month month to month, Professional at $103/month billed yearly or $129/month month to month, and Scale at $239/month billed yearly or $299/month month to month. Enterprise buyers should model seats, domains, audit pages, visibility prompts, and article volume before switching.
 
 ## System Verdict
 
@@ -105,7 +114,7 @@ Current self-serve pricing lists Starter at $49/month, Professional at $129/mont
 | | |
 |---|---|
 | **Core function** | AI Agent for SEO/GEO research, optimization, visibility tracking, audits, publishing, API, and MCP |
-| **Tiers** | Starter $49 · Professional $129 · Scale $299 · Enterprise custom |
+| **Tiers** | Starter $39 yearly / $49 monthly · Professional $103 yearly / $129 monthly · Scale $239 yearly / $299 monthly · Enterprise custom |
 | **Article limits** | Starter 10/mo · Professional 40/mo · Scale 100/mo · Enterprise custom |
 | **Seats** | Starter 1 · Professional 3 included · Scale 5 included · Enterprise custom |
 | **Agent features** | Research, optimization, AI visibility, site audits, publishing, API |
@@ -114,7 +123,7 @@ Current self-serve pricing lists Starter at $49/month, Professional at $129/mont
 | **Backlink data** | None |
 | **Free trial** | 7-day trial with no credit card |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -143,11 +152,11 @@ The editor scores drafts in real time against competitors. The AI drafter fills 
 
 | Plan | Monthly | Articles | Seats | Who's it for |
 |------|---------|---------|-------|--------------|
-| Starter | $49 | 10/mo | 1 | Solo content creators |
-| Professional | $129 | 40/mo | 3 included (+$29/seat) | **Most teams start here** |
-| Scale | $299 | 100/mo | 5 included (+$29/seat) | Agencies and high-volume teams |
+| Starter | $39 yearly / $49 monthly | 10/mo | 1 | Solo content creators |
+| Professional | $103 yearly / $129 monthly | 40/mo | 3 included (+$29/seat) | **Most teams start here** |
+| Scale | $239 yearly / $299 monthly | 100/mo | 5 included (+$29/seat) | Agencies and high-volume teams |
 
-*Prices verified 2026-06-12 via [Frase pricing](https://www.frase.io/pricing). Annual billing saves 20%. Every current self-serve plan includes Frase Agent, SEO and GEO content optimization, AI visibility tracking, site audits, publishing, API, and MCP access; plans differ by volume, domains, seats, history, and enterprise controls.*
+*Prices verified 2026-06-23 via [Frase pricing](https://www.frase.io/pricing). Annual billing saves 20%. Every current self-serve plan includes Frase Agent, SEO and GEO content optimization, AI visibility tracking, site audits, publishing, API, and MCP access; plans differ by volume, domains, seats, history, and enterprise controls.*
 
 ## Against the alternatives
 
@@ -171,12 +180,12 @@ The editor scores drafts in real time against competitors. The AI drafter fills 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Frase pricing](https://www.frase.io/pricing) and [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Frase pricing](https://www.frase.io/pricing) and [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility).
 
 ## FAQ
 
 **How much does Frase cost?**
-Current self-serve tiers are Starter at $49/month, Professional at $129/month, and Scale at $299/month, with annual billing saving 20 percent ([Frase pricing](https://www.frase.io/pricing)).
+Current self-serve tiers are Starter at $39/month billed yearly or $49/month month to month, Professional at $103/month billed yearly or $129/month month to month, and Scale at $239/month billed yearly or $299/month month to month ([Frase pricing](https://www.frase.io/pricing)).
 
 **Is Frase worth it for solo users?**
 Starter at $49/month can make sense if you want the full Frase Agent, optimization, AI visibility tracking, site audits, and API/MCP workflow. If you only need a low-cost content score, [NeuronWriter](/tools/neuronwriter/) is cheaper.

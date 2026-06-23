@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free app access; public terms list $14.99-$199.99/mo plans; MiniMax API pay-as-you-go and video packages from $1,000"
 status: active
 launched: 2024-03
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,58 +30,58 @@ facts:
     source: "https://hailuoai.video/tools/hailuo-2-3-model"
     source_label: "Hailuo 2.3 model page"
     source_id: hailuo-23-tool-page
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-29
+    next_review_at: 2026-06-30
   current_model:
     value: "MiniMax lists Hailuo 2.3 and Hailuo 2.3 Fast as current video models, with Hailuo 2.3 focused on motion, facial emotion, style stability, and prompt adherence, while Hailuo 2.3-Fast is the quicker, lower-cost image-to-video route; MiniMax also says Hailuo Video Agent has evolved toward Media Agent."
     source: "https://www.minimax.io/news/minimax-hailuo-23"
     source_label: "MiniMax Hailuo 2.3 launch"
     source_id: hailuo-23-launch
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-29
+    next_review_at: 2026-06-30
   api_available:
     value: "MiniMax video generation API docs support asynchronous video tasks, but route support is model-specific: text-to-video lists MiniMax-Hailuo-2.3 and MiniMax-Hailuo-02, image-to-video lists MiniMax-Hailuo-2.3, MiniMax-Hailuo-2.3-Fast, and MiniMax-Hailuo-02, first-and-last-frame currently lists MiniMax-Hailuo-02, and subject-reference generation uses S2V-01 rather than Hailuo 2.3."
     source: "https://platform.minimax.io/docs/api-reference/video-generation-intro"
     source_label: "MiniMax video generation API docs"
     source_id: minimax-video-api
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-29
+    next_review_at: 2026-06-30
   pricing_anchor:
     value: "MiniMax video packages currently start at $1,000 for 3,760 video points over one month, with larger one-month packages at $2,500, $4,500, and $6,000 before custom pricing; unused video points reset at expiry."
     source: "https://platform.minimax.io/docs/guides/pricing-video"
     source_label: "MiniMax video package pricing"
     source_id: minimax-video-packages
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-29
+    next_review_at: 2026-06-30
   paygo_video_rates:
     value: "MiniMax pay-as-you-go video pricing lists Hailuo 2.3-Fast at $0.19 for 768p 6s, $0.32 for 768p 10s, and $0.33 for 1080p 6s; Hailuo 2.3 is $0.28, $0.56, and $0.49 for the same durations and resolutions."
     source: "https://platform.minimax.io/docs/guides/pricing-paygo"
     source_label: "MiniMax pay-as-you-go pricing"
     source_id: minimax-paygo-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-29
+    next_review_at: 2026-06-30
   watch_out_for:
     value: "The public subscribe page is dynamic, while Hailuo's official payment-policy page lists Standard $14.99, Pro $54.99, Master $119.99, Ultra $124.99, and Max $199.99 monthly plans; because that terms page is dated July 14, 2025 and still references Hailuo02, buyers should treat it as public terms and verify the live checkout before buying volume."
     source: "https://hailuoai.video/doc/payment-policy.html"
     source_label: "Hailuo payment policy"
     source_id: hailuo-payment-policy
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     volatility: high
     confidence: medium
-    next_review_at: 2026-06-29
+    next_review_at: 2026-06-30
 tags: [ai-video, text-to-video, image-to-video, hailuo, minimax, chinese-ai, video-generation, api-video]
 seo_title: "Hailuo AI Review: Pricing, Models & Best Uses (June 2026)"
-meta_description: "Hailuo AI review updated June 22, 2026. Compare Hailuo 2.3, Hailuo 2.3 Fast, MiniMax API rates, route-specific frame caveats, app credits, and alternatives."
+meta_description: "Hailuo AI review updated June 23, 2026. Compare Hailuo 2.3, Hailuo 2.3 Fast, MiniMax API rates, route-specific frame caveats, app credits, and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
   - low-cost short-form social video experiments
@@ -94,12 +94,12 @@ not_best_for:
   - teams needing mature Western procurement and compliance review
   - projects where exact creator-plan limits must be locked before testing
 quick_answer: >-
-  Hailuo AI is worth testing if you want fast short-form video from MiniMax's Hailuo 2.3 family, especially for social concepts, image-to-video, stylized output, and API experiments. The June 22 MiniMax check makes pay-as-you-go video rates and one-month video packages the cleanest budgeting anchors, while Hailuo app plan allowances and model-route controls still need account-level confirmation. It is not the default first pick for the absolute best raw video quality in 2026; compare it against Seedance, Kling, Veo, and Runway before committing production budget.
+  Hailuo AI is worth testing if you want fast short-form video from MiniMax's Hailuo 2.3 family, especially for social concepts, image-to-video, stylized output, and API experiments. The June 23 MiniMax check makes pay-as-you-go video rates and one-month video packages the cleanest budgeting anchors, while Hailuo app plan allowances and model-route controls still need account-level confirmation. It is not the default first pick for the absolute best raw video quality in 2026; compare it against Seedance, Kling, Veo, and Runway before committing production budget.
 ---
 
 # Hailuo AI
 
-Hailuo AI is MiniMax's creator-facing AI video product. As of June 22, 2026, the current MiniMax video story is **Hailuo 2.3** and **Hailuo 2.3 Fast**, with product access through the Hailuo app and developer access through the MiniMax video generation API. The Hailuo site also promotes Hailuo Agent and Unified AI Space, so buyers should separate the creator app, the agent workspace, and the API route when comparing plans.
+Hailuo AI is MiniMax's creator-facing AI video product. As of June 23, 2026, the current MiniMax video story is **Hailuo 2.3** and **Hailuo 2.3 Fast**, with product access through the Hailuo app and developer access through the MiniMax video generation API. The Hailuo site also promotes Hailuo Agent and Unified AI Space, so buyers should separate the creator app, the agent workspace, and the API route when comparing plans.
 
 The buyer frame is simple: Hailuo is a good place to test short, fast, lower-cost clips. It should not be treated as the guaranteed best video model on the market without comparing current outputs against [Seedance](/tools/seedance/), [Kling](/tools/kling/), [Veo](/tools/veo/), and [Runway](/tools/runway/).
 
@@ -109,7 +109,7 @@ The buyer frame is simple: Hailuo is a good place to test short, fast, lower-cos
 >
 > **Skip Hailuo as your default if raw model quality is the only goal.** In the current AI video market, Seedance, Kling, Veo, and Runway deserve side-by-side testing before you decide. Hailuo's strongest role is value, speed, stylized clips, social concepts, and API experimentation, not a blanket "best video generator" claim.
 >
-> **Buyer warning:** Hailuo's consumer pricing and credit rules are dynamic. AiPedia can verify the official product, Hailuo 2.3 model page, MiniMax pay-as-you-go rates, MiniMax token plans, MiniMax API package pages, and public Hailuo payment policy on June 22, 2026, but exact live checkout allowances should be checked inside the current account screen before any high-volume purchase.
+> **Buyer warning:** Hailuo's consumer pricing and credit rules are dynamic. AiPedia can verify the official product, Hailuo 2.3 model page, MiniMax pay-as-you-go rates, MiniMax token plans, MiniMax API package pages, and public Hailuo payment policy on June 23, 2026, but exact live checkout allowances should be checked inside the current account screen before any high-volume purchase.
 
 ## Key Facts
 
@@ -152,7 +152,7 @@ The MiniMax platform is the route for teams that want programmatic generation an
 
 Do not buy Hailuo only because an old review quotes a low monthly price. The consumer product can show promotional pricing, credit bundles, watermarks, model-specific access, and plan limits that change by account, region, and date.
 
-For developers, the clearer anchors are MiniMax's platform pricing pages. On June 22, 2026, the official docs list pay-as-you-go video rates, video packages, token-plan subscriptions, and separate credit packs.
+For developers, the clearer anchors are MiniMax's platform pricing pages. On June 23, 2026, the official docs list pay-as-you-go video rates, video packages, token-plan subscriptions, and separate credit packs.
 
 For Hailuo app users, the 2.3 model page shows example credit costs of 25 credits for a 768p 6-second Hailuo 2.3 clip, 50 credits for 768p 10 seconds, and 50 credits for 1080p 6 seconds. Treat those as example app-credit anchors, not a guarantee that your account, region, or plan exposes the same allowance.
 
@@ -205,7 +205,7 @@ MiniMax also publishes video-point deductions by model, resolution, and duration
 
 ## Methodology
 
-AiPedia re-verified this page on **June 22, 2026** using official MiniMax and Hailuo sources. The editorial score prioritizes buyer utility, value, moat, and longevity. Claims about current models, API access, pay-as-you-go video rates, token plans, package pricing, app-credit examples, route caveats, and video-point deductions are anchored to primary sources, while Hailuo app-specific allowances are treated as volatile because the live pricing surface is dynamic.
+AiPedia re-verified this page on **June 23, 2026** using official MiniMax and Hailuo sources. The editorial score prioritizes buyer utility, value, moat, and longevity. Claims about current models, API access, pay-as-you-go video rates, token plans, package pricing, app-credit examples, route caveats, and video-point deductions are anchored to primary sources, while Hailuo app-specific allowances are treated as volatile because the live pricing surface is dynamic.
 
 ## FAQ
 
@@ -226,15 +226,15 @@ Casual creators should start with the app and verify current credits before payi
 
 ## Sources
 
-- [MiniMax Hailuo 2.3 launch](https://www.minimax.io/news/minimax-hailuo-23), verified 2026-06-22
-- [Hailuo 2.3 model page](https://hailuoai.video/tools/hailuo-2-3-model), verified 2026-06-22
-- [MiniMax video generation API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro), verified 2026-06-22
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), verified 2026-06-22
-- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video), verified 2026-06-22
-- [MiniMax token plan pricing](https://platform.minimax.io/docs/guides/pricing-token-plan), verified 2026-06-22
-- [Hailuo AI official site](https://hailuoai.video/), verified 2026-06-22
-- [Hailuo subscription page](https://hailuoai.video/subscribe), checked 2026-06-22
-- [Hailuo payment policy](https://hailuoai.video/doc/payment-policy.html), verified 2026-06-22
+- [MiniMax Hailuo 2.3 launch](https://www.minimax.io/news/minimax-hailuo-23), verified 2026-06-23
+- [Hailuo 2.3 model page](https://hailuoai.video/tools/hailuo-2-3-model), verified 2026-06-23
+- [MiniMax video generation API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro), verified 2026-06-23
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), verified 2026-06-23
+- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video), verified 2026-06-23
+- [MiniMax token plan pricing](https://platform.minimax.io/docs/guides/pricing-token-plan), verified 2026-06-23
+- [Hailuo AI official site](https://hailuoai.video/), verified 2026-06-23
+- [Hailuo subscription page](https://hailuoai.video/subscribe), checked 2026-06-23
+- [Hailuo payment policy](https://hailuoai.video/doc/payment-policy.html), verified 2026-06-23
 
 ## Related
 

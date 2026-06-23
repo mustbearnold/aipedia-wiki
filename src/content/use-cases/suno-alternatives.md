@@ -7,8 +7,8 @@ meta_description: "June 2026 buyer guide to Suno alternatives: Udio for prompt-t
 description: "Source-backed buyer guide to Suno alternatives for full songs, commercial music, film scoring, background tracks, audio clips, licensing-sensitive creator workflows, and AI music APIs."
 tools_mentioned: [suno, udio, elevenlabs, aiva, mubert, stable-audio]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 guide_picks:
   best_overall:
@@ -45,7 +45,7 @@ guide_picks:
 
 [Suno](/tools/suno/) is still one of the easiest ways to make a complete AI song. The best Suno alternative depends on what you are replacing: **prompt-to-song generation**, **commercial audio workflow**, **editable composition**, **licensed background music**, **short audio clips**, or **developer/API music generation**.
 
-Verified June 12, 2026 against current Suno, Udio, ElevenLabs, AIVA, Mubert, and Stable Audio sources. AiPedia may earn from some outbound links, but rankings are editorial and affiliate relationships do not affect placement.
+Mubert licensing and pricing constraints were rechecked June 23, 2026. Other vendor source rows retain their listed verification dates. AiPedia may earn from some outbound links, but rankings are editorial and affiliate relationships do not affect placement.
 
 ## Quick Verdict
 
@@ -164,6 +164,6 @@ Yes for clips, sound effects, and model/license-control workflows. No if the buy
 - [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
 - [ElevenLabs Music overview](https://elevenlabs.io/docs/creative-platform/products/music) (verified 2026-06-12)
 - [AIVA legal terms](https://www.aiva.ai/legal/1) (verified 2026-06-12)
-- [Mubert pricing](https://mubert.com/render/pricing) (verified 2026-06-12)
+- [Mubert pricing](https://mubert.com/render/pricing) (verified 2026-06-23)
 - [Stable Audio pricing](https://stableaudio.com/pricing) (verified 2026-06-12)
 - [Stable Audio 3.0 announcement](https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models) (verified 2026-06-12)

@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2019
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,17 +32,16 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Glean pricing is enterprise-sales led with no published self-serve tiers; verify seat count, connectors, agent platform access, security requirements,
-      and support terms with the pricing surface and sales team.
-    source: https://www.glean.com/pricing
-    source_label: Glean pricing surface
+    value: Glean pricing is enterprise-sales led with no published self-serve tiers; its Enterprise Flex docs describe per-user licenses paired with pooled pay-per-use credits for heavy advanced AI usage, so verify seat count, connector scope, credit pool, overage rules, security requirements, and support terms with sales.
+    source: https://docs.glean.com/glean-enterprise-flex-pricing
+    source_label: Glean Enterprise Flex pricing docs
     source_id: glean-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +50,7 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +60,7 @@ facts:
     source: https://developers.glean.com/
     source_label: Glean developer platform
     source_id: glean-developers
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +70,7 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -117,7 +116,7 @@ Its core bet is simple: enterprise AI is only useful if it can safely retrieve t
 | **Graph** | Enterprise Graph, Personal Graph, and system of context |
 | **Connectors** | App connectors, actions, and custom connector support |
 | **Developer access** | APIs, SDKs, MCP endpoint, Claude Code/Cursor plugins, and setup paths for Codex, Goose, Gemini CLI, VS Code, Windsurf, and other MCP hosts |
-| **Pricing** | Custom enterprise contract |
+| **Pricing** | Custom enterprise contract; Enterprise Flex combines per-user licenses with pooled usage credits for advanced AI usage |
 
 ## When to pick Glean
 
@@ -137,9 +136,9 @@ Its core bet is simple: enterprise AI is only useful if it can safely retrieve t
 
 ## Pricing
 
-Glean does not publish simple self-serve pricing for the full enterprise platform. Expect custom annual contracts based on seats, products, support, and deployment scope.
+Glean does not publish simple self-serve pricing for the full enterprise platform. Expect custom annual contracts based on seats, products, support, deployment scope, and the Enterprise Flex usage-credit structure.
 
-That is normal for the category but painful for evaluation. Buyers should model implementation effort, connector coverage, security review, expected adoption, and whether the platform replaces existing tools.
+That is normal for the category but painful for evaluation. Buyers should model implementation effort, connector coverage, security review, expected adoption, advanced-AI credit consumption, overage rules, and whether the platform replaces existing tools.
 
 ## Buyer fit
 
@@ -168,7 +167,7 @@ The platform is less compelling when the corpus is small, permissions are simple
 
 ## Methodology
 
-Last verified 2026-06-12 against Glean product, connector, and developer documentation. The public pricing surface still routes buyers to a sales-led enterprise motion rather than published self-serve tiers. Scoring emphasizes enterprise utility, defensibility of the data and connectors layer, and cost and implementation risk.
+Last verified 2026-06-23 against Glean product, connector, developer, MCP, and Enterprise Flex pricing documentation. The public pricing surface still routes buyers to a sales-led enterprise motion rather than published self-serve tiers. Scoring emphasizes enterprise utility, defensibility of the data and connectors layer, and cost and implementation risk.
 
 ## FAQ
 
@@ -179,7 +178,7 @@ Both. Glean started from enterprise search and now packages assistant and agent 
 Yes. Glean's developer platform describes a secure MCP endpoint and setup paths for Claude Code, Cursor, Codex, Goose, Gemini CLI, VS Code, Windsurf, JetBrains AI Assistant, and other MCP-compatible tools.
 
 **Does Glean publish pricing?**
-Not as a simple self-serve price. Buyers should expect custom enterprise pricing.
+Not as a simple self-serve price. Buyers should expect custom enterprise pricing, plus Enterprise Flex usage-credit modeling when advanced AI usage is heavy.
 
 ## Sources
 
@@ -187,6 +186,7 @@ Not as a simple self-serve price. Buyers should expect custom enterprise pricing
 - [Glean connectors docs](https://docs.glean.com/connectors/about)
 - [Glean developer platform](https://developers.glean.com/)
 - [Glean MCP endpoint](https://developers.glean.com/mcp)
+- [Glean Enterprise Flex pricing docs](https://docs.glean.com/glean-enterprise-flex-pricing)
 
 ## Related
 

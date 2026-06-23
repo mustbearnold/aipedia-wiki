@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free + demo pricing"
 status: active
 launched: 2015-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.marketmuse.com/inventory/"
     source_label: "MarketMuse Inventory"
     source_id: marketmuse-inventory
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.marketmuse.com/pricing"
     source_label: "MarketMuse Pricing"
     source_id: marketmuse-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.marketmuse.com/content-briefs/"
     source_label: "MarketMuse Content Briefs"
     source_id: marketmuse-content-briefs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   competitive_analysis:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.marketmuse.com/competitive-analysis/"
     source_label: "MarketMuse Competitive Analysis"
     source_id: marketmuse-competitive-analysis
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://www.marketmuse.com/pricing"
     source_label: "MarketMuse Pricing"
     source_id: marketmuse-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [seo, content-strategy, topical-authority, content-planning, ai-seo, content-audit, inventory]
@@ -81,6 +81,15 @@ not_best_for:
   - teams that only need on-page SERP scoring
 quick_answer: >-
   MarketMuse models site-wide topical authority and prioritizes which pages to create or update. The current public pricing page lists Free, Optimize, Research, and Strategy tiers but does not expose durable monthly dollar prices in this crawl. Pick it for strategy and inventory work; skip it for solo per-article optimization.
+price_history:
+  - date: 2026-06-23
+    plan: "Free / Optimize / Research / Strategy"
+    price: "Free + demo-led paid pricing"
+    source: "https://www.marketmuse.com/pricing/"
+    source_label: "MarketMuse pricing"
+    source_id: marketmuse-official
+    verified_at: 2026-06-23
+    note: "Public page lists tier limits but does not expose durable dollar prices. Free has 10 queries/month; Optimize has 100 tracked topics and 5 briefs/month; Research has 1000 tracked topics and 10 briefs/month; Strategy has 10K tracked topics and 20 briefs/month."
 ---
 
 # MarketMuse
@@ -115,7 +124,7 @@ The current public pricing page lists Free, Optimize, Research, and Strategy tie
 | **Strategy** | 1 site inventory, 5 users, 10K tracked topics, 20 briefs/month, 5 strategy documents/month |
 | **Native article generation** | None (briefs feed external drafting) |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -154,7 +163,7 @@ Subscription pricing via [marketmuse.com/pricing](https://www.marketmuse.com/pri
 | Research | Verify with MarketMuse | 3 | 1000 tracked topics, 10 briefs/month, 3 strategy documents/month |
 | Strategy | Verify with MarketMuse | 5 | 10K tracked topics, 20 briefs/month, 5 strategy documents/month |
 
-*Tier names and limits verified 2026-06-12 via [MarketMuse pricing](https://www.marketmuse.com/pricing). Current monthly dollar pricing was not exposed in this crawl, so buyers should verify commercial terms directly before procurement.*
+*Tier names and limits verified 2026-06-23 via [MarketMuse pricing](https://www.marketmuse.com/pricing). Current monthly dollar pricing was not exposed in this crawl, so buyers should verify commercial terms directly before procurement.*
 
 ## Against the alternatives
 
@@ -180,7 +189,7 @@ Subscription pricing via [marketmuse.com/pricing](https://www.marketmuse.com/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [MarketMuse pricing](https://www.marketmuse.com/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [MarketMuse pricing](https://www.marketmuse.com/pricing).
 
 ## FAQ
 
@@ -201,9 +210,10 @@ For single-brief work, generalist assistants can produce a usable outline cheapl
 
 ## Sources
 
-- [MarketMuse Pricing](https://www.marketmuse.com/pricing): current tier names, usage limits, and plan positioning
-- [MarketMuse homepage](https://marketmuse.com): product overview and integrations
-- [G2 MarketMuse reviews](https://www.g2.com/products/marketmuse/reviews): user feedback on pricing and limits
+- [MarketMuse Pricing](https://www.marketmuse.com/pricing) (verified 2026-06-23): current tier names, usage limits, and plan positioning
+- [MarketMuse homepage](https://marketmuse.com) (verified 2026-06-23): product overview and integrations
+- [MarketMuse Inventory](https://www.marketmuse.com/inventory/) (verified 2026-06-23): inventory and topical authority positioning
+- [MarketMuse Content Briefs](https://www.marketmuse.com/content-briefs/) (verified 2026-06-23): brief workflow positioning
 
 ## Related
 

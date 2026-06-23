@@ -2,7 +2,7 @@
 type: tool
 slug: hireez
 title: hireEZ
-tagline: AI-first recruiting platform for sourcing, CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows.
+tagline: Agentic AI recruiting platform built on the ATS for sourcing, screening, outreach, scheduling, rediscovery, applicant match, hiring intelligence, and CRM workflows.
 category: ai-automation
 secondary_categories: [ai-search]
 company: hireEZ
@@ -10,8 +10,8 @@ url: https://www.hireez.com/platform/
 pricing_model: enterprise
 price_range: "Contact sales / demo-led"
 status: active
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,33 +26,33 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "hireEZ is best for recruiting teams that need AI sourcing, CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows in one recruiting platform."
-    source: "https://www.hireez.com/platform/"
+    value: "hireEZ is best for recruiting teams that want agentic sourcing, screening, outreach, scheduling, rediscovery, applicant match, hiring intelligence, and CRM workflows layered on top of the ATS."
+    source: "https://hireez.com/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "hireEZ presents a demo-led recruiting platform rather than a public self-serve price; buyers should confirm package, seats, sourcing volume, CRM, ATS, applicant match, analytics, scheduling, job distribution, implementation, and renewal terms with sales."
-    source: "https://www.hireez.com/platform/"
+    value: "hireEZ presents a demo-led recruiting platform rather than a public self-serve price; buyers should confirm package, seats, ATS integration scope, sourcing volume, CRM, applicant match, analytics, scheduling, job distribution, implementation, and renewal terms with sales."
+    source: "https://hireez.com/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: high
     confidence: medium
-    next_review_at: 2026-08-13
+    next_review_at: 2026-07-23
   watch_out_for:
-    value: "The platform is broad, so ROI depends on adoption across sourcing, CRM, rediscovery, applicant matching, analytics, scheduling, and data hygiene."
-    source: "https://www.hireez.com/platform/"
+    value: "The platform is broad, so ROI depends on ATS integration quality and adoption across sourcing, CRM, rediscovery, applicant matching, analytics, scheduling, and data hygiene."
+    source: "https://hireez.com/"
     source_label: "hireEZ AI recruiting platform"
     source_id: hireez-platform
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [recruiting, sourcing, recruiting-crm, talent-acquisition, applicant-matching]
 seo_title: "hireEZ Review (June 2026): AI Sourcing + Recruiting CRM"
-meta_description: "hireEZ is an AI-first recruiting platform for sourcing, CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows. Pricing is demo-led."
+meta_description: "hireEZ is an agentic AI recruiting platform built on the ATS for sourcing, screening, outreach, scheduling, CRM, rediscovery, applicant match, and hiring intelligence. Pricing is demo-led."
 author: "aipedia.wiki Editorial"
 best_for:
   - recruiting teams needing sourcing plus CRM
@@ -64,14 +64,23 @@ not_best_for:
   - teams unwilling to implement a recruiting CRM
   - buyers who need transparent self-serve pricing
 quick_answer: >-
-  hireEZ is the strongest AI recruiting-platform challenger when a team wants sourcing, CRM, rediscovery, applicant matching, analytics, scheduling, job distribution, and ATS workflows in one place. It is broader than a point sourcing tool, so adoption and data hygiene determine ROI. Pricing remains demo-led as of June 12, 2026; ask sales to separate seats, candidate volume, CRM, ATS, match, analytics, implementation, support, and renewal escalators.
+  hireEZ is the strongest AI recruiting-platform challenger when a team wants sourcing, screening, outreach, scheduling, CRM, rediscovery, applicant matching, analytics, job distribution, and ATS workflows in one place. Its current official positioning is agentic AI built on the ATS. Pricing remains demo-led as of June 23, 2026; ask sales to separate seats, ATS integration scope, candidate volume, CRM, applicant match, analytics, implementation, support, and renewal escalators.
+price_history:
+  - date: 2026-06-23
+    plan: "Enterprise / demo-led"
+    price: "Contact sales"
+    source: "https://hireez.com/"
+    source_label: "hireEZ agentic recruiting platform"
+    source_id: hireez-platform
+    verified_at: 2026-06-23
+    note: "Reverified no public self-serve price. Official positioning now emphasizes agentic recruiting built on the ATS, with sourcing, screening, outreach, and scheduling automation."
 ---
 
 # hireEZ
 
-hireEZ is an AI-first recruiting platform for sourcing, recruiting CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows.
+hireEZ is an agentic AI recruiting platform for sourcing, recruiting CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows.
 
-As of June 12, 2026, AiPedia treats hireEZ as the strongest sourcing-and-CRM challenger to LinkedIn Recruiter for teams that want more of the recruiting workflow in one AI-first platform.
+As of June 23, 2026, AiPedia treats hireEZ as the strongest sourcing-and-CRM challenger to LinkedIn Recruiter for teams that want more of the recruiting workflow built on top of their ATS.
 
 ## System Verdict
 
@@ -81,7 +90,7 @@ Skip it if you only need help writing job descriptions or outreach. [ChatGPT](/t
 
 ## What hireEZ Actually Does
 
-hireEZ is best understood as a recruiting operations platform, not a single search box. Its current platform page positions the product around agentic AI for sourcing, CRM, ATS, analytics, internal mobility, applicant match, scheduling, career sites, job distribution, and talent pools. That breadth is the reason it sits between simple sourcing tools and full enterprise talent platforms.
+hireEZ is best understood as a recruiting operations platform, not a single search box. Its current site positions the product around agentic AI that automates research, sourcing, screening, outreach, and scheduling on top of the ATS. That breadth is the reason it sits between simple sourcing tools and full enterprise talent platforms.
 
 The core buyer is a recruiting team that already knows it needs more than one-off candidate discovery. hireEZ makes more sense when recruiters are building talent pools, nurturing passive candidates, rediscovering previous applicants, comparing applicant match signals, and measuring funnel performance. It is less compelling for a founder who hires twice a year or a small team that only needs outreach drafts.
 
@@ -99,7 +108,7 @@ Buy the workflow you can actually operationalize. A broad recruiting platform on
 
 ## Pricing And Procurement
 
-hireEZ does not publish a clean self-serve monthly price on the platform page AiPedia verified on June 12, 2026. Treat pricing as sales-led and ask for the quote to separate recruiter seats, candidate volume, CRM capabilities, applicant match, analytics, scheduling, job distribution, ATS features, implementation, support, and renewal escalators.
+hireEZ does not publish a clean self-serve monthly price on the pages AiPedia verified on June 23, 2026. Treat pricing as sales-led and ask for the quote to separate recruiter seats, candidate volume, CRM capabilities, applicant match, analytics, scheduling, job distribution, ATS integration, implementation, support, and renewal escalators.
 
 Also ask whether email sequencing, integrations, data enrichment, candidate exports, and compliance workflows are included or metered. The hidden cost in recruiting software is rarely the search screen; it is data cleanup, duplicated workflows, low adoption, and unclear ownership between the ATS, CRM, and sourcing tool.
 
@@ -147,7 +156,7 @@ hireEZ is broad. That is a strength only if the team will use the platform beyon
 
 ## AiPedia Trust Note
 
-This page was refreshed on June 12, 2026 using hireEZ's current platform page. AiPedia does not list a paid affiliate program for hireEZ. Scores reflect practical recruiter utility, implementation burden, defensibility, and likely platform durability.
+This page was refreshed on June 23, 2026 using hireEZ's current platform page. AiPedia does not list a paid affiliate program for hireEZ. Scores reflect practical recruiter utility, implementation burden, defensibility, and likely platform durability.
 
 ## Sources
 

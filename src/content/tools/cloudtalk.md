@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "EUR 19-EUR 49/user/month annual; AI Conversation Intelligence EUR 9/user/month; AI Voice Agents from EUR 99/month; dialer and caller-ID add-ons extra"
 status: active
 launched: 2016
-last_updated: 2026-06-21
-last_verified: 2026-06-18
+last_updated: 2026-06-22
+last_verified: 2026-06-22
 update_frequency: monthly
 best_plan: "Essential or Expert plus AI Conversation Intelligence; pilot AI Receptionist before AI Specialist"
 affiliate:
@@ -23,7 +23,7 @@ affiliate:
   link: "https://get.cloudtalk.io/f6bzdfjhsfnk"
   application_status: approved
   approved_date: 2026-05-26
-  notes: "Affiliate link supplied by site owner on 2026-05-26; official CloudTalk affiliate page still lists up to 25% lifetime MRR and a 90-day cookie as of 2026-06-18."
+  notes: "Affiliate link supplied by site owner on 2026-05-26; official CloudTalk affiliate page still lists up to 25% lifetime MRR and a 90-day cookie as of 2026-06-22."
 scores:
   utility: 8
   value: 8
@@ -35,17 +35,17 @@ facts:
     source: "https://www.cloudtalk.io/"
     source_label: "CloudTalk official site"
     source_id: cloudtalk-official
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     volatility: medium
     confidence: high
-    next_review_at: 2026-09-18
+    next_review_at: 2026-09-22
   pricing_anchor:
-    value: "CloudTalk's June 18 pricing check keeps Lite at EUR 19/user/month, Starter at EUR 25/user/month, Essential at EUR 29/user/month, and Expert at EUR 49/user/month when billed annually, with AI Conversation Intelligence at EUR 9/user/month and AI Voice Agents from EUR 99/month for 200 minutes."
+    value: "CloudTalk's June 22 pricing check keeps Lite at EUR 19/user/month, Starter at EUR 25/user/month, Essential at EUR 29/user/month, and Expert at EUR 49/user/month when billed annually, with AI Conversation Intelligence at EUR 9/user/month and AI Voice Agents from EUR 99/month for 200 minutes."
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
-    next_review_at: 2026-07-18
+    verified_at: 2026-06-22
+    next_review_at: 2026-07-22
     volatility: high
     confidence: high
   best_paid_tier:
@@ -53,34 +53,34 @@ facts:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
   ai_conversation_intelligence:
     value: "AI Conversation Intelligence is a EUR 9/user/month add-on for summaries, searchable transcripts, AI notes, topic extraction, trending topics, talk/listen ratio, customer sentiment, call scoring, PDF export, and CRM export."
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
   ai_voice_agents:
     value: "CloudTalk now separates AI Voice Agents into AI Receptionist for 24/7 inbound front-desk coverage and AI Specialist for end-to-end support, sales, billing, and operations workflows, with 60+ languages and accents, customizable skills, personalized data use, and system integrations."
     source: "https://www.cloudtalk.io/ai-voice-agents/"
     source_label: "CloudTalk AI Voice Agents"
     source_id: cloudtalk-ai-voice-agents
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
   integrations:
     value: "CloudTalk's current navigation highlights 95+ standard CRM, helpdesk, and ATS integrations on the pricing page and 100+ integrations across the site, including HubSpot, Pipedrive, Zoho CRM, Salesforce, MS Dynamics, Odoo, Intercom, Zendesk, Salesloft, Outreach, Bullhorn, Monday, Shopify, and Microsoft Teams."
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     volatility: medium
     confidence: high
   watch_out_for:
@@ -88,13 +88,13 @@ facts:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     volatility: high
     confidence: high
-    next_review_at: 2026-06-25
+    next_review_at: 2026-06-29
 tags: [business-phone-system, call-center, sales-calling, support, ai-voice-agents, conversation-intelligence, crm, dialer, voip]
 seo_title: "CloudTalk Review (June 2026): AI Phone System, Pricing, Voice Agents"
-meta_description: "CloudTalk review updated June 18, 2026: current Lite, Starter, Essential, Expert pricing, AI Conversation Intelligence, AI Receptionist, AI Specialist, dialer add-ons, caller ID, spam remediation, and best plan."
+meta_description: "CloudTalk review updated June 22, 2026: current Lite, Starter, Essential, Expert pricing, AI Conversation Intelligence, AI Receptionist, AI Specialist, dialer add-ons, caller ID, spam remediation, and best plan."
 author: "aipedia.wiki Editorial"
 best_for:
   - phone-heavy SMB sales and support teams
@@ -109,7 +109,7 @@ not_best_for:
   - teams that cannot govern consent, routing, CRM fields, call scripts, and escalation
   - outbound teams whose core problem is list quality rather than dialing workflow
 quick_answer: >-
-  CloudTalk is a strong AI phone-system pick when calls still drive revenue, retention, bookings, support, collections, or hiring. The June 18, 2026 check keeps core annual pricing stable: Lite EUR 19/user/month, Starter EUR 25, Essential EUR 29, and Expert EUR 49. The bigger change is product scope. CloudTalk now foregrounds AI Dialer and Outreach, Branded Caller ID, Spam Remediation, AI Conversation Intelligence, AI Receptionist, AI Specialist, and 2026 AI Voice Agent research. Start with Essential or Expert plus AI Conversation Intelligence. Add AI Receptionist for narrow inbound coverage before AI Specialist workflows.
+  CloudTalk is a strong AI phone-system pick when calls still drive revenue, retention, bookings, support, collections, or hiring. The June 22, 2026 check keeps core annual pricing stable: Lite EUR 19/user/month, Starter EUR 25, Essential EUR 29, and Expert EUR 49. The bigger change is product scope. CloudTalk now foregrounds AI Dialer and Outreach, Branded Caller ID, Spam Remediation, AI Conversation Intelligence, AI Receptionist, AI Specialist, and 2026 AI Voice Agent research. Start with Essential or Expert plus AI Conversation Intelligence. Add AI Receptionist for narrow inbound coverage before AI Specialist workflows.
 price_history:
   - date: 2026-05-26
     plan: Lite
@@ -117,7 +117,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "Minimum license count listed as 1; page says free internal and inbound calls are included with toll-free/high-cost-country exclusions."
   - date: 2026-05-26
     plan: Starter
@@ -125,7 +125,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "Minimum license count listed as 1; country-specific minute bundles and fair-use terms apply."
   - date: 2026-05-26
     plan: Essential
@@ -133,7 +133,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "AiPedia's first serious default for many teams because it adds smart routing, integrations, messaging, monitoring, and coaching surfaces."
   - date: 2026-05-26
     plan: Expert
@@ -141,7 +141,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "Minimum license count listed as 3. Includes Power Dialer, advanced monitoring/coaching, Salesforce ecosystem integration, and deeper operations controls."
   - date: 2026-06-18
     plan: AI Conversation Intelligence
@@ -149,7 +149,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "Summaries, searchable transcripts, AI notes, topics, talk/listen ratio, customer sentiment, call scoring, PDF export, and CRM export."
   - date: 2026-06-18
     plan: "Power Dialer / Parallel Dialer"
@@ -157,7 +157,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "Power Dialer is already included in Expert. Parallel Dialer can dial up to 10 numbers at once and remains an add-on."
   - date: 2026-06-18
     plan: "AI Voice Agents"
@@ -165,7 +165,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "AI Voice Agents split into AI Receptionist and AI Specialist bundles. The pricing page shows more granular minute bundles, but buyers should verify the live bundle and region/currency before committing."
   - date: 2026-06-18
     plan: Branded Caller ID / Spam Remediation
@@ -173,7 +173,7 @@ price_history:
     source: "https://www.cloudtalk.io/pricing/"
     source_label: "CloudTalk pricing"
     source_id: cloudtalk-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-22
     note: "Branded Caller ID is available for US and UK numbers with carrier/device caveats; Spam Remediation is for US high-volume outbound teams."
 ---
 
@@ -181,7 +181,7 @@ price_history:
 
 CloudTalk is an AI business phone system and call-center platform for sales, support, operations, and hiring teams. It combines cloud telephony, global numbers, routing, dialers, call recording, monitoring, analytics, CRM/helpdesk sync, AI Conversation Intelligence, and AI Voice Agents.
 
-The June 18, 2026 refresh keeps the headline subscription prices stable, but the product story has changed. CloudTalk now reads less like "VoIP plus AI summaries" and more like an AI-led calling stack: AI Sales Dialer, Parallel Dialer, Branded Caller ID, Spam Remediation, AI Receptionist, AI Specialist, and research-backed AI voice-agent use cases.
+The June 22, 2026 refresh keeps the headline subscription prices stable, but the product story has changed. CloudTalk now reads less like "VoIP plus AI summaries" and more like an AI-led calling stack: AI Sales Dialer, Parallel Dialer, Branded Caller ID, Spam Remediation, AI Receptionist, AI Specialist, and research-backed AI voice-agent use cases.
 
 ## System Verdict
 
@@ -236,7 +236,7 @@ The safest implementation sequence is still human workflow first, AI intelligenc
 
 ## Pricing Reality
 
-CloudTalk pricing checked June 18, 2026:
+CloudTalk pricing checked June 22, 2026:
 
 | Plan or add-on | Annual price | Monthly price | Practical meaning |
 |---|---:|---:|---|
@@ -335,7 +335,7 @@ AiPedia's recommendation: pilot AI Receptionist first unless the buyer already h
 ## FAQ
 
 **How much does CloudTalk cost?**
-As of June 18, 2026, CloudTalk lists Lite at EUR 19/user/month, Starter at EUR 25, Essential at EUR 29, and Expert at EUR 49 when billed annually. Monthly prices are EUR 27, EUR 34, EUR 39, and EUR 69. Add-ons can materially change the bill.
+As of June 22, 2026, CloudTalk lists Lite at EUR 19/user/month, Starter at EUR 25, Essential at EUR 29, and Expert at EUR 49 when billed annually. Monthly prices are EUR 27, EUR 34, EUR 39, and EUR 69. Add-ons can materially change the bill.
 
 **Which CloudTalk plan should I start with?**
 Start with Essential plus AI Conversation Intelligence for most serious SMB sales/support teams. Use Expert when Power Dialer, Salesforce ecosystem integration, advanced monitoring, and higher-volume operations matter.
@@ -357,10 +357,10 @@ AiPedia may earn a commission from CloudTalk affiliate links. Recommendations re
 
 ## Sources
 
-- [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-06-18)
-- [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-06-18)
-- [CloudTalk AI Voice Agents](https://www.cloudtalk.io/ai-voice-agents/) (verified 2026-06-18)
-- [CloudTalk AI Receptionist](https://www.cloudtalk.io/ai-receptionist/) (verified 2026-06-18)
-- [CloudTalk AI Voice Agents research report](https://www.cloudtalk.io/research-and-reports/ai-voice-agents/) (verified 2026-06-18)
-- [CloudTalk Conversation Intelligence help center](https://help.cloudtalk.io/en/articles/9128167-conversation-intelligence) (verified 2026-06-18)
-- [CloudTalk affiliate program](https://www.cloudtalk.io/affiliate-program/) (verified 2026-06-18)
+- [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-06-22)
+- [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-06-22)
+- [CloudTalk AI Voice Agents](https://www.cloudtalk.io/ai-voice-agents/) (verified 2026-06-22)
+- [CloudTalk AI Receptionist](https://www.cloudtalk.io/ai-receptionist/) (verified 2026-06-22)
+- [CloudTalk AI Voice Agents research report](https://www.cloudtalk.io/research-and-reports/ai-voice-agents/) (verified 2026-06-22)
+- [CloudTalk Conversation Intelligence help center](https://help.cloudtalk.io/en/articles/9128167-conversation-intelligence) (verified 2026-06-22)
+- [CloudTalk affiliate program](https://www.cloudtalk.io/affiliate-program/) (verified 2026-06-22)

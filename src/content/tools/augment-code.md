@@ -10,11 +10,11 @@ pricing_model: paid
 price_range: "$100/month business plan; Enterprise custom"
 status: active
 launched: 2024
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: "Augment Code: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 22, 2026: Augment Code still centers public pricing on Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, and Enterprise custom. Model docs list Claude Fable 5, Opus 4.7, GPT-5.5, Kimi K2.6, and Prism routing."
+meta_description: "Updated June 23, 2026: Augment Code still centers public pricing on Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, and Enterprise custom. Model docs list Claude Fable 5, Opus 4.7, GPT-5.5, Kimi K2.6, and Prism routing."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -33,30 +33,30 @@ facts:
     source: "https://docs.augmentcode.com/models/available-models"
     source_label: "Augment available models"
     source_id: augment-code-flagship-model
-    verified_at: 2026-06-22
-    next_review_at: 2026-06-29
+    verified_at: 2026-06-23
+    next_review_at: 2026-06-30
     confidence: high
   coding_agent:
     value: "Agent can edit files, run terminal/tool workflows, use MCP/native tools, and checkpoint changes"
     source: "https://docs.augmentcode.com/using-augment/agent"
     source_label: "Augment Agent docs"
     source_id: augment-code-coding-agent
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     confidence: high
   best_paid_tier:
     value: "Business ($100/month flat) is the current public default for teams up to 50 seats with $100 included usage; Enterprise is the custom route for more than 50 seats, bespoke usage limits, SSO/OIDC/SCIM, CMEK, ISO 42001, SIEM, and data residency options."
     source: "https://www.augmentcode.com/pricing"
     source_label: "Augment pricing"
     source_id: augment-code-best-paid-tier
-    verified_at: 2026-06-22
-    next_review_at: 2026-06-29
+    verified_at: 2026-06-23
+    next_review_at: 2026-06-30
     confidence: high
   best_for:
     value: "Large existing codebases where context quality matters more than editor replacement"
     source: "https://docs.augmentcode.com/introduction"
     source_label: "Augment docs"
     source_id: augment-code-best-for
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     confidence: high
 tags: [ai-coding, coding-agent, codebase-context, vscode, jetbrains, cli, mcp, code-review]
 best_for:
@@ -77,7 +77,7 @@ price_history:
     source: "https://www.augmentcode.com/pricing"
     source_label: "Augment pricing"
     source_id: augment-code-best-paid-tier
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     note: "No material pricing change since the June 15 refresh. Business remains the public self-serve lane with $100/month pooled usage, Cosmos, CLI access, MCP/native tools, pay-as-you-go top-ups, SOC 2 Type II, and no AI training; Enterprise remains custom."
   - date: 2026-06-15
     plan: "Business"
@@ -151,7 +151,7 @@ Augment Code is an AI coding platform built around a codebase context engine. It
 
 The positioning is different from [Cursor](/tools/cursor/) or [Windsurf](/tools/windsurf/): Augment is not trying to replace your editor. It tries to understand a large repository deeply enough to make code changes, answer questions, and review pull requests without forcing a new IDE.
 
-The model menu matters. As of June 22, 2026, Augment documents Claude Fable 5, Claude Opus 4.7, Opus 4.6 and 4.5, Sonnet 4.6 and 4.5, Haiku 4.5, Google Gemini 3.1 Pro, OpenAI GPT-5.5, 5.4, 5.2, and 5.1, and Moonshot Kimi K2.6. Augment also ships Prism smart-routing presets for Claude+Gemini and GPT+Kimi. Treat the Fable 5 listing as a model-menu claim, not a guaranteed production route. Anthropic separately says Fable 5 and Mythos 5 access is suspended for all customers as of June 12, so teams should confirm the actual model route in their Augment workspace before basing rollout decisions on Fable behavior.
+The model menu matters. As of June 23, 2026, Augment documents Claude Fable 5, Claude Opus 4.7, Opus 4.6 and 4.5, Sonnet 4.6 and 4.5, Haiku 4.5, Google Gemini 3.1 Pro, OpenAI GPT-5.5, 5.4, 5.2, and 5.1, and Moonshot Kimi K2.6. Augment also ships Prism smart-routing presets for Claude+Gemini and GPT+Kimi. Treat the Fable 5 listing as a model-menu claim, not a guaranteed production route. Augment's changelog says Fable 5 reached the model picker, but Anthropic's own access statement says Fable 5 and Mythos 5 access was removed for all users after a U.S. government directive, so teams should confirm the actual model route in their Augment workspace before basing rollout decisions on Fable behavior.
 
 ## System Verdict
 
@@ -220,7 +220,7 @@ Pricing via [Augment Code pricing](https://www.augmentcode.com/pricing):
 | Business | $100/month flat | $100/month across LLM tokens, service fee, and Cosmos compute; up to 50 seats | Small and mid-size teams that want Augment without per-seat math |
 | Enterprise | Custom | Custom usage, custom top-up, unlimited users, custom compute, multi-region compute | Larger teams that need SSO/OIDC/SCIM, CMEK, ISO 42001, SIEM, data residency, access controls, audit trails, and dedicated support |
 
-Business usage is dollar-denominated rather than a fixed credit pool. Augment's token-pricing docs say requests draw from three components: LLM tokens at the provider's public API list price, a 40% service fee on LLM usage, and Cosmos compute at $0.19/hour billed in 5-minute increments. Once the included $100 is consumed, billing continues on pay-as-you-go at the same rates with no minimum top-up. Pricing verified 2026-06-22 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing) and [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing).
+Business usage is dollar-denominated rather than a fixed credit pool. Augment's token-pricing docs say requests draw from three components: LLM tokens at the provider's public API list price, a 40% service fee on LLM usage, and Cosmos compute at $0.19/hour billed in 5-minute increments. Once the included $100 is consumed, billing continues on pay-as-you-go at the same rates with no minimum top-up. Pricing verified 2026-06-23 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing) and [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing).
 
 ## Against The Alternatives
 
@@ -240,12 +240,12 @@ Business usage is dollar-denominated rather than a fixed credit pool. Augment's 
 - **Agent quality depends on repo hygiene.** Large codebases with weak tests, sparse conventions, or fragile build steps still need careful human review.
 - **The old solo/team tiers are stale.** The current public pricing surface no longer shows Indie, Standard, or Max as the primary buyer paths. Solo developers who expected a $20/month plan should verify account-level availability before budgeting.
 - **Enterprise value depends on controls.** SSO, CMEK, ISO 42001, data residency, SIEM integration, and audit trails matter only if your organization will use them.
-- **Model menus change.** Augment's current docs list Fable 5, Opus 4.7, GPT-5.5, Kimi K2.6, and Prism, but availability and defaults can shift. Because Anthropic separately says Fable 5 access is suspended, verify the exact model route in the workspace before using Fable-specific results as rollout evidence.
+- **Model menus change.** Augment's current docs list Fable 5, Opus 4.7, GPT-5.5, Kimi K2.6, and Prism, but availability and defaults can shift. Because Anthropic's access statement says Fable 5 and Mythos 5 were removed for all users after a government directive, verify the exact model route in the workspace before using Fable-specific results as rollout evidence.
 - **Code completions need an Enterprise check.** Augment's feature-availability docs label code completions as Enterprise and say support was deprecated on former non-Enterprise plans. If completions are the reason to buy, confirm the entitlement in the account before rolling out Business.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-22 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing), [token-based pricing](https://docs.augmentcode.com/models/token-based-pricing), [available models](https://docs.augmentcode.com/models/available-models), [feature availability](https://docs.augmentcode.com/feature-availability), [Agent docs](https://docs.augmentcode.com/using-augment/agent), and [introduction docs](https://docs.augmentcode.com/introduction).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-23 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing), [token-based pricing](https://docs.augmentcode.com/models/token-based-pricing), [available models](https://docs.augmentcode.com/models/available-models), [feature availability](https://docs.augmentcode.com/feature-availability), [Agent docs](https://docs.augmentcode.com/using-augment/agent), and [introduction docs](https://docs.augmentcode.com/introduction).
 
 ## FAQ
 
@@ -262,7 +262,7 @@ Auggie CLI brings Augment's agent, context engine, and tools into terminal workf
 Augment's pricing FAQ says paid plans exclude AI training on customer data under its Commercial Terms of Service.
 
 **Can I use Claude Fable 5 or Opus 4.7 inside Augment?**
-Augment's available-models page lists Claude Fable 5 and Opus 4.7 alongside Sonnet 4.6, Haiku 4.5, Gemini 3.1 Pro, GPT-5.5, and Kimi K2.6, plus Prism routing presets. However, Anthropic separately says Fable 5 and Mythos 5 access is suspended, so verify the live route in your Augment workspace before treating Fable as available.
+Augment's available-models page lists Claude Fable 5 and Opus 4.7 alongside Sonnet 4.6, Haiku 4.5, Gemini 3.1 Pro, GPT-5.5, and Kimi K2.6, plus Prism routing presets. However, Anthropic's own access statement says Fable 5 and Mythos 5 were removed for all users after a U.S. government directive, so verify the live route in your Augment workspace before treating Fable as available.
 
 **What is Cosmos?**
 Cosmos is Augment's cloud-agent platform for launchable, monitorable, resumable sessions, experts, environments, integrations, webhooks, files, and cloud compute. It is included in Business and Enterprise, with compute billed at $0.19/hour in 5-minute increments when used.

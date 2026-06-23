@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$12/month; Teams custom"
 status: active
 launched: 2020-09
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://get.mem.ai/
     source_label: Mem product site
     source_id: mem-product
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -40,7 +40,7 @@ facts:
     source: https://get.mem.ai/pricing
     source_label: Mem pricing
     source_id: mem-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-08'
@@ -49,7 +49,7 @@ facts:
     source: https://mem.ai/
     source_label: Mem official site
     source_id: mem-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -59,7 +59,7 @@ facts:
     source: https://get.mem.ai/pricing
     source_label: Mem pricing
     source_id: mem-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-08'
@@ -69,7 +69,7 @@ facts:
     source: https://get.mem.ai/
     source_label: Mem product site
     source_id: mem-product
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -95,6 +95,7 @@ price_history:
     source: "https://get.mem.ai/pricing"
     source_label: "Source"
     source_id: mem-pricing
+    verified_at: 2025-10-01
     note: "Raised from $14.99 during Mem 2.0 refresh"
   - date: 2026-04-15
     plan: "Teams"
@@ -102,6 +103,7 @@ price_history:
     source: "https://get.mem.ai/pricing"
     source_label: "Source"
     source_id: mem-pricing
+    verified_at: 2026-04-15
     note: "Unchanged since launch"
   - date: 2026-05-10
     plan: "Pro"
@@ -109,6 +111,7 @@ price_history:
     source: "https://get.mem.ai/pricing"
     source_label: "Source"
     source_id: mem-pricing
+    verified_at: 2026-05-10
     note: "Live pricing page lists Pro at $12/month with unlimited notes, chat, and deep searches; Teams is custom."
   - date: 2026-05-13
     plan: "Pro"
@@ -116,6 +119,7 @@ price_history:
     source: "https://get.mem.ai/pricing"
     source_label: "Source"
     source_id: mem-pricing
+    verified_at: 2026-05-13
     note: "Re-verified Free (25 notes/messages/PDF pages), Pro at $12/month, and Teams as custom-priced; no material changes."
   - date: 2026-06-08
     plan: "Pro"
@@ -123,7 +127,16 @@ price_history:
     source: "https://get.mem.ai/pricing"
     source_label: "Mem pricing"
     source_id: mem-pricing
+    verified_at: 2026-06-08
     note: "Re-verified Free at 25 notes, 25 chat messages, and 25 PDF pages understood in search/chat; Pro at $12/month with unlimited notes, chat messages, deep searches, collections, templates, connected emails, API keys, and PDF pages understood; Teams remains custom."
+  - date: 2026-06-23
+    plan: "Free / Pro / Teams"
+    price: "$0 / $12/month / custom"
+    source: "https://get.mem.ai/pricing"
+    source_label: "Mem pricing"
+    source_id: mem-pricing
+    verified_at: 2026-06-23
+    note: "Reverified Free at 25 notes, 25 chat messages, and 25 PDF pages understood in search/chat; Pro at $12/month with unlimited notes, chat messages, deep searches, collections, templates, connected emails, API keys, PDF pages understood, and beta meeting briefs; Teams remains custom with group billing, priority support, dedicated success manager, and SLAs."
 ---
 
 # Mem
@@ -155,7 +168,7 @@ Free tier is now a light trial with 25 notes, 25 chat messages, and 25 PDF pages
 | **Pro** | $12/mo, unlimited notes, chat messages, deep searches, collections, templates, connected emails, API keys, and PDF pages understood |
 | **Offline mode** | None, cloud-only |
 
-Every data point was verified against vendor docs on 2026-06-12. See Sources.
+Every data point was verified against vendor docs on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -189,7 +202,7 @@ The moat: no other mainstream notes app commits as hard to AI-first organization
 | Pro | $12/mo | Unlimited notes, chat messages, deep searches, collections, templates, connected emails, API keys, and PDF pages understood |
 | Teams | Custom | Everything in Pro plus group billing, priority support, dedicated success manager, and SLAs; verify admin, retention, security, and procurement controls |
 
-*Prices verified 2026-06-12 via [mem.ai/pricing](https://get.mem.ai/pricing).*
+*Prices verified 2026-06-23 via [mem.ai/pricing](https://get.mem.ai/pricing).*
 
 ## Against the alternatives
 
@@ -214,7 +227,7 @@ The moat: no other mainstream notes app commits as hard to AI-first organization
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [mem.ai](https://mem.ai) and the [Mem pricing page](https://get.mem.ai/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [mem.ai](https://mem.ai) and the [Mem pricing page](https://get.mem.ai/pricing).
 
 ## FAQ
 
@@ -235,8 +248,8 @@ Reflect costs less ($10/mo), adds end-to-end encryption, and relies on manual ba
 
 ## Sources
 
-- [mem.ai](https://mem.ai): product overview and feature list, verified 2026-06-12
-- [Mem pricing page](https://get.mem.ai/pricing): current Free, Pro, and Teams tiers, verified 2026-06-12
+- [mem.ai](https://mem.ai): product overview and feature list, verified 2026-06-23
+- [Mem pricing page](https://get.mem.ai/pricing): current Free, Pro, and Teams tiers, verified 2026-06-23
 - [Mem X launch notes](https://newsletter.mem.ai/p/introducing-mem-x-and-teams): AI feature history and roadmap
 
 ## Related

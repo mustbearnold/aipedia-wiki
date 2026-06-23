@@ -7,11 +7,11 @@ category: ai-image
 company: Freepik Company
 url: https://www.freepik.com/ai/image-generator
 pricing_model: freemium
-price_range: "$0-$158.33/month annual; Business and Enterprise custom"
+price_range: "Free; Essential €6/mo annual; Premium €12/mo annual; Premium+ €27/mo annual; Pro €172.50/mo annual; Business and Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,7 +31,7 @@ facts:
     source: "https://www.freepik.com/ai/image-generator"
     source_label: "Freepik AI Image Generator"
     source_id: freepik-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -40,16 +40,16 @@ facts:
     source: "https://www.freepik.com/ai/docs/plans-and-pricing"
     source_label: "Freepik plans and pricing docs"
     source_id: freepik-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
   pricing_anchor:
-    value: "Freepik docs list annual headline prices of Free $0, Essential $5.75/mo, Premium $12/mo, Premium+ $24.50/mo, and Pro $158.33/mo. Premium+ and Pro include unlimited generation with most image models, but premium models and video/audio/advanced tools can still consume credits."
-    source: "https://www.freepik.com/ai/docs/plans-and-pricing"
-    source_label: "Freepik plans and pricing docs"
+    value: "Magnific, formerly Freepik, now lists annual headline prices of Essential €6/mo, Premium €12/mo, Premium+ €27/mo, and Pro €172.50/mo. Credits are annual rather than monthly: 96K, 240K, 600K, and 4M credits/year respectively. Selected models are labeled unlimited all year, while premium media tools can still consume credits."
+    source: "https://www.magnific.com/pricing"
+    source_label: "Magnific pricing"
     source_id: freepik-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -58,7 +58,7 @@ facts:
     source: "https://www.freepik.com/ai/image-generator"
     source_label: "Freepik AI Image Generator"
     source_id: freepik-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -67,13 +67,13 @@ facts:
     source: "https://www.freepik.com/pricing"
     source_label: "Freepik pricing"
     source_id: freepik-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
 tags: [ai-image, image-generation, commercial-license, stock-assets, flux, freepik, magnific, mystic, ensemble, video, audio, 3d]
 seo_title: "Freepik AI Suite / Magnific: Features, Pricing & Review (June 2026)"
-meta_description: "Freepik AI Suite / Magnific in June 2026: AI image generation, Magnific upscaling, Flux and other models, video/audio/3D tools, credits, stock assets, pricing, and commercial-license tradeoffs."
+meta_description: "Freepik AI Suite / Magnific in June 2026: AI image generation, Magnific upscaling, Flux and other models, video/audio/3D tools, annual credits, stock assets, pricing, and commercial-license tradeoffs."
 author: "aipedia.wiki Editorial"
 best_for:
   - marketers who need commercially licensed AI images alongside stock
@@ -81,18 +81,27 @@ best_for:
   - stock-heavy workflows already inside Freepik
   - small teams who want Mystic, Flux, and Imagen in one place
 not_best_for:
-  - users who want a single best-in-class model output
+  - users who want one specialized image model
   - developers needing a production-grade image API
   - workflows requiring Midjourney (not integrated)
 quick_answer: >-
-  Freepik AI Suite / Magnific is a browser-first creative platform across AI image generation, editing, upscaling, video, audio, 3D, mockups, and stock assets. Pick it for commercially licensed multi-model workflows and production marketing assets; skip it if a single best-in-class model or a production API matters more.
+  Freepik AI Suite / Magnific is a browser-first creative platform across AI image generation, editing, upscaling, video, audio, 3D, mockups, and stock assets. Pick it for commercially licensed multi-model workflows and production marketing assets; skip it if one specialized image model or a production API matters more.
 price_history:
+  - date: 2026-06-23
+    plan: "Essential / Premium / Premium+ / Pro"
+    price: "€6/mo / €12/mo / €27/mo / €172.50/mo billed annually"
+    source: "https://www.magnific.com/pricing"
+    source_label: "Magnific pricing"
+    source_id: freepik-pricing
+    verified_at: 2026-06-23
+    note: "Rechecked current Magnific pricing surface. Pricing now emphasizes annual credits: Essential 96K/year, Premium 240K/year, Premium+ 600K/year, and Pro 4M/year. Credits are valid for 1 year, and selected models are labeled unlimited all year."
   - date: 2026-04-17
     plan: "Premium"
     price: "$12/mo"
     source: "https://freepik.com/pricing"
     source_label: "Source"
     source_id: freepik-pricing
+    verified_at: 2026-06-23
     note: "Verified unchanged at freepik.com/pricing (annual billing)"
   - date: 2026-04-17
     plan: "Premium+"
@@ -100,6 +109,7 @@ price_history:
     source: "https://freepik.com/pricing"
     source_label: "Source"
     source_id: freepik-pricing
+    verified_at: 2026-06-23
     note: "Verified, bundle of 20+ AI models plus stock library"
   - date: 2026-05-13
     plan: "Premium"
@@ -107,6 +117,7 @@ price_history:
     source: "https://www.freepik.com/pricing"
     source_label: "Source"
     source_id: freepik-pricing
+    verified_at: 2026-06-23
     note: "May check found the pricing surface still using Freepik plan names while Magnific branding was spreading across AI creative features. Kept as historical price snapshot; June 5 docs now supersede the entitlement details."
   - date: 2026-06-05
     plan: "Premium+ / Pro"
@@ -114,12 +125,13 @@ price_history:
     source: "https://www.freepik.com/ai/docs/plans-and-pricing"
     source_label: "Source"
     source_id: freepik-pricing
+    verified_at: 2026-06-23
     note: "Freepik docs still expose Freepik plan names. Premium+ lists 45,000 credits/month and unlimited generation with most image models; Pro lists 300,000 credits/month, Merchandise License, and unlimited generation with most image models. Premium models, video, audio, and advanced tools can still consume credits."
 ---
 
 # Freepik AI Suite / Magnific
 
-Freepik AI Suite / Magnific is the practical name for Freepik's current AI creative surface: AI image generation, editing, upscaling, video, audio, 3D, templates, mockups, and stock assets under Freepik plan names. Magnific is now part of the buyer story because Freepik markets Magnific upscaling and related AI creative features, but Freepik's public pricing and help docs still use Freepik, Essential, Premium, Premium+, Pro, Business, and Enterprise.
+Freepik AI Suite / Magnific is the practical name for Freepik's current AI creative surface: AI image generation, editing, upscaling, video, audio, 3D, templates, mockups, and stock assets. The pricing surface now lives under Magnific branding, while buyer recognition still mixes Freepik and Magnific.
 
 A single subscription can open up multiple image models, Freepik stock assets, AI editing, upscaling, and cross-media generation under one credit system. The exact model shelf and whether a model is credit-free or credit-metered changes by plan and feature, so buyers should verify the live plan table before standardizing a team.
 
@@ -131,16 +143,16 @@ No [Midjourney](/tools/midjourney/) integration. Magnific is positioned as the "
 >
 > **Skip it if you want the best output from any single model.** [Midjourney](/tools/midjourney/) still wins on aesthetic ceiling and is not integrated. [Flux](/tools/flux/) direct gives developers the full public API without credit metering. [Ideogram](/tools/ideogram/) direct is safer for dense text-in-image work, especially after its 2026 plan restructure.
 >
-> **Who pays which tier:** Free for testing, Essential $5.75/mo annual for AI tools with commercial rights, Premium $12/mo annual for AI plus full premium stock content, Premium+ $24.50/mo annual for unlimited generation with most image models and purchasable extra credits, Pro $158.33/mo annual for maximum credits, merchandise rights, early access, and heavier agency workloads.
+> **Who pays which tier:** Free for testing, Essential €6/mo annual for AI tools with commercial rights, Premium €12/mo annual for AI plus full premium stock content, Premium+ €27/mo annual for broader music rights and 600K annual credits, Pro €172.50/mo annual for 4M annual credits, merchandise rights, early access, and heavier agency workloads.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Brand surface** | Freepik AI Suite with Magnific upscaling/creative features; public docs still use Freepik plan names |
+| **Brand surface** | Magnific, formerly Freepik, with Freepik stock assets and AI creative tools |
 | **Integrated image models** | Multi-model shelf that can include Flux and other image/video engines; verify the live model table before buying |
 | **Not integrated** | Midjourney (no third-party integration exists) |
-| **Credit system** | Credits are used across AI tools; Premium+ and Pro include unlimited generation with most image models, while premium models and video/audio/advanced tools can still consume credits |
+| **Credit system** | Annual credits are used across AI tools; Essential has 96K/year, Premium 240K/year, Premium+ 600K/year, and Pro 4M/year, while selected models are labeled unlimited all year |
 | **Commercial license** | Included on paid plans in Freepik docs; Free plan is personal/attribution |
 | **Stock library** | Premium stock content, templates, mockups, icons, videos, PSDs, and other Freepik assets depending on plan |
 | **Editing suite** | Magnific upscalers · background removal · object removal · sketch-to-image · image/video/design editing tools |
@@ -148,7 +160,7 @@ No [Midjourney](/tools/midjourney/) integration. Magnific is positioned as the "
 | **Video, audio, 3D** | Native generation surfaces on the post-rebrand platform · share the unified credit balance |
 | **Free tier** | Limited access, up to 20 AI image generations per day with the in-house model, personal use/attribution |
 
-Every data point was verified against vendor sources on 2026-06-12. See Sources.
+Every data point was verified against vendor sources on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -177,19 +189,19 @@ The moat is bundling, not model leadership. Its value sits in commercial-plan li
 
 ## Pricing
 
-Subscription pricing via [Freepik pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) and the live [Freepik pricing page](https://www.freepik.com/pricing). USD annual headline prices in the help docs; monthly billing is higher and regional pricing/tax can vary.
+Subscription pricing via [Magnific pricing](https://www.magnific.com/pricing). Annual headline prices are shown in euros, exclude VAT and local taxes, and regional pricing can vary.
 
 | Plan | Price | Credits | What you get |
 |------|-------|---------|--------------|
-| Free | $0 | Limited daily use | Up to 20 AI image generations/day with the in-house model; personal use/attribution |
-| Essential | $5.75/mo annual | 8,000/month | AI tools with commercial rights; templates only, no full premium stock |
-| Premium | $12/mo annual | 20,000/month | Full premium stock content, unlimited downloads, commercial use |
-| Premium+ | $24.50/mo annual | 45,000/month | Unlimited generation with most image models, extra-credit purchases, heavy creator workflow |
-| Pro | $158.33/mo annual | 300,000/month | Unlimited generation with most image models, Merchandise License, early access, maximum individual credits |
-| Business | Custom | 45,000/seat/month in docs | Shared credit pools and team management for 2-30 people |
+| Free | €0 | Limited daily use | Testing and free assets |
+| Essential | €6/mo annual | 96K/year | AI tools, commercial AI license, API credit usage, MCP connection, and 250M+ assets |
+| Premium | €12/mo annual | 240K/year | Premium stock content, commercial AI license, API credit usage, MCP connection |
+| Premium+ | €27/mo annual | 600K/year | Commercial AI license plus music rights, Magnific and Topaz upscalers, selected models unlimited all year |
+| Pro | €172.50/mo annual | 4M/year | Merchandise License, high annual credit pool, early access, heavier agency workflow |
+| Business | Custom | Team allocation | Shared credit pools and team management |
 | Enterprise | Custom | Custom allocation | Unlimited seats, compliance, SSO, dedicated support |
 
-*Prices and plan inclusions verified 2026-06-12 against [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing) and the live [Freepik pricing page](https://www.freepik.com/pricing). Premium+ and Pro unlimited generation applies to most image models, not every model or media type. Premium models, video, audio, upscalers, training, and advanced tools can still consume credits.*
+*Prices and plan inclusions verified 2026-06-23 against [Magnific pricing](https://www.magnific.com/pricing). Selected models are labeled unlimited all year, but premium media tools, training, and advanced actions can still consume credits.*
 
 ## Against the alternatives
 
@@ -218,20 +230,21 @@ Subscription pricing via [Freepik pricing docs](https://www.freepik.com/ai/docs/
 
 ## Recent changes
 
-- **2026-06-05:** Freepik docs rechecked. Public plan names remain Free, Essential, Premium, Premium+, Pro, Business, and Enterprise. Premium+ and Pro include unlimited generation with most image models, while premium models and video/audio/advanced tools can still consume credits.
-- **2026-05-13:** Pricing reconfirmed at carry-over levels (Free, Essential $5.75, Premium $12, Premium+ $24.50, Pro $158.33). Verify in-product entitlements as the product may layer new video, audio, or 3D bundles on top of the plan table.
+- **2026-06-05:** Freepik docs rechecked. Public plan names remained Free, Essential, Premium, Premium+, Pro, Business, and Enterprise. Premium+ and Pro included unlimited generation with most image models, while premium models and video/audio/advanced tools could still consume credits. Treat this as a historical snapshot after the June 23 Magnific pricing recheck.
+- **2026-06-23:** Current Magnific pricing surface lists Essential €6/mo annual, Premium €12/mo annual, Premium+ €27/mo annual, and Pro €172.50/mo annual, with annual credits rather than monthly resets. Treat older USD Freepik plan snapshots as historical.
+- **2026-05-13:** Pricing reconfirmed at carry-over levels (Free, Essential $5.75, Premium $12, Premium+ $24.50, Pro $158.33). This is now a historical snapshot because Magnific pricing has moved to annual euro pricing and annual credits.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Freepik AI Image Generator](https://www.freepik.com/ai/image-generator), [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing), the [Freepik pricing page](https://www.freepik.com/pricing), [Freepik AI image model credit tables](https://www.freepik.com/pricing), and the [Freepik Enterprise page](https://www.freepik.com/enterprise).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Magnific pricing](https://www.magnific.com/pricing), [Freepik AI Image Generator](https://www.freepik.com/ai/image-generator), and the [Freepik Enterprise page](https://www.freepik.com/enterprise).
 
 ## FAQ
 
 **What is the Freepik and Magnific relationship?**
-Treat the buyer surface as Freepik AI Suite / Magnific. Magnific is prominent in Freepik's current AI product story, especially upscaling, but Freepik's public pricing and help docs still use Freepik plan names. Do not assume every URL, plan, invoice, or support page has moved to Magnific.
+Treat the buyer surface as Freepik AI Suite / Magnific. Magnific is now the prominent current AI product and pricing surface, especially for upscaling and generative creative work, while Freepik remains the stock-asset brand buyers recognize. Do not assume every URL, plan, invoice, or support page uses the same name.
 
 **Is the platform free?**
-Yes, with limits. The free tier offers limited basic AI tools and up to 20 AI image generations per day with the in-house model, with personal-use/attribution terms in the plan docs. Paid annual plans start at Essential $5.75/mo and unlock commercial use/no attribution.
+Yes, with limits. The free tier offers limited basic AI tools. Paid annual plans start at Essential €6/mo, billed annually, and unlock commercial AI licensing, annual credits, and broader model access.
 
 **Which AI models are included?**
 Freepik exposes a multi-model AI image shelf, and the live pricing page lists current model-level credit or unlimited coverage. The exact model names change quickly, so verify the live table before buying for one required model.
@@ -243,16 +256,15 @@ No. Midjourney has no official third-party integration and prohibits unofficial 
 Yes on all paid plans. Outputs ship with the platform's commercial license covering advertising, print, web, and social. Free-tier outputs are watermarked and non-commercial.
 
 **How does the credit system work?**
-Each generation or AI action can spend credits from the monthly/annual allowance unless the selected plan/tool/model is included in unlimited generation. Freepik docs list Premium+ and Pro as unlimited for most image models; premium models, video, audio, upscalers, training, and advanced tools can still consume credits.
+Each generation or AI action can spend credits from the annual allowance unless the selected plan/tool/model is labeled unlimited. Magnific pricing lists credits as valid for 1 year and labels selected models as unlimited all year, but premium models, video, audio, upscalers, training, and advanced tools can still consume credits.
 
 **Magnific or Midjourney?**
-Different tools. Freepik AI Suite / Magnific is a creative-suite bundle with stock, AI tools, editing, and plan licensing. Midjourney is a single-model specialist with a higher aesthetic ceiling and its own curated feed. Teams needing commercial asset production across many tools shortlist Freepik. Teams chasing a single best-in-class image output pick Midjourney.
+Different tools. Freepik AI Suite / Magnific is a creative-suite bundle with stock, AI tools, editing, and plan licensing. Midjourney is a single-model specialist with a higher aesthetic ceiling and its own curated feed. Teams needing commercial asset production across many tools shortlist Freepik. Teams chasing one image model with the strongest aesthetic ceiling pick Midjourney.
 
 ## Sources
 
+- [Magnific pricing](https://www.magnific.com/pricing): current pricing, annual credits, model-level credit/unlimited table, MCP/API access, and licensing notes
 - [Freepik AI Image Generator](https://www.freepik.com/ai/image-generator): generator entry point
-- [Freepik plans and pricing docs](https://www.freepik.com/ai/docs/plans-and-pricing): plan features, credits, licensing, unlimited-generation rules
-- [Freepik pricing](https://www.freepik.com/pricing): live pricing and model-level credit/unlimited table
 - [Freepik API pricing](https://docs.freepik.com/pricing): separate API billing surface
 - [Freepik Enterprise](https://www.freepik.com/enterprise): custom team deployments
 - [Freepik License Terms](https://www.freepik.com/license-terms): commercial license scope

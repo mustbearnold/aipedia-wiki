@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-03
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: "Krea: Features, Pricing & Review (June 2026)"
 meta_description: "Krea is the real-time creative suite for image, video, 3D, lipsync, LoRA, and node workflows. June 2026 pricing check: Free 100 daily compute units; Basic, Pro, Max, Business, and Enterprise differ by model access, rollover, seats, and compute."
@@ -34,16 +34,16 @@ facts:
     source: https://www.krea.ai/
     source_label: Krea official site
     source_id: krea-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: Krea pricing is compute-unit and plan dependent; Free gets 100 daily compute units, Basic/Pro/Max allocate monthly compute that does not roll over, Business/Enterprise can support rollover, and one-time compute packs expire after 90 days.
+    value: Krea pricing is compute-unit and plan dependent; Free supports basic use with pay-as-you-go compute units, Basic/Pro/Max allocate monthly compute that does not roll over, Business/Enterprise can support rollover, and Business packs run from 20k to 1.5M monthly units.
     source: https://www.krea.ai/pricing
     source_label: Krea pricing
     source_id: krea-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -52,7 +52,7 @@ facts:
     source: https://www.krea.ai/realtime
     source_label: Krea realtime image generation
     source_id: krea-realtime
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -62,7 +62,7 @@ facts:
     source: https://www.krea.ai/video
     source_label: Krea video generator
     source_id: krea-video
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.krea.ai/pricing
     source_label: Krea pricing
     source_id: krea-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -96,6 +96,7 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Source"
     source_id: krea-pricing
+    verified_at: 2026-06-23
     note: "Verified on krea.ai/pricing"
   - date: 2026-04-18
     plan: "Pro"
@@ -103,6 +104,7 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Source"
     source_id: krea-pricing
+    verified_at: 2026-06-23
     note: "Unlocks Veo 3, Sora, Kling video access"
   - date: 2026-05-13
     plan: "Pro"
@@ -110,6 +112,7 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Source"
     source_id: krea-pricing
+    verified_at: 2026-06-23
     note: "Reverified; Krea 2, Nano Banana Pro, Z-image, Qwen, Hailuo, Runway added to model lineup."
   - date: 2026-06-08
     plan: "Pro"
@@ -119,6 +122,14 @@ price_history:
     source_id: krea-pricing
     verified_at: 2026-06-08
     note: "Reverified current plan table: Pro includes all video models including Veo3, Sora, and Kling; Basic/Pro/Max monthly compute does not roll over, while Business/Enterprise can support rollover."
+  - date: 2026-06-23
+    plan: "Free / Basic / Pro / Max / Business"
+    price: "$0-$200/mo monthly equivalent; Business compute packs vary"
+    source: "https://www.krea.ai/pricing"
+    source_label: "Krea pricing"
+    source_id: krea-pricing
+    verified_at: 2026-06-23
+    note: "Pricing page still centers compute units, yearly discounts, Basic/Pro/Max non-rollover, Business/Enterprise rollover options, unlimited Business members, and Business packs from 20k to 1.5M monthly units."
 ---
 
 # Krea
@@ -145,7 +156,7 @@ Krea sits in an aggregator position: it does not train most of the models it ser
 | **Model catalog** | Krea says 150+ models across image, video, enhancer, realtime, 3D, lipsync, Nano Banana, Topaz, Magnific, Seedance, and related tools |
 | **Video models** | Veo 3, Sora, Kling, Runway, Hailuo, Wan, and others (Pro tier and above) |
 | **3D and lipsync** | In-house 3D and lipsync models |
-| **Free tier** | 100 compute units/day, limited model access |
+| **Free tier** | Basic use with pay-as-you-go compute units and limited model access |
 | **Paid plans** | Basic $9 · Pro $35 · Max $70 · Business $200 |
 | **Enterprise** | Custom pricing with SAML SSO, audit logs, analytics API |
 | **LoRA training** | Up to 50 images (Basic) · unlimited (Max, 2,000 files) |
@@ -197,7 +208,7 @@ The current pricing page emphasizes yearly discounts for individual plans and a 
 
 No public API pricing tier is currently published, although Enterprise plans include analytics API access.
 
-Prices reverified 2026-06-12 via [Krea pricing](https://www.krea.ai/pricing). The checked page lists Krea 2 access across paid tiers, all video models at Pro and above, unlimited relaxed in-house generations at Max and above, Business terms/no-training clauses for teams, and Analytics API/SLA/audit-log controls at Enterprise.
+Prices reverified 2026-06-23 via [Krea pricing](https://www.krea.ai/pricing). The checked page lists Krea 2 access across paid tiers, all video models at Pro and above, unlimited relaxed in-house generations at Max and above, Business terms/no-training clauses for teams, unlimited Business members, Business compute packs from 20k to 1.5M units, and Analytics API/SLA/audit-log controls at Enterprise.
 
 ## Against the alternatives
 
@@ -224,12 +235,12 @@ Prices reverified 2026-06-12 via [Krea pricing](https://www.krea.ai/pricing). Th
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [Krea pricing](https://www.krea.ai/pricing), the [Krea homepage](https://www.krea.ai/), and the [Krea Series B coverage from TechCrunch](https://techcrunch.com/2025/04/07/kreas-founders-snubbed-postgrad-grants-from-the-king-of-spain-to-build-their-ai-startup-now-its-valued-at-500m/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [Krea pricing](https://www.krea.ai/pricing), the [Krea homepage](https://www.krea.ai/), [Krea news](https://www.krea.ai/news), and the [Krea Series B coverage from TechCrunch](https://techcrunch.com/2025/04/07/kreas-founders-snubbed-postgrad-grants-from-the-king-of-spain-to-build-their-ai-startup-now-its-valued-at-500m/).
 
 ## FAQ
 
 **Is Krea free to use?**
-Yes. The free tier gives 100 compute units per day with limited model access. [Basic at $9/month](https://www.krea.ai/pricing) unlocks commercial use and 5,000 monthly units. Video models unlock at Pro ($35/month).
+Yes. The free tier supports basic use with limited model access and pay-as-you-go compute units. [Basic at $9/month](https://www.krea.ai/pricing) unlocks commercial use and 5,000 monthly units. Video models unlock at Pro ($35/month).
 
 **What models does Krea actually run?**
 Krea aggregates external frontier models (Flux, Sora, Veo 3, Kling, Runway, Hailuo, Nano Banana, Topaz, Magnific, Seedance, and more) alongside in-house Krea 1, Krea 2, 3D, lipsync, realtime, and node-workflow surfaces. The June 8 pricing check found Krea claiming 150+ models. Realtime Canvas uses an in-house lightweight model for sub-50ms preview rendering.

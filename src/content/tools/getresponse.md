@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $19-$69/month+
 status: active
 launched: 1998-09
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -36,7 +36,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -46,7 +46,7 @@ facts:
     source: https://www.getresponse.com/pricing
     source_label: GetResponse pricing
     source_id: getresponse-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -65,7 +65,7 @@ facts:
     source: https://www.getresponse.com/
     source_label: GetResponse official site
     source_id: getresponse-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -75,7 +75,7 @@ facts:
     source: https://www.getresponse.com/pricing
     source_label: GetResponse pricing
     source_id: getresponse-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -103,6 +103,7 @@ price_history:
     source: "https://www.getresponse.com/pricing"
     source_label: "Source"
     source_id: getresponse-pricing
+    verified_at: 2026-06-23
     note: "Entry tier: 1K contacts, email marketing + autoresponders + landing pages, 1 marketing-automation workflow, 3 AI-tool uses. 18% annual savings."
   - date: 2026-04-19
     plan: "Marketer"
@@ -110,6 +111,7 @@ price_history:
     source: "https://www.getresponse.com/pricing"
     source_label: "Source"
     source_id: getresponse-pricing
+    verified_at: 2026-06-23
     note: "Adds unlimited marketing automation, ecommerce tools, unlimited AI tools, conversion funnels. 18% annual savings."
   - date: 2026-04-19
     plan: "Creator"
@@ -117,7 +119,16 @@ price_history:
     source: "https://www.getresponse.com/pricing"
     source_label: "Source"
     source_id: getresponse-pricing
+    verified_at: 2026-06-23
     note: "Most Popular tier. Adds webinars (100 attendees), website builder, course creator (500 students). 18% annual savings."
+  - date: 2026-06-23
+    plan: "Starter / Marketer / Creator"
+    price: "$19 / $59 / $69 monthly at 1K contacts; $15.58 / $48.38 / $56.58 annual effective monthly"
+    source: "https://www.getresponse.com/pricing"
+    source_label: "GetResponse pricing"
+    source_id: getresponse-pricing
+    verified_at: 2026-06-23
+    note: "Public pricing page still shows 14-day trial, unlimited monthly email sends, and the same 18% annual discount at the 1,000-contact selector."
 ---
 
 # GetResponse
@@ -152,7 +163,7 @@ As verified in June 2026, the pricing ladder runs Starter $19/mo, Marketer $59/m
 | **Compliance** | GDPR · CAN-SPAM · CASL · transactional email compliant |
 | **Free custom domain** | Included with yearly billing |
 
-Every data point above verified against GetResponse's published sources on 2026-06-12.
+Every data point above verified against GetResponse's published sources on 2026-06-23.
 
 ## What it actually is
 
@@ -199,7 +210,7 @@ Subscription pricing for a 1,000-contact list via [getresponse.com/pricing](http
 
 All tiers include unlimited monthly email sends, unlimited landing pages, 24/7 support, and free custom domain on annual billing. Contact-list pricing scales: a 10,000-contact list runs roughly 2x the 1K price; 100K contacts moves into Enterprise territory.
 
-Prices verified 2026-06-12 via [GetResponse pricing](https://www.getresponse.com/pricing). 18% annual discount across every tier.
+Prices verified 2026-06-23 via [GetResponse pricing](https://www.getresponse.com/pricing). 18% annual discount across every tier at the 1,000-contact selector.
 
 ## Against the alternatives
 
@@ -218,8 +229,8 @@ Prices verified 2026-06-12 via [GetResponse pricing](https://www.getresponse.com
 
 - **Starter tier's single workflow is a real constraint.** Active lists quickly exhaust 1 workflow; Marketer at $59 is the practical floor for anyone using automation.
 - **1,000-contact pricing is the advertised starting line.** Costs scale steeply past 10K contacts; large lists should model full pricing before committing.
-- **AI features are layered, not differentiated.** Competitive parity with Mailchimp, ActiveCampaign, and Klaviyo; GetResponse's AI is functional, not best-in-class.
-- **Webinar quality caps at decent, not best-in-class.** Good enough for lead nurture; streaming-first brands still use Zoom or Restream.
+- **AI features are layered, not differentiated.** Competitive parity with Mailchimp, ActiveCampaign, and Klaviyo; GetResponse's AI is functional rather than a reason to buy by itself.
+- **Webinar quality caps at decent, not specialist-grade.** Good enough for lead nurture; streaming-first brands still use Zoom or Restream.
 - **Course creator is solid but not Kajabi or Teachable.** Covers fundamentals (videos, quizzes, drip, certificates); deep course-platform features (affiliate programs, community, advanced LMS) sit with dedicated course platforms.
 - **Legacy UI in places.** 25+ years of platform evolution shows in older settings screens; newer workflows (course creator, website builder) use modernized UI but older email settings feel dated.
 - **Enterprise is demo-gated.** No public pricing; requires sales contact for anything above Creator tier.
@@ -227,7 +238,7 @@ Prices verified 2026-06-12 via [GetResponse pricing](https://www.getresponse.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [GetResponse pricing](https://www.getresponse.com/pricing) and the [GetResponse homepage](https://www.getresponse.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [GetResponse pricing](https://www.getresponse.com/pricing) and the [GetResponse homepage](https://www.getresponse.com/).
 
 ## FAQ
 

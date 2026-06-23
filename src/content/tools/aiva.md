@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "EUR 0-33/month"
 status: active
 launched: 2016-02
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://www.aiva.ai/
     source_label: AIVA official site
     source_id: aiva-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://www.aiva.ai/pricing
     source_label: AIVA pricing
     source_id: aiva-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.aiva.ai/
     source_label: AIVA official site
     source_id: aiva-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://www.aiva.ai/legal/1
     source_label: AIVA terms
     source_id: aiva-terms
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,7 +70,7 @@ facts:
     source: https://aiva.crisp.help/en/category/frequently-asked-questions-1hnn93r/
     source_label: AIVA help
     source_id: aiva-help
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -97,7 +97,16 @@ quick_answer: >-
   vocal-forward songs, or royalty-safe background loops; Suno, Udio, and Mubert each win those.
   Pricing is EUR-denominated: Standard EUR 11/mo annual, Pro EUR 33/mo annual.
 price_history:
+  - date: 2026-06-23
+    verified_at: 2026-06-23
+    plan: "Free / Standard / Pro"
+    price: "EUR 0 / EUR 11 annual effective / EUR 33 annual effective"
+    source: "https://www.aiva.ai/pricing"
+    source_label: "AIVA pricing"
+    source_id: aiva-pricing
+    note: "Rechecked the live pricing page and EULA. Free, Standard, and Pro annual effective pricing, download caps, export formats, and self-serve rights boundaries remain aligned with the June 18 refresh."
   - date: 2026-04-15
+    verified_at: 2026-06-18
     plan: "Pro"
     price: "EUR 33/mo annual effective"
     source: "https://www.aiva.ai/pricing"
@@ -105,6 +114,7 @@ price_history:
     source_id: aiva-pricing
     note: "Historical row corrected to EUR-denominated annual effective pricing during the June 18, 2026 refresh."
   - date: 2026-04-15
+    verified_at: 2026-06-18
     plan: "Standard"
     price: "EUR 11/mo annual effective"
     source: "https://www.aiva.ai/pricing"
@@ -112,6 +122,7 @@ price_history:
     source_id: aiva-pricing
     note: "Historical row corrected to EUR-denominated annual effective pricing during the June 18, 2026 refresh."
   - date: 2026-05-13
+    verified_at: 2026-06-18
     plan: "Pro"
     price: "EUR 33/mo when billed annually"
     source: "https://www.aiva.ai/pricing"
@@ -119,6 +130,7 @@ price_history:
     source_id: aiva-pricing
     note: "Re-verified June 18, 2026. Pricing is EUR-denominated on the live annual page. Pro grants copyright ownership for individual/small-business use, 300 downloads/mo, 5:30 max track length, WAV/MP3/MIDI/stems."
   - date: 2026-05-13
+    verified_at: 2026-06-18
     plan: "Standard"
     price: "EUR 11/mo when billed annually"
     source: "https://www.aiva.ai/pricing"
@@ -126,6 +138,7 @@ price_history:
     source_id: aiva-pricing
     note: "Re-verified June 18, 2026. Standard track length is 5 min, with 15 downloads/mo. Monetization limited to YouTube, Twitch, TikTok, Instagram."
   - date: 2026-05-13
+    verified_at: 2026-06-18
     plan: "Free"
     price: "EUR 0"
     source: "https://www.aiva.ai/pricing"
@@ -133,6 +146,7 @@ price_history:
     source_id: aiva-pricing
     note: "Re-verified June 18, 2026. Free tier exports MP3 and MIDI, 3 downloads/mo, 3 min max track length, non-commercial only, AIVA attribution required."
   - date: 2026-06-01
+    verified_at: 2026-06-18
     plan: "Free / Standard / Pro"
     price: "EUR 0 / EUR 11 annual effective / EUR 33 annual effective"
     source: "https://www.aiva.ai/pricing"
@@ -145,7 +159,7 @@ price_history:
 
 ## What Changed Since The Last Refresh
 
-- **Pricing held, but the rights advice needed tightening.** The June 18 check still shows Free, Standard at EUR 11/mo billed annually, and Pro at EUR 33/mo billed annually. The EULA defines individual use narrowly and tells enterprises to contact AIVA for custom plans. It also routes private API, high-volume, large-scale licensing/database, and model-training use cases to separate agreements.
+- **Pricing held, but the rights advice needed tightening.** The June 23 recheck still shows Free, Standard at EUR 11/mo billed annually, and Pro at EUR 33/mo billed annually. The EULA defines individual use narrowly and tells enterprises to contact AIVA for custom plans. It also routes private API, high-volume, large-scale licensing/database, and model-training use cases to separate agreements.
 - **The product story is moving toward Lyra.** AIVA's official blog now foregrounds Lyra, a private-beta foundation model for instrumental-only music that supports natural-language prompting and 30-second to 10-minute complete compositions. Do not treat Lyra as a public-plan entitlement yet, but it changes how buyers should read AIVA: the company is building beyond the older preset-composition workflow.
 - **The research stack matters.** The blog describes OmniCodec, ORAQL, and Influence: a codec for music tokens, a quality-assessment model used for reward and selection, and reference-audio conditioning. That supports AIVA's positioning around editable, composer-led workflows rather than vocal song generation.
 - **The current buyer risk is licensing scope.** AIVA is still a strong DAW-friendly scoring tool, but Pro is not a blank check for larger studios, music libraries, stock catalogs, training datasets, or automated pipelines. Those buyers should get written terms before publishing at scale.
@@ -180,7 +194,7 @@ AIVA Technologies is Luxembourg-based. The engine was registered as a composer w
 | **Vocals / lyrics** | None (instrumental only) |
 | **Company** | AIVA Technologies, Luxembourg. SACEM-registered composer since 2017 |
 
-Every data point above was verified against vendor documentation on 2026-06-18. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -216,7 +230,7 @@ Subscription pricing via [aiva.ai/pricing](https://www.aiva.ai/pricing). Pricing
 | Standard | EUR 11 | 15 | Up to 5 min | MP3, MIDI | Platform monetization (YouTube, Twitch, TikTok, Instagram); AIVA retains copyright | Creators needing platform-monetized tracks |
 | Pro | EUR 33 | 300 | Up to 5:30 min | MP3, WAV, MIDI, stems | User copyright ownership for self-serve individual/small-business use | **Professional composers and small studios** |
 
-*Prices verified 2026-06-18 via [AIVA pricing](https://www.aiva.ai/pricing). The Free tier includes MIDI download alongside MP3. Standard supports 5-minute tracks. Educational and enterprise licenses are quoted separately.*
+*Prices verified 2026-06-23 via [AIVA pricing](https://www.aiva.ai/pricing). The Free tier includes MIDI download alongside MP3. Standard supports 5-minute tracks. Educational and enterprise licenses are quoted separately.*
 
 The Pro tier remains the only self-serve tier that makes sense for a working media composer. Standard retains copyright with AIVA and only grants monetization rights on social platforms. For sync licensing, stock-library resale, large catalogs, automated generation, or any company above AIVA's self-serve individual definition, get a separate agreement instead of relying on the Pro checkout page.
 
@@ -247,7 +261,7 @@ The Pro tier remains the only self-serve tier that makes sense for a working med
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-18 against [aiva.ai](https://www.aiva.ai), [aiva.ai/pricing](https://www.aiva.ai/pricing), [AIVA's EULA](https://www.aiva.ai/legal/1), [AIVA Helpdesk](https://aiva.crisp.help/en/category/frequently-asked-questions-1hnn93r/), and [AIVA's Lyra blog](https://blog.aiva.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [aiva.ai](https://www.aiva.ai), [aiva.ai/pricing](https://www.aiva.ai/pricing), [AIVA's EULA](https://www.aiva.ai/legal/1), [AIVA Helpdesk](https://aiva.crisp.help/en/category/frequently-asked-questions-1hnn93r/), and [AIVA's Lyra blog](https://blog.aiva.ai).
 
 ## FAQ
 

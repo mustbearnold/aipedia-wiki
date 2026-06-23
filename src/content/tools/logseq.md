@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "Free core app; Sync beta historically tied to $5/$15 monthly donor access"
 status: active
 launched: 2020-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,16 +31,16 @@ facts:
     source: https://logseq.com/
     source_label: Logseq official site
     source_id: logseq-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
   pricing_anchor:
-    value: "The public site positions Logseq as open-source, privacy-first, locally owned notes; Sync remains beta, and historical official sync setup tied access to $5/$15 monthly Open Collective donor tiers."
+    value: "The public site positions Logseq as open-source, privacy-first, locally owned notes; Sync remains beta, and the May 2026 DB update says Sync testing is open to Open Collective Sponsors with Backers queued for invites."
     source: https://logseq.com/
     source_label: Logseq official site
     source_id: logseq-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-08'
@@ -49,7 +49,7 @@ facts:
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -58,7 +58,7 @@ facts:
     source: https://github.com/logseq/logseq
     source_label: Logseq GitHub repository
     source_id: logseq-repository
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -67,7 +67,7 @@ facts:
     source: https://docs.logseq.com/
     source_label: Logseq documentation
     source_id: logseq-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -95,6 +95,7 @@ price_history:
     source: "https://blog.logseq.com/how-to-setup-and-use-logseq-sync/"
     source_label: "Source"
     source_id: logseq-sync-setup
+    verified_at: 2024-06-01
     note: "End-to-end encrypted cross-device sync launched"
   - date: 2026-04-17
     plan: "Core app"
@@ -102,6 +103,7 @@ price_history:
     source: "https://logseq.com/"
     source_label: "Source"
     source_id: logseq-pricing
+    verified_at: 2026-04-17
     note: "Verified unchanged. AGPL-3.0 license."
   - date: 2026-05-13
     plan: "Core app + Sync"
@@ -109,6 +111,7 @@ price_history:
     source: "https://blog.logseq.com/how-to-setup-and-use-logseq-sync/"
     source_label: "Source"
     source_id: logseq-sync-setup
+    verified_at: 2026-05-13
     note: "Verified unchanged at the previous pricing check. June 8 source check could verify Sync beta language and historical $5/$15 donor access, but the public site did not expose a clean current checkout price."
   - date: 2026-06-08
     plan: "Core app + Sync beta"
@@ -116,19 +119,28 @@ price_history:
     source: "https://logseq.com/"
     source_label: "Source"
     source_id: logseq-pricing
+    verified_at: 2026-06-08
     note: "Official site still describes Logseq as open source, free forever for personal use, privacy-first, and local-data owned. Historical official Sync setup tied beta access to $5/$15 monthly Open Collective donations."
+  - date: 2026-06-23
+    plan: "Core app + DB Sync testing"
+    price: "Core free; new Sync testing open to Sponsors, Backers queued for invites"
+    source: "https://discuss.logseq.com/t/whats-new-with-logseq-db-may-16th-2026/35020"
+    source_label: "Source"
+    source_id: logseq-db-may-2026
+    verified_at: 2026-06-23
+    note: "Rechecked official site, downloads page, GitHub, and May 2026 DB update. Core remains free/open-source; public checkout pricing for Sync is still not a clean SaaS rate card."
 ---
 
 # Logseq
 
 Open-source outliner knowledge base built by Logseq Inc. In the classic graph, notes are Markdown or Org-mode files on disk; every bullet within a note is a first-class block with its own identifier, reference, and query surface.
 
-Core app free under AGPL-3.0. The public site still describes Logseq as open source, privacy-first, and locally owned, with Sync beta for encrypted cross-device sync. Historical official Sync setup tied beta access to $5 or $15 monthly Open Collective donor tiers; confirm the current checkout path before presenting Sync as a normal SaaS add-on. Local-first by default: files live in a folder you control, and you can back up with any filesystem tool.
+Core app free under AGPL-3.0. The public site still describes Logseq as open source, privacy-first, and locally owned, with Sync beta for encrypted cross-device sync. The May 2026 DB update says Sync testing is open to Open Collective Sponsors and Backers are queued for invites; confirm the current checkout path before presenting Sync as a normal SaaS add-on. Local-first by default: files live in a folder you control, and you can back up with any filesystem tool.
 
 ## Recent developments
 
-- **May 16, 2026:** Logseq DB updates shipped markdown mirror for DB graphs, CLI query support, graph-view rebuild work, and sync hardening. That makes the DB version more interesting for agent/CLI workflows, but it also means buyers should separate stable classic Markdown graphs from DB-version migration risk.
-- **June 8, 2026:** AiPedia rechecked the official docs, site, forum changelog, and GitHub posture. Logseq remains a good personal/local-first outliner, but teams should watch DB-version mobile parity, markdown round-trip maturity, and collaboration limits before standardizing.
+- **May 16, 2026:** Logseq DB updates shipped the first round-trip between DB graphs and on-disk markdown, CLI query support, graph-view rebuild work, and sync hardening. Sync testing is open to Sponsors, with Backers queued for invites.
+- **June 23, 2026:** AiPedia rechecked the official site, downloads page, forum changelog, and GitHub posture. Logseq remains a good personal/local-first outliner, but teams should watch DB-version mobile parity, markdown round-trip maturity, sync access, and collaboration limits before standardizing.
 
 ## System Verdict
 
@@ -151,10 +163,10 @@ Core app free under AGPL-3.0. The public site still describes Logseq as open sou
 | **Whiteboards** | Native canvas feature since 2023 |
 | **Mobile apps** | iOS and Android |
 | **Desktop** | Windows, macOS, Linux |
-| **Sync** | Sync beta; historical official access tied to $5/$15 monthly donor tiers; roll-your-own works best for classic Markdown graphs |
+| **Sync** | Sync beta; May 2026 DB update says Sponsors can test new Sync and Backers are queued for invites; roll-your-own works best for classic Markdown graphs |
 | **AI** | Plugin ecosystem and emerging DB/CLI/MCP discussion; bring your own LLM API keys |
 
-Every data point verified 2026-06-12 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), and the May 2026 DB changelog thread.
+Every data point verified 2026-06-23 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), and the May 2026 DB changelog thread.
 
 ## What it actually is
 
@@ -185,9 +197,9 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 | Plan | Price | Who's it for |
 |---|---|---|
 | Logseq (core) | $0 | All users; full features, no caps |
-| Logseq Sync beta | Confirm live; historical beta access via $5/$15 monthly donor tiers | Anyone syncing across devices; E2E encrypted |
+| Logseq Sync beta | Confirm live; Sponsors can test new Sync, Backers queued for invites | Anyone syncing across devices; E2E encrypted |
 
-*Prices verified 2026-06-12 against [logseq.com](https://logseq.com/) and the official Sync setup blog. Sync is optional; iCloud Drive, Syncthing, or git can work for classic Markdown graphs, but DB graphs and mobile parity need a separate test before standardizing.*
+*Prices verified 2026-06-23 against [logseq.com](https://logseq.com/), the downloads page, and the May 2026 DB update. Sync is optional; iCloud Drive, Syncthing, or git can work for classic Markdown graphs, but DB graphs and mobile parity need a separate test before standardizing.*
 
 ## Against the alternatives
 
@@ -213,7 +225,7 @@ Files stay Markdown (`.md`) or Org-mode (`.org`) on disk, your choice. The vault
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [logseq.com](https://logseq.com), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), the [official Sync setup blog](https://blog.logseq.com/how-to-setup-and-use-logseq-sync/), and the [Logseq DB May 2026 changelog](https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2).
+This page was produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [logseq.com](https://logseq.com), the [Logseq downloads page](https://logseq.com/downloads), the [Logseq docs](https://docs.logseq.com/), the [GitHub repo](https://github.com/logseq/logseq), the [official Sync setup blog](https://blog.logseq.com/how-to-setup-and-use-logseq-sync/), and the [Logseq DB May 2026 update](https://discuss.logseq.com/t/whats-new-with-logseq-db-may-16th-2026/35020).
 
 ## FAQ
 
@@ -258,7 +270,8 @@ Yes. Logseq reads Markdown files from any folder. Obsidian's wiki links work. Ob
 - [Logseq docs](https://docs.logseq.com/): graph setup, Markdown import, block references, queries, plugins, and publishing docs
 - [Logseq GitHub repository](https://github.com/logseq/logseq): license, release activity, and DB/mobile development posture
 - [Logseq Sync setup blog](https://blog.logseq.com/how-to-setup-and-use-logseq-sync/): historical Sync beta access and donor-tier language
-- [Logseq DB May 2026 changelog](https://discuss.logseq.com/t/logseq-db-changelog/30013?page=2): markdown mirror, CLI query, graph-view, and sync-hardening updates
+- [Logseq DB May 2026 update](https://discuss.logseq.com/t/whats-new-with-logseq-db-may-16th-2026/35020): markdown round-trip, CLI query, graph-view, and sync-testing updates
+- [Logseq downloads](https://logseq.com/downloads): current beta labels for Sync, Whiteboards, and collaboration
 
 ## Related
 

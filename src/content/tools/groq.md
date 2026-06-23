@@ -2,7 +2,7 @@
 type: tool
 slug: groq
 title: Groq
-tagline: Fast LLM inference on Groq's LPU cloud. Free tier for prototyping, paid usage-based API pricing, Llama/Qwen/GPT OSS open-model routes, Batch API discounts, and prompt-caching savings.
+tagline: Fast LLM inference on Groq's LPU cloud. Free tier for prototyping, paid usage-based API pricing, Llama/Qwen/GPT OSS routes, built-in tools, Batch API discounts, and prompt-caching savings.
 category: ai-chatbots
 company: groq
 url: https://groq.com
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free 30 req/min / paid usage-based"
 status: active
 launched: 2020-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,50 +30,49 @@ facts:
     source: https://groq.com/
     source_label: Groq official site
     source_id: groq-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   pricing_anchor:
-    value: As of June 12, 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
-      Qwen3 32B $0.29/$0.59, and GPT OSS 20B $0.075/$0.30 per million tokens; prompt caching gives 50 percent off cached inputs
-      and Batch API gives 50 percent off async workloads.
+    value: As of June 23, 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
+      Qwen3 32B $0.29/$0.59, Qwen 3.6 27B $0.60/$3.00, and GPT OSS 20B $0.075/$0.30 per million tokens. Prompt caching now explicitly lists Kimi K2 0905 at $1.00 uncached input, $0.50 cached input, and $3.00 output.
     source: https://groq.com/pricing/
     source_label: Groq pricing
     source_id: groq-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-07-23'
   api_available:
     value: Groq is API-first; the docs define authentication, chat/completions behavior, streaming, tool use, and production
       integration assumptions.
     source: https://console.groq.com/docs/overview
     source_label: Groq docs
     source_id: groq-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   model_control:
     value: The June 2026 supported-models page should be treated as the source of truth because model IDs, production/preview status, context windows, and deprecations move quickly.
     source: https://console.groq.com/docs/models
     source_label: Groq supported models
     source_id: groq-models
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-07-23'
   watch_out_for:
     value: Benchmark Groq on your own prompts for latency, context length, model quality, rate limits, and fallback strategy
       rather than buying only on speed positioning.
     source: https://console.groq.com/docs/models
     source_label: Groq supported models
     source_id: groq-models
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-07-23'
 tags: [inference, lpu, fast, llama, qwen, deepseek, gpt-oss, hardware, api]
 seo_title: "Groq (LPU Inference): Features, Pricing & Review (June 2026)"
 meta_description: "Groq is the LPU inference provider, not xAI's Grok chatbot. Compare current June 2026 API pricing, free-tier limits, supported open models, prompt caching, Batch API discounts, and buyer fit."
@@ -88,14 +87,23 @@ not_best_for:
   - long-context or reasoning workloads (open-weight on Groq is capped)
   - users without API integration (consumer-facing UI is minimal)
 quick_answer: >-
-  Groq is the LPU inference provider, not xAI's Grok chatbot. The June 2026 buyer case is still speed and predictable API economics for supported open models: free-tier prototyping, paid usage-based pricing, prompt caching, and Batch API discounts. Pick it for latency-critical open-model workloads; skip it when you need a closed frontier model from OpenAI, Anthropic, or Google.
+  Groq is the LPU inference provider, not xAI's Grok chatbot. The June 23, 2026 buyer case is still speed and predictable API economics for supported open models: free-tier prototyping, paid usage-based pricing, prompt caching, built-in tools, and Batch API discounts. Pick it for latency-critical open-model workloads; skip it when you need a closed frontier model from OpenAI, Anthropic, or Google.
 price_history:
+  - date: 2026-06-23
+    plan: "Model pricing and prompt caching"
+    price: "Usage-based by model"
+    source: "https://groq.com/pricing/"
+    source_label: "Groq pricing"
+    source_id: groq-pricing
+    verified_at: 2026-06-23
+    note: "Reverified pricing table: GPT OSS 20B/120B, Llama 4 Scout, Qwen3 32B, Llama 3.3 70B, Llama 3.1 8B, and Qwen 3.6 27B are public pricing rows; Kimi K2 0905 appears in prompt-caching pricing."
   - date: 2026-06-02
     plan: "Model pricing"
     price: "Usage-based by model"
     source: "https://groq.com/pricing/"
     source_label: "Groq pricing"
     source_id: groq-pricing
+    verified_at: 2026-06-23
     note: "Reverified current public pricing table and discount surfaces; use the live pricing page because model IDs and throughput labels can move."
   - date: 2026-05-13
     plan: "Llama 4 Scout"
@@ -103,6 +111,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
+    verified_at: 2026-06-23
     note: "Verified unchanged; 594 TPS measured"
   - date: 2026-05-13
     plan: "GPT OSS 20B"
@@ -110,6 +119,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
+    verified_at: 2026-06-23
     note: "Added to catalog; 1,000 TPS, top throughput on Groq"
   - date: 2026-05-13
     plan: "Llama 3.3 70B Versatile"
@@ -117,6 +127,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
+    verified_at: 2026-06-23
     note: "Replaced prior Llama 3 70B listing on the pricing page; 394 TPS"
   - date: 2026-05-13
     plan: "Qwen3 32B"
@@ -124,6 +135,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
+    verified_at: 2026-06-23
     note: "Specific pricing now published (previously listed as mid-range)"
 ---
 
@@ -132,6 +144,8 @@ price_history:
 > **Not to be confused with [Grok](/tools/grok/)** (xAI's chatbot, different company, different product). This page is Groq, the LPU inference provider.
 
 One of the fastest LLM inference providers on the market in 2026. Custom silicon called the Language Processing Unit (LPU) is optimized for low-latency model serving, and Groq's API exposes supported open models through an OpenAI-compatible developer surface.
+
+As of June 23, 2026, Groq's public pricing page still frames the buyer case around predictable per-token pricing, prompt caching, Batch API discounts, and built-in tools. Kimi K2 0905 appears in prompt-caching pricing, while Qwen 3.6 27B is now a visible public model-price row beside GPT OSS, Llama, and Qwen3.
 
 ## System Verdict
 
@@ -151,6 +165,7 @@ One of the fastest LLM inference providers on the market in 2026. Custom silicon
 | **Llama 3.3 70B Versatile** | $0.59 input / $0.79 output per M tokens (394 TPS) |
 | **Llama 3.1 8B Instant** | $0.05 input / $0.08 output per M tokens (840 TPS) |
 | **Qwen3 32B** | $0.29 input / $0.59 output per M tokens (662 TPS) |
+| **Qwen 3.6 27B** | $0.60 input / $3.00 output per M tokens (500 TPS) |
 | **GPT OSS 20B** | $0.075 input / $0.30 output per M tokens (1,000 TPS) |
 | **GPT OSS 120B** | $0.15 input / $0.60 output per M tokens (500 TPS) |
 | **Speed** | Up to 1,000 tokens/second on GPT OSS 20B; 394 to 840 TPS on Llama-family models |
@@ -183,11 +198,12 @@ Pricing is per-token and predictable.
 | Llama 4 Scout 17B | $0.11 | $0.34 | 594 |
 | GPT OSS 120B | $0.15 | $0.60 | 500 |
 | Qwen3 32B | $0.29 | $0.59 | 662 |
+| Qwen 3.6 27B | $0.60 | $3.00 | 500 |
 | Llama 3.3 70B Versatile | $0.59 | $0.79 | 394 |
 
-Rate tiers: Free (30 req/min, 14,400/day). Developer (10x free + 25 percent off). Enterprise (custom). Batch API: 50 percent off for 24-hour to 7-day windows. Prompt caching: 50 percent off cached input tokens with no extra caching fee.
+Rate tiers: Free (30 req/min, 14,400/day). Developer (10x free + 25 percent off). Enterprise (custom). Batch API: 50 percent off for 24-hour to 7-day windows. Prompt caching has no extra feature fee; the current table also lists Kimi K2 0905 at $1.00/M uncached input, $0.50/M cached input, and $3.00/M output.
 
-Verified 2026-06-12 via [groq.com/pricing](https://groq.com/pricing) and [Groq supported models](https://console.groq.com/docs/models).
+Verified 2026-06-23 via [groq.com/pricing](https://groq.com/pricing), [Groq supported models](https://console.groq.com/docs/models), and [Groq model deprecations](https://console.groq.com/docs/deprecations).
 
 ## Failure modes
 
@@ -209,7 +225,7 @@ Verified 2026-06-12 via [groq.com/pricing](https://groq.com/pricing) and [Groq s
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [Groq pricing](https://groq.com/pricing/), [Groq docs](https://console.groq.com/docs/overview), and [Groq supported models](https://console.groq.com/docs/models).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [Groq pricing](https://groq.com/pricing/), [Groq docs](https://console.groq.com/docs/overview), [Groq supported models](https://console.groq.com/docs/models), and [Groq model deprecations](https://console.groq.com/docs/deprecations).
 
 ## FAQ
 

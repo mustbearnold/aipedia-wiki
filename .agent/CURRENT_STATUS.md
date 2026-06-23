@@ -1,6 +1,6 @@
 # AiPedia Current Status
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 Audience: maintainers, future agents, and Matt.
 
@@ -16,7 +16,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`. Latest completed batch is Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo.
+- Branch: `master`. Latest completed batch is MiniMax Speech, Modal, Morphic, Mubert, and Murf.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -24,6 +24,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - Top-layer and detail width parity work is complete and pushed. The homepage, top-layer indexes, and representative detail pages now share the narrow-mobile width discipline requested in browser feedback.
 - News catch-up for June 18-22 is complete, and the selected lantern logo is active. The old blue/cyan brand regression was closed.
 - Homepage reported issues are closed: decision-card overcrowding, source/freshness/confidence fallback labels, 319 px portal overflow, orange-brown verified panel styling, and copy density.
+- The model availability tracker interruption is handled: `/trends/model-availability-churn/` is now a simple daily frontier-model availability ledger, `/` and `/news/` are marked for daily refresh, and the Codex app automation `daily-aipedia-news-and-model-availability-refresh` is active. The `/news/` daily automation explicitly requires at least three source-backed AI or AI-tool stories per run.
 
 ## Freshness Queue
 
@@ -53,22 +54,40 @@ Completed for June 21-22:
 - Midjourney.
 - NotebookLM.
 - Qodo.
+- Capacities.
+- Beehiiv.
+- Browserbase.
+- Castmagic.
+- CloudTalk.
+- Grok.
+- Cursor.
+- Lindy.
+- n8n.
+- Mistral AI.
+- Argil.
+- Canva.
+- Replit Agent.
+- Claude.
+- Gemini.
+- Decktopus.
+- Grok.
+- n8n.
 
 Latest completed batch:
 
-1. `mastra`: `/tools/mastra/`, parent `/categories/ai-coding/`.
-2. `microsoft-agent-framework`: `/tools/microsoft-agent-framework/`, parent `/categories/ai-automation/`.
-3. `midjourney`: `/tools/midjourney/`, parent `/categories/ai-image/`.
-4. `notebooklm`: `/tools/notebooklm/`, parent `/categories/ai-notes/`.
-5. `qodo`: `/tools/qodo/`, parent `/categories/ai-coding/`.
+1. `minimax-speech`: `/tools/minimax-speech/`, parent `/categories/ai-voice/`.
+2. `modal`: `/tools/modal/`, parents `/categories/ai-infrastructure/`, `/categories/ai-coding/`, and `/categories/ai-automation/`.
+3. `morphic`: `/tools/morphic/`, parents `/categories/ai-search/` and `/categories/ai-chatbots/`.
+4. `mubert`: `/tools/mubert/`, parent `/categories/ai-music/` plus music guides.
+5. `murf`: `/tools/murf/`, parent `/categories/ai-voice/` plus YouTube voice guide.
 
-Next batched freshness queue from `npm run tool:refresh:batch -- --limit 5 --json` after that push:
+Next oldest-first tracked-tool queue from `PAGE_REFRESH_LEDGER.md`:
 
-1. `capacities`: `/tools/capacities/`, parent `/categories/ai-notes/`.
-2. `beehiiv`: `/tools/beehiiv/`, parent `/categories/ai-writing/`.
-3. `browserbase`: `/tools/browserbase/`, parent `/categories/ai-automation/`.
-4. `castmagic`: `/tools/castmagic/`, parent `/categories/ai-writing/`.
-5. `cloudtalk`: `/tools/cloudtalk/`, parent `/categories/ai-automation/`.
+1. `nanochat`: `/tools/nanochat/`.
+2. `napkin-ai`: `/tools/napkin-ai/`.
+3. `neuronwriter`: `/tools/neuronwriter/`.
+4. `nightcafe`: `/tools/nightcafe/`.
+5. `notion-ai`: `/tools/notion-ai/`.
 
 Use the next queue above unless a newer user request supersedes it.
 
@@ -85,30 +104,36 @@ Do not return to one full build per tool unless a template, runtime, layout, gen
 
 ### Oldest-First Tool Freshness
 
-The Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, and Qodo batch is verified and pushed. It updates:
+The MiniMax Speech, Modal, Morphic, Mubert, and Murf batch is verified locally. It updates:
 
-- `src/content/categories/ai-coding.md`
 - `src/content/categories/ai-automation.md`
-- `src/content/categories/ai-image.md`
-- `src/content/categories/ai-notes.md`
-- `src/content/use-cases/best-ai-for-code-review.md`
+- `src/content/categories/ai-coding.md`
+- `src/content/categories/ai-infrastructure.md`
+- `src/content/categories/ai-music.md`
+- `src/content/categories/ai-voice.md`
+- `src/content/use-cases/best-ai-music-generator.md`
+- `src/content/use-cases/best-ai-voice-youtube.md`
+- `src/content/use-cases/suno-alternatives.md`
+- `src/content/categories/ai-chatbots.md`
 - `src/data/source-registry.json`
 - `PAGE_REFRESH_LEDGER.md`
 - `/tools/` and `/categories/` via ledger/build output
 
 Next active batch:
 
-- `src/content/tools/capacities.md`
-- `src/content/tools/beehiiv.md`
-- `src/content/tools/browserbase.md`
-- `src/content/tools/castmagic.md`
-- `src/content/tools/cloudtalk.md`
+- `src/content/tools/nanochat.md`
+- `src/content/tools/napkin-ai.md`
+- `src/content/tools/neuronwriter.md`
+- `src/content/tools/nightcafe.md`
+- `src/content/tools/notion-ai.md`
 
 Affected parent hubs for the next batch:
 
+- `src/content/categories/ai-chatbots.md`
+- `src/content/categories/ai-design.md`
+- `src/content/categories/ai-seo.md`
+- `src/content/categories/ai-image.md`
 - `src/content/categories/ai-notes.md`
-- `src/content/categories/ai-writing.md`
-- `src/content/categories/ai-automation.md`
 
 ### Decision Content Flywheel
 
@@ -122,14 +147,13 @@ Shared width and card-surface work is complete. Future visual work should inspec
 
 Latest completed batched tool refresh passed:
 
-- `npm run tool:refresh:batch:check -- --file src\content\tools\mastra.md --file src\content\tools\microsoft-agent-framework.md --file src\content\tools\midjourney.md --file src\content\tools\notebooklm.md --file src\content\tools\qodo.md --json`
+- `npm run tool:refresh:batch:check -- --file src\content\tools\minimax-speech.md --file src\content\tools\modal.md --file src\content\tools\morphic.md --file src\content\tools\mubert.md --file src\content\tools\murf.md`
 - `npm run typecheck`
 - `npm run build:fast`
-- `npm run qa:route -- --route /tools/mastra/ --route /categories/ai-coding/ --route /tools/microsoft-agent-framework/ --route /categories/ai-automation/ --route /tools/midjourney/ --route /categories/ai-image/ --route /tools/notebooklm/ --route /categories/ai-notes/ --route /tools/qodo/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
-- `node scripts\guard-em-dashes.mjs`
-- `git diff --check`
+- `npm run qa:route -- --route /tools/minimax-speech/ --route /tools/modal/ --route /tools/morphic/ --route /tools/mubert/ --route /tools/murf/ --route /categories/ai-voice/ --route /categories/ai-infrastructure/ --route /categories/ai-coding/ --route /categories/ai-automation/ --route /categories/ai-search/ --route /categories/ai-chatbots/ --route /categories/ai-music/ --route /guides/best-ai-voice-youtube/ --route /guides/best-ai-music-generator/ --route /guides/suno-alternatives/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
+- `npm run ledger:pages:check`, `node scripts\guard-em-dashes.mjs`, and `git diff --check` passed inside `tool:refresh:batch:check`.
 
-The fast batch gate took about 7 seconds. `build:fast` still takes roughly 2-3 minutes because it prerenders hundreds of routes and runs guard, indexability, commercial CTA, sitemap, and budget checks. Pay that cost once per batch.
+The current ledger count shows 127 tracked tool pages still below the June 23 refresh date. The next oldest-first queue starts with NanoChat, Napkin AI, NeuronWriter, NightCafe, and Notion AI. `build:fast` still takes roughly 2-3 minutes because it prerenders hundreds of routes and runs guard, indexability, commercial CTA, sitemap, and budget checks. Pay that cost once per batch.
 
 ## Known Caveats
 

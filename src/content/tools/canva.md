@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "Free; Pro and Business pricing is region-rendered; Enterprise custom"
 status: active
 launched: 2013-01
-last_updated: 2026-06-20
-last_verified: 2026-06-20
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: "Canva: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 20, 2026: Canva review covers Canva AI 2.0, Pro, Business, Enterprise, AI Pass, pooled AI allowances, AI Product Terms, Canva Shield, regional pricing caveats, Claude comparison fit, and alternatives."
+meta_description: "Updated June 23, 2026: Canva review covers Canva AI 2.0, Pro, Business, Enterprise, AI Pass, pooled AI allowances, AI Product Terms, Canva Shield, regional pricing caveats, Claude comparison fit, and alternatives."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -35,79 +35,79 @@ facts:
     source: "https://www.canva.com/newsroom/news/canva-create-2026-ai/"
     source_label: "Canva AI 2.0 announcement"
     source_id: canva-ai-2-newsroom
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   context_window:
     value: "Not applicable: Canva is a design platform with plan-based AI usage allowances, not a text chat model with a published token window."
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   pricing_anchor:
     value: "Current official surfaces present Free, Pro, Business, and Enterprise. Public pricing remains region and billing-path rendered; Canva's Business newsroom anchor is US$20/person/month with no seat minimum, and AI Pass is a monthly add-on for Canva Pro or Business."
     source: "https://www.canva.com/newsroom/news/introducing-canva-business/"
     source_label: "Canva Business announcement"
     source_id: canva-business-newsroom
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   free_plan:
     value: "Yes: Canva AI is available from the free product experience, but detailed plan allowances, premium asset counts, and live checkout pricing should be verified on Canva's region-rendered plan screens before budgeting."
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   best_paid_tier:
     value: "Pro is still the individual creator upgrade. Business is the safer first team plan to inspect because Canva says it adds 20x higher AI usage than Free, shared workspaces, approval workflows, advanced brand controls, Leonardo.Ai Essential, Flourish Presenter, and deeper growth tools."
     source: "https://www.canva.com/pro/"
     source_label: "Canva Pro"
     source_id: canva-pro
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   api_available:
     value: "Canva is not primarily an open model API. Buyer due diligence should focus on the hosted editor, Canva AI inside the workspace, admin controls, apps/integrations, and whether the output needs a production design or code pipeline outside Canva."
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   image_generation:
     value: "Yes: Canva AI includes AI image generation and editing tools inside a broader design editor."
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   video_generation:
     value: "Yes: Canva AI includes AI-assisted video generation and editing workflows, but specialist video models still win for cinematic generation."
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   real_time_voice:
     value: "No primary real-time voice-agent product; Canva is focused on design and content creation"
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   web_browsing:
@@ -115,7 +115,7 @@ facts:
     source: "https://www.canva.com/newsroom/news/canva-create-2026-ai/"
     source_label: "Canva AI 2.0 announcement"
     source_id: canva-ai-2-newsroom
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   coding_agent:
@@ -123,7 +123,7 @@ facts:
     source: "https://www.canva.com/newsroom/news/canva-create-2026-ai/"
     source_label: "Canva AI 2.0 announcement"
     source_id: canva-ai-2-newsroom
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -131,16 +131,16 @@ facts:
     source: "https://www.canva.com/safe-ai-canva-shield/"
     source_label: "Canva Shield"
     source_id: canva-shield
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
   data_retention_or_privacy:
     value: "Canva says privacy settings control whether Canva and its technology partners may use data to improve AI services. Its AI Product Terms also put accuracy, appropriateness, and commercial-context review responsibility on the user."
     source: "https://www.canva.com/policies/ai-product-terms/"
     source_label: "Canva AI Product Terms"
     source_id: canva-ai-product-terms
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -148,7 +148,7 @@ facts:
     source: "https://www.canva.com/"
     source_label: "Canva product page"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   best_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   watch_out_for:
@@ -164,10 +164,10 @@ facts:
     source: "https://www.canva.com/policies/ai-product-terms/"
     source_label: "Canva AI Product Terms"
     source_id: canva-ai-product-terms
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
-    next_review_at: 2026-06-28
+    next_review_at: 2026-06-29
 tags: [design-tool, social-media, templates, presentations, thumbnails, marketing, magic-studio, magic-design, non-designer]
 best_for:
   - social media managers
@@ -188,7 +188,7 @@ price_history:
     source: "https://www.canva.com/pricing/"
     source_label: "Source"
     source_id: canva-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     note: "Shifted from flat $119.99/year to per-seat billing."
   - date: 2026-04-15
     plan: "Pro"
@@ -196,7 +196,7 @@ price_history:
     source: "https://www.canva.com/pricing/"
     source_label: "Source"
     source_id: canva-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     note: "Historical April 2026 snapshot. Current Pro checkout should be verified directly because Canva can render pricing by region and billing path."
   - date: 2026-06-02
     plan: "Business / AI Pass"
@@ -204,15 +204,15 @@ price_history:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     note: "Historical June 2 packaging snapshot. Current plan prices, storage, and allowances should be verified on the live regional plan screen before procurement."
-  - date: 2026-06-20
+  - date: 2026-06-23
     plan: "Business / AI Pass"
     price: "Business US$20/person/month anchor; AI Pass monthly add-on for Canva Pro or Business"
     source: "https://www.canva.com/ai-pass/"
     source_label: "Canva AI Pass"
     source_id: canva-ai-pass
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     note: "Canva says AI Pass gives up to 40x more AI than Pro and 20x more than Business. Its AI Product Terms also say AI usage limits are operational controls, so heavy users still need a live allowance and checkout check."
 ---
 
@@ -220,7 +220,7 @@ price_history:
 
 Canva is the design platform that non-designers actually complete work in. The current public product surfaces now frame the buying decision around **Free, Pro, Business, Enterprise, Canva AI 2.0, AI Pass, and commercial-use review** rather than templates alone.
 
-The old "templates plus Magic Studio" story is now too small. The June 15 source check keeps Canva AI 2.0 as the conversational creative layer, Canva Pro as the solo-creator upgrade, Canva Business as the no-seat-minimum team/growth plan with a US$20/person/month newsroom anchor, and AI Pass as the monthly Pro/Business add-on for much larger Standard, Premium, and Ultra AI usage. Exact checkout price, storage, and allowance details still need a live regional plan check before procurement.
+The old "templates plus Magic Studio" story is now too small. The June 23 source check keeps Canva AI 2.0 as the conversational creative layer, Canva Pro as the solo-creator upgrade, Canva Business as the no-seat-minimum team/growth plan with a US$20/person/month newsroom anchor, and AI Pass as the monthly Pro/Business add-on for much larger Standard, Premium, and Ultra AI usage. Exact checkout price, storage, and allowance details still need a live regional plan check before procurement.
 
 > **April 17, 2026:** [Claude Design exports directly to Canva](/news/2026-04-17-anthropic-launches-claude-design/). Anthropic's new prompt-to-prototype product ships with Canva as one of its four native export targets (alongside PDF, PPTX, URL). See the [Claude Design tool page](/tools/claude-design/). This is additive for Canva users: a new upstream source of AI-generated prototypes that arrive fully editable in the Canva workspace.
 
@@ -247,7 +247,7 @@ The old "templates plus Magic Studio" story is now too small. The June 15 source
 | **Affiliate program** | No standard publisher affiliate route verified; Canvassador route is creator/education oriented |
 | **Launched** | 2013 |
 
-Every current data point above was verified against vendor sources on 2026-06-20. Region-rendered checkout details still require a live plan-screen check before budgeting. See Sources.
+Every current data point above was verified against vendor sources on 2026-06-23. Region-rendered checkout details still require a live plan-screen check before budgeting. See Sources.
 
 ## What it actually is
 
@@ -285,7 +285,7 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). Ca
 | Business | Region-rendered; US$20/person/month newsroom anchor | Higher AI limits than Free; AI Pass add-on available | Check live plan screen | Individuals or teams needing collaboration, approvals, and growth tools |
 | Enterprise | Custom | Governance and admin controls; inspect Canva Shield scope | Check live contract | Security, privacy, admin, and procurement review |
 
-*Plan structure verified 2026-06-20 via [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), and [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/). Canva's pages can render local currency, account-specific flows, storage, and allowance details, so verify the live checkout before budgeting.*
+*Plan structure verified 2026-06-23 via [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), and [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/). Canva's pages can render local currency, account-specific flows, storage, and allowance details, so verify the live checkout before budgeting.*
 
 ## Against the alternatives
 
@@ -314,7 +314,7 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). Ca
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-20 against [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva AI 2.0](https://www.canva.com/newsroom/news/canva-create-2026-ai/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/), [Canva Claude connector](https://www.canva.com/newsroom/news/claude-ai-connector/), and [Canva Shield](https://www.canva.com/safe-ai-canva-shield/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva AI 2.0](https://www.canva.com/newsroom/news/canva-create-2026-ai/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/), [Canva Claude connector](https://www.canva.com/newsroom/news/claude-ai-connector/), and [Canva Shield](https://www.canva.com/safe-ai-canva-shield/).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$600-$2000+/month"
 status: active
 launched: 2019-01
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: quarterly
 affiliate:
   has_program: true
@@ -33,16 +33,16 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   pricing_anchor:
-    value: 'Amplemarket Startup is $600/mo for 2 seats on annual billing; Growth and Elite are custom-priced. As of June 18, 2026, the live pricing matrix lists Duo Copilot, Copywriter, Competitive Intelligence, and Signals on every plan, Duo Voice on Growth and Elite, and Duo Inbox on Elite or as a Growth add-on.'
+    value: 'Amplemarket Startup is $600/mo for 2 seats on annual billing; Growth and Elite are custom-priced. As of June 23, 2026, the live pricing matrix lists Duo Copilot, Copywriter, Competitive Intelligence, and Signals on every plan, Duo Voice on Growth and Elite, and Duo Inbox on Elite or as a Growth add-on.'
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -69,7 +69,7 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -90,7 +90,16 @@ not_best_for:
 quick_answer: >-
   Amplemarket is a mid-market-and-up AI sales platform. Duo Copilot handles signal discovery, research, and sequence drafting, while Amplemarket now also exposes MCP access for Claude and ChatGPT, Workflows automation, contact-level intent signals, multichannel sequencing, and a 200M+ contact database. Startup is $600/mo for 2 users on annual billing; Growth and Elite quote on volume.
 price_history:
+  - date: 2026-06-23
+    verified_at: 2026-06-23
+    plan: "Startup / Growth / Elite"
+    price: "$600/mo annual term / Custom / Custom"
+    source: "https://www.amplemarket.com/pricing"
+    source_label: "Amplemarket pricing"
+    source_id: amplemarket-pricing
+    note: "Rechecked the live pricing page, pricing explainer, MCP help, and June product update. Startup remains $600/mo annual term for 2 users, with the same live-matrix versus pricing-explainer credit-count caveat."
   - date: 2026-05-02
+    verified_at: 2026-05-02
     plan: "Startup"
     price: "$600/mo ($300/user, annual only)"
     source: "https://amplemarket.com/pricing"
@@ -98,6 +107,7 @@ price_history:
     source_id: amplemarket-pricing
     note: "Verified against live pricing page. 2 seats, 15,000 email credits and 480 phone credits per user per year."
   - date: 2026-05-13
+    verified_at: 2026-05-13
     plan: "Startup"
     price: "$600/mo ($300/user, annual only)"
     source: "https://amplemarket.com/pricing"
@@ -105,6 +115,7 @@ price_history:
     source_id: amplemarket-pricing
     note: "Re-verified May 2026. Pricing unchanged. Duo agent suite on Startup now lists Competitive Intelligence and Signals alongside Copilot and Copywriter; Voice remains gated to Growth and Elite, Inbox remains Elite-only (or paid add-on on Growth)."
   - date: 2026-06-01
+    verified_at: 2026-06-01
     plan: "Startup / Growth / Elite"
     price: "$600/mo annual term / Custom / Custom"
     source: "https://www.amplemarket.com/pricing"
@@ -112,6 +123,7 @@ price_history:
     source_id: amplemarket-pricing
     note: "Rechecked against the live pricing page. Startup remains $600/mo annual term for 2 included users and 27,000 contacts; Growth and Elite remain custom-priced with 4 and 10 included users."
   - date: 2026-06-18
+    verified_at: 2026-06-18
     plan: "Startup / Growth / Elite"
     price: "$600/mo annual term / Custom / Custom"
     source: "https://www.amplemarket.com/pricing"
@@ -167,7 +179,7 @@ The database still covers 200M+ AI-verified contacts, with vendor-reported under
 | **CRM integrations** | Salesforce, HubSpot, Pipedrive (native) |
 | **Onboarding** | Community (Startup) or personalised CSM (Growth, Elite) |
 
-Every data point above was rechecked against Amplemarket's pricing page, pricing explainer, product pages, and June 2026 product updates on 2026-06-18. See Sources.
+Every data point above was rechecked against Amplemarket's pricing page, pricing explainer, product pages, and June 2026 product updates on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -214,7 +226,7 @@ Pricing via [amplemarket.com/pricing](https://amplemarket.com/pricing). Annual o
 | Growth | Tailored quote | 4 | 35,000 on live matrix | 5,000 on live matrix | + Voice, Growth deliverability controls | **Working mid-market SDR teams** |
 | Elite | Tailored quote | 10 | 40,000 on live matrix | 9,600 on live matrix | + Inbox, SSO, larger controls | Formal sales orgs at scale |
 
-Prices verified 2026-06-18 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan. The live matrix and March pricing explainer currently disagree on Startup credit counts, so confirm final credits in the order form.
+Prices verified 2026-06-23 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan. The live matrix and March pricing explainer currently disagree on Startup credit counts, so confirm final credits in the order form.
 
 ## Against the alternatives
 
@@ -244,7 +256,7 @@ Prices verified 2026-06-18 via [amplemarket.com/pricing](https://amplemarket.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-18 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), Amplemarket's [June 16, 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026), Amplemarket's [MCP announcement](https://www.amplemarket.com/blog/mcp), and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), Amplemarket's [June 16, 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026), Amplemarket's [MCP announcement](https://www.amplemarket.com/blog/mcp), and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
 
 ## FAQ
 
@@ -272,7 +284,7 @@ Duo is Amplemarket's AI agent suite. As of June 2026, six specialised agents sha
 <details>
 <summary>Does Amplemarket offer monthly billing?</summary>
 
-No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-06-12. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
+No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-06-23. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
 
 </details>
 

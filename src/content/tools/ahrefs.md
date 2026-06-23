@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$29-$1,499/month"
 status: active
 launched: 2011-01
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://ahrefs.com/site-explorer"
     source_label: "Ahrefs Site Explorer"
     source_id: ahrefs-site-explorer
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://ahrefs.com/pricing"
     source_label: "Ahrefs pricing"
     source_id: ahrefs-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     next_review_at: 2026-07-18
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://ahrefs.com/site-explorer"
     source_label: "Ahrefs Site Explorer"
     source_id: ahrefs-site-explorer
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   ai_visibility:
@@ -55,7 +55,7 @@ facts:
     source: "https://ahrefs.com/brand-radar"
     source_label: "Ahrefs Brand Radar"
     source_id: ahrefs-brand-radar
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     next_review_at: 2026-07-18
     volatility: medium
     confidence: high
@@ -64,7 +64,7 @@ facts:
     source: "https://ahrefs.com/pricing"
     source_label: "Ahrefs pricing"
     source_id: ahrefs-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [seo, backlinks, keyword-research, site-audit, content-explorer, rank-tracker, brand-radar, content-kit, ai-visibility]
@@ -84,6 +84,7 @@ quick_answer: >-
   Ahrefs runs one of the deepest SEO data suites for backlinks, keywords, audits, rank tracking, AI visibility, and competitor research. Pick the $129 Lite plan for real SEO work, not the $29 Starter plan unless the site is genuinely tiny. Skip it when the main job is draft scoring, PPC, social scheduling, or a broad agency suite.
 price_history:
   - date: 2026-01-15
+    verified_at: 2026-01-15
     plan: "Starter"
     price: "$29/mo"
     source: "https://ahrefs.com/pricing"
@@ -91,6 +92,7 @@ price_history:
     source_id: ahrefs-pricing
     note: "Starter tier launched January 2026, cutting entry price 70%."
   - date: 2026-04-15
+    verified_at: 2026-04-15
     plan: "Lite"
     price: "$129/mo"
     source: "https://ahrefs.com/pricing"
@@ -98,6 +100,7 @@ price_history:
     source_id: ahrefs-pricing
     note: "Verified unchanged. Annual billing is 2 months free."
   - date: 2026-05-13
+    verified_at: 2026-05-13
     plan: "Add-on lineup"
     price: "$99-$200/project"
     source: "https://ahrefs.com/pricing"
@@ -105,19 +108,28 @@ price_history:
     source_id: ahrefs-pricing
     note: "AI Content Helper moved under Content Kit from $99; Report Builder ($99), Project Boost Pro/Max ($20-$200/project), and per-seat add-ons are visible on the pricing page."
   - date: 2026-06-18
+    verified_at: 2026-06-18
     plan: "Brand Radar"
     price: "From $199/mo; $699/mo all platforms"
     source: "https://ahrefs.com/brand-radar"
     source_label: "Ahrefs Brand Radar"
     source_id: ahrefs-brand-radar
     note: "Brand Radar product page now cites 371M+ total monthly prompts; the pricing page says 271M+ organic prompts; the help doc says over 350M search-backed prompts and notes Grok data collection is temporarily paused."
+  - date: 2026-06-23
+    verified_at: 2026-06-23
+    plan: "Core plans and AI visibility add-ons"
+    price: "Starter $29; Lite $129; Standard $249; Advanced $449; Enterprise $1,499; Brand Radar starts from $199/mo/AI platform"
+    source: "https://ahrefs.com/pricing"
+    source_label: "Ahrefs pricing"
+    source_id: ahrefs-pricing
+    note: "June 23 recheck kept the core tier ladder and Brand Radar pricing guidance current. Brand Radar help still describes 350M+ search-backed prompts; avoid treating any single prompt-count surface as universal."
 ---
 
 # Ahrefs
 
 ## What Changed Since The Last Refresh
 
-- **Pricing mostly held on June 18, 2026.** Starter, Lite, Standard, Advanced, and Enterprise still show $29, $129, $249, $449, and $1,499/mo on the official pricing page. The important buyer work is still add-on math: Content Kit starts from $99/mo, Report Builder is $99/mo, Brand Radar starts from $199/mo, all-platform Brand Radar is $699/mo, and Project Boost runs $20-$200 per project.
+- **Pricing mostly held on June 23, 2026.** Starter, Lite, Standard, Advanced, and Enterprise still show $29, $129, $249, $449, and $1,499/mo on the official pricing page. The important buyer work is still add-on math: Content Kit starts from $99/mo, Report Builder is $99/mo, Brand Radar starts from $199/mo per AI platform, all-platform Brand Radar is $699/mo, and Project Boost runs $20-$200 per project.
 - **Brand Radar needed a factual correction.** The page no longer should say 395M+ total monthly prompts. Ahrefs' current Brand Radar page cites 371M+ total monthly prompts, the pricing page says Brand Radar AI covers 271M+ organic prompts from the Ahrefs database, and the help doc says over 350M search-backed prompts. The help doc also warns that Grok data collection is temporarily paused after recent Grok policy changes.
 - **The product changed after the June 12 page.** Ahrefs' changelog lists Web Analytics report exports on June 16 and Report Builder Share of Voice / Share of Traffic Value widgets plus API v3 keyword endpoints on June 13. Those are not pricing changes, but they make Ahrefs more useful for reporting, automation, and team workflows.
 - **The early-June feature story still matters.** June 5 added Brand Kits in AI Content Helper, GBP Monitor for Google Business Profile changes, Web Analytics funnels, and Page Inspect AI detection. Ahrefs is increasingly a marketing operations platform around SEO data, not only a backlink tool.
@@ -151,7 +163,7 @@ Brand Radar tracks brand appearances across ChatGPT, Perplexity, Gemini, Copilot
 | **Per-seat fees** | +$40/user (Lite) · +$60/user (Standard) · +$80/user (Advanced) · +$100/user (Enterprise) |
 | **Annual billing** | 2 months free (~17% savings) |
 
-Every data point above was verified against vendor sources on 2026-06-18. See Sources.
+Every data point above was verified against vendor sources on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -204,7 +216,7 @@ Subscription pricing via [ahrefs.com/pricing](https://ahrefs.com/pricing). Annua
 | Project Boost Max | $200/project | Maximum crawl and refresh capacity per tracked project |
 | Custom Prompts (Basic/Growth/Scale) | $50 / $100 / $250 | Bring-your-own prompt monitoring tiers for Brand Radar |
 
-*Prices verified 2026-06-18 via [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [Ahrefs pricing guide](https://ahrefs.com/blog/ahrefs-pricing/), and [Ahrefs changelog](https://ahrefs.com/blog/new-features/). Annual billing is 2 months free where Ahrefs exposes annual billing.*
+*Prices verified 2026-06-23 via [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [Ahrefs pricing guide](https://ahrefs.com/blog/ahrefs-pricing/), and [Ahrefs changelog](https://ahrefs.com/blog/new-features/). Annual billing is 2 months free where Ahrefs exposes annual billing.*
 
 ## Against the alternatives
 
@@ -232,7 +244,7 @@ Subscription pricing via [ahrefs.com/pricing](https://ahrefs.com/pricing). Annua
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-18 against [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [Ahrefs pricing guide](https://ahrefs.com/blog/ahrefs-pricing/), [Ahrefs changelog](https://ahrefs.com/blog/new-features/), [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-what-is-brand-radar-and-how-to-use-it), and [Google Search Central's generative-AI performance reports](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [ahrefs.com/pricing](https://ahrefs.com/pricing), [Brand Radar product page](https://ahrefs.com/brand-radar), [Ahrefs pricing guide](https://ahrefs.com/blog/ahrefs-pricing/), [Ahrefs changelog](https://ahrefs.com/blog/new-features/), [About Brand Radar help doc](https://help.ahrefs.com/en/articles/11064852-what-is-brand-radar-and-how-to-use-it), and [Google Search Central's generative-AI performance reports](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports).
 
 ## FAQ
 

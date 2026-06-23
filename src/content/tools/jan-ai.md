@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 core app; optional cloud-provider usage/add-ons vary"
 status: active
 launched: 2023-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,50 +32,50 @@ facts:
     source: https://jan.ai/
     source_label: Jan official site
     source_id: jan-ai-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   pricing_anchor:
     value: Jan itself is open source; practical cost comes from hardware, local models, and any connected remote model/API providers.
     source: https://github.com/janhq/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   open_source_or_local:
     value: Jan's repository is the authoritative source for license, releases, installation, and project activity.
     source: https://github.com/janhq/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   runtime_architecture:
     value: Docs should be used to verify local model setup, provider connections, data paths, and desktop runtime behavior.
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   watch_out_for:
     value: Local-first chat still needs model-download hygiene, hardware fit, update discipline, and clear separation of local
       versus cloud provider traffic.
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
 tags: [local-llm, open-source, desktop, privacy, offline, chatgpt-alternative]
 seo_title: "Jan.ai: Features & Review (June 2026)"
-meta_description: "Jan.ai is the free open-source desktop AI app for local and cloud models. v0.8.2 shipped June 12, 2026 with faster startup, AMD ROCm/HIP on Linux, and resumable downloads. 42.8k GitHub stars as of June 2."
+meta_description: "Jan.ai is the free open-source desktop AI app for local and cloud models. v0.8.2 shipped June 1, 2026 with faster startup, AMD ROCm/HIP on Linux, and resumable downloads. Rechecked June 23."
 author: "aipedia.wiki Editorial"
 best_for:
   - users who want local AI with a clean desktop UX
@@ -87,7 +87,7 @@ not_best_for:
   - CLI or server deployments (use Ollama)
   - non-technical users new to local AI (LM Studio has gentler onboarding)
 quick_answer: >-
-  Jan.ai is a free open-source ChatGPT alternative for local and cloud models on Mac, Windows, and Linux. The current GitHub repo is janhq/jan; v0.8.2 shipped June 1, 2026 with faster startup, AMD ROCm/HIP backend support on Linux, resumable downloads, safer default context sizing, and chat/provider fixes. GitHub showed 42,807 stars on June 2, 2026. Pick it for open-source desktop local AI. Skip it for maximum model catalog or server use (LM Studio / Ollama win there).
+  Jan.ai is a free open-source ChatGPT alternative for local and cloud models on Mac, Windows, and Linux. The current GitHub repo is janhq/jan; v0.8.2 shipped June 1, 2026 with faster startup, experimental AMD ROCm/HIP backend support on Linux, resumable downloads, safer default context sizing, and chat/provider fixes. Pick it for open-source desktop local AI. Skip it for maximum model catalog or server use.
 ---
 
 # Jan.ai
@@ -109,7 +109,7 @@ The open-source ChatGPT alternative that can stay on your machine. Desktop-first
 | **License** | Open source (permissive; MIT-style) |
 | **Latest version** | v0.8.2 (published June 1, 2026) |
 | **GitHub repo** | [janhq/jan](https://github.com/janhq/jan) |
-| **GitHub stars** | 42,807 as of June 12, 2026 |
+| **GitHub stars** | 42,807 as of June 23, 2026 |
 | **Recent release focus** | Faster startup, AMD ROCm/HIP on Linux, resumable downloads, safer default context size |
 | **Platforms** | macOS, Windows, Linux |
 | **Core cost** | $0 |
@@ -123,7 +123,7 @@ The open-source ChatGPT alternative that can stay on your machine. Desktop-first
 - **Open-source purists.** You want the app itself to be open source, not just the models it runs. Jan is auditable end to end; LM Studio is not.
 - **Desktop-first privacy workflows.** Local models + local data = nothing leaves your machine. Safe for confidential work.
 - **Switching between local and cloud.** The same UI handles Llama 4 local and OpenAI frontier models cloud. Useful when you want local for drafting and cloud for polishing.
-- **Recent Linux GPU support.** v0.8.2 adds AMD ROCm/HIP backend support on Linux, which matters for local-model users outside the Nvidia/CUDA path.
+- **Recent Linux GPU support.** v0.8.2 adds experimental AMD ROCm/HIP backend support on Linux, which matters for local-model users outside the Nvidia/CUDA path.
 - **Safer local downloads.** Pause/resume model downloads and safer default context sizing reduce the most common setup frustrations.
 
 ## When to pick something else
@@ -144,7 +144,7 @@ Jan.ai is fundamentally free.
 | Cloud provider usage | Billed by the connected provider |
 | Optional add-ons | Verify in app before purchase |
 
-Verified 2026-06-12 via [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https://www.jan.ai/changelog), and [Jan.ai GitHub](https://github.com/janhq/jan).
+Verified 2026-06-23 via [jan.ai](https://www.jan.ai/), [Jan.ai v0.8.2 changelog](https://www.jan.ai/changelog/2026-06-01-jan-v0.8.2), and [Jan.ai GitHub](https://github.com/janhq/jan).
 
 ## Failure modes
 
@@ -167,7 +167,7 @@ Verified 2026-06-12 via [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https:
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https://www.jan.ai/changelog), [Jan.ai GitHub releases](https://github.com/janhq/jan/releases), and the GitHub API for current repository activity.
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [jan.ai](https://www.jan.ai/), the [Jan.ai v0.8.2 changelog](https://www.jan.ai/changelog/2026-06-01-jan-v0.8.2), [Jan.ai GitHub releases](https://github.com/janhq/jan/releases), and the GitHub API for current repository activity.
 
 ## FAQ
 

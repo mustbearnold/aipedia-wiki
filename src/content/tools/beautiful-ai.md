@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $12-$50/user/month
 status: active
 launched: 2015-01
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://www.beautiful.ai"
     source_label: "Beautiful.ai overview"
     source_id: beautiful-ai-home
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.beautiful.ai/pricing"
     source_label: "Beautiful.ai pricing"
     source_id: beautiful-ai-official
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     next_review_at: 2026-08-18
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://www.beautiful.ai"
     source_label: "Beautiful.ai overview"
     source_id: beautiful-ai-home
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   product_updates:
@@ -59,7 +59,7 @@ facts:
     source: "https://www.beautiful.ai/product-updates"
     source_label: "Beautiful.ai product updates"
     source_id: beautiful-ai-product-updates
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   design_model:
@@ -67,7 +67,7 @@ facts:
     source: "https://www.beautiful.ai"
     source_label: "Beautiful.ai overview"
     source_id: beautiful-ai-home
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   enterprise_controls:
@@ -75,7 +75,7 @@ facts:
     source: "https://www.beautiful.ai/security"
     source_label: "Beautiful.ai security"
     source_id: beautiful-ai-security
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   watch_out_for:
@@ -83,7 +83,7 @@ facts:
     source: "https://www.beautiful.ai/pricing"
     source_label: "Beautiful.ai pricing"
     source_id: beautiful-ai-official
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [presentations, slides, smart-templates, layout-ai, team-collaboration, pitch-decks, design-automation]
@@ -112,6 +112,7 @@ quick_answer: >-
 - **May 13, 2026:** Verified. Pro ($12 annual / $45 monthly), Team ($40 annual / $50 monthly per user, 2-20 seats), and Enterprise (custom, 20+ seats) are all unchanged. Smart Slide library, Editor AI, and brand-control gating remain as documented.
 - **June 1, 2026:** Pricing and trial terms rechecked. Pro and Team still offer a 14-day trial requiring a credit card; the AI Presentations page now frames Create with AI as a staged workflow from prompt or outline to slide-by-slide refinement rather than a one-shot deck generator.
 - **June 18, 2026:** Full refresh checked pricing, Create with AI, product updates, security, and Enterprise pages. Headline prices did not move, but the buyer story changed: Create with AI is now a guided outline-first workflow with slide-level AI controls, and the product updates page added five Smart Slides for storytelling.
+- **June 23, 2026:** Pricing, Create with AI, product updates, security, and Enterprise pages rechecked. Headline plan prices and credit-card trial terms remain stable, so the buyer guidance stays focused on Smart Slide discipline, outline review, slide-level AI iteration, and enterprise controls.
 
 A design-automation presentation tool with a guided AI creation workflow. The Smart Slide engine enforces layout, spacing, and hierarchy as content changes, removing the alignment and sizing work that burns time in PowerPoint.
 
@@ -151,7 +152,7 @@ The June 18 refresh did not find a headline Pro or Team price change, but it did
 | **Brand governance** | Team and Custom tiers |
 | **Offline use** | Desktop player and exports support presenting offline; editing remains cloud-first |
 
-Every data point above was verified against vendor documentation on 2026-06-18. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -187,7 +188,7 @@ Subscription pricing via [www.beautiful.ai/pricing](https://www.beautiful.ai/pri
 | Team | $40/user | $50/user | 2-20 | Small-to-mid teams with shared branding |
 | Enterprise | Custom | Custom | 20+ | Orgs needing SSO, SCIM, audit logs, brand guardrails, SOC 2, and priority support |
 
-*Prices verified 2026-06-18 via [Beautiful.ai pricing](https://www.beautiful.ai/pricing). 14-day free trial available on Pro and Team requires a credit card and auto-charges unless canceled before the trial ends. Enterprise security includes SOC 2 Type II, GDPR, CCPA, PCI, SSO, audit logs, SCIM, and brand guardrails.*
+*Prices verified 2026-06-23 via [Beautiful.ai pricing](https://www.beautiful.ai/pricing). 14-day free trial available on Pro and Team requires a credit card and auto-charges unless canceled before the trial ends. Enterprise security includes SOC 2 Type II, GDPR, CCPA, PCI, SSO, audit logs, SCIM, and brand guardrails.*
 
 ## Against the alternatives
 
@@ -212,7 +213,7 @@ Subscription pricing via [www.beautiful.ai/pricing](https://www.beautiful.ai/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-18 against [Beautiful.ai pricing](https://www.beautiful.ai/pricing), the [Beautiful.ai homepage](https://www.beautiful.ai), [product updates](https://www.beautiful.ai/product-updates), [security](https://www.beautiful.ai/security), [Enterprise](https://www.beautiful.ai/enterprise), and the [Create with AI workflow announcement](https://www.beautiful.ai/blog/introducing-the-create-with-ai-workflow).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Beautiful.ai pricing](https://www.beautiful.ai/pricing), the [Beautiful.ai homepage](https://www.beautiful.ai), [product updates](https://www.beautiful.ai/product-updates), [security](https://www.beautiful.ai/security), [Enterprise](https://www.beautiful.ai/enterprise), and the [Create with AI workflow announcement](https://www.beautiful.ai/blog/introducing-the-create-with-ai-workflow).
 
 ## FAQ
 

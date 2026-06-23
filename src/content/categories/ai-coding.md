@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 31
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 22, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
+meta_description: "Updated June 23, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -29,7 +29,7 @@ decision_picks:
       - cursor-pricing
       - cursor-changelog
       - cursor-teams-pricing-june-2026
-    verified_at: 2026-06-20
+    verified_at: 2026-06-23
     confidence: high
   - tool: github-copilot
     label: Best GitHub-native enterprise default
@@ -40,7 +40,7 @@ decision_picks:
       - github-copilot-plan-docs
       - github-copilot-ai-credits
       - github-copilot-app-ga
-    verified_at: 2026-06-22
+    verified_at: 2026-06-23
     confidence: high
 ---
 
@@ -52,11 +52,11 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 15 Codex/Ona update:** [OpenAI's June 11 Ona acquisition agreement](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/) makes persistent execution a first-class coding-agent buying criterion. For Codex, Claude Code, Cursor, Copilot, Devin, Replit Agent, and model-router stacks, ask where the agent runs, how credentials are scoped, how activity is logged, which actions require review, and what budget controls exist before letting background agents run for hours or days.
 
-**June 15 Grok Build update:** [Grok](/tools/grok/) now belongs in the coding-agent comparison set, not only Chatbots/Search. xAI's current docs describe Grok Build as an interactive TUI and headless coding agent with custom models, skills/plugins, ACP integration, and a Grok Build 0.1 API model at 256K context. Treat it as an xAI-native coding lane to benchmark, while still checking command approvals, sandbox behavior, team/ZDR retention settings, account limits, and repo-quality output before rollout.
+**June 22 Grok Build update:** [Grok](/tools/grok/) belongs in the coding-agent comparison set, not only Chatbots/Search. xAI's current docs still describe Grok Build as an interactive TUI and headless coding agent with custom models, skills/plugins, ACP integration, and a Grok Build 0.1 API model at 256K context. Treat it as an xAI-native coding lane to benchmark, while still checking command approvals, sandbox behavior, team/ZDR retention settings, account limits, and repo-quality output before rollout.
 
-**June 18 Amazon Q Developer update:** [Amazon Q Developer](/tools/amazon-q/) is no longer a clean greenfield IDE/plugin purchase. AWS announced that Q Developer IDE plugins and paid subscriptions reach end of support on April 30, 2027, new Q Developer account and subscription creation was blocked starting May 15, 2026, and Kiro is the migration path for IDE/CLI work. Existing AWS-heavy teams can use the runway, but new buyers should evaluate Kiro, Cursor, Copilot, Claude Code, Codex, and other current agent surfaces before committing.
+**June 23 Amazon Q Developer update:** [Amazon Q Developer](/tools/amazon-q/) is no longer a clean greenfield IDE/plugin purchase. AWS announced that Q Developer IDE plugins and paid subscriptions reach end of support on April 30, 2027, new Q Developer account and subscription creation was blocked starting May 15, 2026, and Kiro is the migration path for IDE/CLI work. Existing AWS-heavy teams can use the runway, but new buyers should evaluate Kiro, Cursor, Copilot, Claude Code, Codex, and other current agent surfaces before committing.
 
-**Use [Cursor](/tools/cursor/) when a developer wants a full AI-native IDE.** The June 15 recheck keeps it the best default for daily coding when the buyer wants Composer 2.5, repo-aware chat, multi-file edits, the Agents Window, Cloud Agents, CLI/SDK automation, Design Mode, Bugbot review, and a VS Code-like surface built around AI rather than an extension. Cursor's May 22 Gartner enterprise-coding-agent recognition is a procurement signal, but teams should still test it on their own repositories against Codex, Claude Code, and GitHub Copilot.
+**Use [Cursor](/tools/cursor/) when a developer wants a full AI-native IDE.** The June 23 recheck keeps it the best default for daily coding when the buyer wants Composer 2.5, repo-aware chat, multi-file edits, the Agents Window, Cloud Agents, CLI/SDK automation, Design Mode, Bugbot review, and a VS Code-like surface built around AI rather than an extension. Cursor's May 22 Gartner enterprise-coding-agent recognition is a procurement signal, but teams should still test it on their own repositories against Codex, Claude Code, and GitHub Copilot.
 
 **June 15 Cursor update:** Cursor now needs a sharper buyer note around usage-sensitive agent economics and enterprise controls. The live pricing page proves Hobby free, Individual from $20/month, Teams at $40/user/month, Enterprise custom, recommends Pro+ for daily agent users plus Ultra for agent power users, and says on-demand usage can continue after included usage is consumed and be billed in arrears. The June 3-10 official updates added Enterprise organizations, SDK custom tools and auto-review, Design Mode/context usage reporting, and a faster Composer 2.5-powered Bugbot with `/review` before push. Treat Cursor as an editor-native agent platform, not just a Copilot replacement.
 
@@ -70,15 +70,15 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 5 Cursor-cluster update:** the oldest live Cursor comparison rows now separate Cursor vs Gemini, Cursor vs Lovable, Cursor vs v0, and [Cursor vs Windsurf](/compare/cursor-vs-windsurf/) against current primary sources. Retired adjacent-lane pages now belong in this hub, tool pages, or buyer guides unless the tools are direct substitutes for the same workflow.
 
-**Use [GitHub Copilot](/tools/github-copilot/) when the team already lives in GitHub and wants a safe default.** GitHub's official billing docs keep usage-based billing with GitHub AI Credits as the active model, and the June 2 [Copilot SDK GA](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/) turns Copilot into an embeddable agent runtime. It remains a strong value for GitHub-native teams that value IDE coverage, policy, pull requests, and enterprise governance, but heavy agentic, SDK, code-review, Spaces, Spark, and cloud-agent use needs modeling. The June 22 Copilot recheck keeps the DeepSeek split intact: Copilot is the GitHub-native developer workflow, while DeepSeek is the low-cost model/backend lane.
+**Use [GitHub Copilot](/tools/github-copilot/) when the team already lives in GitHub and wants a safe default.** GitHub's official billing docs keep usage-based billing with GitHub AI Credits as the active model, and the June 2 [Copilot SDK GA](/news/2026-06-02-github-copilot-ai-credits-sdk-ga/) turns Copilot into an embeddable agent runtime. It remains a strong value for GitHub-native teams that value IDE coverage, policy, pull requests, and enterprise governance, but heavy agentic, SDK, code-review, Spaces, Spark, and cloud-agent use needs modeling. The June 23 Copilot recheck keeps the DeepSeek split intact: Copilot is the GitHub-native developer workflow, while DeepSeek is the low-cost model/backend lane.
 
-**June 22 GitHub Copilot update:** the Copilot page still supersedes the earlier signup-pause caveat with GitHub's June 17 note that Student, Pro, Pro+, and Max sign-ups are reopening gradually. The current recheck keeps pricing unchanged, confirms Copilot Free's 2,000 completions and 50 chat requests, keeps Fable 5 unavailable, adds the Opus 4.6 fast June 29 deprecation notice, and keeps MAI-Code-1-Flash expansion, `AGENTS.md` support in Copilot code review, and the `ai_credits_used` user metric in the buyer model. Keep the Fable 5 suspension warning, AI Credits budgeting, GitHub Enterprise Server caveat, one-million-token context, configurable reasoning, Agent tasks REST API, Chat/agent-session handoff, Agentic Workflows, CLI `/settings`, and code-review controls in the buyer model.
+**June 23 GitHub Copilot update:** the Copilot page still supersedes the earlier signup-pause caveat with GitHub's June 17 note that Student, Pro, Pro+, and Max sign-ups are reopening gradually. The current recheck keeps pricing unchanged, confirms Copilot Free's 2,000 completions and 50 chat requests, keeps Fable 5 unavailable, adds the Opus 4.6 fast June 29 deprecation notice, and keeps MAI-Code-1-Flash expansion, `AGENTS.md` support in Copilot code review, and the `ai_credits_used` user metric in the buyer model. Keep the Fable 5 suspension warning, AI Credits budgeting, GitHub Enterprise Server caveat, one-million-token context, configurable reasoning, Agent tasks REST API, Chat/agent-session handoff, Agentic Workflows, CLI `/settings`, and code-review controls in the buyer model.
 
 **June 5 Copilot comparison follow-up:** the refreshed [GitHub Copilot vs Supermaven](/compare/github-copilot-vs-supermaven/), [GitHub Copilot vs Tabnine](/compare/github-copilot-vs-tabnine/), and GitHub Copilot vs Val Town pages now separate Copilot's real buyer lane from three adjacent intents: Supermaven for fast long-context autocomplete, Tabnine for privacy-first deploy-anywhere code assistance, and Val Town for hosted TypeScript vals, cron jobs, and tiny APIs.
 
 **June 5 Gemini vs Copilot update:** Gemini vs GitHub Copilot now treats Gemini as the broad Google AI workspace and Copilot as the dedicated GitHub-native coding platform. Gemini can help with code explanation, architecture, Google AI Studio, Gemini CLI, and Code Assist, but Copilot remains the cleaner first purchase when the buyer needs IDE help, PR review, Coding Agent, Spaces, Spark, SDK usage, and AI Credits governance.
 
-**June 18 Antigravity migration update:** [Antigravity](/tools/antigravity/) now carries the current Google developer-agent caveat: Gemini CLI, Gemini Code Assist IDE extensions, Gemini Code Assist for individuals, and Gemini Code Assist for GitHub stop serving consumer/free/Pro/Ultra requests on June 18, 2026 and move toward Antigravity CLI and Antigravity 2.0. Keep that separate from Gemini Code Assist Standard/Enterprise, Google Cloud organization access, and Gemini Enterprise Agent Platform.
+**June 23 Antigravity migration update:** [Antigravity](/tools/antigravity/) now carries the current Google developer-agent caveat: Gemini CLI, Gemini Code Assist IDE extensions, Gemini Code Assist for individuals, and Gemini Code Assist for GitHub stopped serving consumer/free/Pro/Ultra requests on June 18, 2026 and moved toward Antigravity CLI and Antigravity 2.0. Keep that separate from Gemini Code Assist Standard/Enterprise, Google Cloud organization access, and Gemini Enterprise Agent Platform.
 
 **Use [Claude Code](/tools/claude-code/) when the buyer wants a Claude-backed coding agent for serious repo work.** The June 4 comparison pass clarified the real buyer split: specialist Claude agent, open-source BYOK IDE layer, async ticket delegation, GitHub-native AI platform, or hosted TypeScript runtime. Adjacent-lane pages from that pass are retired unless the tools are direct substitutes for the same workflow. Claude Code is better for repo investigation, multi-file work, command execution, debugging loops, and senior-engineer-style delegation than for passive autocomplete.
 
@@ -88,7 +88,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 18 Codeium lineage update:** Codeium is now historical search intent, not a live checkout. Current buyers should compare Devin Desktop against Copilot in category/tool guidance: Cognition-stack IDE, SWE-1.6, Devin Local, local/cloud agent management, quota/extra-usage modeling, and migration-policy work versus GitHub-native IDE coverage, PRs, policy, SDK access, and AI Credits governance.
 
-**June 5 Devin comparison follow-up:** the cleaned-up coding hub now separates three buyer lanes cleanly: Devin for async ticket delegation, GitHub Copilot for GitHub-native IDE/PR/SDK/governance workflows, and Val Town for instant hosted TypeScript endpoints, cron jobs, and small automations.
+**June 23 Devin comparison follow-up:** the cleaned-up coding hub separates three buyer lanes cleanly: Devin for async ticket delegation, GitHub Copilot for GitHub-native IDE/PR/SDK/governance workflows, and Val Town for instant hosted TypeScript endpoints, cron jobs, and small automations. Devin pricing still shows Free, Pro $20/month, Max $200/month, Team $80/month plus $40/month per full user, and extra usage at API pricing after included usage is consumed.
 
 **June 14 Val Town update:** [Val Town](/tools/val-town/) remains the tiny TypeScript runtime lane: Free for public vals, Pro at the $21/month yearly-billed headline with $10/month in Townie credit, and Business from $167/month yearly-billed with $100/month in Townie credit. Use Vercel or Vercel Functions when the buyer is building a full-stack app, needs multiple runtimes, or wants app-platform controls; use Val Town for vals, cron jobs, webhooks, and small internal utilities.
 
@@ -100,13 +100,13 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 22 Qodo update:** [Qodo](/tools/qodo/) remains the enterprise code-review governance lane, not an autocomplete replacement. Current pricing no longer shows the old permanent Developer free tier or $38/user/month Teams plan: every workspace starts with a 14-day trial, then Pro Team starts at $30/month with shared credits, overage caps, and support for up to 30 users. Enterprise is the route for SSO/SAML, audit logs, BYOK, advanced analytics, single-tenant SaaS, on-prem, air-gapped deployment, and negotiated contracts. Treat CLI workflows as sales-verified rather than the default reason to buy.
 
-**June 22 BLACKBOX AI update:** [BLACKBOX AI](/tools/blackbox-ai/) remains a low-cost multi-model coding bundle rather than a procurement-safe enterprise default. Current pricing still lists Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom, but the official pricing page conflicts on included model credits: pricing cards say $10/$20/$40 of latest-model value while comparison and mobile rows say $20/$40/$80. Keep Pro Plus as the practical App Builder, multi-agent, coding-agent tier; use Pro Max for team/admin controls; and do not treat the paused Cuelinks CPC listing as an active affiliate CTA.
+**June 23 BLACKBOX AI update:** [BLACKBOX AI](/tools/blackbox-ai/) remains a low-cost multi-model coding bundle rather than a procurement-safe enterprise default. Current pricing still lists Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom. The clearest pricing rows now show $20/$40/$80 in model credits, while some card copy still uses lower subscription-aligned wording, so checkout remains the budget source of truth. Keep Pro Plus as the practical App Builder, multi-agent, coding-agent tier; use Pro Max for team/admin controls; and do not treat the paused Cuelinks CPC listing as an active affiliate CTA.
 
-**June 20 Replit Agent update:** [Replit Agent](/tools/replit-agent/) should now be evaluated as the current Agent / Agent 4-era browser app-builder surface, not the older Agent 3 session-length story. Current Replit sources keep Lite, Economy, Power, High effort, Pro/Enterprise-only Turbo, Plan Mode, Design Canvas, Web Search, Agent Skills, app self-testing, and task workflows as the buyer frame, while the newer June checks add Custom Instructions, Skills-as-`SKILL.md`, Package Firewall, Starter feature gates, App Testing's web-app-only scope, and Pro credit rollover. Core remains the solo-builder upgrade and Pro is the serious Agent tier, but buyers need usage budgets because Plan Mode/text guidance, third-party API calls, App Testing, High effort, and Turbo can all raise credit burn.
+**June 22 Replit Agent update:** [Replit Agent](/tools/replit-agent/) should now be evaluated as the current Agent / Agent 4-era browser app-builder surface, not the older Agent 3 session-length story. Current Replit sources keep Lite, Economy, Power, High effort, Pro/Enterprise-only Turbo, Plan Mode, Design Canvas, Web Search, Agent Skills, app self-testing, and task workflows as the buyer frame, while the newer June checks add Custom Instructions, Skills-as-`SKILL.md`, Package Firewall, Starter feature gates, App Testing's web-app-only scope, and Pro credit rollover. Core remains the solo-builder upgrade and Pro is the serious Agent tier, but buyers need usage budgets because Plan Mode/text guidance, third-party API calls, App Testing, High effort, and Turbo can all raise credit burn.
 
-**June 20 Replit vs model-backend update:** the new DeepSeek vs Replit Agent page makes Replit's category lane more explicit. Replit is not the cheapest model API, and DeepSeek is not a no-code app builder. Use Replit for low-risk browser prototypes and internal apps; use DeepSeek when engineers own the backend, evaluation, privacy review, and model routing.
+**June 22 Replit vs model-backend update:** the new DeepSeek vs Replit Agent page makes Replit's category lane more explicit. Replit is not the cheapest model API, and DeepSeek is not a no-code app builder. Use Replit for low-risk browser prototypes and internal apps; use DeepSeek when engineers own the backend, evaluation, privacy review, and model routing.
 
-**June 20 Claude/Replit buyer-lane update:** keep Claude and Replit Agent in separate guidance unless a human narrows the buyer job. Claude is the better reasoning, repo investigation, code review, and Claude Code lane for developers working around existing codebases. Replit Agent is the better browser-native app-builder lane for non-developers, prototypes, internal tools, and small projects that need prompt, build, preview, database/auth, publish, and iteration in one workspace.
+**June 22 Claude/Replit buyer-lane update:** keep Claude and Replit Agent in separate guidance unless a human narrows the buyer job. Claude is the better reasoning, repo investigation, code review, and Claude Code lane for developers working around existing codebases. Replit Agent is the better browser-native app-builder lane for non-developers, prototypes, internal tools, and small projects that need prompt, build, preview, database/auth, publish, and iteration in one workspace.
 
 **Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions. After OpenAI's June 11 Ona acquisition agreement, watch how Codex exposes persistent customer-controlled cloud workspaces, scoped credentials, audit logs, and review gates once the deal closes.
 
@@ -114,19 +114,19 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Rork](/tools/rork/) when the coding deliverable is a mobile/app-store prototype instead of a web dashboard.** The June 9 docs check keeps Free as a public web-app test lane, Rork Pro from $20/month for Android Kotlin/Compose plus Expo/React Native and web apps, and Rork Max from $200/month for SwiftUI iOS, Apple Watch, Vision Pro, native games, and widgets. It is an app-builder handoff lane, not a replacement for code review, mobile architecture, or production QA.
 
-**Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The active repository now resolves to `aaif-goose/goose`, Goose itself is Apache-2.0/free, and the real cost is the configured LLM plus local permission/security controls.
+**Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The June 23 check keeps the active repository at `aaif-goose/goose`, with v1.38.0 as the latest release from June 17, 2026, Apache-2.0 code, 15+ provider routes, 70+ MCP extensions, and no Goose subscription fee. The real cost is the configured LLM plus local permission, extension-trust, and secrets controls.
 
 **June 22 Cline update:** [Cline](/tools/cline/) is no longer just a "free VS Code extension" buyer lane. Current Cline pages position it as an open-source agent runtime across IDE, CLI, Kanban, SDK, and a separate licensed Spec Driven enterprise platform with LG CNS. Open Source remains free for individual developers, but inference is usage-based or BYOK, and the pricing navigation now shows roughly 64k GitHub stars. Enterprise and Spec Driven are custom/licensed governance and delivery-platform lanes for SSO/RBAC/billing/audit/deployment controls, enterprise context, fixed spec pipelines, and model/deployment boundaries. Teams should review Auto Approve/YOLO plus SDK tool policies before broad automation because unlisted SDK tools default to enabled and auto-approved. Vercel AI Gateway is one supported provider route, not the whole product.
 
 **June 22 Cody update:** [Cody](/tools/cody/) remains a Sourcegraph Enterprise-only code-intelligence lane, not a self-serve Copilot alternative. Current Sourcegraph sources still keep Enterprise starting at $16K with AI-feature credits, org-wide credit pooling, no monthly credit expiry, and renewal rollover; the VS Code Marketplace now warns Cody is no longer available for non-enterprise users even while the listing still carries stale Cody Pro/model-option copy. Evaluate it only when Sourcegraph code graph, Deep Search, MCP/API/CLI access, Cody Gateway/model controls, and enterprise procurement are part of the platform decision.
 
-**Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.1 docs list 200K context, 128K maximum output, OpenAI-compatible API examples, MCP/tool support, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
+**Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.2 materials list 1M context, flexible coding effort modes, OpenAI-compatible API pricing, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
 
 **Use [MiniMax](/tools/minimax/) when the coding question is MiniMax-M3 backend evaluation.** The June 21 check keeps MiniMax M3-first: standard M3 pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, the M3 page positions it around coding, agentic, long-context, and native multimodal work, and >512K input plus Priority tiers still need account-level access confirmation.
 
 **Use [Yi](/tools/yi/) only for legacy Yi-Coder or frozen-model coding experiments.** The June 10 check keeps 01.AI's public Yi pages alive, but the company headline is WorldWise/WanZhi 2.5 enterprise agents rather than a new Yi coding-model roadmap. Teams with Yi-Coder integrated can keep it as a reproducible baseline after license review; new coding-model evaluations should start with GLM, Qwen, Kimi, MiniMax, DeepSeek, or current hosted coding assistants. The June 15 Qwen recheck matters for coding-agent buyers because Qwen Cloud still lists a June 8 Max snapshot, while qwen3.7-plus remains the clearer multimodal/GUI-agent lane and the live qwen3.7-max marketplace page still describes text input/output.
 
-**Use [Llama](/tools/llama/) when the coding question is open-weight model control rather than an IDE.** The June 8 check keeps Maverick as the flagship open-weight model to evaluate, Scout as the long-context/Groq fast-inference lane, and Together/Groq pricing as provider-specific. It belongs here for self-hosted coding backends, local agent experiments, and model-diversification strategy, not as a direct substitute for Cursor, Copilot, Claude Code, or Codex.
+**Use [Llama](/tools/llama/) when the coding question is open-weight model control rather than an IDE.** The June 23 check keeps Maverick as the flagship open-weight model to evaluate, Scout as the long-context/Groq fast-inference lane, and Together/Groq pricing as provider-specific. It belongs here for self-hosted coding backends, local agent experiments, and model-diversification strategy, not as a direct substitute for Cursor, Copilot, Claude Code, or Codex.
 
 **Use [Modal](/tools/modal/) when the coding deliverable is Python-backed infrastructure, not code suggestions.** Modal fits serverless Python functions, GPU inference jobs, web endpoints, sandboxes, queues, and scheduled jobs. It is a runtime/deployment lane beside Val Town and Replit-style builders, not an IDE assistant.
 
@@ -134,9 +134,9 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Glean](/tools/glean/) when coding agents need permission-aware company knowledge.** Glean's developer platform now exposes MCP and setup paths for Claude Code, Codex, Goose, Cursor, Gemini CLI, VS Code, Windsurf, JetBrains, and other developer surfaces, so it belongs in the enterprise-codebase-context lane rather than the autocomplete lane.
 
-**June 22 Augment Code update:** [Augment Code](/tools/augment-code/) is no longer a clean $20 solo / $60 team / $200 Max comparison in the public pricing surface. The current Augment page centers Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, pay-as-you-go after included usage, and Enterprise custom. Treat Augment as a team usage-balance product, not a simple per-developer Copilot replacement. Its model docs list Claude Fable 5, but Anthropic's Fable/Mythos suspension still makes route verification mandatory before using Fable-specific pilot results.
+**June 23 Augment Code update:** [Augment Code](/tools/augment-code/) is no longer a clean $20 solo / $60 team / $200 Max comparison in the public pricing surface. The current Augment page centers Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, pay-as-you-go after included usage, and Enterprise custom. Treat Augment as a team usage-balance product, not a simple per-developer Copilot replacement. Augment's changelog says Claude Fable 5 reached the model picker, but Anthropic's access statement says Fable/Mythos access has been removed for all users after a US government directive, so teams must verify the live model route before using Fable-specific pilot results.
 
-**June 4 maintenance note:** earlier coding-ledger work still informs the lane map: Continue is source-controlled AI PR checks and agent governance, Cursor is the managed AI-native IDE, Devin is async ticket delegation, GitHub Copilot is the GitHub-native AI Credits platform, and Val Town is a hosted TypeScript runtime. Keep adjacent-lane comparisons in hub, tool, guide, or workflow pages unless a standalone page compares direct substitutes. Earlier June 2 maintenance remains in force for Aider, Cline, CodeRabbit, Amazon Q Developer, Augment Code, Sourcegraph Cody, Factory, JetBrains AI, Kiro, Mastra, OpenHands, Pieces, Qodo, Replit Agent, Same.dev, Supermaven, Tabnine, Windsurf/Devin Desktop, Zed, Goose, GLM-5.1, and Glean.
+**June 23 Continue acquisition update:** [Continue](/tools/continue/) is no longer a clean paid source-controlled PR-check lane. Continue's current homepage says Cursor acquired it, the docs describe a final 2.0.0 release, and the GitHub repository says it is read-only and no longer actively maintained. Treat Continue as an open-source coding-agent artifact to study or fork; route new managed buyers toward Cursor, GitHub Copilot, Claude Code, Cline, CodeRabbit, or Qodo by workflow.
 
 ## Buyer Paths
 
@@ -153,8 +153,8 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 | UI mockup handoff reference | [Uizard](/tools/uizard/) | Fast editable mockups and per-component React/CSS handoff for non-designers | Not a full-project code export or production app builder |
 | Open-source IDE/CLI/SDK agent runtime | [Cline](/tools/cline/) | Free Open Source plan, broad provider/local/Vercel AI Gateway routing, Plan/Act approvals, MCP, CLI, Kanban, and SDK embedding | Usage-based inference, Auto Approve/SDK permission policy, and Enterprise governance need review |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Desktop, CLI, and API agent with model choice, MCP extensions, and Apache-2.0 code | Needs provider-cost controls, secrets hygiene, and local-permission review |
-| Source-controlled AI PR checks | [Continue](/tools/continue/) | Best fit when teams want repo-owned checks, private agents, and explicit standards-as-code review | Weak prompts create noisy checks; humans still own merge decisions |
-| Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.1 open weights, OpenAI-compatible API examples, MCP/tool support, and long context | Verify endpoint behavior, region, compliance, and output-heavy costs |
+| Open-source final coding-agent artifact | [Continue](/tools/continue/) | Useful to study, fork, or self-maintain after Cursor acquired Continue | Official repo is read-only, old pricing is no longer live, and new teams should evaluate maintained alternatives |
+| Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.2 open weights, OpenAI-compatible API pricing, flexible effort modes, and 1M context | Verify endpoint behavior, region, compliance, and output-heavy costs |
 | MiniMax M3 backend evaluation | [MiniMax](/tools/minimax/) | M3 coding/agentic positioning, native multimodality, low standard token price, and MiniMax Code path | Verify 512K vs 1M context access, Priority tier access, data residency, and independent benchmark fit |
 | xAI coding-agent and API evaluation | [Grok](/tools/grok/) | Grok Build CLI/TUI, headless scripting, custom models, skills/plugins, ACP integration, and Grok Build 0.1 API | Newer coding lane; benchmark permissions, sandboxing, ZDR/team settings, account limits, and repo-quality output before rollout |
 | Low-cost coding-model backend | [DeepSeek](/tools/deepseek/) | V4-Flash and V4-Pro provide low-cost API pricing, 1M context, OpenAI/Anthropic-compatible endpoints, and open-weight evaluation paths | Not an IDE or PR-review product; verify endpoint deprecation, hosted-data posture, license/hardware fit, and regulatory risk before production |
@@ -227,63 +227,65 @@ Do not publish stale model-version claims. Coding tools route models and change 
 
 ## Sources
 
-- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-22)
-- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-22)
-- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-22)
+- [GitHub Copilot plans](https://github.com/features/copilot/plans) (verified 2026-06-23)
+- [GitHub Copilot billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals) (verified 2026-06-23)
+- [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises) (verified 2026-06-23)
 - [GitHub Copilot billing and plans changelog](https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans) (verified 2026-06-15)
-- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-22)
-- [GitHub Copilot larger context and reasoning](https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/) (verified 2026-06-22)
-- [GitHub Copilot Agent tasks REST API](https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/) (verified 2026-06-22)
-- [GitHub Copilot Claude Fable 5 suspension note](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/) (verified 2026-06-22)
-- [GitHub Copilot code review controls](https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/) (verified 2026-06-22)
-- [GitHub Copilot app generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/) (verified 2026-06-22)
-- [GitHub Copilot individual plan sign-ups reopening](https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening/) (verified 2026-06-22)
-- [GitHub Copilot MAI-Code-1-Flash expansion](https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces/) (verified 2026-06-22)
-- [GitHub Copilot Opus 4.6 fast deprecation notice](https://github.blog/changelog/2026-06-18-upcoming-deprecation-of-opus-4-6-fast/) (verified 2026-06-22)
-- [GitHub Copilot AI credits usage metrics API](https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/) (verified 2026-06-22)
+- [GitHub Copilot SDK GA](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/) (verified 2026-06-23)
+- [GitHub Copilot larger context and reasoning](https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/) (verified 2026-06-23)
+- [GitHub Copilot Agent tasks REST API](https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/) (verified 2026-06-23)
+- [GitHub Copilot Claude Fable 5 suspension note](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/) (verified 2026-06-23)
+- [GitHub Copilot code review controls](https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/) (verified 2026-06-23)
+- [GitHub Copilot app generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/) (verified 2026-06-23)
+- [GitHub Copilot individual plan sign-ups reopening](https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening/) (verified 2026-06-23)
+- [GitHub Copilot MAI-Code-1-Flash expansion](https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces/) (verified 2026-06-23)
+- [GitHub Copilot Opus 4.6 fast deprecation notice](https://github.blog/changelog/2026-06-18-upcoming-deprecation-of-opus-4-6-fast/) (verified 2026-06-23)
+- [GitHub Copilot AI credits usage metrics API](https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/) (verified 2026-06-23)
 - [OpenAI to acquire Ona](https://openai.com/index/openai-to-acquire-ona/) (verified 2026-06-15)
 - [Ona is joining OpenAI](https://ona.com/stories/ona-joins-openai) (verified 2026-06-15)
 - [AiPedia Disney AI coding token-budget update](/news/2026-06-15-disney-ai-coding-tokenmaxxing/) (verified 2026-06-15)
 - [Business Insider Disney AI tokenmaxxing report](https://www.businessinsider.com/disney-ai-push-increase-velocity-tech-employees-tokenmaxxing-josh-damaro-2026-6) (verified 2026-06-15)
 - [Times of India Disney AI coding report](https://timesofindia.indiatimes.com/technology/tech-news/almost-a-year-after-giving-engineers-access-to-claude-and-cursor-disney-tells-engineers-minimise-ai-coded-products-that-/articleshow/131728705.cms) (verified 2026-06-15)
-- [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-20)
-- [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise) (verified 2026-06-20)
-- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-20)
-- [xAI pricing](https://x.ai/pricing) (verified 2026-06-20)
-- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-20)
-- [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-20)
-- [Cursor Data Use and Privacy Overview](https://cursor.com/data-use) (verified 2026-06-20)
-- [Cursor Enterprise](https://cursor.com/enterprise) (verified 2026-06-20)
-- [Cursor CLI](https://cursor.com/cli) (verified 2026-06-20)
-- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-20)
+- [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-22)
+- [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise) (verified 2026-06-22)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-22)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-22)
+- [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-23)
+- [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-23)
+- [Cursor Data Use and Privacy Overview](https://cursor.com/data-use) (verified 2026-06-23)
+- [Cursor Enterprise](https://cursor.com/enterprise) (verified 2026-06-23)
+- [Cursor CLI](https://cursor.com/cli) (verified 2026-06-23)
+- [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5) (verified 2026-06-23)
 - [Cursor Gartner enterprise-coding-agent recognition](https://cursor.com/blog/cursor-leads-gartner-mq-2026) (verified 2026-05-26)
-- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-20)
+- [Cursor changelog](https://cursor.com/changelog) (verified 2026-06-23)
 - [DeepSeek API pricing docs](https://api-docs.deepseek.com/quick_start/pricing) (verified 2026-06-20)
 - [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424) (verified 2026-06-20)
 - [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai) (verified 2026-06-20)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-21)
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-21)
-- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-21)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-23)
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-23)
+- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-23)
 - [AiPedia late June 13 AI news update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/) (verified 2026-06-13)
 - [AiPedia June 14 AI news desk](/news/2026-06-14-ai-news-desk/) (verified 2026-06-14)
-- [Anthropic Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access) (verified 2026-06-21)
-- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-21)
+- [Anthropic Fable page](https://www.anthropic.com/claude/fable) (verified 2026-06-23)
+- [Claude Opus 4.8 and dynamic workflows](https://www.anthropic.com/news/claude-opus-4-8) (verified 2026-06-23)
 - [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-14)
 - [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-14)
 - [Windsurf pricing redirect to Devin pricing](https://windsurf.com/pricing) (verified 2026-06-18)
-- [Devin pricing](https://devin.ai/pricing/) (verified 2026-06-18)
+- [Devin pricing](https://devin.ai/pricing/) (verified 2026-06-23)
 - [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq) (verified 2026-06-18)
 - [Devin Desktop quota docs](https://docs.devin.ai/desktop/accounts/quota) (verified 2026-06-18)
 - [Devin Desktop model docs](https://docs.devin.ai/desktop/models) (verified 2026-06-18)
 - [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) (verified 2026-06-18)
-- [Aider docs](https://aider.chat/docs/) (verified 2026-06-14)
-- [Aider GitHub repository](https://github.com/Aider-AI/aider) (verified 2026-06-14)
-- [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-18)
-- [Amazon Q Developer end-of-support announcement](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/) (verified 2026-06-18)
-- [Amazon Q Developer quotas](https://docs.aws.amazon.com/general/latest/gr/amazonqdev.html) (verified 2026-06-18)
-- [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-22)
-- [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing) (verified 2026-06-22)
-- [Augment feature availability](https://docs.augmentcode.com/feature-availability) (verified 2026-06-22)
+- [Aider docs](https://aider.chat/docs/) (verified 2026-06-23)
+- [Aider GitHub repository](https://github.com/Aider-AI/aider) (verified 2026-06-23)
+- [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/) (verified 2026-06-23)
+- [Amazon Q Developer end-of-support announcement](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/) (verified 2026-06-23)
+- [Amazon Q Developer quotas](https://docs.aws.amazon.com/general/latest/gr/amazonqdev.html) (verified 2026-06-23)
+- [Google Antigravity pricing](https://antigravity.google/pricing) (verified 2026-06-23)
+- [Google Developers Gemini CLI transition](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/) (verified 2026-06-23)
+- [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-23)
+- [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing) (verified 2026-06-23)
+- [Augment feature availability](https://docs.augmentcode.com/feature-availability) (verified 2026-06-23)
 - [Cline homepage](https://cline.bot/) (verified 2026-06-22)
 - [Cline pricing](https://cline.bot/pricing) (verified 2026-06-22)
 - [Cline docs overview](https://docs.cline.bot/cline-overview) (verified 2026-06-22)
@@ -296,13 +298,14 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [CodeRabbit plans documentation](https://docs.coderabbit.ai/management/plans) (verified 2026-06-22)
 - [CodeRabbit usage-based add-on docs](https://docs.coderabbit.ai/management/usage-based-addon) (verified 2026-06-22)
 - [CodeRabbit changelog](https://docs.coderabbit.ai/changelog) (verified 2026-06-22)
-- [Continue pricing](https://www.continue.dev/pricing) (verified 2026-06-12)
-- [Continue docs](https://docs.continue.dev/) (verified 2026-06-12)
-- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-12)
+- [Continue pricing redirect](https://www.continue.dev/pricing) (verified 2026-06-23)
+- [Continue docs](https://docs.continue.dev/) (verified 2026-06-23)
+- [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-23)
 - [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-12)
 - [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-14)
-- [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-12)
-- [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-12)
+- [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-23)
+- [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-23)
+- [Kiro billing docs](https://kiro.dev/docs/billing/) (verified 2026-06-23)
 - [Mastra pricing](https://mastra.ai/pricing) (verified 2026-06-22)
 - [Mastra model router docs](https://mastra.ai/models) (verified 2026-06-22)
 - [Mastra blog](https://mastra.ai/blog) (verified 2026-06-22)
@@ -311,22 +314,22 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-22)
 - [Qodo pricing and usage](https://docs.qodo.ai/pricing-and-usage) (verified 2026-06-22)
 - [Qodo code review docs](https://docs.qodo.ai/code-review) (verified 2026-06-22)
-- [BLACKBOX AI pricing](https://www.blackbox.ai/pricing) (verified 2026-06-22)
-- [BLACKBOX AI security](https://www.blackbox.ai/security) (verified 2026-06-22)
-- [Cuelinks BLACKBOX AI affiliate listing](https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program) (verified 2026-06-22)
-- [Replit pricing](https://replit.com/pricing) (verified 2026-06-15)
-- [Replit Agent docs](https://docs.replit.com/references/agent/overview) (verified 2026-06-15)
-- [Replit Agent Modes](https://docs.replit.com/references/agent/agent-modes) (verified 2026-06-15)
-- [Replit AI billing](https://docs.replit.com/billing/ai-billing) (verified 2026-06-15)
-- [Replit Custom Skills](https://replit.com/blog/custom-skills) (verified 2026-06-15)
-- [Replit Package Firewall](https://replit.com/blog/package-firewall) (verified 2026-06-15)
+- [BLACKBOX AI pricing](https://www.blackbox.ai/pricing) (verified 2026-06-23)
+- [BLACKBOX AI security](https://www.blackbox.ai/security) (verified 2026-06-23)
+- [Cuelinks BLACKBOX AI affiliate listing](https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program) (verified 2026-06-23)
+- [Replit pricing](https://replit.com/pricing) (verified 2026-06-22)
+- [Replit Agent docs](https://docs.replit.com/references/agent/overview) (verified 2026-06-22)
+- [Replit Agent Modes](https://docs.replit.com/references/agent/agent-modes) (verified 2026-06-22)
+- [Replit AI billing](https://docs.replit.com/billing/ai-billing) (verified 2026-06-22)
+- [Replit Custom Skills](https://replit.com/blog/custom-skills) (verified 2026-06-22)
+- [Replit Package Firewall](https://replit.com/blog/package-firewall) (verified 2026-06-22)
 - [Same pricing docs](https://docs.same.new/usage/pricing) (verified 2026-06-12)
 - [Base44 pricing](https://base44.com/pricing) (verified 2026-06-22)
 - [Base44 cost guide](https://base44.com/blog/how-much-does-base44-cost) (verified 2026-06-22)
 - [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans) (verified 2026-06-22)
-- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-12)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-23)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-18)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-06-12)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-23)
 - [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-12)
 - [OpenAI speech-to-text docs](https://developers.openai.com/api/docs/guides/speech-to-text) (verified 2026-06-12)
 - [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-12)
@@ -349,28 +352,31 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-22)
 - [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-22)
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-22)
-- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-12)
-- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-12)
-- [Hex agent credits usage blog](https://hex.tech/blog/agent-credits-usage/) (verified 2026-06-12)
-- [Julius AI pricing](https://julius.ai/pricing) (verified 2026-06-12)
-- [Julius credit billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-12)
-- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview) (verified 2026-06-12)
-- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-12)
-- [Goose documentation](https://block.github.io/goose/) (verified 2026-06-12)
-- [Z.AI GLM-5.1 docs](https://docs.z.ai/guides/llm/glm-5.1) (verified 2026-06-12)
-- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-12)
-- [GLM-5.1 on Hugging Face](https://huggingface.co/zai-org/GLM-5.1) (verified 2026-06-12)
+- [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-23)
+- [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-23)
+- [Hex agent credits usage blog](https://hex.tech/blog/credits-and-usage-visibility-for-hex-agents/) (verified 2026-06-23)
+- [Julius AI pricing](https://julius.ai/pricing) (verified 2026-06-23)
+- [Julius credits overview](https://julius.ai/docs/billing/credits-overview) (verified 2026-06-23)
+- [Julius credit billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-23)
+- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview) (verified 2026-06-23)
+- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-23)
+- [Goose GitHub releases](https://github.com/aaif-goose/goose/releases) (verified 2026-06-23)
+- [Goose documentation](https://block.github.io/goose/) (verified 2026-06-23)
+- [Z.AI GLM-5.2 launch post](https://huggingface.co/blog/zai-org/glm-52-blog) (verified 2026-06-23)
+- [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-23)
+- [GLM-5.2 on Hugging Face](https://huggingface.co/zai-org/GLM-5.2) (verified 2026-06-23)
 - [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-21)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-21)
 - [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-15)
 - [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max) (verified 2026-06-15)
 - [01.AI Yi models](https://www.01.ai/yi-models) (verified 2026-06-12)
 - [Yi GitHub repository](https://github.com/01-ai/Yi) (verified 2026-06-12)
-- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-12)
-- [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-12)
+- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-23)
+- [Llama 4 Community License](https://www.llama.com/llama4/license/) (verified 2026-06-23)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
-- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-12)
-- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-12)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-23)
+- [Groq Llama 4 Maverick model card](https://console.groq.com/docs/model/meta-llama/llama-4-maverick-17b-128e-instruct) (verified 2026-06-23)
+- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-23)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-12)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-12)
 - [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-12)

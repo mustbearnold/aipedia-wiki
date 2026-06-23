@@ -8,11 +8,11 @@ category: ai-presentation
 company: Gamma Tech
 url: 'https://gamma.app'
 pricing_model: freemium
-price_range: "Free + paid tiers; exact dollar pricing can vary by billing/account state"
+price_range: "Free; Plus/Pro/Ultra paid tiers; Ultra $90/seat/mo annual or $100/mo monthly"
 status: active
 launched: 2020-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://gamma.app/ai-presentation-maker"
     source_label: "Gamma AI presentation maker"
     source_id: gamma-ai-presentation
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   output_model:
@@ -60,7 +60,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   watch_out_for:
@@ -68,13 +68,13 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
 seo_title: 'Gamma: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Gamma generates decks, docs, websites, social posts, and images from prompts, PDFs, and PPTX files. Compare Free, Plus, Pro, Ultra, API, domains, and analytics as of June 2026.
+  Gamma generates decks, docs, websites, social posts, and images from prompts, PDFs, and PPTX files. Compare Free, Plus, Pro, Ultra, API, domains, analytics, and Ultra pricing as of June 2026.
 author: aipedia.wiki Editorial
 best_for:
   - founder pitch decks
@@ -88,7 +88,16 @@ not_best_for:
   - offline presentation workflows
   - teams that need enterprise brand governance
 quick_answer: >-
-  Gamma generates decks, docs, and shareable web pages from a single prompt. The card format works as all three at once. Pick it for speed and format flexibility. Skip it for pixel-perfect PPTX export or chart-heavy analytics decks.
+  Gamma generates decks, docs, and shareable web pages from a single prompt. The card format works as all three at once. Pick it for speed and format flexibility. Skip it for pixel-perfect PPTX export or chart-heavy analytics decks. Ultra is now the public high-usage path at $90/seat/month billed annually or $100/month monthly.
+price_history:
+  - date: 2026-06-23
+    plan: "Ultra"
+    price: "$90/seat/mo billed annually or $100/mo monthly"
+    source: "https://gamma.app/pricing"
+    source_label: "Gamma pricing"
+    source_id: gamma-official
+    verified_at: 2026-06-23
+    note: "Rechecked official pricing. Ultra includes 20x more AI usage, up to 75 cards per prompt, advanced text/image/video models, up to 100 custom domains, and early feature access. Other plan prices can vary by billing toggle, account state, or region."
 ---
 
 # Gamma
@@ -119,7 +128,7 @@ The free tier supports simple projects, imports, and exports. Paid tiers add bra
 | **PPTX export** | Available, lossy on complex layouts |
 | **Offline mode** | None |
 
-Every data point above was verified against official Gamma documentation on 2026-06-12. See Sources.
+Every data point above was verified against official Gamma documentation on 2026-06-23. See Sources.
 
 ## Recent Changes
 
@@ -151,17 +160,17 @@ The moat is format, not model quality. Gamma's shareable URL output skips the do
 
 ## Pricing
 
-Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.app/pricing). Gamma's public pricing page is reliable for plan gates, but exact price rendering can change by billing toggle, account state, or region, so check the live page before purchase.
+Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.app/pricing). Gamma's public pricing page is reliable for plan gates; exact Plus, Pro, Team, or Business amounts can still vary by billing toggle, account state, or region, so check the live page before purchase.
 
 | Plan | Verified gates | Who's it for |
 |------|----------------|--------------|
 | Free | Up to 10 cards per prompt; simple presentations, docs, websites, social, and images; PDF/PPTX import; PDF/PPTX/PNG/Google Slides export | Trial users and occasional decks |
 | Plus | Everything in Free; up to 20 cards per prompt; Gamma branding removal; advanced AI image models | Regular solo creators |
 | Pro | Everything in Plus; up to 60 cards per prompt; premium AI image models; custom branding and fonts; detailed analytics and advanced sharing; up to 10 custom domains; API access; workspace templates | Client-facing, brand, automation, and repeat publishing work |
-| Ultra | Everything in Pro; substantially more AI usage; up to 75 cards per prompt; access to advanced text, image, and video models; up to 100 custom domains; early feature access | Power users, agencies, and heavy generators |
+| Ultra | $90/seat/mo billed annually or $100/mo monthly; everything in Pro; substantially more AI usage; up to 75 cards per prompt; access to advanced text, image, and video models; up to 100 custom domains; early feature access | Power users, agencies, and heavy generators |
 | Team / Sales | Contact-sales path for teams evaluating Gamma | Shared workspace and organization needs |
 
-*Plan gates verified 2026-06-12 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
+*Plan gates verified 2026-06-23 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
 
 ## Against the alternatives
 
@@ -185,7 +194,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Gamma pricing](https://gamma.app/pricing), Gamma's AI presentation maker page, Gamma API documentation, and Gamma's affiliate-program help page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Gamma pricing](https://gamma.app/pricing), Gamma's AI presentation maker page, Gamma API documentation, and Gamma's affiliate-program help page.
 
 ## FAQ
 

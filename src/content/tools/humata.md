@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99-$49/user/mo"
 status: active
 launched: 2023-02
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,58 +31,67 @@ facts:
     source: https://www.humata.ai/
     source_label: Humata official site
     source_id: humata-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   pricing_anchor:
     value: Humata pricing currently lists Free with 60 pages/month, Expert at $9.99/month with 500 pages and up to three users,
       Team at $49/user/month with 5,000 pages and up to ten users, and Enterprise custom. Verify pages, seats, upload limits,
-      GPT-5 support, and enterprise/security features before buying.
+      GPT-5 support, SOC 2 Type II status, and enterprise/security features before buying.
     source: https://www.humata.ai/pricing
     source_label: Humata pricing
     source_id: humata-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-07-23'
   workflow_surface:
     value: Humata focuses on knowledge-base and document Q&A rather than broad web search, meeting notes, or general automation.
     source: https://www.humata.ai/
     source_label: Humata official site
     source_id: humata-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   enterprise_controls:
     value: Security review should cover file retention, encryption, access control, data training policy, and enterprise compliance
       claims.
     source: https://www.humata.ai/security
     source_label: Humata security
     source_id: humata-security
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   watch_out_for:
     value: Document chat tools need evaluation on citation reliability, table/PDF parsing, permission boundaries, and hallucination
       handling before use on legal or financial records.
     source: https://www.humata.ai/blog
     source_label: Humata blog
     source_id: humata-blog
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
 tags: [pdf, document-chat, research, rag, citations, gpt5, soc2]
 price_history:
+  - date: 2026-06-23
+    plan: "Free / Expert / Team / Enterprise"
+    price: "$0 / $9.99 / $49 per user / custom"
+    source: "https://www.humata.ai/security"
+    source_label: "Humata security"
+    source_id: humata-security
+    verified_at: 2026-06-23
+    note: "Reverified pricing, GPT-5 support matrix, and security page. Security page says Humata is SOC 2 Type II compliant and uses privacy-by-design controls."
   - date: 2026-05-13
     plan: "Expert"
     price: "$9.99/mo"
     source: "https://www.humata.ai/pricing"
     source_label: "Source"
     source_id: humata-pricing
+    verified_at: 2026-06-23
     note: "Expert tier increased to 500 pages/mo (from 200) with GPT-5 support and 3 users included. Student $1.99 tier discontinued; Expert is now the entry paid plan."
   - date: 2026-05-13
     plan: "Team"
@@ -90,6 +99,7 @@ price_history:
     source: "https://www.humata.ai/pricing"
     source_label: "Source"
     source_id: humata-pricing
+    verified_at: 2026-06-23
     note: "5,000 pages/mo, up to 10 users, OCR, folder permissions, SOC-2 certificate, GPT-5 support. $0.01/page overage."
   - date: 2026-05-13
     plan: "Free"
@@ -97,6 +107,7 @@ price_history:
     source: "https://www.humata.ai/pricing"
     source_label: "Source"
     source_id: humata-pricing
+    verified_at: 2026-06-23
     note: "60 pages/mo. No additional pages available on free tier."
   - date: 2026-06-02
     plan: "Free / Expert / Team / Enterprise"
@@ -104,6 +115,7 @@ price_history:
     source: "https://www.humata.ai/pricing"
     source_label: "Source"
     source_id: humata-pricing
+    verified_at: 2026-06-23
     note: "Live pricing page rechecked. Free includes 60 pages/mo; Expert includes 500 pages/mo and up to 3 users; Team includes 5,000 pages/mo, up to 10 users, OCR, folder permissions, response personalization, and SOC-2 certificate. Additional pages remain $0.02/page on Expert and $0.01/page on Team."
 seo_title: "Humata: Features, Pricing & Review (June 2026)"
 meta_description: "Humata is a PDF chat tool with GPT-5 support listed in its pricing matrix. Free 60 pages/mo. Expert $9.99 (500 pages, 3 users), Team $49/user/mo (5,000 pages, OCR, SOC-2). Review for June 2026."
@@ -142,7 +154,7 @@ A document-chat platform aimed at research-heavy students and small teams. Uploa
 | **Team plan** | $49/user/mo, 5,000 pages, up to 10 users, GPT-5, OCR, folder permissions, SOC-2 certificate, response personalization |
 | **Enterprise** | Custom pricing, uptime SLA, early access, enterprise support |
 | **LLM stack (June 2026)** | GPT-5 support listed in the public pricing matrix; verify exact model access if contractual |
-| **Compliance** | SOC-2 certificate on Team and Enterprise; SHA-256 encryption |
+| **Compliance** | SOC 2 Type II status on the security page; Team and Enterprise expose SOC-2 certificate access in the pricing matrix |
 | **File types** | PDF, DOCX, TXT, more |
 | **Additional pages** | $0.02/page (Expert), $0.01/page (Team) |
 
@@ -169,7 +181,7 @@ A document-chat platform aimed at research-heavy students and small teams. Uploa
 | Team | $49/user/mo | 5,000 pages, up to 10 users, GPT-5, OCR, folder permissions, SOC-2 certificate, $0.01/page overage |
 | Enterprise | Custom | Unlimited + uptime SLA + early access + enterprise support |
 
-Prices verified 2026-06-12 via [humata.ai/pricing](https://www.humata.ai/pricing). The current public pricing page shows Free, Expert, Team, and Enterprise; it does not show a self-serve Student tier on the rendered pricing grid.
+Prices verified 2026-06-23 via [humata.ai/pricing](https://www.humata.ai/pricing) and [Humata security](https://www.humata.ai/security). The current public pricing page shows Free, Expert, Team, and Enterprise; it does not show a self-serve Student tier on the rendered pricing grid.
 
 ## Best plan recommendation
 
@@ -197,7 +209,7 @@ Before paying, upload the actual documents you care about: scanned PDFs, tables,
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [humata.ai/pricing](https://www.humata.ai/pricing), [humata.ai](https://www.humata.ai/), and [Humata security](https://www.humata.ai/security).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [humata.ai/pricing](https://www.humata.ai/pricing), [humata.ai](https://www.humata.ai/), and [Humata security](https://www.humata.ai/security).
 
 ## FAQ
 
@@ -208,7 +220,7 @@ At Expert tier ($9.99/mo for 500 pages), Humata is roughly half the cost of Chat
 Yes, on the Team tier. Useful for scanned contracts, historical documents, or image-based PDFs.
 
 **Which model powers Humata?**
-Humata's public pricing matrix lists GPT-5 support as of June 12, 2026. Verify model access in procurement if the exact model is a hard requirement.
+Humata's public pricing matrix lists GPT-5 support as of June 23, 2026. Verify model access in procurement if the exact model is a hard requirement.
 
 **How accurate is Humata for legal documents?**
 Decent for direct factual questions with citation verification. Always review cited pages. Not a substitute for attorney judgment on material questions.

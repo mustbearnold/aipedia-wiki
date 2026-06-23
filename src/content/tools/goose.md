@@ -2,7 +2,7 @@
 type: tool
 slug: goose
 title: Goose
-tagline: Open-source AI agent originally from Block, now governed by the Linux Foundation's Agentic AI Foundation. Desktop, CLI, and API across 15+ LLMs with 70+ MCP extensions.
+tagline: Open-source AI agent originally from Block, now governed by the Linux Foundation's Agentic AI Foundation. Desktop, CLI, and API across 15+ LLM providers with 70+ MCP extensions.
 category: ai-automation
 company: agentic-ai-foundation
 url: https://block.github.io/goose/
@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (Apache-2.0; BYOK LLM costs)"
 status: active
 launched: 2025-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: frequent
 affiliate:
   has_program: false
@@ -31,8 +31,8 @@ facts:
       tasks.
     source: https://github.com/aaif-goose/goose
     source_label: Goose GitHub repository
-    source_id: goose-repository
-    verified_at: '2026-06-12'
+    source_id: goose-releases
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -42,16 +42,16 @@ facts:
     source: https://github.com/aaif-goose/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   open_source_or_local:
-    value: The repository is the authoritative source for license, installation, releases, extensions, and project activity.
-    source: https://github.com/aaif-goose/goose
-    source_label: Goose GitHub repository
+    value: The repository and release feed are the authoritative sources for license, installation, v1.38.0 release status, extensions, and project activity.
+    source: https://github.com/aaif-goose/goose/releases
+    source_label: Goose GitHub releases
     source_id: goose-repository
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://block.github.io/goose/
     source_label: Goose official site
     source_id: goose-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -71,7 +71,7 @@ facts:
     source: https://github.com/aaif-goose/goose
     source_label: Goose GitHub repository
     source_id: goose-repository
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -97,6 +97,7 @@ price_history:
     source: "https://github.com/aaif-goose/goose"
     source_label: "Source"
     source_id: goose-pricing
+    verified_at: 2026-06-23
     note: "Block contributed Goose to the Linux Foundation's Agentic AI Foundation (AAIF)."
   - date: 2026-04-17
     plan: "Open-source"
@@ -104,6 +105,7 @@ price_history:
     source: "https://github.com/aaif-goose/goose"
     source_label: "Source"
     source_id: goose-pricing
+    verified_at: 2026-06-23
     note: "Verified unchanged. Apache-2.0, BYOK LLM costs."
   - date: 2026-06-02
     plan: "Open-source"
@@ -111,12 +113,21 @@ price_history:
     source: "https://github.com/aaif-goose/goose"
     source_label: "Source"
     source_id: goose-pricing
+    verified_at: 2026-06-23
     note: "Verified unchanged. Apache-2.0, BYOK LLM costs. Repository now resolves to aaif-goose/goose."
+  - date: 2026-06-23
+    plan: "Open-source"
+    price: "Free"
+    source: "https://github.com/aaif-goose/goose/releases"
+    source_label: "Goose GitHub releases"
+    source_id: goose-pricing
+    verified_at: 2026-06-23
+    note: "Verified unchanged. Apache-2.0, BYOK LLM costs. Latest GitHub release shown as v1.38.0 from June 17, 2026."
 ---
 
 # Goose
 
-Free, Apache-2.0 AI agent originally open-sourced by Block (the company behind Square, Cash App, and Tidal) in January 2025. In December 2025, Block contributed Goose to the Linux Foundation's Agentic AI Foundation (AAIF). The code now lives under the [aaif-goose/goose](https://github.com/aaif-goose/goose) repository.
+Free, Apache-2.0 AI agent originally open-sourced by Block (the company behind Square, Cash App, and Tidal) in January 2025. In December 2025, Block contributed Goose to the Linux Foundation's Agentic AI Foundation (AAIF). The code now lives under the [aaif-goose/goose](https://github.com/aaif-goose/goose) repository, with v1.38.0 shown as the latest GitHub release checked on June 23, 2026.
 
 Runs as a native desktop app, CLI, and API on macOS, Linux, and Windows. Supports 15+ LLM providers through a unified interface and extends via 70+ Model Context Protocol extensions.
 
@@ -144,7 +155,7 @@ Runs as a native desktop app, CLI, and API on macOS, Linux, and Windows. Support
 | **GitHub stars** | 46,000+ as of June 2026 |
 | **Pricing** | Free. Users pay their own LLM costs |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -179,7 +190,7 @@ Provider flexibility is the architectural commitment. Swap LLMs via config; work
 | CLI | Free |
 | API (self-host) | Free |
 
-*Goose itself is Apache-2.0 and free. Users pay the LLM provider directly. Verified 2026-06-12 via [GitHub](https://github.com/aaif-goose/goose) and the [official docs](https://block.github.io/goose/).*
+*Goose itself is Apache-2.0 and free. Users pay the LLM provider directly. Verified 2026-06-23 via [GitHub releases](https://github.com/aaif-goose/goose/releases), the [repository](https://github.com/aaif-goose/goose), and the [official docs](https://block.github.io/goose/).*
 
 ## Against the alternatives
 
@@ -206,7 +217,7 @@ Provider flexibility is the architectural commitment. Swap LLMs via config; work
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Goose documentation](https://block.github.io/goose/), the [aaif-goose/goose GitHub repository](https://github.com/aaif-goose/goose), and the [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Goose documentation](https://block.github.io/goose/), the [aaif-goose/goose GitHub repository](https://github.com/aaif-goose/goose), [Goose releases](https://github.com/aaif-goose/goose/releases), and the [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose).
 
 ## FAQ
 
@@ -228,6 +239,7 @@ Yes, natively and deeply. 70+ documented MCP extensions cover GitHub, Google Dri
 ## Sources
 
 - [Goose GitHub (aaif-goose/goose)](https://github.com/aaif-goose/goose): Apache-2.0 license, codebase, governance history
+- [Goose releases](https://github.com/aaif-goose/goose/releases): current release status
 - [Goose documentation](https://block.github.io/goose/): features, extensions, provider support
 - [Block open-source announcement](https://block.xyz/inside/block-open-source-introduces-codename-goose): original launch context
 - [Agentic AI Foundation](https://www.aaif.dev/): Linux Foundation project handling Goose governance since December 2025

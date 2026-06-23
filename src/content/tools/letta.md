@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open-source) · Letta Code Free · Pro $20/mo · Enterprise custom"
 status: active
 launched: 2023-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,16 +31,16 @@ facts:
     source: https://www.letta.com/
     source_label: Letta official site
     source_id: letta-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
   pricing_anchor:
-    value: "As of June 2026, letta.com/pricing routes buyers to Letta Code pricing. The hosted ladder is Free, Pro $20/mo (Letta Auto quota plus pay-as-you-go), and Enterprise custom. BYOK is supported on every tier."
+    value: "As of June 2026, letta.com/pricing routes buyers to Letta Code pricing. The hosted ladder is Free, Pro $20/mo (Letta Auto quota plus pay-as-you-go), and Enterprise custom. The API Platform remains usage-based, with LLM usage charged from underlying model token costs."
     source: https://docs.letta.com/letta-code/pricing
     source_label: Letta Code pricing
     source_id: letta-code-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-08'
@@ -49,7 +49,7 @@ facts:
     source: https://docs.letta.com/
     source_label: Letta documentation
     source_id: letta-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -58,7 +58,7 @@ facts:
     source: https://github.com/letta-ai/letta
     source_label: Letta GitHub repository
     source_id: letta-repository
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -67,13 +67,13 @@ facts:
     source: https://docs.letta.com/
     source_label: Letta documentation
     source_id: letta-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
 tags: [agent-framework, memory, stateful, memgpt, open-source, python, llm-agents, long-term-memory, rag, letta-code]
 seo_title: "Letta (formerly MemGPT): Features, Pricing & Review (June 2026)"
-meta_description: "Letta is the open-source stateful agent platform formerly known as MemGPT. Verified June 12, 2026: self-host free under Apache-2.0, or use Letta Code Free / Pro $20/mo / Enterprise with Letta Auto and BYOK."
+meta_description: "Letta is the open-source stateful agent platform formerly known as MemGPT. Verified June 23, 2026: self-host free under Apache-2.0, or use Letta Code Free / Pro $20/mo / Enterprise with Letta Auto and usage-based API billing."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers building agents that need long-term memory
@@ -93,6 +93,7 @@ price_history:
     source: "https://www.letta.com/pricing"
     source_label: "Letta pricing (legacy)"
     source_id: letta-pricing-legacy
+    verified_at: 2026-04-17
     note: "Prior multi-tier Cloud structure with premium/standard request quotas."
   - date: 2026-05-13
     plan: "Letta Code"
@@ -100,6 +101,7 @@ price_history:
     source: "https://docs.letta.com/letta-code/pricing"
     source_label: "Letta Code pricing"
     source_id: letta-code-pricing
+    verified_at: 2026-05-13
     note: "letta.com/pricing now 301-redirects to Letta Code pricing. Consolidated to three tiers. Pro adds Letta Auto quota (open-weights models, automatic routing) and pay-as-you-go overage; up to 20 stateful agents. BYOK is supported on every tier. Letta Auto Chat and Auto Fast variants exposed."
   - date: 2026-06-08
     plan: "Letta Code"
@@ -107,12 +109,21 @@ price_history:
     source: "https://docs.letta.com/letta-code/pricing"
     source_label: "Letta Code pricing"
     source_id: letta-code-pricing
+    verified_at: 2026-06-08
     note: "Re-verified the Free, Pro, and Enterprise ladder, Pro $20/month, up to 20 stateful agents, Letta Auto quota, pay-as-you-go overage, all-plan BYOK, and Personal Plans versus API Plan split."
+  - date: 2026-06-23
+    plan: "Letta Code and API Platform"
+    price: "Free / Pro $20/mo / Enterprise custom; API usage billed by underlying model token cost"
+    source: "https://docs.letta.com/guides/build-with-letta/pricing/"
+    source_label: "Letta API pricing"
+    source_id: letta-api-pricing
+    verified_at: 2026-06-23
+    note: "Rechecked Pro at $20/month, Letta Auto weekly/monthly quota, pay-as-you-go overage, up to 20 stateful agents, and usage-based API Platform billing. Letta's June 2026 positioning emphasizes Letta Code and Letta Code SDK as an open, model-agnostic runtime."
 ---
 
 # Letta
 
-Letta is the open-source stateful agent platform originally released as MemGPT at UC Berkeley. The core is Apache-2.0 licensed. As of June 2026, the hosted platform has consolidated around Letta Code, a memory-first coding CLI with **Letta Auto** model routing ([docs](https://docs.letta.com/letta-code/)). The legacy letta.com/pricing route now points buyers to Letta Code pricing.
+Letta is the open-source stateful agent platform originally released as MemGPT at UC Berkeley. The core is Apache-2.0 licensed. As of June 2026, the hosted platform has consolidated around Letta Code, a memory-first coding CLI with **Letta Auto** model routing ([docs](https://docs.letta.com/letta-code/)). The legacy letta.com/pricing route now points buyers to Letta Code pricing, while the Letta API Platform remains usage-based.
 
 The differentiator is typed memory blocks (persona, human context, archival) that persist across sessions and port between LLM providers.
 
@@ -136,13 +147,13 @@ The differentiator is typed memory blocks (persona, human context, archival) tha
 | **SDKs** | Python · TypeScript |
 | **REST API** | Yes, full agent lifecycle |
 | **Letta Code** | `npm install -g @letta-ai/letta-code` · memory-first coding CLI |
-| **Hosted tiers (June 2026)** | Free · Pro $20/mo · Enterprise (custom per-seat) |
+| **Hosted tiers (June 2026)** | Free · Pro $20/mo · Enterprise (custom per-seat), plus usage-based API Platform billing |
 | **Letta Auto** | Automatic model routing (open-weights + frontier). Variants: Auto Chat, Auto Fast |
 | **BYOK** | Supported on every tier (paid users can layer pay-as-you-go credits) |
 | **Pro tier limits** | Up to 20 stateful agents · Letta Auto quota · pay-as-you-go overage |
 | **Typical usage cost** | Vendor estimates $100-$200+/month for active coding workloads |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -150,7 +161,7 @@ A stateful agent runtime. Every agent owns typed memory blocks that it reads and
 
 Memory is the portable layer. Swap the underlying LLM from OpenAI to Anthropic and the agent keeps its history, persona, and learned facts. That portability is the product-level claim that sets Letta apart from LangGraph or CrewAI.
 
-Letta Code is the most interesting recent ship and now the front door for the hosted product. A Terminal-Bench top-ranked OSS harness, it puts a persisted agent behind a coding CLI so sessions accumulate context over days instead of starting cold. Letta Auto handles model routing (open-weights plus frontier), with Auto Chat and Auto Fast variants for non-coding and speed-optimized work.
+Letta Code is the most interesting recent ship and now the front door for the hosted product. A Terminal-Bench top-ranked OSS harness, it puts a persisted agent behind a coding CLI so sessions accumulate context over days instead of starting cold. Letta Auto handles model routing (open-weights plus frontier), with Auto Chat and Auto Fast variants for non-coding and speed-optimized work. Letta's June 2026 next-phase post frames Letta Code and the SDK as an open, model-agnostic runtime where teams own memory and can inspect LLM token I/O.
 
 ## When to pick Letta
 
@@ -176,9 +187,10 @@ Letta Code is the most interesting recent ship and now the front door for the ho
 | Open-source (self-host) | Free | Apache-2.0, BYO compute and API keys |
 | Letta Code Free | $0/mo | Limited agents, limited Letta Auto, BYOK only |
 | Letta Code Pro | $20/mo | Up to 20 stateful agents · Letta Auto quota + pay-as-you-go overage · BYOK |
+| Letta API Platform | Usage-based | LLM usage charged from underlying model token costs |
 | Enterprise | Custom | Managed per-seat for teams, private models, SAML/OIDC SSO, dedicated quotas |
 
-*Prices verified 2026-06-12 via [Letta Code pricing](https://docs.letta.com/letta-code/pricing). The legacy `letta.com/pricing` route now points buyers to this Letta Code pricing surface. Self-hosting is free; you still pay for LLM tokens through your provider. Vendor estimates active coding workloads can run $100-$200+/month when using paid Letta Auto on Pro.*
+*Prices verified 2026-06-23 via [Letta Code pricing](https://docs.letta.com/letta-code/pricing) and [Letta API pricing](https://docs.letta.com/guides/build-with-letta/pricing/). The legacy `letta.com/pricing` route now points buyers to this Letta Code pricing surface. Self-hosting is free; you still pay for LLM tokens through your provider. Vendor estimates active coding workloads can run $100-$200+/month when using paid Letta Auto on Pro.*
 
 ## Against the alternatives
 
@@ -206,10 +218,11 @@ Letta Code is the most interesting recent ship and now the front door for the ho
 
 - **2026-05-13:** Hosted pricing consolidated. `letta.com/pricing` now 301-redirects to [Letta Code pricing](https://docs.letta.com/letta-code/pricing). The new ladder is Free, Pro $20/mo, and Enterprise (managed per-seat). Pro includes Letta Auto quota plus pay-as-you-go overage and supports up to 20 stateful agents. BYOK is available on every tier. Letta Auto exposes Auto Chat and Auto Fast variants.
 - **2026-06-08:** Re-verified Letta Code pricing, Pro $20/month, Letta Auto quota/overage, BYOK on every plan, Constellation cloud features, remote-environment quickstart, and the Personal Plans versus API Plan split.
+- **2026-06-23:** Rechecked Letta Code and API Platform pricing. Pro remains $20/month with Letta Auto quota and pay-as-you-go overage, while API Platform billing is usage-based on the underlying model token costs. Letta's June positioning emphasizes Letta Code and the SDK as an open, model-agnostic runtime for long-lived agents.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Letta Code pricing](https://docs.letta.com/letta-code/pricing), [Letta Code docs](https://docs.letta.com/letta-code/), the [Letta Code quickstart](https://docs.letta.com/letta-code/quickstart), and the [letta-ai/letta GitHub repo](https://github.com/letta-ai/letta).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Letta Code pricing](https://docs.letta.com/letta-code/pricing), [Letta API pricing](https://docs.letta.com/guides/build-with-letta/pricing/), [Letta Code docs](https://docs.letta.com/letta-code/), the [Letta next-phase post](https://www.letta.com/blog/our-next-phase/), and the [letta-ai/letta GitHub repo](https://github.com/letta-ai/letta).
 
 ## FAQ
 
@@ -233,6 +246,8 @@ Yes. Memory lives outside the model. Switch from OpenAI to Anthropic or a local 
 - [Letta Code pricing](https://docs.letta.com/letta-code/pricing): Current hosted tiers, Letta Auto details, BYOK terms (letta.com/pricing now redirects here)
 - [Letta Code docs](https://docs.letta.com/letta-code/): CLI install and memory-first coding architecture
 - [Letta Code announcement](https://www.letta.com/blog/letta-code): Terminal-Bench results and positioning
+- [Letta API pricing](https://docs.letta.com/guides/build-with-letta/pricing/): usage-based API Platform billing and underlying model token cost note
+- [Letta next-phase post](https://www.letta.com/blog/our-next-phase/): June 2026 product positioning for Letta Code and the SDK
 - [letta-ai/letta GitHub](https://github.com/letta-ai/letta): Apache-2.0 source and release history
 - [Letta documentation](https://docs.letta.com/): Memory block architecture reference
 

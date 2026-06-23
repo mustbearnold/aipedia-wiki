@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$60/month web plans; team and API plans separate"
 status: active
 launched: 2023-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: medium
     next_review_at: '2026-12-08'
@@ -41,16 +41,16 @@ facts:
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: medium
     next_review_at: '2026-09-08'
   api_available:
-    value: "Leonardo's API docs say API access is separate from free or web app subscriptions; users purchase API credits, create API keys, and track API credit usage through API Access."
-    source: https://docs.leonardo.ai/docs/getting-started
-    source_label: Leonardo AI API docs
-    source_id: leonardo-docs
-    verified_at: '2026-06-12'
+    value: "Leonardo's API docs say API access is separate from free or web app subscriptions; API pricing is transitioning to pay-as-you-go, with users loading credit by manual top-ups or auto top-ups and existing subscriptions able to switch after cancellation."
+    source: https://docs.leonardo.ai/docs/pricing-and-plans-faq
+    source_label: Leonardo AI pricing and plans FAQ
+    source_id: leonardo-pricing-faq
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-08'
@@ -59,7 +59,7 @@ facts:
     source: https://leonardo.ai/
     source_label: Leonardo AI official site
     source_id: leonardo-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: medium
     next_review_at: '2026-12-08'
@@ -68,14 +68,14 @@ facts:
     source: https://leonardo.ai/pricing/
     source_label: Leonardo AI pricing
     source_id: leonardo-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: medium
     next_review_at: '2026-09-08'
 tags: [ai-image, image-generation, text-to-image, free-tier, beginner-friendly, leonardo, lucid-origin, phoenix]
 seo_title: 'Leonardo AI: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Leonardo AI offers 150 free Fast Tokens/day. Verified June 12, 2026: Essential is $12/mo, Premium $30/mo, Ultimate $60/mo, with team and API plans separate.
+  Leonardo AI offers 150 free Fast Tokens/day. Verified June 23, 2026: Essential is $12/mo, Premium $30/mo, Ultimate $60/mo, with team and API plans separate plus PAYG API migration and June 2026 model deprecation risks.
 author: aipedia.wiki Editorial
 best_for:
   - beginners evaluating AI image generation
@@ -98,6 +98,7 @@ price_history:
     source: "https://leonardo.ai/pricing"
     source_label: "Source"
     source_id: leonardo-pricing
+    verified_at: 2026-06-23
     note: "Lucid Origin model added as new flagship."
   - date: 2026-04-17
     plan: "Apprentice"
@@ -105,6 +106,7 @@ price_history:
     source: "https://leonardo.ai/pricing"
     source_label: "Source"
     source_id: leonardo-pricing
+    verified_at: 2026-06-23
     note: "Verified unchanged (annual billing)."
   - date: 2026-05-13
     plan: "Apprentice / Artisan / Maestro"
@@ -112,6 +114,7 @@ price_history:
     source: "https://leonardo.ai/pricing"
     source_label: "Source"
     source_id: leonardo-pricing
+    verified_at: 2026-06-23
     note: "Historical check from the previous Leonardo plan ladder. Superseded by the June 8, 2026 official Free / Essential / Premium / Ultimate public pricing refresh."
   - date: 2026-06-08
     plan: "Free / Essential / Premium / Ultimate"
@@ -119,7 +122,16 @@ price_history:
     source: "https://leonardo.ai/pricing"
     source_label: "Leonardo.Ai pricing"
     source_id: leonardo-pricing
+    verified_at: 2026-06-23
     note: "Official pricing now lists Free with 150 Fast Tokens/day, Essential with 8,500 Fast Tokens/month, Premium with 25,000 Fast Tokens/month, Ultimate with 60,000 Fast Tokens/month, plus separate team and API pay-as-you-go/custom plans."
+  - date: 2026-06-23
+    plan: "Free / Essential / Premium / Ultimate / API PAYG"
+    price: "$0 / $12 / $30 / $60 per month; API credit top-ups separate"
+    source: "https://leonardo.ai/pricing"
+    source_label: "Leonardo.Ai pricing"
+    source_id: leonardo-pricing
+    verified_at: 2026-06-23
+    note: "Web plan ladder unchanged; API docs now emphasize pay-as-you-go credit loading, and deprecation docs flag Motion 1.0 retirement plus Veo 3/Veo 3 Fast API retirement after June 29, 2026."
 ---
 
 # Leonardo AI
@@ -151,7 +163,7 @@ The free tier runs 150 Fast Tokens per day. That is still one of the easiest fre
 | **API access** | Separate API credits / pay-as-you-go / custom API plans |
 | **Ownership note** | Paid subscribers retain ownership of generated images; Free users receive a commercial-use license but Leonardo retains broader rights to use Free creations |
 
-Every data point above was verified on 2026-06-12. See Sources.
+Every data point above was verified on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -193,7 +205,7 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 | API Pay as you go | Starts with $5 API credit | Usage-based | API credits, up to 10 concurrent generations, no long commitment | Developers testing production workflows |
 | API Custom | Custom | Custom | Higher-volume workloads, custom concurrency, model-based discounts, dedicated support | Production API teams |
 
-*Prices verified 2026-06-12 against [leonardo.ai/pricing](https://leonardo.ai/pricing) and the Leonardo API quickstart. Token cost varies by model and settings. API access is separate from Free or web app subscriptions, so teams building product workflows should budget API credits directly rather than assuming a web plan covers production API use.*
+*Prices verified 2026-06-23 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the Leonardo API quickstart, and the pricing/plans FAQ. Token cost varies by model and settings. API access is separate from Free or web app subscriptions, so teams building product workflows should budget API credits directly rather than assuming a web plan covers production API use.*
 
 ## Against the alternatives
 
@@ -222,11 +234,12 @@ Subscription pricing via [leonardo.ai/pricing](https://leonardo.ai/pricing). Mon
 ## Recent changes
 
 - **2026-06-08:** Rebuilt pricing around Leonardo's current official Free, Essential, Premium, Ultimate, Team Starter/Growth, and API plan surfaces. Removed stale Apprentice / Artisan / Maestro buyer guidance.
+- **2026-06-23:** Reverified the web plan ladder and added the API PAYG migration warning plus June 2026 model retirement risk for Motion 1.0 and Veo 3/Veo 3 Fast API routes.
 - **2026-05-13:** Previous tier prices, model lineup, and free-tier allowance were re-verified against third-party reviews because automated pricing checks failed. Superseded by the June 8 official pricing refresh.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [leonardo.ai/pricing](https://leonardo.ai/pricing), the [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started), the [pricing and plans FAQ](https://docs.leonardo.ai/docs/pricing-and-plans-faq), [Leonardo deprecations](https://docs.leonardo.ai/docs/deprecations-changes), the [Lucid Origin announcement](https://leonardo.ai/lucid-origin/), and [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin).
 
 ## FAQ
 
@@ -246,12 +259,14 @@ Lucid Origin is the versatile generalist. Lucid Realism is purpose-built for cin
 Paid subscribers retain ownership of generated images under Leonardo's current FAQ. Free users receive a non-exclusive, royalty-free license to access creations for commercial use, but Leonardo can use, reproduce, modify, and distribute Free creations. Leonardo does not offer Adobe-style IP indemnification.
 
 **Does Leonardo have an API?**
-Yes, but API access is a separate API-credit path. Leonardo's API docs say API plans are distinct from free or web app subscriptions; API buyers purchase credits, create API keys, and monitor credit balance through API Access.
+Yes, but API access is a separate API-credit path. Leonardo's API docs say API pricing is moving to pay-as-you-go, with manual or automatic credit top-ups. API buyers should also watch model deprecation notices, including June 2026 retirement dates for Motion 1.0 and Veo 3/Veo 3 Fast API routes.
 
 ## Sources
 
 - [Leonardo.Ai pricing](https://leonardo.ai/pricing): current Free, Essential, Premium, Ultimate, team, API, token, queue, private-generation, and rights details
 - [Leonardo API quickstart](https://docs.leonardo.ai/docs/getting-started): API keys, API credit purchase, and API-vs-web-plan distinction
+- [Leonardo pricing and plans FAQ](https://docs.leonardo.ai/docs/pricing-and-plans-faq): API PAYG migration and credit top-up behavior
+- [Leonardo deprecations and changes](https://docs.leonardo.ai/docs/deprecations-changes): June 2026 Motion and Veo API retirement notices
 - [Lucid Origin announcement](https://leonardo.ai/lucid-origin/): flagship model release
 - [Lucid Origin help docs](https://intercom.help/leonardo-ai/en/articles/11890238-lucid-origin): model capabilities and positioning
 

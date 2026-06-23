@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free download; account required for AI usage"
 status: active
 launched: 2025
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: "Dia Browser: Features, Pricing & Review (June 2026)"
 meta_description: "Dia is The Browser Company's Atlassian-owned AI-native browser for contextual search, page-aware chat, and agentic browsing. Best for researchers and operators who want AI inside the browser, not a separate tab."
@@ -34,34 +34,34 @@ facts:
     source: "https://www.diabrowser.com"
     source_label: "Dia website"
     source_id: dia-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     confidence: high
   best_for:
     value: "Contextual research, tab-aware browsing, and AI-assisted web workflows"
     source: "https://www.diabrowser.com"
     source_label: "Dia website"
     source_id: dia-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     confidence: high
   best_paid_tier:
-    value: "Free download remains the public entry path; the public site does not expose a stable team or higher-volume pricing table as of 2026-06-12"
+    value: "Free download remains the public entry path; the public site does not expose a stable team or higher-volume pricing table as of 2026-06-23"
     source: "https://www.diabrowser.com"
     source_id: dia-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-07-02
     confidence: high
   coding_agent:
     value: "No dedicated coding agent"
     source: "https://aipedia.wiki/tools/dia/"
     source_id: dia-coding-agent
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     confidence: high
   enterprise_controls:
     value: "Dia is now part of Atlassian; the security page lists SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and contractual restrictions preventing partner AI providers from training on Dia user data."
     source: "https://www.diabrowser.com/security"
     source_label: "Dia security"
     source_id: dia-security
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
     next_review_at: 2026-08-13
@@ -81,9 +81,9 @@ quick_answer: >-
 
 # Dia
 
-Dia is an AI-native browser from The Browser Company, the team behind Arc and now part of Atlassian. As of 2026-06-12, the public site positions Dia as a browser that "works with you": it reads across tabs, can create Morning Briefs from calendar, inbox, and links, surfaces proactive suggestions, and can answer using context from GSuite, Slack, tabs, and connected work apps.
+Dia is an AI-native browser from The Browser Company, the team behind Arc and now part of Atlassian. As of 2026-06-23, the public site positions Dia as a browser that "works with you" across tabs, calendar, inbox, links, and connected apps. It can create Morning Briefs, surface proactive suggestions, turn scattered Slack, Notion, and Calendar context into Reports, and answer using context from GSuite, Slack, tabs, and work apps.
 
-It is currently available for Apple macOS 14 or later on M1 chips or later. No Windows or Linux build is advertised on the public site. The security page says Dia is Chromium-based, disables several Google and Chromium telemetry and sync integrations, includes native ad blocking, completed a SOC 2 Type II examination covering security, confidentiality, and privacy for calendar year 2025 (final report issued in 2026), supports SSO, MDM controls, and admin-managed profiles, and uses layered controls for prompt-injection risk. Partner AI providers are contractually restricted from retaining or using Dia user data to train their own models.
+It is currently available for Apple macOS 14 or later on M1 chips or later. No Windows or Linux build is advertised on the public site. The security page says Dia is Chromium-based, disables several Google and Chromium telemetry and sync integrations, includes native ad blocking, and completed a SOC 2 Type II examination for calendar year 2025. The same page lists SSO, MDM controls, admin-managed profiles, and layered prompt-injection controls. Partner AI providers are contractually restricted from retaining or using Dia user data to train their own models.
 
 ## System Verdict
 
@@ -102,6 +102,12 @@ It is currently available for Apple macOS 14 or later on M1 chips or later. No W
 | Availability | macOS 14+ with Apple Silicon |
 | Pricing | Free download; stable paid/team pricing table not public on the site |
 | Main competitors | [Perplexity Comet](/tools/comet/), ChatGPT browsing, [Perplexity](/tools/perplexity/) |
+
+## Pricing
+
+Dia's public site currently routes users to a free download and account-based AI use. It does not expose a stable self-serve team or usage-tier pricing table in the public page source checked on 2026-06-23.
+
+For buyers, the practical price test is adoption cost rather than seat math. Validate macOS fit, extension compatibility, connected-app permissions, and whether Dia saves enough context recovery time before treating it as a paid or company-wide browser lane.
 
 ## Where it fits
 
@@ -128,9 +134,9 @@ Before switching, test platform fit, extension compatibility, account boundaries
 
 ## Security and privacy notes
 
-Dia is unusually explicit about browser-agent risk. Its security page (verified 2026-06-12) says conversations, history, bookmarks, and files are encrypted and stored locally by default; Sync uses end-to-end encryption so servers cannot read it; AI providers are contractually restricted from retaining or training on Dia user data; content shared for improvement is unlinked from accounts and deleted after 30 days; and user data is never sold. SOC 2 Type II coverage extends to security, confidentiality, and privacy for calendar year 2025, with the report issued in 2026 and obtainable through trust.diabrowser.com.
+Dia is unusually explicit about browser-agent risk. Its security page (verified 2026-06-23) says conversations, history, bookmarks, and files are encrypted and stored locally by default. Sync uses end-to-end encryption so servers cannot read synced data. AI providers are contractually restricted from retaining or training on Dia user data. Content shared for improvement is unlinked from accounts and deleted after 30 days, and user data is never sold. SOC 2 Type II coverage extends to security, confidentiality, and privacy for calendar year 2025, with the report issued in 2026 and obtainable through trust.diabrowser.com.
 
-For prompt injection, Dia says the assistant will not automatically open or follow LLM-generated URLs, requires user approval before granting tab access or write actions, blocks insertion of data into third-party sites without consent, holds calendar events and sensitive actions in draft until the user confirms, restricts agentic-mode navigation to prevent cross-site attacks, and masks sensitive form fields from the agent. Dia acknowledges that prompt injections can still cause style shifts, introduce misinformation, or trigger unintended searches.
+For prompt injection, Dia says the assistant will not automatically open or follow LLM-generated URLs. It requires user approval before granting tab access or write actions, blocks insertion of data into third-party sites without consent, and keeps calendar events and sensitive actions in draft until the user confirms. It also restricts agentic-mode navigation to prevent cross-site attacks and masks sensitive form fields from the agent. Dia acknowledges that prompt injections can still cause style shifts, introduce misinformation, or trigger unintended searches.
 
 ## Best plan recommendation
 
@@ -140,9 +146,10 @@ For teams, the decision is slower. Test extension behavior, profile separation, 
 
 ## Recent changes
 
-- **Atlassian ownership surfaced (verified 2026-06-12).** Dia's security page now states that The Browser Company is part of Atlassian, shifting the enterprise read from indie AI browser to a likely Atlassian work-browser lane.
+- **Reports surfaced on the public site (verified 2026-06-23).** Dia now advertises Reports as a work-output feature that gathers context from Slack, Notion, Calendar, and related surfaces into shareable reports.
+- **Atlassian ownership surfaced (verified 2026-06-23).** Dia's security page now states that The Browser Company is part of Atlassian, shifting the enterprise read from indie AI browser to a likely Atlassian work-browser lane.
 - **Enterprise controls surfaced.** The security page lists SSO, MDM controls, admin-managed profiles, and customer support alongside SOC 2 Type II coverage.
-- **SOC 2 Type II finalized (reverified 2026-06-12).** The 2025 audit covers security, confidentiality, and privacy; the final report was issued in 2026 and is available via trust.diabrowser.com. That gives enterprise reviewers a primary-source posture document.
+- **SOC 2 Type II finalized (reverified 2026-06-23).** The 2025 audit covers security, confidentiality, and privacy; the final report was issued in 2026 and is available via trust.diabrowser.com. That gives enterprise reviewers a primary-source posture document.
 - **AI provider training restrictions surfaced.** Dia's security page now explicitly names Anthropic, OpenAI, Gemini, Azure, and AWS as partner providers contractually restricted from training on user data.
 - **Prompt-injection controls itemized.** The page enumerates specific behaviors: no auto-opening LLM-generated URLs, draft-only sensitive actions, restricted agentic navigation, and masked sensitive form fields. Useful posture detail for buyers comparing AI-native browsers.
 
@@ -157,7 +164,7 @@ For teams, the decision is slower. Test extension behavior, profile separation, 
 
 ## Methodology
 
-Last verified 2026-06-12 against the Dia website and security page. Scoring emphasizes browser utility, AI workflow value, moat (work-context surface), and longevity.
+Last verified 2026-06-23 against the Dia website and security page, including the current Reports, Morning Brief, Live Work, privacy, SSO, MDM, and prompt-injection language. Scoring emphasizes browser utility, AI workflow value, moat (work-context surface), and longevity.
 
 ## Sources
 

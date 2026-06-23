@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: '$59-$69/month (Business: custom)'
 status: active
 launched: 2021-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: 'Jasper: Features, Pricing & Review (June 2026)'
 meta_description: >-
@@ -37,8 +37,8 @@ facts:
     source: "https://www.jasper.ai/platform"
     source_label: "Jasper platform"
     source_id: jasper-platform
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-23
+    next_review_at: 2026-07-23
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -46,8 +46,8 @@ facts:
     source: "https://www.jasper.ai/pricing"
     source_label: "Jasper pricing"
     source_id: jasper-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-23
+    next_review_at: 2026-07-23
     volatility: high
     confidence: high
   usage_credits:
@@ -55,8 +55,8 @@ facts:
     source: "https://help.jasper.ai/hc/en-us/articles/46644376016923-Credits-Based-Pricing"
     source_label: "Jasper credits-based pricing"
     source_id: jasper-credits-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-23
+    next_review_at: 2026-07-23
     volatility: high
     confidence: high
   best_for:
@@ -64,8 +64,8 @@ facts:
     source: "https://www.jasper.ai/platform"
     source_label: "Jasper platform"
     source_id: jasper-platform
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-23
+    next_review_at: 2026-07-23
     volatility: medium
     confidence: high
   watch_out_for:
@@ -73,8 +73,8 @@ facts:
     source: "https://help.jasper.ai/hc/en-us/articles/46644376016923-Credits-Based-Pricing"
     source_label: "Jasper credits-based pricing"
     source_id: jasper-credits-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-08-13
+    verified_at: 2026-06-23
+    next_review_at: 2026-07-23
     volatility: high
     confidence: medium
 tags: [marketing, copywriting, brand-voice, enterprise, content-creation, campaign-management, team-collaboration]
@@ -91,13 +91,21 @@ not_best_for:
 quick_answer: >-
   Jasper is the enterprise marketing platform for brand-consistent content. Pick it for Jasper IQ context, Brand Voice enforcement, campaign workflows, agents, Grid, AI Studio custom apps, and API/MCP workflows. Skip it if one ChatGPT or Claude seat covers the same drafting need.
 price_history:
+  - date: 2026-06-23
+    plan: "Pro and Business"
+    price: "$59/mo annual or $69/mo monthly for Pro; Business custom"
+    source: "https://www.jasper.ai/pricing"
+    source_label: "Jasper pricing"
+    source_id: jasper-pricing
+    verified_at: 2026-06-23
+    note: "Official pricing page still lists Pro at $59/month billed yearly or $69/month billed monthly, a 7-day Pro trial, and custom Business plans with a 12-month commitment."
   - date: 2026-05-10
     plan: "Pro"
     price: "$59/mo"
     source: "https://www.jasper.ai/pricing"
     source_label: "Jasper pricing"
     source_id: jasper-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-23
     note: "Annual billing. Monthly rate $69. Current public pricing page presents Pro and Business; Creator is not visible."
   - date: 2026-05-13
     plan: "Pro"
@@ -105,7 +113,7 @@ price_history:
     source: "https://www.jasper.ai/pricing"
     source_label: "Jasper pricing"
     source_id: jasper-pricing
-    verified_at: 2026-05-13
+    verified_at: 2026-06-23
     note: "Re-verified, unchanged. Pro $59 annual / $69 monthly; Business is custom pricing."
   - date: 2026-06-03
     plan: "Pro and Business"
@@ -113,7 +121,7 @@ price_history:
     source: "https://www.jasper.ai/pricing"
     source_label: "Jasper pricing"
     source_id: jasper-pricing
-    verified_at: 2026-06-03
+    verified_at: 2026-06-23
     note: "Re-verified Pro monthly/annual rates, 7-day trial, Business custom features, and Jasper's credit-metered premium actions for Grid, API/MCP, and advanced agents."
 ---
 
@@ -145,7 +153,7 @@ Targets marketing teams that need brand-consistent output at scale. Solo users a
 | **Credits** | Premium actions such as Grid rows, API/MCP usage, and advanced tools can consume workspace credits |
 | **Free trial** | 7 days on Pro · no permanent free tier |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -183,7 +191,7 @@ Subscription pricing via [jasper.ai/pricing](https://www.jasper.ai/pricing):
 | Pro | $59 | $69 | Solo marketers or small teams testing Jasper | Essential agents, Canvas, Brand Voice, knowledge assets, audiences, browser extension, 90+ apps, and Jasper Chat |
 | Business | Custom | Custom | Marketing departments and agencies | Advanced agents, Jasper Grid, no-code AI App Builder/custom agents, unlimited IQ customization, API/MCP access, admin controls, SSO, credits, and dedicated support |
 
-*Prices verified 2026-06-12 via [jasper.ai/pricing](https://www.jasper.ai/pricing). Annual billing saves roughly 20% on Pro. Jasper says most people start with a 7-day free trial of Pro. Jasper Help says premium actions such as Grid rows, API/MCP usage, and advanced tools can consume credits; Business workspaces receive included credits and can manage overage and per-user limits.*
+*Prices verified 2026-06-23 via [jasper.ai/pricing](https://www.jasper.ai/pricing). Annual billing saves roughly 20% on Pro. Jasper says most people start with a 7-day free trial of Pro. Jasper Help says premium actions such as Grid rows, API/MCP usage, and advanced tools can consume credits; Business workspaces receive included credits and can manage overage and per-user limits.*
 
 ## Against the alternatives
 
@@ -211,7 +219,7 @@ Subscription pricing via [jasper.ai/pricing](https://www.jasper.ai/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [jasper.ai/pricing](https://www.jasper.ai/pricing), the [Jasper platform page](https://www.jasper.ai/platform), and [Jasper credits-based pricing](https://help.jasper.ai/hc/en-us/articles/46644376016923-Credits-Based-Pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [jasper.ai/pricing](https://www.jasper.ai/pricing), the [Jasper platform page](https://www.jasper.ai/platform), and [Jasper credits-based pricing](https://help.jasper.ai/hc/en-us/articles/46644376016923-Credits-Based-Pricing).
 
 ## FAQ
 

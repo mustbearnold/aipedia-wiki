@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $50-$99/mo cloud"
 status: active
 launched: 2023-06
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://anythingllm.com/
     source_label: AnythingLLM official site
     source_id: anythingllm-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://anythingllm.com/pricing
     source_label: AnythingLLM hosted cloud pricing
     source_id: anythingllm-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://github.com/Mintplex-Labs/anything-llm
     source_label: AnythingLLM GitHub repository
     source_id: anythingllm-repository
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -59,7 +59,7 @@ facts:
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -68,7 +68,7 @@ facts:
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -88,12 +88,21 @@ not_best_for:
 quick_answer: >-
   AnythingLLM is an open-source MIT-licensed desktop, Docker, cloud, and mobile-connected app for private document chat, RAG, agents, Agent Flows, MCP tools, Meeting Assistant, and multi-user workspaces. Free self-hosted, or cloud tiers at $50/mo Basic and $99/mo Pro. Pick it for privacy-first or self-managed AI workspaces. Skip it for casual single-PDF chat where ChatPDF or NotebookLM is simpler.
 price_history:
+  - date: 2026-06-23
+    plan: "Cloud Basic / Pro / Enterprise"
+    price: "$50 / $99 per mo / Custom"
+    source: "https://anythingllm.com/cloud"
+    source_label: "AnythingLLM cloud pricing"
+    source_id: anythingllm-pricing
+    verified_at: 2026-06-23
+    note: "Cloud pricing remains unchanged. GitHub releases still show v1.14.1 as the current desktop release, so the buyer story remains private RAG, agents, MCP, Agent Flows, mobile sync, and the v1.14.1 Meeting Assistant overhaul rather than a plan reshuffle."
   - date: 2026-05-13
     plan: "Cloud Basic / Pro"
     price: "$50 / $99 per mo"
     source: "https://anythingllm.com/pricing"
     source_label: "Source"
     source_id: anythingllm-pricing
+    verified_at: 2026-05-13
     note: "Cloud tiers verified. Basic ($50/mo) is for individuals or teams under 5 users with under 100 documents. Pro ($99/mo) adds a 72-hour support SLA. Enterprise is custom (on-prem option)."
   - date: 2026-06-01
     plan: "Cloud Basic / Pro"
@@ -101,6 +110,7 @@ price_history:
     source: "https://anythingllm.com/cloud"
     source_label: "AnythingLLM cloud pricing"
     source_id: anythingllm-pricing
+    verified_at: 2026-06-01
     note: "Cloud page still exposes Basic at $50/month, Pro at $99/month, and Enterprise custom. GitHub releases page shows v1.13.0 as the current release."
   - date: 2026-06-18
     plan: "Cloud Basic / Pro / Enterprise"
@@ -108,6 +118,7 @@ price_history:
     source: "https://anythingllm.com/cloud"
     source_label: "AnythingLLM cloud pricing"
     source_id: anythingllm-pricing
+    verified_at: 2026-06-18
     note: "Pricing unchanged, but current docs and GitHub releases now show v1.14.1, Android mobile availability, Agent Flows, MCP compatibility, and Meeting Assistant overhaul as the more important refresh story."
 ---
 
@@ -170,7 +181,7 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 | Cloud Pro | $99/mo | Private instance, RAG and agents, 72-hour support SLA. Startups and larger teams. |
 | Enterprise | Custom | On-premise install, custom SLA, custom domain, custom integration. Large companies. |
 
-Prices verified 2026-06-12 via [anythingllm.com/cloud](https://anythingllm.com/cloud).
+Prices verified 2026-06-23 via [anythingllm.com/cloud](https://anythingllm.com/cloud).
 
 ## Failure modes
 
@@ -195,7 +206,7 @@ Prices verified 2026-06-12 via [anythingllm.com/cloud](https://anythingllm.com/c
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-18 against [anythingllm.com/cloud](https://anythingllm.com/cloud), the [AnythingLLM docs](https://docs.anythingllm.com/), [v1.14.1 release notes](https://docs.anythingllm.com/changelog/v1.14.1), [v1.14.0 release notes](https://docs.anythingllm.com/changelog/v1.14.0), [MCP compatibility docs](https://docs.anythingllm.com/mcp-compatibility/overview), and the [GitHub releases page](https://github.com/Mintplex-Labs/anything-llm/releases).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [anythingllm.com/cloud](https://anythingllm.com/cloud), the [AnythingLLM docs](https://docs.anythingllm.com/), [v1.14.1 release notes](https://docs.anythingllm.com/changelog/v1.14.1), [v1.14.0 release notes](https://docs.anythingllm.com/changelog/v1.14.0), [MCP compatibility docs](https://docs.anythingllm.com/mcp-compatibility/overview), and the [GitHub releases page](https://github.com/Mintplex-Labs/anything-llm/releases).
 
 ## FAQ
 

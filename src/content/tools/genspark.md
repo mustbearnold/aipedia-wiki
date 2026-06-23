@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$249.99/month"
 status: active
 launched: 2024-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,17 +32,16 @@ facts:
     source: https://www.genspark.ai/
     source_label: Genspark official site
     source_id: genspark-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
   pricing_anchor:
-    value: Genspark's public membership page lists Plus at $24.99/mo with 10,000 monthly credits and Pro at $249.99/mo with
-      125,000 monthly credits; verify account-level credit burn and any guarded pricing page before buying.
-    source: https://www.genspark.ai/membership-benefits-lp
-    source_label: Genspark membership benefits
+    value: Genspark's public membership/help surfaces list Plus and Pro credit tiers starting at 10,000 and 125,000 monthly credits, with Plus/Pro public pricing still centered on $24.99/mo and $249.99/mo; verify account-level credit burn and checkout-visible annual discounts before buying.
+    source: https://www.genspark.ai/helpcenter/membership-plans
+    source_label: Genspark membership plans
     source_id: genspark-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -52,7 +51,7 @@ facts:
     source: https://www.genspark.ai/membership-benefits-lp
     source_label: Genspark membership benefits
     source_id: genspark-agents
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -62,7 +61,7 @@ facts:
     source: https://www.genspark.ai/membership-benefits-lp
     source_label: Genspark membership benefits
     source_id: genspark-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -72,7 +71,7 @@ facts:
     source: https://www.genspark.ai/agents
     source_label: Genspark Agents
     source_id: genspark-agents
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -98,6 +97,7 @@ price_history:
     source: "https://www.genspark.ai/pricing"
     source_label: "Source"
     source_id: genspark-pricing
+    verified_at: 2026-06-23
     note: "Verified current from public membership page; pricing page may be guarded for external fetches."
   - date: 2026-04-17
     plan: "Pro"
@@ -105,6 +105,7 @@ price_history:
     source: "https://www.genspark.ai/pricing"
     source_label: "Source"
     source_id: genspark-pricing
+    verified_at: 2026-06-23
     note: "Verified current from public membership page; pricing page may be guarded for external fetches."
   - date: 2026-06-02
     plan: "All tiers"
@@ -112,7 +113,16 @@ price_history:
     source: "https://www.genspark.ai/pricing"
     source_label: "Source"
     source_id: genspark-pricing
+    verified_at: 2026-06-23
     note: "Re-verified June 2, 2026. Public membership page confirms Plus $24.99/mo or $239.99/year with 10,000 credits and 50 GB AI Drive storage; Pro $249.99/mo or $2,399.99/year with 125,000 credits and 1 TB storage. Account-level free credits and task burn still need live verification."
+  - date: 2026-06-23
+    plan: "Plus / Pro"
+    price: "$24.99/mo Plus; $249.99/mo Pro public anchors, with annual discounts visible in buyer-facing pricing coverage"
+    source: "https://www.genspark.ai/helpcenter/membership-plans"
+    source_label: "Genspark membership plans"
+    source_id: genspark-pricing
+    verified_at: 2026-06-23
+    note: "Genspark help-center copy confirms Plus credit tiers starting at 10,000 credits/month and Pro starting at 125,000 credits/month; checkout remains the source of truth for annual discounts and credit burn."
 ---
 
 # Genspark
@@ -144,7 +154,7 @@ Output is a finished artifact, not a list of links.
 | **API** | Limited. Enterprise access available on request, no self-serve public API |
 | **Storage** | Plus includes 50 GB AI Drive; Pro includes 1 TB AI Drive |
 
-Every data point above was re-verified against vendor and partner tracker sources on 2026-06-12. See Sources.
+Every data point above was re-verified against vendor and partner tracker sources on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -180,7 +190,7 @@ Subscription pricing via [genspark.ai/pricing](https://www.genspark.ai/pricing).
 | Plus | $24.99 monthly / $239.99 yearly | 10,000/mo | Full workspace, 50 GB AI Drive, commercial license | Included | **Most individuals land here** |
 | Pro | $249.99 monthly / $2,399.99 yearly | 125,000/mo | Plus features, 1 TB AI Drive, beta access, much higher allowance | Higher volume | Studios, teams, high-volume operators |
 
-*Prices re-verified 2026-06-12 via [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) and the guarded public pricing surface. Annual billing offers a discount. Credit costs per task vary by sub-agent; slide decks, media, code, and phone calls can burn more than text research.*
+*Prices re-verified 2026-06-23 via [Genspark membership plans](https://www.genspark.ai/helpcenter/membership-plans), the public membership-benefits surface, and the guarded pricing surface. Annual billing can reduce the effective monthly price. Credit costs per task vary by sub-agent; slide decks, media, code, and phone calls can burn more than text research.*
 
 ## Against the alternatives
 
@@ -207,7 +217,7 @@ Subscription pricing via [genspark.ai/pricing](https://www.genspark.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp), [Genspark pricing](https://www.genspark.ai/pricing), [Genspark docs](https://docs.genspark.ai), and the [Genspark blog](https://www.genspark.ai/blog).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [Genspark membership plans](https://www.genspark.ai/helpcenter/membership-plans), [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp), [Genspark pricing](https://www.genspark.ai/pricing), [Genspark docs](https://docs.genspark.ai), and the [Genspark blog](https://www.genspark.ai/blog).
 
 ## FAQ
 
@@ -235,6 +245,7 @@ Eric Jing and Kay Zhu, both former Baidu search leadership. The company raised f
 ## Sources
 
 - [Genspark Official Site](https://www.genspark.ai): product overview, Super Agent, specialist agents
+- [Genspark Membership Plans](https://www.genspark.ai/helpcenter/membership-plans): Plus/Pro credit tiers and plan benefits
 - [Genspark Membership Benefits](https://www.genspark.ai/membership-benefits-lp): Plus/Pro pricing, credits, storage, and workspace positioning
 - [Genspark Pricing](https://www.genspark.ai/pricing): guarded plan surface to verify in account
 - [Genspark Docs](https://docs.genspark.ai): feature documentation and API details

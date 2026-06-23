@@ -13,8 +13,8 @@ pricing_model: open-source
 price_range: Free self-host / $5 per active flow (cloud)
 status: active
 launched: 2022-06
-last_updated: 2026-06-21
-last_verified: 2026-06-21
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -37,7 +37,7 @@ facts:
     source: https://github.com/activepieces/activepieces
     source_label: Activepieces GitHub repository
     source_id: activepieces-repository
-    verified_at: '2026-06-21'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-21'
@@ -47,7 +47,7 @@ facts:
     source: https://www.activepieces.com/pricing
     source_label: Activepieces pricing
     source_id: activepieces-pricing
-    verified_at: '2026-06-21'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-07-21'
@@ -57,7 +57,7 @@ facts:
     source: https://github.com/activepieces/activepieces
     source_label: Activepieces GitHub repository
     source_id: activepieces-repository
-    verified_at: '2026-06-21'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-21'
@@ -66,7 +66,7 @@ facts:
     source: https://www.activepieces.com/docs
     source_label: Activepieces docs
     source_id: activepieces-docs
-    verified_at: '2026-06-21'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-21'
@@ -76,7 +76,7 @@ facts:
     source: https://www.activepieces.com/pricing
     source_label: Activepieces pricing
     source_id: activepieces-pricing
-    verified_at: '2026-06-21'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-07-21'
@@ -86,7 +86,7 @@ facts:
     source: https://www.activepieces.com/docs
     source_label: Activepieces docs
     source_id: activepieces-docs
-    verified_at: '2026-06-21'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-21'
@@ -95,7 +95,7 @@ seo_title: 'Activepieces Review: Open-Source Zapier Alternative (June 2026)'
 meta_description: >-
   Activepieces is an MIT-licensed no-code automation platform with AI agents and
   MCP support. Free to self-host; cloud Standard includes 10 free active flows,
-  then $5/flow/month. Verified June 21, 2026.
+  then $5/flow/month. Verified June 23, 2026.
 author: aipedia.wiki Editorial
 best_for:
   - teams leaving Zapier on cost
@@ -107,7 +107,7 @@ not_best_for:
   - workflows needing 1000+ third-party connectors
   - heavy enterprise SSO/audit requirements without an annual contract
 quick_answer: >-
-  Activepieces is an MIT-licensed Zapier alternative. Self-host free with unlimited runs, or use cloud Standard (10 flows free, then $5 per active flow per month). The June 21, 2026 check found 754 catalog pieces, 754 MCP listings, unlimited MCP servers on Standard, and active June releases through 0.85.4. Pick it for cost, privacy, and MCP-heavy workflow control; skip if a required connector or self-host operation plan is missing.
+  Activepieces is an MIT-licensed Zapier alternative. Self-host free with unlimited runs, or use cloud Standard (10 flows free, then $5 per active flow per month). The June 23, 2026 check found 754 catalog pieces, 754 MCP listings, unlimited MCP servers on Standard, and active June releases through 0.85.4. Pick it for cost, privacy, and MCP-heavy workflow control; skip if a required connector or self-host operation plan is missing.
 price_history:
   - date: 2026-02-01
     plan: "Standard"
@@ -125,19 +125,19 @@ price_history:
     source_id: activepieces-pricing
     verified_at: 2026-04-17
     note: "Verified unchanged. MIT license, unlimited runs."
-  - date: 2026-06-21
+  - date: 2026-06-23
     plan: "Standard"
     price: "10 active flows free, then $5/active flow/mo"
     source: "https://www.activepieces.com/pricing"
     source_label: "Source"
     source_id: activepieces-pricing
-    verified_at: 2026-06-21
-    note: "Pricing page lists unlimited runs, AI agents, unlimited MCP servers, unlimited tables, and community support; pieces and MCP pages both showed 754 listings."
+    verified_at: 2026-06-23
+    note: "June 23 recheck: pricing page still lists unlimited runs, AI agents, unlimited MCP servers, unlimited tables, and community support; pieces and MCP pages still showed 754 listings."
 ---
 
 # Activepieces
 
-Open-source no-code automation platform from Activepieces Inc. Positioned as a [Zapier](/tools/zapier/) alternative, with the Community Edition core under MIT license on [GitHub](https://github.com/activepieces/activepieces). Activepieces now markets MCP as a first-class control surface: the pricing page includes unlimited MCP servers, the MCP page showed 754 MCPs on June 21, 2026, and the MCP tools docs expose flow reading, validation, building, branching, table, run, and setup-guide actions for AI agents.
+Open-source no-code automation platform from Activepieces Inc. Positioned as a [Zapier](/tools/zapier/) alternative, with the Community Edition core under MIT license on [GitHub](https://github.com/activepieces/activepieces). Activepieces now markets MCP as a first-class control surface: the pricing page includes unlimited MCP servers, the MCP page showed 754 MCPs on June 23, 2026, and the MCP tools docs expose flow reading, validation, building, branching, table, run, and setup-guide actions for AI agents.
 
 Two deployment paths: self-host free on your own infrastructure, or use the cloud Standard plan (10 flows free, then $5 per active flow per month).
 
@@ -157,14 +157,14 @@ Two deployment paths: self-host free on your own infrastructure, or use the clou
 |---|---|
 | **License** | Community Edition core is MIT; enterprise and cloud-edition features use a commercial license |
 | **Cloud Standard** | 10 active flows free, then $5 per active flow per month |
-| **Connectors ("pieces")** | Live catalog showed 754 pieces on 2026-06-21; site navigation says 700+ integrations |
-| **MCP servers** | Pricing includes unlimited MCP servers; the public MCP page showed 754 MCP listings on 2026-06-21 |
+| **Connectors ("pieces")** | Live catalog showed 754 pieces on 2026-06-23; site navigation says 700+ integrations |
+| **MCP servers** | Pricing includes unlimited MCP servers; the public MCP page showed 754 MCP listings on 2026-06-23 |
 | **AI actions** | Native pieces and platform AI routes include OpenAI, Anthropic Claude, Google Gemini, OpenRouter, Mistral AI, vector stores, and agent workflows |
 | **Self-host stack** | Docker fastest path with PGLite; Docker Compose with PostgreSQL and Redis |
 | **Code steps** | JavaScript (Node-based) |
 | **Enterprise deploy** | Ultimate annual contract (SSO, audit logs, custom RBAC, Git sync, piece access controls, dedicated support) |
 
-Every data point above was verified against vendor documentation on 2026-06-21. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What changed since the last refresh
 
@@ -212,7 +212,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 | Cloud Ultimate | Custom annual contract | SSO, audit logs, custom RBAC, piece access controls, global connections, Git sync, dedicated support |
 | Embed | From $30,000/yr | Embedded builder and agents, JS SDK, custom templates, white-label |
 
-*Prices verified 2026-06-21 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing is currently per active flow on Standard; the current GitHub releases page showed 0.85.4 shipping on June 17, 2026.*
+*Prices verified 2026-06-23 via [activepieces.com/pricing](https://www.activepieces.com/pricing). Pricing is currently per active flow on Standard; the current GitHub releases page showed 0.85.4 shipping on June 17, 2026.*
 
 ## Against the alternatives
 
@@ -238,7 +238,7 @@ Pricing via [activepieces.com/pricing](https://www.activepieces.com/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-21 against [activepieces.com/pricing](https://www.activepieces.com/pricing), the [Activepieces GitHub repository](https://github.com/activepieces/activepieces), the [Activepieces pieces catalog](https://www.activepieces.com/pieces), the MCP page, MCP tools docs, install docs, and the current releases page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [activepieces.com/pricing](https://www.activepieces.com/pricing), the [Activepieces GitHub repository](https://github.com/activepieces/activepieces), the [Activepieces pieces catalog](https://www.activepieces.com/pieces), the MCP page, MCP tools docs, install docs, and the current releases page.
 
 ## FAQ
 
@@ -249,7 +249,7 @@ The Community Edition core is MIT-licensed and self-hostable. The operator pays 
 Cloud Standard is free for the first 10 active flows, then $5 per active flow per month. Runs are unlimited. This replaces the earlier per-task model.
 
 **Does Activepieces support MCP?**
-Yes, but do not read it as "every catalog piece is guaranteed." On June 21, 2026, the pricing page included unlimited MCP servers, the MCP page showed 754 MCP listings, and the docs listed MCP tools for flow discovery, editing, validation, testing, and publishing.
+Yes, but do not read it as "every catalog piece is guaranteed." On June 23, 2026, the pricing page included unlimited MCP servers, the MCP page showed 754 MCP listings, and the docs listed MCP tools for flow discovery, editing, validation, testing, and publishing.
 
 **Activepieces vs Zapier in 2026?**
 Activepieces wins on cost, self-host option, and MCP-driven workflow control. Zapier wins when connector breadth and hands-off SaaS reliability matter more than infrastructure control. See [Activepieces vs Zapier](/compare/activepieces-vs-zapier/) for the full buyer fork.
@@ -259,12 +259,12 @@ OpenAI, Anthropic Claude, Google Gemini, OpenRouter, Mistral AI, vector-store, a
 
 ## Sources
 
-- [Activepieces pricing](https://www.activepieces.com/pricing): plan structure, per-flow cost (verified 2026-06-21)
-- [Activepieces GitHub](https://github.com/activepieces/activepieces): MIT license, codebase, MCP positioning (verified 2026-06-21)
-- [Activepieces self-hosting docs](https://www.activepieces.com/docs/install/overview): Docker Compose, Postgres, Redis setup (verified 2026-06-21)
-- [Activepieces MCP page](https://www.activepieces.com/mcp): public MCP count and setup flow (verified 2026-06-21)
-- [Activepieces MCP tools docs](https://www.activepieces.com/docs/mcp/tools): flow discovery, editing, validation, testing, and table tools exposed through MCP (verified 2026-06-21)
-- [Activepieces pieces catalog](https://www.activepieces.com/pieces): live piece count and integration categories (verified 2026-06-21)
+- [Activepieces pricing](https://www.activepieces.com/pricing): plan structure, per-flow cost (verified 2026-06-23)
+- [Activepieces GitHub](https://github.com/activepieces/activepieces): MIT license, codebase, MCP positioning (verified 2026-06-23)
+- [Activepieces self-hosting docs](https://www.activepieces.com/docs/install/overview): Docker Compose, Postgres, Redis setup (verified 2026-06-23)
+- [Activepieces MCP page](https://www.activepieces.com/mcp): public MCP count and setup flow (verified 2026-06-23)
+- [Activepieces MCP tools docs](https://www.activepieces.com/docs/mcp/tools): flow discovery, editing, validation, testing, and table tools exposed through MCP (verified 2026-06-23)
+- [Activepieces pieces catalog](https://www.activepieces.com/pieces): live piece count and integration categories (verified 2026-06-23)
 - [Pricing-model blog post](https://www.activepieces.com/blog/automation-pricing): 2026 shift from per-task to per-flow billing
 
 ## Related

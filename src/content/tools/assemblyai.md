@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Up to 185 hrs free pre-recorded + 333 hrs streaming; STT from $0.15-$0.21/hr; Voice Agent API $4.50/hr
 status: active
 launched: 2017
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,16 +32,16 @@ facts:
     source: https://www.assemblyai.com/
     source_label: AssemblyAI official site
     source_id: assemblyai-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
   pricing_anchor:
-    value: AssemblyAI pricing on 2026-06-18 lists Universal-3 Pro pre-recorded at $0.21/hr, Universal-2 at $0.15/hr, Universal-3 Pro Streaming at $0.45/hr, Universal-Streaming and Universal-Streaming Multilingual at $0.15/hr, and Voice Agent API at $4.50/hr. The free tier page also says new accounts can start without a credit card with up to 185 hours of pre-recorded transcription and up to 333 hours of streaming transcription.
+    value: AssemblyAI pricing on 2026-06-23 lists Universal-3 Pro pre-recorded at $0.21/hr, Universal-2 at $0.15/hr, Universal-3 Pro Streaming at $0.45/hr, Universal-Streaming and Universal-Streaming Multilingual at $0.15/hr, and Voice Agent API at $4.50/hr. The free tier page also says new accounts can start without a credit card with up to 185 hours of pre-recorded transcription and up to 333 hours of streaming transcription.
     source: https://www.assemblyai.com/pricing/
     source_label: AssemblyAI pricing
     source_id: assemblyai-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
@@ -50,7 +50,7 @@ facts:
     source: https://www.assemblyai.com/docs/
     source_label: AssemblyAI docs
     source_id: assemblyai-docs
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -59,7 +59,7 @@ facts:
     source: https://www.assemblyai.com/docs/getting-started/models
     source_label: AssemblyAI models docs
     source_id: assemblyai-models
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -68,7 +68,7 @@ facts:
     source: https://www.assemblyai.com/docs/pre-recorded-audio/universal-3-5-pro
     source_label: AssemblyAI Universal 3.5 Pro docs
     source_id: assemblyai-universal-35-pro
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-07-18'
@@ -77,7 +77,7 @@ facts:
     source: https://www.assemblyai.com/products/voice-agent-api
     source_label: AssemblyAI Voice Agent API
     source_id: assemblyai-voice-agent-api
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-07-18'
@@ -86,7 +86,7 @@ facts:
     source: https://www.assemblyai.com/docs/llm-gateway/overview
     source_label: AssemblyAI LLM Gateway docs
     source_id: assemblyai-llm-gateway
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-07-18'
@@ -95,18 +95,27 @@ facts:
     source: https://www.assemblyai.com/docs/billing-and-pricing
     source_label: AssemblyAI billing and pricing docs
     source_id: assemblyai-billing-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-04'
 tags: [speech-to-text, streaming-transcription, voice-ai, audio-intelligence, api, diarization, transcription]
 price_history:
+  - date: 2026-06-23
+    plan: "Universal STT / Streaming / Voice Agent API"
+    price: "$0.15-$0.45/hr STT; $4.50/hr Voice Agent API"
+    source: "https://www.assemblyai.com/pricing/"
+    source_label: "AssemblyAI pricing"
+    source_id: assemblyai-pricing
+    verified_at: 2026-06-23
+    note: "Pricing still lists Universal-3 Pro pre-recorded at $0.21/hr, Universal-2 at $0.15/hr, Universal-3 Pro Streaming at $0.45/hr, Universal-Streaming and Universal-Streaming Multilingual at $0.15/hr, and Voice Agent API at $4.50/hr."
   - date: 2026-05-05
     plan: "Free credits"
     price: "$50 free credits"
     source: "https://www.assemblyai.com/pricing/"
     source_label: "AssemblyAI pricing"
     source_id: assemblyai-pricing
+    verified_at: 2026-05-05
     note: "Previous free-trial offer for new accounts"
   - date: 2026-05-13
     plan: "Free tier"
@@ -114,6 +123,7 @@ price_history:
     source: "https://www.assemblyai.com/pricing/"
     source_label: "AssemblyAI pricing"
     source_id: assemblyai-pricing
+    verified_at: 2026-05-13
     note: "Materially expanded free tier replaces the $50 credit grant; no card required. Medical Mode add-on ($0.15/hr) and Whisper-Streaming ($0.30/hr) added to lineup."
   - date: 2026-06-01
     plan: "Voice Agent API"
@@ -121,6 +131,7 @@ price_history:
     source: "https://www.assemblyai.com/products/voice-agent-api"
     source_label: "AssemblyAI Voice Agent API"
     source_id: assemblyai-voice-agent-api
+    verified_at: 2026-06-01
     note: "Voice Agent API remains flat-rate at $4.50/hr and is positioned as an end-to-end speech-to-speech stack built on Universal-3 Pro with roughly 1-second latency and 30-second session resumption."
 seo_title: "AssemblyAI Review: Speech-to-Text API & Pricing (2026)"
 meta_description: "AssemblyAI is a voice AI API platform for STT, Universal 3.5 Pro preview, streaming transcription, LLM Gateway, guardrails, Voice Agent API, and speech understanding."
@@ -154,7 +165,7 @@ The main decision is not AssemblyAI versus a meeting note app. It is AssemblyAI 
 
 ## What Changed Since The Last Refresh
 
-The June 18 refresh found that AssemblyAI changed more in product shape than in headline STT prices.
+The June 23 recheck found that AssemblyAI changed more in product shape than in headline STT prices.
 
 - Universal 3.5 Pro is now documented as a preview pre-recorded model with 18-language support.
 - Its main test reasons are stronger accented-English handling, code switching, contextual prompting, and Universal-2 fallback for broader language coverage.
@@ -202,7 +213,7 @@ AssemblyAI now ships a generous free tier (up to 185 hours of pre-recorded trans
 
 The practical unit is audio hours plus add-ons. Teams should test cost using real audio length, concurrency, required features, and volume discounts.
 
-As verified on 2026-06-18, the pricing page lists pre-recorded Universal-3 Pro at $0.21/hour and Universal-2 at $0.15/hour. Streaming pricing ranges from $0.15/hour for Universal-Streaming and Universal-Streaming Multilingual, up to $0.45/hour for Universal-3 Pro Streaming. Voice Agent API stays at $4.50/hour ($0.075/minute). Add-ons such as diarization, keyterms prompting, prompting beta, Medical Mode, Voice Focus, PII text redaction, translation, entity detection, sentiment, chapters, and summaries can add separate hourly charges.
+As verified on 2026-06-23, the pricing page lists pre-recorded Universal-3 Pro at $0.21/hour and Universal-2 at $0.15/hour. Streaming pricing ranges from $0.15/hour for Universal-Streaming and Universal-Streaming Multilingual, up to $0.45/hour for Universal-3 Pro Streaming. Voice Agent API stays at $4.50/hour ($0.075/minute). Add-ons such as diarization, keyterms prompting, prompting beta, Medical Mode, Voice Focus, PII text redaction, translation, entity detection, sentiment, chapters, and summaries can add separate hourly charges.
 
 Important: streaming is billed by WebSocket session duration, not by audio actually sent. Close sessions deliberately. AssemblyAI's billing docs say unclosed streaming sessions can auto-close after 3 hours and bill for that full session time.
 
@@ -239,7 +250,7 @@ It is less attractive when the job is simply recording meetings or editing podca
 
 ## Methodology
 
-Last verified 2026-06-18 against AssemblyAI pricing, docs, docs index, model docs, billing docs, LLM Gateway docs, data-retention docs, changelog, Universal 3.5 Pro preview docs, Universal-Streaming page, and Voice Agent API pages. Scoring emphasizes speech quality potential, developer utility, feature breadth, cost transparency, regional controls, and buyer clarity.
+Last verified 2026-06-23 against AssemblyAI pricing, docs, docs index, model docs, billing docs, LLM Gateway docs, data-retention docs, changelog, Universal 3.5 Pro preview docs, Universal-Streaming page, and Voice Agent API pages. Scoring emphasizes speech quality potential, developer utility, feature breadth, cost transparency, regional controls, and buyer clarity.
 
 ## FAQ
 

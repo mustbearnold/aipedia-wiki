@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$99/month + API PAYG"
 status: active
 launched: 2020-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: https://murf.ai/
     source_label: Murf AI official site
     source_id: murf-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -44,25 +44,25 @@ facts:
     source: https://murf.ai/pricing
     source_label: Murf pricing
     source_id: murf-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
   api_available:
-    value: Murf publishes API docs for Falcon, Gen2, dubbing, voice changer, and translation; API accounts support Free Trial, pay-as-you-go, and Custom plans.
+    value: Murf publishes API docs for Falcon, Gen2, dubbing, voice changer, and translation; API accounts support Free Trial, pay-as-you-go, and Custom plans, with Falcon separately marketed at $0.01/minute.
     source: https://help.murf.ai/murf-api-plans-and-limits
     source_label: Murf API plans and limits
     source_id: murf-api-plans
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
   real_time_voice:
-    value: Murf Falcon is positioned for real-time conversational AI with sub-130ms time-to-first-audio, 150+ voices, 35 languages, and high-concurrency enterprise routes.
-    source: https://murf.ai/api/docs/text-to-speech-models/falcon
-    source_label: Murf Falcon docs
+    value: Murf Falcon is positioned for real-time conversational AI with 55 ms model latency, roughly 130 ms time-to-first-audio, 35+ languages, and a public $0.01/minute marketing anchor.
+    source: https://murf.ai/falcon
+    source_label: Murf Falcon product page
     source_id: murf-falcon
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -71,7 +71,7 @@ facts:
     source: https://murf.ai/enterprise
     source_label: Murf enterprise
     source_id: murf-enterprise
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -80,7 +80,7 @@ facts:
     source: https://murf.ai/api
     source_label: Murf Voice API
     source_id: murf-api
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -89,7 +89,7 @@ seo_title: 'Murf AI: Features, Pricing & Review (June 2026)'
 meta_description: >-
   Murf AI covers Studio narration, slide/video sync, dubbing, translation, and
   Falcon/Gen2 voice APIs. Studio Creator $29 monthly or $19 annual; Business
-  $99 monthly or $66 annual. Verified June 2026.
+  $99 monthly or $66 annual. API PAYG and Falcon rates need separate checks. Verified June 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - e-learning and corporate training
@@ -114,6 +114,7 @@ price_history:
     source: "https://murf.ai/pricing"
     source_label: "Murf pricing"
     source_id: murf-pricing
+    verified_at: 2026-05-13
     note: "Studio creator plan used as the self-serve solo-production anchor."
   - date: 2026-05-13
     plan: "Business"
@@ -121,6 +122,7 @@ price_history:
     source: "https://murf.ai/pricing"
     source_label: "Murf pricing"
     source_id: murf-pricing
+    verified_at: 2026-05-13
     note: "Studio team-production anchor for collaboration and higher production caps."
   - date: 2026-06-05
     plan: "API Pay-as-you-go"
@@ -128,20 +130,29 @@ price_history:
     source: "https://help.murf.ai/murf-api-pay-as-you-go"
     source_label: "Murf API pay-as-you-go"
     source_id: murf-api-payg
+    verified_at: 2026-06-05
     note: "Murf API help now documents self-serve pay-as-you-go characters separately from Studio subscriptions."
+  - date: 2026-06-23
+    plan: "Studio / API / Falcon"
+    price: "Creator $29/mo monthly or $19/mo annual; Business $99/mo monthly or $66/mo annual; API PAYG from $1 per 10,000 chars; Falcon marketed at $0.01/min"
+    source: "https://murf.ai/pricing"
+    source_label: "Murf pricing"
+    source_id: murf-pricing
+    verified_at: 2026-06-23
+    note: "June 23 verification pass. Murf still separates Studio subscriptions, API pay-as-you-go/help-center character billing, Falcon's public $0.01/minute marketing anchor, Dub PAYG, and custom/enterprise routes."
 ---
 
 # Murf AI
 
 Murf is a business-focused AI voice platform with two important buying lanes. Murf Studio handles scripts, voiceovers, slide/video sync, downloads, translation, and dubbing for teams that publish narrated business content. Murf API handles programmatic voice through Falcon, Gen2, dubbing, voice changer, and translation routes.
 
-The June 5, 2026 correction: Murf should no longer be described as a Studio-only product or as having API access only on Enterprise across the whole product family. Murf's API help documents Free Trial, pay-as-you-go, and Custom plans, while high-volume enterprise deployments still require sales for reserved capacity, data residency, discounts, and large concurrency.
+The June 23, 2026 correction: Murf should no longer be described as a Studio-only product or as having API access only on Enterprise across the whole product family. Murf's API help documents Free Trial, pay-as-you-go, and Custom plans, while Falcon has its own public low-latency product page and high-volume enterprise deployments still require sales for reserved capacity, data residency, discounts, and large concurrency.
 
 ## System Verdict
 
 > **Pick Murf when narration is part of a business workflow.** The strongest fit is L&D, product education, internal comms, presentation narration, training videos, and multilingual business dubbing where scripts, timing, review, and exports matter.
 >
-> **Test Murf Falcon when TTS latency and API cost are the problem.** Murf positions Falcon for real-time conversational AI with sub-130ms time-to-first-audio, 150+ voices, 35 languages, and high-concurrency enterprise routes.
+> **Test Murf Falcon when TTS latency and API cost are the problem.** Murf positions Falcon for real-time conversational AI with 55 ms model latency, roughly 130 ms time-to-first-audio, 35+ languages, and a public $0.01/minute marketing anchor.
 >
 > **Skip Murf for maximum creative range.** [ElevenLabs](/tools/elevenlabs/) and [Fish Audio](/tools/fish-audio/) are better first tests for expressive creator narration, character voices, and low-friction experimentation.
 
@@ -149,16 +160,16 @@ The June 5, 2026 correction: Murf should no longer be described as a Studio-only
 
 - **Primary product:** Murf Studio for business voiceovers plus Murf API for programmatic voice.
 - **Studio voice catalog:** 200+ voices across 25+ languages in current vendor positioning.
-- **API voice catalog:** Murf API docs describe 150+ voices across 35 languages for API workflows.
+- **API voice catalog:** Murf API docs describe 150+ voices across 35 languages for API workflows, while the Falcon product page emphasizes low-latency 35+ language support.
 - **Dubbing:** Murf Dub supports business localization and pay-as-you-go/custom routes; verify language and project limits in the Dub interface before buying.
 - **API models:** Falcon for real-time conversational TTS; Gen2 for studio-quality customizable speech.
 - **API plan routes:** Free Trial, pay-as-you-go, and Custom.
 - **Studio plan routes:** Free, Creator, Business, Enterprise.
 - **Studio pricing anchor:** Creator $29 monthly or $19 annual; Business $99 monthly or $66 annual; Enterprise custom.
-- **API PAYG anchor:** Murf API help lists 10,000 characters for $1 with a $2 minimum purchase.
+- **API PAYG anchor:** Murf API help lists 10,000 characters for $1 with a $2 minimum purchase on one PAYG page; the API plans page also lists a broader Gen2-style $0.03 per 1,000 characters PAYG route. Treat Falcon, Gen2, Dub, and Studio as separate billing surfaces.
 - **Main watch-out:** Studio, API, Dub, and Enterprise have separate limits and billing paths.
 
-Every current data point was verified against Murf vendor pages and help documentation on 2026-06-12.
+Every current data point was verified against Murf vendor pages and help documentation on 2026-06-23.
 
 ## What It Actually Is
 
@@ -173,7 +184,7 @@ The API lane is for developers building voice features. Murf's current API docs 
 - **Narrated business videos are the main output.** Murf is stronger when the voiceover belongs inside a slide, product, explainer, or training workflow.
 - **L&D needs repeatable production.** Studio workflow, project structure, and business voice consistency matter more than dramatic voice range.
 - **Dubbing is part of the rollout.** Murf is worth testing when the same business story needs localized narration.
-- **A voice-agent team needs a Falcon benchmark.** Compare Murf Falcon against ElevenLabs, Cartesia, Deepgram, and your existing provider on latency, language, concurrency, and total API cost.
+- **A voice-agent team needs a Falcon benchmark.** Compare Murf Falcon against ElevenLabs, Cartesia, Deepgram, and your existing provider on latency, language, concurrency, units, and total API cost.
 - **Procurement wants one vendor for Studio and API evaluation.** Murf can cover both lanes, but plan limits must be checked separately.
 
 ## When To Pick Something Else
@@ -193,11 +204,12 @@ Murf's pricing needs to be evaluated by product surface.
 - **Studio Business:** $99/month on monthly billing or $66/month on annual billing; best for teams needing collaboration and higher production limits.
 - **Studio Enterprise:** Custom; evaluate voice cloning, security, compliance, and scale needs.
 - **API Free Trial:** Murf API help says the Free Trial includes 100,000 characters for trying voices and API services.
-- **API Pay-as-you-go:** Murf API help says buyers can purchase 10,000 characters for $1 with a $2 minimum purchase.
+- **API Pay-as-you-go:** Murf API help says buyers can purchase 10,000 characters for $1 with a $2 minimum purchase on the PAYG page. The API plans page separately describes a broader pay-as-you-go route at $0.03 per 1,000 characters, so confirm the exact model and account route before rollout.
+- **Falcon public anchor:** Murf's Falcon page markets real-time TTS at $0.01/minute with 55 ms model latency and roughly 130 ms time-to-first-audio.
 - **API Custom:** For higher character, concurrency, rate-limit, and volume-discount requirements.
 - **Dub:** Free Trial, pay-as-you-go, and Custom routes; confirm project, watermark, QA, and enterprise requirements in the Dub product.
 
-Prices and plan routes were verified 2026-06-12 against Murf pricing, API docs, and Murf help pages. Because Murf exposes several billing surfaces, confirm the exact plan inside the product before procurement.
+Prices and plan routes were verified 2026-06-23 against Murf pricing, Falcon, API docs, and Murf help pages. Because Murf exposes several billing surfaces, confirm the exact plan inside the product before procurement.
 
 ## Against The Alternatives
 
@@ -216,7 +228,7 @@ Prices and plan routes were verified 2026-06-12 against Murf pricing, API docs, 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against Murf pricing, Murf API docs, Murf Falcon docs, Murf API plan help, and Murf pay-as-you-go help.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-23 against Murf pricing, Murf API docs, Murf Falcon docs, Murf API plan help, and Murf pay-as-you-go help.
 
 ## FAQ
 
@@ -230,21 +242,21 @@ Yes. Murf publishes API docs for Falcon, Gen2, dubbing, voice changer, and trans
 Job-dependent. Murf is better for structured business narration, slide/video sync, and enterprise API evaluation. ElevenLabs is better for expressive creator voice, cloning, dubbing, and broad creative audio.
 
 **What is Murf Falcon?**
-Falcon is Murf's low-latency streaming TTS model for conversational AI and voice agents. Murf positions it around sub-130ms time-to-first-audio, 150+ voices, 35 languages, and enterprise scale.
+Falcon is Murf's low-latency streaming TTS model for conversational AI and voice agents. Murf positions it around 55 ms model latency, roughly 130 ms time-to-first-audio, 35+ languages, and enterprise scale.
 
 **What should I verify before buying Murf?**
 Confirm whether you need Studio, API, Dub, Enterprise, or more than one. Then verify minutes, characters, exports, voice cloning, dubbing QA, concurrency, rate limits, data residency, and support.
 
 ## Sources
 
-- [Murf AI official site](https://murf.ai) (verified 2026-06-12)
-- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-12)
-- [Murf API overview](https://murf.ai/api) (verified 2026-06-12)
-- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-12)
-- [Murf Falcon docs](https://murf.ai/api/docs/text-to-speech-models/falcon) (verified 2026-06-12)
-- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-12)
-- [Murf API pay-as-you-go](https://help.murf.ai/murf-api-pay-as-you-go) (verified 2026-06-12)
-- [Murf Dub plans](https://help.murf.ai/murf-dub-plans) (verified 2026-06-12)
+- [Murf AI official site](https://murf.ai) (verified 2026-06-23)
+- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-23)
+- [Murf API overview](https://murf.ai/api) (verified 2026-06-23)
+- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-23)
+- [Murf Falcon product page](https://murf.ai/falcon) (verified 2026-06-23)
+- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-23)
+- [Murf API pay-as-you-go](https://help.murf.ai/murf-api-pay-as-you-go) (verified 2026-06-23)
+- [Murf Dub plans](https://help.murf.ai/murf-dub-plans) (verified 2026-06-23)
 
 ## Related
 

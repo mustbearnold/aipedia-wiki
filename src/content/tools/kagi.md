@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$5-$25/month"
 status: active
 launched: 2017-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -34,19 +34,19 @@ facts:
     volatility: medium
     confidence: high
   ai_search:
-    value: "Kagi Assistant ships across paid tiers in 2026: Starter, Professional, and Ultimate have Quick mode allowances, while Ultimate adds Research mode and flagship model access listed on the live pricing page."
-    source: "https://help.kagi.com/kagi/ai/assistant.html"
-    source_label: "Kagi Assistant docs"
-    source_id: kagi-assistant-docs
-    verified_at: 2026-06-12
+    value: "Kagi's June 16, 2026 changelog retired the old Assistant and moved users to the new Assistant experience; Starter, Professional, and Ultimate have Quick mode, while Ultimate adds Research mode and flagship model access."
+    source: "https://kagi.com/changelog"
+    source_label: "Kagi changelog"
+    source_id: kagi-changelog
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page on June 12, 2026. Annual billing still shows 10% off."
+    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page on June 23, 2026. Annual billing still shows 10% off; Family starts at $20/month for up to 6 members and Ultimate upgrades can be added per member."
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-06
     volatility: high
     confidence: high
@@ -55,7 +55,7 @@ facts:
     source: "https://kagi.com"
     source_label: "Kagi official site"
     source_id: kagi-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-06
     volatility: high
     confidence: high
@@ -89,6 +89,7 @@ price_history:
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
+    verified_at: 2026-06-23
     note: "Tier prices verified unchanged. Basic Assistant available on Professional and above."
   - date: 2026-05-13
     plan: "Starter / Professional / Ultimate"
@@ -96,6 +97,7 @@ price_history:
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
+    verified_at: 2026-06-23
     note: "Re-verified. Starter and Professional now both get Quick mode Assistant; Ultimate adds Research mode with Claude, GPT, Gemini frontier models. Annual discount steady at 10%."
   - date: 2026-06-05
     plan: "Starter / Professional / Ultimate"
@@ -103,6 +105,7 @@ price_history:
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
+    verified_at: 2026-06-23
     note: "June 2026 comparison refresh: pricing unchanged; Kagi remains a human-facing paid search product, not a developer retrieval API like Exa."
   - date: 2026-06-06
     plan: "Starter / Professional / Ultimate"
@@ -112,6 +115,14 @@ price_history:
     source_id: kagi-pricing
     verified_at: 2026-06-06
     note: "Kagi vs Perplexity and Kagi vs You.com refresh reverified the paid private-search lane, Assistant tier access, Research mode, and fair-pricing policy."
+  - date: 2026-06-23
+    plan: "Starter / Professional / Ultimate"
+    price: "$5 / $10 / $25 per month"
+    source: "https://kagi.com/pricing"
+    source_label: "Kagi pricing"
+    source_id: kagi-pricing
+    verified_at: 2026-06-23
+    note: "Pricing unchanged; Kagi changelog says the old Assistant was retired on June 16, 2026 and the new Assistant experience is now the active AI layer."
 ---
 
 # Kagi
@@ -143,7 +154,7 @@ Kagi Assistant is the integrated AI chat layer. Quick mode Assistant is now avai
 | **Privacy** | No behavioral tracking, no ad profiles, subscription-funded |
 | **Index** | Proprietary crawl + licensed third-party indexes |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -180,7 +191,7 @@ Pricing via [kagi.com/pricing](https://kagi.com/pricing):
 | Professional | $10 | Unlimited | Quick mode | **Most paying users land here** |
 | Ultimate | $25 | Unlimited | Research mode + flagship models | Power researchers + AI power users |
 
-Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Prices verified 2026-06-12 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
+Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Family starts at $20/month for up to 6 members, and Family or Team members can add Ultimate at $15/member where applicable. Prices verified 2026-06-23 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
 
 No free tier. New users get a 100-search trial before subscribing.
 
@@ -208,12 +219,13 @@ No free tier. New users get a 100-search trial before subscribing.
 ## Recent changes
 
 - **2026-06-06:** Kagi vs Perplexity and Kagi vs You.com were refreshed around the current buyer split: Kagi is paid private search for humans, Perplexity is cited answer/research workflow, and You.com is a grounding/research API stack.
+- **2026-06-16:** Kagi's changelog says the old Assistant was retired and the new Assistant experience became the active AI layer across the product.
 - **2026-06-05:** Pricing re-verified on the live page during the Exa comparison refresh. Kagi remains the paid private search choice for humans; Exa is the developer retrieval API lane.
 - **2026-05-13:** Pricing re-verified on the live page. Quick mode Assistant confirmed available on paid tiers; Research mode and flagship-model access remain Ultimate-only.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html), and [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html), [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html), and [Kagi changelog](https://kagi.com/changelog).
 
 ## FAQ
 
@@ -224,7 +236,7 @@ For users running 20+ searches per day who want flagship AI model access and Res
 Yes. New users get 100 free searches before being asked to subscribe. Enough to evaluate whether result quality justifies paying.
 
 **What changed with Kagi Assistant?**
-Quick mode Assistant rolled out to paid tiers, including the $5 Starter plan. Ultimate at $25/mo still holds Research mode and flagship model access.
+Quick mode Assistant is available to paid tiers, including the $5 Starter plan. Ultimate at $25/mo still holds Research mode and flagship model access. Kagi's June 16, 2026 changelog says the old Assistant was retired in favor of the new Assistant experience.
 
 **Kagi vs Perplexity?**
 Kagi is a search engine with an AI layer. Perplexity is an AI answer engine with search underneath. Kagi gives finer control over ranking; Perplexity gives deeper research synthesis. Pick Kagi for daily search replacement, Perplexity for research tasks.
@@ -239,6 +251,7 @@ No behavioral tracking, no ad profiles, no data sold to third parties. IP is not
 - [Kagi Assistant for all](https://blog.kagi.com/assistant-for-all): Assistant tier expansion
 - [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html): premium model access
 - [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html): Research mode workflow
+- [Kagi changelog](https://kagi.com/changelog): June 16, 2026 Assistant retirement and product updates
 
 ## Related
 

@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$39-$999/month; Enterprise custom"
 status: active
 launched: 2021-03
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: quarterly
 seo_title: "AdCreative.ai Review (June 2026): AI Ad Creative Generator"
 meta_description: "AdCreative.ai generates banner, product, and video ad variants with creative scoring, brand-kit workflows, and current public pricing from $39/mo. Best for paid-social creative volume, not brand-first design."
@@ -25,7 +25,7 @@ affiliate:
   link: "https://free-trial.adcreative.ai/46864ltm9g0d"
   application_status: approved
   approved_date: 2026-05-08
-  notes: "Affiliate link supplied by site owner on 2026-05-08. Official affiliate page rechecked 2026-06-18 says 30% recurring, tiered rewards up to 40%, no minimum payout threshold, and PartnerStack join path; keep FTC disclosure near commercial CTAs."
+  notes: "Affiliate link supplied by site owner on 2026-05-08. Official affiliate page rechecked 2026-06-23 says 30% recurring, tiered rewards up to 40%, no minimum payout threshold, and PartnerStack join path; keep FTC disclosure near commercial CTAs."
 scores:
   utility: 8
   value: 7
@@ -37,7 +37,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -46,7 +46,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -55,7 +55,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -64,7 +64,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-official
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -73,7 +73,7 @@ facts:
     source: https://www.adcreative.ai/
     source_label: AdCreative.ai official site
     source_id: adcreative-pricing
-    verified_at: '2026-06-18'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -92,6 +92,7 @@ quick_answer: >-
   AdCreative.ai is best treated as a paid-social creative factory. Use it when the bottleneck is generating enough ad variants, product visuals, and short video ideas to test across Meta, Google, LinkedIn, or TikTok. Skip it when the job is premium brand design, deep copy strategy, or a full ad-ops attribution platform.
 price_history:
   - date: 2026-05-08
+    verified_at: 2026-05-08
     plan: "Public entry plan"
     price: "$29/mo starting point"
     source: "https://www.adcreative.ai/"
@@ -99,6 +100,7 @@ price_history:
     source_id: adcreative-pricing
     note: "Official homepage pricing surface previously showed a $29/mo public entry point and active promotional discount messaging."
   - date: 2026-05-13
+    verified_at: 2026-05-13
     plan: "Starter"
     price: "$39/mo"
     source: "https://www.adcreative.ai/"
@@ -106,6 +108,7 @@ price_history:
     source_id: adcreative-pricing
     note: "10 credits/month, 1 brand. Lowest paid tier; pairs with active promotional offers (May 2026 Mother's Day prep sale)."
   - date: 2026-05-13
+    verified_at: 2026-05-13
     plan: "Professional"
     price: "$249/mo"
     source: "https://www.adcreative.ai/"
@@ -113,6 +116,7 @@ price_history:
     source_id: adcreative-pricing
     note: "50 credits/month, 10 brands. Marked as Most Popular on the live pricing surface."
   - date: 2026-05-13
+    verified_at: 2026-05-13
     plan: "Ultimate"
     price: "$999/mo"
     source: "https://www.adcreative.ai/"
@@ -120,6 +124,7 @@ price_history:
     source_id: adcreative-pricing
     note: "100 credits/month, 25 brands. Highest published tier before custom Enterprise."
   - date: 2026-05-13
+    verified_at: 2026-05-13
     plan: "Enterprise"
     price: "Custom"
     source: "https://www.adcreative.ai/"
@@ -127,6 +132,7 @@ price_history:
     source_id: adcreative-pricing
     note: "Tailored credits and brands; pricing on request. Yearly billing applies a 50% discount, quarterly a 25% discount."
   - date: 2026-06-01
+    verified_at: 2026-06-01
     plan: "Starter / Professional / Ultimate"
     price: "$39 / $249 / $999 per month before billing-cadence discounts"
     source: "https://www.adcreative.ai/"
@@ -134,19 +140,28 @@ price_history:
     source_id: adcreative-pricing
     note: "Public monthly list prices unchanged. The live page now promotes a Father's Day prep sale: 50% off yearly and 25% off quarterly plans, with effective yearly prices shown as $20, $125, and $500 per month."
   - date: 2026-06-18
+    verified_at: 2026-06-18
     plan: "Starter / Professional / Ultimate / Enterprise"
     price: "$39 / $249 / $999 per month list prices; discounted quarterly/yearly checkout values shown on site"
     source: "https://www.adcreative.ai/"
     source_label: "AdCreative.ai official site"
     source_id: adcreative-pricing
     note: "Monthly list prices remain visible. Current site repeats a Father's Day prep sale with 25% off quarterly and 50% off yearly messaging, plus discounted effective monthly displays. Verify checkout before quoting a committed price, brand count, or credit bundle."
+  - date: 2026-06-23
+    verified_at: 2026-06-23
+    plan: "Starter / Professional / Ultimate / Enterprise"
+    price: "$39 / $249 / $999 per month list prices; checkout promotions can change effective monthly values"
+    source: "https://www.adcreative.ai/"
+    source_label: "AdCreative.ai official site"
+    source_id: adcreative-pricing
+    note: "June 23 recheck found the official site still focused on ad creatives, product/fashion shoots, AI images, AI videos, creative scoring, competitor insight, and trial-led checkout. Verify live checkout before quoting committed pricing or credit bundles."
 ---
 
 # AdCreative.ai
 
 AdCreative.ai is an AI ad-creative generator for teams that need more testable ad assets than a designer, founder, or small growth team can make manually. Its strongest fit is paid-social and ecommerce creative production: upload a brand kit or product asset, generate platform-ready variants, score likely performance, and send the best ideas into the campaign workflow.
 
-As of 2026-06-18, AiPedia would shortlist AdCreative.ai for marketers who are creative-volume constrained. It is not the best first choice for brand systems, polished campaign art direction, or long-form copy strategy.
+As of 2026-06-23, AiPedia would shortlist AdCreative.ai for marketers who are creative-volume constrained. It is not the best first choice for brand systems, polished campaign art direction, or long-form copy strategy.
 
 ## System Verdict
 
@@ -172,7 +187,7 @@ As of 2026-06-18, AiPedia would shortlist AdCreative.ai for marketers who are cr
 
 ## Pricing And Access
 
-AdCreative.ai's pricing surface is current but volatile. AiPedia verified the live pricing on 2026-06-18 against the official site. The published monthly list tiers are:
+AdCreative.ai's pricing surface is current but volatile. AiPedia verified the live pricing on 2026-06-23 against the official site. The published monthly list tiers are:
 
 | Plan | Monthly | Credits/month | Brands |
 |---|---:|---:|---:|
@@ -222,9 +237,9 @@ That workflow matters because AI ad tools can create volume faster than a team c
 
 ## What Changed Since The Last Refresh
 
-The prior page was last verified on 2026-06-12. AdCreative.ai does not publish a clean public release-note feed, so this refresh compares the current official surfaces against the previous page rather than pretending there is a dated changelog.
+The prior page was last verified on 2026-06-18. AdCreative.ai does not publish a clean public release-note feed, so this refresh compares the current official surfaces against the previous page rather than pretending there is a dated changelog.
 
-- **Pricing is still anchored to $39, $249, and $999 monthly list prices, but the sale display needs more caution.** The official page now shows the Father's Day prep sale across multiple pricing blocks, with 25% off quarterly and 50% off yearly messaging. Buyers should verify checkout because discounted effective monthly values and brand-count displays can differ by billing toggle and page section.
+- **Pricing is still anchored to $39, $249, and $999 monthly list prices, but checkout remains the source of truth.** The official site still uses trial-led purchase paths and promotion-sensitive pricing displays. Buyers should verify checkout because effective monthly values, brand counts, users, credits, and video access can differ by billing toggle and page section.
 - **The product surface is more video and ecommerce-heavy.** Current navigation and product pages emphasize UGC Videos AI, AI Video Generation, Product Videoshoots, Fashion Videoshoots, Fashion Photoshoots, Product Photoshoots, AI Image Generation, Instant Ads, Storytelling Video, Buyer Personas, Creative Insights, Competitor Insights, Compliance Checker, and Custom Templates.
 - **Product Videoshoots is now a more concrete ecommerce workflow.** The official product-video page says buyers can upload a product image, choose a style or prompt, and generate product video variations for ecommerce listings, paid ads, and social campaigns.
 - **Fashion Videoshoots is a dedicated ad-video lane.** The official page frames it as turning static garment images into campaign-ready fashion video ads, with custom prompts, presets, ad overlays, calls to action, and commercial-use language.
@@ -262,7 +277,7 @@ If you are still deciding what to sell, what audience to target, or what the lan
 ## FAQ
 
 **Is AdCreative.ai free?**
-No permanent free tier was verified. The official site advertises a trial path, and the public pricing surface starts at Starter $39/month as of 2026-06-18, climbing to Professional $249, Ultimate $999, and custom Enterprise.
+No permanent free tier was verified. The official site advertises a trial path, and the public pricing surface starts at Starter $39/month as of 2026-06-23, climbing to Professional $249, Ultimate $999, and custom Enterprise.
 
 **What is AdCreative.ai best at?**
 Generating many ad creative variants, product visuals, short ad videos, and ad copy directions for performance-marketing tests.
@@ -278,10 +293,10 @@ Canva is a broader design workspace. AdCreative.ai is narrower and more performa
 
 ## Sources
 
-- [AdCreative.ai official site](https://www.adcreative.ai/): product surface, trial language, ad creative, product photo, UGC video, fashion videoshoots, creative scoring, and current Starter $39, Professional $249, Ultimate $999, Enterprise custom pricing checked 2026-06-18.
-- [AdCreative.ai product videoshoots](https://www.adcreative.ai/product-videoshoot-ai): product-image to product-video workflow checked 2026-06-18.
-- [AdCreative.ai fashion videoshoots](https://www.adcreative.ai/fashion-videoshoot): static garment image to fashion video ad workflow checked 2026-06-18.
-- [AdCreative.ai affiliate program](https://www.adcreative.ai/affiliate): official commission, tiered reward, payout, and PartnerStack join language checked 2026-06-18.
+- [AdCreative.ai official site](https://www.adcreative.ai/): product surface, trial language, ad creative, product photo, UGC video, fashion videoshoots, creative scoring, and current Starter $39, Professional $249, Ultimate $999, Enterprise custom pricing checked 2026-06-23.
+- [AdCreative.ai product videoshoots](https://www.adcreative.ai/product-videoshoot-ai): product-image to product-video workflow checked 2026-06-23.
+- [AdCreative.ai fashion videoshoots](https://www.adcreative.ai/fashion-videoshoot): static garment image to fashion video ad workflow checked 2026-06-23.
+- [AdCreative.ai affiliate program](https://www.adcreative.ai/affiliate): official commission, tiered reward, payout, and PartnerStack join language checked 2026-06-23.
 
 ## Related
 

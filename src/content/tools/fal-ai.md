@@ -7,11 +7,11 @@ category: ai-image
 company: fal-ai
 url: https://fal.ai
 pricing_model: freemium
-price_range: "$0.01-$0.08 per image / on-demand A100 $0.99/h, H100 $1.89/h, B200 contact sales"
+price_range: "$0.01-$0.08 per image / compute list pricing from H100 $3.99/h, as low as $1.89/h"
 status: active
 launched: 2022-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://fal.ai/
     source_label: fal.ai official site
     source_id: fal-ai-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://fal.ai/pricing
     source_label: fal.ai pricing
     source_id: fal-ai-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -50,7 +50,7 @@ facts:
     source: https://docs.fal.ai/
     source_label: fal.ai docs
     source_id: fal-ai-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://fal.ai/models
     source_label: fal.ai model catalog
     source_id: fal-ai-models
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -69,13 +69,13 @@ facts:
     source: https://fal.ai/pricing
     source_label: fal.ai pricing
     source_id: fal-ai-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
 tags: [inference, image-generation, video-generation, flux, nano-banana, serverless, api, fast]
 seo_title: "Fal.ai: Features, Pricing & Review (June 2026)"
-meta_description: "Fal.ai is a fast generative-AI inference platform with 600+ models across image, video, audio, and 3D. Pricing is prepaid-credit and model-specific; many image models land around $0.01-$0.08/image, with A100 $0.99/h and H100 $1.89/h fallback compute rates."
+meta_description: "Fal.ai is a fast generative-AI inference platform with 600+ models across image, video, audio, and 3D. Pricing is prepaid-credit and model-specific; many image models land around $0.01-$0.08/image, while compute pricing is shown per GPU class."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers integrating AI image and video generation
@@ -87,7 +87,7 @@ not_best_for:
   - users who just want to chat or prompt-and-download
   - workloads that fit Midjourney's web-only workflow
 quick_answer: >-
-  Fal.ai is a fast serverless inference platform for generative AI. 600+ models are accessible through one API: FLUX variants, Nano Banana 2, Seedream V4, Recraft, video models, audio models, and 3D models. Pricing is prepaid-credit and model-specific; many image models land around $0.01-$0.08 per image, while fallback compute rates include A100 at $0.99/h and H100 at $1.89/h. Pick it for developer-grade AI generation at speed. Skip it if you want a consumer UI.
+  Fal.ai is a fast serverless inference platform for generative AI. 600+ models are accessible through one API: FLUX variants, Nano Banana 2, Seedream V4, Recraft, video models, audio models, and 3D models. Pricing is prepaid-credit and model-specific; many image models land around $0.01-$0.08 per image, while compute pricing is now shown by GPU class with discounted H100 capacity advertised as low as $1.89/h. Pick it for developer-grade AI generation at speed. Skip it if you want a consumer UI.
 price_history:
   - date: 2026-04-18
     plan: "A100 on-demand GPU"
@@ -95,6 +95,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
+    verified_at: 2026-06-23
     note: "Previously listed rate"
   - date: 2026-05-13
     plan: "A100 on-demand GPU"
@@ -102,6 +103,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
+    verified_at: 2026-06-23
     note: "On-demand A100 dropped to $0.99/h (40GB VRAM) at May 2026 refresh"
   - date: 2026-05-13
     plan: "H100 on-demand GPU"
@@ -109,6 +111,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
+    verified_at: 2026-06-23
     note: "On-demand H100 listed at $1.89/h (80GB VRAM)"
   - date: 2026-05-13
     plan: "B200 on-demand GPU"
@@ -116,6 +119,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
+    verified_at: 2026-06-23
     note: "Previously $9.00/h; moved to enterprise contact-sales tier at May 2026 refresh"
   - date: 2026-05-13
     plan: "Seedream V4 image"
@@ -123,6 +127,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
+    verified_at: 2026-06-23
     note: "Per-output rate verified"
   - date: 2026-05-13
     plan: "Flux Kontext Pro image"
@@ -130,6 +135,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
+    verified_at: 2026-06-23
     note: "Per-output rate verified"
   - date: 2026-05-13
     plan: "Nano Banana 2 image"
@@ -137,6 +143,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
+    verified_at: 2026-06-23
     note: "Per-output rate verified; ~25 images per $1"
 ---
 
@@ -146,7 +153,7 @@ A cloud-hosted, serverless inference platform built specifically for generative 
 
 ## Recent developments
 
-- **May 13, 2026:** On-demand GPU pricing reset on [fal.ai/pricing](https://fal.ai/pricing). A100 (40GB) is now $0.99/h and H100 (80GB) is $1.89/h, both meaningfully below prior rates. B200 (184GB) moved to a contact-sales tier rather than a published rate. Per-image rates verified for Seedream V4 ($0.03), Flux Kontext Pro ($0.04), Nano Banana ($0.0398), and Qwen ($0.02 per megapixel).
+- **June 23, 2026:** Pricing reverified on [fal.ai/pricing](https://fal.ai/pricing) and the Model API pricing docs. fal still bills model APIs by prepaid credits and successful outputs, but the public compute table now emphasizes GPU-class list and discounted pricing, including H100 at $3.99/h list and as low as $1.89/h, H200 at $4.50/h list and as low as $2.10/h, B200 at $6.25/h list and as low as $3.49/h, and B300 at $8.50/h list and as low as $4.49/h. Keep per-model output prices tied to the live model card.
 - **May 12, 2026:** [Anthropic launched Claude for Legal with first-party MCP connectors](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). For Fal, the read is supportive: regulated buyers continue to consolidate around Claude/ChatGPT for chat and reasoning, which keeps generative media a separate procurement category that benefits providers with broad model catalogues like Fal.
 
 ## System Verdict
@@ -168,14 +175,12 @@ A cloud-hosted, serverless inference platform built specifically for generative 
 | **Flux Kontext Pro** | $0.04/image (~25 per $1) |
 | **Nano Banana** | ~$0.0398/image (~25 per $1) |
 | **Qwen image** | $0.02 per megapixel (~50 megapixels per $1) |
-| **On-demand A100 (40GB)** | $0.99/hour |
-| **On-demand H100 (80GB)** | $1.89/hour |
-| **On-demand B200 (184GB)** | Contact sales |
+| **Compute pricing examples** | H100 $3.99/h list, as low as $1.89/h; H200 $4.50/h list, as low as $2.10/h; B200 $6.25/h list, as low as $3.49/h; B300 $8.50/h list, as low as $4.49/h |
 | **Free credits** | $1 on new accounts |
 | **Speed advantage** | Custom CUDA kernels, 5-10s cold starts, 4× faster than some competitors |
 | **Enterprise** | Custom pricing, dedicated inference capacity |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
 
 ## When to pick Fal.ai
 
@@ -203,12 +208,10 @@ Every data point above was verified against vendor documentation on 2026-06-12. 
 | Nano Banana | ~$0.0398 per image |
 | Recraft V4 | ~$0.04 per image |
 | Qwen image | $0.02 per megapixel |
-| A100 (40GB) on-demand GPU | $0.99/hour ($0.0003/sec) |
-| H100 (80GB) on-demand GPU | $1.89/hour ($0.0005/sec) |
-| B200 (184GB) on-demand GPU | Contact sales |
+| Compute examples | H100 $3.99/h list, as low as $1.89/h; H200 $4.50/h list, as low as $2.10/h; B200 $6.25/h list, as low as $3.49/h; B300 $8.50/h list, as low as $4.49/h |
 | Free credits | $1 on signup |
 
-fal's model API docs say billing is prepaid-credit based, each model has its own unit, successful outputs are billed, HTTP 500+ server errors are not billed, and time spent waiting in queue is free. Batch inference: 50% of serverless pricing. Verified 2026-06-12 via [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), and [pricepertoken.com/image](https://pricepertoken.com/image).
+fal's model API docs say billing is prepaid-credit based, each model has its own unit, successful outputs are billed, HTTP 500+ server errors are not billed, and time spent waiting in queue is free. Batch inference: 50% of serverless pricing. Verified 2026-06-23 via [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), and [pricepertoken.com/image](https://pricepertoken.com/image).
 
 ## Failure modes
 
@@ -229,7 +232,7 @@ fal's model API docs say billing is prepaid-credit based, each model has its own
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), [docs.fal.ai](https://docs.fal.ai), and [pricepertoken.com/image](https://pricepertoken.com/image).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), [docs.fal.ai](https://docs.fal.ai), and [pricepertoken.com/image](https://pricepertoken.com/image).
 
 ## FAQ
 

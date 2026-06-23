@@ -4,7 +4,10 @@
  *
  * AI tools news feed sorted by date. Severity-color-coded cards.
  * Legacy preserved at src/legacy-pages/news-index.legacy.astro.
- * Refresh metadata: dateModified: '2026-06-22'
+ * Refresh metadata: dateModified: '2026-06-23'
+ * Refresh metadata: update_frequency: daily
+ * Refresh metadata: 2026-06-23 news archive cadence set to daily, with the
+ * daily run required to add at least three source-backed AI or AI-tool stories.
  * Refresh metadata: 2026-06-22 June 18-22 desks and focused coverage added
  * after current OpenAI health, ChatGPT Enterprise spend controls, ChatGPT
  * release notes, Shopify agentic commerce, Google Cloud release notes, Axios
@@ -161,6 +164,7 @@ const collectionItems = sorted.map((item) => ({
 
   <div class="sr-only" data-pagefind-ignore>
     <span data-pagefind-filter="Type">NewsIndex</span>
+    <span data-pagefind-meta="UpdateFrequency">daily</span>
   </div>
 
   <div class="gt-canvas">

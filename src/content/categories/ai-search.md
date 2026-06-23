@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 22, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 23, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -32,7 +32,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page. The June 22 Comet recheck keeps the free-first rule: upgrade Perplexity only when Comet Agent queries, Max Assistant, Computer credits, advanced models, or enterprise assistant controls become the actual bottleneck, and require explicit review before Comet handles email, finance, shopping, account, file, or checkout actions.
 
-**Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 2 check found Dia explicitly positioned as part of Atlassian, with SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions now surfaced on the security page. It is still a user browser, not a programmable browser automation API.
+**Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 23 check keeps Dia in the work-context browser lane: Reports, Morning Brief, Live Work, connected-app context, SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions are now surfaced on the public and security pages. It is still a user browser, not a programmable browser automation API.
 
 **June 7 Perplexity alternatives update:** [Perplexity alternatives](/guides/perplexity-alternatives/) now separates ChatGPT Search for all-purpose AI work, Gemini/Google AI Mode for Google-native research, NotebookLM for owned-source notebooks, Claude for deep synthesis, Kagi for private paid search, and Exa/Perplexity APIs for developer retrieval and answer layers.
 
@@ -46,11 +46,11 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [NotebookLM](/tools/notebooklm/) when source review matters more than open-ended web chat.** The June 15 NotebookLM recheck keeps it in the source-grounded notebook lane, but the current help table now makes Deep Research, data tables, infographics, slide decks, Audio/Video Overview limits, and Cloud/Workspace data-handling routes part of the buying decision. Use source discovery to speed up source-pack building, not to skip source-quality review.
 
-**Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and Assistant features rather than an answer-engine-first product. The June 5 Exa vs Kagi refresh keeps the boundary clear: Kagi is the human-facing paid search product; Exa is the developer retrieval API.
+**Use [Kagi](/tools/kagi/) when privacy and search control matter.** It is the paid, ad-free search choice for people who want ranking controls and Assistant features rather than an answer-engine-first product. The June 23 Kagi check keeps Starter, Professional, and Ultimate pricing at $5/$10/$25, adds the June 16 retirement of the old Assistant, and keeps the boundary clear: Kagi is the human-facing paid search product; Exa is the developer retrieval API.
 
 **June 6 private-search fork:** Kagi vs Perplexity and Kagi vs You.com now make the buyer job explicit. Kagi is for humans replacing ad-supported search with private paid search. Perplexity is for cited answer/research workflow. You.com is for builders who need search, contents, and research APIs.
 
-**Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, AI page summaries, and beta Agent runs. Model result counts, summaries, monitor cadence, enrichment, and Agent effort before traffic grows.
+**Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, AI page summaries, and Exa Agent runs. The June 23 refresh adds the June 16 Exa Agent launch context: natural-language queries, effort modes, structured output schemas, and optional input data are now part of the API buying surface. Cap result counts, summaries, monitor cadence, enrichment, and Agent effort before traffic grows.
 
 **Use [Weaviate](/tools/weaviate/) when search is product infrastructure rather than an answer engine.** The June 10 check keeps Weaviate in the open vector database lane, but Engram's June 3 GA means it now also belongs in agent-memory conversations: it is for teams building retrieval, RAG, hybrid search, and durable scoped context inside products, not for non-technical users replacing Google or Perplexity.
 
@@ -64,9 +64,9 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **June 8 Phind migration cleanup:** Phind is not a live AI search recommendation. AiPedia refreshed the stale Phind comparison routes so they no longer describe fake 2026 Phind pricing, model access, or context windows. Former Phind users should pick by replacement job: ChatGPT vs Phind for a broad assistant, Perplexity vs Phind for cited search, Kagi vs Phind for private paid search, Exa AI vs Phind for retrieval APIs, and Phind vs You.com for grounding/research APIs.
 
-**Use [Genspark](/tools/genspark/) when search should become work output.** The June 2 membership check frames Genspark as an AI workspace with Plus at $24.99/month for 10,000 credits and Pro at $249.99/month for 125,000 credits, built around Super Agent, documents, slides, sheets, calls, meetings, media, and AI Drive storage rather than a pure citation-first answer engine.
+**Use [Genspark](/tools/genspark/) when search should become work output.** The June 23 membership check frames Genspark as an AI workspace with Plus credit tiers starting at 10,000 credits/month and Pro starting at 125,000 credits/month, built around Super Agent, documents, slides, sheets, calls, meetings, media, and AI Drive storage rather than a pure citation-first answer engine.
 
-**Use [Glean](/tools/glean/) when the search surface is company knowledge.** Glean is the enterprise lane for permission-aware workplace search, agents, and developer integrations over SaaS tools and internal content. It is demo-gated, so procurement should validate connectors, permissions, MCP/IDE paths, and security requirements before rollout.
+**Use [Glean](/tools/glean/) when the search surface is company knowledge.** Glean is the enterprise lane for permission-aware workplace search, agents, and developer integrations over SaaS tools and internal content. It is demo-gated, and the Enterprise Flex docs add usage-credit modeling to procurement alongside connectors, permissions, MCP/IDE paths, and security requirements.
 
 **Watch Bing's AI-guided image search if visual discovery affects your workflow.** Microsoft's May 2026 opt-in Bing Image Search update groups image results into labeled sections and summarizes those groups. That matters for shopping, education, design inspiration, publishers, and ecommerce teams because visual search is becoming a guided decision surface rather than a plain thumbnail grid.
 
@@ -76,12 +76,12 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 |---|---|---|---|
 | Cited open-web answers | [Perplexity](/tools/perplexity/) | Best answer-engine workflow for sources, follow-ups, and research spaces | Citations still need source-quality checks, review ownership, and plan/API budget caps |
 | AI browser workflow | [Comet](/tools/comet/) | Keeps Perplexity-style assistance closer to tabs, pages, and web tasks | Sensitive delegated actions need explicit approval; paid capacity matters only when Comet Agent, Max Assistant, or Computer limits block real work |
-| Work-context AI browser | [Dia](/tools/dia/) | Page-aware assistance over tabs and connected apps, now under Atlassian with more enterprise posture detail | macOS-only and not a deterministic automation API |
+| Work-context AI browser | [Dia](/tools/dia/) | Page-aware assistance over tabs and connected apps, now under Atlassian with Reports and more enterprise posture detail | macOS-only and not a deterministic automation API |
 | General AI workspace with search | [ChatGPT](/tools/chatgpt/) | Search plus writing, files, code, data, image, voice, and projects | Requires source discipline for serious research |
 | Google-native search and research | [Gemini](/tools/gemini/) | AI Mode, AI Overviews, Deep Research, Workspace, NotebookLM, and Chrome fit | Google ecosystem lock-in and regional feature limits |
 | Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, Drive material, and source-pack artifacts | Discovery and Deep Research still need source-quality review; no public NotebookLM API |
 | Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
-| Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, and Agent effort |
+| Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, structured-output needs, and Agent effort |
 | Product RAG and agent memory | [Weaviate](/tools/weaviate/) | Open vector database, managed cloud, hybrid search, hosted embeddings, Query Agent, and Engram memory/context service | Infrastructure ownership, index design, add-on pricing, and app-layer permissions still matter |
 | Enterprise RAG model stack | [Cohere](/tools/cohere/) | Embed v4, Rerank 4, Command A+, North Mini Code, and Model Vault for private retrieval-heavy systems | Not a human search UI; model serving, Rerank chunk math, deployment terms, and evals remain the buyer's responsibility |
 | Search-to-deliverable AI workspace | [Genspark](/tools/genspark/) | Turns research into docs, slides, sheets, calls, media, and agent outputs | Credit burn and enterprise/API availability need direct verification |
@@ -137,8 +137,8 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 ## Sources
 
 - [Perplexity Comet](https://www.perplexity.ai/comet) (verified 2026-06-22)
-- [Dia website](https://www.diabrowser.com) (verified 2026-06-12)
-- [Dia security](https://www.diabrowser.com/security) (verified 2026-06-12)
+- [Dia website](https://www.diabrowser.com) (verified 2026-06-23)
+- [Dia security](https://www.diabrowser.com/security) (verified 2026-06-23)
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-15)
 - [Perplexity Max help](https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max) (verified 2026-06-22)
 - [Perplexity Enterprise](https://www.perplexity.ai/enterprise) (verified 2026-06-15)
@@ -148,8 +148,8 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) (verified 2026-06-22)
 - [Perplexity API privacy and security](https://docs.perplexity.ai/docs/resources/privacy-security) (verified 2026-06-22)
 - [Perplexity security](https://www.perplexity.ai/hub/security) (verified 2026-06-15)
-- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-12)
-- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-12)
+- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-23)
+- [Google AI Mode and AI Overviews updates](https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/) (verified 2026-06-23)
 - [Google AI Plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-22)
 - [Gemini Grounding with Google Search](https://ai.google.dev/gemini-api/docs/google-search) (verified 2026-06-22)
 - [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-22)
@@ -158,31 +158,34 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [WIRED AI Overviews liability report](https://www.wired.com/story/a-court-has-ruled-that-google-is-liable-for-false-statements-generated-by-ai-overviews/) (verified 2026-06-15)
 - [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-15)
 - [The Verge NotebookLM Gemini 3.5 update](https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update) (verified 2026-06-15)
-- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-12)
-- [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-12)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-12)
-- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-12)
-- [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html) (verified 2026-06-12)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-12)
-- [Exa API pricing](https://exa.ai/pricing/api) (verified 2026-06-12)
-- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-12)
-- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-12)
+- [Kagi pricing](https://kagi.com/pricing) (verified 2026-06-23)
+- [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html) (verified 2026-06-23)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-23)
+- [Kagi Team plan docs](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-23)
+- [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html) (verified 2026-06-23)
+- [Kagi changelog](https://kagi.com/changelog) (verified 2026-06-23)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-23)
+- [Exa pricing](https://exa.ai/pricing) (verified 2026-06-23)
+- [Exa Agent launch](https://exa.ai/blog/exa-agent) (verified 2026-06-23)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-23)
+- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-23)
 - [Cohere pricing](https://cohere.com/pricing) (verified 2026-06-18)
 - [Cohere models docs](https://docs.cohere.com/docs/models) (verified 2026-06-18)
 - [Cohere Rerank docs](https://docs.cohere.com/docs/reranking-with-cohere) (verified 2026-06-18)
 - [Cohere and Aleph Alpha](https://cohere.com/blog/cohere-alephalpha-join-forces) (verified 2026-06-18)
-- [Genspark membership benefits](https://www.genspark.ai/membership-benefits-lp) (verified 2026-06-12)
-- [Glean official site](https://www.glean.com/) (verified 2026-06-12)
-- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-12)
-- [Morphic official site](https://morphic.sh) (verified 2026-06-12)
-- [miurla/morphic GitHub repository](https://github.com/miurla/morphic) (verified 2026-06-12)
-- [Morphic v1.4.0 release notes](https://github.com/miurla/morphic/releases/tag/v1.4.0) (verified 2026-06-12)
-- [You.com pricing](https://you.com/pricing) (verified 2026-06-12)
-- [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-12)
+- [Genspark membership plans](https://www.genspark.ai/helpcenter/membership-plans) (verified 2026-06-23)
+- [Glean official site](https://www.glean.com/) (verified 2026-06-23)
+- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-23)
+- [Glean Enterprise Flex pricing docs](https://docs.glean.com/glean-enterprise-flex-pricing) (verified 2026-06-23)
+- [Morphic official site](https://morphic.sh) (verified 2026-06-23)
+- [miurla/morphic GitHub repository](https://github.com/miurla/morphic) (verified 2026-06-23)
+- [Morphic v1.4.0 release notes](https://github.com/miurla/morphic/releases/tag/v1.4.0) (verified 2026-06-23)
+- [You.com pricing](https://you.com/pricing) (verified 2026-06-23)
+- [You.com API docs](https://you.com/docs/get-started/quickstart) (verified 2026-06-23)
 - [Grok by xAI](https://x.ai/grok) (verified 2026-06-15)
 - [xAI pricing](https://x.ai/pricing) (verified 2026-06-15)
 - [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-15)
 - [xAI X Search docs](https://docs.x.ai/developers/tools/x-search) (verified 2026-06-15)
-- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-06-12)
+- [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-06-23)
 - [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-12)
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-23)

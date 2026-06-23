@@ -5,10 +5,10 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 22, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
+meta_description: "Updated June 23, 2026: compare OpenRouter, OpenAI API, Claude API after Fable/Mythos suspension, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -49,7 +49,7 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 
 **Use direct vendor APIs when native features matter.** [OpenAI API](/tools/chatgpt/) is the default direct route for broad multimodal app work. [Claude API](/tools/claude/) is the direct route for long reasoning, writing, code, and document workflows. [Gemini API](/tools/gemini/) matters when Google Cloud, long context, multimodal inputs, or Veo video generation are part of the product. The June 22 Gemini recheck keeps Gemini 3.5 Flash pricing mode-specific: standard, batch/flex, priority, grounding, tools, and media rows need separate cost modeling.
 
-**Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** The June 15 Mistral check keeps the timeline and cost model honest: Mistral 3 officially launched on December 2, 2025, while Medium 3.5's model-card date is April 28, 2026. Current Mistral pricing lists Large 3 at $0.50/M input and $1.50/M output, Medium 3.5 at $1.50/M and $7.50/M, and Small 4 at $0.10/M and $0.30/M, but the Small 4 model card still lists $0.15/M and $0.60/M, and the pricing FAQ still uses a generic Mistral Large $2/$6 example. Benchmark real prompts, confirm the live Studio quote, and pin exact model IDs before switching because model quality, output length, retries, aliases, and source drift change the bill.
+**Use [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when price/performance, open-model strategy, European infrastructure, or low-latency inference matters.** The June 23 Groq check adds Qwen 3.6 27B, Kimi K2 0905 prompt-caching pricing, and built-in-tool costs to the hosted-inference buyer math. The June 15 Mistral check keeps the timeline and cost model honest: Mistral 3 officially launched on December 2, 2025, while Medium 3.5's model-card date is April 28, 2026. Current Mistral pricing lists Large 3 at $0.50/M input and $1.50/M output, Medium 3.5 at $1.50/M and $7.50/M, and Small 4 at $0.10/M and $0.30/M, but the Small 4 model card still lists $0.15/M and $0.60/M, and the pricing FAQ still uses a generic Mistral Large $2/$6 example. Benchmark real prompts, confirm the live Studio quote, and pin exact model IDs before switching because model quality, output length, retries, aliases, and source drift change the bill.
 
 **Use [Replicate](/tools/replicate/) or [fal.ai](/tools/fal-ai/) when the job is hosted image, video, audio, 3D, or custom-model inference.** The June 9 Replicate check keeps it strongest as a broad model catalog and custom-model deployment layer: public models may bill by hardware time or by input/output, while most private deployments bill setup, idle, and active time unless they are labeled fast-booting fine-tunes. fal is stronger when successful-output billing and fast media APIs are the buyer problem; the June 2 check keeps prepaid credits, queue behavior, failed-output billing, and the 50% batch discount as the key pricing details to model.
 
@@ -59,7 +59,7 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 
 **Use [Deepgram](/tools/deepgram/) when speech is infrastructure.** Deepgram is a better fit for product teams adding STT, TTS, audio intelligence, or voice agents than for creators who only need a one-off transcript.
 
-**Use [Hugging Face](/tools/hugging-face/) when model discovery, model cards, datasets, Spaces, and managed endpoints need to live in one open-AI collaboration surface.** The June 2 pricing check keeps Pro at $9/month, Team at $20/user/month, Enterprise from $50/user/month, storage at $12/TB public and $18/TB private before volume discounts, ZeroGPU on RTX Pro 6000 Blackwell for PRO/Enterprise, and Inference Endpoints starting at $0.033/hour CPU.
+**Use [Hugging Face](/tools/hugging-face/) when model discovery, model cards, datasets, Spaces, and managed endpoints need to live in one open-AI collaboration surface.** The June 23 pricing check keeps Pro at $9/month, Team at $20/user/month, Enterprise from $50/user/month, storage at $12/TB public and $18/TB private before volume discounts, ZeroGPU on RTX Pro 6000 Blackwell, and Inference Endpoints starting around low hourly CPU pricing.
 
 ## Buyer Paths
 
@@ -89,9 +89,9 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 - **Production inference:** Pick [Fireworks AI](/tools/fireworks-ai/) when hosted model APIs, batch inference, dedicated GPU deployments, and fine-tuning are more important than a polished chatbot UI.
 - **Browser automation:** Pick [Browserbase](/tools/browserbase/) when an AI agent, scraper, QA runner, or workflow needs managed browsers, Search/Fetch, Functions runtime, identity, observability, Model Gateway, and Stagehand-style automation.
 - **Speech APIs:** Pick [Deepgram](/tools/deepgram/) when speech-to-text, text-to-speech, voice agents, or audio intelligence are infrastructure, not just creator utilities.
-- **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, sandboxes, and GPU workloads without Kubernetes. The June 8 check keeps Starter at $0 with $30/month credits, Team at $250/month plus compute with $100/month credits, B200 at $0.001736/sec, H100 at $0.001097/sec, and B200+ as a compatibility route that can run on B200 or B300 while billing as B200.
-- **Open-weight model family:** Pick [Llama](/tools/llama/) when infrastructure needs self-hostable or provider-hosted open weights rather than a closed frontier API. The June 8 check keeps Maverick as the flagship open-weight lane, Scout as the current Groq fast-inference card at $0.11/M input and $0.34/M output, and Together Maverick at $0.27/M input and $0.85/M output.
-- **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus native v1 REST API, OpenAI-compatible and Anthropic-compatible endpoints, MCP support, SDKs, CLI server control, and LM Link for Llama, Qwen, Mistral, and other open weights. LM Studio has been free for ordinary home and work use since its July 2025 terms change.
+- **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, sandboxes, and GPU workloads without Kubernetes. The June 23 check keeps Starter at $0 with $30/month credits, Team at $250/month plus compute with $100/month credits, B200 at $0.001736/sec, H200 at $0.001261/sec, H100 at $0.001097/sec, region multipliers at 1.5x to 1.75x, non-preemptible execution at 3x, and B200+ as a compatibility route that can run on B200 or B300 while billing as B200.
+- **Open-weight model family:** Pick [Llama](/tools/llama/) when infrastructure needs self-hostable or provider-hosted open weights rather than a closed frontier API. The June 23 check keeps Maverick as the flagship open-weight lane, Scout as the current Groq fast-inference card at $0.11/M input and $0.34/M output, and Together Maverick at $0.27/M input and $0.85/M output. Treat provider-specific availability, context, and pricing as live checks.
+- **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus native v1 REST API, OpenAI-compatible and Anthropic-compatible endpoints, MCP support, SDKs, CLI server control, and LM Link for Llama, Qwen, Mistral, and other open weights. LM Studio has been free for ordinary home and work use since its July 2025 terms change, while Enterprise is the sales-led route for SSO, model/MCP gating, and private collaboration.
 - **Managed vector search:** Pick [Pinecone](/tools/pinecone/) when retrieval is production-critical and you want managed operations. The June 8 check keeps Starter free, Builder at $20/month flat, Standard at a $50/month minimum plus usage, and Enterprise at a $500/month minimum, so production buyers should model reads, writes, storage, Assistant, inference, backups, imports, and reranking before treating the database price as the whole retrieval bill.
 - **Open vector databases and agent memory:** Pick [Weaviate](/tools/weaviate/) or [Qdrant](/tools/qdrant/) when self-hosting optionality and control matter. The June 10 Weaviate check keeps Free, Flex from $45/month, Plus from $280/month, Premium from $400/month, Weaviate Embeddings at $0.025-$0.065 per 1M tokens, Query Agent at a free 1,000-request/month trial path or $30/org/month with 4,000 included requests, and Engram generally available as a managed memory/context service for agents. The June 8 Qdrant check keeps the Free Cloud testing tier at 0.5 vCPU, 1GB RAM, and 4GB disk; Standard as usage-based production cloud; Premium as the enterprise-support tier; Hybrid/Private Cloud as the control-first path; and v1.18.2 as the latest release checked, with security fixes included in the release notes.
 
@@ -126,7 +126,7 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Mistral AI Now Summit 2026](https://mistral.ai/news/ai-now-summit-2026/) (verified 2026-06-15)
 - [Mistral model docs](https://docs.mistral.ai/models/overview) (verified 2026-06-15)
 - [Mistral 3 launch post](https://mistral.ai/news/mistral-3) (verified 2026-06-15)
-- [Groq pricing](https://groq.com/pricing) (verified 2026-06-12)
+- [Groq pricing](https://groq.com/pricing) (verified 2026-06-23)
 - [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-12)
 - [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-12)
 - [Fireworks AI pricing](https://fireworks.ai/pricing) (verified 2026-06-12)
@@ -138,14 +138,17 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Browserbase Model Gateway docs](https://docs.browserbase.com/platform/model-gateway/overview) (verified 2026-06-18)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-12)
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
-- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-12)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-06-12)
-- [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-12)
-- [LM Studio](https://lmstudio.ai/) (verified 2026-06-12)
-- [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-12)
-- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-12)
-- [Together AI Llama pricing](https://www.together.ai/pricing) (verified 2026-06-12)
-- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-12)
+- [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-23)
+- [Hugging Face ZeroGPU docs](https://huggingface.co/docs/hub/en/spaces-zerogpu) (verified 2026-06-23)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-23)
+- [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-23)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-06-23)
+- [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-23)
+- [LM Studio desktop app terms](https://lmstudio.ai/app-terms) (verified 2026-06-23)
+- [Llama official site](https://ai.meta.com/llama/) (verified 2026-06-23)
+- [Together AI Llama pricing](https://www.together.ai/pricing) (verified 2026-06-23)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-23)
+- [Groq Llama 4 Maverick model card](https://console.groq.com/docs/model/meta-llama/llama-4-maverick-17b-128e-instruct) (verified 2026-06-23)
 - [Pinecone pricing](https://www.pinecone.io/pricing/) (verified 2026-06-12)
 - [Pinecone cost docs](https://docs.pinecone.io/guides/manage-cost/understanding-cost) (verified 2026-06-12)
 - [Pinecone Assistant pricing and limits](https://docs.pinecone.io/guides/assistant/pricing-and-limits) (verified 2026-06-12)

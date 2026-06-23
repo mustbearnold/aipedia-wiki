@@ -12,11 +12,11 @@ pricing_model: free
 price_range: "$0 (self-host) + provider API costs"
 status: active
 launched: 2024-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: quarterly
 seo_title: "Morphic Review: Self-Hosted AI Search, Pricing & Release Status (June 2026)"
-meta_description: "Morphic is an Apache 2.0 AI answer engine and self-hosted Perplexity alternative. June 2026 check: v1.4.0, 8.9k GitHub stars, no first-party paid SaaS tier."
+meta_description: "Morphic is an Apache 2.0 AI answer engine and self-hosted Perplexity alternative. June 2026 check: v1.4.0, roughly 8.9k GitHub stars, no first-party paid SaaS tier."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -35,24 +35,24 @@ facts:
     source: "https://github.com/miurla/morphic"
     source_label: "miurla/morphic on GitHub"
     source_id: morphic-github
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Self-host; $0 framework cost; Apache 2.0; BYOK for model and search-backend providers; no first-party public paid SaaS tier verified on June 12, 2026."
+    value: "Self-host; $0 framework cost; Apache 2.0; BYOK for model and search-backend providers; no first-party public paid SaaS tier verified on June 23, 2026."
     source: "https://github.com/miurla/morphic"
     source_label: "miurla/morphic on GitHub"
     source_id: morphic-github
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-08
     volatility: low
     confidence: high
   watch_out_for:
-    value: "Community-scale maintenance. v1.4.0 is the latest stable release as of June 12, 2026; verify last-commit and release cadence before depending on a fork. No first-party hosted SLA."
+    value: "Community-scale maintenance. v1.4.0 is the latest stable release as of June 23, 2026; verify last-commit and release cadence before depending on a fork. No first-party hosted SLA."
     source: "https://github.com/miurla/morphic"
     source_label: "miurla/morphic on GitHub"
     source_id: morphic-github
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -67,7 +67,7 @@ not_best_for:
   - teams needing polished mobile apps
   - workflows dependent on hosted SLAs
 quick_answer: >-
-  Morphic is the self-hostable, Apache 2.0 alternative to Perplexity. The June 8, 2026 check found v1.4.0 as the latest stable release, about 8.9k GitHub stars, 2.3k forks, and no first-party public paid SaaS tier. Pick it for private deployments, provider choice, and a generative-UI stack to fork. Skip it for polished hosted search, mobile apps, or non-technical users who want zero setup.
+  Morphic is the self-hostable, Apache 2.0 alternative to Perplexity. The June 23, 2026 check found v1.4.0 as the latest stable release, roughly 8.9k GitHub stars, 2.3k forks, and no first-party public paid SaaS tier. Pick it for private deployments, provider choice, and a generative-UI stack to fork. Skip it for polished hosted search, mobile apps, or non-technical users who want zero setup.
 price_history:
   - date: 2026-04-10
     plan: "Self-host · v1.3.0"
@@ -75,6 +75,7 @@ price_history:
     source: "https://github.com/miurla/morphic/releases"
     source_label: "miurla/morphic releases"
     source_id: morphic-github
+    verified_at: 2026-04-10
     note: "v1.3.0 released; Apache 2.0; new providers (Google, Vercel AI Gateway); Docker Compose with Postgres, Redis, SearXNG"
   - date: 2026-05-13
     plan: "Self-host"
@@ -82,6 +83,7 @@ price_history:
     source: "https://github.com/miurla/morphic"
     source_label: "miurla/morphic on GitHub"
     source_id: morphic-github
+    verified_at: 2026-05-13
     note: "Verified unchanged; no first-party hosted SaaS tier"
   - date: 2026-06-08
     plan: "Self-host · v1.4.0"
@@ -89,14 +91,23 @@ price_history:
     source: "https://github.com/miurla/morphic/releases/tag/v1.4.0"
     source_label: "miurla/morphic v1.4.0 release"
     source_id: morphic-github
+    verified_at: 2026-06-08
     note: "Verified Apache 2.0 repo, 8.9k stars, 2.3k forks, v1.4.0 latest stable, and no first-party public paid SaaS tier."
+  - date: 2026-06-23
+    plan: "Self-host · v1.4.0"
+    price: "$0"
+    source: "https://github.com/miurla/morphic/releases/tag/v1.4.0"
+    source_label: "miurla/morphic v1.4.0 release"
+    source_id: morphic-releases
+    verified_at: 2026-06-23
+    note: "Verified Apache 2.0 repo, v1.4.0 still latest stable release, roughly 8.9k stars, 2.3k forks, BYOK provider setup, and no first-party public paid SaaS tier."
 ---
 
 # Morphic
 
 An open-source AI answer engine positioned as a self-hostable Perplexity alternative. Generative UI, BYOK model/search routing, and an Apache 2.0 license make it a practical forkable stack for private answer-engine experiments.
 
-Core code lives at [github.com/miurla/morphic](https://github.com/miurla/morphic) (8.9k stars, 2.3k forks as of June 12, 2026). A hosted reference instance runs at [morphic.sh](https://morphic.sh) for evaluation.
+Core code lives at [github.com/miurla/morphic](https://github.com/miurla/morphic) (roughly 8.9k stars and 2.3k forks as of June 23, 2026). A hosted reference instance runs at [morphic.sh](https://morphic.sh) for evaluation.
 
 ## Recent developments
 
@@ -115,7 +126,7 @@ Core code lives at [github.com/miurla/morphic](https://github.com/miurla/morphic
 
 | | |
 |---|---|
-| **Repository** | [github.com/miurla/morphic](https://github.com/miurla/morphic) · 8.9k stars · 2.3k forks · mostly TypeScript |
+| **Repository** | [github.com/miurla/morphic](https://github.com/miurla/morphic) · roughly 8.9k stars · 2.3k forks · mostly TypeScript |
 | **Latest release** | v1.4.0 (May 24, 2026) |
 | **License** | Apache 2.0 |
 | **Hosting model** | Self-host (primary) · reference instance at [morphic.sh](https://morphic.sh) |
@@ -130,7 +141,7 @@ Core code lives at [github.com/miurla/morphic](https://github.com/miurla/morphic
 | **Hosted paid plan** | None typical · product is code-first |
 | **Launched** | 2024, by miurla as an open-source release |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-23. See Sources.
 
 ## What it actually is
 
@@ -153,7 +164,7 @@ The real moat is licensing and posture. Apache 2.0 license plus BYOK plus option
 ## When to pick something else
 
 - **Polished hosted search, zero setup:** [Perplexity](/tools/perplexity/). Mobile apps, Pro tier, Spaces, and continued product investment.
-- **Best-in-class retrieval as an API primitive:** [Exa](/tools/exa/). Better embeddings-native search for developers piping results into their own stack.
+- **Strong retrieval as an API primitive:** [Exa](/tools/exa/). Better embeddings-native search for developers piping results into their own stack.
 - **Curated non-AI search with privacy focus:** [Kagi](/tools/kagi/). Paid human-tuned search, optional AI summaries.
 - **Broader consumer ecosystem:** [You.com](/tools/you-com/). Custom agents, modes, and a hosted product path Morphic does not offer.
 - **Non-technical user base:** any hosted product. Morphic still requires a deploy step and provider-key configuration.
@@ -170,7 +181,7 @@ Morphic itself is free. The core application is Apache 2.0 licensed and installa
 | Search backend | Variable | Tavily, SearXNG (self-host, $0), Brave, and Exa offer free tiers or per-query pricing. |
 | Hosted plan | None typical | No first-party paid SaaS tier. Community forks exist. |
 
-*Prices verified 2026-06-12 via [github.com/miurla/morphic](https://github.com/miurla/morphic), the [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0), and [morphic.sh](https://morphic.sh). The hosted reference instance is for evaluation only and can be rate-limited or removed without notice.*
+*Prices verified 2026-06-23 via [github.com/miurla/morphic](https://github.com/miurla/morphic), the [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0), and [morphic.sh](https://morphic.sh). The hosted reference instance is for evaluation only and can be rate-limited or removed without notice.*
 
 A realistic monthly cost for a small-team private deployment runs $15-$60 depending on query volume and provider mix. Heavy Anthropic or OpenAI use can push higher; Ollama-local setups can run at near-zero provider cost.
 
@@ -199,7 +210,7 @@ A realistic monthly cost for a small-team private deployment runs $15-$60 depend
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against the [miurla/morphic GitHub repo](https://github.com/miurla/morphic), the [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0), and [morphic.sh](https://morphic.sh).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against the [miurla/morphic GitHub repo](https://github.com/miurla/morphic), the [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0), and [morphic.sh](https://morphic.sh).
 
 ## FAQ
 

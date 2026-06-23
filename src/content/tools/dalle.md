@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Deprecated API models; use current GPT Image pricing"
 status: dead
 launched: 2022-04
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -30,14 +30,14 @@ facts:
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_label: "OpenAI image generation guide"
     source_id: dalle-image-generation
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   flagship_model:
     value: "DALL-E 3, deprecated in favor of GPT Image models for new builds"
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_id: dalle-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
     status: deprecated
@@ -46,7 +46,7 @@ facts:
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_label: "OpenAI image generation guide"
     source_id: dalle-image-generation
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
     status: deprecated
@@ -55,14 +55,14 @@ facts:
     source: "https://platform.openai.com/docs/pricing/"
     source_label: "OpenAI pricing"
     source_id: dalle-best-paid-tier
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
   best_paid_tier:
     value: "Use current OpenAI GPT Image API pricing rather than starting new work on DALL-E"
     source: "https://platform.openai.com/docs/pricing/"
     source_id: dalle-best-paid-tier
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
     status: deprecated
@@ -70,7 +70,7 @@ facts:
     value: "Historical context and migration planning away from DALL-E API models"
     source: "https://platform.openai.com/docs/deprecations/2023-03-20-codex-models%23.doc"
     source_id: dalle-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     volatility: low
     confidence: high
     status: deprecated
@@ -120,13 +120,19 @@ For broader site context on OpenAI's image-generation transition, see the local 
 
 ## API status
 
-As verified on 2026-06-12:
+As verified on 2026-06-23:
 
 - OpenAI's deprecation schedule retired `dall-e-2` and `dall-e-3` from the API on May 12, 2026. New calls should target GPT Image model IDs.
 - OpenAI's image guide now centers GPT Image as the current path for image-generation work; DALL-E appears only as historical context.
 - GPT Image models support editing and output controls that the older DALL-E 3 Image API endpoint did not.
 - Any code still referencing the `dall-e-3` model string will fail against the live API and needs migration.
-- Current pricing should be read from OpenAI's pricing page because GPT Image costs depend on image tokens, quality, size, and input images.
+- Current pricing should be read from OpenAI's pricing page because GPT Image costs depend on image tokens, quality, size, and input images. OpenAI's public API pricing page now lists GPT-Image-2 as the current image-generation billing anchor.
+
+## Pricing
+
+DALL-E is not a current buying path. OpenAI retired the `dall-e-2` and `dall-e-3` API model IDs on May 12, 2026, so there is no new-production DALL-E plan to recommend.
+
+For new OpenAI image work, use GPT Image pricing from OpenAI's live pricing page. As verified on 2026-06-23, GPT-Image-2 is the current public API pricing anchor for OpenAI image generation, with separate image-token input, cached-input, and output prices.
 
 ## Migration notes
 

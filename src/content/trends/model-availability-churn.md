@@ -1,91 +1,87 @@
 ---
 type: trend
 slug: model-availability-churn
-title: "AI Model Availability & Churn Tracker"
-seo_title: "AI Model Availability Tracker: Retirements, Suspensions & Buyer Risk (June 2026)"
-meta_description: "Updated June 13, 2026: track current AI model availability risk across ChatGPT, Claude, Gemini, GitHub Copilot, Claude Code, Codex, and model routers."
+title: "AI Model Availability Tracker"
+seo_title: "AI Model Availability Tracker: Frontier Models Available or Unavailable (June 2026)"
+meta_description: "Updated June 23, 2026: a simple frontier AI model availability table for GPT-5.5, GPT-5.6, Claude Opus 4.8, Fable, Mythos, Gemini 3.5, Grok, DeepSeek, Qwen, Kimi, Mistral, Llama, MiniMax, and Cohere."
 author: "aipedia.wiki Editorial"
-description: "A live buyer-risk tracker for frontier model access, app/API differences, scheduled retirements, suspensions, and routing caveats."
-timeframe: "Live tracker started June 13, 2026 after GPT-5.2 left ChatGPT, Fable/Mythos access was suspended, and model-route billing changed across coding tools."
+description: "Daily status table for the frontier and widely used AI models buyers actually ask about."
+timeframe: "Daily model availability ledger, last checked June 23, 2026."
 impact: high
-last_updated: 2026-06-13
-last_verified: 2026-06-13
-update_frequency: weekly
+last_updated: 2026-06-23
+last_verified: 2026-06-23
+update_frequency: daily
 ---
 
-AI model access is no longer a background detail. It is a buying risk.
+Last checked: **June 23, 2026**.
 
-As of June 13, 2026, AiPedia treats model availability as a first-class decision factor alongside price, quality, privacy, and workflow fit. A model can be strong and still be a bad production default if it is gated, scheduled for retirement, available only in one app surface, or routed through a plan-specific billing system.
+Status rule: **Available** means the provider or a major official distribution route documents public, paid, enterprise, API, or open-weight access. **Unavailable** means the model is unreleased, retired from the named surface, suspended, or not documented as public access.
 
-## Current Verdict
+## Model Availability
 
-**Safe default for most buyers:** build everyday assistant workflows around [ChatGPT](/tools/chatgpt/) GPT-5.5, [Claude](/tools/claude/) Opus 4.8 or the stable Claude app/API routes available in your plan, and [Gemini](/tools/gemini/) 3.5 Flash where Google ecosystem integration matters.
+| Model | Provider | Status | Where it is available or unavailable as of June 23, 2026 |
+| --- | --- | --- | --- |
+| GPT-5.5 Instant | OpenAI | Available | ChatGPT default route and OpenAI API. |
+| GPT-5.5 Pro / GPT-5.5 Thinking | OpenAI | Available | ChatGPT paid routes and OpenAI API where plan or API access allows it. |
+| GPT-5.6 | OpenAI | Unavailable | No public OpenAI release-note or model-doc listing found. Do not cite it as released. |
+| GPT-5.4, GPT-5.4 mini, GPT-5.4 nano | OpenAI | Available | OpenAI model catalog and selected product/router surfaces, including GitHub Copilot-supported routes. |
+| GPT-5.3-Codex | OpenAI | Available | OpenAI Codex and GitHub Copilot-supported coding surfaces. |
+| GPT-5.2 in ChatGPT | OpenAI | Unavailable | Removed from ChatGPT on June 12, 2026. Existing conversations were moved to corresponding GPT-5.5 models. |
+| GPT-4.5 in ChatGPT | OpenAI | Available until June 27, 2026 | Scheduled ChatGPT retirement. OpenAI says the API is not affected by that ChatGPT retirement. |
+| o3 in ChatGPT | OpenAI | Available until August 26, 2026 | Scheduled ChatGPT retirement. OpenAI says the API is not affected by that ChatGPT retirement. |
+| Claude Opus 4.8 | Anthropic | Available | Claude app paid tiers, Claude API, and cloud partner routes documented by Anthropic. |
+| Claude Opus 4.7 / 4.6 | Anthropic | Available | Claude app, API, and supported partner routes where the plan or model picker includes them. |
+| Claude Sonnet 4.6 | Anthropic | Available | Claude product/API routes and GitHub Copilot-supported routes. |
+| Claude Haiku 4.5 | Anthropic | Available | Anthropic-supported lower-cost route and GitHub Copilot-supported route. |
+| Claude Fable 5 | Anthropic | Unavailable | Anthropic says access is suspended for all users. GitHub's Copilot model list also flags Fable as currently unavailable. |
+| Claude Mythos 5 | Anthropic | Unavailable | Anthropic says access is suspended for all users. |
+| Gemini 3.5 Flash | Google | Available | Gemini app, AI Mode in Search, Gemini API, Google Antigravity, and enterprise routes. |
+| Gemini 3.5 Pro | Google | Unavailable | Google says it is still in progress and expected after the Flash rollout, not publicly available yet. |
+| Gemini 3.1 Pro preview | Google | Available | Preview route in supported surfaces such as GitHub Copilot. Treat as preview access, not a stable production default. |
+| Gemini 2.5 Pro / Gemini 2.5 Flash | Google | Available | Stable Gemini API routes, with lifecycle dates published by Google. |
+| Grok 4.3 | xAI | Available | xAI API and selected partner routes such as Amazon Bedrock. xAI lists it as the default choice for general chat and coding. |
+| Grok Build 0.1 | xAI | Available | xAI coding route. Confirm surface and plan before standardizing an IDE workflow. |
+| DeepSeek-V4-Pro | DeepSeek | Available | DeepSeek says V4 preview is live, open-sourced, and available in chat and API routes. Treat preview behavior as change-prone. |
+| DeepSeek-V4-Flash | DeepSeek | Available | DeepSeek chat/API route and third-party official deployment routes such as NVIDIA NIM. |
+| Qwen3.7-Max | Alibaba Qwen | Available | Qwen's official release page documents Qwen3.7-Max as the agent frontier model. Verify API route and region before production use. |
+| Qwen3.7-Plus | Alibaba Qwen | Available | Partner-hosted inference routes document Qwen3.7 Plus availability. Use when the Plus route, not Max, is the supported deployment. |
+| Kimi K2.6 | Moonshot AI | Available | Moonshot's Kimi product page lists K2.6 as the current multimodal model route. |
+| Kimi K2.7 Code | Moonshot AI | Available | Kimi API Platform lists K2.7 Code as a current coding model API route. |
+| Mistral Medium 3.5 | Mistral AI | Available | Mistral docs list Medium 3.5 as the frontier multimodal model and model card. |
+| Mistral Small 4 | Mistral AI | Available | Mistral docs and announcement list Small 4 as a current hybrid open model. |
+| Llama 4 Maverick | Meta | Available | Meta announced Maverick as an open-weight Llama 4 model available through Meta and distribution partners. |
+| Llama 4 Scout | Meta | Available | Meta announced Scout as an open-weight Llama 4 model available through Meta and distribution partners. |
+| Llama 4 Behemoth | Meta | Unavailable | Meta described Behemoth as a preview/teacher model, not a public model route. |
+| MiniMax M3 | MiniMax | Available | MiniMax says M3 is officially released for coding and agentic work. Confirm hosted API or deployment route before rollout. |
+| Cohere Command A+ | Cohere | Available | Cohere docs list `command-a-plus-05-2026` as live through standard API endpoints, with private deployment options for enterprise customers. |
 
-**Treat as unstable:** any workflow that hardcodes GPT-5.2 in ChatGPT, expects Claude Fable 5 or Mythos 5 access, assumes a Copilot model is free or fixed-cost, or treats a model-router listing as proof that the underlying provider route is usable.
+## Fast Buyer Read
 
-**Enterprise rule:** if a model choice affects a customer promise, compliance workflow, benchmark claim, or product SLA, check the vendor release notes and route availability before renewal or deployment.
-
-## Availability Matrix
-
-| Surface | Current status as of June 13, 2026 | Buyer action |
-| --- | --- | --- |
-| ChatGPT GPT-5.5 | Stable current ChatGPT family. OpenAI says GPT-5.5 models remain available after GPT-5.2 retirement. | Use GPT-5.5 for new ChatGPT comparisons and update old GPT-5.2 internal docs. |
-| ChatGPT GPT-5.2 | Retired from ChatGPT as of June 12, 2026. Existing GPT-5.2 conversations continue on corresponding GPT-5.5 models. | Do not cite GPT-5.2 as available in ChatGPT. Re-run important saved workflows. |
-| ChatGPT o3 and GPT-4.5 | Scheduled ChatGPT-only retirements: GPT-4.5 on June 27, 2026 and o3 on August 26, 2026. OpenAI says these changes do not affect the API. | Separate ChatGPT app availability from API availability in procurement notes. |
-| OpenAI API GPT-5.5 | OpenAI says GPT-5.5 and GPT-5.5 Pro are available in the API after the April 24 update. | Keep API model strings and deprecation checks separate from ChatGPT model-picker changes. |
-| Claude Opus 4.8 | Stable high-end Claude route and current safest default for Claude-heavy professional or coding workflows. | Use Opus 4.8 as the fallback assumption when Fable/Mythos is unavailable. |
-| Claude Fable 5 and Mythos 5 | Suspended for all users after a US government directive. Anthropic says other Claude models are unaffected. | Do not buy or build around Fable/Mythos until Anthropic restores access and publishes the new access rules. |
-| Gemini 3.5 Flash | Generally available in the Gemini app, AI Mode in Search, Gemini API, Antigravity, and enterprise surfaces. | Safe Google default, but confirm plan and API route because Gemini surfaces differ. |
-| Gemini preview and older API models | Gemini 2.0 Flash routes shut down June 1, 2026. Gemini 3.1 image preview routes are scheduled to shut down June 25, 2026. | Replace preview/old model strings before they reach production. |
-| GitHub Copilot model routes | Supported models vary by plan, client, capability, and retirement status. Usage is now charged through AI Credits based on model and token use. | Budget by model and workflow, not by "Copilot" as a single fixed-cost product. |
-| Claude Code | Strong route when Opus 4.8 is available; dynamic workflows and Fable/Mythos expectations require explicit verification. | Pin current Claude Code behavior in team docs and keep a fallback agent path. |
-| Codex | GPT-5.5 is available in Codex according to OpenAI's GPT-5.5 launch details, while ChatGPT release notes continue to change model-picker and Codex features. | Track Codex app usage limits separately from API pricing and ChatGPT model retirement. |
-| OpenRouter and model routers | Useful for optionality and fallback, but a listed model is not the same as a provider-guaranteed production entitlement. | Use routing for tests and fallback, but verify direct provider access for regulated or core workloads. |
-
-## The Decision Rule
-
-For a personal subscription, pick the assistant that gives the best answer today. For a business workflow, pick the model route with the clearest replacement path.
-
-That means the best model is not always the most capable model. A slightly weaker route with stable access, published retirement windows, admin controls, and clear billing can be safer than a stronger route that can disappear, move behind a trusted-access program, or change cost behavior overnight.
-
-## What Changed This Week
-
-**Anthropic turned model access into governance risk.** Claude Fable 5 was announced as the public Mythos-class model on June 9, but Anthropic later said it had to disable Fable 5 and Mythos 5 for all users after a US government directive. The practical buyer takeaway: even public frontier access can become unavailable because of policy, export-control, or safety disputes.
-
-**OpenAI turned model continuity into an app-surface risk.** GPT-5.2 is gone from ChatGPT, but OpenAI says existing conversations continue on corresponding GPT-5.5 models. OpenAI's release notes also distinguish ChatGPT-only retirements from API availability, which matters for buyers comparing old evals, saved prompts, and API workloads.
-
-**Google shows why preview labels matter.** Gemini 3.5 Flash is a current stable route, while older Gemini 2.0 Flash routes have already shut down and some image preview routes have a June 25 shutdown date. Preview and latest labels should not be treated as permanent model IDs.
-
-**GitHub Copilot made model choice a cost-control issue.** Copilot usage now depends on the model and token consumption through AI Credits. Teams should stop asking "how much is Copilot?" and start asking "which model, which client, which workflow, and what monthly budget?"
-
-## Buyer Checklist
-
-| Question | Why it matters |
-| --- | --- |
-| Is this an app model, API model, IDE model, or router model? | Availability can differ across ChatGPT, Codex, API, Copilot, Claude Code, Gemini app, and model routers. |
-| Is the model stable, preview, experimental, or trusted-access only? | Preview and restricted routes carry migration risk. |
-| Is there a scheduled retirement date? | Old saved workflows can quietly move to newer models or stop working. |
-| Does usage depend on tokens, credits, or model class? | Coding agents and model routers can change real cost faster than subscription labels suggest. |
-| Is there a direct-provider fallback? | Router convenience does not replace enterprise access, support, or data-processing terms. |
-| Would a model change break a customer promise? | If yes, pin the model route, document fallback behavior, and re-test before renewing. |
-
-## AiPedia Take
-
-The model market has crossed from "which model is smartest?" into "which model route can I trust next month?" For individual users, the answer is still mostly product fit. For teams, availability, retirement policy, billing surface, and fallback strategy now belong in every buying decision.
-
-AiPedia will use this tracker as the canonical reference when updating [ChatGPT](/tools/chatgpt/), [Claude](/tools/claude/), [Gemini](/tools/gemini/), [Claude Code](/tools/claude-code/), [GitHub Copilot](/tools/github-copilot/), [OpenRouter](/tools/openrouter/), [AI Chatbots](/categories/ai-chatbots/), [AI Coding](/categories/ai-coding/), and [AI Infrastructure](/categories/ai-infrastructure/) pages.
+- Safe current defaults: GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.3, Mistral Medium 3.5, DeepSeek V4, Qwen3.7, Kimi K2, MiniMax M3, Llama 4 Maverick/Scout, and Cohere Command A+.
+- Do not build around yet: GPT-5.6, Gemini 3.5 Pro, Claude Fable 5, Claude Mythos 5, or Llama 4 Behemoth.
+- Recheck before procurement: any preview route, Copilot model route, model-router listing, or scheduled-retirement model.
 
 ## Sources
 
-- [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), verified June 13, 2026.
-- [OpenAI GPT-5.5 launch page](https://openai.com/index/introducing-gpt-5-5/), verified June 13, 2026.
-- [Anthropic statement on Fable 5 and Mythos 5 access](https://www.anthropic.com/news/fable-mythos-access), verified June 13, 2026.
-- [Anthropic Claude Opus 4.8 announcement](https://www.anthropic.com/news/claude-opus-4-8), verified June 13, 2026.
-- [Google Gemini 3.5 announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/), verified June 13, 2026.
-- [Google Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), verified June 13, 2026.
-- [Google Gemini API model docs](https://ai.google.dev/gemini-api/docs/models), verified June 13, 2026.
-- [GitHub Copilot supported models docs](https://docs.github.com/en/copilot/reference/ai-models/supported-models), verified June 13, 2026.
-- [GitHub Copilot model pricing docs](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), verified June 13, 2026.
-- [OpenRouter pricing](https://openrouter.ai/pricing), verified June 13, 2026.
-- [OpenRouter models](https://openrouter.ai/models), verified June 13, 2026.
-- [AiPedia late June 13 news update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/), verified June 13, 2026.
+- [OpenAI model release notes](https://help.openai.com/en/articles/9624314-model-release-notes), verified June 23, 2026.
+- [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), verified June 23, 2026.
+- [OpenAI GPT-5.5 Instant](https://openai.com/index/introducing-gpt-5-5-instant/), verified June 23, 2026.
+- [Anthropic Fable 5 and Mythos 5 access statement](https://www.anthropic.com/news/fable-mythos-access), verified June 23, 2026.
+- [Anthropic Claude Opus 4.8 announcement](https://www.anthropic.com/news/claude-opus-4-8), verified June 23, 2026.
+- [Anthropic Claude models overview](https://docs.anthropic.com/en/docs/about-claude/models/overview), verified June 23, 2026.
+- [Google Gemini 3.5 announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/), verified June 23, 2026.
+- [Google Gemini API changelog](https://ai.google.dev/gemini-api/docs/changelog), verified June 23, 2026.
+- [Google Gemini model lifecycle docs](https://ai.google.dev/gemini-api/docs/model-versions), verified June 23, 2026.
+- [GitHub Copilot supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models), verified June 23, 2026.
+- [xAI model docs](https://docs.x.ai/developers/models), verified June 23, 2026.
+- [AWS Bedrock Grok 4.3 model card](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html), verified June 23, 2026.
+- [DeepSeek V4 Preview release](https://api-docs.deepseek.com/news/news260424), verified June 23, 2026.
+- [Qwen3.7 official release](https://qwen.ai/blog?id=qwen3.7), verified June 23, 2026.
+- [Kimi by Moonshot AI](https://www.moonshot.ai/), verified June 23, 2026.
+- [Kimi API Platform](https://platform.kimi.ai/), verified June 23, 2026.
+- [Mistral model overview](https://docs.mistral.ai/models/overview), verified June 23, 2026.
+- [Mistral Medium 3.5 model card](https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04), verified June 23, 2026.
+- [Mistral Small 4 announcement](https://mistral.ai/news/mistral-small-4/), verified June 23, 2026.
+- [Meta Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), verified June 23, 2026.
+- [MiniMax M3 announcement](https://www.minimax.io/blog/minimax-m3), verified June 23, 2026.
+- [Cohere model docs](https://docs.cohere.com/docs/models), verified June 23, 2026.

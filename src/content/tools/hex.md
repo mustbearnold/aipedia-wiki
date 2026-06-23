@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $36-$75/Editor/mo / Enterprise custom"
 status: active
 launched: 2020-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,48 +31,48 @@ facts:
     source: https://hex.tech/
     source_label: Hex official site
     source_id: hex-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   pricing_anchor:
-    value: Hex pricing (June 2026) is Community free with 5 notebooks, Professional $36/Editor/mo with the Notebook agent and standard credits, Team $75/Editor/mo with Threads and Semantic Model agents plus extended credits, scheduled runs, and unlimited published apps, and Enterprise custom.
+    value: Hex pricing (June 2026) is Community free with 5 notebooks, Professional $36/Editor/mo with the Notebook agent and standard credits, Team $75/Editor/mo with Threads and Semantic Model agents plus extended credits, scheduled runs, and unlimited published apps, and Enterprise custom. Hex's agent-credit update still lists 30 monthly credits for Professional Editor seats, 40 for Team Editor seats, 60 for Enterprise Editor seats, and 10 for Explorer seats.
     source: https://hex.tech/pricing/
     source_label: Hex pricing
     source_id: hex-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: high
     confidence: high
-    next_review_at: '2026-08-13'
+    next_review_at: '2026-07-23'
   workflow_surface:
     value: Hex combines notebooks, SQL/Python, apps, dashboards, Threads, semantic-model-aware agents, and AI assistance rather than acting as a standalone chatbot.
     source: https://learn.hex.tech/
     source_label: Hex Learn
     source_id: hex-learn
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   enterprise_controls:
     value: Security review should cover data connections, permissions, workspace governance, auditability, and enterprise compliance
       posture.
     source: https://hex.tech/security/
     source_label: Hex security
     source_id: hex-security
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
   watch_out_for:
     value: Hex is strongest when data teams standardize workflows; compare migration effort, warehouse costs, notebook ergonomics,
       and dashboard/app consumption patterns.
     source: https://hex.tech/
     source_label: Hex official site
     source_id: hex-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-23'
     volatility: medium
     confidence: high
-    next_review_at: '2026-11-13'
+    next_review_at: '2026-09-23'
 tags: [data-analysis, sql, python, notebook, ai-magic, collaboration, business-intelligence]
 seo_title: "Hex: Features, Pricing & Review (June 2026)"
 meta_description: "Hex is an AI Analytics Platform for SQL + Python teams. Notebook, Threads, and Semantic Model agents help build governed analyses. Free Community, Professional $36/Editor/mo, Team $75/Editor/mo."
@@ -89,12 +89,21 @@ not_best_for:
 quick_answer: >-
   Hex is an AI Analytics Platform for data teams: SQL/Python notebooks, governed context, published apps, Threads for natural-language questions, and Notebook/Semantic Model agents for analysis work. Community is free for 5 notebooks. Professional is $36/Editor/mo with Notebook agent and standard credits. Team is $75/Editor/mo with Threads agent, Semantic Model agent, extended credits, scheduled runs, and unlimited published apps. Enterprise is custom. Pick it for AI-augmented data team workflows. Skip it for pure dashboards or solo casual use.
 price_history:
+  - date: 2026-06-23
+    plan: "Community / Professional / Team / Enterprise"
+    price: "$0 / $36/Editor/mo / $75/Editor/mo / Custom"
+    source: "https://hex.tech/blog/credits-and-usage-visibility-for-hex-agents/"
+    source_label: "Hex agent credits usage update"
+    source_id: hex-agent-credits
+    verified_at: 2026-06-23
+    note: "Reverified pricing and agent-credit grants. Paid Editor seats still get monthly AI credits by plan, Explorer seats get a smaller grant, and teams can buy add-on pooled credits."
   - date: 2026-06-02
     plan: "Community / Professional / Team / Enterprise"
     price: "$0 / $36/Editor/mo / $75/Editor/mo / Custom"
     source: "https://hex.tech/pricing/"
     source_label: "Hex pricing"
     source_id: hex-pricing
+    verified_at: 2026-06-23
     note: "Reverified public pricing and current AI credit language. Professional Editor seats include standard credits; Team includes extended credits; Enterprise includes premium credits. Hex's May 20 credit update says Professional Editor seats include 30 monthly credits, Team Editor seats 40, Enterprise Editor seats 60, and Explorer seats 10."
   - date: 2026-04-18
     plan: "Individual Paid"
@@ -102,6 +111,7 @@ price_history:
     source: "https://hex.tech/pricing/"
     source_label: "Source"
     source_id: hex-pricing
+    verified_at: 2026-06-23
     note: "Solo paid tier with collaboration; Team Creator seats listed at $149-$199/user/mo annual."
   - date: 2026-05-13
     plan: "Community / Professional / Team / Enterprise"
@@ -109,6 +119,7 @@ price_history:
     source: "https://hex.tech/pricing/"
     source_label: "Source"
     source_id: hex-pricing
+    verified_at: 2026-06-23
     note: "Pricing restructured around Editor seats. Professional ($36) replaces Individual Paid and unlocks the Notebook agent plus unlimited AI quick edits. Team ($75/Editor, with 14-day free trial) replaces Team Creator and ships Threads agent, Semantic Model agent, scheduled runs, unlimited published apps, alerts, and shared collections. Steep reduction from previous $149-$199/user team pricing."
 ---
 
@@ -162,7 +173,7 @@ A collaborative AI analytics workspace that merges three historically separate t
 | Team | $75/Editor/mo (14-day free trial) | Data teams with Threads agent, Semantic Model agent, extended credits, scheduled runs, unlimited published apps, alerts, shared components |
 | Enterprise | Custom | Compliance, SSO, custom compute, governance |
 
-Prices verified 2026-06-12 via [hex.tech/pricing](https://hex.tech/pricing/) and Hex's AI/credit docs. All paid plans include monthly per-seat AI credit grants for paid seats, with add-on credits available when teams need more.
+Prices verified 2026-06-23 via [hex.tech/pricing](https://hex.tech/pricing/) and Hex's AI/credit docs. Professional Editor seats include 30 monthly credits, Team Editors 40, Enterprise Editors 60, and Explorer seats 10. Add-on pooled credits are available when teams need more.
 
 ## Failure modes
 
@@ -184,7 +195,7 @@ Prices verified 2026-06-12 via [hex.tech/pricing](https://hex.tech/pricing/) and
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [hex.tech](https://hex.tech/), [hex.tech/pricing](https://hex.tech/pricing/), [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview), and Hex's May 20, 2026 credit update.
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [hex.tech](https://hex.tech/), [hex.tech/pricing](https://hex.tech/pricing/), [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview), and Hex's May 20, 2026 credit update.
 
 ## FAQ
 

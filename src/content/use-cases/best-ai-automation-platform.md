@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-automation-platform
 title: "Best AI Automation Platform (June 2026)"
 seo_title: "Best AI Automation Platform: n8n, Zapier, Make, Gumloop & Relevance AI (June 2026)"
-meta_description: "Best AI automation platforms in June 2026: n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, Relevance AI for agent workforces, and Lindy for assistant-style delegation. Buyer-path links updated June 21."
+meta_description: "Best AI automation platforms in June 2026: n8n for technical teams, Zapier for no-code integrations, Make for visual operations, Gumloop for AI-native workflows, Relevance AI for agent workforces, and Lindy for assistant-style delegation. Buyer-path links updated June 23."
 author: "aipedia.wiki Editorial"
 description: "A current buyer guide to AI automation platforms, covering workflow automation, AI agents, integrations, self-hosting, pricing units, governance, and which platform to buy first."
 tools_mentioned: ["n8n", "zapier", "make", "gumloop", "relevance-ai", "lindy", "pipedream", "crewai"]
@@ -36,14 +36,14 @@ guide_picks:
     sources:
       - label: "Zapier pricing"
         url: "https://zapier.com/pricing"
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 ---
 
 # Best AI Automation Platform (June 2026)
 
-AiPedia verified this guide on 2026-06-12 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
+AiPedia rechecked Make in this guide on 2026-06-23 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
 
 ## Quick Verdict
 
@@ -51,7 +51,7 @@ AiPedia verified this guide on 2026-06-12 against current official pricing, docs
 
 **[Zapier](/tools/zapier/) is the best choice for non-technical teams that need the broadest app coverage.** Zapier's current pricing page positions it around Zaps, Tables, Interfaces, Canvas, built-in AI workflow tools, Zapier MCP, and more than 8,000 app integrations. Choose it when speed and coverage beat control.
 
-**[Make](/tools/make/) is the best low-cost visual workflow builder.** Make is strongest when the buyer wants a visual scenario canvas, routers, filters, credits, 3000+ apps, and newer AI agent workflows without taking on self-hosting.
+**[Make](/tools/make/) is the best low-cost visual workflow builder.** Make is strongest when the buyer wants a visual scenario canvas, routers, filters, credits, 3000+ apps, AI Toolkit/Web Search, Make Code App, and newer AI agent workflows without taking on self-hosting.
 
 **[Gumloop](/tools/gumloop/) is the strongest AI-native automation challenger for teams building agent-heavy workflows.** It is useful when buyers want flows, agents, triggers, MCP hosting/proxying, app guardrails, and a modern agent workflow surface.
 
@@ -109,7 +109,7 @@ Watch-out: Zapier is easy to start, which can create messy automation sprawl. Te
 
 ### Make
 
-Make is the best low-cost visual alternative. Its current pricing page lists a free plan with 1,000 credits/month and a visual builder, while Core, Pro, and Teams scale by credits and collaboration features. Its AI Agents page positions Make around transparent agents across 3000+ apps.
+Make is the best low-cost visual alternative. Its June 23 pricing page lists a free plan with 1,000 credits/month and a visual builder, while Core, Pro, and Teams scale by credits and collaboration features. Its AI Agents and pricing surfaces position Make around transparent agents, MCP, AI Toolkit, AI Web Search, Make Code App, and 3000+ apps.
 
 Best for: visual operators, e-commerce workflows, data syncs, branching automations, and teams that want more canvas control than Zapier without self-hosting.
 
@@ -190,8 +190,8 @@ Use Gumloop when the work is AI-native flows and agents inside a workflow surfac
 - [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-12)
 - [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-12)
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-12)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-12)
-- [Make AI Agents](https://help.make.com/introduction-to-make-ai-agents-new) (verified 2026-06-12)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-23)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-23)
 - [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-12)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-12)
 - [Relevance AI plans and credits docs](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-12)

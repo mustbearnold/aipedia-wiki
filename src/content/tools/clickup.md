@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$40/user/month; Brain AI $9/user/month; Everything AI $28/user/month; AI Super Credits $10 per 10K credits"
 status: active
 launched: 2017-01
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 seo_title: "ClickUp Review (June 2026): Pricing, Brain AI, Super Agents, MCP"
-meta_description: "ClickUp review updated June 18, 2026: Free, Unlimited $7, Business $12, Brain AI $9, Everything AI $28, Super Agents, Brain MAX, MCP, AI Super Credits, pricing risks, and workspace fit."
+meta_description: "ClickUp review updated June 23, 2026: Free, Unlimited $7, Business $12, Brain AI $9, Everything AI $28, Super Agents, Brain MAX, MCP, AI Super Credits, pricing risks, and workspace fit."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: true
@@ -36,16 +36,16 @@ facts:
     source: https://clickup.com/pricing
     source_label: ClickUp pricing
     source_id: clickup-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: medium
     confidence: high
     next_review_at: 2026-09-18
   pricing_anchor:
-    value: "ClickUp's June 18 pricing check keeps Free Forever, Unlimited at $7/user/month billed yearly, Business at $12/user/month billed yearly, Enterprise custom, Brain AI at $9/user/month, Everything AI at $28/user/month, and AI Super Credits at $10 per 10,000 credits."
+    value: "ClickUp's June 23 pricing check keeps Free Forever, Unlimited at $7/user/month billed yearly, Business at $12/user/month billed yearly, Enterprise custom, Brain AI at $9/user/month, Everything AI at $28/user/month, and AI Super Credits at $10 per 10,000 credits."
     source: https://clickup.com/pricing
     source_label: ClickUp pricing
     source_id: clickup-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
     next_review_at: 2026-08-18
@@ -54,7 +54,7 @@ facts:
     source: https://help.clickup.com/hc/en-us/articles/12578085238039-What-is-ClickUp-Brain-AI
     source_label: ClickUp Brain AI help
     source_id: clickup-brain-help
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
     next_review_at: 2026-08-18
@@ -63,7 +63,7 @@ facts:
     source: https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server
     source_label: ClickUp MCP server
     source_id: clickup-mcp
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
     next_review_at: 2026-08-18
@@ -72,7 +72,7 @@ facts:
     source: https://help.clickup.com/hc/en-us/articles/20686299081879-ClickUp-Brain-AI-feature-availability-and-limits
     source_label: ClickUp Brain AI feature availability and limits
     source_id: clickup-ai-limits
-    verified_at: 2026-06-18
+    verified_at: 2026-06-23
     volatility: high
     confidence: high
     next_review_at: 2026-08-18
@@ -90,14 +90,23 @@ not_best_for:
   - enterprises needing a pure ITSM, CRM, or ERP platform
   - teams that cannot govern agent permissions, AI spend, and workspace hierarchy
 quick_answer: >-
-  ClickUp is the all-in-one work-management workspace for teams that want tasks, docs, chat, dashboards, automations, and AI in the same operating system. The June 18, 2026 check keeps core pricing stable: Free Forever, Unlimited $7/user/month billed yearly, Business $12/user/month billed yearly, Enterprise custom, Brain AI $9/user/month, Everything AI $28/user/month, and AI Super Credits at $10 per 10K credits. The bigger change is product scope: Brain 2, Brain MAX apps, Super Agents, AI Super Credits, public-beta MCP, and cross-tool AI context make ClickUp more agentic, but also raise governance and spend-control risk.
+  ClickUp is the all-in-one work-management workspace for teams that want tasks, docs, chat, dashboards, automations, and AI in the same operating system. The June 23, 2026 check keeps core pricing stable: Free Forever, Unlimited $7/user/month billed yearly, Business $12/user/month billed yearly, Enterprise custom, Brain AI $9/user/month, Everything AI $28/user/month, and AI Super Credits at $10 per 10K credits. The bigger change is product scope: Brain 2, Brain MAX apps, Super Agents, AI Super Credits, public-beta MCP, usage dashboards, and cross-tool AI context make ClickUp more agentic, but also raise governance and spend-control risk.
 price_history:
+  - date: 2026-06-23
+    plan: "Core workspace / Brain AI / Everything AI / Super Credits"
+    price: "Free; Unlimited $7/user/mo annual; Business $12/user/mo annual; Brain AI $9/user/mo; Everything AI $28/user/mo; AI Super Credits $10 per 10K"
+    source: "https://clickup.com/pricing"
+    source_label: "ClickUp pricing"
+    source_id: clickup-pricing
+    verified_at: 2026-06-23
+    note: "Rechecked pricing, Brain AI help, AI Super Credit docs, usage dashboard docs, and MCP docs. No material price change found; governance and credit usage remain the main risk."
   - date: 2026-04-19
     plan: "Unlimited"
     price: "$7/user/mo (annual)"
     source: "https://clickup.com/pricing"
     source_label: "ClickUp pricing"
     source_id: clickup-pricing
+    verified_at: 2026-06-23
     note: "Annual billing. Monthly rate shown at $10/user/mo on the pricing page at the time."
   - date: 2026-04-19
     plan: "Business"
@@ -105,6 +114,7 @@ price_history:
     source: "https://clickup.com/pricing"
     source_label: "ClickUp pricing"
     source_id: clickup-pricing
+    verified_at: 2026-06-23
     note: "Annual billing. Monthly rate $19/user/mo at the time. Includes dashboards, SSO, and 5K automations/mo."
   - date: 2026-05-13
     plan: "Brain AI / Everything AI"
@@ -112,6 +122,7 @@ price_history:
     source: "https://clickup.com/pricing"
     source_label: "ClickUp pricing"
     source_id: clickup-pricing
+    verified_at: 2026-06-23
     note: "Brain AI and Everything AI pricing remained live, with AI Super Credits priced separately."
   - date: 2026-06-18
     plan: "Core workspace"
@@ -119,6 +130,7 @@ price_history:
     source: "https://clickup.com/pricing"
     source_label: "ClickUp pricing"
     source_id: clickup-pricing
+    verified_at: 2026-06-23
     note: "Free has 60MB storage, unlimited tasks, unlimited free members, 1 form, and limited advanced use. Unlimited adds unlimited storage, integrations, Gantt, goals, resource management, Chat, email in ClickUp, and permission-controlled guests. Business adds unlimited dashboards with advanced cards, unlimited message history, 5K automations/mo, Google SSO, proofing, and advanced work views."
   - date: 2026-06-18
     plan: "Brain AI"
@@ -126,6 +138,7 @@ price_history:
     source: "https://clickup.com/pricing"
     source_label: "ClickUp pricing"
     source_id: clickup-pricing
+    verified_at: 2026-06-23
     note: "Includes unlimited Brain Assistant, @Brain Agent, unlimited AI chat with Claude/ChatGPT/Gemini, expanded premium model use, unlimited AI writing, Enterprise Search Workspace, and 1,500 AI Super Credits per user/month."
   - date: 2026-06-18
     plan: "Everything AI"
@@ -133,6 +146,7 @@ price_history:
     source: "https://clickup.com/pricing"
     source_label: "ClickUp pricing"
     source_id: clickup-pricing
+    verified_at: 2026-06-23
     note: "Adds Ambient Answers, AI Notetaker, image generation, AI Fields, AI Automations and Dashboards, AI Assign and Prioritize, 3x more Super Agent usage, private/workspace Enterprise Search, and 5,000 AI Super Credits per user/month."
   - date: 2026-06-18
     plan: "AI Super Credits"
@@ -140,6 +154,7 @@ price_history:
     source: "https://help.clickup.com/hc/en-us/articles/37837088720151-How-are-AI-Super-Credits-consumed"
     source_label: "ClickUp AI Super Credits help"
     source_id: clickup-ai-credits
+    verified_at: 2026-06-23
     note: "AI Super Credits renew monthly, do not roll over, cost $0.001/credit, and are consumed by premium AI features such as AI Fields, image generation, Autopilot Agents, and Super Agents."
 ---
 
@@ -147,7 +162,7 @@ price_history:
 
 ClickUp is an all-in-one work-management workspace. It bundles tasks, docs, chat, calendars, dashboards, whiteboards, time tracking, goals, automations, integrations, and AI into one operating system for team work.
 
-The June 18, 2026 refresh keeps the old pricing story mostly stable, but changes the buyer read. ClickUp is no longer just "tasks plus ClickUp Brain." The current product story is Brain 2, Brain MAX apps, Super Agents, Everything AI, public-beta MCP, AI Super Credits, and workspace-context AI that can answer, write, search, create tasks, build workflows, and act through ClickUp permissions.
+The June 23, 2026 refresh keeps the old pricing story mostly stable, but changes the buyer read. ClickUp is no longer just "tasks plus ClickUp Brain." The current product story is Brain 2, Brain MAX apps, Super Agents, Everything AI, public-beta MCP, AI Super Credits, and workspace-context AI that can answer, write, search, create tasks, build workflows, and act through ClickUp permissions.
 
 ## System Verdict
 
@@ -193,7 +208,7 @@ The tradeoff is complexity. ClickUp's Workspace, Space, Folder, List, Task, Doc,
 
 ## Pricing And Access
 
-ClickUp workspace pricing, checked June 18, 2026:
+ClickUp workspace pricing, checked June 23, 2026:
 
 | Plan | Annual price | Best for | Key limits or upgrades |
 |---|---:|---|---|
@@ -202,7 +217,7 @@ ClickUp workspace pricing, checked June 18, 2026:
 | Business | $12/user/month billed yearly | Teams needing dashboards and controls | Advanced dashboards, unlimited message history, 5K automations/mo, Google SSO, proofing, custom exports, portfolio workload |
 | Enterprise | Custom | Regulated and large organizations | Governance, custom roles, SAML SSO, SCIM, audit log, session management, Enterprise API, HIPAA available, data residency, 250K automations/mo |
 
-AI pricing, checked June 18, 2026:
+AI pricing, checked June 23, 2026:
 
 | AI option | Price | What it adds |
 |---|---:|---|
@@ -304,13 +319,13 @@ Not currently. AiPedia applied through PartnerStack and was rejected as of the p
 
 ## Sources
 
-- [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-18)
-- [ClickUp Brain](https://clickup.com/brain) (verified 2026-06-18)
-- [ClickUp Brain pricing](https://clickup.com/brain/pricing) (verified 2026-06-18)
-- [What is ClickUp Brain AI?](https://help.clickup.com/hc/en-us/articles/12578085238039-What-is-ClickUp-Brain-AI) (verified 2026-06-18)
-- [ClickUp Brain AI feature availability and limits](https://help.clickup.com/hc/en-us/articles/20686299081879-ClickUp-Brain-AI-feature-availability-and-limits) (verified 2026-06-18)
-- [How AI Super Credits are consumed](https://help.clickup.com/hc/en-us/articles/37837088720151-How-are-AI-Super-Credits-consumed) (verified 2026-06-18)
-- [ClickUp MCP server](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server) (verified 2026-06-18)
-- [ClickUp MCP setup instructions](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server-1) (verified 2026-06-18)
-- [ClickUp MCP supported tools](https://developer.clickup.com/docs/mcp-tools) (verified 2026-06-18)
-- [ClickUp Super Agents launch](https://clickup.com/blog/super-agents-launch/) (verified 2026-06-18)
+- [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-23)
+- [ClickUp Brain](https://clickup.com/brain) (verified 2026-06-23)
+- [ClickUp Brain pricing](https://clickup.com/brain/pricing) (verified 2026-06-23)
+- [What is ClickUp Brain AI?](https://help.clickup.com/hc/en-us/articles/12578085238039-What-is-ClickUp-Brain-AI) (verified 2026-06-23)
+- [ClickUp Brain AI feature availability and limits](https://help.clickup.com/hc/en-us/articles/20686299081879-ClickUp-Brain-AI-feature-availability-and-limits) (verified 2026-06-23)
+- [How AI Super Credits are consumed](https://help.clickup.com/hc/en-us/articles/37837088720151-How-are-AI-Super-Credits-consumed) (verified 2026-06-23)
+- [ClickUp MCP server](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server) (verified 2026-06-23)
+- [ClickUp MCP setup instructions](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server-1) (verified 2026-06-23)
+- [ClickUp MCP supported tools](https://developer.clickup.com/docs/mcp-tools) (verified 2026-06-23)
+- [ClickUp Super Agents launch](https://clickup.com/blog/super-agents-launch/) (verified 2026-06-23)

@@ -2,17 +2,17 @@
 type: tool
 slug: gpt-image-2
 title: GPT Image 2
-tagline: OpenAI's reasoning-native image model. State-of-the-art text rendering across 12+ languages, 4K output, up to 8 variants per prompt.
+tagline: OpenAI's reasoning-native image model. Strong text rendering across 12+ languages, web-aware generation, and API pricing listed by image/text tokens.
 category: ai-image
 secondary_categories: [ai-design]
 company: openai
 url: https://openai.com/index/introducing-chatgpt-images-2-0/
 pricing_model: freemium
-price_range: "$0-$200/month (ChatGPT) · API from $0.01/image"
+price_range: "$0-$200/month (ChatGPT) · API token pricing: image $8/M input, $2/M cached input, $30/M output; text $5/M input, $1.25/M cached input, $10/M output"
 status: active
 launched: 2026-04
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-23
+last_verified: 2026-06-23
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
     source_label: "OpenAI GPT Image 2 launch"
     source_id: gpt-image-2-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -40,16 +40,16 @@ facts:
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_label: "OpenAI image generation docs"
     source_id: openai-image-generation-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Consumer access follows ChatGPT plan limits; API pricing is published on OpenAI API pricing and should be checked per model, quality, and image size."
+    value: "Consumer access follows ChatGPT plan limits; API pricing is published as token pricing on OpenAI API pricing and should be checked per model, input modality, cached input, output, quality, and image size."
     source: "https://openai.com/api/pricing/"
     source_label: "OpenAI API pricing"
     source_id: openai-api-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_label: "OpenAI image generation docs"
     source_id: openai-image-generation-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -67,13 +67,13 @@ facts:
     source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
     source_label: "OpenAI GPT Image 2 launch"
     source_id: gpt-image-2-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-23
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
 tags: [ai-image, image-generation, text-to-image, openai, gpt-image, reasoning, multilingual, 4k, infographics, api]
 seo_title: "GPT Image 2: Features, Pricing & Review (June 2026)"
-meta_description: "OpenAI's GPT Image 2 launched April 21, 2026. Native reasoning, 4K output, multilingual text rendering, and API pricing from $0.01/image. May 19 added C2PA conformance, SynthID watermarking, and OpenAI verification-tool preview."
+meta_description: "OpenAI's GPT Image 2 launched April 21, 2026. Native reasoning, multilingual text rendering, ChatGPT access, token-based API pricing, and C2PA/SynthID provenance updates."
 author: "aipedia.wiki Editorial"
 best_for:
   - infographics, slides, annotated diagrams, maps
@@ -82,7 +82,7 @@ best_for:
   - 4K resolution output at custom aspect ratios
   - programmatic image generation via API
 not_best_for:
-  - lowest-cost bulk image generation (Flux and DeepSeek Image undercut)
+  - lowest-cost bulk image generation with predictable per-image invoices
   - users wanting open weights
   - aesthetic stylized illustration where Midjourney V7 still edges ahead
 quick_answer: >-
@@ -94,35 +94,48 @@ price_history:
     source: "https://chatgpt.com/#pricing"
     source_label: "Source"
     source_id: gpt-image-2-pricing
+    verified_at: 2026-06-23
     note: "Thinking mode, longer reasoning runs, web search inside generation"
   - date: 2026-04-21
-    plan: "API (low quality, 1024x768)"
-    price: "$0.01 per image"
+    plan: "API launch estimate (low quality, 1024x768)"
+    price: "Historical estimate, now superseded by token pricing"
     source: "https://chatgpt.com/#pricing"
     source_label: "Source"
     source_id: gpt-image-2-pricing
-    note: "Entry-point tier for bulk programmatic generation"
+    verified_at: 2026-06-23
+    note: "Historical launch shorthand. The current public pricing page presents GPT-Image-2 as token-priced, so use the June 23 token-pricing row for buyer math."
   - date: 2026-04-21
-    plan: "API (high quality, 4K)"
-    price: "$0.41 per image"
+    plan: "API launch estimate (high quality, 4K)"
+    price: "Historical estimate, now superseded by token pricing"
     source: "https://chatgpt.com/#pricing"
     source_label: "Source"
     source_id: gpt-image-2-pricing
-    note: "Top tier, 4K photorealistic output"
+    verified_at: 2026-06-23
+    note: "Historical launch shorthand. The current public pricing page presents GPT-Image-2 as token-priced, so use the June 23 token-pricing row for buyer math."
   - date: 2026-05-13
     plan: "All tiers"
     price: "Unchanged"
     source: "https://openai.com/api/pricing/"
     source_label: "Source"
     source_id: gpt-image-2-pricing
-    note: "Verified unchanged 3 weeks post-launch. Free, Plus $20, Pro $200; API $0.01/$0.08/$0.41 per image."
+    verified_at: 2026-06-23
+    note: "Historical recheck kept the earlier launch shorthand. Current buyer math should use the June 23 token-pricing row because OpenAI's public pricing page now presents GPT-Image-2 as token-priced."
   - date: 2026-06-12
     plan: "All tiers"
     price: "Unchanged"
     source: "https://openai.com/api/pricing/"
     source_label: "Source"
     source_id: gpt-image-2-pricing
-    note: "Re-verified unchanged. Free, Plus $20, Pro $200; API $0.01/$0.08/$0.41 per image; token pricing $8/MTok input, $2 cached, $30/MTok output."
+    verified_at: 2026-06-23
+    note: "Recheck found the public pricing surface moving toward token pricing. Current buyer math should use the June 23 token-pricing row."
+  - date: 2026-06-23
+    plan: "API token pricing"
+    price: "Image: $8/M input, $2/M cached input, $30/M output; Text: $5/M input, $1.25/M cached input, $10/M output"
+    source: "https://openai.com/api/pricing/"
+    source_label: "OpenAI API pricing"
+    source_id: gpt-image-2-pricing
+    verified_at: 2026-06-23
+    note: "OpenAI's current public pricing page presents GPT-Image-2 as token-priced rather than a fixed per-image list price; older per-image shorthand should be treated as an estimate, not the list price."
 ---
 
 # GPT Image 2
@@ -134,18 +147,19 @@ The step change is reasoning inside the image model. GPT Image 2 thinks before i
 ## Recent developments
 
 - **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for ChatGPT, Codex, and API-generated images](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). Treat this as a provenance workflow upgrade, not a perfect detector; metadata can still be stripped and absence of a signal is not proof that an image is human-made.
-- **May 13, 2026:** Pricing and feature set verified unchanged 3 weeks post-launch. Free, Plus $20, Pro $200; API $0.01 (low), $0.08 (medium), $0.41 (high). Token pricing also stable at $8/MTok input, $2 cached, $30/MTok output.
+- **June 23, 2026:** Pricing rechecked against OpenAI's public API pricing page. The durable public API anchor is token pricing: image $8/M input, $2/M cached input, $30/M output, plus text $5/M input, $1.25/M cached input, $10/M output. Older per-image figures are estimates, not the current list-price format.
+- **May 13, 2026:** Pricing and feature set verified unchanged 3 weeks post-launch. Earlier buyer copy used per-image shorthand, but API billing should now be anchored to OpenAI's token table.
 - **April 23, 2026:** [GPT-5.5 rolls out](/news/2026-04-25-ai-news-catchup/) as the upstream reasoning backbone available to ChatGPT users alongside gpt-image-2 in the bundle. The combined text + image surface is still the strongest value at $20/mo.
 - **April 21, 2026:** [ChatGPT Images 2.0 and gpt-image-2 launch](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/). Native reasoning, 4K resolution, multilingual text, up to 8 variants per prompt. Free tier gets the standard model; Plus, Pro, and Business add thinking mode and web search inside generation. API pricing starts at $0.01/image.
 - **April 21, 2026:** [Adobe + NVIDIA ship agentic creative workflow at Adobe Summit](/news/2026-04-21-adobe-nvidia-agents-adobe-summit-wpp/). Pipeline-level orchestration competes with stand-alone image-gen workflows; expect enterprise buyers to evaluate GPT Image 2 inside both ChatGPT and third-party agent stacks.
 
 ## System Verdict
 
-> **Pick GPT Image 2 if you need reasoning in the image step, reliable multilingual text rendering, or 4K photorealistic output with brand consistency.** It is the clear leader for infographics, slides, annotated diagrams, maps, and brand-consistent product photography as of June 2026. The ChatGPT bundle (text, code, voice, image under one $20/mo subscription) is the best-value default for users who would otherwise pay for multiple tools.
+> **Pick GPT Image 2 if you need reasoning in the image step, reliable multilingual text rendering, or ChatGPT-native image workflows with brand consistency.** It is especially strong for infographics, slides, annotated diagrams, maps, and product photography as of June 2026. The ChatGPT bundle (text, code, voice, image under one $20/mo subscription) is the best-value default for users who would otherwise pay for multiple tools.
 >
-> **Skip it if your workload needs open weights, the cheapest per-image bulk API, or pure aesthetic stylization.** Flux and DeepSeek Image undercut on price. Stable Diffusion keeps the open-weights crown. Midjourney V7 still edges ahead on cinematic composition and stylized illustration; Niji 7 still owns anime.
+> **Skip it if your workload needs open weights, a simple fixed per-image invoice, or pure aesthetic stylization.** Stable Diffusion and Flux keep the open/local-control lane. Midjourney still leads on cinematic composition and stylized illustration; Niji still owns anime.
 >
-> **Who pays which tier:** ChatGPT Free for casual use (standard model, capped runs), Plus $20/mo for most individuals who want thinking mode and web-search-in-generation, Pro $200/mo for heavy commercial use with priority generation, Business for teams needing commercial terms and admin. API at $0.01-$0.41 per image for programmatic workloads.
+> **Who pays which tier:** ChatGPT Free for casual use, Plus $20/mo for most individuals who want thinking mode and web-search-in-generation, Pro $200/mo for heavy commercial use with priority generation, Business for teams needing commercial terms and admin. API buyers should model token usage from OpenAI's live pricing table rather than relying on old per-image shorthand.
 
 ## Key Facts
 
@@ -161,13 +175,14 @@ The step change is reasoning inside the image model. GPT Image 2 thinks before i
 | **Web search in generation** | Yes (Plus, Pro, Business only) |
 | **Consumer entry point** | ChatGPT Free, Plus, Pro, Business |
 | **API access** | OpenAI API, Microsoft Foundry |
-| **API pricing (per image)** | $0.01 (low, 1024x768) · $0.08 (medium, 2K) · $0.41 (high, 4K) |
-| **API token pricing** | $8/MTok input · $2/MTok cached · $30/MTok output |
+| **API pricing** | Token-priced in the current OpenAI table; do not treat older per-image estimates as list prices |
+| **Image token pricing** | $8/MTok input · $2/MTok cached input · $30/MTok output |
+| **Text token pricing** | $5/MTok input · $1.25/MTok cached input · $10/MTok output |
 | **Commercial use** | Plus, Pro, Business; Free tier terms-limited |
 | **Provenance** | C2PA Content Credentials, SynthID watermarking, and OpenAI verification-tool preview as of May 19, 2026 |
 | **Open weights** | No |
 
-Every data point above was verified on 2026-06-12. See Sources in the launch [news item](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/) and the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/).
+Every data point above was verified on 2026-06-23. See Sources in the launch [news item](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/), the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), and OpenAI's current API pricing page.
 
 ## What it actually is
 
@@ -181,17 +196,17 @@ The reasoning layer is the meaningful upgrade. Prior-generation image models cou
 
 ## When to pick GPT Image 2
 
-- **Text-heavy generation.** Infographics, slides, annotated diagrams, maps, product labels. Best-in-class as of June 2026.
+- **Text-heavy generation.** Infographics, slides, annotated diagrams, maps, and product labels. It is one of the strongest current choices as of June 2026.
 - **Multilingual output.** Japanese, Korean, Chinese, Hindi, Bengali text rendering all landed readable at launch and held through June verification. Previously the exclusive domain of [Ideogram](/tools/ideogram/); that moat is gone.
 - **Brand-consistent product photography.** Multi-image consistency holds subject, lighting, and logo across generations.
-- **Programmatic workflows.** $0.01 per image at low tier is cheaper than any competitive frontier model for bulk generation.
+- **Programmatic workflows.** Token-based API pricing lets teams model input, cached input, and output costs rather than buying a separate image app.
 - **ChatGPT bundle users.** If you already pay for Plus, image gen is included; running Midjourney or Firefly alongside doubles subscription spend.
 
 ## When to pick something else
 
 - **Pure aesthetic stylization:** [Midjourney V7](/tools/midjourney/). Still the reference for cinematic composition and stylized illustration.
 - **Open weights:** [Stable Diffusion](/tools/stable-diffusion/) or [Flux](/tools/flux/). GPT Image 2 is closed.
-- **Cheapest bulk generation:** [Flux](/tools/flux/) schnell tier and DeepSeek Image undercut GPT Image 2 at the low end.
+- **Cheapest bulk generation:** compare [Flux](/tools/flux/) and specialist media APIs when you need predictable high-volume image costs.
 - **IP indemnification on licensed training data:** [Adobe Firefly](/tools/adobe-firefly/). OpenAI's training data provenance for GPT Image 2 has not been disclosed in the same detail.
 - **Anime and illustrative work:** [Niji 7](/tools/midjourney/) (via Midjourney) still leads the aesthetic.
 
@@ -206,17 +221,14 @@ Consumer subscription (via [ChatGPT](/tools/chatgpt/)):
 | Pro | $200/mo | Plus features plus higher daily caps and priority generation |
 | Business | Custom | Plus features plus commercial terms, team admin, usage pooling |
 
-API pricing (per image):
+API pricing:
 
-| Quality | Resolution | Price |
-|---|---|---|
-| Low | 1024x768 | $0.01 |
-| Medium | 2K | $0.08 |
-| High | 4K | $0.41 |
+| Modality | Input | Cached input | Output |
+|---|---|---|---|
+| Image | $8/MTok | $2/MTok | $30/MTok |
+| Text | $5/MTok | $1.25/MTok | $10/MTok |
 
-Token-based API pricing for long prompts: **$8 per MTok input, $2 cached input, $30 per MTok output**.
-
-Prices were last rechecked 2026-06-12 via the [OpenAI launch post](https://openai.com/index/introducing-chatgpt-images-2-0/) and the [OpenAI API docs](https://developers.openai.com/api/docs/models/gpt-image-2). Provenance controls were updated and verified on 2026-06-12 against OpenAI's May 19 announcement.
+Prices were last rechecked 2026-06-23 via the [OpenAI API pricing page](https://openai.com/api/pricing/), the [OpenAI launch post](https://openai.com/index/introducing-chatgpt-images-2-0/), and the [OpenAI image-generation docs](https://platform.openai.com/docs/guides/image-generation). Provenance controls were updated and verified against OpenAI's May 19 announcement.
 
 ## Against the alternatives
 
@@ -229,7 +241,7 @@ Prices were last rechecked 2026-06-12 via the [OpenAI launch post](https://opena
 | **Open weights** | No | No | No | No (API) | No |
 | **Consumer bundle** | ChatGPT | Standalone | Adobe CC | Standalone | Standalone |
 | **API availability** | OpenAI + Microsoft Foundry | Enterprise only | Adobe Firefly Services | fal.ai, Replicate | Ideogram API |
-| **Entry price** | Free + $0.01 API | $10/mo | $9.99/mo | From ~$0.003/image | $8/mo |
+| **Entry price** | Free ChatGPT route plus token-priced API | $10/mo | $9.99/mo | Hosted pricing varies by provider | $8/mo |
 | **Best viewed as** | Reasoning + text specialist | Aesthetic specialist | Commercial-safe generalist | Open-API alternative | Text-in-image specialist (fading) |
 
 ## Failure modes
@@ -243,7 +255,7 @@ Prices were last rechecked 2026-06-12 via the [OpenAI launch post](https://opena
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), the [OpenAI launch announcement](https://openai.com/index/introducing-chatgpt-images-2-0/), [TechCrunch coverage](https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/), [VentureBeat coverage](https://venturebeat.com/technology/openais-chatgpt-images-2-0-is-here-and-it-does-multilingual-text-full-infographics-slides-maps-even-manga-seemingly-flawlessly), and the [OpenAI API model docs](https://developers.openai.com/api/docs/models/gpt-image-2).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), the [OpenAI launch announcement](https://openai.com/index/introducing-chatgpt-images-2-0/), the [OpenAI API pricing page](https://openai.com/api/pricing/), and the [OpenAI image-generation docs](https://platform.openai.com/docs/guides/image-generation).
 
 ## FAQ
 
@@ -264,7 +276,7 @@ Three meaningful upgrades: native reasoning in the image model (multi-step compo
 <details>
 <summary>Is there an API?</summary>
 
-Yes. Model ID `gpt-image-2` on the [OpenAI API](https://developers.openai.com/api/docs/models/gpt-image-2) and in [Microsoft Foundry](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-openais-gpt-image-2-in-microsoft-foundry/4500571). Pricing from $0.01 per image (low, 1024x768) to $0.41 per image (high, 4K). Token-based pricing available for long prompts at $8/MTok input, $2 cached, $30/MTok output.
+Yes. Model ID `gpt-image-2` on the OpenAI API and in Microsoft Foundry. OpenAI's public pricing page now lists token-based pricing: image $8/MTok input, $2/MTok cached input, $30/MTok output; text $5/MTok input, $1.25/MTok cached input, $10/MTok output.
 
 </details>
 
