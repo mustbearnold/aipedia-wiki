@@ -81,11 +81,15 @@ The registered loops are Decision Content, Freshness, Trust and Provenance, Reve
 
 ### Batched tool freshness
 
-Tool-page refreshes should run in batches by default. Use `npm run tool:refresh:batch -- --limit 4` to select the next oldest-first batch, then verify sources, edit tool pages, update affected parent hubs, update source registry rows, and regenerate `PAGE_REFRESH_LEDGER.md` across the batch.
+Tool-page refreshes should run in 60-tool planner batches by default. Use `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json` to select the next oldest-first batch and produce the canonical plan. Use `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents` when you want six shard-worker prompts plus the integrator prompt.
 
-During the batch, run cheap per-file checks such as `npm run audit:tool-quality -- --file <path>` as each tool is edited. Once the batch has tool edits, parent hubs, source registry rows, and the page ledger in place, use `npm run tool:refresh:batch:check` for the fast grouped gate. Save expensive gates for the batch closeout: typecheck, one `npm run build:fast`, and one combined `npm run qa:route` for the edited tool routes, parent category routes, `/tools/`, and `/categories/`.
+The safe parallel model is six shard workers and one integrator for shared files. In the Codex Windows app, run at most six active worker agents at once. Each worker may edit only the `src/content/tools/<slug>.md` files listed in its shard, must verify current facts with current-month searches, and must return proposed source-registry rows, parent hub notes, route notes, and risks grouped by tool. Workers must not edit `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, parent category hubs, top-layer pages, or `.agent` continuity docs. They also must not run typecheck, build, or route QA.
+
+The integrator reviews every worker diff, updates affected parent hubs, updates source registry rows once, regenerates `PAGE_REFRESH_LEDGER.md`, and then runs `npm run tool:refresh:batch:check -- --plan <planner-json>` or the equivalent `--file` list. Save expensive gates for the batch closeout: typecheck, one `npm run build:fast`, and one combined `npm run qa:route` for the edited tool routes, parent category routes, `/tools/`, and `/categories/`.
 
 Run a full build after each individual tool only when the tool change affects templates, layout, runtime behavior, generated assets, high-risk commercial claims, or when isolating a failing build. If one tool blocks on source access, remove it from the batch, document the reason in the receipt, and continue with the rest.
+
+As of the June 24, 2026 profiling pass, the measured closeout costs are about 12 seconds for `tool:refresh:batch:check`, 25-31 seconds for `typecheck`, 65 seconds for `build:fast` after content-cache optimization, and 19 seconds for a 12-route by 5-width `qa:route` run when using `--concurrency 4`. Treat `build:fast` as whole-site validation and pay it once after content is grouped. Do not run `typecheck` and `build:fast` in parallel because Astro can race on `node_modules/.astro/data-store.json`. During editing, prefer `node scripts\qa-route.mjs --base-url http://127.0.0.1:4325 --concurrency 4 ...` against the running local server, then run the final built-output route QA with `--site-dir dist-fast/client --concurrency 4`.
 
 Before editing:
 

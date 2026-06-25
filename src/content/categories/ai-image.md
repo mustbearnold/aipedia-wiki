@@ -5,10 +5,10 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools, Photo Editors & 3D Generators (June 2026)"
-meta_description: "Updated June 23, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, Google Nano Banana, deprecated Imagen 4 migration risk, Recraft, Freepik, AdCreative.ai, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
+meta_description: "Updated June 24, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, NightCafe, Google Nano Banana, deprecated Imagen 4 migration risk, Recraft, Freepik, AdCreative.ai, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -26,7 +26,7 @@ top_picks:
 
 AiPedia rechecked Adobe Firefly on June 23, 2026 after the June 22 Midjourney/Firefly check, the June 18 AdCreative/Clipdrop refresh, the June 15 Canva/Midjourney/Firefly checks, the June 23 Tripo3D refresh, the June 23 Freepik/Magnific pricing refresh, the June 7 Midjourney alternatives guide, the June 6 photo-editing buyer guide, and the June 5 Midjourney, Ideogram, and Flux image-model comparison slice. This category now splits into six buyer jobs: aesthetic generation, conversational image editing, still-image animation, finished social/design assets, professional photo-production workflows, and 3D asset generation for games, AR/VR, printing, and prototyping. Freepik/Magnific naming remains mixed across public surfaces: use Freepik AI Suite / Magnific for buyer guidance, but verify the live Magnific pricing/model table before claiming a specific credit-free model or plan entitlement.
 
-[Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 22 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions, V8.1 as the default image model, V7 as the Omni Reference fallback, annual effective pricing at $8/$24/$48/$96 per month, extra GPU time at $4/hr, and Midjourney Video as a short image-to-video add-on with GPU-minute costs that can outpace still-image work. [ChatGPT](/tools/chatgpt/) is the best default when image generation or editing is part of a broader assistant workflow, especially after current ChatGPT release notes added ImageGen 2.0 and image-prompt editing updates. The June 23 [GPT Image 2](/tools/gpt-image-2/) API pricing check corrects buyer math away from old fixed per-image shorthand: OpenAI's public pricing page now frames GPT-Image-2 with token pricing for image and text input/output, so API buyers need to estimate token usage instead of assuming a stable per-image list price. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, Firefly Image 5/Image5, partner-model-aware Adobe workflows, free daily generation testing, Pro Plus/Premium promo terms ending Aug. 26, 2026, and credit-aware commercial review that now includes per-model credit rates and prompt/reference-file sharing checks. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly, but the June 15 Canva refresh makes AI allowance, AI Pass, AI usage-limit drift, and commercial-rights review part of the image-production decision.
+[Midjourney](/tools/midjourney/) remains the aesthetic ideation benchmark, and the June 22 check keeps the buyer math anchored to Basic, Standard, Pro, and Mega subscriptions, V8.1 as the default image model, V7 as the Omni Reference fallback, annual effective pricing at $8/$24/$48/$96 per month, extra GPU time at $4/hr, and Midjourney Video as a short image-to-video add-on with GPU-minute costs that can outpace still-image work. [ChatGPT](/tools/chatgpt/) is the best default when image generation or editing is part of a broader assistant workflow, especially after current ChatGPT release notes added ImageGen 2.0 and image-prompt editing updates. The June 23 [GPT Image 2](/tools/gpt-image-2/) API pricing check corrects buyer math away from old fixed per-image shorthand: OpenAI's public pricing page now frames GPT-Image-2 with token pricing for image and text input/output, so API buyers need to estimate token usage instead of assuming a stable per-image list price. [Adobe Firefly](/tools/adobe-firefly/) is the safer first pick for Photoshop, Creative Cloud, Generative Fill, object removal, image expansion, Firefly Image 5/Image5, partner-model-aware Adobe workflows, free daily generation testing, Pro Plus/Premium promo terms ending Aug. 26, 2026, and credit-aware commercial review that now includes per-model credit rates and prompt/reference-file sharing checks. [Canva](/tools/canva/) wins when the image needs to become a finished post, ad, thumbnail, product graphic, or presentation asset quickly, but the June 24 Canva refresh makes AI allowance, AI Pass, assistant-connector access, plan entitlement, AI usage-limit drift, and commercial-rights review part of the image-production decision.
 
 For paid-media image production, [AdCreative.ai](/tools/adcreative/) is a narrow specialist rather than a general image model. The June 23 check keeps monthly list prices at Starter $39, Professional $249, Ultimate $999, and Enterprise custom, with checkout-sensitive promotions. Use it when the image job is ad-variant production, product visuals, product/fashion videoshoots, UGC-style assets, brand-kit workflow, and creative scoring, not art direction. Verify checkout because credits, brands, users, video usage, and discounted effective monthly values can shift the real cost.
 
@@ -66,7 +66,7 @@ The practical question is no longer "which model can make an image?" Most major 
 - **Flux remains the open-weight workflow choice.** LoRA fine-tuning, self-hosting, ComfyUI, and hosted APIs keep it important even when closed models improve, but license terms still need checking before commercial use.
 - **Ideogram is now a focused text-in-image specialist.** It still matters for logo and marketing workflows, and the June 2 pricing check moves buyer math to Plus $15/mo annual and Pro $42/mo annual rather than old Basic-era prices.
 - **Adobe Firefly wins where Adobe workflow and commercial-safety review matter.** It may not lead on raw image quality, but enterprise creative teams often care about Photoshop/Illustrator/Express workflow, Content Credentials posture, source-backed buyer review, partner-model governance, beta-output indemnification limits, API entitlement checks, and credit economics more than leaderboard wins.
-- **Specialists still matter.** Recraft V4 remains the shortlist entry for vector/text-heavy brand assets, NightCafe is the hobbyist/community multi-model playground, and Rodin is the 3D detail specialist when the output must become a mesh rather than a flat image.
+- **Specialists still matter.** Recraft V4 remains the shortlist entry for vector/text-heavy brand assets, [NightCafe](/tools/nightcafe/) is the hobbyist/community multi-model playground, and Rodin is the 3D detail specialist when the output must become a mesh rather than a flat image. The June 24 NightCafe refresh adds a live-check caveat: official pricing and model pages blocked non-interactive verification, so exact plan names, credit packs, free-credit expiry, and premium model gates should be verified in the account screen before buying.
 - **3D generation is a separate workflow.** Meshy is the safer first editor/workspace pick, Tripo3D is the cleaner topology/API pick, and Rodin remains the detail specialist. Do not compare them only against flat image tools.
 - **Media APIs are their own buyer lane.** fal.ai is worth shortlisting when the image job is part of a product API, workflow, or batch media pipeline rather than a human-facing design app.
 - **Utility image APIs need ownership checks.** Clipdrop is now Jasper-owned and its API page points toward Jasper's image API, so do not treat it as a Stability API replacement without checking Jasper Business/API terms.
@@ -132,9 +132,9 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Adobe partner models in Adobe products](https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html) (verified 2026-06-23)
 - [Adobe Creative Cloud generative AI features](https://helpx.adobe.com/creative-cloud/apps/generative-ai/creative-cloud-generative-ai-features.html) (verified 2026-06-23)
 - [Photoshop Generative Fill](https://www.adobe.com/products/photoshop/generative-fill.html) (verified 2026-06-23)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-15)
-- [Canva AI Pass](https://www.canva.com/ai-pass/) (verified 2026-06-15)
-- [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-15)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-24)
+- [Canva AI Pass](https://www.canva.com/ai-pass/) (verified 2026-06-24)
+- [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-24)
 - [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-23)
 - [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-23)
 - [Ideogram pricing](https://ideogram.ai/pricing) (verified 2026-06-23)
@@ -154,7 +154,9 @@ Image generation is approaching commodity. The real differentiation is workflow 
 - [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-23)
 - [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-23)
 - [AdCreative.ai fashion videoshoots](https://www.adcreative.ai/fashion-videoshoot) (verified 2026-06-23)
-- [NightCafe pricing](https://creator.nightcafe.studio/pricing) (verified 2026-05-24)
+- [NightCafe pricing](https://creator.nightcafe.studio/pricing) (last successful official pricing check 2026-05-24; non-interactive page access blocked 2026-06-24)
+- [NightCafe commercial-use help](https://help.nightcafe.studio/portal/en/kb/articles/does-the-license-allow-me-to-sell-my-creations-or-use-them-for-commercial-purposes) (verified 2026-06-24)
+- [Software Advice NightCafe pricing profile](https://www.softwareadvice.com/nft-creation/nightcafe-profile/) (secondary pricing profile checked 2026-06-24)
 - [Rodin pricing](https://hyper3d.ai/pricing) (verified 2026-05-24)
 - [fal pricing](https://fal.ai/pricing) (verified 2026-06-23)
 - [fal Model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing) (verified 2026-06-23)

@@ -2,6 +2,8 @@
 /**
  * /workflows/ index — god-tier 10/10 mobile-first.
  *
+ * Refresh metadata: 2026-06-24 workflow archive first screen tightened so
+ * readers see more stack options before the fold.
  * Refresh metadata: 2026-06-20 workflow hub inspected after workflow
  * commercial CTA tracking and approved-affiliate handling changed in
  * WorkflowLayout; index remains data-driven from workflow frontmatter.
@@ -63,7 +65,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
   <div class="gt-canvas">
     <Hero
       title="Workflow tutorials"
-      tagline="Practical tool sets for real work. Each tutorial names the tools, buying order, failure points, and human checkpoints."
+      tagline="Tool stacks with buying order, failure points, and human checkpoints."
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: 'Workflows' },
@@ -90,7 +92,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
               {w.lastVerified && <span class="gt-wf-verified">Verified {w.lastVerified}</span>}
               {w.stack.length > 0 && (
                 <div class="gt-wf-stack">
-                  {w.stack.slice(0, 6).map((s: string) => (
+                  {w.stack.slice(0, 4).map((s: string) => (
                     <span class="gt-wf-stack-item">{s}</span>
                   ))}
                 </div>
@@ -123,7 +125,15 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
       color: var(--gt-fg);
       min-height: 90px;
     }
-    .gt-wf-title { font-size: 16px; font-weight: 700; line-height: 1.35; }
+    .gt-wf-title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
     .gt-wf-desc {
       margin: 0; font-size: 13px; line-height: 1.5; color: var(--gt-muted);
       display: -webkit-box;

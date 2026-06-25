@@ -4,12 +4,18 @@
  *
  * Composes the same god-tier components used across the site:
  *   wiki search · portal index · buyer shortcuts · tool records · category rail · news list · TrustPanel
- * Refresh metadata: dateModified: '2026-06-23'
+ * Refresh metadata: dateModified: '2026-06-24'
  * Refresh metadata: update_frequency: daily
+ * Refresh metadata: 2026-06-24 homepage news rail inspected after Jun 23-24
+ * focused AI news coverage on OpenAI Daybreak/Codex Security, Samsung
+ * ChatGPT Enterprise and Codex, Claude reliability, GLM-5.2, and Google AI
+ * talent movement. Homepage remains data-driven.
+ * Refresh metadata: 2026-06-24 homepage first-screen portal labels tightened
+ * around buyer actions after top-layer time-waste review.
  * Refresh metadata: 2026-06-23 homepage cadence set to daily so news,
  * model availability, and high-change buying paths are checked every day.
  * Refresh metadata: 2026-06-22 homepage news rail inspected after June 18-22
- * AI news desks and focused coverage across OpenAI health and spend controls,
+ * AI news coverage and focused articles across OpenAI health and spend controls,
  * Shopify agentic commerce, Google Cloud agent governance, G7 AI standards,
  * OpenAI Bio Bounty, Codex community, and AI talent movement. Homepage remains
  * data-driven.
@@ -39,7 +45,7 @@
  * Refresh metadata: 2026-06-16 homepage news count and archive context
  * inspected after backfilling the June 12 OpenAI Academy workplace-courses
  * story from current OpenAI Academy and OpenAI announcement checks; June 12
- * desk, news archive, RSS, /explore/, source registry, and LLM surfaces
+ * focused coverage, news archive, RSS, /explore/, source registry, and LLM surfaces
  * inspected. Homepage remains data-driven.
  * Refresh metadata: 2026-06-16 homepage answer shortcut inspected after the
  * best free AI tools answer refresh covering OpenAI ChatGPT Free Tier FAQ,
@@ -61,12 +67,12 @@
  * arXiv, WIRED, source registry cleanup, trends/categories/tools/explore
  * indexes, and LLM surfaces. Homepage remains data-driven.
  * Refresh metadata: 2026-06-16 homepage news/tool/category context inspected
- * after Work IQ GA desk and buyer checklist refresh covering Microsoft Work IQ
+ * after Work IQ GA buyer checklist refresh covering Microsoft Work IQ
  * API GA, Copilot Credit billing, Partner Center admin controls, Microsoft Agent
  * Framework, AI Automation, news archive, RSS, tools/categories indexes,
  * /explore/, source registry, and LLM surfaces. Homepage remains data-driven.
  * Refresh metadata: 2026-06-16 homepage news count and archive context
- * inspected after backfilling June 1 and June 2 AI news desks from current
+ * inspected after backfilling June 1 and June 2 AI coverage from current
  * June GitHub, NVIDIA, Microsoft, Anthropic, Postman, RelationalAI, 7AI, and
  * White House source checks; news archive, RSS, /explore/, and LLM surfaces
  * inspected.
@@ -114,9 +120,9 @@
  * data-driven.
  * Refresh metadata: 2026-06-15 homepage news/coding rail inspected after
  * OpenAI/Ona Codex persistent-agent acquisition coverage; Codex, AI Coding,
- * June 11 desk, RSS, and LLM surfaces inspected. Homepage remains data-driven.
+ * June 11 coverage, RSS, and LLM surfaces inspected. Homepage remains data-driven.
  * Refresh metadata: 2026-06-15 homepage news rail inspected after June 15
- * AI news desk and Google AI search risk checklist across G7 Evian opening,
+ * AI governance coverage and Google AI search risk checklist across G7 Evian opening,
  * AP AI-regulation agenda and state-law patchwork reporting, Google AI
  * Overviews liability coverage, Google's Gemini-related phishing lawsuit
  * coverage, Gemini/AI Search/AI Chatbots notes, RSS, and LLM surfaces.
@@ -294,7 +300,7 @@
  * micro-SaaS weekend stack refresh moved API/webhook guidance to Vercel
  * Functions; homepage remains data-driven.
  * Refresh metadata: 2026-06-14 homepage news rail inspected after AI
- * news desk refresh across OpenAI trust scrutiny and buyer-safety checklist,
+ * news coverage refresh across OpenAI trust scrutiny and buyer-safety checklist,
  * Anthropic Fable/Mythos access risk, ChatGPT GPT-5.2 retirement, and the
  * G7 governance backdrop.
  * Refresh metadata: 2026-06-14 homepage top-tool context inspected after
@@ -697,9 +703,20 @@ const allWorkflows = await getCollection('workflows');
 const allTrends = await getCollection('trends');
 const allCompanies = await getCollection('companies');
 
+function isRoundupStory(item: { slug?: string; title?: string }): boolean {
+  const slug = String(item.slug ?? '').toLowerCase();
+  const title = String(item.title ?? '').toLowerCase();
+  return slug.includes('ai-news-desk') || title.startsWith('ai news desk,');
+}
+
+const publicNews = allNews.filter((news: any) => !isRoundupStory({
+  slug: searchEntrySlug(news),
+  title: news.data.title,
+}));
+
 const toolCount = activeTools.length;
 const comparisonCount = allComparisons.length;
-const newsCount = allNews.length;
+const newsCount = publicNews.length;
 const guideCount = allGuides.length;
 
 const catalogItems = buildSearchCatalog({
@@ -707,7 +724,7 @@ const catalogItems = buildSearchCatalog({
   comparisons: allComparisons,
   categories: allCategories,
   guides: allGuides,
-  news: allNews,
+  news: publicNews,
   workflows: allWorkflows,
   trends: allTrends,
   companies: allCompanies,
@@ -737,43 +754,43 @@ const homeCategories = categories.slice(0, 8);
 const wikiPortals = [
   {
     href: '/tools/',
-    label: 'Tool index',
-    meta: `${toolCount} records`,
+    label: 'Find a tool',
+    meta: `${toolCount} scored`,
     type: 'tool',
     slug: 'tools',
   },
   {
     href: '/categories/',
-    label: 'Categories',
+    label: 'Pick a job',
     meta: `${categories.length} lanes`,
     type: 'category',
     slug: 'categories',
   },
   {
     href: '/compare/',
-    label: 'Comparisons',
+    label: 'Compare tools',
     meta: `${comparisonCount} matchups`,
     type: 'comparison',
     slug: 'compare',
   },
   {
     href: '/guides/',
-    label: 'Buyer guides',
+    label: 'Choose a plan',
     meta: `${guideCount} guides`,
     type: 'guide',
     slug: 'guides',
   },
   {
     href: '/answers/',
-    label: 'Quick answers',
-    meta: 'Best picks',
+    label: 'Get best pick',
+    meta: 'Fast answers',
     type: 'answer',
     slug: 'answers',
   },
   {
     href: '/news/',
-    label: 'AI news',
-    meta: `${newsCount} items`,
+    label: 'Check changes',
+    meta: `${newsCount} updates`,
     type: 'news',
     slug: 'news',
   },
@@ -837,13 +854,12 @@ if (weakFeaturedDecisionEvidence.length > 0) {
 
 function homeNewsTitle(title: string): string {
   return String(title)
-    .replace(/^AI News Desk, ([A-Z][a-z]+ \d{1,2}, \d{4}):\s*/, '$1 desk: ')
     .replace(/^The ([A-Z][a-z]+ \d{1,2}) AI tools checklist:\s*/i, '$1 checklist: ')
     .replace(/OpenAI Bio Bounty deadline, Codex community, and AI talent pressure/i, 'OpenAI Bio Bounty, Codex, talent pressure')
     .replace(/health claims, spend limits, AI shopping feeds, and agent fallbacks/i, 'health claims, spend limits, agent fallbacks');
 }
 
-const latestNews = allNews
+const latestNews = publicNews
   .map((news: any) => ({
     slug: searchEntrySlug(news),
     title: homeNewsTitle(news.data.title),
@@ -860,18 +876,17 @@ const homepageSources = [
   { label: 'Affiliate disclosure', url: '/disclosure/', verified: '2026-06-06' },
 ];
 
-// Dynamic freshness: count today's and this-week's news, build the
-// verified label off the most-recent news date so the homepage rank
-// line actually carries a real signal.
+// Dynamic freshness: count today's and this-week's news. The homepage refresh
+// badge is tied to this page's actual refresh pass, while the news rail exposes
+// its own latest-entry date separately.
 const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const monthLong = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const homepageRefreshIso = '2026-06-24';
+const homepageRefreshDate = new Date(homepageRefreshIso + 'T12:00:00Z');
 const latestNewsDateIso = latestNews[0]?.date ?? '';
 const latestNewsDate = latestNewsDateIso ? new Date(latestNewsDateIso + 'T12:00:00Z') : null;
-// Self-updating freshness: derive the visible "page refreshed" label from the
-// freshest content the homepage surfaces (latest news) so it can never show a
-// hardcoded stale date. Every rebuild that ingests newer news advances it.
-const freshLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
-  ? `Page refreshed ${monthShort[latestNewsDate.getUTCMonth()]} ${latestNewsDate.getUTCDate()}`
+const freshLabel = !isNaN(homepageRefreshDate.getTime())
+  ? `Page refreshed ${monthShort[homepageRefreshDate.getUTCMonth()]} ${homepageRefreshDate.getUTCDate()}`
   : 'Independent AI tools wiki';
 const newsThroughLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
   ? `Latest archive entry: ${monthShort[latestNewsDate.getUTCMonth()]} ${latestNewsDate.getUTCDate()}`
@@ -917,7 +932,7 @@ function newsDateFmt(iso: string): string {
     toolCount={toolCount}
     comparisonCount={comparisonCount}
     categoryCount={allCategories.length}
-    lastUpdated={latestNewsDateIso || '2026-06-12'}
+    lastUpdated={homepageRefreshIso}
   />
 
   <div class="sr-only" data-pagefind-ignore>
@@ -2025,7 +2040,7 @@ function newsDateFmt(iso: string): string {
       border: 1px solid var(--gt-line-strong);
       border-radius: var(--gt-radius);
       background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(14, 165, 233, 0.065) 44%, rgba(255, 255, 255, 0.02)),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(244, 124, 40, 0.07) 44%, rgba(255, 255, 255, 0.02)),
         rgba(8, 12, 18, 0.94);
       box-shadow:
         inset 3px 0 0 var(--gt-accent),
@@ -2091,9 +2106,9 @@ function newsDateFmt(iso: string): string {
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 3px 12px;
       padding: 11px 12px;
-      border: 1px solid rgba(148, 163, 184, 0.22);
+      border: 1px solid var(--gt-line);
       border-radius: var(--gt-radius-sm);
-      background: rgba(12, 18, 27, 0.72);
+      background: rgba(18, 15, 14, 0.74);
       color: var(--gt-fg);
       text-decoration: none;
       transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
@@ -2132,7 +2147,7 @@ function newsDateFmt(iso: string): string {
     }
     .gt-home-refresh-lane:hover {
       border-color: var(--gt-accent);
-      background: rgba(19, 27, 39, 0.82);
+      background: rgba(28, 20, 16, 0.86);
       transform: translateY(-1px);
     }
     @media (max-width: 900px) {

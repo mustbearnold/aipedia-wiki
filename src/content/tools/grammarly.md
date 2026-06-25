@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$40/member/month; Enterprise custom"
 status: active
 launched: 2009-07
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -52,7 +52,7 @@ facts:
     source: "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost"
     source_label: "Grammarly Pro pricing support"
     source_id: grammarly-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -70,7 +70,7 @@ facts:
     source: "https://support.grammarly.com/hc/en-us/articles/25043801131149-About-Grammarly-Pro"
     source_label: "About Grammarly Pro"
     source_id: grammarly-pro-support
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -127,7 +127,7 @@ facts:
     source: "https://superhuman.com/plans"
     source_label: "Superhuman plans"
     source_id: grammarly-plans
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -166,7 +166,7 @@ facts:
 tags: [ai-writing, grammar-checker, writing-assistant, productivity, chrome-extension]
 seo_title: 'Grammarly: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Updated June 23, 2026: Grammarly review covers Free, Pro, Superhuman Business, Enterprise, AI prompts, 1M+ app/site coverage, privacy controls, affiliate-cookie status, Expert Review risk, and alternatives.
+  Updated June 24, 2026: Grammarly review covers Free, Pro, Superhuman Business, Enterprise, AI prompts, 1M+ app/site coverage, privacy controls, GPTZero deal context, Expert Review risk, and alternatives.
 author: aipedia.wiki Editorial
 best_for:
   - inline grammar and tone checks in the browser
@@ -220,13 +220,21 @@ price_history:
     source_id: grammarly-pricing
     verified_at: 2026-06-23
     note: "Official support still lists Grammarly Pro as the writing-first tier for up to 149 seats. Superhuman suite support and plans keep Pro and Business as broader suite subscriptions."
+  - date: 2026-06-24
+    plan: "Grammarly Pro / Superhuman suite"
+    price: "No plan-price change found: Grammarly Pro $30/member/mo monthly, $60/member quarterly, or $144/member/year; Superhuman Pro $12/member/mo annual or $30 monthly; Superhuman Business $33/member/mo annual or $40 monthly; Enterprise custom"
+    source: "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost"
+    source_label: "Grammarly Pro pricing support"
+    source_id: grammarly-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked Grammarly Pro pricing, Superhuman suite pricing, and Superhuman suite support. The June 2026 GPTZero acquisition agreement is covered as roadmap context, not a current plan-price change."
 ---
 
 # Grammarly
 
 Grammarly is Superhuman Platform's AI writing assistant. It runs across a browser extension, desktop apps on Windows and Mac, mobile keyboards on iOS and Android, and web writing surfaces. The current product is no longer just grammar, spelling, clarity, and tone detection: Grammarly now markets writing agents, reader-reaction feedback, AI composition, docs, paragraph translation, and brand/style guidance inside the broader Superhuman suite.
 
-Official pages now describe 40 million daily users, more than 1 million app and website integrations, and a business page trusted by 70,000 teams. Grammarly is positioned as the writing assistant inside the Superhuman suite alongside Superhuman Go, Coda, and Superhuman Mail, while standalone Grammarly remains available.
+Official pages now describe 40 million daily users, more than 1 million app and website integrations, and a business page trusted by 70,000 teams. Grammarly is positioned as the writing assistant inside the Superhuman suite alongside Superhuman Go, Coda, and Superhuman Mail, while standalone Grammarly remains available. Superhuman also [announced on June 23, 2026](https://www.businesswire.com/news/home/20260623083788/en/Superhuman-to-Acquire-GPTZero-AI-Authenticity-Platform) that it agreed to acquire GPTZero, which makes AI-authenticity, hallucination detection, plagiarism checking, and writing-integrity features more relevant to the Grammarly roadmap.
 
 ## System Verdict
 
@@ -248,9 +256,9 @@ Official pages now describe 40 million daily users, more than 1 million app and 
 | **AI prompts** | Free 100 prompts · Pro 2,000 prompts · Enterprise unlimited prompts |
 | **Compliance** | SOC 2 · GDPR · HIPAA |
 | **Developer API** | No public general-purpose writing API for buyers |
-| **Recent strategic move** | Superhuman suite positioning with Superhuman Go, Grammarly, Coda, Superhuman Mail, and suite pricing |
+| **Recent strategic move** | Superhuman suite positioning with Superhuman Go, Grammarly, Coda, Superhuman Mail, suite pricing, and a June 2026 GPTZero acquisition agreement |
 
-Every data point above was verified against official Grammarly and Superhuman documentation on 2026-06-23. See Sources.
+Every data point above was verified against official Grammarly and Superhuman documentation on 2026-06-24. See Sources.
 
 ## What it actually is
 
@@ -288,7 +296,7 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 | Superhuman Business | $33/member/mo annual or $40/member/mo monthly | Grammarly plus Superhuman Mail, Coda, and Go suite workflows | Teams that also want email, docs, and proactive app-context AI |
 | Enterprise | Custom | Advanced security/admin controls, SAML SSO, SCIM, DLP, BYOK, analytics, dedicated support, and unlimited generative AI prompts | Larger teams or regulated industries |
 
-*Prices verified 2026-06-23 via Grammarly support, [Grammarly Pro](https://www.grammarly.com/pro), [Superhuman plans](https://superhuman.com/plans), and Superhuman suite support. Grammarly support says Pro replaces the old Grammarly Business plan and allows up to 149 seats. The public checkout can localize by currency, so procurement should verify the checkout currency and seat terms shown to the buyer.*
+*Prices rechecked 2026-06-24 via Grammarly support, [Grammarly Pro](https://www.grammarly.com/pro), [Superhuman plans](https://superhuman.com/plans), and Superhuman suite support. Grammarly support says Pro replaces the old Grammarly Business plan and allows up to 149 seats. The public checkout can localize by currency, so procurement should verify the checkout currency and seat terms shown to the buyer.*
 
 ## Against the alternatives
 
@@ -318,7 +326,7 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Grammarly Pro](https://www.grammarly.com/pro), Grammarly support pricing docs, [Superhuman plans](https://superhuman.com/plans), [Superhuman Grammarly](https://superhuman.com/products/grammarly), Superhuman suite support, [Grammarly Business](https://www.grammarly.com/business), Grammarly Trust Center, Grammarly affiliates, and WIRED's Expert Review reporting.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [Grammarly Pro](https://www.grammarly.com/pro), Grammarly support pricing docs, [Superhuman plans](https://superhuman.com/plans), [Superhuman Grammarly](https://superhuman.com/products/grammarly), Superhuman suite support, [Grammarly Business](https://www.grammarly.com/business), Grammarly Trust Center, Grammarly affiliates, Superhuman's GPTZero acquisition announcement, and WIRED's Expert Review reporting.
 
 ## FAQ
 
@@ -329,7 +337,7 @@ Yes. The free tier covers core writing help and 100 AI prompts. Pro unlocks 2,00
 Yes for daily English writers. Pro's tone suggestions, full-sentence rewrites, advanced writing features, and team controls cover professional polish the free tier does not. Infrequent users may get enough from free.
 
 **What changed with Superhuman?**
-Grammarly is now part of the Superhuman suite alongside Superhuman Go, Coda, and Superhuman Mail. Grammarly support says standalone Grammarly remains available for customers who prefer it.
+Grammarly is now part of the Superhuman suite alongside Superhuman Go, Coda, and Superhuman Mail. Grammarly support says standalone Grammarly remains available for customers who prefer it. Superhuman also announced a June 2026 agreement to acquire GPTZero, so buyers should expect AI-authenticity and writing-integrity features to matter more in the roadmap.
 
 **What is the difference between Grammarly Pro and Superhuman Business?**
 Grammarly Pro is the writing-first plan for individuals and teams up to 149 seats. Superhuman Business is the broader suite plan that adds Superhuman Mail, Coda, and Go workflow value, so buy it only if those products matter.
@@ -351,6 +359,7 @@ No public general-purpose writing API for buyers. Grammarly is primarily deliver
 - [Grammarly Trust Center](https://www.grammarly.com/trust): Content-sale, employee-access, privacy, and training opt-out claims
 - [Grammarly Affiliates](https://www.grammarly.com/affiliates): Impact application link, cross-device tracking, 90-day cookie, and public affiliate-perk claims
 - [Superhuman suite support](https://support.grammarly.com/hc/en-us/articles/40709437438733-Introducing-the-Superhuman-suite): Suite packaging and standalone-product notes
+- [Superhuman GPTZero acquisition announcement](https://www.businesswire.com/news/home/20260623083788/en/Superhuman-to-Acquire-GPTZero-AI-Authenticity-Platform): June 2026 acquisition agreement and AI-authenticity roadmap context
 - [WIRED Expert Review coverage](https://www.wired.com/story/grammarly-is-facing-a-class-action-lawsuit-over-its-ai-expert-review-feature/): Expert Review shutdown and class-action trust caveat
 
 ## Related

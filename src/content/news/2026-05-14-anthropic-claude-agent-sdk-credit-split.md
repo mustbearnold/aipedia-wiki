@@ -4,11 +4,11 @@ slug: 2026-05-14-anthropic-claude-agent-sdk-credit-split
 title: "Anthropic splits Claude Agent SDK and claude -p into separate monthly credits, ending the shared-limit era for programmatic agents"
 date: 2026-05-14
 severity: major
-summary: "June 20 correction: Anthropic's current help page says the June 15 Agent SDK usage changes are paused. The original May 14 story described announced separate credits for Claude Agent SDK, claude -p, GitHub Actions, and third-party Agent SDK apps."
+summary: "June 24 correction: Anthropic's current help page again frames supported Claude Agent SDK and Claude Code usage through monthly Claude plan credits, while direct API usage remains separate. The original May 14 story is preserved as historical context for the announced billing change."
 categories: [ai-coding, ai-agents, ai-pricing]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-20
-last_verified: 2026-06-20
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 affects: [claude, claude-code, openclaw]
 related_tools: [claude, claude-code, openclaw]
 sources:
@@ -26,11 +26,11 @@ sources:
 
 # Anthropic splits Claude Agent SDK and claude -p into separate monthly credits, ending the shared-limit era for programmatic agents
 
-> **June 20, 2026 correction:** Anthropic's current Agent SDK help page says the June 15 usage changes are paused. Do not treat the separate monthly Agent SDK credit pool described below as active until Anthropic updates the guidance again. The original May 14 story is preserved as historical context for the announced billing change.
+> **June 24, 2026 correction:** Anthropic's current Agent SDK help page again frames supported Claude Agent SDK and Claude Code usage through monthly Claude plan credits, while direct API usage remains separate. The original May 14 story is preserved as historical context for the announced billing change and the June 20 pause.
 
 Anthropic had announced a hard line between **interactive Claude use** and **programmatic agent use**.
 
-The announced June 15 change said usage through the **Claude Agent SDK**, the **`claude -p`** non-interactive command, **Claude Code GitHub Actions**, and third-party apps built on the Agent SDK would no longer draw from normal Claude subscription limits. Eligible paid users would instead receive a separate monthly **Agent SDK credit** consumed first, then standard API-rate extra usage if the user enabled it. Anthropic's current help guidance now says that change is paused.
+The announced June 15 change said usage through the **Claude Agent SDK**, the **`claude -p`** non-interactive command, **Claude Code GitHub Actions**, and third-party apps built on the Agent SDK would draw from plan-level monthly credits before extra API-rated usage if the user enabled it. Anthropic's June 24 help guidance puts the buyer back on monthly Claude plan credits for supported Agent SDK and Claude Code usage, while direct API usage remains outside the plan-credit path.
 
 The original official support article listed the monthly credits:
 
@@ -44,9 +44,9 @@ The original official support article listed the monthly credits:
 | Enterprise usage-based | $20 |
 | Enterprise seat-based Premium seats | $200 |
 
-Seat-based Enterprise Standard users were not listed as eligible for the credit, according to the original Anthropic guidance. API-key users also did not receive the credit; pay-as-you-go billing continued as before. Under the current help-page update, the separate credit change is paused.
+Seat-based Enterprise Standard users were not listed as eligible for the credit, according to the original Anthropic guidance. API-key users also did not receive the credit; pay-as-you-go billing continued as before. Under the current help-page update, buyers should check their exact plan and account state before assuming the credit amount.
 
-## What the paused credit plan covered
+## What the credit plan covers
 
 The announced bucket would have applied to:
 
@@ -57,7 +57,7 @@ The announced bucket would have applied to:
 
 It does not apply to normal Claude conversations, Claude Cowork, or interactive Claude Code in a terminal or IDE.
 
-The announced credits were per-user, could not be pooled across a team, did not roll over, and required a one-time claim. If extra usage was disabled and the monthly credit ran out, Agent SDK requests would stop until the credit refreshed. Anthropic's current help guidance says that usage change is paused.
+The announced credits were per-user, could not be pooled across a team, did not roll over, and required a one-time claim. If extra usage was disabled and the monthly credit ran out, Agent SDK requests would stop until the credit refreshed. Current buyers should still verify the live help page and their account because Claude plan, team, enterprise, and API routes do not behave the same way.
 
 ## Why this matters
 
@@ -74,12 +74,12 @@ The user reaction is understandably split. Light users get a clearer legal path 
 For Claude buyers, the practical read is:
 
 - **Interactive Claude Code is still the subscription story.** If a human is in the terminal or IDE working with Claude Code, Anthropic says those normal subscription limits continue.
-- **Automation still needs a budget.** CI runs, `claude -p`, custom scripts, and third-party agent apps should be treated like cloud spend, especially because the separate credit split is paused under current guidance.
-- **Production agents should use API keys.** The announced monthly Agent SDK credit was positioned as individual experimentation and automation, not pooled production infrastructure. With the change paused, API metering remains the cleaner path for predictable production billing.
+- **Automation still needs a budget.** CI runs, `claude -p`, custom scripts, and third-party agent apps should be treated like cloud spend, even when a monthly Claude plan credit absorbs the first slice of usage.
+- **Production agents should use API keys.** The monthly Agent SDK credit is positioned as individual experimentation and automation, not pooled production infrastructure. API metering remains the cleaner path for predictable production billing.
 
 For OpenClaw users, the announcement was a mixed win. The route looked less gray than the April restriction period, but the economics were much less magical. OpenClaw remains free and self-hosted; the model bill is still hard to hide inside a subscription.
 
-For teams, this should still trigger a small governance cleanup: identify where `claude -p`, Claude Code GitHub Actions, Agent SDK scripts, and third-party agent tools are being used; assign cost owners; and decide whether those jobs belong on subscription limits, a future credit pool if Anthropic resumes it, or normal API billing.
+For teams, this should still trigger a small governance cleanup: identify where `claude -p`, Claude Code GitHub Actions, Agent SDK scripts, and third-party agent tools are being used; assign cost owners; and decide whether those jobs belong on subscription plan credits or normal API billing.
 
 ## What is still unclear
 

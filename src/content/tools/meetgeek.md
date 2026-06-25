@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$17/user/month billed annually; Enterprise custom"
 status: active
 launched: 2020-11
-last_updated: 2026-06-20
-last_verified: 2026-06-20
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 best_plan: "Business for customer-facing teams; Pro for solo professionals who can live inside 20 transcription hours per month"
 affiliate:
@@ -23,7 +23,7 @@ affiliate:
   link: "https://get.meetgeek.ai/3aqk23dqgmgy"
   application_status: approved
   approved_date: 2026-05-26
-  notes: "Affiliate link supplied by site owner on 2026-05-26; PartnerStack program directory lists 30% recurring commissions, 12-month commission duration, and a 90-day cookie."
+  notes: "Affiliate link supplied by site owner on 2026-05-26; PartnerStack program directory was rechecked on 2026-06-24 and public text still supported the 30% recurring commission signal, but the prior 90-day cookie claim was not visible in the public directory during this pass."
 scores:
   utility: 9
   value: 9
@@ -35,7 +35,7 @@ facts:
     source: "https://meetgeek.ai/"
     source_label: "MeetGeek official site"
     source_id: meetgeek-overview
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     next_review_at: 2026-07-04
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     next_review_at: 2026-07-04
     volatility: high
     confidence: high
@@ -61,7 +61,7 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   automation_features:
@@ -69,7 +69,7 @@ facts:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     next_review_at: 2026-07-04
     volatility: high
     confidence: high
@@ -78,24 +78,24 @@ facts:
     source: "https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications"
     source_label: "MeetGeek consent help center"
     source_id: meetgeek-consent
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   affiliate_terms:
-    value: "MeetGeek's PartnerStack directory lists 30% recurring commissions, recurring commissions for 12 months unless otherwise stated, cash-out via PayPal or Stripe, payout the month after commission is earned, and a 90-day cookie."
+    value: "MeetGeek's PartnerStack directory supports a 30% recurring commission signal. The prior PartnerStack/publisher data listed a 12-month commission duration and 90-day cookie, but the June 24 public directory check did not expose the cookie-window text, so buyers and publishers should verify the partner dashboard before treating the cookie claim as current."
     source: "https://market.partnerstack.com/page/meetgeek"
     source_label: "MeetGeek PartnerStack program"
     source_id: meetgeek-partnerstack
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     next_review_at: 2026-07-04
     volatility: high
-    confidence: high
+    confidence: medium
   watch_out_for:
     value: "Pro's 20-hour transcription cap and lack of team/video depth make Business the real default for customer-facing teams; buyer teams still need consent policy, sharing rules, CRM field ownership, and workspace separation before rollout."
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
     next_review_at: 2026-07-04
     volatility: high
     confidence: high
@@ -123,28 +123,28 @@ price_history:
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
   - date: 2026-05-26
     plan: Pro
     price: "$9.99/user/month billed annually; 20 transcription hours/month; 1 year transcript storage; 6 months audio storage; $0.50 per extra hour"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
   - date: 2026-05-26
     plan: Business
     price: "$17/user/month billed annually; unlimited transcription; unlimited transcript storage; 12 months video storage"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
   - date: 2026-05-26
     plan: Enterprise
     price: "Custom; unlimited transcription; custom video storage; SSO/SCIM; custom retention; on-premise storage options"
     source: "https://meetgeek.ai/pricing"
     source_label: "MeetGeek pricing"
     source_id: meetgeek-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-24
 ---
 
 # MeetGeek
@@ -153,7 +153,7 @@ MeetGeek is an AI meeting assistant for teams that need every customer call, sal
 
 The strongest way to understand it: MeetGeek is not just a transcript app. It is a meeting-to-workflow layer. It records and transcribes calls, generates summaries and next steps, lets teams search and chat across meeting history, and can push structured outputs into CRMs, task tools, Slack, Zapier, Make, n8n, API, and MCP-connected assistants.
 
-AiPedia verified this page against MeetGeek official pricing, product, integration, consent, customer-success, and PartnerStack program sources on 2026-06-20. AiPedia may earn from MeetGeek links, but the score and verdict remain editorial.
+AiPedia verified this page against MeetGeek official pricing, product, integration, consent, customer-success, and PartnerStack program sources on 2026-06-24. AiPedia may earn from MeetGeek links, but the score and verdict remain editorial. The public PartnerStack directory check did not expose the older 90-day cookie text, so publishers should verify cookie terms inside PartnerStack before relying on that claim.
 
 ## System Verdict
 
@@ -176,7 +176,7 @@ AiPedia verified this page against MeetGeek official pricing, product, integrati
 | **Business unlocks** | Unlimited transcription, HD video, team spaces, team analytics, AI auto-sharing, unlimited AI Chat, unlimited agentic workflows, consent notifications |
 | **Automation** | Zapier, Make, n8n, Slack Assistant, API, MCP access, AI Agents and Workflows |
 | **Security signals** | SOC 2, GDPR, HIPAA, zero-data-training, EU/US storage region choice listed on pricing page |
-| **Affiliate program** | PartnerStack; 30% recurring commissions, 12-month duration, 90-day cookie |
+| **Affiliate program** | PartnerStack; 30% recurring commission signal rechecked, prior 12-month duration and 90-day cookie should be verified in the partner dashboard |
 
 ## Who MeetGeek Is Perfect For
 
@@ -229,7 +229,7 @@ The trap is buying Pro for a team that is obviously a Business buyer. A CSM doin
 
 ## Pricing Reality
 
-MeetGeek pricing was verified from the official pricing page on 2026-06-20. The prices below are the annual-billing prices visible on the pricing page.
+MeetGeek pricing was verified from the official pricing page on 2026-06-24. The prices below are the annual-billing prices visible on the pricing page.
 
 | Plan | Price | Usage | Best for |
 |---|---:|---|---|
@@ -316,7 +316,7 @@ Yes. It is strongest when onboarding, renewal, QBR, escalation, product-feedback
 
 **Does MeetGeek have an affiliate program?**
 
-Yes. The MeetGeek PartnerStack program directory lists 30% recurring commissions, recurring commission duration for 12 months unless otherwise stated, and a 90-day cookie.
+Yes. The MeetGeek PartnerStack program directory supports a 30% recurring commission signal. Prior PartnerStack/publisher data listed a 12-month commission duration and 90-day cookie, but the June 24 public directory check did not expose the cookie-window text, so publishers should verify those terms inside PartnerStack before relying on them.
 
 **Does AiPedia earn from MeetGeek links?**
 
@@ -324,12 +324,12 @@ AiPedia may earn a commission from MeetGeek affiliate links. Rankings and recomm
 
 ## Sources
 
-- [MeetGeek official site](https://meetgeek.ai/) (verified 2026-06-20)
-- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-06-20)
-- [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-06-20)
-- [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-06-20)
-- [MeetGeek recording consent help center](https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications) (verified 2026-06-20)
-- [MeetGeek AI for Customer Success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-06-20)
+- [MeetGeek official site](https://meetgeek.ai/) (verified 2026-06-24)
+- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-06-24)
+- [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-06-24)
+- [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-06-24)
+- [MeetGeek recording consent help center](https://support.meetgeek.ai/en/articles/6021904-recording-consents-notifications) (verified 2026-06-24)
+- [MeetGeek AI for Customer Success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-06-24)
 
 ## Related
 

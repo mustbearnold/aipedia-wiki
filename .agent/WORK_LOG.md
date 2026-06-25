@@ -30,6 +30,17 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ## Entries
 
+### 2026-06-25: Tool Refresh Planner Source-Health Bridge
+
+- Status: Complete locally, partially verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Updated `scripts/tool-refresh-batch.mjs` so batch JSON includes registered source metadata for each planned tool, deduped `commands.source_ids`, scoped offline/live/snapshot `audit:sources` commands, and shard-level `source_ids` in worker briefs. Updated `scripts/README.md`, `tests/scripts/tool-refresh-batch.test.mjs`, and `.agent/CURRENT_STATUS.md`.
+- Verification: `node --check scripts/tool-refresh-batch.mjs`; `npm run tool:refresh:batch -- --limit 2 --max-workers 2 --tools-per-worker 1 --json`; `node --test tests/scripts/tool-refresh-batch.test.mjs`; `npm run audit:commands`; `npm run audit:sources -- --json --limit 0 --source-id consensus-pricing`.
+- Failed then documented: `npm run check:quick` stopped in the broad script suite because the local shell is using Node 22 and missing installed packages such as `sharp` and `esbuild`; existing dirty-baseline `qa-route` and temporary TypeScript import fixture failures also remain in that broad run. The focused planner test passed.
+- Residual risks: Live source-health fetching was not run because this was a planner wiring change and live checks can be slow or network-sensitive. Future batches should use the emitted live command when deciding whether registered source hashes changed.
+- Next: Use the emitted `commands.source_health` section before the next large refresh batch to prioritize changed sources and avoid unnecessary page edits.
+
 ### 2026-06-22: Capacities, Beehiiv, Browserbase, Castmagic, CloudTalk Batch
 
 - Status: Complete in this batch.
@@ -619,3 +630,103 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `npm run tool:refresh:batch:check -- --file src\content\tools\minimax-speech.md --file src\content\tools\modal.md --file src\content\tools\morphic.md --file src\content\tools\mubert.md --file src\content\tools\murf.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/minimax-speech/ --route /tools/modal/ --route /tools/morphic/ --route /tools/mubert/ --route /tools/murf/ --route /categories/ai-voice/ --route /categories/ai-infrastructure/ --route /categories/ai-coding/ --route /categories/ai-automation/ --route /categories/ai-search/ --route /categories/ai-chatbots/ --route /categories/ai-music/ --route /guides/best-ai-voice-youtube/ --route /guides/best-ai-music-generator/ --route /guides/suno-alternatives/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
 - Residual risks: 127 tracked tool pages remain below the June 23 refresh date. Mubert exact self-serve prices still need live flow confirmation before procurement, as documented in content.
 - Next: Continue with NanoChat, Napkin AI, NeuronWriter, NightCafe, and Notion AI.
+
+### 2026-06-24: Jun 23-24 Focused AI News Coverage
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Added five individual source-backed news articles for Jun 23-24 coverage without adding a daily desk page: OpenAI Daybreak/Codex Security, Samsung ChatGPT Enterprise and Codex, Claude reliability incidents, GLM-5.2 open-model pressure, and Google AI talent movement. Updated `/news/`, homepage, RSS, LLM surfaces, generated news OG assets, and regenerated `PAGE_REFRESH_LEDGER.md`.
+- Verification: `node scripts\guard-em-dashes.mjs`; `npm run ledger:pages:check`; `npm run check:news`; `node scripts\audit-news-rendering.mjs --json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /news/ --route / --route /news/2026-06-23-openai-daybreak-codex-security/ --route /news/2026-06-23-samsung-chatgpt-codex-enterprise/ --route /news/2026-06-23-claude-error-rate-fallback-planning/ --route /news/2026-06-24-zai-glm-52-open-model-pressure/ --route /news/2026-06-24-google-ai-talent-openai-anthropic/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Residual risks: GLM-5.2 coverage relies on named reporting rather than a directly opened Z.ai primary release page because current search did not surface a stable official announcement page. The article avoids unsupported benchmark claims and frames it as market pressure.
+- Next: Resume NanoChat, Napkin AI, NeuronWriter, NightCafe, and Notion AI freshness unless a newer user request supersedes it.
+
+### 2026-06-24: Shared Tool Page Decision Spine
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Migrated the shared tool detail template to the new default flow: hero, decision card, plan guidance, fit, recent changes, alternatives, related comparisons, collapsed proof/score math, and collapsed full review notes. Hid reader reviews unless approved reviews exist, normalized older source-registry rows required by script tests, contained `/search/` quick chips on mobile, updated homepage smoke expectations for value labels, and made top-layer card outlines neutral by default.
+- Verification: `npm run ledger:pages`; `npm run typecheck`; `npm run test:scripts`; `npm run build:fast`; `npm run smoke:visual`; `npm run qa:route -- --route /tools/chatgpt/ --route /tools/claude/ --route /tools/cursor/ --route /tools/midjourney/ --route /tools/notion-ai/ --route /tools/watsonx-orchestrate/ --route /tools/ --route /compare/ --route / --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`; `node scripts\guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: `/search/` is intentionally noindex, so it should not be included in `qa:route`; broad smoke covers its mobile overflow instead. The in-app browser screenshot capture timed out, but DOM, overflow, desktop, and drawer-state checks passed against `http://127.0.0.1:4325/tools/chatgpt/`.
+- Next: Keep refreshing tool content through the new layout, starting with NanoChat, Napkin AI, NeuronWriter, NightCafe, and Notion AI unless superseded.
+
+### 2026-06-24: NanoChat, Napkin AI, NeuronWriter, NightCafe, Notion AI Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Refreshed NanoChat, Napkin AI, NeuronWriter, NightCafe, and Notion AI against current June 2026 sources, updated AI Research, AI Presentation, AI Design, AI SEO, AI Image, and AI Notes parent hubs, refreshed source-registry rows, regenerated `PAGE_REFRESH_LEDGER.md`, updated `.agent/CURRENT_STATUS.md` and `.agent/PLANS.md`, and recorded `.agent/loop-runs/2026-06-24-nanochat-napkin-neuronwriter-nightcafe-notion-batch.md`.
+- Verification: `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --file src\content\tools\nanochat.md --file src\content\tools\napkin-ai.md --file src\content\tools\neuronwriter.md --file src\content\tools\nightcafe.md --file src\content\tools\notion-ai.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/nanochat/ --route /tools/napkin-ai/ --route /tools/neuronwriter/ --route /tools/nightcafe/ --route /tools/notion-ai/ --route /categories/ai-research/ --route /categories/ai-presentation/ --route /categories/ai-design/ --route /categories/ai-seo/ --route /categories/ai-image/ --route /categories/ai-notes/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`.
+- Failed then fixed: First `tool:refresh:batch:check` failed because Napkin AI, NightCafe, and Notion AI price-history rows were missing `verified_at`; added them and reran successfully.
+- Residual risks: NightCafe official pricing and model pages were blocked by Cloudflare during non-interactive verification, so the page avoids exact live plan-gate claims and points buyers to confirm in checkout.
+- Next: Continue with Consensus, Beehiiv, BLACKBOX AI, Browserbase, and Canva.
+
+### 2026-06-24: Tool Refresh Workflow Timing Pass
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Profiled the current tool-refresh closeout workflow from the live batch, added per-stage timing output to `scripts/build-fast.mjs`, added local-server and concurrency modes to `scripts/qa-route.mjs`, added focused tests, and updated `.agent/LOOPS.md`, `.agent/OPERATING_RULES.md`, `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `scripts/README.md` so future refresh work pays for one whole-site build per batch instead of one build per tool.
+- Measured bottlenecks: `build:fast` was the slowest gate at about 166.9 seconds end to end, with about 2m 38s inside Astro and about 2m 13s in static route prerender. The built-output audits after Astro were small: indexability under 1 second, CTA audit about 2 seconds, and budget check under 1 second. `typecheck` took about 31.2 seconds when run alone, and `tool:refresh:batch:check` took about 11.8 seconds.
+- Route QA optimization: the 12-route by 5-width matrix took about 65 seconds serially against the local dev server, then about 18.9 seconds with `--concurrency 4`. The same matrix against `dist-fast/client` also passed in about 18.9 seconds with `--concurrency 4`.
+- Failed then explained: Running `typecheck` and `build:fast` in parallel produced an Astro content-store `ENOENT rename` race under `node_modules/.astro/data-store.json`. Rerunning `typecheck` alone passed, so the workflow rule is sequential Astro commands.
+- Verification: `npm run build:fast`; `node --test tests\scripts\build-fast.test.mjs tests\scripts\qa-route.test.mjs`; `node scripts\guard-em-dashes.mjs`; `node scripts\qa-route.mjs --base-url http://127.0.0.1:4325 --route /tools/consensus/ --route /categories/ai-research/ --route /tools/beehiiv/ --route /categories/ai-writing/ --route /tools/blackbox-ai/ --route /categories/ai-coding/ --route /tools/browserbase/ --route /categories/ai-automation/ --route /tools/canva/ --route /categories/ai-design/ --route /tools/ --route /categories/ --widths 319,390,430,768,1024`; `node scripts\qa-route.mjs --base-url http://127.0.0.1:4325 --concurrency 4 --route /tools/consensus/ --route /categories/ai-research/ --route /tools/beehiiv/ --route /categories/ai-writing/ --route /tools/blackbox-ai/ --route /categories/ai-coding/ --route /tools/browserbase/ --route /categories/ai-automation/ --route /tools/canva/ --route /categories/ai-design/ --route /tools/ --route /categories/ --widths 319,390,430,768,1024`; `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --route /tools/consensus/ --route /categories/ai-research/ --route /tools/beehiiv/ --route /categories/ai-writing/ --route /tools/blackbox-ai/ --route /categories/ai-coding/ --route /tools/browserbase/ --route /categories/ai-automation/ --route /tools/canva/ --route /categories/ai-design/ --route /tools/ --route /categories/ --widths 319,390,430,768,1024`; `npm run audit:commands`; `git diff --check`.
+- Residual risks: `build:fast` is still a whole-site Astro prerender and remains the main fixed closeout cost. The next deeper win would require route-scoped build output or reducing the number of generated routes checked in local loops, both of which need more design care.
+- Next: Continue the batched freshness loop with fast content gates, optional dev-server route QA using `--base-url --concurrency 4`, then one final sequential `typecheck`, `build:fast`, and built-output route QA using `--concurrency 4`.
+
+### 2026-06-24: Tool Refresh Workflow Optimization Pass
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Made grouped refreshes the planner default, added guarded worker and integrator briefs, taught the batch checker to consume saved planner JSON, added production-only content collection caching for hot global and page paths, and documented the modern refresh loop in README, script docs, `.agent/LOOPS.md`, `.agent/OPERATING_RULES.md`, `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/loop-runs/2026-06-24-tool-refresh-workflow-timing.md`. This was later expanded from the original 10-tool fanout to six 10-tool shards.
+- Measured result: `build:fast` dropped from about 166.9 seconds before optimization to about 65 seconds end to end. Astro static prerender dropped from about 2m 13s to about 37 seconds. `typecheck` is about 25 seconds, and representative route QA is about 11-19 seconds with `--concurrency 4` depending on route count.
+- Parallel rule: Ten subagents are useful only when each worker edits exactly one `src/content/tools/<slug>.md` file and returns source, parent-hub, route, and risk notes. The main integrator owns `src/data/source-registry.json`, parent hubs, ledgers, top-layer pages, `.agent` docs, and the expensive closeout gates.
+- Verification: `node --test tests\scripts\build-performance.test.mjs tests\scripts\loop-hardening.test.mjs tests\scripts\qa-route.test.mjs tests\scripts\tool-refresh-batch.test.mjs`; `node --check scripts\tool-refresh-batch-check.mjs`; `node --check scripts\tool-refresh-batch.mjs`; `node --check scripts\loop-verify.mjs`; `npm run typecheck`; `npm run build:fast`; `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --route / --route /tools/chatgpt/ --route /news/2026-06-23-openai-daybreak-codex-security/ --route /categories/ai-research/ --route /compare/chatgpt-vs-claude/ --route /dead/bing-chat/ --route /tools/ --route /categories/ --widths 319,390,768,1024`.
+- Residual risks: The optimized closeout is much faster, but it is still whole-site validation and should be paid once per integrated batch.
+- Next: Use the six-shard-worker plan shape unless the user asks for a smaller batch.
+
+### 2026-06-24: AiPedia Tool Refresh Workflow Skill
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Packaged the optimized refresh process as local skill `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`, with a lean `SKILL.md`, UI metadata, and `references/tool-refresh-batch.md` for the detailed worker/integrator checklist. Updated `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, and `.agent/LOOPS.md` to treat the skill as the incubating playbook before loop-registry promotion.
+- Verification: `python C:\Users\mustb\.codex\skills\.system\skill-creator\scripts\quick_validate.py .agents\skills\aipedia-tool-refresh-workflow`; placeholder and em-dash sweeps on the new skill and updated workflow docs; `git diff --check`.
+- Residual risks: `.agents/` is intentionally gitignored local skill state, so this is available in this workspace but not committed unless the repo policy changes or the skill moves to a committed location.
+- Next: Use the skill on the next six-shard-worker batch, patch the skill after any friction, and promote only the stable final shape into `src/data/aipedia-loops.json`.
+
+### 2026-06-24: Consensus, Beehiiv, BLACKBOX AI, Browserbase, Canva, Captions, Castmagic, Cline, CloudTalk, CodeRabbit Batch
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Refreshed Consensus, Beehiiv, BLACKBOX AI, Browserbase, Canva, Captions, Castmagic, Cline, CloudTalk, and CodeRabbit against current June 2026 sources. Updated AI Research, AI Writing, AI Coding, AI Automation, AI Design, AI Image, AI Presentation, and AI Video parent hubs, refreshed source-registry rows, regenerated `PAGE_REFRESH_LEDGER.md`, and recorded `.agent/loop-runs/2026-06-24-consensus-beehiiv-blackbox-browserbase-canva-captions-castmagic-cline-cloudtalk-coderabbit-batch.md`.
+- Workflow adaptation: The Codex Windows app hit an active-agent ceiling after six workers. Six tools were completed by workers and four were completed in the main thread. The planner, local skill, loop docs, and operating docs were first adapted to six-worker waves, then expanded to six shard workers with up to 10 tools each.
+- Verification: `node --check scripts\tool-refresh-batch.mjs`; `node --test tests\scripts\build-performance.test.mjs`; `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/consensus/ --route /categories/ai-research/ --route /tools/beehiiv/ --route /categories/ai-writing/ --route /tools/blackbox-ai/ --route /categories/ai-coding/ --route /tools/browserbase/ --route /categories/ai-automation/ --route /tools/canva/ --route /categories/ai-design/ --route /tools/captions/ --route /categories/ai-video/ --route /tools/castmagic/ --route /tools/cline/ --route /tools/cloudtalk/ --route /tools/coderabbit/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`.
+- Failed then adapted: Initial spawns for Castmagic, Cline, CloudTalk, and CodeRabbit failed with `agent thread limit reached`; the batch continued in-thread and the workflow was adapted to wave-limited fanout.
+- Residual risks: The planner can still surface same-day refreshed high-volatility pages because their short review windows keep them near due. Skip same-day repeats or tune the planner before the next large run.
+- Next: Regenerate the next batch with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`; the next not-refreshed page observed behind this batch was Cody.
+
+### 2026-06-24: Six Shard Worker Tool Refresh Workflow
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Expanded the tool-refresh planner and local workflow from one worker per tool to six parallel shard workers with up to 10 tool files each. Updated `scripts/tool-refresh-batch.mjs`, focused tests, README, script docs, `.agent` operating docs, the local `$aipedia-tool-refresh-workflow` skill, and normalized `nightcafe-softwareadvice-pricing` to source type `third_party`.
+- Verification: `node --check scripts\tool-refresh-batch.mjs`; `node --test tests\scripts\build-performance.test.mjs tests\scripts\tool-refresh-batch.test.mjs`; planner smoke showed `batch=60`, `workers=6`, `tools_per_worker=10`; `npm run check:quick`.
+- Failed then fixed: First `npm run check:quick` failed because `nightcafe-softwareadvice-pricing` used invalid source type `directory`; changed it to `third_party` and reran successfully.
+- Residual risks: A 60-tool batch will increase integration review and route-QA scope. Keep shared files integrator-owned and use the saved planner JSON for the grouped batch check.
+- Next: Generate the next plan with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
+
+### 2026-06-24: Six-Shard 60-Tool Baseline Run
+
+- Status: Complete locally, verified, not yet pushed.
+- Commit: pending.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Ran the new six-shard `$aipedia-tool-refresh-workflow` on 60 tools from Cody through Lovart; integrated source-registry updates, same-day planner exclusion, affected category hubs, `PAGE_REFRESH_LEDGER.md`, the Claude Agent SDK billing correction article, workflow timing docs, and `.agent/loop-runs/2026-06-24-60-tool-refresh-baseline.md`.
+- Timing: 36m 55s from `.tmp-tool-refresh-run-start.txt` through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core timing was 25m 07s worker collection and 11m 48s integration plus verification. Closeout gates: ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, supplemental route QA 4s for two edited routes missed by the main matrix.
+- Verification: `node --check scripts\tool-refresh-batch.mjs`; `node --test tests\scripts\build-performance.test.mjs`; `npm run ledger:pages`; `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`; `npm run typecheck`; `npm run check:quick`; `npm run build:fast`; `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --widths 319,390,430,768,1024` across 80 routes; supplemental `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --route /categories/ai-infrastructure/ --route /news/2026-05-14-anthropic-claude-agent-sdk-credit-split/ --widths 319,390,430,768,1024`.
+- Residual risks: Dynamic account or checkout-dependent facts remain caveated in content, especially Claude Fable/Mythos account routes, Udio exports/API/commercial terms, Pika pricing, Lovable checkout prices, Mubert custom/API/one-track license pricing, Seedance route economics, and Synthesia add-ons.
+- Next: Stop for tonight as requested. Future runs should regenerate the plan and use the same six 10-tool shard shape unless the measured app concurrency limit changes.

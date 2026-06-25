@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -21,7 +21,7 @@ affiliate:
   cookie_days: 30
   network: Partnerize
   link: null
-  notes: "Official Adobe affiliate page verified 2026-06-23: application via Partnerize, 85% of the first month's subscription price on eligible monthly and annual-paid-monthly plans, 8.33% of first year for annual prepaid plans, and 30-day cookie duration."
+  notes: "Official Adobe affiliate page verified 2026-06-24: application via Partnerize, 85% of the first month's subscription price on eligible monthly and annual-paid-monthly plans, 8.33% of first year for annual prepaid plans, and 30-day cookie duration."
 scores:
   utility: 7
   value: 7
@@ -29,11 +29,11 @@ scores:
   longevity: 9
 facts:
   flagship_model:
-    value: "Firefly Image 5/Image5 is Adobe's latest image model and API route, with native 4 MP resolution and Instruct Edit; Firefly also routes partner models such as GPT Image 2, GPT Image 1.5, Sora 2, GPT-5.1, Google Gemini/Nano Banana variants, Veo, FLUX, Luma Ray, Runway Gen-4/4.5/Aleph, Topaz, ElevenLabs, and Kling 2.5/3.0/3.0 Omni depending on surface and plan"
+    value: "Firefly Image 5/Image5 is Adobe's latest image model and API route, with native 4 MP resolution and Instruct Edit; Firefly also routes partner models such as GPT Image/GPT Image 1.5/GPT Image 2, Sora 2 and Sora 2 Pro, GPT-5.1, Google Gemini 2.5/3/3.1 Nano Banana variants, Veo 3.1 and Veo 3.1 Fast, FLUX, Luma Ray, Runway Gen-4/4.5/Aleph/Aleph 2.0, Topaz Astra, ElevenLabs, and Kling 2.5/3.0/3.0 Omni depending on surface and plan"
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -42,7 +42,7 @@ facts:
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
     next_review_at: 2026-06-30
@@ -51,7 +51,7 @@ facts:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -60,7 +60,7 @@ facts:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -69,7 +69,7 @@ facts:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -78,25 +78,25 @@ facts:
     source: "https://developer.adobe.com/firefly-services/docs/firefly-api/"
     source_label: "Adobe Firefly API documentation"
     source_id: adobe-firefly-api
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
   image_generation:
-    value: "Yes: Firefly image tools include Generate Image, Edit Image, Generative Fill, Generative Expand, Prompt to Edit, Firefly Image 5, GPT Image/Gemini/FLUX partner routes, and Creative Cloud app workflows"
+    value: "Yes: Firefly image tools include Generate Image, Edit Image, Generative Fill, Generative Expand, Prompt to Edit, Firefly Image 5, GPT Image/GPT Image 1.5/GPT Image 2, Gemini Nano Banana variants, FLUX partner routes, and Creative Cloud app workflows"
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
   video_generation:
-    value: "Yes: Firefly plans include Text to Video/Image to Video with generative credits, 5-second video allowances by plan, partner video models with per-second credit rates, and unlimited Firefly Video Model access on Premium"
+    value: "Yes: Firefly plans include Text to Video/Image to Video with generative credits, 5-second video allowances by plan, partner video models with per-second credit rates such as Veo 3.1, Sora 2, Runway, Topaz, and Kling, and unlimited Firefly Video Model access on Premium"
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -105,7 +105,7 @@ facts:
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   web_browsing:
@@ -113,7 +113,7 @@ facts:
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   coding_agent:
@@ -121,7 +121,7 @@ facts:
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   enterprise_controls:
@@ -129,7 +129,7 @@ facts:
     source: "https://helpx.adobe.com/creative-cloud/apps/generative-ai/creative-cloud-generative-ai-features.html"
     source_label: "Adobe Creative Cloud generative AI features"
     source_id: adobe-creative-cloud-generative-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -137,7 +137,7 @@ facts:
     source: "https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html"
     source_label: "Adobe partner models in Adobe products"
     source_id: adobe-creative-cloud-partner-models
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -146,7 +146,7 @@ facts:
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   best_for:
@@ -154,15 +154,15 @@ facts:
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Credit limits, partner-model per-generation/per-second rates, limited-time unlimited-generation terms, model/resolution exclusions, separate API entitlement/procurement, partner prompt/reference-file sharing, Kling 3.0/Omni transfer disclosure, beta-output indemnification limits, and a lower raw aesthetic ceiling than Midjourney for some styles"
+    value: "Credit limits, partner-model per-generation/per-second rates, limited-time unlimited-generation terms, model/resolution exclusions, separate API entitlement/procurement, partner prompt/reference-file sharing, Kling 3.0/Omni transfer disclosure, beta-output indemnification limits, individual-only partner-model exclusions, and a lower raw aesthetic ceiling than Midjourney for some styles"
     source: "https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html"
     source_label: "Adobe partner models in Adobe products"
     source_id: adobe-creative-cloud-partner-models
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -186,6 +186,14 @@ not_best_for:
 quick_answer: >-
   Adobe Firefly is Adobe's creative AI suite for images, video, audio, vectors, Boards, Photoshop web/mobile, Express, and partner models. Firefly Image 5/Image5 is the latest image engine/API route, and paid Firefly plans now run from Standard $9.99 to Premium $199.99/month before temporary first-year discounts on bigger plans that Adobe currently says end Aug. 26, 2026. Pick it for Adobe-first production and commercial-safety posture; skip if you want the strongest raw aesthetic model, simple API pricing, or partner-model use without credit-rate and prompt-sharing review.
 price_history:
+  - date: 2026-06-24
+    plan: "Firefly individual plans and partner-model rates"
+    price: "Free daily generations; Standard $9.99/mo, Pro $19.99/mo, Pro Plus $49.99/mo regular or $34.97/mo promo, Premium $199.99/mo regular or $139.91/mo promo"
+    source: "https://www.adobe.com/products/firefly/plans.html"
+    source_label: "Adobe Firefly plans"
+    source_id: adobe-firefly-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked Firefly plans, current promotions, partner-model docs, product page, Firefly API docs, and affiliate terms. Plan prices and Aug. 26 promo date still match June 23, but partner-model docs now warrant sharper Gemini 3/3.1, Sora 2/Pro, Veo 3.1, Runway, Topaz, and Kling credit-rate wording."
   - date: 2026-06-15
     plan: "Standard"
     price: "$9.99/mo"
@@ -240,8 +248,9 @@ Use Firefly when the output has to move through Adobe apps or client approval. U
 
 ## Recent changes
 
+- **June 24, 2026:** Re-verified Adobe Firefly against official Adobe product, plan, API, generative-credit, partner-model, legal, and affiliate sources. Current individual plans remain Standard $9.99/month with 2,000 credits, Pro $19.99/month with 4,000 credits, Pro Plus $49.99/month regular with a $34.97 first-year promo, and Premium $199.99/month regular with a $139.91 first-year promo. Adobe's current plan page still says the Pro Plus and Premium first-year promo ends Aug. 26, 2026.
 - **June 23, 2026:** Re-verified Adobe Firefly against official Adobe product, plan, API, generative-credit, partner-model, legal, and affiliate sources. Current individual plans remain Standard $9.99/month with 2,000 credits, Pro $19.99/month with 4,000 credits, Pro Plus $49.99/month regular with a $34.97 first-year promo, and Premium $199.99/month regular with a $139.91 first-year promo. Adobe's current plan page says the Pro Plus and Premium first-year promo ends Aug. 26, 2026.
-- **June 23, 2026:** Updated free-plan, API, and partner-model caveats. Free Firefly is now described as limited daily generations; Firefly API access requires Developer Console credentials and provisioning; and Adobe's partner-model list now spans Google, OpenAI, Sora, FLUX, Luma, Runway, Topaz, ElevenLabs, Kling, and related model routes depending on app surface and plan.
+- **June 24, 2026:** Updated free-plan, API, and partner-model caveats. Free Firefly is still described as limited daily generations; Firefly API access requires Developer Console credentials and provisioning; and Adobe's current partner-model docs now warrant explicit GPT Image 2, Sora 2, GPT-5.1, Gemini 3/3.1 Nano Banana, Veo 3.1, Runway Gen-4.5/Aleph, Topaz Astra, Kling 3.0/Omni, and credit-rate caveats.
 - **June 15, 2026:** Re-verified Adobe Firefly against official Adobe product, plan, API, generative-credit, partner-model, and affiliate sources. Current individual plans remained Standard $9.99/month with 2,000 credits, Pro $19.99/month with 4,000 credits, Pro Plus $49.99/month regular with a $34.97 first-year promo, and Premium $199.99/month regular with a $139.91 first-year promo.
 - **June 15, 2026:** Added partner-model credit and data-sharing caveats. Adobe's partner-model docs publish per-second video rates, per-generation image/vector rates, ElevenLabs character-based speech rates, and a Kling 3.0/Kling 3.0 Omni disclosure that prompts and reference files are sent to the Chinese company that developed those models.
 - **June 15, 2026:** Tightened Firefly Image 5 and API language. Adobe's Firefly API docs describe Image5 as the latest model with native 4 MP resolution and Instruct Edit, plus Composite Operations APIs for product/object scene workflows.
@@ -267,15 +276,15 @@ Use Firefly when the output has to move through Adobe apps or client approval. U
 | | |
 |---|---|
 | **Latest image engine** | Firefly Image 5 / Image5 API with native 4 MP output and Instruct Edit |
-| **Image workflow** | Generate Image, Edit Image, Generative Fill/Expand, Prompt to Edit, Firefly Image 5, GPT Image/Gemini/FLUX partner routes |
-| **Video workflow** | Text/Image to Video with credits and five-second plan allowances; partner models can use per-second credit rates; Premium adds unlimited Firefly Video Model access |
+| **Image workflow** | Generate Image, Edit Image, Generative Fill/Expand, Prompt to Edit, Firefly Image 5, GPT Image/GPT Image 1.5/GPT Image 2, Gemini Nano Banana, and FLUX partner routes |
+| **Video workflow** | Text/Image to Video with credits and five-second plan allowances; partner models can use per-second credit rates for Veo 3.1, Sora 2, Runway, Topaz, Kling, and others; Premium adds unlimited Firefly Video Model access |
 | **Audio workflow** | Generate Soundtrack, Generate Speech, sound effects, translation, dubbing, and beta/editor features depending on surface |
-| **Partner models** | Adobe, Google Gemini/Nano Banana, Veo, OpenAI GPT Image/Sora/GPT routes, FLUX, Luma Ray, Runway Gen-4/4.5/Aleph, Topaz, ElevenLabs, Kling 2.5/3.0/3.0 Omni, and others appear across current Adobe surfaces |
+| **Partner models** | Adobe, Google Gemini 2.5/3/3.1 Nano Banana variants, Veo 3.1/Fast, OpenAI GPT Image/GPT Image 1.5/GPT Image 2/Sora 2/GPT-5.1 routes, FLUX, Luma Ray, Runway Gen-4/4.5/Aleph/Aleph 2.0, Topaz Astra, ElevenLabs, Kling 2.5/3.0/3.0 Omni, and others appear across current Adobe surfaces |
 | **Integrations** | Firefly web/mobile, Photoshop, Illustrator, Premiere Pro, Express, Creative Cloud, and Adobe enterprise/workflow routes |
 | **API** | Firefly Services / Firefly API documentation exists; verify entitlement and pricing separately from app plans |
 | **Pricing** | Free access plus Standard $9.99, Pro $19.99, Pro Plus $49.99, Premium $199.99 regular individual plans |
 
-Every current fact above was verified on 2026-06-23 from official Adobe sources. See Sources.
+Every current fact above was verified on 2026-06-24 from official Adobe sources. See Sources.
 
 ## What it actually is
 
@@ -319,7 +328,7 @@ Adobe's current public Firefly plan table is credit-based. The key buyer questio
 
 Team plans use separate per-license pricing: Pro for teams $19.99/license/month, Pro Plus for teams $49.99/license/month, and Premium for teams $199.99/license/month on Adobe's current table. The unlimited-generation promotion Adobe describes for individual plans excludes Teams and Enterprise, so do not copy consumer promo math into a team procurement note.
 
-Credits also need workflow-level accounting. Adobe says credits can stack across multiple subscriptions and reset monthly for paid plans, but partner models are not a flat allowance: examples in Adobe's current docs include video models billed per second, Gemini/GPT image routes billed per generation, and ElevenLabs billed per 1,000 characters. If a team is using Veo, Sora, Kling, Runway, GPT Image, Gemini/Nano Banana, or ElevenLabs inside Firefly, test the exact model/resolution path before assuming Pro Plus or Premium is enough.
+Credits also need workflow-level accounting. Adobe says credits can stack across multiple subscriptions and reset monthly for paid plans, but partner models are not a flat allowance: examples in Adobe's current docs include video models billed per second, Gemini/GPT image routes billed per generation, and ElevenLabs billed per 1,000 characters. If a team is using Veo 3.1, Sora 2, Kling 3.0, Runway Gen-4.5/Aleph, GPT Image 2, Gemini 3/3.1 Nano Banana, Topaz, or ElevenLabs inside Firefly, test the exact model/resolution path before assuming Pro Plus or Premium is enough.
 
 ## Against the alternatives
 
@@ -351,7 +360,7 @@ Credits also need workflow-level accounting. Adobe says credits can stack across
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
-Last verified 2026-06-23 against Adobe Firefly plans, Firefly product pages, Firefly promotions, Creative Cloud generative AI documentation, Firefly API documentation, partner-model documentation, Adobe GenAI user guidelines, enterprise pages, and affiliate information.
+Last verified 2026-06-24 against Adobe Firefly plans, Firefly product pages, Firefly promotions, Creative Cloud generative AI documentation, Firefly API documentation, partner-model documentation, Adobe GenAI user guidelines, enterprise pages, and affiliate information.
 
 ## FAQ
 
@@ -378,17 +387,17 @@ Creative Cloud and Firefly bundles are moving targets. The current Firefly plan 
 
 ## Sources
 
-- [Adobe Firefly official site](https://www.adobe.com/products/firefly.html) (verified 2026-06-23): product surface, partner-model positioning, feature set, and Content Credentials posture
-- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-23): current individual/team pricing, credits, video/audio allowances, and promo prices
-- [Adobe Firefly current promotions](https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html) (verified 2026-06-23): unlimited-generation promo eligibility, exclusions, and caveats
-- [Adobe generative credits FAQ](https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html) (verified 2026-06-23): credit stacking, credit exhaustion, and paid-plan reset behavior
-- [Adobe partner models in Adobe products](https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html) (verified 2026-06-23): partner-model credit rates, provider sharing, and Kling 3.0 disclosure
-- [Adobe Firefly FAQ](https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/adobe-firefly-faq.html) (verified 2026-06-23): product definition and availability caveats
-- [Adobe Creative Cloud generative AI features](https://helpx.adobe.com/creative-cloud/apps/generative-ai/creative-cloud-generative-ai-features.html) (verified 2026-06-23): Firefly feature map across Adobe apps
-- [Adobe Firefly API documentation](https://developer.adobe.com/firefly-services/docs/firefly-api/) (verified 2026-06-23): Image5, Instruct Edit, and developer/API route
-- [Adobe GenAI user guidelines](https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html) (verified 2026-06-23): rights-respecting use, accuracy caveats, abuse-prevention review, and Content Credentials posture
-- [Adobe MAX 2025 Firefly update](https://news.adobe.com/news/2025/10/adobe-max-2025-firefly) (verified 2026-06-23): Firefly Image Model 5, audio/video, and editing direction
-- [Adobe affiliates](https://www.adobe.com/affiliates.html) (verified 2026-06-23): Partnerize program, commission, and cookie-duration details
+- [Adobe Firefly official site](https://www.adobe.com/products/firefly.html) (verified 2026-06-24): product surface, partner-model positioning, feature set, and Content Credentials posture
+- [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-24): current individual/team pricing, credits, video/audio allowances, and promo prices
+- [Adobe Firefly current promotions](https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html) (verified 2026-06-24): unlimited-generation promo eligibility, exclusions, and caveats
+- [Adobe generative credits FAQ](https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html) (verified 2026-06-24): credit stacking, credit exhaustion, and paid-plan reset behavior
+- [Adobe partner models in Adobe products](https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html) (verified 2026-06-24): partner-model credit rates, provider sharing, and Kling 3.0 disclosure
+- [Adobe Firefly FAQ](https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/adobe-firefly-faq.html) (verified 2026-06-24): product definition and availability caveats
+- [Adobe Creative Cloud generative AI features](https://helpx.adobe.com/creative-cloud/apps/generative-ai/creative-cloud-generative-ai-features.html) (verified 2026-06-24): Firefly feature map across Adobe apps
+- [Adobe Firefly API documentation](https://developer.adobe.com/firefly-services/docs/firefly-api/) (verified 2026-06-24): Image5, Instruct Edit, and developer/API route
+- [Adobe GenAI user guidelines](https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html) (verified 2026-06-24): rights-respecting use, accuracy caveats, abuse-prevention review, and Content Credentials posture
+- [Adobe MAX 2025 Firefly update](https://news.adobe.com/news/2025/10/adobe-max-2025-firefly) (verified 2026-06-24): Firefly Image Model 5, audio/video, and editing direction
+- [Adobe affiliates](https://www.adobe.com/affiliates.html) (verified 2026-06-24): Partnerize program, commission, and cookie-duration details
 
 ## Related
 

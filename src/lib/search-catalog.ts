@@ -87,6 +87,12 @@ function categoryBuyerTerms(slug: string | undefined): string[] {
   return slug ? BUYER_INTENT_TERMS_BY_CATEGORY[slug] ?? [] : [];
 }
 
+function isNewsRoundupEntry(entry: CatalogEntry): boolean {
+  const slug = searchEntrySlug(entry).toLowerCase();
+  const title = String(entry.data.title ?? '').toLowerCase();
+  return slug.includes('ai-news-desk') || title.startsWith('ai news desk,');
+}
+
 function toolBuyerTerms(tool: CatalogEntry, categories: readonly string[]): string[] {
   const haystack = buildSearchHaystack([
     tool.data.title,
@@ -404,7 +410,7 @@ export function buildSearchCatalog(input: CatalogInput): SearchCatalogItem[] {
     };
   });
 
-  const newsItems = input.news.map((news) => {
+  const newsItems = input.news.filter((news) => !isNewsRoundupEntry(news)).map((news) => {
     const slug = searchEntrySlug(news);
 
     return {

@@ -54,6 +54,74 @@ test('loop verify does not add a fallback build when no route or force-build is 
   assert.ok(!report.commands.includes('npm run build:fast'));
 });
 
+test('loop verify emits concurrent fallback route QA by default', () => {
+  const result = runNode('scripts/loop-verify.mjs', [
+    '--json',
+    '--dry-run',
+    '--date',
+    '2026-06-24',
+    '--skip-build',
+    '--route',
+    '/tools/chatgpt/',
+    '--path',
+    '.agent/CURRENT_STATUS.md',
+  ]);
+
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+  const report = JSON.parse(result.stdout);
+  const routeCommand = report.commands.find((command) => /scripts\/qa-route\.mjs/.test(command));
+  assert.ok(routeCommand);
+  assert.match(routeCommand, /--concurrency 4/);
+  assert.equal(report.route_qa_concurrency, 4);
+});
+
+test('loop verify passes a local base URL to fallback route QA', () => {
+  const result = runNode('scripts/loop-verify.mjs', [
+    '--json',
+    '--dry-run',
+    '--date',
+    '2026-06-24',
+    '--skip-build',
+    '--route',
+    '/tools/chatgpt/',
+    '--path',
+    '.agent/CURRENT_STATUS.md',
+    '--base-url',
+    'http://127.0.0.1:4325',
+    '--concurrency',
+    '3',
+  ]);
+
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+  const report = JSON.parse(result.stdout);
+  const routeCommand = report.commands.find((command) => /scripts\/qa-route\.mjs/.test(command));
+  assert.ok(routeCommand);
+  assert.match(routeCommand, /--base-url http:\/\/127\.0\.0\.1:4325/);
+  assert.match(routeCommand, /--concurrency 3/);
+  assert.equal(report.route_qa_base_url, 'http://127.0.0.1:4325');
+  assert.equal(report.route_qa_concurrency, 3);
+});
+
+test('loop verify rejects invalid route QA concurrency', () => {
+  const result = runNode('scripts/loop-verify.mjs', [
+    '--json',
+    '--dry-run',
+    '--date',
+    '2026-06-24',
+    '--route',
+    '/tools/chatgpt/',
+    '--path',
+    '.agent/CURRENT_STATUS.md',
+    '--concurrency',
+    '12',
+  ]);
+
+  assert.equal(result.status, 2);
+  const report = JSON.parse(result.stdout);
+  assert.equal(report.mode, 'argument-error');
+  assert.ok(report.argument_issues.some((issue) => /concurrency/.test(issue.detail)));
+});
+
 test('loop verify recognizes combined smart route QA commands', () => {
   const result = runNode('scripts/loop-verify.mjs', [
     '--json',

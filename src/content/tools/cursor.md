@@ -7,11 +7,11 @@ category: ai-coding
 company: anysphere
 url: https://cursor.com
 pricing_model: freemium
-price_range: "$0-$40+/user/month; Enterprise custom"
+price_range: "$0-$120+/user/month; Enterprise custom"
 status: active
 launched: 2023-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -48,7 +48,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -57,7 +57,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -66,7 +66,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -124,7 +124,7 @@ facts:
     source: "https://cursor.com/enterprise"
     source_label: "Cursor Enterprise"
     source_id: cursor-enterprise
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -163,7 +163,7 @@ facts:
     next_review_at: 2026-06-30
 tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cloud-agents, automations, mcp, composer, composer-2-5]
 seo_title: "Cursor: Features, Pricing & Review (June 2026)"
-meta_description: "Cursor is an AI-native VS Code fork with Composer 2.5, Agents Window, Cloud Agents, Automations, Bugbot, and usage-sensitive model access. Updated June 23, 2026."
+meta_description: "Cursor is an AI-native VS Code fork with Composer 2.5, Agents Window, Cloud Agents, Automations, Bugbot, and usage-sensitive model access. Updated June 24, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - professional developers on VS Code ergonomics
@@ -177,6 +177,14 @@ not_best_for:
 quick_answer: >-
   Cursor is the strongest GUI-first AI IDE in June 2026, built as a VS Code fork with Composer 2.5, a multi-agent Agents Window, Automations, Cloud Agents, CLI/SDK agent surfaces, Design Mode, and Bugbot. Pick it for editor-native parallel agents and code review; skip it if you want a pure terminal loop (Claude Code) or cheaper GitHub-native completions (GitHub Copilot).
 price_history:
+  - date: 2026-06-24
+    plan: "Individual / Teams / Enterprise"
+    price: "Hobby free; Individual starts at $20/mo; Teams Standard $40/user/mo monthly; Teams Premium $120/user/mo monthly; Enterprise custom"
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked official pricing, Teams pricing update, changelog, Composer 2.5, Enterprise, and CLI sources. No material buyer-price change found versus June 23; keep Pro+/Ultra amounts and included usage as checkout-verification items."
   - date: 2026-06-20
     plan: "Individual / Teams / Enterprise"
     price: "Hobby free; Individual starts at $20/mo; Teams Standard $40/user/mo monthly; Teams Premium $120/user/mo monthly; Enterprise custom"
@@ -265,6 +273,7 @@ Anysphere's AI-native code editor. A VS Code fork with LLMs wired into autocompl
 
 ## Recent developments
 
+- **June 24, 2026:** Fresh source check confirmed Cursor's pricing page and Teams pricing update still list Hobby free, Individual from $20/month, Teams Standard at $40/user/month, Teams Premium at $120/user/month monthly, Enterprise custom, Pro+ for daily agent users, and Ultra for agent power users. No buyer recommendation changed, but the price range now explicitly reflects Teams Premium.
 - **June 23, 2026:** Fresh source check confirmed Cursor's pricing page and Teams pricing update still list Hobby free, Individual from $20/month, Teams Standard at $40/user/month, Teams Premium at $120/user/month monthly, Enterprise custom, Pro+ for daily agent users, and Ultra for agent power users. No buyer recommendation changed.
 - **June 15, 2026:** [Disney's AI coding push turned token budgets and release quality into buyer checks](/news/2026-06-15-disney-ai-coding-tokenmaxxing/). The reported Disney guidance is a useful enterprise signal for Cursor buyers: measure accepted, reviewed, test-passing work rather than raw token usage, and keep rollback, backup, and post-release quality gates in the rollout plan.
 - **June 20, 2026:** Cursor was rechecked for the Cursor vs Grok loop against official pricing, changelog, Teams pricing, and the current xAI pricing, model, Grok Build, and enterprise docs. The buyer split is now sharper: Cursor is the finished daily AI IDE and agent workbench, while Grok is an xAI-native coding-agent/API lane to benchmark when X context, Grok Build, or broader xAI platform fit matters.
@@ -309,7 +318,7 @@ Cursor's supported model catalog, Auto routing, and in-house Composer 2.5 are th
 | **Other supported models** | Provider/model access changes frequently; verify against Cursor docs and the in-product picker |
 | **Agent modes** | Tab (autocomplete) · Cmd+K (inline edit) · Agents Window (multi-agent) · Cloud Agents · CLI/headless automation · SDK agents · Automations · Design Mode · Bugbot and `/review` |
 | **Model pricing inside Cursor** | Base API rates where supported; Composer 2.5 Standard is $0.50/$2.50 per MTok and Fast/default is $3/$15 per MTok |
-| **Subscription pricing** | Hobby free · Individual starts at $20/mo · Teams $40/user/mo · Enterprise custom · Pro+/Ultra positioned for heavier agent users |
+| **Subscription pricing** | Hobby free · Individual starts at $20/mo · Teams Standard $40/user/mo · Teams Premium $120/user/mo monthly · Enterprise custom · Pro+/Ultra positioned for heavier agent users |
 | **Annual discount** | ~20% off paid tiers |
 | **Review surface** | Bugbot is usage-sensitive and can run before push or on GitHub/GitLab PRs; verify plan entitlement and per-run cost in account settings |
 | **Recent shutdowns** | Notepads (deprecated in Cursor 2.0, Oct 2025) |
@@ -361,7 +370,7 @@ Model usage inside Cursor is billed against plan usage and on-demand usage at mo
 
 Do not assume the $20 Individual starting price covers daily agent work. Cursor's own pricing FAQ recommends Pro+ for daily agent users and Ultra for agent power users, and on-demand usage can continue after included usage is consumed, billed in arrears.
 
-Subscription prices verified 2026-06-23 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-23 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams Standard at $40/user/month, and Enterprise custom, with Pro+/Ultra upgrade paths for heavier agent usage and on-demand usage after included usage is consumed. Cursor's June Teams pricing update also adds Premium seats at 5x Standard usage for 3x the cost. Exact Pro+/Ultra checkout amounts, included usage, and billing controls should be verified in the live account screen before procurement.
+Subscription prices verified 2026-06-24 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-24 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams Standard at $40/user/month, Teams Premium at $120/user/month monthly, and Enterprise custom, with Pro+/Ultra upgrade paths for heavier agent usage and on-demand usage after included usage is consumed. Cursor's June Teams pricing update also adds Premium seats at 5x Standard usage for 3x the cost. Exact Pro+/Ultra checkout amounts, included usage, and billing controls should be verified in the live account screen before procurement.
 
 ## Against the alternatives
 
@@ -391,7 +400,7 @@ Subscription prices verified 2026-06-23 via [cursor.com/pricing](https://cursor.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [cursor.com/pricing](https://cursor.com/pricing), [Cursor Data Use](https://cursor.com/data-use), [Cursor Enterprise](https://cursor.com/enterprise), [Cursor CLI](https://cursor.com/cli), the [Cursor changelog](https://cursor.com/changelog), [Cursor Teams pricing](https://cursor.com/blog/teams-pricing-june-2026), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), and the [Cursor Gartner recognition post](https://cursor.com/blog/cursor-leads-gartner-mq-2026).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [cursor.com/pricing](https://cursor.com/pricing), [Cursor Data Use](https://cursor.com/data-use), [Cursor Enterprise](https://cursor.com/enterprise), [Cursor CLI](https://cursor.com/cli), the [Cursor changelog](https://cursor.com/changelog), [Cursor Teams pricing](https://cursor.com/blog/teams-pricing-june-2026), the [Cursor Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5), and the [Cursor Gartner recognition post](https://cursor.com/blog/cursor-leads-gartner-mq-2026).
 
 ## FAQ
 

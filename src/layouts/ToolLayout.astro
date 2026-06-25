@@ -1,17 +1,16 @@
 ---
 /**
- * ToolLayout — god-tier 10/10 mobile-first tool page (May 2026 onward).
+ * ToolLayout: god-tier 10/10 mobile-first tool page (May 2026 onward).
  *
  * Composes shared components from src/components/godtier/:
  *   Hero · DecisionCard · Decision · ScoreCard · FactList · TrustPanel · StickyCTA
  *
  * Trailing concerns (related comparisons, reviews, share, helpful vote,
  * badge embed, cite, feedback, report outdated) reuse the existing
- * site components — they continue to work and feed the same analytics.
+ * site components. They continue to work and feed the same analytics.
  *
  * Legacy layout preserved at ToolLayout.legacy.astro for reference.
  */
-import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 
 // God-tier components
@@ -44,6 +43,7 @@ import CiteThisPage from '../components/CiteThisPage.astro';
 
 import { isActiveToolStatus, overallScore } from '../utils/tool-metadata';
 import { buildToolPageModel, toFactListFacts } from '../lib/content-models/tool-page-model';
+import { getToolCategoryPeers } from '../lib/content-cache';
 
 interface Props {
   frontmatter: Record<string, any>;
@@ -80,23 +80,19 @@ const breadcrumbLdItems = [
   { name: toolTitle, url: `${siteBase}tools/${toolSlug}/` },
 ];
 
-// Category rank for the hero rank pill
-const allTools = await getCollection('tools');
-const categoryPeers = allTools
-  .filter((t: any) => t.data.category === catSlug && isActiveToolStatus(t.data.status))
-  .map((t: any) => ({
-    slug: t.data.slug ?? t.id,
-    score: overallScore(t.data.scores ?? {}),
-  }))
-  .sort((a: any, b: any) => b.score - a.score);
-const categoryRank = categoryPeers.findIndex((p: any) => p.slug === toolSlug) + 1;
+// Category rank for the hero rank pill and same-category alternatives.
+const categoryPeers = await getToolCategoryPeers(catSlug);
+const categoryRank = categoryPeers.findIndex((p) => p.slug === toolSlug) + 1;
 const isTopPick = isActiveToolStatus(toolStatus) && categoryRank === 1 && overall >= 7.5;
 const isHighRank = categoryRank > 1 && categoryRank <= 3 && categoryPeers.length >= 6 && overall >= 7;
 const rankLabel = isTopPick
   ? `Top pick in ${catLabel}`
   : isHighRank ? `#${categoryRank} in ${catLabel}` : '';
+const peerAlternatives = categoryPeers
+  .filter((tool) => tool.slug !== toolSlug)
+  .slice(0, 3);
 
-// Verified label — only show when fresh enough to matter
+// Verified label: only show when fresh enough to matter.
 function daysSince(v: unknown): number {
   if (!v) return Infinity;
   const d = new Date(String(v));
@@ -134,6 +130,29 @@ function cleanSnippet(value: unknown, fallback = ''): string {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
+function compactSnippet(value: unknown, max = 120, fallback = ''): string {
+  const text = cleanSnippet(value, fallback);
+  if (text.length <= max) return text;
+  const firstSentence = text.match(/^(.+?[.!?])\s+/)?.[1];
+  const base = firstSentence && firstSentence.length <= max ? firstSentence : text.slice(0, max);
+  const trimmed = base.replace(/\s+\S*$/, '').replace(/[,:;]+$/, '').trim();
+  return trimmed ? `${trimmed}...` : text.slice(0, max).trim();
+}
+
+function compactDecisionLine(value: unknown, max = 68, fallback = ''): string {
+  const text = cleanSnippet(value, fallback);
+  const clause = text.split(/[.;]/).map((part) => part.trim()).find(Boolean) ?? text;
+  return compactSnippet(clause, max, fallback);
+}
+
+function compactRiskLine(value: unknown): string {
+  const text = cleanSnippet(value, '');
+  const firstSentence = text.split(/[.!?]/)[0] ?? text;
+  const clauses = firstSentence.split(',').map((part) => part.trim()).filter(Boolean);
+  const clipped = clauses.slice(0, 3).join(', ');
+  return compactSnippet(clipped || firstSentence, 58, '');
+}
+
 const firstBestFor = model.decision.buy_if.length > 0
   ? cleanSnippet(model.decision.buy_if[0])
   : `${catLabel || 'Primary'} workflows`;
@@ -145,6 +164,9 @@ const bestPlanGlance = cleanSnippet(
   pricingSummary
 );
 const watchOutGlance = cleanSnippet(model.decision.watch_out, '');
+const heroTagline = compactSnippet(quickAnswer || toolTagline, 168, toolTagline);
+const compactBestPlan = compactDecisionLine(bestPlanGlance, 68, pricingSummary);
+const compactWatchOut = compactRiskLine(watchOutGlance);
 
 const decisionItems = [
   { tone: 'positive' as const, label: 'Buy if',  value: firstBestFor },
@@ -152,10 +174,44 @@ const decisionItems = [
   ...(firstNotBestFor ? [{ tone: 'negative' as const, label: 'Skip if', value: firstNotBestFor }] : []),
 ];
 const decisionDetailItems = [
-  { label: 'Best alternative', value: model.decision.best_alternative },
   { label: 'Watch out', value: model.decision.watch_out },
   { label: 'Recent change', value: model.decision.recent_change },
 ].filter((item): item is { label: string; value: string } => Boolean(item.value));
+const latestPriceUpdates = [...model.pricing]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3);
+const latestPricingSource = latestPriceUpdates.find((item) => item.source?.url)?.source;
+function formatToolDate(value: unknown): string {
+  if (!value) return '';
+  const date = value instanceof Date ? value : new Date(String(value));
+  if (Number.isNaN(date.getTime())) return String(value);
+  return `${monthShort[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+}
+function isUsefulText(value: unknown): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+const fitBuy = model.decision.buy_if.filter(isUsefulText).slice(0, 4);
+const fitSkip = model.decision.skip_if.filter(isUsefulText).slice(0, 4);
+const explicitAlternative = model.decision.best_alternative;
+const planCards = [
+  {
+    label: 'Best plan',
+    title: bestPlanGlance || pricingSummary,
+    body: compactWatchOut ? `Watch: ${compactWatchOut}` : 'Start here unless your workflow clearly needs a higher tier.',
+  },
+  {
+    label: 'Price range',
+    title: pricingSummary,
+    body: latestPriceUpdates[0]?.price
+      ? compactSnippet(latestPriceUpdates[0].price, 118, '')
+      : 'Use the official pricing page before purchase because AI plans change often.',
+  },
+  {
+    label: 'Upgrade only if',
+    title: fitSkip[0] ? `Not for ${cleanSnippet(fitSkip[0]).toLowerCase()}` : 'Limits block your workflow',
+    body: compactWatchOut || 'Move up only when caps, seats, governance, or weekly production use justify it.',
+  },
+];
 
 const scoreAxes = [
   { label: 'Utility',   value: scores.utility ?? 0,   why: 'How much real work it can do for a competent operator, end to end.' },
@@ -177,7 +233,7 @@ const sources = model.sources
   }))
   .slice(0, 8);
 
-// Table of contents from markdown H2s (skip System Verdict — covered by the
+// Table of contents from markdown H2s. Skip System Verdict because it is covered by the
 // Quick Answer decision card already shown above the body).
 const tocItems = (headings ?? [])
   .filter((h) => h.depth === 2 && h.slug !== 'system-verdict')
@@ -223,7 +279,7 @@ const tocItems = (headings ?? [])
   <div class="gt-canvas gt-canvas-wide">
     <Hero
       title={toolTitle}
-      tagline={toolTagline}
+      tagline={heroTagline}
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: catLabel, href: `/categories/${catSlug}/` },
@@ -242,8 +298,8 @@ const tocItems = (headings ?? [])
       price={pricingSummary}
       affiliate={isAffiliate}
       eyebrow="Best plan"
-      title={bestPlanGlance}
-      description={watchOutGlance ? `Watch out: ${watchOutGlance}` : undefined}
+      title={compactBestPlan}
+      description={compactWatchOut ? `Risk: ${compactWatchOut}` : undefined}
     >
       <CommercialCTA
         slot="primary-cta"
@@ -282,27 +338,58 @@ const tocItems = (headings ?? [])
       <Decision
         quickAnswer={quickAnswer}
         items={decisionItems}
+        heading="Should you use it?"
       />
     )}
 
-    <section class="gt-evidence-panel" aria-labelledby="gt-evidence-panel-h">
-      <div class="gt-evidence-panel-head">
-        <p class="gt-evidence-kicker">Evidence rail</p>
-        <h2 id="gt-evidence-panel-h">Why this recommendation is trusted</h2>
+    <section class="gt-plan-picker" aria-labelledby="gt-plan-picker-h">
+      <div class="gt-section-head">
+        <p class="gt-section-kicker">Plan guidance</p>
+        <h2 id="gt-plan-picker-h">What to buy</h2>
       </div>
-      <EvidenceRail evidence={model.evidence} variant="full" label={`${toolTitle} evidence`} />
-      <a
-        href={`/compare/build/?tools=${toolSlug}`}
-        class="gt-btn gt-btn-secondary gt-evidence-compare-link"
-        data-analytics-event="internal_cta_click"
-        data-analytics-source-module="tool_evidence_panel"
-        data-analytics-destination-type="comparison"
-        data-analytics-destination-slug="compare/build"
-        data-analytics-tool-slug={toolSlug}
-        data-analytics-category-slug={catSlug}
-        data-analytics-position="top"
-        data-analytics-label={`Build comparison from ${toolTitle}`}
-      >Build comparison</a>
+      <div class="gt-plan-grid">
+        {planCards.map((card) => (
+          <article class="gt-plan-card">
+            <span class="gt-plan-label">{card.label}</span>
+            <strong>{card.title}</strong>
+            <p>{card.body}</p>
+          </article>
+        ))}
+      </div>
+      {latestPricingSource?.url && (
+        <p class="gt-plan-source">
+          Current pricing source:
+          {' '}
+          <a href={latestPricingSource.url} target="_blank" rel="noopener nofollow">
+            {latestPricingSource.label ?? 'official pricing'}
+          </a>
+        </p>
+      )}
+    </section>
+
+    <section class="gt-fit" aria-labelledby="gt-fit-h">
+      <div class="gt-section-head">
+        <p class="gt-section-kicker">Fit</p>
+        <h2 id="gt-fit-h">Use it for this, skip it for that</h2>
+      </div>
+      <div class="gt-fit-grid">
+        {fitBuy.length > 0 && (
+          <div class="gt-fit-panel is-positive">
+            <h3>Best for</h3>
+            <ul>
+              {fitBuy.map((item) => <li>{cleanSnippet(item)}</li>)}
+            </ul>
+          </div>
+        )}
+        {fitSkip.length > 0 && (
+          <div class="gt-fit-panel is-negative">
+            <h3>Avoid if</h3>
+            <ul>
+              {fitSkip.map((item) => <li>{cleanSnippet(item)}</li>)}
+            </ul>
+          </div>
+        )}
+      </div>
       {decisionDetailItems.length > 0 && (
         <dl class="gt-decision-details">
           {decisionDetailItems.map((item) => (
@@ -315,96 +402,150 @@ const tocItems = (headings ?? [])
       )}
     </section>
 
-    <ScoreCard
-      overall={overall}
-      band={scoreBand}
-      confidence="high"
-      axes={scoreAxes}
-    />
-
-    {facts.length > 0 && <FactList facts={facts} />}
-
-    {f.github_url && (
-      <div class="gt-github">
-        <GithubStats slug={toolSlug} />
-      </div>
+    {latestPriceUpdates.length > 0 && (
+      <section class="gt-updates" aria-labelledby="gt-updates-h">
+        <div class="gt-section-head">
+          <p class="gt-section-kicker">Recent changes</p>
+          <h2 id="gt-updates-h">Only what affects the decision</h2>
+        </div>
+        <ol class="gt-update-list">
+          {latestPriceUpdates.map((item) => (
+            <li class="gt-update-item">
+              <time>{formatToolDate(item.date)}</time>
+              <div>
+                <strong>{item.plan ?? 'Latest check'}</strong>
+                <p>{compactSnippet(item.note ?? item.price, 190, item.price)}</p>
+                {item.source?.url && (
+                  <a href={item.source.url} target="_blank" rel="noopener nofollow">
+                    {item.source.label ?? 'Source'}
+                  </a>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
     )}
 
-    {tocItems.length > 0 && (
-      <nav class="gt-jump" aria-label="Jump to section">
-        <span class="gt-jump-label">Jump to</span>
-        <div class="gt-jump-list">
-          {tocItems.map((h) => (
+    {(explicitAlternative || peerAlternatives.length > 0) && (
+      <section class="gt-alternatives" aria-labelledby="gt-alternatives-h">
+        <div class="gt-section-head">
+          <p class="gt-section-kicker">Alternatives</p>
+          <h2 id="gt-alternatives-h">Best swaps</h2>
+        </div>
+        {explicitAlternative && (
+          <p class="gt-alt-note">Best alternative: {explicitAlternative}</p>
+        )}
+        <div class="gt-alt-grid">
+          {peerAlternatives.map((tool) => (
             <a
-              href={`#${h.slug}`}
-              class="gt-jump-chip"
-              data-analytics-event="table_of_contents_click"
-              data-analytics-source-module="tool_jump_links"
-              data-analytics-destination-type="toc"
-              data-analytics-destination-slug={h.slug}
-              data-analytics-position="top"
-              data-analytics-label={h.text}
-            >{h.text}</a>
+              href={`/tools/${tool.slug}/`}
+              class="gt-alt-card"
+              data-analytics-event="internal_cta_click"
+              data-analytics-source-module="tool_alternatives"
+              data-analytics-destination-type="tool"
+              data-analytics-destination-slug={tool.slug}
+              data-analytics-tool-slug={toolSlug}
+              data-analytics-category-slug={catSlug}
+              data-analytics-position="middle"
+              data-analytics-label={tool.title}
+            >
+              <span>{tool.title}</span>
+              {tool.tagline && <p>{tool.tagline}</p>}
+              <small>{tool.price ? `${tool.price} · ` : ''}{tool.score}/10</small>
+            </a>
           ))}
         </div>
-      </nav>
+        <a
+          href={`/compare/build/?tools=${toolSlug}`}
+          class="gt-btn gt-btn-secondary gt-compare-builder-link"
+          data-analytics-event="internal_cta_click"
+          data-analytics-source-module="tool_alternatives"
+          data-analytics-destination-type="comparison"
+          data-analytics-destination-slug="compare/build"
+          data-analytics-tool-slug={toolSlug}
+          data-analytics-category-slug={catSlug}
+          data-analytics-position="middle"
+          data-analytics-label={`Build comparison from ${toolTitle}`}
+        >Build comparison</a>
+      </section>
     )}
 
-    <div class="gt-body-layout">
-      <article class="gt-body" id="gt-body">
-        <slot />
-      </article>
+    <RelatedComparisons toolSlug={toolSlug} toolTitle={toolTitle} />
 
-      {tocItems.length > 0 && (
-        <aside class="gt-toc" aria-label="On this page" data-gt-toc>
-          <div class="gt-toc-sticky">
-            <p class="gt-toc-label">On this page</p>
-            <ol class="gt-toc-list">
-              {tocItems.map((h) => (
-                <li>
-                  <a
-                    href={`#${h.slug}`}
-                    data-analytics-event="table_of_contents_click"
-                    data-analytics-source-module="tool_desktop_toc"
-                    data-analytics-destination-type="toc"
-                    data-analytics-destination-slug={h.slug}
-                    data-analytics-position="sidebar"
-                    data-analytics-label={h.text}
-                  >{h.text}</a>
-                </li>
-              ))}
-            </ol>
+    <details class="gt-proof-drawer">
+      <summary>
+        <span>
+          <strong>Proof and score math</strong>
+          <small>{showVerified ? verifiedStr : 'Source-backed review'}</small>
+        </span>
+      </summary>
+      <div class="gt-proof-content">
+        <section class="gt-evidence-panel" aria-labelledby="gt-evidence-panel-h">
+          <div class="gt-evidence-panel-head">
+            <p class="gt-evidence-kicker">Proof</p>
+            <h2 id="gt-evidence-panel-h">Why this recommendation is trusted</h2>
           </div>
-        </aside>
-      )}
-    </div>
+          <EvidenceRail evidence={model.evidence} variant="full" label={`${toolTitle} evidence`} />
+        </section>
 
-    <section class="gt-tool-footer-cta" aria-label="Visit tool">
-      <p class="gt-tool-footer-cta-line">Ready to try {toolTitle}?</p>
-      <CommercialCTA
-        toolName={toolTitle}
-        toolSlug={toolSlug}
-        canonicalUrl={toolUrl}
-        affiliateUrl={affiliateUrl}
-        affiliateStatus={affiliateStatus}
-        affiliateProgram={affiliateProgram}
-        pricingModel={pricingModel}
-        priceRange={priceRange}
-        pageType="tool"
-        placement="tool_post_body"
-        pageSlug={toolSlug}
-        categorySlug={catSlug}
-        label={primaryCtaLabel}
-        className="gt-btn gt-btn-primary"
-        showDisclosure={isAffiliate}
-        toolCtaMarker
-        arrow="→"
-      />
-    </section>
+        <ScoreCard
+          overall={overall}
+          band={scoreBand}
+          confidence="high"
+          axes={scoreAxes}
+        />
 
-    {sources.length > 0 && (
-      <TrustPanel sources={sources} affiliate={isAffiliate} />
-    )}
+        {facts.length > 0 && <FactList facts={facts} heading="Verified facts" />}
+
+        {f.github_url && (
+          <div class="gt-github">
+            <GithubStats slug={toolSlug} />
+          </div>
+        )}
+
+        {sources.length > 0 && (
+          <TrustPanel sources={sources} affiliate={isAffiliate} heading="Sources" />
+        )}
+      </div>
+    </details>
+
+    <details class="gt-review-drawer">
+      <summary>
+        <span>
+          <strong>Full review notes</strong>
+          <small>Long-form details, FAQ, and source history</small>
+        </span>
+      </summary>
+      <div class="gt-body-layout">
+        <article class="gt-body" id="gt-body">
+          <slot />
+        </article>
+
+        {tocItems.length > 0 && (
+          <aside class="gt-toc" aria-label="On this page" data-gt-toc>
+            <div class="gt-toc-sticky">
+              <p class="gt-toc-label">On this page</p>
+              <ol class="gt-toc-list">
+                {tocItems.map((h) => (
+                  <li>
+                    <a
+                      href={`#${h.slug}`}
+                      data-analytics-event="table_of_contents_click"
+                      data-analytics-source-module="tool_desktop_toc"
+                      data-analytics-destination-type="toc"
+                      data-analytics-destination-slug={h.slug}
+                      data-analytics-position="sidebar"
+                      data-analytics-label={h.text}
+                    >{h.text}</a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </aside>
+        )}
+      </div>
+    </details>
 
     <FAQAccordionScript />
 
@@ -418,7 +559,6 @@ const tocItems = (headings ?? [])
       affiliateProgram={affiliateProgram}
     />
 
-    <RelatedComparisons toolSlug={toolSlug} toolTitle={toolTitle} />
     <ReviewsBlock toolSlug={toolSlug} toolTitle={toolTitle} />
     <ShareButtons title={toolTitle} pageUrl={`${siteBase}tools/${toolSlug}/`} />
     <HelpfulVote pageSlug={toolSlug} pageType="tool" />
@@ -608,56 +748,186 @@ const tocItems = (headings ?? [])
       .gt-canvas-wide { max-width: 1040px; }
     }
 
-    /* Horizontal jump-to chips, shown only on narrow viewports where the
-       sticky sidebar TOC isn't present. */
-    .gt-jump {
-      display: block;
-      margin: 8px 0 24px;
-      overflow: hidden;
+    .gt-section-head {
+      display: grid;
+      gap: 4px;
+      margin-bottom: 12px;
     }
-    .gt-jump-label {
-      display: block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gt-subtle);
-      margin-bottom: 8px;
-    }
-    .gt-jump-list {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
+    .gt-section-kicker {
       margin: 0;
-      padding: 0 0 8px;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    .gt-jump-list::-webkit-scrollbar { display: none; }
-    .gt-jump-chip {
-      flex: 0 0 auto;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      max-width: min(260px, calc(100vw - 36px));
-      padding: 6px 12px;
-      min-height: 32px;
-      border-radius: 999px;
-      background: var(--gt-surface);
-      border: 1px solid var(--gt-line);
-      color: var(--gt-muted);
-      font-size: 12.5px;
-      font-weight: 500;
-      text-decoration: none;
+      color: var(--gt-accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
       line-height: 1.2;
-      text-align: center;
-      white-space: normal;
-      overflow-wrap: anywhere;
-      scroll-margin: 12px;
+      text-transform: uppercase;
     }
-    .gt-jump-chip:hover { background: var(--gt-surface-2); color: var(--gt-fg); }
-    @media (min-width: 1024px) {
-      .gt-jump { display: none; }
+    .gt-section-head h2 {
+      margin: 0;
+      color: var(--gt-fg);
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+    .gt-plan-picker,
+    .gt-fit,
+    .gt-updates,
+    .gt-alternatives {
+      margin: 0 0 34px;
+    }
+    .gt-plan-grid,
+    .gt-fit-grid,
+    .gt-alt-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      min-width: 0;
+    }
+    .gt-plan-card,
+    .gt-fit-panel,
+    .gt-alt-card,
+    .gt-update-item {
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius-sm);
+      background: var(--gt-surface);
+      min-width: 0;
+    }
+    .gt-plan-card {
+      display: grid;
+      gap: 6px;
+      padding: 14px 15px;
+    }
+    .gt-plan-label {
+      color: var(--gt-subtle);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .gt-plan-card strong {
+      color: var(--gt-fg);
+      font-size: 16px;
+      line-height: 1.25;
+    }
+    .gt-plan-card p,
+    .gt-alt-card p {
+      margin: 0;
+      color: var(--gt-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .gt-plan-source {
+      margin: 10px 0 0;
+      color: var(--gt-subtle);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .gt-plan-source a,
+    .gt-update-item a {
+      color: var(--gt-accent);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      overflow-wrap: anywhere;
+    }
+    .gt-fit-panel {
+      padding: 15px;
+      border-left: 3px solid var(--gt-line-strong);
+    }
+    .gt-fit-panel.is-positive { border-left-color: var(--gt-positive); }
+    .gt-fit-panel.is-negative { border-left-color: var(--gt-negative); }
+    .gt-fit-panel h3 {
+      margin: 0 0 10px;
+      color: var(--gt-fg);
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    .gt-fit-panel ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .gt-fit-panel li {
+      color: var(--gt-muted);
+      font-size: 13.5px;
+      line-height: 1.42;
+      overflow-wrap: anywhere;
+    }
+    .gt-update-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+    .gt-update-item {
+      display: grid;
+      gap: 8px;
+      padding: 14px 15px;
+    }
+    .gt-update-item time {
+      color: var(--gt-accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .gt-update-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gt-fg);
+      font-size: 15px;
+      line-height: 1.3;
+    }
+    .gt-update-item p {
+      margin: 0 0 5px;
+      color: var(--gt-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .gt-alt-card {
+      display: grid;
+      gap: 6px;
+      padding: 14px 15px;
+      color: var(--gt-fg);
+      text-decoration: none;
+      transition: border-color 120ms ease, background 120ms ease;
+    }
+    .gt-alt-card:hover {
+      border-color: rgba(249, 115, 22, 0.42);
+      background: var(--gt-surface-2);
+    }
+    .gt-alt-card span {
+      color: var(--gt-fg);
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.2;
+    }
+    .gt-alt-card small {
+      color: var(--gt-subtle);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+    .gt-alt-note {
+      margin: 0 0 10px;
+      color: var(--gt-muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .gt-compare-builder-link {
+      width: 100%;
+      min-height: 44px;
+      margin-top: 10px;
+    }
+    @media (min-width: 700px) {
+      .gt-plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .gt-fit-grid,
+      .gt-alt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gt-update-item { grid-template-columns: 132px minmax(0, 1fr); }
+      .gt-compare-builder-link { width: auto; }
     }
 
     /* Two-column layout at desktop: prose + sticky TOC */
@@ -719,6 +989,96 @@ const tocItems = (headings ?? [])
       color: var(--gt-accent);
       border-left-color: var(--gt-accent);
       font-weight: 600;
+    }
+
+    .gt-proof-drawer,
+    .gt-review-drawer {
+      margin: 0 0 28px;
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius);
+      background: rgba(255, 255, 255, 0.025);
+      overflow: hidden;
+    }
+    .gt-proof-drawer > summary,
+    .gt-review-drawer > summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 18px;
+      color: var(--gt-fg);
+    }
+    .gt-proof-drawer > summary::-webkit-details-marker,
+    .gt-review-drawer > summary::-webkit-details-marker {
+      display: none;
+    }
+    .gt-proof-drawer > summary {
+      background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
+    }
+    .gt-proof-drawer > summary span,
+    .gt-review-drawer > summary span {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px 14px;
+      align-items: center;
+      min-width: 0;
+    }
+    .gt-proof-drawer > summary strong,
+    .gt-review-drawer > summary strong {
+      grid-column: 1;
+      font-size: 16px;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+    .gt-proof-drawer > summary small,
+    .gt-review-drawer > summary small {
+      grid-column: 1;
+      color: var(--gt-subtle);
+      font-size: 12px;
+      line-height: 1.35;
+      text-align: left;
+    }
+    .gt-proof-drawer > summary span::after,
+    .gt-review-drawer > summary span::after {
+      content: 'Show';
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: center;
+      color: var(--gt-accent);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      border-radius: 999px;
+      background: rgba(249, 115, 22, 0.08);
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .gt-proof-drawer[open] > summary span::after,
+    .gt-review-drawer[open] > summary span::after {
+      content: 'Hide';
+      color: var(--gt-muted);
+      border-color: var(--gt-line-strong);
+      background: var(--gt-surface-2);
+    }
+    .gt-proof-content,
+    .gt-review-drawer .gt-body-layout {
+      padding: 18px;
+    }
+    @media (max-width: 420px) {
+      .gt-proof-drawer > summary span,
+      .gt-review-drawer > summary span {
+        grid-template-columns: 1fr;
+      }
+      .gt-proof-drawer > summary small,
+      .gt-review-drawer > summary small {
+        text-align: left;
+      }
+      .gt-proof-drawer > summary span::after,
+      .gt-review-drawer > summary span::after {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
+      }
     }
 
     .gt-evidence-panel {
@@ -784,20 +1144,6 @@ const tocItems = (headings ?? [])
     }
 
     .gt-github { margin-bottom: 32px; }
-    .gt-tool-footer-cta {
-      margin: 32px 0;
-      padding: 20px;
-      border-radius: var(--gt-radius);
-      border: 1px solid var(--gt-line-strong);
-      background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
-      text-align: center;
-    }
-    .gt-tool-footer-cta-line {
-      margin: 0 0 14px;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--gt-fg);
-    }
     .gt-body { margin-bottom: 40px; min-width: 0; }
     .gt-body :global(h2) {
       font-size: 24px;

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free; Plus $9/user/mo; Pro $22/user/mo; Enterprise custom
 status: active
 launched: 2024
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,17 +39,17 @@ facts:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
-    verified_at: 2026-06-12
-    next_review_at: 2026-09-08
+    verified_at: 2026-06-24
+    next_review_at: 2026-09-24
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Credits charge roughly one per word selected for generation; complex outputs and advanced features may consume more. Heavy users should test real briefs before committing to a tier."
+    value: "Credits charge roughly one per word selected for generation; complex outputs and advanced features may consume more. Napkin says customer data is encrypted and private, and that AI subprocessors are contractually barred from training on customer data. Heavy users should still test real briefs before committing to a tier."
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
-    verified_at: 2026-06-12
-    next_review_at: 2026-09-08
+    verified_at: 2026-06-24
+    next_review_at: 2026-09-24
     volatility: medium
     confidence: high
 tags: [diagrams, presentations, visuals, flowcharts, infographics, documents, design]
@@ -60,6 +60,7 @@ price_history:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
+    verified_at: 2026-05-13
     note: "Verified, unchanged; 10,000 monthly AI credits, PPT and SVG export, brand removal"
   - date: 2026-05-13
     plan: "Pro"
@@ -67,6 +68,7 @@ price_history:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
+    verified_at: 2026-05-13
     note: "Verified, unchanged; 30,000 monthly AI credits, unlimited custom branding, font uploads, optional credit top-ups"
   - date: 2026-06-08
     plan: "Free / Plus / Pro"
@@ -74,7 +76,16 @@ price_history:
     source: "https://www.napkin.ai/pricing/"
     source_label: "Napkin AI pricing"
     source_id: napkin-ai-official
+    verified_at: 2026-06-08
     note: "Verified current Free, Plus, Pro, and Enterprise pricing, 25% annual savings, credit pools, export entitlements, brand controls, and optional Pro credit top-ups."
+  - date: 2026-06-24
+    plan: "Free / Plus / Pro"
+    price: "$0 · $9/person/mo · $22/person/mo"
+    source: "https://www.napkin.ai/pricing/"
+    source_label: "Napkin AI pricing"
+    source_id: napkin-ai-official
+    verified_at: 2026-06-24
+    note: "Rechecked unchanged. Free remains 500 weekly credits, Plus 10,000 monthly credits, Pro 30,000 monthly credits, annual billing saves 25%, and Napkin says AI subprocessors are contractually barred from training on customer data."
 seo_title: "Napkin AI Review: Text-to-Visuals, Diagrams & Pricing (June 2026)"
 meta_description: "Napkin AI turns text into editable diagrams, flowcharts, and presentation visuals. June 2026 pricing check: Free, Plus $9/person/mo, Pro $22/person/mo, Enterprise custom."
 author: aipedia.wiki Editorial
@@ -88,7 +99,7 @@ not_best_for:
   - data-heavy charting and BI dashboards
   - teams needing full presentation generation
 quick_answer: >-
-  Napkin AI is a fast text-to-visuals tool for turning paragraphs into diagrams, flowcharts, and presentation-ready graphics. The June 8, 2026 pricing check keeps Free at 500 weekly AI credits, Plus at $9/person/month, Pro at $22/person/month, and Enterprise custom. Pick it for explaining ideas visually without opening a design suite. Skip it for data visualization, full deck automation, or strict brand systems.
+  Napkin AI is a fast text-to-visuals tool for turning paragraphs into diagrams, flowcharts, and presentation-ready graphics. The June 24, 2026 pricing check keeps Free at 500 weekly AI credits, Plus at $9/person/month, Pro at $22/person/month, and Enterprise custom. Pick it for explaining ideas visually without opening a design suite. Skip it for data visualization, full deck automation, or strict brand systems.
 ---
 
 # Napkin AI
@@ -148,7 +159,7 @@ That narrowness is the point. Napkin is not trying to own the whole deck or the 
 
 Napkin AI has a free plan with 500 AI credits per week, unlimited visual editing, file import, PNG/PDF export, and Napkin branding. Plus is $9 per person per month and adds 10,000 monthly credits, PPT/SVG export, brand styles, bold icons, team management, and branding removal. Pro is $22 per person per month and adds 30,000 monthly credits, exclusive designs, unlimited custom branding, uploaded fonts, and optional credit top-ups. Enterprise is custom.
 
-Annual billing saves about 25% versus monthly. As verified on 2026-06-12, Napkin says AI credits are used to generate visuals, with roughly one credit charged per selected word, though that may change for more complex outputs or advanced features.
+Annual billing saves about 25% versus monthly. As verified on 2026-06-24, Napkin says AI credits are used to generate visuals, with roughly one credit charged per selected word, though that may change for more complex outputs or advanced features. Napkin also says customer data is encrypted and private, and that its AI subprocessors are contractually barred from training on customer data.
 
 ## Buyer fit
 
@@ -169,7 +180,7 @@ The healthiest workflow is to use Napkin early. Generate a visual, test whether 
 
 ## Methodology
 
-Last verified 2026-06-12 against [Napkin AI pricing](https://www.napkin.ai/pricing/) and product documentation, with Free/Plus/Pro/Enterprise tiers, credit pools, export entitlements, brand controls, optional credit top-ups, and the 25% annual discount confirmed from the vendor pricing page. Scoring emphasizes usefulness for explanation, low entry cost, export flexibility, and moat risk.
+Last verified 2026-06-24 against [Napkin AI pricing](https://www.napkin.ai/pricing/) and product documentation, with Free/Plus/Pro/Enterprise tiers, credit pools, export entitlements, brand controls, optional credit top-ups, data-use language, and the 25% annual discount confirmed from the vendor pricing page. Scoring emphasizes usefulness for explanation, low entry cost, export flexibility, and moat risk.
 
 ## FAQ
 
@@ -184,7 +195,7 @@ No. Napkin makes visuals from text. Gamma and Beautiful.ai generate broader pres
 
 ## Sources
 
-- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-12)
+- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-24)
 - [Napkin AI home](https://www.napkin.ai/)
 
 ## Related

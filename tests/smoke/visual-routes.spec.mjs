@@ -271,12 +271,12 @@ test('homepage primary destination labels are readable', async ({ page }) => {
 
   const labelText = await labels.allTextContents();
   expect(labelText.map((text) => text.trim())).toEqual([
-    'Tool index',
-    'Categories',
-    'Comparisons',
-    'Buyer guides',
-    'Quick answers',
-    'AI news',
+    'Find a tool',
+    'Pick a job',
+    'Compare tools',
+    'Choose a plan',
+    'Get best pick',
+    'Check changes',
   ]);
 
   const clippedLabels = await labels.evaluateAll((nodes) => nodes

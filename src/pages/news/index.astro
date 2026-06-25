@@ -4,48 +4,55 @@
  *
  * AI tools news feed sorted by date. Severity-color-coded cards.
  * Legacy preserved at src/legacy-pages/news-index.legacy.astro.
- * Refresh metadata: dateModified: '2026-06-23'
+ * Refresh metadata: dateModified: '2026-06-24'
+ * Refresh metadata: 2026-06-24 archive first screen tightened so the latest
+ * story appears before filters or maintenance links.
+ * Refresh metadata: 2026-06-24 Jun 23-24 focused AI news coverage added as
+ * individual maximum-value articles, not daily roundup pages, covering OpenAI
+ * Daybreak/Codex Security, Samsung ChatGPT Enterprise and Codex, Claude
+ * reliability incidents, GLM-5.2 open-model pressure, and Google AI talent
+ * movement; homepage, RSS, sitemap, LLM surfaces, and ledger inspected.
  * Refresh metadata: update_frequency: daily
  * Refresh metadata: 2026-06-23 news archive cadence set to daily, with the
  * daily run required to add at least three source-backed AI or AI-tool stories.
- * Refresh metadata: 2026-06-22 June 18-22 desks and focused coverage added
+ * Refresh metadata: 2026-06-22 June 18-22 focused briefs and coverage added
  * after current OpenAI health, ChatGPT Enterprise spend controls, ChatGPT
  * release notes, Shopify agentic commerce, Google Cloud release notes, Axios
  * G7 AI standards, OpenAI Bio Bounty, OpenAI Developers, and Bloomberg/TNW
  * AI talent reporting checks; homepage, RSS, sitemap, LLM surfaces, and news
  * archive inspected.
- * Refresh metadata: 2026-06-17 June 17 desk and focused coverage added after
+ * Refresh metadata: 2026-06-17 June 17 focused brief and coverage added after
  * current June Google Pixel Drop, Gemini Omni, Microsoft Copilot Cowork,
  * Work IQ billing, AP G7 AI sovereignty, official G7 statements, AP NVIDIA,
  * and Coherent AI infrastructure source checks; homepage, RSS, sitemap, LLM
  * surfaces, news archive, and related tool/category routes inspected.
  * Refresh metadata: 2026-06-16 Google Cloud data-agents coverage added after
  * current June Google Cloud data agents, Data Engineering Agent,
- * Conversational Analytics, and MCP server source checks; June 16 desk, AI
+ * Conversational Analytics, and MCP server source checks; June 16 focused brief, AI
  * Automation, AI Infrastructure, homepage, RSS, tools/categories indexes,
  * /explore/, source registry, and LLM surfaces inspected.
  * Refresh metadata: 2026-06-16 June 12 OpenAI Academy workplace-courses
  * backfill added after current June OpenAI Academy and OpenAI announcement
- * checks; June 12 desk, homepage, RSS, /explore/, source registry, and LLM
+ * checks; June 12 focused brief, homepage, RSS, /explore/, source registry, and LLM
  * surfaces inspected.
- * Refresh metadata: 2026-06-16 Work IQ GA desk and buyer checklist added after
+ * Refresh metadata: 2026-06-16 Work IQ GA buyer checklist added after
  * current June Microsoft Work IQ API/licensing/Partner Center and Council of
  * the EU source checks; Microsoft Agent Framework, AI Automation, homepage,
  * tools/categories indexes, RSS, /explore/, and LLM surfaces inspected.
- * Refresh metadata: 2026-06-16 June 1 and June 2 AI news desks
+ * Refresh metadata: 2026-06-16 June 1 and June 2 AI coverage
  * backfilled after current June source checks across GitHub Copilot billing
  * and SDK GA, NVIDIA GTC Taipei, Microsoft Work IQ, Anthropic Glasswing,
  * Postman AI Engineer, RelationalAI, 7AI, and White House AI cybersecurity
  * sources; homepage, RSS, /explore/, and LLM surfaces inspected.
  * Refresh metadata: 2026-06-15 Visa/ChatGPT agent-payments coverage added
  * after current June AP and Visa Intelligent Commerce source checks;
- * ChatGPT, OpenAI, agent-commerce trend, June 10 desk, RSS, homepage,
+ * ChatGPT, OpenAI, agent-commerce trend, June 10 coverage, RSS, homepage,
  * trends/tools/categories indexes, and LLM surfaces inspected.
  * Refresh metadata: 2026-06-15 OpenAI/Ona Codex persistent-agent
  * acquisition coverage added after current June official OpenAI, Ona, Codex
- * product, and Codex pricing source checks; Codex, AI Coding, June 11 desk,
+ * product, and Codex pricing source checks; Codex, AI Coding, June 11 coverage,
  * RSS, homepage, and LLM surfaces inspected.
- * Refresh metadata: 2026-06-15 AI news desk and Google AI search risk
+ * Refresh metadata: 2026-06-15 AI governance coverage and Google AI search risk
  * checklist added after current June source checks across the G7 Evian summit
  * opening, AP AI-regulation agenda and state-law patchwork reporting, Google
  * AI Overviews liability coverage, and Google's Gemini-related phishing
@@ -55,7 +62,7 @@
  * after current June search found Business Insider/Times of India Disney
  * reporting on Claude/Cursor usage, tokenmaxxing, and AI-coded release quality;
  * Cursor, Claude Code, AI Coding, homepage, RSS, and LLM surfaces inspected.
- * Refresh metadata: 2026-06-14 AI news desk added after current June
+ * Refresh metadata: 2026-06-14 AI news coverage added after current June
  * source checks across OpenAI multistate probe coverage and buyer-safety
  * checklist, Anthropic Fable/Mythos access suspension, ChatGPT GPT-5.2
  * retirement, and the G7 governance backdrop; homepage, RSS, and LLM
@@ -69,7 +76,7 @@
  * Refresh metadata: 2026-06-13 June 10-13 AI tools news coverage refresh
  * across DXC + Anthropic Claude alliance, Claude Corps fellowship, OpenAI
  * Codex rate-limit banking, Google DeepMind DiffusionGemma, and the G7
- * summit AI-leader attendance, plus daily news desks for June 11-13.
+ * summit AI-leader attendance, plus daily focused briefs for June 11-13.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -95,6 +102,12 @@ function prettyDate(iso: string): string {
   return `${months[d.getUTCMonth()]} ${d.getUTCDate()}`;
 }
 
+function isRoundupStory(item: { slug?: string; title?: string }): boolean {
+  const slug = String(item.slug ?? '').toLowerCase();
+  const title = String(item.title ?? '').toLowerCase();
+  return slug.includes('ai-news-desk') || title.startsWith('ai news desk,');
+}
+
 interface NewsItem {
   slug: string;
   title: string;
@@ -111,6 +124,7 @@ const sorted: NewsItem[] = entries
     date: toYmd(e.data.date),
     severity: (e.data.severity as string) || 'minor',
   }))
+  .filter((item) => !isRoundupStory(item))
   .sort((a: any, b: any) => (b.date || '').localeCompare(a.date || '') || b.slug.localeCompare(a.slug));
 
 // Severity counts for filter chips
@@ -170,7 +184,7 @@ const collectionItems = sorted.map((item) => ({
   <div class="gt-canvas">
     <Hero
       title="AI tools news"
-      tagline="Model releases, pricing changes, security advisories, acquisitions, shutdowns, funding rounds, and enterprise shifts affecting the AI tools catalog. Verified against primary sources and named reporting."
+      tagline="Daily source-backed AI changes that can affect what to buy, keep, or avoid."
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: 'News' },
@@ -178,6 +192,25 @@ const collectionItems = sorted.map((item) => ({
       verifiedLabel={topStory ? `Latest ${prettyDate(topStory.date)}` : undefined}
       rankLabel={`${sorted.length} stories`}
     />
+
+    {topStory && (
+      <aside class="gt-news-lead" aria-label="Latest AI news story">
+        <a
+          href={`/news/${topStory.slug}/`}
+          data-analytics-event="internal_cta_click"
+          data-analytics-source-module="news_index_latest_story"
+          data-analytics-destination-type="news"
+          data-analytics-destination-slug={`news/${topStory.slug}`}
+          data-analytics-destination-url={`/news/${topStory.slug}/`}
+          data-analytics-position="top"
+          data-analytics-label={topStory.title}
+        >
+          <span class="gt-news-lead-meta">Latest {prettyDate(topStory.date)} · {topStory.severity}</span>
+          <strong>{topStory.title}</strong>
+          {topStory.summary && <span class="gt-news-lead-summary">{topStory.summary}</span>}
+        </a>
+      </aside>
+    )}
 
     <aside class="gt-news-tracker" aria-label="Model availability tracker">
       <a
@@ -191,7 +224,7 @@ const collectionItems = sorted.map((item) => ({
         data-analytics-label="Track model availability"
       >
         <strong>Model availability tracker</strong>
-        <span>Follow current ChatGPT, Claude, Gemini, Copilot, Codex, and router access changes behind this week's news.</span>
+        <span>Green or red status for current frontier model routes.</span>
       </a>
     </aside>
 
@@ -252,6 +285,46 @@ const collectionItems = sorted.map((item) => ({
   </script>
 
   <style>
+    .gt-news-lead {
+      margin: 0 0 10px;
+      border: 1px solid var(--gt-line-strong);
+      border-left: 3px solid var(--gt-accent);
+      border-radius: var(--gt-radius-sm);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+        var(--gt-surface);
+    }
+    .gt-news-lead a {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 13px 14px;
+      color: var(--gt-fg);
+      text-decoration: none;
+    }
+    .gt-news-lead:hover { background: var(--gt-surface-2); }
+    .gt-news-lead-meta {
+      width: fit-content;
+      color: var(--gt-accent);
+      font-size: 11px;
+      font-weight: 750;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .gt-news-lead strong {
+      font-size: 16px;
+      line-height: 1.32;
+    }
+    .gt-news-lead-summary {
+      color: var(--gt-muted);
+      font-size: 13px;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
     .gt-news-tracker {
       margin: 0 0 12px;
       border: 1px solid var(--gt-line-strong);

@@ -4,6 +4,8 @@
  *
  * Two-group navigation hub for every primary route. Legacy preserved
  * at src/legacy-pages/explore-index.legacy.astro.
+ * Refresh metadata: 2026-06-24 hub hero tightened so route cards reach the
+ * first viewport faster.
  * Refresh metadata: 2026-06-20 route hub inspected after expanded LLM full
  * surface coverage for workflows, trends, answers, reports, companies, and
  * dead-tool records; primary navigation remains current.
@@ -192,7 +194,7 @@ function destinationSlug(href: string): string {
   <div class="gt-canvas">
     <Hero
       title="Explore the wiki"
-      tagline="Every primary section in one jump. Tools, categories, comparisons, daily news, longer analysis, builders, workflows, answers, glossary, vendors, plus the discontinued archive."
+      tagline="Jump to the right surface: tools, comparisons, news, guides, workflows, answers, categories, or trend analysis."
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: 'Explore' },
@@ -201,7 +203,7 @@ function destinationSlug(href: string): string {
     />
 
     <section class="gt-hub-group" aria-labelledby="gt-hub-browse-h">
-      <p id="gt-hub-browse-h" class="gt-hub-group-label">Browse and decide</p>
+      <p id="gt-hub-browse-h" class="gt-hub-group-label">Fast paths</p>
       <ul class="gt-hub-cards">
         {browse.map((item) => (
           <li class="gt-hub-card">

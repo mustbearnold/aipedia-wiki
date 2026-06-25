@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Basic free, Starter $29/mo monthly or $18/mo annual, Creator $89/mo monthly or $64/mo annual, Enterprise custom"
 status: active
 launched: 2017-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -19,7 +19,7 @@ affiliate:
   cookie_days: 60
   network: direct
   link: null
-  notes: "Official Synthesia affiliate page verified 2026-05-26: 25% commission on Starter and Creator plan payments with a 60-day cookie."
+  notes: "Official Synthesia affiliate page verified 2026-06-24: 25% commission on Starter and Creator plan payments with a 60-day cookie."
 scores:
   utility: 8
   value: 7
@@ -40,7 +40,7 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   pricing_anchor:
@@ -48,70 +48,70 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   free_plan:
     value: "Basic is free and includes 1,200 credits/month, usable for up to 10 minutes of video/month or 25 AI-generated video assets, with 9 stock avatars and no Personal Avatar slots."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   best_paid_tier:
     value: "Creator is the practical production tier for regular teams; Enterprise is the safer path for unlimited minutes, SAML/SSO, live collaboration, brand kits, SCORM export, onboarding, and governance."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   api_available:
     value: "Creator and Enterprise include Synthesia API access, with listed annual video-minute allowances and additional usage available on Enterprise."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   image_generation:
     value: "Limited supporting asset generation: Synthesia pricing says credits can be used for AI-generated video assets, while the product remains focused on avatar-led video rather than general image generation."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   video_generation:
     value: "Synthesia focuses on avatar-led presenter video, AI dubbing, localization, PowerPoint-to-video, templates, interactivity, API automation, and SCORM-ready publishing."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   real_time_voice:
     value: "No primary real-time voice-agent product is listed; Synthesia's public pricing positions the platform around generated avatar videos, AI Dubbing, interactive videos, API access, and enterprise publishing."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   web_browsing:
     value: "No web-browsing assistant is listed; Synthesia is a business video, avatar, dubbing, localization, API, and SCORM publishing platform."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   coding_agent:
@@ -119,7 +119,7 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   enterprise_controls:
@@ -127,10 +127,10 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   data_retention_or_privacy:
     value: "Synthesia security practices describe logical customer-data separation, customer-controlled SSO, AES-256 encryption at rest, TLS 1.2+ in transit, EU/Ireland customer-data storage, and deletion within up to 90 days after request or account termination."
     source: "https://www.synthesia.io/legal/security-practices"
@@ -149,32 +149,32 @@ facts:
     volatility: low
     confidence: high
   avatar_library:
-    value: "Synthesia pricing lists 9 stock avatars on Basic, 125+ stock plus 3 Personal Avatars on Starter, 180+ stock plus 5 Personal Avatars on Creator, and 240+ stock plus unlimited Personal Avatars on Enterprise. Studio Express Avatar is a $1,000/year annual-plan add-on with up to a 10-day processing window."
+    value: "Synthesia pricing lists 9 stock avatars on Basic, 125+ stock plus 3 Personal Avatars on Starter, 180+ stock plus 5 Personal Avatars on Creator, and 240+ stock plus unlimited Personal Avatars on Enterprise. Standalone custom-avatar add-on pricing was not confirmed on the current public pricing page during the June 24 check."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
-    confidence: high
-    next_review_at: 2026-07-06
+    confidence: medium
+    next_review_at: 2026-07-08
   best_for:
     value: "Corporate training, onboarding, compliance, sales enablement, multilingual training, PowerPoint-to-video, and SCORM-ready presenter video."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
   watch_out_for:
     value: "Credits, AI asset generation, API allowances, AI dubbing, Veo/Sora integration, and enterprise-only controls can change quickly and should be checked before procurement."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: 2026-07-06
+    next_review_at: 2026-07-08
 tags: [ai-video, ai-avatar, talking-head, training-video, corporate-video, e-learning, express-2, scorm, video-localization]
 best_for:
   - corporate training, onboarding, compliance, and enablement teams
@@ -187,10 +187,10 @@ not_best_for:
   - cinematic scene generation or motion-first creative video
   - teams that need simple unlimited usage without credit planning
 seo_title: "Synthesia Review: Pricing, Express-2 & Best Uses (June 2026)"
-meta_description: "Synthesia review updated June 12, 2026. Compare Basic, Starter, Creator, Enterprise, Express-2 avatars, API access, SCORM export, and alternatives."
+meta_description: "Synthesia review updated June 24, 2026. Compare Basic, Starter, Creator, Enterprise, Express-2 avatars, API access, SCORM export, and alternatives."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Synthesia is the enterprise AI avatar video pick when the job is training, onboarding, compliance, sales enablement, PowerPoint-to-video, localization, or SCORM-ready presenter content. As of June 12, 2026, Express-2 is the current avatar engine story, Creator now matters because API access (360 minutes/year) appears on public pricing, the Studio Express Avatar add-on is a $1,000/year annual-only path to a Personal Avatar, and Enterprise is still the safer path for governance, unlimited minutes, SAML/SSO, brand kits, and SCORM workflows.
+  Synthesia is the enterprise AI avatar video pick when the job is training, onboarding, compliance, sales enablement, PowerPoint-to-video, localization, or SCORM-ready presenter content. As of June 24, 2026, Express-2 is the current avatar engine story, Creator matters because API access (360 minutes/year) appears on public pricing, and Enterprise is still the safer path for governance, unlimited minutes, SAML/SSO, brand kits, and SCORM workflows. Verify custom-avatar add-on terms during procurement because the current public pricing page did not confirm a standalone add-on price.
 price_history:
   - date: 2026-05-13
     plan: "Basic"
@@ -198,6 +198,7 @@ price_history:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
+    verified_at: 2026-05-13
     note: "1,200 credits/mo, up to 10 minutes of video/month or 25 AI-generated video assets, 9 stock avatars, no Personal Avatars."
   - date: 2026-05-13
     plan: "Starter"
@@ -205,6 +206,7 @@ price_history:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
+    verified_at: 2026-05-13
     note: "14,500 credits/year on annual billing (~120 video/dubbing minutes/year), 125+ stock avatars, 3 Personal Avatars, 1 editor + 3 guests."
   - date: 2026-05-13
     plan: "Creator"
@@ -212,6 +214,7 @@ price_history:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
+    verified_at: 2026-05-13
     note: "44,000 credits/year on annual billing (~360 video/dubbing minutes/year), 5 Personal Avatars, API access with 360 minutes/year included, multiple avatars per scene, interactive videos, 180+ stock avatars."
   - date: 2026-05-13
     plan: "Enterprise"
@@ -219,14 +222,16 @@ price_history:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
+    verified_at: 2026-05-13
     note: "Unlimited video minutes, 240+ stock avatars, unlimited Personal Avatars, SAML/SSO, live collaboration, brand kits, SCORM export, onboarding."
-  - date: 2026-05-13
-    plan: "Studio Express Avatar add-on"
-    price: "$1,000/year (annual plans only)"
+  - date: 2026-06-24
+    plan: "Basic / Starter / Creator / Enterprise"
+    price: "Basic free; Starter $29 monthly or $18 annual; Creator $89 monthly or $64 annual; Enterprise custom"
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    note: "Premium Personal Avatar add-on with up to 10-day processing window."
+    verified_at: 2026-06-24
+    note: "Rechecked public pricing, credit model, API access on Creator/Enterprise, avatar counts, and enterprise controls. Standalone custom-avatar add-on pricing was not confirmed on the current public pricing page."
 ---
 
 # Synthesia
@@ -237,6 +242,7 @@ The current buyer correction is that Synthesia is no longer only "Starter vs Cre
 
 ## Recent changes
 
+- **2026-06-24:** Rechecked Synthesia pricing, affiliate terms, API/SCORM language, avatar counts, and enterprise controls. Public pricing still lists Basic free, Starter $29 monthly or $18 annual, Creator $89 monthly or $64 annual, and Enterprise custom. The previous standalone Studio Express Avatar price claim was removed because the current public pricing page did not confirm a stable add-on price.
 - **2026-06-06:** Rechecked Synthesia pricing, avatar docs, API/SCORM language, and enterprise controls while refreshing the Pika/Runway/Kling/Seedance/Veo comparison cluster. Synthesia remains the business-avatar/training route, not a cinematic model pick.
 
 ## System Verdict
@@ -257,7 +263,7 @@ The current buyer correction is that Synthesia is no longer only "Starter vs Cre
 - **Creator:** $89/mo monthly or $64/mo annual, 5 Personal Avatars, API access (360 video minutes/year included), multiple avatars per scene, interactive videos, 180+ stock avatars, and 44,000 credits/year on annual billing covering up to 360 minutes of video or dubbing.
 - **Enterprise:** custom pricing, unlimited video minutes, 240+ stock avatars, unlimited Personal Avatars, SAML/SSO, live collaboration, brand kits, SCORM export, and onboarding.
 - **API:** public pricing lists API access on Creator (360 minutes/year included) and Enterprise (custom allocation), with paid add-on overages.
-- **Studio Express Avatar add-on:** $1,000/year (annual plans only), with avatar processing taking up to 10 days.
+- **Custom-avatar note:** public pricing confirms Personal Avatar allowances by plan, but the current public pricing page did not confirm a standalone Studio Express Avatar add-on price during the June 24 check.
 - **Publishing strength:** SCORM export, video embeds, multilingual player, PowerPoint import, templates, and brand controls.
 
 ## What It Actually Is
@@ -284,13 +290,13 @@ Express-2 is Synthesia's current avatar-engine story. Synthesia describes it as 
 
 ## Pricing And Buying Advice
 
-As of June 12, 2026, Synthesia's public pricing lists:
+As of June 24, 2026, Synthesia's public pricing lists:
 
 - **Basic:** free, 1,200 credits/mo, up to 10 minutes of video/month or 25 AI-generated video assets, 9 stock avatars, no Personal Avatars.
 - **Starter:** $29/mo monthly or $18/mo annual, 14,500 credits/year on annual billing (about 120 video/dubbing minutes/year), 125+ stock avatars, 3 Personal Avatars, 1 editor and 3 guests, AI Dubbing, logo removal, and downloaded videos.
 - **Creator:** $89/mo monthly or $64/mo annual, 44,000 credits/year on annual billing (about 360 video/dubbing minutes/year), 5 Personal Avatars, API access with 360 minutes/year included, multiple avatars per scene, interactive videos, 1 editor and 5 guests, and 180+ stock avatars.
 - **Enterprise:** custom, unlimited video minutes, 240+ stock avatars, unlimited Personal Avatars, SAML/SSO, live collaboration, brand kits, SCORM export, onboarding, and custom credits.
-- **Studio Express Avatar add-on:** $1,000/year flat for annual subscribers, with up to a 10-day creation window.
+- **Custom-avatar procurement note:** Personal Avatar allowances are listed by plan, but standalone custom-avatar add-on pricing was not confirmed on the current public pricing page.
 
 The old "API was locked to Enterprise" framing is stale. The public pricing page now lists Synthesia API under Creator (360 minutes/year) and Enterprise (custom). Procurement teams should still verify exact API allowance, add-on pricing, data controls, and commercial terms before buying.
 
@@ -315,7 +321,7 @@ The old "API was locked to Enterprise" framing is stale. The public pricing page
 
 ## Methodology
 
-AiPedia re-verified this page on **June 12, 2026** against Synthesia pricing, avatar product pages, Express-2 materials, and Synthesia docs. Public pricing and API availability have changed enough that older reviews should not be trusted without checking the current pricing page.
+AiPedia re-verified this page on **June 24, 2026** against Synthesia pricing, affiliate terms, avatar product pages, Express-2 materials, and Synthesia docs. Public pricing and API availability have changed enough that older reviews should not be trusted without checking the current pricing page.
 
 ## FAQ
 
@@ -336,7 +342,8 @@ No. Synthesia is a presenter-video and training platform. It may include short g
 
 ## Sources
 
-- [Synthesia pricing](https://www.synthesia.io/pricing)
+- [Synthesia pricing](https://www.synthesia.io/pricing) · pricing, credits, API access, avatar allowances, enterprise controls (verified 2026-06-24)
+- [Synthesia affiliate program](https://www.synthesia.io/partners/affiliates) · commission and cookie terms (verified 2026-06-24)
 - [Synthesia avatars](https://www.synthesia.io/features/avatars)
 - [Synthesia Express-2 announcement](https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars)
 - [Synthesia avatar docs](https://docs.synthesia.io/docs/synthesia-avatars)

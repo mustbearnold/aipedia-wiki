@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 23, 2026: compare Perplexity, Kagi, You.com APIs, Comet, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 24, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -24,15 +24,15 @@ top_picks:
 
 ## Quick Decision
 
-AI search is not one category anymore. Buyers now choose between **cited answer engines**, **Google-native AI search**, **owned-document research**, **private paid search**, **developer search APIs**, and **real-time social/current-events context**. The June 15 Grok recheck keeps xAI in the social-current context lane while moving Grok Build into the coding comparison set: use Grok here when X Search is the source, but verify important claims against primary sources before publishing or buying.
+AI search is not one category anymore. Buyers now choose between **cited answer engines**, **AI browsers**, **owned-document research**, **private paid search**, **developer search APIs**, and **real-time social/current-events context**. The June 24 refresh keeps Perplexity as the cited answer-engine default, Comet as the Perplexity browser lane, Dia as the work-context browser lane, and Elicit as the literature-review lane. Use Grok here only when X Search is the source, then verify important claims against primary sources before publishing or buying.
 
 **Use [Perplexity](/tools/perplexity/) when the job is cited open-web answers.** It remains the strongest default for people who want an answer engine with source links, follow-up research, spaces, Pro/Max paths, Enterprise controls, Comet/Computer, limited paid asset/video generation for research outputs, and API surfaces like Sonar, Search API, Agent API, tools, embeddings, and media responses. The June 15 [Perplexity](/tools/perplexity/) refresh keeps pricing intact while adding a harder buyer rule: citations are a source trail, not proof, so customer-facing AI search needs saved source logs, source-quality review, action approvals, and API/tool budget caps.
 
 **June 6 Perplexity vs ChatGPT update:** Perplexity vs ChatGPT now gives Perplexity the answer-engine lane and ChatGPT the general AI workbench lane. Buyers who need source trails, market scans, vendor checks, and current web due diligence should start with Perplexity; buyers who need writing, coding, files, data, image, voice, and agent workflows should start with ChatGPT and add source discipline when browsing.
 
-**Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page. The June 22 Comet recheck keeps the free-first rule: upgrade Perplexity only when Comet Agent queries, Max Assistant, Computer credits, advanced models, or enterprise assistant controls become the actual bottleneck, and require explicit review before Comet handles email, finance, shopping, account, file, or checkout actions.
+**Use [Comet](/tools/comet/) when the search workflow should live inside the browser.** Comet is the Perplexity browser lane for users who want AI search, page context, shopping/research help, and everyday web actions closer to tabs instead of a separate answer-engine page. The June 24 Comet recheck keeps the free-first rule: upgrade Perplexity only when Comet Agent queries, Max Assistant, Computer credits, advanced models, or Enterprise Comet controls become the actual bottleneck, and require explicit review before Comet handles email, finance, shopping, account, file, or checkout actions.
 
-**Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 23 check keeps Dia in the work-context browser lane: Reports, Morning Brief, Live Work, connected-app context, SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions are now surfaced on the public and security pages. It is still a user browser, not a programmable browser automation API.
+**Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 24 check keeps Dia in the work-context browser lane: Reports, Morning Brief, Live Work, connected-app context, SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions are now surfaced on the public and security pages. It is still a user browser, not a programmable browser automation API.
 
 **June 7 Perplexity alternatives update:** [Perplexity alternatives](/guides/perplexity-alternatives/) now separates ChatGPT Search for all-purpose AI work, Gemini/Google AI Mode for Google-native research, NotebookLM for owned-source notebooks, Claude for deep synthesis, Kagi for private paid search, and Exa/Perplexity APIs for developer retrieval and answer layers.
 

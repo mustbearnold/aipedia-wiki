@@ -2,16 +2,16 @@
 type: tool
 slug: pika
 title: Pika Labs
-tagline: Creative-effects AI video. Pika 2.5 ships Pikaffects, Pikadditions, Pikaframes, and scene extension from $0 to enterprise.
+tagline: Creative-effects AI video. Pika 2.5 ships Pikaffects, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaframes, and Pikaformance from $0 to enterprise.
 category: ai-video
 company: Pika Labs
 url: 'https://pika.art'
 pricing_model: freemium
-price_range: "$0-$148/month billed yearly"
+price_range: "$0-$76+/month billed yearly; verify Fancy and monthly checkout live"
 status: active
 launched: 2023-11
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,34 +30,34 @@ facts:
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
   creative_surface:
-    value: "Pika differentiates around creator-facing effects and easy experimentation, so evaluate its templates and motion style as much as raw model quality."
-    source: "https://pika.art"
-    source_label: "Pika official site"
-    source_id: pika-official
-    verified_at: 2026-06-12
+    value: "Pika differentiates around creator-facing effects, short-form experimentation, and named workflows such as Pikaffects, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaframes, and Pikaformance."
+    source: "https://pika.art/pricing"
+    source_label: "Pika pricing"
+    source_id: pika-pricing
+    verified_at: 2026-06-24
     next_review_at: 2026-07-06
     volatility: high
     confidence: medium
   pricing_anchor:
-    value: "Pika lists Free ($0, 80 credits), Basic ($8/mo yearly, 80 credits, commercial use), Standard ($28/mo yearly, 700 credits, all resolutions and Pikaframes), Pro ($76/mo yearly, 2,300 credits, faster generation), and Fancy ($148/mo yearly, 6,000 credits, fastest generations) on the official pricing page."
+    value: "Pika lists Free, Basic at $8/month billed yearly with 80 credits and commercial use, Standard at $28/month billed yearly with 700 credits, Pro at $76/month billed yearly with 2,300 credits, and Fancy with 6,000 credits. The June 24 static check did not expose a clean Fancy dollar row, so verify Fancy and monthly checkout live."
     source: "https://pika.art/pricing"
     source_label: "Pika pricing"
     source_id: pika-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
   workflow_surface:
-    value: "Best for ideation and social video drafts. Compare against Kling, Runway, Hailuo, and Veo if you need long-form continuity or strict brand controls."
+    value: "Best for ideation and social video drafts using named effects and short clips. Compare against Kling, Runway, Hailuo, and Veo if you need long-form continuity or strict brand controls."
     source: "https://pika.art"
     source_label: "Pika official site"
     source_id: pika-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     next_review_at: 2026-07-06
     volatility: high
     confidence: medium
@@ -66,14 +66,14 @@ facts:
     source: "https://pika.art/pricing"
     source_label: "Pika pricing"
     source_id: pika-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     next_review_at: 2026-07-06
     volatility: high
     confidence: high
 tags: [ai-video, text-to-video, image-to-video, video-generation, creative, short-video, pikaffects, pika-2-5]
 seo_title: 'Pika Labs: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Pika Labs runs on Pika 2.5 with Pikaffects, Pikadditions, Pikaframes, and scene extension. Free includes 80 monthly video credits; paid plans run from Basic at $8/mo to Fancy at $148/mo billed yearly.
+  Pika Labs runs on Pika 2.5 with Pikaffects, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaframes, and Pikaformance. Free includes 80 monthly video credits; Basic, Standard, and Pro prices were verified in June 2026, while Fancy should be checked live.
 author: aipedia.wiki Editorial
 best_for:
   - creative effects and Pikaffects
@@ -85,7 +85,7 @@ not_best_for:
   - API-driven production pipelines
   - single clips beyond Pikaframes' 20-25 second ceiling
 quick_answer: >-
-  Pika Labs runs on Pika 2.5 with Pikaffects, Pikadditions, and Pikaframes for creative-effects video. The free tier is the easiest on-ramp in the category. Basic at $8 unlocks commercial use; Standard at $28 unlocks all resolutions, Pikaframes, and watermark-free downloads. Skip it for multi-shot narratives or API-driven pipelines.
+  Pika Labs runs on Pika 2.5 with Pikaffects, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaframes, and Pikaformance for creative-effects video. The free tier is the easiest on-ramp in the category. Basic at $8 unlocks commercial use; Standard at $28 unlocks all resolutions, Pikaframes, and watermark-free downloads. Skip it for multi-shot narratives or API-driven pipelines.
 price_history:
   - date: 2024-02-01
     plan: "Standard (legacy)"
@@ -93,7 +93,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     note: "Historic paid entry point before 2026 tier restructure"
   - date: 2026-04-17
     plan: "Standard (legacy)"
@@ -101,7 +101,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     note: "Pre-restructure pricing snapshot"
   - date: 2026-05-13
     plan: "Basic"
@@ -109,7 +109,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     note: "New entry paid tier post-restructure; 80 credits with commercial use"
   - date: 2026-05-13
     plan: "Standard"
@@ -117,7 +117,7 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     note: "Restructured Standard now lists 700 credits, all resolutions, Pikaframes"
   - date: 2026-05-13
     plan: "Pro"
@@ -125,28 +125,29 @@ price_history:
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     note: "Restructured Pro at 2,300 credits with faster generations"
   - date: 2026-05-13
     plan: "Fancy"
-    price: "$148/mo billed yearly"
+    price: "Verify live"
     source: "https://pika.art/pricing"
     source_label: "Source"
     source_id: pika-pricing
-    verified_at: 2026-06-12
-    note: "New top tier with 6,000 credits and fastest generations"
+    verified_at: 2026-06-24
+    note: "Current static pricing check verified 6,000 credits and fastest generations, but did not expose a clean Fancy dollar row. Verify live checkout before budgeting around Fancy."
 ---
 
 # Pika Labs
 
-Pika Labs' AI video generator. Pika 2.5 (released early 2026) is the current flagship, covering text-to-video, image-to-video, and creative effects through Pikaffects, Pikadditions, and Pikaframes.
+Pika Labs' AI video generator. Pika 2.5 is the current flagship path for text-to-video, image-to-video, and creative effects through Pikaffects, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaframes, and Pikaformance.
 
-Pricing runs from a free tier to Fancy at $148/month billed yearly. The free tier includes 80 monthly video credits; Basic at $8/month is the cheapest paid tier with commercial use rights.
+Pricing runs from a free tier to paid tiers. The free tier includes 80 monthly video credits; Basic at $8/month billed yearly is the cheapest paid tier with commercial use rights. The June 24 static pricing check verified Basic, Standard, Pro prices and Fancy's 6,000-credit allowance, but did not expose a clean Fancy dollar row, so verify the live checkout before budgeting around Fancy.
 
 ## Recent changes
 
+- **2026-06-24:** Rechecked Pika's official pricing page. Basic remains $8/month billed yearly, Standard $28/month billed yearly, and Pro $76/month billed yearly. The page also lists Fancy with 6,000 credits and fastest generations, but the static capture did not expose a clean Fancy dollar row, so AiPedia now treats Fancy pricing as a live-check item.
 - **2026-06-06:** Rechecked Pika pricing and creative-effects positioning during the Kling/Pika/Runway/Seedance/Synthesia/Veo comparison refresh. The Basic/Standard/Pro/Fancy ladder and Pika 2.5 credit math remain the buyer anchor.
-- **2026-05-13:** Pika restructured its paid ladder. Standard moved from $8 to $28 with 700 credits, all resolutions, and Pikaframes. Pro moved from $28 to $76 with 2,300 credits. Fancy moved from $76 to $148 with 6,000 credits. A new Basic tier at $8 keeps the cheap entry point with commercial use rights but stays at 80 credits.
+- **2026-05-13:** Pika restructured its paid ladder. Standard moved from the old $8 entry point to $28 with 700 credits, all resolutions, and Pikaframes. Pro moved to $76 with 2,300 credits. Fancy shows 6,000 credits, but AiPedia now treats its dollar price as a live-check item. A new Basic tier at $8 keeps the cheap entry point with commercial use rights but stays at 80 credits.
 
 ## System Verdict
 
@@ -161,21 +162,21 @@ Pricing runs from a free tier to Fancy at $148/month billed yearly. The free tie
 | | |
 |---|---|
 | **Current flagship** | Pika 2.5 |
-| **Signature features** | Pikaffects · Pikadditions · Pikaframes · scene extension · integrated sound effects |
+| **Signature features** | Pikaffects · Pikascenes · Pikadditions · Pikaswaps · Pikatwists · Pikaframes · Pikaformance |
 | **Base clip length** | 3 to 5 seconds |
 | **Extended clip length** | Up to 20-25 seconds via Pikaframes |
 | **Free tier** | 80 monthly video credits · Pika 2.5 at 480p only |
-| **Paid tiers** | Basic $8 · Standard $28 · Pro $76 · Fancy $148 (all billed yearly) |
+| **Paid tiers** | Basic $8 · Standard $28 · Pro $76 billed yearly; Fancy has 6,000 credits, verify current price live |
 | **API access** | Enterprise tier only |
 | **Company** | Pika Labs |
 
-Pricing was refreshed against the official Pika pricing page on 2026-06-12. Feature notes were last checked against Pika's official site and Pika 2.5 release notes on 2026-04-17. See Sources.
+Pricing and feature names were refreshed against the official Pika pricing page on 2026-06-24. See Sources.
 
 ## What it actually is
 
 A web-based AI video generator at pika.art. A single subscription covers text-to-video, image-to-video, video-to-video restyle, and the creative-effects library.
 
-Pika 2.5 introduced Pikaframes for 20-25 second durations, scene extension for longer narratives, and integrated sound effect generation that matches on-screen action. Pikaffects apply visual transformations (melt, explode, squish, cake-ify, dissolve) to existing clips. Pikadditions insert new objects or characters into video.
+Pika 2.5 is now packaged around named creation paths such as Pikaffects, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaframes, and Pikaformance. Pikaffects apply visual transformations to existing clips. Pikadditions and Pikaswaps handle object or subject changes, while Pikaframes extends single clips up to the 20-25 second range listed in the pricing credit table.
 
 The moat is creative effects. Pika is the only major generator with a production-ready library of preset transformations and object-insertion tools. The gap is narrative length: base generations still run 3 to 5 seconds, and multi-shot consistency trails Runway and Kling.
 
@@ -206,9 +207,9 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 | Basic | $8/mo billed yearly | 80 | Commercial use unlocked · 480p only · same credit ceiling as Free |
 | Standard | $28/mo billed yearly | 700 | All resolutions · Pikaframes · fast generations · watermark-free downloads |
 | Pro | $76/mo billed yearly | 2,300 | Faster generations · larger credit allowance |
-| Fancy | $148/mo billed yearly | 6,000 | Fastest generations · largest listed credit allowance |
+| Fancy | Verify live | 6,000 | Fastest generations · largest listed credit allowance |
 
-*Prices verified 2026-06-12 via [pika.art/pricing](https://pika.art/pricing). VAT and monthly-billing prices may vary by country and billing toggle.*
+*Basic, Standard, Pro, credit allowances, and feature access verified 2026-06-24 via [pika.art/pricing](https://pika.art/pricing). Fancy's 6,000-credit allowance was visible, but a clean dollar row was not exposed in the static capture. VAT, monthly billing, and top-tier checkout pricing may vary by country and billing toggle.*
 
 ## Against the alternatives
 
@@ -234,7 +235,7 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [pika.art/pricing](https://pika.art/pricing) and the [Pika 2.5 release notes](https://pika.art/blog/pika-2-5).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [pika.art/pricing](https://pika.art/pricing).
 
 ## FAQ
 
@@ -258,9 +259,8 @@ Yes, but treat API access as a separate/custom route. Standard and Pro users sho
 
 ## Sources
 
-- [Pika Labs official site](https://pika.art) (verified 2026-04-17)
-- [Pika Pricing](https://pika.art/pricing) (verified 2026-06-12)
-- [Pika 2.5 release notes](https://pika.art/blog/pika-2-5) (verified 2026-04-17)
+- [Pika Labs official site](https://pika.art) (verified 2026-06-24)
+- [Pika Pricing](https://pika.art/pricing) (verified 2026-06-24)
 
 ## Related
 

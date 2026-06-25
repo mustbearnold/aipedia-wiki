@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0, Creator $29/mo, Pro from $49/mo, Business $149/mo plus seats, Enterprise custom; API and LiveAvatar pricing are separate"
 status: active
 launched: 2022-11
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -19,7 +19,7 @@ affiliate:
   cookie_days: 30
   network: direct
   link: null
-  notes: "Official HeyGen Social Creator Program page verified 2026-06-23: 35% recurring commission for 3 months, 30-day tracking, 60-day validation, $100 minimum payout, PayPal payouts, 5K+ follower eligibility, and no SEO/blog-only promotion."
+  notes: "Official HeyGen Social Creator Program page verified 2026-06-24: 35% recurring commission for 3 months, 30-day tracking, 60-day validation, $100 minimum payout, PayPal payouts, 5K+ follower eligibility, and no SEO/blog-only promotion."
 scores:
   utility: 9
   value: 8
@@ -31,7 +31,7 @@ facts:
     source: "https://www.heygen.com/blog/announcing-avatar-v"
     source_label: "HeyGen Avatar V launch"
     source_id: heygen-avatar-v-launch
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -40,7 +40,7 @@ facts:
     source: "https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatar"
     source_label: "HeyGen LiveAvatar help"
     source_id: heygen-liveavatar-help
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
     next_review_at: 2026-08-14
@@ -49,7 +49,7 @@ facts:
     source: "https://developers.heygen.com/docs/pricing"
     source_label: "HeyGen self-serve API pricing"
     source_id: heygen-api-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -58,7 +58,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -67,7 +67,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -76,7 +76,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -85,7 +85,7 @@ facts:
     source: "https://developers.heygen.com/docs/pricing"
     source_label: "HeyGen self-serve API pricing"
     source_id: heygen-api-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -94,7 +94,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -103,7 +103,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -112,7 +112,7 @@ facts:
     source: "https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatar"
     source_label: "HeyGen LiveAvatar help"
     source_id: heygen-liveavatar-help
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -121,7 +121,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   coding_agent:
@@ -129,7 +129,7 @@ facts:
     source: "https://developers.heygen.com/"
     source_label: "HeyGen API docs"
     source_id: heygen-api-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   enterprise_controls:
@@ -137,7 +137,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -146,7 +146,7 @@ facts:
     source: "https://www.heygen.com/security"
     source_label: "HeyGen security"
     source_id: heygen-security
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
     next_review_at: 2026-08-14
@@ -155,7 +155,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   api_available:
@@ -163,7 +163,7 @@ facts:
     source: "https://developers.heygen.com/"
     source_label: "HeyGen API docs"
     source_id: heygen-api-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
     next_review_at: 2026-08-14
@@ -172,7 +172,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
     next_review_at: 2026-08-14
@@ -181,11 +181,19 @@ facts:
     source: "https://www.heygen.com/geniverse/social-creator-program"
     source_label: "HeyGen Social Creator Program"
     source_id: heygen-affiliate-program
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
 price_history:
+  - date: 2026-06-24
+    plan: "Self-serve app plans / API / LiveAvatar"
+    price: "Free $0, Creator $29/mo with 600 credits, Pro from $49/mo with 1,000 credits, Business $149/mo with 1,500 credits plus $20/seat, Enterprise custom; Avatar IV/V API $0.05/sec or $0.0667/sec; LiveAvatar Starter $19/mo, Essential $99/mo, Business $475/mo"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked app pricing, developer pricing, API pricing help, LiveAvatar, Avatar V, security, trust/safety, developers, legacy Unlimited help, and Social Creator Program sources. No material buyer-price change found versus June 23."
   - date: 2026-05-08
     plan: "Free"
     price: "$0/mo, 1 video per month, videos up to 3 minutes, 720p"
@@ -270,10 +278,10 @@ not_best_for:
   - strict enterprise deployments without avatar-consent and brand-safety review
   - teams whose main need is LMS governance rather than marketing/localization speed
 seo_title: "HeyGen Review: Avatar V, Pricing & Best Uses (June 2026)"
-meta_description: "HeyGen review updated June 23, 2026. See Avatar V, corrected Avatar IV/V API pricing, LiveAvatar plans, Creator/Pro/Business plans, risks, and alternatives."
+meta_description: "HeyGen review updated June 24, 2026. See Avatar V, corrected Avatar IV/V API pricing, LiveAvatar plans, Creator/Pro/Business plans, risks, and alternatives."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  HeyGen is the best AI video shortlist pick when the deliverable is avatar-led business video: sales clips, training, localization, digital twins, and presenter templates. As of June 23, 2026, Avatar V is the current headline avatar model, Avatar IV/V API pricing is the important programmatic route, and LiveAvatar has a separate streaming-plan surface. Do not rank HeyGen as a general cinematic AI video model; compare it against Synthesia, Tavus, and D-ID for avatar workflows, and against Seedance, Kling, Veo, or Runway only when you also need scene generation.
+  HeyGen is the best AI video shortlist pick when the deliverable is avatar-led business video: sales clips, training, localization, digital twins, and presenter templates. As of June 24, 2026, Avatar V is the current headline avatar model, Avatar IV/V API pricing is the important programmatic route, and LiveAvatar has a separate streaming-plan surface. Do not rank HeyGen as a general cinematic AI video model; compare it against Synthesia, Tavus, and D-ID for avatar workflows, and against Seedance, Kling, Veo, or Runway only when you also need scene generation.
 ---
 
 # HeyGen
@@ -293,8 +301,8 @@ The current buyer correction is important: **Avatar V is HeyGen's newest avatar 
 ## Recent changes
 
 - **June 15, 2026 verification:** HeyGen's app pricing still lists Free, Creator $29/month, Pro $49/month, Business $149/month plus $20/seat, and Enterprise custom. Developer pricing now makes the billing boundary sharper: API-key usage draws from a prepaid API wallet, OAuth/MCP-style usage can draw from the web-plan balance, LiveAvatar has its own Essential/Business/Enterprise streaming plans, and the Social Creator Program is a separate affiliate surface with creator eligibility and payout rules.
-- **June 23, 2026 verification:** HeyGen's app-plan prices remain current, but the purchase math needs sharper labels: Creator includes 600 credits, Pro starts at 1,000 credits, Business includes 1,500 credits, current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar is $7/video, HyperFrames is $0.10-$0.30/min, and LiveAvatar now needs Free/Starter coverage before Essential and Business.
-- **June 23, 2026 affiliate check:** the public Social Creator Program remains the sourceable affiliate surface: 35% recurring for 3 months, 30-day tracking, 60-day verification, $100 minimum payout, PayPal payouts, and creator eligibility rules.
+- **June 24, 2026 verification:** HeyGen's app-plan prices remain current, but the purchase math needs sharp labels: Creator includes 600 credits, Pro starts at 1,000 credits, Business includes 1,500 credits, current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar is $7/video, HyperFrames is $0.10-$0.30/min, and LiveAvatar needs Free/Starter coverage before Essential and Business. No material buyer-price change was found versus June 23.
+- **June 24, 2026 affiliate check:** the public Social Creator Program remains the sourceable affiliate surface: 35% recurring for 3 months, 30-day tracking, 60-day verification, $100 minimum payout, PayPal payouts, and creator eligibility rules.
 - **June 14, 2026 verification:** HeyGen's app pricing still listed Free, Creator $29/month, Pro $49/month, Business $149/month plus $20/seat, and Enterprise custom. Developer pricing still separated Avatar IV & V pay-as-you-go generation from normal subscriptions, and the pricing help route mainly warned about decommissioned Unlimited-plan history.
 - **June 5, 2026 verification:** HeyGen's public pricing page shows Pro at $49/month, not the older $99/month figure, and the developer pricing page now lists Avatar IV & V generation rates. The Free plan still lists 3 videos per month up to 1 minute each.
 
@@ -338,7 +346,7 @@ This separation matters for purchasing. A plan that looks cheap for manual video
 
 ## Pricing And Buying Advice
 
-As of June 23, 2026, HeyGen's public app pricing lists:
+As of June 24, 2026, HeyGen's public app pricing lists:
 
 - **Free:** $0, 3 videos per month up to 1 minute each, access to Avatar IV and Video Agent, standard processing, 500+ Stock Digital Twins, one Custom Digital Twin, and 30+ languages.
 - **Creator:** $29/mo, 600 credits, videos up to 30 minutes, one Custom Digital Twin, 700+ Stock Video Avatars, 175+ languages/dialects, 1080p export, brand kit, and watermark removal.
@@ -374,7 +382,7 @@ For LiveAvatar, do not assume ordinary rendered-video subscriptions cover live s
 
 ## Methodology
 
-AiPedia re-verified this page on **June 23, 2026** against HeyGen's pricing page, developer API pricing docs, API pricing help, LiveAvatar help, API docs, security page, trust and safety pages, Avatar V launch material, legacy Unlimited-plan help, and Social Creator Program page. Claims about pricing, model availability, API billing, LiveAvatar streaming, and affiliate eligibility should be reviewed weekly because HeyGen is shipping avatar and API changes quickly.
+AiPedia re-verified this page on **June 24, 2026** against HeyGen's pricing page, developer API pricing docs, API pricing help, LiveAvatar help, API docs, security page, trust and safety pages, Avatar V launch material, legacy Unlimited-plan help, and Social Creator Program page. Claims about pricing, model availability, API billing, LiveAvatar streaming, and affiliate eligibility should be reviewed weekly because HeyGen is shipping avatar and API changes quickly.
 
 ## FAQ
 
@@ -395,19 +403,19 @@ No. HeyGen is for avatar-led presenter video. Use Runway, Kling, Seedance, or Ve
 
 ## Sources
 
-- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-23)
-- [HeyGen legacy unlimited pricing help](https://help.heygen.com/en/articles/9204682-heygen-legacy-unlimited-plans) (verified 2026-06-23)
-- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-23)
-- [HeyGen API pricing explained](https://help.heygen.com/en/articles/10060327-heygen-api-pricing-explained) (verified 2026-06-23)
-- [HeyGen LiveAvatar help](https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatar) (verified 2026-06-23)
-- [HeyGen security](https://www.heygen.com/security) (verified 2026-06-23)
-- [HeyGen trust and safety](https://www.heygen.com/trust-and-safety) (verified 2026-06-23)
-- [HeyGen Avatar V launch](https://www.heygen.com/blog/announcing-avatar-v) (verified 2026-06-23)
-- [HeyGen May 2026 release](https://www.heygen.com/blog/heygen-may-2026-release) (verified 2026-06-23)
-- [HeyGen Avatar V technical report](https://dynamic.heygen.ai/www/Paper%20Links/avatarv_tech_report.pdf) (verified 2026-06-23)
-- [HeyGen Avatar IV API announcement](https://www.heygen.com/blog/announcing-the-avatar-iv-api) (verified 2026-06-23)
-- [HeyGen developers](https://developers.heygen.com/) (verified 2026-06-23)
-- [HeyGen Social Creator Program](https://www.heygen.com/geniverse/social-creator-program) (verified 2026-06-23)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-24)
+- [HeyGen legacy unlimited pricing help](https://help.heygen.com/en/articles/9204682-heygen-legacy-unlimited-plans) (verified 2026-06-24)
+- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-24)
+- [HeyGen API pricing explained](https://help.heygen.com/en/articles/10060327-heygen-api-pricing-explained) (verified 2026-06-24)
+- [HeyGen LiveAvatar help](https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatar) (verified 2026-06-24)
+- [HeyGen security](https://www.heygen.com/security) (verified 2026-06-24)
+- [HeyGen trust and safety](https://www.heygen.com/trust-and-safety) (verified 2026-06-24)
+- [HeyGen Avatar V launch](https://www.heygen.com/blog/announcing-avatar-v) (verified 2026-06-24)
+- [HeyGen May 2026 release](https://www.heygen.com/blog/heygen-may-2026-release) (verified 2026-06-24)
+- [HeyGen Avatar V technical report](https://dynamic.heygen.ai/www/Paper%20Links/avatarv_tech_report.pdf) (verified 2026-06-24)
+- [HeyGen Avatar IV API announcement](https://www.heygen.com/blog/announcing-the-avatar-iv-api) (verified 2026-06-24)
+- [HeyGen developers](https://developers.heygen.com/) (verified 2026-06-24)
+- [HeyGen Social Creator Program](https://www.heygen.com/geniverse/social-creator-program) (verified 2026-06-24)
 
 ## Related
 

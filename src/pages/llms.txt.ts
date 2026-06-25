@@ -3,6 +3,7 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-24 Jun 23-24 focused AI news coverage added; LLM concise surface remains data-driven through the news collection.
 // Refresh metadata: 2026-06-21 Mistral AI vs Poe comparison loop after current
 // Mistral pricing, Vibe, model docs, Search Toolkit, Poe subscription plans,
 // purchases FAQ, Creator Platform API, and download checks; added comparison,
@@ -67,14 +68,14 @@
 // and video GPU cost caveats.
 // Refresh metadata: 2026-06-16 Google Cloud data-agents coverage after current
 // Google Cloud announcement, Data Engineering Agent, Conversational Analytics,
-// and MCP server checks; updated June 16 desk, AI Automation, AI
+// and MCP server checks; updated June 16 focused coverage, AI Automation, AI
 // Infrastructure, source registry, homepage, news archive, RSS,
 // tools/categories/explore indexes, and LLM maintenance around governed
 // analytics, MCP permissions, SQL verification, spend limits, and
 // preview-vs-GA rollout boundaries.
 // Refresh metadata: 2026-06-16 June 12 OpenAI Academy workplace-courses
 // backfill after current OpenAI Academy and OpenAI announcement checks;
-// updated June 12 desk, source registry, homepage, news archive, RSS,
+// updated June 12 focused coverage, source registry, homepage, news archive, RSS,
 // /explore/, and LLM maintenance around AI Foundations, Applied AI
 // Foundations, Agents and Workflows, certificates, and training governance.
 // Refresh metadata: 2026-06-16 answer-cluster refresh after current OpenAI
@@ -95,12 +96,12 @@
 // party measurement reconciliation, prompt/citation/source-log controls,
 // source registry cleanup, homepage, categories/tools/trends/explore indexes,
 // and LLM maintenance.
-// Refresh metadata: 2026-06-16 Work IQ GA desk and buyer checklist refresh after
+// Refresh metadata: 2026-06-16 Work IQ GA buyer checklist refresh after
 // current Microsoft Work IQ API/licensing/Partner Center, Agent Framework,
 // and Council of the EU source checks; updated Microsoft Agent Framework, AI
 // Automation, source registry, homepage, news archive, RSS, tools/categories/
 // explore indexes, and LLM maintenance.
-// Refresh metadata: 2026-06-16 June 1 and June 2 AI news desks backfilled
+// Refresh metadata: 2026-06-16 June 1 and June 2 AI coverage backfilled
 // after current June GitHub, NVIDIA, Microsoft, Anthropic, Postman,
 // RelationalAI, 7AI, and White House source checks; homepage, news archive,
 // RSS, and /explore/ inspected.
@@ -147,9 +148,9 @@
 // and dispute-ready logs.
 // Refresh metadata: 2026-06-15 OpenAI/Ona Codex persistent-agent acquisition
 // coverage added after current June official OpenAI, Ona, Codex product, and
-// Codex pricing source checks; Codex, AI Coding, June 11 desk, news archive,
+// Codex pricing source checks; Codex, AI Coding, June 11 coverage, news archive,
 // RSS, homepage, and LLM surfaces inspected.
-// Refresh metadata: 2026-06-15 AI news desk and Google AI search risk
+// Refresh metadata: 2026-06-15 AI governance coverage and Google AI search risk
 // checklist refresh across G7 Evian opening, AP AI-regulation agenda and
 // state-law patchwork reporting, Google AI Overviews liability coverage,
 // Google's Gemini-related phishing lawsuit coverage, Gemini/AI Search/AI
@@ -258,7 +259,7 @@
 // Refresh metadata: 2026-06-14 micro-SaaS workflow refresh after moving the
 // default API/webhook path to Vercel Functions, updating AI Coding parent
 // guidance, /workflows/, homepage, and LLM maintenance.
-// Refresh metadata: 2026-06-14 AI news desk refresh across OpenAI probe
+// Refresh metadata: 2026-06-14 AI news coverage refresh across OpenAI probe
 // coverage and buyer-safety checklist, Anthropic Fable/Mythos access risk,
 // ChatGPT GPT-5.2 retirement, G7 governance, homepage, news, RSS, and LLM
 // surfaces.
@@ -462,14 +463,14 @@ export const GET: APIRoute = async () => {
   lines.push('Recent comparison refresh: June 20, 2026 added Cursor vs DeepSeek and refreshed Cursor, DeepSeek, AI Coding, source registry, ledger, and LLM maintenance after current Cursor pricing, Teams pricing, changelog, Data Use, Enterprise, CLI, Composer 2.5, DeepSeek API pricing, V4 release, and Hugging Face checks; buyer guidance now separates Cursor as the AI-native IDE and agent workbench from DeepSeek as a low-cost coding-model/API backend.');
   lines.push('Recent comparison refresh: June 20, 2026 added Claude vs Replit Agent and refreshed Replit Agent, Claude related links, AI Coding, source registry, ledger, and LLM maintenance after current Claude pricing, Claude Code, Agent SDK credit, Anthropic model, Replit pricing, Agent, AI billing, Modes, App Testing, Skills, Custom Instructions, and Package Firewall checks; buyer guidance now separates Claude-style reasoning, repo investigation, and code review from Replit-style browser app building, prototypes, and internal tools.');
   lines.push('Recent comparison refresh: June 20, 2026 added Canva vs Claude and refreshed Canva, Claude, AI Design, source registry, ledger, and LLM maintenance after current Canva AI 2.0, Canva Business, AI Pass, Canva AI Product Terms, Canva Claude connector, Claude pricing, Claude for Small Business, and Agent SDK credit help checks; buyer guidance now separates final creative production from upstream reasoning, critique, coding, connector workflows, and the paused Agent SDK credit split.');
-  lines.push('Recent news refresh: June 17, 2026 filled the active June date gap with the June 17 AI News Desk plus Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage, updating news archive, RSS, ledger, and LLM maintenance around phone-native Gemini creation, metered workplace agents, sovereign model-access risk, and compute-capacity procurement checks.');
+  lines.push('Recent news refresh: June 17, 2026 filled the active June date gap with focused Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage, updating news archive, RSS, ledger, and LLM maintenance around phone-native Gemini creation, metered workplace agents, sovereign model-access risk, and compute-capacity procurement checks.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI image generator answer plus answers index, homepage/explore comments, source registry cleanup, ledger, and LLM maintenance around ChatGPT with GPT Image 2 as the default, Midjourney for art direction, Ideogram for typography, Adobe Firefly for Adobe-governed creative, and Flux/Stable Diffusion/API-first routes for control-heavy workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Midjourney worth-it answer plus answers index, homepage/explore comments, source registry, ledger, and LLM maintenance around Standard-vs-Pro fit, V8.1 default status, V7 Omni Reference fallback, Stealth Mode, SD video Relax Mode, video GPU cost caveats, commercial-rights thresholds, no generally available public API, and alternatives for text-heavy, Adobe-governed, assistant-first, or local/API image workflows.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the Cursor worth-it answer plus answers index, homepage/explore comments, source registry, and LLM maintenance around Cursor Pro/Pro+/Ultra fit, Teams Standard/Premium usage pools, on-demand usage billing, spend alerts, Privacy Mode/ZDR limits, GitHub Copilot rollout fit, and Claude Code terminal-first fit.');
   lines.push('Recent answer refresh: June 16, 2026 refreshed the best AI chatbot, ChatGPT-vs-Claude, ChatGPT alternatives, and best free AI tools answers plus answers index, homepage shortcut, source registry, and LLM maintenance around ChatGPT as the broad default, ChatGPT Free GPT-5.5/tool limits, ChatGPT plan-fit escalation, Claude Free/Pro usage boundaries, Claude Opus 4.8 fallback and Fable/Mythos access suspension, Gemini/NotebookLM Google-native fit, NotebookLM Standard source/research limits, and Perplexity citation-first research fit.');
-  lines.push('Recent news/category refresh: June 16, 2026 added Google Cloud data-agent coverage and refreshed the June 16 desk, AI Automation, AI Infrastructure, source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Data Engineering Agent GA, Managed MCP Servers for Databases GA, Conversational Analytics, Looker and Gemini Enterprise previews, IAM/MCP permissions, SQL verification, BigQuery spend limits, job labels, and preview-vs-GA rollout boundaries.');
-  lines.push('Recent news refresh: June 16, 2026 backfilled the June 12 OpenAI Academy workplace-courses story and updated the June 12 desk, source registry, homepage, news archive, RSS, explore, and LLM maintenance around AI Foundations, Applied AI Foundations, Agents and Workflows, completion certificates, enterprise onboarding, and the warning that training certificates do not replace governance.');
-  lines.push('Recent news/tool refresh: June 16, 2026 added the Work IQ GA desk and buyer checklist, refreshed Microsoft Agent Framework and AI Automation, and updated source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Work IQ API GA, Copilot Credit billing, Partner Center admin controls, tenant-bound context, and pending G7 AI summit statements.');
+  lines.push('Recent news/category refresh: June 16, 2026 added Google Cloud data-agent coverage and refreshed the June 16 focused coverage, AI Automation, AI Infrastructure, source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Data Engineering Agent GA, Managed MCP Servers for Databases GA, Conversational Analytics, Looker and Gemini Enterprise previews, IAM/MCP permissions, SQL verification, BigQuery spend limits, job labels, and preview-vs-GA rollout boundaries.');
+  lines.push('Recent news refresh: June 16, 2026 backfilled the June 12 OpenAI Academy workplace-courses story and updated the June 12 focused coverage, source registry, homepage, news archive, RSS, explore, and LLM maintenance around AI Foundations, Applied AI Foundations, Agents and Workflows, completion certificates, enterprise onboarding, and the warning that training certificates do not replace governance.');
+  lines.push('Recent news/tool refresh: June 16, 2026 added the Work IQ GA buyer checklist, refreshed Microsoft Agent Framework and AI Automation, and updated source registry, homepage, news archive, RSS, tools index, categories index, explore, and LLM maintenance around Work IQ API GA, Copilot Credit billing, Partner Center admin controls, tenant-bound context, and pending G7 AI summit statements.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Presentation plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Gamma Plus/Pro/Ultra deck/export/API gates, Pitch AI credits and branded export gates, Canva AI Product Terms and operational usage limits, Beautiful.ai trial/pricing, Decktopus credits, Presentations.AI credit discrepancy, Napkin AI visual credits, and Prezi route-check caveats.');
   lines.push('Recent category refresh: June 15, 2026 refreshed AI Music plus source registry, homepage, tools index, categories index, explore, and LLM maintenance around Suno paid-rights timing, Udio disabled downloads, ElevenLabs Music/API, AIVA scoring plans, Mubert Content ID/standalone/stock-site exclusions, Stable Audio 3.0 open weights/API, and Boomy/Stable Audio source-visible pricing caveats.');
   lines.push('Recent trend/category refresh: June 16, 2026 refreshed GEO, Generative Engine Optimization, and the AI SEO parent hub plus source registry, homepage, trends index, categories index, tools index, explore, and LLM maintenance around Google Search Console generative-AI performance reports, AI visibility prompt dashboards, citation/source logs, claim fidelity, Google AI features guidance, Pew click research, AI Overview measurement, and liability-aware source-review controls.');
@@ -489,7 +490,7 @@ export const GET: APIRoute = async () => {
   lines.push('Recent news refresh: June 15, 2026 added Visa/ChatGPT agent-payments coverage and refreshed ChatGPT, OpenAI, AI Chatbots, and agent-commerce guidance around consumer-controlled checkout, approval workflows, spending limits, token scope, merchant boundaries, human approval defaults, and dispute-ready logs.');
   lines.push('Recent news refresh: June 15, 2026 added OpenAI/Ona Codex persistent-agent coverage, updating Codex and AI Coding buyer guidance around customer-controlled cloud execution, scoped credentials, audit logs, review gates, long-running work, and budget controls.');
   lines.push('Recent news refresh: June 15, 2026 added a coding-agent governance story from Disney AI adoption reporting, turning Claude/Cursor usage, tokenmaxxing, AI-coded release quality, source-backed agent configuration, tests, review ownership, rollback safety, and token-budget controls into explicit buyer guidance for Cursor, Claude Code, and AI Coding teams.');
-  lines.push('Recent news refresh: June 15, 2026 added a buyer-facing AI news desk and Google AI search risk checklist covering the G7 Evian opening with AI regulation on the agenda, AP state-AI-law patchwork reporting, Google AI Overviews liability reporting, Google Gemini-related phishing lawsuit coverage, and the resulting source-log, abuse-control, workflow-scope, and governance checklist for Gemini, ChatGPT, Claude, Perplexity, AI Search, and AI Chatbots buyers.');
+  lines.push('Recent news refresh: June 15, 2026 added buyer-facing AI governance coverage and Google AI search risk checklist covering the G7 Evian opening with AI regulation on the agenda, AP state-AI-law patchwork reporting, Google AI Overviews liability reporting, Google Gemini-related phishing lawsuit coverage, and the resulting source-log, abuse-control, workflow-scope, and governance checklist for Gemini, ChatGPT, Claude, Perplexity, AI Search, and AI Chatbots buyers.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed CodeRabbit plus AI Coding, the code-review buyer guide, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around Pro/Pro+ pricing, refillable review allowances, $1 usage credits, Slack Agent billing, CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and GitLab/GHES review updates.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Qodo plus AI Coding, the code-review buyer guide, source registry, homepage, tools index, categories index, guides index, and LLM maintenance around Qodo Review v2, Teams paid-seat and Git-account linking requirements, Free review limits, Enterprise org-whitelisted review, Context Engine/governance docs, and the CLI legacy caveat.');
   lines.push('Recent tool refresh: June 15, 2026 refreshed Mastra plus AI Coding, source registry, homepage, tools index, categories index, and LLM maintenance around Starter/Teams/Enterprise pricing, usage meters, model-router scope, GitHub/company traction claims, Code Mode, Agent Signals, ACP support, and sandbox/harness permission review.');
@@ -513,8 +514,8 @@ export const GET: APIRoute = async () => {
   lines.push('Recent tool refresh: June 14, 2026 refreshed Val Town and the AI Coding parent hub around Free/Pro/Business pricing, Townie credits, tiny TypeScript runtime fit, and the Vercel Functions alternative-platform boundary.');
   lines.push('Recent tool refresh: June 14, 2026 refreshed Aider and the AI Coding parent hub around source-backed BYOK cost language, provider/API cost modeling, and a repaired Claude Code alternative link.');
   lines.push('Recent tool refresh: June 14, 2026 updated ChatGPT and the AI Chatbots parent hub with a safety-procurement checklist based on AP and Business Insider OpenAI probe reporting; refreshed /tools/, /categories/, homepage, and LLM surfaces.');
-  lines.push('Recent news refresh: June 14, 2026 added a buyer-facing AI news desk plus an OpenAI ChatGPT safety-procurement checklist covering multistate probe reporting, Anthropic Fable/Mythos access risk, ChatGPT GPT-5.2 retirement, G7 governance, homepage, /news/, RSS, and LLM surfaces.');
-  lines.push('Recent trend refresh: June 23, 2026 rebuilt the AI Model Availability Tracker as a simple daily availability ledger covering GPT-5.5, unreleased GPT-5.6, Claude Opus/Fable/Mythos, Gemini 3.5 Flash/Pro, Grok 4.3, DeepSeek V4, Qwen3.7, Kimi, Mistral, Llama 4, MiniMax M3, and Cohere Command A+; homepage and /news/ are now marked for daily refresh, and /news/ daily maintenance must add at least three source-backed AI or AI-tool stories.');
+  lines.push('Recent news refresh: June 14, 2026 added buyer-facing AI coverage plus an OpenAI ChatGPT safety-procurement checklist covering multistate probe reporting, Anthropic Fable/Mythos access risk, ChatGPT GPT-5.2 retirement, G7 governance, homepage, /news/, RSS, and LLM surfaces.');
+  lines.push('Recent trend refresh: June 24, 2026 simplified the AI Model Availability Tracker into a two-column green/red ledger with only model name and current availability status.');
   lines.push('Recent news refresh: June 13, 2026 covered late-day Claude Fable 5/Mythos 5 access suspension, ChatGPT GPT-5.2 retirement, and reported OpenAI state-attorneys-general scrutiny; refreshed Claude, Claude Code, ChatGPT, Anthropic, OpenAI, AI Chatbots, AI Coding, AI Infrastructure, /news/, RSS, homepage, /explore/, /tools/, /categories/, /companies/, and LLM surfaces.');
   lines.push('Recent maintenance: June 12, 2026 refreshed the May 15 frontier across /about/our-stack/, the landing-page A/B testing guide, and OpenClaw; updated Unbounce, Instapage, VWO, Convert, Leadpages, and OpenClaw source posture plus /about/, /guides/, /tools/, AI Automation, homepage, categories, source registry, and LLM surfaces.');
   lines.push('Recent news refresh: June 10, 2026 added June 9-10 source-backed AI tools coverage across Claude Fable 5/Mythos 5, Apple Siri AI and EU rollout risk, Copilot CLI custom agents, Datadog DASH agent observability/security, Similarweb May 2026 AI chatbot rankings, Claude Cowork, Gemini for Apple developers, Devin/Desktop, FrontierCode, and local model deployment.');

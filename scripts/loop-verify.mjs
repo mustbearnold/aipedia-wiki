@@ -16,6 +16,7 @@ const SKIP_BUILD = hasFlag('--skip-build');
 const SKIP_ROUTE_QA = hasFlag('--skip-route-qa');
 const FORCE_BUILD = hasFlag('--force-build');
 const DEFAULT_ROUTE_WIDTHS = '360,390,430,768,1024,1366';
+const DEFAULT_ROUTE_CONCURRENCY = 4;
 const KNOWN_FLAGS = new Set([
   '--date',
   '--route',
@@ -25,6 +26,8 @@ const KNOWN_FLAGS = new Set([
   '--width',
   '--widths',
   '--site-dir',
+  '--base-url',
+  '--concurrency',
   '--project-dir',
   '--root',
   '--skip-build',
@@ -44,6 +47,8 @@ const VALUE_FLAGS = new Set([
   '--width',
   '--widths',
   '--site-dir',
+  '--base-url',
+  '--concurrency',
   '--project-dir',
   '--root',
 ]);
@@ -98,6 +103,8 @@ function usage() {
     '  --path <path>        Changed path. Repeatable or comma-separated via --paths.',
     '  --widths <list>      Route QA widths. Default: 360,390,430,768,1024,1366.',
     '  --site-dir <dir>     Static build directory passed to qa:route.',
+    '  --base-url <url>      Local server URL passed to qa:route, for example http://127.0.0.1:4325.',
+    '  --concurrency <n>    Route QA concurrency. Default: 4.',
     '  --skip-build         Do not add a fallback build:fast step.',
     '  --force-build        Run build:fast even when no route QA is requested.',
     '  --skip-route-qa      Do not run qa:route.',
@@ -129,6 +136,9 @@ function collectArgumentIssues() {
   if (SKIP_BUILD && FORCE_BUILD) {
     issues.push({ code: 'argument-invalid', detail: 'choose only one of --skip-build or --force-build' });
   }
+  if (hasFlag('--site-dir') && hasFlag('--base-url')) {
+    issues.push({ code: 'argument-invalid', detail: 'choose only one of --site-dir or --base-url' });
+  }
 
   const date = verificationDate();
   if (!date) issues.push({ code: 'argument-invalid', detail: '--date or AIPEDIA_LEDGER_DATE is required' });
@@ -140,6 +150,11 @@ function collectArgumentIssues() {
     if (!Number.isInteger(width) || width < 240 || width > 3840) {
       issues.push({ code: 'argument-invalid', detail: `width must be an integer from 240 to 3840, got ${width}` });
     }
+  }
+
+  const concurrency = concurrencyForQa();
+  if (!Number.isInteger(concurrency) || concurrency < 1 || concurrency > 8) {
+    issues.push({ code: 'argument-invalid', detail: `concurrency must be an integer from 1 to 8, got ${valueFor('--concurrency') || concurrency}` });
   }
   return issues;
 }
@@ -191,6 +206,12 @@ function widthsForQa() {
   const rawWidths = valuesFor('--width', '--widths');
   const values = rawWidths.length ? rawWidths : DEFAULT_ROUTE_WIDTHS.split(',');
   return [...new Set(values.map((width) => Number(width)))].sort((a, b) => a - b);
+}
+
+function concurrencyForQa() {
+  const raw = valueFor('--concurrency');
+  if (!raw) return DEFAULT_ROUTE_CONCURRENCY;
+  return Number(raw);
 }
 
 function commandLabel(step) {
@@ -246,7 +267,10 @@ function commandPlan({ paths, date, route, widths }) {
   if (!SKIP_ROUTE_QA && route && !smartRunsRouteQa) {
     const routeArgs = ['scripts/qa-route.mjs', '--route', route, '--widths', widths.join(',')];
     const siteDir = valueFor('--site-dir');
+    const baseUrl = valueFor('--base-url');
     if (siteDir) routeArgs.push('--site-dir', siteDir);
+    if (baseUrl) routeArgs.push('--base-url', baseUrl);
+    routeArgs.push('--concurrency', String(concurrencyForQa()));
     steps.push(step(process.execPath, routeArgs, `route QA for ${route} at ${widths.join(', ')} px`));
   }
 
@@ -329,6 +353,7 @@ function main() {
   const route = routeForQa();
   const widths = widthsForQa();
   const plan = commandPlan({ paths, date, route, widths });
+  const routeQaConcurrency = concurrencyForQa();
   const commands = plan.steps.map(commandLabel);
   const reportBase = {
     ok: true,
@@ -338,6 +363,8 @@ function main() {
     paths,
     route,
     widths,
+    route_qa_concurrency: routeQaConcurrency,
+    route_qa_base_url: valueFor('--base-url'),
     smart_runs_build: plan.smartRunsBuild,
     smart_runs_route_qa: plan.smartRunsRouteQa,
     commands,

@@ -3,6 +3,8 @@
  * /tools/ index — god-tier 10/10 mobile-first.
  *
  * Full catalog of active AI tools sorted by score, with category filter chips.
+ * Refresh metadata: 2026-06-24 active-tool hub first screen tightened with
+ * top tool, biggest category, and model-status fast paths before filters.
  * Refresh metadata: 2026-06-21 active-tool hub inspected after Activepieces
  * vs n8n loop refreshed Activepieces, n8n, AI Automation, source registry,
  * comparison archive, ledger, and LLM surfaces around open-source automation
@@ -523,6 +525,8 @@ const categoryOptions = Array.from(categoryCounts.entries())
   .map(([slug, count]) => ({ slug, label: categoryLabel(slug), count }))
   .sort((a, b) => b.count - a.count);
 
+const topTool = scoredTools[0];
+const topCategory = categoryOptions[0];
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
 const description = `Complete index of all ${scoredTools.length} active AI tools reviewed on aipedia.wiki. Sorted by editorial score across ${categoryOptions.length} categories.`;
 
@@ -551,7 +555,7 @@ const itemList = scoredTools.map((t) => ({
   <div class="gt-canvas">
     <Hero
       title="All AI tools"
-      tagline="Every actively-reviewed AI tool in the catalog, sorted by editorial score. Filter by category, click through to deep reviews."
+      tagline="Search the active catalog, or start with the top-rated tool, busiest category, or model-status ledger."
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: 'All tools' },
@@ -559,21 +563,54 @@ const itemList = scoredTools.map((t) => ({
       rankLabel={`${scoredTools.length} tools · ${categoryOptions.length} categories`}
     />
 
-    <aside class="gt-model-tracker" aria-label="Model availability tracker">
+    <nav class="gt-tools-fastpaths" aria-label="Fast tool catalog paths">
+      {topTool && (
+        <a
+          href={`/tools/${topTool.slug}/`}
+          data-analytics-event="related_tool_click"
+          data-analytics-source-module="tools_index_fastpath"
+          data-analytics-destination-type="tool"
+          data-analytics-destination-slug={`tools/${topTool.slug}`}
+          data-analytics-tool-slug={topTool.slug}
+          data-analytics-position="top"
+          data-analytics-label={topTool.title}
+        >
+          <span>Top rated</span>
+          <strong>{topTool.title}</strong>
+          <em>{topTool.score}/10</em>
+        </a>
+      )}
+      {topCategory && (
+        <a
+          href={`/categories/${topCategory.slug}/`}
+          data-analytics-event="related_category_click"
+          data-analytics-source-module="tools_index_fastpath"
+          data-analytics-destination-type="category"
+          data-analytics-destination-slug={`categories/${topCategory.slug}`}
+          data-analytics-category-slug={topCategory.slug}
+          data-analytics-position="top"
+          data-analytics-label={topCategory.label}
+        >
+          <span>Biggest category</span>
+          <strong>{topCategory.label}</strong>
+          <em>{topCategory.count} tools</em>
+        </a>
+      )}
       <a
         href="/trends/model-availability-churn/"
         data-analytics-event="internal_cta_click"
-        data-analytics-source-module="tools_index_model_tracker"
+        data-analytics-source-module="tools_index_fastpath"
         data-analytics-destination-type="trend"
         data-analytics-destination-slug="trends/model-availability-churn"
         data-analytics-destination-url="/trends/model-availability-churn/"
         data-analytics-position="top"
         data-analytics-label="Track model availability"
       >
-        <strong>Model availability tracker</strong>
-        <span>Check current ChatGPT, Claude, Gemini, Copilot, Codex, and model-router risk before choosing a tool.</span>
+        <span>Model routes</span>
+        <strong>Availability ledger</strong>
+        <em>Green or red</em>
       </a>
-    </aside>
+    </nav>
 
     <form class="gt-tools-search" role="search" onsubmit="return false">
       <label for="tools-search-input" class="gt-sr-only">Search tools</label>
@@ -697,23 +734,51 @@ const itemList = scoredTools.map((t) => ({
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
     }
-    .gt-model-tracker {
+    .gt-tools-fastpaths {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
       margin: 0 0 12px;
+    }
+    .gt-tools-fastpaths a {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 3px 10px;
+      align-items: baseline;
+      min-height: 70px;
+      padding: 12px 14px;
       border: 1px solid var(--gt-line-strong);
+      border-left: 3px solid var(--gt-accent);
       border-radius: var(--gt-radius-sm);
       background: var(--gt-surface);
-    }
-    .gt-model-tracker a {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      padding: 12px 14px;
       color: var(--gt-fg);
       text-decoration: none;
     }
-    .gt-model-tracker:hover { background: var(--gt-surface-2); }
-    .gt-model-tracker strong { font-size: 14px; line-height: 1.3; }
-    .gt-model-tracker span { font-size: 13px; line-height: 1.45; color: var(--gt-muted); }
+    .gt-tools-fastpaths a:hover { background: var(--gt-surface-2); }
+    .gt-tools-fastpaths span {
+      grid-column: 1 / -1;
+      color: var(--gt-subtle);
+      font-size: 10px;
+      font-weight: 750;
+      line-height: 1.2;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .gt-tools-fastpaths strong {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+    .gt-tools-fastpaths em {
+      color: var(--gt-accent);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 750;
+      white-space: nowrap;
+    }
     .gt-tools-search { margin: 0 0 12px; }
     .gt-tools-search input {
       width: 100%;
@@ -831,6 +896,9 @@ const itemList = scoredTools.map((t) => ({
       background: var(--gt-surface);
       color: var(--gt-muted);
       font-size: 14px;
+    }
+    @media (min-width: 680px) {
+      .gt-tools-fastpaths { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
   </style>
 </BaseLayout>

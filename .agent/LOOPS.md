@@ -1,6 +1,6 @@
 # AiPedia Loop Registry
 
-Last updated: 2026-06-22
+Last updated: 2026-06-24
 
 This file explains the repeatable AiPedia loops in plain English. The executable registry lives in `src/data/aipedia-loops.json`, and the runner is `npm run loop:system`.
 
@@ -23,9 +23,10 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:quality -- --json`: run the Quality Pruning loop checks.
 - `npm run loop:performance -- --json`: run the Performance and UX loop checks.
 - `npm run loop:news -- --json`: run the News and Market Change loop checks.
-- `npm run tool:refresh:batch -- --limit 4`: plan the next batched oldest-first tool refresh.
-- `npm run tool:refresh:batch -- --limit 4 --json`: emit the same batch plan in structured form.
-- `npm run tool:refresh:batch:check`: run the fast grouped gate for changed tool files, including per-tool quality, changed provenance, freshness, ledger check, em-dash guard, and `git diff --check`, without build/typecheck/route QA.
+- `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10`: plan the next batched oldest-first tool refresh.
+- `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`: emit the same batch plan in structured form, including `agent_briefs` for six shard workers, up to 10 tools per worker, and a single integrator.
+- `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents`: print shard-worker prompts and the integrator prompt for manual subagent fanout.
+- `npm run tool:refresh:batch:check -- --plan <planner-json>`: run the fast grouped gate from a saved planner output, including per-tool quality, changed provenance, freshness, ledger check, em-dash guard, and `git diff --check`, without build/typecheck/route QA.
 
 Built-output loops depend on fresh `dist-fast/client` output. If the runner skips conversion or performance, run `npm run build:fast`, then rerun the specific loop. If the runner marks built output as stale or unknown, do the same before trusting rendered-output audits.
 
@@ -58,7 +59,13 @@ Use when the question is "what is stale next?" It turns due review dates, stale 
 
 Primary output: tool/fact refresh candidates ordered by due date and comparison impact.
 
-Default tool-refresh mode is batched. Use `npm run tool:refresh:batch -- --limit 4` to group the next tools, source IDs, parent category routes, and closeout commands. Verify and edit several tools together, run `npm run ledger:pages`, then use `npm run tool:refresh:batch:check` as the fast pre-build gate. Only after that should the batch pay for typecheck, one `npm run build:fast`, and one combined route-QA command. Do not run a full build after every individual tool unless the tool introduces template/layout/runtime changes, a high-risk commercial claim, or a blocker that must be isolated.
+Default tool-refresh mode is a 60-tool planner batch with six shard workers, up to 10 tools per worker. Use `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json` to group the next tools, source IDs, parent category routes, closeout commands, and shard prompts. Each worker may edit only the tool markdown files listed in its shard, and the Codex Windows app should launch no more than six active workers at once. Workers must not edit `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, parent category hubs, top-layer pages, or `.agent` continuity docs. The integrator reviews all worker diffs, deduplicates source-registry rows, updates shared surfaces once, runs `npm run ledger:pages`, then uses `npm run tool:refresh:batch:check -- --plan <planner-json>` as the fast pre-build gate. Only after that should the batch pay for typecheck, one `npm run build:fast`, and one combined route-QA command. Do not run a full build after every individual tool unless the tool introduces template/layout/runtime changes, a high-risk commercial claim, or a blocker that must be isolated.
+
+The incubating skill for this flow is `$aipedia-tool-refresh-workflow` at `.agents/skills/aipedia-tool-refresh-workflow/`. Use the skill as the working playbook while the process is still being tuned. Promote stable behavior into `src/data/aipedia-loops.json` only after repeated successful runs.
+
+Current timing guidance from the June 24, 2026 tool-refresh run: `tool:refresh:batch:check` is about 12 seconds for a dirty five-tool batch, `typecheck` is about 25-31 seconds, and `build:fast` is now about 65 seconds end to end after production-only content collection caching. Astro static prerender dropped from about 2m 13s to about 37 seconds. Built-output audits after Astro are small: indexability was under 1 second, commercial CTA audit was about 2 seconds, and budget check was under 1 second. Run `build:fast` once per batch, not once per tool. Run `typecheck` and `build:fast` sequentially because both commands sync Astro content and can race on `node_modules/.astro/data-store.json` when parallelized.
+
+Route QA now supports faster local loops. Use `node scripts\qa-route.mjs --base-url http://127.0.0.1:4325 --concurrency 4 ...` while editing against the running dev server, then after the one final build use `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 ...`. On the June 24 12-route by 5-width matrix, serial QA took about 65 seconds and concurrency 4 took about 19 seconds against both dev-server and static built output.
 
 ### Trust And Provenance Loop
 

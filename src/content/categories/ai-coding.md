@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 31
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 23, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
+meta_description: "Updated June 24, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -29,7 +29,7 @@ decision_picks:
       - cursor-pricing
       - cursor-changelog
       - cursor-teams-pricing-june-2026
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     confidence: high
   - tool: github-copilot
     label: Best GitHub-native enterprise default
@@ -40,7 +40,7 @@ decision_picks:
       - github-copilot-plan-docs
       - github-copilot-ai-credits
       - github-copilot-app-ga
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     confidence: high
 ---
 
@@ -82,7 +82,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Claude Code](/tools/claude-code/) when the buyer wants a Claude-backed coding agent for serious repo work.** The June 4 comparison pass clarified the real buyer split: specialist Claude agent, open-source BYOK IDE layer, async ticket delegation, GitHub-native AI platform, or hosted TypeScript runtime. Adjacent-lane pages from that pass are retired unless the tools are direct substitutes for the same workflow. Claude Code is better for repo investigation, multi-file work, command execution, debugging loops, and senior-engineer-style delegation than for passive autocomplete.
 
-**June 21 Claude Code billing correction:** [Claude Fable 5 and Mythos 5 access is suspended](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/), and the [June 14 desk](/news/2026-06-14-ai-news-desk/) makes the route-risk lesson explicit. Claude Code buyers should treat Opus 4.8 as the stable high-end Anthropic route until Anthropic restores Fable/Mythos access. Do not use Fable- or Mythos-specific pilot notes as production-default evidence until the account route is actually available again. Anthropic's Agent SDK help still says the separate Agent SDK credit changes are paused, so do not budget around a separate Agent SDK, `claude -p`, or GitHub Actions credit pool until Anthropic updates the guidance. For coding-agent route stability across Claude Code, Codex, GitHub Copilot, and model routers, use the [AI Model Availability & Churn Tracker](/trends/model-availability-churn/).
+**June 24 Claude Code billing correction:** Claude Code buyers should treat Opus 4.8 as the stable public high-end Anthropic route unless their own account, contract, or console shows Fable/Mythos access. Do not use Fable- or Mythos-specific pilot notes as production-default evidence until the account route is actually available. Anthropic's current Agent SDK help now points plan users back to monthly Claude credits for supported Agent SDK and Claude Code usage, while direct API usage remains separate. For coding-agent route stability across Claude Code, Codex, GitHub Copilot, and model routers, use the [AI Model Availability & Churn Tracker](/trends/model-availability-churn/).
 
 **Use [Windsurf / Devin Desktop](/tools/windsurf/) when the buyer wants Cognition's IDE surface beside Devin.** The June 18 recheck keeps `windsurf.com/pricing` routed through Devin pricing, but the page now needs to be evaluated as a current Devin Desktop stack, not a simple rename. Devin pricing still lists Free, Pro $20/month, Max $200/month, Teams $80/month plus $40/month per full dev seat, and Enterprise custom, while docs now make daily/weekly quotas, extra usage at API pricing, SWE-1.6, Devin Local, ACP, and migration/admin details central to the buyer decision.
 
@@ -96,11 +96,11 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 22 Mastra update:** [Mastra](/tools/mastra/) remains the TypeScript-first agent-framework lane, not a no-code app builder. The current pricing page keeps Starter at $0/month, Teams at $250/month, and Enterprise/self-hosted custom, but the June 22 check sharpens the real cost model around observability events, CPU time, data egress, persistent servers, Memory Gateway input/output at market rate plus 5.5%, memory tokens, retrieval storage, platform storage, LibSQL/Postgres meters, database storage, and outside model-provider spend. Current docs also make Mastra a broader production-agent surface: the model router claims 4,539 models across 133 providers, while June posts added Code Mode, Agent Signals, ACP delegation, and harness architecture guidance. Treat sandbox policy, workspace isolation, tool approvals, and provider-key handling as part of the buying decision.
 
-**June 22 CodeRabbit update:** [CodeRabbit](/tools/coderabbit/) remains the dedicated PR-review lane for teams that want AI summaries, comments, IDE/CLI review, Knowledge Base, linters, SAST hooks, and human approval before merge. The June 22 check keeps Pro at $24/developer/month annual or $30 monthly, Pro+ at $48 annual or $60 monthly, Slack Agent at $0.50 per active agent minute, and adds sharper capacity guidance: Pro, Pro+, and Enterprise review limits are refillable per-developer allowances, while usage add-on credits are $1 each and cover four reviewed files for eligible over-limit PR/CLI reviews. June changelog updates also matter for coding-agent teams: CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and newer GitLab/GHES review support.
+**June 24 CodeRabbit update:** [CodeRabbit](/tools/coderabbit/) remains the dedicated PR-review lane for teams that want AI summaries, comments, IDE/CLI review, Knowledge Base, linters, SAST hooks, and human approval before merge. The June 24 check keeps Pro at $24/developer/month annual or $30 monthly, Pro+ at $48 annual or $60 monthly, Slack Agent at $0.50 per active agent minute, and adds sharper capacity guidance: Pro, Pro+, and Enterprise review limits are refillable per-developer allowances, while usage add-on credits are $1 each and cover four reviewed files for eligible over-limit PR/CLI reviews. June changelog updates also matter for coding-agent teams: CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and newer GitLab/GHES review support.
 
 **June 22 Qodo update:** [Qodo](/tools/qodo/) remains the enterprise code-review governance lane, not an autocomplete replacement. Current pricing no longer shows the old permanent Developer free tier or $38/user/month Teams plan: every workspace starts with a 14-day trial, then Pro Team starts at $30/month with shared credits, overage caps, and support for up to 30 users. Enterprise is the route for SSO/SAML, audit logs, BYOK, advanced analytics, single-tenant SaaS, on-prem, air-gapped deployment, and negotiated contracts. Treat CLI workflows as sales-verified rather than the default reason to buy.
 
-**June 23 BLACKBOX AI update:** [BLACKBOX AI](/tools/blackbox-ai/) remains a low-cost multi-model coding bundle rather than a procurement-safe enterprise default. Current pricing still lists Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom. The clearest pricing rows now show $20/$40/$80 in model credits, while some card copy still uses lower subscription-aligned wording, so checkout remains the budget source of truth. Keep Pro Plus as the practical App Builder, multi-agent, coding-agent tier; use Pro Max for team/admin controls; and do not treat the paused Cuelinks CPC listing as an active affiliate CTA.
+**June 24 BLACKBOX AI update:** [BLACKBOX AI](/tools/blackbox-ai/) remains a low-cost multi-model coding bundle rather than a procurement-safe enterprise default. Current pricing still lists Pro at $10/month, Pro Plus at $20/month, Pro Max at $40/month, and Enterprise custom. The clearest pricing rows now show $20/$40/$80 in model credits, while some card copy still uses lower subscription-aligned wording, so checkout remains the budget source of truth. Keep Pro Plus as the practical App Builder, multi-agent, coding-agent tier; use Pro Max for team/admin controls; treat SOC 2 Type II and ISO 27001 as in-progress audit items; and do not treat the paused Cuelinks CPC listing as an active affiliate CTA.
 
 **June 22 Replit Agent update:** [Replit Agent](/tools/replit-agent/) should now be evaluated as the current Agent / Agent 4-era browser app-builder surface, not the older Agent 3 session-length story. Current Replit sources keep Lite, Economy, Power, High effort, Pro/Enterprise-only Turbo, Plan Mode, Design Canvas, Web Search, Agent Skills, app self-testing, and task workflows as the buyer frame, while the newer June checks add Custom Instructions, Skills-as-`SKILL.md`, Package Firewall, Starter feature gates, App Testing's web-app-only scope, and Pro credit rollover. Core remains the solo-builder upgrade and Pro is the serious Agent tier, but buyers need usage budgets because Plan Mode/text guidance, third-party API calls, App Testing, High effort, and Turbo can all raise credit burn.
 
@@ -116,7 +116,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The June 23 check keeps the active repository at `aaif-goose/goose`, with v1.38.0 as the latest release from June 17, 2026, Apache-2.0 code, 15+ provider routes, 70+ MCP extensions, and no Goose subscription fee. The real cost is the configured LLM plus local permission, extension-trust, and secrets controls.
 
-**June 22 Cline update:** [Cline](/tools/cline/) is no longer just a "free VS Code extension" buyer lane. Current Cline pages position it as an open-source agent runtime across IDE, CLI, Kanban, SDK, and a separate licensed Spec Driven enterprise platform with LG CNS. Open Source remains free for individual developers, but inference is usage-based or BYOK, and the pricing navigation now shows roughly 64k GitHub stars. Enterprise and Spec Driven are custom/licensed governance and delivery-platform lanes for SSO/RBAC/billing/audit/deployment controls, enterprise context, fixed spec pipelines, and model/deployment boundaries. Teams should review Auto Approve/YOLO plus SDK tool policies before broad automation because unlisted SDK tools default to enabled and auto-approved. Vercel AI Gateway is one supported provider route, not the whole product.
+**June 24 Cline update:** [Cline](/tools/cline/) is no longer just a "free VS Code extension" buyer lane. Current Cline pages position it as an open-source agent runtime across IDE, CLI, Kanban, SDK, and a separate licensed Spec Driven enterprise platform with LG CNS. Open Source remains free for individual developers, but inference is usage-based or BYOK, and the pricing navigation now shows roughly 64k GitHub stars. Enterprise and Spec Driven are custom/licensed governance and delivery-platform lanes for SSO/RBAC/billing/audit/deployment controls, enterprise context, fixed spec pipelines, and model/deployment boundaries. Teams should review Auto Approve/YOLO plus SDK tool policies before broad automation because unlisted SDK tools default to enabled and auto-approved. Vercel AI Gateway is one supported provider route, not the whole product.
 
 **June 22 Cody update:** [Cody](/tools/cody/) remains a Sourcegraph Enterprise-only code-intelligence lane, not a self-serve Copilot alternative. Current Sourcegraph sources still keep Enterprise starting at $16K with AI-feature credits, org-wide credit pooling, no monthly credit expiry, and renewal rollover; the VS Code Marketplace now warns Cody is no longer available for non-enterprise users even while the listing still carries stale Cody Pro/model-option copy. Evaluate it only when Sourcegraph code graph, Deep Search, MCP/API/CLI access, Cody Gateway/model controls, and enterprise procurement are part of the platform decision.
 
@@ -194,7 +194,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 ## Money Pages To Build Next
 
 - Do not rebuild Cursor vs GitHub Copilot as a standalone page unless a human narrows it to a same-workflow purchase. Cover the IDE-versus-GitHub-governance split in the coding guide and tool pages.
-- [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 6 verified founder build path: Cursor for technical founders, Lovable/Bolt for non-technical MVPs, ChatGPT as the low-friction generalist, and explicit budgeting for GitHub Copilot AI Credits plus the now-paused Claude Agent SDK credit split.
+- [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 6 verified founder build path: Cursor for technical founders, Lovable/Bolt for non-technical MVPs, ChatGPT as the low-friction generalist, and explicit budgeting for GitHub Copilot AI Credits plus Claude Agent SDK and Claude Code plan credits.
 - [Daily agentic coding workflow](/workflows/agentic-coding-workflow/) now separates Cursor, Claude Code, GitHub Copilot, and Codex by job while warning teams to model Claude usage and Copilot AI Credits before broad rollout.
 - [Micro-SaaS weekend MVP workflow](/workflows/micro-saas-weekend-build/) now shows how to use Cursor with Supabase, Vercel, Vercel Functions, Stripe, and Lemon Squeezy without pretending a weekend prototype is a production SaaS.
 - [Best AI tools for developers](/guides/best-ai-tools-for-developers/) is the June 6 verified AI developer buyer guide for AI-native IDE, GitHub-native assistant, terminal-agent, OpenAI-native agent, browser app-builder, and open-source CLI decisions.
@@ -261,9 +261,9 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [DeepSeek API pricing docs](https://api-docs.deepseek.com/quick_start/pricing) (verified 2026-06-20)
 - [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424) (verified 2026-06-20)
 - [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai) (verified 2026-06-20)
-- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-23)
-- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-23)
-- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-23)
+- [Claude Code docs](https://code.claude.com/docs) (verified 2026-06-24)
+- [Claude Code cost management](https://code.claude.com/docs/en/costs) (verified 2026-06-24)
+- [Claude Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-24)
 - [AiPedia late June 13 AI news update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/) (verified 2026-06-13)
 - [AiPedia June 14 AI news desk](/news/2026-06-14-ai-news-desk/) (verified 2026-06-14)
 - [Anthropic Fable page](https://www.anthropic.com/claude/fable) (verified 2026-06-23)
@@ -286,18 +286,18 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Augment Code pricing](https://www.augmentcode.com/pricing) (verified 2026-06-23)
 - [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing) (verified 2026-06-23)
 - [Augment feature availability](https://docs.augmentcode.com/feature-availability) (verified 2026-06-23)
-- [Cline homepage](https://cline.bot/) (verified 2026-06-22)
-- [Cline pricing](https://cline.bot/pricing) (verified 2026-06-22)
-- [Cline docs overview](https://docs.cline.bot/cline-overview) (verified 2026-06-22)
-- [Cline CLI](https://cline.bot/cli) (verified 2026-06-22)
-- [Cline SDK](https://cline.bot/sdk) (verified 2026-06-22)
-- [Cline Spec Driven](https://cline.bot/spec-driven) (verified 2026-06-22)
-- [Cline provider configuration docs](https://docs.cline.bot/provider-config/other-30-plus-providers) (verified 2026-06-22)
-- [Cline SDK permission handling](https://docs.cline.bot/sdk/guides/permission-handling) (verified 2026-06-22)
-- [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-22)
-- [CodeRabbit plans documentation](https://docs.coderabbit.ai/management/plans) (verified 2026-06-22)
-- [CodeRabbit usage-based add-on docs](https://docs.coderabbit.ai/management/usage-based-addon) (verified 2026-06-22)
-- [CodeRabbit changelog](https://docs.coderabbit.ai/changelog) (verified 2026-06-22)
+- [Cline homepage](https://cline.bot/) (verified 2026-06-24)
+- [Cline pricing](https://cline.bot/pricing) (verified 2026-06-24)
+- [Cline docs overview](https://docs.cline.bot/cline-overview) (verified 2026-06-24)
+- [Cline CLI](https://cline.bot/cli) (verified 2026-06-24)
+- [Cline SDK](https://cline.bot/sdk) (verified 2026-06-24)
+- [Cline Spec Driven](https://cline.bot/spec-driven) (verified 2026-06-24)
+- [Cline provider configuration docs](https://docs.cline.bot/provider-config/other-30-plus-providers) (verified 2026-06-24)
+- [Cline SDK permission handling](https://docs.cline.bot/sdk/guides/permission-handling) (verified 2026-06-24)
+- [CodeRabbit pricing](https://www.coderabbit.ai/pricing) (verified 2026-06-24)
+- [CodeRabbit plans documentation](https://docs.coderabbit.ai/management/plans) (verified 2026-06-24)
+- [CodeRabbit usage-based add-on docs](https://docs.coderabbit.ai/management/usage-based-addon) (verified 2026-06-24)
+- [CodeRabbit changelog](https://docs.coderabbit.ai/changelog) (verified 2026-06-24)
 - [Continue pricing redirect](https://www.continue.dev/pricing) (verified 2026-06-23)
 - [Continue docs](https://docs.continue.dev/) (verified 2026-06-23)
 - [Continue GitHub repository](https://github.com/continuedev/continue) (verified 2026-06-23)
@@ -314,9 +314,9 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-22)
 - [Qodo pricing and usage](https://docs.qodo.ai/pricing-and-usage) (verified 2026-06-22)
 - [Qodo code review docs](https://docs.qodo.ai/code-review) (verified 2026-06-22)
-- [BLACKBOX AI pricing](https://www.blackbox.ai/pricing) (verified 2026-06-23)
-- [BLACKBOX AI security](https://www.blackbox.ai/security) (verified 2026-06-23)
-- [Cuelinks BLACKBOX AI affiliate listing](https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program) (verified 2026-06-23)
+- [BLACKBOX AI pricing](https://www.blackbox.ai/pricing) (verified 2026-06-24)
+- [BLACKBOX AI security](https://www.blackbox.ai/security) (verified 2026-06-24)
+- [Cuelinks BLACKBOX AI affiliate listing](https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program) (verified 2026-06-24)
 - [Replit pricing](https://replit.com/pricing) (verified 2026-06-22)
 - [Replit Agent docs](https://docs.replit.com/references/agent/overview) (verified 2026-06-22)
 - [Replit Agent Modes](https://docs.replit.com/references/agent/agent-modes) (verified 2026-06-22)

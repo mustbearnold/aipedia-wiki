@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free + credit-based paid plans; verify 3.0/Omni access in app"
 status: active
 launched: 2024-06
-last_updated: 2026-06-16
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,8 +30,8 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
   video_generation:
@@ -39,17 +39,17 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Kling uses an official app/pricing surface and credit-based paid plans, but the pricing page did not expose full static text in this crawl. Verify current 3.0/Omni access, credits, region, and commercial rights inside the app before buying."
+    value: "Kling uses an official app/pricing surface and credit-based paid plans, but the pricing page did not expose full static text in the June 24 crawl. Verify current 3.0/Omni access, credits, region, and commercial rights inside the app before buying."
     source: "https://klingai.com/pricing"
     source_label: "Kling AI pricing"
     source_id: kling-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: medium
   watch_out_for:
@@ -57,8 +57,8 @@ facts:
     source: "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be"
     source_label: "Kuaishou Kling 3.0 launch"
     source_id: kling-30-launch
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, native-audio, kuaishou, kling, cinematic, multi-shot]
@@ -75,7 +75,7 @@ not_best_for:
   - public API procurement
   - Western-only data handling requirements
 quick_answer: >-
-  Kling 3.0 is one of the top AI video models to test in June 2026. As of June 12, 2026, pick it for cinematic short clips, native audio, multi-shot storytelling, and value after verifying current 3.0/Omni access in the official app. Skip it if you need a clean public API or static pricing that is easy to audit without login.
+  Kling 3.0 is one of the top AI video models to test in June 2026. As of June 24, 2026, pick it for cinematic short clips, native audio, multi-shot storytelling, and value after verifying current 3.0/Omni access in the official app. Skip it if you need a clean public API or static pricing that is easy to audit without login.
 price_history:
   - date: 2026-02-05
     plan: "Kling AI 3.0 series"
@@ -105,12 +105,13 @@ price_history:
 
 # Kling 3.0
 
-Kling 3.0 is Kuaishou's frontier AI video model family. As of June 12, 2026, it belongs on the short list with [Seedance 2.0](/tools/seedance/) and [Google Veo 3.1](/tools/veo/) for anyone comparing the best current AI video models.
+Kling 3.0 is Kuaishou's frontier AI video model family. As of June 24, 2026, it belongs on the short list with [Seedance 2.0](/tools/seedance/) and [Google Veo 3.1](/tools/veo/) for anyone comparing the best current AI video models.
 
 The right way to evaluate Kling is prompt-first: run the same test prompts through Kling, Seedance, Veo, and Runway, then compare motion, shot continuity, audio, character consistency, text preservation, and post-production cleanup time.
 
 ## Recent changes
 
+- **2026-06-24:** Rechecked the official Kuaishou Kling 3.0 launch source and the public Kling pricing URL. The launch source still supports Video 3.0 and Video 3.0 Omni claims. The pricing page remains dynamic in this crawl, so AiPedia still will not hard-code plan prices, credit costs, or commercial-rights guarantees without account-level confirmation.
 - **2026-06-06:** Rechecked official Kling 3.0/Omni documentation and pricing-access caveats while refreshing the old Kling/Pika/Seedance/Synthesia/Veo comparison cluster. Keep plan guidance conservative because exact 3.0/Omni access still needs account-level confirmation.
 
 ## System Verdict
@@ -178,10 +179,10 @@ For buyers, that means the right plan is the lowest current plan that explicitly
 | **Native audio** | Yes, strongest sync | Yes, across cuts | Yes | Yes | Limited |
 | **Clip length** | Short clips, 1080p and 4K | Up to about 15s, multi-shot | Up to about 15s, multi-shot | Short clips | Short clips |
 | **Access** | Gemini API, Vertex AI, Flow | Kling app, credits | BytePlus API, Dreamina | ChatGPT and Sora app | Web app and API |
-| **Price signal** | Premium ($0.40-0.60/sec at 4K) | Lowest (about $0.10/sec) | Token packs (about $3.30-4.30/1M) | Subscription | Credit-based |
+| **Price signal** | Premium ($0.40-0.60/sec at 4K) | Credit-based, verify in app | BytePlus route-specific pricing | Subscription | Credit-based |
 | **Best viewed as** | Google-stack frontier model | Cinematic motion benchmark | Reference-driven generator | Stylized social video | Editing workspace |
 
-The honest read: [Kling](/tools/kling/) is the pick when cinematic motion and price matter most, [Veo](/tools/veo/) wins for clean audio and Google-stack governance, [Seedance](/tools/seedance/) is best when you build from your own image, audio, and video references, Sora 2 has the most distinctive style, and [Runway](/tools/runway/) is the better full editing workspace.
+The honest read: [Kling](/tools/kling/) is the pick when cinematic motion and in-app value matter most. [Veo](/tools/veo/) wins for clean audio and Google-stack governance. [Seedance](/tools/seedance/) is best when you build from your own image, audio, and video references. Sora 2 has the most distinctive style, and [Runway](/tools/runway/) is the better full editing workspace.
 
 ## Failure Modes
 
@@ -193,12 +194,12 @@ The honest read: [Kling](/tools/kling/) is the pick when cinematic motion and pr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against the [Kuaishou Kling 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), the [Kling AI site](https://klingai.com/), and the [Kling AI pricing page](https://klingai.com/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against the [Kuaishou Kling 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), the [Kling AI site](https://klingai.com/), and the [Kling AI pricing page](https://klingai.com/pricing).
 
 ## FAQ
 
 **Is Kling 3.0 one of the best AI video models?**
-Yes. On June 6, 2026, it belongs in the frontier set with Seedance 2.0 and Veo 3.1.
+Yes. On June 24, 2026, it belongs in the frontier set with Seedance 2.0 and Veo 3.1.
 
 **How much does Kling 3.0 cost?**
 Kling is credit-based. Verify the current paid plan, model access, and credit cost in the official app before buying because public pricing details can change and the page is not reliably crawlable as static text.
@@ -211,9 +212,9 @@ Kuaishou's official 3.0 launch describes native audio across English, Chinese, J
 
 ## Sources
 
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-06-12)
-- [Kling AI](https://klingai.com/) (verified 2026-06-12)
-- [Kling AI pricing](https://klingai.com/pricing) (checked 2026-06-12; dynamic page, verify in app)
+- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-06-24)
+- [Kling AI](https://klingai.com/) (verified 2026-06-24)
+- [Kling AI pricing](https://klingai.com/pricing) (checked 2026-06-24; dynamic page, verify in app)
 
 ## Related
 

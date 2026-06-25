@@ -2,7 +2,7 @@
 type: tool
 slug: notion-ai
 title: Notion AI
-tagline: AI layered into Notion's workspace. Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search (beta), Research Mode, and Custom Agents with credit-based usage.
+tagline: AI layered into Notion's workspace. Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search, Research Mode, Custom Agents with credit-based usage, and Workers beta credit exposure.
 category: ai-notes
 company: notion
 url: https://www.notion.so/product/ai
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$20/user/month + Custom Agent credits"
 status: active
 launched: 2023-02
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -28,11 +28,11 @@ scores:
   longevity: 8
 facts:
   flagship_model:
-    value: "Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search (beta), Research Mode, and Custom Agents inside the Notion workspace"
+    value: "Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search, Research Mode, Custom Agents, Notion Mail AI, and Workers beta inside the Notion workspace"
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -41,16 +41,16 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
   pricing_anchor:
-    value: "Full AI access (Notion Agent, AI Meeting Notes, Enterprise Search, Research Mode) is bundled into Business and Enterprise; Business is $20/member/month. Free and Plus include trial AI features."
+    value: "Full AI access (Notion Agent, AI Meeting Notes, Enterprise Search, Research Mode) is bundled into Business and Enterprise; Business is $20/seat/month. Free and Plus include trial AI features. Custom Agents are free to try, then $10 per 1,000 monthly Notion credits; Workers beta starts using credits on August 11."
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -59,7 +59,7 @@ facts:
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -68,7 +68,7 @@ facts:
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -77,7 +77,7 @@ facts:
     source: "https://www.notion.so/help"
     source_label: "Notion help"
     source_id: notion-help
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   image_generation:
@@ -85,7 +85,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   video_generation:
@@ -93,7 +93,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   real_time_voice:
@@ -101,7 +101,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   coding_agent:
@@ -117,24 +117,24 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   enterprise_controls:
-    value: "Enterprise adds SAML SSO, audit logs, advanced security, and workspace governance"
+    value: "Enterprise adds SAML SSO, audit logs, advanced security, workspace governance, and zero data retention with LLM providers for Enterprise plan workspaces"
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
   data_retention_or_privacy:
-    value: "Cloud-hosted workspace AI; regulated teams should review Notion Enterprise security and admin controls"
+    value: "Cloud-hosted workspace AI. Notion pricing lists 30-day LLM-provider retention on non-Enterprise plans and zero data retention for Enterprise plan workspaces; regulated teams should review Notion Enterprise security and admin controls."
     source: "https://www.notion.so/help"
     source_label: "Notion help"
     source_id: notion-help
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -142,7 +142,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   best_for:
@@ -150,21 +150,21 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   watch_out_for:
-    value: "Custom Agents use credit-based billing after the workspace service date on or after May 4, 2026; model transparency is limited; messy workspaces reduce answer quality"
+    value: "Custom Agents use Notion credits, credits pause agents when exhausted, admins get 80% and 100% usage notifications, Workers beta starts using credits on August 11, model transparency is limited, and messy workspaces reduce answer quality"
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
 tags: [notes, workspace, wiki, knowledge-base, ai-writing, ai-q-and-a, databases, collaboration, productivity, agents, meeting-notes]
 seo_title: "Notion AI: Features, Pricing & Review (June 2026)"
-meta_description: "Notion AI is bundled into Business at $20/member/month and includes Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search (beta), and Research Mode. Free and Plus get trial AI. Custom Agents use Notion credits."
+meta_description: "Notion AI is bundled into Business at $20/seat/month and includes Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search, and Research Mode. Free and Plus get trial AI. Custom Agents and Workers beta add credit risk."
 author: "aipedia.wiki Editorial"
 best_for:
   - teams already running Notion as the primary workspace
@@ -176,7 +176,7 @@ not_best_for:
   - users needing transparent model selection or bring-your-own-model control
   - privacy-first workflows requiring local data
 quick_answer: >-
-  Notion AI bundles LLM features into the Notion workspace. Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search (beta), and Research Mode are included in Business at $20/member/month. Free and Plus get trial AI capabilities. Custom Agents use Notion credits after the workspace billing transition. Pick for teams already in Notion with large wikis; skip solo buyers who mainly need document Q&A or standalone writing help.
+  Notion AI bundles LLM features into the Notion workspace. Notion Agent, Ask Notion, AI Autofill, AI Meeting Notes, Enterprise Search, and Research Mode are included in Business at $20/seat/month. Free and Plus get trial AI capabilities. Custom Agents use Notion credits, and Workers beta starts using credits on August 11. Pick for teams already in Notion with large wikis; skip solo buyers who mainly need document Q&A or standalone writing help.
 price_history:
   - date: 2025-05
     plan: "Plus AI add-on"
@@ -184,6 +184,7 @@ price_history:
     source: "https://www.notion.com/pricing"
     source_label: "Source"
     source_id: notion-pricing
+    verified_at: 2025-05
     note: "Standalone $10 AI add-on removed. AI consolidated under Business and Enterprise. Legacy Plus+AI subscribers grandfathered."
   - date: 2026-04-17
     plan: "Business"
@@ -191,47 +192,58 @@ price_history:
     source: "https://www.notion.so/pricing"
     source_label: "Source"
     source_id: notion-pricing
+    verified_at: 2026-04-17
     note: "Verified via notion.so/pricing"
   - date: 2026-06-06
     plan: "Business / Plus"
-    price: "$20/member/mo · $10/member/mo + Custom Agent credits"
+    price: "$20/seat/mo · $10/seat/mo + Custom Agent credits"
     source: "https://www.notion.com/pricing"
     source_label: "Source"
     source_id: notion-pricing
-    note: "Verified at notion.com/pricing and Notion Custom Agent pricing docs. Business is $20/member/month. Plus is $10/member/month. Free and Plus include trial AI capabilities; full Notion Agent access requires Business. Custom Agents use Notion credits, listed at $10 per 1,000 monthly credits for in-product billing."
+    verified_at: 2026-06-06
+    note: "Verified at notion.com/pricing and Notion credits docs. Business is $20/seat/month. Plus is $10/seat/month. Free and Plus include trial AI capabilities; full Notion Agent access requires Business. Custom Agents use Notion credits, listed at $10 per 1,000 monthly credits for in-product billing."
+  - date: 2026-06-24
+    plan: "Business / Plus / Custom Agents / Workers beta"
+    price: "$20/seat/mo · $10/seat/mo · $10 per 1,000 monthly Notion credits"
+    source: "https://www.notion.com/pricing"
+    source_label: "Source"
+    source_id: notion-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked Notion pricing, Notion AI product copy, Notion credits docs, and affiliate page. Business remains $20/seat/month, Plus remains $10/seat/month, Free and Plus include trial AI, Custom Agents require Notion credits, agents pause when credits run out, and Workers beta starts using credits on August 11, 2026."
 ---
 
 # Notion AI
 
-LLM feature layer built into the Notion workspace by Notion Labs, Inc. Adds natural-language Q&A across documents, AI Autofill in databases, a writing assistant, AI Meeting Notes with transcription, Enterprise Search (beta) across connected apps, Research Mode for long-form reports, and Notion Agent for multi-step task completion. Custom Agents now use Notion credits after each workspace's billing transition on or after May 4, 2026.
+LLM feature layer built into the Notion workspace by Notion Labs, Inc. Adds natural-language Q&A across documents, AI Autofill in databases, a writing assistant, AI Meeting Notes with transcription, Enterprise Search across connected apps, Research Mode for long-form reports, and Notion Agent for multi-step task completion. Custom Agents use Notion credits. Workers beta is free to try now and starts using credits on August 11, 2026.
 
-Notion retired the standalone $10 AI add-on in May 2025. AI is now consolidated under Business at $20/member/month, with trial AI capabilities included on Free and Plus ($10/member/month). Existing Plus+AI subscribers are grandfathered at legacy pricing.
+Notion retired the standalone $10 AI add-on in May 2025. AI is now consolidated under Business at $20/seat/month, with trial AI capabilities included on Free and Plus ($10/seat/month). Existing Plus+AI subscribers are grandfathered at legacy pricing.
 
 ## System Verdict
 
-> **Pick Notion AI if your team already runs Notion as its primary workspace and wiki.** Ask Notion searches across your docs, databases, and connected apps (Slack, Google Drive, GitHub) with source citations. AI Autofill computes database properties in bulk. Notion Agent handles complex, multi-step work; Custom Agents automate recurring workflows on schedules or triggers. Enterprise Search (beta) and Research Mode round out the suite. None of this works without a Notion vault; none of it requires a second tool if you already have one.
+> **Pick Notion AI if your team already runs Notion as its primary workspace and wiki.** Ask Notion searches across your docs, databases, and connected apps (Slack, Google Drive, GitHub) with source citations. AI Autofill computes database properties in bulk. Notion Agent handles complex, multi-step work; Custom Agents automate recurring workflows on schedules or triggers. Enterprise Search and Research Mode round out the suite. None of this works without a Notion vault; none of it requires a second tool if you already have one.
 >
 > **Skip it if you're evaluating Notion only for the AI.** For solo users, [NotebookLM](/tools/notebooklm/) handles document Q&A free with better source management. [Claude](/tools/claude/) at $20/mo is a stronger standalone writing and reasoning assistant. [Obsidian](/tools/obsidian/) + Smart Connections gives you a local-first equivalent with your own API key. Notion does not disclose a stable model-routing table, so buyers should evaluate output quality in their own workspace before rolling it out.
 >
-> **Who pays which tier:** Free for personal notes with trial AI, Plus $10/member/month for team workspaces with trial AI, Business $20/member/month for Notion Agent, AI Meeting Notes, Enterprise Search (beta), and Research Mode, Enterprise (custom) for stronger governance. Budget separately for Custom Agent credits when automations read more content, take more actions, or run often.
+> **Who pays which tier:** Free for personal notes with trial AI, Plus $10/seat/month for team workspaces with trial AI, Business $20/seat/month for Notion Agent, AI Meeting Notes, Enterprise Search, and Research Mode, Enterprise (custom) for stronger governance. Budget separately for Custom Agent credits when automations read more content, take more actions, or run often. Budget Workers beta credits before August 11, 2026 if custom-code agent tools become part of the workflow.
 
 ## Key Facts
 
 | | |
 |---|---|
-| **Core AI features** | Notion Agent · Ask Notion (Q&A) · AI Autofill · Writing assistant · AI Meeting Notes · Enterprise Search (beta) · Research Mode · Custom Agents |
+| **Core AI features** | Notion Agent · Ask Notion (Q&A) · AI Autofill · Writing assistant · AI Meeting Notes · Enterprise Search · Research Mode · Custom Agents · Workers beta · Notion Mail AI |
 | **Custom Agents** | Introduced February 2026 · credit-based after each workspace service date on or after May 4, 2026 |
 | **Workers for Agents** | Custom code execution inside agent workflows (April 2026) |
 | **Voice input** | Desktop · April 2026 |
 | **AI access** | Free and Plus: trial Notion AI · Business: Notion Agent and production AI suite · Enterprise: AI plus stronger governance |
-| **Data retention** | Verify current Notion enterprise and security docs before regulated rollout |
-| **Legacy pricing** | Plus+AI grandfathered at $18/member/month for existing subscribers |
+| **Credits** | Custom Agents use Notion credits · Workers beta starts using credits on August 11, 2026 · agents pause when credits run out |
+| **Data retention** | Pricing table lists 30-day LLM-provider retention on non-Enterprise plans and zero data retention for Enterprise plan workspaces |
+| **Legacy pricing** | Plus+AI grandfathered at $18/seat/month for existing subscribers |
 | **Underlying models** | Not disclosed as a stable per-feature routing table |
 | **Connected apps** | Q&A and Enterprise Search cover Slack, Google Drive, GitHub, other integrations |
 | **Enterprise pricing** | Custom · SAML SSO · audit log · advanced security |
 | **Cloud-only** | No local/offline mode · no BYO-model |
 
-Every data point verified on 2026-06-12 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), and [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing).
+Every data point verified on 2026-06-24 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), and [Notion credits docs](https://www.notion.com/help/category/notion-credits).
 
 ## What it actually is
 
@@ -239,7 +251,7 @@ An LLM feature layer sitting on top of the existing Notion product. Not a standa
 
 AI Autofill turns database properties into computed columns. Summarize linked pages, classify entries, extract structured data from unstructured text. Useful for content calendars, CRMs, and project trackers where manual entry is the bottleneck.
 
-AI Meeting Notes captures meetings inside the workspace and produces actionable summaries. Notion Agent handles complex multi-step tasks; Custom Agents automate recurring team work on schedules or triggers, with credit usage depending on how much the agent reads, how many steps it takes, how often it runs, and the model choice. Enterprise Search (beta) and Research Mode extend the workspace AI into cross-app discovery and long-form synthesis.
+AI Meeting Notes captures meetings inside the workspace and produces actionable summaries. Notion Agent handles complex multi-step tasks; Custom Agents automate recurring team work on schedules or triggers, with credit usage depending on how much the agent reads, how many steps it takes, how often it runs, and the model choice. Workers beta extends agents with custom code and external triggers, and Notion's pricing page says it starts using credits on August 11, 2026. Enterprise Search and Research Mode extend the workspace AI into cross-app discovery and long-form synthesis.
 
 The underlying LLM routing is not disclosed as a stable per-feature table. Quality-sensitive teams should run a workspace-specific pilot rather than assuming Notion AI will match a standalone frontier-model chat subscription on writing, reasoning, or code work.
 
@@ -249,7 +261,7 @@ The underlying LLM routing is not disclosed as a stable per-feature table. Quali
 - **You need AI Autofill in databases.** CRM enrichment, content calendar auto-summaries, support ticket classification: all work better here than in any generic AI chat tool.
 - **You want meeting notes inside your docs platform.** AI Meeting Notes with transcription, captured via Cmd+K, drops summaries straight into the workspace that holds everything else.
 - **You're coordinating multi-step AI workflows.** Notion Agent handles ad-hoc complex tasks; Custom Agents automate recurring work on schedules or triggers. Workers for Agents adds custom code execution.
-- **You need cross-app discovery.** Enterprise Search (beta) covers Slack, Google Drive, GitHub, and other integrations alongside your Notion pages. Research Mode produces long-form reports from those sources.
+- **You need cross-app discovery.** Enterprise Search covers Slack, Google Drive, GitHub, and other integrations alongside your Notion pages. Research Mode produces long-form reports from those sources.
 
 ## When to pick something else
 
@@ -267,11 +279,11 @@ Pricing via [notion.com/pricing](https://www.notion.com/pricing).
 | Plan | Price | Who's it for |
 |---|---|---|
 | Free | $0 | Personal notes · limited Notion AI trial (chat, doc generation, autofill, Meeting Notes, Research Mode) |
-| Plus | $10/member/month | Team workspace · same trial AI as Free · legacy Plus+AI subscribers grandfathered |
-| Business | $20/member/month | **Recommended for teams** · Notion Agent · AI Meeting Notes · Enterprise Search (beta) · Research Mode · production AI access |
+| Plus | $10/seat/month | Team workspace · same trial AI as Free · legacy Plus+AI subscribers grandfathered |
+| Business | $20/seat/month | **Recommended for teams** · Notion Agent · AI Meeting Notes · Enterprise Search · Research Mode · production AI access |
 | Enterprise | Custom | All Business AI · zero data retention with LLM providers · SAML SSO · audit log · advanced security |
 
-*Prices verified 2026-06-12 via [notion.com/pricing](https://www.notion.com/pricing) and [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing). The standalone $10 AI add-on was retired in May 2025. Free and Plus include trial AI capabilities; full production AI requires Business or Enterprise. Custom Agents use Notion credits, with in-product monthly credits listed at $10 per 1,000 credits and no monthly rollover.*
+*Prices verified 2026-06-24 via [notion.com/pricing](https://www.notion.com/pricing) and [Notion credits docs](https://www.notion.com/help/category/notion-credits). The standalone $10 AI add-on was retired in May 2025. Free and Plus include trial AI capabilities; full production AI requires Business or Enterprise. Custom Agents use Notion credits, with in-product monthly credits listed at $10 per 1,000 monthly credits. Custom Agents pause if credits run out, admins get 80% and 100% usage notifications, and Workers beta starts using credits on August 11, 2026.*
 
 ## Against the alternatives
 
@@ -301,21 +313,21 @@ Pricing via [notion.com/pricing](https://www.notion.com/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing), and [notion.com/help](https://www.notion.com/help).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-24 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), [Notion credits docs](https://www.notion.com/help/category/notion-credits), and [notion.com/help](https://www.notion.com/help).
 
 ## FAQ
 
 **Is Notion AI free?**
-There is trial AI on Free and Plus that covers chat, document generation, database autofill, AI Meeting Notes, and Research Mode at trial-level quotas. Full production AI (Notion Agent, full Meeting Notes, Enterprise Search beta, and Research Mode) requires Business at $20/member/month or Enterprise. The standalone $10 AI add-on was retired in May 2025. Existing Plus+AI customers are grandfathered at legacy pricing.
+There is trial AI on Free and Plus that covers chat, document generation, database autofill, AI Meeting Notes, and Research Mode at trial-level quotas. Full production AI (Notion Agent, full Meeting Notes, Enterprise Search, and Research Mode) requires Business at $20/seat/month or Enterprise. The standalone $10 AI add-on was retired in May 2025. Existing Plus+AI customers are grandfathered at legacy pricing.
 
 **What AI models does Notion use?**
 Notion does not publicly disclose a stable per-feature LLM routing table. Treat model choice as managed by Notion, not as a buyer-controlled setting.
 
 **Can Notion AI search connected apps?**
-Yes. Ask Notion Q&A and Enterprise Search (beta) cover integrated apps including Slack, Google Drive, and GitHub in addition to the Notion workspace itself. Integration depth varies by connected app.
+Yes. Ask Notion Q&A and Enterprise Search cover integrated apps including Slack, Google Drive, and GitHub in addition to the Notion workspace itself. Integration depth varies by connected app.
 
 **What changed for Custom Agents after May 4, 2026?**
-Custom Agents consume Notion credits after the workspace's billing transition on or after May 4, 2026. In-product monthly credits are listed at $10 per 1,000 credits, are shared across the workspace, reset monthly, and do not roll over. Teams should monitor the credits dashboard because agents can pause when credits run out.
+Custom Agents consume Notion credits. In-product monthly credits are listed at $10 per 1,000 monthly credits, are shared across the workspace, and teams should monitor the credits dashboard because agents pause when credits run out. Notion says admins receive 80% and 100% usage notifications. Workers beta starts using credits on August 11, 2026.
 
 **What is Notion Agent vs Custom Agents?**
 Notion Agent handles ad-hoc, multi-step tasks the user invokes inside the workspace. Custom Agents automate recurring team work on schedules or triggers. Workers for Agents (April 2026) adds custom code execution inside agent pipelines. All are included in Business and Enterprise AI access.
@@ -327,7 +339,7 @@ Notion AI wins on workspace context: it searches your pages and databases automa
 
 - [Notion AI](https://www.notion.com/product/ai): product page
 - [Notion pricing](https://www.notion.com/pricing): current tier pricing
-- [Notion Custom Agent pricing](https://www.notion.com/help/custom-agent-pricing): credit pricing, reset behavior, and billing transition
+- [Notion credits docs](https://www.notion.com/help/category/notion-credits): credit pricing, usage notifications, reset behavior, and pause behavior
 - [Notion help](https://www.notion.com/help): feature documentation
 
 ## Related

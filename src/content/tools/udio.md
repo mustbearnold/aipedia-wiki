@@ -2,7 +2,7 @@
 type: tool
 slug: udio
 title: Udio
-tagline: High-fidelity AI music generation with inpainting, now transitioning to a fully licensed platform under UMG and Warner deals.
+tagline: AI music generation with inpainting, now transitioning to a fully licensed platform under UMG and Warner deals.
 category: ai-music
 company: Udio (Uncharted Labs)
 url: https://udio.com
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free, Standard, and Pro credit tiers; verify live pricing before purchase"
 status: active
 launched: 2024-04
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,11 +26,11 @@ scores:
   longevity: 7
 facts:
   flagship_model:
-    value: "Udio v2.1 for AI music generation with inpainting, extensions, stems-style editing workflows, and licensing-oriented product direction"
-    source: "https://www.udio.com/"
-    source_label: "Udio product site"
-    source_id: udio-product
-    verified_at: 2026-06-12
+    value: "During the licensing transition, Udio's help center says users still have access to v1, v1.5, and v1.5 Allegro; the new licensed-platform model details are not yet disclosed."
+    source: "https://help.udio.com/en/articles/12874375-udio-warner-music-group-wmg-partnership"
+    source_label: "Udio WMG partnership help"
+    source_id: udio-warner-partnership
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -39,7 +39,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
     next_review_at: 2026-07-06
@@ -48,7 +48,7 @@ facts:
     source: "https://help.udio.com/en/articles/10739134-credits-and-credit-limits"
     source_label: "Udio Help Center credit guide"
     source_id: udio-credit-limits
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -57,7 +57,7 @@ facts:
     source: "https://www.udio.com/pricing"
     source_label: "Udio pricing"
     source_id: udio-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -66,16 +66,16 @@ facts:
     source: "https://www.udio.com/pricing"
     source_label: "Udio pricing"
     source_id: udio-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
   api_available:
-    value: "Yes: API access is listed for Standard and Pro tiers"
+    value: "API access has been listed on paid tiers, but the June 24 static pricing check did not expose a clean API row; verify access inside the live pricing or account flow before procurement"
     source: "https://www.udio.com/pricing"
     source_label: "Udio pricing"
     source_id: udio-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -84,7 +84,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   video_generation:
@@ -92,7 +92,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   real_time_voice:
@@ -100,7 +100,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   web_browsing:
@@ -108,7 +108,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   coding_agent:
@@ -116,7 +116,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   enterprise_controls:
@@ -124,7 +124,7 @@ facts:
     source: "https://www.udio.com/pricing"
     source_label: "Udio pricing"
     source_id: udio-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -133,7 +133,7 @@ facts:
     source: "https://www.udio.com/pricing"
     source_label: "Udio pricing"
     source_id: udio-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://www.udio.com/"
     source_label: "Udio product site"
     source_id: udio-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,7 +157,7 @@ facts:
     source: "https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership"
     source_label: "Udio UMG partnership changes"
     source_id: udio-umg-partnership-changes
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-07-06
@@ -177,7 +177,7 @@ not_best_for:
   - workflows that cannot tolerate a mid-year platform reset
   - copyright-strict YouTube monetization
 quick_answer: >-
-  Udio AI is the better Suno alternative when edit control matters more than first-shot polish. Pick it for high-fidelity instrumentation, inpainting, and section-level regeneration. Choose Suno instead for smoother pop vocals, easier UX, and the most mainstream song-generation workflow.
+  Udio AI is the better Suno alternative when edit control matters more than first-shot polish. Pick it for inpainting and section-level regeneration, but verify export availability before production work. Choose Suno instead for smoother pop vocals, easier UX, and the most mainstream song-generation workflow.
 decision_brief:
   items:
     - label: Best use
@@ -192,39 +192,40 @@ decision_brief:
 price_history:
   - date: 2026-05-13
     plan: "Free"
-    price: "$0"
-    source: "https://udio.com/pricing"
-    source_label: "Source"
-    source_id: udio-pricing
-    verified_at: 2026-06-12
-    note: "10 daily credits plus 100 monthly credits; commercial use with attribution; help center caps free output at 3 songs (130 seconds each) per day."
+    price: "$0; credits verified"
+    source: "https://help.udio.com/en/articles/10739134-credits-and-credit-limits"
+    source_label: "Udio credits and credit limits"
+    source_id: udio-credit-limits
+    verified_at: 2026-06-24
+    note: "10 daily credits plus 100 monthly credits. Downloads are disabled during the UMG partnership transition, so verify live usage rights before commercial release."
   - date: 2026-05-13
     plan: "Standard"
-    price: "$10/mo"
-    source: "https://udio.com/pricing"
-    source_label: "Source"
-    source_id: udio-pricing
-    verified_at: 2026-06-12
-    note: "2,400 credits per month, no rollover, commercial use without attribution, API access listed."
+    price: "Verify live"
+    source: "https://help.udio.com/en/articles/10739134-credits-and-credit-limits"
+    source_label: "Udio credits and credit limits"
+    source_id: udio-credit-limits
+    verified_at: 2026-06-24
+    note: "2,400 monthly credits verified in help docs; live dollar price, download status, and commercial-use terms should be checked at purchase."
   - date: 2026-05-13
     plan: "Pro"
-    price: "$30/mo"
-    source: "https://udio.com/pricing"
-    source_label: "Source"
-    source_id: udio-pricing
-    verified_at: 2026-06-12
-    note: "6,000 credits per month, no rollover, commercial use without attribution, API access listed."
+    price: "Verify live"
+    source: "https://help.udio.com/en/articles/10739134-credits-and-credit-limits"
+    source_label: "Udio credits and credit limits"
+    source_id: udio-credit-limits
+    verified_at: 2026-06-24
+    note: "6,000 monthly credits verified in help docs; live dollar price, download status, and commercial-use terms should be checked at purchase."
 ---
 
 # Udio
 
-Udio is an AI music generator built by Uncharted Labs. It produces high-fidelity songs with vocals and full instrumentation from text prompts, with inpainting for regenerating specific time ranges inside a clip. Launched April 2024.
+Udio is an AI music generator built by Uncharted Labs. It produces songs with vocals and full instrumentation from text prompts, with inpainting for regenerating specific time ranges inside a clip. Launched April 2024.
 
 UMG signed a licensing deal on October 29, 2025. Warner Music Group followed with a settlement and licensing deal. Merlin signed in early 2026. A fully licensed AI music platform launches in 2026, pivoting Udio from open generation toward a licensed-content remix and fan-engagement model.
 
 ## Recent changes
 
 - **June 6, 2026:** Rechecked Udio's help center and official Warner post. Standard is still documented at 2,400 monthly credits, Pro at 6,000 monthly credits, and free accounts at 10 daily credits plus a 100-credit monthly limit. Udio's help center also says downloading audio, video, and stems is disabled during the UMG partnership transition, which is now the main production-workflow watch-out.
+- **June 24, 2026:** Rechecked the credit guide, UMG transition guide, Warner partnership help page, UMG announcement, and live pricing URL. Udio still documents v1, v1.5, and v1.5 Allegro access during transition, not a newly disclosed public flagship model; AiPedia has removed the unsupported old flagship-model claim from the buyer spine.
 
 ## System Verdict
 
@@ -238,7 +239,7 @@ UMG signed a licensing deal on October 29, 2025. Warner Music Group followed wit
 
 | | |
 |---|---|
-| **Current model** | Udio v2.1 (May 2026) |
+| **Current model** | Transition access to v1, v1.5, and v1.5 Allegro; new licensed-platform model details not disclosed |
 | **Free tier** | 10 daily credits plus 100 monthly credits; up to 3 songs/day at 130 seconds |
 | **Standard tier** | 2,400 credits per month; verify current dollar price live |
 | **Pro tier** | 6,000 credits per month; verify current dollar price live |
@@ -251,7 +252,7 @@ UMG signed a licensing deal on October 29, 2025. Warner Music Group followed wit
 | **Licensing status** | UMG deal (Oct 2025), WMG deal, Merlin deal, licensed platform launching 2026 |
 | **Downloads** | Udio help says audio, video, and stem downloads are disabled during the UMG partnership transition |
 
-Credit limits, download status, and licensed-platform direction were verified against vendor documentation on 2026-06-12. Exact dollar pricing should be rechecked in the live pricing flow before purchase. See Sources.
+Credit limits, download status, and licensed-platform direction were verified against vendor documentation on 2026-06-24. Exact dollar pricing should be rechecked in the live pricing flow before purchase. See Sources.
 
 ## What it actually is
 
@@ -278,19 +279,19 @@ The business model is pivoting. UMG's October 2025 deal, Warner's follow-up sett
 
 ## Pricing
 
-Subscription pricing is published through [udio.com/pricing](https://udio.com/pricing), but the exact dollar table was not cleanly visible in static HTML during the 2026-06-06 check. Use the price rows below only as the last clean AiPedia capture from May 13, then verify live pricing before purchase.
+Subscription pricing is published through [udio.com/pricing](https://udio.com/pricing), but the exact dollar table was not cleanly visible in static HTML during the June 24 check. Use the price rows below only as the last clean AiPedia capture from May 13, then verify live pricing before purchase.
 
 | Plan | Monthly | Credits | Commercial use |
 |------|---------|---------|----------------|
-| Free | Last clean capture: $0 | 10/day + 100/month | With attribution |
-| Standard | Last clean capture: $10 | 2,400/month | Yes, no attribution |
-| Pro | Last clean capture: $30 | 6,000/month | Yes, no attribution |
+| Free | Last clean capture: $0 | 10/day + 100/month | Verify live terms |
+| Standard | Last clean capture: $10 | 2,400/month | Verify live terms |
+| Pro | Last clean capture: $30 | 6,000/month | Verify live terms |
 
-*Credit limits and credit rollover rules verified 2026-06-12 via the [Udio Help Center credit guide](https://help.udio.com/en/articles/10739134-credits-and-credit-limits). Dollar prices in this table are the last clean AiPedia capture from 2026-05-13 and should be rechecked in the live pricing flow. Subscription credits reset monthly and do not roll over; a la carte credit packs purchased on udio.com/pricing never expire. The free tier caps daily output at 3 songs of 130 seconds. Licensed 2026 platform pricing is not yet disclosed.*
+*Credit limits and credit rollover rules verified 2026-06-24 via the [Udio Help Center credit guide](https://help.udio.com/en/articles/10739134-credits-and-credit-limits). Dollar prices in this table are the last clean AiPedia capture from 2026-05-13 and should be rechecked in the live pricing flow. Subscription credits reset monthly and do not roll over; a la carte credit packs purchased on udio.com/pricing never expire. The free tier caps daily output at 3 songs of 130 seconds. Licensed 2026 platform pricing is not yet disclosed.*
 
 ## Against the alternatives
 
-| | Udio v2.1 | Suno v4 | Mubert | Soundraw |
+| | Udio transition platform | Suno | Mubert | Soundraw |
 |---|---|---|---|---|
 | **Output type** | Full songs + vocals | Full songs + vocals | Instrumental only | Instrumental stems |
 | **Instrumental fidelity** | **Strongest in niche genres** | Strong, consistent | Mid | Mid |
@@ -313,7 +314,7 @@ Subscription pricing is published through [udio.com/pricing](https://udio.com/pr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against the [Udio pricing page](https://udio.com/pricing), the [Udio Help Center credit guide](https://help.udio.com/en/articles/10739134-credits-and-credit-limits), the [Udio UMG partnership changes guide](https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership), and [Udio's Warner Music Group post](https://www.udio.com/blog/udio-warner).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-24 against the [Udio pricing page](https://udio.com/pricing), the [Udio Help Center credit guide](https://help.udio.com/en/articles/10739134-credits-and-credit-limits), the [Udio UMG partnership changes guide](https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership), [Udio's Warner Music Group help page](https://help.udio.com/en/articles/12874375-udio-warner-music-group-wmg-partnership), and [UMG's Udio agreement announcement](https://www.universalmusic.com/universal-music-group-and-udio-announce-udios-first-strategic-agreements-for-new-licensed-ai-music-creation-platform/).
 
 ## FAQ
 
@@ -339,9 +340,10 @@ Udio's help center says downloading audio, video, and stems has been disabled du
 
 - [Udio official site](https://udio.com): product overview
 - [Udio pricing](https://udio.com/pricing): live pricing flow to verify before purchase
-- [Udio credits and credit limits](https://help.udio.com/en/articles/10739134-credits-and-credit-limits): current free, Standard, and Pro credit limits
-- [Udio UMG partnership changes](https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership): increased credit limits and disabled downloads
-- [Udio with Warner Music Group](https://www.udio.com/blog/udio-warner): Warner partnership, transition ToS, and licensed-service direction
+- [Udio credits and credit limits](https://help.udio.com/en/articles/10739134-credits-and-credit-limits): current free, Standard, and Pro credit limits, verified 2026-06-24
+- [Udio UMG partnership changes](https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership): increased credit limits and disabled downloads, verified 2026-06-24
+- [Udio Warner Music Group partnership](https://help.udio.com/en/articles/12874375-udio-warner-music-group-wmg-partnership): transition model access and licensed-service direction, verified 2026-06-24
+- [UMG and Udio agreement announcement](https://www.universalmusic.com/universal-music-group-and-udio-announce-udios-first-strategic-agreements-for-new-licensed-ai-music-creation-platform/): 2026 licensed-platform direction, verified 2026-06-24
 
 ## Related
 

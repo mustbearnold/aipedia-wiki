@@ -3,6 +3,8 @@
  * /categories/ index — god-tier 10/10 mobile-first.
  *
  * Browse all AI tool categories. Legacy preserved at
+ * Refresh metadata: 2026-06-24 category archive first screen tightened by
+ * moving maintenance copy below the category cards.
  * Refresh metadata: 2026-06-21 AI Automation parent hub maintenance after
  * Activepieces vs n8n loop refreshed Activepieces, n8n, source registry,
  * comparison archive, ledger, and LLM surfaces around open-source automation
@@ -638,10 +640,6 @@ const categoryItems = sorted.map((category: any) => ({
       rankLabel={`${allCategories.length} categories · ${activeTools.length} tools`}
     />
 
-    <p class="gt-cat-refresh">
-      Updated Jun 22, 2026 across active category hubs, buyer guides, and source-backed decision routes.
-    </p>
-
     <section class="gt-cat-index" aria-label="All AI tool categories">
       <ul class="gt-cat-cards">
         {sorted.map((c: any) => (
@@ -673,12 +671,16 @@ const categoryItems = sorted.map((category: any) => ({
         ))}
       </ul>
     </section>
+
+    <p class="gt-cat-refresh">
+      Updated Jun 22, 2026 across active category hubs, buyer guides, and source-backed decision routes.
+    </p>
   </div>
 
   <style>
     .gt-cat-index { margin-bottom: 40px; }
     .gt-cat-refresh {
-      margin: -10px 0 20px;
+      margin: -20px 0 40px;
       padding: 12px 14px;
       border: 1px solid var(--gt-index-line, var(--gt-line));
       border-left: 3px solid var(--gt-accent);

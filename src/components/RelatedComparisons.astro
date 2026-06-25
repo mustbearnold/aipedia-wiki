@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getRelatedComparisonsForTool } from '../lib/content-cache';
 
 interface Props {
   toolSlug: string;
@@ -8,26 +8,7 @@ interface Props {
 
 const { toolSlug, toolTitle } = Astro.props;
 
-const comparisons = await getCollection('comparisons');
-const staleCardCopy = /(Opus 4\.7|GPT-5\.3|premium requests?|premium-request|7\.5x)/i;
-
-function dateKey(value: unknown): string {
-  if (!value) return '';
-  const date = value instanceof Date ? value : new Date(String(value));
-  return Number.isNaN(date.getTime()) ? String(value) : date.toISOString().slice(0, 10);
-}
-
-const matches = comparisons
-  .filter((c) => Array.isArray(c.data.tools) && c.data.tools.includes(toolSlug))
-  .filter((c) => !staleCardCopy.test(c.data.meta_description ?? ''))
-  .sort((a, b) => {
-    const dateCompare = dateKey(b.data.last_verified ?? b.data.last_updated).localeCompare(
-      dateKey(a.data.last_verified ?? a.data.last_updated)
-    );
-    if (dateCompare !== 0) return dateCompare;
-    return String(a.data.title ?? '').localeCompare(String(b.data.title ?? ''));
-  })
-  .slice(0, 6);
+const matches = await getRelatedComparisonsForTool(toolSlug);
 ---
 
 {matches.length > 0 && (
@@ -43,23 +24,23 @@ const matches = comparisons
     <div class="grid sm:grid-cols-2 gap-2">
       {matches.map((c) => (
         <a
-          href={`/compare/${c.data.slug ?? c.id.replace(/\.md$/, '')}/`}
+          href={`/compare/${c.slug}/`}
           class="block rounded-lg border border-[var(--border)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] hover:border-[rgba(249, 115, 22,0.4)] px-4 py-3 no-underline transition-colors"
           data-analytics-event="related_comparison_click"
           data-analytics-source-module="related_comparisons"
           data-analytics-destination-type="comparison"
-          data-analytics-destination-slug={c.data.slug ?? c.id.replace(/\.md$/, '')}
-          data-analytics-comparison-slug={c.data.slug ?? c.id.replace(/\.md$/, '')}
+          data-analytics-destination-slug={c.slug}
+          data-analytics-comparison-slug={c.slug}
           data-analytics-tool-slug={toolSlug}
           data-analytics-position="bottom"
-          data-analytics-label={c.data.title}
+          data-analytics-label={c.title}
         >
           <div class="text-sm font-medium text-[var(--text-primary)] leading-tight">
-            {c.data.title}
+            {c.title}
           </div>
-          {c.data.meta_description && (
+          {c.meta_description && (
             <div class="text-xs text-[var(--text-muted)] mt-1 line-clamp-2">
-              {c.data.meta_description}
+              {c.meta_description}
             </div>
           )}
         </a>

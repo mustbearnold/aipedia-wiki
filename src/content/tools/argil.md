@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$39-$499/month; Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -21,7 +21,7 @@ affiliate:
   link: https://argil.ai/?ref=aipediawiki
   application_status: approved
   approved_date: 2026-05-28
-  notes: "Official Argil affiliation page verified 2026-05-28: public page says affiliates get 30% generated revenue for each client for 12 months; AiPedia approved/referral URL provided by publisher."
+  notes: "Official Argil affiliation page rechecked 2026-06-24: public page says affiliates get 30% generated revenue for each client for 12 months; AiPedia approved/referral URL provided by publisher."
 scores:
   utility: 8
   value: 8
@@ -33,16 +33,16 @@ facts:
     source: https://www.argil.ai/
     source_label: Argil official site
     source_id: argil-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-24'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-28'
   pricing_anchor:
-    value: Argil pricing on 2026-06-23 still lists Classic at $39/month, Pro at $149/month, Scale at $499/month, and Enterprise custom, with a 30% discount on yearly billing and a 5-day free trial across paid tiers. The public pricing page shows Classic at 1,600 credits/month while the docs Plans page shows 1,500 credits/month, so verify live checkout for the exact Classic credit count before purchase.
+    value: Argil pricing on 2026-06-24 still lists Classic at $39/month, Pro at $149/month, Scale at $499/month, and Enterprise custom, with a 30% discount on yearly billing and a 5-day free trial across paid tiers. The public pricing page shows Classic at 1,600 credits/month while the docs Plans page has previously shown 1,500 credits/month, so verify live checkout for the exact Classic credit count before purchase.
     source: https://www.argil.ai/pricing
     source_label: Argil pricing
     source_id: argil-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
     next_review_at: '2026-06-30'
@@ -51,7 +51,7 @@ facts:
     source: https://docs.argil.ai/llms.txt
     source_label: Argil docs index
     source_id: argil-docs-index
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-24'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-28'
@@ -60,7 +60,7 @@ facts:
     source: https://docs.argil.ai/resources/api-pricings
     source_label: Argil API pricing
     source_id: argil-api-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
     next_review_at: '2026-07-18'
@@ -69,7 +69,7 @@ facts:
     source: https://www.argil.ai/pricing
     source_label: Argil pricing
     source_id: argil-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
     next_review_at: '2026-06-30'
@@ -78,7 +78,7 @@ facts:
     source: https://docs.argil.ai/resources/product-showcase
     source_label: Argil Product Showcase docs
     source_id: argil-product-showcase
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
     next_review_at: '2026-06-30'
@@ -99,6 +99,14 @@ not_best_for:
 quick_answer: >-
   Argil is best treated as a creator and marketer avatar-video studio, not a generic cinematic video model. The current pricing stack is Classic, Pro, Scale, and Enterprise. Pro is the key upgrade if Seedance 2.0 videos and more serious campaign volume matter; Classic is the safer first paid test.
 price_history:
+  - date: 2026-06-24
+    plan: "Classic / Pro / Scale / Enterprise"
+    price: "$39 / $149 / $499 per month; Enterprise custom"
+    source: "https://www.argil.ai/pricing"
+    source_label: "Argil pricing"
+    source_id: argil-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked pricing, API credit docs, pay-as-you-go docs, Product Showcase docs, docs index, and affiliate docs. No headline plan-price change found; Classic credit-count mismatch remains a live checkout warning."
   - date: 2026-05-28
     plan: "Classic"
     price: "$39/mo"
@@ -139,7 +147,7 @@ Argil is an AI avatar and creator-video platform built for UGC ads, social video
 
 ## What Changed Since The Last Refresh
 
-The June 23 refresh did not find a headline plan-price change, but it changed the buying checklist:
+The June 24 refresh did not find a headline plan-price change, but it keeps the buying checklist current:
 
 - The public pricing page still lists Classic $39/month, Pro $149/month, Scale $499/month, Enterprise custom, 30% yearly discount equivalents, and a 5-day free trial on Classic.
 - The Classic credit mismatch remains unresolved: pricing page shows 1,600 credits/month, while docs Plans still show 1,500 credits/month. Use live checkout as the final credit count.
@@ -161,7 +169,7 @@ The June 23 refresh did not find a headline plan-price change, but it changed th
 - **Product Showcase:** current docs mark it as V1, say bugs are expected, and say V2 is expected, so do a controlled test before promising product-holding avatar shots to clients.
 - **Affiliate link:** AiPedia has an approved Argil affiliate URL through the Argil/Tolt program. Argil's public affiliation page says affiliates get 30% generated revenue for each client for 12 months.
 
-Verified against Argil official pages on 2026-06-23.
+Verified against Argil official pages on 2026-06-24.
 
 ## What It Actually Is
 
@@ -190,7 +198,7 @@ AiPedia removed the older long-form single-take claim from this page. The curren
 
 ## Pricing
 
-Use [Argil pricing](https://www.argil.ai/pricing) as the live source before buying. Current public monthly pricing on 2026-06-23:
+Use [Argil pricing](https://www.argil.ai/pricing) as the live source before buying. Current public monthly pricing on 2026-06-24:
 
 - **Classic:** $39/month, 1,600 credits/month, 10 avatar styles, 100+ Argil avatars, magic video editing, fictions playground, API access.
 - **Pro:** $149/month, 6,000 credits/month, unlimited avatar styles, Seedance 2.0 videos, style editing, fast generation.
@@ -221,7 +229,7 @@ Note: Argil's pricing page currently lists Classic at 1,600 credits/month, while
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-06-23 using Argil's official home page, pricing page, docs, docs index, API pricing docs, pay-as-you-go docs, Product Showcase docs, and affiliate docs. Older plan names, price ranges, API-gating language, and unsupported long-form single-take claims were removed or replaced with current official pricing and workflow facts.
+AiPedia refreshed this page on 2026-06-24 using Argil's official home page, pricing page, docs, docs index, API pricing docs, pay-as-you-go docs, Product Showcase docs, and affiliate docs. Older plan names, price ranges, API-gating language, and unsupported long-form single-take claims were removed or replaced with current official pricing and workflow facts.
 
 ## FAQ
 
@@ -229,7 +237,7 @@ AiPedia refreshed this page on 2026-06-23 using Argil's official home page, pric
 Argil is best for creator and marketer workflows: UGC ads, AI avatars, product videos, article-to-video, AI clones, and social content production.
 
 **How much does Argil cost?**
-As of 2026-06-23, Argil lists Classic at $39/month, Pro at $149/month, Scale at $499/month, and Enterprise custom. Yearly billing lowers the effective monthly price.
+As of 2026-06-24, Argil lists Classic at $39/month, Pro at $149/month, Scale at $499/month, and Enterprise custom. Yearly billing lowers the effective monthly price.
 
 **Does Argil include Seedance 2.0?**
 Yes. Argil's current pricing page lists Seedance 2.0 videos on the Pro plan.

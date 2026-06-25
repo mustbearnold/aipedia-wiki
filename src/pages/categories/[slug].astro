@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import CategoryLayout from '../../layouts/CategoryLayout.astro';
 import CategoryGraph from '../../components/CategoryGraph.astro';
+import { getCachedCollection } from '../../lib/content-cache';
 
 export async function getStaticPaths() {
   const entries = await getCollection('categories');
@@ -24,7 +25,7 @@ const EMOJI: Record<string, string> = {
   'ai-presentation': '\u{1F4CA}', 'ai-research': '\u{1F52C}', 'ai-infrastructure': '\u{1F527}',
 };
 
-const allTools = await getCollection('tools');
+const allTools = await getCachedCollection('tools');
 const matchingTools = allTools
   .flatMap((t) => {
     if (t.data.status !== 'active') return [];

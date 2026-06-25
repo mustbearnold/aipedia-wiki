@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 23, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim.ai, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 24, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim AI, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,7 +28,7 @@ decision_picks:
     source_refs:
       - n8n-pricing
       - n8n-agent-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     confidence: high
   - tool: zapier
     label: Best non-technical automation rollout
@@ -45,7 +45,7 @@ decision_picks:
 
 AI automation now splits into four buyer jobs: deterministic workflow automation, AI-assisted workflow building, delegated agent workforces, and vertical revenue/support automation. Do not buy by hype. Start with the workflow owner, the billing unit, and the failure risk.
 
-**June 22 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases now show python-1.9.0 from June 18 and dotnet-1.10.0 from June 10, with recent breaking guardrail, file-access, hosting, and approval-flow notes, so production teams should pin package versions. Work IQ is generally available: Microsoft's licensing and Partner Center notices say Work IQ API usage draws down Copilot Credits, has no separate Work IQ API SKU/subscription/per-user license, and should be governed with admin billing, access policies, limits, and alerts before custom or third-party agents use Microsoft 365 data. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
+**June 24 Microsoft agent-framework update:** [Microsoft Agent Framework](/tools/microsoft-agent-framework/) remains the Microsoft-aligned open-source agent framework, but the current check sharpens the watch-out. GitHub releases now show python-1.9.0 from June 18 and dotnet-1.10.0 from June 10, with recent breaking guardrail, file-access, hosting, and approval-flow notes, so production teams should pin package versions. Work IQ is generally available: Microsoft's licensing and Partner Center notices say Work IQ API usage draws down Copilot Credits, has no separate Work IQ API SKU/subscription/per-user license, and should be governed with admin billing, access policies, limits, and alerts before custom or third-party agents use Microsoft 365 data. Do not treat Work IQ-backed agents as free just because Agent Framework itself is MIT open source.
 
 **June 16 Google Cloud data-agent update:** Google's [data-agent rollout](/news/2026-06-16-google-cloud-data-agents/) moves automation deeper into governed analytics and database workflows. Data Engineering Agent and Managed MCP Servers for Databases are now generally available, while Data Science Agent, Data Agent Kit, Looker MCP, Gemini Enterprise Conversational Analytics, Data Insights Agent, Deep Research Agent, QueryData, and UCP Analytics are preview or select-customer routes. Treat this as an automation-control-plane update: verify IAM, `roles/mcp.toolUser`, separate production identities, SQL review, spend limits, job labels, data retention, and GA-versus-preview status before agents touch production data.
 
@@ -65,7 +65,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **June 5 automation comparison update:** AiPedia rebuilt the high-intent automation fork across Instantly vs Intercom, Instantly vs Make, Instantly vs Zapier, Intercom vs Make, and Intercom vs Zapier. The retired n8n/Make/Zapier comparison now belongs in category and tool guidance because visual workflow orchestration, broad no-code app automation, and self-hosted technical AI workflows are different buying jobs.
 
-**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 23 spot-check, hosted Starter is still listed at EUR20/month billed annually, hosted Pro at EUR50/month billed annually, Business at EUR667/month billed annually for self-hosted teams, and the Community self-host path remains free. The current AI Agent docs still standardize AI Agent nodes around Tools Agent behavior, while n8n's hosting docs warn that self-hosting is for expert users because server, scaling, and security mistakes can cause data loss or downtime. Buyers should also model the Business license-key ping, default telemetry setting, and EUR4,000 per 300,000-execution overage bucket before treating paid self-host as a simple isolated deployment. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
+**Use [n8n](/tools/n8n/) when a technical founder, ops engineer, or agency wants control.** n8n's current pricing page says plans include unlimited users, unlimited workflows, every integration, and monthly workflow-execution billing rather than per-step billing. As of the June 24 spot-check, hosted Starter is still listed at EUR20/month billed annually, hosted Pro at EUR50/month billed annually, Business at EUR667/month billed annually for self-hosted teams, and the Community self-host path remains free. The current AI Agent docs still standardize AI Agent nodes around Tools Agent behavior, while n8n's hosting docs warn that self-hosting is for expert users because server, scaling, and security mistakes can cause data loss or downtime. Buyers should also model the Business license-key ping, default telemetry setting, and EUR4,000 per 300,000-execution overage bucket before treating paid self-host as a simple isolated deployment. This makes n8n the strongest default for complex AI workflows when someone can own credentials, logs, retries, and security.
 
 **Use [Zapier](/tools/zapier/) when non-technical teams need the fastest SaaS connection path.** Zapier's current pricing and AI pages frame the platform around Zaps, Tables, Forms, MCP, Copilot, Agents, and more than 9,000 apps. The June 4 ChatGPT vs Zapier refresh keeps the distinction explicit: ChatGPT is the thinking and drafting assistant; Zapier is the workflow execution layer when SaaS actions need to run repeatedly. It is still the cleanest recommendation when app coverage and speed matter more than self-hosting or code-level control.
 
@@ -103,7 +103,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Letta](/tools/letta/) when the agent's memory must persist across sessions and model swaps.** The June 23 check keeps Letta Code Free, Pro $20/month, and Enterprise custom, with Letta Auto quota on Pro, pay-as-you-go overage, and usage-based API Platform billing tied to underlying model token costs. It is strongest when memory governance is a product requirement, not when the job is a stateless workflow.
 
-**Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** The June 23 refresh keeps the same Free, Developer $20/month, Startup $99/month, and Scale custom pricing, but the product has shifted further into browser-agent infrastructure: real cloud Chromium browsers, Search and Fetch APIs, Functions runtime, Identity, Model Gateway, Stagehand, MCP, replay, and observability instead of local Playwright infrastructure.
+**Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** The June 24 refresh keeps the same Free, Developer $20/month, Startup $99/month, and Scale custom pricing, but the product has shifted further into browser-agent infrastructure: real cloud Chromium browsers, Search and Fetch APIs, Extract, Functions runtime, Identity, Model Gateway, Stagehand, MCP, replay, and observability instead of local Playwright infrastructure. High-volume read-only jobs now need separate Fetch/Extract math from browser-hour math.
 
 **Use [Modal](/tools/modal/) when automation is Python jobs, queues, web endpoints, sandboxes, or serverless GPU work rather than SaaS connector routing.** Modal is not a Zapier/n8n replacement; it is the better fit when the automation owner can write Python and wants per-second compute, GPU classes, scheduled jobs, web functions, and infrastructure-as-code ergonomics.
 
@@ -231,7 +231,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 - [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly. The May 13 n8n cloud price cut and the May Make price reduction both flow into this page.
 - [Best AI tools for agencies](/guides/best-ai-tools-for-agencies/) is now the June 6 verified role guide for ChatGPT, Claude, Zapier, n8n, Make, Copy.ai, and client-data guardrails. Keep it aligned with [AI automation agency tech stack](/guides/ai-agency-stack/), sales, support, and lead-generation updates.
-- [AI automation agency tech stack](/guides/ai-agency-stack/) is now the June 6 verified agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions, with the June 21 Claude Agent SDK billing correction now saying the credit changes are paused. Keep it aligned with agency role guidance, sales, support, and lead-generation updates.
+- [AI automation agency tech stack](/guides/ai-agency-stack/) is now the June 6 verified agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions. Keep it aligned with the June 24 Claude Agent SDK billing guidance: plan users should budget monthly Claude credits for supported Agent SDK and Claude Code usage, while direct API usage remains separate.
 - [AI lead generation stack](/guides/ai-lead-generation/) is now the June 6 verified buyer flow for Apollo, Clay, Amplemarket, Instantly, and n8n across prospect data, enrichment, AI research, sender handoff, deliverability, and GTM automation. Keep it synchronized with the June 6 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/) because Apollo trial/credit rules, Instantly Outreach versus Credits packaging, Clay's June 23 Actions/Data Credits, Sculptor, MCP, Sequencer, fixed-versus-variable AI pricing, and Amplemarket's June 23 credit-matrix, MCP sequence creation, and Workflows updates all affect outbound-automation advice.
 - [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified sales-stack guide for Apollo, Instantly, Clay, Amplemarket, and ChatGPT across prospect data, outbound execution, GTM enrichment, AI SDR workflow, CRM hygiene, and credit/export modeling. Amplemarket's June 23 refresh now requires extra attention to MCP permissions, Workflows routing, and live-matrix credit counts.
 - [Best AI tools for recruiters](/guides/best-ai-tools-for-recruiters/) is the June 6 verified hiring-automation guide for LinkedIn Recruiter + Hiring Assistant, hireEZ, Paradox, Eightfold AI, and ChatGPT, with human-in-the-loop, candidate-data, ATS/CRM, screening, and scheduling cautions.
@@ -240,7 +240,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI meeting assistant for customer success teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/) is the MeetGeek money page for teams that need customer calls to become account memory, action items, CRM/task updates, QBR prep, and renewal context.
 - [Best AI tools for accountants](/guides/best-ai-tools-for-accountants/) is the June 6 verified finance-ops guide for Microsoft 365 Copilot in Excel, ChatGPT analysis, Claude memo review, Gemini Workspace context, Perplexity source trails, Intuit Assist, Xero JAX, and client-data governance.
 - [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) is the Lindy money page for buyers who want inbox, calendar, meeting, follow-up, and text-delegation help before they choose a workflow platform.
-- [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 21 verified founder sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and explicit budgeting for Copilot AI Credits, paused Claude Agent SDK credit changes, app-builder credits, Fin outcomes, and workflow executions.
+- [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 21 verified founder sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and explicit budgeting for Copilot AI Credits, Claude Agent SDK and Claude Code plan credits, app-builder credits, Fin outcomes, and workflow executions.
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) is the June 6 verified owner-operator guide for ChatGPT, Gemini, Zapier, Claude, Canva, and Perplexity, with the conservative buying sequence sharpened around general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually. It now calls out Zapier's bundled Tables, Forms, MCP, and AI-action packaging plus MCP task-count risk.
 - [Best AI tools for ecommerce](/guides/best-ai-tools-for-ecommerce/) is the June 6 verified store-operations guide for ChatGPT catalog/support work, Canva creative, Jasper campaign governance, Perplexity source trails, and Zapier handoffs after workflows are stable.
 - [Activepieces vs n8n](/compare/activepieces-vs-n8n/) is now the direct open-source automation fork for MIT self-hosting, MCP-first app actions, active-flow pricing, code-node depth, AI Agent nodes, execution-based cloud, and governed self-hosting.
@@ -260,13 +260,13 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-23)
-- [n8n hosting documentation](https://docs.n8n.io/hosting/) (verified 2026-06-23)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-23)
-- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-23)
-- [n8n GitHub repository](https://github.com/n8n-io/n8n) (verified 2026-06-23)
-- [n8n affiliate program](https://n8n.io/affiliates/) (verified 2026-06-23)
-- [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-21)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-24)
+- [n8n hosting documentation](https://docs.n8n.io/hosting/) (verified 2026-06-24)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-24)
+- [n8n AI Agent node documentation](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-24)
+- [n8n GitHub repository](https://github.com/n8n-io/n8n) (verified 2026-06-24)
+- [n8n affiliate program](https://n8n.io/affiliates/) (verified 2026-06-24)
+- [Claude Agent SDK with a Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-24)
 - [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-21)
 - [Zapier AI](https://zapier.com/ai) (verified 2026-06-21)
 - [Zapier apps directory](https://zapier.com/apps) (verified 2026-06-21)
@@ -388,9 +388,9 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Apollo AI platform information](https://www.apollo.io/llm-info) (verified 2026-06-23)
 - [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-23)
 - [Amplemarket MCP announcement](https://www.amplemarket.com/blog/mcp) (verified 2026-06-23)
-- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-23)
-- [Browserbase changelog](https://www.browserbase.com/changelog) (verified 2026-06-23)
-- [Browserbase Browser explainer](https://www.browserbase.com/blog/what-is-a-browserbase-browser) (verified 2026-06-23)
+- [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-24)
+- [Browserbase changelog](https://www.browserbase.com/changelog) (verified 2026-06-24)
+- [Browserbase Browser explainer](https://www.browserbase.com/blog/what-is-a-browserbase-browser) (verified 2026-06-24)
 - [Modal pricing](https://modal.com/pricing) (verified 2026-06-23)
 - [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-23)
 - [Helicone pricing](https://www.helicone.ai/pricing) (verified 2026-06-23)
@@ -421,10 +421,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Pipedream MCP end-user docs](https://pipedream.com/docs/connect/mcp/users) (verified 2026-06-08)
 - [Workday FY2026 Q4 results: Pipedream acquisition closed](https://newsroom.workday.com/2026-02-24-Workday-Announces-Fiscal-2026-Fourth-Quarter-and-Full-Year-Financial-Results) (verified 2026-06-08)
 - [Microsoft Research MagenticLite, MagenticBrain, and Fara1.5](https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/) (verified 2026-05-26)
-- [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-06-22)
-- [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-06-22)
-- [CloudTalk AI Voice Agents](https://www.cloudtalk.io/ai-voice-agents/) (verified 2026-06-22)
-- [CloudTalk AI Receptionist](https://www.cloudtalk.io/ai-receptionist/) (verified 2026-06-22)
+- [CloudTalk pricing](https://www.cloudtalk.io/pricing/) (verified 2026-06-24)
+- [CloudTalk official site](https://www.cloudtalk.io/) (verified 2026-06-24)
+- [CloudTalk AI Voice Agents](https://www.cloudtalk.io/ai-voice-agents/) (verified 2026-06-24)
+- [CloudTalk AI Receptionist](https://www.cloudtalk.io/ai-receptionist/) (verified 2026-06-24)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
 - [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)
 - [Tactiq pricing](https://tactiq.io/buy) (verified 2026-06-09)

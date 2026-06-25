@@ -30,3 +30,16 @@ test('fast build resolves Astro from the current worktree or a parent checkout b
   assert.match(script, /worktree/);
   assert.match(script, /process\.exit\(1\)/);
 });
+
+test('fast build reports stage and total timings', () => {
+  const script = readFileSync('scripts/build-fast.mjs', 'utf8');
+
+  assert.match(script, /function formatDuration/);
+  assert.match(script, /function runStage/);
+  assert.match(script, /\[build-fast\] \$\{label\}/);
+  assert.match(script, /Astro build/);
+  assert.match(script, /Indexability audit/);
+  assert.match(script, /Commercial CTA audit/);
+  assert.match(script, /Fast dist budget check/);
+  assert.match(script, /\[build-fast\] Total completed in/);
+});

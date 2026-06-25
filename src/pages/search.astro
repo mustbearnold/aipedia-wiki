@@ -1,6 +1,6 @@
 ---
 /**
- * /search/ — god-tier 10/10 mobile-first.
+ * /search/: god-tier 10/10 mobile-first.
  *
  * Hero + .gt-search input + popular term chips + filterable site-local index.
  * Same client-side Pagefind-style filtering + Ctrl/Cmd K shortcut +
@@ -384,10 +384,13 @@ const totalItems = catalogItems.length;
     }
 
     .gt-chips {
+      box-sizing: border-box;
       display: flex; gap: 6px;
+      width: 100%;
+      max-width: 100%;
       overflow-x: auto;
-      padding: 0 18px 12px;
-      margin: 0 -18px 12px;
+      padding: 0 0 12px;
+      margin: 0 0 12px;
       scrollbar-width: none;
     }
     .gt-chips::-webkit-scrollbar { display: none; }

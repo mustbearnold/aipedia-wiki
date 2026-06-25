@@ -6,22 +6,26 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 
 ## Current Snapshot
 
-- Last updated: 2026-06-23.
-- Branch baseline: `master`; latest completed batch is MiniMax Speech, Modal, Morphic, Mubert, and Murf.
+- Last updated: 2026-06-24.
+- Branch baseline: `codex/refresh-tool-pages-june-23`; latest completed tool batch is the June 24 six-shard 60-tool baseline run from `.tmp-tool-refresh-batch.json`.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
-- The active site-freshness lane uses batched tool refreshes, not one full build per tool.
-- The latest completed local batch is `minimax-speech`, `modal`, `morphic`, `mubert`, and `murf`.
-- The latest completed freshness batch is `minimax-speech`, `modal`, `morphic`, `mubert`, and `murf`.
-- The next freshness batch is `nanochat`, `napkin-ai`, `neuronwriter`, `nightcafe`, and `notion-ai`.
+- The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
+- `$aipedia-tool-refresh-workflow` now packages the six-shard-worker plus integrator process as a local incubating skill. Use six active workers in the Codex Windows app, and promote it into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
+- The latest completed local batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
+- The latest completed freshness batch is the same 60-tool baseline run.
+- The latest completed news pass is Jun 23-24 focused coverage with five individual source-backed stories and no daily desk page.
+- Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
+- The next freshness batch should be regenerated with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`; the planner now excludes same-day refreshed pages by default unless `--include-same-day` is passed.
 - The next Decision Content candidate remains `amazon-q-vs-github-copilot`, but freshness batch work is currently in progress.
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports.
+- June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The first full 60-tool run took 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core timing was 25m 07s worker collection and 11m 48s integration plus verification. Closeout timings were ledger 2s, `tool:refresh:batch:check` 37s, `typecheck` 32s, `check:quick` 22s, `build:fast` 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s. Future refresh work should use six shard workers with up to 10 tools each, one integrator, the fast batch gate, dev-server route QA while editing, then one `build:fast` at closeout.
 
-## Active: June 21 To June 22 Site Freshness Goal
+## Active: June 24 Site Freshness Baseline Goal
 
 ### Objective
 
-Keep every volatile tool fact, source-backed claim, commercial surface, affected parent hub, and crawl surface fresh for the June 21-22, 2026 refresh window, or document any remaining item as future queue work.
+Keep every volatile tool fact, source-backed claim, commercial surface, affected parent hub, and crawl surface fresh for the June 24, 2026 refresh window, or document any remaining item as future queue work.
 
 ### Completed
 
@@ -42,66 +46,60 @@ Keep every volatile tool fact, source-backed claim, commercial surface, affected
 - Claude, Decktopus, Gemini, Grok, and n8n.
 - Claude Code, GitHub Copilot, Grammarly, Mistral AI, and Qwen.
 - MiniMax Speech, Modal, Morphic, Mubert, and Murf.
+- NanoChat, Napkin AI, NeuronWriter, NightCafe, and Notion AI.
+- Consensus, Beehiiv, BLACKBOX AI, Browserbase, Canva, Captions, Castmagic, Cline, CloudTalk, and CodeRabbit.
+- Jun 23-24 focused news coverage: OpenAI Daybreak/Codex Security, Samsung ChatGPT Enterprise and Codex, Claude reliability incidents, GLM-5.2 open-model pressure, and Google AI talent movement.
+- Shared tool-page decision-spine migration across all tool detail routes.
+- Six-shard 60-tool baseline run: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 
 ### Latest Completed Batch
 
 Completed batch:
 
-- `src/content/tools/minimax-speech.md`
-- `src/content/tools/modal.md`
-- `src/content/tools/morphic.md`
-- `src/content/tools/mubert.md`
-- `src/content/tools/murf.md`
+- 60 tool markdown files from `.tmp-tool-refresh-batch.json`, covering the six shard groups from Cody through Lovart.
 
 Affected parent hubs:
 
-- `src/content/categories/ai-voice.md`
-- `src/content/categories/ai-infrastructure.md`
+- `src/content/categories/ai-research.md`
+- `src/content/categories/ai-writing.md`
 - `src/content/categories/ai-coding.md`
 - `src/content/categories/ai-automation.md`
-- `src/content/categories/ai-search.md`
+- `src/content/categories/ai-design.md`
+- `src/content/categories/ai-image.md`
+- `src/content/categories/ai-presentation.md`
+- `src/content/categories/ai-video.md`
 - `src/content/categories/ai-chatbots.md`
+- `src/content/categories/ai-infrastructure.md`
 - `src/content/categories/ai-music.md`
-- `src/content/use-cases/best-ai-voice-youtube.md`
-- `src/content/use-cases/best-ai-music-generator.md`
-- `src/content/use-cases/suno-alternatives.md`
+- `src/content/categories/ai-notes.md`
+- `src/content/categories/ai-search.md`
+- `src/content/categories/ai-voice.md`
 
 Required closeout:
 
 - `npm run ledger:pages` done locally.
-- `npm run tool:refresh:batch:check -- --file src\content\tools\minimax-speech.md --file src\content\tools\modal.md --file src\content\tools\morphic.md --file src\content\tools\mubert.md --file src\content\tools\murf.md` passed.
+- `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json` passed.
 - `npm run typecheck` passed.
+- `npm run check:quick` passed.
 - `npm run build:fast` passed.
-- `npm run qa:route -- --route /tools/minimax-speech/ --route /tools/modal/ --route /tools/morphic/ --route /tools/mubert/ --route /tools/murf/ --route /categories/ai-voice/ --route /categories/ai-infrastructure/ --route /categories/ai-coding/ --route /categories/ai-automation/ --route /categories/ai-search/ --route /categories/ai-chatbots/ --route /categories/ai-music/ --route /guides/best-ai-voice-youtube/ --route /guides/best-ai-music-generator/ --route /guides/suno-alternatives/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client` passed.
-- `npm run ledger:pages:check`, `node scripts\guard-em-dashes.mjs`, and `git diff --check` passed inside batch gate.
+- `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --widths 319,390,430,768,1024` passed across 80 routes and 400 rendered width checks.
+- `npm run ledger:pages:check`, `node scripts\guard-em-dashes.mjs`, `npm run audit:provenance:changed -- --json`, `npm run loop:freshness -- --json`, and `git diff --check` passed inside batch gate.
 
 Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and running them in parallel can race on `node_modules/.astro/data-store.json`.
 
 ### Next Batch
 
-Next oldest-first batch from `PAGE_REFRESH_LEDGER.md`:
+Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes same-day refreshed pages by default; pass `--include-same-day` only for intentional revisits.
 
-- `src/content/tools/nanochat.md`
-- `src/content/tools/napkin-ai.md`
-- `src/content/tools/neuronwriter.md`
-- `src/content/tools/nightcafe.md`
-- `src/content/tools/notion-ai.md`
-
-Affected parent hubs:
-
-- `src/content/categories/ai-chatbots.md`
-- `src/content/categories/ai-design.md`
-- `src/content/categories/ai-seo.md`
-- `src/content/categories/ai-image.md`
-- `src/content/categories/ai-notes.md`
+Likely affected parent hubs depend on the regenerated batch. Recompute before editing.
 
 Required closeout:
 
 - `npm run ledger:pages`
-- `npm run tool:refresh:batch:check -- --file src\content\tools\nanochat.md --file src\content\tools\napkin-ai.md --file src\content\tools\neuronwriter.md --file src\content\tools\nightcafe.md --file src\content\tools\notion-ai.md`
+- `npm run tool:refresh:batch:check -- --plan <saved-planner-json>`
 - `npm run typecheck`
 - `npm run build:fast`
-- `npm run qa:route -- --route /tools/nanochat/ --route /tools/napkin-ai/ --route /tools/neuronwriter/ --route /tools/nightcafe/ --route /tools/notion-ai/ --route /categories/ai-chatbots/ --route /categories/ai-design/ --route /categories/ai-seo/ --route /categories/ai-image/ --route /categories/ai-notes/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client`
+- `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --route <changed-tool-and-parent-routes> --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366`
 
 ## Active: Decision Content Flywheel
 
@@ -146,7 +144,7 @@ Run `loop:all:record` only after meaningful broad reviews, not after every small
 
 ### Status
 
-Shared width, card polish, filter containment, breadcrumb geometry, and detail-page width parity are complete.
+Shared width, card polish, filter containment, breadcrumb geometry, detail-page width parity, and the tool-page decision-spine migration are complete.
 
 ### Remaining
 

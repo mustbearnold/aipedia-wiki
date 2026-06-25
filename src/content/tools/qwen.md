@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free open-weight downloads / hosted API priced per model"
 status: active
 launched: 2023-09
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -36,38 +36,38 @@ facts:
     volatility: high
     confidence: high
   model_surface:
-    value: "Qwen should be evaluated as a model family with Qwen Studio, Qwen Cloud/API Platform, Apache 2.0 Qwen3 open weights, the June 8 qwen3.7-max snapshot, qwen3.7-plus multimodal/GUI-agent work, specialty Qwen image/audio/video branches, and the June 16 Qwen-Robot Suite research branch rather than a single chatbot product."
+    value: "Qwen should be evaluated as a model family with Qwen Studio, Qwen Cloud/API Platform, Apache 2.0 Qwen3 open weights, the June 8 qwen3.7-max snapshot, qwen3.7-plus multimodal/GUI-agent work, specialty Qwen image/audio/video branches, the June 16 Qwen-Robot Suite research branch, and newer non-Qwen-branded Qwen Cloud model entries rather than a single chatbot product."
     source: "https://docs.qwencloud.com/changelog/models"
     source_label: "Qwen Cloud model releases"
     source_id: qwencloud-model-releases
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     next_review_at: 2026-06-30
     volatility: high
     confidence: high
   latest_hosted_model:
-    value: "Qwen Cloud's latest Max changelog entry is qwen3.7-max-2026-06-08, described as adding visual-modal understanding compared with the May 20 snapshot; the live qwen3.7-max marketplace page still presents the public model as text input/output with 1M context, 991.80K max input, 65.53K max output, and built-in tools."
+    value: "Qwen Cloud's latest Max changelog entry remains qwen3.7-max-2026-06-08, described as adding visual-modal understanding compared with the May 20 snapshot; the live qwen3.7-max marketplace page still presents the public model as text input/output with 1M context, 991.80K max input, 65.53K max output, and built-in tools."
     source: "https://docs.qwencloud.com/changelog/models"
     source_label: "Qwen Cloud model releases"
     source_id: qwencloud-model-releases
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     next_review_at: 2026-06-30
     volatility: high
     confidence: high
   latest_changelog_release:
-    value: "Qwen Cloud's latest official model-release changelog entry found on June 23 is qwen3.7-max-2026-06-08, with visual-modal understanding added versus the May 20 Max snapshot; qwen3.7-plus / qwen3.7-plus-2026-05-26 remains the current Plus multimodal interactive hybrid-agent release."
+    value: "Qwen Cloud's latest official model-release changelog entries found on June 24 are non-Qwen-branded HappyHorse 1.1 releases dated June 22, 2026. The latest Qwen-branded Max entry remains qwen3.7-max-2026-06-08, with visual-modal understanding added versus the May 20 Max snapshot; qwen3.7-plus / qwen3.7-plus-2026-05-26 remains the current Plus multimodal interactive hybrid-agent release."
     source: "https://docs.qwencloud.com/changelog/models"
     source_label: "Qwen Cloud model releases"
     source_id: qwencloud-model-releases
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     next_review_at: 2026-06-30
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Hosted API pricing is published through Qwen Cloud / Alibaba Cloud docs and model marketplace pages; docs are representative, qwen3.7-max list price remains $2.50/M input and $7.50/M output, the visible 50% promo page says it was effective until June 22, 2026, qwen3.7-plus shows 20% off display pricing without an official expiry found, and tool calls can add fees."
+    value: "Hosted API pricing is published through Qwen Cloud / Alibaba Cloud docs and model marketplace pages; docs are representative, qwen3.7-max list price remains $2.50/M input and $7.50/M output, the visible 50% promo page says it was effective until June 22, 2026, qwen3.7-plus list pricing remains unchanged, and tool calls can add fees."
     source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
     source_label: "Qwen Cloud pricing docs"
     source_id: qwencloud-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     next_review_at: 2026-06-30
     volatility: high
     confidence: high
@@ -90,6 +90,13 @@ facts:
     volatility: high
     confidence: high
 price_history:
+  - date: 2026-06-24
+    price: "qwen3.7-max list price remains $2.50/M input and $7.50/M output; the 50% Qwen3.7-Max promo page still says the promotion was effective until June 22, 2026. qwen3.7-plus docs still list $0.40/$1.60 up to 256K and $1.20/$4.80 from 256K-1M."
+    source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
+    source_label: "Qwen Cloud pricing docs"
+    source_id: qwencloud-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked pricing docs, qwen3.7-max, the Qwen promo page, qwen.ai, and Qwen Cloud model releases. The model-release changelog now has June 22 HappyHorse 1.1 entries, so AiPedia now distinguishes latest overall changelog entry from latest Qwen-branded Max entry."
   - date: 2026-06-15
     price: "qwen3.7-max list price: $2.50/M input and $7.50/M output; promo page displays $1.25/M input and $3.75/M output through June 22, 2026. qwen3.7-plus lists $0.40/M input and $1.60/M output up to 256K input, then $1.20/M input and $4.80/M output from 256K-1M."
     source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
@@ -162,10 +169,11 @@ Alibaba Cloud's Qwen family spans Qwen Studio, hosted API access through Qwen Cl
 
 The practical buyer question is whether your team needs a controllable model family for building, hosting, tuning, or routing AI systems.
 
-The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22B** and **Qwen3-30B-A3B**, plus dense models from **0.6B** through **32B**, all under Apache 2.0. Qwen says Qwen3 supports 119 languages and dialects, hybrid thinking/non-thinking modes, and agentic/coding improvements. The newer Qwen3.7-Max route is a hosted Qwen Cloud model, not part of the Apache 2.0 open-weight Qwen3 release. As of the June 23 source check, Qwen Cloud's changelog says the June 8 Max snapshot adds visual-modal understanding, while the public qwen3.7-max marketplace page still describes a pure text interface. Hosted inference pricing is published through Qwen Cloud / Alibaba Cloud docs and varies by exact model, context, mode, discount, tool use, and token volume.
+The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22B** and **Qwen3-30B-A3B**, plus dense models from **0.6B** through **32B**, all under Apache 2.0. Qwen says Qwen3 supports 119 languages and dialects, hybrid thinking/non-thinking modes, and agentic/coding improvements. The newer Qwen3.7-Max route is a hosted Qwen Cloud model, not part of the Apache 2.0 open-weight Qwen3 release. As of the June 24 source check, Qwen Cloud's changelog has newer HappyHorse 1.1 entries, but the latest Qwen-branded Max entry still says the June 8 Max snapshot adds visual-modal understanding while the public qwen3.7-max marketplace page describes a text interface. Hosted inference pricing is published through Qwen Cloud / Alibaba Cloud docs and varies by exact model, context, mode, discount, tool use, and token volume.
 
 ## Recent developments
 
+- **June 24, 2026:** Qwen Cloud model releases, Qwen3.7-Max, Qwen Cloud pricing, the Qwen3.7-Max promo page, qwen.ai, and Qwen3 sources were rechecked. Qwen Cloud's latest overall changelog entries found were HappyHorse 1.1 releases dated June 22, while the latest Qwen-branded Max entry remained `qwen3.7-max-2026-06-08`. Use list price for conservative Qwen3.7-Max budgeting because the 50% promo page still says the promotion was effective until June 22, 2026.
 - **June 23, 2026:** Qwen Cloud model releases, Qwen3.7-Max, Qwen3.7-Plus, Qwen Cloud pricing, Qwen Studio, Qwen3 sources, and Hugging Face Qwen were rechecked. The newest official Qwen Cloud changelog entry remains `qwen3.7-max-2026-06-08`, listed on June 10 with visual-modal understanding added versus the May 20 Max snapshot, while the live qwen3.7-max marketplace page still describes public experimentation as text-only. Verify modality on the exact endpoint before building around visual input.
 - **June 22, 2026:** The public qwen.ai surface is now best described as **Qwen Studio**, not just Qwen Chat. Qwen's official research page also added the Qwen-Robot Suite on June 16, including Qwen-RobotNav, Qwen-RobotManip, and Qwen-RobotWorld.
 - **June 23, 2026:** Pricing docs still list qwen3.7-max at $2.50/M input and $7.50/M output. The qwen3.7-max model page still displays 50% off pricing, but the promo page itself says the promotion was effective until June 22, so use list price unless checkout confirms a live discount. qwen3.7-plus list rates remain $0.40/$1.60 up to 256K and $1.20/$4.80 from 256K-1M, while its model page shows 20% off display pricing without an official expiry found.
@@ -195,6 +203,7 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 | | |
 |---|---|
 | **Official open-weight line** | Qwen3 series under Apache 2.0, from 0.6B dense to 235B MoE |
+| **Latest Qwen Cloud changelog entries found** | June 22 HappyHorse 1.1 entries are the latest overall entries found on June 24; latest Qwen-branded Max entry remains `qwen3.7-max-2026-06-08` |
 | **Latest Qwen Cloud Max changelog entry** | `qwen3.7-max-2026-06-08`: Max snapshot with visual-modal understanding added versus the May 20 snapshot |
 | **Live qwen3.7-max marketplace page** | Public qwen3.7-max page still describes text input/output, thinking enabled by default, 1M context, 991.80K max input, 65.53K max output, built-in tools, 600 RPM, and 1M TPM |
 | **Current Plus multimodal/GUI lane** | `qwen3.7-plus-2026-05-26`, a multimodal interactive hybrid-agent model for screen/GUI, coding, tool use, productivity, and app-navigation workflows |
@@ -213,7 +222,7 @@ The official Qwen3 release includes two open-weight MoE models, **Qwen3-235B-A22
 | **Production agent surface** | Qwen and Taobao co-built agentic shopping launched May 11, 2026 |
 | **Agent-cloud push** | First international Qwen Conference promoted Qwen Cloud, Skills, infrastructure upgrades, and JVS Agent Suite |
 
-Qwen3.7-Max, Qwen3.7-Plus, Qwen Cloud pricing, and model-release rows above were verified on 2026-06-23. Older qwen-max examples retain their own source dates in price history. See Sources.
+Qwen3.7-Max, Qwen3.7-Plus, Qwen Cloud pricing, and model-release rows above were verified on 2026-06-24. Older qwen-max examples retain their own source dates in price history. See Sources.
 
 ## What it actually is
 
@@ -259,7 +268,7 @@ Hosted pricing via [Qwen Cloud pricing docs](https://docs.qwencloud.com/develope
 | Qwen-Flash | $0.10/M input, $0.40/M output | New entry tier; Qwen-Turbo no longer receiving updates |
 | Batch invocation | 50% off real-time | Supported models only |
 
-*Qwen3.7-Max and Qwen3.7-Plus pricing verified 2026-06-23 via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), and the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen). Qwen Cloud pricing docs list representative models only and point buyers to marketplace model pages for complete current pricing. Built-in tools can add fees: Web Search is listed at $10 per 1,000 calls and Image Search at $8 per 1,000 calls, while Web Extractor and Code Interpreter are marked free for a limited time. Older qwen-max examples were verified 2026-05-13 via Alibaba Cloud Model Studio pricing. Chinese Mainland deployment rates can differ from International tiers. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
+*Qwen3.7-Max and Qwen3.7-Plus pricing verified 2026-06-24 via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), and the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen). Qwen Cloud pricing docs list representative models only and point buyers to marketplace model pages for complete current pricing. Built-in tools can add fees: Web Search is listed at $10 per 1,000 calls and Image Search at $8 per 1,000 calls, while Web Extractor and Code Interpreter are marked free for a limited time. Older qwen-max examples were verified 2026-05-13 via Alibaba Cloud Model Studio pricing. Chinese Mainland deployment rates can differ from International tiers. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
 
 ## Against the alternatives
 
@@ -290,7 +299,7 @@ Hosted pricing via [Qwen Cloud pricing docs](https://docs.qwencloud.com/develope
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average).
 
-Last verified 2026-06-23 against [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), Qwen Studio and Qwen research pages, current Qwen Conference coverage, Qwen-Taobao coverage, and tracked Qwen3.6-35B-A3B coverage.
+Last verified 2026-06-24 against [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen), [Qwen official site](https://qwen.ai/), [Qwen3 blog](https://qwenlm.github.io/blog/qwen3/), [Hugging Face Qwen](https://huggingface.co/Qwen), Qwen Studio and Qwen research pages, current Qwen Conference coverage, Qwen-Taobao coverage, and tracked Qwen3.6-35B-A3B coverage.
 
 ## FAQ
 
@@ -301,7 +310,7 @@ Partly. The official Qwen3 open-weight line ships under Apache 2.0 on Hugging Fa
 The official Qwen3 release includes two MoE models, Qwen3-235B-A22B and Qwen3-30B-A3B, plus six dense models from 0.6B through 32B. Qwen says the line supports hybrid thinking modes, 119 languages and dialects, and agentic/coding improvements.
 
 **What is the latest Qwen model?**
-As of this refresh on June 23, 2026, the latest official Qwen Cloud changelog entry AiPedia found is `qwen3.7-max-2026-06-08`, listed on June 10 as a Max snapshot with visual-modal understanding added versus the May 20 snapshot. The live qwen3.7-max marketplace page still describes the public model page as text input/output, so buyers should verify the exact route before assuming visual input. The current Plus multimodal/GUI agent lane remains `qwen3.7-plus-2026-05-26`. None of this changes the buyer-facing fact that the main open-weight line is still Qwen3.
+As of this refresh on June 24, 2026, the latest Qwen Cloud changelog entries AiPedia found are HappyHorse 1.1 releases dated June 22. The latest Qwen-branded Max entry remains `qwen3.7-max-2026-06-08`, listed on June 10 as a Max snapshot with visual-modal understanding added versus the May 20 snapshot. The live qwen3.7-max marketplace page still describes the public model page as text input/output, so buyers should verify the exact route before assuming visual input. The current Plus multimodal/GUI agent lane remains `qwen3.7-plus-2026-05-26`. None of this changes the buyer-facing fact that the main open-weight line is still Qwen3.
 
 **How does Qwen3 compare to Claude?**
 Qwen is more compelling when you need open weights and self-hosting. Claude is usually stronger when you want a polished paid assistant or API for English writing, long-document work, and managed enterprise workflows.

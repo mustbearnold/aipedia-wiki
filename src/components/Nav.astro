@@ -1,13 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import ThemeToggle from './ThemeToggle.astro';
+import { getActiveToolCount } from '../lib/content-cache';
 
 // Live tool count for the search-button placeholder.
 // Excludes retired/dead/acquired so the figure matches the homepage stat.
-const allTools = await getCollection('tools');
-const liveToolCount = allTools.filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'acquired'
-).length;
+const liveToolCount = await getActiveToolCount();
 
 // Active-page detection. Tree-based prefixes for Compare, News,
 // Explore (/explore/), and Categories (/categories/...).

@@ -11,12 +11,9 @@
  *
  * Legacy version preserved at SearchModal.legacy.astro.
  */
-import { getCollection } from 'astro:content';
+import { getActiveToolCount } from '../lib/content-cache';
 
-const allTools = await getCollection('tools');
-const toolsCount = allTools.filter(
-  (t: any) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired'
-).length;
+const toolsCount = await getActiveToolCount();
 ---
 
 <div id="search-modal" role="dialog" aria-modal="true" aria-label="Search aipedia.wiki">

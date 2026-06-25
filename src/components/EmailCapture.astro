@@ -6,7 +6,7 @@
 //   variant: 'inline' | 'hero' | 'footer' (controls surrounding spacing/prominence)
 //   source: optional string passed to the API so we know where the signup came from
 
-import { getCollection } from 'astro:content';
+import { getActiveToolCount } from '../lib/content-cache';
 
 export interface Props {
   variant?: 'inline' | 'hero' | 'footer';
@@ -14,9 +14,7 @@ export interface Props {
 }
 
 const { variant = 'inline', source = 'unknown' } = Astro.props;
-const toolCount = (await getCollection('tools')).filter(
-  (t) => t.data.status !== 'dead' && t.data.status !== 'acquired'
-).length;
+const toolCount = await getActiveToolCount();
 
 // Unique id suffix so multiple instances on one page don't collide
 const uid = Math.random().toString(36).slice(2, 8);

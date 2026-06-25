@@ -178,6 +178,10 @@ const {
     margin: 0 0 8px;
   }
   .gt-tagline {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: var(--gt-text-tagline);
     line-height: 1.4;
     color: var(--gt-fg);
@@ -216,7 +220,11 @@ const {
   }
   @media (min-width: 900px) {
     .gt-title { font-size: 60px; }
-    .gt-tagline { font-size: 19px; }
+    .gt-tagline {
+      display: block;
+      overflow: visible;
+      font-size: 19px;
+    }
     .gt-title-row.has-logo { gap: 20px; }
   }
 </style>

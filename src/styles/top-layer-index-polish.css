@@ -9,7 +9,7 @@
   --gt-index-canvas-max: 1040px;
   --gt-index-panel: color-mix(in srgb, var(--color-bg-base, #080808) 86%, transparent);
   --gt-index-panel-strong: color-mix(in srgb, var(--color-bg-base, #080808) 92%, transparent);
-  --gt-index-line: rgba(249, 115, 22, 0.14);
+  --gt-index-line: rgba(255, 255, 255, 0.08);
   --gt-index-line-hover: rgba(249, 115, 22, 0.34);
   --gt-index-shadow: 0 20px 42px -34px rgba(0, 0, 0, 0.74);
 }
@@ -130,9 +130,7 @@
   position: relative;
   overflow: hidden;
   border-color: var(--gt-index-line);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.046), rgba(255, 255, 255, 0.014)),
-    var(--gt-index-panel);
+  background: var(--gt-index-panel);
   box-shadow: var(--gt-index-shadow);
 }
 
@@ -289,7 +287,7 @@
 html.light #main-content .gt-canvas {
   --gt-index-panel: color-mix(in srgb, #ffffff 94%, transparent);
   --gt-index-panel-strong: color-mix(in srgb, #ffffff 98%, transparent);
-  --gt-index-line: rgba(249, 115, 22, 0.18);
+  --gt-index-line: rgba(30, 41, 59, 0.14);
   --gt-index-line-hover: rgba(249, 115, 22, 0.38);
   --gt-index-shadow: 0 20px 42px -36px rgba(15, 23, 42, 0.26);
 }

@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
 import RelatedToolsStrip from '../../components/RelatedToolsStrip.astro';
 import NewsImpactBox from '../../components/NewsImpactBox.astro';
+import { getToolDataBySlugMap } from '../../lib/content-cache';
 
 export async function getStaticPaths() {
   const entries = await getCollection('news');
@@ -29,18 +30,15 @@ const severityBadge: Record<string, { text: string; color: string }> = {
 const sev = (entry.data.severity as string) || 'minor';
 const badge = severityBadge[sev] ?? severityBadge.minor;
 const sources = Array.isArray(entry.data.sources) ? entry.data.sources.filter((source) => source?.url) : [];
-const allTools = await getCollection('tools');
-const toolsBySlug = new Map(
-  allTools.map((tool) => {
-    const toolSlug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
-    return [toolSlug, { slug: toolSlug, title: tool.data.title }];
-  })
-);
+const toolsBySlug = await getToolDataBySlugMap();
 const affectedSlugs = Array.from(new Set([
   ...(Array.isArray(entry.data.related_tools) ? entry.data.related_tools : []),
   ...(Array.isArray(entry.data.affects) ? entry.data.affects : []),
 ])).filter((toolSlug) => toolsBySlug.has(toolSlug));
-const affectedTools = affectedSlugs.map((toolSlug) => toolsBySlug.get(toolSlug)!);
+const affectedTools = affectedSlugs.map((toolSlug) => {
+  const tool = toolsBySlug.get(toolSlug)!;
+  return { slug: toolSlug, title: tool.title };
+});
 
 function sourceLabel(source: { url: string; title?: string }): string {
   if (source.title) return source.title;

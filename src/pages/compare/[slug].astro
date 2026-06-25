@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import ComparisonLayout from '../../layouts/ComparisonLayout.astro';
 import { buildToolPageModel } from '../../lib/content-models/tool-page-model';
+import { getCachedCollection } from '../../lib/content-cache';
 
 export async function getStaticPaths() {
   const entries = await getCollection('comparisons');
@@ -83,9 +84,9 @@ const tools = toolEntries
     };
   });
 
-const newsEntries = await getCollection('news');
+const newsEntries = await getCachedCollection('news');
 const relatedNews = newsEntries
-  .filter((n) => (n.data.affects ?? []).some((slug) => toolSlugs.includes(slug)))
+  .filter((n) => (n.data.affects ?? []).some((slug: string) => toolSlugs.includes(slug)))
   .sort((a, b) => {
     const dateA = new Date(a.data.date ?? a.data.last_updated ?? 0).getTime();
     const dateB = new Date(b.data.date ?? b.data.last_updated ?? 0).getTime();

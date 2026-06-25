@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/month + usage credits; Enterprise custom"
 status: active
 launched: 2024-09
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://replit.com/agent4"
     source_label: "Replit Agent 4 product page"
     source_id: replit-agent4-product
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.replit.com/references/agent/overview"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -48,7 +48,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -57,16 +57,16 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
   best_paid_tier:
-    value: "Core is the sensible solo-builder upgrade; Pro is the serious Agent tier when Turbo, powerful models, 10 parallel agents, 15 collaborators, 50 viewers, one-month credit rollover, and database rollbacks matter; Enterprise is for SSO/SAML, privacy controls, single-tenant, region, static IP, and VPC needs."
+    value: "Core is the sensible solo-builder upgrade; Pro is the serious Agent tier when Turbo, powerful models, 10 parallel agents, 15 collaborators, 50 viewers, Custom Instructions, and database rollbacks matter; Enterprise is for SSO/SAML, privacy controls, single-tenant, region, static IP, and VPC needs."
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -75,7 +75,7 @@ facts:
     source: "https://docs.replit.com/references/agent/overview"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://docs.replit.com/references/agent/overview"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: medium
     confidence: medium
   video_generation:
@@ -91,7 +91,7 @@ facts:
     source: "https://docs.replit.com/references/agent/overview"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: medium
     confidence: medium
   real_time_voice:
@@ -99,7 +99,7 @@ facts:
     source: "https://replit.com/products/agent"
     source_label: "Replit Agent product page"
     source_id: replit-agent-product
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   web_browsing:
@@ -107,7 +107,7 @@ facts:
     source: "https://docs.replit.com/references/agent/web-search"
     source_label: "Replit Web Search docs"
     source_id: replit-agent-web-search
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -116,7 +116,7 @@ facts:
     source: "https://docs.replit.com/references/agent/overview"
     source_label: "Replit Agent docs"
     source_id: replit-agent-docs
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -125,7 +125,7 @@ facts:
     source: "https://replit.com/blog/custom-skills"
     source_label: "Replit Custom Skills announcement"
     source_id: replit-custom-skills
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -134,7 +134,7 @@ facts:
     source: "https://docs.replit.com/references/agent/app-testing"
     source_label: "Replit App Testing docs"
     source_id: replit-agent-app-testing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -143,7 +143,7 @@ facts:
     source: "https://replit.com/blog/package-firewall"
     source_label: "Replit Package Firewall"
     source_id: replit-package-firewall
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -152,7 +152,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -161,7 +161,7 @@ facts:
     source: "https://docs.replit.com/references/agent/app-testing"
     source_label: "Replit App Testing docs"
     source_id: replit-agent-app-testing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -169,7 +169,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   best_for:
@@ -177,7 +177,7 @@ facts:
     source: "https://replit.com/products/agent"
     source_label: "Replit Agent product page"
     source_id: replit-agent-product
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   watch_out_for:
@@ -185,16 +185,16 @@ facts:
     source: "https://docs.replit.com/billing/ai-billing"
     source_label: "Replit AI billing docs"
     source_id: replit-ai-billing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
 tags: [browser-ide, app-builder, no-local-setup, ai-coding, deployment, non-developer, replit, agent-4]
 seo_title: "Replit Agent: Features, Pricing & Review (June 2026)"
-meta_description: "Replit Agent review updated June 22, 2026: pricing, Agent 4, Skills and Custom Instructions, Package Firewall, App Testing limits, Starter/Core/Pro feature gates, and Claude comparison fit."
+meta_description: "Replit Agent review updated June 24, 2026: pricing, Agent 4, Skills and Custom Instructions, Package Firewall, App Testing limits, Starter/Core/Pro feature gates, and Claude comparison fit."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Replit Agent builds, runs, tests, and publishes apps from a browser workspace. As of June 22, 2026, treat it as Replit's Agent 4-era app builder rather than the older Agent 3 session-length story: the practical decision is Core for solo prototypes, Pro for Turbo/parallel agents/rollbacks/Custom Instructions, and Enterprise for governance.
+  Replit Agent builds, runs, tests, and publishes apps from a browser workspace. As of June 24, 2026, treat it as Replit's Agent 4-era app builder rather than the older Agent 3 session-length story: the practical decision is Core for solo prototypes, Pro for Turbo/parallel agents/rollbacks/Custom Instructions, and Enterprise for governance.
 best_for:
   - Non-developers building prototypes
   - Rapid idea validation with live deploy
@@ -206,37 +206,37 @@ not_best_for:
   - Complex regulated systems with strict deployment compliance
   - Teams without usage budgets, secrets policy, or review discipline
 price_history:
-  - date: 2026-06-15
+  - date: 2026-06-24
     plan: "Starter"
     price: "$0"
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     note: "Free tier currently lists daily Agent credits, built-in database for full-stack apps, slides/videos/animations, one published project, and private/password-protected deployments."
-  - date: 2026-06-15
+  - date: 2026-06-24
     plan: "Core"
     price: "$25 monthly or $20/month billed annually"
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     note: "Current pricing page shows $25 monthly credits, up to 5 collaborators, up to 2 agents in parallel, regional publishing, unlimited workspaces, badge removal, and Replit AI Integrations."
-  - date: 2026-06-15
+  - date: 2026-06-24
     plan: "Pro"
     price: "$100 monthly or $95/month billed annually"
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
-    note: "Current pricing page shows $100 monthly credits, up to 15 collaborators, 50 viewers, up to 10 agents in parallel, access to the most powerful models, 28-day database rollbacks, and premium support; Replit AI billing docs say Pro monthly credits roll over for one month."
-  - date: 2026-06-15
+    verified_at: 2026-06-24
+    note: "Current pricing page shows $100 monthly credits, up to 15 collaborators, 50 viewers, up to 10 agents in parallel, access to powerful models, 28-day database rollbacks, and premium support. Treat rollover language as account/billing-page guidance to verify before purchase."
+  - date: 2026-06-24
     plan: "Enterprise"
     price: "Custom"
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-22
+    verified_at: 2026-06-24
     note: "Enterprise currently adds custom seat limits, SSO/SAML, advanced privacy controls, design-system support, data warehouse connections, custom groups, dedicated support, single-tenant environments, region selection, static outbound IPs, and VPC peering."
 ---
 
@@ -244,13 +244,13 @@ price_history:
 
 Replit Agent is Replit's browser-based app builder at [replit.com/products/agent](https://replit.com/products/agent). Describe an app, site, automation, data project, slide deck, design, or mobile/web artifact in plain language and Agent builds inside a Replit project with editor, preview, database/auth options, publishing, and billing in one place.
 
-The key June 22 correction: the old `replit.com/agent3` URL still routes to Replit's Agent 4 page, and current docs keep the product centered on task workflows, parallel work, Design Canvas, connected services, Web Search, Agent Skills, Plan Mode, Lite/Economy/Power, High effort, Turbo, and app self-testing. The newest buyer details are not price changes; they are Agent Customization, Package Firewall, App Testing scope, Starter feature gates, Pro credit rollover, and the real split from Claude-style repo agents.
+The key June 24 correction: the old `replit.com/agent3` URL still routes to Replit's Agent 4 page, and current docs keep the product centered on task workflows, parallel work, Design Canvas, connected services, Web Search, Agent Skills, Plan Mode, Lite/Economy/Power, High effort, Turbo, and app self-testing. The newest buyer details are not price changes; they are Agent Customization, Package Firewall, App Testing scope, Starter feature gates, Pro credit/account checks, and the real split from Claude-style repo agents.
 
 ## Recent developments
 
 - **2026-06-22:** DeepSeek vs Replit Agent now separates Replit as the browser-native app-builder workflow from DeepSeek as a low-cost model/API backend. Replit wins when the buyer wants prompt, plan, build, preview, database/auth, App Testing, Skills, and publishing in one workspace; DeepSeek wins when engineers are building their own agent, router, eval harness, or low-cost model route.
 - **2026-06-22:** Claude vs Replit Agent now separates the buyer choice: Claude is stronger for reasoning, repo investigation, code review, and Claude Code work, while Replit Agent is stronger for browser-native app building, prototypes, internal tools, and non-developer workflows.
-- **2026-06-22:** Replit pricing still shows Starter free, Core at $20/month billed annually with $25 monthly credits, Pro at $95/month billed annually with $100 monthly credits, and Enterprise custom. The June 22 recheck keeps two important billing details: Replit AI billing docs say Pro credits roll over for one month, and the feature table shows Starter lacks full build, Plan Mode, connectors, task planning, and Turbo.
+- **2026-06-24:** Replit pricing still shows Starter free, Core at $20/month billed annually with $25 monthly credits, Pro at $95/month billed annually with $100 monthly credits, and Enterprise custom. The June 24 recheck keeps the important plan split: Starter is exploration, Core is the practical solo-builder upgrade, Pro adds heavier Agent capacity and governance-adjacent features, and Enterprise is the route for SSO/SAML, tenant, network, region, and privacy controls.
 - **2026-06-22:** Replit's current Agent docs keep Lite, Economy, and Power as the main mode selector; High effort can be turned on in Economy/Power; Turbo is Pro/Enterprise-only in Power and can cost up to 6x Power. App Testing is useful, but currently scoped to web applications only and is effort-billed.
 - **2026-06-15:** Replit's June 10 Custom Skills announcement adds a stronger team-governance lane: Custom Instructions are always-on workspace guidelines for Pro/Enterprise, while Skills are reusable `SKILL.md` playbooks available across plans and loaded only when relevant.
 - **2026-06-15:** Replit's June 9 Package Firewall announcement adds a meaningful safety layer for AI-generated installs: it is on by default, blocks malicious or compromised packages before install, and gives Agent the same block signal so it can choose a safer path.
@@ -262,7 +262,7 @@ The key June 22 correction: the old `replit.com/agent3` URL still routes to Repl
 >
 > **Skip it if the buyer needs professional local repo control.** Replit Agent is strongest for prototypes, demos, internal tools, and non-developer app creation. [Cursor](/tools/cursor/) is still the better AI-native IDE for existing codebases, and [Claude Code](/tools/claude-code/) is still the cleaner terminal-agent lane for developers who want command execution and reviewable diffs.
 >
-> **Who pays which tier:** Starter is for free exploration, but not serious Agent work because it lacks full build, Plan Mode, connectors, task planning, and Turbo. Core is the sensible solo-builder upgrade because it adds $25 monthly credits, unlimited workspaces, five collaborators, and two parallel agents. Pro is the serious Agent tier because it adds $100 monthly credits, one-month credit rollover, up to 10 parallel agents, Turbo, access to the most powerful models, 28-day database rollbacks, Custom Instructions, and premium support. Enterprise is for SSO/SAML, privacy controls, single-tenant, region, static IP, VPC needs, and admin-controlled team playbooks.
+> **Who pays which tier:** Starter is for free exploration, but not serious Agent work because it lacks full build, Plan Mode, connectors, task planning, and Turbo. Core is the sensible solo-builder upgrade because it adds $25 monthly credits, unlimited workspaces, five collaborators, and two parallel agents. Pro is the serious Agent tier because it adds $100 monthly credits, up to 10 parallel agents, Turbo, access to powerful models, 28-day database rollbacks, Custom Instructions, and premium support. Enterprise is for SSO/SAML, privacy controls, single-tenant, region, static IP, VPC needs, and admin-controlled team playbooks.
 
 ## Key Facts
 
@@ -280,11 +280,11 @@ The key June 22 correction: the old `replit.com/agent3` URL still routes to Repl
 | **App Testing scope** | Web applications only at this time; effort-billed |
 | **Runtime** | Replit browser workspace: editor, preview, database/auth, publishing |
 | **Free tier** | Starter with daily Agent credits and one published project; billing docs show several Agent feature gates |
-| **Top individual plan** | Pro at $95/mo annual ($100 monthly) with Turbo, 10 parallel agents, one-month credit rollover, and 28-day DB rollbacks |
+| **Top individual plan** | Pro at $95/mo annual ($100 monthly) with Turbo, 10 parallel agents, Custom Instructions, and 28-day DB rollbacks |
 | **Enterprise** | SSO/SAML, advanced privacy controls, single-tenant environments, region selection, static outbound IPs, VPC peering |
 | **Billing risk** | Effort-based credits, billable Plan Mode/text guidance, provider API deductions, Turbo up to 6x Power |
 
-Every data point above was verified against official Replit sources on 2026-06-22. See Sources.
+Every data point above was verified against official Replit sources on 2026-06-24. See Sources.
 
 ## What it actually is
 
@@ -321,10 +321,10 @@ Pricing via [replit.com/pricing](https://replit.com/pricing). Replit Agent uses 
 |------|-------|---------------------------|----------------|--------------|
 | Starter | $0 | Daily Agent credits, built-in database, one published project | Agent chat/Lite limits; no full build, Plan Mode, connectors, task planning, or Turbo in the billing feature table | Exploration and first prototypes |
 | Core | $20/mo annual ($25 monthly) | $25 monthly credits, 5 collaborators, 2 parallel agents, unlimited workspaces | Lite, Economy, Power | **Most solo builders land here** |
-| Pro | $95/mo annual ($100 monthly) | $100 monthly credits with one-month rollover, 15 collaborators, 50 viewers, 10 parallel agents, 28-day DB rollbacks | Lite, Economy, Power, High effort, Turbo, Custom Instructions | Heavy Agent use and commercial builds |
+| Pro | $95/mo annual ($100 monthly) | $100 monthly credits, 15 collaborators, 50 viewers, 10 parallel agents, 28-day DB rollbacks | Lite, Economy, Power, High effort, Turbo, Custom Instructions | Heavy Agent use and commercial builds |
 | Enterprise | Custom | Custom seats, support, privacy, region, network, and tenant controls | Full controls on custom terms | Compliance-heavy orgs |
 
-*Prices Verified 2026-06-22 via [replit.com/pricing](https://replit.com/pricing) and [Replit AI billing docs](https://docs.replit.com/billing/ai-billing). Agent usage is effort-based. Plan Mode and text guidance are billable. Some Agent services use paid third-party APIs such as Claude, ChatGPT, and Nano Banana / Gemini, billed at provider public API rates and deducted from Replit credits. Turbo is Pro/Enterprise only and can cost materially more than Power.*
+*Prices Verified 2026-06-24 via [replit.com/pricing](https://replit.com/pricing), [Replit Agent docs](https://docs.replit.com/references/agent/overview), and [Replit AI billing docs](https://docs.replit.com/billing/ai-billing). Agent usage is effort-based. Plan Mode and text guidance are billable. Some Agent services use paid third-party APIs such as Claude, ChatGPT, and Nano Banana / Gemini, billed at provider public API rates and deducted from Replit credits. Turbo is Pro/Enterprise only and can cost materially more than Power.*
 
 ## Against the alternatives
 
@@ -352,7 +352,7 @@ Pricing via [replit.com/pricing](https://replit.com/pricing). Replit Agent uses 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last Verified 2026-06-22 against [Replit pricing](https://replit.com/pricing), the [Replit Agent product page](https://replit.com/products/agent), the [Replit Agent 4 page](https://replit.com/agent4), Replit Agent docs, Replit Agent Modes, App Testing, Web Search, Agent Skills, Plan Mode, Replit AI billing docs, Replit Custom Skills, and Replit Package Firewall sources.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last Verified 2026-06-24 against [Replit pricing](https://replit.com/pricing), the [Replit Agent product page](https://replit.com/products/agent), the [Replit Agent 4 page](https://replit.com/agent4), Replit Agent docs, Replit Agent Modes, App Testing, Web Search, Agent Skills, Plan Mode, Replit AI billing docs, Replit Custom Skills, and Replit Package Firewall sources.
 
 ## FAQ
 
@@ -360,7 +360,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. Starter is free and currently includes daily Agent credits, a built-in database for full-stack apps, creation of slides/videos/animations, one published project, and private or password-protected deployments. It is enough for exploration, not sustained commercial use.
 
 **Is Replit Agent 3 still the current page?**
-No for buyer guidance. As of June 22, 2026, the old `replit.com/agent3` URL redirects to Replit's Agent 4 page, and current docs describe the broader Agent surface. Treat old Agent 3 session-length claims as historical unless Replit republishes them in current docs.
+No for buyer guidance. As of June 24, 2026, the old `replit.com/agent3` URL redirects to Replit's Agent 4 page, and current docs describe the broader Agent surface. Treat old Agent 3 session-length claims as historical unless Replit republishes them in current docs.
 
 **How do Lite, Economy, Power, High effort, and Turbo work?**
 Lite is for quick scoped edits. Economy optimizes for lower credit usage. Power uses more capable models for harder work. High effort is an opt-in toggle in Economy and Power for the hardest parts of a task. Turbo is a Pro/Enterprise-only Power toggle for faster runs at higher cost.
@@ -382,17 +382,17 @@ Replit's February 24, 2026 Pro announcement says Teams was sunset and Teams user
 
 ## Sources
 
-- [Replit pricing](https://replit.com/pricing): Starter, Core, Pro, Enterprise, credits, collaborators, parallel agents, Enterprise controls. Verified 2026-06-22.
-- [Replit Agent product page](https://replit.com/products/agent): app-building, web search, built-in services, self-testing, agents and automations. Verified 2026-06-22.
-- [Replit Agent 4 page](https://replit.com/agent4): current Agent 4 marketing surface, tasks, parallel work, Design Canvas, and connected services. Verified 2026-06-22.
-- [Replit Agent docs](https://docs.replit.com/references/agent/overview): plain-language Agent workflow, project types, modes, feature availability, and artifact types. Verified 2026-06-22.
+- [Replit pricing](https://replit.com/pricing): Starter, Core, Pro, Enterprise, credits, collaborators, parallel agents, Enterprise controls. Verified 2026-06-24.
+- [Replit Agent product page](https://replit.com/products/agent): app-building, web search, built-in services, self-testing, agents and automations. Verified 2026-06-24.
+- [Replit Agent 4 page](https://replit.com/agent4): current Agent 4 marketing surface, tasks, parallel work, Design Canvas, and connected services. Verified 2026-06-24.
+- [Replit Agent docs](https://docs.replit.com/references/agent/overview): plain-language Agent workflow, project types, modes, feature availability, and artifact types. Verified 2026-06-24.
 - [Replit Agent Modes](https://docs.replit.com/references/agent/agent-modes): Lite/Economy/Power, High effort, Turbo, and Max-mode retirement. Verified 2026-06-22.
 - [Replit App Testing docs](https://docs.replit.com/references/agent/app-testing): browser self-testing, supported app types, and effort-billed testing. Verified 2026-06-22.
 - [Replit Web Search docs](https://docs.replit.com/references/agent/web-search): web search, content fetching, and source citations. Verified 2026-06-22.
 - [Replit Agent Skills docs](https://docs.replit.com/references/agent/skills): project/workspace/enterprise skills and `SKILL.md` behavior. Verified 2026-06-22.
 - [Replit Custom Skills announcement](https://replit.com/blog/custom-skills): Custom Instructions, Skills, scope, loading behavior, and plan availability. Verified 2026-06-22.
 - [Replit Package Firewall](https://replit.com/blog/package-firewall): Socket-backed install-time package blocking and Auto-Protect context. Verified 2026-06-22.
-- [Replit AI billing docs](https://docs.replit.com/billing/ai-billing): effort billing, third-party API pass-through, usage dashboard, alerts, budgets, feature table, and credit packs. Verified 2026-06-22.
+- [Replit AI billing docs](https://docs.replit.com/billing/ai-billing): effort billing, third-party API pass-through, usage dashboard, alerts, budgets, feature table, and credit packs. Verified 2026-06-24.
 - [Replit Pro launch](https://replit.com/blog/pro-plan): Pro launch, Core update, Teams sunset, Economy/Power, Turbo availability, and one-month Pro credit rollover. Verified 2026-06-22.
 - [Replit effort-based pricing](https://replit.com/blog/effort-based-pricing): effort-based pricing model and checkpoint economics. Verified 2026-06-22.
 

@@ -21,6 +21,28 @@ function findNodeModuleBin(startDir, packagePath) {
 
 const astroBin = findNodeModuleBin(PROJECT_DIR, ['astro', 'bin', 'astro.mjs']);
 
+function formatDuration(durationMs) {
+  if (durationMs < 1000) return `${durationMs}ms`;
+  const seconds = durationMs / 1000;
+  if (seconds < 60) return `${seconds.toFixed(1)}s`;
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.round(seconds % 60);
+  return `${minutes}m ${remainingSeconds}s`;
+}
+
+function runStage(label, command, commandArgs, options) {
+  const startedAt = Date.now();
+  const result = spawnSync(command, commandArgs, options);
+  const duration = formatDuration(Date.now() - startedAt);
+  const status = result.status ?? 1;
+  console.log(`[build-fast] ${label} ${status === 0 ? 'completed' : 'failed'} in ${duration}.`);
+  return result;
+}
+
+function exitCode(result) {
+  return result.status ?? 1;
+}
+
 if (!astroBin) {
   console.error([
     '[build-fast] Missing Astro dependency at node_modules/astro/bin/astro.mjs.',
@@ -34,7 +56,9 @@ if (!astroBin) {
 
 console.log('[build-fast] Building to dist-fast; skipping GitHub stats refresh, OG generation, Pagefind, and live Worker runtime bundling.');
 
-const result = spawnSync(process.execPath, [astroBin, 'build'], {
+const totalStartedAt = Date.now();
+
+const result = runStage('Astro build', process.execPath, [astroBin, 'build'], {
   cwd: PROJECT_DIR,
   env: {
     ...process.env,
@@ -43,27 +67,29 @@ const result = spawnSync(process.execPath, [astroBin, 'build'], {
   stdio: 'inherit',
 });
 
-if ((result.status ?? 1) !== 0) process.exit(result.status ?? 1);
+if (exitCode(result) !== 0) process.exit(exitCode(result));
 
 const fastStaticDir = existsSync(join(PROJECT_DIR, 'dist-fast', 'client')) ? 'dist-fast/client' : 'dist-fast';
 
-const auditResult = spawnSync(process.execPath, ['scripts/audit-indexability.mjs', '--dist', fastStaticDir], {
+const auditResult = runStage('Indexability audit', process.execPath, ['scripts/audit-indexability.mjs', '--dist', fastStaticDir], {
   cwd: PROJECT_DIR,
   stdio: 'inherit',
 });
 
-if ((auditResult.status ?? 1) !== 0) process.exit(auditResult.status ?? 1);
+if (exitCode(auditResult) !== 0) process.exit(exitCode(auditResult));
 
-const commercialCtaAuditResult = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--dist', fastStaticDir], {
+const commercialCtaAuditResult = runStage('Commercial CTA audit', process.execPath, ['scripts/audit-commercial-cta.mjs', '--dist', fastStaticDir], {
   cwd: PROJECT_DIR,
   stdio: 'inherit',
 });
 
-if ((commercialCtaAuditResult.status ?? 1) !== 0) process.exit(commercialCtaAuditResult.status ?? 1);
+if (exitCode(commercialCtaAuditResult) !== 0) process.exit(exitCode(commercialCtaAuditResult));
 
-const distBudgetResult = spawnSync(process.execPath, ['scripts/check-dist-budget.mjs', '--site-dir', fastStaticDir, '--mode', 'fast'], {
+const distBudgetResult = runStage('Fast dist budget check', process.execPath, ['scripts/check-dist-budget.mjs', '--site-dir', fastStaticDir, '--mode', 'fast'], {
   cwd: PROJECT_DIR,
   stdio: 'inherit',
 });
 
-process.exit(distBudgetResult.status ?? 1);
+if (exitCode(distBudgetResult) !== 0) process.exit(exitCode(distBudgetResult));
+
+console.log(`[build-fast] Total completed in ${formatDuration(Date.now() - totalStartedAt)}.`);

@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCachedCollection } from '../lib/content-cache';
 
 interface Props {
   categorySlug: string;
@@ -9,10 +9,10 @@ interface Props {
 
 const { categorySlug, categoryTitle, toolSlugs } = Astro.props;
 
-const allTools = await getCollection('tools');
-const allComparisons = await getCollection('comparisons');
-const allGuides = (await getCollection('use-cases')).filter((entry) => entry.data.noindex !== true);
-const allNews = await getCollection('news');
+const allTools = await getCachedCollection('tools');
+const allComparisons = await getCachedCollection('comparisons');
+const allGuides = (await getCachedCollection('use-cases')).filter((entry) => entry.data.noindex !== true);
+const allNews = await getCachedCollection('news');
 
 const categoryToolSet = new Set(toolSlugs);
 const toolMetaBySlug = new Map(
@@ -65,10 +65,10 @@ const curatedComparisonRank = new Map(
 const comparisonLinks = allComparisons
   .map((entry) => {
     const slug = entrySlug(entry);
-    const comparedTools = entry.data.tools ?? [];
+    const comparedTools: string[] = entry.data.tools ?? [];
     const overlap = overlapCount(comparedTools);
     const exactCategory = entry.data.category === categorySlug ? 1 : 0;
-    const bestPeerScore = Math.max(0, ...comparedTools.map((slug) => toolMetaBySlug.get(slug)?.score ?? 0));
+    const bestPeerScore = Math.max(0, ...comparedTools.map((slug: string) => toolMetaBySlug.get(slug)?.score ?? 0));
     return {
       slug,
       title: entry.data.title,

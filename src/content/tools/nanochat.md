@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free MIT code; compute cost varies"
 status: active
 launched: 2025-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: occasional
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   learning_surface:
@@ -39,7 +39,7 @@ facts:
     source: "https://github.com/karpathy/nanochat/blob/master/README.md"
     source_label: "nanochat README"
     source_id: nanochat-readme
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -47,7 +47,7 @@ facts:
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   workflow_surface:
@@ -55,7 +55,7 @@ facts:
     source: "https://github.com/karpathy/nanochat/blob/master/README.md"
     source_label: "nanochat README"
     source_id: nanochat-readme
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://github.com/karpathy/nanochat"
     source_label: "nanochat GitHub repository"
     source_id: nanochat-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
 tags: [education, llm-training, open-source, python, karpathy, pretraining, fine-tuning, rlhf, gpt, research, minimal]
@@ -86,7 +86,7 @@ quick_answer: >-
 
 Andrej Karpathy's open-source reference for the full LLM training pipeline. The repo covers tokenization, pretraining, supervised fine-tuning, RLHF, evaluation, inference, and a minimal chat UI in roughly 8,000 lines of Python.
 
-Released in 2025. MIT licensed. The GitHub repository showed 54,644 stars, 7,421 forks, and a May 5, 2026 push timestamp when rechecked through GitHub's API on June 12, 2026. Its README frames the project as a minimal experimental harness for training LLMs on a single GPU node, with the current example claiming GPT-2-capability training for about $48 on an 8xH100 node in roughly two hours, or closer to $15 on a spot instance.
+Released in 2025. MIT licensed. The GitHub repository showed 55,379 stars, 7,613 forks, 110 open issues, and a May 5, 2026 push timestamp when rechecked through GitHub's API on June 24, 2026. Its README frames the project as a minimal experimental harness for training LLMs on a single GPU node, with the current example claiming GPT-2-capability training for about $48 on an 8xH100 node in roughly two hours, or closer to $15 on a spot instance.
 
 ## System Verdict
 
@@ -109,7 +109,7 @@ Released in 2025. MIT licensed. The GitHub repository showed 54,644 stars, 7,421
 | **Hyperparameter control** | Single `--depth` flag; other hparams auto-computed |
 | **Eval suite included** | MMLU, GSM8K, HumanEval |
 | **Hardware floor** | CPU or Apple MPS for toy runs. 8xH100 for the speedrun. |
-| **Repository signal** | 54,644 stars, 7,421 forks, MIT license, and May 5, 2026 push timestamp as of June 12, 2026 |
+| **Repository signal** | 55,379 stars, 7,613 forks, MIT license, 110 open issues, and May 5, 2026 push timestamp as of June 24, 2026 |
 | **Recent experiments** | FP8 precision, batch-size tweaks, NVIDIA ClimbMix data, autoresearch loops |
 
 ## What it actually is
@@ -145,7 +145,7 @@ The GPT-2-capability example is the headline benchmark. The README contrasts the
 | CPU or MPS experimentation | Free on existing hardware |
 | Inference after training | User's choice of provider or self-host |
 
-*Verified 2026-06-12 via the [nanochat GitHub README](https://github.com/karpathy/nanochat) and GitHub repository metadata.*
+*Verified 2026-06-24 via the [nanochat GitHub README](https://github.com/karpathy/nanochat) and GitHub repository metadata.*
 
 ## Against the alternatives
 
@@ -170,7 +170,7 @@ The GPT-2-capability example is the headline benchmark. The README contrasts the
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against the [nanochat GitHub repo](https://github.com/karpathy/nanochat), README, and GitHub repository metadata.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies claims against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against the [nanochat GitHub repo](https://github.com/karpathy/nanochat), README, and GitHub repository metadata.
 
 ## FAQ
 

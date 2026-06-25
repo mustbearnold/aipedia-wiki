@@ -43,6 +43,7 @@ interface Props {
   citations?: Array<{ url: string; title?: string }>;
   relatedItems?: RelatedItem[];
   homeSurfaceCards?: boolean;
+  compactHeader?: boolean;
 }
 
 const {
@@ -55,6 +56,7 @@ const {
   ogImage,
   citations = [],
   relatedItems = [],
+  compactHeader = false,
 } = Astro.props;
 
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
@@ -133,13 +135,20 @@ const rankLabel = badge?.text ?? metaExtra ?? (readingMinutes > 0 ? `${readingMi
   </div>
 
   <div class="gt-canvas">
-    <Hero
-      title={title}
-      tagline={description}
-      breadcrumbs={heroBreadcrumbs}
-      verifiedLabel={verifiedLabel}
-      rankLabel={rankLabel}
-    />
+    {compactHeader ? (
+      <header class="gt-compact-header">
+        <h1>{title}</h1>
+        {verifiedLabel && <p>{verifiedLabel}</p>}
+      </header>
+    ) : (
+      <Hero
+        title={title}
+        tagline={description}
+        breadcrumbs={heroBreadcrumbs}
+        verifiedLabel={verifiedLabel}
+        rankLabel={rankLabel}
+      />
+    )}
 
     <article class="gt-body">
       <slot />
@@ -163,6 +172,26 @@ const rankLabel = badge?.text ?? metaExtra ?? (readingMinutes > 0 ? `${readingMi
   </div>
 
   <style>
+    .gt-compact-header {
+      margin: 0 0 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--gt-line);
+    }
+    .gt-compact-header h1 {
+      margin: 0;
+      color: var(--gt-fg);
+      font-size: clamp(28px, 8vw, 42px);
+      font-weight: 750;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .gt-compact-header p {
+      margin: 6px 0 0;
+      color: var(--gt-positive);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
     .gt-body { margin-bottom: 40px; }
     .gt-body :global(h2) {
       font-size: 22px; font-weight: 700; letter-spacing: 0;
@@ -195,6 +224,92 @@ const rankLabel = badge?.text ?? metaExtra ?? (readingMinutes > 0 ? `${readingMi
     .gt-body :global(th) {
       font-size: 11px; font-weight: 700; text-transform: uppercase;
       letter-spacing: 0.08em; color: var(--gt-subtle);
+    }
+    .gt-body :global(.availability-ledger) {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 18px;
+    }
+    .gt-body :global(.availability-row) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 9px 10px 9px 12px;
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius-sm);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(249, 115, 22, 0.035)),
+        rgba(255, 255, 255, 0.028);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+    }
+    .gt-body :global(.availability-row strong) {
+      min-width: 0;
+      color: var(--gt-fg);
+      font-size: 14px;
+      font-weight: 750;
+      line-height: 1.22;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+    }
+    .gt-body :global(.availability-status) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      min-width: 88px;
+      padding: 4px 10px;
+      border-radius: var(--gt-radius-pill);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .gt-body :global(.availability-status.is-available) {
+      border: 1px solid rgba(var(--gt-positive-rgb), 0.38);
+      background: rgba(var(--gt-positive-rgb), 0.12);
+      color: var(--gt-positive);
+    }
+    .gt-body :global(.availability-status.is-unavailable) {
+      border: 1px solid rgba(var(--gt-negative-rgb), 0.42);
+      background: rgba(var(--gt-negative-rgb), 0.12);
+      color: var(--gt-negative);
+    }
+    .gt-body :global(details) {
+      margin-top: 18px;
+      border: 1px solid var(--gt-line);
+      border-radius: var(--gt-radius-sm);
+      background: rgba(255, 255, 255, 0.025);
+    }
+    .gt-body :global(details summary) {
+      cursor: pointer;
+      padding: 12px;
+      color: var(--gt-muted);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.2;
+    }
+    .gt-body :global(details ul) {
+      margin: 0;
+      padding: 0 12px 12px 28px;
+    }
+    .gt-body :global(details li) {
+      margin-bottom: 6px;
+      color: var(--gt-muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    @media (max-width: 360px) {
+      .gt-body :global(.availability-row) {
+        gap: 8px;
+        padding-inline: 10px 8px;
+      }
+      .gt-body :global(.availability-status) {
+        min-width: 76px;
+        padding-inline: 8px;
+        font-size: 11px;
+      }
     }
     .gt-body :global(code) {
       font-family: var(--font-mono);

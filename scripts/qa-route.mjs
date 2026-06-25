@@ -19,6 +19,8 @@ const KNOWN_FLAGS = new Set([
   '--widths',
   '--site-dir',
   '--dist-dir',
+  '--base-url',
+  '--concurrency',
   '--host',
   '--port',
   '--project-dir',
@@ -34,6 +36,8 @@ const VALUE_FLAGS = new Set([
   '--widths',
   '--site-dir',
   '--dist-dir',
+  '--base-url',
+  '--concurrency',
   '--host',
   '--port',
   '--project-dir',
@@ -85,6 +89,8 @@ function usage() {
     '  --route <path>        Route to verify. Repeatable or comma-separated via --routes.',
     '  --width <px>         Viewport width. Repeatable or comma-separated via --widths.',
     '  --site-dir <dir>     Static build directory. Defaults to the detected built output.',
+    '  --base-url <url>     Existing local dev or preview server to test instead of starting a static server.',
+    '  --concurrency <n>    Number of browser checks to run at once. Default: 1.',
     '  --host <host>        Static server host. Default: 127.0.0.1.',
     '  --port <port>        Static server port. Default: first open local port.',
     '  --project-dir <dir>  Resolve paths from another project root.',
@@ -117,6 +123,18 @@ function collectArgumentIssues() {
     issues.push({ code: 'argument-invalid', detail: 'choose only one of --site-dir or --dist-dir' });
   }
 
+  const baseUrl = valueFor('--base-url');
+  if (baseUrl) {
+    const parsed = parseLocalBaseUrl(baseUrl);
+    if (!parsed.ok) issues.push({ code: 'argument-invalid', detail: parsed.detail });
+    if (hasFlag('--site-dir') || hasFlag('--dist-dir')) {
+      issues.push({ code: 'argument-invalid', detail: 'choose either --base-url or a static build directory, not both' });
+    }
+    if (hasFlag('--host') || hasFlag('--port')) {
+      issues.push({ code: 'argument-invalid', detail: '--host and --port only apply when qa-route starts its own static server' });
+    }
+  }
+
   const routes = routeArgs();
   if (!routes.length) issues.push({ code: 'argument-invalid', detail: 'at least one --route is required' });
   for (const route of routes) {
@@ -130,6 +148,11 @@ function collectArgumentIssues() {
     }
   }
 
+  const concurrency = concurrencyArg();
+  if (!Number.isInteger(concurrency) || concurrency < 1 || concurrency > 8) {
+    issues.push({ code: 'argument-invalid', detail: `--concurrency must be an integer from 1 to 8, got ${valueFor('--concurrency')}` });
+  }
+
   const portValue = valueFor('--port');
   if (portValue) {
     const parsed = Number(portValue);
@@ -139,6 +162,27 @@ function collectArgumentIssues() {
   }
 
   return issues;
+}
+
+function parseLocalBaseUrl(rawUrl) {
+  let parsed;
+  try {
+    parsed = new URL(rawUrl);
+  } catch {
+    return { ok: false, detail: `--base-url must be a valid URL, got ${rawUrl}` };
+  }
+
+  if (parsed.protocol !== 'http:') {
+    return { ok: false, detail: `--base-url must use http, got ${parsed.protocol}` };
+  }
+
+  const host = parsed.hostname.toLowerCase();
+  const localHosts = new Set(['127.0.0.1', 'localhost', '::1', '[::1]']);
+  if (!localHosts.has(host)) {
+    return { ok: false, detail: `--base-url must point at a local server, got ${parsed.hostname}` };
+  }
+
+  return { ok: true, url: `${parsed.origin}${parsed.pathname.replace(/\/+$/, '')}` };
 }
 
 function routeArgs() {
@@ -155,6 +199,12 @@ function widthArgs() {
   const rawWidths = valuesFor('--width', '--widths');
   if (!rawWidths.length) return DEFAULT_WIDTHS;
   return [...new Set(rawWidths.map((width) => Number(width)))].sort((a, b) => a - b);
+}
+
+function concurrencyArg() {
+  const raw = valueFor('--concurrency');
+  if (!raw) return 1;
+  return Number(raw);
 }
 
 function viewportHeight(width) {
@@ -323,6 +373,39 @@ async function evaluateRoute(page, route) {
   }, comparisonRoute(route));
 }
 
+async function checkRoute({ browser, baseUrl, route, width }) {
+  const page = await browser.newPage({
+    viewport: { width, height: viewportHeight(width) },
+    isMobile: width <= 430,
+  });
+  const failedRequests = [];
+  page.on('requestfailed', (request) => {
+    if (isAllowedLocalMissing(request.url())) return;
+    failedRequests.push({ method: request.method(), url: request.url(), failure: request.failure()?.errorText ?? '' });
+  });
+  page.on('response', (response) => {
+    if (response.status() < 400 || isAllowedLocalMissing(response.url())) return;
+    const request = response.request();
+    if (request.resourceType() === 'document') return;
+    failedRequests.push({ method: request.method(), url: response.url(), status: response.status() });
+  });
+
+  const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'domcontentloaded' });
+  await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
+  const metrics = await evaluateRoute(page, route);
+  await page.close();
+
+  const result = {
+    route,
+    width,
+    responseStatus: response?.status() ?? null,
+    metrics,
+    failedRequests,
+  };
+  result.failures = failuresForResult(result);
+  return result;
+}
+
 function failuresForResult({ route, width, responseStatus, metrics, failedRequests }) {
   const failures = [];
   const label = routeLabel(route, width);
@@ -354,65 +437,47 @@ function failuresForResult({ route, width, responseStatus, metrics, failedReques
   return failures;
 }
 
-async function runQa({ routes, widths, host, port, siteDir }) {
-  const server = startStaticServer({ host, port, siteDir });
-  const baseUrl = `http://${host}:${port}`;
-  const results = [];
+async function runQa({ routes, widths, host, port, siteDir, baseUrl, concurrency }) {
+  const server = baseUrl ? null : startStaticServer({ host, port, siteDir });
+  const resolvedBaseUrl = baseUrl || `http://${host}:${port}`;
+  const jobs = routes.flatMap((route) => widths.map((width) => ({ route, width })));
+  const results = new Array(jobs.length);
 
   try {
-    await waitForServer(baseUrl);
+    await waitForServer(resolvedBaseUrl);
     const browser = await chromium.launch();
     try {
-      for (const route of routes) {
-        for (const width of widths) {
-          const page = await browser.newPage({
-            viewport: { width, height: viewportHeight(width) },
-            isMobile: width <= 430,
+      let nextJobIndex = 0;
+      const workerCount = Math.min(concurrency, jobs.length);
+      await Promise.all(Array.from({ length: workerCount }, async () => {
+        while (nextJobIndex < jobs.length) {
+          const jobIndex = nextJobIndex;
+          nextJobIndex += 1;
+          results[jobIndex] = await checkRoute({
+            browser,
+            baseUrl: resolvedBaseUrl,
+            ...jobs[jobIndex],
           });
-          const failedRequests = [];
-          page.on('requestfailed', (request) => {
-            if (isAllowedLocalMissing(request.url())) return;
-            failedRequests.push({ method: request.method(), url: request.url(), failure: request.failure()?.errorText ?? '' });
-          });
-          page.on('response', (response) => {
-            if (response.status() < 400 || isAllowedLocalMissing(response.url())) return;
-            const request = response.request();
-            if (request.resourceType() === 'document') return;
-            failedRequests.push({ method: request.method(), url: response.url(), status: response.status() });
-          });
-
-          const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'domcontentloaded' });
-          await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
-          const metrics = await evaluateRoute(page, route);
-          await page.close();
-
-          const result = {
-            route,
-            width,
-            responseStatus: response?.status() ?? null,
-            metrics,
-            failedRequests,
-          };
-          result.failures = failuresForResult(result);
-          results.push(result);
         }
-      }
+      }));
     } finally {
       await browser.close();
     }
   } finally {
-    await server.stop();
+    if (server) await server.stop();
   }
 
   return {
     ok: results.every((result) => result.failures.length === 0),
     project_dir: PROJECT_DIR,
-    site_dir: siteDir,
+    site_dir: siteDir || null,
+    base_url: resolvedBaseUrl,
+    concurrency,
     routes,
     widths,
-    results,
-    failures: results.flatMap((result) => result.failures),
-    server_output: server.output(),
+    results: results.filter(Boolean),
+    failures: results.filter(Boolean).flatMap((result) => result.failures),
+    server_output: server?.output() ?? '',
   };
 }
 
@@ -443,11 +508,13 @@ async function main() {
     return 2;
   }
 
+  const baseUrlResult = valueFor('--base-url') ? parseLocalBaseUrl(valueFor('--base-url')) : null;
+  const baseUrl = baseUrlResult?.url || '';
   const host = valueFor('--host') || '127.0.0.1';
-  const port = valueFor('--port') ? Number(valueFor('--port')) : await findOpenPort();
+  const port = baseUrl ? 0 : valueFor('--port') ? Number(valueFor('--port')) : await findOpenPort();
   const siteDirArg = valueFor('--site-dir') || valueFor('--dist-dir');
-  const siteDir = builtSiteDir(PROJECT_DIR, siteDirArg ? resolvePathFromProject(PROJECT_DIR, siteDirArg) : '');
-  if (!existsSync(siteDir) || !statSync(siteDir).isDirectory()) {
+  const siteDir = baseUrl ? '' : builtSiteDir(PROJECT_DIR, siteDirArg ? resolvePathFromProject(PROJECT_DIR, siteDirArg) : '');
+  if (!baseUrl && (!existsSync(siteDir) || !statSync(siteDir).isDirectory())) {
     emitReport({
       ok: false,
       mode: 'missing-site-dir',
@@ -465,6 +532,8 @@ async function main() {
     host,
     port,
     siteDir,
+    baseUrl,
+    concurrency: concurrencyArg(),
   });
   emitReport(report);
   return report.ok ? 0 : 1;

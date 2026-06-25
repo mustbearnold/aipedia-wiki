@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Pro/Believer pricing is region-rendered"
 status: active
 launched: 2021-06
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -38,7 +38,7 @@ facts:
     source: "https://capacities.io/pricing"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     next_review_at: 2026-07-22
     volatility: high
     confidence: high
@@ -55,7 +55,7 @@ facts:
     source: "https://docs.capacities.io/reference/ai-assistant"
     source_label: "Capacities AI assistant docs"
     source_id: capacities-ai-assistant-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -64,16 +64,16 @@ facts:
     source: "https://docs.capacities.io/reference/ai-chat-connectors"
     source_label: "Capacities AI Chat Connectors docs"
     source_id: capacities-ai-chat-connectors
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
   recent_product_change:
-    value: "Release 65 made Bulk Import available to all users, added Image Analysis for Pro, improved recurring tasks, reworked the side panel, and added AI web search and AI chat improvements."
+    value: "Release 65 made Bulk Import available to all users, added Image Analysis for Pro, improved recurring tasks, reworked the side panel, and added AI web search and AI chat improvements; the latest What's New page also lists May 2026 v1.65.x continuous improvements above Release 65."
     source: "https://capacities.io/whats-new/release-65/"
     source_label: "Capacities Release 65"
     source_id: capacities-release-65
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -99,8 +99,16 @@ not_best_for:
   - users requiring plain-Markdown portability
   - workflows dependent on heavy plugin ecosystems
 quick_answer: >-
-  Capacities is object-based PKM where every note is a typed object with properties. The June 23 check is product scope, not only pricing: Pro now matters more for AI Chat Connectors, provider choice, richer AI context, image analysis, recurring tasks, and media-aware workflows, while Bulk Import is now available to all users. Pick it for structural thinking and clean auto-links. Skip it for teams, plugin depth, or plain-Markdown portability.
+  Capacities is object-based PKM where every note is a typed object with properties. The June 24 check is product scope, not only pricing: Pro now matters more for AI Chat Connectors, provider choice, richer AI context, image analysis, recurring tasks, and media-aware workflows, while Bulk Import is now available to all users. Pick it for structural thinking and clean auto-links. Skip it for teams, plugin depth, or plain-Markdown portability.
 price_history:
+  - date: 2026-06-24
+    plan: "Free / Pro / Believer"
+    price: "Region-rendered"
+    source: "https://capacities.io/pricing"
+    source_label: "Capacities pricing"
+    source_id: capacities-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked pricing, AI assistant docs, AI Chat Connectors docs, Release 65, and the What's New index. No fixed USD plan-price update found in the text crawl; latest What's New now shows May 2026 v1.65.x continuous improvements above Release 65."
   - date: 2025-11-01
     plan: "Pro"
     price: "$9.99/mo (annual)"
@@ -154,6 +162,7 @@ The free-core promise is still visible on the pricing page, but detailed plan pr
 - Release 64 added recurring tasks with schedule/completion-date modes, catch-up behavior, excuse/skip options, task stats, and a recurring task dashboard.
 - Release 64 also added AI model-provider choice across OpenAI, Gemini, Anthropic, Mistral, and xAI, with model-picker details for EU-hosted models and usage cost.
 - Release 65 made Bulk Import available to all users, brought image analysis to Capacities Pro, improved recurring task edge cases, reworked the side panel, and added AI web search and AI chat polish.
+- The What's New index now lists May 2026 v1.65.x continuous improvements above Release 65, including small fixes, query suggestions for object dashboards, tags view for task dashboards, and an AI panel fix.
 - Release 62 and the current docs keep AI Chat Connectors as a Pro beta using MCP, so ChatGPT, Claude, Cursor, Le Chat, and other compatible tools can search notes, read objects, add daily-note content, and link Capacities objects.
 - Release 63 added Related Content, deadlines, Search 3.0, AI chat upgrades, and full Bulk Import access for Believers.
 - Release 61 added AI media analysis for images, including searchable descriptions, OCR-like extraction, and media-specific object categories.
@@ -161,6 +170,7 @@ The free-core promise is still visible on the pricing page, but detailed plan pr
 
 ## Recent Changes
 
+- **May 2026 continuous improvements:** The What's New index now shows v1.65.13 and v1.65.6 above Release 65, including small fixes, object-dashboard query suggestions, task-dashboard tags view, standardized task context picker behavior, and an AI panel fix.
 - **Release 65 (May 2026):** Bulk Import is available to all users, Image Analysis is available for Pro users, recurring tasks gained more scheduling polish, the side panel was reworked, and AI web search was added to the assistant.
 - **Release 64 (May 2026):** Recurring tasks shipped, and Capacities AI added model-provider choice across OpenAI, Gemini, Anthropic, Mistral, and xAI.
 - **Release 63:** Related Content, deadlines, Search 3.0, AI chat upgrades, and full Bulk Import access for Believers.
@@ -194,7 +204,7 @@ The free-core promise is still visible on the pricing page, but detailed plan pr
 | **Free tier** | Core product remains free; verify media and plan limits in live regional pricing |
 | **API** | None public |
 
-Every data point was verified against vendor docs on 2026-06-23. See Sources.
+Every data point was verified against vendor docs on 2026-06-24. See Sources.
 
 ## What it actually is
 
@@ -229,7 +239,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 | Pro | Region-rendered | AI assistant, AI Chat Connectors beta, provider choice, richer AI workflows, and Pro features. |
 | Believer | Region-rendered | Everything in Pro plus support for development and early/beta access such as Bulk Import. |
 
-*Prices verified 2026-06-23 via [capacities.io/pricing](https://capacities.io/pricing). The text crawl confirms the free-core promise, but detailed Pro and Believer prices are region-rendered, so verify your account region before budgeting.*
+*Prices verified 2026-06-24 via [capacities.io/pricing](https://capacities.io/pricing). The text crawl confirms the free-core promise, but detailed Pro and Believer prices are region-rendered, so verify your account region before budgeting.*
 
 ## Against the alternatives
 
@@ -257,7 +267,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [capacities.io/pricing](https://capacities.io/pricing), [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant), [AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors), [Capacities Release 65](https://capacities.io/whats-new/release-65/), and the [Capacities changelog](https://capacities.io/whats-new/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [capacities.io/pricing](https://capacities.io/pricing), [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant), [AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors), [Capacities Release 65](https://capacities.io/whats-new/release-65/), and the [Capacities changelog](https://capacities.io/whats-new/).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200/month individual via Devin pricing; Team from $80/month plus full-dev seats"
 status: active
 launched: 2024-11
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,49 +30,49 @@ facts:
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: windsurf-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   pricing_anchor:
     value: windsurf.com/pricing now redirects to Devin pricing. Current public pricing lists Free, Pro $20/mo, Max $200/mo, Teams $80/mo plus $40/mo per full dev seat, and Enterprise custom.
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: windsurf-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   coding_agent:
     value: Devin Desktop model docs describe SWE-1.6, SWE-1.6 Fast, SWE-1.5, SWE-1-mini, swe-grep, Adaptive routing, and selected BYOK Claude 4 options.
     source: https://docs.devin.ai/desktop/models
     source_label: Devin Desktop model docs
     source_id: windsurf-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   enterprise_controls:
     value: Enterprise evaluation should now happen through Cognition/Devin procurement, including admin controls, model access, usage governance, SSO, and deployment options.
     source: https://devin.ai/pricing
     source_label: Devin pricing
     source_id: devin-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   watch_out_for:
     value: The main risk is rebrand and packaging churn. Do not quote old standalone Windsurf or Codeium prices unless the current Devin/Windsurf account screen confirms them.
     source: https://windsurf.com/pricing
     source_label: Devin pricing
     source_id: windsurf-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-24'
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
 tags: [code-editor, ide, autocomplete, ai-coding, vscode-fork, agentic-coding, cascade, swe-1-6, cognition, devin-desktop]
 seo_title: "Windsurf / Devin Desktop: Features, Pricing & Review (June 2026)"
-meta_description: "Windsurf is now publicly presented as Devin Desktop. Current pricing redirects to Devin plans: Free, Pro $20/mo, Max $200/mo, Teams from $80/mo plus full-dev seats, Enterprise custom. Verified June 2026."
+meta_description: "Windsurf is now publicly presented as Devin Desktop. Current pricing redirects to Devin plans: Free, Pro $20/mo, Max $200/mo, Team $80/mo plus full-dev seats, Enterprise custom. Verified June 2026."
 author: aipedia.wiki Editorial
 best_for:
   - existing Windsurf users evaluating the Devin Desktop path
@@ -87,12 +87,21 @@ not_best_for:
 quick_answer: >-
   Windsurf is not dead, but the public product path has moved into Devin Desktop. Choose it if Cognition's Devin stack, SWE-1.6 family, and IDE-to-cloud-agent handoff matter. Choose Cursor if you want a cleaner standalone AI-native IDE decision with less rebrand and packaging uncertainty.
 price_history:
+  - date: 2026-06-24
+    plan: "Devin Desktop public pricing recheck"
+    price: "Free / Pro $20 / Max $200 / Team $80 base + $40 per full user / Enterprise custom"
+    source: "https://devin.ai/pricing/"
+    source_label: "Devin pricing"
+    source_id: windsurf-pricing
+    verified_at: 2026-06-24
+    note: "Official Devin pricing still lists Free, Pro, Max, Team, and Enterprise. The Team card includes unlimited flex seats plus $40/month per full user, and full users include Devin Desktop access."
   - date: 2026-06-05
     plan: "Windsurf becomes Devin Desktop public path"
     price: "Free / Pro $20 / Max $200 / Teams $80 base + $40 per full dev seat / Enterprise custom"
     source: "https://windsurf.com/pricing"
     source_label: "Devin pricing"
     source_id: windsurf-pricing
+    verified_at: 2026-06-05
     note: "June 5 recheck: windsurf.com/pricing redirects to devin.ai/pricing, whose banner says Windsurf is now Devin Desktop. Treat old standalone Windsurf pricing as stale unless the account screen confirms it."
   - date: 2026-06-01
     plan: "Old standalone Windsurf pricing check"
@@ -100,6 +109,7 @@ price_history:
     source: "https://windsurf.com/pricing"
     source_label: "Source"
     source_id: windsurf-pricing
+    verified_at: 2026-06-01
     note: "Superseded by the June 5 redirect check."
   - date: 2025-07-14
     plan: "Ownership"
@@ -107,17 +117,19 @@ price_history:
     source: "https://cognition.ai/blog/windsurf"
     source_label: "Cognition acquisition announcement"
     source_id: cognition-windsurf-acquisition
+    verified_at: 2025-07-14
     note: "Cognition announced a definitive agreement to acquire Windsurf's IP, product, trademark, brand, team, and business."
 ---
 
 # Windsurf / Devin Desktop
 
-Windsurf is Cognition's AI-native IDE surface formerly sold as a standalone Windsurf product. As of the June 12, 2026 verification, the public path has shifted: `windsurf.com/pricing` redirects to Devin pricing, and the pricing page banner says **"Windsurf is now Devin Desktop."**
+Windsurf is Cognition's AI-native IDE surface formerly sold as a standalone Windsurf product. As of the June 24, 2026 verification, the public path has shifted: `windsurf.com/pricing` redirects to Devin pricing, and the Devin Desktop FAQ says Windsurf became Devin Desktop on June 2, 2026.
 
 That makes this page active, not dead. The correct buyer framing is no longer "Windsurf versus Cursor as two clean standalone AI IDEs." It is now **Devin Desktop versus Cursor**: Cognition's IDE surface attached to the broader Devin autonomous-engineering stack.
 
 ## Recent Developments
 
+- **June 24, 2026:** Rechecked Devin pricing, Devin Desktop model docs, and the Devin Desktop FAQ. Official pricing still lists Free, Pro $20/month, Max $200/month, Team $80/month plus $40/month per full user, and Enterprise custom. SWE-1.6 remains the current in-house model family, and the FAQ says existing Windsurf plan pricing did not change during the Devin Desktop transition.
 - **June 5, 2026:** Windsurf pricing now redirects to [Devin pricing](https://devin.ai/pricing). Current public plans are Free, Pro $20/month, Max $200/month, Teams $80/month plus $40/month per full dev seat, and Enterprise custom. Paid plans include usage allowances and extra usage at API pricing.
 - **June 5, 2026:** Windsurf model docs now resolve to [Devin Desktop model docs](https://docs.devin.ai/desktop/models), which list SWE-1.6, SWE-1.6 Fast, SWE-1.5, SWE-1-mini, swe-grep, Adaptive routing, and selected BYOK Claude 4 options.
 - **July 14, 2025:** Cognition announced the acquisition of Windsurf's IP, product, trademark, brand, people, and business. The integration path is now visible in the Devin Desktop positioning.
@@ -143,11 +155,11 @@ That makes this page active, not dead. The correct buyer framing is no longer "W
 | **BYOK** | Selected Claude 4 BYOK options listed for individual users |
 | **Current pricing route** | windsurf.com/pricing -> devin.ai/pricing |
 | **Individual pricing** | Free, Pro $20/month, Max $200/month |
-| **Team pricing** | Teams $80/month plus $40/month per full dev seat |
+| **Team pricing** | Team $80/month plus $40/month per full user |
 | **Enterprise** | Custom |
 | **Main risk** | Rebrand/packaging churn and stale old Windsurf pricing claims |
 
-Every data point above was verified against current public Cognition, Devin, and Windsurf sources on 2026-06-12.
+Every data point above was verified against current public Cognition, Devin, and Windsurf sources on 2026-06-24.
 
 ## What It Actually Is
 
@@ -180,7 +192,7 @@ Use [windsurf.com/pricing](https://windsurf.com/pricing), but understand that it
 | Free | $0 | Evaluation and light usage |
 | Pro | $20/month | Individual paid plan with increased quotas and frontier model access |
 | Max | $200/month | Higher individual quota for heavy usage |
-| Teams | $80/month base plus $40/month per full dev seat | Shared admin, collaboration, centralized billing |
+| Team | $80/month base plus $40/month per full user | Shared admin, collaboration, centralized billing |
 | Enterprise | Custom | SSO, enterprise controls, custom deployment/support |
 
 Paid-plan usage language now centers on included allowances that refresh daily/weekly plus extra usage at API pricing.
@@ -204,7 +216,7 @@ Paid-plan usage language now centers on included allowances that refresh daily/w
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Windsurf pricing](https://windsurf.com/pricing), [Devin pricing](https://devin.ai/pricing), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), and the [Cognition acquisition announcement](https://cognition.ai/blog/windsurf).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [Windsurf pricing](https://windsurf.com/pricing), [Devin pricing](https://devin.ai/pricing), [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), and the [Cognition Devin Desktop announcement](https://cognition.ai/blog/introducing-devin-desktop).
 
 ## FAQ
 
@@ -215,7 +227,7 @@ No. The public product path now presents Windsurf as Devin Desktop. That is an a
 Windsurf inherited the Codeium lineage, and Cognition acquired Windsurf in 2025. Current buyers should evaluate the Devin Desktop path rather than old Codeium branding.
 
 **Is Windsurf cheaper than Cursor?**
-Do not assume that from old pricing. The current public route lands on Devin pricing: Pro $20/month and Max $200/month for individuals, with Teams pricing starting at $80/month plus full-dev-seat add-ons.
+Do not assume that from old pricing. The current public route lands on Devin pricing: Pro $20/month and Max $200/month for individuals, with Team pricing starting at $80/month plus full-user add-ons.
 
 **What is SWE-1.6?**
 Cognition's current software-engineering model family in the Devin Desktop docs. The docs also list SWE-1.6 Fast, SWE-1.5, SWE-1-mini, and swe-grep.
@@ -226,7 +238,8 @@ Choose Cursor for the cleaner standalone AI IDE. Choose Windsurf / Devin Desktop
 ## Sources
 
 - [Windsurf pricing redirect](https://windsurf.com/pricing): current route into Devin pricing
-- [Devin pricing](https://devin.ai/pricing): current plans and Devin Desktop banner
+- [Devin pricing](https://devin.ai/pricing): current Free, Pro, Max, Team, and Enterprise pricing
+- [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq): transition, pricing-continuity, Devin Local, and JetBrains-plugin notes
 - [Devin Desktop model docs](https://docs.devin.ai/desktop/models): SWE-1.6, Adaptive, BYOK, and model selector notes
 - [Cognition acquisition of Windsurf](https://cognition.ai/blog/windsurf): ownership and integration context
 

@@ -128,12 +128,12 @@ const priceLabels = ['Monthly', 'Annual'];
   .gt-card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 18px;
+    gap: 8px;
+    padding: 14px;
     border-radius: var(--gt-radius);
     border: 1px solid var(--gt-line-strong);
     background: linear-gradient(180deg, var(--gt-surface-2), var(--gt-surface));
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   .gt-card-head {
     display: grid;
@@ -144,7 +144,7 @@ const priceLabels = ['Monthly', 'Annual'];
   }
   .gt-card-score { display: flex; flex-direction: column; }
   .gt-card-score-num {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0;
@@ -229,18 +229,26 @@ const priceLabels = ['Monthly', 'Annual'];
   .gt-card-title {
     margin: 0;
     color: var(--gt-fg);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 800;
     letter-spacing: 0;
     line-height: 1.18;
     text-wrap: balance;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .gt-card-description {
     margin: 0;
     color: var(--gt-muted);
-    font-size: 14px;
-    line-height: 1.45;
+    font-size: 13px;
+    line-height: 1.38;
     text-wrap: pretty;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .gt-card-ctas {
     display: flex;
@@ -288,6 +296,8 @@ const priceLabels = ['Monthly', 'Annual'];
       flex: 1 1 100%;
       order: 2;
     }
+    .gt-card-title { font-size: 20px; }
+    .gt-card-description { font-size: 14px; }
     .gt-card-ctas {
       order: 3;
       flex-direction: row;

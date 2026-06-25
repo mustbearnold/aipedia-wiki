@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 23, 2026: compare Canva AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
+meta_description: "Updated June 24, 2026: compare Canva AI, Napkin AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -28,9 +28,9 @@ AI design is now two overlapping markets. The first is **visual creation and pro
 
 As of June 20, 2026, start with the job:
 
-**Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layered layouts, on-brand generation, AI images, AI video, Magic Write, connectors, web research, Canva Code 2.0, and business controls. It is the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department, but heavy users now need to inspect AI Pass, allowance burn, AI Product Terms, and commercial-rights review before buying.
+**Use [Canva](/tools/canva/) when non-designers need finished creative fast.** Canva AI 2.0 is built across Canva's Visual Suite and supports conversational creation, editable layered layouts, on-brand generation, AI images, AI video, Magic Write, connectors, web research, Canva Code 2.0, and business controls. The June 24 pass adds assistant-connector context for ChatGPT, Codex, Perplexity, Claude Design, and Gemini, but those routes depend on assistant plan, region, workspace policy, connector permissions, and Canva entitlements. Canva is still the safest first stop for marketers, creators, teachers, small businesses, and teams that need to publish polished content without a design department, but heavy users now need to inspect AI Pass, allowance burn, AI Product Terms, and commercial-rights review before buying.
 
-**Use [Napkin AI](/tools/napkin-ai/) when the design task starts as text and needs an explanatory visual.** The June 8 pricing check keeps Free at 500 weekly AI credits, Plus at $9/person/month, and Pro at $22/person/month. It is a diagram/flowchart/slide-visual builder, not a full design system or campaign creative suite.
+**Use [Napkin AI](/tools/napkin-ai/) when the design task starts as text and needs an explanatory visual.** The June 24 pricing check keeps Free at 500 weekly AI credits, Plus at $9/person/month, and Pro at $22/person/month. It also confirms the 25% annual-billing discount, PPT/SVG export on Plus and Pro, optional Pro credit top-ups, and Napkin's statement that AI subprocessors are contractually barred from training on customer data. It is a diagram/flowchart/slide-visual builder, not a full design system or campaign creative suite.
 
 **Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 23 pricing check lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites beta on Full seats, Figma Buzz beta across seats, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 23 model and handoff check confirms Figma Make has multiple selectable non-default models, a default-model caveat, paid-plan verified partner MCP connectors, one-way GitHub push to Figma-created repositories, and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
@@ -88,7 +88,7 @@ As of June 20, 2026, start with the job:
 
 ## Current Shortlist
 
-**Best for non-designers: Canva.** The reason is not just AI generation. Canva wins because it combines templates, brand controls, image/video/editor workflows, AI writing, social formats, education use cases, and a familiar editor. If the buyer is a marketer, creator, teacher, founder, or small business operator, Canva usually turns intent into a publishable asset faster than Figma or an app builder. The June 23 source pass keeps two buying cautions in the foreground: AI Pass is an allowance extender for Pro/Business, and Canva's AI Product Terms still make output uniqueness, licensed-content handling, AI usage limits, and commercial review the buyer's responsibility.
+**Best for non-designers: Canva.** The reason is not just AI generation. Canva wins because it combines templates, brand controls, image/video/editor workflows, AI writing, social formats, education use cases, and a familiar editor. If the buyer is a marketer, creator, teacher, founder, or small business operator, Canva usually turns intent into a publishable asset faster than Figma or an app builder. The June 24 source pass keeps two buying cautions in the foreground: AI Pass is an allowance extender for Pro/Business, and Canva's AI Product Terms still make output uniqueness, licensed-content handling, operational AI usage limits, and commercial review the buyer's responsibility.
 
 **Best pro design suite: Figma.** Figma is still the pro team default because design is social: designers, PMs, engineers, marketers, and stakeholders need comments, versions, libraries, variables, prototypes, Dev Mode, and governance. Figma Make and Sites make the category more competitive with app builders, but the strongest reason to buy Figma is still shared product design discipline.
 
@@ -134,7 +134,7 @@ Bolt.new is token-based. Its public pricing page lists Free, Pro at $25/month, T
 
 v0 is credit and token metered. Its public pricing page lists Free, Team at $30/user/month, Business at $100/user/month, Enterprise custom, plus model token rates for v0 Mini, v0 Pro, v0 Max, and v0 Max Fast.
 
-Canva pricing is region-sensitive and now needs a live checkout check for exact Pro, Business, Enterprise, storage, and allowance details. Canva's Business announcement anchors Business at US$20/person/month with no seat minimum, and AI Pass remains the Pro/Business add-on for heavier generation. The safer buyer guidance is still to use Canva Free to validate workflow fit, then verify Pro, Business, Enterprise, and AI Pass pricing directly in your region before upgrading.
+Canva pricing is region-sensitive and now needs a live checkout check for exact Pro, Business, Enterprise, storage, and allowance details. Canva's Business announcement anchors Business at US$20/person/month with no seat minimum, and AI Pass remains the Pro/Business add-on for heavier generation. The June 24 terms check keeps one important caveat: Canva treats AI usage limits as operational controls, not fixed entitlements. Use Canva Free to validate workflow fit, then verify Pro, Business, Enterprise, and AI Pass pricing directly in your region before upgrading.
 
 Midjourney pricing is subscription and generation-capacity based. Its official plans page lists Basic, Standard, Pro, and Mega plan tiers with different monthly or yearly prices and GPU-time limits; its Video docs make GPU burn a bigger consideration when the design team animates still concepts, especially because default batch-4 jobs cost 8 GPU minutes for SD or 26 for HD.
 
@@ -191,16 +191,21 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 
 ## Sources
 
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-23)
-- [Canva Pro](https://www.canva.com/pro/) (verified 2026-06-23)
-- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-23)
-- [Canva Business announcement](https://www.canva.com/newsroom/news/introducing-canva-business/) (verified 2026-06-23)
-- [Canva AI Pass](https://www.canva.com/ai-pass/) (verified 2026-06-23)
-- [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-23)
-- [Canva Claude connector announcement](https://www.canva.com/newsroom/news/claude-ai-connector/) (verified 2026-06-23)
-- [Canva Shield](https://www.canva.com/safe-ai-canva-shield/) (verified 2026-06-23)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-24)
+- [Canva Pro](https://www.canva.com/pro/) (verified 2026-06-24)
+- [Canva AI 2.0 announcement](https://www.canva.com/newsroom/news/canva-create-2026-ai/) (verified 2026-06-24)
+- [Canva Business announcement](https://www.canva.com/newsroom/news/introducing-canva-business/) (verified 2026-06-24)
+- [Canva AI Pass](https://www.canva.com/ai-pass/) (verified 2026-06-24)
+- [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-24)
+- [Canva Claude connector announcement](https://www.canva.com/newsroom/news/claude-ai-connector/) (verified 2026-06-24)
+- [Canva in ChatGPT and Codex](https://www.canva.com/newsroom/news/deep-research-integration-mcp-server/) (verified 2026-06-24)
+- [Canva in Perplexity Computer](https://www.canva.com/newsroom/news/perplexity/) (verified 2026-06-24)
+- [Canva in Claude Design](https://www.canva.com/newsroom/news/canva-claude-design/) (verified 2026-06-24)
+- [Canva in Google Gemini](https://www.canva.com/newsroom/news/google-gemini/) (verified 2026-06-24)
+- [Canva for tech companies](https://www.canva.com/solutions/technology/) (verified 2026-06-24)
+- [Canva Shield](https://www.canva.com/safe-ai-canva-shield/) (verified 2026-06-24)
 - [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-14)
-- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-23)
+- [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-24)
 - [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-23)
 - [AdCreative.ai product videoshoots](https://www.adcreative.ai/product-videoshoot-ai) (verified 2026-06-23)
 - [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-23)

@@ -5,10 +5,10 @@ title: AI Presentation Tools
 description: AI tools for turning prompts, outlines, docs, and written ideas into decks, visual stories, and presentation assets.
 tool_count: 8
 seo_title: "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)"
-meta_description: "Updated June 23, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, Decktopus remains the interactive presenter workflow, and Presentations.AI has a rechecked enterprise/API, data integration, SSO, and auto-refresh lane."
+meta_description: "Updated June 24, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, Napkin AI remains the budget text-to-visuals bridge, and Presentations.AI has a rechecked enterprise/API, data integration, SSO, and auto-refresh lane."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 top_picks:
   best_overall:
@@ -52,7 +52,7 @@ Pick Beautiful.ai when the goal is "make this look professional and stay on bran
 The June 23 pricing check still confirms Pro at $12/month billed annually or $45 monthly, Team at $40/user/month billed annually or $50/user/month monthly for 2-20 seats, Enterprise custom, and a credit-card-required 14-day Pro/Team trial that auto-charges if not canceled. Enterprise buyers should test brand guardrails, shared libraries, viewer analytics, SSO, SCIM, audit logs, and SOC 2 Type II/GDPR/CCPA/PCI documentation before standardizing.
 
 **Slide visuals and diagrams: [Napkin AI](/tools/napkin-ai/).**
-Pick Napkin AI when the bottleneck is not the whole deck, but the visual explanation inside the deck. Its June 15 pricing page check keeps Free at 500 weekly AI credits with unlimited visual editing, file import, PNG/PDF export, and Napkin branding; Plus at $9/person/month with 10,000 monthly credits and PPT/SVG export; and Pro at $22/person/month with 30,000 monthly credits, uploaded fonts, custom branding, and optional credit top-ups. That makes it a useful budget pick for founders, teachers, consultants, and writers who need diagrams before they need a full presentation system.
+Pick Napkin AI when the bottleneck is not the whole deck, but the visual explanation inside the deck. Its June 24 pricing page check keeps Free at 500 weekly AI credits with unlimited visual editing, file import, PNG/PDF export, and Napkin branding; Plus at $9/person/month with 10,000 monthly credits and PPT/SVG export; and Pro at $22/person/month with 30,000 monthly credits, uploaded fonts, custom branding, and optional credit top-ups. Napkin also says customer data is encrypted and private, and that AI subprocessors are contractually barred from training on customer data. That makes it a useful budget pick for founders, teachers, consultants, and writers who need diagrams before they need a full presentation system.
 
 **Interactive presenter workflows: [Decktopus AI](/tools/decktopus/).**
 Pick Decktopus when a deck needs built-in forms, Q&A, analytics, embedded pages, custom domains, voice recording, webhooks, or lead capture. It is not the cleanest default for executive polish, but it is more useful than a plain deck generator when the presentation is also a microsite, feedback form, training asset, or sales funnel. Decktopus pricing and FAQ details were rechecked on June 23, 2026; Pro remains $14.99/month billed annually and Business remains $34.99/user/month billed annually.
@@ -133,12 +133,12 @@ Affiliate availability does not determine ranking. A monetizable tool can be inc
 
 - Gamma AI presentation maker: [https://gamma.app/ai-presentation-maker](https://gamma.app/ai-presentation-maker) (verified 2026-06-23)
 - Gamma pricing, API, and subscription docs: [Gamma pricing](https://gamma.app/pricing), [Gamma API documentation](https://help.gamma.app/en/articles/11962420-does-gamma-have-an-api), [Gamma workspace upgrade docs](https://help.gamma.app/en/articles/8077107-i-want-to-know-more-about-upgrading-my-workspace-to-gamma-s-paid-plans) (pricing/API verified 2026-06-23)
-- Canva AI and Canva AI Product Terms: [https://www.canva.com/canva-ai/](https://www.canva.com/canva-ai/), [https://www.canva.com/policies/ai-product-terms/](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-15)
+- Canva AI and Canva AI Product Terms: [https://www.canva.com/canva-ai/](https://www.canva.com/canva-ai/), [https://www.canva.com/policies/ai-product-terms/](https://www.canva.com/policies/ai-product-terms/) (verified 2026-06-24)
 - Beautiful.ai Create with AI, pricing, product updates, security, and Enterprise controls: [https://www.beautiful.ai](https://www.beautiful.ai), [https://www.beautiful.ai/pricing](https://www.beautiful.ai/pricing), [https://www.beautiful.ai/product-updates](https://www.beautiful.ai/product-updates), [https://www.beautiful.ai/security](https://www.beautiful.ai/security), [https://www.beautiful.ai/enterprise](https://www.beautiful.ai/enterprise) (verified 2026-06-23)
 - Pitch AI presentation maker, pricing, and AI credits: [https://pitch.com/use-cases/ai-presentation-maker](https://pitch.com/use-cases/ai-presentation-maker), [https://pitch.com/pricing/us](https://pitch.com/pricing/us), [https://help.pitch.com/en/articles/12755590-guide-to-ai-credits](https://help.pitch.com/en/articles/12755590-guide-to-ai-credits) (verified 2026-06-15)
 - Decktopus pricing and feature FAQ: [https://www.decktopus.com/pricing](https://www.decktopus.com/pricing) (verified 2026-06-23)
 - Presentations.AI pricing, product, API, features, and Enterprise pages: [https://www.presentations.ai/pricing](https://www.presentations.ai/pricing), [https://www.presentations.ai/](https://www.presentations.ai/), [https://www.presentations.ai/solutions/api](https://www.presentations.ai/solutions/api), [https://www.presentations.ai/features](https://www.presentations.ai/features), [https://www.presentations.ai/solutions/enterprise](https://www.presentations.ai/solutions/enterprise) (verified 2026-06-21)
-- Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/) (verified 2026-06-15)
+- Napkin AI pricing: [https://www.napkin.ai/pricing/](https://www.napkin.ai/pricing/) (verified 2026-06-24)
 - Prezi pricing and plan support: [https://prezi.com/pricing/](https://prezi.com/pricing/), [https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans](https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans) (route checked 2026-06-15; public pricing route redirected without text and the plan-support route returned placeholder text)
 - Gemini in Slides help: [https://support.google.com/docs/answer/14355071](https://support.google.com/docs/answer/14355071) (verified 2026-06-15)
 - Claude Design launch, access, and metering: [https://www.anthropic.com/news/claude-design-anthropic-labs](https://www.anthropic.com/news/claude-design-anthropic-labs), [https://support.claude.com/en/articles/14667344-claude-design-subscription-usage-and-pricing](https://support.claude.com/en/articles/14667344-claude-design-subscription-usage-and-pricing), [https://support.claude.com/en/articles/14604416-get-started-with-claude-design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design), [https://claude.com/pricing](https://claude.com/pricing) (verified 2026-06-18)

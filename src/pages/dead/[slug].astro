@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import ArticlePlusLayout from '../../layouts/ArticlePlusLayout.astro';
 import ToolLogo from '../../components/ToolLogo.astro';
-import { overallScore } from '../../utils/tool-metadata';
+import { getToolCategoryPeers } from '../../lib/content-cache';
 
 export async function getStaticPaths() {
   const entries = await getCollection('dead');
@@ -17,21 +17,7 @@ const { Content, headings } = await render(entry);
 
 const slug = entry.data.slug ?? entry.id.replace(/\.md$/, '');
 const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
-const allTools = await getCollection('tools');
-const migrationPicks = allTools
-  .filter((tool) => tool.data.category === entry.data.category && !['dead', 'retired', 'acquired'].includes(String(tool.data.status ?? '').toLowerCase()))
-  .map((tool) => {
-    const toolSlug = tool.data.slug || tool.id.replace(/\.md$/, '').replace(/\\/g, '/');
-    return {
-      slug: toolSlug,
-      title: tool.data.title,
-      tagline: tool.data.tagline ?? '',
-      price: tool.data.price_range ?? '',
-      score: overallScore(tool.data.scores ?? {}),
-    };
-  })
-  .sort((a, b) => b.score - a.score)
-  .slice(0, 4);
+const migrationPicks = (await getToolCategoryPeers(String(entry.data.category ?? ''))).slice(0, 4);
 
 const wordCount = entry.body ? entry.body.split(/\s+/).filter(Boolean).length : 0;
 const readingMinutes = Math.max(1, Math.round(wordCount / 230));

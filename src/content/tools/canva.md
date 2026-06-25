@@ -2,7 +2,7 @@
 type: tool
 slug: canva
 title: Canva
-tagline: The design platform non-designers actually finish work in. Canva AI 2.0, Business, and AI Pass now make plan fit, AI allowance, and commercial review part of the buying decision.
+tagline: The design platform non-designers actually finish work in. Canva AI 2.0, Business, AI Pass, and assistant integrations now make plan fit, AI allowance, and commercial review part of the buying decision.
 category: ai-design
 company: canva
 url: https://canva.com
@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "Free; Pro and Business pricing is region-rendered; Enterprise custom"
 status: active
 launched: 2013-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 seo_title: "Canva: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 23, 2026: Canva review covers Canva AI 2.0, Pro, Business, Enterprise, AI Pass, pooled AI allowances, AI Product Terms, Canva Shield, regional pricing caveats, Claude comparison fit, and alternatives."
+meta_description: "Updated June 24, 2026: Canva review covers Canva AI 2.0, Pro, Business, Enterprise, AI Pass, pooled AI allowances, AI Product Terms, Canva Shield, regional pricing caveats, AI assistant integrations, and alternatives."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -23,7 +23,7 @@ affiliate:
   network: null
   link: null
   application_status: paused
-  notes: "Canva closed the traditional Impact affiliate path in favor of the Canvassador Program (canva.com/canvassador), which requires active tutorial / course / workshop content creation, not just a publisher relationship. Gate doesn't fit an encyclopedia-style site without a dedicated Canva-tutorials section. Revisit if/when aipedia.wiki adds Canva-specific educational content, or if Canva reopens Impact publisher access."
+  notes: "Canva's official affiliate help surface points affiliate benefits through the Canvassador Program and says the separately managed Canvassador Program is currently closed for applications. Treat Canva as non-affiliate on AiPedia until an approved dashboard, current commission terms, cookie window, and allowed traffic rules are available."
 scores:
   utility: 8
   value: 9
@@ -35,7 +35,7 @@ facts:
     source: "https://www.canva.com/newsroom/news/canva-create-2026-ai/"
     source_label: "Canva AI 2.0 announcement"
     source_id: canva-ai-2-newsroom
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -44,7 +44,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
     next_review_at: 2026-06-29
@@ -53,7 +53,7 @@ facts:
     source: "https://www.canva.com/newsroom/news/introducing-canva-business/"
     source_label: "Canva Business announcement"
     source_id: canva-business-newsroom
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -62,7 +62,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -71,7 +71,7 @@ facts:
     source: "https://www.canva.com/pro/"
     source_label: "Canva Pro"
     source_id: canva-pro
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -80,7 +80,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -89,7 +89,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -98,7 +98,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -107,7 +107,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   web_browsing:
@@ -115,7 +115,7 @@ facts:
     source: "https://www.canva.com/newsroom/news/canva-create-2026-ai/"
     source_label: "Canva AI 2.0 announcement"
     source_id: canva-ai-2-newsroom
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   coding_agent:
@@ -123,7 +123,7 @@ facts:
     source: "https://www.canva.com/newsroom/news/canva-create-2026-ai/"
     source_label: "Canva AI 2.0 announcement"
     source_id: canva-ai-2-newsroom
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -131,7 +131,7 @@ facts:
     source: "https://www.canva.com/safe-ai-canva-shield/"
     source_label: "Canva Shield"
     source_id: canva-shield
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -140,7 +140,7 @@ facts:
     source: "https://www.canva.com/policies/ai-product-terms/"
     source_label: "Canva AI Product Terms"
     source_id: canva-ai-product-terms
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -148,7 +148,7 @@ facts:
     source: "https://www.canva.com/"
     source_label: "Canva product page"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: low
     confidence: high
   best_for:
@@ -156,7 +156,7 @@ facts:
     source: "https://www.canva.com/canva-ai/"
     source_label: "Canva AI"
     source_id: canva-ai
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
   watch_out_for:
@@ -164,7 +164,7 @@ facts:
     source: "https://www.canva.com/policies/ai-product-terms/"
     source_label: "Canva AI Product Terms"
     source_id: canva-ai-product-terms
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -180,15 +180,23 @@ not_best_for:
   - print production requiring CMYK precision
   - design system work
 quick_answer: >-
-  Canva is the fastest path from blank page to finished social post for non-designers. Pick Pro for solo creators; pick Business when collaboration, approvals, Leonardo.AI/Flourish access, and heavier AI usage matter; add AI Pass only after testing allowance burn. Skip it for product design (Figma), vector precision (Illustrator), raw image quality (Midjourney), or anything that cannot survive AI-output rights review.
+  Canva is the fastest path from blank page to finished social post for non-designers. Pick Pro for solo creators; pick Business when collaboration, approvals, Leonardo.AI/Flourish access, and heavier AI usage matter; add AI Pass only after testing allowance burn. Treat ChatGPT, Codex, Gemini, Claude, and Perplexity integrations as input paths into Canva, not substitutes for plan, rights, and admin review. Skip it for product design (Figma), vector precision (Illustrator), raw image quality (Midjourney), or anything that cannot survive AI-output rights review.
 price_history:
+  - date: 2026-06-24
+    plan: "AI Pass / AI usage limits"
+    price: "AI Pass monthly add-on; exact checkout price is region/account rendered"
+    source: "https://www.canva.com/ai-pass/"
+    source_label: "Canva AI Pass"
+    source_id: canva-ai-pass
+    verified_at: 2026-06-24
+    note: "AI Pass remains a Pro/Business add-on with up to 40x Pro and 20x Business AI allowance; AI Product Terms say AI limits are operational controls, not fixed entitlements."
   - date: 2024-09-01
     plan: "Teams (historical)"
     price: "$10/seat/mo annual"
     source: "https://www.canva.com/pricing/"
     source_label: "Source"
     source_id: canva-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     note: "Shifted from flat $119.99/year to per-seat billing."
   - date: 2026-04-15
     plan: "Pro"
@@ -196,7 +204,7 @@ price_history:
     source: "https://www.canva.com/pricing/"
     source_label: "Source"
     source_id: canva-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     note: "Historical April 2026 snapshot. Current Pro checkout should be verified directly because Canva can render pricing by region and billing path."
   - date: 2026-06-02
     plan: "Business / AI Pass"
@@ -204,7 +212,7 @@ price_history:
     source: "https://www.canva.com/pricing/"
     source_label: "Canva pricing"
     source_id: canva-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     note: "Historical June 2 packaging snapshot. Current plan prices, storage, and allowances should be verified on the live regional plan screen before procurement."
   - date: 2026-06-23
     plan: "Business / AI Pass"
@@ -212,17 +220,17 @@ price_history:
     source: "https://www.canva.com/ai-pass/"
     source_label: "Canva AI Pass"
     source_id: canva-ai-pass
-    verified_at: 2026-06-23
+    verified_at: 2026-06-24
     note: "Canva says AI Pass gives up to 40x more AI than Pro and 20x more than Business. Its AI Product Terms also say AI usage limits are operational controls, so heavy users still need a live allowance and checkout check."
 ---
 
 # Canva
 
-Canva is the design platform that non-designers actually complete work in. The current public product surfaces now frame the buying decision around **Free, Pro, Business, Enterprise, Canva AI 2.0, AI Pass, and commercial-use review** rather than templates alone.
+Canva is the design platform that non-designers actually complete work in. The current public product surfaces now frame the buying decision around **Free, Pro, Business, Enterprise, Canva AI 2.0, AI Pass, assistant integrations, and commercial-use review** rather than templates alone.
 
-The old "templates plus Magic Studio" story is now too small. The June 23 source check keeps Canva AI 2.0 as the conversational creative layer, Canva Pro as the solo-creator upgrade, Canva Business as the no-seat-minimum team/growth plan with a US$20/person/month newsroom anchor, and AI Pass as the monthly Pro/Business add-on for much larger Standard, Premium, and Ultra AI usage. Exact checkout price, storage, and allowance details still need a live regional plan check before procurement.
+The old "templates plus Magic Studio" story is now too small. The June 24 source check keeps Canva AI 2.0 as the conversational creative layer, Canva Pro as the solo-creator upgrade, Canva Business as the no-seat-minimum team/growth plan with a US$20/person/month newsroom anchor, and AI Pass as the monthly Pro/Business add-on for much larger Standard, Premium, and Ultra AI usage. Exact checkout price, storage, and allowance details still need a live regional plan check before procurement.
 
-> **April 17, 2026:** [Claude Design exports directly to Canva](/news/2026-04-17-anthropic-launches-claude-design/). Anthropic's new prompt-to-prototype product ships with Canva as one of its four native export targets (alongside PDF, PPTX, URL). See the [Claude Design tool page](/tools/claude-design/). This is additive for Canva users: a new upstream source of AI-generated prototypes that arrive fully editable in the Canva workspace.
+**Recent integration signal:** Canva is moving into the AI assistant surfaces where briefs start. Canva's June source pages say ChatGPT can create, preview, and edit Canva designs, while Codex can use a Canva plugin for brand-aligned creative work. Perplexity Computer can hand research into editable Canva assets for paid Perplexity users, Google Gemini can call `@Canva`, and Claude Design can move AI-generated drafts and HTML artifacts into Canva. Treat these as extra starting points. The buying decision still depends on Canva plan limits, connector permissions, region availability, and output review.
 
 ## System Verdict
 
@@ -240,6 +248,7 @@ The old "templates plus Magic Studio" story is now too small. The June 23 source
 | **Template/media base** | Verify the live regional plan screen before procurement; asset counts and plan packaging can render by account and locale |
 | **Business price anchor** | US$20/person/month from Canva's Business newsroom announcement; checkout can still render by region and billing path |
 | **Canva AI** | Canva AI 2.0 · conversational design · editable layered output · connectors · scheduling · web research · Magic Layers · Canva Code 2.0 · plan-based AI allowances |
+| **Assistant integrations** | ChatGPT, Codex, Gemini, Claude, and Perplexity paths can feed work into Canva, but access depends on each assistant plan, connector support, region, and account permissions |
 | **AI allowance** | Shared Standard/Premium/Ultra allowance; AI Pass advertises up to 40x more AI than Pro and 20x more than Business, but AI usage limits are not fixed entitlements |
 | **Business extras** | Collaboration/admin tools, approval workflows, higher AI limits, Leonardo.Ai Essential, Flourish Presenter, and growth tools |
 | **Enterprise features** | Admin controls, privacy settings, safety posture, custom governance review, and Canva Shield due diligence |
@@ -247,13 +256,15 @@ The old "templates plus Magic Studio" story is now too small. The June 23 source
 | **Affiliate program** | No standard publisher affiliate route verified; Canvassador route is creator/education oriented |
 | **Launched** | 2013 |
 
-Every current data point above was verified against vendor sources on 2026-06-23. Region-rendered checkout details still require a live plan-screen check before budgeting. See Sources.
+Every current data point above was verified against vendor sources on 2026-06-24. Region-rendered checkout details still require a live plan-screen check before budgeting. See Sources.
 
 ## What it actually is
 
-A web-based design editor with a library of 610,000+ templates for every social, print, and video format. The moat is the template-to-finish workflow: users describe a need, pick a starting point, and ship something usable in minutes.
+A web-based design editor with a large template and media library for social, print, presentation, video, and business formats. Canva's business pages cite more than 610,000 templates and more than 100 million images or design elements in some contexts, but live entitlements still depend on plan, account, region, and asset license.
 
 Canva AI is the generative layer on top. Canva AI 2.0 starts from conversation and can produce editable, layered designs rather than only static images. Magic Design-style prompting, AI writing, AI media, background tools, AI ad creation, connectors, Magic Layers, Canva Code 2.0, and brand-controlled output all sit inside the editor. The buyer question is no longer simply "does Canva have AI?" It is whether the plan's AI allowance, storage, premium asset library, brand controls, and collaboration layer fit the work.
+
+Canva is also becoming a visual production layer for assistant-led work. The ChatGPT, Codex, Gemini, Claude, and Perplexity paths matter when teams already start campaigns, decks, or research briefs in an AI assistant and want the output to end as editable Canva work. They do not remove the need for Canva plan review or brand, rights, and admin checks.
 
 Canva is not trying to replace Figma for product teams or Illustrator for vector work. It is the default tool for social media managers, small business owners, educators, creators, and marketing teams who need professional-looking output without learning Adobe. Treat Canva Code 2.0 as interactive creative output, not production software engineering.
 
@@ -285,7 +296,7 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). Ca
 | Business | Region-rendered; US$20/person/month newsroom anchor | Higher AI limits than Free; AI Pass add-on available | Check live plan screen | Individuals or teams needing collaboration, approvals, and growth tools |
 | Enterprise | Custom | Governance and admin controls; inspect Canva Shield scope | Check live contract | Security, privacy, admin, and procurement review |
 
-*Plan structure verified 2026-06-23 via [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), and [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/). Canva's pages can render local currency, account-specific flows, storage, and allowance details, so verify the live checkout before budgeting.*
+*Plan structure verified 2026-06-24 via [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), and [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/). Canva's pricing page can render local currency, account-specific flows, storage, and allowance details, so verify the live checkout before budgeting.*
 
 ## Against the alternatives
 
@@ -314,7 +325,9 @@ Subscription pricing via [canva.com/pricing](https://www.canva.com/pricing/). Ca
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva AI 2.0](https://www.canva.com/newsroom/news/canva-create-2026-ai/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/), [Canva Claude connector](https://www.canva.com/newsroom/news/claude-ai-connector/), and [Canva Shield](https://www.canva.com/safe-ai-canva-shield/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
+
+Last verified 2026-06-24 against [Canva AI](https://www.canva.com/canva-ai/), [Canva Pro](https://www.canva.com/pro/), [Canva AI 2.0](https://www.canva.com/newsroom/news/canva-create-2026-ai/), [Canva Business](https://www.canva.com/newsroom/news/introducing-canva-business/), [Canva AI Pass](https://www.canva.com/ai-pass/), [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/), and [Canva Shield](https://www.canva.com/safe-ai-canva-shield/). Additional integration and asset context came from [Canva in ChatGPT and Codex](https://www.canva.com/newsroom/news/deep-research-integration-mcp-server/), [Canva in Perplexity Computer](https://www.canva.com/newsroom/news/perplexity/), [Canva in Claude Design](https://www.canva.com/newsroom/news/canva-claude-design/), [Canva in Google Gemini](https://www.canva.com/newsroom/news/google-gemini/), and [Canva for tech companies](https://www.canva.com/solutions/technology/).
 
 ## FAQ
 
@@ -323,6 +336,9 @@ Yes. Canva still has a free entry point and Canva AI is available from the produ
 
 **What is Canva AI?**
 Canva's AI suite inside the design editor. The current public packaging emphasizes Canva AI 2.0, conversational design, editable layered output, connectors, Magic Layers, Canva Code 2.0, writing, image/video generation and editing, resizing, background tools, and plan-based AI allowances ([Canva AI overview](https://www.canva.com/canva-ai/)).
+
+**Does Canva work inside other AI assistants?**
+Yes, but treat each integration as a connector path with its own access rules. Canva says current or recent paths include ChatGPT, Codex, Gemini, Claude Design, and Perplexity Computer. Check assistant plan, region, connector permission, workspace admin policy, and Canva plan before assuming a team can use the same workflow.
 
 **Canva vs Figma for real work?**
 Different tools for different jobs. Canva is for non-designers making marketing content. Figma is for product teams making apps and design systems. If your output is a social post or deck, Canva wins. If it is a shipping product, Figma wins.
@@ -342,6 +358,12 @@ Custom pricing only. Treat Enterprise as a sales-led security, admin, privacy, C
 - [Canva AI Pass](https://www.canva.com/ai-pass/): AI Pass add-on, 40x Pro / 20x Business allowance language, and shared Standard/Premium/Ultra allowance pool
 - [Canva AI Product Terms](https://www.canva.com/policies/ai-product-terms/): AI usage limits, output ownership, non-unique output, licensed-content caveats, AI-generated audio restrictions, and user review responsibility
 - [Canva Shield](https://www.canva.com/safe-ai-canva-shield/): AI privacy settings, safety controls, and eligible enterprise indemnification posture
+- [Canva affiliate help](https://www.canva.com/help/canva-affiliate-marketing-program/): Current official affiliate route, Canvassador status, and application caveat
+- [Canva for tech companies](https://www.canva.com/solutions/technology/): Current public asset and template count context used with plan-entitlement caveats
+- [Canva in ChatGPT and Codex](https://www.canva.com/newsroom/news/deep-research-integration-mcp-server/): ChatGPT design creation/editing, Codex plugin, Canva MCP Server, and availability caveats
+- [Canva in Perplexity Computer](https://www.canva.com/newsroom/news/perplexity/): Paid Perplexity connector and research-to-editable-Canva workflow
+- [Canva in Claude Design](https://www.canva.com/newsroom/news/canva-claude-design/): Claude Design export, Canva Design Model, and HTML/artifact editing context
+- [Canva in Google Gemini](https://www.canva.com/newsroom/news/google-gemini/): `@Canva` Gemini connector, Brand Kit context, Magic Layers, and repurposing workflow
 
 ## Related
 

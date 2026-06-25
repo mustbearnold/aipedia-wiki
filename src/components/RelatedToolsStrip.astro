@@ -8,8 +8,8 @@
 // scripts/audit-news-xrefs.mjs). Use `affects:` when the tool has a
 // dedicated page that should cascade the news link; use `related_tools:`
 // when you want a visible visual rail at the top of the article.
-import { getCollection } from 'astro:content';
 import ToolLogo from './ToolLogo.astro';
+import { getToolDataBySlugMap } from '../lib/content-cache';
 
 interface Props {
   slugs: string[];
@@ -17,12 +17,7 @@ interface Props {
 
 const { slugs } = Astro.props;
 
-const tools = await getCollection('tools');
-const bySlug = new Map<string, any>();
-for (const t of tools) {
-  const s = t.data.slug || t.id.replace(/\.md$/, '');
-  bySlug.set(s, t.data);
-}
+const bySlug = await getToolDataBySlugMap();
 
 interface ResolvedTool {
   slug: string;

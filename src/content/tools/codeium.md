@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$200/month individual; Teams from $80/month plus full-dev seats"
 status: active
 launched: 2022-12
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,46 +32,46 @@ facts:
     source: https://docs.devin.ai/desktop/devin-desktop-faq
     source_label: Devin Desktop FAQ
     source_id: codeium-devin-desktop-faq
-    verified_at: 2026-06-18
+    verified_at: 2026-06-24
     volatility: medium
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   pricing_anchor:
-    value: "Public Codeium/Windsurf pricing now routes to Devin pricing: Free, Pro $20/month, Max $200/month, Teams $80/month base plus $40/month per full dev seat, Enterprise custom, and paid-plan extra usage at API pricing."
+    value: "Public Codeium/Windsurf pricing now routes to Devin pricing: Free, Pro $20/month, Max $200/month, Team $80/month base plus $40/month per full user, Enterprise custom, and paid-plan extra usage at API pricing."
     source: https://devin.ai/pricing/
     source_label: Devin pricing
     source_id: codeium-devin-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   coding_agent:
-    value: "The current product center is Devin Desktop: a full IDE with Agent Command Center, Spaces, ACP support, Devin Local, current v3.2 releases, SWE-1.6 models, and backwards compatibility with Windsurf workflows."
+    value: "The current product center is Devin Desktop: a full IDE with Agent Command Center, Spaces, ACP support, Devin Local, current v2.3 public changelog updates, SWE-1.6 models, and backwards compatibility with Windsurf workflows."
     source: https://docs.devin.ai/desktop/changelog
     source_label: Devin Desktop changelog
     source_id: codeium-devin-changelog
-    verified_at: 2026-06-18
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   enterprise_controls:
     value: Enterprise evaluation should now happen through Cognition/Devin procurement, including SAML/OIDC SSO, centralized admin controls, deployment options, support, usage governance, endpoint policies, allowlists, and Devin Local permission scopes.
     source: https://docs.devin.ai/desktop/devin-desktop-faq
     source_label: Devin Desktop FAQ
     source_id: codeium-devin-desktop-faq
-    verified_at: 2026-06-18
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
   watch_out_for:
     value: Codeium as a separate brand is retired, old Windsurf-only pricing is stale, and existing subscribers may have grandfathered quota/pricing terms that differ from public Devin pricing.
     source: https://docs.devin.ai/desktop/accounts/quota
     source_label: Devin Desktop quota docs
     source_id: codeium-devin-quota
-    verified_at: 2026-06-18
+    verified_at: 2026-06-24
     volatility: high
     confidence: high
-    next_review_at: '2026-07-05'
+    next_review_at: '2026-07-08'
 tags: [autocomplete, free, ai-coding, ide-plugin, enterprise, vscode, jetbrains, neovim, windsurf, devin-desktop]
 seo_title: 'Codeium: Now Windsurf / Devin Desktop - Brand History (June 2026)'
 meta_description: >-
@@ -90,9 +90,17 @@ not_best_for:
 quick_answer: >-
   Codeium was the autocomplete brand from 2022 to 2025. It became Windsurf, Cognition acquired Windsurf, and as of June 2026 Windsurf is Devin Desktop. Treat Codeium as a historical search term, not a separate product checkout.
 price_history:
+  - date: 2026-06-24
+    plan: "Current public path recheck"
+    price: "Free / Pro $20 / Max $200 / Team $80 base + $40 per full user / Enterprise custom"
+    source: "https://devin.ai/pricing/"
+    source_label: "Devin pricing"
+    source_id: codeium-devin-pricing
+    verified_at: 2026-06-24
+    note: "Rechecked official Devin pricing, Devin Desktop FAQ, model docs, quota docs, and changelog. Codeium remains a historical search term; current buyers should evaluate Devin Desktop."
   - date: 2026-06-18
     plan: "Current public path"
-    price: "Free / Pro $20 / Max $200 / Teams $80 base + $40 per full dev seat / Enterprise custom / paid-plan extra usage"
+    price: "Free / Pro $20 / Max $200 / Team $80 base + $40 per full user / Enterprise custom / paid-plan extra usage"
     source: "https://devin.ai/pricing/"
     source_label: "Devin pricing"
     source_id: codeium-devin-pricing
@@ -100,12 +108,12 @@ price_history:
     note: "Devin pricing now lists public plan prices, free SWE-1.6 on Pro, daily/weekly quota allowances, and paid-plan extra usage at API pricing."
   - date: 2026-06-18
     plan: "Release path"
-    price: "Devin Desktop v3.2.19"
+    price: "Superseded by June 24 v2.3.9 public changelog check"
     source: "https://docs.devin.ai/desktop/changelog"
     source_label: "Devin Desktop changelog"
     source_id: codeium-devin-changelog
     verified_at: 2026-06-18
-    note: "Current release stream shows post-rebrand v3.2 updates, including Devin Local plugin, subagent MCP, terminal permission scopes, and a June 18 skill-file fix."
+    note: "Superseded by the June 24 check: the public changelog top release is v2.3.9, not a v3.2 line."
   - date: 2026-06-02
     plan: "Brand path"
     price: "Windsurf is now Devin Desktop"
@@ -120,12 +128,13 @@ price_history:
 
 Codeium was the AI code completion brand that shipped plugin-based autocomplete across many editors from 2022 to 2025. The current buyer path is no longer Codeium. It is **Codeium -> [Windsurf](/tools/windsurf/) -> Devin Desktop**.
 
-As of the June 18, 2026 check, `windsurf.com/pricing` still routes into Devin pricing, Devin Desktop has moved through the v3.2 release line, and the live docs now spell out quota, migration, model, and enterprise-admin details that were not enough to treat the change as a simple rename. This page stays live because people still search for Codeium, but the recommendation is historical and navigational: use it to understand the lineage, then evaluate [Windsurf / Devin Desktop](/tools/windsurf/) or [GitHub Copilot](/tools/github-copilot/) as current products.
+As of the June 24, 2026 check, `windsurf.com/pricing` still routes into Devin pricing, the current public Devin Desktop changelog is in the v2.3 line, and the live docs spell out quota, migration, model, and enterprise-admin details that are too material to treat the change as a simple rename. This page stays live because people still search for Codeium, but the recommendation is historical and navigational: use it to understand the lineage, then evaluate [Windsurf / Devin Desktop](/tools/windsurf/) or [GitHub Copilot](/tools/github-copilot/) as current products.
 
 ## Recent Developments
 
-- **June 18, 2026:** Devin Desktop releases reached v3.2.19. The v3.2 line adds Devin Local plugin support in preview, lets subagents call MCP tools, adds enterprise terminal allow/deny-list permission scopes, and fixes a skill-file loading bug.
-- **June 18, 2026:** Current Devin pricing still lists Free, Pro $20/month, Max $200/month, Teams $80/month plus $40/month per full dev seat, and Enterprise custom. The important change is the clearer cost model: paid plans have daily and weekly quota allowances, Pro includes free SWE-1.6 and open-source models, and extra usage is billed at API pricing.
+- **June 24, 2026:** Rechecked Devin pricing, Devin Desktop FAQ, model docs, quota docs, and changelog. The current public changelog top release is v2.3.9, with fixes for `swe-check` availability, terminal processing, conversation sharing, and WSL Devin Local path resolution. The current buyer path remains Devin Desktop, not Codeium.
+- **June 18, 2026:** Devin Desktop releases had moved beyond the initial rebrand. The migration surface is procurement-relevant because Devin Local, rules, endpoint names, and enterprise allowlists can affect rollout.
+- **June 18, 2026:** Current Devin pricing still listed Free, Pro $20/month, Max $200/month, Team $80/month plus $40/month per full user, and Enterprise custom. The important change was the clearer cost model: paid plans have daily and weekly quota allowances, Pro includes free SWE-1.6 and open-source models, and extra usage is billed at API pricing.
 - **June 18, 2026:** The Devin Desktop FAQ now makes the migration surface procurement-relevant: plans and pricing do not automatically change for existing Windsurf users, Devin Local replaces Cascade, Cascade remains available through July, Windsurf rules continue to work, `.devin/rules/` is preferred, AGENTS.md is supported, and enterprise admins need to review endpoint, allowlist, and command-name changes.
 - **June 2, 2026:** Cognition announced Devin Desktop as the next generation of Windsurf. The product keeps Windsurf/VS Code compatibility while making Agent Command Center, Spaces, ACP-compatible agents, Devin Local, Devin Cloud, Devin CLI, and Devin Review part of one product story.
 - **July 2025:** Cognition announced its Windsurf acquisition. Codeium-era buyer research should now be read through the Cognition/Devin roadmap.
@@ -148,15 +157,15 @@ As of the June 18, 2026 check, `windsurf.com/pricing` still routes into Devin pr
 | **Codeium role** | Historical autocomplete brand, not a separate checkout |
 | **Current public pricing route** | windsurf.com/pricing -> devin.ai/pricing |
 | **Individual pricing** | Free, Pro $20/month, Max $200/month |
-| **Team pricing** | Teams $80/month plus $40/month per full dev seat |
+| **Team pricing** | Team $80/month plus $40/month per full user |
 | **Enterprise** | Custom, with SAML/OIDC SSO, centralized controls, deployment/support options |
 | **Current usage model** | Daily and weekly quota allowances; paid plans can buy extra usage at API pricing |
 | **Current model lane** | SWE-1.6 is generally available, Pro includes free SWE-1.6 and leading open-source model use, and paid users can access frontier OpenAI, Claude, and Gemini models |
-| **Current agent surface** | Devin Desktop with Agent Command Center, Spaces, ACP support, Devin Local, Devin Cloud, Devin CLI, Devin Review, and v3.2 Devin Local updates |
+| **Current agent surface** | Devin Desktop with Agent Command Center, Spaces, ACP support, Devin Local, Devin Cloud, Devin CLI, Devin Review, and active v2.3 public changelog updates |
 | **Migration/admin risk** | Existing subscriptions may have grandfathered pricing or quotas; admins should review endpoint names, allowlists, rules, command names, and Devin Local permissions |
 | **Main risk** | Brand churn: old Codeium and old standalone Windsurf claims are stale, and old Cascade/plugin guidance can miss current Devin Local behavior |
 
-Every data point above was verified against current Cognition, Devin, and Windsurf sources on 2026-06-18.
+Every data point above was verified against current Cognition, Devin, and Windsurf sources on 2026-06-24.
 
 ## What it actually is
 
@@ -166,7 +175,7 @@ One lineage, three names:
 
 **Windsurf** was the AI-native IDE brand that absorbed Codeium-era autocomplete and expanded into agentic editing.
 
-**Devin Desktop** is the current public direction. Cognition says it built Devin Desktop on Windsurf's IDE foundation, made Agent Command Center the default surface, added Spaces for shared context, supports Agent Client Protocol so compatible third-party agents can run inside the editor, and keeps the editor, extensions, keybindings, language servers, terminal, and workflows backwards-compatible with Windsurf. The June 18 docs now add more buyer-useful detail: Devin Local is the Cascade successor, the app keeps compatibility with legacy Windsurf paths during migration, and the v3.2 release line is adding plugin, MCP, and terminal-permission controls around local agents.
+**Devin Desktop** is the current public direction. Cognition says it built Devin Desktop on Windsurf's IDE foundation, made Agent Command Center the default surface, added Spaces for shared context, supports Agent Client Protocol so compatible third-party agents can run inside the editor, and keeps the editor, extensions, keybindings, language servers, terminal, and workflows backwards-compatible with Windsurf. The June 24 docs add buyer-useful detail: Devin Local is the Cascade successor, the app keeps compatibility with legacy Windsurf paths during migration, and the current public changelog is fixing reliability, WSL pathing, terminal processing, and model-availability issues around local agents.
 
 That means a buyer should not ask, "Should I buy Codeium?" The current questions are:
 
@@ -197,10 +206,10 @@ All current public pricing flows through the Windsurf-to-Devin pricing path. His
 | Free | $0 | Light quota, limited model availability, unlimited inline edits and Tab completions | Trying Devin Desktop before paying |
 | Pro | $20/month | Increased quotas, OpenAI/Claude/Gemini frontier models, free SWE-1.6 and leading open-source models, cloud agents, extra usage at API pricing | Most individual users evaluating Cognition's IDE |
 | Max | $200/month | Significantly higher quotas | Heavy individual use |
-| Teams | $80/month base plus $40/month per full dev seat | Team plan plus full dev seats and shared controls | Teams that need admin and collaboration |
+| Team | $80/month base plus $40/month per full user | Team plan plus full users and shared controls | Teams that need admin and collaboration |
 | Enterprise | Custom | SSO/OIDC, centralized admin, deployment/support options | Regulated or large enterprises |
 
-Prices verified 2026-06-18 via [Devin pricing](https://devin.ai/pricing/), the [Devin Desktop quota docs](https://docs.devin.ai/desktop/accounts/quota), and the [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq). Existing account entitlements may differ because older Pro and Teams subscribers can have grandfathered pricing and quota terms, so enterprise and grandfathered buyers should verify inside the live admin console.
+Prices verified 2026-06-24 via [Devin pricing](https://devin.ai/pricing/), the [Devin Desktop quota docs](https://docs.devin.ai/desktop/accounts/quota), and the [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq). Existing account entitlements may differ because older Pro and Team subscribers can have grandfathered pricing and quota terms, so enterprise and grandfathered buyers should verify inside the live admin console.
 
 The most important cost change since the earlier write is not a new headline price. It is the quota and extra-usage model. Devin Desktop plans now describe daily and weekly usage allowances, model-token-based quota burn, free models that do not count against quota, and extra usage for Pro, Teams, and Max after the included allowance is exhausted.
 
@@ -224,7 +233,7 @@ The most important cost change since the earlier write is not a new headline pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-18 against [Devin pricing](https://devin.ai/pricing/), the [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq), [Devin Desktop quota docs](https://docs.devin.ai/desktop/accounts/quota), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog), and the [Cognition Devin Desktop announcement](https://cognition.ai/blog/introducing-devin-desktop).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [Devin pricing](https://devin.ai/pricing/), the [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq), [Devin Desktop quota docs](https://docs.devin.ai/desktop/accounts/quota), [Devin Desktop model docs](https://docs.devin.ai/desktop/models), [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog), and the [Cognition Devin Desktop announcement](https://cognition.ai/blog/introducing-devin-desktop).
 
 ## FAQ
 
@@ -235,7 +244,7 @@ It is the historical lineage, not a current separate product. Codeium became Win
 There is no separate Codeium Free plan. The current public path includes a Devin Desktop Free tier for light use, plus paid Devin pricing.
 
 **What changed with the Cognition acquisition?**
-Cognition consolidated the product direction around Devin and Windsurf. The June 2026 public path is Devin Desktop: Windsurf's IDE foundation plus Agent Command Center, Spaces, ACP support, Devin Local, Devin Cloud, Devin CLI, and Devin Review. Since the previous write, the practical update is clearer migration detail, v3.2 Devin Local changes, SWE-1.6 availability, quota-based usage, and enterprise allowlist/device-policy guidance.
+Cognition consolidated the product direction around Devin and Windsurf. The June 2026 public path is Devin Desktop: Windsurf's IDE foundation plus Agent Command Center, Spaces, ACP support, Devin Local, Devin Cloud, Devin CLI, and Devin Review. Since the previous write, the practical update is clearer migration detail, v2.3 public changelog fixes, SWE-1.6 availability, quota-based usage, and enterprise allowlist/device-policy guidance.
 
 **Codeium-lineage plugins vs GitHub Copilot?**
 Copilot is the cleaner current choice for GitHub-native teams that want policy, PRs, existing IDEs, and AI Credits controls. The Codeium lineage now means evaluating Devin Desktop for Cognition-stack agent management.

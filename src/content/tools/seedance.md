@@ -7,11 +7,11 @@ category: ai-video
 company: bytedance
 url: "https://seed.bytedance.com/en/seedance2_0"
 pricing_model: paid
-price_range: "BytePlus API/resource packs; route-specific pricing"
+price_range: "BytePlus API/resource packs; verify current per-video or pack pricing in ModelArk"
 status: active
 launched: 2026-02
-last_updated: 2026-06-16
-last_verified: 2026-06-12
+last_updated: 2026-06-24
+last_verified: 2026-06-24
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,8 +30,8 @@ facts:
     source: "https://seed.bytedance.com/en/seedance2_0"
     source_label: "ByteDance Seedance 2.0"
     source_id: seedance-official
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
   video_generation:
@@ -39,8 +39,8 @@ facts:
     source: "https://seed.bytedance.com/blog/seedance-2-0-official-launch"
     source_label: "Seedance 2.0 official launch"
     source_id: seedance-bytedance-launch
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
   api_available:
@@ -48,17 +48,17 @@ facts:
     source: "https://docs.byteplus.com/api/docs/ModelArk/1520757"
     source_label: "BytePlus Seedance 2.0 API reference"
     source_id: seedance-byteplus-api
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "BytePlus documents Dreamina Seedance 2.0 resource packs at USD 4.30 per 1M tokens and Dreamina Seedance 2.0 fast at USD 3.30 per 1M tokens, with minimum purchase rules and pay-as-you-go overage."
-    source: "https://docs.byteplus.com/api/docs/ModelArk/2191775"
-    source_label: "BytePlus Seedance 2.0 resource packs"
+    value: "BytePlus ModelArk exposes Seedance 2.0 pricing through route-specific pricing/resource-pack documentation, but the June 24 crawl did not expose a stable static table. Verify the current per-video or pack price, minimum purchase, region, and overage rules in BytePlus before buying."
+    source: "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+    source_label: "BytePlus ModelArk pricing"
     source_id: seedance-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
   watch_out_for:
@@ -66,13 +66,13 @@ facts:
     source: "https://www.seedance.ai/"
     source_label: "Seedance.ai independent disclosure"
     source_id: seedance-ai-independent-disclosure
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-06
+    verified_at: 2026-06-24
+    next_review_at: 2026-07-08
     volatility: high
     confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, audio-video, bytedance, seedance, multimodal, modelark]
 seo_title: "Seedance 2.0: Features, Access, Pricing and Review (June 2026)"
-meta_description: "Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. Verified June 12, 2026 against ByteDance Seed and BytePlus sources. Avoid treating seedance.ai as official."
+meta_description: "Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. Verified June 24, 2026 against ByteDance Seed and BytePlus sources. Avoid treating seedance.ai as official."
 author: "aipedia.wiki Editorial"
 best_for:
   - raw AI video model quality tests
@@ -84,8 +84,16 @@ not_best_for:
   - teams that cannot use ByteDance-linked providers
   - workflows that need a finished editing suite around the model
 quick_answer: >-
-  Seedance 2.0 is one of the first AI video models serious buyers should test in June 2026. Use official ByteDance Seed or BytePlus routes, not seedance.ai as an official source. Pick it for raw model quality, multimodal references, motion, and native audio-video generation; skip it if procurement simplicity matters more.
+  Seedance 2.0 is one of the first AI video models serious buyers should test in June 2026. Use official ByteDance Seed or BytePlus routes, not seedance.ai as an official source. Pick it for raw model quality, multimodal references, motion, and native audio-video generation; skip it if procurement simplicity or static self-serve pricing matters more.
 price_history:
+  - date: 2026-06-24
+    plan: "BytePlus ModelArk pricing route"
+    price: "Route-specific; verify current per-video or pack pricing in BytePlus"
+    source: "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+    source_label: "BytePlus ModelArk pricing"
+    source_id: seedance-pricing
+    verified_at: 2026-06-24
+    note: "Current BytePlus pricing docs were updated June 23, 2026, but the crawl did not expose a durable static table for all Seedance rates. AiPedia no longer carries the old 1M-token pack numbers as current buyer guidance."
   - date: 2026-02-12
     plan: "Seedance 2.0"
     price: "Official launch"
@@ -109,17 +117,18 @@ price_history:
     source_label: "BytePlus Seedance 2.0 resource packs"
     source_id: seedance-pricing
     verified_at: 2026-06-06
-    note: "BytePlus resource-pack pricing is route-specific and not the same as a consumer SaaS plan."
+    note: "Historical May check only. Superseded by the June 24, 2026 pricing-route check, which treats current Seedance pricing as route-specific and account-verification-dependent."
 ---
 
 # Seedance 2.0
 
-Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. As of June 12, 2026, AiPedia treats it as one of the first models serious buyers should test for raw video quality, motion stability, multimodal references, native audio-video generation, and director-style control.
+Seedance 2.0 is ByteDance Seed's frontier multimodal AI video model. As of June 24, 2026, AiPedia treats it as one of the first models serious buyers should test for raw video quality, motion stability, multimodal references, native audio-video generation, and director-style control.
 
 The key correction: `seedance.ai` is not the official ByteDance Seedance product route. That site says it is independent and not affiliated with ByteDance or its products. The canonical sources for this record are ByteDance Seed and BytePlus ModelArk.
 
 ## Recent changes
 
+- **2026-06-24:** Rechecked ByteDance Seed, the official launch post, BytePlus ModelArk API docs, and BytePlus pricing docs. The model/API claims still hold, but current pricing should be treated as route-specific and verified in BytePlus because the crawl did not expose a stable public table for all Seedance rates.
 - **2026-06-06:** Rechecked ByteDance Seed and BytePlus ModelArk sources while refreshing the old Seedance/Pika/Veo/Synthesia comparison cluster. Seedance remains the raw model-quality test; the watch-out remains route confusion and official-provider verification.
 
 ## System Verdict
@@ -167,13 +176,13 @@ The official launch says Seedance 2.0 improves complex interaction and motion sc
 
 ## Pricing And Access
 
-Do not reuse old consumer-plan numbers for Seedance unless they are tied to a verified official route. The current source-backed pricing anchor AiPedia can cite is BytePlus ModelArk's resource-pack documentation, which lists Dreamina Seedance 2.0 and Dreamina Seedance 2.0 fast resource packs by token quantity.
+Do not reuse old consumer-plan numbers for Seedance unless they are tied to a verified official route. The current source-backed pricing anchor AiPedia can cite is BytePlus ModelArk, but current pricing is route-specific and should be verified in the buyer's exact BytePlus project before procurement. The June 24 crawl did not expose enough stable static pricing text to keep old 1M-token resource-pack numbers as current guidance.
 
 | Route | What to verify | Source-backed status |
 |---|---|---|
-| ByteDance Seed page | Model identity and official positioning | Verified June 12, 2026 |
-| BytePlus ModelArk | API/product access and docs | Verified June 12, 2026 |
-| BytePlus resource packs | USD resource-pack pricing and minimum purchase rules | Verified June 12, 2026 |
+| ByteDance Seed page | Model identity and official positioning | Verified June 24, 2026 |
+| BytePlus ModelArk | API/product access and docs | Verified June 24, 2026 |
+| BytePlus pricing/resource packs | Route-specific pricing, minimum purchase rules, region, and overage behavior | Pricing route checked June 24, 2026; verify in account before buying |
 | seedance.ai | Whether it is official ByteDance | It says it is independent and not affiliated |
 
 ## Against the alternatives
@@ -184,10 +193,10 @@ Do not reuse old consumer-plan numbers for Seedance unless they are tied to a ve
 | **Native audio** | Yes, strongest sync | Yes, across cuts | Yes | Yes | Limited |
 | **Clip length** | Short clips, 1080p and 4K | Up to about 15s, multi-shot | Up to about 15s, multi-shot | Short clips | Short clips |
 | **Access** | Gemini API, Vertex AI, Flow | Kling app, credits | BytePlus API, Dreamina | ChatGPT and Sora app | Web app and API |
-| **Price signal** | Premium ($0.40-0.60/sec at 4K) | Lowest (about $0.10/sec) | Token packs (about $3.30-4.30/1M) | Subscription | Credit-based |
+| **Price signal** | Premium ($0.40-0.60/sec at 4K) | Credit-based, verify in app | BytePlus route-specific pricing | Subscription | Credit-based |
 | **Best viewed as** | Google-stack frontier model | Cinematic motion benchmark | Reference-driven generator | Stylized social video | Editing workspace |
 
-The honest read: [Seedance](/tools/seedance/) is the pick when you generate from your own image, audio, and video references in one pass, [Veo](/tools/veo/) wins for clean audio and Google-stack governance, [Kling](/tools/kling/) leads on cinematic motion and price, Sora 2 has the most distinctive style, and [Runway](/tools/runway/) is the better full editing workspace.
+The honest read: [Seedance](/tools/seedance/) is the pick when you generate from your own image, audio, and video references in one pass. [Veo](/tools/veo/) wins for clean audio and Google-stack governance. [Kling](/tools/kling/) leads on cinematic motion after account-level price checks. Sora 2 has the most distinctive style, and [Runway](/tools/runway/) is the better full editing workspace.
 
 ## Failure Modes
 
@@ -199,7 +208,7 @@ The honest read: [Seedance](/tools/seedance/) is the pick when you generate from
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0), the [official launch post](https://seed.bytedance.com/blog/seedance-2-0-official-launch), and the [BytePlus ModelArk API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0), the [official launch post](https://seed.bytedance.com/blog/seedance-2-0-official-launch), the [BytePlus ModelArk API reference](https://docs.byteplus.com/en/docs/ModelArk/1520757), and [BytePlus ModelArk pricing](https://docs.byteplus.com/en/docs/ModelArk/1544106).
 
 ## FAQ
 
@@ -217,12 +226,12 @@ AiPedia would test Seedance 2.0 first for raw model quality on June 6, 2026. Ser
 
 ## Sources
 
-- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) (verified 2026-06-12)
-- [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-06-12)
-- [BytePlus ModelArk](https://www.byteplus.com/en/product/modelark) (verified 2026-06-12)
-- [BytePlus Seedance 2.0 API reference](https://docs.byteplus.com/api/docs/ModelArk/1520757) (verified 2026-06-12)
-- [BytePlus Seedance 2.0 resource packs](https://docs.byteplus.com/api/docs/ModelArk/2191775) (verified 2026-06-12)
-- [Seedance.ai independent disclosure](https://www.seedance.ai/) (verified 2026-06-12)
+- [ByteDance Seedance 2.0](https://seed.bytedance.com/en/seedance2_0) (verified 2026-06-24)
+- [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-06-24)
+- [BytePlus ModelArk](https://www.byteplus.com/en/product/modelark) (verified 2026-06-24)
+- [BytePlus Seedance 2.0 API reference](https://docs.byteplus.com/en/docs/ModelArk/1520757) (verified 2026-06-24)
+- [BytePlus ModelArk pricing](https://docs.byteplus.com/en/docs/ModelArk/1544106) (checked 2026-06-24; verify account route before buying)
+- [Seedance.ai independent disclosure](https://www.seedance.ai/) (verified 2026-06-24)
 
 ## Related
 

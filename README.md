@@ -21,6 +21,8 @@ npm run loop:all:record -- --json
 npm run loop:next
 npm run loop:verify -- --date 2026-06-20 --route /compare/example/ --path src/content/comparisons/example.md
 npm run loop:record -- --date 2026-06-20 --slug example --status complete
+npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json
+npm run tool:refresh:batch:check -- --plan .agent/tool-refresh-batch.json
 npm run qa:route -- --route /compare/example/
 npm run check:ci
 npm run check
@@ -38,6 +40,8 @@ npm run deploy
 - `npm run loop:next`: decision-content flywheel brief for the next buyer-intent cluster, including files, parent surfaces, source requirements, and checks.
 - `npm run loop:verify`: date-stable verification wrapper for a decision-content cycle.
 - `npm run loop:record`: writes a durable `.agent/loop-runs/` receipt for a completed or attempted cycle.
+- `npm run tool:refresh:batch`: plans batched tool freshness work. Use `--limit 60 --max-workers 6 --tools-per-worker 10 --json` for shard-worker and integrator briefs, and `--agents` for printable subagent prompts.
+- `npm run tool:refresh:batch:check`: fast grouped tool refresh gate. Use `--plan <planner-json>` after saving the batch planner output.
 - `npm run qa:route`: reusable Playwright route QA for mobile, tablet, and desktop widths.
 - `npm run check:ci`: full CI confidence gate for pre-ship and remediation work.
 - `npm run check`: broader source, content, link, news, asset, and security checks.
