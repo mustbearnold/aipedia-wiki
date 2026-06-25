@@ -99,7 +99,12 @@
     "kg": "node tools/project-kg/bin/project-kg",
     "indexnow:ping": "node scripts/indexnow-ping.mjs",
     "check": "npm run guard:check && npm run check:links && npm run check:news && npm run check:security",
-    "deploy": "npx vercel build --prod && npx vercel deploy --prebuilt --prod"
+    "deploy": "npx vercel build --prod && npx vercel deploy --prebuilt --prod",
+    "runner": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml --",
+    "runner:tool-refresh:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- plan",
+    "runner:tool-refresh:route-args": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- route-args",
+    "runner:tool-refresh:closeout": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- closeout",
+    "runner:tool-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- run"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

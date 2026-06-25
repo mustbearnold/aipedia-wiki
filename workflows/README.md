@@ -28,3 +28,14 @@ When a workflow changes because a real run taught us something:
 3. Update `.agent/CURRENT_STATUS.md` only if the change affects the next session.
 4. Add tests or script checks when the workflow change is executable.
 5. Avoid moving source files just to make the tree look tidy.
+
+## Runner
+
+The Rust workflow runner lives at `tools/aipedia-runner/`. It is intentionally an orchestrator around the existing scripts, not a replacement for editorial judgment or source verification.
+
+Useful commands:
+
+```bash
+npm run runner:tool-refresh:plan
+npm run runner:tool-refresh:closeout
+```

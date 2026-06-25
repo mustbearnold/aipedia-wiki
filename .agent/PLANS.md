@@ -112,6 +112,7 @@ Latest closeout notes:
 - Keep source registry and category hubs integrator-owned. The workers were most effective when limited to 10 tool markdown files each and asked to report source-registry rows instead of editing shared files.
 - `tool:refresh:batch:check` now runs `scripts/check-frontmatter.mjs --changed` so malformed markdown frontmatter is caught before the slower Astro typecheck/build phase.
 - Generated worker prompts now require source-confidence labels for constrained facts: `primary-confirmed`, `primary-conflict`, `account-gated`, `checkout-gated`, `region-rendered`, `blocked-live-check`, and `secondary-only`.
+- Rust runner commands are available for the next batch: use `npm run runner:tool-refresh:plan` to prepare local planner artifacts and worker prompts, then `npm run runner:tool-refresh:closeout` after integration to run the closeout sequence and write a local receipt.
 
 ## Active: Decision Content Flywheel
 

@@ -802,3 +802,12 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Added committed `workflows/` as the canonical home for repeatable operating procedures, separate from current-state `.agent/` memory and local-only `.agents/` runtime state. Added the full `workflows/tool-refresh/` procedure, worker prompt, integrator checklist, verification sequence, placeholders for news/page/QA workflows, and reusable run/worker report templates. Updated `.agent` orientation docs to point future agents at `workflows/`.
 - Verification: pending.
 - Residual risks: The new news/page/QA workflow folders are intentionally placeholders; expand them only from real repeated runs.
+
+### 2026-06-25: Rust Tool Refresh Runner
+
+- Status: Complete locally, verified, pending commit.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Added `tools/aipedia-runner/`, a Rust CLI that wraps the existing proven Node/Astro workflow instead of replacing it. The runner can plan tool-refresh batches, write worker prompt files, generate route QA args, run the ordered closeout gates, and write local receipts under `local/tmp/aipedia-runner/`. Added npm entry points: `runner`, `runner:tool-refresh:plan`, `runner:tool-refresh:route-args`, `runner:tool-refresh:closeout`, and `runner:tool-refresh:run`. Updated workflow docs and script docs to prefer the runner while keeping manual fallback commands.
+- Verification: `cargo check --manifest-path tools/aipedia-runner/Cargo.toml`; `npm run runner:tool-refresh:plan -- --limit 2 --workers 2 --tools-per-worker 1`; `npm run runner:tool-refresh:closeout -- --skip-build --skip-route-qa`; `cargo fmt --manifest-path tools/aipedia-runner/Cargo.toml --check`; `cargo test --manifest-path tools/aipedia-runner/Cargo.toml`; `npm run audit:commands`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: First version intentionally does not launch Codex subagents by itself. It prepares worker prompts and enforces closeout sequencing around the existing scripts. Full `build:fast` and route QA were not run for this tooling-only change, but the real workflow should run them without skip flags after an actual content batch.
+- Next: Use the runner on the next 60-tool refresh, then add file-ownership diff checks and source-health caching after one real runner-backed batch.

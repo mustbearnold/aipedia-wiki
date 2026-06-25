@@ -7,10 +7,18 @@ Use this workflow for batch-refreshing AiPedia tool pages with current sources, 
 Run one planner batch of up to 60 tools:
 
 ```bash
+npm run runner:tool-refresh:plan
+```
+
+The Rust runner writes planner JSON, worker prompts, and route QA args under `local/tmp/aipedia-runner/`.
+
+Fallback without the Rust runner:
+
+```bash
 npm run --silent tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json > local/tmp/tool-refresh-batch.json
 ```
 
-If `local/tmp/` is not available, use `.tmp-tool-refresh-batch.json` as the fallback. Do not commit local planner JSON.
+Do not commit local planner JSON.
 
 The normal execution shape is:
 
@@ -66,11 +74,10 @@ The integrator reviews worker diffs, deduplicates source rows, applies caveats f
 Run cheap deterministic gates before expensive rendered gates:
 
 ```bash
-npm run ledger:pages && npm run ledger:pages:check
-npm run tool:refresh:batch:check -- --plan local/tmp/tool-refresh-batch.json
-npm run typecheck
-npm run build:fast
+npm run runner:tool-refresh:closeout
 ```
+
+The runner executes the ledger precheck, grouped batch check, typecheck, build, route-arg generation, route QA, and a local receipt in order.
 
 Then generate route QA args from the saved planner and run:
 
@@ -78,7 +85,7 @@ Then generate route QA args from the saved planner and run:
 node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 4 $(cat local/tmp/route-qa-args.txt) --widths 319,360,390,430,768,1024,1366
 ```
 
-If using `.tmp-tool-refresh-batch.json`, adjust the paths accordingly.
+If using the fallback planner instead of the Rust runner, adjust the paths accordingly.
 
 ## Why This Order Exists
 
@@ -92,6 +99,7 @@ If using `.tmp-tool-refresh-batch.json`, adjust the paths accordingly.
 - `worker-prompt.md`
 - `integrator-checklist.md`
 - `verification.md`
+- `tools/aipedia-runner/`
 - `scripts/tool-refresh-batch.mjs`
 - `scripts/tool-refresh-batch-check.mjs`
 - `.agent/LOOPS.md`

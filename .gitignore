@@ -107,7 +107,10 @@ agent-runs/
 benchmarks/
 brand-mockups/
 linkedin-kit/
-tools/project-kg/
+tools/*
+!tools/aipedia-runner/
+!tools/aipedia-runner/**
+tools/aipedia-runner/target/
 apps/kg-dashboard/
 .kg/
 .vscode/

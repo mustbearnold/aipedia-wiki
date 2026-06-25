@@ -4,6 +4,14 @@ Use this verification sequence for a full rendered tool-refresh batch.
 
 ## Cheap Gates
 
+Preferred runner:
+
+```bash
+npm run runner:tool-refresh:closeout -- --skip-build --skip-route-qa
+```
+
+Manual fallback:
+
 ```bash
 npm run ledger:pages && npm run ledger:pages:check
 npm run tool:refresh:batch:check -- --plan local/tmp/tool-refresh-batch.json
@@ -24,6 +32,14 @@ If the planner is saved as `.tmp-tool-refresh-batch.json`, use that path.
 ## Expensive Gates
 
 Run these once after the cheap gates pass:
+
+Preferred runner:
+
+```bash
+npm run runner:tool-refresh:closeout
+```
+
+Manual fallback:
 
 ```bash
 npm run typecheck

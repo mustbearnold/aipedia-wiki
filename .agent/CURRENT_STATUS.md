@@ -228,6 +228,12 @@ Workflow improvement now complete locally:
 - Updated planner closeout commands to put `npm run ledger:pages && npm run ledger:pages:check` before the grouped checker.
 - Verification passed: `node --check` for the changed scripts, `node --test tests/scripts/tool-refresh-batch.test.mjs`, `npm run check:frontmatter`, planner smoke, `npm run audit:commands`, `npm run ledger:pages && npm run ledger:pages:check`, and `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-workflow-smoke.json`.
 
+Rust workflow runner now exists at `tools/aipedia-runner/`:
+
+- `npm run runner:tool-refresh:plan` writes planner JSON, worker prompts, and route QA args under `local/tmp/aipedia-runner/`.
+- `npm run runner:tool-refresh:closeout` runs ledger precheck, grouped batch check, typecheck, build, route QA, and a local receipt in order.
+- Smoke verification passed with a two-tool planner and closeout using `--skip-build --skip-route-qa`; full build/route QA should be used on real rendered batches.
+
 Latest completed 60-tool baseline refresh passed:
 
 - `node --check scripts\tool-refresh-batch.mjs`
