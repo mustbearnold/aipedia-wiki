@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-12
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 24, 2026: Gemini 3.5 Flash remains the stable API route, with standard, batch/flex, and priority pricing separated from Google AI plan limits, Code Assist, and Antigravity guidance."
+meta_description: "Updated June 25, 2026: Gemini 3.5 Flash remains the stable API route while Computer Use enters public preview and reported Gemini 3.5 Pro timing stays pending."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -301,6 +301,10 @@ The subscription story is plan- and region-sensitive. Google AI Pro remains the 
 ## Recent developments (April-June 2026)
 
 Verified 2026-06-24 for Google AI plans, Gemini app limits, Gemini API model/pricing, image/video API docs, Grounding with Google Search, the Code Assist / Antigravity transition, Gemini Intelligence, and the Workspace privacy boundary.
+
+- **June 25:** [Reported Gemini 3.5 Pro delay](/news/2026-06-25-google-gemini-35-pro-delay-buyer-risk/) keeps buyer docs anchored on Gemini 3.5 Flash until Google publishes official Pro availability, pricing, limits, and model IDs.
+
+- **June 24:** [Gemini 3.5 Flash gained Computer Use in public preview](/news/2026-06-24-google-gemini-computer-use-preview/), adding a browser/mobile/desktop agent evaluation path with safety-policy and prompt-injection controls. Treat it as a governed preview, not broad desktop authority.
 
 - **June 24:** Rechecked Gemini's high-volatility buyer facts against official Google sources. The main correction remains pricing precision: Gemini 3.5 Flash standard API pricing still differs from batch/flex and priority pricing, so production buyers should not quote one API row for every mode, grounding path, tool call, or media workload.
 

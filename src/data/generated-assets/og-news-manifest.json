@@ -1,199 +1,162 @@
 {
   "version": 1,
   "kind": "news-og",
-  "source_hash": "680485b6e052fa3e56a1a6f629a6410b6026e50052fbb5e2fd3f34f17cef5a6f",
+  "source_hash": "9d28ede4cbecc470d2719b23f54cc13f2b418ce16eefe8998ec959e5963bb346",
   "generated_at": "deterministic",
   "meta": {
-    "records": 5,
+    "records": 4,
     "requested_slugs": [
-      "2026-06-23-openai-daybreak-codex-security",
-      "2026-06-23-samsung-chatgpt-codex-enterprise",
-      "2026-06-23-claude-error-rate-fallback-planning",
-      "2026-06-24-zai-glm-52-open-model-pressure",
-      "2026-06-24-google-ai-talent-openai-anthropic"
+      "2026-06-24-google-gemini-computer-use-preview",
+      "2026-06-25-github-copilot-best-month-ai-coding-demand",
+      "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
+      "2026-06-25-openai-anthropic-raise-us-workforce-push"
     ],
     "limit": null
   },
   "outputs": [
     {
-      "file": "public/og/news/2026-06-23-claude-error-rate-fallback-planning.png",
+      "file": "public/og/news/2026-06-24-google-gemini-computer-use-preview.png",
       "kind": "news-png",
-      "slug": "2026-06-23-claude-error-rate-fallback-planning",
+      "slug": "2026-06-24-google-gemini-computer-use-preview",
       "theme": "dark",
       "target": null,
-      "bytes": 53721,
-      "sha256": "40167254dbc212e56368a0a9b6ebbd70e8b58d513d56a5658cd77f1fa1c6e358"
+      "bytes": 51587,
+      "sha256": "c2a2bdfa26fd4baf547b352a39245fb4576396c9e7f7ac6de5146fbece8115ba"
     },
     {
-      "file": "public/og/news/2026-06-23-openai-daybreak-codex-security.png",
+      "file": "public/og/news/2026-06-25-github-copilot-best-month-ai-coding-demand.png",
       "kind": "news-png",
-      "slug": "2026-06-23-openai-daybreak-codex-security",
+      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
       "theme": "dark",
       "target": null,
-      "bytes": 57037,
-      "sha256": "fe7c0c6bf5df9a9b82500fdecfa028f47c6e9d0119077e6fda77e94fc4ac2c0d"
+      "bytes": 54699,
+      "sha256": "4026bc30933952099ec4c57d323ebef350c95c014e291472f264d4b19da83926"
     },
     {
-      "file": "public/og/news/2026-06-23-samsung-chatgpt-codex-enterprise.png",
+      "file": "public/og/news/2026-06-25-google-gemini-35-pro-delay-buyer-risk.png",
       "kind": "news-png",
-      "slug": "2026-06-23-samsung-chatgpt-codex-enterprise",
+      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
       "theme": "dark",
       "target": null,
-      "bytes": 53504,
-      "sha256": "a54191e4b4d68ae5820d2e900a95c40210337bb30146e304117592bb38b9abcb"
+      "bytes": 44457,
+      "sha256": "04d6b0571dc959e5af528b51d1357520cc3557ae8e829fc9ad13c709e05cf957"
     },
     {
-      "file": "public/og/news/2026-06-24-google-ai-talent-openai-anthropic.png",
+      "file": "public/og/news/2026-06-25-openai-anthropic-raise-us-workforce-push.png",
       "kind": "news-png",
-      "slug": "2026-06-24-google-ai-talent-openai-anthropic",
+      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
       "theme": "dark",
       "target": null,
-      "bytes": 51577,
-      "sha256": "e3896659c9e5b729fbca5658ca3681bfab8a4d86b1395fe979d952961e14f941"
+      "bytes": 49611,
+      "sha256": "956a05ab28d70e855f045df7f9b4cfc24fd41eb616a512423db8ffa11f28b327"
     },
     {
-      "file": "public/og/news/2026-06-24-zai-glm-52-open-model-pressure.png",
+      "file": "public/og/news/light/2026-06-24-google-gemini-computer-use-preview.png",
       "kind": "news-png",
-      "slug": "2026-06-24-zai-glm-52-open-model-pressure",
+      "slug": "2026-06-24-google-gemini-computer-use-preview",
+      "theme": "light",
+      "target": null,
+      "bytes": 35798,
+      "sha256": "a63c7f50ecdeaf21d0ab0cef3eab17c7b34e80781fbb8488a9e020ce5a9e1053"
+    },
+    {
+      "file": "public/og/news/light/2026-06-25-github-copilot-best-month-ai-coding-demand.png",
+      "kind": "news-png",
+      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
+      "theme": "light",
+      "target": null,
+      "bytes": 46278,
+      "sha256": "cfa04df2171c40c5abe3e5b66bdb960c96b4b1e00060a93e7e40e2146494cf6f"
+    },
+    {
+      "file": "public/og/news/light/2026-06-25-google-gemini-35-pro-delay-buyer-risk.png",
+      "kind": "news-png",
+      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
+      "theme": "light",
+      "target": null,
+      "bytes": 37664,
+      "sha256": "14958289afbed4a4adf527a2c6f04fa906190b6b8c53b3a5165f551a80653866"
+    },
+    {
+      "file": "public/og/news/light/2026-06-25-openai-anthropic-raise-us-workforce-push.png",
+      "kind": "news-png",
+      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
+      "theme": "light",
+      "target": null,
+      "bytes": 45276,
+      "sha256": "ed3c4c733c78cea50ed4b19f41b0ba9b160e719b7abbbfcc031c582a6314bd34"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-24-google-gemini-computer-use-preview.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-24-google-gemini-computer-use-preview",
       "theme": "dark",
       "target": null,
-      "bytes": 43417,
-      "sha256": "43934aaf563301141ea80e010586857fedb75cbe3582b69c7d8c13b68cf7a79d"
+      "bytes": 16996,
+      "sha256": "a6ba6bc740504d9f1b485556f58c624460d6257e879310640ad830dd490382eb"
     },
     {
-      "file": "public/og/news/light/2026-06-23-claude-error-rate-fallback-planning.png",
-      "kind": "news-png",
-      "slug": "2026-06-23-claude-error-rate-fallback-planning",
-      "theme": "light",
-      "target": null,
-      "bytes": 43590,
-      "sha256": "fadedcc4fb4d968fc0fa75d79a77088eda3555018686149a12c3cb69628b7bc1"
-    },
-    {
-      "file": "public/og/news/light/2026-06-23-openai-daybreak-codex-security.png",
-      "kind": "news-png",
-      "slug": "2026-06-23-openai-daybreak-codex-security",
-      "theme": "light",
-      "target": null,
-      "bytes": 40845,
-      "sha256": "96d292b57598a58b16c8f150172b84c39fe4d581e875e712397f485149769822"
-    },
-    {
-      "file": "public/og/news/light/2026-06-23-samsung-chatgpt-codex-enterprise.png",
-      "kind": "news-png",
-      "slug": "2026-06-23-samsung-chatgpt-codex-enterprise",
-      "theme": "light",
-      "target": null,
-      "bytes": 38342,
-      "sha256": "1171787c1551cea183978e5a07996ccc3dfede1824210298205dfe73ecba1a24"
-    },
-    {
-      "file": "public/og/news/light/2026-06-24-google-ai-talent-openai-anthropic.png",
-      "kind": "news-png",
-      "slug": "2026-06-24-google-ai-talent-openai-anthropic",
-      "theme": "light",
-      "target": null,
-      "bytes": 35781,
-      "sha256": "198ab3e6b17a4804f528330be6a1e0639596796fe19fe0e51fbd5d10e5e1b603"
-    },
-    {
-      "file": "public/og/news/light/2026-06-24-zai-glm-52-open-model-pressure.png",
-      "kind": "news-png",
-      "slug": "2026-06-24-zai-glm-52-open-model-pressure",
-      "theme": "light",
-      "target": null,
-      "bytes": 41190,
-      "sha256": "383e18c26de96481299ce0c44044e3c37e09a3bc4c2da8451e0cb329e6e565fa"
-    },
-    {
-      "file": "public/og/news/thumbs/2026-06-23-claude-error-rate-fallback-planning.webp",
+      "file": "public/og/news/thumbs/2026-06-25-github-copilot-best-month-ai-coding-demand.webp",
       "kind": "news-thumb",
-      "slug": "2026-06-23-claude-error-rate-fallback-planning",
+      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
       "theme": "dark",
       "target": null,
-      "bytes": 17830,
-      "sha256": "243b190c011daa70909b9c7ac724f96915f863cd93f5ef3f9e8b19f9ee70bdc9"
+      "bytes": 16666,
+      "sha256": "28a54aab87b6a9d44995377514f6434afc5b8f71e1185d19c73fa02543261ede"
     },
     {
-      "file": "public/og/news/thumbs/2026-06-23-openai-daybreak-codex-security.webp",
+      "file": "public/og/news/thumbs/2026-06-25-google-gemini-35-pro-delay-buyer-risk.webp",
       "kind": "news-thumb",
-      "slug": "2026-06-23-openai-daybreak-codex-security",
+      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
       "theme": "dark",
       "target": null,
-      "bytes": 18996,
-      "sha256": "52393c1d0aeb0914ec64592c18d192194da9c0a276c95c22900004e7b123c08d"
+      "bytes": 17770,
+      "sha256": "9517b972561c948cae46ab408d9833a6276566df684f3ce47cb4ff375823a7ac"
     },
     {
-      "file": "public/og/news/thumbs/2026-06-23-samsung-chatgpt-codex-enterprise.webp",
+      "file": "public/og/news/thumbs/2026-06-25-openai-anthropic-raise-us-workforce-push.webp",
       "kind": "news-thumb",
-      "slug": "2026-06-23-samsung-chatgpt-codex-enterprise",
+      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
       "theme": "dark",
       "target": null,
-      "bytes": 18200,
-      "sha256": "56e5681f3360d052ca1ec4cb7761dbe1e6102087289bb36d9051049601e98800"
+      "bytes": 16040,
+      "sha256": "a1a12f2129ebb0ea7cfa4ec89ce4f44bb84a1fc4f1bc2db520ce5dba92df3fb2"
     },
     {
-      "file": "public/og/news/thumbs/2026-06-24-google-ai-talent-openai-anthropic.webp",
+      "file": "public/og/news/thumbs/light/2026-06-24-google-gemini-computer-use-preview.webp",
       "kind": "news-thumb",
-      "slug": "2026-06-24-google-ai-talent-openai-anthropic",
-      "theme": "dark",
-      "target": null,
-      "bytes": 16984,
-      "sha256": "7ac7c85c95be166251b533fa0253c65f14066c90c89e0ad77e853dec698b3028"
-    },
-    {
-      "file": "public/og/news/thumbs/2026-06-24-zai-glm-52-open-model-pressure.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-24-zai-glm-52-open-model-pressure",
-      "theme": "dark",
-      "target": null,
-      "bytes": 17678,
-      "sha256": "db9e04535d43bddd59940c3c33d101cc00ec1e855a23a242e11f119dac6e7731"
-    },
-    {
-      "file": "public/og/news/thumbs/light/2026-06-23-claude-error-rate-fallback-planning.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-23-claude-error-rate-fallback-planning",
+      "slug": "2026-06-24-google-gemini-computer-use-preview",
       "theme": "light",
       "target": null,
-      "bytes": 17974,
-      "sha256": "794eb0267041aad48c2829ae9c38aa0192369bf133e382d1bfddfa1791e263aa"
+      "bytes": 17204,
+      "sha256": "5ae205cd528782e9dea20ea9625a1e836d36d6e042179b2afbba161535e56538"
     },
     {
-      "file": "public/og/news/thumbs/light/2026-06-23-openai-daybreak-codex-security.webp",
+      "file": "public/og/news/thumbs/light/2026-06-25-github-copilot-best-month-ai-coding-demand.webp",
       "kind": "news-thumb",
-      "slug": "2026-06-23-openai-daybreak-codex-security",
+      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
       "theme": "light",
       "target": null,
-      "bytes": 19364,
-      "sha256": "23e7c8ef16c161ea507e531fb4d53fbb9bec801c854e078b6d6ca7f061ce70fc"
+      "bytes": 16872,
+      "sha256": "ba63abdeebf92ff4ccbd73806aba6e335fde08dcdb90cc9d1e371b5c248b0029"
     },
     {
-      "file": "public/og/news/thumbs/light/2026-06-23-samsung-chatgpt-codex-enterprise.webp",
+      "file": "public/og/news/thumbs/light/2026-06-25-google-gemini-35-pro-delay-buyer-risk.webp",
       "kind": "news-thumb",
-      "slug": "2026-06-23-samsung-chatgpt-codex-enterprise",
+      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
       "theme": "light",
       "target": null,
-      "bytes": 18448,
-      "sha256": "cb6b9af5c7d67f34b6a9b3eac7db8c4ea85a24e69ce0c0b2bcb84723b9e35134"
+      "bytes": 17978,
+      "sha256": "f85bd1eebedc5d031fbf9544b66d87ae6049dae01573b800060979e970f14edb"
     },
     {
-      "file": "public/og/news/thumbs/light/2026-06-24-google-ai-talent-openai-anthropic.webp",
+      "file": "public/og/news/thumbs/light/2026-06-25-openai-anthropic-raise-us-workforce-push.webp",
       "kind": "news-thumb",
-      "slug": "2026-06-24-google-ai-talent-openai-anthropic",
+      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
       "theme": "light",
       "target": null,
-      "bytes": 17230,
-      "sha256": "779125e7f14da1c564ec1cc250193fd9f641710ba3a51ab7c37a2f5d485a8c7f"
-    },
-    {
-      "file": "public/og/news/thumbs/light/2026-06-24-zai-glm-52-open-model-pressure.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-24-zai-glm-52-open-model-pressure",
-      "theme": "light",
-      "target": null,
-      "bytes": 17854,
-      "sha256": "5e8ebfa99c3f25f7621fa7569ac0ed621d5c6861b4a498fd0d1ce9796f290898"
+      "bytes": 16310,
+      "sha256": "70133f045e0a884d17300aa2f58adda9001e3941a22758c0a72b4d1ea2d3eb3d"
     }
   ]
 }

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -164,7 +164,7 @@ facts:
     next_review_at: 2026-06-30
 tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, ai-credits]
 seo_title: "GitHub Copilot: Features, Pricing & AI Credits Review (June 2026)"
-meta_description: "GitHub Copilot spans IDE help, chat, agent mode, code review, CLI, Spaces, Spark, app, SDK, and cloud-agent workflows. Updated June 24, 2026 for AI Credits, model-route risk, MAI-Code-1-Flash, Opus 4.6 fast deprecation, and Fable 5 suspension."
+meta_description: "GitHub Copilot spans IDE help, chat, agent mode, code review, CLI, Spaces, Spark, app, SDK, and cloud-agent workflows. Updated June 25, 2026 for AI Credits, demand signals, and model-route risk."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers already in the GitHub ecosystem
@@ -529,6 +529,7 @@ Before procurement promises Pro, Pro+, Max, or a self-serve Business rollout, ch
 
 ## Recent changes
 
+- **June 25, 2026:** [Business Insider reported GitHub's best month ever as AI coding demand rose](/news/2026-06-25-github-copilot-best-month-ai-coding-demand/). For buyers, the signal is not just adoption momentum; it is the need to govern AI Credits, model routes, and agent usage before Copilot becomes a surprise budget line.
 - **June 24, 2026:** Current-source check found no base subscription price change. GitHub docs still list Pro at $10 with 1,500 AI credits, Pro+ at $39 with 7,000, Max at $100 with 20,000, Business at $19/user with 1,900 pooled credits, and Enterprise at $39/user with 3,900 pooled credits. The organization promo language is now framed as June-August 2026 higher included credits.
 - **June 23, 2026:** Current-source recheck kept Copilot pricing unchanged, confirmed Free's 2,000 completions plus 50 chat requests, kept Fable 5 unavailable, added the Opus 4.6 fast June 29 deprecation notice, and confirmed MAI-Code-1-Flash is expanding across more Copilot surfaces.
 - **June 20, 2026:** DeepSeek comparison refresh added the June 17 sign-up change: Student, Pro, Pro+, and Max sign-ups are reopening gradually after the earlier pause. It also added the generally available GitHub Copilot app, MAI-Code-1-Flash expansion, `AGENTS.md` support in Copilot code review, and the new `ai_credits_used` user metric for admins.
