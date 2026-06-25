@@ -6,12 +6,12 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 
 ## Current Snapshot
 
-- Last updated: 2026-06-25.
-- Branch baseline: `codex/refresh-tool-pages-june-23`; latest completed local tool batch is the June 25 third six-worker batch from Zapier through Jan.ai.
+- Last updated: 2026-06-26.
+- Branch baseline: `codex/refresh-tool-pages-june-23`; latest pushed branch batch is the June 25 third six-worker batch from Zapier through Jan.ai plus workflow no-regression hardening.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
-- The latest completed local batch refreshed 54 tools from Zapier through Jan.ai after the previous six-worker batches and serial shards.
+- The latest pushed branch batch refreshed 54 tools from Zapier through Jan.ai after the previous six-worker batches and serial shards.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.

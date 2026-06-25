@@ -1,6 +1,6 @@
 # AiPedia Current Status
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
 
 Audience: maintainers, future agents, and Matt.
 
@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `cad52dc26` on `master`. Latest completed local tool batch is the June 25 third six-worker batch from Zapier through Jan.ai.
+- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed refresh branch includes the June 25 third six-worker batch from Zapier through Jan.ai plus workflow no-regression hardening.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -85,7 +85,7 @@ Latest completed batch:
 - Affected parent hubs: AI Video, AI Image, AI Design, and AI Writing.
 - Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, and affected parent source/date summaries. Meshy's current individual ladder now includes Pro, Premium, and Ultra before Studio; Magnific API guidance now warns that pay-per-usage is marked for June 30, 2026 discontinuation.
 
-Latest local batch, verified and pending push:
+Latest completed and pushed branch batch:
 
 - Third six-worker June 25 batch from the regenerated due-soon queue: `zapier`, `sudowrite`, `writesonic`, `pitch`, `gamma`, `fish-audio`, `quillbot`, `murf`, `resemble-ai`, `stable-diffusion`, `wellsaid`, `freepik`, `you-com`, `kagi`, `scite`, `semantic-scholar`, `kimi`, `langfuse`, `leonardo`, `letta`, `llama`, `lm-studio`, `logseq`, `mem`, `morphic`, `ollama`, `open-webui`, `paradox`, `reflect`, `reka`, `replicate`, `riverside`, `sanebox`, `spellbook`, `stable-audio`, `tactiq`, `writer`, `rows`, `voiceflow`, `tripo3d`, `typingmind`, `uizard`, `unbounce`, `watsonx-orchestrate`, `weaviate`, `whisper`, `workato`, `yi`, `antigravity`, `cohere`, `gpt-image-2`, `openclaw`, `hermes-agent`, and `jan-ai`.
 - Affected parent hubs inspected: AI Automation, AI Writing, AI Presentation, AI Voice, AI Image, AI Search, AI Research, AI Chatbots, AI Notes, AI Infrastructure, AI Music, AI Design, and AI Coding. The `/tools/` and `/categories/` top-layer routes were covered in route QA.
@@ -117,7 +117,7 @@ Next due-soon tracked-tool queue:
 - Regenerate before the next batch with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
 - The planner now excludes tools verified since yesterday by default. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when the user explicitly wants to revisit recent pages.
 - Current regenerated `.tmp-tool-refresh-batch.json` starts with `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, `retell-ai`, `rork`, `taskade`, `tavus`, `tines`, and `together-ai`, and contains 60 tools across 77 route-QA routes.
-- The first four tools from that queue are verified locally and pending push; after push, regenerate again and continue with `reclaim-ai`, `relevance-ai`, `retell-ai`, and `rork` unless the planner changes.
+- Regenerate again before selecting the next shard; continue with the oldest due tools from the fresh planner output unless the queue changes.
 
 Use `$aipedia-tool-refresh-workflow` for the parallel batched tool refresh flow:
 
@@ -210,7 +210,7 @@ Latest six-worker 60-tool refresh batch passed:
 
 This run refreshed 60 tools from Reclaim AI through Supermaven, updated affected category hubs, source registry rows, the page refresh ledger, and `.agent/loop-runs/2026-06-25-six-worker-60-tool-refresh-batch.md`. First grouped check caught and fixed long sentences in Hume and Tana, a banned phrase in Supermaven, five source-registry `last_checked` gaps, and a ledger check race caused by concurrent ledger generation.
 
-Latest third six-worker tool refresh batch passed locally and is ready to commit/push:
+Latest third six-worker tool refresh batch passed and is pushed on `codex/refresh-tool-pages-june-23`:
 
 - `npm run ledger:pages && npm run ledger:pages:check`
 - `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`
@@ -220,7 +220,7 @@ Latest third six-worker tool refresh batch passed locally and is ready to commit
 
 This run refreshed 54 tools from Zapier through Jan.ai, updated source registry rows, the page refresh ledger, corrected the saved planner route set, and wrote `.agent/loop-runs/2026-06-25-third-six-worker-tool-refresh-batch.md`. First grouped check caught Kimi filler phrases, watsonx category/sentence issues, one missing source-registry `last_checked`, and missing price-history `verified_at` metadata; all were fixed. First route QA failed only on nonexistent `/categories/ai-enterprise/`, a planner artifact after correcting watsonx Orchestrate back to AI Automation; the corrected 69-route matrix passed.
 
-Workflow improvement now complete locally:
+Workflow improvement is complete and pushed on `codex/refresh-tool-pages-june-23`:
 
 - Added `npm run check:frontmatter` and wired it into `tool:refresh:batch:check` so malformed markdown YAML is caught before typecheck/build.
 - Updated planner-generated worker prompts to require source-confidence labels for constrained facts.

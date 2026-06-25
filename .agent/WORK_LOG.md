@@ -745,34 +745,34 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ### 2026-06-25: Luma, Magnific, Meshy, and OpusClip Serial Tool Shard
 
-- Status: Complete locally, verified, pending push.
+- Status: Complete, verified, and pushed on `codex/refresh-tool-pages-june-23`.
 - Branch: `codex/refresh-tool-pages-june-23`.
 - Changed: Refreshed Luma, Magnific, Meshy, and OpusClip against current June 2026 primary sources. Updated AI Video, AI Image, AI Design, and AI Writing parent hubs, refreshed source-registry `last_checked` rows, regenerated `PAGE_REFRESH_LEDGER.md`, and regenerated `.tmp-tool-refresh-batch.json`.
 - Buyer-impact notes: Meshy now shows the current individual ladder with Pro $20/month, Premium $40/month, Ultra $100/month, and Studio $60/seat/month with a 2-seat minimum. Magnific now warns API buyers that pay-per-usage is marked for June 30, 2026 discontinuation and should not be treated as durable procurement math.
 - Verification: `npm run audit:tool-quality -- --file` for all four tool files; `npm run audit:provenance:changed -- --json`; `npm run --silent audit:sources -- --json --live --limit 0` across 22 refreshed sources; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run tool:refresh:batch:check -- --file src/content/tools/luma.md --file src/content/tools/magnific.md --file src/content/tools/meshy.md --file src/content/tools/opusclip.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/luma/ --route /tools/magnific/ --route /tools/meshy/ --route /tools/opusclip/ --route /categories/ai-video/ --route /categories/ai-image/ --route /categories/ai-design/ --route /categories/ai-writing/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`.
 - Failed then fixed: The first Magnific API pay-per-use source-health pass returned a 404 for `docs.magnific.com/pricing-payg`; updated the registry and visible sources to `https://www.magnific.com/api/pricing`, added the June 30 discontinuation caveat, and reran source health successfully.
-- Next: Continue the regenerated queue starting with Pinecone, PixVerse, Playground AI, and Qdrant.
+- Next: Completed by the Pinecone, PixVerse, Playground AI, and Qdrant shard below.
 
 ### 2026-06-25: Pinecone, PixVerse, Playground AI, and Qdrant Serial Tool Shard
 
-- Status: Complete locally, verified, pending push.
+- Status: Complete, verified, and pushed on `codex/refresh-tool-pages-june-23`.
 - Branch: `codex/refresh-tool-pages-june-23`.
 - Changed: Refreshed Pinecone, PixVerse, Playground AI, and Qdrant against current June 2026 primary sources. Updated AI Infrastructure, AI Search, AI Image, and AI Video parent hubs, refreshed source-registry `last_checked` rows, added `pixverse-changelog`, and regenerated `PAGE_REFRESH_LEDGER.md`.
 - Buyer-impact notes: PixVerse now surfaces the June 16, 2026 Upscale feature release from the official Platform changelog. Qdrant v1.18.2 remains the latest checked GitHub release, but the page now correctly says the release was published June 4, 2026. Pinecone and Playground pricing checks remained stable on June 25.
 - Verification: `npm run audit:tool-quality -- --file src/content/tools/pinecone.md --file src/content/tools/pixverse.md --file src/content/tools/playground-ai.md --file src/content/tools/qdrant.md`; `npm run audit:provenance:changed -- --json`; `npm run --silent audit:sources -- --json --live --limit 0` across 13 refreshed sources; `npm run ledger:pages && npm run ledger:pages:check`; `npm run tool:refresh:batch:check -- --file src/content/tools/pinecone.md --file src/content/tools/pixverse.md --file src/content/tools/playground-ai.md --file src/content/tools/qdrant.md`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --route /tools/pinecone/ --route /tools/pixverse/ --route /tools/playground-ai/ --route /tools/qdrant/ --route /categories/ai-infrastructure/ --route /categories/ai-search/ --route /categories/ai-image/ --route /categories/ai-video/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`.
 - Failed then fixed: The first provenance pass caught missing confidence on Qdrant `best_for` and missing `verified_at` fields on two older PixVerse price-history rows; added the missing metadata and reran successfully. The first ledger check was stale after parent-page edits; regenerated and reran successfully.
-- Next: Push this shard, regenerate the planner, and continue with the next due-soon tools, likely Reclaim AI, Relevance AI, Retell AI, and Rork.
+- Next: Completed by the subsequent six-worker 60-tool refresh batch.
 
 ### 2026-06-25: Six-Worker 60-Tool Refresh Batch
 
-- Status: Complete locally, verified, pending push.
+- Status: Complete, verified, and pushed on `codex/refresh-tool-pages-june-23`.
 - Branch: `codex/refresh-tool-pages-june-23`.
 - Changed: Ran the six-worker `$aipedia-tool-refresh-workflow` across 60 due-soon tools from Reclaim AI through Supermaven. Integrated worker edits, updated affected category hubs, refreshed `src/data/source-registry.json`, added the Hunyuan HY-Embodied-0.5 paper source, regenerated `PAGE_REFRESH_LEDGER.md`, and checked all affected rendered routes.
 - Buyer-impact notes: Tavus pricing now carries the newer Developer surface plus a caveat for duplicated old pricing blocks. Kiro now includes Pro Max. Hume, Vapi, InVideo, Framer, Flux, Codex, Devin, Obsidian, Poe, Groq, Imagen, Genspark, Ahrefs, AssemblyAI, and Supermaven got current buyer-facing corrections or tightened caveats. Other shard tools were reverified against current June 2026 sources with dates and provenance aligned.
 - Verification: `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`; `npm run typecheck`; `npm run build:fast`; `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 4 $(cat .tmp-route-qa-args.txt) --widths 319,360,390,430,768,1024,1366`.
 - Failed then fixed: The first batch check caught long sentences in `hume.md` and `tana.md`, the banned phrase `best-in-class` in `supermaven.md`, and a ledger check race caused by running ledger generation/check concurrently. Split the sentences, replaced the phrase, regenerated the ledger, and reran the grouped batch check successfully.
 - Residual risks: Checkout-gated and account-gated claims remain caveated in content, especially Boomy, Apollo, Jimeng/Dreamina, Gemini Omni API pricing, Ada contact-sales pricing, Tavus overages/concurrency, and Genspark task-level credit burn.
-- Next: Commit, move `master` to the verified batch, push `master`, regenerate the next planner, and continue the next not-recently-refreshed batch.
+- Next: Move `master` to the verified branch tip, push `master`, regenerate the next planner, and continue the next not-recently-refreshed batch.
 
 ### 2026-06-25: Second Six-Worker 60-Tool Refresh Batch
 
