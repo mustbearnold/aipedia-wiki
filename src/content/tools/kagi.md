@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$5-$25/month"
 status: active
 launched: 2017-06
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://kagi.com"
     source_label: "Kagi official site"
     source_id: kagi-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   ai_search:
@@ -38,15 +38,15 @@ facts:
     source: "https://kagi.com/changelog"
     source_label: "Kagi changelog"
     source_id: kagi-changelog
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page on June 23, 2026. Annual billing still shows 10% off; Family starts at $20/month for up to 6 members and Ultimate upgrades can be added per member."
+    value: "Paid search plans (Starter $5, Professional $10, Ultimate $25) verified on the live pricing page on June 25, 2026. Annual billing still shows 10% off; Family starts at $20/month for up to 6 members and Ultimate upgrades can be added per member."
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: high
     confidence: high
@@ -55,7 +55,7 @@ facts:
     source: "https://kagi.com"
     source_label: "Kagi official site"
     source_id: kagi-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://kagi.com/pricing"
     source_label: "Kagi pricing"
     source_id: kagi-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: high
     confidence: high
@@ -123,6 +123,14 @@ price_history:
     source_id: kagi-pricing
     verified_at: 2026-06-23
     note: "Pricing unchanged; Kagi changelog says the old Assistant was retired on June 16, 2026 and the new Assistant experience is now the active AI layer."
+  - date: 2026-06-25
+    plan: "Starter / Professional / Ultimate"
+    price: "$5 / $10 / $25 per month"
+    source: "https://kagi.com/pricing"
+    source_label: "Kagi pricing"
+    source_id: kagi-pricing
+    verified_at: 2026-06-25
+    note: "Pricing unchanged; Ultimate still lists Research mode and flagship model access, while Starter and Professional include Quick mode Assistant."
 ---
 
 # Kagi
@@ -154,7 +162,7 @@ Kagi Assistant is the integrated AI chat layer. Quick mode Assistant is now avai
 | **Privacy** | No behavioral tracking, no ad profiles, subscription-funded |
 | **Index** | Proprietary crawl + licensed third-party indexes |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -191,7 +199,7 @@ Pricing via [kagi.com/pricing](https://kagi.com/pricing):
 | Professional | $10 | Unlimited | Quick mode | **Most paying users land here** |
 | Ultimate | $25 | Unlimited | Research mode + flagship models | Power researchers + AI power users |
 
-Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Family starts at $20/month for up to 6 members, and Family or Team members can add Ultimate at $15/member where applicable. Prices verified 2026-06-23 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
+Annual billing saves 10% across all tiers. Fair pricing policy: unused Starter searches auto-credit the next cycle. Family starts at $20/month for up to 6 members, and Family or Team members can add Ultimate at $15/member where applicable. Prices verified 2026-06-25 via [Kagi pricing](https://kagi.com/pricing) and [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html).
 
 No free tier. New users get a 100-search trial before subscribing.
 
@@ -225,7 +233,7 @@ No free tier. New users get a 100-search trial before subscribing.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html), [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html), and [Kagi changelog](https://kagi.com/changelog).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Kagi pricing](https://kagi.com/pricing), [Kagi plan types docs](https://help.kagi.com/kagi/plans/plan-types.html), [Kagi Research Assistants](https://help.kagi.com/kagi/ai/kagi-research.html), [Kagi Assistant docs](https://help.kagi.com/kagi/ai/assistant.html), and [Kagi changelog](https://kagi.com/changelog).
 
 ## FAQ
 

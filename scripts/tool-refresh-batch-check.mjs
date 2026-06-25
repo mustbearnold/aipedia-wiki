@@ -4,7 +4,7 @@
 // expensive closeout.
 
 import { spawnSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,6 +12,7 @@ const args = process.argv.slice(2);
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || dirname(dirname(fileURLToPath(import.meta.url))));
 const JSON_MODE = args.includes('--json');
 const HELP_MODE = args.includes('--help') || args.includes('-h');
+const TIMING_FILE = valueFor('--timing-file');
 const NPM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 if (HELP_MODE) {
@@ -27,8 +28,10 @@ function usage() {
     '  node scripts/tool-refresh-batch-check.mjs --plan .agent/tool-refresh-batch.json',
     '  node scripts/tool-refresh-batch-check.mjs --files-from .agent/tool-refresh-batch.json',
     '  node scripts/tool-refresh-batch-check.mjs --json',
+    '  node scripts/tool-refresh-batch-check.mjs --timing-file local/tmp/tool-refresh-batch-check.json',
     '',
     'Runs per-tool quality checks plus changed frontmatter parsing, changed provenance, freshness, ledger check, em-dash guard, and git diff check.',
+    '--timing-file writes the full command timing payload to disk for runner receipts.',
     'It does not run typecheck, build, or route QA. Use the batch planner closeout for those.',
   ].join('\n');
 }
@@ -144,6 +147,7 @@ for (const file of toolFiles) {
 
 commands.push(run(process.execPath, ['scripts/check-frontmatter.mjs', '--changed']));
 commands.push(run(NPM, ['run', 'audit:provenance:changed', '--', '--json']));
+commands.push(run(NPM, ['run', 'audit:hub-staleness:changed', '--', '--json']));
 commands.push(run(NPM, ['run', 'loop:freshness', '--', '--json']));
 commands.push(run(NPM, ['run', 'ledger:pages:check']));
 commands.push(run(process.execPath, ['scripts/guard-em-dashes.mjs']));
@@ -163,6 +167,12 @@ finish({
 });
 
 function finish(result) {
+  if (TIMING_FILE) {
+    const timingPath = resolve(PROJECT_DIR, TIMING_FILE);
+    mkdirSync(dirname(timingPath), { recursive: true });
+    writeFileSync(timingPath, `${JSON.stringify(result, null, 2)}\n`);
+  }
+
   if (JSON_MODE) {
     process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
   } else {

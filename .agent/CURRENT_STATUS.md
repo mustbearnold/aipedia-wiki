@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `cad52dc26` on `master`. Latest completed local tool batch is the June 25 four-tool serial shard: Pinecone, PixVerse, Playground AI, and Qdrant.
+- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `cad52dc26` on `master`. Latest completed local tool batch is the June 25 third six-worker batch from Zapier through Jan.ai.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -87,9 +87,9 @@ Latest completed batch:
 
 Latest local batch, verified and pending push:
 
-- Four-tool June 25 serial shard from the regenerated due-soon queue: `pinecone`, `pixverse`, `playground-ai`, and `qdrant`.
-- Affected parent hubs: AI Infrastructure, AI Search, AI Image, and AI Video.
-- Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, affected parent source/date summaries, and agent status docs. Current buyer-impact notes: PixVerse changelog now surfaces the June 16, 2026 Upscale feature release; Qdrant v1.18.2 remains the latest checked release but its release date is June 4, 2026 rather than June 12; Pinecone and Playground pricing checks remain stable as of June 25.
+- Third six-worker June 25 batch from the regenerated due-soon queue: `zapier`, `sudowrite`, `writesonic`, `pitch`, `gamma`, `fish-audio`, `quillbot`, `murf`, `resemble-ai`, `stable-diffusion`, `wellsaid`, `freepik`, `you-com`, `kagi`, `scite`, `semantic-scholar`, `kimi`, `langfuse`, `leonardo`, `letta`, `llama`, `lm-studio`, `logseq`, `mem`, `morphic`, `ollama`, `open-webui`, `paradox`, `reflect`, `reka`, `replicate`, `riverside`, `sanebox`, `spellbook`, `stable-audio`, `tactiq`, `writer`, `rows`, `voiceflow`, `tripo3d`, `typingmind`, `uizard`, `unbounce`, `watsonx-orchestrate`, `weaviate`, `whisper`, `workato`, `yi`, `antigravity`, `cohere`, `gpt-image-2`, `openclaw`, `hermes-agent`, and `jan-ai`.
+- Affected parent hubs inspected: AI Automation, AI Writing, AI Presentation, AI Voice, AI Image, AI Search, AI Research, AI Chatbots, AI Notes, AI Infrastructure, AI Music, AI Design, and AI Coding. The `/tools/` and `/categories/` top-layer routes were covered in route QA.
+- Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, `.tmp-tool-refresh-batch.json`, `.tmp-route-qa-args.txt`, and agent status docs. Current buyer-impact notes: WellSaid moved off stale Creative-era pricing; Freepik/Magnific and QuillBot carry region-rendered caveats; Kimi keeps K2.6 as primary-source current with K2.7-Code secondary-only; Mem flags conflicting pricing labels; Ollama treats `v0.30.11-rc0` as pre-release; watsonx Orchestrate is back on the valid AI Automation category; GPT Image 2 uses current OpenAI API token pricing; Jan.ai is refreshed to v0.8.3 and Apache-2.0 licensing.
 
 Previous large batch:
 
@@ -210,16 +210,15 @@ Latest six-worker 60-tool refresh batch passed:
 
 This run refreshed 60 tools from Reclaim AI through Supermaven, updated affected category hubs, source registry rows, the page refresh ledger, and `.agent/loop-runs/2026-06-25-six-worker-60-tool-refresh-batch.md`. First grouped check caught and fixed long sentences in Hume and Tana, a banned phrase in Supermaven, five source-registry `last_checked` gaps, and a ledger check race caused by concurrent ledger generation.
 
-Second six-worker 60-tool refresh batch passed locally and is ready to commit/push:
+Latest third six-worker tool refresh batch passed locally and is ready to commit/push:
 
 - `npm run ledger:pages && npm run ledger:pages:check`
 - `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`
-- `npm run audit:provenance:changed -- --json`
 - `npm run typecheck`
 - `npm run build:fast`
 - `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 4 $(cat .tmp-route-qa-args.txt) --widths 319,360,390,430,768,1024,1366`
 
-This run refreshed 60 tools from Tabnine through Wordtune, updated affected category hubs, source registry rows, the page refresh ledger, and `.agent/loop-runs/2026-06-25-second-six-worker-60-tool-refresh-batch.md`. First grouped check failed only on `ledger:pages:check`; rerunning `ledger:pages && ledger:pages:check` fixed it. First typecheck caught a YAML scalar issue in Claude Design; it was converted to a folded scalar and typecheck passed.
+This run refreshed 54 tools from Zapier through Jan.ai, updated source registry rows, the page refresh ledger, corrected the saved planner route set, and wrote `.agent/loop-runs/2026-06-25-third-six-worker-tool-refresh-batch.md`. First grouped check caught Kimi filler phrases, watsonx category/sentence issues, one missing source-registry `last_checked`, and missing price-history `verified_at` metadata; all were fixed. First route QA failed only on nonexistent `/categories/ai-enterprise/`, a planner artifact after correcting watsonx Orchestrate back to AI Automation; the corrected 69-route matrix passed.
 
 Workflow improvement now complete locally:
 

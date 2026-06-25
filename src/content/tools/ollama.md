@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 local / $20-$100/mo cloud"
 status: active
 launched: 2023-07
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://ollama.com/"
     source_label: "Ollama"
     source_id: ollama-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://ollama.com/"
     source_label: "Ollama"
     source_id: ollama-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-08
     volatility: high
     confidence: high
@@ -48,13 +48,13 @@ facts:
     source: "https://ollama.com/"
     source_label: "Ollama"
     source_id: ollama-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
 tags: [local-llm, open-source, inference, llm-runtime, privacy, self-hosted, developer, infrastructure]
 seo_title: "Ollama Review: Local Models, Cloud Pricing & Setup (June 2026)"
-meta_description: "Ollama runs open models locally with an OpenAI-compatible API. June 2026 check: v0.30.6 stable, free local runtime, Cloud Pro $20/mo, Max $100/mo, Team coming soon."
+meta_description: "Ollama runs open models locally with an OpenAI-compatible API. June 2026 check: v0.30.10 stable, free local runtime, Cloud Pro $20/mo, Max $100/mo, Team coming soon."
 author: "aipedia.wiki Editorial"
 best_for:
   - running LLMs on your own hardware
@@ -66,7 +66,7 @@ not_best_for:
   - workloads needing the strongest hosted frontier assistants
   - production workloads without a reliability layer
 quick_answer: >-
-  Ollama is the easiest way to run local open models with an OpenAI-compatible API. The June 8, 2026 check found v0.30.6 as the latest stable GitHub release, the local runtime still free, Cloud Pro at $20/month or $200/year, Cloud Max at $100/month, and Team listed as coming soon. Pick it for private prompts, free local inference, agent prototyping, embeddings, or testing Llama, Qwen, DeepSeek, Gemma, Mistral, and other open models. Choose a hosted frontier assistant or managed inference platform when quality, scale, uptime, or governance matters more than local control.
+  Ollama is the easiest way to run local open models with an OpenAI-compatible API. The June 25, 2026 check found v0.30.10 as the latest stable GitHub release, with v0.30.11-rc0 marked pre-release. The local runtime is still free, Cloud Pro is $20/month or $200/year, Cloud Max is $100/month, and Team is listed as coming soon. Pick it for private prompts, free local inference, agent prototyping, embeddings, or testing Llama, Qwen, DeepSeek, Gemma, Mistral, and other open models. Choose a hosted frontier assistant or managed inference platform when quality, scale, uptime, or governance matters more than local control.
 decision_brief:
   items:
     - label: Start here
@@ -85,6 +85,7 @@ price_history:
     source: "https://ollama.com/"
     source_label: "Source"
     source_id: ollama-pricing
+    verified_at: 2026-06-25
     note: "Historical pricing check: Pro offered monthly and annual billing, Max stayed at $100/mo, and local runtime remained free."
   - date: 2026-06-08
     plan: "Local / Cloud Pro / Cloud Max / Team"
@@ -92,7 +93,16 @@ price_history:
     source: "https://ollama.com/pricing"
     source_label: "Ollama pricing"
     source_id: ollama-pricing
+    verified_at: 2026-06-25
     note: "Verified Cloud Pro, Max, and Team-coming-soon pricing plus local runtime status. Stable release checked separately at v0.30.6."
+  - date: 2026-06-25
+    plan: "Local / Cloud Pro / Cloud Max / Team"
+    price: "$0 local · $20/mo or $200/yr Pro · $100/mo Max · Team coming soon"
+    source: "https://ollama.com/pricing"
+    source_label: "Ollama pricing"
+    source_id: ollama-pricing
+    verified_at: 2026-06-25
+    note: "Pricing unchanged. GitHub releases show v0.30.10 as the latest stable release and v0.30.11-rc0 as a June 25 pre-release."
 ---
 
 # Ollama
@@ -111,22 +121,22 @@ Ollama is the local-runtime default for people who want to run open models on th
 
 | | |
 |---|---|
-| **Current stable release** | v0.30.6 (June 5, 2026) |
+| **Current stable release** | v0.30.10 (June 17, 2026); v0.30.11-rc0 is a June 25 pre-release |
 | **Platforms** | macOS (Apple Silicon + Intel), Windows (including native ARM64), Linux |
 | **Cost to run locally** | $0 |
 | **API surface** | OpenAI-compatible HTTP (`/v1/chat/completions`, `/v1/embeddings`), native REST |
 | **Model library examples** | Llama 3.1/3.2, DeepSeek-R1, Gemma 3, Gemma 4 QAT, Qwen2.5/Qwen3, Mistral, nomic-embed-text, and other open models |
 | **Multimodal** | Depends on the selected model; verify model cards before assuming vision, tool, or embedding support |
 | **Quantization** | Automatic Q4_K_M by default; Q2 through Q8 selectable |
-| **GitHub scale** | 173k stars and 16.5k forks as of June 12, 2026 |
+| **GitHub scale** | about 175k stars and 16.7k forks as of June 25, 2026 |
 | **Ollama Cloud tiers** | Free · Pro $20/mo or $200/yr · Max $100/mo |
 | **Team plan** | Listed as coming soon, with shared usage, centralized billing/admin, SSO, model access controls, MDM installer, priority support, and dedicated Slack |
 | **Cloud data note** | Ollama says Cloud data is not trained on; Cloud model regions include United States, Europe, and Singapore |
 
 ## Recent developments
 
-- **June 5, 2026:** [Ollama v0.30.6](https://github.com/ollama/ollama/releases/tag/v0.30.6) is the latest stable GitHub release checked by AiPedia. The release notes highlight Gemma 4 QAT weights, an `ollama launch omp` path for Oh My Pi, and MLX embedding-layer changes.
-- **June 8, 2026:** Ollama's pricing page still lists local use as free, Cloud Pro at $20/month or $200/year, Cloud Max at $100/month, and Team as coming soon. The GitHub releases page also shows newer release-candidate builds, but AiPedia treats v0.30.6 as the current stable release until a non-prerelease tag supersedes it.
+- **June 25, 2026:** GitHub releases show [Ollama v0.30.10](https://github.com/ollama/ollama/releases/tag/v0.30.10) as the latest stable release and v0.30.11-rc0 as a pre-release. The release cadence is moving quickly, so production teams should pin and test a version rather than auto-upgrading local runtimes.
+- **June 25, 2026:** Ollama's pricing page still lists local use as free, Cloud Pro at $20/month or $200/year, Cloud Max at $100/month, and Team as coming soon.
 - **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). More high-memory Apple Silicon machines in circulation expands the practical install base for local inference stacks such as Ollama.
 
 ## When to pick Ollama
@@ -154,7 +164,7 @@ Local Ollama is free. Ollama Cloud (released late 2025) offers hosted inference:
 | Max | $100/mo | Run 10 cloud models at a time, 5x more usage than Pro |
 | Team | Coming soon | Shared usage, centralized billing/admin, SSO, model access controls, MDM installer, priority support, dedicated Slack |
 
-*Prices verified 2026-06-12 via [ollama.com/pricing](https://ollama.com/pricing).*
+*Prices verified 2026-06-25 via [ollama.com/pricing](https://ollama.com/pricing).*
 
 ## Failure modes
 
@@ -176,7 +186,7 @@ Local Ollama is free. Ollama Cloud (released late 2025) offers hosted inference:
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-06-12 against the [Ollama official site](https://ollama.com/), [Ollama pricing](https://ollama.com/pricing), [Ollama library](https://ollama.com/library), and [Ollama v0.30.6 release notes](https://github.com/ollama/ollama/releases/tag/v0.30.6).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/). Last verified 2026-06-25 against the [Ollama official site](https://ollama.com/), [Ollama pricing](https://ollama.com/pricing), [Ollama library](https://ollama.com/library), and [Ollama releases](https://github.com/ollama/ollama/releases).
 
 ## FAQ
 

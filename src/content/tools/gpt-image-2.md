@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month (ChatGPT) · API token pricing: image $8/M input, $2/M cached input, $30/M output; text $5/M input, $1.25/M cached input, $10/M output"
 status: active
 launched: 2026-04
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
     source_label: "OpenAI GPT Image 2 launch"
     source_id: gpt-image-2-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_label: "OpenAI image generation docs"
     source_id: openai-image-generation-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -49,7 +49,7 @@ facts:
     source: "https://openai.com/api/pricing/"
     source_label: "OpenAI API pricing"
     source_id: openai-api-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://platform.openai.com/docs/guides/image-generation"
     source_label: "OpenAI image generation docs"
     source_id: openai-image-generation-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -67,7 +67,7 @@ facts:
     source: "https://openai.com/index/introducing-chatgpt-images-2-0/"
     source_label: "OpenAI GPT Image 2 launch"
     source_id: gpt-image-2-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-12
     volatility: high
     confidence: high
@@ -136,6 +136,14 @@ price_history:
     source_id: gpt-image-2-pricing
     verified_at: 2026-06-23
     note: "OpenAI's current public pricing page presents GPT-Image-2 as token-priced rather than a fixed per-image list price; older per-image shorthand should be treated as an estimate, not the list price."
+  - date: 2026-06-25
+    plan: "API token pricing"
+    price: "Image: $8/M input, $2/M cached input, $30/M output; Text: $5/M input, $1.25/M cached input, $10/M output"
+    source: "https://openai.com/api/pricing/"
+    source_label: "OpenAI API pricing"
+    source_id: gpt-image-2-pricing
+    verified_at: 2026-06-25
+    note: "Rechecked the public OpenAI pricing table. GPT-Image-2 remains token-priced; buyer math should not use the older fixed per-image launch shorthand."
 ---
 
 # GPT Image 2
@@ -146,11 +154,11 @@ The step change is reasoning inside the image model. GPT Image 2 thinks before i
 
 ## Recent developments
 
-- **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for ChatGPT, Codex, and API-generated images](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). Treat this as a provenance workflow upgrade, not a perfect detector; metadata can still be stripped and absence of a signal is not proof that an image is human-made.
+- **June 25, 2026:** API pricing rechecked against OpenAI's public pricing table. GPT-Image-2 is still listed as token-priced: image $8/M input, $2/M cached input, $30/M output, plus text $5/M input, $1.25/M cached input, $10/M output.
 - **June 23, 2026:** Pricing rechecked against OpenAI's public API pricing page. The durable public API anchor is token pricing: image $8/M input, $2/M cached input, $30/M output, plus text $5/M input, $1.25/M cached input, $10/M output. Older per-image figures are estimates, not the current list-price format.
+- **May 19, 2026:** [OpenAI added C2PA conformance, SynthID watermarking, and a public verification-tool preview for ChatGPT, Codex, and API-generated images](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/). Treat this as a provenance workflow upgrade, not a perfect detector; metadata can still be stripped and absence of a signal is not proof that an image is human-made.
 - **May 13, 2026:** Pricing and feature set verified unchanged 3 weeks post-launch. Earlier buyer copy used per-image shorthand, but API billing should now be anchored to OpenAI's token table.
-- **April 23, 2026:** [GPT-5.5 rolls out](/news/2026-04-25-ai-news-catchup/) as the upstream reasoning backbone available to ChatGPT users alongside gpt-image-2 in the bundle. The combined text + image surface is still the strongest value at $20/mo.
-- **April 21, 2026:** [ChatGPT Images 2.0 and gpt-image-2 launch](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/). Native reasoning, 4K resolution, multilingual text, up to 8 variants per prompt. Free tier gets the standard model; Plus, Pro, and Business add thinking mode and web search inside generation. API pricing starts at $0.01/image.
+- **April 21, 2026:** [ChatGPT Images 2.0 and gpt-image-2 launch](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/). Native reasoning, 4K resolution, multilingual text, and up to 8 variants per prompt. Free tier gets capped access; Plus, Pro, and Business add higher limits and richer ChatGPT workflow features.
 - **April 21, 2026:** [Adobe + NVIDIA ship agentic creative workflow at Adobe Summit](/news/2026-04-21-adobe-nvidia-agents-adobe-summit-wpp/). Pipeline-level orchestration competes with stand-alone image-gen workflows; expect enterprise buyers to evaluate GPT Image 2 inside both ChatGPT and third-party agent stacks.
 
 ## System Verdict
@@ -182,7 +190,7 @@ The step change is reasoning inside the image model. GPT Image 2 thinks before i
 | **Provenance** | C2PA Content Credentials, SynthID watermarking, and OpenAI verification-tool preview as of May 19, 2026 |
 | **Open weights** | No |
 
-Every data point above was verified on 2026-06-23. See Sources in the launch [news item](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/), the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), and OpenAI's current API pricing page.
+Every data point above was verified on 2026-06-25. See Sources in the launch [news item](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/), the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), and OpenAI's current API pricing page.
 
 ## What it actually is
 
@@ -190,7 +198,7 @@ A single reasoning-native image model accessed three ways:
 
 1. **Consumer:** inside [ChatGPT](/tools/chatgpt/) at chat.openai.com. Free tier runs the standard model; Plus and above unlock thinking mode, longer reasoning runs, and web search inside generation for real-world branding reference.
 2. **Enterprise chat:** ChatGPT Business with commercial terms and team admin.
-3. **API:** `gpt-image-2` endpoint on OpenAI API and inside Microsoft Foundry. Billed per-image by quality tier or per-token for long prompts.
+3. **API:** `gpt-image-2` endpoint on OpenAI API and inside Microsoft Foundry. OpenAI's public pricing table now presents it as token-priced by image and text modality.
 
 The reasoning layer is the meaningful upgrade. Prior-generation image models could not reliably plan a three-panel infographic with heading, body, and footnote; GPT Image 2 can. That unlocks a set of workflows (slide export, annotated maps, multi-panel product sheets) that previously required manual composition or a design tool.
 
@@ -228,7 +236,7 @@ API pricing:
 | Image | $8/MTok | $2/MTok | $30/MTok |
 | Text | $5/MTok | $1.25/MTok | $10/MTok |
 
-Prices were last rechecked 2026-06-23 via the [OpenAI API pricing page](https://openai.com/api/pricing/), the [OpenAI launch post](https://openai.com/index/introducing-chatgpt-images-2-0/), and the [OpenAI image-generation docs](https://platform.openai.com/docs/guides/image-generation). Provenance controls were updated and verified against OpenAI's May 19 announcement.
+Prices were last rechecked 2026-06-25 via the [OpenAI API pricing page](https://openai.com/api/pricing/), the [OpenAI launch post](https://openai.com/index/introducing-chatgpt-images-2-0/), and the [OpenAI image-generation docs](https://platform.openai.com/docs/guides/image-generation). Provenance controls were updated and verified against OpenAI's May 19 announcement.
 
 ## Against the alternatives
 
@@ -255,7 +263,7 @@ Prices were last rechecked 2026-06-23 via the [OpenAI API pricing page](https://
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), the [OpenAI launch announcement](https://openai.com/index/introducing-chatgpt-images-2-0/), the [OpenAI API pricing page](https://openai.com/api/pricing/), and the [OpenAI image-generation docs](https://platform.openai.com/docs/guides/image-generation).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [May 19 provenance update](/news/2026-05-19-openai-google-synthid-c2pa-image-provenance/), the [OpenAI launch announcement](https://openai.com/index/introducing-chatgpt-images-2-0/), the [OpenAI API pricing page](https://openai.com/api/pricing/), and the [OpenAI image-generation docs](https://platform.openai.com/docs/guides/image-generation).
 
 ## FAQ
 

@@ -68,6 +68,7 @@
     "audit:indexability": "node scripts/audit-indexability.mjs",
     "audit:all": "npm run audit:kpis && npm run audit:facts && npm run audit:provenance && npm run audit:freshness && npm run audit:sources && npm run audit:passed-dates",
     "audit:guide-picks": "node scripts/audit-guide-picks.mjs",
+    "audit:hub-staleness:changed": "node scripts/audit-hub-staleness.mjs --changed",
     "audit:commands": "node scripts/audit-command-surface.mjs",
     "db:migrate": "node scripts/neon-migrate.mjs",
     "db:migrate:check": "node scripts/neon-migrate.mjs --check",

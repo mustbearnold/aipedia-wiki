@@ -10,8 +10,8 @@ pricing_model: enterprise
 price_range: "Custom usage-based enterprise pricing"
 status: active
 launched: 2013-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.workato.com/en/mcp.html"
     source_label: "Workato MCP docs"
     source_id: workato-mcp-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://docs.workato.com/pricing.html"
     source_label: "Workato pricing docs"
     source_id: workato-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
@@ -47,13 +47,13 @@ facts:
     source: "https://docs.workato.com/pricing.html"
     source_label: "Workato pricing docs"
     source_id: workato-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
 tags: [ipaas, enterprise-automation, workflow, integration, governance, audit, rbac, sso, ai-agents, workbot]
 seo_title: "Workato Review: Pricing, Workato ONE & MCP (June 2026)"
-meta_description: "Workato is enterprise iPaaS plus agentic orchestration for governed automation, Workato ONE, Agent Studio genies, Workato GO, MCP servers, and usage-based custom pricing. Verified June 12, 2026."
+meta_description: "Workato is enterprise iPaaS plus agentic orchestration for governed automation, Workato ONE, Agent Studio genies, Workato GO, MCP servers, and usage-based custom pricing. Verified June 25, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - large enterprises with compliance and audit requirements
@@ -69,19 +69,21 @@ not_best_for:
 quick_answer: >-
   Workato is enterprise iPaaS and agentic orchestration for large, audit-heavy organizations. Its current direct-customer pricing model combines a platform edition fee with usage fees, and Workato One adds agentic capabilities such as Agent Studio, Workato GO, and MCP. Pick it when governed enterprise integration matters more than self-serve pricing; skip it if Zapier, Make, n8n, or Activepieces fits your team size.
 price_history:
-  - date: 2026-06-10
+  - date: 2026-06-25
     plan: "Standard / Business / Enterprise / Workato One"
     price: "Custom usage-based enterprise pricing"
     source: "https://docs.workato.com/pricing.html"
     source_label: "Workato pricing docs"
     source_id: workato-pricing
-    note: "Workato docs describe a platform edition fee plus usage fee for direct customers; Workato One includes agentic capabilities. Customers before February 2024 may be on a separate pricing model, and OPAs/concurrency can be separate add-ons."
+    verified_at: 2026-06-25
+    note: "Reverified. Workato docs describe a platform edition fee plus usage fee for direct customers; Workato One includes agentic capabilities. Customers before February 2024 may be on a separate pricing model, and OPAs/concurrency can be separate add-ons."
   - date: 2026-04-17
     plan: "Enterprise"
     price: "Custom annual contract"
     source: "https://www.workato.com"
     source_label: "Source"
     source_id: workato-pricing
+    verified_at: 2026-06-25
     note: "No public per-seat or per-task pricing; engagement required for quote"
 ---
 
@@ -122,7 +124,7 @@ Pricing is **custom and usage-based for direct customers**. Workato's own docs d
 | **Versioning** | Recipe lifecycle (Dev → Test → Prod), Git-backed recipe export |
 | **Monitoring** | Error dashboards, recipe run logs, SLA-grade uptime |
 
-Every data point on this page was re-verified on 2026-06-12 against Workato pricing, connector, agentic, MCP, and security documentation.
+Every data point on this page was re-verified on 2026-06-25 against Workato pricing, connector, agentic, MCP, and security documentation.
 
 ## What it actually is
 
@@ -191,7 +193,7 @@ Third-party pricing pages often estimate five-figure annual entry points and six
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Public dollar pricing for Workato is unavailable, so this refresh relies on Workato's pricing model documentation rather than unsupported quoted brackets. Last verified 2026-06-12 against Workato pricing, connector, security, Agent Studio, Workato GO, MCP, and 2026 Gartner-positioning pages.
+This page was produced by the aipedia.wiki editorial pipeline. Public dollar pricing for Workato is unavailable, so this refresh relies on Workato's pricing model documentation rather than unsupported quoted brackets. Last verified 2026-06-25 against Workato pricing, connector, security, Agent Studio, Workato GO, MCP, and 2026 Gartner-positioning pages.
 
 ## FAQ
 
@@ -237,16 +239,17 @@ No. Workato is SaaS only. For self-host iPaaS options, see [n8n](/tools/n8n/) (f
 
 ## Sources
 
-- [Workato pricing docs](https://docs.workato.com/pricing.html) (verified 2026-06-12)
-- [Workato MCP docs](https://docs.workato.com/en/mcp.html) (verified 2026-06-12)
-- [Workato Agent Studio docs](https://docs.workato.com/agentic/agent-studio) (verified 2026-06-12)
-- [Workato GO docs](https://docs.workato.com/en/agentic/workato-go.html) (verified 2026-06-12)
-- [Workato connector docs](https://docs.workato.com/en/connectors.html) (verified 2026-06-12)
-- [Workato security compliance docs](https://docs.workato.com/en/security/security-compliance.html) (verified 2026-06-12)
-- [Workato 2026 Gartner Magic Quadrant post](https://www.workato.com/the-connector/gartner-magic-quadrant-2026/) (verified 2026-06-12)
+- [Workato pricing docs](https://docs.workato.com/pricing.html) (verified 2026-06-25)
+- [Workato MCP docs](https://docs.workato.com/en/mcp.html) (verified 2026-06-25)
+- [Workato Enterprise MCP post](https://www.workato.com/the-connector/workato-mcp/) (verified 2026-06-25)
+- [Workato Agent Studio docs](https://docs.workato.com/agentic/agent-studio) (verified 2026-06-25)
+- [Workato GO docs](https://docs.workato.com/en/agentic/workato-go.html) (verified 2026-06-25)
+- [Workato connector docs](https://docs.workato.com/en/connectors.html) (verified 2026-06-25)
+- [Workato security compliance docs](https://docs.workato.com/en/security/security-compliance.html) (verified 2026-06-25)
+- [Workato 2026 Gartner Magic Quadrant post](https://www.workato.com/the-connector/gartner-magic-quadrant-2026/) (verified 2026-06-25)
 
 ## Review History
 
-- **2026-06-10:** Re-verified usage-based pricing, Workato One edition framing, MCP regional availability, Agent Studio/GO positioning, connector count, security-compliance language, and Gartner 2026 positioning.
+- **2026-06-25:** Re-verified usage-based pricing, Workato One edition framing, MCP regional availability, Workato Enterprise MCP positioning, Agent Studio/GO positioning, connector count, security-compliance language, and Gartner 2026 positioning.
 - **2026-05-10:** Refreshed pricing model, agentic/MCP positioning, connector count language, compliance caveats, alternatives, and source registry against current Workato docs.
 - **2026-04-23:** Initial enterprise iPaaS review.

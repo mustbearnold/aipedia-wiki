@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$200+/month; organization access via Google Cloud consumption"
 status: active
 launched: 2025-11
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Antigravity Review: CLI Migration, Pricing & Limits (June 2026)"
 meta_description: "Google Antigravity now spans Antigravity 2.0, CLI, SDK, and IDE. Free individuals get basic weekly limits; AI Pro and AI Ultra add larger pools; consumer Gemini CLI and Code Assist IDE users must migrate."
@@ -33,7 +33,7 @@ facts:
     source: https://antigravity.google/
     source_label: Google Antigravity official site
     source_id: antigravity-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-12'
@@ -42,7 +42,7 @@ facts:
     source: https://antigravity.google/pricing
     source_label: Google Antigravity pricing
     source_id: antigravity-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-12'
@@ -51,7 +51,7 @@ facts:
     source: https://antigravity.google/docs
     source_label: Google Antigravity docs
     source_id: antigravity-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-12'
@@ -60,7 +60,7 @@ facts:
     source: https://antigravity.google/pricing
     source_label: Google Antigravity pricing
     source_id: antigravity-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-12'
@@ -69,7 +69,7 @@ facts:
     source: https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/
     source_label: Google Developers Gemini CLI transition
     source_id: google-antigravity-cli-transition
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-12'
@@ -88,16 +88,16 @@ not_best_for:
 quick_answer: >-
   Antigravity is now Google's agentic development platform: Antigravity 2.0 for multi-agent desktop orchestration, Antigravity CLI for terminal work, Antigravity SDK for custom agents, and Antigravity IDE for editor workflows. Pick it if you want Google's shared agent harness, Gemini 3.5 Flash, browser verification, subagents, hooks, and the Gemini CLI migration path. Skip it if you need predictable token accounting, non-Google billing, or a non-VS-Code editor.
 price_history:
-  - date: 2026-06-23
-    verified_at: 2026-06-23
+  - date: 2026-06-25
+    verified_at: 2026-06-25
     plan: "Individual / Google AI Pro / Google AI Ultra / Organization"
     price: "$0 / $19.99/mo / $100-$200/mo / Google Cloud consumption"
     source: "https://antigravity.google/pricing"
     source_label: "Google Antigravity pricing"
     source_id: antigravity-pricing
-    note: "Rechecked Antigravity pricing and Google's Gemini CLI transition post after the June 18 migration date. Individual remains $0 with weekly limits, Pro and Ultra use Google AI subscription packaging, and Organization access runs through Google Cloud."
+    note: "Rechecked Antigravity pricing, changelog, and Google's Gemini CLI transition post after the June 18 migration date. Individual remains $0 with weekly limits, Pro and Ultra use Google AI subscription packaging, and Organization access runs through Google Cloud."
   - date: 2025-11-20
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     plan: "Public preview"
     price: "$0"
     source: "https://gemini.google/subscriptions/"
@@ -105,7 +105,7 @@ price_history:
     source_id: google-gemini-subscriptions
     note: "Launched free with generous rate limits on Gemini 3 Pro"
   - date: 2026-03-12
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     plan: "Free tier"
     price: "$0, reduced quota"
     source: "https://gemini.google/subscriptions/"
@@ -113,7 +113,7 @@ price_history:
     source_id: google-gemini-subscriptions
     note: "Daily requests cut from 250 to 20; per-minute from 10 to 5. User backlash triggered paid tiers rollout"
   - date: 2026-04-18
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     plan: "AI Pro / AI Ultra / credits"
     price: "Historical: $20 / $249.99 / $25 per 2,500 credits"
     source: "https://gemini.google/subscriptions/"
@@ -121,7 +121,7 @@ price_history:
     source_id: google-gemini-subscriptions
     note: "Verified via Google AI subscriptions page and community reporting"
   - date: 2026-05-19
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     plan: "Antigravity 2.0 / Managed Agents"
     price: "Google AI Pro $19.99/mo; AI Ultra starts at $100/mo with $200/mo top tier"
     source: "/news/2026-05-19-google-antigravity-managed-agents-ai-studio/"
@@ -129,7 +129,7 @@ price_history:
     source_id: aipedia-news
     note: "Google I/O 2026 introduced Antigravity 2.0, Managed Agents in the Gemini API, AI Studio export to Antigravity, and Gemini 3.5 Flash as the high-speed agentic coding engine."
   - date: 2026-06-18
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     plan: "Individual / Google AI Pro / Google AI Ultra / Organization"
     price: "$0 / $19.99/mo / $100-$200/mo / Google Cloud consumption"
     source: "https://antigravity.google/pricing"
@@ -140,7 +140,7 @@ price_history:
 
 # Antigravity
 
-> **June 23, 2026 update:** Google's consumer Gemini CLI and Gemini Code Assist IDE-extension transition is now in effect. Free users, Google AI Pro users, Google AI Ultra users, and Gemini Code Assist for individuals have been moved toward Antigravity CLI and Antigravity 2.0. Gemini Code Assist Standard, Enterprise, and Google Cloud customers keep their existing access under separate enterprise rules.
+> **June 25, 2026 update:** Google's consumer Gemini CLI and Gemini Code Assist IDE-extension transition remains in effect. Free users, Google AI Pro users, Google AI Ultra users, and Gemini Code Assist for individuals have been moved toward Antigravity CLI and Antigravity 2.0. Gemini Code Assist Standard, Enterprise, and Google Cloud customers keep their existing access under separate enterprise rules.
 
 Google's agent-first coding product has become a broader agentic development platform. The current public story is no longer only a VS Code fork with Manager view. It is Antigravity 2.0 for desktop multi-agent orchestration, Antigravity CLI for terminal agents, Antigravity SDK for custom agents, and Antigravity IDE for editor workflows, all tied to the same server-side harness.
 
@@ -219,7 +219,7 @@ Antigravity packaging now combines the [Antigravity pricing page](https://antigr
 | Google AI Ultra top tier | $200/mo | 20x higher usage limit in Gemini app and Antigravity than Pro | Sustained multi-agent and media-heavy workloads |
 | Organization via Google Cloud | Consumption based | Google Cloud terms, project integration, Gemini Enterprise Agent Platform path | Teams that need enterprise procurement and Cloud billing |
 
-Prices and I/O changes verified 2026-06-23 via [Google Antigravity pricing](https://antigravity.google/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), Google's [May 19 subscription update](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/), and Google's [Gemini CLI transition post](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/).
+Prices and I/O changes verified 2026-06-25 via [Google Antigravity pricing](https://antigravity.google/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), Google's [May 19 subscription update](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/), and Google's [Gemini CLI transition post](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/).
 
 **Credit opacity warning:** Google does not publish the credit-to-token conversion rate. Community reporting in March 2026 flagged AI Pro subscribers hitting weekly rate limits at a fraction of their prior daily quota. Budget-sensitive workloads should benchmark their own weekly consumption before committing.
 
@@ -248,7 +248,7 @@ Prices and I/O changes verified 2026-06-23 via [Google Antigravity pricing](http
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Google Antigravity pricing](https://antigravity.google/pricing), [Google Antigravity docs](https://antigravity.google/docs), the [Antigravity changelog](https://antigravity.google/changelog), Google's [Gemini CLI transition post](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/), Google's [I/O 2026 AI subscription update](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/), and [Google AI subscriptions](https://gemini.google/subscriptions/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Google Antigravity pricing](https://antigravity.google/pricing), [Google Antigravity docs](https://antigravity.google/docs), the [Antigravity changelog](https://antigravity.google/changelog), Google's [Gemini CLI transition post](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/), Google's [I/O 2026 AI subscription update](https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/), and [Google AI subscriptions](https://gemini.google/subscriptions/).
 
 ## FAQ
 
@@ -262,7 +262,7 @@ Google I/O 2026 introduced Antigravity 2.0, Antigravity CLI, Antigravity SDK, or
 All three have AI coding agents, but Antigravity now reaches beyond the editor. It is a Google platform with desktop orchestration, CLI, SDK, IDE, browser verification, Gemini subscriptions, and Google Cloud organization access. Cursor is broader on model choice and has more transparent API-rate billing. Windsurf sits between them with Cascade and cleaner credit accounting.
 
 **Does Antigravity support Claude Opus 4.8?**
-Not on the live pricing page as of June 23, 2026. The published model line lists Claude Sonnet and Opus 4.6, alongside Gemini 3.5 Flash, Gemini 3.1 Pro, Gemini 3 Flash, and gpt-oss-120b. Recheck the live model picker before making procurement decisions.
+Not on the live pricing page as of June 25, 2026. The published model line lists Claude Sonnet and Opus 4.6, alongside Gemini 3.5 Flash, Gemini 3.1 Pro, Gemini 3 Flash, and gpt-oss-120b. Recheck the live model picker before making procurement decisions.
 
 **Do Gemini CLI users have to migrate?**
 For consumer/free/Pro/Ultra usage, yes. Google says Gemini CLI, Gemini Code Assist IDE extensions, and Gemini Code Assist for individuals stopped serving those requests on June 18, 2026. Gemini Code Assist Standard, Enterprise, Google Cloud, and Gemini Enterprise Agent Platform paths have separate continuity rules.

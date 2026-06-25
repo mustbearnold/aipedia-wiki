@@ -11,7 +11,8 @@ Use this after all shard workers have reported back.
 5. Deduplicate proposed source-registry rows by ID and URL.
 6. Update `src/data/source-registry.json` once.
 7. Update affected category hubs and top-layer surfaces only where summaries, picks, metadata, or internal links would otherwise become stale.
-8. Regenerate `PAGE_REFRESH_LEDGER.md`.
+8. If any worker changed a tool primary category, regenerate or patch the saved planner and route-QA args from current frontmatter before route QA.
+9. Regenerate `PAGE_REFRESH_LEDGER.md`.
 
 ## Source Confidence Labels
 
@@ -51,3 +52,5 @@ NODE
 ```
 
 If using `.tmp-tool-refresh-batch.json`, change `planPath` and output file accordingly.
+
+If a tool primary category changed during integration, do not reuse stale planner routes. Either regenerate `.tmp-tool-refresh-batch.json` or patch that tool's `category` and `category_route` in the saved planner before generating route args.

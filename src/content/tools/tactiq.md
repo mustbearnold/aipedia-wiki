@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$40/user/month; annual discounts"
 status: active
 launched: 2020-08
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://tactiq.io"
     source_label: "Tactiq official"
     source_id: tactiq-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -69,12 +69,21 @@ seo_title: "Tactiq: Features, Pricing & Review (June 2026)"
 meta_description: "Tactiq transcribes Google Meet, Zoom, and Teams via Chrome extension with no bot in the call. June 2026 plans: Free, Pro $8 annual or $12 monthly, Team $16.67 annual, Business $29.17 annual, Enterprise custom, with MCP beta."
 author: "aipedia.wiki Editorial"
 price_history:
+  - date: 2026-06-25
+    plan: "Pro / Team / Business"
+    price: "$8 / $16.67 / $29.17 per user per month annually"
+    source: "https://tactiq.io/buy"
+    source_label: "Tactiq pricing"
+    source_id: tactiq-pricing
+    verified_at: 2026-06-25
+    note: "Public pricing remains unchanged from the June 9 check. Business still lists MCP beta and Claude Connector beta; current Tactiq Learn content continues to emphasize Claude connector workflows."
   - date: 2026-06-09
     plan: "Pro"
     price: "$8/user/mo annual"
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
+    verified_at: 2026-06-25
     note: "Verified 2026-06-09. Monthly billing is $12/user; Pro includes unlimited transcripts and 10 AI credits/month."
   - date: 2026-06-09
     plan: "Team"
@@ -82,6 +91,7 @@ price_history:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
+    verified_at: 2026-06-25
     note: "Verified 2026-06-09. Monthly billing is $20/user; Team lists unlimited AI credits for 1-20 users."
   - date: 2026-06-09
     plan: "Business"
@@ -89,6 +99,7 @@ price_history:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
+    verified_at: 2026-06-25
     note: "Verified 2026-06-09. Monthly billing is $40/user; Business is for 20-200 users and lists SAML SSO, advanced retention, Tactiq MCP beta, and Claude Connector beta."
   - date: 2026-05-10
     plan: "Pro"
@@ -96,6 +107,7 @@ price_history:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged. Monthly billing is $12/user."
   - date: 2026-04-17
     plan: "Pro"
@@ -103,6 +115,7 @@ price_history:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
+    verified_at: 2026-06-25
     note: "Verified. Monthly billing is $12/user."
   - date: 2026-04-17
     plan: "Team"
@@ -110,6 +123,7 @@ price_history:
     source: "https://tactiq.io/buy"
     source_label: "Tactiq pricing"
     source_id: tactiq-pricing
+    verified_at: 2026-06-25
     note: "Verified. Monthly billing is $20/user."
 ---
 
@@ -119,7 +133,7 @@ Tactiq is an AI meeting transcription tool that runs from a Chrome extension. It
 
 Pricing runs Free, Pro $8/user/month, Team $16.67/user/month, Business $29.17/user/month, and Enterprise on custom contracts when billed annually. Monthly billing is $12 Pro, $20 Team, and $40 Business. Tactiq's pricing and Trust Center pages publish SOC 2 Type II, ISO 27001:2022, GDPR, and HIPAA claims, with detailed documents available by Trust Center request.
 
-The June 9, 2026 recheck also confirms Tactiq's MCP direction: the Business pricing table lists Tactiq MCP beta and Claude Connector beta, while Tactiq's dedicated MCP page positions transcripts as meeting context for Claude, Cursor, ChatGPT, Gemini, and other MCP clients.
+The June 25, 2026 recheck also confirms Tactiq's MCP direction: the Business pricing table lists Tactiq MCP beta and Claude Connector beta, while Tactiq's MCP and Learn pages position transcripts as meeting context for Claude, Cursor, ChatGPT, Gemini, and other MCP clients.
 
 ## System Verdict
 
@@ -148,7 +162,7 @@ The June 9, 2026 recheck also confirms Tactiq's MCP direction: the Business pric
 | **Pricing (annual)** | Free, Pro $8, Team $16.67, Business $29.17, Enterprise custom |
 | **Adoption signals claimed** | 1m+ weekly meetings, 1,000,000+ Chrome extension users, 4.8 rating from 3,000+ Chrome Web Store reviews |
 
-Every data point above was verified against vendor pages on 2026-06-12. See Sources.
+Every data point above was verified against vendor pages on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -187,7 +201,7 @@ Subscription pricing via [tactiq.io/buy](https://tactiq.io/buy). Annual billing 
 | Business | $40/user | $29.17/user | Unlimited | Unlimited | 20-200 | SAML SSO, MCP beta, Claude Connector beta, advanced retention |
 | Enterprise | Custom | Custom | Unlimited | Unlimited | 200+ | DPA, customizable SSO, CSM |
 
-*Prices verified 2026-06-12 via [tactiq.io/buy](https://tactiq.io/buy). Free tier has no credit card requirement.*
+*Prices verified 2026-06-25 via [tactiq.io/buy](https://tactiq.io/buy). Free tier has no credit card requirement.*
 
 ## Against the alternatives
 
@@ -215,7 +229,7 @@ Subscription pricing via [tactiq.io/buy](https://tactiq.io/buy). Annual billing 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [tactiq.io/buy](https://tactiq.io/buy), [tactiq.io](https://tactiq.io), [Tactiq MCP](https://tactiq.io/mcp), and Tactiq's Trust Center help page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [tactiq.io/buy](https://tactiq.io/buy), [tactiq.io](https://tactiq.io), [Tactiq MCP](https://tactiq.io/mcp), and Tactiq's Trust Center help page.
 
 ## FAQ
 
@@ -254,6 +268,7 @@ Yes, on the Business tier as a beta. The same Business tier also lists a Tactiq 
 
 ## Review History
 
+- **2026-06-25:** Reverified Free/Pro/Team/Business/Enterprise pricing, transcript caps, AI credits, and Business MCP/Claude Connector beta language. No material pricing change found.
 - **2026-04-17:** New page. Pricing and features verified against tactiq.io.
 - **2026-05-10:** Refreshed pricing source from redirected /pricing to canonical /buy; reverified monthly/annual pricing, MCP/Claude beta status, Trust Center claims, platform support, and adoption signals.
 - **2026-05-13:** Reverified all pricing, transcript caps, AI credits, MCP/Claude Connector beta status, and compliance claims against tactiq.io/buy. No material changes.

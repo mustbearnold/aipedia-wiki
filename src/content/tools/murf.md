@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$99/month + API PAYG"
 status: active
 launched: 2020-10
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: https://murf.ai/
     source_label: Murf AI official site
     source_id: murf-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -44,7 +44,7 @@ facts:
     source: https://murf.ai/pricing
     source_label: Murf pricing
     source_id: murf-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -53,16 +53,16 @@ facts:
     source: https://help.murf.ai/murf-api-plans-and-limits
     source_label: Murf API plans and limits
     source_id: murf-api-plans
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
   real_time_voice:
-    value: Murf Falcon is positioned for real-time conversational AI with 55 ms model latency, roughly 130 ms time-to-first-audio, 35+ languages, and a public $0.01/minute marketing anchor.
+    value: Murf Falcon is positioned for real-time conversational AI with 55 ms model latency, roughly 130 ms time-to-first-audio, 35+ languages, and a public $0.01/minute marketing anchor; Murf API docs list Falcon 2 as launched on June 16, 2026.
     source: https://murf.ai/falcon
     source_label: Murf Falcon product page
     source_id: murf-falcon
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -71,7 +71,7 @@ facts:
     source: https://murf.ai/enterprise
     source_label: Murf enterprise
     source_id: murf-enterprise
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -80,7 +80,7 @@ facts:
     source: https://murf.ai/api
     source_label: Murf Voice API
     source_id: murf-api
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -138,15 +138,23 @@ price_history:
     source: "https://murf.ai/pricing"
     source_label: "Murf pricing"
     source_id: murf-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "June 23 verification pass. Murf still separates Studio subscriptions, API pay-as-you-go/help-center character billing, Falcon's public $0.01/minute marketing anchor, Dub PAYG, and custom/enterprise routes."
+  - date: 2026-06-25
+    plan: "Falcon 2"
+    price: "Falcon public anchor remains $0.01/minute"
+    source: "https://murf.ai/api/docs/changelog"
+    source_label: "Murf API changelog"
+    source_id: murf-api-changelog
+    verified_at: 2026-06-25
+    note: "Murf API changelog says Falcon 2 launched on June 16, 2026 with improvements to voice quality, latency, and generation reliability; pricing page and Falcon page still need separate buyer checks."
 ---
 
 # Murf AI
 
 Murf is a business-focused AI voice platform with two important buying lanes. Murf Studio handles scripts, voiceovers, slide/video sync, downloads, translation, and dubbing for teams that publish narrated business content. Murf API handles programmatic voice through Falcon, Gen2, dubbing, voice changer, and translation routes.
 
-The June 23, 2026 correction: Murf should no longer be described as a Studio-only product or as having API access only on Enterprise across the whole product family. Murf's API help documents Free Trial, pay-as-you-go, and Custom plans, while Falcon has its own public low-latency product page and high-volume enterprise deployments still require sales for reserved capacity, data residency, discounts, and large concurrency.
+The June 25, 2026 correction: Murf should no longer be described as a Studio-only product or as having API access only on Enterprise across the whole product family. Murf's API help documents Free Trial, pay-as-you-go, and Custom plans, while Falcon has its own public low-latency product page. Murf's API changelog also says Falcon 2 launched on June 16, 2026. High-volume enterprise deployments still require sales for reserved capacity, data residency, discounts, and large concurrency.
 
 ## System Verdict
 
@@ -169,7 +177,7 @@ The June 23, 2026 correction: Murf should no longer be described as a Studio-onl
 - **API PAYG anchor:** Murf API help lists 10,000 characters for $1 with a $2 minimum purchase on one PAYG page; the API plans page also lists a broader Gen2-style $0.03 per 1,000 characters PAYG route. Treat Falcon, Gen2, Dub, and Studio as separate billing surfaces.
 - **Main watch-out:** Studio, API, Dub, and Enterprise have separate limits and billing paths.
 
-Every current data point was verified against Murf vendor pages and help documentation on 2026-06-23.
+Every current data point was verified against Murf vendor pages and help documentation on 2026-06-25.
 
 ## What It Actually Is
 
@@ -209,7 +217,7 @@ Murf's pricing needs to be evaluated by product surface.
 - **API Custom:** For higher character, concurrency, rate-limit, and volume-discount requirements.
 - **Dub:** Free Trial, pay-as-you-go, and Custom routes; confirm project, watermark, QA, and enterprise requirements in the Dub product.
 
-Prices and plan routes were verified 2026-06-23 against Murf pricing, Falcon, API docs, and Murf help pages. Because Murf exposes several billing surfaces, confirm the exact plan inside the product before procurement.
+Prices and plan routes were verified 2026-06-25 against Murf pricing, Falcon, API docs, and Murf help pages. Falcon 2 launch status was verified against the Murf API changelog. Because Murf exposes several billing surfaces, confirm the exact plan inside the product before procurement.
 
 ## Against The Alternatives
 
@@ -228,7 +236,7 @@ Prices and plan routes were verified 2026-06-23 against Murf pricing, Falcon, AP
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-23 against Murf pricing, Murf API docs, Murf Falcon docs, Murf API plan help, and Murf pay-as-you-go help.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against Murf pricing, Murf API docs, Murf Falcon docs, Murf API plan help, and Murf pay-as-you-go help.
 
 ## FAQ
 
@@ -249,14 +257,14 @@ Confirm whether you need Studio, API, Dub, Enterprise, or more than one. Then ve
 
 ## Sources
 
-- [Murf AI official site](https://murf.ai) (verified 2026-06-23)
-- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-23)
-- [Murf API overview](https://murf.ai/api) (verified 2026-06-23)
-- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-23)
-- [Murf Falcon product page](https://murf.ai/falcon) (verified 2026-06-23)
-- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-23)
-- [Murf API pay-as-you-go](https://help.murf.ai/murf-api-pay-as-you-go) (verified 2026-06-23)
-- [Murf Dub plans](https://help.murf.ai/murf-dub-plans) (verified 2026-06-23)
+- [Murf AI official site](https://murf.ai) (verified 2026-06-25)
+- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-25)
+- [Murf API overview](https://murf.ai/api) (verified 2026-06-25)
+- [Murf API docs](https://murf.ai/api/docs) (verified 2026-06-25)
+- [Murf Falcon product page](https://murf.ai/falcon) (verified 2026-06-25)
+- [Murf API plans and limits](https://help.murf.ai/murf-api-plans-and-limits) (verified 2026-06-25)
+- [Murf API pay-as-you-go](https://help.murf.ai/murf-api-pay-as-you-go) (verified 2026-06-25)
+- [Murf Dub plans](https://help.murf.ai/murf-dub-plans) (verified 2026-06-25)
 
 ## Related
 

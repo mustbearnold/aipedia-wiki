@@ -678,6 +678,15 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "amplemarket-mcp-help",
+      "label": "Amplemarket MCP help",
+      "url": "https://knowledge.amplemarket.com/articles/8022685319-connecting-to-the-amplemarket-mcp-server",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "amplemarket-official",
       "label": "Amplemarket official site",
       "url": "https://www.amplemarket.com/",
@@ -873,7 +882,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "antigravity-docs",
@@ -882,7 +891,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "antigravity-official",
@@ -891,7 +900,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "antigravity-pricing",
@@ -900,7 +909,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "anythingllm-changelog-1141",
@@ -910,6 +919,15 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "anythingllm-cloud-limitations",
+      "label": "AnythingLLM cloud limitations",
+      "url": "https://docs.anythingllm.com/cloud/limitations",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "anythingllm-docs",
@@ -1785,6 +1803,15 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "businessinsider-fable-access-lawsuit-2026-06-24",
+      "label": "Business Insider Fable access and Legion AI lawsuit reporting",
+      "url": "https://www.businessinsider.com/legion-ai-startup-suing-us-government-new-anthropic-model-fable5-2026-6",
+      "type": "report",
+      "trust_tier": "secondary",
+      "volatility": "high",
+      "last_checked": "2026-06-24"
+    },
+    {
       "id": "bytedance-seed-2-official-launch",
       "label": "ByteDance Seed 2.0 official launch",
       "url": "https://seed.bytedance.com/en/blog/seed-2-0-official-launch",
@@ -2136,6 +2163,15 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "cartesia-june-2026-promo-terms",
+      "label": "Cartesia June 2026 promotion terms",
+      "url": "https://www.cartesia.ai/legal/promotion-terms-jun-2026",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "cartesia-pricing",
       "label": "Cartesia pricing",
       "url": "https://cartesia.ai/pricing",
@@ -2421,7 +2457,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "claude-agent-sdk-credit",
@@ -3321,7 +3357,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cohere-command",
@@ -3339,7 +3375,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cohere-docs",
@@ -3348,7 +3384,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cohere-models-docs",
@@ -3357,7 +3393,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cohere-north-mini-code",
@@ -3366,7 +3402,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cohere-official",
@@ -3375,7 +3411,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cohere-pricing",
@@ -3384,7 +3420,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cohere-pricing-docs",
@@ -3420,7 +3456,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "comet-best-for",
@@ -3915,6 +3951,15 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "deepl-api-usage-billing",
+      "label": "DeepL API usage and billing",
+      "url": "https://support.deepl.com/hc/en-us/articles/360020685720-Usage-count-and-billing-in-DeepL-API",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "deepl-docs",
@@ -4697,7 +4742,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "fish-audio-official",
@@ -4706,7 +4751,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "fish-audio-pricing",
@@ -4716,6 +4761,15 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "fish-audio-s21-pro-api",
+      "label": "Fish Audio S2.1 Pro API announcement",
+      "url": "https://fish.audio/blog/s2-1-pro-free-api/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "flux-2-github",
@@ -4904,7 +4958,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "freepik-pricing",
@@ -4913,7 +4967,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "galileo-ai-features",
@@ -4976,7 +5030,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "gamma-subscription-help",
@@ -5443,7 +5497,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "google-cloud-conversational-analytics",
@@ -5686,7 +5740,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "gpt-image-2-pricing",
@@ -5695,7 +5749,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "grammarly-affiliates",
@@ -6136,7 +6190,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "hermes-agent-official",
@@ -6145,7 +6199,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "hermes-agent-pricing",
@@ -6163,7 +6217,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "hermes-agent-repository",
@@ -6172,7 +6226,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "hex-agent-credits",
@@ -6562,6 +6616,15 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "hunyuan-hy-embodied-05-paper",
+      "label": "Tencent Hunyuan HY-Embodied-0.5 paper",
+      "url": "https://arxiv.org/abs/2504.14971",
+      "type": "report",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "hunyuan-hy3",
       "label": "Tencent Hunyuan Hy3-preview Hugging Face",
       "url": "https://huggingface.co/tencent/Hy3-preview",
@@ -6578,15 +6641,6 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
-    },
-    {
-      "id": "hunyuan-hy-embodied-05-paper",
-      "label": "Tencent Hunyuan HY-Embodied-0.5 paper",
-      "url": "https://arxiv.org/abs/2504.14971",
-      "type": "report",
-      "trust_tier": "primary",
-      "volatility": "medium",
-      "last_checked": "2026-06-25"
     },
     {
       "id": "hunyuan-official",
@@ -6676,7 +6730,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "ibm-watsonx-portfolio",
@@ -6910,7 +6964,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "jan-ai-docs",
@@ -6919,7 +6973,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "jan-ai-official",
@@ -6928,7 +6982,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "jan-ai-repository",
@@ -6937,7 +6991,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "jan-ai-v082",
@@ -7171,7 +7225,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "kagi-research-docs",
@@ -7189,7 +7243,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "kimi-official",
@@ -7198,7 +7252,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "kimi-pricing",
@@ -7207,7 +7261,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "kiro-best-for",
@@ -7431,7 +7485,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "langfuse-clickhouse-series-d",
@@ -7449,7 +7503,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "langfuse-integrations",
@@ -7476,7 +7530,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "langfuse-opentelemetry",
@@ -7494,7 +7548,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "langfuse-repository",
@@ -7512,7 +7566,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "langgraph-docs",
@@ -7602,7 +7656,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "leonardo-pricing",
@@ -7611,7 +7665,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "leonardo-pricing-faq",
@@ -7620,7 +7674,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "letta-api-pricing",
@@ -7638,7 +7692,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "letta-docs",
@@ -7647,7 +7701,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "letta-next-phase",
@@ -7665,7 +7719,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "letta-pricing",
@@ -7691,7 +7745,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "lindy-credits",
@@ -7808,7 +7862,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "llama-downloads",
@@ -7817,7 +7871,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "llama-groq-deprecations",
@@ -7826,7 +7880,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "llama-groq-maverick",
@@ -7835,7 +7889,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "llama-groq-scout",
@@ -7844,7 +7898,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "llama-meta-official",
@@ -7853,7 +7907,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "llama-official",
@@ -7871,7 +7925,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "llama-repository",
@@ -7880,7 +7934,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "lm-studio-api-docs",
@@ -7889,7 +7943,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "lm-studio-app-terms",
@@ -7898,7 +7952,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "lm-studio-docs",
@@ -7907,7 +7961,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "lm-studio-free-work",
@@ -7916,7 +7970,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "lm-studio-github",
@@ -7928,13 +7982,22 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "lm-studio-link",
+      "label": "LM Studio Link",
+      "url": "https://lmstudio.ai/link",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "lm-studio-official",
       "label": "LM Studio official site",
       "url": "https://lmstudio.ai/",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "lm-studio-openai-compat-docs",
@@ -7970,7 +8033,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "logseq-docs",
@@ -7979,7 +8042,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "logseq-downloads",
@@ -7988,7 +8051,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "logseq-official",
@@ -7997,7 +8060,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "logseq-pricing",
@@ -8006,7 +8069,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "logseq-repository",
@@ -8015,7 +8078,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "logseq-sync-setup",
@@ -8576,13 +8639,22 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "mem-get-product",
+      "label": "Mem product page",
+      "url": "https://get.mem.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "mem-official",
       "label": "Mem official site",
       "url": "https://mem.ai/",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "mem-pricing",
@@ -8591,7 +8663,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "mem-product",
@@ -8600,7 +8672,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "meshy-6-launch",
@@ -9074,7 +9146,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "morphic-pricing",
@@ -9083,7 +9155,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "morphic-releases",
@@ -9092,7 +9164,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "mubert-faq",
@@ -9101,6 +9173,15 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
+      "last_checked": "2026-06-24"
+    },
+    {
+      "id": "mubert-license",
+      "label": "Mubert Render license",
+      "url": "https://mubert.com/render/license",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
       "last_checked": "2026-06-24"
     },
     {
@@ -9128,7 +9209,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "murf-api-changelog",
+      "label": "Murf API changelog",
+      "url": "https://murf.ai/api/docs/changelog",
+      "type": "release_notes",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "murf-api-docs",
@@ -9155,7 +9245,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "murf-dub-plans",
@@ -9173,7 +9263,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "murf-falcon",
@@ -9182,7 +9272,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "murf-official",
@@ -9191,7 +9281,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "murf-pricing",
@@ -9200,7 +9290,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "n8n-affiliates",
@@ -9542,7 +9632,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "ollama-official",
@@ -9551,7 +9641,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "ollama-pricing",
@@ -9560,7 +9650,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "ollama-releases",
@@ -9569,7 +9659,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "omniseo-official",
@@ -9596,7 +9686,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "open-webui-github",
@@ -9608,13 +9698,22 @@
       "last_checked": "2026-06-08"
     },
     {
+      "id": "open-webui-license",
+      "label": "Open WebUI license",
+      "url": "https://openwebui.com/license/",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "open-webui-official",
       "label": "openwebui.com",
       "url": "https://openwebui.com",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "open-webui-releases",
@@ -9623,7 +9722,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "openai-academy-courses-work-2026",
@@ -9641,7 +9740,7 @@
       "url": "https://openai.com/api/pricing/",
       "type": "pricing",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "openai-chatgpt-file-library",
@@ -9744,7 +9843,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-23",
+      "last_checked": "2026-06-25",
       "id": "openai-image-generation-docs",
       "label": "OpenAI image generation docs",
       "url": "https://platform.openai.com/docs/guides/image-generation",
@@ -9794,7 +9893,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "openclaw-official",
@@ -9803,7 +9902,25 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-12"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "openclaw-releases",
+      "label": "OpenClaw GitHub releases",
+      "url": "https://github.com/openclaw/openclaw/releases",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "openclaw-techradar-phishing-test",
+      "label": "TechRadar OpenClaw phishing test",
+      "url": "https://www.techradar.com/pro/security/openclaw-ai-agent-tricked-into-phishing-attacks-with-user-data-compromised",
+      "type": "news",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "openhands-official",
@@ -9893,7 +10010,16 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "paradox-workday-partner",
+      "label": "Paradox Workday partner page",
+      "url": "https://www.paradox.ai/partners/workday",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "perplexity-agent-tools",
@@ -9939,6 +10065,15 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-15"
+    },
+    {
+      "id": "perplexity-enterprise-comet",
+      "label": "Perplexity Enterprise Comet",
+      "url": "https://www.perplexity.ai/enterprise/comet",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-24"
     },
     {
       "id": "perplexity-enterprise-pricing",
@@ -10161,7 +10296,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "pixverse-api-overview",
@@ -10182,15 +10317,6 @@
       "last_checked": "2026-06-25"
     },
     {
-      "id": "pixverse-funding-cntechpost",
-      "label": "CnTechPost AIsphere Series C report",
-      "url": "https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/",
-      "type": "third_party",
-      "trust_tier": "secondary",
-      "volatility": "medium",
-      "last_checked": "2026-06-08"
-    },
-    {
       "id": "pixverse-changelog",
       "label": "PixVerse Platform changelog",
       "url": "https://docs.platform.pixverse.ai/changelogs-906383m0",
@@ -10198,6 +10324,15 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-25"
+    },
+    {
+      "id": "pixverse-funding-cntechpost",
+      "label": "CnTechPost AIsphere Series C report",
+      "url": "https://cntechpost.com/2026/03/12/ai-video-startup-aisphere-raises-300-million-record-china-funding/",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-06-08"
     },
     {
       "id": "pixverse-model-pricing",
@@ -10539,7 +10674,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "quillbot-pricing",
@@ -10710,7 +10845,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "reflect-pricing",
@@ -10719,7 +10854,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "reka-edge-launch",
@@ -10728,7 +10863,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "reka-edge-product",
@@ -10737,7 +10872,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "reka-homepage",
@@ -10746,7 +10881,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "reka-models-docs",
@@ -10755,7 +10890,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "reka-news",
+      "label": "Reka news",
+      "url": "https://reka.ai/news",
+      "type": "release_notes",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "reka-pricing",
@@ -10764,7 +10908,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "relationalai-snowflake-agentic-decision-intelligence",
@@ -10800,7 +10944,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "replicate-docs",
@@ -10809,7 +10953,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "replicate-official",
@@ -10818,7 +10962,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "replicate-pricing",
@@ -10827,7 +10971,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "replit-agent-app-testing",
@@ -10957,7 +11101,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-18",
+      "last_checked": "2026-06-25",
       "id": "resemble-ai-docs",
       "label": "Resemble AI docs",
       "url": "https://docs.resemble.ai/welcome",
@@ -10971,7 +11115,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-18"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "resemble-ai-pricing",
@@ -10980,7 +11124,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "retell-ai-api-deprecation-2026-06-15",
@@ -11061,7 +11205,16 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "rodin-gen-25-80lv",
+      "label": "80 Level Rodin Gen-2.5 coverage",
+      "url": "https://80.lv/articles/how-hyper3d-rodin-gen-2-5-is-bringing-production-level-control-to-ai-3d-generation",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "rodin-pricing",
@@ -11133,7 +11286,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "rows-docs",
@@ -11142,7 +11295,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "rows-official",
@@ -11151,7 +11304,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "rows-pricing",
@@ -11160,7 +11313,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "runway-agent",
@@ -11203,6 +11356,15 @@
       "label": "Runway API pricing",
       "url": "https://docs.dev.runwayml.com/guides/pricing/",
       "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-24"
+    },
+    {
+      "id": "runway-changelog",
+      "label": "Runway changelog",
+      "url": "https://runwayml.com/changelog",
+      "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-24"
@@ -11329,7 +11491,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "sanebox-plan-help",
@@ -11347,7 +11509,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "sanebox-reply-drafts",
@@ -11356,7 +11518,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "scite-mcp-announcement",
@@ -11374,7 +11536,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "scite-pricing",
@@ -11383,7 +11545,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "seedance-ai-independent-disclosure",
@@ -11441,7 +11603,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-06",
+      "last_checked": "2026-06-25",
       "id": "semantic-scholar-api",
       "label": "Semantic Scholar API",
       "url": "https://www.semanticscholar.org/product/api",
@@ -11450,7 +11612,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-06",
+      "last_checked": "2026-06-25",
       "id": "semantic-scholar-official",
       "label": "Semantic Scholar homepage",
       "url": "https://www.semanticscholar.org/",
@@ -11521,6 +11683,15 @@
       "last_checked": "2026-06-09"
     },
     {
+      "id": "servicenow-ai-control-tower-product",
+      "label": "ServiceNow AI Control Tower product page",
+      "url": "https://www.servicenow.com/products/ai-control-tower.html",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "servicenow-aws-kiro-2026",
       "label": "ServiceNow + AWS AgentCore + Kiro coverage",
       "url": "https://www.barchart.com/story/news/1747462/servicenow-hits-1-billion-in-aws-marketplace-transactions-as-enterprises-rapidly-adopt-ai-at-scale",
@@ -11584,6 +11755,15 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "speechify-affiliates",
+      "label": "Speechify affiliates",
+      "url": "https://speechify.com/affiliates/",
+      "type": "affiliate",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "speechify-pricing",
       "label": "Source",
       "url": "https://speechify.com/pricing",
@@ -11616,7 +11796,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "spellbook-security",
@@ -11629,7 +11809,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-05",
+      "last_checked": "2026-06-25",
       "id": "stability-docs",
       "label": "Stability AI platform docs",
       "url": "https://platform.stability.ai/docs",
@@ -11647,7 +11827,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-05",
+      "last_checked": "2026-06-25",
       "id": "stability-stable-image",
       "label": "Stability AI Stable Image",
       "url": "https://stability.ai/stable-image",
@@ -11661,7 +11841,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "stable-audio-api-pricing",
@@ -11687,7 +11867,8 @@
       "url": "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale",
       "type": "blog",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "stable-audio-license",
@@ -11696,7 +11877,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-02"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "stable-audio-official",
@@ -11722,7 +11903,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "stable-diffusion-official",
@@ -11731,7 +11912,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "stable-diffusion-pricing",
@@ -11740,7 +11921,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "stackblitz-webcontainers",
@@ -11775,7 +11956,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "sudowrite-pricing",
@@ -11784,7 +11965,16 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "suno-afm-lawsuit",
+      "label": "Music Business Worldwide AFM lawsuit reporting on Suno and Udio licensing",
+      "url": "https://www.musicbusinessworldwide.com/musicians-union-sues-umg-and-warner-music-alleging-member-recordings-were-licensed-to-suno-and-udio-without-compensation-or-credit/",
+      "type": "report",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-06-24"
     },
     {
       "id": "suno-distribution-rights",
@@ -11832,6 +12022,24 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "suno-series-d",
+      "label": "Suno Series D announcement",
+      "url": "https://suno.com/blog/series-d-announcement",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-24"
+    },
+    {
+      "id": "suno-stem-separation",
+      "label": "Suno stem separation updates",
+      "url": "https://suno.com/blog/stem-separation-updates",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-24"
+    },
+    {
       "id": "suno-studio",
       "label": "Suno Studio announcement",
       "url": "https://suno.com/blog/suno-studio",
@@ -11847,6 +12055,15 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
+      "last_checked": "2026-06-24"
+    },
+    {
+      "id": "superhuman-gptzero-acquisition",
+      "label": "Superhuman to acquire GPTZero announcement",
+      "url": "https://www.businesswire.com/news/home/20260623083788/en/Superhuman-to-Acquire-GPTZero-AI-Authenticity-Platform",
+      "type": "newsroom",
+      "trust_tier": "primary",
+      "volatility": "medium",
       "last_checked": "2026-06-24"
     },
     {
@@ -11877,6 +12094,15 @@
       "last_checked": "2026-06-02"
     },
     {
+      "id": "surfer-june-2026-product-roundup",
+      "label": "Surfer June 2026 product roundup",
+      "url": "https://surferseo.com/blog/whats-new-at-surfer-june-2026-product-roundup/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "surfer-official",
       "label": "Surfer SEO official site",
       "url": "https://surferseo.com",
@@ -11893,6 +12119,15 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-20"
+    },
+    {
+      "id": "synthesia-affiliate",
+      "label": "Synthesia affiliate partners",
+      "url": "https://www.synthesia.io/partners/affiliates",
+      "type": "affiliate",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-24"
     },
     {
       "id": "synthesia-avatar-docs",
@@ -12018,7 +12253,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tactiq-official",
@@ -12027,7 +12262,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tactiq-pricing",
@@ -12036,7 +12271,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tactiq-trust-center",
@@ -12135,6 +12370,15 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "tidio-lyro-limit",
+      "label": "Tidio Lyro AI agent limit help",
+      "url": "https://help.tidio.com/hc/en-us/articles/13924459295900-The-Lyro-AI-agent-limit",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
       "last_checked": "2026-06-25"
     },
     {
@@ -12284,7 +12528,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tripo3d-site",
@@ -12302,7 +12546,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "typeface-official",
@@ -12323,13 +12567,22 @@
       "last_checked": "2026-05-24"
     },
     {
+      "id": "typingmind-changelog",
+      "label": "TypingMind changelog",
+      "url": "https://feedback.typingmind.com/changelog",
+      "type": "release_notes",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "typingmind-official",
       "label": "typingmind.com/buy",
       "url": "https://www.typingmind.com/buy",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "typingmind-teams-pricing",
@@ -12338,7 +12591,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "udio-credit-limits",
@@ -12392,7 +12645,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "uizard-exporting-projects",
@@ -12401,7 +12654,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "uizard-figma-import",
@@ -12428,7 +12681,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "uizard-screenshot-scanner",
@@ -12464,7 +12717,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "unbounce-plan-comparison",
@@ -12473,7 +12726,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "unbounce-pricing",
@@ -12482,7 +12735,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "v0-changelog",
@@ -12689,7 +12942,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "trust_tier": "primary",
@@ -12788,7 +13041,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "weaviate-best-for",
@@ -12797,7 +13050,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "weaviate-best-paid-tier",
@@ -12806,7 +13059,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "weaviate-engram-ga",
@@ -12815,7 +13068,16 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "weaviate-free-tier",
+      "label": "Weaviate Cloud free tier announcement",
+      "url": "https://weaviate.io/blog/weaviate-free-tier",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "wellsaid-docs",
@@ -12824,7 +13086,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "wellsaid-enterprise",
@@ -12833,7 +13095,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "wellsaid-official",
@@ -12851,7 +13113,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "wellsaid-pricing-help",
@@ -12860,7 +13122,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "whisper-official",
@@ -12869,7 +13131,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "whisper-pricing",
@@ -12878,7 +13140,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "whisper-research",
@@ -13058,7 +13320,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workato-connectors-docs",
@@ -13067,7 +13329,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "workato-enterprise-mcp",
+      "label": "Workato Enterprise MCP post",
+      "url": "https://www.workato.com/the-connector/workato-mcp/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workato-gartner-mq-2026",
@@ -13085,7 +13356,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workato-mcp-docs",
@@ -13094,7 +13365,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workato-pricing",
@@ -13103,7 +13374,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workato-security-compliance-docs",
@@ -13112,7 +13383,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workday-paradox-ats",
@@ -13121,7 +13392,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workday-paradox-close",
@@ -13130,7 +13401,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "workday-pipedream-close",
@@ -13157,7 +13428,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "writer-model-docs",
@@ -13166,7 +13437,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "writer-official",
@@ -13184,7 +13455,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "writer-platform",
@@ -13193,7 +13464,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "writer-pricing",
@@ -13202,7 +13473,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "writesonic-ai-visibility-tracker",
@@ -13220,7 +13491,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "writesonic-official",
@@ -13237,7 +13508,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-04"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "x-premium-help",
@@ -13282,7 +13553,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "yi-huggingface",
@@ -13291,7 +13562,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "yi-lingyiwanwu",
@@ -13300,7 +13571,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "yi-models",
@@ -13309,7 +13580,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "yi-official",
@@ -13318,11 +13589,11 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-25"
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-06",
+      "last_checked": "2026-06-25",
       "id": "you-com-docs",
       "label": "You.com API docs",
       "url": "https://you.com/docs/welcome",
@@ -13336,7 +13607,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "zapier-agents-guide",
@@ -13354,7 +13625,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "zapier-apps",
@@ -13381,7 +13652,16 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-22"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "zapier-product-updates",
+      "label": "Zapier Product Updates",
+      "url": "https://help.zapier.com/hc/en-us/categories/13951101412877-Product-updates",
+      "type": "release_notes",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "zed-pricing",
@@ -13390,168 +13670,6 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "perplexity-enterprise-comet",
-      "label": "Perplexity Enterprise Comet",
-      "url": "https://www.perplexity.ai/enterprise/comet",
-      "type": "official",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "businessinsider-fable-access-lawsuit-2026-06-24",
-      "label": "Business Insider Fable access and Legion AI lawsuit reporting",
-      "url": "https://www.businessinsider.com/legion-ai-startup-suing-us-government-new-anthropic-model-fable5-2026-6",
-      "type": "report",
-      "trust_tier": "secondary",
-      "volatility": "high",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "superhuman-gptzero-acquisition",
-      "label": "Superhuman to acquire GPTZero announcement",
-      "url": "https://www.businesswire.com/news/home/20260623083788/en/Superhuman-to-Acquire-GPTZero-AI-Authenticity-Platform",
-      "type": "newsroom",
-      "trust_tier": "primary",
-      "volatility": "medium",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "mubert-license",
-      "label": "Mubert Render license",
-      "url": "https://mubert.com/render/license",
-      "type": "pricing",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "runway-changelog",
-      "label": "Runway changelog",
-      "url": "https://runwayml.com/changelog",
-      "type": "release_notes",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "suno-series-d",
-      "label": "Suno Series D announcement",
-      "url": "https://suno.com/blog/series-d-announcement",
-      "type": "blog",
-      "trust_tier": "primary",
-      "volatility": "medium",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "suno-stem-separation",
-      "label": "Suno stem separation updates",
-      "url": "https://suno.com/blog/stem-separation-updates",
-      "type": "blog",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "suno-afm-lawsuit",
-      "label": "Music Business Worldwide AFM lawsuit reporting on Suno and Udio licensing",
-      "url": "https://www.musicbusinessworldwide.com/musicians-union-sues-umg-and-warner-music-alleging-member-recordings-were-licensed-to-suno-and-udio-without-compensation-or-credit/",
-      "type": "report",
-      "trust_tier": "secondary",
-      "volatility": "medium",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "synthesia-affiliate",
-      "label": "Synthesia affiliate partners",
-      "url": "https://www.synthesia.io/partners/affiliates",
-      "type": "affiliate",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-24"
-    },
-    {
-      "id": "anythingllm-cloud-limitations",
-      "label": "AnythingLLM cloud limitations",
-      "url": "https://docs.anythingllm.com/cloud/limitations",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "deepl-api-usage-billing",
-      "label": "DeepL API usage and billing",
-      "url": "https://support.deepl.com/hc/en-us/articles/360020685720-Usage-count-and-billing-in-DeepL-API",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "amplemarket-mcp-help",
-      "label": "Amplemarket MCP help",
-      "url": "https://knowledge.amplemarket.com/articles/8022685319-connecting-to-the-amplemarket-mcp-server",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "cartesia-june-2026-promo-terms",
-      "label": "Cartesia June 2026 promotion terms",
-      "url": "https://www.cartesia.ai/legal/promotion-terms-jun-2026",
-      "type": "official",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "servicenow-ai-control-tower-product",
-      "label": "ServiceNow AI Control Tower product page",
-      "url": "https://www.servicenow.com/products/ai-control-tower.html",
-      "type": "official",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "speechify-affiliates",
-      "label": "Speechify affiliates",
-      "url": "https://speechify.com/affiliates/",
-      "type": "affiliate",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "tidio-lyro-limit",
-      "label": "Tidio Lyro AI agent limit help",
-      "url": "https://help.tidio.com/hc/en-us/articles/13924459295900-The-Lyro-AI-agent-limit",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "surfer-june-2026-product-roundup",
-      "label": "Surfer June 2026 product roundup",
-      "url": "https://surferseo.com/blog/whats-new-at-surfer-june-2026-product-roundup/",
-      "type": "blog",
-      "trust_tier": "primary",
-      "volatility": "medium",
-      "last_checked": "2026-06-25"
-    },
-    {
-      "id": "rodin-gen-25-80lv",
-      "label": "80 Level Rodin Gen-2.5 coverage",
-      "url": "https://80.lv/articles/how-hyper3d-rodin-gen-2-5-is-bringing-production-level-control-to-ai-3d-generation",
-      "type": "third_party",
-      "trust_tier": "secondary",
-      "volatility": "medium",
       "last_checked": "2026-06-25"
     }
   ]

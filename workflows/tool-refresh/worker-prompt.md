@@ -23,6 +23,8 @@ Do not edit:
 
 Refresh current pricing, plan, API/model/access, affiliate, recent-change, best-plan, watch-out, and alternative guidance only when supported by current sources.
 
+Update `last_verified`, fact-level `verified_at`, and `price_history[].verified_at` only for facts or commercial rows you actually checked.
+
 If a fact is constrained or uncertain, label it:
 - primary-confirmed
 - primary-conflict
@@ -44,7 +46,7 @@ Final report:
 - Source URLs checked, grouped by tool.
 - Proposed source-registry rows, grouped by tool.
 - Fact/source confidence labels, grouped by tool.
-- Parent category/top-layer surfaces the integrator should inspect.
+- Parent category/top-layer surfaces the integrator should inspect. If you changed a tool primary category, call that out explicitly.
 - Verification commands run and results.
 - Anything blocked, unverified, softened, or removed.
 ```

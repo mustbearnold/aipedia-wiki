@@ -2,7 +2,7 @@
 type: tool
 slug: morphic
 title: Morphic
-tagline: Open-source AI answer engine with generative UI. Self-hostable, Apache 2.0, multi-provider search/chat stack. Latest stable release v1.4.0 (May 24, 2026).
+tagline: Open-source AI answer engine with generative UI. Self-hostable, Apache 2.0, multi-provider search/chat stack. Latest stable release v1.5.0 (June 10, 2026).
 category: ai-search
 secondary_categories: [ai-chatbots]
 company: morphic
@@ -12,11 +12,11 @@ pricing_model: free
 price_range: "$0 (self-host) + provider API costs"
 status: active
 launched: 2024-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
 seo_title: "Morphic Review: Self-Hosted AI Search, Pricing & Release Status (June 2026)"
-meta_description: "Morphic is an Apache 2.0 AI answer engine and self-hosted Perplexity alternative. June 2026 check: v1.4.0, roughly 8.9k GitHub stars, no first-party paid SaaS tier."
+meta_description: "Morphic is an Apache 2.0 AI answer engine and self-hosted Perplexity alternative. June 2026 check: v1.5.0, roughly 8.9k GitHub stars, no first-party paid SaaS tier."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -31,11 +31,11 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Open-source AI answer engine with generative UI. v1.4.0 shipped May 24, 2026 under Apache 2.0. Self-hostable, BYOK, and best for AI search, retrieval workflows, forkable answer engines, and teams that need private deployments."
+    value: "Open-source AI answer engine with generative UI. v1.5.0 shipped June 10, 2026 under Apache 2.0. Self-hostable, BYOK, and best for AI search, retrieval workflows, forkable answer engines, and teams that need private deployments."
     source: "https://github.com/miurla/morphic"
     source_label: "miurla/morphic on GitHub"
     source_id: morphic-github
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -43,16 +43,16 @@ facts:
     source: "https://github.com/miurla/morphic"
     source_label: "miurla/morphic on GitHub"
     source_id: morphic-github
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-08
     volatility: low
     confidence: high
   watch_out_for:
-    value: "Community-scale maintenance. v1.4.0 is the latest stable release as of June 23, 2026; verify last-commit and release cadence before depending on a fork. No first-party hosted SLA."
+    value: "Community-scale maintenance. v1.5.0 is the latest stable release as of June 25, 2026; verify last-commit and release cadence before depending on a fork. No first-party hosted SLA."
     source: "https://github.com/miurla/morphic"
     source_label: "miurla/morphic on GitHub"
     source_id: morphic-github
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -67,7 +67,7 @@ not_best_for:
   - teams needing polished mobile apps
   - workflows dependent on hosted SLAs
 quick_answer: >-
-  Morphic is the self-hostable, Apache 2.0 alternative to Perplexity. The June 23, 2026 check found v1.4.0 as the latest stable release, roughly 8.9k GitHub stars, 2.3k forks, and no first-party public paid SaaS tier. Pick it for private deployments, provider choice, and a generative-UI stack to fork. Skip it for polished hosted search, mobile apps, or non-technical users who want zero setup.
+  Morphic is the self-hostable, Apache 2.0 alternative to Perplexity. The June 25, 2026 check found v1.5.0 as the latest stable release, roughly 8.9k GitHub stars, 2.3k forks, and no first-party public paid SaaS tier. Pick it for private deployments, provider choice, and a generative-UI stack to fork. Skip it for polished hosted search, mobile apps, or non-technical users who want zero setup.
 price_history:
   - date: 2026-04-10
     plan: "Self-host · v1.3.0"
@@ -101,6 +101,14 @@ price_history:
     source_id: morphic-releases
     verified_at: 2026-06-23
     note: "Verified Apache 2.0 repo, v1.4.0 still latest stable release, roughly 8.9k stars, 2.3k forks, BYOK provider setup, and no first-party public paid SaaS tier."
+  - date: 2026-06-25
+    plan: "Self-host · v1.5.0"
+    price: "$0"
+    source: "https://github.com/miurla/morphic/releases/tag/v1.5.0"
+    source_label: "miurla/morphic v1.5.0 release"
+    source_id: morphic-releases
+    verified_at: 2026-06-25
+    note: "Verified Apache 2.0 repo, v1.5.0 as latest stable release, Docker Compose with SearXNG default search, roughly 8.9k stars, 2.3k forks, BYOK provider setup, and no first-party public paid SaaS tier."
 ---
 
 # Morphic
@@ -111,7 +119,8 @@ Core code lives at [github.com/miurla/morphic](https://github.com/miurla/morphic
 
 ## Recent developments
 
-- **May 24, 2026:** [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0) becomes the latest stable build, adding an enhanced research-process UI, image-viewer source details, message navigation dots, copy controls, collapsible user messages, and keyboard shortcuts.
+- **June 10, 2026:** [v1.5.0 release](https://github.com/miurla/morphic/releases/tag/v1.5.0) becomes the latest stable build, with Docker Compose using SearXNG by default, Next.js 16, AI SDK 6, PostgreSQL with Drizzle/RLS, Supabase auth with guest mode, and provider profiles for OpenAI, Anthropic Claude, Google Gemini, Vercel AI Gateway, and Ollama.
+- **May 24, 2026:** [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0) added an enhanced research-process UI, image-viewer source details, message navigation dots, copy controls, collapsible user messages, and keyboard shortcuts.
 - **April 10, 2026:** [v1.3.0 release](https://github.com/miurla/morphic/releases) hardened the deployment story with Quick and Adaptive search modes, dynamic provider detection, a Docker Compose stack with PostgreSQL + Redis + SearXNG + the app, and Supabase authentication with guest mode.
 
 ## System Verdict
@@ -127,7 +136,7 @@ Core code lives at [github.com/miurla/morphic](https://github.com/miurla/morphic
 | | |
 |---|---|
 | **Repository** | [github.com/miurla/morphic](https://github.com/miurla/morphic) · roughly 8.9k stars · 2.3k forks · mostly TypeScript |
-| **Latest release** | v1.4.0 (May 24, 2026) |
+| **Latest release** | v1.5.0 (June 10, 2026) |
 | **License** | Apache 2.0 |
 | **Hosting model** | Self-host (primary) · reference instance at [morphic.sh](https://morphic.sh) |
 | **Model providers** | OpenAI, Anthropic, Google, Ollama (local), Vercel AI Gateway, and more via config |
@@ -141,7 +150,7 @@ Core code lives at [github.com/miurla/morphic](https://github.com/miurla/morphic
 | **Hosted paid plan** | None typical · product is code-first |
 | **Launched** | 2024, by miurla as an open-source release |
 
-Every data point above was verified against vendor sources on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -149,7 +158,7 @@ A Next.js application that stitches a search backend, an LLM provider, and strea
 
 The generative UI layer is the standout feature. Answers arrive as composed React components (charts, tables, cards, follow-up questions) rather than flat markdown. The approach mirrors Perplexity's UI but ships as source.
 
-The 2026 release line hardened the production story. Docker Compose stands up the full stack (Next.js app, PostgreSQL, Redis, SearXNG) in a single command, Supabase handles authentication with a guest mode for quick demos, and the model selector auto-detects which providers are configured. v1.4.0 then focused on reader and reviewer UX around the research process, image sources, message navigation, copy actions, collapsible prompts, and keyboard shortcuts.
+The 2026 release line hardened the production story. Docker Compose stands up the full stack with SearXNG as the default search engine, so a light evaluation only needs one AI provider key. Supabase handles authentication with a guest mode for quick demos, and the model selector auto-detects which providers are configured. v1.4.0 focused on reader and reviewer UX around the research process, image sources, message navigation, copy actions, collapsible prompts, and keyboard shortcuts; v1.5.0 moved the stack to Next.js 16, AI SDK 6, PostgreSQL, and a more complete provider/search setup.
 
 The real moat is licensing and posture. Apache 2.0 license plus BYOK plus optional local inference makes Morphic one of the few answer engines deployable behind a firewall without relationship negotiation.
 
@@ -181,7 +190,7 @@ Morphic itself is free. The core application is Apache 2.0 licensed and installa
 | Search backend | Variable | Tavily, SearXNG (self-host, $0), Brave, and Exa offer free tiers or per-query pricing. |
 | Hosted plan | None typical | No first-party paid SaaS tier. Community forks exist. |
 
-*Prices verified 2026-06-23 via [github.com/miurla/morphic](https://github.com/miurla/morphic), the [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0), and [morphic.sh](https://morphic.sh). The hosted reference instance is for evaluation only and can be rate-limited or removed without notice.*
+*Prices verified 2026-06-25 via [github.com/miurla/morphic](https://github.com/miurla/morphic), the [v1.5.0 release](https://github.com/miurla/morphic/releases/tag/v1.5.0), and [morphic.sh](https://morphic.sh). The hosted reference instance is for evaluation only and can be rate-limited or removed without notice.*
 
 A realistic monthly cost for a small-team private deployment runs $15-$60 depending on query volume and provider mix. Heavy Anthropic or OpenAI use can push higher; Ollama-local setups can run at near-zero provider cost.
 
@@ -210,7 +219,7 @@ A realistic monthly cost for a small-team private deployment runs $15-$60 depend
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against the [miurla/morphic GitHub repo](https://github.com/miurla/morphic), the [v1.4.0 release](https://github.com/miurla/morphic/releases/tag/v1.4.0), and [morphic.sh](https://morphic.sh).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against the [miurla/morphic GitHub repo](https://github.com/miurla/morphic), the [v1.5.0 release](https://github.com/miurla/morphic/releases/tag/v1.5.0), and [morphic.sh](https://morphic.sh).
 
 ## FAQ
 
@@ -241,7 +250,7 @@ Primary maintainer is miurla on GitHub. Community contributors submit PRs. Verif
 ## Sources
 
 - [morphic.sh](https://morphic.sh): hosted reference instance and product overview
-- [github.com/miurla/morphic](https://github.com/miurla/morphic): source code, Apache 2.0 license, setup docs, v1.4.0 release (May 24, 2026)
+- [github.com/miurla/morphic](https://github.com/miurla/morphic): source code, Apache 2.0 license, setup docs, v1.5.0 release (June 10, 2026)
 - [morphic.sh/docs](https://morphic.sh/docs): deployment, provider configuration, and generative-UI reference
 
 ## Related

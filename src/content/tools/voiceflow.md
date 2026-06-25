@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free agency trial plus demo-gated usage-based quotes; historical Pro/Teams rates must be confirmed"
 status: active
 launched: 2019-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
@@ -47,7 +47,7 @@ facts:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: high
@@ -68,12 +68,21 @@ not_best_for:
 quick_answer: >-
   Voiceflow is the no-code conversational AI builder. Pick it for customer-facing chat and voice agents with knowledge-base RAG. Skip for general workflow automation (n8n or Make) or code-first agent control (LangGraph, CrewAI).
 price_history:
+  - date: 2026-06-25
+    plan: "Pricing model"
+    price: "demo-gated usage-based quote"
+    source: "https://www.voiceflow.com/pricing"
+    source_label: "Voiceflow pricing"
+    source_id: voiceflow-pricing
+    verified_at: 2026-06-25
+    note: "Public pricing still emphasizes a free agency trial, transparent usage-based billing, and demo-gated business quotes. Docs now describe bills as plan fee plus optional editor seats, phone numbers, and credit-based usage."
   - date: 2026-02-01
     plan: "Pro"
     price: "$60/editor/mo"
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
+    verified_at: 2026-06-25
     note: "Per-editor pricing restructure"
   - date: 2026-04-15
     plan: "Pro"
@@ -81,6 +90,7 @@ price_history:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged"
   - date: 2026-05-13
     plan: "Pricing model"
@@ -88,6 +98,7 @@ price_history:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
+    verified_at: 2026-06-25
     note: "Public pricing page no longer lists Sandbox, Pro, or Teams tier prices. Voiceflow now describes pricing as usage-based with a free agency trial and demo-gated business quotes. Last-confirmed Pro rate ($60/editor/mo) should be validated against a sales-issued quote."
   - date: 2026-06-10
     plan: "Pricing model"
@@ -95,6 +106,7 @@ price_history:
     source: "https://www.voiceflow.com/pricing"
     source_label: "Source"
     source_id: voiceflow-pricing
+    verified_at: 2026-06-25
     note: "Re-verified: public pricing still emphasizes a free agency trial, transparent usage-based billing, and demo-gated business quotes rather than a public Sandbox/Pro/Teams tier sheet."
 ---
 
@@ -102,7 +114,11 @@ price_history:
 
 Voiceflow is the no-code AI agent builder for conversational apps. A drag-and-drop canvas designs multi-turn flows, a knowledge base powers RAG-grounded answers, and one-click deployment ships agents to web chat, Slack, WhatsApp, Microsoft Teams, and voice channels.
 
-Voiceflow's current public pricing page no longer publishes the old self-serve tier rates. As of June 12, 2026, treat Voiceflow as a free-trial-plus-quote product with usage-based billing; use historical Pro/Teams rates only as procurement baselines to confirm in writing.
+Voiceflow's current public pricing page no longer publishes the old self-serve tier rates. As of June 25, 2026, treat Voiceflow as a free-trial-plus-quote product with usage-based billing; use historical Pro/Teams rates only as procurement baselines to confirm in writing.
+
+## Recent changes
+
+- **June 25, 2026:** AiPedia rechecked Voiceflow pricing, billing docs, core docs, and changelog. The public pricing page remains demo-gated and usage-based. Voiceflow's June 24 docs changelog added required variables for workflows and playbooks plus more usage analytics, which reinforces the production-agent positioning but does not restore public self-serve tier prices.
 
 ## System Verdict
 
@@ -126,7 +142,7 @@ Voiceflow's current public pricing page no longer publishes the old self-serve t
 | **Model costs** | Confirm whether usage is billed through Voiceflow, provider keys, or both |
 | **Version control** | Staging · production · rollback · change history |
 
-Every data point above was verified against vendor documentation on 2026-06-12. Voiceflow's public pricing page no longer lists tier rates; the figures below reflect last-known buyer baselines and should be confirmed with sales before procurement. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. Voiceflow's public pricing page no longer lists tier rates; the figures below reflect last-known buyer baselines and should be confirmed with sales before procurement. See Sources.
 
 ## What it actually is
 
@@ -163,7 +179,7 @@ As of June 2026, [voiceflow.com/pricing](https://www.voiceflow.com/pricing) no l
 | Teams | ~$150/editor historically | ~30,000/mo historically | Unlimited agents, priority support, voice concurrency | Baseline for quote review, not a current public price |
 | Enterprise | Custom | Custom | SLA, SSO, dedicated support, compliance controls | Regulated orgs should use procurement/legal review |
 
-*Rates last publicly confirmed 2026-04-15. The 2026-06-10 verification found the Voiceflow pricing page still routes users to a demo or agency free trial rather than listing tier prices. Use the numbers above as buyer-reference baselines only; confirm against a written sales quote. Confirm how agent usage, model-provider costs, phone/voice usage, and external telephony fees are billed.*
+*Rates last publicly confirmed 2026-04-15. The 2026-06-25 verification found the Voiceflow pricing page still routes users to a demo or agency free trial rather than listing tier prices. Use the numbers above as buyer-reference baselines only; confirm against a written sales quote. Confirm how agent usage, model-provider costs, phone/voice usage, and external telephony fees are billed.*
 
 ## Against the alternatives
 
@@ -189,7 +205,7 @@ As of June 2026, [voiceflow.com/pricing](https://www.voiceflow.com/pricing) no l
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [Voiceflow pricing](https://www.voiceflow.com/pricing) and the [Voiceflow documentation](https://docs.voiceflow.com/). Public pricing tiers are no longer displayed on the vendor page; rates shown reflect the last publicly confirmed numbers (2026-04-15) and should be verified against a sales quote.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against [Voiceflow pricing](https://www.voiceflow.com/pricing) and the [Voiceflow documentation](https://docs.voiceflow.com/). Public pricing tiers are no longer displayed on the vendor page; rates shown reflect the last publicly confirmed numbers (2026-04-15) and should be verified against a sales quote.
 
 ## FAQ
 

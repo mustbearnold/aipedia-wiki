@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: Free self-host/cloud entry; Flex from $45/mo; Plus from $280/mo; Premium from $400/mo; AI services usage-based
 status: active
 launched: 2019
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: "https://weaviate.io/"
     source_label: "Weaviate official site"
     source_id: weaviate-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     confidence: high
   best_paid_tier:
@@ -40,29 +40,29 @@ facts:
     source: "https://weaviate.io/pricing"
     source_label: "Weaviate pricing"
     source_id: weaviate-best-paid-tier
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     confidence: high
   best_for:
     value: "Hybrid search, RAG, metadata filtering, multi-tenancy, open-source vector infrastructure, and agent memory when Engram-managed context is part of the architecture."
     source: "https://weaviate.io/"
     source_id: weaviate-best-for
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     confidence: high
   add_ons:
     value: "Weaviate Embeddings $0.025 to $0.065 per 1M tokens by model; Query Agent free to try at 1,000 requests/month or $30/org/month with 4,000 included requests plus usage-based overage."
     source: "https://weaviate.io/pricing"
     source_label: "Weaviate pricing"
     source_id: weaviate-add-ons
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     confidence: high
   agent_memory:
-    value: "Engram by Weaviate became generally available on June 3, 2026 as a managed memory and context service for agents inside Weaviate Cloud, with a free tier."
+    value: "Engram by Weaviate became generally available on June 3, 2026 as a managed memory and context service for agents inside Weaviate Cloud, with a free tier. Weaviate's June 2026 free-start update says Database, Query Agent, and Engram all have free tiers."
     source: "https://weaviate.io/blog/engram-generally-available"
     source_label: "Weaviate Engram GA blog"
     source_id: weaviate-engram-ga
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     confidence: high
 tags: [vector-database, open-source, rag, semantic-search, hybrid-search, embeddings, retrieval]
@@ -90,7 +90,8 @@ It competes with [Pinecone](/tools/pinecone/), [Qdrant](/tools/qdrant/), Milvus,
 
 ## Recent developments
 
-- **June 10, 2026:** Pricing and positioning reverified. Weaviate Cloud now shows Free, Flex from $45/mo, Plus from $280/mo, and Premium from $400/mo; Weaviate Embeddings remain $0.025-$0.065 per 1M tokens; Query Agent has a 1,000-request/month free trial path and a $30/org/month plan with 4,000 included requests plus usage-based overage.
+- **June 25, 2026:** Pricing and positioning reverified. Weaviate Cloud still shows Free, Flex from $45/mo, Plus from $280/mo, and Premium from $400/mo. Weaviate also announced that the managed Database, Query Agent, and Engram now all have free tiers, making the practical test path stronger than a trial-only cloud route.
+- **June 10, 2026:** Pricing and positioning reverified. Weaviate Embeddings remain $0.025-$0.065 per 1M tokens; Query Agent has a 1,000-request/month free trial path and a $30/org/month plan with 4,000 included requests plus usage-based overage.
 - **June 3, 2026:** Weaviate made **Engram** generally available as a managed memory and context service for agents in Weaviate Cloud, with a free tier. This widens Weaviate from vector database/retrieval infrastructure into the agent-memory lane for teams that need durable, scoped memories.
 
 ## System Verdict
@@ -143,7 +144,7 @@ Compare it directly with [Qdrant](/tools/qdrant/) and [Pinecone](/tools/pinecone
 
 ## Pricing
 
-Weaviate can be self-hosted for free. As verified on 2026-06-12, Weaviate Cloud lists a free entry plan, Flex from $45/month, Plus from $280/month, and Premium from $400/month. Flex is the low-commit shared-cloud pay-as-you-go path with 99.5% availability; Plus raises the shared-cloud floor and SLA; Premium adds predictable spend, enhanced reliability, support, and shared or dedicated deployment options with up to 99.95% availability and 1-hour Severity 1 response.
+Weaviate can be self-hosted for free. As verified on 2026-06-25, Weaviate Cloud lists a free entry plan, Flex from $45/month, Plus from $280/month, and Premium from $400/month. Flex is the low-commit shared-cloud pay-as-you-go path with 99.5% availability; Plus raises the shared-cloud floor and SLA; Premium adds predictable spend, enhanced reliability, support, and shared or dedicated deployment options with up to 99.95% availability and 1-hour Severity 1 response.
 
 Pricing dimensions include vector dimensions, storage, backup, index type, compression, region, and cloud plan. The public calculator defaults to $45/month for a small Flex-shaped estimate, but production buyers should model their own vector dimensions, object count, object size, backup retention, compression profile, cloud provider, and region before migrating.
 
@@ -151,7 +152,7 @@ The practical advice: use the calculator before migration, and compare against p
 
 Weaviate lists database AI services that run inside Weaviate Cloud. **Weaviate Embeddings** is hosted embedding generation priced $0.025 to $0.065 per 1M tokens depending on model. **Query Agent** is free to try at 1,000 requests/month or available as a $30/organization monthly plan with 4,000 included requests plus usage-based pricing for additional requests. These are useful, but they mean the full bill can include database, backup, AI service, support, and agent usage rather than only vector storage.
 
-Engram is a separate strategic signal. Weaviate describes it as a managed memory and context service for agents, generally available in Weaviate Cloud with a free tier. Treat it as an agent-architecture decision, not a generic vector-table feature.
+Engram is a separate strategic signal. Weaviate describes it as a managed memory and context service for agents, generally available in Weaviate Cloud with a free tier. Weaviate's June free-start update says Database, Query Agent, and Engram are all available as free tiers, so teams can test the full retrieval-plus-agent-memory path before buying Flex or higher. Treat it as an agent-architecture decision, not a generic vector-table feature.
 
 ## Evaluation checklist
 
@@ -173,7 +174,7 @@ Engram is a separate strategic signal. Weaviate describes it as a managed memory
 
 ## Methodology
 
-Last verified 2026-06-12 against [weaviate.io/pricing](https://weaviate.io/pricing), the [Weaviate homepage](https://weaviate.io/), the [Engram GA announcement](https://weaviate.io/blog/engram-generally-available), [Weaviate documentation](https://weaviate.io/developers/weaviate), and the [Weaviate GitHub](https://github.com/weaviate/weaviate). Scoring reflects open-source leverage, feature depth, cloud maturity, agent-memory optionality, and operational complexity.
+Last verified 2026-06-25 against [weaviate.io/pricing](https://weaviate.io/pricing), the [Weaviate homepage](https://weaviate.io/), the [Engram GA announcement](https://weaviate.io/blog/engram-generally-available), the [Weaviate Cloud free-tier announcement](https://weaviate.io/blog/weaviate-free-tier), [Weaviate documentation](https://weaviate.io/developers/weaviate), and the [Weaviate GitHub](https://github.com/weaviate/weaviate). Scoring reflects open-source leverage, feature depth, cloud maturity, agent-memory optionality, and operational complexity.
 
 ## FAQ
 
@@ -188,11 +189,12 @@ Yes. Hybrid semantic and keyword retrieval is a core use case.
 
 ## Sources
 
-- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-12)
-- [Weaviate homepage](https://weaviate.io/) (verified 2026-06-12)
-- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-12)
-- [Weaviate documentation](https://weaviate.io/developers/weaviate) (verified 2026-06-12)
-- [Weaviate GitHub](https://github.com/weaviate/weaviate) (verified 2026-06-12)
+- [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-25)
+- [Weaviate homepage](https://weaviate.io/) (verified 2026-06-25)
+- [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-25)
+- [Weaviate Cloud free tier announcement](https://weaviate.io/blog/weaviate-free-tier) (verified 2026-06-25)
+- [Weaviate documentation](https://weaviate.io/developers/weaviate) (verified 2026-06-25)
+- [Weaviate GitHub](https://github.com/weaviate/weaviate) (verified 2026-06-25)
 
 ## Related
 

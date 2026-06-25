@@ -24,6 +24,7 @@ If the planner is saved as `.tmp-tool-refresh-batch.json`, use that path.
 - per-tool `audit:tool-quality`
 - changed frontmatter parsing
 - changed provenance/pricing audit
+- changed tool parent-hub freshness audit
 - freshness loop check
 - ledger check
 - em dash guard
@@ -65,6 +66,7 @@ Final report must name:
 
 - tools refreshed
 - shared files updated
+- timing from the runner receipt or manual closeout notes
 - verification commands passed
 - commands that failed and were fixed
 - unresolved risks

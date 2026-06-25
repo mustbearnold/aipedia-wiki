@@ -2,7 +2,7 @@
 type: tool
 slug: jan-ai
 title: Jan.ai
-tagline: Free open-source ChatGPT alternative that runs locally on Mac, Windows, and Linux. v0.8.2 adds faster startup, AMD ROCm/HIP on Linux, and resumable downloads.
+tagline: Free open-source ChatGPT alternative that runs locally on Mac, Windows, and Linux. v0.8.3 hardens MCP/browser ports, backend installs, media uploads, and first-message rendering.
 category: ai-chatbots
 company: janhq
 url: https://www.jan.ai
@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 core app; optional cloud-provider usage/add-ons vary"
 status: active
 launched: 2023-10
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,25 +32,25 @@ facts:
     source: https://jan.ai/
     source_label: Jan official site
     source_id: jan-ai-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   pricing_anchor:
-    value: Jan itself is open source; practical cost comes from hardware, local models, and any connected remote model/API providers.
+    value: Jan itself is Apache-2.0 open source; practical cost comes from hardware, local models, and any connected remote model/API providers.
     source: https://github.com/janhq/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   open_source_or_local:
-    value: Jan's repository is the authoritative source for license, releases, installation, and project activity.
+    value: Jan's repository is the authoritative source for Apache-2.0 license, releases, installation, and project activity.
     source: https://github.com/janhq/jan
     source_label: Jan GitHub repository
     source_id: jan-ai-repository
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -59,7 +59,7 @@ facts:
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -69,13 +69,13 @@ facts:
     source: https://jan.ai/docs
     source_label: Jan docs
     source_id: jan-ai-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
 tags: [local-llm, open-source, desktop, privacy, offline, chatgpt-alternative]
 seo_title: "Jan.ai: Features & Review (June 2026)"
-meta_description: "Jan.ai is the free open-source desktop AI app for local and cloud models. v0.8.2 shipped June 1, 2026 with faster startup, AMD ROCm/HIP on Linux, and resumable downloads. Rechecked June 23."
+meta_description: "Jan.ai is the free open-source desktop AI app for local and cloud models. v0.8.3 shipped June 24, 2026 with MCP/browser-port fixes, backend install hardening, media-upload fixes, and first-message rendering fixes."
 author: "aipedia.wiki Editorial"
 best_for:
   - users who want local AI with a clean desktop UX
@@ -87,16 +87,22 @@ not_best_for:
   - CLI or server deployments (use Ollama)
   - non-technical users new to local AI (LM Studio has gentler onboarding)
 quick_answer: >-
-  Jan.ai is a free open-source ChatGPT alternative for local and cloud models on Mac, Windows, and Linux. The current GitHub repo is janhq/jan; v0.8.2 shipped June 1, 2026 with faster startup, experimental AMD ROCm/HIP backend support on Linux, resumable downloads, safer default context sizing, and chat/provider fixes. Pick it for open-source desktop local AI. Skip it for maximum model catalog or server use.
+  Jan.ai is a free open-source ChatGPT alternative for local and cloud models on Mac, Windows, and Linux. The current GitHub repo is janhq/jan; v0.8.3 shipped June 24, 2026 with MCP/browser-port fixes, backend install hardening, sampler/layout fixes, media-upload fixes, and first-message rendering fixes. v0.8.2 remains the bigger feature release for faster startup, experimental AMD ROCm/HIP backend support on Linux, resumable downloads, and safer default context sizing. Pick it for open-source desktop local AI. Skip it for maximum model catalog or server use.
 ---
 
 # Jan.ai
 
 The open-source ChatGPT alternative that can stay on your machine. Desktop-first, privacy-first, and offline-capable for local models. Maintained by Jan HQ at [janhq/jan](https://github.com/janhq/jan) with an active desktop-release cadence.
 
+## Recent developments
+
+- **June 25, 2026:** GitHub API check showed v0.8.3 as the latest release, 43K+ stars, and Apache-2.0 licensing in the repository license file. Jan's site showed 5.9M+ downloads, 43.2K GitHub stars, and 123 Hugging Face models.
+- **June 24, 2026:** v0.8.3 shipped with MCP/browser-port leak fixes, backend install hardening, sampler default corrections, media-upload CSP fixes, and chat rendering fixes for first-message media.
+- **May 29, 2026:** v0.8.2 remained the most important recent feature release: faster startup, AMD ROCm/HIP backend support on Linux, pause/resume model downloads, safer default context sizing, and chat/provider fixes.
+
 ## System Verdict
 
-> **Pick Jan.ai if open-source matters to you and you want a desktop ChatGPT replacement.** The app is fully MIT-licensed on GitHub, runs 100% offline, and handles local open-weight models (Llama, Qwen, Mistral, Gemma) with a polished chat UI. Also connects to cloud APIs (OpenAI, Claude, Gemini) if you want a unified chat client for both.
+> **Pick Jan.ai if open-source matters to you and you want a desktop ChatGPT replacement.** The app is Apache-2.0 licensed on GitHub, runs 100% offline for local models, and handles local open-weight models (Llama, Qwen, Mistral, Gemma) with a polished chat UI. Also connects to cloud APIs (OpenAI, Claude, Gemini) if you want a unified chat client for both.
 >
 > **Skip it if you want the largest model catalog or server deployment.** [LM Studio](/tools/lm-studio/) has a deeper model browser; [Ollama](/tools/ollama/) is better for CLI or Docker/server use. For raw convenience + feature depth, those alternatives still edge Jan.
 >
@@ -106,11 +112,11 @@ The open-source ChatGPT alternative that can stay on your machine. Desktop-first
 
 | | |
 |---|---|
-| **License** | Open source (permissive; MIT-style) |
-| **Latest version** | v0.8.2 (published June 1, 2026) |
+| **License** | Apache-2.0 |
+| **Latest version** | v0.8.3 (published June 24, 2026) |
 | **GitHub repo** | [janhq/jan](https://github.com/janhq/jan) |
-| **GitHub stars** | 42,807 as of June 23, 2026 |
-| **Recent release focus** | Faster startup, AMD ROCm/HIP on Linux, resumable downloads, safer default context size |
+| **GitHub stars** | 43K+ as of June 25, 2026 |
+| **Recent release focus** | v0.8.3 fixes MCP/browser-port leaks, backend installs, media uploads, and first-message rendering; v0.8.2 added faster startup, AMD ROCm/HIP on Linux, resumable downloads, and safer default context size |
 | **Platforms** | macOS, Windows, Linux |
 | **Core cost** | $0 |
 | **Optional paid** | Cloud provider usage and optional add-ons vary; verify in app |
@@ -123,7 +129,7 @@ The open-source ChatGPT alternative that can stay on your machine. Desktop-first
 - **Open-source purists.** You want the app itself to be open source, not just the models it runs. Jan is auditable end to end; LM Studio is not.
 - **Desktop-first privacy workflows.** Local models + local data = nothing leaves your machine. Safe for confidential work.
 - **Switching between local and cloud.** The same UI handles Llama 4 local and OpenAI frontier models cloud. Useful when you want local for drafting and cloud for polishing.
-- **Recent Linux GPU support.** v0.8.2 adds experimental AMD ROCm/HIP backend support on Linux, which matters for local-model users outside the Nvidia/CUDA path.
+- **Recent Linux GPU support.** v0.8.2 added experimental AMD ROCm/HIP backend support on Linux, which matters for local-model users outside the Nvidia/CUDA path.
 - **Safer local downloads.** Pause/resume model downloads and safer default context sizing reduce the most common setup frustrations.
 
 ## When to pick something else
@@ -144,7 +150,7 @@ Jan.ai is fundamentally free.
 | Cloud provider usage | Billed by the connected provider |
 | Optional add-ons | Verify in app before purchase |
 
-Verified 2026-06-23 via [jan.ai](https://www.jan.ai/), [Jan.ai v0.8.2 changelog](https://www.jan.ai/changelog/2026-06-01-jan-v0.8.2), and [Jan.ai GitHub](https://github.com/janhq/jan).
+Verified 2026-06-25 via [jan.ai](https://www.jan.ai/), [Jan.ai changelog](https://www.jan.ai/changelog), [Jan.ai GitHub releases](https://github.com/janhq/jan/releases), and the repository license file.
 
 ## Failure modes
 
@@ -167,7 +173,7 @@ Verified 2026-06-23 via [jan.ai](https://www.jan.ai/), [Jan.ai v0.8.2 changelog]
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [jan.ai](https://www.jan.ai/), the [Jan.ai v0.8.2 changelog](https://www.jan.ai/changelog/2026-06-01-jan-v0.8.2), [Jan.ai GitHub releases](https://github.com/janhq/jan/releases), and the GitHub API for current repository activity.
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [jan.ai](https://www.jan.ai/), the [Jan.ai changelog](https://www.jan.ai/changelog), [Jan.ai GitHub releases](https://github.com/janhq/jan/releases), the repository license file, and the GitHub API for current repository activity.
 
 ## FAQ
 

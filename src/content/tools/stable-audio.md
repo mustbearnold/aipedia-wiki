@@ -2,19 +2,19 @@
 type: tool
 slug: stable-audio
 title: Stable Audio
-tagline: Stability AI's licensed-data audio model family for music, sound effects, brand audio, open-weight experimentation, API access, and enterprise licensing. Stable Audio 3.0 adds Small, Medium, and Large models with six-minute generation options.
+tagline: Stability AI's licensed-data audio model family for music, sound effects, brand audio, open-weight experimentation, hosted app subscriptions, API access, and enterprise licensing. Stable Audio 3.0 adds Small, Medium, and Large models with six-minute generation options.
 category: ai-music
 company: stability-ai
 url: https://stableaudio.com
 pricing_model: freemium
-price_range: "Open weights + hosted/API/enterprise"
+price_range: "Open weights + hosted Pro $11.99/mo and Pro Studio $29.99/mo + API/enterprise"
 status: active
 launched: 2023-09
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Stable Audio Review: Stable Audio 3.0, Pricing & License (June 2026)"
-meta_description: "Stable Audio review refreshed June 12, 2026: Stable Audio 3.0 open weights, Small/Medium/Large model family, six-minute generation, Community vs Enterprise licensing, API access, and hosted-pricing caveats."
+meta_description: "Stable Audio review refreshed June 25, 2026: Stable Audio 3.0 open weights, Small/Medium/Large model family, six-minute generation, Community vs Enterprise licensing, API access, and hosted-pricing caveats."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -33,15 +33,15 @@ facts:
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Stable Audio 3.0 Small SFX, Small, and Medium are open weights under Stability's Community License; organizations with more than $1M annual revenue need Enterprise License coverage. Stable Audio 3.0 Large is available through the Stability AI API and enterprise self-hosting."
+    value: "Stable Audio 3.0 Small SFX, Small, and Medium are open weights under Stability's Community License; organizations with more than $1M annual revenue need Enterprise License coverage. Stable Audio 3.0 Large is available through the Stability AI API and enterprise self-hosting. StableAudio.com also lists hosted Pro at $11.99/month and Pro Studio at $29.99/month before VAT or sales tax."
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: high
     confidence: high
@@ -68,12 +68,29 @@ not_best_for:
 quick_answer: >-
   Stable Audio 3.0 is now the center of the Stable Audio buyer story. Small SFX, Small, and Medium are open weights trained on licensed data; Medium and Large can generate more than six minutes; Large is the API/enterprise path. Use it for licensed-data music/sfx experimentation, brand audio, and enterprise deployment conversations. Skip it if you mainly want consumer vocal songwriting.
 price_history:
+  - date: 2026-06-25
+    plan: "StableAudio.com hosted subscriptions"
+    price: "Pro $11.99/mo; Pro Studio $29.99/mo, excluding VAT/sales taxes"
+    source: "https://stableaudio.com/pricing"
+    source_label: "Stable Audio pricing"
+    source_id: stable-audio-pricing
+    verified_at: 2026-06-25
+    note: "Primary pricing route exposed hosted Pro and Pro Studio monthly prices. Buyers still need checkout confirmation for license, tax, and model access details."
+  - date: 2026-06-25
+    plan: "Stable Audio 3.0 Small SFX / Small / Medium"
+    price: "Open weights under Stability AI Community License; Enterprise License required for organizations over $1M annual revenue"
+    source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
+    source_label: "Stable Audio 3.0 launch"
+    source_id: stable-audio-3-launch
+    verified_at: 2026-06-25
+    note: "Stable Audio 3.0 launch page and Stability license page still confirm output ownership under the Community License and Enterprise coverage above the revenue threshold."
   - date: 2026-06-09
     plan: "Stable Audio 3.0 Small SFX / Small / Medium"
     price: "Open weights under Stability AI Community License; Enterprise License required for organizations over $1M annual revenue"
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
+    verified_at: 2026-06-25
     note: "Small SFX, Small, and Medium are open weights trained on fully licensed data. Medium supports track length up to 6:20; Small generates up to 2 minutes."
   - date: 2026-06-09
     plan: "Stable Audio 3.0 Large"
@@ -81,6 +98,7 @@ price_history:
     source: "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
     source_label: "Stable Audio 3.0 launch"
     source_id: stable-audio-3-launch
+    verified_at: 2026-06-25
     note: "Large is positioned for music platforms and creative applications needing high-volume, low-latency generation."
   - date: 2026-06-09
     plan: "StableAudio.com hosted subscriptions"
@@ -88,6 +106,7 @@ price_history:
     source: "https://stableaudio.com/pricing"
     source_label: "Stable Audio pricing"
     source_id: stable-audio-pricing
+    verified_at: 2026-06-25
     note: "The public pricing route is JS-heavy; verify current hosted plan, model access, license, and taxes in checkout before purchase."
   - date: 2025-09-10
     plan: "Stable Audio 2.5 launch"
@@ -95,14 +114,15 @@ price_history:
     source: "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale"
     source_label: "Stable Audio 2.5 launch"
     source_id: stable-audio-launch
+    verified_at: 2026-06-25
     note: "Stable Audio 2.5 launched with three-minute outputs, API and partner access, audio inpainting, fully licensed training data, and enterprise licensing."
 ---
 
 # Stable Audio
 
-Stable Audio is Stability AI's music and sound generation product. **Stable Audio 3.0** is the current flagship family as of June 12, 2026, and Stability positions it for licensed-data audio generation, open-weight experimentation, API access, sound effects, brand audio, full music composition, and enterprise deployment.
+Stable Audio is Stability AI's music and sound generation product. **Stable Audio 3.0** is the current flagship family as of June 25, 2026, and Stability positions it for licensed-data audio generation, open-weight experimentation, API access, sound effects, brand audio, full music composition, and enterprise deployment.
 
-Verified June 12, 2026 against Stability AI's Stable Audio 3.0 release, StableAudio.com pricing, Stability AI platform/API surfaces, and Stability AI licensing context.
+Verified June 25, 2026 against Stability AI's Stable Audio 3.0 release, StableAudio.com pricing, Stability AI platform/API surfaces, and Stability AI licensing context.
 
 ## System Verdict
 
@@ -159,10 +179,10 @@ Stable Audio now has two different buyer surfaces that should not be collapsed: 
 |---|---|---|---|
 | Stable Audio 3.0 Small SFX / Small / Medium | Open weights | Community License; Enterprise for orgs over $1M annual revenue | Developers, researchers, local/on-device experimentation |
 | Stable Audio 3.0 Large | API / enterprise | Stability AI API and enterprise self-hosting | Platforms, apps, high-volume creative systems |
-| StableAudio.com hosted app | Checkout-confirmed Free/Pro/Studio/Max/Enterprise | Verify current model access and license in checkout | Individual hosted generation workflows |
+| StableAudio.com hosted app | Pro $11.99/mo and Pro Studio $29.99/mo before VAT/sales tax on the public page | Verify current model access and license in checkout | Individual hosted generation workflows |
 | Enterprise | Custom | Enterprise License, legal indemnification, fine-tuning support, self-hosting conversations | Organizations, apps, games, film/TV, large deployments |
 
-The old May pricing page data for hosted subscriptions should not be treated as a complete 3.0 procurement model. StableAudio.com is JS-heavy, and Stability's public API pricing route did not expose stable text to AiPedia's checker on June 9. Confirm live checkout, API account pricing, model access, license, taxes, and revenue threshold before purchase.
+The old May pricing page data for hosted subscriptions should not be treated as a complete 3.0 procurement model. StableAudio.com exposed Pro and Pro Studio hosted prices in the June 25 check, but checkout is still required for taxes, current model access, license fit, and account-level limits. Confirm live checkout, API account pricing, model access, license, taxes, and revenue threshold before purchase.
 
 ## Against The Alternatives
 
@@ -186,7 +206,7 @@ The old May pricing page data for hosted subscriptions should not be treated as 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified June 12, 2026 against the [Stable Audio 3.0 launch](https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models), [Stable Audio pricing](https://stableaudio.com/pricing), [Stability AI platform pricing](https://platform.stability.ai/pricing), and [Stability AI licensing](https://stability.ai/license).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified June 25, 2026 against the [Stable Audio 3.0 launch](https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models), [Stable Audio pricing](https://stableaudio.com/pricing), [Stability AI platform pricing](https://platform.stability.ai/pricing), and [Stability AI licensing](https://stability.ai/license).
 
 ## FAQ
 
@@ -200,7 +220,7 @@ If you are under the Community License threshold, test the open weights and conf
 Stable Audio 3.0 is the current flagship family. It includes Small SFX, Small, Medium, and Large. Medium and Large generate more than six minutes; Large is available through the Stability AI API and enterprise deployment path.
 
 **How much does the Stable Audio API cost?**
-Stable Audio 3.0 Large is available via the Stability AI API, but live API pricing should be confirmed in your platform account before building a margin model. The public pricing route did not expose stable text to AiPedia's checker on June 9, 2026.
+Stable Audio 3.0 Large is available via the Stability AI API, but live API pricing should be confirmed in your platform account before building a margin model. StableAudio.com hosted app pricing is separate from API pricing.
 
 **Can I use Stable Audio output commercially?**
 Yes, but only under the right license. Stability says users own Stable Audio 3.0 outputs and can distribute/commercialize under the Community License, while organizations with more than $1M in annual revenue should use the Enterprise License.

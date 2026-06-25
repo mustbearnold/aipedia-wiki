@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$0 to start, pay-per-use + Enterprise"
 status: active
 launched: 2019-06
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,11 +26,11 @@ scores:
   longevity: 8
 facts:
   enterprise_voice_stack:
-    value: "Chatterbox Turbo voice cloning/TTS, Chatterbox Multilingual dubbing, DETECT-3B Omni deepfake scanning, watermarking, and cloud/on-prem/VPC deployment make Resemble an enterprise voice-authenticity stack rather than a creator-only TTS app."
+    value: "Chatterbox voice cloning/TTS, Chatterbox Multilingual dubbing, DETECT-3B Omni multimodal deepfake scanning, watermarking, and cloud/on-prem/VPC deployment make Resemble an enterprise voice-authenticity stack rather than a creator-only TTS app."
     source: "https://www.resemble.ai/"
     source_label: "Resemble AI homepage"
     source_id: resemble-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Resemble AI pricing"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.resemble.ai/welcome"
     source_label: "Resemble AI docs"
     source_id: resemble-ai-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://www.resemble.ai/"
     source_label: "Resemble AI homepage"
     source_id: resemble-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Resemble AI pricing"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -85,7 +85,7 @@ not_best_for:
   - cheapest API pricing at scale
   - workflows that never need dubbing or compliance
 quick_answer: >-
-  Resemble AI is the enterprise voice platform in 2026. Three pillars: Generate (Chatterbox Turbo cloning and TTS), Localize (Chatterbox Multilingual dubbing), and Detect (DETECT-3B Omni at 98.1% benchmark accuracy across 160+ generative models). Pricing reset to Flex Plan (pay-per-use, $0 to start, credits never expire) plus Enterprise (custom, volume discounts up to 80%). Pick it for compliance-heavy dubbing or authenticity workflows. Skip it for solo creators (use Fish Audio or ElevenLabs) or real-time voice agents (use Cartesia).
+  Resemble AI is the enterprise voice platform in 2026. Three pillars: Generate (Chatterbox cloning and TTS), Localize (Chatterbox Multilingual dubbing), and Detect (DETECT-3B Omni for multimodal deepfake detection). Pricing reset to Flex Plan (pay-per-use, $0 to start, credits never expire) plus Enterprise (custom, volume discounts up to 80%). Pick it for compliance-heavy dubbing or authenticity workflows. Skip it for solo creators (use Fish Audio or ElevenLabs) or real-time voice agents (use Cartesia).
 price_history:
   - date: 2026-03-01
     plan: "Professional"
@@ -93,7 +93,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Consumer tiers restructured; Flex Plan added for Detect"
   - date: 2026-04-15
     plan: "Creator"
@@ -101,7 +101,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Verified unchanged (later retired in May 2026 pricing reset)"
   - date: 2026-05-13
     plan: "Flex Plan"
@@ -109,7 +109,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Major restructure: Free/Creator/Professional/Business flat tiers retired; replaced by single pay-per-consumption Flex Plan ($0.0002 to $0.07/second across TTS, cloning, detection) with non-expiring credits. Enterprise tier preserved with volume discounts up to 80%."
   - date: 2026-05-13
     plan: "Team Seat (add-on)"
@@ -117,7 +117,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "New seat add-on under Flex Plan; Rapid Voice Clone $2/voice/mo, Pro Voice Clone $5/voice/mo, Voice Design $2/voice/mo"
   - date: 2026-06-05
     plan: "Flex Plan"
@@ -125,7 +125,7 @@ price_history:
     source: "https://www.resemble.ai/pricing/"
     source_label: "Source"
     source_id: resemble-ai-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Comparison refresh rechecked Flex Plan, add-ons, and Enterprise positioning against Descript. Flex remains pay-per-consumption with team seats at $20/user/mo, Rapid clone $2/voice/mo, Pro clone $5/voice/mo, and Voice Design $2/voice/mo."
 ---
 
@@ -164,7 +164,7 @@ Launched 2019. Targets enterprise workflows where compliance, watermarking, and 
 | **Voice add-ons** | Rapid Voice Clone $2/voice/mo, Pro Voice Clone $5/voice/mo, Voice Design $2/voice/mo |
 | **Enterprise** | Custom; volume discounts up to 80%, SOC 2, SSO/SAML, custom training, on-prem, dedicated support |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -208,7 +208,7 @@ In May 2026 Resemble retired its flat-rate Free, Creator ($30/mo), Professional 
 - Pro Voice Clone: $5/voice/mo
 - Voice Design: $2/voice/mo
 
-*Prices verified 2026-06-12 via [resemble.ai/pricing](https://www.resemble.ai/pricing). The May 2026 reset removes the previous Creator/Professional/Business flat tiers; budget against expected per-second usage instead of seat counts.*
+*Prices verified 2026-06-25 via [resemble.ai/pricing](https://www.resemble.ai/pricing). The May 2026 reset removes the previous Creator/Professional/Business flat tiers; budget against expected per-second usage instead of seat counts.*
 
 ## Against the alternatives
 
@@ -236,6 +236,7 @@ In May 2026 Resemble retired its flat-rate Free, Creator ($30/mo), Professional 
 ## Recent changes
 
 - **June 5, 2026:** Flex Plan, add-ons, and enterprise positioning rechecked for the Descript comparison slice. Descript remains the better creator editor; Resemble remains the better governed voice platform for cloning, localization, detection, watermarking, and deployment controls.
+- **June 25, 2026:** Rechecked pricing, DETECT-3B Omni model page, comparison pages, docs, and platform overview. Pricing remains Flex Plan plus Enterprise; detection copy now emphasizes multimodal benchmark and deployment claims without overpromising one static accuracy number across every modality.
 - **May 2026:** Major pricing restructure. Free, Creator ($30/mo), Professional ($60/mo), and Business (£499/mo) flat tiers retired. Self-serve consolidated into a single Flex Plan at $0 to start with pay-per-consumption ($0.0002 to $0.07/second), credits that never expire, and full API access. Add-ons cover team seats ($20/user/mo) and per-voice clones ($2 Rapid, $5 Pro).
 - **2026:** Chrome extension for DETECT-3B Omni released for browser-side deepfake verification.
 - **2026:** Detection benchmark refreshed at 98.1% on the DETECT-3B Omni audio benchmark, against 160+ generative models. Detection now covers audio, image, and video formats (WAV, FLAC, MP3, WEBM, M4A, OGG).
@@ -243,7 +244,7 @@ In May 2026 Resemble retired its flat-rate Free, Creator ($30/mo), Professional 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [resemble.ai](https://www.resemble.ai/), [pricing page](https://www.resemble.ai/pricing/), and [voice AI platform overview](https://www.resemble.ai/voice-ai-platform/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [resemble.ai](https://www.resemble.ai/), [pricing page](https://www.resemble.ai/pricing/), and [voice AI platform overview](https://www.resemble.ai/voice-ai-platform/).
 
 ## FAQ
 

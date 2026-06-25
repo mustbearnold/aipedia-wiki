@@ -2,7 +2,7 @@
 type: tool
 slug: fish-audio
 title: Fish Audio / OpenAudio S1 + S2
-tagline: Open-source TTS that beats ElevenLabs on naturalness at a fraction of the price. S2 Pro is the expressive flagship; S1 remains the fast default.
+tagline: Open-source TTS with S2 Pro quality, S2.1 Pro API access, and low-cost cloud/API pricing for expressive speech.
 category: ai-voice
 company: fish-audio
 url: https://fish.audio
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$75/month"
 status: active
 launched: 2024-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   model_surface:
@@ -39,7 +39,7 @@ facts:
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits"
     source_label: "Fish Audio API pricing and rate limits"
     source_id: fish-audio-api-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -65,7 +65,7 @@ facts:
     source: "https://fish.audio"
     source_label: "Fish Audio official site"
     source_id: fish-audio-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [tts, text-to-speech, voice-ai, open-source, self-hosted, voice-cloning, openaudio, fish-speech, low-latency, multilingual]
@@ -82,7 +82,7 @@ not_best_for:
   - enterprise dubbing pipelines with lip-sync
   - workflows that need built-in deepfake detection
 quick_answer: >-
-  Fish Audio is the open-weight TTS leader heading into June 2026. OpenAudio S2 Pro ranked first in Fish Audio's blind preference testing, and S1 remains the fast default. Pick it for self-hosted voice agents or high-volume API workloads; skip for enterprise dubbing (use Resemble) or real-time voice agents where Cartesia's sub-100ms latency matters more than voice quality.
+  Fish Audio is the open-weight TTS leader heading into June 2026. OpenAudio S2 Pro ranked first in Fish Audio's blind preference testing, S1 remains the fast default, and Fish announced S2.1 Pro API access on June 23, 2026. Pick it for self-hosted voice agents or high-volume API workloads; skip for enterprise dubbing (use Resemble) or real-time voice agents where Cartesia's sub-100ms latency matters more than voice quality.
 price_history:
   - date: 2026-03-01
     plan: "Plus"
@@ -90,7 +90,7 @@ price_history:
     source: "https://fish.audio"
     source_label: "Source"
     source_id: fish-audio-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "S2 cloud tiers restructured around minutes of generation"
   - date: 2026-04-15
     plan: "API"
@@ -98,7 +98,7 @@ price_history:
     source: "https://fish.audio"
     source_label: "Source"
     source_id: fish-audio-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified unchanged"
   - date: 2026-06-02
     plan: "Pro"
@@ -106,7 +106,7 @@ price_history:
     source: "https://fish.audio/plan/"
     source_label: "Source"
     source_id: fish-audio-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified Pro at $75/mo, 1,620 minutes (~27 hours). Max tier $749/mo confirmed at 6,250 minutes for sustained agency workloads. API docs list s1 and s2-pro at $15 per 1M UTF-8 bytes."
   - date: 2026-06-23
     plan: "Plus / Pro / API"
@@ -114,8 +114,16 @@ price_history:
     source: "https://fish.audio/plan/"
     source_label: "Source"
     source_id: fish-audio-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "June 23 refresh rechecked the plan page and API pricing docs. Fish remains the better path for open-weight/self-hosted or high-volume generated speech; Descript remains the better transcript editor."
+  - date: 2026-06-25
+    plan: "S2.1 Pro API"
+    price: "Free developer API access announced"
+    source: "https://fish.audio/blog/s2-1-pro-free-api/"
+    source_label: "Fish Audio S2.1 Pro API announcement"
+    source_id: fish-audio-s21-pro-api
+    verified_at: 2026-06-25
+    note: "Fish Audio's June 23, 2026 announcement says S2.1 Pro is open to developers through free API access; production buyers should still verify account limits and current API pricing docs."
 ---
 
 # Fish Audio
@@ -148,7 +156,7 @@ S2 Pro ranked first in Fish Audio's own 2026 blind-provider comparison. Artifici
 | **API pricing** | $15 per 1M UTF-8 bytes for s1 and s2-pro · transcribe-1 ASR at $0.36/audio hour |
 | **Blind-test rank (2026)** | S2 Pro #1, S1 above every third-party provider |
 
-Every data point above was verified against vendor sources on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -185,7 +193,7 @@ The moat is model quality plus license freedom. S2 Pro beats every commercial th
 | Max | $749/mo | ~104 hours S2 / 25M credits | Agency-scale, 10 team seats |
 | API | $15 / 1M UTF-8 bytes | Pay-as-you-go | s1 and s2-pro; ASR transcribe-1 is $0.36/audio hour |
 
-*Prices verified 2026-06-23 via [Fish Audio plan page](https://fish.audio/plan/) and [Fish Audio API pricing docs](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits).*
+*Prices verified 2026-06-25 via [Fish Audio plan page](https://fish.audio/plan/) and [Fish Audio API pricing docs](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits).*
 
 ## Against the alternatives
 
@@ -210,12 +218,13 @@ The moat is model quality plus license freedom. S2 Pro beats every commercial th
 ## Recent changes
 
 - **2026-06-23:** Plan and API pricing refreshed. Plus $11, Pro $75, Max $749, and API pricing at $15 per 1M UTF-8 bytes for s1 and s2-pro remain the current pricing anchors.
+- **2026-06-25:** Rechecked plan page, API pricing docs, GitHub model claims, and Fish Audio's June 23 S2.1 Pro API announcement. The page now flags S2.1 Pro API access as a new developer surface while keeping production API billing caveats.
 - **2026-06-02:** Pricing reconfirmed live. Plus $11, Pro $75, Max $749. The Pro tier covers ~1,620 generation minutes (27 hours) per month with three team seats; the Max tier unlocks ~6,250 minutes (104 hours) and ten team seats for sustained agency or platform workloads. API pricing docs list s1 and s2-pro at $15 per 1M UTF-8 bytes and transcribe-1 ASR at $0.36 per audio hour. Free tier remains 7 minutes plus 8K credits/mo, non-commercial.
 - **2026-04-17:** S2 Pro confirmed as flagship in Artificial Analysis' aggregate TTS ELO leaderboard.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-23 against [Fish Audio plan page](https://fish.audio/plan/), [Fish Audio API pricing docs](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits), [OpenAudio S2 page](https://fish.audio/s2/), [Fish Audio 2026 provider comparison](https://fish.audio/blog/blind-tts-provider-comparison-2026/), and [Artificial Analysis TTS leaderboard](https://artificialanalysis.ai/text-to-speech/model-families/fishaudio).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-25 against [Fish Audio plan page](https://fish.audio/plan/), [Fish Audio API pricing docs](https://docs.fish.audio/developer-guide/models-pricing/pricing-and-rate-limits), [OpenAudio S2 page](https://fish.audio/s2/), [Fish Audio 2026 provider comparison](https://fish.audio/blog/blind-tts-provider-comparison-2026/), and [Artificial Analysis TTS leaderboard](https://artificialanalysis.ai/text-to-speech/model-families/fishaudio).
 
 ## FAQ
 

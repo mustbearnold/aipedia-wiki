@@ -2,17 +2,17 @@
 type: tool
 slug: wellsaid
 title: WellSaid Labs
-tagline: AI voice platform for enterprise e-learning and corporate narration, with Studio, Trial, Creative, Business, Enterprise, and API routes.
+tagline: AI voice platform for enterprise e-learning and corporate narration, with Studio, Trial, Starter, Pro, Business, Enterprise, and API routes.
 category: ai-voice
 secondary_categories: [ai-voice]
 company: WellSaid Labs
 url: https://wellsaidlabs.com
 pricing_model: freemium
-price_range: "$50-$160+/user/month"
+price_range: "$10-$160+/month"
 status: active
 launched: 2018
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -31,25 +31,25 @@ facts:
     source: https://wellsaidlabs.com/enterprise
     source_label: WellSaid enterprise
     source_id: wellsaid-enterprise
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
   pricing_anchor:
-    value: WellSaid Studio lists Creative at $50/user/month billed annually, Business at $160/user/month billed annually for growing teams up to 5 seats, plus Trial, Enterprise, and API routes.
-    source: https://wellsaidlabs.com/pricing
+    value: WellSaid Studio now lists Trial as free, Starter at $10/month billed annually, Pro at $33/month billed annually, Business at $160/month/user billed annually, and Enterprise as custom pricing.
+    source: https://www.wellsaid.io/ai-voice-pricing
     source_label: WellSaid pricing
     source_id: wellsaid-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
   api_available:
-    value: WellSaid publishes API documentation and pricing/help pages reference API as a distinct buying route; evaluate API access through procurement before building around it.
+    value: WellSaid publishes API documentation and its public pricing page offers a one-week API trial; evaluate API access, limits, and production pricing before building around it.
     source: https://docs.wellsaidlabs.com/
     source_label: WellSaid API docs
     source_id: wellsaid-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -58,7 +58,7 @@ facts:
     source: https://wellsaidlabs.com/enterprise
     source_label: WellSaid enterprise
     source_id: wellsaid-enterprise
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
@@ -67,16 +67,16 @@ facts:
     source: https://docs.wellsaidlabs.com/
     source_label: WellSaid API docs
     source_id: wellsaid-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-05'
   watch_out_for:
     value: WellSaid is a fit decision around L&D narration quality, downloads, seats, export formats, API access, and enterprise controls rather than the lowest monthly price.
-    source: https://wellsaidlabs.com/pricing
+    source: https://www.wellsaid.io/ai-voice-pricing
     source_label: WellSaid pricing
     source_id: wellsaid-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-05'
@@ -84,8 +84,8 @@ tags: [tts, enterprise, e-learning, corporate-narration, scorm, articulate, api]
 seo_title: "WellSaid Labs: Features, Pricing & Review (June 2026)"
 meta_description: >-
   WellSaid Labs is an enterprise AI voice platform for L&D narration. Trial,
-  Creative $50/user/mo annual, Business $160/user/mo annual, Enterprise and
-  API routes. Verified June 2026.
+  Starter $10/mo annual, Pro $33/mo annual, Business $160/user/mo annual,
+  Enterprise and API routes. Verified June 2026.
 author: "aipedia.wiki Editorial"
 best_for:
   - enterprise L&D teams
@@ -100,7 +100,8 @@ not_best_for:
 quick_answer: >-
   WellSaid Labs is best for enterprise L&D narration and controlled corporate
   voiceovers. Pick it for training scripts, brand-safe narration, commercial
-  rights, and procurement-friendly Studio/API routes. Skip it for podcasts,
+  rights, and procurement-friendly Studio/API routes. Starter and Pro now make
+  individual testing cheaper than the older Creative ladder. Skip it for podcasts,
   character voices, or the broad creative range of ElevenLabs.
 price_history:
   - date: 2026-04-15
@@ -109,6 +110,7 @@ price_history:
     source: "https://wellsaidlabs.com/pricing"
     source_label: "WellSaid pricing"
     source_id: wellsaid-pricing
+    verified_at: 2026-06-25
     note: "Prior Maker $49 / Creative $99 / Business $179 structure."
   - date: 2026-05-13
     plan: "Creative"
@@ -116,6 +118,7 @@ price_history:
     source: "https://wellsaidlabs.com/pricing"
     source_label: "WellSaid pricing"
     source_id: wellsaid-pricing
+    verified_at: 2026-06-25
     note: "WellSaid retired the Maker plan and rebuilt the entry tier around Creative."
   - date: 2026-05-13
     plan: "Business"
@@ -123,6 +126,7 @@ price_history:
     source: "https://wellsaidlabs.com/pricing"
     source_label: "WellSaid pricing"
     source_id: wellsaid-pricing
+    verified_at: 2026-06-25
     note: "Business became the team tier for growing teams up to 5 seats."
   - date: 2026-06-05
     plan: "Trial"
@@ -130,20 +134,29 @@ price_history:
     source: "https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost"
     source_label: "WellSaid pricing help"
     source_id: wellsaid-pricing-help
+    verified_at: 2026-06-25
     note: "WellSaid help confirms buyers can preview voices with a Free Trial."
+  - date: 2026-06-25
+    plan: "Starter / Pro / Business"
+    price: "$10/mo annual / $33/mo annual / $160/mo/user annual"
+    source: "https://www.wellsaid.io/ai-voice-pricing"
+    source_label: "WellSaid pricing"
+    source_id: wellsaid-pricing
+    verified_at: 2026-06-25
+    note: "Public pricing now lists Starter and Pro individual tiers instead of the older Creative entry point. Trial is free; Enterprise is custom."
 ---
 
 # WellSaid Labs
 
 WellSaid Labs runs WellSaid Studio, an enterprise-oriented AI voice platform for L&D teams, instructional designers, compliance training, product education, and corporate narration. It is narrower than broad creator voice tools by design: the point is controlled, repeatable, brand-safe narration rather than maximum character range.
 
-The June 5, 2026 buyer correction: WellSaid should not be described as having no trial. WellSaid pricing help confirms buyers can preview voices with a Free Trial. Paid plans are still where exportable commercial production starts.
+The June 25, 2026 buyer correction: WellSaid's public pricing ladder has moved away from the older Creative entry tier. The live page now lists Trial, Starter, Pro, Business, and Enterprise. Paid plans are still where exportable commercial production starts.
 
 ## System Verdict
 
 > **Pick WellSaid Labs if enterprise L&D is the workload.** The platform fits training scripts, compliance narration, product education, and brand-approved voiceovers where consistency matters more than dramatic performance.
 >
-> **Use the Trial for voice fit, not final production.** The trial is for previewing voices and evaluating fit. Paid Creative, Business, Enterprise, or API routes decide real publishing.
+> **Use the Trial for voice fit, not final production.** The trial is for previewing voices and evaluating fit. Paid Starter, Pro, Business, Enterprise, or API routes decide real publishing.
 >
 > **Skip it for creator audio.** [ElevenLabs](/tools/elevenlabs/) has broader voice range, stronger creative experimentation, and easier creator/developer workflows. [Murf](/tools/murf/) can be more flexible for presentation narration and business dubbing.
 
@@ -151,14 +164,15 @@ The June 5, 2026 buyer correction: WellSaid should not be described as having no
 
 - **Primary product:** WellSaid Studio for corporate narration.
 - **Best fit:** L&D, compliance training, instructional design, product education, and controlled brand voiceovers.
-- **Plan routes:** Trial, Creative, Business, Enterprise, and API.
-- **Creative anchor:** $50/user/month billed annually.
+- **Plan routes:** Trial, Starter, Pro, Business, Enterprise, and API.
+- **Starter anchor:** $10/month billed annually.
+- **Pro anchor:** $33/month billed annually.
 - **Business anchor:** $160/user/month billed annually for growing teams up to 5 seats.
 - **Commercial rights:** WellSaid pricing help says paid subscriptions may use created audio commercially under WellSaid's terms.
 - **API:** WellSaid publishes API documentation; confirm access and terms before building.
 - **Main watch-out:** Great fit for enterprise narration, weak fit for emotional creator content.
 
-Every current data point was verified against WellSaid vendor pages and help documentation on 2026-06-12.
+Every current data point was verified against WellSaid vendor pages and help documentation on 2026-06-25.
 
 ## What It Actually Is
 
@@ -186,13 +200,14 @@ The product is intentionally focused. It does not compete on the biggest public 
 
 Current WellSaid pricing should be evaluated by plan route:
 
-- **Trial:** Free voice preview route for evaluation.
-- **Creative:** $50/user/month billed annually; individual and content-creator route.
+- **Trial:** Free voice preview route for evaluation, including a one-week Studio trial and a one-week API trial on the public pricing page.
+- **Starter:** $10/month billed annually; lower-cost individual route.
+- **Pro:** $33/month billed annually; stronger individual route before Business.
 - **Business:** $160/user/month billed annually; growing-team route up to 5 seats.
 - **Enterprise:** Custom; evaluate custom voices, advanced support, security, and larger governance requirements.
 - **API:** Separate route; confirm API access, usage, and support directly before building.
 
-Prices and plan routes were verified 2026-06-12 against WellSaid pricing and pricing-help pages. Because WellSaid sells Studio, Enterprise, and API routes, confirm download limits, seats, export formats, custom voice requirements, and API terms before signing.
+Prices and plan routes were verified 2026-06-25 against WellSaid pricing and pricing-help pages. Because WellSaid sells Studio, Enterprise, and API routes, confirm download limits, seats, export formats, custom voice requirements, and API terms before signing.
 
 ## Against The Alternatives
 
@@ -211,7 +226,7 @@ Prices and plan routes were verified 2026-06-12 against WellSaid pricing and pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against WellSaid pricing, pricing help, enterprise, and API documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation, pricing pages, help-center pages, and product documentation before generating editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against WellSaid pricing, pricing help, enterprise, and API documentation.
 
 ## FAQ
 
@@ -219,7 +234,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. WellSaid pricing help says buyers can preview voices with a Free Trial. Treat it as evaluation, not full production.
 
 **How much does WellSaid cost?**
-Current public pricing lists Creative at $50/user/month billed annually and Business at $160/user/month billed annually. Enterprise and API routes require closer procurement review.
+Current public pricing lists Starter at $10/month billed annually, Pro at $33/month billed annually, and Business at $160/user/month billed annually. Enterprise and API routes require closer procurement review.
 
 **Is WellSaid better than ElevenLabs?**
 For enterprise L&D narration, sometimes. For creative voice generation, voice cloning, dubbing, and voice agents, ElevenLabs is usually stronger.
@@ -232,11 +247,11 @@ No. It is tuned for corporate narration. Use ElevenLabs, Fish Audio, or another 
 
 ## Sources
 
-- [WellSaid Labs official site](https://wellsaidlabs.com) (verified 2026-06-12)
-- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-12)
-- [WellSaid pricing help](https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost) (verified 2026-06-12)
-- [WellSaid API docs](https://docs.wellsaidlabs.com/) (verified 2026-06-12)
-- [WellSaid enterprise](https://wellsaidlabs.com/enterprise) (verified 2026-06-12)
+- [WellSaid Labs official site](https://www.wellsaid.io) (verified 2026-06-25)
+- [WellSaid pricing](https://www.wellsaid.io/ai-voice-pricing) (verified 2026-06-25)
+- [WellSaid pricing help](https://help.wellsaid.io/hc/en-us/articles/39149441616531-How-Much-Does-WellSaid-Studio-Cost) (verified 2026-06-25)
+- [WellSaid API docs](https://docs.wellsaidlabs.com/) (verified 2026-06-25)
+- [WellSaid enterprise](https://www.wellsaid.io/ai-voice-enterprise) (verified 2026-06-25)
 
 ## Related
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$109.90/month; annual from $13.93/month"
 status: active
 launched: 2024-02
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3"
     source_label: "Tripo v3.0 Ultra release"
     source_id: tripo3d-v3-ultra
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.tripo3d.ai/pricing"
     source_label: "Source"
     source_id: tripo3d-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3"
     source_label: "Tripo v3.0 Ultra release"
     source_id: tripo3d-v3-ultra
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   watch_out_for:
@@ -55,13 +55,14 @@ facts:
     source: "https://www.tripo3d.ai/pricing"
     source_label: "Source"
     source_id: tripo3d-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: high
 tags: [3d-generation, text-to-3d, image-to-3d, pbr-textures, quad-topology, auto-rigging, game-assets, api, glb, fbx, usdz, obj]
 seo_title: "Tripo3D Review (June 2026): Text-to-3D, Ultra Mode, Pricing"
 meta_description: "Tripo3D review for June 2026: VAST AI's text-to-3D and image-to-3D generator running Tripo v3.0 Ultra. Free 200 credits, Pro $13.93/mo annual, Max $53.94/mo annual, Team $54.93/seat annual."
+author: "aipedia.wiki Editorial"
 best_for:
   - indie and mid-size game developers needing clean quad topology
   - creators building stylized assets for Unity or Unreal pipelines
@@ -74,12 +75,21 @@ not_best_for:
 quick_answer: >-
   Tripo3D is the topology and API specialist for AI 3D generation. Tripo v3.0 Ultra now pairs Standard/Ultra modes with cleaner geometry, PBR textures, Smart Part Segmentation, T-Pose export, and auto-rigging. Pick it for game-asset pipelines, 3D printing, and Unity or Unreal workflows. Skip it for hero photoreal assets where Rodin still wins, or a richer editor workspace where Meshy has more bundled animation tools. The current public ladder is Free, Pro $13.93/mo annual or $19.90 monthly, Max $53.94/mo annual or $89.90 monthly, and Team $54.93/seat annual or $109.90 monthly.
 price_history:
+  - date: 2026-06-25
+    plan: "Free / Pro / Max / Team"
+    price: "$0; $13.93/mo annual or $19.90 monthly; $53.94/mo annual or $89.90 monthly; $54.93/mo/seat annual or $109.90 monthly"
+    source: "https://www.tripo3d.ai/pricing"
+    source_label: "Tripo3D pricing"
+    source_id: tripo3d-pricing
+    verified_at: 2026-06-25
+    note: "Public pricing remains unchanged from the June 10 check. Free still lists 200 credits, public CC BY 4.0 output, 1 concurrent task, and limited downloads; paid tiers add private models and commercial use."
   - date: 2025-10-14
     plan: "Tripo 2.5"
     price: "n/a"
     source: "https://www.tripo3d.ai/pricing"
     source_label: "Source"
     source_id: tripo3d-pricing
+    verified_at: 2026-06-25
     note: "Tripo 2.5 released with higher-fidelity geometry and quad-topology remesh as a first-class output."
   - date: 2026-04-15
     plan: "Pro"
@@ -87,6 +97,7 @@ price_history:
     source: "https://www.tripo3d.ai/pricing"
     source_label: "Source"
     source_id: tripo3d-pricing
+    verified_at: 2026-06-25
     note: "Historical snapshot later superseded by the June 2026 Free / Pro / Max / Team ladder."
   - date: 2026-06-10
     plan: "Pro"
@@ -94,6 +105,7 @@ price_history:
     source: "https://www.tripo3d.ai/pricing"
     source_label: "Source"
     source_id: tripo3d-pricing
+    verified_at: 2026-06-25
     note: "June 2026 public pricing lists Pro with 3,000 monthly credits, 10 concurrent tasks, Smart Mesh, batch generation up to 10, private models, commercial use, 7-day edit history, unlimited storage/downloads, and image-generation model unlocks."
   - date: 2026-06-10
     plan: "Max"
@@ -101,6 +113,7 @@ price_history:
     source: "https://www.tripo3d.ai/pricing"
     source_label: "Source"
     source_id: tripo3d-pricing
+    verified_at: 2026-06-25
     note: "June 2026 public pricing lists Max with 25,000 monthly credits, 100 concurrent tasks, batch generation up to 30, dedicated processing, unlimited retries, permanent edit history, and 20 free images daily."
   - date: 2026-06-10
     plan: "Team"
@@ -108,6 +121,7 @@ price_history:
     source: "https://www.tripo3d.ai/pricing"
     source_label: "Source"
     source_id: tripo3d-pricing
+    verified_at: 2026-06-25
     note: "June 2026 public pricing lists Team with 45,000 monthly credits, 200 concurrent tasks, shared workspace/assets, centralized billing/admin, and unlimited free image generations."
   - date: 2026-06-10
     plan: "Tripo v3.0 Ultra"
@@ -115,14 +129,19 @@ price_history:
     source: "https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3"
     source_label: "Tripo v3.0 Ultra release"
     source_id: tripo3d-v3-ultra
+    verified_at: 2026-06-25
     note: "Official Tripo v3.0 Ultra release page describes sharper geometry, cleaner topology, Standard/Ultra modes, PBR material prediction, Smart Part Segmentation, T-Pose export, auto-rigging, and Magic Brush 2.0."
 ---
 
 # Tripo3D
 
-VAST AI's text-to-3D and image-to-3D generator. **Tripo v3.0 Ultra** is the current flagship release as of June 12, 2026. A single workspace covers text-to-3D, image-to-3D, sketch-to-3D, Standard and Ultra output modes, Smart Part Segmentation, Magic Brush 2.0, high-fidelity PBR materials, T-Pose export, auto-rigging, and skin weighting.
+VAST AI's text-to-3D and image-to-3D generator. **Tripo v3.0 Ultra** is the current flagship release as of June 25, 2026. A single workspace covers text-to-3D, image-to-3D, sketch-to-3D, Standard and Ultra output modes, Smart Part Segmentation, Magic Brush 2.0, high-fidelity PBR materials, T-Pose export, auto-rigging, and skin weighting.
 
 Outputs export to GLB, FBX, USDZ, OBJ, and STL. A generally-available API serves paid tiers and runs on third-party hosts such as fal.ai. The platform reports 6.5M+ creators, 40K+ active developers, 700+ industry clients, and 100M+ 3D models generated to date.
+
+## Recent changes
+
+- **June 25, 2026:** AiPedia rechecked Tripo Studio pricing and platform billing docs. The Free, Pro, Max, and Team ladder remains unchanged, while platform docs now expose a June 3, 2026 API pricing and billing changelog. API credit costs remain a benchmark-before-volume item for buyers.
 
 ## System Verdict
 
@@ -136,7 +155,7 @@ Outputs export to GLB, FBX, USDZ, OBJ, and STL. A generally-available API serves
 
 | | |
 |---|---|
-| **Flagship model** | Tripo v3.0 Ultra (current flagship release checked June 12, 2026) |
+| **Flagship model** | Tripo v3.0 Ultra (current flagship release checked June 25, 2026) |
 | **Core modes** | Text-to-3D · Image-to-3D · Sketch-to-3D · Standard/Ultra outputs · Smart Part Segmentation · Magic Brush 2.0 · T-Pose export · Auto-rigging with skin weights |
 | **Topology option** | Quad remesh as a first-class output (not just triangles) |
 | **Materials** | High-fidelity PBR material prediction and localized Magic Brush refinement |
@@ -147,7 +166,7 @@ Outputs export to GLB, FBX, USDZ, OBJ, and STL. A generally-available API serves
 | **Platform plugins** | Blender · Unity · Unreal Engine · ComfyUI · Cocos · Godot |
 | **Scale claims** | 6.5M+ creators · 40K+ active developers · 700+ industry clients · 100M+ models generated |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -157,7 +176,7 @@ Tripo v3.0 Ultra is the current flagship generation release. Text, image, and sk
 
 The editor covers re-texturing, remeshing, Magic Brush localized PBR adjustments, and export. The v3.0 texture/material pipeline is the main quality jump from older Tripo generations.
 
-The moats: quad topology as a default output is rare in this category, intelligent part segmentation is now native rather than a manual step, the API is genuinely GA rather than invitation-only, and the fal.ai mirror means teams that already orchestrate generation through fal get Tripo without a second platform contract. The weaknesses remain a shallower editor than Meshy and no bundled animation library.
+The moats are practical. Quad topology as a default output is rare in this category, intelligent part segmentation is now native, and the API is genuinely GA rather than invitation-only. The fal.ai mirror also means teams that already orchestrate generation through fal get Tripo without a second platform contract. The weaknesses remain a shallower editor than Meshy and no bundled animation library.
 
 ## When to pick Tripo3D
 
@@ -186,7 +205,7 @@ Subscription pricing via [tripo3d.ai/pricing](https://www.tripo3d.ai/pricing). T
 | Max | $89.90/mo | $53.94/mo ($647.28/yr) | 25,000/mo | Yes | **Most serious creator pipelines land here** |
 | Team | $109.90/mo/seat | $54.93/mo/seat (public page shows $1,978.20/yr) | 45,000/mo | Yes | Shared workspace, admin, asset teams |
 
-*Prices verified 2026-06-12 via [Tripo3D pricing](https://www.tripo3d.ai/pricing). The Free tier produces public models under a CC BY 4.0 license; commercial/private use requires Pro or higher. Team pricing is quoted from the public pricing page and should be checked in checkout before multi-seat annual billing.*
+*Prices verified 2026-06-25 via [Tripo3D pricing](https://www.tripo3d.ai/pricing). The Free tier produces public models under a CC BY 4.0 license; commercial/private use requires Pro or higher. Team pricing is quoted from the public pricing page and should be checked in checkout before multi-seat annual billing.*
 
 ## Against the alternatives
 
@@ -214,7 +233,7 @@ Subscription pricing via [tripo3d.ai/pricing](https://www.tripo3d.ai/pricing). T
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [Tripo3D pricing](https://www.tripo3d.ai/pricing), the [Tripo v3.0 Ultra release](https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3), the [Tripo3D site](https://www.tripo3d.ai), the [platform docs](https://platform.tripo3d.ai/docs), and the [fal.ai model listing](https://fal.ai/models/tripo3d).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [Tripo3D pricing](https://www.tripo3d.ai/pricing), the [Tripo v3.0 Ultra release](https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3), the [Tripo3D site](https://www.tripo3d.ai), the [platform docs](https://platform.tripo3d.ai/docs), and the [fal.ai model listing](https://fal.ai/models/tripo3d).
 
 ## FAQ
 
@@ -238,8 +257,8 @@ Meshy if you want the deepest editor workspace and a 500+ animation library in o
 
 ## Sources
 
-- [Tripo3D pricing](https://www.tripo3d.ai/pricing): current Free, Pro, Max, and Team tiers, credit allocations, output rights, concurrency, storage, and download limits (verified 2026-06-12)
-- [Tripo v3.0 Ultra release](https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3): Standard/Ultra modes, geometry, topology, PBR materials, Smart Part Segmentation, Magic Brush 2.0, T-Pose export, and auto-rigging (verified 2026-06-12)
+- [Tripo3D pricing](https://www.tripo3d.ai/pricing): current Free, Pro, Max, and Team tiers, credit allocations, output rights, concurrency, storage, and download limits (verified 2026-06-25)
+- [Tripo v3.0 Ultra release](https://www.tripo3d.ai/blog/introducing-tripo-new-algorithm3): Standard/Ultra modes, geometry, topology, PBR materials, Smart Part Segmentation, Magic Brush 2.0, T-Pose export, and auto-rigging (verified 2026-06-25)
 - [Tripo3D site](https://www.tripo3d.ai): Tripo product surface and Studio/API routing
 - [Tripo Platform docs](https://platform.tripo3d.ai/docs): API endpoints, credit economy, model options
 - [fal.ai Tripo3D listing](https://fal.ai/models/tripo3d): third-party API mirror and rate details

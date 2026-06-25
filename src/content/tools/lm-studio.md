@@ -11,8 +11,8 @@ pricing_model: free
 price_range: "$0 home and work use"
 status: active
 launched: 2023-05
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://lmstudio.ai/
     source_label: LM Studio official site
     source_id: lm-studio-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -40,7 +40,7 @@ facts:
     source: https://lmstudio.ai/
     source_label: LM Studio official site
     source_id: lm-studio-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -49,7 +49,7 @@ facts:
     source: https://lmstudio.ai/docs
     source_label: LM Studio documentation
     source_id: lm-studio-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -58,7 +58,7 @@ facts:
     source: https://lmstudio.ai/docs/api
     source_label: LM Studio developer docs
     source_id: lm-studio-api-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -67,7 +67,7 @@ facts:
     source: https://lmstudio.ai/docs
     source_label: LM Studio documentation
     source_id: lm-studio-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-08'
@@ -85,7 +85,7 @@ not_best_for:
   - users without capable hardware
   - enterprise production inference
 quick_answer: >-
-  LM Studio is the free desktop app that makes running open-weight LLMs on your laptop a fast setup. The June 23 check keeps it in the GUI-first local LLM lane, but the developer story is stronger now: v1 REST API, OpenAI-compatible Responses/Chat/Embeddings endpoints, Anthropic-compatible Messages, MCP support, SDKs, CLI server control, and a headless daemon path. Pick it for a GUI alternative to Ollama; skip it when you need fully open-source app code or production fleet governance.
+  LM Studio is the free desktop app that makes running open-weight LLMs on your laptop a fast setup. The June 25 check keeps it in the GUI-first local LLM lane, but the developer story is stronger now: v1 REST API, OpenAI-compatible Responses/Chat/Embeddings endpoints, Anthropic-compatible Messages, MCP support, SDKs, CLI server control, and a headless daemon path. LM Link remains free during preview, with free and paid plans expected at general availability. Pick it for a GUI alternative to Ollama; skip it when you need fully open-source app code or production fleet governance.
 ---
 
 # LM Studio
@@ -96,7 +96,7 @@ A desktop application that wraps local open-weight model running in a visual int
 
 - **April 28, 2026:** [Mistral 3 shipped as an open-weight release](/news/2026-04-28-mistral-3-open-model-release/). The new weights appear in the LM Studio model browser alongside Llama 4, Qwen 3, Gemma 4, and GPT-OSS, broadening the GGUF options worth benchmarking on consumer hardware.
 - **April 30, 2026:** [Apple said AI and agentic tools helped drive unexpected Mac demand](/news/2026-04-30-apple-mac-ai-agent-demand/). If more users buy Macs for local AI, GUI-first model runners like LM Studio become the easier on-ramp than terminal-only stacks.
-- **June 23, 2026:** Official site and docs still list free home/work use, v1 REST API, OpenAI-compatible Responses and Chat Completions, Anthropic-compatible Messages, MCP support, TypeScript/Python SDKs, `lms` CLI server control, and headless `llmster` daemon installs. The free-for-work announcement also points enterprises with SSO, model/MCP gating, or private collaboration needs to contact sales.
+- **June 25, 2026:** Official site and docs still list free home/work use, v1 REST API, OpenAI-compatible Responses and Chat Completions, Anthropic-compatible Messages, MCP support, TypeScript/Python SDKs, `lms` CLI server control, and headless `llmster` daemon installs. LM Link remains preview-priced rather than a stable paid tier. The free-for-work announcement also points enterprises with SSO, model/MCP gating, or private collaboration needs to contact sales.
 
 ## System Verdict
 
@@ -140,7 +140,7 @@ A desktop application that wraps local open-weight model running in a visual int
 | Home and work use | $0 | Ordinary home and work use, no separate commercial license required |
 | Enterprise | Contact sales | SSO, model/MCP gating, and private collaboration for governed deployments |
 
-Verified 2026-06-23 via [lmstudio.ai](https://lmstudio.ai) and the official free-for-work announcement. The terms shifted in July 2025 to drop the prior "contact us for commercial" gating for ordinary work use; review the [LM Studio Terms of Use](https://lmstudio.ai/app-terms) before redistribution, embedding, or fleet-scale deployment.
+Verified 2026-06-25 via [lmstudio.ai](https://lmstudio.ai), the official free-for-work announcement, and [LM Link](https://lmstudio.ai/link). The terms shifted in July 2025 to drop the prior "contact us for commercial" gating for ordinary work use; review the [LM Studio Terms of Use](https://lmstudio.ai/app-terms) before redistribution, embedding, or fleet-scale deployment.
 
 ## Failure modes
 
@@ -161,7 +161,7 @@ Verified 2026-06-23 via [lmstudio.ai](https://lmstudio.ai) and the official free
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [lmstudio.ai](https://lmstudio.ai), the [LM Studio developer docs](https://lmstudio.ai/docs/api), the [LM Studio REST API docs](https://lmstudio.ai/docs/developer/rest), the [local server docs](https://lmstudio.ai/docs/developer/core/server), the [desktop app terms](https://lmstudio.ai/app-terms), and the [free-for-work announcement](https://lmstudio.ai/blog/free-for-work).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [lmstudio.ai](https://lmstudio.ai), the [LM Studio developer docs](https://lmstudio.ai/docs/api), the [LM Studio REST API docs](https://lmstudio.ai/docs/developer/rest), the [local server docs](https://lmstudio.ai/docs/developer/core/server), [LM Link](https://lmstudio.ai/link), the [desktop app terms](https://lmstudio.ai/app-terms), and the [free-for-work announcement](https://lmstudio.ai/blog/free-for-work).
 
 ## FAQ
 

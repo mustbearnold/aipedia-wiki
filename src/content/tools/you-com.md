@@ -13,8 +13,8 @@ pricing_model: paid
 price_range: "$1-$110+ per 1K calls; $100 free credit; Enterprise custom"
 status: active
 launched: 2020-11
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -42,7 +42,7 @@ facts:
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://you.com/docs/welcome"
     source_label: "You.com API docs"
     source_id: you-com-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: medium
     confidence: high
@@ -60,7 +60,7 @@ facts:
     source: "https://you.com/"
     source_label: "You.com homepage"
     source_id: you-com-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -69,7 +69,7 @@ facts:
     source: "https://you.com/pricing"
     source_label: "You.com pricing"
     source_id: you-com-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -94,6 +94,7 @@ price_history:
     source: https://you.com/pricing
     source_label: Source
     source_id: you-com-official
+    verified_at: 2026-06-25
     note: 1-100 results per call; news search included; $100 free credit at signup
   - date: 2026-05-13
     plan: Contents API
@@ -101,6 +102,7 @@ price_history:
     source: https://you.com/pricing
     source_label: Source
     source_id: you-com-official
+    verified_at: 2026-06-25
     note: Batch URL-to-Markdown or raw HTML; $100 free credit shared with Search
   - date: 2026-05-13
     plan: Research API
@@ -108,6 +110,7 @@ price_history:
     source: https://you.com/pricing
     source_label: Source
     source_id: you-com-official
+    verified_at: 2026-06-25
     note: Five depth tiers (Lite, Standard, Deep, Exhaustive, Frontier); ARI runs inside this product
   - date: 2026-05-13
     plan: Enterprise
@@ -115,6 +118,7 @@ price_history:
     source: https://you.com/pricing
     source_label: Source
     source_id: you-com-official
+    verified_at: 2026-06-25
     note: Custom QPS, annual commitment discounts, SOC 2, zero data retention options, DPA-ready
   - date: 2026-06-04
     plan: Finance Research API
@@ -122,6 +126,7 @@ price_history:
     source: https://you.com/pricing
     source_label: Source
     source_id: you-com-official
+    verified_at: 2026-06-25
     note: New/current pricing row verified for finance-focused research calls, separate from the general Research API.
   - date: 2026-06-05
     plan: Search / Contents / Research APIs
@@ -129,6 +134,7 @@ price_history:
     source: https://you.com/pricing
     source_label: Source
     source_id: you-com-official
+    verified_at: 2026-06-25
     note: Exa comparison refresh verified You.com as the broader grounding-and-research API bundle, not a consumer search-plan replacement.
   - date: 2026-06-06
     plan: Search / Contents / Research / Finance Research APIs
@@ -138,12 +144,21 @@ price_history:
     source_id: you-com-official
     verified_at: 2026-06-06
     note: Kagi and Perplexity comparison refresh reverified You.com as the API-first web-grounding and research lane rather than a consumer search/chat subscription.
+  - date: 2026-06-25
+    plan: Search / Contents / Research / Finance Research APIs
+    price: $5 / $1 / $12 / $110+ per 1K calls or pages
+    source: https://you.com/pricing
+    source_label: You.com pricing
+    source_id: you-com-official
+    verified_at: 2026-06-25
+    note: Live pricing page still lists $100 free credit, Search API $5/1K calls, Contents API $1/1K pages, Research API $12/1K calls, and Finance Research API from $110/1K calls.
   - date: 2026-04-17
     plan: Legacy consumer plans (retired)
     price: Free $0 / Pro $20/mo / Max $200/mo / Enterprise custom
     source: https://you.com/pricing
     source_label: Source
     source_id: you-com-official
+    verified_at: 2026-06-25
     note: Pro and Max consumer subscriptions removed from the pricing page when You.com finished its API pivot
 quick_answer: >-
   You.com finished its pivot. The product is now three APIs: Search ($5/1K calls), Contents ($1/1K pages), and Research ($12/1K calls, with ARI inside as five depth tiers). $100 free credit. Consumer Pro and Max plans are no longer published. Pick it to ground agents or LLMs in fresh, cited web data. Skip it if you wanted a chat UI (Perplexity wins there).
@@ -183,7 +198,7 @@ You.com finished its pivot from consumer AI search to a developer-API platform. 
 | **Pivot status** | Consumer Pro and Max subscriptions removed from the pricing page in 2026 |
 | **Where ARI lives now** | Inside the Research API as the depth-tier ladder |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -221,7 +236,7 @@ Pricing via [you.com/pricing](https://you.com/pricing):
 | Finance Research API | From $110 per 1K calls | Finance-focused research calls for higher-cost research workloads |
 | Enterprise | Custom | Custom QPS, volume and annual discounts, SOC 2, zero retention, DPA-ready |
 
-Prices verified 2026-06-12 via [You.com pricing](https://you.com/pricing). Enterprise quotes come through sales. Annual commitment and high-volume discounts apply on top of pay-as-you-go rates.
+Prices verified 2026-06-25 via [You.com pricing](https://you.com/pricing). Enterprise quotes come through sales. Annual commitment and high-volume discounts apply on top of pay-as-you-go rates.
 
 ## Against the alternatives
 
@@ -244,7 +259,7 @@ Prices verified 2026-06-12 via [You.com pricing](https://you.com/pricing). Enter
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [You.com pricing](https://you.com/pricing), [You.com API docs](https://you.com/docs/welcome), and the [You.com homepage](https://you.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [You.com pricing](https://you.com/pricing), [You.com API docs](https://you.com/docs/welcome), and the [You.com homepage](https://you.com/).
 
 ## FAQ
 

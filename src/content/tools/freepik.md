@@ -7,11 +7,11 @@ category: ai-image
 company: Freepik Company
 url: https://www.freepik.com/ai/image-generator
 pricing_model: freemium
-price_range: "Free; Essential €6/mo annual; Premium €12/mo annual; Premium+ €27/mo annual; Pro €172.50/mo annual; Business and Enterprise custom"
+price_range: "Free; regional annual pricing for Essential, Premium, Premium+, Pro; Business and Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,7 +31,7 @@ facts:
     source: "https://www.freepik.com/ai/image-generator"
     source_label: "Freepik AI Image Generator"
     source_id: freepik-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -40,16 +40,16 @@ facts:
     source: "https://www.freepik.com/ai/docs/plans-and-pricing"
     source_label: "Freepik plans and pricing docs"
     source_id: freepik-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
   pricing_anchor:
-    value: "Magnific, formerly Freepik, now lists annual headline prices of Essential €6/mo, Premium €12/mo, Premium+ €27/mo, and Pro €172.50/mo. Credits are annual rather than monthly: 96K, 240K, 600K, and 4M credits/year respectively. Selected models are labeled unlimited all year, while premium media tools can still consume credits."
+    value: "Magnific, formerly Freepik, now renders plan prices by region. The checked New Zealand/Australia render showed Essential A$9.75/mo annual, Premium A$18.50/mo annual, Premium+ A$45/mo annual, and Pro A$288/mo annual. Credits remain annual rather than monthly: 96K, 240K, 600K, and 4M credits/year respectively. Selected models are labeled unlimited all year, while premium media tools can still consume credits."
     source: "https://www.magnific.com/pricing"
     source_label: "Magnific pricing"
     source_id: freepik-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -58,7 +58,7 @@ facts:
     source: "https://www.freepik.com/ai/image-generator"
     source_label: "Freepik AI Image Generator"
     source_id: freepik-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: medium
@@ -67,7 +67,7 @@ facts:
     source: "https://www.freepik.com/pricing"
     source_label: "Freepik pricing"
     source_id: freepik-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -95,6 +95,14 @@ price_history:
     source_id: freepik-pricing
     verified_at: 2026-06-23
     note: "Rechecked current Magnific pricing surface. Pricing now emphasizes annual credits: Essential 96K/year, Premium 240K/year, Premium+ 600K/year, and Pro 4M/year. Credits are valid for 1 year, and selected models are labeled unlimited all year."
+  - date: 2026-06-25
+    plan: "Essential / Premium / Premium+ / Pro"
+    price: "Region-rendered; A$9.75 / A$18.50 / A$45 / A$288 per month billed annually in checked New Zealand/Australia render"
+    source: "https://www.magnific.com/pricing/6374291"
+    source_label: "Magnific pricing"
+    source_id: freepik-pricing
+    verified_at: 2026-06-25
+    note: "Primary page renders localized currency. Credit pools remain 96K, 240K, 600K, and 4M credits/year, with credits valid for 1 year and no monthly resets."
   - date: 2026-04-17
     plan: "Premium"
     price: "$12/mo"
@@ -143,7 +151,7 @@ No [Midjourney](/tools/midjourney/) integration. Magnific is positioned as the "
 >
 > **Skip it if you want the best output from any single model.** [Midjourney](/tools/midjourney/) still wins on aesthetic ceiling and is not integrated. [Flux](/tools/flux/) direct gives developers the full public API without credit metering. [Ideogram](/tools/ideogram/) direct is safer for dense text-in-image work, especially after its 2026 plan restructure.
 >
-> **Who pays which tier:** Free for testing, Essential €6/mo annual for AI tools with commercial rights, Premium €12/mo annual for AI plus full premium stock content, Premium+ €27/mo annual for broader music rights and 600K annual credits, Pro €172.50/mo annual for 4M annual credits, merchandise rights, early access, and heavier agency workloads.
+> **Who pays which tier:** Free for testing, Essential for AI tools with commercial rights, Premium for AI plus full premium stock content, Premium+ for broader music rights and 600K annual credits, and Pro for 4M annual credits, merchandise rights, early access, and heavier agency workloads. Check your region's rendered currency before buying.
 
 ## Key Facts
 
@@ -160,7 +168,7 @@ No [Midjourney](/tools/midjourney/) integration. Magnific is positioned as the "
 | **Video, audio, 3D** | Native generation surfaces on the post-rebrand platform · share the unified credit balance |
 | **Free tier** | Limited access, up to 20 AI image generations per day with the in-house model, personal use/attribution |
 
-Every data point was verified against vendor sources on 2026-06-23. See Sources.
+Every data point was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -189,19 +197,19 @@ The moat is bundling, not model leadership. Its value sits in commercial-plan li
 
 ## Pricing
 
-Subscription pricing via [Magnific pricing](https://www.magnific.com/pricing). Annual headline prices are shown in euros, exclude VAT and local taxes, and regional pricing can vary.
+Subscription pricing via [Magnific pricing](https://www.magnific.com/pricing). The page renders localized currency, excludes VAT and local taxes, and regional pricing can vary. The checked New Zealand/Australia render on 2026-06-25 showed Australian-dollar annual rates; EU and US visitors may see different currency.
 
 | Plan | Price | Credits | What you get |
 |------|-------|---------|--------------|
 | Free | €0 | Limited daily use | Testing and free assets |
-| Essential | €6/mo annual | 96K/year | AI tools, commercial AI license, API credit usage, MCP connection, and 250M+ assets |
-| Premium | €12/mo annual | 240K/year | Premium stock content, commercial AI license, API credit usage, MCP connection |
-| Premium+ | €27/mo annual | 600K/year | Commercial AI license plus music rights, Magnific and Topaz upscalers, selected models unlimited all year |
-| Pro | €172.50/mo annual | 4M/year | Merchandise License, high annual credit pool, early access, heavier agency workflow |
+| Essential | Regional annual price | 96K/year | AI tools, commercial AI license, API credit usage, MCP connection, and 250M+ assets |
+| Premium | Regional annual price | 240K/year | Premium stock content, commercial AI license, API credit usage, MCP connection |
+| Premium+ | Regional annual price | 600K/year | Commercial AI license plus music rights, Magnific and Topaz upscalers, selected models unlimited all year |
+| Pro | Regional annual price | 4M/year | Merchandise License, high annual credit pool, early access, heavier agency workflow |
 | Business | Custom | Team allocation | Shared credit pools and team management |
 | Enterprise | Custom | Custom allocation | Unlimited seats, compliance, SSO, dedicated support |
 
-*Prices and plan inclusions verified 2026-06-23 against [Magnific pricing](https://www.magnific.com/pricing). Selected models are labeled unlimited all year, but premium media tools, training, and advanced actions can still consume credits.*
+*Prices and plan inclusions verified 2026-06-25 against [Magnific pricing](https://www.magnific.com/pricing). Selected models are labeled unlimited all year, but premium media tools, training, and advanced actions can still consume credits.*
 
 ## Against the alternatives
 
@@ -231,12 +239,13 @@ Subscription pricing via [Magnific pricing](https://www.magnific.com/pricing). A
 ## Recent changes
 
 - **2026-06-05:** Freepik docs rechecked. Public plan names remained Free, Essential, Premium, Premium+, Pro, Business, and Enterprise. Premium+ and Pro included unlimited generation with most image models, while premium models and video/audio/advanced tools could still consume credits. Treat this as a historical snapshot after the June 23 Magnific pricing recheck.
-- **2026-06-23:** Current Magnific pricing surface lists Essential €6/mo annual, Premium €12/mo annual, Premium+ €27/mo annual, and Pro €172.50/mo annual, with annual credits rather than monthly resets. Treat older USD Freepik plan snapshots as historical.
+- **2026-06-25:** Current Magnific pricing renders by region. The checked New Zealand/Australia render showed Essential A$9.75/mo annual, Premium A$18.50/mo annual, Premium+ A$45/mo annual, and Pro A$288/mo annual, with annual credits rather than monthly resets. Treat older USD and euro Freepik plan snapshots as historical unless your live region shows those currencies.
+- **2026-06-23:** Current Magnific pricing surface listed Essential €6/mo annual, Premium €12/mo annual, Premium+ €27/mo annual, and Pro €172.50/mo annual, with annual credits rather than monthly resets. Superseded by the June 25 region-rendered check.
 - **2026-05-13:** Pricing reconfirmed at carry-over levels (Free, Essential $5.75, Premium $12, Premium+ $24.50, Pro $158.33). This is now a historical snapshot because Magnific pricing has moved to annual euro pricing and annual credits.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Magnific pricing](https://www.magnific.com/pricing), [Freepik AI Image Generator](https://www.freepik.com/ai/image-generator), and the [Freepik Enterprise page](https://www.freepik.com/enterprise).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Magnific pricing](https://www.magnific.com/pricing), [Freepik AI Image Generator](https://www.freepik.com/ai/image-generator), and the [Freepik Enterprise page](https://www.freepik.com/enterprise).
 
 ## FAQ
 
@@ -244,7 +253,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Treat the buyer surface as Freepik AI Suite / Magnific. Magnific is now the prominent current AI product and pricing surface, especially for upscaling and generative creative work, while Freepik remains the stock-asset brand buyers recognize. Do not assume every URL, plan, invoice, or support page uses the same name.
 
 **Is the platform free?**
-Yes, with limits. The free tier offers limited basic AI tools. Paid annual plans start at Essential €6/mo, billed annually, and unlock commercial AI licensing, annual credits, and broader model access.
+Yes, with limits. The free tier offers limited basic AI tools. Paid annual plans start at Essential, render prices by region, and unlock commercial AI licensing, annual credits, and broader model access.
 
 **Which AI models are included?**
 Freepik exposes a multi-model AI image shelf, and the live pricing page lists current model-level credit or unlimited coverage. The exact model names change quickly, so verify the live table before buying for one required model.

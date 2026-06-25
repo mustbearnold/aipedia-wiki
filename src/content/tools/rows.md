@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$79+/month"
 status: active
 launched: 2021-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://rows.com/ai
     source_label: Rows AI Analyst
     source_id: rows-ai
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-10'
@@ -42,7 +42,7 @@ facts:
     source: https://rows.com/pricing
     source_label: Rows pricing
     source_id: rows-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-10'
@@ -52,7 +52,7 @@ facts:
     source: https://rows.com/docs
     source_label: Rows docs
     source_id: rows-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-10'
@@ -61,7 +61,7 @@ facts:
     source: https://rows.com/pricing
     source_label: Rows pricing
     source_id: rows-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-10'
@@ -71,7 +71,7 @@ facts:
     source: https://rows.com/
     source_label: Rows official site
     source_id: rows-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-10'
@@ -92,12 +92,21 @@ seo_title: "Rows: Features, Pricing & Review (June 2026)"
 meta_description: "Rows is an AI-native cloud spreadsheet with AI Analyst, =AI() cells, Python blocks, and 50+ connectors. Plans Free, Plus $8/user, Pro $79 + $8/user, Enterprise custom. Rows joined Superhuman; policy handover starts June 16."
 author: "aipedia.wiki Editorial"
 price_history:
+  - date: 2026-06-25
+    plan: "Plus / Pro"
+    price: "$8/user/mo; $79/mo base + $8/user"
+    source: "https://rows.com/pricing"
+    source_label: "Rows pricing"
+    source_id: rows-pricing
+    verified_at: 2026-06-25
+    note: "Pricing remains unchanged. Rows still presents Free, Plus, Pro, and Enterprise, with Superhuman privacy policy and terms applying as of June 16."
   - date: 2026-04-17
     plan: "Plus"
     price: "$8/user/mo"
     source: "https://rows.com/pricing"
     source_label: "Source"
     source_id: rows-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged on annual $6/user/mo"
   - date: 2026-04-17
     plan: "Pro"
@@ -105,6 +114,7 @@ price_history:
     source: "https://rows.com/pricing"
     source_label: "Source"
     source_id: rows-pricing
+    verified_at: 2026-06-25
     note: "Verified. Annual $59 base + $6/user"
   - date: 2026-05-13
     plan: "Plus"
@@ -112,6 +122,7 @@ price_history:
     source: "https://rows.com/pricing"
     source_label: "Source"
     source_id: rows-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged. Annual $6/user. 200 AI tasks/mo, 10 integration accounts, 50K API calls."
   - date: 2026-05-13
     plan: "Pro"
@@ -119,6 +130,7 @@ price_history:
     source: "https://rows.com/pricing"
     source_label: "Source"
     source_id: rows-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged. Annual $59 + $6/user. 1,000 AI tasks/mo, 100 integration accounts, 1M API calls."
   - date: 2026-06-10
     plan: "Plus"
@@ -126,6 +138,7 @@ price_history:
     source: "https://rows.com/pricing"
     source_label: "Source"
     source_id: rows-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged. Rows pricing lists Plus at $8/user/month, 200 AI tasks/month, daily Data Table automation, 10 integration accounts, and up to 10 guests."
   - date: 2026-06-10
     plan: "Pro"
@@ -133,6 +146,7 @@ price_history:
     source: "https://rows.com/pricing"
     source_label: "Source"
     source_id: rows-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged. Rows pricing lists Pro at $79/month plus $8/month per user, 1,000 AI tasks/month, minute-level Data Table automation, 100 integration accounts, and up to 200 guests."
 ---
 
@@ -166,7 +180,7 @@ Rows joined Superhuman in 2026 and still ships as a standalone product at [rows.
 | **Pro AI cap** | 1,000 AI tasks per month |
 | **Ownership** | Joined Superhuman in 2026, still sold standalone |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -204,7 +218,7 @@ Subscription pricing via [rows.com/pricing](https://rows.com/pricing). Annual bi
 | Pro | $79 + $8/user | $59 + $6/user | 1,000 | Minute refresh | 100 accounts | 1M/mo | Small teams, scheduled automations |
 | Enterprise | Custom | Custom | Unlimited | Minute refresh | Unlimited | Advanced | SSO, custom AI models, compliance |
 
-*Prices verified 2026-06-12 via [rows.com/pricing](https://rows.com/pricing). Rows' pricing page says Superhuman privacy policy and terms apply as of June 16 following the 2026 acquisition.*
+*Prices verified 2026-06-25 via [rows.com/pricing](https://rows.com/pricing). Rows' pricing page says Superhuman privacy policy and terms apply as of June 16 following the 2026 acquisition.*
 
 ## Against the alternatives
 
@@ -231,13 +245,14 @@ Subscription pricing via [rows.com/pricing](https://rows.com/pricing). Annual bi
 
 ## Recent changes
 
+- **June 25, 2026:** Pricing verified unchanged across Free, Plus, Pro, and Enterprise. Rows remains sold standalone at rows.com, and the pricing page still points buyers to Superhuman privacy policy and terms.
 - **June 2026:** Pricing verified unchanged across all four tiers. The pricing page still shows Free, Plus, Pro, and Enterprise, and says Superhuman privacy policy and terms apply as of June 16.
 - **May 2026:** Pricing verified unchanged across all four tiers. Privacy policy and terms began moving toward Superhuman governance following the acquisition.
 - **2026:** Rows joined Superhuman; product remains sold standalone at rows.com with the same Free/Plus/Pro/Enterprise structure.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [rows.com/pricing](https://rows.com/pricing), [rows.com/ai](https://rows.com/ai), and [rows.com](https://rows.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [rows.com/pricing](https://rows.com/pricing), [rows.com/ai](https://rows.com/ai), and [rows.com](https://rows.com).
 
 ## FAQ
 
@@ -257,7 +272,7 @@ Rows ships the AI cell and 50+ live SaaS connectors as native, not addons. Sheet
 No. Rows is browser-only with no desktop or mobile app for full editing. Desktop Excel remains the pick for offline modeling.
 
 **Did Rows get acquired?**
-Rows joined Superhuman in 2026. The product is still sold standalone at [rows.com](https://rows.com) with unchanged pricing. Rows' pricing page says Superhuman privacy policy and terms apply as of June 16. Long-term roadmap direction may shift as integration progresses. Verified via vendor site on 2026-06-12.
+Rows joined Superhuman in 2026. The product is still sold standalone at [rows.com](https://rows.com) with unchanged pricing. Rows' pricing page says Superhuman privacy policy and terms apply as of June 16. Long-term roadmap direction may shift as integration progresses. Verified via vendor site on 2026-06-25.
 
 **What are Data Tables?**
 Data Tables are live-synced tables pulled from SaaS tools on a schedule. Free refreshes manually, Plus refreshes daily, Pro refreshes every minute, and Enterprise matches Pro with advanced API endpoints.

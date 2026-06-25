@@ -12,8 +12,8 @@ pricing_model: open-source
 price_range: "Free/open weights; Yi-Lightning historical ~$0.14/M; WorldWise custom"
 status: active
 launched: 2023-11
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: irregular
 affiliate:
   has_program: false
@@ -28,11 +28,11 @@ scores:
   longevity: 4
 facts:
   best_for:
-    value: "Researchers using Yi as a frozen bilingual baseline, teams already running Yi-Coder/Yi-1.5, and enterprises evaluating 01.AI's WorldWise/WanZhi multi-agent platform. 01.AI's June 2026 site still markets Yi-Lightning and Yi open models while leading with WorldWise 2.5 and Super Employee enterprise-agent messaging."
+    value: "Researchers using Yi as a frozen bilingual baseline, teams already running Yi-Coder/Yi-1.5, and enterprises evaluating 01.AI's WorldWise/WanZhi multi-agent platform. 01.AI's June 2026 site still keeps Yi open models discoverable, while English-language WorldWise 2.5 messaging was not consistently visible in the live page text during this refresh."
     source: "https://www.01.ai/"
     source_label: "01.AI company site"
     source_id: yi-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -40,22 +40,22 @@ facts:
     source: "https://huggingface.co/01-ai"
     source_label: "Hugging Face 01-ai"
     source_id: yi-huggingface
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
   watch_out_for:
-    value: "01.AI's public framing now puts WorldWise/WanZhi 2.5, multi-agent enterprise deployments, and Super Employee agent products ahead of new Yi releases. Buyers should verify model-specific license terms and direct API availability before building new production workloads on Yi."
+    value: "01.AI's public GitHub and model pages remain centered on older Yi-family releases and model-specific license paths. Buyers should verify model-specific license terms and direct API availability before building new production workloads on Yi."
     source: "https://www.01.ai/"
     source_label: "01.AI company site"
     source_id: yi-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
 tags: [open-source, llm, kai-fu-lee, chinese-ai, yi-34b, yi-lightning, open-weight, 01ai, worldwise]
 seo_title: "Yi (01.AI): Frozen Models, WorldWise 2.5 Pivot & Review (June 2026)"
-meta_description: "Yi is 01.AI's open-weight LLM family. The company now leads with WorldWise/WanZhi 2.5 enterprise agents while Yi remains available through public model pages. Verified June 12, 2026."
+meta_description: "Yi is 01.AI's open-weight LLM family. Yi remains available through public model pages, while current direct API pricing and new Yi roadmap signals are unclear. Verified June 25, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - researchers using Yi-34B-200K for long-context experiments on fixed weights
@@ -74,11 +74,11 @@ quick_answer: >-
 
 01.AI's open-weight LLM family, developed in Beijing by Kai-Fu Lee's lab starting March 2023. 01.AI achieved unicorn status within eight months and released Yi-34B, Yi-Lightning, and Yi-Coder across 2023 and 2024. Yi-Lightning briefly ranked joint third on Chatbot Arena at its October 2024 launch.
 
-**Status as of June 2026: maintenance Yi, headline WorldWise/WanZhi.** 01.AI's public site still markets Yi-Lightning as a "Global SOTA Mixture-of-Experts LLM" and keeps Yi open model variants listed, but the strategic headline is the WorldWise enterprise LLM platform and the Chinese WanZhi site, now at version 2.5. The public GitHub news stream still centers 2024 Yi releases, while the 2026 company site highlights multi-agent enterprise deployment and Super Employee agent products. Yi-2 is not announced.
+**Status as of June 2026: maintenance Yi, active company uncertain from public English pages.** 01.AI's public model page still keeps Yi open model variants listed, but the public GitHub news stream remains centered on 2024 Yi releases. During the June 25 refresh, AiPedia could verify Yi model availability on 01.AI, Hugging Face, and GitHub, but not a fresh Yi-2 roadmap or a current first-party Yi API price. Treat WorldWise/WanZhi claims as sales-led or region-rendered unless the buyer has current 01.AI materials.
 
 ## System Verdict
 
-> **Pick Yi for narrow legacy use cases or as the on-ramp to WorldWise/WanZhi.** Yi-34B-200K still works as a fixed baseline for research. Yi-Coder and Yi-1.5 remain available through public model paths for teams that have already integrated them. Yi-Lightning's official direct pricing is no longer surfaced on the June 2026 pages AiPedia checked, so treat the old ~$0.14/M-token figure as historical unless a gateway quote confirms it. Enterprises that want 01.AI's WorldWise/WanZhi 2.5 multi-agent platform can evaluate that directly.
+> **Pick Yi for narrow legacy use cases or as the on-ramp to 01.AI sales conversations.** Yi-34B-200K still works as a fixed baseline for research. Yi-Coder and Yi-1.5 remain available through public model paths for teams that have already integrated them. Yi-Lightning's official direct pricing is no longer surfaced on the June 2026 pages AiPedia checked, so treat the old ~$0.14/M-token figure as historical unless a gateway quote confirms it.
 >
 > **Skip it for new frontier production.** The family receives no major pre-training updates. [DeepSeek](/tools/deepseek/) delivers what Yi-Lightning promised with an active roadmap. [Qwen](/tools/qwen/) offers a broader open-weight family under Apache 2.0 with monthly releases. [Kimi](/tools/kimi/) K2.6 lands the open-weight agentic baseline that 01.AI has stepped back from.
 >
@@ -89,17 +89,17 @@ quick_answer: >-
 | | |
 |---|---|
 | **Status** | Yi family in maintenance since the March 2025 pre-training pause |
-| **Current focus of 01.AI** | WorldWise/WanZhi enterprise LLM platform, version 2.5 in 2026 |
+| **Current focus of 01.AI** | Enterprise AI platform and applications; exact WorldWise/WanZhi availability should be verified through current 01.AI sales materials |
 | **Highest-performing Yi model** | Yi-Lightning (October 2024) |
 | **Flagship open-weight** | Yi-34B-200K (4K base, 200K extended context) |
 | **Coding models** | Yi-Coder-9B and Yi-Coder-1.5B public model paths |
-| **Enterprise platform** | WorldWise/WanZhi 2.5 multi-agent system, "Super Employee" agent products, CEO-led go-to-market |
+| **Enterprise platform** | WorldWise/WanZhi materials have appeared in prior 2026 checks, but live public English-page confirmation was constrained during the June 25 refresh |
 | **Yi-Lightning pricing** | Historical ~$0.14/M input and output; no current direct 01.AI price surfaced in June 2026 source check |
 | **Third-party access** | OpenRouter, AIMLAPI, other aggregators |
 | **License posture** | GitHub now shows Apache-2.0 license files for Yi-1.5; 01.AI site still routes commercial-license applications, so confirm model-specific terms |
 | **No Yi-2 announced** | Public 01.AI and GitHub pages do not show a new Yi-2 release |
 
-Every data point above was verified on 2026-06-12. See Sources.
+Every data point above was verified on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -139,7 +139,7 @@ Yi-Lightning pricing depends on third-party aggregators unless 01.AI sales confi
 | Yi-Lightning (third-party gateways) | Varies | OpenRouter, AIMLAPI, other aggregators |
 | WorldWise/WanZhi 2.5 enterprise platform | Custom | Multi-agent platform; CEO-led sales motion in 2026 |
 
-*Prices verified 2026-06-12 via [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Hugging Face 01-ai](https://huggingface.co/01-ai), [Yi GitHub](https://github.com/01-ai/Yi), and [SCMP coverage of 01.AI's enterprise pivot](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source). Direct 01.AI API access post-pivot remains uncertain; third-party gateways are the practical path for Yi-Lightning unless sales confirms otherwise, while WorldWise/WanZhi 2.5 is a sales-led enterprise platform.*
+*Prices verified 2026-06-25 via [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Hugging Face 01-ai](https://huggingface.co/01-ai), [Yi GitHub](https://github.com/01-ai/Yi), and [SCMP coverage of 01.AI's enterprise pivot](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source). Direct 01.AI API access post-pivot remains uncertain; third-party gateways are the practical path for Yi-Lightning unless sales confirms otherwise, while WorldWise/WanZhi claims should be confirmed through current sales materials.*
 
 ## Against the alternatives
 
@@ -165,7 +165,7 @@ Yi-Lightning pricing depends on third-party aggregators unless 01.AI sales confi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Longevity is scored low to reflect the frozen-model status of the Yi family, even though 01.AI as a company remains operational via WorldWise/WanZhi 2.5. Last verified 2026-06-12 against [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/), [SCMP interview with Kai-Fu Lee](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source), [Hugging Face 01-ai](https://huggingface.co/01-ai), and [Yi GitHub](https://github.com/01-ai/Yi).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Longevity is scored low to reflect the frozen-model status of the Yi family, even though 01.AI as a company remains operational. Last verified 2026-06-25 against [01.AI company site](https://www.01.ai/), [01.AI Yi models](https://www.01.ai/yi-models), [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/), [SCMP interview with Kai-Fu Lee](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source), [Hugging Face 01-ai](https://huggingface.co/01-ai), and [Yi GitHub](https://github.com/01-ai/Yi).
 
 ## FAQ
 
@@ -186,13 +186,13 @@ Only if you specifically need a frozen-weight research baseline or already have 
 
 ## Sources
 
-- [01.AI company site](https://www.01.ai/): WorldWise 2.5 positioning and Yi-Lightning marketing, verified 2026-06-12
-- [01.AI Yi models](https://www.01.ai/yi-models): Yi-Lightning, Yi-1.5, Yi-VL, and Yi-Coder public model positioning, verified 2026-06-12
-- [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/): Chinese WanZhi enterprise-agent positioning and January 5, 2026 WanZhi 2.5 item, verified 2026-06-12
-- [SCMP: Kai-Fu Lee bets on DeepSeek](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source): strategic reversal interview, verified 2026-06-12
-- [Hugging Face 01-ai](https://huggingface.co/01-ai): current public model availability, verified 2026-06-12
-- [Yi open-source GitHub](https://github.com/01-ai/Yi): repo license, release-news, and community status, verified 2026-06-12
-- [Yi: Open Foundation Models paper](https://arxiv.org/abs/2403.04652): original model architecture and training, verified 2026-06-12
+- [01.AI company site](https://www.01.ai/): company status and region-rendered public site constraints, verified 2026-06-25
+- [01.AI Yi models](https://www.01.ai/yi-models): Yi-Lightning, Yi-1.5, Yi-VL, and Yi-Coder public model positioning, verified 2026-06-25
+- [Lingyiwanwu/WanZhi site](https://www.lingyiwanwu.com/): Chinese enterprise-agent positioning, verified 2026-06-25
+- [SCMP: Kai-Fu Lee bets on DeepSeek](https://www.scmp.com/tech/tech-trends/article/3303403/ai-entrepreneur-lee-kai-fu-bets-his-start-ups-future-deepseek-and-open-source): strategic reversal interview, verified 2026-06-25
+- [Hugging Face 01-ai](https://huggingface.co/01-ai): current public model availability, verified 2026-06-25
+- [Yi open-source GitHub](https://github.com/01-ai/Yi): repo license, release-news, and community status, verified 2026-06-25
+- [Yi: Open Foundation Models paper](https://arxiv.org/abs/2403.04652): original model architecture and training, verified 2026-06-25
 
 ## Related
 
@@ -200,4 +200,4 @@ Only if you specifically need a frozen-weight research baseline or already have 
 
 ## Review History
 
-- **2026-06-10:** Re-verified 01.AI's WorldWise/WanZhi 2.5 enterprise-agent positioning, Yi model page, Hugging Face organization, GitHub license/release-news posture, and direct-pricing uncertainty.
+- **2026-06-25:** Re-verified 01.AI company site, Yi model page, Hugging Face organization, GitHub license/release-news posture, and direct-pricing uncertainty. Softened WorldWise/WanZhi 2.5 claims where the live public English pages were region-rendered or not consistently visible.

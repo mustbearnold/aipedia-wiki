@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / Enterprise custom / third-party hosting varies"
 status: active
 launched: 2023-11
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://openwebui.com"
     source_label: "openwebui.com"
     source_id: open-webui-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.openwebui.com/enterprise/"
     source_label: "docs.openwebui.com/enterprise"
     source_id: open-webui-enterprise
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.openwebui.com/enterprise/"
     source_label: "docs.openwebui.com/enterprise"
     source_id: open-webui-enterprise
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-08
     volatility: medium
     confidence: high
@@ -60,6 +60,7 @@ price_history:
     source: "https://openwebui.com/"
     source_label: "Open WebUI official site"
     source_id: open-webui-official
+    verified_at: 2026-06-25
     note: "Verified official self-hosted positioning, enterprise SSO/RBAC/audit-log lane, v0.9.6 release status, and avoided treating third-party hosting as first-party pricing."
 seo_title: "Open WebUI Review: Self-Hosted AI Chat, Pricing & Enterprise Fit (June 2026)"
 meta_description: "Open WebUI is a self-hosted AI interface for local and cloud models. June 2026 check: v0.9.6 release, free self-hosted path, Enterprise custom, third-party hosting varies."
@@ -74,7 +75,7 @@ not_best_for:
   - non-technical individuals (Jan.ai or LM Studio are easier)
   - production workflows without a sysadmin on staff
 quick_answer: >-
-  Open WebUI is a self-hosted AI interface and RAG stack for teams that want local Ollama workflows, OpenAI-compatible model access, Python extensibility, and infrastructure control. The June 8, 2026 check found v0.9.6 as the latest GitHub release, the official site claiming 290M downloads, 423K community members, and 141K GitHub stars, and Enterprise positioned around SSO, RBAC, audit logs, support, and full control over data and infrastructure. Pick it for self-hosted team chat. Skip it if you want hands-off SaaS.
+  Open WebUI is a self-hosted AI interface and RAG stack for teams that want local Ollama workflows, OpenAI-compatible model access, Python extensibility, and infrastructure control. The June 25, 2026 check found v0.9.6 as the latest GitHub release, the official license page preserving a free internal self-hosted path with branding conditions for larger deployments, and Enterprise positioned around SSO, RBAC, audit logs, support, and full control over data and infrastructure. Pick it for self-hosted team chat. Skip it if you want hands-off SaaS.
 ---
 
 # Open WebUI
@@ -97,12 +98,12 @@ A self-hosted AI interface for local and cloud models. Pair it with [Ollama](/to
 | **Latest release** | v0.9.6 (June 1, 2026) |
 | **Self-hosted cost** | $0 software path plus your infrastructure, model/API, storage, backup, and admin costs |
 | **Enterprise** | Custom; official enterprise page emphasizes SSO, RBAC, audit logs, support, full control over data/infrastructure/roadmap, and customer deployments |
-| **Official scale signal** | 290M downloads, 423K community members, 141K GitHub stars claimed on the official site; GitHub API showed about 140.6K stars on June 8, 2026 |
+| **Official scale signal** | Official site publishes community/download scale claims; GitHub showed about 143k stars on June 25, 2026 |
 | **LLM backends** | Ollama/local models and OpenAI-compatible APIs; verify each model/provider before assuming capability |
 | **RAG capabilities** | Knowledge-base workflows, retrieval integrations, and sync tooling; final quality depends on setup |
 | **Deployment** | Docker, docker-compose, Kubernetes, VPS |
 
-Verified 2026-06-12 via [openwebui.com](https://openwebui.com), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
+Verified 2026-06-25 via [openwebui.com](https://openwebui.com), [Open WebUI license](https://openwebui.com/license/), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
 
 ## When to pick Open WebUI
 
@@ -127,7 +128,7 @@ Verified 2026-06-12 via [openwebui.com](https://openwebui.com), [docs.openwebui.
 | Third-party hosting | Varies | Hosting partners and marketplaces may offer one-click deploys; verify live provider pricing before buying |
 | Enterprise | Custom | SSO, RBAC, audit logs, enterprise support, deployment/data control, and commercial/license-sensitive deployments |
 
-Verified 2026-06-12 via [openwebui.com](https://openwebui.com) and [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/). AiPedia does not treat third-party hosting prices as first-party Open WebUI pricing.
+Verified 2026-06-25 via [openwebui.com](https://openwebui.com), [Open WebUI license](https://openwebui.com/license/), and [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/). AiPedia does not treat third-party hosting prices as first-party Open WebUI pricing.
 
 ## Failure modes
 
@@ -149,7 +150,7 @@ Verified 2026-06-12 via [openwebui.com](https://openwebui.com) and [docs.openweb
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [openwebui.com](https://openwebui.com/), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and the [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [openwebui.com](https://openwebui.com/), [Open WebUI license](https://openwebui.com/license/), [docs.openwebui.com/enterprise](https://docs.openwebui.com/enterprise/), and the [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6).
 
 ## FAQ
 
@@ -167,9 +168,10 @@ Jan is a desktop app for one user. Open WebUI is a server app for a team. Differ
 
 ## Sources
 
-- [Open WebUI official site](https://openwebui.com/) (verified 2026-06-12)
-- [Open WebUI Enterprise docs](https://docs.openwebui.com/enterprise/) (verified 2026-06-12)
-- [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6) (verified 2026-06-12)
+- [Open WebUI official site](https://openwebui.com/) (verified 2026-06-25)
+- [Open WebUI license](https://openwebui.com/license/) (verified 2026-06-25)
+- [Open WebUI Enterprise docs](https://docs.openwebui.com/enterprise/) (verified 2026-06-25)
+- [Open WebUI v0.9.6 release notes](https://github.com/open-webui/open-webui/releases/tag/v0.9.6) (verified 2026-06-25)
 
 ## Related
 

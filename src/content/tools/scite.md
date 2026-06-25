@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$20-$50/month; organization/developer custom"
 status: active
 launched: 2018-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://scite.ai/pricing"
     source_label: "scite.ai pricing"
     source_id: scite-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-09-06
@@ -48,7 +48,7 @@ facts:
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -66,14 +66,14 @@ facts:
     source: "https://scite.ai"
     source_label: "scite.ai"
     source_id: scite-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-09-06
 tags: [citations, academic-research, peer-review, literature-review, evidence, smart-citations]
 seo_title: "Scite.ai: Smart Citations Review & Pricing (June 2026)"
 meta_description: >-
-  Scite classifies 1.6B+ citations as Supporting, Contrasting, or Mentioning. Basic $20/mo, Pro $50/mo, Organization and Developer custom. Verified June 12, 2026.
+  Scite classifies 1.6B+ citations as Supporting, Contrasting, or Mentioning. Basic $20/mo, Pro $50/mo, Organization and Developer custom. Verified June 25, 2026.
 author: "aipedia.wiki Editorial"
 quick_answer: >-
   Scite classifies citation contexts as Supporting, Contrasting, or Mentioning across 1.6B+ indexed citations. The Assistant and search tools are grounded in Scite's scholarly corpus. Pick it for credibility checks and systematic reviews. Skip it for casual browsing or humanities-heavy fields.
@@ -93,6 +93,7 @@ price_history:
     source: "https://scite.ai/pricing"
     source_label: "Scite pricing"
     source_id: scite-pricing
+    verified_at: 2026-06-25
     note: "Older Personal framing verified before Scite's Basic/Pro packaging refresh."
   - date: 2026-05-13
     plan: "Basic"
@@ -100,6 +101,7 @@ price_history:
     source: "https://scite.ai/pricing"
     source_label: "Scite pricing"
     source_id: scite-pricing
+    verified_at: 2026-06-25
     note: "Includes Scite Assistant, Full-Text Search, dashboards, citation reports, alerts, and 250 MCP credits per month."
   - date: 2026-05-13
     plan: "Pro"
@@ -107,6 +109,7 @@ price_history:
     source: "https://scite.ai/pricing"
     source_label: "Scite pricing"
     source_id: scite-pricing
+    verified_at: 2026-06-25
     note: "Adds patents in Search and Assistant, MCP access to more datasets, and 2,500 MCP credits per month."
   - date: 2026-06-04
     plan: "Basic and Pro"
@@ -114,6 +117,7 @@ price_history:
     source: "https://scite.ai/pricing"
     source_label: "Scite pricing"
     source_id: scite-pricing
+    verified_at: 2026-06-25
     note: "Reverified Basic at $20/mo, Pro at $50/mo, and Organization/Developer as custom-priced."
   - date: 2026-06-06
     plan: "Basic and Pro"
@@ -121,7 +125,16 @@ price_history:
     source: "https://scite.ai/pricing"
     source_label: "Scite pricing"
     source_id: scite-pricing
+    verified_at: 2026-06-25
     note: "Reverified Basic at $20/mo, Pro at $50/mo, Organization and Developer as custom-priced, and a 7-day free trial."
+  - date: 2026-06-25
+    plan: "Basic and Pro"
+    price: "$20-$50/mo"
+    source: "https://scite.ai/pricing"
+    source_label: "Scite pricing"
+    source_id: scite-pricing
+    verified_at: 2026-06-25
+    note: "Live pricing snippet still lists Basic with 250 MCP credits/month, Pro at $50/month with 2,500 MCP credits/month, Organization and Developer paths as custom, and a 7-day free trial."
 ---
 
 # Scite
@@ -180,7 +193,7 @@ The moat is the classified database itself. Building it required years of NLP tr
 
 ## Pricing
 
-Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing), verified June 12, 2026.
+Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing), verified June 25, 2026.
 
 | Plan | Price | Key Access |
 |------|-------|-----------|
@@ -189,7 +202,7 @@ Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing), verified 
 | Organization | Custom | Domain/IP/email access, API and MCP access, volume pricing, analytics, SSO, exports, support |
 | Developer | Custom | Credit-based API and MCP access, with tiered pricing for high-volume usage |
 
-*Prices verified 2026-06-12 via [scite.ai/pricing](https://scite.ai/pricing). Scite says new users can start a 7-day free trial. Organization and Developer pricing require contacting Scite.*
+*Prices verified 2026-06-25 via [scite.ai/pricing](https://scite.ai/pricing). Scite says new users can start a 7-day free trial. Organization and Developer pricing require contacting Scite.*
 
 ## Against the alternatives
 
@@ -214,7 +227,7 @@ Subscription pricing via [scite.ai/pricing](https://scite.ai/pricing), verified 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [scite.ai](https://scite.ai) and [scite pricing](https://scite.ai/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-25 against [scite.ai](https://scite.ai) and [scite pricing](https://scite.ai/pricing).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free"
 status: active
 launched: 2015-11
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -39,16 +39,16 @@ facts:
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Free for the core scholar search product. Most API endpoints are public but rate-limited; some endpoints require an API key and authenticated users can receive higher limits."
+    value: "Free for the core scholar search product. The API overview describes Academic Graph, Recommendations, and Datasets services; most endpoints are public but rate-limited, and some endpoints require an API key or authenticated access."
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://www.semanticscholar.org/"
     source_label: "Semantic Scholar homepage"
     source_id: semantic-scholar-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.semanticscholar.org/product/api"
     source_label: "Semantic Scholar API"
     source_id: semantic-scholar-api
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-06
     volatility: medium
     confidence: medium
@@ -94,7 +94,7 @@ price_history:
     source: "https://www.semanticscholar.org"
     source_label: "Source"
     source_id: semantic-scholar-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Verified fully free. No paid tier exists."
   - date: 2026-06-04
     plan: "Free"
@@ -102,7 +102,7 @@ price_history:
     source: "https://www.semanticscholar.org/about"
     source_label: "Source"
     source_id: semantic-scholar-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Re-verified. Core Semantic Scholar search remains free; API access is free but rate-limited and some endpoints require an API key."
   - date: 2026-06-06
     plan: "Free"
@@ -112,13 +112,21 @@ price_history:
     source_id: semantic-scholar-pricing
     verified_at: 2026-06-12
     note: "Reverified free core search. Homepage showed 234,531,320 searchable papers; API overview still listed free but rate-limited access with optional API-key paths."
+  - date: 2026-06-25
+    plan: "Free"
+    price: "$0"
+    source: "https://www.semanticscholar.org/product/api"
+    source_label: "Semantic Scholar API"
+    source_id: semantic-scholar-api
+    verified_at: 2026-06-25
+    note: "API overview still presents Academic Graph, Recommendations, and Datasets as public research infrastructure. Live homepage paper count was not reliably captured in this worker check."
 ---
 
 # Semantic Scholar
 
 Allen Institute for AI (AI2)'s free academic search engine. The homepage showed 234,531,320 searchable papers on June 6, 2026. The API overview still lists 214 million papers, 2.49 billion citations, and 79 million authors. Basic search is free. API use is also free, but public endpoints are rate-limited and some endpoints require an API key.
 
-An AI layer generates TLDR one-sentence summaries, highlights influential citations, recommends related papers, and powers public Academic Graph, Recommendations, and Datasets APIs used by third-party research tools.
+An AI layer generates TLDR one-sentence summaries, highlights influential citations, recommends related papers, and powers Academic Graph, Recommendations, and Datasets APIs used by third-party research tools.
 
 ## System Verdict
 
@@ -175,7 +183,7 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 |------|-------|--------|
 | Free | $0 | Core search, TLDR, Semantic Reader, Research Feed, and API access with public rate limits or API key where required |
 
-*Verified 2026-06-12. Semantic Scholar's core search is free. API access is free but rate-limited, and some endpoints require an API key.*
+*Verified 2026-06-25. Semantic Scholar's core search is free. API access is free but rate-limited, and some endpoints require an API key.*
 
 ## Against the alternatives
 
@@ -201,7 +209,7 @@ The moat is institutional. AI2 is a non-profit with permanent funding, which rem
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Semantic Scholar](https://www.semanticscholar.org) and the [Semantic Scholar API overview](https://www.semanticscholar.org/product/api).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies corpus and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Semantic Scholar API overview](https://www.semanticscholar.org/product/api); the exact homepage live paper count remains carried from the prior June 2026 check because the dynamic counter was not reliably captured in this worker pass.
 
 ## FAQ
 

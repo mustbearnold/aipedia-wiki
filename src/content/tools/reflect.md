@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10/month"
 status: active
 launched: 2022-03
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://reflect.app/"
     source_label: "Reflect homepage"
     source_id: reflect-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -84,6 +84,7 @@ price_history:
     source: "https://reflect.app"
     source_label: "Source"
     source_id: reflect-pricing
+    verified_at: 2026-06-25
     note: "Dropped from $12 on annual renewal track"
   - date: 2026-04-15
     plan: "Pro"
@@ -91,6 +92,7 @@ price_history:
     source: "https://reflect.app"
     source_label: "Source"
     source_id: reflect-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged on reflect.app"
   - date: 2026-06-09
     plan: "Pro"
@@ -99,6 +101,14 @@ price_history:
     source_label: "Source"
     source_id: reflect-pricing
     verified_at: 2026-06-09
+    note: "Verified unchanged on reflect.app; $10/mo billed annually remains the single paid plan after a 14-day trial."
+  - date: 2026-06-25
+    plan: "Pro"
+    price: "$10/mo (annual billing)"
+    source: "https://reflect.app"
+    source_label: "Reflect homepage"
+    source_id: reflect-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged on reflect.app; $10/mo billed annually remains the single paid plan after a 14-day trial."
 ---
 
@@ -134,7 +144,7 @@ Strongest fit for privacy-conscious solo users who have already validated that n
 | **Free tier** | None beyond 14-day trial |
 | **Pro** | $10/mo billed annually |
 
-Every data point was verified against vendor docs on 2026-06-12. See Sources.
+Every data point was verified against vendor docs on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -167,7 +177,7 @@ The moat: end-to-end encryption plus bidirectional linking in one clean product 
 | Free trial | 14 days | Full access |
 | Pro | $10/mo billed annually | Reflect AI, full feature set, E2EE sync, backlinks, web/Kindle capture, calendar integrations |
 
-*Prices verified 2026-06-12 via [reflect.app](https://reflect.app). No perpetual free tier exists. Annual billing is the default; the $10/mo figure reflects the annual-billed monthly equivalent.*
+*Prices verified 2026-06-25 via [reflect.app](https://reflect.app). No perpetual free tier exists. Annual billing is the default; the $10/mo figure reflects the annual-billed monthly equivalent.*
 
 ## Against the alternatives
 
@@ -193,7 +203,7 @@ The moat: end-to-end encryption plus bidirectional linking in one clean product 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [reflect.app](https://reflect.app).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [reflect.app](https://reflect.app).
 
 ## FAQ
 
@@ -217,7 +227,7 @@ No. Only a 14-day trial followed by the $10/mo Pro plan.
 
 ## Sources
 
-- [reflect.app](https://reflect.app): product overview, pricing, and feature list verified 2026-06-12
+- [reflect.app](https://reflect.app): product overview, pricing, and feature list verified 2026-06-25
 
 ## Related
 

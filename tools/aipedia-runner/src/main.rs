@@ -104,6 +104,7 @@ struct Plan {
 struct Tool {
     #[allow(dead_code)]
     slug: String,
+    path: String,
     route: String,
     category_route: Option<String>,
 }
@@ -131,6 +132,7 @@ struct CommandResult {
     label: String,
     status: Option<i32>,
     duration_ms: u128,
+    details_path: Option<PathBuf>,
 }
 
 fn main() -> Result<()> {
@@ -148,7 +150,7 @@ fn main() -> Result<()> {
             let plan_path = resolve_project_path(&project_dir, &args.plan);
             let out_path = resolve_project_path(&project_dir, &args.out);
             let plan = read_plan(&plan_path)?;
-            write_route_args(&plan, &out_path)?;
+            write_route_args(&project_dir, &plan, &out_path)?;
             println!(
                 "Wrote route QA args to {}",
                 display_path(&project_dir, &out_path)
@@ -224,7 +226,7 @@ fn plan_tool_refresh(project_dir: &Path, args: &ToolRefreshArgs, dry_run: bool) 
     })?;
 
     write_worker_prompts(&plan, &worker_dir)?;
-    write_route_args(&plan, &route_args_out)?;
+    write_route_args(project_dir, &plan, &route_args_out)?;
 
     println!("Planned {} tool(s)", plan.batch.len());
     println!("Plan: {}", display_path(project_dir, &out_path));
@@ -241,18 +243,28 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
     let route_args_path = resolve_project_path(project_dir, &args.route_args);
     let receipt_dir = resolve_project_path(project_dir, &args.receipt_dir);
     let plan = read_plan(&plan_path)?;
-    write_route_args(&plan, &route_args_path)?;
+    let closeout_start = Instant::now();
+    write_route_args(project_dir, &plan, &route_args_path)?;
     fs::create_dir_all(&receipt_dir)
         .with_context(|| format!("could not create {}", receipt_dir.display()))?;
+    let timing_dir = receipt_dir.join("timings");
+    fs::create_dir_all(&timing_dir)
+        .with_context(|| format!("could not create {}", timing_dir.display()))?;
+    let grouped_check_timing_path = timing_dir.join(format!(
+        "{}-tool-refresh-grouped-check.json",
+        Utc::now().format("%Y-%m-%dT%H-%M-%SZ")
+    ));
 
-    let mut commands: Vec<(String, Vec<String>)> = vec![
+    let mut commands: Vec<(String, Vec<String>, Option<PathBuf>)> = vec![
         (
             "ledger generate".to_string(),
             vec!["run".to_string(), "ledger:pages".to_string()],
+            None,
         ),
         (
             "ledger check".to_string(),
             vec!["run".to_string(), "ledger:pages:check".to_string()],
+            None,
         ),
         (
             "tool refresh grouped check".to_string(),
@@ -262,11 +274,15 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
                 "--".to_string(),
                 "--plan".to_string(),
                 display_path(project_dir, &plan_path),
+                "--timing-file".to_string(),
+                display_path(project_dir, &grouped_check_timing_path),
             ],
+            Some(grouped_check_timing_path),
         ),
         (
             "typecheck".to_string(),
             vec!["run".to_string(), "typecheck".to_string()],
+            None,
         ),
     ];
 
@@ -274,6 +290,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
         commands.push((
             "build fast".to_string(),
             vec!["run".to_string(), "build:fast".to_string()],
+            None,
         ));
     }
 
@@ -292,17 +309,18 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
             "--widths".to_string(),
             "319,360,390,430,768,1024,1366".to_string(),
         ]);
-        commands.push(("route qa".to_string(), qa_args));
+        commands.push(("route qa".to_string(), qa_args, None));
     }
 
     let mut results = Vec::new();
-    for (label, command_args) in commands {
+    for (label, command_args, details_path) in commands {
         if label == "route qa" {
             results.push(run_command(
                 project_dir,
                 &label,
                 node_bin(),
                 &command_args,
+                details_path,
                 dry_run,
             )?);
         } else {
@@ -311,6 +329,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
                 &label,
                 npm_bin(),
                 &command_args,
+                details_path,
                 dry_run,
             )?);
         }
@@ -323,6 +342,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
                 &route_args_path,
                 &results,
                 false,
+                closeout_start.elapsed().as_millis(),
             )?;
             bail!("closeout stopped after failed command: {}", label);
         }
@@ -335,6 +355,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
         &route_args_path,
         &results,
         true,
+        closeout_start.elapsed().as_millis(),
     )?;
     println!("Closeout passed");
     Ok(())
@@ -345,6 +366,7 @@ fn run_command(
     label: &str,
     program: &str,
     args: &[String],
+    details_path: Option<PathBuf>,
     dry_run: bool,
 ) -> Result<CommandResult> {
     println!("==> {}", label);
@@ -354,6 +376,7 @@ fn run_command(
             label: label.to_string(),
             status: Some(0),
             duration_ms: 0,
+            details_path,
         });
     }
 
@@ -378,6 +401,7 @@ fn run_command(
         label: label.to_string(),
         status: status.code(),
         duration_ms,
+        details_path,
     })
 }
 
@@ -417,14 +441,18 @@ fn write_worker_prompts(plan: &Plan, worker_dir: &Path) -> Result<()> {
     Ok(())
 }
 
-fn write_route_args(plan: &Plan, out_path: &Path) -> Result<()> {
+fn write_route_args(project_dir: &Path, plan: &Plan, out_path: &Path) -> Result<()> {
     ensure_parent(out_path)?;
     let mut routes = BTreeSet::new();
     for tool in &plan.batch {
         if !tool.route.is_empty() {
             routes.insert(tool.route.clone());
         }
-        if let Some(category_route) = &tool.category_route {
+        if let Some(category_route) = current_category_route(project_dir, tool)? {
+            if !category_route.is_empty() {
+                routes.insert(category_route.clone());
+            }
+        } else if let Some(category_route) = &tool.category_route {
             if !category_route.is_empty() {
                 routes.insert(category_route.clone());
             }
@@ -443,6 +471,35 @@ fn write_route_args(plan: &Plan, out_path: &Path) -> Result<()> {
     Ok(())
 }
 
+fn current_category_route(project_dir: &Path, tool: &Tool) -> Result<Option<String>> {
+    let path = project_dir.join(&tool.path);
+    if !path.exists() {
+        return Ok(tool.category_route.clone());
+    }
+
+    let raw = fs::read_to_string(&path)
+        .with_context(|| format!("could not read tool frontmatter {}", path.display()))?;
+    let Some(rest) = raw.strip_prefix("---") else {
+        return Ok(tool.category_route.clone());
+    };
+    let Some((frontmatter, _body)) = rest.split_once("---") else {
+        return Ok(tool.category_route.clone());
+    };
+
+    for line in frontmatter.lines() {
+        let Some(value) = line.strip_prefix("category:") else {
+            continue;
+        };
+        let category = value.trim().trim_matches('"').trim_matches('\'');
+        if category.is_empty() {
+            return Ok(None);
+        }
+        return Ok(Some(format!("/categories/{category}/")));
+    }
+
+    Ok(tool.category_route.clone())
+}
+
 fn write_receipt(
     project_dir: &Path,
     receipt_dir: &Path,
@@ -450,6 +507,7 @@ fn write_receipt(
     route_args_path: &Path,
     results: &[CommandResult],
     ok: bool,
+    total_duration_ms: u128,
 ) -> Result<()> {
     let timestamp = Utc::now().format("%Y-%m-%dT%H-%M-%SZ");
     let path = receipt_dir.join(format!("{}-tool-refresh-closeout.md", timestamp));
@@ -468,12 +526,42 @@ fn write_receipt(
         "- Route args: `{}`\n\n",
         display_path(project_dir, route_args_path)
     ));
+    content.push_str("## Timing\n\n");
+    content.push_str(&format!("- Total closeout: {} ms\n", total_duration_ms));
+    let cheap_ms: u128 = results
+        .iter()
+        .filter(|result| {
+            matches!(
+                result.label.as_str(),
+                "ledger generate" | "ledger check" | "tool refresh grouped check"
+            )
+        })
+        .map(|result| result.duration_ms)
+        .sum();
+    let expensive_ms: u128 = results
+        .iter()
+        .filter(|result| {
+            matches!(
+                result.label.as_str(),
+                "typecheck" | "build fast" | "route qa"
+            )
+        })
+        .map(|result| result.duration_ms)
+        .sum();
+    content.push_str(&format!("- Cheap gates: {} ms\n", cheap_ms));
+    content.push_str(&format!("- Expensive gates: {} ms\n\n", expensive_ms));
     content.push_str("## Commands\n\n");
     for result in results {
         content.push_str(&format!(
             "- {}: status {:?}, {} ms\n",
             result.label, result.status, result.duration_ms
         ));
+        if let Some(details_path) = &result.details_path {
+            content.push_str(&format!(
+                "  - Timing detail: `{}`\n",
+                display_path(project_dir, details_path)
+            ));
+        }
     }
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
     println!("Receipt: {}", display_path(project_dir, &path));

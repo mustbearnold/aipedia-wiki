@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: "$2-$44.99/month effective"
 status: active
 launched: 2010-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -23,7 +23,7 @@ affiliate:
   link: "https://try.sanebox.com/itokxwzvk7c5"
   application_status: approved
   approved_date: 2026-05-14
-  notes: "Affiliate link configured 2026-05-14 via SaneBox's in-house referral program; pricing/source context reverified 2026-06-09. Internal monetization terms should not be surfaced in public editorial copy."
+  notes: "Affiliate link configured 2026-05-14 via SaneBox's in-house referral program; pricing/source context reverified 2026-06-25. Internal monetization terms should not be surfaced in public editorial copy."
 scores:
   utility: 8
   value: 8
@@ -35,7 +35,7 @@ facts:
     source: "https://www.sanebox.com/"
     source_label: "SaneBox overview"
     source_id: sanebox-overview
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://www.sanebox.com/pricing"
     source_label: "SaneBox pricing"
     source_id: sanebox-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: medium
     confidence: medium
@@ -52,7 +52,7 @@ facts:
     source: "https://www.sanebox.com/"
     source_label: "SaneBox overview"
     source_id: sanebox-overview
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   ml_approach:
@@ -60,7 +60,7 @@ facts:
     source: "https://www.sanebox.com/"
     source_label: "SaneBox overview"
     source_id: sanebox-overview
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   signature_features:
@@ -68,7 +68,7 @@ facts:
     source: "https://www.sanebox.com/"
     source_label: "SaneBox overview"
     source_id: sanebox-overview
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   watch_out_for:
@@ -76,7 +76,7 @@ facts:
     source: "https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice"
     source_label: "SaneBox Reply Draft help"
     source_id: sanebox-reply-drafts
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [email, triage, inbox-management, classification, productivity, gmail, outlook, imap, focus]
@@ -98,6 +98,14 @@ not_best_for:
 quick_answer: >-
   SaneBox is server-side email triage. It moves unimportant mail to SaneLater, kills senders with SaneBlackHole, and ships a daily digest inside your existing inbox. June 2026 checks add an important caveat: SaneBox now documents beta AI summary and reply-draft features, but the core product is still triage rather than a full Superhuman/Shortwave-style email client replacement.
 price_history:
+  - date: 2026-06-25
+    plan: "Pricing page"
+    price: "Dynamic page; Appetizer $24/year and discounted Snack/Lunch/Dinner effective rates surfaced in primary HTML"
+    source: "https://www.sanebox.com/pricing"
+    source_label: "SaneBox pricing"
+    source_id: sanebox-pricing
+    verified_at: 2026-06-25
+    note: "Primary pricing page remains dynamic. AiPedia kept the prior embedded monthly and annual ladder as buyer guidance, but flags live-page rendering as a confirmation point before purchase."
   - date: 2026-06-09
     plan: "Appetizer"
     price: "$24/year; $2/month effective; 1 feature; 1 account"
@@ -132,7 +140,7 @@ price_history:
 
 A server-side email triage layer that hooks into your inbox and sorts incoming mail by predicted importance. No new email client, no provider change. It is one of the oldest and most quietly durable productivity tools in the email-AI category, founded in 2010 and still running.
 
-Where modern AI email tools like Superhuman AI, Shortwave, and ChatGPT for Gmail focus on **generating** email content, SaneBox still focuses first on **triaging** it. The June 9, 2026 check found newer request-only beta AI features for summaries and reply drafts, but those sit on top of the durable product: classify what comes in, route it to the right folder, and let your existing email client be the front end.
+Where modern AI email tools like Superhuman AI, Shortwave, and ChatGPT for Gmail focus on **generating** email content, SaneBox still focuses first on **triaging** it. The June 25, 2026 check still found request-only beta AI features for summaries and reply drafts, but those sit on top of the durable product: classify what comes in, route it to the right folder, and let your existing email client be the front end.
 
 ## System Verdict
 
@@ -158,7 +166,7 @@ Where modern AI email tools like Superhuman AI, Shortwave, and ChatGPT for Gmail
 | **Mobile** | Works because IMAP works · no native app needed |
 | **Data residency** | Server-side processing · review security docs before deploying in regulated industries |
 
-Every data point above was verified against SaneBox pricing and product documentation on 2026-06-12. See Sources.
+Every data point above was verified against SaneBox pricing and product documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -194,7 +202,7 @@ What SaneBox is *not*: a full AI email client. SaneBox now lists SaneDrafts/Repl
 
 ## Pricing
 
-Subscription pricing is managed via [sanebox.com/pricing](https://www.sanebox.com/pricing). The public page is dynamic, so AiPedia checked the embedded official pricing payload on June 12, 2026. Annual and two-year terms lower the effective monthly price.
+Subscription pricing is managed via [sanebox.com/pricing](https://www.sanebox.com/pricing). The public page is dynamic, so AiPedia checked the embedded official pricing payload on June 25, 2026. Annual and two-year terms lower the effective monthly price.
 
 | Plan | Monthly | Annual effective | Two-year effective | Accounts/features | Who's it for |
 |------|---------|------------------|--------------------|-------------------|--------------|
@@ -207,7 +215,7 @@ Subscription pricing is managed via [sanebox.com/pricing](https://www.sanebox.co
 
 **Trial:** 14 days free, no credit card required.
 
-Prices verified 2026-06-12 via [sanebox.com/pricing](https://www.sanebox.com/pricing). The pricing page renders dynamically, so confirm the live page before purchase.
+Prices verified 2026-06-25 via [sanebox.com/pricing](https://www.sanebox.com/pricing). The pricing page renders dynamically, so confirm the live page before purchase.
 
 ## Against the alternatives
 
@@ -233,7 +241,7 @@ Prices verified 2026-06-12 via [sanebox.com/pricing](https://www.sanebox.com/pri
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [SaneBox pricing](https://www.sanebox.com/pricing), the [SaneBox overview](https://www.sanebox.com/), SaneBox plan help, SaneBox feature help, and Reply Draft/SaneDrafts help.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [SaneBox pricing](https://www.sanebox.com/pricing), the [SaneBox overview](https://www.sanebox.com/), SaneBox plan help, SaneBox feature help, and Reply Draft/SaneDrafts help.
 
 ## FAQ
 
@@ -256,7 +264,7 @@ Drag any sender's email into the SaneBlackHole folder and you will never see ano
 One email per day that summarizes everything SaneBox routed to SaneLater (the low-priority folder). You scan it in 30 seconds and pull anything that turned out to actually matter back to the inbox.
 
 **Is there a free version?**
-No, but there's a 14-day free trial with no credit card required. After that, the cheapest official option checked June 9 is Appetizer at $24/year, while Snack starts at $9.99 month-to-month or $5.99/month effective annual.
+No, but there's a 14-day free trial with no credit card required. After that, the cheapest official option checked June 25 is Appetizer at $24/year, while Snack starts at $9.99 month-to-month or $5.99/month effective annual in AiPedia's embedded pricing snapshot.
 
 **How is SaneBox different from Gmail's Priority Inbox?**
 SaneBox is a separate per-user classifier with explicit folders (SaneLater, SaneNews, SaneBlackHole) and a daily digest. Gmail's Priority Inbox marks emails as Important but doesn't move them out of the main view. Many Gmail users prefer SaneBox's stricter separation; some don't.

@@ -7,11 +7,11 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-25.
-- Branch baseline: `codex/refresh-tool-pages-june-23`; latest completed local tool batch is the June 25 four-tool serial shard for Pinecone, PixVerse, Playground AI, and Qdrant.
+- Branch baseline: `codex/refresh-tool-pages-june-23`; latest completed local tool batch is the June 25 third six-worker batch from Zapier through Jan.ai.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
-- The latest completed local batch refreshed Pinecone, PixVerse, Playground AI, and Qdrant after the Luma/Magnific/Meshy/OpusClip shard.
+- The latest completed local batch refreshed 54 tools from Zapier through Jan.ai after the previous six-worker batches and serial shards.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
@@ -55,6 +55,7 @@ Keep every volatile tool fact, source-backed claim, commercial surface, affected
 - Luma, Magnific, Meshy, and OpusClip June 25 serial shard, including Meshy's updated Pro/Premium/Ultra/Studio ladder and Magnific API pay-per-usage discontinuation caveat.
 
 - Pinecone, PixVerse, Playground AI, and Qdrant June 25 serial shard, including PixVerse Upscale changelog coverage and the Qdrant v1.18.2 release-date correction.
+- Third six-worker June 25 batch: Zapier, Sudowrite, Writesonic, Pitch, Gamma, Fish Audio, QuillBot, Murf, Resemble AI, Stable Diffusion, WellSaid, Freepik, You.com, Kagi, Scite, Semantic Scholar, Kimi, Langfuse, Leonardo, Letta, Llama, LM Studio, Logseq, Mem, Morphic, Ollama, Open WebUI, Paradox, Reflect, Reka, Replicate, Riverside, SaneBox, Spellbook, Stable Audio, Tactiq, Writer, Rows, Voiceflow, Tripo3D, TypingMind, Uizard, Unbounce, watsonx Orchestrate, Weaviate, Whisper, Workato, Yi, Antigravity, Cohere, GPT Image 2, OpenClaw, Hermes Agent, and Jan.ai.
 
 ### Latest Completed Batch
 
@@ -95,7 +96,7 @@ Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and
 
 Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes pages verified since yesterday by default; pass `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only for intentional recent-page revisits.
 
-The current verified batch refreshed `tabnine` through `wordtune` from `.tmp-tool-refresh-batch.json` with six workers. Recompute after this batch is pushed before selecting the next shard.
+The current verified batch refreshed `zapier` through `jan-ai` from `.tmp-tool-refresh-batch.json` with six workers. Recompute after this batch is pushed before selecting the next shard.
 
 Required closeout:
 
@@ -113,6 +114,7 @@ Latest closeout notes:
 - `tool:refresh:batch:check` now runs `scripts/check-frontmatter.mjs --changed` so malformed markdown frontmatter is caught before the slower Astro typecheck/build phase.
 - Generated worker prompts now require source-confidence labels for constrained facts: `primary-confirmed`, `primary-conflict`, `account-gated`, `checkout-gated`, `region-rendered`, `blocked-live-check`, and `secondary-only`.
 - Rust runner commands are available for the next batch: use `npm run runner:tool-refresh:plan` to prepare local planner artifacts and worker prompts, then `npm run runner:tool-refresh:closeout` after integration to run the closeout sequence and write a local receipt.
+- The third six-worker batch needed a planner-route correction after watsonx Orchestrate moved from invalid `ai-enterprise` back to `ai-automation`; if a worker changes a tool's primary category, update `.tmp-tool-refresh-batch.json` and `.tmp-route-qa-args.txt` before route QA.
 
 ## Active: Decision Content Flywheel
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$30/seat/month"
 status: active
 launched: 2019-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://pitch.com/features"
     source_label: "Pitch features"
     source_id: pitch-features
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://pitch.com/pricing/us"
     source_label: "Pitch pricing"
     source_id: pitch-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://pitch.com/use-cases/ai-presentation-maker"
     source_label: "Pitch AI"
     source_id: pitch-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   collaboration_model:
@@ -56,7 +56,7 @@ facts:
     source: "https://pitch.com/features"
     source_label: "Pitch features"
     source_id: pitch-features
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://pitch.com/pricing/us"
     source_label: "Pitch pricing"
     source_id: pitch-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [presentations, collaboration, slides, ai-writing, team-workflows, pitch-decks, real-time-editing]
@@ -90,6 +90,7 @@ price_history:
     source: "https://pitch.com/pricing/us"
     source_label: "Pitch pricing"
     source_id: pitch-official
+    verified_at: 2026-06-25
     note: "Free, Plus $15/$13, Team $23/$19, Business $30/$25 verified unchanged. Co-present slides confirmed live on Team."
   - date: 2026-06-05
     plan: "All tiers"
@@ -99,6 +100,14 @@ price_history:
     source_id: pitch-official
     verified_at: 2026-06-05
     note: "Official pricing still lists Free, Plus $15 monthly/$13 yearly, Team $23 monthly/$19 yearly, Business $30 monthly/$25 yearly, and Enterprise contact-sales. AI credits rechecked against pricing and help-center docs."
+  - date: 2026-06-25
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://pitch.com/pricing/us"
+    source_label: "Pitch pricing"
+    source_id: pitch-official
+    verified_at: 2026-06-25
+    note: "Rechecked official pricing, free-plan documentation, and feature pages. Pitch remains a collaboration-first deck workspace with AI credits layered onto Free, Plus, Team, Business, and Enterprise plans."
 ---
 
 # Pitch
@@ -129,11 +138,12 @@ Free tier supports unlimited decks with up to 5 members. Paid tiers run $13 to $
 | **Credit pricing** | Extra credits at $0.004 per credit |
 | **Live sharing** | Browser URL with view analytics |
 
-Every data point above was verified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. See Sources.
 
 ## Recent Changes
 
 - **2026-06-05:** Pricing, member caps, guest limits, pitch rooms, credit allowances, and $0.004 extra-credit pricing rechecked while refreshing the Decktopus vs Pitch comparison. Free remains $0 with up to 5 members and 100 one-time AI credits; Plus, Team, Business, and Enterprise positioning remains materially unchanged.
+- **2026-06-25:** Rechecked pricing and feature pages. No material pricing change found; Pitch remains strongest when deck collaboration, pitch rooms, analytics, and brand consistency matter more than prompt-to-deck speed.
 - **2026-05-13:** Pricing, member caps, and credit allowances verified unchanged. Co-present slides confirmed as a Team-tier feature for smooth presentation handoff between collaborators. Free tier still uniquely uncapped on deck count in the category.
 
 ## What it actually is
@@ -171,7 +181,7 @@ Subscription pricing via [pitch.com/pricing/us](https://pitch.com/pricing/us).
 | Business | $30/seat | $25/seat | 2-200 | 9,000/seat/yr | Larger orgs, batch creation, unlimited guests |
 | Enterprise | Custom | Custom | 30+ | Custom | SSO, success manager, invoiced billing |
 
-*Prices verified 2026-06-12 via [Pitch pricing](https://pitch.com/pricing/us). Annual billing saves roughly 15 to 20%. Extra AI credits at $0.004 each. Team plan ships co-present slides; Business unlocks unlimited rooms, guests, and version history.*
+*Prices verified 2026-06-25 via [Pitch pricing](https://pitch.com/pricing/us). Annual billing saves roughly 15 to 20%. Extra AI credits at $0.004 each. Team plan ships co-present slides; Business unlocks unlimited rooms, guests, and version history.*
 
 ## Against the alternatives
 
@@ -196,7 +206,7 @@ Subscription pricing via [pitch.com/pricing/us](https://pitch.com/pricing/us).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Pitch pricing](https://pitch.com/pricing/us), Pitch AI-credit documentation, and the [Free plan help center article](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Pitch pricing](https://pitch.com/pricing/us), Pitch AI-credit documentation, and the [Free plan help center article](https://help.pitch.com/en/articles/9364575-pitch-s-free-plan).
 
 ## FAQ
 

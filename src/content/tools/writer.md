@@ -11,11 +11,11 @@ pricing_model: enterprise
 price_range: "14-day Starter trial · Enterprise custom · Palmyra API per MTok"
 status: active
 launched: 2020-03
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
 seo_title: "Writer (Palmyra X5): Features, Pricing & Review (2026)"
-meta_description: "Writer is the enterprise AI platform running Palmyra X5 with 1M token context. X5 API is $0.60 in / $6 out per MTok; Starter has a 14-day trial and Enterprise is contact-sales. Verified June 12, 2026."
+meta_description: "Writer is the enterprise AI platform running Palmyra X5 with 1M token context. X5 API is $0.60 in / $6 out per MTok; Starter has a 14-day trial and Enterprise is contact-sales. Verified June 25, 2026."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://writer.com/platform/"
     source_label: "Writer platform"
     source_id: writer-platform
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: medium
     confidence: high
@@ -43,7 +43,7 @@ facts:
     source: "https://writer.com/llms/"
     source_label: "Writer Palmyra LLMs"
     source_id: writer-palmyra
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://writer.com/plans/"
     source_label: "Writer plans"
     source_id: writer-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
@@ -61,7 +61,7 @@ facts:
     source: "https://writer.com/platform/"
     source_label: "Writer platform"
     source_id: writer-platform
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: medium
     confidence: high
@@ -70,7 +70,7 @@ facts:
     source: "https://dev.writer.com/home/models"
     source_label: "Writer model docs"
     source_id: writer-model-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: high
     confidence: medium
@@ -89,12 +89,21 @@ not_best_for:
 quick_answer: >-
   Writer is the enterprise generative AI platform built on its own Palmyra models, not a GPT wrapper. Pick it for enterprise content work, governed AI agents, and cost-sensitive API workloads that need a 1M context window. Skip it if the primary need is a consumer chatbot or agentic coding.
 price_history:
+  - date: 2026-06-25
+    plan: "Palmyra X5 API"
+    price: "$0.60 in / $6 out per MTok"
+    source: "https://dev.writer.com/home/pricing"
+    source_label: "Writer developer pricing"
+    source_id: writer-developer-pricing
+    verified_at: 2026-06-25
+    note: "Developer pricing still lists palmyra-x5 at $0.60 input and $6 output per 1M tokens; model docs still show 1M context and the July 13, 2026 deprecation path for older Palmyra IDs."
   - date: 2026-06-10
     plan: "Palmyra X5 API"
     price: "$0.60 in / $6 out per MTok"
     source: "https://dev.writer.com/home/pricing"
     source_label: "Writer developer pricing"
     source_id: writer-developer-pricing
+    verified_at: 2026-06-25
     note: "Developer pricing docs list palmyra-x5 at $0.60 input and $6 output per 1M tokens; model docs keep 1M context."
   - date: 2026-06-10
     plan: "Palmyra X4 API"
@@ -102,6 +111,7 @@ price_history:
     source: "https://dev.writer.com/home/pricing"
     source_label: "Writer developer pricing"
     source_id: writer-developer-pricing
+    verified_at: 2026-06-25
     note: "Current developer pricing lists palmyra-x4 separately from X5."
   - date: 2026-06-10
     plan: "Deprecated Palmyra model IDs"
@@ -109,6 +119,7 @@ price_history:
     source: "https://dev.writer.com/home/models"
     source_label: "Writer model docs"
     source_id: writer-model-docs
+    verified_at: 2026-06-25
     note: "Writer model docs say palmyra-x-003-instruct, palmyra-vision, palmyra-med, palmyra-fin, and palmyra-creative will be removed on July 13, 2026; use palmyra-x5 as the migration path."
   - date: 2026-04-18
     plan: "Palmyra X5 API"
@@ -116,6 +127,7 @@ price_history:
     source: "https://writer.com/plans/"
     source_label: "Source"
     source_id: writer-pricing
+    verified_at: 2026-06-25
     note: "1M context; Writer claims roughly 75% lower cost than GPT-4.1 on comparable tasks"
   - date: 2026-04-18
     plan: "Starter"
@@ -123,6 +135,7 @@ price_history:
     source: "https://writer.com/plans/"
     source_label: "Source"
     source_id: writer-pricing
+    verified_at: 2026-06-25
     note: "Paid price not published on writer.com/plans; third-party sources report ~$29/user/mo annual"
   - date: 2025-04-28
     plan: "Palmyra X5 launch"
@@ -130,6 +143,7 @@ price_history:
     source: "https://writer.com/plans/"
     source_label: "Source"
     source_id: writer-pricing
+    verified_at: 2026-06-25
     note: "Adaptive reasoning LLM positioned against GPT-4.1"
 ---
 
@@ -143,6 +157,7 @@ Writer is a San Francisco based company founded in 2020. The 2024 Series C led b
 
 ## Recent changes
 
+- **2026-06-25:** Rechecked Writer plans, Palmyra model docs, and developer pricing. Palmyra X5 remains $0.60 input / $6 output per 1M tokens with 1M context, and the July 13, 2026 removal notice for older Palmyra IDs remains active.
 - **2026-06-10:** Re-verified plans, LLM pages, developer pricing, and model docs. Starter is still a 14-day trial for up to 5 users; Enterprise remains contact-sales. Palmyra X5 remains $0.60 input / $6 output per 1M tokens with 1M context. Developer docs now mark `palmyra-x-003-instruct`, `palmyra-vision`, `palmyra-med`, `palmyra-fin`, and `palmyra-creative` as deprecated and scheduled for removal on July 13, 2026, with `palmyra-x5` as the migration path.
 
 ## System Verdict
@@ -216,7 +231,7 @@ Published tiers via [writer.com/plans](https://writer.com/plans/):
 
 API pricing for Palmyra X5: **$0.60 per MTok input, $6 per MTok output**, with a 1M token context window. Palmyra X4 is **$2.50 per MTok input and $10 per MTok output**.
 
-Prices verified 2026-06-12 via [writer.com/plans](https://writer.com/plans/), [writer.com/llms](https://writer.com/llms/), and [Writer developer pricing docs](https://dev.writer.com/home/pricing).
+Prices verified 2026-06-25 via [writer.com/plans](https://writer.com/plans/), [writer.com/llms](https://writer.com/llms/), and [Writer developer pricing docs](https://dev.writer.com/home/pricing).
 
 **Model deprecation note:** Writer developer docs say `palmyra-x-003-instruct`, `palmyra-vision`, `palmyra-med`, `palmyra-fin`, and `palmyra-creative` are deprecated and will be removed on July 13, 2026. New builds should use `palmyra-x5` unless Writer confirms a different supported model path in contract.
 
@@ -245,7 +260,7 @@ Prices verified 2026-06-12 via [writer.com/plans](https://writer.com/plans/), [w
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [writer.com/plans](https://writer.com/plans/), [writer.com/llms](https://writer.com/llms/), [Writer developer pricing docs](https://dev.writer.com/home/pricing), and [Writer model docs](https://dev.writer.com/home/models).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [writer.com/plans](https://writer.com/plans/), [writer.com/llms](https://writer.com/llms/), [Writer developer pricing docs](https://dev.writer.com/home/pricing), and [Writer model docs](https://dev.writer.com/home/models).
 
 ## FAQ
 
@@ -273,7 +288,7 @@ A self-hosted deployment of Palmyra for enterprise customers who cannot send dat
 
 ## Sources
 
-- [Writer plans](https://writer.com/plans/) (verified 2026-06-12)
-- [Writer Palmyra LLMs](https://writer.com/llms/) (verified 2026-06-12)
-- [Writer developer pricing docs](https://dev.writer.com/home/pricing) (verified 2026-06-12)
-- [Writer model docs](https://dev.writer.com/home/models) (verified 2026-06-12)
+- [Writer plans](https://writer.com/plans/) (verified 2026-06-25)
+- [Writer Palmyra LLMs](https://writer.com/llms/) (verified 2026-06-25)
+- [Writer developer pricing docs](https://dev.writer.com/home/pricing) (verified 2026-06-25)
+- [Writer model docs](https://dev.writer.com/home/models) (verified 2026-06-25)

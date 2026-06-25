@@ -82,6 +82,7 @@ test('tool refresh planner includes source metadata and scoped source-health com
     '2',
     '--tools-per-worker',
     '1',
+    '--include-same-day',
   ]);
 
   assert.equal(result.status, 0, `planner should emit JSON\nstdout:\n${result.stdout}\nstderr:\n${result.stderr}`);

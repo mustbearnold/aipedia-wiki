@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free; Plus/Pro/Ultra paid tiers; Ultra $90/seat/mo annual or $100/mo monthly"
 status: active
 launched: 2020-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-05
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://gamma.app/ai-presentation-maker"
     source_label: "Gamma AI presentation maker"
     source_id: gamma-ai-presentation
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   output_model:
@@ -60,7 +60,7 @@ facts:
     source: "https://gamma.app/features"
     source_label: "Gamma features"
     source_id: gamma-features
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   watch_out_for:
@@ -68,7 +68,7 @@ facts:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [presentations, slides, ai-generation, documents, web-pages, pitch-decks, prompt-to-deck]
@@ -96,8 +96,16 @@ price_history:
     source: "https://gamma.app/pricing"
     source_label: "Gamma pricing"
     source_id: gamma-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Rechecked official pricing. Ultra includes 20x more AI usage, up to 75 cards per prompt, advanced text/image/video models, up to 100 custom domains, and early feature access. Other plan prices can vary by billing toggle, account state, or region."
+  - date: 2026-06-25
+    plan: "Ultra"
+    price: "$90/seat/mo billed annually or $100/mo monthly"
+    source: "https://gamma.app/pricing"
+    source_label: "Gamma pricing"
+    source_id: gamma-official
+    verified_at: 2026-06-25
+    note: "Rechecked official pricing and Gamma help pages. Ultra remains the public high-usage path; Pro remains the first self-serve tier called out for API access in Gamma's API help article."
 ---
 
 # Gamma
@@ -128,11 +136,12 @@ The free tier supports simple projects, imports, and exports. Paid tiers add bra
 | **PPTX export** | Available, lossy on complex layouts |
 | **Offline mode** | None |
 
-Every data point above was verified against official Gamma documentation on 2026-06-23. See Sources.
+Every data point above was verified against official Gamma documentation on 2026-06-25. See Sources.
 
 ## Recent Changes
 
 - **2026-06-05:** Rechecked Gamma pricing gates, AI presentation positioning, and Generate API availability while refreshing the Decktopus comparison slice. Free still supports simple presentations, docs, websites, social posts, images, import, and export. Pro remains the first self-serve tier with API access, advanced sharing, detailed analytics, custom branding/fonts, and up to 10 custom domains. Ultra remains the high-usage path with advanced text/image/video model access and up to 100 custom domains.
+- **2026-06-25:** Rechecked pricing, AI presentation-maker page, API help, and affiliate help. Ultra still lists $90/seat/month annually or $100 monthly, and the API remains documented for Pro, Ultra, Team, and Business accounts.
 - **2026-06-03:** Category refresh rechecked Gamma as the default AI presentation pick against official pricing, API, and presentation-maker sources.
 
 ## What it actually is
@@ -170,7 +179,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 | Ultra | $90/seat/mo billed annually or $100/mo monthly; everything in Pro; substantially more AI usage; up to 75 cards per prompt; access to advanced text, image, and video models; up to 100 custom domains; early feature access | Power users, agencies, and heavy generators |
 | Team / Sales | Contact-sales path for teams evaluating Gamma | Shared workspace and organization needs |
 
-*Plan gates verified 2026-06-23 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
+*Plan gates verified 2026-06-25 via [gamma.app/pricing](https://gamma.app/pricing). Check the live pricing page for current dollar amounts and billing options before purchase.*
 
 ## Against the alternatives
 
@@ -194,7 +203,7 @@ Subscription and team pricing are managed via [gamma.app/pricing](https://gamma.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Gamma pricing](https://gamma.app/pricing), Gamma's AI presentation maker page, Gamma API documentation, and Gamma's affiliate-program help page.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Gamma pricing](https://gamma.app/pricing), Gamma's AI presentation maker page, Gamma API documentation, and Gamma's affiliate-program help page.
 
 ## FAQ
 

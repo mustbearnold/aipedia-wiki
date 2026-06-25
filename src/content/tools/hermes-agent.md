@@ -2,7 +2,7 @@
 type: tool
 slug: hermes-agent
 title: Hermes Agent
-tagline: Self-improving open-source AI agent from Nous Research. v0.17.0 release stream, persistent memory, auto-generated skills, natural language scheduling, six terminal backends, desktop app, messaging platforms, and optional Nous Portal routing.
+tagline: Self-improving open-source AI agent from Nous Research. v0.17.0 Reach Release, persistent memory, background subagents, image editing, desktop app, messaging platforms, and optional Nous Portal routing.
 category: ai-automation
 company: nous-research
 url: https://hermes-agent.nousresearch.com/
@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (MIT license; BYOK API costs)"
 status: active
 launched: 2026-02
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://hermes-agent.nousresearch.com/
     source_label: Hermes Agent official site
     source_id: hermes-agent-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -42,7 +42,7 @@ facts:
     source: https://github.com/NousResearch/hermes-agent
     source_label: Hermes Agent GitHub repository
     source_id: hermes-agent-repository
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -51,7 +51,7 @@ facts:
     source: https://github.com/NousResearch/hermes-agent
     source_label: Hermes Agent GitHub repository
     source_id: hermes-agent-repository
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -61,23 +61,23 @@ facts:
     source: https://hermes-agent.nousresearch.com/docs
     source_label: Hermes Agent docs
     source_id: hermes-agent-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   watch_out_for:
     value: 'Hermes Agent is powerful but operator-owned: buyers need comfort managing providers, credentials, tool permissions,
-      and long-running agent behavior.'
+      dashboard exposure, background subagents, and long-running agent behavior.'
     source: https://hermes-agent.nousresearch.com/docs
     source_label: Hermes Agent docs
     source_id: hermes-agent-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
 tags: [open-source, self-hosted, persistent-memory, auto-skills, multi-platform, telegram, discord, slack, whatsapp, signal, nous-research, mit-license]
 seo_title: "Hermes Agent: Features, Review & Pricing (June 2026)"
-meta_description: "Hermes Agent is Nous Research's MIT-licensed autonomous AI agent, current v0.17.0. Persistent memory, auto-generated skills, natural language cron, six terminal backends, 15+ messaging platforms, and optional Nous Portal routing."
+meta_description: "Hermes Agent is Nous Research's MIT-licensed autonomous AI agent, current v0.17.0. Persistent memory, background subagents, image editing, natural language cron, six terminal backends, 15+ messaging platforms, and optional Nous Portal routing."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers wanting a self-improving self-hosted agent
@@ -89,8 +89,16 @@ not_best_for:
   - teams needing IDE-integrated coding assistance
   - workflows where managed cloud uptime is required
 quick_answer: >-
-  Hermes Agent is Nous Research's MIT-licensed autonomous agent. Current GitHub releases show v0.17.0 from June 19, 2026. It runs as a persistent server, now has a desktop app surface, connects CLI plus messaging platforms, and can use six terminal backends: local, Docker, SSH, Daytona, Singularity, and Modal. Persistent memory, auto-written skills, natural language cron, subagents, and optional Nous Portal tool/model routing are the differentiators. Free to self-host; bring your own API keys or use a Nous Portal subscription.
+  Hermes Agent is Nous Research's MIT-licensed autonomous agent. Current GitHub releases show v0.17.0 from June 19, 2026, and the GitHub API showed 202K+ stars on June 25. It runs as a persistent server, now has a desktop app surface, connects CLI plus messaging platforms, and can use six terminal backends: local, Docker, SSH, Daytona, Singularity, and Modal. Persistent memory, auto-written skills, background subagents, natural language cron, image editing, and optional Nous Portal tool/model routing are the differentiators. Free to self-host; bring your own API keys or use a Nous Portal subscription.
 price_history:
+  - date: 2026-06-25
+    plan: "Open-source"
+    price: "Free"
+    source: "https://github.com/NousResearch/hermes-agent/releases"
+    source_label: "Hermes Agent GitHub releases"
+    source_id: hermes-agent-releases
+    verified_at: 2026-06-25
+    note: "Reverified v0.17.0 as latest, MIT/open-source posture, and no mandatory subscription. Real spend remains model/API providers, optional Nous Portal subscription, hosting, terminal backends, and connected services."
   - date: 2026-06-23
     plan: "Open-source"
     price: "Free"
@@ -139,7 +147,12 @@ Free, MIT-licensed autonomous AI agent from Nous Research ([hermes-agent.nousres
 
 Three features set it apart from a standard chatbot: persistent memory across restarts, auto-generated skills that the agent writes and refines from experience, and natural language cron scheduling that delivers recurring output to any connected platform.
 
-As of June 23, 2026, the official GitHub release stream is at v0.17.0 from June 19. The current docs and README describe a broader platform surface than the early spring build: messaging platforms, six terminal backends, MCP support, subagents, and a Tool Gateway through Nous Portal. Provider switching spans Nous Portal, OpenRouter, OpenAI, Anthropic-compatible routes, NovitaAI, NVIDIA NIM, z.ai/GLM, Kimi/Moonshot, MiniMax, Hugging Face, and custom endpoints.
+As of June 25, 2026, the official GitHub release stream is still v0.17.0 from June 19. The current docs and README describe a broader platform surface than the early spring build: messaging platforms, six terminal backends, MCP support, background subagents, image editing through `image_generate`, and a Tool Gateway through Nous Portal. Provider switching spans Nous Portal, OpenRouter, OpenAI, Anthropic-compatible routes, NovitaAI, NVIDIA NIM, z.ai/GLM, Kimi/Moonshot, MiniMax, Hugging Face, and custom endpoints.
+
+## Recent developments
+
+- **June 25, 2026:** GitHub API check showed 202K+ stars and v0.17.0 as the latest release. Pricing remains open-source: no mandatory Hermes subscription, with spend coming from model/API providers, optional Nous Portal, hosting, terminal backends, and connected services.
+- **June 19, 2026:** v0.17.0, the Reach Release, added iMessage via Photon, a Raft agent-network adapter, background subagents via `delegate_task(background=true)`, image-to-image editing in `image_generate`, dashboard profile building, Skills Hub browsing, a memory-tool upgrade, secure dashboard-login fixes, and an official WhatsApp Business Cloud API adapter.
 
 ## System Verdict
 
@@ -157,7 +170,8 @@ As of June 23, 2026, the official GitHub release stream is at v0.17.0 from June 
 |---|---|
 | **License** | MIT open-source (Nous Research) |
 | **Released** | February 2026 |
-| **Current version** | v0.17.0 release stream (verified June 23, 2026) |
+| **Current version** | v0.17.0 release stream (verified June 25, 2026) |
+| **GitHub stars** | 202K+ (GitHub API, checked June 25, 2026) |
 | **Deployment** | Self-hosted/local or user-controlled infrastructure (local, Docker, SSH, Daytona, Singularity, Modal) |
 | **Platforms from one process** | CLI plus Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Mattermost, Email, SMS, DingTalk, Feishu, WeCom, BlueBubbles, Home Assistant, Microsoft Teams, and more as docs evolve |
 | **Model/providers** | Nous Portal, OpenRouter, NovitaAI, NVIDIA NIM, Xiaomi MiMo, z.ai/GLM, Kimi/Moonshot, MiniMax, Hugging Face, OpenAI, and custom endpoints |
@@ -166,7 +180,7 @@ As of June 23, 2026, the official GitHub release stream is at v0.17.0 from June 
 | **Scheduling** | Natural language cron ("daily digest at 7am") |
 | **Serverless hibernation** | Modal backend |
 
-Every data point above was verified against vendor documentation and GitHub releases on 2026-06-23. See Sources.
+Every data point above was verified against vendor documentation and GitHub releases on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -200,7 +214,7 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 | Model/API route | Usage-based BYOK, or optional Nous Portal subscription for model/tool routing |
 | Daytona or Modal backend | Usage-based/serverless-style persistence. Can hibernate when idle, but operators still need spend and permission controls |
 
-*Verified 2026-06-23 via the [official site/docs](https://hermes-agent.nousresearch.com/docs/) and [GitHub repository/releases](https://github.com/nousresearch/hermes-agent/releases). No mandatory subscription; Nous Portal is optional infrastructure for model/tool routing.*
+*Verified 2026-06-25 via the [official site/docs](https://hermes-agent.nousresearch.com/docs/) and [GitHub repository/releases](https://github.com/nousresearch/hermes-agent/releases). No mandatory subscription; Nous Portal is optional infrastructure for model/tool routing.*
 
 ## Against the alternatives
 
@@ -219,7 +233,7 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 
 - **Self-hosted only.** No managed cloud means the operator owns uptime, updates, and security patches.
 - **Setup is not plug-and-play.** Platform bridges, terminal backend, model route, tool permissions, and optional Portal setup all need configuration. Comfortable with Docker or server setup is the baseline.
-- **API costs are unbounded by default.** No built-in spend caps. A runaway skill calling OpenAI frontier models can burn through credits fast.
+- **API costs are unbounded by default.** No built-in spend caps. A runaway skill, background subagent, image-editing workflow, or frontier-model route can burn through credits fast.
 - **Version churn.** Early-stage project; breaking changes to config format have shipped between releases.
 - **Low moat.** MIT license plus open architecture means forks are trivial. Differentiation depends on Nous Research staying active.
 - **No IDE integration.** Not a coding assistant for in-editor flows.
@@ -228,7 +242,7 @@ The skill system is emergent, not pre-authored. After a multi-step task (typical
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-23 against the [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/), [GitHub repository](https://github.com/nousresearch/hermes-agent), [GitHub releases](https://github.com/nousresearch/hermes-agent/releases), and [Nous Research](https://nousresearch.com/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/), [GitHub repository](https://github.com/nousresearch/hermes-agent), [GitHub releases](https://github.com/nousresearch/hermes-agent/releases), and [Nous Research](https://nousresearch.com/).
 
 ## FAQ
 
@@ -250,7 +264,7 @@ Nous Research, an AI research lab focused on open-weight models and agent archit
 ## Sources
 
 - [Hermes Agent official site](https://hermes-agent.nousresearch.com/): feature overview, platform list, setup docs
-- [Hermes Agent GitHub](https://github.com/nousresearch/hermes-agent): MIT license, codebase, release notes
+- [Hermes Agent GitHub](https://github.com/nousresearch/hermes-agent): MIT license, codebase, release notes, GitHub API activity snapshot
 - [Nous Research](https://nousresearch.com/): lab background, Hermes model series
 - [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/): sandbox backends, scheduling syntax
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$79/month annually · custom Business"
 status: active
 launched: 2020-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: high
     confidence: medium
@@ -70,12 +70,21 @@ not_best_for:
 quick_answer: >-
   Riverside captures each remote guest as a separate high-quality local track, uploads those tracks during or after the session, then gives teams recording, editing, clips, transcripts, publishing, and live-event options in one product. Free is for testing, Pro is the default paid creator plan at $24/mo annually, Live and Webinar add event features, and Business is custom. Pick it for remote podcast/video capture; skip for solo work or edit-first workflows where Descript fits better.
 price_history:
+  - date: 2026-06-25
+    plan: "Pro / Live / Webinar"
+    price: "$24 / $34 / $79 per month annually"
+    source: "https://riverside.com/pricing"
+    source_label: "Riverside pricing"
+    source_id: riverside-pricing
+    verified_at: 2026-06-25
+    note: "Public pricing still shows Free $0, Pro $29 monthly or $24/mo annual, Live $39 monthly or $34/mo annual, Webinar $99 monthly or $79/mo annual, and Business custom. The rendered Webinar annual billed-total line still appears inconsistent, so checkout confirmation remains required."
   - date: 2026-06-09
     plan: "Pro / Live / Webinar"
     price: "$24 / $34 / $79 per month annually"
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
+    verified_at: 2026-06-25
     note: "Monthly billing still shows Pro $29, Live $39, Webinar $99. Official page also shows Free $0 and Business custom; verify annual billed totals at checkout because one rendered Webinar billed-amount line appears duplicated from Live."
   - date: 2026-05-13
     plan: "Pro / Live / Webinar"
@@ -83,6 +92,7 @@ price_history:
     source: "https://riverside.com/pricing"
     source_label: "Source"
     source_id: riverside-pricing
+    verified_at: 2026-06-25
     note: "Pricing page now resolves on riverside.com (301 from riverside.fm). Monthly billing: Pro $29, Live $39, Webinar $99. Annual: Pro $24 ($288/yr), Live $34 ($408/yr), Webinar $79. Business custom."
   - date: 2026-05-10
     plan: "Pro"
@@ -90,6 +100,7 @@ price_history:
     source: "https://riverside.fm/pricing"
     source_label: "Source"
     source_id: riverside-pricing
+    verified_at: 2026-06-25
     note: "Verified current public plan lineup: Free $0, Pro $24/mo annually, Live $34/mo annually, Webinar $79/mo annually, Business custom"
   - date: 2026-04-17
     plan: "Standard / Pro / Business"
@@ -97,6 +108,7 @@ price_history:
     source: "https://riverside.fm/pricing"
     source_label: "Source"
     source_id: riverside-pricing
+    verified_at: 2026-06-25
     note: "Older AiPedia snapshot before Riverside's public pricing emphasis moved to Pro, Live, Webinar, and custom Business"
 ---
 
@@ -129,7 +141,7 @@ Founded in 2020 by Gideon and Nadav Keyson, Riverside has grown from remote podc
 | **Pricing tiers** | Free · Pro $24/mo annual · Live $34/mo annual · Webinar $79/mo annual · Business custom |
 | **Monthly pricing** | Annual plans show up to 20% discount versus monthly billing |
 
-Every data point verified 2026-06-12 via [Riverside pricing](https://riverside.com/pricing), Riverside Help Center recording docs, and Riverside AI tools docs. Note: riverside.fm now 301-redirects to riverside.com as the canonical domain.
+Every data point verified 2026-06-25 via [Riverside pricing](https://riverside.com/pricing), Riverside Help Center recording docs, and Riverside AI tools docs. Note: riverside.fm now 301-redirects to riverside.com as the canonical domain.
 
 ## What it actually is
 
@@ -163,7 +175,7 @@ Added capabilities layered on top:
 
 ## Pricing
 
-Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing). Riverside shows annual plans with up to 20% off versus monthly billing. Monthly rates (verified 2026-06-12): Pro $29, Live $39, Webinar $99. Annual monthly rates remain Pro $24, Live $34, and Webinar $79, but verify the final annual billed total at checkout because one rendered pricing-page line appears to duplicate Live's billed amount inside the Webinar card.
+Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing). Riverside shows annual plans with up to 20% off versus monthly billing. Monthly rates (verified 2026-06-25): Pro $29, Live $39, Webinar $99. Annual monthly rates remain Pro $24, Live $34, and Webinar $79, but verify the final annual billed total at checkout because one rendered pricing-page line appears to duplicate Live's billed amount inside the Webinar card.
 
 | Plan | Annual monthly rate | Recording cap | Key features | Who's it for |
 |---|---|---|---|---|
@@ -173,7 +185,7 @@ Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing).
 | Webinar | $79/mo | Unlimited separate-track recording shown in compare table | Webinar registration, up to 100 registrants, analytics, HubSpot sync | Webinars and events |
 | Business | Custom | Unlimited multi-track recording | API access, custom roles, SSO, ISO 27001/SOC 2 language, priority support | Teams, agencies, enterprises |
 
-*Prices verified 2026-06-12 via [Riverside pricing](https://riverside.com/pricing).*
+*Prices verified 2026-06-25 via [Riverside pricing](https://riverside.com/pricing).*
 
 ## Against the alternatives
 
@@ -197,7 +209,7 @@ Subscription pricing via [riverside.com/pricing](https://riverside.com/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Riverside pricing, Help Center recording docs, and Riverside AI tools docs.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against Riverside pricing, Help Center recording docs, and Riverside AI tools docs.
 
 ## FAQ
 
@@ -258,6 +270,7 @@ Yes, but the dedicated Live plan is now the cleaner buyer route for full-HD mult
 
 ## Review History
 
+- **2026-06-25:** Reverified public plan ladder, Business custom posture, API/SSO/security language, and the duplicated Webinar annual billed-total caveat against Riverside pricing.
 - **2026-04-17:** New page. Pricing and features verified against riverside.fm.
 - **2026-05-10:** Refreshed public pricing from Standard/Business public pricing to Free, Pro, Live, Webinar, and custom Business; reverified local-track recording, 4K/48kHz caveats, AI clips/tools, upload failure modes, and company positioning.
 - **2026-05-13:** Reverified pricing page now canonical on riverside.com (301 from riverside.fm). Captured explicit monthly rates (Pro $29, Live $39, Webinar $99) alongside annual rates; all tier prices unchanged.

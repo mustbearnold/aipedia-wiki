@@ -2,7 +2,7 @@
 type: tool
 slug: reka
 title: Reka
-tagline: Physical-AI and multimodal model company behind Reka Edge 2, Reka Chat, Research, Vision, Infer, and source-available Edge weights for local deployment.
+tagline: Physical-AI and multimodal model company behind Reka Edge, Reka Chat, Research, Vision, Infer, and source-available Edge weights for local deployment.
 category: ai-chatbots
 secondary_categories: [ai-research]
 company: Reka AI
@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "$0.10-$6/MTok for Chat API; Research $25-$60/1k requests"
 status: active
 launched: 2022
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
-seo_title: "Reka AI Review: Edge 2, Pricing & Physical AI (June 2026)"
-meta_description: "Reka now centers Edge 2, physical AI, Vision, Infer, and Chat API pricing. Edge is $0.10/$0.10 per MTok, BSL 1.1 weights are available, and Core remains $2/$6 per MTok."
+seo_title: "Reka AI Review: Edge, Pricing & Physical AI (June 2026)"
+meta_description: "Reka now centers Edge, physical AI, Vision, Infer, and Chat API pricing. Edge is $0.10/$0.10 per MTok, BSL 1.1 weights are available, and Core remains $2/$6 per MTok."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,11 +30,11 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "Reka is now best framed as a physical-AI and multimodal infrastructure company: Reka Edge 2 for on-device/local visual intelligence, Reka Chat and Research APIs, Reka Vision for video/image search and Q&A, Infer for multimodal inference infrastructure, and Claru for training-data infrastructure."
+    value: "Reka is now best framed as a physical-AI and multimodal infrastructure company: Reka Edge for on-device/local visual intelligence, Reka Chat and Research APIs, Reka Vision for video/image search and Q&A, Infer for multimodal inference infrastructure, and Claru for training-data infrastructure."
     source: "https://reka.ai/"
     source_label: "Reka homepage"
     source_id: reka-homepage
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://docs.reka.ai/pricing"
     source_label: "Reka API pricing"
     source_id: reka-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://reka.ai/reka-edge"
     source_label: "Reka Edge product page"
     source_id: reka-edge-product
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-09
     volatility: medium
     confidence: high
@@ -68,7 +68,7 @@ not_best_for:
   - the absolute top of reasoning benchmarks (Claude Opus and OpenAI frontier models lead)
   - buyers who require permissive Apache/MIT model weights
 quick_answer: >-
-  Reka is now best understood as a physical-AI and multimodal infrastructure company, not a consumer chatbot. Pick it for Reka Edge 2, local/edge vision-language deployment, video/image intelligence, Reka Chat APIs, and enterprise infrastructure. Skip it if you need a polished consumer assistant or permissive open-weight licensing.
+  Reka is now best understood as a physical-AI and multimodal infrastructure company, not a consumer chatbot. Pick it for Reka Edge, local/edge vision-language deployment, video/image intelligence, Reka Chat APIs, and enterprise infrastructure. Skip it if you need a polished consumer assistant or permissive open-weight licensing.
 price_history:
   - date: 2026-04-18
     plan: "Reka Core API"
@@ -76,6 +76,7 @@ price_history:
     source: "https://docs.reka.ai/pricing"
     source_label: "Source"
     source_id: reka-pricing
+    verified_at: 2026-06-25
     note: "Verified via docs.reka.ai/pricing. Image $0.02, video $0.08/min, audio $0.02/min."
   - date: 2026-03-05
     plan: "Reka Edge (7B)"
@@ -83,6 +84,7 @@ price_history:
     source: "https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai"
     source_label: "Source"
     source_id: reka-edge-launch
+    verified_at: 2026-06-25
     note: "Reka Edge launched March 5, 2026 for physical AI and on-device vision-language."
   - date: 2026-06-09
     plan: "Reka Edge API"
@@ -96,15 +98,15 @@ price_history:
 
 # Reka
 
-Reka is a multimodal AI research and infrastructure company founded in 2022 by veterans from DeepMind, Google Brain, Meta, and Baidu. The old way to describe it was a Core/Flash/Edge model family. The current June 2026 site is more specific: Reka is building models and infrastructure for the physical-AI era, with Reka Edge 2, Reka Chat, Reka Research, Reka Vision, Infer, and Claru.
+Reka is a multimodal AI research and infrastructure company founded in 2022 by veterans from DeepMind, Google Brain, Meta, and Baidu. The old way to describe it was a Core/Flash/Edge model family. The current June 2026 site is more specific: Reka is building models and infrastructure for the physical-AI era, with Reka Edge, Reka Chat, Reka Research, Reka Vision, Infer, and Claru.
 
-Reka's real moat is visual intelligence for video-heavy and edge-heavy systems. Reka Edge is a 7B-class vision-language model built for on-device, on-prem, and cloud deployment, with a ConvNeXt V2 visual encoder, compact 64-token image tiles, and quantized local deployment options. The current price card also makes Edge the cheapest public Chat API lane at $0.10 per million input tokens and $0.10 per million output tokens.
+Reka's real moat is visual intelligence for video-heavy and edge-heavy systems. Reka Edge is a 7B-class vision-language model built for on-device, on-prem, and cloud deployment, with a ConvNeXt V2 visual encoder, compact 64-token image tiles, and quantized local deployment options. The current price card also makes Edge the cheapest public Chat API lane at $0.10 per million input tokens and $0.10 per million output tokens. Reka's news page added fresh physical-AI research signals in June 2026, including CS2-10k on June 24 and PhysicalRealismBench-U on June 9.
 
 The company hit unicorn status in 2025 with a $110M round led by NVIDIA and Snowflake. That backing signals hyperscaler interest in Reka's on-prem and dedicated deployment story, which sets it apart from API-only rivals.
 
 ## System Verdict
 
-> **Pick Reka if your workload centers on visual/physical AI, video understanding, local or edge deployment, or multimodal infrastructure.** Reka Edge 2 is the buyer signal now: source-available weights, Hugging Face/vLLM deployment, local offline operation, API access, and commercial-license caveats. Core and Flash still matter for API workloads, but the homepage no longer reads like a generic LLM lab.
+> **Pick Reka if your workload centers on visual/physical AI, video understanding, local or edge deployment, or multimodal infrastructure.** Reka Edge is the buyer signal now: source-available weights, Hugging Face/vLLM deployment, local offline operation, API access, and commercial-license caveats. Core and Flash still matter for API workloads, but the homepage no longer reads like a generic LLM lab.
 >
 > **Skip it if you need consumer-grade chat, top-of-benchmark reasoning, or image/video generation.** Reka has no ChatGPT-style consumer product. On pure text reasoning, [Claude](/tools/claude/) Opus 4.8 and OpenAI frontier models lead. Reka also understands media but does not generate it, so image and video creation workflows need a separate tool.
 >
@@ -114,7 +116,7 @@ The company hit unicorn status in 2025 with a $110M round led by NVIDIA and Snow
 
 | | |
 |---|---|
-| **Current public emphasis** | Reka Edge 2 for physical AI, plus Reka Chat, Research, Vision, Infer, and Claru |
+| **Current public emphasis** | Reka Edge for physical AI, plus Reka Chat, Research, Vision, Infer, and Claru |
 | **Public Chat models** | reka-flash · reka-edge / reka-edge-2603 · Core pricing still listed |
 | **Research product** | Reka Research (flat-rate per 1,000 requests) |
 | **Video / image intelligence** | Edge and Vision for video/image understanding, search, Q&A, detection, tagging, and physical grounding |
@@ -171,7 +173,7 @@ Research pricing:
 
 Dedicated on-prem deployments and Spark licensing price through direct contact with Reka sales.
 
-Prices verified 2026-06-12 via [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka Edge product page](https://reka.ai/reka-edge), and the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai).
+Prices verified 2026-06-25 via [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka Edge product page](https://reka.ai/reka-edge), the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai), and [Reka news](https://reka.ai/news).
 
 **No free tier is documented.** Reka runs pay-as-you-go with no upfront commitment. Usage is billed after consumption.
 
@@ -194,13 +196,13 @@ Prices verified 2026-06-12 via [docs.reka.ai/pricing](https://docs.reka.ai/prici
 - **Smaller ecosystem.** Fewer third-party tools, SDKs, and community templates than OpenAI, Anthropic, or Google. Integration work is more DIY.
 - **Behind on pure text reasoning benchmarks.** Core's multimodal strength does not translate to chart-topping text-only scores. Claude Opus 4.8 and OpenAI frontier models lead those categories.
 - **Edge licensing is not Apache/MIT.** Reka Edge weights are available, but BSL 1.1 and the $1M annual-revenue commercial threshold make licensing a procurement issue.
-- **Core/Flash/Edge naming can confuse buyers.** The homepage emphasizes Reka Edge 2 and physical-AI infrastructure, while the API docs list public chat models as `reka-flash` and `reka-edge` / `reka-edge-2603`; verify model IDs from the Get Models API before production.
+- **Core/Flash/Edge naming can confuse buyers.** The homepage emphasizes Reka Edge and physical-AI infrastructure, while the API docs list public chat models as `reka-flash` and `reka-edge` / `reka-edge-2603`; verify model IDs from the Get Models API before production.
 - **No documented free tier.** Unlike OpenAI, Anthropic, or Google, there is no free monthly quota to evaluate Core before billing begins. Expect to set up billing from day one.
 - **Research product pricing can surprise.** Parallel Thinking scales from $35 to $60 per 1,000 requests based on depth. Budget for the high end when enabling the feature.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka models docs](https://docs.reka.ai/chat/models), the [Reka Edge product page](https://reka.ai/reka-edge), the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai), and the [Reka homepage](https://reka.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [docs.reka.ai/pricing](https://docs.reka.ai/pricing), the [Reka models docs](https://docs.reka.ai/chat/models), the [Reka Edge product page](https://reka.ai/reka-edge), the [Reka Edge launch announcement](https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai), the [Reka homepage](https://reka.ai/), and [Reka news](https://reka.ai/news).
 
 ## FAQ
 
@@ -208,7 +210,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 No free tier is currently documented. Reka runs pay-as-you-go API pricing with no upfront commitment. Expect to configure billing before issuing the first request.
 
 **What is Reka's flagship model?**
-The older flagship framing was Reka Core, still priced at $2 input / $6 output per 1M tokens. The current public site emphasizes Reka Edge 2 and physical-AI infrastructure, so buyers should choose based on workload: Edge for local/visual/physical AI, Flash for balanced API work, Core for heavier multimodal reasoning.
+The older flagship framing was Reka Core, still priced at $2 input / $6 output per 1M tokens. The current public site emphasizes Reka Edge and physical-AI infrastructure, so buyers should choose based on workload: Edge for local/visual/physical AI, Flash for balanced API work, Core for heavier multimodal reasoning.
 
 **What is Reka Edge?**
 A 7B-class vision-language model optimized for on-device physical AI, robotics, vehicles, cameras, and embedded systems. It is available through the API and through Hugging Face/vLLM local deployment, with BSL 1.1 licensing and a free commercial grant below $1M annual revenue.

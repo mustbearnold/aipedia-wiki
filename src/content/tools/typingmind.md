@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$39-$99 one-time / $395+ team bulk"
 status: active
 launched: 2023-04
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: medium
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     volatility: medium
     confidence: high
@@ -73,6 +73,7 @@ price_history:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
+    verified_at: 2026-06-25
     note: "Reverified unchanged. Personal license remains three tiers: Standard ($39, basic chat + agents + voice input), Extended ($79, adds image gen, web search, TTS, vision, document upload), Premium ($99, adds multi-model chats, unlimited plugins, projects, artifacts)."
   - date: 2026-06-10
     plan: "Bulk License"
@@ -80,6 +81,7 @@ price_history:
     source: "https://www.typingmind.com/buy"
     source_label: "typingmind.com/buy"
     source_id: typingmind-official
+    verified_at: 2026-06-25
     note: "Reverified unchanged. Shared key for up to 10 users across 50 devices with Premium-equivalent features, listed at $395 from $790."
   - date: 2026-06-10
     plan: "TypingMind Teams"
@@ -87,7 +89,16 @@ price_history:
     source: "https://custom.typingmind.com/pricing"
     source_label: "TypingMind Teams pricing"
     source_id: typingmind-teams-pricing
+    verified_at: 2026-06-25
     note: "Teams pricing page lists Professional promo pricing, custom Business terms starting at $18,700/year, self-hosted source-code licensing, add-ons, and a warning that OpenAI/Anthropic/Google API costs are not included."
+  - date: 2026-06-25
+    plan: "Model/provider metadata"
+    price: "Included with licensed app; API costs separate"
+    source: "https://feedback.typingmind.com/changelog"
+    source_label: "TypingMind changelog"
+    source_id: typingmind-changelog
+    verified_at: 2026-06-25
+    note: "TypingMind's June 23, 2026 changelog added Sakana Fugu and refreshed OpenRouter and DeepInfra model metadata, including limits, pricing, PDF support, and prompt-caching support."
 ---
 
 # TypingMind
@@ -143,7 +154,7 @@ A chat UI for power users who already have API keys for the major providers. Buy
 
 **Note on BYOK billing:** TypingMind never bills you for API calls. You pay OpenAI, Anthropic, Google, OpenRouter, cloud credits, or whichever configured provider you use based on provider pricing. All personal licenses include a 14-day money-back guarantee and allow free upgrades between tiers anytime.
 
-Prices verified 2026-06-12 via [typingmind.com/buy](https://www.typingmind.com/buy) and [TypingMind Teams pricing](https://custom.typingmind.com/pricing).
+Prices verified 2026-06-25 via [typingmind.com/buy](https://www.typingmind.com/buy) and [TypingMind Teams pricing](https://custom.typingmind.com/pricing). TypingMind's June 23 changelog also refreshed OpenRouter and DeepInfra model metadata, so exact available models should still be checked inside the app before a high-volume rollout.
 
 ## Failure modes
 
@@ -165,7 +176,7 @@ Prices verified 2026-06-12 via [typingmind.com/buy](https://www.typingmind.com/b
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-12 against [typingmind.com/buy](https://www.typingmind.com/buy), [TypingMind Teams pricing](https://custom.typingmind.com/pricing), and [G2 TypingMind alternatives](https://www.g2.com/products/typingmind-typingmind/competitors/alternatives).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [typingmind.com/buy](https://www.typingmind.com/buy), [TypingMind Teams pricing](https://custom.typingmind.com/pricing), [TypingMind changelog](https://feedback.typingmind.com/changelog), and [G2 TypingMind alternatives](https://www.g2.com/products/typingmind-typingmind/competitors/alternatives).
 
 ## FAQ
 
