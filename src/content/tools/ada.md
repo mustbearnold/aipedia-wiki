@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: "Contact sales; no public tier sheet"
 status: active
 launched: 2016-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
 seo_title: "Ada (ada.cx): AI Customer Service Platform Review (June 2026)"
 meta_description: "Ada runs the ACX Platform for enterprise AI customer support: chat, voice, email, SMS, social, Reasoning Engine, Playbooks, MCP, Web Chat SDK, and demo-gated pricing."
@@ -34,7 +34,7 @@ facts:
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
@@ -43,7 +43,7 @@ facts:
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-18'
@@ -52,7 +52,7 @@ facts:
     source: https://www.ada.cx/platform
     source_label: Ada platform
     source_id: ada-platform
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
@@ -61,7 +61,7 @@ facts:
     source: https://docs.ada.cx/mcp/introduction/overview
     source_label: Ada MCP overview
     source_id: ada-mcp-overview
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
@@ -70,7 +70,7 @@ facts:
     source: https://docs.ada.cx/release-notes
     source_label: Ada release notes
     source_id: ada-playbooks-upgrade
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-18'
@@ -121,14 +121,14 @@ price_history:
     source_label: "Ada platform"
     source_id: ada-platform
     note: "Current platform FAQ says most customers use conversation-based pricing and resolution-based pricing remains available for enterprises with specific needs."
-  - date: 2026-06-23
-    verified_at: 2026-06-23
+  - date: 2026-06-25
+    verified_at: 2026-06-25
     plan: "Enterprise (contact sales)"
     price: "No public tier sheet; conversation-based pricing is the primary public model"
     source: "https://docs.ada.cx/2026-06-22-playbooks-enhancements"
     source_label: "Ada Playbooks upgrade"
     source_id: ada-playbooks-upgrade
-    note: "June 23 refresh adds the June 22 Playbooks upgrade to the procurement checklist: structured Playbooks now use six step types, AI-driven modes, built-in flow intelligence, error branching, and messaging/email/voice support."
+    note: "June 25 refresh adds the June 22 Playbooks upgrade to the procurement checklist: structured Playbooks now use six step types, AI-driven modes, built-in flow intelligence, error branching, and messaging/email/voice support."
 ---
 
 # Ada
@@ -149,7 +149,7 @@ Ada is not a self-serve chatbot widget. It is a sales-led enterprise CX platform
 
 ## What Changed Since The Last Refresh
 
-The prior Ada page was last verified on 2026-06-18 and mainly described MCP, coaching, Web Chat SDK, and handoff changes. The June 23 refresh adds the June 22 Playbooks upgrade and keeps five June operating-surface changes in the buyer checklist.
+The prior Ada page was last verified on 2026-06-18 and mainly described MCP, coaching, Web Chat SDK, and handoff changes. The June 25 refresh adds the June 22 Playbooks upgrade and keeps five June operating-surface changes in the buyer checklist.
 
 - **Playbooks moved to a structured step model.** Ada's June 22 release says Playbooks now use six step types: SEND, SET, ASK, RUN, IF/ELSE, and GO TO. Buyers get more predictable execution, AI-driven modes where useful, automatic intent-change handling, Knowledge-search pause/resume, escalation behavior, action error branching, and support across messaging, email, and voice.
 - **MCP is now part of the operating surface.** Ada's MCP overview says connected assistants such as Claude, ChatGPT, or any MCP client can analyze performance, update and create resources, run tests, answer questions, and stage changes safely. This makes Ada more admin-assistive, but it also creates a governance question around who can propose or confirm production changes.
@@ -175,7 +175,7 @@ The page also updates Ada's scale signal from **5.5B+** handled interactions to 
 | **Compliance** | SOC 2, HIPAA, GDPR, AIUC-1, zero-retention LLM provider policy |
 | **Integrations** | Zendesk, Salesforce, Twilio, AWS, Freshworks, Genesys, GitHub, Aircall, ServiceNow, Shopify, MCP, APIs, SDKs |
 | **Pricing model** | Contact sales; conversation-based pricing is primary, resolution-based remains available for specific enterprise needs |
-| **Public tier sheet** | None found on June 23, 2026 |
+| **Public tier sheet** | None found on June 25, 2026 |
 | **Typical deployment** | Ada says the platform fits companies with at least 300K annual customer-service conversations |
 | **HQ** | Toronto, Canada |
 | **Founded** | 2016 |
@@ -210,7 +210,7 @@ Ada publishes no public pricing tiers. The current platform FAQ says conversatio
 
 | Signal | Current source-backed read |
 |---|---|
-| Public price sheet | None found on June 23, 2026 |
+| Public price sheet | None found on June 25, 2026 |
 | Buying path | Demo and sales consultation |
 | Primary public pricing model | Conversation-based pricing |
 | Optional pricing model | Resolution-based pricing for specific enterprise needs |
@@ -242,7 +242,7 @@ Do not quote old third-party ACV ranges as current Ada pricing. They can be used
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-23 against [Ada's homepage](https://www.ada.cx/), the [Ada ACX Platform overview](https://www.ada.cx/platform/), [Ada release notes](https://docs.ada.cx/release-notes), [Ada MCP overview](https://docs.ada.cx/mcp/introduction/overview), [Ada Playbooks](https://docs.ada.cx/2026-06-22-playbooks-enhancements), [Ada's pricing explainer](https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/), and the [Ada demo request path](https://www.ada.cx/demo/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against [Ada's homepage](https://www.ada.cx/), the [Ada ACX Platform overview](https://www.ada.cx/platform/), [Ada release notes](https://docs.ada.cx/release-notes), [Ada MCP overview](https://docs.ada.cx/mcp/introduction/overview), [Ada Playbooks](https://docs.ada.cx/2026-06-22-playbooks-enhancements), [Ada's pricing explainer](https://www.ada.cx/blog/unpacking-ai-agent-pricing-resolution-based-vs-conversation-based-models/), and the [Ada demo request path](https://www.ada.cx/demo/).
 
 ## FAQ
 

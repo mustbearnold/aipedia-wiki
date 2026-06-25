@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / paid checkout required"
 status: active
 launched: 2021-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,17 +31,17 @@ facts:
     source: https://boomy.com/
     source_label: Boomy official site
     source_id: boomy-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
   pricing_anchor:
-    value: Boomy's official pricing snippets on June 23 showed paid routes discounted to $9.99/month and $29.99/month, but
+    value: Boomy's official pricing snippets on June 25 showed paid routes discounted to $9.99/month and $29.99/month, but
       plan names, download counts, annual discounts, account eligibility, and current limits still need live-checkout confirmation.
     source: https://boomy.com/pricing
     source_label: Boomy pricing
     source_id: boomy-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: medium
     next_review_at: '2026-07-18'
@@ -51,7 +51,7 @@ facts:
     source: https://support.boomy.com/hc/en-us/articles/14581471021581-Can-I-release-my-Boomy-music-with-other-distributors
     source_label: Boomy other-distributor support
     source_id: boomy-support-other-distributors
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
@@ -61,7 +61,7 @@ facts:
     source: https://support.boomy.com/hc/en-us/articles/16238363656845-Do-my-commercial-rights-for-my-songs-end-if-I-cancel-my-membership
     source_label: Boomy commercial rights after cancellation
     source_id: boomy-support-rights-after-cancel
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -71,7 +71,7 @@ facts:
     source: https://support.boomy.com/hc/en-us/articles/15261808044301-Who-owns-the-rights-to-Boomy-songs
     source_label: Boomy rights ownership support
     source_id: boomy-support-rights-ownership
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -81,7 +81,7 @@ facts:
     source: https://support.boomy.com/hc/en-us/articles/15261378066957-What-is-my-share-of-royalties-and-how-is-it-calculated
     source_label: Boomy royalty and distribution support
     source_id: boomy-support-revenue-share
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -90,7 +90,7 @@ facts:
     source: https://support.boomy.com/hc/en-us/articles/14582444321037-How-much-does-Dolby-Remastering-cost
     source_label: Boomy Dolby Remastering cost
     source_id: boomy-dolby-remastering-cost
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
@@ -100,7 +100,7 @@ facts:
     source: https://support.boomy.com/hc/en-us/articles/16237103661581-What-commercial-use-is-available-for-the-different-Boomy-Memberships
     source_label: Boomy commercial-use membership support
     source_id: boomy-support-commercial-use
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -119,18 +119,18 @@ not_best_for:
   - users who need copyright assignment
   - creators who cannot tolerate checkout-only plan limits
 quick_answer: >-
-  Boomy is AI music generation for complete beginners. The June 23, 2026 check keeps the buyer story focused on paid-download commercial-rights lanes, with users free to use a distributor of their choice after downloading a release. Commercial rights continue after cancellation for songs downloaded while subscribed, but Boomy says it owns and manages copyright by default. Official pricing snippets now show discounted paid routes at $9.99/month and $29.99/month, while plan names, download counts, annual discounts, and eligibility still need live-checkout confirmation.
+  Boomy is AI music generation for complete beginners. The June 25, 2026 check keeps the buyer story focused on paid-download commercial-rights lanes, with users free to use a distributor of their choice after downloading a release. Commercial rights continue after cancellation for songs downloaded while subscribed, but Boomy says it owns and manages copyright by default. Official pricing snippets now show discounted paid routes at $9.99/month and $29.99/month, while plan names, download counts, annual discounts, and eligibility still need live-checkout confirmation.
 ---
 
 # Boomy
 
-Music generation with training wheels. Pick a style, generate a song, then decide whether the result is worth paying to download and release. Boomy still belongs in beginner AI music shortlists, but the June 23 buyer story is less about one-click Boomy distribution and more about paid downloads, commercial-use rights, and your own distributor workflow.
+Music generation with training wheels. Pick a style, generate a song, then decide whether the result is worth paying to download and release. Boomy still belongs in beginner AI music shortlists, but the June 25 buyer story is less about one-click Boomy distribution and more about paid downloads, commercial-use rights, and your own distributor workflow.
 
 ## System Verdict
 
 > **Pick Boomy if you want the simplest way to make a song and you will verify rights before publishing.** It is still built for non-musicians, not producers. The best buyer fit is a creator who wants quick background tracks, novelty songs, or release experiments without learning a DAW.
 >
-> **Do not buy it just because an old page quoted a cheap plan.** Official June 23 pricing snippets showed discounted paid routes at $9.99/month and $29.99/month, but support docs still send users back to the pricing page for current membership options and download limits. Confirm plan names, download limits, annual discounts, and account eligibility in checkout.
+> **Do not buy it just because an old page quoted a cheap plan.** Official June 25 pricing snippets showed discounted paid routes at $9.99/month and $29.99/month, but support docs still send users back to the pricing page for current membership options and download limits. Confirm plan names, download limits, annual discounts, and account eligibility in checkout.
 >
 > **The licensing shift is the real update.** Boomy support says Creator and Pro downloads carry full commercial rights, those rights continue after cancellation for songs downloaded while subscribed, and users can use a distributor of their choice. Boomy still says it owns and manages copyright by default, so this is commercial-use permission, not a clean copyright assignment.
 
@@ -172,14 +172,14 @@ Music generation with training wheels. Pick a style, generate a song, then decid
 
 ## Pricing
 
-| Plan | What We Could Verify On June 23 | Buying Note |
+| Plan | What We Could Verify On June 25 | Buying Note |
 |---|---|---|
 | Free | Boomy remains free to try for basic generation. | Use it only to test output before paying. Do not assume commercial download rights on free output. |
 | Creator | Official snippets showed a paid route discounted to $9.99/month from $14.99/month, and support docs position Creator as a commercial-rights lane for songs downloaded while subscribed. | Verify live plan name, download count, annual discount, and current rights language in checkout. |
 | Pro | Official snippets showed Pro discounted to $29.99/month from $39.99/month. | Verify the live checkout before buying, especially download limits and whether the promo applies to your account. |
 | Dolby Remastering | Support docs list Dolby Remastering at $9.99 per track. | Treat it as an add-on cost, not included plan value. |
 
-Verified 2026-06-23 against Boomy support docs and pricing route checks. Official snippets now show discounted paid routes at $9.99/month and $29.99/month, but exact live plan limits need checkout confirmation.
+Verified 2026-06-25 against Boomy support docs and pricing route checks. Official snippets now show discounted paid routes at $9.99/month and $29.99/month, but exact live plan limits need checkout confirmation.
 
 ## Failure Modes
 
@@ -201,7 +201,7 @@ Verified 2026-06-23 against Boomy support docs and pricing route checks. Officia
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [Boomy's official site](https://boomy.com/), [Boomy pricing route](https://boomy.com/pricing), [Boomy terms route](https://boomy.com/terms), Boomy support docs for commercial rights, other distributors, ownership, download limits, membership pricing, billing options, royalties, and Dolby Remastering.
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [Boomy's official site](https://boomy.com/), [Boomy pricing route](https://boomy.com/pricing), [Boomy terms route](https://boomy.com/terms), Boomy support docs for commercial rights, other distributors, ownership, download limits, membership pricing, billing options, royalties, and Dolby Remastering.
 
 ## FAQ
 

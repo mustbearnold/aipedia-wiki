@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Deprecated API model; Gemini/Vertex image pricing varies"
 status: active
 launched: 2025-05
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,34 +30,34 @@ facts:
     source: https://ai.google.dev/gemini-api/docs/changelog
     source_label: Gemini API release notes
     source_id: gemini-api-changelog
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   pricing_anchor:
-    value: Legacy Imagen per-image prices are no longer the main buyer question. Gemini image output is token-priced, and shutdown dates vary by Google surface.
+    value: Legacy Imagen per-image prices are no longer the main buyer question. Gemini image output is token-priced, and Google docs show Imagen shutdown risk across Gemini API, Vertex AI Gemini API, and Firebase AI Logic surfaces.
     source: https://ai.google.dev/gemini-api/docs/pricing
     source_label: Gemini Developer API pricing
     source_id: gemini-api-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
   api_available:
-    value: Google migration docs route Imagen users toward newer Gemini image models, so API availability must be checked by exact surface and model ID.
+    value: Google migration docs route Imagen users toward Gemini 3.x Image models, so API availability must be checked by exact surface and model ID.
     source: https://firebase.google.com/docs/ai-logic/imagen-models-migration
     source_label: Firebase Imagen migration guide
     source_id: firebase-imagen-migration
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   model_control:
-    value: Gemini API model docs now list Imagen 4 as deprecated, and the release notes name the affected Imagen 4 model IDs.
+    value: Gemini API model docs list Imagen 4 standard, ultra, and fast endpoints as deprecated, with migration guidance toward Gemini image models.
     source: https://ai.google.dev/gemini-api/docs/models/imagen
     source_label: Gemini API Imagen docs
     source_id: imagen-gemini-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -66,7 +66,7 @@ facts:
     source: https://ai.google.dev/gemini-api/docs/changelog
     source_label: Gemini API release notes
     source_id: gemini-api-changelog
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -85,23 +85,23 @@ not_best_for:
   - open weights or self-hosting
   - uncensored or edgy content
 quick_answer: >-
-  Imagen 4 is now a migration-risk Google image model, not a clean net-new recommendation. Gemini API docs mark Imagen 4 deprecated, and Google migration guidance points developers toward newer Gemini image models. Existing integrations should audit model IDs, pricing, and shutdown dates by surface. New Google-stack work should start with Gemini image models such as Nano Banana unless Google confirms a current Imagen path for your account.
+  Imagen 4 is now a migration-risk Google image model, not a clean net-new recommendation. Gemini API docs mark Imagen 4 deprecated, and Google migration guidance points developers toward Gemini image models. Existing integrations should audit model IDs, pricing, and shutdown dates by surface. New Google-stack work should start with Gemini 3.x Image models such as Nano Banana unless Google confirms a current Imagen path for your account.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Imagen 4 Gemini API models"
     price: "Deprecated; migrate to current Gemini image models"
     source: "https://ai.google.dev/gemini-api/docs/changelog"
     source_label: "Gemini API release notes"
     source_id: gemini-api-changelog
-    verified_at: 2026-06-23
-    note: "Gemini API release notes say Imagen 4 and Gemini 3 Image models are being deprecated, while Firebase migration guidance lists a separate Imagen shutdown timeline. Verify the exact surface before launch."
+    verified_at: 2026-06-25
+    note: "Gemini API model docs say Imagen 4 standard, ultra, and fast endpoints are deprecated and name an August 17, 2026 shutdown date; Firebase migration guidance says Imagen models shut down June 24, 2026 across Firebase AI Logic routes. Verify the exact surface before launch."
   - date: 2026-04-17
     plan: "Gemini API"
     price: "$0.02-$0.06 per image"
     source: "https://cloud.google.com/vertex-ai/generative-ai/pricing"
     source_label: "Source"
     source_id: imagen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Fast / Standard / Ultra tiers verified on ai.google.dev"
   - date: 2026-04-17
     plan: "Google AI Pro"
@@ -109,7 +109,7 @@ price_history:
     source: "https://cloud.google.com/vertex-ai/generative-ai/pricing"
     source_label: "Source"
     source_id: imagen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Consumer bundle with Gemini 3.1 Pro, 2TB storage, verified"
   - date: 2026-05-13
     plan: "Gemini API"
@@ -117,7 +117,7 @@ price_history:
     source: "https://ai.google.dev/gemini-api/docs/models/imagen"
     source_label: "Source"
     source_id: imagen-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Model IDs confirmed on ai.google.dev: imagen-4.0-fast-generate-001, imagen-4.0-generate-001, imagen-4.0-ultra-generate-001. Up to 4 images per request, 480 token prompt limit. Pricing unchanged from April 2026."
   - date: 2026-05-13
     plan: "Google AI Ultra"
@@ -125,7 +125,7 @@ price_history:
     source: "https://gemini.google/subscriptions/"
     source_label: "Source"
     source_id: imagen-subscriptions
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Max Gemini 3.1 Pro, Veo 3.1 video, 30TB storage, Project Mariner. Intro pricing of $124.99/mo for the first three months remains active."
   - date: 2026-05-19
     plan: "Google AI Ultra refresh"
@@ -133,13 +133,13 @@ price_history:
     source: "/news/2026-05-19-google-io-gemini-35-search-ai-ultra/"
     source_label: "AIpedia coverage"
     source_id: aipedia-news
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Google I/O 2026 reset AI Ultra pricing from the old $249.99-style tier to $100 and $200 premium tiers. Exact Imagen/Google media limits should be checked in-account."
 ---
 
 # Imagen 4
 
-Google DeepMind's Imagen 4 was Google's flagship text-to-image model across Gemini, AI Studio, the Gemini API, and Vertex AI. As of the June 23, 2026 refresh, the buyer story has changed: Gemini API docs mark Imagen 4 as deprecated, and Google migration guidance points developers toward newer Gemini image models.
+Google DeepMind's Imagen 4 was Google's flagship text-to-image model across Gemini, AI Studio, the Gemini API, and Vertex AI. As of the June 25, 2026 refresh, the buyer story has changed: Gemini API docs mark Imagen 4 as deprecated, and Google migration guidance points developers toward Gemini 3.x Image models.
 
 The old API surface shipped **Fast**, **Standard**, and **Ultra** model IDs. That historical pricing is useful for invoice review, but it should not drive net-new architecture. Audit your model IDs, confirm the active shutdown date for your Google surface, and move new work to the current Gemini image path.
 
@@ -158,20 +158,20 @@ The old API surface shipped **Fast**, **Standard**, and **Ultra** model IDs. Tha
 | **Current status** | Deprecated on Gemini API model docs |
 | **Legacy model IDs** | `imagen-4.0-fast-generate-001` · `imagen-4.0-generate-001` · `imagen-4.0-ultra-generate-001` |
 | **Legacy API pricing** | Historical Fast $0.02 · Standard $0.04 · Ultra $0.06 per image |
-| **Replacement direction** | Newer Gemini image models, checked by exact Google surface |
+| **Replacement direction** | Gemini 3.x Image models, checked by exact Google surface |
 | **Pricing to model now** | Gemini image output token pricing plus any Google Cloud or subscription context |
 | **Enterprise** | Verify Vertex AI support, migration dates, and Cloud billing before launch |
 | **Watermark** | SynthID embedded in every output |
 | **Best fit now** | Migration planning, model-ID audit, legacy invoice review |
 | **Open weights** | None |
 
-Every status and pricing data point was last verified against Google documentation on 2026-06-23. Google surfaces currently disagree in wording and timeline, so treat the exact shutdown date as surface-specific until confirmed in your console or support channel.
+Every status and pricing data point was last verified against Google documentation on 2026-06-25. Google surfaces currently show different wording and dates, so treat the exact shutdown date as surface-specific until confirmed in your console or support channel.
 
 ## What it actually is
 
 One image model family served through several Google entry points. That used to be the reason to pick Imagen: consumer users generated inside Gemini, developers used the Gemini API or AI Studio, and enterprises routed production through Vertex AI.
 
-The June 2026 refresh changes the decision. Gemini API docs mark Imagen 4 as deprecated, Gemini API release notes name Imagen 4 model IDs in a deprecation notice, and Firebase migration docs tell image-generation users to move to newer Gemini image models.
+The June 2026 refresh changes the decision. Gemini API docs mark Imagen 4 as deprecated and Firebase migration docs tell image-generation users to move to Gemini 3.x Image models.
 
 For existing users, the job is not to debate whether Imagen 4 was good. It was strong on Google integration, SynthID provenance, and text rendering. The job now is to keep production stable while moving prompts, safety settings, and billing expectations onto a supported model.
 
@@ -214,7 +214,7 @@ Legacy Imagen 4 API pricing and current migration reference:
 | Gemini image models | Token-priced image output | Net-new Google image builds after migration |
 | Vertex AI | Surface-specific Cloud billing | Confirm model availability and shutdown windows |
 
-*Status verified 2026-06-23 via [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), [Firebase Imagen migration guidance](https://firebase.google.com/docs/ai-logic/imagen-models-migration), and [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing). The exact shutdown date must be confirmed by surface because Google docs now show different timelines.*
+*Status verified 2026-06-25 via [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Firebase Imagen migration guidance](https://firebase.google.com/docs/ai-logic/imagen-models-migration), and [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing). The exact shutdown date must be confirmed by surface because Google docs now show different timelines.*
 
 ## Against the alternatives
 
@@ -241,7 +241,7 @@ Legacy Imagen 4 API pricing and current migration reference:
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against the [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Firebase Imagen migration guidance](https://firebase.google.com/docs/ai-logic/imagen-models-migration), [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), and the [SynthID overview](https://deepmind.google/technologies/synthid).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog), [Gemini API Imagen docs](https://ai.google.dev/gemini-api/docs/models/imagen), [Firebase Imagen migration guidance](https://firebase.google.com/docs/ai-logic/imagen-models-migration), [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing), [Google AI subscriptions](https://gemini.google/subscriptions/), and the [SynthID overview](https://deepmind.google/technologies/synthid).
 
 ## FAQ
 
@@ -249,7 +249,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Treat legacy free access as unstable. Google AI Studio and Gemini app availability should be checked in account because Google is moving image users toward newer Gemini image models.
 
 **How much does Imagen 4 cost on the API?**
-Historically, Fast was $0.02 per image, Standard $0.04, and Ultra $0.06. As of June 23, 2026, the larger issue is deprecation. Verify the replacement Gemini image model and its token-priced output before launch.
+Historically, Fast was $0.02 per image, Standard $0.04, and Ultra $0.06. As of June 25, 2026, the larger issue is deprecation. Verify the replacement Gemini image model and its token-priced output before launch.
 
 **Can Imagen 4 images be used commercially?**
 Google generally permits commercial use of outputs from consumer and Vertex AI surfaces, subject to the standard acceptable-use policy. For Imagen 4 specifically, first confirm the active surface and migration status because deprecated model access can change.

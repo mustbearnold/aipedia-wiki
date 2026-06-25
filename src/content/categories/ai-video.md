@@ -92,7 +92,7 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its June 25 Platform docs publish C1, V6, V5.6, and V5.5 credit rates, one-time API credit packs, Essential/Scale/Business API memberships, and a June 16 upscale release in the changelog. API memberships are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
 
-**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 23 HeyGen recheck keeps app plans, API-key wallet usage, OAuth/web-plan usage, LiveAvatar streaming, and affiliate terms separate: the app still lists Free, Creator $29/month with 600 credits, Pro from $49/month with 1,000 credits, Business $149/month plus $20/seat with 1,500 credits, and Enterprise custom, while current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar at $7/video, Video Agent at $0.0333/sec, and HyperFrames at $0.10-$0.30/min. LiveAvatar now needs Free and Starter $19/month coverage before Essential $99/month, Business $475/month, and Enterprise custom with a stated $48,800 minimum budget. The pricing help route still matters for API plan caveats, so buyers should use the live pricing page, developer pricing docs, and LiveAvatar help for current purchase math. The June 9 Tavus check keeps Tavus as the API-first live video-agent lane, with Developer pricing at Free, Starter $59/mo, Growth $397/mo, Enterprise custom, plus pay-as-you-go usage and a current Growth card showing 10 concurrent streams. The June 22 D-ID check keeps D-ID as the visual-agent and agentic-video lane: API minutes draw from the same balance as web D-ID, Studio video usage rounds to the nearest 15-second interval, Trial/Lite outputs can carry watermarks, everyone gets 200 free conversation sessions to start, and generated agent response video is metered at 0.5 credit per 30 seconds. The June 24 Captions check keeps Captions as the short-form social editor lane: Max adds AI Twin/custom actors, Mirage-generated actors, chat editing, and 500 credits, while Scale/Scale 2x/Scale 4x only make sense after measuring model-specific credit burn, platform support, Mirage API beta status, and the live-account rollover state. Use the June 22 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 7 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
+**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 23 HeyGen recheck keeps app plans, API-key wallet usage, OAuth/web-plan usage, LiveAvatar streaming, and affiliate terms separate: the app still lists Free, Creator $29/month with 600 credits, Pro from $49/month with 1,000 credits, Business $149/month plus $20/seat with 1,500 credits, and Enterprise custom, while current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar at $7/video, Video Agent at $0.0333/sec, and HyperFrames at $0.10-$0.30/min. LiveAvatar now needs Free and Starter $19/month coverage before Essential $99/month, Business $475/month, and Enterprise custom with a stated $48,800 minimum budget. The pricing help route still matters for API plan caveats, so buyers should use the live pricing page, developer pricing docs, and LiveAvatar help for current purchase math. The June 25 Tavus check keeps Tavus as the API-first live video-agent lane, but the current pricing page now exposes a newer Developer surface with Starter $22/month, Builder $59/month, Growth $397/month, Business $975/month, and Enterprise custom while also rendering older pricing blocks. Buyers should confirm overages, replica terms, and concurrency in writing before procurement. The June 22 D-ID check keeps D-ID as the visual-agent and agentic-video lane: API minutes draw from the same balance as web D-ID, Studio video usage rounds to the nearest 15-second interval, Trial/Lite outputs can carry watermarks, everyone gets 200 free conversation sessions to start, and generated agent response video is metered at 0.5 credit per 30 seconds. The June 24 Captions check keeps Captions as the short-form social editor lane: Max adds AI Twin/custom actors, Mirage-generated actors, chat editing, and 500 credits, while Scale/Scale 2x/Scale 4x only make sense after measuring model-specific credit burn, platform support, Mirage API beta status, and the live-account rollover state. Use the June 22 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 7 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
 ## What Hurts Trust
 
@@ -124,7 +124,7 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **Training or L&D buyer:** start with Synthesia or HeyGen, then use the [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) to compare Tavus, D-ID, Argil, Hedra, and Captions depending on whether the need is templates, live conversation, long-form avatars, custom talking characters, or short-form social editing.
 
-**Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, Captions.ai creator polish, HeyGen avatar posts, or InVideo prompt-to-video. The June 23 InVideo check moves its buyer math from old AI-minute shorthand to credits: Plus starts from $17/month annual with 75 credits/month, paid plans include 200+ models such as Seedance 2.0, Veo 3.1, Kling 3.0, Nano Banana Pro, and ElevenLabs music, and unused credits do not roll over.
+**Short-form social creator:** use the refreshed [TikTok AI tools guide](/guides/best-ai-for-tiktok/) when the choice is hooks/scripts, CapCut-style editing, OpusClip repurposing, Runway generated B-roll, Captions.ai creator polish, HeyGen avatar posts, or InVideo prompt-to-video. The June 25 InVideo check moves its buyer math from old AI-minute shorthand to credits: Plus starts from $17/month annual with 390 credits/month, paid plans include 200+ models such as Sora 2, Seedance 2.0, Veo 3.1, Kling 3.0, Nano Banana Pro, and ElevenLabs music, and unused credits do not roll over.
 
 **Reference consistency or open-route buyer:** test Vidu when the job is consistent characters, products, or short native-audio story clips. Test Wan when the job is open weights, Alibaba Cloud, or provider API economics. In both cases, write down the exact model route, resolution, audio setting, duration, region, provider terms, and failed-generation billing before comparing against Seedance, Kling, Veo, or Runway.
 
@@ -175,9 +175,9 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Seedance 2.0 official launch](https://seed.bytedance.com/blog/seedance-2-0-official-launch) (verified 2026-06-23)
 - [TechCrunch: Dreamina Seedance 2.0 comes to CapCut](https://techcrunch.com/2026/03/26/bytedances-new-ai-video-generation-model-dreamina-seedance-2-0-comes-to-capcut/)
 - [BytePlus ModelArk](https://www.byteplus.com/en/product/modelark)
-- [Kuaishou Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-06-12)
-- [Kling AI](https://klingai.com/) (verified 2026-06-12)
-- [Google DeepMind Veo](https://deepmind.google/models/veo/) (verified 2026-06-12)
+- [Kuaishou Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be) (verified 2026-06-25)
+- [Kling AI](https://klingai.com/) (verified 2026-06-25)
+- [Google DeepMind Veo](https://deepmind.google/models/veo/) (verified 2026-06-25)
 - [Google DeepMind Gemini Omni](https://deepmind.google/models/gemini-omni/) (verified 2026-06-23)
 - [Gemini Omni Flash model card](https://deepmind.google/models/model-cards/gemini-omni-flash/) (verified 2026-06-23)
 - [Introducing Gemini Omni](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/) (verified 2026-06-23)
@@ -190,13 +190,13 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Adobe generative credits FAQ](https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html) (verified 2026-06-23)
 - [Adobe partner models in Adobe products](https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html) (verified 2026-06-23)
 - [OpenAI Sora discontinuation help](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation) (verified 2026-05-17)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-12)
-- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-12)
-- [Runway credits help](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-12)
-- [Runway Gen-4.5 help](https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5) (verified 2026-06-12)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-25)
+- [Runway API pricing](https://docs.dev.runwayml.com/guides/pricing/) (verified 2026-06-25)
+- [Runway credits help](https://help.runwayml.com/hc/en-us/articles/15124877443219-How-do-credits-work) (verified 2026-06-25)
+- [Runway Gen-4.5 help](https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5) (verified 2026-06-25)
 - [Runway Aleph 2.0 and Edit Studio](https://runwayml.com/news/introducing-aleph-2-and-edit-studio) (verified 2026-05-24)
-- [Runway API models](https://docs.dev.runwayml.com/guides/models/) (verified 2026-06-12)
-- [Pika pricing](https://pika.art/pricing) (verified 2026-06-12)
+- [Runway API models](https://docs.dev.runwayml.com/guides/models/) (verified 2026-06-25)
+- [Pika pricing](https://pika.art/pricing) (verified 2026-06-25)
 - [Hailuo official site](https://hailuoai.video/) (verified 2026-06-23)
 - [Hailuo 2.3 model page](https://hailuoai.video/tools/hailuo-2-3-model) (verified 2026-06-23)
 - [Hailuo payment policy](https://hailuoai.video/doc/payment-policy.html) (verified 2026-06-23)
@@ -216,7 +216,7 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Higgsfield pricing](https://higgsfield.ai/pricing) (verified 2026-06-23)
 - [Higgsfield about](https://higgsfield.ai/about) (verified 2026-06-23)
 - [Higgsfield Seedance Unlimited](https://higgsfield.ai/blog/seedance-unlimited) (verified 2026-06-23)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-25)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-25)
 - [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-25)
 - [OpusClip credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed) (verified 2026-06-25)
@@ -231,21 +231,21 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Argil Product Showcase docs](https://docs.argil.ai/resources/product-showcase) (verified 2026-06-23)
 - [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-24)
 - [Castmagic features](https://www.castmagic.io/features) (verified 2026-06-24)
-- [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0) (verified 2026-06-12)
-- [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0) (verified 2026-06-12)
-- [Vidu Q3](https://www.vidu.com/vidu-q3) (verified 2026-06-12)
-- [Vidu API pricing](https://platform.vidu.com/docs/pricing) (verified 2026-06-12)
-- [Vidu API reference-to-video](https://platform.vidu.com/docs/reference-to-video) (verified 2026-06-12)
-- [Alibaba Cloud Wan video generation and editing docs](https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/) (verified 2026-06-12)
-- [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing) (verified 2026-06-12)
-- [Wan2.2 GitHub repository](https://github.com/Wan-Video/Wan2.2) (verified 2026-06-12)
+- [PixVerse Platform pricing](https://docs.platform.pixverse.ai/pricing-796039m0) (verified 2026-06-25)
+- [PixVerse API subscription docs](https://docs.platform.pixverse.ai/subscribe-api-plans-882969m0) (verified 2026-06-25)
+- [Vidu Q3](https://www.vidu.com/vidu-q3) (verified 2026-06-25)
+- [Vidu API pricing](https://platform.vidu.com/docs/pricing) (verified 2026-06-25)
+- [Vidu API reference-to-video](https://platform.vidu.com/docs/reference-to-video) (verified 2026-06-25)
+- [Alibaba Cloud Wan video generation and editing docs](https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/) (verified 2026-06-25)
+- [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing) (verified 2026-06-25)
+- [Wan2.2 GitHub repository](https://github.com/Wan-Video/Wan2.2) (verified 2026-06-25)
 - [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-23)
-- [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-23)
+- [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-25)
 - [CapCut](https://www.capcut.com/) (verified 2026-06-23)
 - [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-23)
-- [Tavus pricing](https://www.tavus.io/pricing) (verified 2026-06-12)
-- [Tavus CVI](https://www.tavus.io/cvi) (verified 2026-06-12)
-- [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-12)
+- [Tavus pricing](https://www.tavus.io/pricing) (verified 2026-06-25)
+- [Tavus CVI](https://www.tavus.io/cvi) (verified 2026-06-25)
+- [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-25)
 - [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) (verified 2026-06-22)
 - [D-ID API pricing](https://www.d-id.com/pricing/api/) (verified 2026-06-22)
 - [D-ID Visual Agents](https://www.d-id.com/ai-agents/) (verified 2026-06-22)

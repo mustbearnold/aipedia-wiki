@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free 30 req/min / paid usage-based"
 status: active
 launched: 2020-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,17 +30,17 @@ facts:
     source: https://groq.com/
     source_label: Groq official site
     source_id: groq-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   pricing_anchor:
-    value: As of June 23, 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
-      Qwen3 32B $0.29/$0.59, Qwen 3.6 27B $0.60/$3.00, and GPT OSS 20B $0.075/$0.30 per million tokens. Prompt caching now explicitly lists Kimi K2 0905 at $1.00 uncached input, $0.50 cached input, and $3.00 output.
+    value: As of June 25, 2026, Llama 4 Scout runs $0.11/$0.34, Llama 3.1 8B Instant $0.05/$0.08, Llama 3.3 70B Versatile $0.59/$0.79,
+      Qwen3 32B $0.29/$0.59, Qwen 3.6 27B $0.60/$3.00, and GPT OSS 20B $0.075/$0.30 per million tokens. Qwen3 32B and Llama 4 Scout are scheduled to shut down for free and developer-tier users on July 17, 2026, so new production builds should prefer the recommended replacements.
     source: https://groq.com/pricing/
     source_label: Groq pricing
     source_id: groq-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -50,26 +50,25 @@ facts:
     source: https://console.groq.com/docs/overview
     source_label: Groq docs
     source_id: groq-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   model_control:
-    value: The June 2026 supported-models page should be treated as the source of truth because model IDs, production/preview status, context windows, and deprecations move quickly.
-    source: https://console.groq.com/docs/models
-    source_label: Groq supported models
-    source_id: groq-models
-    verified_at: '2026-06-23'
+    value: The June 2026 supported-models and deprecations pages should be treated as the source of truth because model IDs, production/preview status, context windows, and shutdown dates move quickly; Qwen3 32B and Llama 4 Scout are scheduled to shut down for free and developer-tier users on July 17, 2026.
+    source: https://console.groq.com/docs/deprecations
+    source_label: Groq model deprecations
+    source_id: groq-deprecations
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
   watch_out_for:
-    value: Benchmark Groq on your own prompts for latency, context length, model quality, rate limits, and fallback strategy
-      rather than buying only on speed positioning.
-    source: https://console.groq.com/docs/models
-    source_label: Groq supported models
-    source_id: groq-models
-    verified_at: '2026-06-23'
+    value: Benchmark Groq on your own prompts for latency, context length, model quality, rate limits, deprecations, and fallback strategy rather than buying only on speed positioning.
+    source: https://console.groq.com/docs/deprecations
+    source_label: Groq model deprecations
+    source_id: groq-deprecations
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -87,15 +86,15 @@ not_best_for:
   - long-context or reasoning workloads (open-weight on Groq is capped)
   - users without API integration (consumer-facing UI is minimal)
 quick_answer: >-
-  Groq is the LPU inference provider, not xAI's Grok chatbot. The June 23, 2026 buyer case is still speed and predictable API economics for supported open models: free-tier prototyping, paid usage-based pricing, prompt caching, built-in tools, and Batch API discounts. Pick it for latency-critical open-model workloads; skip it when you need a closed frontier model from OpenAI, Anthropic, or Google.
+  Groq is the LPU inference provider, not xAI's Grok chatbot. The June 25, 2026 buyer case is still speed and predictable API economics for supported open models: free-tier prototyping, paid usage-based pricing, prompt caching, built-in tools, and Batch API discounts. Pick it for latency-critical open-model workloads; skip it when you need a closed frontier model from OpenAI, Anthropic, or Google.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Model pricing and prompt caching"
     price: "Usage-based by model"
     source: "https://groq.com/pricing/"
     source_label: "Groq pricing"
     source_id: groq-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified pricing table: GPT OSS 20B/120B, Llama 4 Scout, Qwen3 32B, Llama 3.3 70B, Llama 3.1 8B, and Qwen 3.6 27B are public pricing rows; Kimi K2 0905 appears in prompt-caching pricing."
   - date: 2026-06-02
     plan: "Model pricing"
@@ -103,7 +102,7 @@ price_history:
     source: "https://groq.com/pricing/"
     source_label: "Groq pricing"
     source_id: groq-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified current public pricing table and discount surfaces; use the live pricing page because model IDs and throughput labels can move."
   - date: 2026-05-13
     plan: "Llama 4 Scout"
@@ -111,7 +110,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified unchanged; 594 TPS measured"
   - date: 2026-05-13
     plan: "GPT OSS 20B"
@@ -119,7 +118,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Added to catalog; 1,000 TPS, top throughput on Groq"
   - date: 2026-05-13
     plan: "Llama 3.3 70B Versatile"
@@ -127,7 +126,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Replaced prior Llama 3 70B listing on the pricing page; 394 TPS"
   - date: 2026-05-13
     plan: "Qwen3 32B"
@@ -135,7 +134,7 @@ price_history:
     source: "https://groq.com/pricing"
     source_label: "Groq pricing"
     source_id: groq-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Specific pricing now published (previously listed as mid-range)"
 ---
 
@@ -145,7 +144,7 @@ price_history:
 
 One of the fastest LLM inference providers on the market in 2026. Custom silicon called the Language Processing Unit (LPU) is optimized for low-latency model serving, and Groq's API exposes supported open models through an OpenAI-compatible developer surface.
 
-As of June 23, 2026, Groq's public pricing page still frames the buyer case around predictable per-token pricing, prompt caching, Batch API discounts, and built-in tools. Kimi K2 0905 appears in prompt-caching pricing, while Qwen 3.6 27B is now a visible public model-price row beside GPT OSS, Llama, and Qwen3.
+As of June 25, 2026, Groq's public pricing page still frames the buyer case around predictable per-token pricing, prompt caching, Batch API discounts, and built-in tools. Kimi K2 0905 appears in prompt-caching pricing, while Qwen 3.6 27B is now a visible public model-price row beside GPT OSS, Llama, and Qwen3. Do not pin new free/developer-tier production work to Qwen3 32B or Llama 4 Scout without a migration plan because Groq's deprecations page schedules both for July 17, 2026 shutdown on those tiers.
 
 ## System Verdict
 
@@ -172,6 +171,7 @@ As of June 23, 2026, Groq's public pricing page still frames the buyer case arou
 | **Hardware** | Custom LPU (Language Processing Unit) silicon |
 | **Batch API** | 50 percent discount for non-real-time workloads (24h to 7d windows) |
 | **Prompt caching** | 50 percent off cached input tokens, no extra caching fee |
+| **Near-term deprecations** | Qwen3 32B and Llama 4 Scout shut down for free/developer-tier users on July 17, 2026; enterprise committed-spend customers are not affected |
 
 ## When to pick Groq
 
@@ -203,7 +203,7 @@ Pricing is per-token and predictable.
 
 Rate tiers: Free (30 req/min, 14,400/day). Developer (10x free + 25 percent off). Enterprise (custom). Batch API: 50 percent off for 24-hour to 7-day windows. Prompt caching has no extra feature fee; the current table also lists Kimi K2 0905 at $1.00/M uncached input, $0.50/M cached input, and $3.00/M output.
 
-Verified 2026-06-23 via [groq.com/pricing](https://groq.com/pricing), [Groq supported models](https://console.groq.com/docs/models), and [Groq model deprecations](https://console.groq.com/docs/deprecations).
+Verified 2026-06-25 via [groq.com/pricing](https://groq.com/pricing), [Groq supported models](https://console.groq.com/docs/models), and [Groq model deprecations](https://console.groq.com/docs/deprecations).
 
 ## Failure modes
 
@@ -211,6 +211,7 @@ Verified 2026-06-23 via [groq.com/pricing](https://groq.com/pricing), [Groq supp
 - **Free tier rate limits bite.** 30 req/min is enough for prototyping, not production. Plan upgrade.
 - **Model catalog is narrower than FLUX marketplaces.** Curated selection of flagship open-weight models, not every model on Hugging Face.
 - **Model catalog changes.** Groq's supported-model table includes production and preview routes; check model IDs, deprecations, context limits, and rate limits before pinning a production workload.
+- **Two visible pricing rows are near shutdown on lower tiers.** Qwen3 32B and Llama 4 Scout still appear as useful price anchors, but Groq says they shut down for free and developer-tier users on July 17, 2026. New builds should test GPT OSS 120B or Qwen 3.6 27B replacements.
 - **LPU geography is limited.** Not globally distributed in 2026 at the level of AWS or GCP. Latency is great near a Groq region, less great far from one.
 
 ## Against the alternatives
@@ -225,7 +226,7 @@ Verified 2026-06-23 via [groq.com/pricing](https://groq.com/pricing), [Groq supp
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [Groq pricing](https://groq.com/pricing/), [Groq docs](https://console.groq.com/docs/overview), [Groq supported models](https://console.groq.com/docs/models), and [Groq model deprecations](https://console.groq.com/docs/deprecations).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [Groq pricing](https://groq.com/pricing/), [Groq docs](https://console.groq.com/docs/overview), [Groq supported models](https://console.groq.com/docs/models), and [Groq model deprecations](https://console.groq.com/docs/deprecations).
 
 ## FAQ
 

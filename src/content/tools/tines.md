@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$500+/month + custom"
 status: active
 launched: 2018
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
 seo_title: "Tines: Pricing, Features & Review (June 2026)"
 meta_description: "Tines is security-first workflow automation for IT and SOC teams. Community is free; Starter starts at $500/mo; Business and Enterprise are custom. AI Agent usage depends on credits and package terms."
@@ -34,7 +34,7 @@ facts:
     source: "https://www.tines.com/platform/ai/"
     source_label: "Tines AI"
     source_id: tines-ai
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
     source_label: "Tines pricing explainer"
     source_id: tines-pricing-explainer
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
     source_label: "Tines pricing explainer"
     source_id: tines-pricing-explainer
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: medium
@@ -75,6 +75,7 @@ price_history:
     source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
     source_label: "Tines pricing explainer"
     source_id: tines-pricing-explainer
+    verified_at: 2026-05-13
     note: "Verified. May 1, 2026 packaging lists 5-20 flows, 2-5 users, 1M monthly events, 2,500-10,000 AI run-time credits, and AI Agent action now included."
   - date: 2026-05-13
     plan: "Community"
@@ -82,6 +83,7 @@ price_history:
     source: "https://www.tines.com/pricing/"
     source_label: "Tines pricing"
     source_id: tines-pricing
+    verified_at: 2026-05-13
     note: "Free with no credit card. Packaging docs list 3 flows, 1 user, 25K monthly events, and 50 monthly AI run-time credits. No AI Agent action."
   - date: 2026-05-13
     plan: "Business"
@@ -89,6 +91,7 @@ price_history:
     source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
     source_label: "Tines pricing explainer"
     source_id: tines-pricing-explainer
+    verified_at: 2026-05-13
     note: "Business edition starts at 30 flows, 100 users, 1.5M daily events, with AI Agent action and self-hosting available."
   - date: 2026-05-13
     plan: "Enterprise"
@@ -96,6 +99,7 @@ price_history:
     source: "https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging"
     source_label: "Tines pricing explainer"
     source_id: tines-pricing-explainer
+    verified_at: 2026-05-13
     note: "All limits contact-Tines; dedicated cloud tenant and self-hosting available."
   - date: 2026-05-10
     plan: "Starter"
@@ -103,6 +107,7 @@ price_history:
     source: "https://www.tines.com/pricing/"
     source_label: "Tines pricing"
     source_id: tines-pricing
+    verified_at: 2026-05-10
     note: "Verified. Pricing page lists 1M monthly events, 2,500 AI run-time credits, up to 5 builders, and 20 flows."
   - date: 2026-04-18
     plan: "Starter"
@@ -110,6 +115,7 @@ price_history:
     source: "https://www.tines.com/pricing/"
     source_label: "Tines pricing"
     source_id: tines-pricing
+    verified_at: 2026-04-18
     note: "Verified via tines.com/pricing. 1M events/mo, 2,500 AI credits, 5 flows."
   - date: 2026-04-18
     plan: "Community"
@@ -117,6 +123,7 @@ price_history:
     source: "https://www.tines.com/pricing/"
     source_label: "Tines pricing"
     source_id: tines-pricing
+    verified_at: 2026-04-18
     note: "Free forever. 1 builder, 3 flows, 25K events/mo, 50 AI credits."
   - date: 2026-06-09
     plan: "AI Agent action"
@@ -124,6 +131,7 @@ price_history:
     source: "https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents"
     source_label: "Tines AI Agents intro"
     source_id: tines-agent-intro
+    verified_at: 2026-06-09
     note: "Newer AI Agents introduction says the AI Agent action is available on all Tines tenants as of February 10, 2026. Buyers should model AI run-time credits and package limits rather than relying only on older plan-access wording."
 ---
 
@@ -160,7 +168,7 @@ As of June 2026, Tines' AI stack spans Workbench, the AI Agent action, Story cop
 | **Funding** | $272M total, $125M Series C Feb 2025, $1.125B valuation |
 | **Investors** | Growth Equity at Goldman Sachs, SoftBank, Activant, Accel, Felicis, CrowdStrike, Addition |
 
-Every data point above was verified against vendor or company-source pages on 2026-06-12. See Sources.
+Every data point above was verified against vendor or company-source pages on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -174,7 +182,7 @@ The real moat: Tines treats every run like evidence. Logs are immutable, credent
 
 - **SOC and incident response automation.** Native connectors to CrowdStrike, SentinelOne, Splunk, and PagerDuty mean you are not writing custom HTTP wrappers for every alert route.
 - **Regulated industries with audit requirements.** Tines publishes SOC Type II, audit logs, SSO/SAML, Trust Center documents, and hosting controls for regulated reviews.
-- **Agentic workflows with explicit controls.** The AI Agent action runs in Task mode for autonomous workflow steps or Chat mode for user-facing AI pages. The June 9 check found newer AI Agents documentation saying the action is available on all tenants, while usage still consumes AI run-time credits, so confirm credits and edition scope on quote.
+- **Agentic workflows with explicit controls.** The AI Agent action runs in Task mode for autonomous workflow steps or Chat mode for user-facing AI pages. The June 25 check found newer AI Agents documentation saying the action is available on all tenants, while usage still consumes AI run-time credits, so confirm credits and edition scope on quote.
 - **IT ops and compliance teams replacing spreadsheet-driven runbooks.** Case and incident management ships in Business and Enterprise tiers.
 - **Multi-team enterprise deployments.** Business and Enterprise bring flexible hosting, advanced security controls, support/training, and broader workflow program management.
 
@@ -200,7 +208,7 @@ All tiers include unlimited parallel workflow runs. Tines' pricing explainer say
 
 Published list pricing for Business and Enterprise is not posted. Treat any third-party quote ranges as directional only until Tines returns an order form.
 
-Prices verified 2026-06-12 via [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), and the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents).
+Prices verified 2026-06-25 via [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), and the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents).
 
 ## Against the alternatives
 
@@ -227,7 +235,7 @@ Prices verified 2026-06-12 via [tines.com/pricing](https://www.tines.com/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents), [AI in Tines](https://www.tines.com/platform/ai/), and [Tines security](https://www.tines.com/security/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-25 against [tines.com/pricing](https://www.tines.com/pricing/), the [Tines pricing explainer](https://explained.tines.com/en/articles/9620399-understanding-tines-pricing-and-packaging), the [Tines AI Agents intro](https://explained.tines.com/en/articles/11571096-introduction-to-ai-agents), [AI in Tines](https://www.tines.com/platform/ai/), and [Tines security](https://www.tines.com/security/).
 
 ## FAQ
 

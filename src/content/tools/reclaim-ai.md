@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$22/seat/month annual-billed; Starter and Business monthly available
 status: active
 launched: 2019-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates"
     source_label: "Reclaim Outlook integration help"
     source_id: reclaim-outlook-help
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   task_integrations:
@@ -60,7 +60,7 @@ facts:
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   smart_meetings:
@@ -68,7 +68,7 @@ facts:
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   watch_out_for:
@@ -76,7 +76,7 @@ facts:
     source: "https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates"
     source_label: "Reclaim Outlook integration help"
     source_id: reclaim-outlook-help
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [scheduling, calendar, productivity, time-blocking, focus-time, habits, meetings, google-calendar, task-management]
@@ -151,7 +151,7 @@ The free Lite plan runs one user with capped features. Paid plans unlock more AI
 | **API** | Public API documented for Starter+ |
 | **Native mobile app** | iOS only |
 
-Every data point above was verified against Reclaim.ai pricing, help, and product documentation on 2026-06-12. See Sources.
+Every data point above was verified against Reclaim.ai pricing, help, and product documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -194,7 +194,7 @@ Subscription and team pricing are managed via [reclaim.ai/pricing](https://recla
 
 Attendee Users for Smart Meetings with 3+ people are free through July 31, 2026. After that launch promo, AU packs are plan-specific add-ons and include a free paid seat with each pack. Reclaim's own pricing page and help article use slightly different annual-discount language, so treat the checkout screen as the final purchase source.
 
-Prices verified 2026-06-12 via [reclaim.ai/pricing](https://reclaim.ai/pricing).
+Prices verified 2026-06-25 via [reclaim.ai/pricing](https://reclaim.ai/pricing).
 
 ## Against the alternatives
 
@@ -220,7 +220,7 @@ Prices verified 2026-06-12 via [reclaim.ai/pricing](https://reclaim.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Reclaim.ai pricing](https://reclaim.ai/pricing), [Reclaim.ai Outlook help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates), and the [Reclaim.ai product overview](https://reclaim.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-25 against [Reclaim.ai pricing](https://reclaim.ai/pricing), [Reclaim.ai Outlook help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates), and the [Reclaim.ai product overview](https://reclaim.ai/).
 
 ## FAQ
 

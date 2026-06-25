@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$99/month individual annual; Teams from $59/seat/mo annual"
 status: active
 launched: 2025-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Higgsfield: Features, Pricing & Review (2026)"
 meta_description: "Higgsfield is an AI video platform with cinematic camera controls, Cinema Studio 3.5, Soul character anchoring, and Lipsync Studio. Free tier, Starter $15/mo, Plus $39/mo, Ultra $99/mo (annual). API on Ultra."
@@ -35,19 +35,19 @@ facts:
     source: https://higgsfield.ai/
     source_label: Higgsfield official site
     source_id: higgsfield-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   pricing_anchor:
     value: Higgsfield pricing is plan/credit dependent; individual annual tiers list Starter $15/mo, Plus $39/mo, Ultra $99/mo,
-      and Teams from $59/seat/mo as of June 23, 2026. The current Seedance Unlimited post describes a 30-day add-on for unlimited
+      and Teams from $59/seat/mo as of June 25, 2026. The current Seedance Unlimited post describes a 30-day add-on for unlimited
       Enhanced Seedance 2.0 Fast generations. Verify add-on availability, model rates, unlimited-model exceptions, commercial
       rights, and feature access before committing.
     source: https://higgsfield.ai/pricing
     source_label: Higgsfield pricing
     source_id: higgsfield-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -57,7 +57,7 @@ facts:
     source: https://higgsfield.ai/
     source_label: Higgsfield official site
     source_id: higgsfield-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -67,7 +67,7 @@ facts:
     source: https://higgsfield.ai/about
     source_label: Higgsfield about
     source_id: higgsfield-about
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -77,7 +77,7 @@ facts:
     source: https://higgsfield.ai/pricing
     source_label: Higgsfield pricing
     source_id: higgsfield-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -94,15 +94,15 @@ not_best_for:
   - pure text-to-video quality benchmarks (Veo 3 and Seedance still lead)
   - teams needing enterprise SSO, VPC, or compliance controls
 quick_answer: >-
-  Higgsfield is an AI video and image studio specializing in cinematic camera control, Soul character consistency, and multi-model generation. As of June 23, 2026, annual individual pricing lists Starter $15/mo, Plus $39/mo, Ultra $99/mo, with Teams from $59/seat/mo. A current Seedance Unlimited add-on covers 30 days of unlimited Enhanced Seedance 2.0 Fast generations. Pick it for short-form cinematic clips, social ads, and character-consistent campaigns. Skip it for long-form editing or API-first workflows that need low entry pricing.
+  Higgsfield is an AI video and image studio specializing in cinematic camera control, Soul character consistency, and multi-model generation. As of June 25, 2026, annual individual pricing lists Starter $15/mo, Plus $39/mo, Ultra $99/mo, with Teams from $59/seat/mo. A current Seedance Unlimited add-on covers 30 days of unlimited Enhanced Seedance 2.0 Fast generations. Pick it for short-form cinematic clips, social ads, and character-consistent campaigns. Skip it for long-form editing or API-first workflows that need low entry pricing.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Starter / Plus / Ultra / Teams"
     price: "$15 / $39 / $99 per month annual; Teams from $59/seat/mo annual"
     source: "https://higgsfield.ai/blog/seedance-unlimited"
     source_label: "Higgsfield Seedance Unlimited add-on"
     source_id: higgsfield-seedance-unlimited
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified plan ladder and added the 30-day Seedance Unlimited add-on signal. Pricing remains credit/model dependent, and unlimited benefits still need surface-by-surface checks."
   - date: 2026-04-18
     plan: "Starter"
@@ -110,7 +110,7 @@ price_history:
     source: "https://higgsfield.ai/pricing"
     source_label: "Source"
     source_id: higgsfield-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "200 credits/mo, 2 concurrent video jobs"
   - date: 2026-04-18
     plan: "Plus"
@@ -118,7 +118,7 @@ price_history:
     source: "https://higgsfield.ai/pricing"
     source_label: "Source"
     source_id: higgsfield-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "1,000 credits/mo, 6 concurrent jobs, 365-day unlimited on select image models"
   - date: 2026-04-18
     plan: "Ultra"
@@ -126,7 +126,7 @@ price_history:
     source: "https://higgsfield.ai/pricing"
     source_label: "Source"
     source_id: higgsfield-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "3,000 base credits, 8 concurrent jobs, API access, one unlimited video model"
   - date: 2026-05-13
     plan: "Starter / Plus / Ultra"
@@ -134,7 +134,7 @@ price_history:
     source: "https://higgsfield.ai/pricing"
     source_label: "Source"
     source_id: higgsfield-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified unchanged. Cinema Studio 3.5, Soul ID, Seedance 2.0 remain the flagship surface; multi-model orchestration (Kling 3.0, Veo 3, Nano Banana 2, Wan 2.6, Flux.2 Pro) and Lipsync Studio still ship across paid tiers."
   - date: 2026-06-02
     plan: "Starter / Plus / Ultra"
@@ -142,7 +142,7 @@ price_history:
     source: "https://higgsfield.ai/pricing"
     source_label: "Source"
     source_id: higgsfield-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Pricing page rechecked. Starter includes 200 credits/mo and 2 videos / 4 images in parallel; Plus includes 1,000 credits/mo, 6 videos / 8 images, all models, Kling 3.0 and Nano Banana 2 unlimited promos; Ultra starts at 3,000 credits/mo, 8 videos / 8 images, one 365-day unlimited video model, Nano Banana Pro/2 and Kling 3.0 unlimited promos."
   - date: 2026-06-02
     plan: "Teams"
@@ -150,7 +150,7 @@ price_history:
     source: "https://higgsfield.ai/pricing"
     source_label: "Source"
     source_id: higgsfield-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Team plan starts at two seats and adds shared workspaces/credits, SOC 2, custom SSO, no-training clause, indemnification, SLA, analytics, Slack support, and custom credits."
 ---
 
@@ -158,7 +158,7 @@ price_history:
 
 Higgsfield is an AI video and image platform that competes on cinematic camera control rather than raw text-to-video quality. Co-founders: Alex Mashrabov (former head of generative AI at Snap), Yerzat Dulat, and Mahi de Silva. The company publicly launched its video generation tools on March 31, 2025.
 
-As of the June 23, 2026 refresh, Higgsfield's about page positions the platform at 50M+ users, 5M+ creators, 300M+ videos, 2M+ videos created daily, and 6M+ total creations daily. Treat older user-count, run-rate, and funding figures as historical context unless separately re-verified.
+As of the June 25, 2026 refresh, Higgsfield's about page positions the platform at 50M+ users, 5M+ creators, 300M+ videos, 2M+ videos created daily, and 6M+ total creations daily. Treat older user-count, run-rate, and funding figures as historical context unless separately re-verified.
 
 The differentiator is the shot language. Cinema Studio exposes per-shot camera moves (dolly, orbit, push-in, crane, tilt). Soul anchors character identity across generations. Lipsync and talking-avatar surfaces cover dubbed clips. Higgsfield also exposes Explore, Image, Video, Audio, Supercomputer, MCP & CLI, Plugins, Collab, Marketing Studio, Cinema Studio, AI Influencer, and Canvas surfaces, while orchestrating models such as Kling, Seedance, Veo, Sora, Nano Banana, Wan, Flux, Soul, and Cinema.
 
@@ -196,7 +196,7 @@ Cinema Studio adds per-shot camera control (dolly, orbit, push-in, crane, static
 
 Lipsync Studio and Talking Avatar handle dubbed video, so a single image plus a voice track produces a talking-head clip.
 
-Credit consumption varies by model. As of June 23, 2026, the pricing matrix showed Seedance 2.0 720p at 22 credits per 5 seconds, Seedance 2.0 Fast at 17 credits per 5 seconds, and Kling 3.0 at 7-8 credits per 5 seconds. It also listed Google Veo 3.1 Fast at 11 credits per 4 seconds, Google Veo 3.1 at 29 credits per 4 seconds, Veo 3 at 58 credits per 8 seconds, and Nano Banana Pro / 2 image generations at 2 credits per image.
+Credit consumption varies by model. As of June 25, 2026, the pricing matrix showed Seedance 2.0 720p at 22 credits per 5 seconds, Seedance 2.0 Fast at 17 credits per 5 seconds, and Kling 3.0 at 7-8 credits per 5 seconds. It also listed Google Veo 3.1 Fast at 11 credits per 4 seconds, Google Veo 3.1 at 29 credits per 4 seconds, Veo 3 at 58 credits per 8 seconds, and Nano Banana Pro / 2 image generations at 2 credits per image.
 
 ## When to pick Higgsfield
 
@@ -216,7 +216,7 @@ Credit consumption varies by model. As of June 23, 2026, the pricing matrix show
 
 ## Pricing
 
-Plans via [higgsfield.ai/pricing](https://higgsfield.ai/pricing), verified June 23, 2026:
+Plans via [higgsfield.ai/pricing](https://higgsfield.ai/pricing), verified June 25, 2026:
 
 | Plan | Price | Credits | Concurrent jobs | Key features |
 |---|---|---|---|---|
@@ -226,7 +226,7 @@ Plans via [higgsfield.ai/pricing](https://higgsfield.ai/pricing), verified June 
 | Ultra | $99/mo annual | 3,000/mo base (6,000/9,000 selectable) | 8 videos / 8 images | All models, one 365-day unlimited video model, Nano Banana Pro / 2 2K unlimited promos, Kling 3.0 unlimited promo, 10,000 Soul V2 and Cinema generations |
 | Teams | from $59/seat/mo annual | Custom/shared | Team workspace | Two seats minimum, shared credits/workspaces, custom credits, unlimited members, SOC 2, custom SSO, no-training clause, indemnification, SLA, analytics, Slack support |
 
-Prices verified 2026-06-23 via [Higgsfield pricing](https://higgsfield.ai/pricing), current Higgsfield product/about pages, and the [Seedance Unlimited add-on post](https://higgsfield.ai/blog/seedance-unlimited).
+Prices verified 2026-06-25 via [Higgsfield pricing](https://higgsfield.ai/pricing), current Higgsfield product/about pages, and the [Seedance Unlimited add-on post](https://higgsfield.ai/blog/seedance-unlimited).
 
 **Billing notes:**
 - Annual pricing is the headline on the main pricing page; monthly rates can differ.
@@ -260,7 +260,7 @@ Prices verified 2026-06-23 via [Higgsfield pricing](https://higgsfield.ai/pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Higgsfield pricing](https://higgsfield.ai/pricing), [Higgsfield homepage](https://higgsfield.ai/), [Higgsfield about](https://higgsfield.ai/about), Supercomputer notes, and the Seedance Unlimited add-on post.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Higgsfield pricing](https://higgsfield.ai/pricing), [Higgsfield homepage](https://higgsfield.ai/), [Higgsfield about](https://higgsfield.ai/about), Supercomputer notes, and the Seedance Unlimited add-on post.
 
 ## FAQ
 

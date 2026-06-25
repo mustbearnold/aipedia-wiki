@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 local / hosted from ~$0.012-$0.07+ per MP"
 status: active
 launched: 2024-08
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://bfl.ai"
     source_label: "Black Forest Labs official site"
     source_id: flux-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-10
     volatility: high
     confidence: high
@@ -40,16 +40,16 @@ facts:
     source: "https://help.bfl.ai/articles/9364115800-flux-models-overview"
     source_label: "Black Forest Labs FLUX models overview"
     source_id: flux-2-models
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-10
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "BFL's own pricing is credit-based and model/resolution dependent; FLUX.2 Klein 4B starts at $0.014/image, Pro starts at $0.03/MP text-to-image and $0.045/MP editing, and Max/Flex are listed at $0.07/MP and $0.06/MP respectively."
+    value: "BFL's own pricing is credit-based and model/resolution dependent; FLUX.2 Klein 4B starts at $0.014/image, Pro starts at $0.03/MP text-to-image and $0.045/MP editing, Max is listed at $0.07/MP, and Flex is listed at $0.05/MP text-to-image or $0.10/MP editing."
     source: "https://bfl.ai/pricing"
     source_label: "Black Forest Labs API pricing"
     source_id: flux-2-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-10
     volatility: high
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://fal.ai/flux-2"
     source_label: "fal.ai FLUX.2 pricing"
     source_id: flux-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-10
     volatility: high
     confidence: high
@@ -67,7 +67,7 @@ facts:
     source: "https://help.bfl.ai/articles/9272590838-self-serve-dev-license-overview-pricing"
     source_label: "Black Forest Labs licensing overview"
     source_id: flux-licensing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-10
     volatility: high
     confidence: high
@@ -95,6 +95,14 @@ price_history:
     source_id: flux-2-pricing
     verified_at: 2026-06-23
     note: "Credit pricing uses 1 credit = $0.01 and varies by model, resolution, and generation/editing mode. June 5 check kept BFL's current FLUX.2 table: Klein, Pro, Max, Flex, and Dev."
+  - date: 2026-06-25
+    plan: "BFL API"
+    price: "FLUX.2 [klein] 4B from $0.014/image; FLUX.2 [pro] from $0.03/MP TTI and $0.045/MP editing; FLUX.2 [max] from $0.07/MP; FLUX.2 [flex] $0.05/MP TTI and $0.10/MP editing"
+    source: "https://help.bfl.ai/articles/9364115800-flux-models-overview"
+    source_label: "Black Forest Labs FLUX models overview"
+    source_id: flux-2-models
+    verified_at: 2026-06-25
+    note: "June 25 check corrected FLUX.2 Flex from the prior flat $0.06/MP summary. BFL help now lists Flex at $0.05/MP text-to-image and $0.10/MP editing."
   - date: 2026-01-15
     plan: "FLUX.2 [klein]"
     price: "4B and 4B Base Apache 2.0; 9B variants under FLUX Non-Commercial License"
@@ -142,7 +150,7 @@ The buyer experience is API-first. BFL offers its dashboard, API, and Playground
 | **Consumer app** | BFL Playground exists for testing, but no simple consumer subscription app like Midjourney |
 | **Release dates** | FLUX.2 family Nov. 25, 2025 · FLUX.2 [klein] Jan. 15, 2026 |
 
-Every data point above was verified against vendor sources on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -185,7 +193,7 @@ Flux is priced per image, per megapixel, or per provider-specific billing unit. 
 | FLUX.2 [klein] 9B | from $0.015 / image | Higher-quality Klein route, non-commercial open-weight license |
 | FLUX.2 [pro] | from $0.03/MP text-to-image; from $0.045/MP editing | Production balance |
 | FLUX.2 [max] | from $0.07/MP | Highest-quality/grounding-oriented FLUX.2 route |
-| FLUX.2 [flex] | from $0.06/MP text-to-image; from $0.06/MP editing | Typography and fine-grained control |
+| FLUX.2 [flex] | $0.05/MP text-to-image; $0.10/MP editing | Typography and fine-grained control |
 | FLUX.2 [dev] | Free for local non-commercial development | Commercial local use requires a license |
 | FLUX.1 Kontext [pro] / [max] | $0.04 / $0.08 per image | Previous-generation context-aware editing |
 | FLUX1.1 [pro] Ultra / Raw | $0.06 per image | Legacy high-resolution/candid-photo options |
@@ -215,7 +223,7 @@ Flux is priced per image, per megapixel, or per provider-specific billing unit. 
 
 **Self-hosted** (open weights): $0 API runtime, hardware and licensing cost only. FLUX.2 [klein] 4B and 4B Base are Apache 2.0. FLUX.2 [dev], FLUX.2 [klein] 9B variants, FLUX.1 [dev], and FLUX.1 Kontext [dev] are non-commercial unless you have a commercial license from BFL.
 
-Prices verified 2026-06-23 via [BFL pricing](https://bfl.ai/pricing), [BFL model overview](https://help.bfl.ai/articles/9364115800-flux-models-overview), [fal.ai FLUX.2](https://fal.ai/flux-2), and [Replicate](https://replicate.com/blog/run-flux-2-on-replicate/). BFL direct, fal.ai, Replicate, and Cloudflare can expose different units, endpoint names, and limits; check the live source before committing a production budget.
+Prices verified 2026-06-25 via [BFL pricing](https://bfl.ai/pricing), [BFL model overview](https://help.bfl.ai/articles/9364115800-flux-models-overview), [fal.ai FLUX.2](https://fal.ai/flux-2), and [Replicate](https://replicate.com/blog/run-flux-2-on-replicate/). BFL direct, fal.ai, Replicate, and Cloudflare can expose different units, endpoint names, and limits; check the live source before committing a production budget.
 
 ## Against the alternatives
 
@@ -243,7 +251,7 @@ Prices verified 2026-06-23 via [BFL pricing](https://bfl.ai/pricing), [BFL model
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against Black Forest Labs, BFL documentation/help pages, Hugging Face model cards, GitHub repositories, fal.ai, Replicate, and Cloudflare Workers AI documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against Black Forest Labs, BFL documentation/help pages, Hugging Face model cards, GitHub repositories, fal.ai, Replicate, and Cloudflare Workers AI documentation.
 
 ## FAQ
 
@@ -272,16 +280,16 @@ Midjourney wins default aesthetic polish and ease of use. Flux wins when the buy
 
 ## Sources
 
-- [Black Forest Labs official site](https://bfl.ai) (verified 2026-06-23)
+- [Black Forest Labs official site](https://bfl.ai) (verified 2026-06-25)
 - [Black Forest Labs about page](https://bfl.ai/about) (verified 2026-06-23)
-- [BFL FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-23)
-- [BFL FLUX.2 pricing](https://bfl.ai/pricing) (verified 2026-06-23)
-- [BFL licensing overview](https://help.bfl.ai/articles/9272590838-self-serve-dev-license-overview-pricing) (verified 2026-06-23)
+- [BFL FLUX models overview](https://help.bfl.ai/articles/9364115800-flux-models-overview) (verified 2026-06-25)
+- [BFL FLUX.2 pricing](https://bfl.ai/pricing) (verified 2026-06-25)
+- [BFL licensing overview](https://help.bfl.ai/articles/9272590838-self-serve-dev-license-overview-pricing) (verified 2026-06-25)
 - [FLUX.2 model page](https://bfl.ai/models/flux-2) (verified 2026-06-23)
 - [FLUX.2 Klein model page](https://bfl.ai/models/flux-2-klein) (verified 2026-06-23)
 - [FLUX.2 GitHub repo](https://github.com/black-forest-labs/flux2) (verified 2026-06-23)
 - [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-23)
-- [fal.ai FLUX.2](https://fal.ai/flux-2) (verified 2026-06-23)
-- [Replicate: Run FLUX.2](https://replicate.com/blog/run-flux-2-on-replicate/) (verified 2026-06-23)
+- [fal.ai FLUX.2](https://fal.ai/flux-2) (verified 2026-06-25)
+- [Replicate: Run FLUX.2](https://replicate.com/blog/run-flux-2-on-replicate/) (verified 2026-06-25)
 - [Replicate pricing](https://replicate.com/pricing) (verified 2026-06-23)
 - [Cloudflare Workers AI changelog](https://developers.cloudflare.com/changelog/product-group/ai/3/) (verified 2026-06-23)

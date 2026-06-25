@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$120/month"
 status: active
 launched: 2023
-last_updated: 2026-06-16
-last_verified: 2026-06-16
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Tana: Features, Pricing & Review (2026)"
 meta_description: "Tana is now an agentic meeting platform: AI agents join Zoom, Teams, and Meet calls, transcribe, and create docs and tasks during the call. Free tier; Pro from about $20/mo. The original Supertags outliner is a separate product. Reviewed June 2026."
@@ -38,11 +38,11 @@ facts:
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Freemium. The current Tana meeting platform lists Free (about 5 hosted meetings a month and roughly 50 AI queries), Pro at about $20/month on an early-bird rate (around $30 standard), Max at about $80/month early-bird (around $120 standard), and Business at custom yearly pricing. The separate Tana Outliner product has its own lower-priced plans. Verify current rates on the live pricing page."
+    value: "Freemium. The current Tana meeting platform lists Free with 5 hosted meetings/month and 50 AI queries, Pro at $20/month early-bird ($30 standard), Max at $80/month early-bird ($120 standard), and Business custom billed yearly."
     source: "https://tana.inc/pricing"
     source_label: "Tana pricing"
     source_id: tana-pricing
-    verified_at: 2026-06-16
+    verified_at: 2026-06-25
     volatility: high
     confidence: medium
     next_review_at: 2026-07-16
@@ -125,11 +125,11 @@ The trade-off is focus. Tana is now built around teams and live calls. If you wa
 
 ## Pricing
 
-Tana is freemium. As of June 2026 the meeting platform at [tana.inc/pricing](https://tana.inc/pricing) lists a Free plan with about 5 hosted meetings a month and roughly 50 AI queries, a Pro plan at about $20 per month on an early-bird rate (around $30 standard) with unlimited meetings and more AI, a Max plan at about $80 per month early-bird (around $120 standard) that adds more AI and dedicated support, and a Business plan at custom yearly pricing with SAML SSO and advanced security.
+Tana is freemium. As of June 2026 the meeting platform at [tana.inc/pricing](https://tana.inc/pricing) lists Free with about 5 hosted meetings a month and roughly 50 AI queries. Pro is about $20/month on an early-bird rate, around $30 standard, with unlimited meetings and more AI. Max is about $80/month early-bird, around $120 standard, and Business is custom yearly pricing with SAML SSO and advanced security.
 
 The original Tana Outliner is a separate product with its own, generally lower-priced plans at outliner.tana.inc. Because the platform is young and several tiers are on promotional early-bird rates, confirm the current prices and meeting limits on the live pricing page before committing.
 
-Pricing and positioning verified 2026-06-16 against the [Tana site](https://tana.inc/pricing).
+Pricing and positioning verified 2026-06-25 against the [Tana pricing page](https://tana.inc/pricing).
 
 ## Failure modes
 
@@ -141,7 +141,7 @@ Pricing and positioning verified 2026-06-16 against the [Tana site](https://tana
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-16 against the [Tana site](https://tana.inc/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Tana pricing page](https://tana.inc/pricing).
 
 ## FAQ
 

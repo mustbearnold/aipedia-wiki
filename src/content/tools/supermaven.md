@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$10/month"
 status: active
 launched: 2023-10
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://supermaven.com/pricing
     source_label: Supermaven pricing
     source_id: supermaven-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -70,7 +70,7 @@ facts:
     source: https://supermaven.com/pricing
     source_label: Supermaven pricing
     source_id: supermaven-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -80,7 +80,7 @@ facts:
     source: https://supermaven.com/
     source_label: Supermaven official site
     source_id: supermaven-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -107,13 +107,23 @@ price_history:
     source: "https://supermaven.com/pricing"
     source_label: "Source"
     source_id: supermaven-pricing
+    verified_at: 2026-06-01
     note: "June 1 recheck: Free keeps fast suggestions and 7-day data retention; Pro and Team include 1M context, style adaptation, the largest model, $5/month in chat credits, and a 30-day Pro trial."
+  - date: 2026-06-25
+    plan: "Free / Pro / Team"
+    price: "$0 / $10 / $10 per user per month"
+    source: "https://supermaven.com/pricing"
+    source_label: "Supermaven pricing"
+    source_id: supermaven-pricing
+    verified_at: 2026-06-25
+    note: "Public pricing remains unchanged: Pro and Team list 1M context, style adaptation, largest model, $5/month chat credits, 7-day data retention, and a 30-day Pro trial."
   - date: 2026-04-15
     plan: "Pro"
     price: "$10/mo"
     source: "https://supermaven.com/pricing"
     source_label: "Source"
     source_id: supermaven-pricing
+    verified_at: 2026-04-15
     note: "Verified unchanged. $5/month in chat credits included."
   - date: 2025-09-01
     plan: "Free"
@@ -121,6 +131,7 @@ price_history:
     source: "https://supermaven.com/pricing"
     source_label: "Source"
     source_id: supermaven-pricing
+    verified_at: 2025-09-01
     note: "Free tier now includes 1M-token Babble context."
   - date: 2026-05-13
     plan: "Pro"
@@ -128,6 +139,7 @@ price_history:
     source: "https://supermaven.com/pricing"
     source_label: "Source"
     source_id: supermaven-pricing
+    verified_at: 2026-05-13
     note: "Re-verified. Pro retains 1M context, coding-style adaptation, and $5/mo chat credits. Free tier now shows 7-day data retention and no longer advertises 1M context or style adaptation. Team plan at $10/user/mo with centralized management."
 ---
 
@@ -143,7 +155,7 @@ Chat credits exist on Pro and Team, but the product is still autocomplete-first.
 >
 > **Skip it if chat, agent mode, or codebase Q&A need to live in the same tool.** [Cursor](/tools/cursor/) covers everything Supermaven does plus agentic editing. [GitHub Copilot](/tools/github-copilot/) matches the $10 price point and adds chat. [Continue](/tools/continue/) is free and brings-your-own-key.
 >
-> **Who pays:** Developers who already use a separate chat tool and want best-in-class completion on top. Neovim users. Engineers on monorepos where small context windows hurt.
+> **Who pays:** Developers who already use a separate chat tool and want very fast completion on top. Neovim users. Engineers on monorepos where small context windows hurt.
 
 ## Key Facts
 
@@ -160,7 +172,7 @@ Chat credits exist on Pro and Team, but the product is still autocomplete-first.
 | **Agent mode** | None |
 | **Enterprise features** | None (no SSO, no audit logs) |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -195,7 +207,7 @@ The project indexes locally. Code does not ship to remote servers beyond what th
 | Pro | $10/mo | 1M tokens | $5/mo included | **Most paid users land here** |
 | Team | $10/user/mo | 1M tokens | $5/user/mo included | Teams that want shared management with the Pro feature set |
 
-*Prices verified 2026-06-12 via [supermaven.com/pricing](https://supermaven.com/pricing). Pro and Team include the 1M Babble context window and coding-style adaptation; the Free tier no longer advertises either as of this verification. A 30-day Pro trial is offered. Chat is a secondary feature; heavy chat users belong on a different tool.*
+*Prices verified 2026-06-25 via [supermaven.com/pricing](https://supermaven.com/pricing). Pro and Team include the 1M Babble context window and coding-style adaptation; the Free tier no longer advertises either as of this verification. A 30-day Pro trial is offered. Chat is a secondary feature; heavy chat users belong on a different tool.*
 
 ## Against the alternatives
 
@@ -221,7 +233,7 @@ The project indexes locally. Code does not ship to remote servers beyond what th
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [supermaven.com/pricing](https://supermaven.com/pricing) and the [Supermaven 1.0 announcement](https://supermaven.com/blog/announcing-supermaven-1.0).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against [supermaven.com/pricing](https://supermaven.com/pricing) and the [Supermaven 1.0 announcement](https://supermaven.com/blog/announcing-supermaven-1.0).
 
 ## FAQ
 

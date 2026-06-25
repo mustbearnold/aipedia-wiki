@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$500/month + usage; Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-06-16
-last_verified: 2026-06-16
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Hume AI: Features, Pricing & Review (2026)"
 meta_description: "Hume AI builds emotion-aware voice: the Empathic Voice Interface (EVI), Octave TTS, and an Expression Measurement API. Free tier plus paid plans from $3 to $500/month. Reviewed June 2026."
@@ -38,11 +38,11 @@ facts:
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Freemium: a free tier (about 10,000 characters per month and a few minutes of EVI), paid plans roughly $3/month up to $500/month, and Enterprise custom, plus usage-based overage that drops at higher tiers (for example EVI around $0.05 to $0.07 per minute). Verify current rates on the live pricing page."
+    value: "Freemium: Free includes 10,000 TTS characters and 5 EVI minutes; paid plans run from Starter at $3/month through Business at $500/month, plus Enterprise custom. Additional EVI 3 usage drops from about $0.07/minute on Starter/Creator to $0.04/minute on Business."
     source: "https://www.hume.ai/pricing"
     source_label: "Hume AI pricing"
     source_id: hume-pricing
-    verified_at: 2026-06-16
+    verified_at: 2026-06-25
     volatility: high
     confidence: medium
     next_review_at: 2026-07-16
@@ -91,9 +91,9 @@ Hume's three core products are the Empathic Voice Interface (EVI), a speech-to-s
 | **Octave** | Expressive, controllable text-to-speech model |
 | **Expression Measurement API** | Scores emotion in voice, language, and faces |
 | **Differentiator** | Emotional intelligence, not just voice realism |
-| **Free tier** | Yes, about 10,000 characters/month and a few minutes of EVI |
-| **Paid plans** | Roughly $3 to $500/month plus usage; Enterprise custom |
-| **Usage overage** | Drops at higher tiers (for example EVI about $0.05 to $0.07/min) |
+| **Free tier** | 10,000 TTS characters/month and 5 EVI minutes |
+| **Paid plans** | Starter $3, Creator $7 first month then $14, Pro $70, Scale $200, Business $500, Enterprise custom |
+| **Usage overage** | Drops at higher tiers; additional EVI 3 runs about $0.07/minute on Starter/Creator, $0.06 on Pro, $0.05 on Scale, and $0.04 on Business |
 | **Company** | Hume AI (Series B funded) |
 | **Best alternative** | [ElevenLabs](/tools/elevenlabs/) for voice quality |
 
@@ -122,11 +122,11 @@ The tradeoff is focus. Hume is not trying to win on the most photoreal voice clo
 
 ## Pricing
 
-Hume uses a freemium, usage-based model. As of June 2026 there is a free tier with around 10,000 characters per month and a few minutes of EVI, paid plans ranging roughly from $3 per month up to about $500 per month, and an Enterprise plan on custom terms. Usage overage is billed per character or per minute and drops at higher tiers, for example EVI in the range of about $0.05 to $0.07 per minute.
+Hume uses a freemium, usage-based model. As of June 25, 2026 the pricing page lists Free with 10,000 monthly TTS characters and 5 EVI minutes. Paid tiers run from Starter at $3/month through Business at $500/month, with Enterprise custom. Usage overage is billed per character or per minute and drops at higher tiers, from about $0.07/minute for additional EVI 3 on Starter/Creator to $0.04/minute on Business.
 
 Because pricing is usage-based and tiered, model your real character and minute volume before committing, and confirm current rates on the live pricing page.
 
-Pricing and products verified 2026-06-16 against the [Hume AI site](https://www.hume.ai).
+Pricing and products verified 2026-06-25 against the [Hume AI pricing page](https://www.hume.ai/pricing).
 
 ## Failure modes
 
@@ -138,7 +138,7 @@ Pricing and products verified 2026-06-16 against the [Hume AI site](https://www.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-16 against the [Hume AI site](https://www.hume.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Hume AI pricing page](https://www.hume.ai/pricing).
 
 ## FAQ
 
@@ -148,7 +148,7 @@ A voice AI company focused on emotional intelligence, with the Empathic Voice In
 
 **How much does Hume AI cost?**
 
-There is a free tier (about 10,000 characters per month and a few minutes of EVI), paid plans from roughly $3 to $500 per month plus usage, and Enterprise pricing on request. Confirm current rates on the live page.
+There is a free tier with 10,000 monthly TTS characters and 5 EVI minutes, paid plans from $3 to $500 per month plus usage, and Enterprise pricing on request. Confirm current rates on the live page.
 
 **How is Hume different from ElevenLabs?**
 

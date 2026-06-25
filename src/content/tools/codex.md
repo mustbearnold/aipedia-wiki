@@ -8,11 +8,11 @@ secondary_categories: [ai-chatbots]
 company: openai
 url: https://openai.com/codex/
 pricing_model: freemium
-price_range: "Bundled with ChatGPT Plus ($20/mo) through Pro 20x ($200/mo)"
+price_range: "Included with ChatGPT Free, Go ($8/mo), Plus ($20/mo), Pro, Business, Edu, and Enterprise"
 status: active
 launched: 2025-05
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,17 +32,16 @@ facts:
     source: https://openai.com/codex/
     source_label: OpenAI Codex product page
     source_id: codex-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
   pricing_anchor:
-    value: Codex pricing is high-volatility because developer/product packaging and token-credit billing can change; verify
-      the developer pricing page before quoting usage cost.
+    value: Codex is included with ChatGPT Free, Go, Plus, Pro, Business, Edu, and Enterprise plans; credit and token-rate details remain high-volatility, so verify the developer pricing page before quoting usage cost.
     source: https://developers.openai.com/codex/pricing
     source_label: Codex pricing
     source_id: codex-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
@@ -52,7 +51,7 @@ facts:
     source: https://platform.openai.com/docs/codex
     source_label: Codex docs
     source_id: codex-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
@@ -62,7 +61,7 @@ facts:
     source: https://platform.openai.com/docs/codex
     source_label: Codex docs
     source_id: codex-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
@@ -72,13 +71,13 @@ facts:
     source: https://openai.com/codex/
     source_label: OpenAI Codex product page
     source_id: codex-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-11'
 tags: [agentic-coding, cloud-agent, desktop-app, cli, openai, gpt-5, computer-use, memory, plugins, multi-agent]
 seo_title: "OpenAI Codex: Features, Pricing & Review (June 2026)"
-meta_description: "OpenAI Codex is the cloud-async coding agent bundled with ChatGPT. Updated June 15, 2026: OpenAI's Ona deal makes persistent, customer-controlled cloud execution a core Codex buyer issue."
+meta_description: "OpenAI Codex is the cloud-async coding agent included with ChatGPT Free, Go, Plus, Pro, Business, Edu, and Enterprise. Verified June 25, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - async background coding (fire a task, return to a PR)
@@ -92,7 +91,7 @@ not_best_for:
   - terminal-only workflows where Claude Code is tighter
   - users who do not already have a ChatGPT subscription
 quick_answer: >-
-  Codex is OpenAI's agentic coding product. Works async in the cloud or locally via CLI and Codex Desktop. Best for fire-and-forget tasks, multi-file refactors, and teams already inside the OpenAI ecosystem. Bundled with ChatGPT Plus and up; Pro tiers get 5-20x Codex usage. The June 11 Ona acquisition agreement makes persistent, customer-controlled cloud execution the next enterprise control to watch. Skip it if you need a Linux desktop GUI or want the tightest IDE daily driver (Cursor) or tightest terminal agent (Claude Code).
+  Codex is OpenAI's agentic coding product. Works async in the cloud or locally via CLI and Codex Desktop. Best for fire-and-forget tasks, multi-file refactors, and teams already inside the OpenAI ecosystem. Included with ChatGPT Free, Go, Plus, Pro, Business, Edu, and Enterprise; Pro tiers are still the serious developer path. The June 11 Ona acquisition agreement makes persistent, customer-controlled cloud execution the next enterprise control to watch. Skip it if you need a Linux desktop GUI or want the tightest IDE daily driver (Cursor) or tightest terminal agent (Claude Code).
 price_history:
   - date: 2026-06-11
     plan: "Ona acquisition agreement"
@@ -100,6 +99,7 @@ price_history:
     source: "/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/"
     source_label: "AIpedia coverage"
     source_id: aipedia-news
+    verified_at: 2026-06-11
     note: "OpenAI agreed to acquire Ona to bring secure, customer-controlled cloud execution and orchestration into Codex for long-running agents across software and knowledge work. The deal is subject to closing conditions and regulatory approvals."
   - date: 2026-05-22
     plan: "Gartner enterprise coding-agent recognition"
@@ -107,6 +107,7 @@ price_history:
     source: "/news/2026-05-22-openai-codex-gartner-enterprise-coding-agent-leader/"
     source_label: "AIpedia coverage"
     source_id: aipedia-news
+    verified_at: 2026-05-22
     note: "OpenAI said Codex was named a Leader in Gartner's 2026 Magic Quadrant for Enterprise AI Coding Agents and cited more than 4 million weekly users."
   - date: 2026-05-14
     plan: "ChatGPT mobile preview"
@@ -114,6 +115,7 @@ price_history:
     source: "https://openai.com/index/work-with-codex-from-anywhere/"
     source_label: "OpenAI Codex mobile announcement"
     source_id: openai-codex-mobile
+    verified_at: 2026-05-14
     note: "Codex entered the ChatGPT mobile app on iOS and Android in preview. Users can monitor active work, review outputs, approve commands, change models, and start new threads while Codex runs on a connected machine or remote environment."
   - date: 2026-04-02
     plan: "API-aligned billing"
@@ -121,6 +123,7 @@ price_history:
     source: "https://developers.openai.com/codex/pricing"
     source_label: "Source"
     source_id: codex-pricing
+    verified_at: 2026-04-02
     note: "Switched from per-message to per-token credit billing. Credits remain the purchase unit; usage tracks input/cached/output tokens."
   - date: 2026-04-09
     plan: "Pro"
@@ -128,6 +131,7 @@ price_history:
     source: "https://developers.openai.com/codex/pricing"
     source_label: "Source"
     source_id: codex-pricing
+    verified_at: 2026-04-09
     note: "New $100 Pro tier launched between Plus and Pro 20x. 5x Codex usage vs Plus (10x promo through May 31, 2026). Matches Claude Max 5x pricing."
   - date: 2026-04-16
     plan: "Super-app update"
@@ -135,6 +139,7 @@ price_history:
     source: "https://developers.openai.com/codex/pricing"
     source_label: "Source"
     source_id: codex-pricing
+    verified_at: 2026-04-16
     note: "Codex Desktop gained Computer Use, Memory, gpt-image-2, in-app browser, 90+ plugins, multi-agent workflows. Biggest surface expansion since launch."
   - date: 2026-04-23
     plan: "GPT-5.5"
@@ -142,6 +147,7 @@ price_history:
     source: "https://developers.openai.com/codex/pricing"
     source_label: "Source"
     source_id: codex-pricing
+    verified_at: 2026-04-23
     note: "GPT-5.5 rolled out to Codex for longer-running coding, research, data, documents, spreadsheets, and tool-use tasks."
   - date: 2026-05-07
     plan: "Codex for Chrome"
@@ -149,6 +155,7 @@ price_history:
     source: "https://developers.openai.com/codex/pricing"
     source_label: "Source"
     source_id: codex-pricing
+    verified_at: 2026-05-07
     note: "Codex Chrome extension launched, letting the desktop app inspect, test, and operate across signed-in Chrome tabs on macOS and Windows."
   - date: 2026-05-11
     plan: "Daybreak / Codex Security"
@@ -156,6 +163,7 @@ price_history:
     source: "https://developers.openai.com/codex/pricing"
     source_label: "Source"
     source_id: codex-pricing
+    verified_at: 2026-05-11
     note: "OpenAI launched Daybreak with Codex Security as the anchor product. GPT-5.5 / Trusted Access / GPT-5.5-Cyber tiers. 22 partners including Cloudflare, Cisco, CrowdStrike, Palo Alto Networks, Snyk, Semgrep, and Socket. Same-day GPT-5.5-Cyber EU preview and OpenAI Deployment Company corporate restructure."
 ---
 
@@ -163,7 +171,7 @@ price_history:
 
 OpenAI's **agentic coding** product. A coding agent that works either **async in the cloud** (fire a task, come back to a PR) or **locally** via the Codex Desktop app, CLI, and IDE extensions. Backed by GPT-5.5 for harder work and GPT-5.3-Codex-Spark for faster routine coding.
 
-Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of Plus. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel. The June 11 Ona acquisition agreement makes persistent, customer-controlled cloud execution the next Codex enterprise control to watch.
+Included with ChatGPT Free, Go, Plus, Pro, Business, Edu, and Enterprise. The current pricing page lists Free for quick coding tasks and Go at $8/month for lightweight work, while Plus and Pro remain the practical buyer path for repeated agentic coding. The April 16, 2026 super-app update turned Codex Desktop into the most capable OpenAI product surface to date: Computer Use, persistent Memory, gpt-image-2 for visuals, an in-app browser, 90+ plugins, and multi-agent workflows running in parallel. The June 11 Ona acquisition agreement makes persistent, customer-controlled cloud execution the next Codex enterprise control to watch.
 
 ## Recent developments (March-June 2026)
 
@@ -216,7 +224,7 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 >
 > **Skip it if you need a Linux desktop GUI today, primary in-IDE coding, or the tightest terminal agent.** [Cursor](/tools/cursor/) owns daily-driver IDE coding with real-time autocomplete and in-editor chat. [Claude Code](/tools/claude-code/) owns terminal-native autonomous runs and the 1M context window for codebase-scale work. [Devin](/tools/devin/) owns fully-autonomous enterprise agent-first workflows. Codex is strongest as a hybrid: async cloud agent + capable desktop companion.
 >
-> **Who pays which tier:** Plus $20/mo for most individuals doing occasional Codex tasks, Pro $100/mo for engineers running Codex weekly (5x usage, matches Claude Max 5x pricing), Pro 20x $200/mo for sustained agentic coding workloads. Business $25/user for teams. Codex-only seats are available with pay-as-you-go token billing.
+> **Who pays which tier:** Free only for trying quick tasks, Go $8/mo for lightweight coding, Plus $20/mo for most individuals doing occasional Codex tasks, Pro $100/mo for engineers running Codex weekly, and Pro 20x $200/mo for sustained agentic coding workloads. Business, Edu, and Enterprise are the governed team paths. Codex-only seats and credit-based usage should be verified against the live developer pricing page before procurement.
 
 ## Key Facts
 
@@ -238,11 +246,11 @@ Bundled with every paid ChatGPT tier. Pro tiers get 5x to 20x the Codex usage of
 | **Cyber model tiers** | GPT-5.5 · Trusted Access · GPT-5.5-Cyber (EU preview opened May 11, 2026) |
 | **Multi-agent** | Yes. Run multiple Codex agents concurrently across different tasks or modules |
 | **Voice** | Realtime 2 voice models (new May 7, 2026) tighten dictation and hands-free Codex sessions |
-| **Billing** | Credits per MTok input / cached input / output (since April 2, 2026) |
+| **Billing** | Included with ChatGPT plans; extra credits are consumed based on model/features and API-style token rates |
 | **Platform support** | macOS (primary) · Windows rolling out · EU/UK rolling out · Linux via CLI |
 | **Cloud distribution** | OpenAI Deployment Company (formed May 11, 2026) consolidates enterprise distribution; Amazon Bedrock preview live since April 28, 2026 |
 
-Current Codex product, pricing, and Ona acquisition facts verified 2026-06-15 against OpenAI's Codex page, Codex pricing docs, OpenAI's Ona announcement, and Ona's own announcement. Earlier event links remain sourced through their linked AiPedia coverage.
+Current Codex product and pricing facts verified 2026-06-25 against OpenAI's Codex page and Codex pricing docs. Ona acquisition facts remain sourced to OpenAI's June 11 announcement and Ona's own announcement. Earlier event links remain sourced through their linked AiPedia coverage.
 
 ## What it actually is
 
@@ -275,28 +283,29 @@ The real moat is the **cross-surface consistency**. A task started in the deskto
 
 - **Daily-driver IDE coding:** [Cursor](/tools/cursor/). Tighter in-editor autocomplete, Composer for multi-file edits, and Cursor 3's Agents Window for parallel agent orchestration. Works on Linux, macOS, Windows.
 - **Terminal-native autonomous runs:** [Claude Code](/tools/claude-code/). Strongest CLI coding agent; 1M context on Opus 4.8; Ultraplan cloud environments; no desktop-app requirement.
-- **Fully-autonomous enterprise agent:** [Devin](/tools/devin/) by Cognition AI. $500/mo Teams. Agent-first from the ground up, runs end-to-end without human review.
+- **Fully-autonomous enterprise agent:** [Devin](/tools/devin/) by Cognition AI. Free, Pro, Max, Team, and Enterprise plans, with Team starting at $80/month plus full-dev seats. Agent-first from the ground up, runs end-to-end with human review before merge.
 - **Open-source terminal agent:** [Aider](/tools/aider/). Free, self-hosted, works with any model including local Ollama.
 - **IDE plugin inside existing VS Code setup:** [GitHub Copilot](/tools/github-copilot/). Deepest Microsoft ecosystem integration.
 - **Hosted full-app builder:** [Replit Agent](/tools/replit-agent/). Runs the full app lifecycle on Replit infrastructure.
 
 ## Pricing
 
-Codex is **bundled with every paid ChatGPT tier**. No standalone Codex subscription. Usage scales with tier.
+Codex is included with ChatGPT Free, Go, Plus, Pro, Business, Edu, and Enterprise. Usage and model access scale with tier, and developer credit details should be checked against the live pricing page before procurement.
 
-| ChatGPT tier | Monthly | Codex usage vs Plus |
+| ChatGPT tier | Monthly | Codex guidance |
 |---|---|---|
-| Free | $0 | Limited Codex (rate-limited) |
-| Go | $8 | Basic Codex |
+| Free | $0 | Quick coding tasks and evaluation |
+| Go | $8 | Lightweight coding |
 | Plus | $20/mo | 1x (baseline) |
-| Pro | $100/mo | 5x (10x promo through May 31, 2026) |
+| Pro | $100/mo | Higher agentic-coding allowance for active engineers |
 | Pro 20x | $200/mo | 20x |
-| Business | $25/user/mo | Per-seat Codex + admin controls |
+| Business | $25/user/mo | Team seats, admin controls, and shared workspace governance |
+| Edu | Custom | Education workspace governance |
 | Enterprise | Custom | Custom usage + SSO + compliance |
 
-**API-aligned billing (since April 2, 2026):** Credits are the purchase unit. Consumption is measured in input tokens, cached input tokens, and output tokens, not per-message. Teams on pay-as-you-go get transparent cost-per-task tracking.
+**Credit billing:** Codex consumes included and purchased credits based on the model and features used. OpenAI's developer pricing page remains the source of truth for current token-rate details.
 
-Prices verified 2026-06-12 via [OpenAI Codex pricing](https://developers.openai.com/codex/pricing) and the [Codex rate card](https://help.openai.com/en/articles/20001106-codex-rate-card).
+Prices verified 2026-06-25 via [OpenAI Codex pricing](https://developers.openai.com/codex/pricing) and the [Codex rate card](https://help.openai.com/en/articles/20001106-codex-rate-card).
 
 ## Against the alternatives
 
@@ -310,7 +319,7 @@ Prices verified 2026-06-12 via [OpenAI Codex pricing](https://developers.openai.
 | **Image generation** | gpt-image-2 bundled | None native | None native | None native |
 | **Plugins / ecosystem** | 90+ (April 16) | MCP registry + Anthropic Skills | Extensions + custom commands | Built-in toolset |
 | **Platform support** | macOS now; Windows + EU/UK rolling; Linux via CLI | macOS, Windows, Linux | macOS, Windows, Linux | Web (cross-platform) |
-| **Pricing model** | Bundled with ChatGPT Plus+ | Bundled with Claude Pro+ | $20/mo Cursor Pro + API | $500/mo Teams |
+| **Pricing model** | Included with ChatGPT Free, Go, Plus, Pro, Business, Edu, and Enterprise | Bundled with Claude Pro+ | $20/mo Cursor Pro + API | Free, Pro, Max, Team, and Enterprise |
 | **Best for** | Async background work + OpenAI ecosystem | Long-context terminal agent | Primary daily-driver IDE | Fully autonomous tasks |
 
 ## Recent changes
@@ -343,12 +352,12 @@ Prices verified 2026-06-12 via [OpenAI Codex pricing](https://developers.openai.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Current Codex product, pricing, and Ona acquisition facts were verified on 2026-06-15 against OpenAI's Codex page, Codex pricing docs, OpenAI's Ona announcement, and Ona's own announcement, alongside the [June 11 Ona acquisition coverage](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/) and [Codex rate-limit banking coverage](/news/2026-06-11-openai-codex-rate-limit-banking/). Earlier recent-development links remain sourced through their linked AiPedia coverage.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation and multi-source news coverage, verifies facts against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Current Codex product and pricing facts were verified on 2026-06-25 against OpenAI's Codex page and Codex pricing docs. Ona acquisition facts remain sourced to OpenAI's June 11 announcement and Ona's own announcement, alongside the [June 11 Ona acquisition coverage](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/) and [Codex rate-limit banking coverage](/news/2026-06-11-openai-codex-rate-limit-banking/). Earlier recent-development links remain sourced through their linked AiPedia coverage.
 
 ## FAQ
 
 **Is Codex a separate subscription?**
-No. Codex is bundled with every paid ChatGPT tier: Plus ($20/mo), Pro ($100/mo), Pro 20x ($200/mo), Business ($25/user/mo), and Enterprise.
+No. Codex is included with ChatGPT Free, Go ($8/mo), Plus ($20/mo), Pro ($100/mo), Pro 20x ($200/mo), Business ($25/user/mo), Edu, and Enterprise.
 
 **What's the difference between Codex, ChatGPT, and Codex Desktop?**
 ChatGPT is the general-purpose assistant. Codex is the coding agent inside ChatGPT and in standalone surfaces. Codex Desktop is the macOS app that runs Codex agents + Computer Use + 90+ plugins. Same underlying product family.

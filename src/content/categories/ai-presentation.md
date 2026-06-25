@@ -5,10 +5,10 @@ title: AI Presentation Tools
 description: AI tools for turning prompts, outlines, docs, and written ideas into decks, visual stories, and presentation assets.
 tool_count: 8
 seo_title: "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)"
-meta_description: "Updated June 24, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, Napkin AI remains the budget text-to-visuals bridge, and Presentations.AI has a rechecked enterprise/API, data integration, SSO, and auto-refresh lane."
+meta_description: "Updated June 25, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, Napkin AI remains the budget text-to-visuals bridge, and Presentations.AI has a rechecked enterprise/API, data integration, SSO, and auto-refresh lane."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 top_picks:
   best_overall:

@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$20-$200/month; Teams and Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-06-14
-last_verified: 2026-06-14
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Factory: Features, Pricing & Review (June 2026)"
 meta_description: "Factory is an AI-native development platform for Droid coding agents. Pro is $20/mo, Plus is $100/mo, Max is $200/mo, and Teams/Enterprise add ZDR, SSO, audit, data-residency, and deployment controls."
@@ -34,7 +34,7 @@ facts:
     source: "https://docs.factory.ai/welcome"
     source_label: "Factory docs"
     source_id: factory-best-for
-    verified_at: 2026-06-14
+    verified_at: 2026-06-25
     next_review_at: 2026-07-14
     confidence: high
   best_paid_tier:
@@ -42,7 +42,7 @@ facts:
     source: "https://docs.factory.ai/pricing"
     source_label: "Factory plans and models"
     source_id: factory-best-paid-tier
-    verified_at: 2026-06-14
+    verified_at: 2026-06-25
     next_review_at: 2026-07-14
     confidence: high
   best_for:
@@ -72,6 +72,7 @@ price_history:
     source: "https://docs.factory.ai/pricing"
     source_label: "Source"
     source_id: factory-best-paid-tier
+    verified_at: 2026-05-13
     note: "Individual software development agents with Desktop, CLI, SDK, cloud/local background agents, billing/usage stats, and agent-readiness dashboard"
   - date: 2026-05-13
     plan: "Plus"
@@ -79,6 +80,7 @@ price_history:
     source: "https://docs.factory.ai/pricing"
     source_label: "Source"
     source_id: factory-best-paid-tier
+    verified_at: 2026-05-13
     note: "Adds expanded rolling rate limits around 5x Pro and Droid Computers for remote Droids"
   - date: 2026-05-13
     plan: "Max"
@@ -86,6 +88,7 @@ price_history:
     source: "https://docs.factory.ai/pricing"
     source_label: "Source"
     source_id: factory-best-paid-tier
+    verified_at: 2026-05-13
     note: "Everything in Plus, around 10x Pro usage, and early access"
   - date: 2026-05-13
     plan: "Teams"
@@ -93,6 +96,7 @@ price_history:
     source: "https://docs.factory.ai/pricing"
     source_label: "Source"
     source_id: factory-best-paid-tier
+    verified_at: 2026-05-13
     note: "Up to 150 seats, custom usage limits, onboarding/support, SSO, SAML/SCIM, ZDR, and basic admin controls"
   - date: 2026-05-13
     plan: "Enterprise"
@@ -100,6 +104,7 @@ price_history:
     source: "https://docs.factory.ai/pricing"
     source_label: "Source"
     source_id: factory-best-paid-tier
+    verified_at: 2026-05-13
     note: "Unlimited team members, dedicated compute, audit logs, full admin controls, data residency/session retention/network policy controls, on-prem deployment, SLAs, and custom onboarding"
   - date: 2026-06-01
     plan: "All plans"
@@ -107,14 +112,16 @@ price_history:
     source: "https://docs.factory.ai/pricing"
     source_label: "Source"
     source_id: factory-best-paid-tier
+    verified_at: 2026-06-01
     note: "June 1 recheck: Pro $20, Plus $100, Max $200, Teams custom, Enterprise custom. Droid Core fallback, $10 minimum Extra Usage credits, BYOK allowances, and rolling 5-hour/weekly/monthly Standard Usage windows remain the live buying caveats."
-  - date: 2026-06-14
+  - date: 2026-06-25
     plan: "All plans"
     price: "Unchanged"
     source: "https://docs.factory.ai/pricing"
     source_label: "Factory plans and models"
     source_id: factory-best-paid-tier
-    note: "June 14 recheck: Factory docs still list Pro at $20/month, Plus at $100/month, Max at $200/month, Teams custom, and Enterprise custom. The best-paid-tier guidance remains Pro for individuals, Plus only when Droid Computers or roughly 5x Pro usage matter, and Max for heavy individual users who need roughly 10x Pro usage plus early access."
+    verified_at: 2026-06-25
+    note: "June 25 recheck: Factory docs still list Pro at $20/month, Plus at $100/month, Max at $200/month, Teams custom, and Enterprise custom. The best-paid-tier guidance remains Pro for individuals, Plus only when Droid Computers or roughly 5x Pro usage matter, and Max for heavy individual users who need roughly 10x Pro usage plus early access."
 ---
 
 # Factory
@@ -186,7 +193,7 @@ The practical question is whether Factory becomes the place your team runs codin
 
 ## Pricing
 
-Factory pricing was verified from official docs on 2026-06-14:
+Factory pricing was verified from official docs on 2026-06-25:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -220,7 +227,7 @@ Factory also documents rolling Standard Usage, Droid Core fallback, prepaid Extr
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-14 against Factory primary documentation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against Factory primary documentation.
 
 ## FAQ
 

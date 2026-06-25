@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$44.99/month"
 status: active
 launched: 2021-06
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.hyperwriteai.com"
     source_label: "HyperWrite official site"
     source_id: hyperwrite-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   agent_surface:
@@ -38,16 +38,16 @@ facts:
     source: "https://www.hyperwriteai.com/personal-assistant"
     source_label: "HyperWrite Personal Assistant"
     source_id: hyperwrite-personal-assistant
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-07-23
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Freemium writing-assistant product with paid plans listed on the vendor pricing page: Premium $19.99/mo monthly or $16/mo annual equivalent; Ultra $44.99/mo monthly or $29/mo annual equivalent as of June 23, 2026."
+    value: "Freemium writing-assistant product with paid plans listed on the vendor pricing page: Premium $19.99/mo monthly or $16/mo annual equivalent; Ultra $44.99/mo monthly or $29/mo annual equivalent as of June 25, 2026."
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "HyperWrite pricing"
     source_id: hyperwrite-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-07-23
     volatility: high
     confidence: high
@@ -56,7 +56,7 @@ facts:
     source: "https://www.hyperwriteai.com"
     source_label: "HyperWrite official site"
     source_id: hyperwrite-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://www.hyperwriteai.com/personal-assistant"
     source_label: "HyperWrite Personal Assistant"
     source_id: hyperwrite-personal-assistant
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-07-23
     volatility: high
     confidence: high
@@ -84,13 +84,13 @@ not_best_for:
 quick_answer: >-
   HyperWrite is a Chrome-extension writing suite bolted to a browser-agent called Personal Assistant. Pick Premium at $19.99/mo (or $16/mo annual, $192/yr) for daily inline use with 250 AI messages a month and unlimited TypeAheads, or Ultra at $44.99/mo (or $29/mo annual, $348/yr) for unlimited AI messages and first access to experimental features. Skip it if ChatGPT Plus with Operator already covers the workflow.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Premium / Ultra"
     price: "$19.99 / $44.99 monthly; $16 / $29 annual"
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "HyperWrite pricing"
     source_id: hyperwrite-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Premium remains 250 AI messages per month with unlimited TypeAheads, citations with real-time info, and 3 custom personas. Ultra remains unlimited AI messages, 10 custom personas, and first access to experimental features."
   - date: 2026-04-17
     plan: "Premium"
@@ -98,7 +98,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Premium and Ultra tiers verified at $19.99 and $44.99 monthly."
   - date: 2026-05-13
     plan: "Premium / Ultra"
@@ -106,7 +106,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Pricing page now publishes a 250 AI messages per month limit on Premium plus 3 custom personas and citations with real-time info. Ultra moves to unlimited AI messages, 10 custom personas, and first access to experimental features. Annual billing saves 20%: $192/yr Premium ($16/mo equivalent), $348/yr Ultra ($29/mo equivalent)."
   - date: 2026-06-02
     plan: "Premium / Ultra"
@@ -114,7 +114,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Pricing page rechecked after a May 20, 2026 publish timestamp. Premium remains 250 AI messages/month with unlimited TypeAheads, citations with real-time info, and 3 custom personas; Ultra remains unlimited AI messages, 10 custom personas, and first access to experimental features."
   - date: 2026-06-05
     plan: "Premium / Ultra"
@@ -122,7 +122,7 @@ price_history:
     source: "https://www.hyperwriteai.com/pricing"
     source_label: "Source"
     source_id: hyperwrite-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Rechecked during the HyperWrite comparison refresh. Premium and Ultra prices, AI-message limits, TypeAhead access, citations with real-time info, and persona limits remained unchanged from the June 2 check."
 ---
 
@@ -155,7 +155,7 @@ Pricing runs $0 to $44.99/month on monthly billing. Annual billing saves 20% on 
 | **Integrations** | Gmail, Google Docs, LinkedIn, Notion, most browser text fields |
 | **Desktop app** | None, browser-only |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -193,7 +193,7 @@ Subscription pricing via [hyperwriteai.com/pricing](https://www.hyperwriteai.com
 | Premium | $19.99/mo | $192/yr (~$16/mo, saves 20%) | 250 per month | 3 custom | Included | **Most daily users land here** |
 | Ultra | $44.99/mo | $348/yr (~$29/mo, saves 20%) | Unlimited | 10 custom | Included with first access to experimental features | Heavy browser-automation workloads |
 
-*Prices verified 2026-06-23 via [HyperWrite pricing](https://www.hyperwriteai.com/pricing). Premium and Ultra both include unlimited TypeAheads and citations with real-time info. Promo codes rotate. The 250-AI-messages cap on Premium is the main reason heavy daily users should compare against Ultra before subscribing.*
+*Prices verified 2026-06-25 via [HyperWrite pricing](https://www.hyperwriteai.com/pricing). Premium and Ultra both include unlimited TypeAheads and citations with real-time info. Promo codes rotate. The 250-AI-messages cap on Premium is the main reason heavy daily users should compare against Ultra before subscribing.*
 
 ## Against the alternatives
 
@@ -219,7 +219,7 @@ Subscription pricing via [hyperwriteai.com/pricing](https://www.hyperwriteai.com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [HyperWrite pricing](https://www.hyperwriteai.com/pricing), the [Personal Assistant product page](https://www.hyperwriteai.com/personal-assistant), and the [AI Agent overview](https://www.hyperwriteai.com/aitools/ai-agent).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [HyperWrite pricing](https://www.hyperwriteai.com/pricing), the [Personal Assistant product page](https://www.hyperwriteai.com/personal-assistant), and the [AI Agent overview](https://www.hyperwriteai.com/aitools/ai-agent).
 
 ## FAQ
 

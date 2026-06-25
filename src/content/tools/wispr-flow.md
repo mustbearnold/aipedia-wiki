@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$15/user/month; Enterprise custom"
 status: active
 launched: 2024
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Wispr Flow: Features, Pricing & Review (June 2026)"
 meta_description: "June 2026 Wispr Flow review: AI dictation for Mac, Windows, iPhone, and Android. Free Basic, Pro at $15 monthly or $12 annual, Team/Enterprise controls, Command Mode, Privacy Mode, and reliability watch-outs."
@@ -38,10 +38,10 @@ facts:
     confidence: high
   best_paid_tier:
     value: "Flow Pro ($15/user/month monthly or $12/user/month annual) for unlimited words and command mode"
-    source: "https://wisprflow.ai/business"
-    source_label: "Wispr Flow business pricing"
-    source_id: wispr-flow-business
-    verified_at: 2026-06-12
+    source: "https://wisprflow.ai/pricing"
+    source_label: "Wispr Flow pricing"
+    source_id: wispr-flow-best-for
+    verified_at: 2026-06-25
     next_review_at: 2026-09-10
     confidence: high
   best_for:
@@ -52,11 +52,11 @@ facts:
     verified_at: 2026-06-12
     confidence: high
   data_controls:
-    value: "Privacy Mode is the zero-dictation-retention path when enabled; Wispr still performs cloud transcription and may use dictation data to evaluate/train systems when Privacy Mode is off."
+    value: "Privacy Mode is the zero-dictation-retention path when enabled; Cloud Sync separately controls whether transcripts, audio, and dictation history are stored for cross-device access. Wispr still performs cloud transcription."
     source: "https://wisprflow.ai/data-controls"
     source_label: "Wispr Flow data controls"
     source_id: wispr-flow-data-controls
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-09-10
@@ -88,6 +88,7 @@ price_history:
     source: "https://wisprflow.ai/business"
     source_label: "Wispr Flow business pricing"
     source_id: wispr-flow-business
+    verified_at: 2026-06-10
     note: "Reverified. Free tier includes 2,000 words/week on Mac or Windows, 1,000 words/week on iPhone, Android unlimited for a limited time, dictionary/snippets, 100+ languages, Privacy Mode, and HIPAA-ready positioning."
   - date: 2026-06-10
     plan: "Flow Pro"
@@ -95,6 +96,7 @@ price_history:
     source: "https://wisprflow.ai/business"
     source_label: "Wispr Flow business pricing"
     source_id: wispr-flow-business
+    verified_at: 2026-06-10
     note: "Reverified. Pro adds unlimited words across Mac, Windows, iPhone, and Android, prioritized support, Command Mode, early access, and team collaboration features."
   - date: 2026-06-10
     plan: "Flow Enterprise"
@@ -102,6 +104,7 @@ price_history:
     source: "https://wisprflow.ai/business"
     source_label: "Wispr Flow business pricing"
     source_id: wispr-flow-business
+    verified_at: 2026-06-10
     note: "Reverified. Enterprise adds dedicated support, SOC 2 Type II, ISO 27001, enforced HIPAA compliance, enforced Privacy Mode, SSO/SAML, advanced usage dashboards, and bulk pricing discounts."
   - date: 2026-05-10
     plan: "Flow Basic"
@@ -109,6 +112,7 @@ price_history:
     source: "https://wisprflow.ai/pricing"
     source_label: "Source"
     source_id: wispr-flow-best-for
+    verified_at: 2026-05-10
     note: "2,000 words/week desktop, 1,000 words/week iPhone, Android unlimited for a limited time"
   - date: 2026-05-10
     plan: "Flow Pro"
@@ -116,6 +120,7 @@ price_history:
     source: "https://wisprflow.ai/pricing"
     source_label: "Source"
     source_id: wispr-flow-best-for
+    verified_at: 2026-05-10
     note: "Unlimited words across Mac, Windows, iPhone, and Android"
   - date: 2026-05-10
     plan: "Flow Enterprise"
@@ -123,6 +128,7 @@ price_history:
     source: "https://wisprflow.ai/pricing"
     source_label: "Source"
     source_id: wispr-flow-best-for
+    verified_at: 2026-05-10
     note: "Dedicated support, SOC 2 Type II, ISO 27001, enforced HIPAA compliance, enforced Privacy Mode, SSO/SAML, advanced dashboards, bulk discounts, dedicated IT admin seats"
   - date: 2026-05-13
     plan: "Flow Pro"
@@ -142,7 +148,7 @@ The key distinction is Wispr Flow vs raw speech-to-text. Raw transcription captu
 
 ## Recent developments
 
-- **June 10, 2026:** Pricing, plan docs, data controls, and team/enterprise docs reverified. Flow Basic remains free; Flow Pro is still listed at $15/user/month monthly or $12/user/month annual; Enterprise remains contact-sales. Team docs clarify 14-day trials, shared context, team insights, and billing grace-period behavior. Data Controls clarify that Privacy Mode is the zero-dictation-retention path, while cloud transcription still occurs.
+- **June 25, 2026:** Pricing and data controls reverified. Flow Basic remains free; Flow Pro is still listed at $15/user/month monthly or $12/user/month annual; Enterprise remains contact-sales. Data Controls now make the buyer distinction clearer: Privacy Mode governs retention/training behavior, while Cloud Sync governs storage of transcripts, audio, and dictation history for cross-device access.
 - **June 4, 2026:** Wispr published a reliability update after recent issues, saying scaling-related infrastructure changes caused outages and text-insertion problems, with redundancy, health monitoring, and on-call processes now prioritized. Treat this as a transparency signal and a rollout risk to test before team-wide deployment.
 - **May 12, 2026:** [Wispr reportedly in talks for ~$260M at ~$2B valuation, led by Menlo Ventures](/news/2026-05-12-wispr-ai-260m-2b-valuation-menlo-ventures/). Bloomberg and The Tech Portal both reported the round (not yet finalized) and cited 2.5M+ downloads and Fortune 500 traction. Treat the valuation as a buying-confidence signal for product longevity, not a pricing change.
 - **2026-05-13:** Pro pricing re-verified unchanged at $15/user/mo monthly or $12/user/mo annual on the official pricing page.
@@ -210,7 +216,7 @@ Command Mode is the key paid workflow to understand. Wispr's help docs say it is
 
 ## Pricing
 
-Wispr Flow pricing was re-verified from official plan docs and the business pricing page on 2026-06-12:
+Wispr Flow pricing was re-verified from official plan docs and the pricing page on 2026-06-25:
 
 | Plan | Price | Practical meaning |
 |---|---:|---|
@@ -235,8 +241,8 @@ Team and Enterprise admins should read the plan FAQ before procurement. Wispr's 
 ## Failure Modes
 
 - **It only pays off if you dictate often.** Occasional users may not get enough value from Pro.
-- **Privacy Mode is a setting and policy choice.** Wispr says Privacy Mode gives zero dictation data retention. Enterprise and HIPAA workflows can enforce it, but non-enterprise teams should verify settings before dictating sensitive material.
-- **Cloud transcription still happens.** Wispr's data-controls page says transcription is performed in the cloud even when Privacy Mode changes retention/training behavior, so sensitive teams should review the Trust Center, BAA/DPA/MSA, and retention controls before rollout.
+- **Privacy Mode and Cloud Sync are separate controls.** Wispr says Privacy Mode gives zero dictation data retention, while Cloud Sync controls whether transcripts, audio, and dictation history are stored on Wispr's servers for cross-device access. Sensitive teams should verify both settings.
+- **Cloud transcription still happens.** Wispr's data-controls page says transcription is performed in the cloud even when retention and sync settings change, so sensitive teams should review the Trust Center, BAA/DPA/MSA, and retention controls before rollout.
 - **Reliability needs pilot testing.** Wispr's June 4 reliability note disclosed recent infrastructure and text-insertion issues; test across the team's actual OS versions, microphones, apps, login behavior, and mobile/desktop mix before mandating it.
 - **Compliance wording needs procurement review.** The pricing/privacy pages say SOC 2 Type II, ISO 27001, HIPAA, SSO/SAML, and enforced Privacy Mode are available, but teams should still review the Trust Center, BAA, DPA/MSA, and current reports.
 - **Speech habits matter.** Dictation gets better when users learn to speak in structured chunks.
@@ -245,7 +251,7 @@ Team and Enterprise admins should read the plan FAQ before procurement. Wispr's 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against Wispr Flow primary plan docs, business pricing, data-controls, privacy, command-mode, team/enterprise, reliability-update, referral, and affiliate-program information, plus May 12, 2026 Bloomberg/The Tech Portal/TechFundingNews coverage of the reported $260M Menlo-led round at a $2B valuation.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against Wispr Flow primary plan docs, pricing, data-controls, privacy, command-mode, team/enterprise, reliability-update, referral, and affiliate-program information, plus May 12, 2026 Bloomberg/The Tech Portal/TechFundingNews coverage of the reported $260M Menlo-led round at a $2B valuation.
 
 ## FAQ
 
@@ -269,9 +275,9 @@ No. Wispr Flow is a dictation and writing tool. Use a voice-agent platform for p
 
 ## Sources
 
-- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included): Basic, Pro, Team, Enterprise, platforms, and plan features (verified 2026-06-12)
-- [Wispr Flow business pricing](https://wisprflow.ai/business): current Free/Pro/Enterprise price and feature cards (verified 2026-06-12)
-- [Wispr Flow data controls](https://wisprflow.ai/data-controls): Privacy Mode, retention, cloud transcription, context awareness, and security controls (verified 2026-06-12)
+- [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included): Basic, Pro, Team, Enterprise, platforms, and plan features (verified 2026-06-25)
+- [Wispr Flow pricing](https://wisprflow.ai/pricing): current Free/Pro/Enterprise price and feature cards (verified 2026-06-25)
+- [Wispr Flow data controls](https://wisprflow.ai/data-controls): Privacy Mode, Cloud Sync, retention, cloud transcription, context awareness, and security controls (verified 2026-06-25)
 - [Wispr Flow What's New](https://wisprflow.ai/whats-new): June 12, 2026 reliability update (verified 2026-06-12)
 - [Wispr Flow privacy](https://wisprflow.ai/privacy): Privacy Mode, no-sale/no-share language, compliance and SSO claims (verified 2026-06-12)
 - [Wispr Flow Command Mode docs](https://docs.wisprflow.ai/articles/4816967992-how-to-use-command-mode): paid/trial requirement and Mac/Windows availability

@@ -5,10 +5,10 @@ title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
 tool_count: 27
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 24, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim AI, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 25, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim AI, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -73,13 +73,13 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Gumloop](/tools/gumloop/) when the buyer wants AI-native flows, agents, triggers, MCP, policies, and guardrails.** Gumloop is a stronger fit for agent-heavy workflow building than a generic "connect two apps" use case. The June 23 check keeps credit testing central: Pro lists 20K+ credits, unlimited seats, app policies, one hosted MCP server, three MCP server proxies, BYOK gives 50 percent off AI model credits on Pro or Enterprise, and overage costs $0.007 per credit when enabled. Teams should still test workflow, agent, MCP, and enrichment nodes separately before assuming every AI step is cheap.
 
-**Use [Taskade](/tools/taskade/) when automation belongs inside project work.** The June 9 check keeps Taskade in the AI workspace lane: tasks, docs, mind maps, automations, Genesis apps, agents, model routing, and MCP live beside the team's project state. Public pricing now shows workspace tiers from Free through Starter $6/mo, Pro $16/mo, Business $40/mo, Max $200/mo, and Enterprise $400/mo, but the help-center table still disagrees on some monthly-style prices, so buyers should confirm the billing toggle before renewal.
+**Use [Taskade](/tools/taskade/) when automation belongs inside project work.** The June 25 check keeps Taskade in the AI workspace lane: tasks, docs, mind maps, automations, Genesis apps, agents, model routing, and MCP live beside the team's project state. Public pricing still shows workspace tiers from Free through Starter $6/mo, Pro $16/mo, Business $40/mo, Max $200/mo, and Enterprise $400/mo, but the help-center table can disagree on monthly-style prices, so buyers should confirm the billing toggle before renewal.
 
-**Use [Reclaim.ai](/tools/reclaim-ai/) when automation starts with the calendar.** The June 9 check confirms Reclaim.ai is now branded from Dropbox, supports Google Calendar and Microsoft Outlook, and positions AI agents around tasks, habits, scheduling links, smart meetings, and team availability. Start with Reclaim when the job is calendar defense, focus-time protection, and task scheduling; skip it if the buyer needs a broad workflow router.
+**Use [Reclaim.ai](/tools/reclaim-ai/) when automation starts with the calendar.** The June 25 check keeps Reclaim.ai branded from Dropbox, supports Google Calendar and Microsoft Outlook, and positions AI agents around tasks, habits, scheduling links, smart meetings, and team availability. Start with Reclaim when the job is calendar defense, focus-time protection, and task scheduling; skip it if the buyer needs a broad workflow router or an Outlook rollout that depends on delegated/shared calendars, hosted Exchange, Teams status, or Outlook Tasks.
 
 **Use [SaneBox](/tools/sanebox/) when automation starts with inbox triage.** The June 9 check updates SaneBox's Appetizer/Snack/Lunch/Dinner pricing ladder and adds an important caveat: SaneDrafts/Reply Draft and SaneSummary are request-only beta AI features, while the durable product remains server-side inbox classification, SaneLater, SaneBlackHole, Daily Digest, reminders, and snooze.
 
-**Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** The June 9 check found the public pricing page foregrounding Enterprise contact-sales packaging, while docs still define Free at 200 Actions/month plus 1,000 Vendor Credits, top-ups at $80 per 1,000 Actions and $20 per 10,000 Vendor Credits, and BYO API keys on paid plans. Treat old Pro/Team prices as historical unless the app or sales confirms them.
+**Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** The June 25 check still finds the public pricing page foregrounding Enterprise contact-sales packaging, while docs define Actions, Vendor Credits, rollover behavior, paid top-ups, and BYO API keys on paid plans. Treat old Pro/Team prices as historical unless the app or sales confirms them.
 
 **Use [ServiceNow](/tools/servicenow/) when enterprise AI automation needs a governance/control tower.** The June 9 check keeps ServiceNow in the governed autonomous-work lane: AI Control Tower now spans Discover, Observe, Govern, Secure, and Measure, with Action Fabric MCP, Build Agent, Workflow Data Fabric, AWS Bedrock AgentCore/Kiro context, and an August 2026 GA caveat for Control Tower enhancements.
 
@@ -87,7 +87,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Workato](/tools/workato/) when enterprise integration depth and governed agentic orchestration matter more than self-serve pricing.** The June 10 check confirms Workato's direct-customer model is still a platform edition fee plus usage fee, with Workato One adding agentic capabilities above Enterprise. Agent Studio genies, Workato GO, and MCP are the AI reasons to shortlist it, but MCP availability is region-scoped and contract-dependent, so buyers must verify edition, usage capacity, OPAs, concurrency, Agent Studio, GO, MCP, and data-center terms in writing.
 
-**Use [Tines](/tools/tines/) when security, IT, or compliance teams need workflow runs that hold up in audit.** The June 9 check keeps Community free, Starter starting at $500/mo, Business/Enterprise contact-sales, and the AI Agent action broader than the old FAQ wording. The practical purchase question is not app count; it is AI run-time credits, package limits, logs, SSO/SAML, flexible hosting, and whether a SOC or IT team can own the workflow safely.
+**Use [Tines](/tools/tines/) when security, IT, or compliance teams need workflow runs that hold up in audit.** The June 25 check keeps Community free, Starter starting at $500/mo, Business/Enterprise contact-sales, and the AI Agent action broader than the old FAQ wording. The practical purchase question is not app count; it is AI run-time credits, package limits, logs, SSO/SAML, flexible hosting, and whether a SOC or IT team can own the workflow safely.
 
 **Use [Activepieces](/tools/activepieces/) when open-source workflow automation, self-hosting, and MCP-mediated workflow control matter.** The June 23 check keeps Standard pricing at 10 free active flows and then $5 per active flow per month, confirms 754 pieces and 754 MCP listings on the live catalog surfaces, and keeps the product-change story around 0.85.4, AI-ready metadata, Mistral AI support, formulas, data manipulation triggers, admin health metrics, MCP flow tooling, and self-host reliability fixes.
 
@@ -278,12 +278,12 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Gumloop credits docs](https://docs.gumloop.com/core-concepts/credits) (verified 2026-06-23)
 - [Gumloop AI models docs](https://docs.gumloop.com/core-concepts/ai_models) (verified 2026-06-23)
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-23)
-- [Reclaim.ai pricing](https://reclaim.ai/pricing) (verified 2026-06-09)
-- [Reclaim.ai Microsoft Outlook integration help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates) (verified 2026-06-09)
+- [Reclaim.ai pricing](https://reclaim.ai/pricing) (verified 2026-06-25)
+- [Reclaim.ai Microsoft Outlook integration help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates) (verified 2026-06-25)
 - [SaneBox pricing](https://www.sanebox.com/pricing) (verified 2026-06-09)
 - [SaneBox Reply Draft help](https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice) (verified 2026-06-09)
-- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-09)
-- [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-09)
+- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-25)
+- [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-25)
 - [ServiceNow AI Control Tower expansion](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx) (verified 2026-06-09)
 - [IBM watsonx Orchestrate release notes](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=releases-release-notes-2025) (verified 2026-06-10)
 - [IBM Think 2026 announcement](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens) (verified 2026-06-10)
@@ -365,8 +365,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-05)
 - [Voiceflow pricing](https://www.voiceflow.com/pricing) (verified 2026-06-10)
 - [Voiceflow documentation](https://docs.voiceflow.com/documentation/Introduction) (verified 2026-06-10)
-- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-09)
-- [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-09)
+- [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-25)
+- [Retell AI legacy endpoint deprecation](https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints) (verified 2026-06-25)
 - [Microsoft Agent Framework GitHub releases](https://github.com/microsoft/agent-framework/releases) (verified 2026-06-22)
 - [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/) (verified 2026-06-22)
 - [Microsoft Agent Framework providers](https://learn.microsoft.com/en-us/agent-framework/agents/providers/) (verified 2026-06-22)

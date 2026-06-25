@@ -2,7 +2,7 @@
 type: tool
 slug: poe
 title: Poe
-tagline: Quora's AI chatbot aggregator. One subscription, thousands of bots and models including GPT-5.5, Claude Opus 4.7, Gemini 3.5 Flash, Nano Banana Pro, Veo 3.1, image, video, audio, group chat, custom bots, and developer APIs.
+tagline: Quora's AI chatbot aggregator. One subscription, thousands of bots and models including GPT-5, GPT-5.5, Claude Sonnet 4.5, Claude Opus 4.7, Gemini 3.5 Flash, Sora 2, Veo 3.1, custom bots, and developer APIs.
 category: ai-chatbots
 company: quora
 url: https://poe.com
@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free + five regional point tiers; US annual schema $49.99-$2,499.99/year"
 status: active
 launched: 2023-02
-last_updated: 2026-06-21
-last_verified: 2026-06-21
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -26,11 +26,11 @@ scores:
   longevity: 8
 facts:
   flagship_model:
-    value: "Multi-model Poe chat platform with GPT, Claude, Gemini, Grok, DeepSeek, Mistral, media models, custom bots, group chat, web search, creator bots, developer APIs, and a subscription point system"
+    value: "Multi-model Poe chat platform with GPT, Claude, Gemini, Grok, DeepSeek, Mistral, Sora, Veo, media models, custom bots, group chat, web search, creator bots, developer APIs, and a subscription point system"
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-21
@@ -39,16 +39,16 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-21
   pricing_anchor:
-    value: "Free limited access plus five point tiers: Basic 10K/day, Plus 660K/month, Pro 1.65M/month, Advanced 3.3M/month, and Max 8.25M/month; US structured-data annual anchors observed June 21 run $49.99-$2,499.99/year, while checkout display can vary by region, tax, and currency"
+    value: "Free limited access plus five point tiers: Basic 10K/day, Plus 660K/month, Pro 1.65M/month, Advanced 3.3M/month, and Max 8.25M/month; US structured-data annual anchors observed June 25 run $49.99-$2,499.99/year, while checkout display can vary by region, tax, and currency"
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-21
@@ -57,7 +57,7 @@ facts:
     source: "https://poe.com"
     source_label: "Poe product site"
     source_id: poe-product
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-21
@@ -66,7 +66,7 @@ facts:
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-21
@@ -75,7 +75,7 @@ facts:
     source: "https://creator.poe.com/api-reference/overview"
     source_label: "Poe Creator Platform API overview"
     source_id: poe-api-docs
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   image_generation:
@@ -83,7 +83,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-21
@@ -92,7 +92,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   real_time_voice:
@@ -100,7 +100,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   web_browsing:
@@ -108,7 +108,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   coding_agent:
@@ -116,7 +116,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -124,7 +124,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -132,7 +132,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -140,7 +140,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   best_for:
@@ -148,7 +148,7 @@ facts:
     source: "https://poe.com/about"
     source_label: "Poe about page"
     source_id: poe-about
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   watch_out_for:
@@ -156,13 +156,13 @@ facts:
     source: "https://poe.com/subscription_plans"
     source_label: "Poe subscription plans"
     source_id: poe-subscription-plans
-    verified_at: 2026-06-21
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-21
 tags: [ai-chat, aggregator, multi-model, quora, points-based, developer-api]
 seo_title: "Poe: Features, Pricing & Review (June 2026)"
-meta_description: "Poe is Quora's multi-model AI chatbot aggregator. Access GPT-5.5, Claude Opus 4.7, Gemini 3.5 Flash, Nano Banana Pro, Veo 3.1, and thousands of bots through point-based subscriptions."
+meta_description: "Poe is Quora's multi-model AI chatbot aggregator. Access GPT-5, GPT-5.5, Claude Sonnet 4.5, Claude Opus 4.7, Gemini 3.5 Flash, Sora 2, Veo 3.1, and thousands of bots through point-based subscriptions."
 author: "aipedia.wiki Editorial"
 best_for:
   - testing multiple AI models in one interface
@@ -174,7 +174,7 @@ not_best_for:
   - API-heavy production use
   - users who want every model at its full-feature fidelity
 quick_answer: >-
-  Poe aggregates frontier chat models, media models, search bots, group chat, custom bots, creator tooling, and developer APIs into one app with a unified points-based subscription. As of June 21, 2026, its public plan page lists Basic, Plus, Pro, Advanced, and Max point buckets from 10K points/day to 8.25M points/month, with regional checkout pricing and US annual structured-data anchors from $49.99 to $2,499.99/year. Pick it if you want breadth and comparison. Skip it if you just need one model at full fidelity.
+  Poe aggregates frontier chat models, media models, search bots, group chat, custom bots, creator tooling, and developer APIs into one app with a unified points-based subscription. As of June 25, 2026, its public plan page lists Basic, Plus, Pro, Advanced, and Max point buckets from 10K points/day to 8.25M points/month, with regional checkout pricing and US annual structured-data anchors from $49.99 to $2,499.99/year. Pick it if you want breadth and comparison. Skip it if you just need one model at full fidelity.
 ---
 
 # Poe
@@ -183,7 +183,7 @@ Quora's multi-model AI chatbot platform. One account, one subscription, dozens o
 
 ## System Verdict
 
-> **Pick Poe if you regularly switch between models or want to test which one wins on your specific prompts.** The interface is clean, the subscription page currently highlights GPT-5.5, Claude Opus 4.7, Gemini 3.5 Flash, Nano Banana Pro, and Veo 3.1, while the public bot directory also exposes many open, media, and specialist bots. The unified points system is simpler than juggling accounts across several model providers.
+> **Pick Poe if you regularly switch between models or want to test which one wins on your specific prompts.** The interface is clean, the public Poe surface highlights GPT-5, Claude Sonnet 4.5, DeepSeek-R1, Veo 3.1, Sora 2, GPT-5.5, Claude Opus 4.7, Gemini 3.5 Flash, and Nano Banana Pro across its home and subscription pages, while the public bot directory also exposes many open, media, and specialist bots. The unified points system is simpler than juggling accounts across several model providers.
 >
 > **Skip it if you're a heavy single-model user.** Going direct to [ChatGPT Plus](/tools/chatgpt/) or [Claude Pro](/tools/claude/) usually gives you fuller native features, provider-specific workflow tools, and less point accounting. Poe's model is strongest when breadth matters more than one provider's full product.
 >
@@ -194,7 +194,7 @@ Quora's multi-model AI chatbot platform. One account, one subscription, dozens o
 | | |
 |---|---|
 | **Parent company** | Quora Inc. |
-| **Available models** | Poe subscription page highlights GPT-5.5, Claude Opus 4.7, Gemini 3.5 Flash, Nano Banana Pro, and Veo 3.1; public bot directory changes frequently |
+| **Available models** | Poe public pages highlight GPT-5, Claude Sonnet 4.5, DeepSeek-R1, Veo 3.1, Sora 2, GPT-5.5, Claude Opus 4.7, Gemini 3.5 Flash, and Nano Banana Pro; public bot directory changes frequently |
 | **Pricing model** | Points-based subscription. Each bot charges a per-message point cost; total points per day or month depends on tier |
 | **Custom bots** | Anyone can create and share bots with custom prompts or API connections |
 | **Developer API** | Creator Platform API with Python SDK, OpenAI-compatible, and REST routes |
@@ -226,7 +226,7 @@ Quora's multi-model AI chatbot platform. One account, one subscription, dozens o
 | Advanced | $999.99/year | 3.3M points/month | Heavier frontier-model and rich-media use |
 | Max | $2,499.99/year | 8.25M points/month | Very heavy use across expensive bots |
 
-Poe's rendered checkout can localize currency, tax, and monthly display pricing. Prices and point grants verified June 21, 2026 via [Poe subscription plans](https://poe.com/subscription_plans) and [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs). Check the live checkout before buying because Poe says final prices may vary by regional taxes and currency conversion.
+Poe's rendered checkout can localize currency, tax, and monthly display pricing. Prices and point grants verified June 25, 2026 via [Poe subscription plans](https://poe.com/subscription_plans) and [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs). Check the live checkout before buying because Poe says final prices may vary by regional taxes and currency conversion.
 
 ## Failure modes
 
@@ -237,12 +237,15 @@ Poe's rendered checkout can localize currency, tax, and monthly display pricing.
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-21 against [Poe subscription plans](https://poe.com/subscription_plans), the [Poe about page](https://poe.com/about), the [Poe Creator Platform API overview](https://creator.poe.com/api-reference/overview), the [Poe download page](https://poe.com/download), and the [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [Poe subscription plans](https://poe.com/subscription_plans), the [Poe about page](https://poe.com/about), the [Poe Creator Platform API overview](https://creator.poe.com/api-reference/overview), the [Poe download page](https://poe.com/download), and the [Poe purchases FAQ](https://help.poe.com/hc/en-us/articles/19945140063636-Poe-Purchases-FAQs).
 
 ## FAQ
 
 **Does Poe include GPT-5.5 and Claude Opus 4.7?**
 Yes. Both are available on paid tiers, subject to point costs. Free tier has limited access to lower-cost models.
+
+**Does Poe include Sora 2 and Veo 3.1?**
+Poe's public subscription page now highlights Veo 3.1, and the public product copy highlights Sora 2. Availability and point costs remain bot-specific, so check the bot card before planning heavy media generation.
 
 **Is Poe cheaper than ChatGPT Plus + Claude Pro combined?**
 If you use both lightly or moderately, Poe Plus may be cheaper than maintaining direct subscriptions to both providers. If you use one model heavily, direct subscription to that provider is usually better because native features and limits matter more than breadth.

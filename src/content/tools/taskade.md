@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$400+/month (workspace pricing)"
 status: active
 launched: 2017-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.taskade.com/pricing"
     source_label: "Taskade pricing"
     source_id: taskade-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.taskade.com/pricing"
     source_label: "Taskade pricing"
     source_id: taskade-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.taskade.com/pricing"
     source_label: "Taskade pricing"
     source_id: taskade-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://www.taskade.com/pricing"
     source_label: "Taskade pricing"
     source_id: taskade-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [project-management, ai-agent, collaboration, mind-map, kanban, ai-workspace, templates, real-time]
@@ -82,6 +82,7 @@ price_history:
     source: "https://www.taskade.com/pricing"
     source_label: "Source"
     source_id: taskade-pricing
+    verified_at: 2026-04-17
     note: "Verified current via taskade.com/pricing"
   - date: 2026-04-17
     plan: "Business"
@@ -89,6 +90,7 @@ price_history:
     source: "https://www.taskade.com/pricing"
     source_label: "Source"
     source_id: taskade-pricing
+    verified_at: 2026-04-17
     note: "Verified current"
   - date: 2026-05-13
     plan: "Pro"
@@ -96,6 +98,7 @@ price_history:
     source: "https://www.taskade.com/pricing"
     source_label: "Source"
     source_id: taskade-pricing
+    verified_at: 2026-05-13
     note: "Major restructure. Taskade moved from per-seat to workspace pricing. Pro now $16/mo for up to 10 users with 50K monthly AI credits."
   - date: 2026-05-13
     plan: "Business"
@@ -103,6 +106,7 @@ price_history:
     source: "https://www.taskade.com/pricing"
     source_label: "Source"
     source_id: taskade-pricing
+    verified_at: 2026-05-13
     note: "Business shifted to flat $40/mo with unlimited users and 150K credits."
   - date: 2026-05-13
     plan: "Max"
@@ -110,6 +114,7 @@ price_history:
     source: "https://www.taskade.com/pricing"
     source_label: "Source"
     source_id: taskade-pricing
+    verified_at: 2026-05-13
     note: "New tier. Max adds autonomous agents and extended thinking with 400K monthly credits."
   - date: 2026-05-13
     plan: "Enterprise"
@@ -117,6 +122,7 @@ price_history:
     source: "https://www.taskade.com/pricing"
     source_label: "Source"
     source_id: taskade-pricing
+    verified_at: 2026-05-13
     note: "Enterprise now lists a $400/mo starting price with 1.1M credits, SSO/SAML, and MCP integration for Claude Desktop, Cursor, and VS Code."
   - date: 2026-06-09
     plan: "Public pricing page"
@@ -124,6 +130,7 @@ price_history:
     source: "https://www.taskade.com/pricing"
     source_label: "Taskade pricing"
     source_id: taskade-pricing
+    verified_at: 2026-06-09
     note: "Verified live pricing page. Help Center still shows $8/$20/$50 in one current-plan table, so buyers should confirm monthly versus annual checkout before renewal."
 ---
 
@@ -139,7 +146,7 @@ Users build custom agents that read and write project data, trigger workflows, a
 >
 > **Skip it if you need enterprise project portfolio management, a deep knowledge graph, or pure workflow plumbing.** [Notion AI](/tools/notion-ai/) wins on knowledge density. [Obsidian](/tools/obsidian/) wins on long-term personal knowledge. [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) win on agent intelligence; Claude Opus 4.8 holds the agentic-coding lead. [Zapier](/tools/zapier/) wins on cross-app automation breadth.
 >
-> **Who pays which tier (workspace pricing, rechecked June 9):** Free for solo testing with up to 3K one-time credits, Starter $6/mo (3 users, 10K monthly credits) for tiny teams, Pro $16/mo (10 users, 50K monthly credits) for most small teams, Business $40/mo (unlimited users, 150K monthly credits) for admin and analytics, Max $200/mo for autonomous agents and extended thinking, Enterprise from $400/mo for SSO, SAML, BYOK, and MCP integration. Confirm monthly versus annual checkout because the help-center table still shows $8/$20/$50.
+> **Who pays which tier (workspace pricing, rechecked June 25):** Free for solo testing with up to 3K one-time credits, Starter $6/mo (3 users, 10K monthly credits) for tiny teams, Pro $16/mo (10 users, 50K monthly credits) for most small teams, Business $40/mo (unlimited users, 150K monthly credits) for admin and analytics, Max $200/mo for autonomous agents and extended thinking, Enterprise from $400/mo for SSO, SAML, BYOK, and MCP integration. Confirm monthly versus annual checkout because the help-center table still shows $8/$20/$50.
 
 ## Key Facts
 
@@ -157,7 +164,7 @@ Users build custom agents that read and write project data, trigger workflows, a
 | **Platforms** | Web · macOS · Windows · iOS · Android · browser extensions |
 | **Free tier** | Yes. 1 app, 1 agent, 3 automations, 3,000 one-time AI credits |
 
-Every data point above was reverified against vendor documentation on 2026-06-12. See Sources.
+Every data point above was reverified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -186,7 +193,7 @@ The moat is integration density and model neutrality, not any single specialist 
 
 ## Pricing
 
-Subscription pricing via [taskade.com/pricing](https://www.taskade.com/pricing). Taskade migrated from per-seat to workspace pricing in 2026; the tiers below reflect the annual-facing values rendered on the public pricing page on June 9, 2026. The Help Center still lists $8/$20/$50 in one current-plan table, so buyers should confirm the active billing toggle and quote before renewal.
+Subscription pricing via [taskade.com/pricing](https://www.taskade.com/pricing). Taskade migrated from per-seat to workspace pricing in 2026; the tiers below reflect the annual-facing values rendered on the public pricing page on June 25, 2026. The Help Center still lists $8/$20/$50 in one current-plan table, so buyers should confirm the active billing toggle and quote before renewal.
 
 | Plan | Monthly (annual) | Users | Apps | Agents | AI credits | Storage | Who's it for |
 |------|------------------|-------|------|--------|------------|---------|--------------|
@@ -197,7 +204,7 @@ Subscription pricing via [taskade.com/pricing](https://www.taskade.com/pricing).
 | Max | $200 | Unlimited | Unlimited | Unlimited | 400,000/mo | 5 TB | Autonomous agents, extended thinking |
 | Enterprise | From $400 | Unlimited | Unlimited | Unlimited | 1,100,000/mo | 10 TB | SSO, SAML, MCP, dedicated support |
 
-*Prices verified 2026-06-12 via [Taskade pricing](https://www.taskade.com/pricing). Workspace pricing replaces the per-seat model used through Q1 2026. AI credits power agents, automations, and app generation; published apps keep running if AI credits are exhausted, and buyers can purchase pay-as-you-go credit packs.*
+*Prices verified 2026-06-25 via [Taskade pricing](https://www.taskade.com/pricing). Workspace pricing replaces the per-seat model used through Q1 2026. AI credits power agents, automations, and app generation; published apps keep running if AI credits are exhausted, and buyers can purchase pay-as-you-go credit packs.*
 
 ## Against the alternatives
 
@@ -228,7 +235,7 @@ Subscription pricing via [taskade.com/pricing](https://www.taskade.com/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-12 against [Taskade pricing](https://www.taskade.com/pricing), [Taskade AI](https://www.taskade.com/ai), and [Taskade Help Center](https://help.taskade.com).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [Taskade pricing](https://www.taskade.com/pricing), [Taskade AI](https://www.taskade.com/ai), and [Taskade Help Center](https://help.taskade.com).
 
 ## FAQ
 

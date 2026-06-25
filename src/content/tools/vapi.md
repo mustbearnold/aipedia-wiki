@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0.05/min platform fee + at-cost providers (~$0.14-0.30/min all-in)"
 status: active
 launched: 2023
-last_updated: 2026-06-16
-last_verified: 2026-06-16
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Vapi: Features, Pricing & Review (2026)"
 meta_description: "Vapi is a developer platform for real-time voice AI agents, charging about $0.05/min plus at-cost model, voice, and transcription providers. Bring-your-own stack, Squads, and function calling. Reviewed June 2026."
@@ -38,20 +38,20 @@ facts:
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Usage-based with no seat fee: Vapi charges about $0.05/min for its platform and passes through model, text-to-speech, transcription, and telephony at cost, so a real call commonly lands around $0.14 to $0.30+ per minute depending on the stack. New accounts get about $10 in free credits."
+    value: "Usage-based: Vapi charges $0.05/min for hosted calls and $0.005/message for SMS/chat, then passes through model, TTS, STT, and transport costs at cost unless you bring your own API key. Build includes 10 concurrent call lines; extra lines are $10/line/month."
     source: "https://vapi.ai/pricing"
     source_label: "Vapi pricing"
     source_id: vapi-pricing
-    verified_at: 2026-06-16
+    verified_at: 2026-06-25
     volatility: high
     confidence: medium
     next_review_at: 2026-07-16
   watch_out_for:
-    value: "The headline $0.05/min is only the platform fee; total cost stacks the model, voice, transcription, and telephony providers on top, so model real all-in per-minute cost before scaling. It is a developer platform that needs engineering to build and maintain agents."
+    value: "The headline $0.05/min is only the platform fee; total cost stacks the model, voice, transcription, and telephony providers on top. HIPAA and zero-data-retention are listed as paid add-ons, so regulated buyers should budget those separately."
     source: "https://vapi.ai"
     source_label: "Vapi"
     source_id: vapi-product
-    verified_at: 2026-06-16
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
 tags: [voice-agents, voice-ai, phone-calls, developer-platform, telephony, vapi]
@@ -92,7 +92,8 @@ The pitch is control plus low latency. Vapi manages turn-taking, interruptions, 
 | **Platform fee** | About $0.05 per minute |
 | **Provider costs** | Model, TTS, STT, and telephony passed through at cost |
 | **Real all-in cost** | Commonly about $0.14 to $0.30+ per minute depending on stack |
-| **Free credits** | About $10 to test |
+| **Call concurrency** | 10 included on Build; extra lines listed at $10/line/month |
+| **Compliance add-ons** | HIPAA listed at $2,000/month and Zero Data Retention at $1,000/month |
 | **Multi-agent** | Squads chain specialized agents with handoffs |
 | **In-call actions** | Function calling to external APIs; knowledge base (RAG) |
 | **Company** | Vapi |
@@ -123,15 +124,18 @@ The flip side is that Vapi is a platform for builders. You assemble and maintain
 
 ## Pricing
 
-Vapi is usage-based with no seat fee. As of June 2026 it charges roughly $0.05 per minute for its own platform and passes through the language model, text-to-speech, speech-to-text, and telephony providers at cost. In practice a real call commonly lands around $0.14 to $0.30 or more per minute once those providers are stacked, and budget setups can be lower. New accounts get about $10 in free credits to test.
+Vapi is usage-based. As of June 25, 2026 it lists hosted calls at $0.05 per minute and SMS/chat at $0.005 per message, excluding model-provider costs. Speech-to-text, LLM, text-to-speech, and transport/network costs are passed through at cost, or $0 if you bring your own provider API key. Build includes 10 call-concurrency lines, with extra lines listed at $10 per line per month.
+
+Regulated buyers should model add-ons separately. The pricing page lists HIPAA at $2,000/month and Zero Data Retention at $1,000/month, while Scale moves to custom terms for higher volume and enterprise support.
 
 There are usage-based self-serve terms plus committed-volume options for higher scale. Because the all-in cost depends entirely on the providers you choose, model a representative call against your real stack before scaling.
 
-Pricing and features verified 2026-06-16 against the [Vapi site](https://vapi.ai).
+Pricing and features verified 2026-06-25 against the [Vapi pricing page](https://vapi.ai/pricing).
 
 ## Failure modes
 
 - **Headline price is not all-in.** The $0.05/min platform fee excludes model, voice, transcription, and telephony, which dominate real cost.
+- **Compliance can change the budget.** HIPAA and Zero Data Retention are paid add-ons on the current pricing page.
 - **Requires engineering.** Vapi is a developer platform; building and maintaining a reliable agent takes technical work.
 - **Cost varies with the stack.** Provider choices swing per-minute cost widely, so budgeting needs a real-world test.
 - **Telephony billed separately.** Numbers and minutes through Twilio, Telnyx, or Vonage are additional.
@@ -139,7 +143,7 @@ Pricing and features verified 2026-06-16 against the [Vapi site](https://vapi.ai
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-16 against the [Vapi site](https://vapi.ai).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Vapi pricing page](https://vapi.ai/pricing).
 
 ## FAQ
 
@@ -149,7 +153,7 @@ A developer platform for building real-time voice AI agents that make and answer
 
 **How much does Vapi cost?**
 
-About $0.05 per minute for the platform, plus the model, voice, transcription, and telephony at cost. Real calls commonly run around $0.14 to $0.30+ per minute depending on the providers, with roughly $10 in free credits to start.
+About $0.05 per minute for hosted calls, plus model, voice, transcription, and transport/network costs at cost unless you bring your own API key. Extra call-concurrency lines, HIPAA, and Zero Data Retention are separate budget items.
 
 **Is Vapi no-code?**
 

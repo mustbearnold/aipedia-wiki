@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 31
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 24, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
+meta_description: "Updated June 25, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -88,7 +88,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 18 Codeium lineage update:** Codeium is now historical search intent, not a live checkout. Current buyers should compare Devin Desktop against Copilot in category/tool guidance: Cognition-stack IDE, SWE-1.6, Devin Local, local/cloud agent management, quota/extra-usage modeling, and migration-policy work versus GitHub-native IDE coverage, PRs, policy, SDK access, and AI Credits governance.
 
-**June 23 Devin comparison follow-up:** the cleaned-up coding hub separates three buyer lanes cleanly: Devin for async ticket delegation, GitHub Copilot for GitHub-native IDE/PR/SDK/governance workflows, and Val Town for instant hosted TypeScript endpoints, cron jobs, and small automations. Devin pricing still shows Free, Pro $20/month, Max $200/month, Team $80/month plus $40/month per full user, and extra usage at API pricing after included usage is consumed.
+**June 25 Devin comparison follow-up:** the cleaned-up coding hub separates three buyer lanes cleanly: Devin for async ticket delegation, GitHub Copilot for GitHub-native IDE/PR/SDK/governance workflows, and Val Town for instant hosted TypeScript endpoints, cron jobs, and small automations. Devin pricing still shows Free, Pro $20/month, Max $200/month, Team $80/month plus $40/month per full user, and extra usage at API pricing after included usage is consumed.
 
 **June 14 Val Town update:** [Val Town](/tools/val-town/) remains the tiny TypeScript runtime lane: Free for public vals, Pro at the $21/month yearly-billed headline with $10/month in Townie credit, and Business from $167/month yearly-billed with $100/month in Townie credit. Use Vercel or Vercel Functions when the buyer is building a full-stack app, needs multiple runtimes, or wants app-platform controls; use Val Town for vals, cron jobs, webhooks, and small internal utilities.
 
@@ -108,11 +108,11 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 22 Claude/Replit buyer-lane update:** keep Claude and Replit Agent in separate guidance unless a human narrows the buyer job. Claude is the better reasoning, repo investigation, code review, and Claude Code lane for developers working around existing codebases. Replit Agent is the better browser-native app-builder lane for non-developers, prototypes, internal tools, and small projects that need prompt, build, preview, database/auth, publish, and iteration in one workspace.
 
-**Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions. After OpenAI's June 11 Ona acquisition agreement, watch how Codex exposes persistent customer-controlled cloud workspaces, scoped credentials, audit logs, and review gates once the deal closes.
+**Use [Codex](/tools/codex/) when the team wants OpenAI-native agent coding.** The June 25 check broadens the plan framing to ChatGPT Free, Go, Plus, Pro, Business, Edu, and Enterprise rather than the older Plus-and-up shortcut. It fits local repo work, PR preparation, checks, and tasks where an agent can edit and verify code rather than only suggest completions. After OpenAI's June 11 Ona acquisition agreement, watch how Codex exposes persistent customer-controlled cloud workspaces, scoped credentials, audit logs, and review gates once the deal closes.
 
 **Use [v0 by Vercel](/tools/v0/) when the coding deliverable is a Vercel-native web artifact.** The June 4 ChatGPT vs v0 refresh keeps the boundary clear: ChatGPT is broader for requirements, architecture, debugging, and code review, while v0 is better for generating previewable React/Next/Tailwind interfaces, deploys, GitHub sync, and PR workflows.
 
-**Use [Rork](/tools/rork/) when the coding deliverable is a mobile/app-store prototype instead of a web dashboard.** The June 9 docs check keeps Free as a public web-app test lane, Rork Pro from $20/month for Android Kotlin/Compose plus Expo/React Native and web apps, and Rork Max from $200/month for SwiftUI iOS, Apple Watch, Vision Pro, native games, and widgets. It is an app-builder handoff lane, not a replacement for code review, mobile architecture, or production QA.
+**Use [Rork](/tools/rork/) when the coding deliverable is a mobile/app-store prototype instead of a web dashboard.** The June 25 docs check keeps Free as a public web-app test lane, Rork Pro for Android Kotlin/Compose plus Expo/React Native and web apps, and Rork Max from $200/month for SwiftUI iOS, Apple Watch, Vision Pro, native games, and widgets. Public Rork price surfaces can conflict on the exact Pro entry point, so use checkout as the purchase source. It is an app-builder handoff lane, not a replacement for code review, mobile architecture, or production QA.
 
 **Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The June 23 check keeps the active repository at `aaif-goose/goose`, with v1.38.0 as the latest release from June 17, 2026, Apache-2.0 code, 15+ provider routes, 70+ MCP extensions, and no Goose subscription fee. The real cost is the configured LLM plus local permission, extension-trust, and secrets controls.
 
@@ -271,7 +271,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Claude dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) (verified 2026-06-14)
 - [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-14)
 - [Windsurf pricing redirect to Devin pricing](https://windsurf.com/pricing) (verified 2026-06-18)
-- [Devin pricing](https://devin.ai/pricing/) (verified 2026-06-23)
+- [Devin pricing](https://devin.ai/pricing/) (verified 2026-06-25)
 - [Devin Desktop FAQ](https://docs.devin.ai/desktop/devin-desktop-faq) (verified 2026-06-18)
 - [Devin Desktop quota docs](https://docs.devin.ai/desktop/accounts/quota) (verified 2026-06-18)
 - [Devin Desktop model docs](https://docs.devin.ai/desktop/models) (verified 2026-06-18)
@@ -304,13 +304,13 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Cognition Windsurf acquisition announcement](https://cognition.ai/blog/windsurf) (verified 2026-06-12)
 - [Factory pricing](https://docs.factory.ai/pricing) (verified 2026-06-14)
 - [JetBrains AI pricing](https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html) (verified 2026-06-23)
-- [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-23)
-- [Kiro billing docs](https://kiro.dev/docs/billing/) (verified 2026-06-23)
+- [Kiro pricing](https://kiro.dev/pricing) (verified 2026-06-25)
+- [Kiro billing docs](https://kiro.dev/docs/billing/) (verified 2026-06-25)
 - [Mastra pricing](https://mastra.ai/pricing) (verified 2026-06-22)
 - [Mastra model router docs](https://mastra.ai/models) (verified 2026-06-22)
 - [Mastra blog](https://mastra.ai/blog) (verified 2026-06-22)
 - [OpenHands pricing](https://openhands.dev/pricing) (verified 2026-06-12)
-- [Pieces pricing](https://pieces.app/pricing) (verified 2026-06-12)
+- [Pieces pricing](https://pieces.app/pricing) (verified 2026-06-25)
 - [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-22)
 - [Qodo pricing and usage](https://docs.qodo.ai/pricing-and-usage) (verified 2026-06-22)
 - [Qodo code review docs](https://docs.qodo.ai/code-review) (verified 2026-06-22)
@@ -334,7 +334,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [OpenAI speech-to-text docs](https://developers.openai.com/api/docs/guides/speech-to-text) (verified 2026-06-12)
 - [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-12)
 - [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
-- [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-12)
+- [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-25)
 - [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-12)
 - [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-22)
 - [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody) (verified 2026-06-22)
@@ -380,5 +380,5 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-12)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-12)
 - [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-12)
-- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-12)
-- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-12)
+- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-25)
+- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-25)

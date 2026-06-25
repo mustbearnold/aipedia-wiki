@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$37/month + Enterprise custom"
 status: active
 launched: 2023-04
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Gumloop: Features, Pricing & Review (June 2026)"
 meta_description: "Gumloop is a YC W24 AI workflow automation platform. Free tier with 5K credits, Pro $37/mo with 20K+ credits and unlimited seats, Enterprise custom. Drag-and-drop builder, BYOK economics, OpenAI/Anthropic/Gemini/DeepSeek backbones."
@@ -35,7 +35,7 @@ facts:
     source: https://www.gumloop.com/
     source_label: Gumloop official site
     source_id: gumloop-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -44,7 +44,7 @@ facts:
     source: https://www.gumloop.com/pricing
     source_label: Gumloop pricing
     source_id: gumloop-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -54,7 +54,7 @@ facts:
     source: https://docs.gumloop.com/
     source_label: Gumloop docs
     source_id: gumloop-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -64,7 +64,7 @@ facts:
     source: https://docs.gumloop.com/
     source_label: Gumloop docs
     source_id: gumloop-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -74,7 +74,7 @@ facts:
     source: https://www.gumloop.com/
     source_label: Gumloop official site
     source_id: gumloop-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -89,15 +89,15 @@ not_best_for:
   - self-hosted or air-gapped deployments (n8n is better)
   - pure LLM chat or coding assistance (use ChatGPT, Claude, Copilot)
 quick_answer: >-
-  Gumloop is a YC W24 drag-and-drop AI workflow builder aimed at marketing, sales, and ops teams. As of June 23, 2026 the plan structure remains Free (5K credits, 1 seat), Pro ($37/mo, 20K+ credits, unlimited seats, team analytics, app policies, MCP hosting/proxying), and Enterprise (custom). Pick it for AI-native no-code automation. Skip for broad SaaS connector breadth or self-hosting.
+  Gumloop is a YC W24 drag-and-drop AI workflow builder aimed at marketing, sales, and ops teams. As of June 25, 2026 the plan structure remains Free (5K credits, 1 seat), Pro ($37/mo, 20K+ credits, unlimited seats, team analytics, app policies, MCP hosting/proxying), and Enterprise (custom). Pick it for AI-native no-code automation. Skip for broad SaaS connector breadth or self-hosting.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Free / Pro / Enterprise"
     price: "$0 / $37/mo / Custom"
     source: "https://www.gumloop.com/pricing"
     source_label: "Gumloop pricing"
     source_id: gumloop-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified Free 5K credits, Pro $37/mo with 20K+ credits, unlimited seats, app policies, one hosted MCP server, three MCP server proxies, and Enterprise governance. Credits docs list overage at $0.007/credit when enabled; AI-model docs say BYOK gives 50 percent off model credits on Pro or Enterprise."
   - date: 2026-06-02
     plan: "Free / Pro / Enterprise"
@@ -105,7 +105,7 @@ price_history:
     source: "https://gumloop.com/pricing"
     source_label: "Gumloop pricing"
     source_id: gumloop-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified public plan ladder unchanged: Free 5K credits and 1 seat; Pro $37/mo with 20K+ credits and unlimited seats; Enterprise custom."
   - date: 2026-05-13
     plan: "Free"
@@ -113,7 +113,7 @@ price_history:
     source: "https://gumloop.com/pricing"
     source_label: "Gumloop pricing"
     source_id: gumloop-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Free tier credit allowance increased from 2,000 to 5,000 credits/month; still 1 seat, 2 concurrent runs"
   - date: 2026-05-13
     plan: "Pro"
@@ -121,7 +121,7 @@ price_history:
     source: "https://gumloop.com/pricing"
     source_label: "Gumloop pricing"
     source_id: gumloop-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "New unified Pro tier replaces the old Solo ($37, 10K credits, 1 seat) and Team ($244, 60K credits, 10 seats) plans. Pro now ships 20K+ credits, unlimited seats, unlimited teams, team analytics, app policies, 5 concurrent runs, 25 concurrent agent interactions. 20 percent annual discount preserved."
   - date: 2026-05-13
     plan: "Enterprise"
@@ -129,7 +129,7 @@ price_history:
     source: "https://gumloop.com/pricing"
     source_label: "Gumloop pricing"
     source_id: gumloop-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Adds RBAC, SCIM/SAML, admin dashboard, audit logs, data retention rules, security reports, VPC, workflow queuing"
   - date: 2026-04-18
     plan: "Solo (legacy)"
@@ -137,7 +137,7 @@ price_history:
     source: "https://gumloop.com/pricing"
     source_label: "Source"
     source_id: gumloop-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Prior plan: 10K credits, 1 seat. Discontinued and rolled into Pro by May 2026."
   - date: 2026-04-18
     plan: "Team (legacy)"
@@ -145,7 +145,7 @@ price_history:
     source: "https://gumloop.com/pricing"
     source_label: "Source"
     source_id: gumloop-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Prior plan: 60K credits, up to 10 seats. Discontinued; multi-seat usage now sits on Pro with unlimited seats or Enterprise."
 ---
 
@@ -161,7 +161,7 @@ The anchor moat is the bring-your-own-API-key model. Connecting your own OpenAI,
 
 ## Recent changes
 
-- **Plan and MCP rechecked June 23, 2026.** The previous Solo ($37/mo, 10K credits, 1 seat) and Team ($244/mo, 60K credits, 10 seats) tiers remain collapsed into a single **Pro** plan at $37/mo with 20,000+ credits and unlimited seats. Pro also lists app policies, one hosted MCP server, and three MCP server proxies. Free stays at 5,000 credits per month.
+- **Plan and MCP rechecked June 25, 2026.** The previous Solo ($37/mo, 10K credits, 1 seat) and Team ($244/mo, 60K credits, 10 seats) tiers remain collapsed into a single **Pro** plan at $37/mo with 20,000+ credits and unlimited seats. Pro also lists app policies, one hosted MCP server, and three MCP server proxies. Free stays at 5,000 credits per month.
 - **Credit controls:** Gumloop docs now make the overage rule explicit: when enabled, overage costs $0.007 per credit and is capped at 2x the monthly allocation. BYOK gives 50 percent off AI model credits on Pro or Enterprise.
 
 ## System Verdict
@@ -234,7 +234,7 @@ Credit consumption at a glance:
 - Contact enrichment: 60 credits
 - BYOK workflow AI nodes: verify the live node cost; current docs position BYOK as the main way to lower Gumloop credit burn.
 
-Prices verified 2026-06-23 via [Gumloop pricing](https://gumloop.com/pricing), [Gumloop credits docs](https://docs.gumloop.com/core-concepts/credits), and [Gumloop AI models docs](https://docs.gumloop.com/core-concepts/ai_models).
+Prices verified 2026-06-25 via [Gumloop pricing](https://gumloop.com/pricing), [Gumloop credits docs](https://docs.gumloop.com/core-concepts/credits), and [Gumloop AI models docs](https://docs.gumloop.com/core-concepts/ai_models).
 
 ## Against the alternatives
 
@@ -260,7 +260,7 @@ Prices verified 2026-06-23 via [Gumloop pricing](https://gumloop.com/pricing), [
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Gumloop pricing](https://gumloop.com/pricing), [Gumloop docs](https://docs.gumloop.com/), [YC's Gumloop company profile](https://www.ycombinator.com/companies/gumloop), and [BetaKit's Series B coverage](https://betakit.com/vancouver-founded-gumloop-sticks-50-million-usd-series-b-round-to-let-employees-build-their-own-ai-agents/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Gumloop pricing](https://gumloop.com/pricing), [Gumloop docs](https://docs.gumloop.com/), [YC's Gumloop company profile](https://www.ycombinator.com/companies/gumloop), and [BetaKit's Series B coverage](https://betakit.com/vancouver-founded-gumloop-sticks-50-million-usd-series-b-round-to-let-employees-build-their-own-ai-agents/).
 
 ## FAQ
 

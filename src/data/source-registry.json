@@ -3221,7 +3221,8 @@
       "url": "https://platform.openai.com/docs/codex",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "codex-official",
@@ -3238,7 +3239,8 @@
       "url": "https://developers.openai.com/codex/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "cody-docs",
@@ -6578,6 +6580,15 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "hunyuan-hy-embodied-05-paper",
+      "label": "Tencent Hunyuan HY-Embodied-0.5 paper",
+      "url": "https://arxiv.org/abs/2504.14971",
+      "type": "report",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
+    },
+    {
       "id": "hunyuan-official",
       "label": "Tencent Hunyuan official site",
       "url": "https://hunyuan.tencent.com/",
@@ -9701,7 +9712,8 @@
       "url": "https://openai.com/index/work-with-codex-from-anywhere/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "openai-enterprise-privacy",
@@ -10037,7 +10049,8 @@
       "url": "https://pieces.app/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "pika-official",
@@ -11832,7 +11845,8 @@
       "url": "https://supermaven.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "supermaven-pricing",

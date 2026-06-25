@@ -5,10 +5,10 @@ title: AI Music Generation
 description: AI-generated music from text prompts, full songs, scoring, background tracks, sound effects, and commercial audio workflows.
 tool_count: 7
 seo_title: "Best AI Music Generators (June 2026), aipedia.wiki"
-meta_description: "Updated June 24, 2026: Compare Suno, Udio, Mubert, ElevenLabs Music, AIVA, Boomy, and Stable Audio by rights, export availability, credits, source-visible pricing, model direction, and whether you need songs, scores, beds, or licensed-data audio."
+meta_description: "Updated June 25, 2026: Compare Suno, Udio, Mubert, ElevenLabs Music, AIVA, Boomy, and Stable Audio by rights, export availability, credits, source-visible pricing, model direction, and whether you need songs, scores, beds, or licensed-data audio."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 ---
 

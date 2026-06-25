@@ -5,7 +5,7 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 24, 2026: compare Canva AI, Napkin AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
+meta_description: "Updated June 25, 2026: compare Canva AI, Napkin AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-25
 last_verified: 2026-06-25
@@ -48,7 +48,7 @@ As of June 20, 2026, start with the job:
 
 **Use [Lovable](/tools/lovable/) when the buyer wants a full-stack app from a prompt.** Lovable's June 23 public pricing and docs check lists Free with 5 daily build credits capped at 30/month plus monthly Cloud and in-app AI credit grants, Pro at $25/month with 100 monthly credits, Business from $50/month, Enterprise platform-fee pricing, and one shared credit balance across building, Lovable Cloud, and deployed-app AI features. Keep Lovable as the default founder MVP lane when the buyer wants hosted app-building speed.
 
-**Use [Rork](/tools/rork/) when the app-builder question is mobile or app-store output, not a generic web app.** The June 9 docs check uses Free, Rork Pro, and Rork Max: Free is a public web-app lane with tiny monthly credits, Pro starts at $20/month for Android Kotlin/Compose plus Expo/React Native and web apps, and Max starts at $200/month for SwiftUI iOS plus Apple-device outputs. Treat it as a mobile/app prototype lane that still needs developer review before production.
+**Use [Rork](/tools/rork/) when the app-builder question is mobile or app-store output, not a generic web app.** The June 25 docs check uses Free, Rork Pro, and Rork Max: Free is a public web-app lane with tiny monthly credits, Pro covers Android Kotlin/Compose plus Expo/React Native and web apps, and Max starts at $200/month for SwiftUI iOS plus Apple-device outputs. Public Rork price surfaces can conflict on the exact Pro entry point, so use checkout as the purchase source. Treat it as a mobile/app prototype lane that still needs developer review before production.
 
 **Use [Base44](/tools/base44/) when the buyer wants a Wix-owned AI app builder with an all-in-one app path.** Base44's June 23 pricing, cost-guide, and billing-docs check keeps the Free, Starter, Builder, Pro, Elite, and Enterprise ladder intact. Public prices are $16/$40/$80/$160 per month when billed annually or $20/$50/$100/$200 month-to-month. Plan cards and billing docs list Free at 25 messages plus 100 integration credits/month, but the marketing FAQ still says 500. Builder remains the practical serious tier because it adds backend functions, model selection, custom domains, and GitHub integration.
 
@@ -60,7 +60,7 @@ As of June 20, 2026, start with the job:
 
 **June 5 Stitch comparison follow-up:** the refreshed Google Stitch vs Lovable and Google Stitch vs v0 pages now separate the buyer jobs cleanly: Stitch is the Google Labs UI exploration canvas, Lovable is the founder MVP builder with credits, Cloud, Supabase, and GitHub sync, and v0 is the Vercel-native app-building workflow with deploys, PRs, and token-metered models.
 
-**Use [Framer AI](/tools/framer-ai/) when the job is a marketing site, landing page, portfolio, or polished web presence rather than a full app.** Framer's June 23 check keeps Free, Basic, Pro, Scale, and Enterprise as the site-plan ladder, with Basic at $10/month annual. The newer buyer split is website publishing, CMS, bandwidth, AI credits, canvas agents, and external-agent handoff, not app backend generation.
+**Use [Framer AI](/tools/framer-ai/) when the job is a marketing site, landing page, portfolio, or polished web presence rather than a full app.** Framer's June 25 check keeps Free, Basic, Pro, and Enterprise as the primary public site-plan ladder, with Pro usage add-ons and Basic/Pro agent credits. The newer buyer split is website publishing, CMS, bandwidth, AI credits, canvas agents, and external-agent handoff, not app backend generation.
 
 **Use [Unbounce](/tools/unbounce/) when the design job is paid-campaign conversion, not general web design.** The June 10 check keeps Starter at $29/month or $22/month annual, Build at $99/$74, Experiment at $149/$112, Optimize at $249/$187, and Concierge/Agency custom. Build is the practical floor for active campaigns, Experiment is the A/B-testing inspection point, and Optimize is the tier to inspect when Smart Traffic is the reason to buy.
 
@@ -126,7 +126,7 @@ Figma is seat-based and AI-credit aware. Its public pricing page lists Starter f
 
 Lovable is credit-based and team-friendly. Its pricing page lists Pro at $25/month and Business at $50/month, shared across unlimited users, with monthly credits, Cloud credit grants, and usage-based cloud plus AI.
 
-Rork is credit-based and platform-tiered. The June 9 docs list Free at $0 for public web apps, Rork Pro from $20/month for 100 credits or $100/month for 500 credits, and Rork Max from $200/month for 1,000 credits with larger Max packs up to 10,000 credits. The plan decision is platform output first, credit volume second.
+Rork is credit-based and platform-tiered. The June 25 docs keep Free for public web apps, Rork Pro for Android, Expo/React Native, and web, and Rork Max from $200/month for SwiftUI iOS and Apple-device output. Public Rork pages can conflict on the exact Pro entry price, so the plan decision is platform output first, checkout price second.
 
 Base44 is app-credit and integration-credit aware. Its public pricing page, cost guide, and billing docs list Free, Starter, Builder, Pro, Elite, and Enterprise, but the June 23 check still found inconsistent Free integration-credit language: 100/month in plan cards and billing docs versus 500/month in the pricing FAQ. Verify current in-product limits before choosing it for a client or production app.
 
@@ -144,7 +144,7 @@ Lovart pricing is credit-based. The June 23 check confirms Starter at 2,000 mont
 
 Google Stitch's official March and May 2026 updates are product-focused, not durable pricing tables. Treat its access and quotas as volatile until Google publishes stable commercial terms.
 
-Framer is site-plan and AI-credit based. The June 23 public pricing check lists Free, Basic, Pro, Scale, and Enterprise, with Basic at $10/month annual, Free at 500 AI credits/day, and Basic at 1,000 AI credits/month. Verify page, CMS collection, CMS item, bandwidth, collaboration, AI-credit, and external-agent needs before moving a client site.
+Framer is site-plan and AI-credit based. The June 25 public pricing check lists Free, Basic, Pro, and Enterprise with Pro usage add-ons and Basic/Pro agent credits. Verify page, CMS collection, CMS item, bandwidth, collaboration, AI-credit, and external-agent needs before moving a client site.
 
 Uizard is generation-cap and plan based. The June 10 public pricing check lists Free with 3 AI generations/month, Pro at $12/month billed annually with 500 generations, Business at $39/month billed annually with 5,000 generations, and Enterprise custom with unlimited generation positioning.
 
@@ -206,58 +206,58 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 - [Canva Shield](https://www.canva.com/safe-ai-canva-shield/) (verified 2026-06-24)
 - [Canva AI social media post generator](https://www.canva.com/features/ai-social-media-post-generator/) (verified 2026-06-14)
 - [Napkin AI pricing](https://www.napkin.ai/pricing/) (verified 2026-06-24)
-- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-23)
-- [AdCreative.ai product videoshoots](https://www.adcreative.ai/product-videoshoot-ai) (verified 2026-06-23)
-- [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-23)
-- [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-23)
+- [AdCreative.ai official site](https://www.adcreative.ai/) (verified 2026-06-25)
+- [AdCreative.ai product videoshoots](https://www.adcreative.ai/product-videoshoot-ai) (verified 2026-06-25)
+- [Jasper pricing](https://www.jasper.ai/pricing) (verified 2026-06-25)
+- [Jasper Brand Voice help](https://help.jasper.ai/hc/en-us/articles/27419540851995-Brand-Voice) (verified 2026-06-25)
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-25)
 - [Anthropic Claude Design launch](https://www.anthropic.com/news/claude-design-anthropic-labs), [Claude Design usage and pricing](https://support.claude.com/en/articles/14667344-claude-design-subscription-usage-and-pricing), and [Claude Design get-started guide](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) (verified 2026-06-18)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-06-22)
 - [Anthropic Claude for Small Business](https://www.anthropic.com/news/claude-for-small-business) (verified 2026-06-22)
 - [Anthropic Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) (verified 2026-06-22)
-- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-23)
-- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-23)
-- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-23)
-- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-23)
-- [Push from Figma Make to GitHub](https://help.figma.com/hc/en-us/articles/35463818346647-Push-from-Figma-Make-to-GitHub) (verified 2026-06-23)
-- [Use verified partner MCP connectors in Figma Make](https://help.figma.com/hc/en-us/articles/35440096186007-Use-verified-partner-MCP-connectors-in-Figma-Make) (verified 2026-06-23)
+- [Figma pricing](https://www.figma.com/pricing/) (verified 2026-06-25)
+- [Figma AI credits](https://help.figma.com/hc/en-us/articles/33459875669015-How-AI-credits-work) (verified 2026-06-25)
+- [Figma Make model selection](https://help.figma.com/hc/en-us/articles/36400680326551-Select-an-AI-model-to-use-in-Figma-Make) (verified 2026-06-25)
+- [Create and edit a Figma Make file](https://help.figma.com/hc/en-us/articles/31304485164695-Create-and-edit-a-Figma-Make-file) (verified 2026-06-25)
+- [Push from Figma Make to GitHub](https://help.figma.com/hc/en-us/articles/35463818346647-Push-from-Figma-Make-to-GitHub) (verified 2026-06-25)
+- [Use verified partner MCP connectors in Figma Make](https://help.figma.com/hc/en-us/articles/35440096186007-Use-verified-partner-MCP-connectors-in-Figma-Make) (verified 2026-06-25)
 - [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-15)
 - [Midjourney version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-15)
 - [Midjourney Video docs](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video) (verified 2026-06-15)
-- [Lovart website](https://www.lovart.ai) (verified 2026-06-23)
-- [Lovart pricing](https://www.lovart.ai/pricing) (verified 2026-06-23)
-- [Lovart pricing FAQ](https://insight.lovart.ai/pricing) (verified 2026-06-23)
+- [Lovart website](https://www.lovart.ai) (verified 2026-06-25)
+- [Lovart pricing](https://www.lovart.ai/pricing) (verified 2026-06-25)
+- [Lovart pricing FAQ](https://insight.lovart.ai/pricing) (verified 2026-06-25)
 - [Adobe Firefly official site](https://www.adobe.com/products/firefly.html) (verified 2026-06-15)
 - [Adobe Firefly plans](https://www.adobe.com/products/firefly/plans.html) (verified 2026-06-15)
 - [Adobe generative credits FAQ](https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html) (verified 2026-06-15)
 - [Adobe partner models in Adobe products](https://helpx.adobe.com/creative-cloud/apps/generative-ai/non-adobe-models-in-adobe-products.html) (verified 2026-06-15)
 - [Adobe Firefly current promotions](https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/current-firefly-promotions.html) (verified 2026-06-15)
-- [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-23)
-- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-23)
-- [Google Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) (verified 2026-06-23)
-- [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-23)
-- [Framer AI](https://www.framer.com/ai/) (verified 2026-06-23)
-- [Framer plan use cases](https://www.framer.com/help/articles/best-use-cases-for-each-framer-plan/) (verified 2026-06-23)
-- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-23)
-- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-23)
-- [Lovable credits and usage](https://docs.lovable.dev/introduction/credits-and-usage) (verified 2026-06-23)
-- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-23)
-- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-23)
-- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-23)
-- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-23)
-- [Base44 cost guide](https://base44.com/blog/how-much-does-base44-cost) (verified 2026-06-23)
-- [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans) (verified 2026-06-23)
-- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-23)
-- [Bolt supported technologies](https://support.bolt.new/concepts/supported-technologies) (verified 2026-06-23)
-- [v0 pricing](https://v0.app/pricing) (verified 2026-06-23)
-- [v0 documentation](https://v0.app/docs) (verified 2026-06-23)
-- [Uizard pricing](https://uizard.io/pricing/) (verified 2026-06-23)
-- [Uizard Autodesigner 2.0](https://uizard.io/autodesigner/) (verified 2026-06-23)
-- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-23)
-- [Unbounce pricing](https://unbounce.com/pricing/) (verified 2026-06-23)
-- [Unbounce plan comparison](https://unbounce.com/compare-plan-features/) (verified 2026-06-23)
-- [Unbounce features](https://unbounce.com/product/features/) (verified 2026-06-23)
+- [Google Stitch official site](https://stitch.withgoogle.com/) (verified 2026-06-25)
+- [Google Stitch announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/) (verified 2026-06-25)
+- [Google Stitch real-time update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/) (verified 2026-06-25)
+- [Framer pricing](https://www.framer.com/pricing) (verified 2026-06-25)
+- [Framer AI](https://www.framer.com/ai/) (verified 2026-06-25)
+- [Framer plan use cases](https://www.framer.com/help/articles/best-use-cases-for-each-framer-plan/) (verified 2026-06-25)
+- [Lovable pricing](https://lovable.dev/pricing) (verified 2026-06-25)
+- [Lovable plans and credits](https://docs.lovable.dev/introduction/plans-and-credits) (verified 2026-06-25)
+- [Lovable credits and usage](https://docs.lovable.dev/introduction/credits-and-usage) (verified 2026-06-25)
+- [Lovable Cloud docs](https://docs.lovable.dev/integrations/cloud) (verified 2026-06-25)
+- [Rork subscription docs](https://docs.rork.com/introduction/subscriptions) (verified 2026-06-25)
+- [Rork technical FAQ](https://docs.rork.com/faq/technical) (verified 2026-06-25)
+- [Base44 pricing](https://base44.com/pricing) (verified 2026-06-25)
+- [Base44 cost guide](https://base44.com/blog/how-much-does-base44-cost) (verified 2026-06-25)
+- [Base44 billing and plans](https://docs.base44.com/Account-and-billing/Billing-and-plans) (verified 2026-06-25)
+- [Bolt.new pricing](https://bolt.new/pricing) (verified 2026-06-25)
+- [Bolt supported technologies](https://support.bolt.new/concepts/supported-technologies) (verified 2026-06-25)
+- [v0 pricing](https://v0.app/pricing) (verified 2026-06-25)
+- [v0 documentation](https://v0.app/docs) (verified 2026-06-25)
+- [Uizard pricing](https://uizard.io/pricing/) (verified 2026-06-25)
+- [Uizard Autodesigner 2.0](https://uizard.io/autodesigner/) (verified 2026-06-25)
+- [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-25)
+- [Unbounce pricing](https://unbounce.com/pricing/) (verified 2026-06-25)
+- [Unbounce plan comparison](https://unbounce.com/compare-plan-features/) (verified 2026-06-25)
+- [Unbounce features](https://unbounce.com/product/features/) (verified 2026-06-25)
 - [Magnific pricing](https://www.magnific.com/pricing) (verified 2026-06-25)
-- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-23)
-- [Recraft V4 announcement](https://www.recraft.ai/blog/introducing-recraft-v4-design-taste-meets-image-generation) (verified 2026-06-23)
-- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-23)
+- [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4) (verified 2026-06-25)
+- [Recraft V4 announcement](https://www.recraft.ai/blog/introducing-recraft-v4-design-taste-meets-image-generation) (verified 2026-06-25)
+- [Ideogram plans](https://docs.ideogram.ai/plans-and-pricing/available-plans) (verified 2026-06-25)

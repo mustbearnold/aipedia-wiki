@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free (open weights) / Tencent Cloud API variable"
 status: active
 launched: 2023-09
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://cloud.tencent.com/product/hunyuan
     source_label: Tencent Cloud Hunyuan product
     source_id: hunyuan-cloud
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -43,7 +43,7 @@ facts:
     source: https://cloud.tencent.com/document/product/1729/97731
     source_label: Tencent Cloud Hunyuan pricing docs
     source_id: hunyuan-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -53,7 +53,7 @@ facts:
     source: https://cloud.tencent.com/document/product/1729
     source_label: Tencent Cloud Hunyuan docs
     source_id: hunyuan-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -63,7 +63,7 @@ facts:
     source: https://hunyuan.tencent.com/
     source_label: Tencent Hunyuan official site
     source_id: hunyuan-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -73,19 +73,19 @@ facts:
     source: https://cloud.tencent.com/product/hunyuan
     source_label: Tencent Cloud Hunyuan product
     source_id: hunyuan-cloud
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
 tags: [tencent, open-weights, hunyuan, hy3-preview, hy-world, omniweaving, 3d-world-model, world-model, chinese-llm, video-gen, image-gen, gaussian-splatting, embodied-ai]
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "HY-World 2.0 / Hy3-preview / HY-OmniWeaving"
     price: "Free open weights; Tencent Cloud hosted API varies"
     source: "https://hy.tencent.com/"
     source_label: "Tencent Hy research"
     source_id: hunyuan-research
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Tencent Hy research listings and HY-World 2.0 repo news still make Hy3-preview, HY-World 2.0, and HY-OmniWeaving the current open-weight anchors. HY-World image-to-3DWorld code and WorldStereo weights were released in May."
   - date: 2026-05-13
     plan: "Hy3-preview (open weights)"
@@ -93,7 +93,7 @@ price_history:
     source: "https://huggingface.co/tencent/Hy3-preview"
     source_label: "Source"
     source_id: hunyuan-hy3
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "295B MoE / 21B activated, 192 experts top-8, 256K context, BF16. Released April 23, 2026 on Hugging Face, ModelScope, GitCode. Benchmarks: SWE-bench Verified 74.4%, Terminal-Bench 2.0 54.4%, GPQA Diamond 87.2%."
   - date: 2026-05-13
     plan: "HY-OmniWeaving (open weights)"
@@ -101,7 +101,7 @@ price_history:
     source: "https://huggingface.co/tencent/HY-OmniWeaving"
     source_label: "Source"
     source_id: hunyuan-omniweaving
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Unified video generation built on HunyuanVideo-1.5 backbone. Code and weights released April 3, 2026. Supports 8 tasks: T2V, I2V, key-frames-to-video, reference-to-video, video editing, text-image-video-to-video, compositional multi-image-to-video, reasoning-augmented generation."
   - date: 2026-05-13
     plan: "HY-World 2.0 (open weights)"
@@ -109,7 +109,7 @@ price_history:
     source: "https://huggingface.co/tencent/HY-World-2.0"
     source_label: "Source"
     source_id: hunyuan-hyworld
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Open-source 3D world model released April 16, 2026. Outputs editable 3DGS, meshes, point clouds; imports into Unity, Unreal, Nvidia Isaac. WorldMirror 2.0 ~1.2B params, 50K-500K pixel flexible-resolution inference."
   - date: 2026-06-02
     plan: "HY-World 2.0 / Hy3-preview / HY-OmniWeaving"
@@ -117,7 +117,7 @@ price_history:
     source: "https://huggingface.co/tencent/HY-World-2.0"
     source_label: "Source"
     source_id: hunyuan-hyworld
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "HY-World 2.0 image-to-3DWorld generation code is now released after the initial April open-source drop. Hy3-preview and HY-OmniWeaving remain free open-weight evaluation surfaces; hosted Tencent Cloud API pricing remains model-specific."
 seo_title: "Hunyuan: Features, Pricing & Review (June 2026)"
 meta_description: "Hunyuan is Tencent's open-weight AI family. Key 2026 releases: HY-World 2.0 (3D worlds, image-to-3DWorld code released), Hy3-preview 295B MoE LLM, and HY-OmniWeaving unified video. Free open weights plus Tencent Cloud hosted API."
@@ -132,12 +132,12 @@ not_best_for:
   - production-grade video generation (Kling or Veo 3 lead here)
   - teams requiring strict Western data residency on hosted API
 quick_answer: >-
-  Hunyuan is Tencent's multi-surface open-weight AI family. The current 2026 anchors are HY-World 2.0 for editable 3D worlds, Hy3-preview for a 295B / 21B-active MoE LLM, and HY-OmniWeaving for unified video generation. The June 23 refresh confirms HY-World 2.0 image-to-3DWorld code remains released after the first April drop. Pick Hunyuan for open-source 3D, embodied AI, or strong-reasoning Chinese-stack workloads; skip for English consumer chat.
+  Hunyuan is Tencent's multi-surface open-weight AI family. The current 2026 anchors are HY-World 2.0 for editable 3D worlds, Hy3-preview for a 295B / 21B-active MoE LLM, HY-OmniWeaving for unified video generation, and HY-Embodied-0.5 for embodied reasoning. The June 25 refresh confirms HY-World 2.0 image-to-3DWorld code remains released after the first April drop. Pick Hunyuan for open-source 3D, embodied AI, or strong-reasoning Chinese-stack workloads; skip for English consumer chat.
 ---
 
 # Hunyuan
 
-Tencent's open-weight AI model family. April 2026 was the family's strongest month on record: HY-World 2.0 open-sourced 3D world generation, Hy3-preview shipped a 295B MoE LLM, HY-OmniWeaving consolidated eight video tasks, and HY-Embodied-0.5 extended the family into image-text-to-text embodied AI. By the June 23 refresh, HY-World 2.0's image-to-3DWorld code and WorldStereo weights remain released after the first April drop. Most weights ship on [Hugging Face](https://huggingface.co/tencent) under permissive licenses; hosted API access runs through Tencent Cloud.
+Tencent's open-weight AI model family. April 2026 was the family's strongest month on record: HY-World 2.0 open-sourced 3D world generation, Hy3-preview shipped a 295B MoE LLM, HY-OmniWeaving consolidated eight video tasks, and HY-Embodied-0.5 extended the family into embodied reasoning. By the June 25 refresh, HY-World 2.0's image-to-3DWorld code and WorldStereo weights remain released after the first April drop. Most weights ship on [Hugging Face](https://huggingface.co/tencent) under permissive licenses; hosted API access runs through Tencent Cloud.
 
 ## System Verdict
 
@@ -163,7 +163,7 @@ Tencent's open-weight AI model family. April 2026 was the family's strongest mon
 | **HY-World 2.0 resolution** | 50K to 500K pixels, flexible-resolution inference |
 | **Unified video model** | **HY-OmniWeaving** · April 3, 2026 · 8 unified video tasks, built on HunyuanVideo-1.5 |
 | **OmniWeaving features** | Thinking Mode, Hidden States DeepStacking, MLLM + MMDiT + VAE architecture |
-| **Embodied AI** | HY-Embodied-0.5 · 4B params, image-text-to-text |
+| **Embodied AI** | HY-Embodied-0.5 · 7B VLM plus 0.5B policy model, targeting embodied reasoning and robotics control |
 | **Previous LLM family** | Hunyuan-Large (389B MoE), Hunyuan-Turbo, Hunyuan-Standard |
 | **3D asset model** | Hunyuan3D (text-to-3D asset generation) |
 | **Hosted API** | [Tencent Cloud Hunyuan API](https://cloud.tencent.com/product/hunyuan) |
@@ -209,7 +209,7 @@ Self-hosted runs under the respective license terms. Commercial use allowed on m
 - **April 16, 2026:** [Tencent open-sources Hunyuan World 2.0](/news/2026-04-16-tencent-hunyuan-world-2-open-source/) with editable 3DGS plus mesh output and Unity, Unreal, and Isaac import. Cross-reference Google's [Gemini 3D Models preview from April 10](/news/2026-04-10-google-gemini-3d-models/), which is closed-source and narrower in scope.
 - **May 18, 2026:** HY-World 2.0 image-to-3DWorld generation code was released, reducing the launch-time gap between paper/model-card claims and usable open-source implementation.
 - **April 3, 2026:** HY-OmniWeaving code and weights ship. Unified video model on the HunyuanVideo-1.5 backbone covering T2V, I2V, key-frames-to-video, reference-to-video, video editing, text-image-video-to-video, compositional multi-image-to-video, and reasoning-augmented generation.
-- **Late March / April 2026:** HY-Embodied-0.5 extends the family into embodied AI with a 4B image-text-to-text model targeting robotics and on-device perception.
+- **April 2026:** HY-Embodied-0.5 extends the family into embodied AI with a 7B VLM and 0.5B policy model for physical common-sense reasoning, manipulation, navigation, and task planning.
 
 ## Failure modes
 
@@ -233,7 +233,7 @@ Self-hosted runs under the respective license terms. Commercial use allowed on m
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [Tencent-Hunyuan/HY-World-2.0 GitHub](https://github.com/Tencent-Hunyuan/HY-World-2.0), the [Hugging Face tencent org](https://huggingface.co/tencent), [Tencent Hy research](https://hy.tencent.com/), the [Hy3-preview model card](https://huggingface.co/tencent/Hy3-preview), the [HY-OmniWeaving model card](https://huggingface.co/tencent/HY-OmniWeaving), and [Tencent Cloud Hunyuan](https://cloud.tencent.com/product/hunyuan).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [Tencent-Hunyuan/HY-World-2.0 GitHub](https://github.com/Tencent-Hunyuan/HY-World-2.0), the [Hugging Face tencent org](https://huggingface.co/tencent), [Tencent Hy research](https://hy.tencent.com/), the [Hy3-preview model card](https://huggingface.co/tencent/Hy3-preview), the [HY-OmniWeaving model card](https://huggingface.co/tencent/HY-OmniWeaving), [HY-Embodied-0.5 paper](https://arxiv.org/abs/2504.14971), and [Tencent Cloud Hunyuan](https://cloud.tencent.com/product/hunyuan).
 
 ## FAQ
 
@@ -264,6 +264,7 @@ A unified video generation model released April 3, 2026 on the HunyuanVideo-1.5 
 - [Hugging Face tencent organization](https://huggingface.co/tencent)
 - [Hy3-preview model card](https://huggingface.co/tencent/Hy3-preview)
 - [HY-OmniWeaving model card](https://huggingface.co/tencent/HY-OmniWeaving)
+- [HY-Embodied-0.5 paper](https://arxiv.org/abs/2504.14971)
 - [HY World project page](https://hyworld.dev/)
 - [Tencent Hy research](https://hy.tencent.com/)
 - [BigGo Finance: Tencent open-sources Hunyuan 3D World Model 2.0](https://finance.biggo.com/news/0jPDlZ0BvthpMgHBvLv3)

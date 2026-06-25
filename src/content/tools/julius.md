@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$16-$750/month; enterprise custom"
 status: active
 launched: 2023-08
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Julius AI: Features, Pricing & Review (June 2026)"
 meta_description: "Julius AI is a data-analysis workspace for files, notebooks, live databases, Slack Agent, charts, slides, and scheduled reports. June 2026 pricing uses credits: Plus starts at $16/mo annual equivalent, Pro has 5,000 credits, and Business tiers run from $450-$750/mo."
@@ -45,7 +45,7 @@ facts:
     source: https://julius.ai/pricing
     source_label: Julius AI pricing
     source_id: julius-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-07'
@@ -55,7 +55,7 @@ facts:
     source: https://julius.ai/docs/data-connectors/overview
     source_label: Julius data connector docs
     source_id: julius-connectors
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -65,7 +65,7 @@ facts:
     source: https://julius.ai/pricing
     source_label: Julius AI pricing
     source_id: julius-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-07'
@@ -93,7 +93,7 @@ not_best_for:
   - teams unwilling to model credit burn before rollout
   - sensitive datasets without a clear connector, Slack, and access-control review
 quick_answer: >-
-  Julius is an AI data-analysis workspace built around files, notebooks, live data connectors, charts, slides, and Slack Agent. Pick it when analysts need conversational analysis over databases or recurring reports. Skip it when a general chatbot, spreadsheet, or BI tool already gives enough control and auditability.
+  Julius is an AI data-analysis workspace built around files, notebooks, live data connectors, charts, slides, scheduled reports, and Slack Agent. Pick it when analysts need conversational analysis over databases or recurring reports. Skip it when a general chatbot, spreadsheet, or BI tool already gives enough control and auditability.
 price_history:
   - date: 2026-04-15
     plan: "Standard (legacy naming)"
@@ -101,7 +101,7 @@ price_history:
     source: "https://julius.ai/pricing"
     source_label: "Julius AI pricing"
     source_id: julius-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Historical message-era packaging; superseded by Pro credit packaging in the June 2026 public pricing page."
   - date: 2026-04-15
     plan: "Team (legacy naming)"
@@ -109,15 +109,15 @@ price_history:
     source: "https://julius.ai/pricing"
     source_label: "Julius AI pricing"
     source_id: julius-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Historical team packaging; superseded by Business/Growth credit tiers in the June 2026 public pricing page."
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Plus / Pro / Max / Business"
     price: "$16-$750/mo annual equivalent; Enterprise custom"
     source: "https://julius.ai/pricing"
     source_label: "Julius AI pricing"
     source_id: julius-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Current public credit-based pricing: Plus has 2,000 monthly credits at $16/mo annual equivalent; Pro has 5,000; Max tiers show 25,000 and 70,000 credits; Business tiers show 60,000 and 100,000 credits."
 ---
 
@@ -142,13 +142,13 @@ The June buyer change is pricing. Julius now presents usage credits instead of m
 | **Product type** | AI data-analysis workspace with notebooks, code execution, connectors, Slack Agent, and scheduled reports |
 | **Billing unit** | Usage credits, not messages |
 | **Current public paid tiers** | Plus $16 annual equivalent · Pro · Max $200/$500 · Business $450/$750 · Enterprise custom |
-| **Models named on pricing page** | Julius models plus GPT-5.5 and Claude-family frontier models; exact model access varies by plan |
+| **Models named in credits docs** | Julius models plus Claude Sonnet 4.6, Claude Opus 4.8, and GPT-5.5 examples; exact model access varies by plan |
 | **Compute** | 2 GB RAM on Free; 32 GB RAM appears on Pro and above |
 | **Data connectors** | PostgreSQL, MySQL, SQL Server, Snowflake, BigQuery, Databricks, Supabase, Vertica, Google Ads, Meta Ads, MCP |
 | **Team surface** | Slack Agent, scheduled reports, shared connectors, custom agents, dashboards on higher plans |
 | **Output** | Charts, tables, slides, HTML artifacts, images, code/queries, and written explanations |
 
-Every data point above was reverified against vendor sources on 2026-06-23. See Sources.
+Every data point above was reverified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -180,7 +180,7 @@ Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing is adve
 
 | Plan | Monthly | Annual equivalent | Credits / seats | Why buy |
 |------|---------|-------------------|-----------------|---------|
-| Free | $0 | $0 | Daily free credits, 2 GB RAM | Small projects and first test drive |
+| Free | $0 | $0 | 100 one-time credits, 2 GB RAM | Small projects and first test drive |
 | Plus | Public page emphasizes $16/mo annual equivalent | $16/mo | 2,000 credits, 1 seat | Solo users who need more advanced analysis and exports |
 | Pro | Check current page | Check current page | 5,000 credits, 1 seat, 32 GB RAM | **Most working analysts start here** |
 | Max | $200 | Check current page | 25,000 credits | Heavy solo usage, larger context, priority access |
@@ -189,7 +189,7 @@ Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing is adve
 | Business | $750 | Check current page | 100,000 credits, larger team packaging | Startup/org rollout with knowledge base, data dictionary, dashboards, support |
 | Enterprise | Custom | Custom | Custom/unlimited | Large orgs needing custom security, procurement, and deployment terms |
 
-*Prices reverified 2026-06-23 via [Julius pricing](https://julius.ai/pricing), [credits docs](https://julius.ai/docs/billing/credits-overview), and the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits). Paid-plan credits renew each billing cycle; the free 100-credit starter grant is one-time.*
+*Prices reverified 2026-06-25 via [Julius pricing](https://julius.ai/pricing), [credits docs](https://julius.ai/docs/billing/credits-overview), and the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits). Paid-plan credits renew each billing cycle; the free 100-credit starter grant is one-time.*
 
 ## Against the alternatives
 
@@ -214,7 +214,7 @@ Plans via [julius.ai/pricing](https://julius.ai/pricing). Annual billing is adve
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [Julius pricing](https://julius.ai/pricing), [Julius credits docs](https://julius.ai/docs/billing/credits-overview), the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits), [data connector docs](https://julius.ai/docs/data-connectors/overview), and [Slack Agent docs](https://julius.ai/docs/slack-agent/overview).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown here. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [Julius pricing](https://julius.ai/pricing), [Julius credits docs](https://julius.ai/docs/billing/credits-overview), the [billing update](https://julius.ai/content/billing-update-messages-to-usage-credits), [data connector docs](https://julius.ai/docs/data-connectors/overview), and [Slack Agent docs](https://julius.ai/docs/slack-agent/overview).
 
 ## FAQ
 
@@ -222,13 +222,13 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The free plan is for small projects and basic analysis, with daily free credits and 2 GB RAM. Plus at $20/mo is the first paid plan for regular solo use.
 
 **What models does Julius use?**
-The June 7 pricing page names Julius models plus GPT-5.5 and Claude-family frontier models, including Claude Opus 4.8 in plan cards and Claude Sonnet 4.6 / Opus 4.7 in the feature table. Treat the current account model picker as the source of truth because access can vary by plan and release cycle.
+Julius credits docs name Julius models plus Claude Sonnet 4.6, Claude Opus 4.8, and GPT-5.5 as examples of faster or frontier model choices. Treat the current account model picker as the source of truth because access can vary by plan and release cycle.
 
 **How large a file can Julius handle?**
 The current pricing page lists 2 GB RAM on Free and 32 GB RAM on Pro and above. Do not equate RAM with a guaranteed file-size limit; test your actual file, connector, and notebook workflow.
 
 **What happened to Julius message limits?**
-Julius moved from message-based billing to usage credits. The June 23 check found Plus at 2,000 monthly credits, Pro at 5,000, Max at 25,000 or 70,000, Business at 60,000 or 100,000, and Enterprise on custom terms.
+Julius moved from message-based billing to usage credits. The June 25 check found Plus at 2,000 monthly credits, Pro at 5,000, Max at 25,000 or 70,000, Business at 60,000 or 100,000, and Enterprise on custom terms.
 
 **Does Julius connect to Snowflake or BigQuery?**
 Yes. Current data-connector docs list PostgreSQL, MySQL, SQL Server, Snowflake, BigQuery, Databricks, Supabase, Vertica, Google Ads, Meta Ads, and MCP.
@@ -246,9 +246,9 @@ Start with ChatGPT or Claude when the job is one-off file analysis or general re
 
 ## Sources
 
-- [Julius AI pricing](https://julius.ai/pricing): current public plans, credits, seats, RAM, connectors, Slack Agent, and export features, verified 2026-06-23
-- [Julius credits overview](https://julius.ai/docs/billing/credits-overview): credit-based billing explanation, verified 2026-06-23
-- [Julius billing update](https://julius.ai/content/billing-update-messages-to-usage-credits): transition from messages to usage credits, verified 2026-06-23
-- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview): supported databases, MCP, built-in data tools, and security notes, verified 2026-06-23
-- [Julius Slack Agent overview](https://julius.ai/docs/slack-agent/overview): Slack data-analysis and scheduled-report workflow, verified 2026-06-23
-- [Julius scheduled Slack reports](https://julius.ai/docs/slack-agent/slack-reports): recurring notebook-to-Slack reporting, verified 2026-06-23
+- [Julius AI pricing](https://julius.ai/pricing): current public plans, credits, seats, RAM, connectors, Slack Agent, and export features, verified 2026-06-25
+- [Julius credits overview](https://julius.ai/docs/billing/credits-overview): credit-based billing explanation, verified 2026-06-25
+- [Julius billing update](https://julius.ai/content/billing-update-messages-to-usage-credits): transition from messages to usage credits, verified 2026-06-25
+- [Julius data connector overview](https://julius.ai/docs/data-connectors/overview): supported databases, MCP, built-in data tools, and security notes, verified 2026-06-25
+- [Julius Slack Agent overview](https://julius.ai/docs/slack-agent/overview): Slack data-analysis and scheduled-report workflow, verified 2026-06-25
+- [Julius scheduled Slack reports](https://julius.ai/docs/slack-agent/slack-reports): recurring notebook-to-Slack reporting, verified 2026-06-25

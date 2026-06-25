@@ -5,7 +5,7 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 24, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 25, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-25
 last_verified: 2026-06-25
@@ -64,7 +64,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **June 8 Phind migration cleanup:** Phind is not a live AI search recommendation. AiPedia refreshed the stale Phind comparison routes so they no longer describe fake 2026 Phind pricing, model access, or context windows. Former Phind users should pick by replacement job: ChatGPT vs Phind for a broad assistant, Perplexity vs Phind for cited search, Kagi vs Phind for private paid search, Exa AI vs Phind for retrieval APIs, and Phind vs You.com for grounding/research APIs.
 
-**Use [Genspark](/tools/genspark/) when search should become work output.** The June 23 membership check frames Genspark as an AI workspace with Plus credit tiers starting at 10,000 credits/month and Pro starting at 125,000 credits/month, built around Super Agent, documents, slides, sheets, calls, meetings, media, and AI Drive storage rather than a pure citation-first answer engine.
+**Use [Genspark](/tools/genspark/) when search should become work output.** The June 25 membership check frames Genspark as an AI workspace with 100 daily free credits, Plus credit tiers starting at 10,000 credits/month, and Pro starting at 125,000 credits/month, built around Super Agent, documents, slides, sheets, calls, meetings, media, and AI Drive storage rather than a pure citation-first answer engine.
 
 **Use [Glean](/tools/glean/) when the search surface is company knowledge.** Glean is the enterprise lane for permission-aware workplace search, agents, and developer integrations over SaaS tools and internal content. It is demo-gated, and the Enterprise Flex docs add usage-credit modeling to procurement alongside connectors, permissions, MCP/IDE paths, and security requirements.
 
@@ -173,7 +173,7 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Cohere models docs](https://docs.cohere.com/docs/models) (verified 2026-06-18)
 - [Cohere Rerank docs](https://docs.cohere.com/docs/reranking-with-cohere) (verified 2026-06-18)
 - [Cohere and Aleph Alpha](https://cohere.com/blog/cohere-alephalpha-join-forces) (verified 2026-06-18)
-- [Genspark membership plans](https://www.genspark.ai/helpcenter/membership-plans) (verified 2026-06-23)
+- [Genspark membership plans](https://www.genspark.ai/helpcenter/membership-plans) (verified 2026-06-25)
 - [Glean official site](https://www.glean.com/) (verified 2026-06-23)
 - [Glean developer platform](https://developers.glean.com/) (verified 2026-06-23)
 - [Glean Enterprise Flex pricing docs](https://docs.glean.com/glean-enterprise-flex-pricing) (verified 2026-06-23)

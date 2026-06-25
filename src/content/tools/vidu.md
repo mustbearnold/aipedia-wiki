@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free app access plus paid plans; API credits are $0.005 each, with current Q3 API routes roughly $0.02-$0.145/sec by route, model, resolution, and off-peak state"
 status: active
 launched: 2024-07
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.vidu.com/ai-reference-to-video"
     source_label: "Vidu reference-to-video official page"
     source_id: vidu-reference-to-video
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-10
@@ -39,7 +39,7 @@ facts:
     source: "https://platform.vidu.com/docs/pricing"
     source_label: "Vidu API pricing"
     source_id: vidu-api-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-10
@@ -48,7 +48,7 @@ facts:
     source: "https://www.vidu.com/vidu-q3"
     source_label: "Vidu Q3 official page"
     source_id: vidu-q3-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-10
@@ -57,7 +57,7 @@ facts:
     source: "https://platform.vidu.com/docs/reference-to-video"
     source_label: "Vidu API reference-to-video docs"
     source_id: vidu-api-reference-to-video
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-10
@@ -66,7 +66,7 @@ facts:
     source: "https://platform.vidu.com/docs/pricing"
     source_label: "Vidu API pricing"
     source_id: vidu-api-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-10
@@ -75,13 +75,13 @@ facts:
     source: "https://platform.vidu.com/docs/quick-start"
     source_label: "Vidu API quickstart"
     source_id: vidu-api-quickstart
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-10
 tags: [video-generation, china-ai, short-video, ai-video, vidu, reference-to-video, native-audio]
 seo_title: "Vidu Review: Q3, Q2, Pricing & Best Uses (June 2026)"
-meta_description: "Vidu review updated June 12, 2026. See when to use Vidu Q3, Q2, and Q1, current API pricing, reference-to-video strengths, risks, and alternatives."
+meta_description: "Vidu review updated June 25, 2026. See when to use Vidu Q3, Q2, and Q1, current API pricing, reference-to-video strengths, risks, and alternatives."
 author: "aipedia.wiki Editorial"
 best_for:
   - reference-driven video with consistent characters, products, or scenes
@@ -94,14 +94,14 @@ not_best_for:
   - teams needing mature Western procurement, admin, and compliance workflows
   - avatar or presenter video workflows that need a business-video platform
 quick_answer: >-
-  Vidu is not just a Q1 tool anymore. As of June 12, 2026, treat Vidu Q3 as the current story/video-with-native-audio route, Q2 as a flexible lower-cost API route, and Q1 as a legacy 5-second 1080p option. Pick Vidu for reference-driven consistency and short narrative clips; compare Seedance, Kling, Veo, and Runway before calling it the best general video model.
+  Vidu is not just a Q1 tool anymore. As of June 25, 2026, treat Vidu Q3 as the current story/video-with-native-audio route, Q2 as a flexible lower-cost API route, and Q1 as a legacy 5-second 1080p option. Pick Vidu for reference-driven consistency and short narrative clips; compare Seedance, Kling, Veo, and Runway before calling it the best general video model.
 ---
 
 # Vidu
 
 Vidu is Shengshu Technology's AI video platform. It is strongest when you need reference-driven consistency: the same person, product, character, logo, scene, or style staying recognizable across generated clips.
 
-The old buyer story was "Vidu Q1 makes 5-second reference videos." That is now too thin and stale. As of June 12, 2026, Vidu's current official surface includes **Vidu Q3**, **Vidu Q2**, **Vidu Q1**, and **Vidu 2.0** routes, with different durations, audio behavior, resolutions, and API prices.
+The old buyer story was "Vidu Q1 makes 5-second reference videos." That is now too thin and stale. As of June 25, 2026, Vidu's current official surface includes **Vidu Q3**, **Vidu Q2**, **Vidu Q1**, and **Vidu 2.0** routes, with different durations, audio behavior, resolutions, and API prices.
 
 ## System Verdict
 
@@ -172,7 +172,7 @@ The important current-date correction is that **Vidu Q1 is not the only current 
 
 Vidu has two different buyer surfaces: the consumer web app and the API platform. Do not assume a consumer plan, app credit allowance, and API route have the same economics.
 
-On June 10, 2026, Vidu's API docs list credits at **$0.005 each**. The same docs list Q3 and Q2 pricing by model, route, resolution, duration, and peak/off-peak state.
+On June 25, 2026, Vidu's API docs list credits at **$0.005 each**. The same docs list Q3 and Q2 pricing by model, route, resolution, duration, and peak/off-peak state.
 
 For quick planning:
 
@@ -207,7 +207,7 @@ That API detail is useful, but creators should still verify consumer app pricing
 
 ## Methodology
 
-AiPedia re-verified this page on **June 12, 2026** using Vidu's official Q3 page, official reference-to-video page, API quickstart, API pricing docs, and API reference-to-video docs. The score reflects buyer utility, value, moat, and longevity, with extra caution because Vidu's route naming and pricing are changing quickly.
+AiPedia re-verified this page on **June 25, 2026** using Vidu's official Q3 page, official reference-to-video page, API quickstart, API pricing docs, and API reference-to-video docs. The score reflects buyer utility, value, moat, and longevity, with extra caution because Vidu's route naming and pricing are changing quickly.
 
 ## FAQ
 

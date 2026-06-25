@@ -95,7 +95,7 @@ Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and
 
 Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes pages verified since yesterday by default; pass `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only for intentional recent-page revisits.
 
-The current regenerated plan starts with `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, `retell-ai`, `rork`, `taskade`, `tavus`, `tines`, and `together-ai`, then continues through 60 tools. The first four are verified locally and pending push; recompute after they are pushed before selecting the next shard.
+The current verified batch refreshed `reclaim-ai` through `supermaven` from `.tmp-tool-refresh-batch.json` with six workers. Recompute after this batch is pushed before selecting the next shard.
 
 Required closeout:
 

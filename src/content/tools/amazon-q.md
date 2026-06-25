@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$19/user/month"
 status: active
 launched: 2023-11
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://aws.amazon.com/q/developer/
     source_label: Amazon Q Developer official site
     source_id: amazon-q-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -39,7 +39,7 @@ facts:
     source: https://aws.amazon.com/q/developer/pricing/
     source_label: Amazon Q Developer pricing
     source_id: amazon-q-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: '2026-07-18'
@@ -48,7 +48,7 @@ facts:
     source: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
     source_label: Amazon Q Developer docs
     source_id: amazon-q-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -58,7 +58,7 @@ facts:
     source: https://aws.amazon.com/q/developer/features/
     source_label: Amazon Q Developer features
     source_id: amazon-q-features
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -67,7 +67,7 @@ facts:
     source: https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/
     source_label: Amazon Q Developer end-of-support announcement
     source_id: amazon-q-end-of-support
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -87,14 +87,14 @@ not_best_for:
 quick_answer: >-
   Amazon Q Developer is AWS's AI coding assistant for existing AWS-heavy customers, evolved from CodeWhisperer. Pricing still shows Pro at $19/user/month, but AWS announced that Q Developer IDE plugins and paid subscriptions reach end of support on April 30, 2027 and new signups/subscriptions were blocked starting May 15, 2026. New buyers should evaluate Kiro first.
 price_history:
-  - date: 2026-06-23
-    verified_at: 2026-06-23
+  - date: 2026-06-25
+    verified_at: 2026-06-25
     plan: "Transition"
     price: "New signups blocked; existing subscriptions continue"
     source: "https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/"
     source_label: "Amazon Q Developer end-of-support announcement"
     source_id: amazon-q-end-of-support
-    note: "June 23 recheck keeps the April 30, 2027 IDE/plugin and paid-subscription end-of-support date, May 15, 2026 new-signup cutoff, and $19/user/month Pro billing model current for existing customers."
+    note: "June 25 recheck keeps the April 30, 2027 IDE/plugin and paid-subscription end-of-support date, May 15, 2026 new-signup cutoff, and $19/user/month Pro billing model current for existing customers."
   - date: 2024-04-30
     verified_at: 2026-06-18
     plan: "Pro"
@@ -177,7 +177,7 @@ Free tier access is now mainly relevant for existing eligible users, with a 50 a
 | **IP indemnification** | Yes, matching GitHub Copilot's policy |
 | **Free-tier data use** | Free-tier content may be used for service improvement and model training unless opted out; Pro content is not used for service improvement |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -214,7 +214,7 @@ The moat is AWS-native context. IAM policy drafting, CDK construct patterns, Lam
 | Pro | $19/user/mo for existing subscriptions | Roughly 1,000 user inputs for agentic requests, 4,000 LOC transformation per user per month pooled at account level, admin controls, SSO (IAM Identity Center), data isolation, IP indemnity |
 | Transformation overage (Pro) | $0.003/LOC | Beyond the 4,000 LOC monthly pooled allocation |
 
-*Prices verified 2026-06-23 via [aws.amazon.com/q/developer/pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), and [AWS General Reference quotas](https://docs.aws.amazon.com/general/latest/gr/amazonqdev.html). Transformation LOC is pooled across all Pro seats in the account, so 10 Pro subscribers share a 40,000 LOC monthly budget.*
+*Prices verified 2026-06-25 via [aws.amazon.com/q/developer/pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), and [AWS General Reference quotas](https://docs.aws.amazon.com/general/latest/gr/amazonqdev.html). Transformation LOC is pooled across all Pro seats in the account, so 10 Pro subscribers share a 40,000 LOC monthly budget.*
 
 ## Against the alternatives
 
@@ -244,7 +244,7 @@ The moat is AWS-native context. IAM policy drafting, CDK construct patterns, Lam
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), [AWS General Reference quotas](https://docs.aws.amazon.com/general/latest/gr/amazonqdev.html), [Amazon Q Developer service-improvement docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/service-improvement.html), and the [Amazon Q Developer end-of-support announcement](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [Amazon Q Developer pricing](https://aws.amazon.com/q/developer/pricing/), the [Q Developer tiers docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html), [AWS General Reference quotas](https://docs.aws.amazon.com/general/latest/gr/amazonqdev.html), [Amazon Q Developer service-improvement docs](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/service-improvement.html), and the [Amazon Q Developer end-of-support announcement](https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/).
 
 ## FAQ
 

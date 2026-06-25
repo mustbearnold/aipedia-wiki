@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free hub access; Pro $9/mo; Team $20/user/mo; Enterprise from $50/user/mo; paid compute/storage
 status: active
 launched: 2016
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,16 +32,16 @@ facts:
     source: https://huggingface.co/
     source_label: Hugging Face official site
     source_id: hugging-face-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   pricing_anchor:
-    value: "As of June 23, 2026 Hugging Face publishes Pro at $9/month, Team at $20/user/month, and Enterprise from $50/user/month. Storage is tiered per TB per month with volume discounts. Spaces hardware starts free on CPU Basic and includes ZeroGPU on RTX Pro 6000 Blackwell for PRO/Enterprise, while paid GPUs and Inference Endpoints scale from low hourly CPU pricing through B200-class options."
+    value: "As of June 25, 2026 Hugging Face publishes Pro at $9/month, Team at $20/user/month, and Enterprise from $50/user/month. Storage is tiered per TB per month with volume discounts. Spaces hardware starts free on CPU Basic and includes ZeroGPU on RTX Pro 6000 Blackwell for PRO/Enterprise, while paid GPUs and Inference Endpoints scale from low hourly CPU pricing through B200-class options."
     source: https://huggingface.co/pricing
     source_label: Hugging Face pricing
     source_id: hugging-face-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -50,7 +50,7 @@ facts:
     source: https://huggingface.co/models
     source_label: Hugging Face model hub
     source_id: hugging-face-models
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
@@ -60,7 +60,7 @@ facts:
     source: https://huggingface.co/docs
     source_label: Hugging Face docs
     source_id: hugging-face-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
@@ -70,18 +70,18 @@ facts:
     source: https://huggingface.co/models
     source_label: Hugging Face model hub
     source_id: hugging-face-models
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-07-23'
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Pro / Team / Enterprise / compute"
     price: "$9/mo Pro · $20/user/mo Team · from $50/user/mo Enterprise; compute/storage separate"
     source: "https://huggingface.co/docs/hub/en/spaces-zerogpu"
     source_label: "Hugging Face ZeroGPU docs"
     source_id: hugging-face-zerogpu
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified pricing and ZeroGPU docs. ZeroGPU now describes dynamically allocated NVIDIA RTX Pro 6000 Blackwell GPUs, while endpoint pricing still starts around low hourly CPU instances and scales through B200-class options."
   - date: 2026-05-13
     plan: "Pro / Team / Enterprise"
@@ -89,7 +89,7 @@ price_history:
     source: "https://huggingface.co/pricing"
     source_label: "Source"
     source_id: hugging-face-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Account plan pricing held steady on the published pricing surface. Team includes SSO, Audit Logs, Storage Regions, and ZeroGPU/Inference Provider PRO benefits."
   - date: 2026-05-13
     plan: "Storage (per TB / month)"
@@ -97,7 +97,7 @@ price_history:
     source: "https://huggingface.co/pricing"
     source_label: "Source"
     source_id: hugging-face-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Volume-tiered storage with custom pricing above 500TB."
   - date: 2026-05-13
     plan: "Spaces hardware"
@@ -105,7 +105,7 @@ price_history:
     source: "https://huggingface.co/pricing"
     source_label: "Source"
     source_id: hugging-face-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Historical snapshot. Current ZeroGPU docs now describe dynamically allocated NVIDIA RTX Pro 6000 Blackwell GPUs."
   - date: 2026-05-13
     plan: "Inference Endpoints"
@@ -113,7 +113,7 @@ price_history:
     source: "https://huggingface.co/pricing"
     source_label: "Source"
     source_id: hugging-face-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Dedicated inference endpoints span CPU, GPU (including H100, H200, B200), and accelerators (AWS Neuron, GCP TPU v5e)."
   - date: 2026-06-02
     plan: "Pro / Team / Enterprise"
@@ -121,7 +121,7 @@ price_history:
     source: "https://huggingface.co/pricing"
     source_label: "Source"
     source_id: hugging-face-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Account pricing rechecked. Storage remains $12/TB/mo public and $18/TB/mo private before volume discounts; Spaces include CPU Basic free, CPU Upgrade $0.03/hr, and ZeroGPU on RTX Pro 6000 Blackwell for PRO and Enterprise. Inference Endpoints still start at $0.033/hr CPU and run through T4, L4, A10G, L40S, A100, H100, H200, B200, Neuron, and TPU options."
 tags: [model-hub, datasets, spaces, inference-endpoints, open-source, research, mlops]
 seo_title: "Hugging Face Review: Model Hub, Inference & Pricing (2026)"
@@ -137,7 +137,7 @@ not_best_for:
   - teams that need one fully managed app instead of a platform
   - production workloads that require hand-tuned GPU infrastructure
 quick_answer: >-
-  Hugging Face is the default map of the open AI ecosystem. Pick it for model discovery, datasets, Spaces demos, research artifacts, and managed inference endpoints. As of June 23, 2026, Pro is still $9/mo, Team $20/user/mo, Enterprise from $50/user/mo, with separate storage, Spaces, ZeroGPU, and Inference Endpoint billing. Skip it if you need a polished end-user app or a single-purpose hosted model API with simpler pricing.
+  Hugging Face is the default map of the open AI ecosystem. Pick it for model discovery, datasets, Spaces demos, research artifacts, and managed inference endpoints. As of June 25, 2026, Pro is still $9/mo, Team $20/user/mo, Enterprise from $50/user/mo, with separate storage, Spaces, ZeroGPU, and Inference Endpoint billing. Skip it if you need a polished end-user app or a single-purpose hosted model API with simpler pricing.
 ---
 
 # Hugging Face
@@ -148,7 +148,7 @@ If a model matters in open AI, it usually has a Hugging Face page. That makes th
 
 ## Recent developments
 
-- **June 23, 2026:** Pricing and compute surfaces re-verified. Pro is $9/month, Team is $20/user/month, and Enterprise starts at $50/user/month. Storage remains $12/TB/month public and $18/TB/month private before volume discounts. ZeroGPU docs now describe dynamically allocated RTX Pro 6000 Blackwell GPUs; Inference Endpoints still start around low hourly CPU instances and scale through H100, H200, B200, AWS Neuron, and GCP TPU v5e options.
+- **June 25, 2026:** Pricing and compute surfaces re-verified. Pro is $9/month, Team is $20/user/month, and Enterprise starts at $50/user/month. Storage remains $12/TB/month public and $18/TB/month private before volume discounts. ZeroGPU docs now describe dynamically allocated RTX Pro 6000 Blackwell GPUs; Inference Endpoints still start around low hourly CPU instances and scale through H100, H200, B200, AWS Neuron, and GCP TPU v5e options.
 - **April 28, 2026:** [NVIDIA launched Nemotron 3 Nano Omni](/news/2026-04-28-nvidia-nemotron-3-nano-omni/), with Hugging Face serving as one of the primary model-distribution surfaces for the open multimodal agent model.
 - **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/), reinforcing Hugging Face's role as the discovery layer for open model releases before teams choose an inference provider.
 
@@ -193,7 +193,7 @@ If a model matters in open AI, it usually has a Hugging Face page. That makes th
 
 The hub itself has a generous free surface. Paid costs appear when teams need private collaboration, more storage, hosted Spaces compute, or production Inference Endpoints.
 
-As verified on 2026-06-23, Hugging Face lists **Pro at $9/month**, **Team at $20/user/month**, and **Enterprise starting at $50/user/month**. Paid storage is priced per TB per month (public from $12 and private from $18, with 20% to 33% volume discounts above 50TB, 200TB, and 500TB). Spaces hardware starts free on CPU Basic and ZeroGPU (RTX Pro 6000 Blackwell, up to 96GB VRAM, for PRO and Enterprise), with CPU Upgrade at $0.03/hour and paid GPU options scaling across T4, L4, L40S, A10G, A100, H100, and H200. **Inference Endpoints start at $0.033/hour for CPU** and scale through GPU options ($0.50 to $74/hour across T4 to B200) and accelerators (AWS Neuron and GCP TPU v5e at $0.75 to $12/hour).
+As verified on 2026-06-25, Hugging Face lists **Pro at $9/month**, **Team at $20/user/month**, and **Enterprise starting at $50/user/month**. Paid storage is priced per TB per month (public from $12 and private from $18, with 20% to 33% volume discounts above 50TB, 200TB, and 500TB). Spaces hardware starts free on CPU Basic and ZeroGPU (RTX Pro 6000 Blackwell, up to 96GB VRAM, for PRO and Enterprise), with CPU Upgrade at $0.03/hour and paid GPU options scaling across T4, L4, L40S, A10G, A100, H100, and H200. **Inference Endpoints start at $0.033/hour for CPU** and scale through GPU options ($0.50 to $74/hour across T4 to B200) and accelerators (AWS Neuron and GCP TPU v5e at $0.75 to $12/hour).
 
 This makes Hugging Face flexible but less predictable than a simple per-request API if the team leaves endpoints or upgraded Spaces running. Budget by storage, collaboration plan, demo hardware, inference providers, and dedicated endpoint uptime separately.
 
@@ -223,7 +223,7 @@ It is weaker when the buyer wants one opinionated application. Hugging Face give
 
 ## Methodology
 
-Last verified 2026-06-23 against the Hugging Face [pricing](https://huggingface.co/pricing), [Inference Endpoints](https://huggingface.co/docs/inference-endpoints/en/pricing), and [ZeroGPU](https://huggingface.co/docs/hub/en/spaces-zerogpu) surfaces. Scoring reflects ecosystem centrality, utility for open AI, low entry cost, and long-term durability.
+Last verified 2026-06-25 against the Hugging Face [pricing](https://huggingface.co/pricing), [Inference Endpoints](https://huggingface.co/docs/inference-endpoints/en/pricing), and [ZeroGPU](https://huggingface.co/docs/hub/en/spaces-zerogpu) surfaces. Scoring reflects ecosystem centrality, utility for open AI, low entry cost, and long-term durability.
 
 ## FAQ
 

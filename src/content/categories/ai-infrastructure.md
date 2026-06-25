@@ -5,7 +5,7 @@ title: AI Infrastructure & Model APIs
 description: Developer platforms for LLM routing, pay-as-you-go model APIs, hosted inference, serverless GPUs, vector databases, speech APIs, and production retrieval systems.
 tool_count: 12
 seo_title: "Best AI Infrastructure & Model API Tools (June 2026)"
-meta_description: "Updated June 24, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
+meta_description: "Updated June 25, 2026: compare OpenRouter, OpenAI API, Claude API, Gemini API, Google Cloud data agents and managed MCP servers, Mistral, Groq, Together AI, Replicate, fal, Fireworks AI, Modal, Browserbase, Deepgram, Pinecone, Weaviate/Engram, Qdrant, Llama, LM Studio, and model-availability governance tradeoffs."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-25
 last_verified: 2026-06-25
@@ -82,14 +82,14 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 - **Model routing:** Pick [OpenRouter](/tools/openrouter/) when you need one OpenAI-compatible API across many providers.
 - **Direct LLM APIs:** Pick [OpenAI](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/) when native features, procurement, and provider-specific controls matter.
 - **Cost and latency:** Pick [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when you can benchmark quality against real prompts and need tighter unit economics.
-- **Open-model infrastructure:** Pick [Together AI](/tools/together-ai/) when you need hosted inference, fine-tuning, dedicated endpoints, code sandboxes, and GPU capacity for open-model products. The June 9 check separates serverless model-token pricing from dedicated inference and GPU clusters, so benchmark your actual traffic before assuming a single "open model" unit cost.
+- **Open-model infrastructure:** Pick [Together AI](/tools/together-ai/) when you need hosted inference, fine-tuning, dedicated endpoints, code sandboxes, and GPU capacity for open-model products. The June 25 check separates serverless model-token pricing from dedicated inference and GPU clusters, so benchmark your actual traffic before assuming a single "open model" unit cost.
 - **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, Spaces, ZeroGPU, and endpoints.
 - **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API. The June 9 check confirms buyers should model public output-priced examples separately from hardware-time runs and private deployments that can bill while idle.
 - **Fast media APIs:** Pick [fal.ai](/tools/fal-ai/) when successful-output billing, image/video/audio/3D endpoints, and fast experimentation matter.
 - **Production inference:** Pick [Fireworks AI](/tools/fireworks-ai/) when hosted model APIs, batch inference, dedicated GPU deployments, and fine-tuning are more important than a polished chatbot UI.
 - **Browser automation:** Pick [Browserbase](/tools/browserbase/) when an AI agent, scraper, QA runner, or workflow needs managed browsers, Search/Fetch, Functions runtime, identity, observability, Model Gateway, and Stagehand-style automation.
 - **Speech APIs:** Pick [Deepgram](/tools/deepgram/) when speech-to-text, text-to-speech, voice agents, or audio intelligence are infrastructure, not just creator utilities.
-- **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, sandboxes, and GPU workloads without Kubernetes. The June 23 check keeps Starter at $0 with $30/month credits, Team at $250/month plus compute with $100/month credits, B200 at $0.001736/sec, H200 at $0.001261/sec, H100 at $0.001097/sec, region multipliers at 1.5x to 1.75x, non-preemptible execution at 3x, and B200+ as a compatibility route that can run on B200 or B300 while billing as B200.
+- **Serverless GPU apps:** Pick [Modal](/tools/modal/) when you want Python jobs, endpoints, queues, sandboxes, and GPU workloads without Kubernetes. The June 25 check keeps Starter at $0 with $30/month credits, Team at $250/month plus compute with $100/month credits, B200 at $0.001736/sec, H200 at $0.001261/sec, H100 at $0.001097/sec, region multipliers at 1.5x to 1.75x, non-preemptible execution at 3x, and B200+ as a compatibility route that can run on B200 or B300 while billing as B200.
 - **Open-weight model family:** Pick [Llama](/tools/llama/) when infrastructure needs self-hostable or provider-hosted open weights rather than a closed frontier API. The June 23 check keeps Maverick as the flagship open-weight lane, Scout as the current Groq fast-inference card at $0.11/M input and $0.34/M output, and Together Maverick at $0.27/M input and $0.85/M output. Treat provider-specific availability, context, and pricing as live checks.
 - **Local model runtime:** Pick [LM Studio](/tools/lm-studio/) when developers need a desktop GUI plus native v1 REST API, OpenAI-compatible and Anthropic-compatible endpoints, MCP support, SDKs, CLI server control, and LM Link for Llama, Qwen, Mistral, and other open weights. LM Studio has been free for ordinary home and work use since its July 2025 terms change, while Enterprise is the sales-led route for SSO, model/MCP gating, and private collaboration.
 - **Managed vector search:** Pick [Pinecone](/tools/pinecone/) when retrieval is production-critical and you want managed operations. The June 25 check keeps Starter free, Builder at $20/month flat, Standard at a $50/month minimum plus usage, and Enterprise at a $500/month minimum, so production buyers should model reads, writes, storage, Assistant, inference, backups, imports, and reranking before treating the database price as the whole retrieval bill.
@@ -137,11 +137,11 @@ Do not publish infrastructure pages with old flat monthly subscription framing. 
 - [Browserbase Browser explainer](https://www.browserbase.com/blog/what-is-a-browserbase-browser) (verified 2026-06-18)
 - [Browserbase Model Gateway docs](https://docs.browserbase.com/platform/model-gateway/overview) (verified 2026-06-18)
 - [Deepgram pricing](https://deepgram.com/pricing) (verified 2026-06-12)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-25)
 - [Hugging Face pricing](https://huggingface.co/pricing) (verified 2026-06-23)
 - [Hugging Face ZeroGPU docs](https://huggingface.co/docs/hub/en/spaces-zerogpu) (verified 2026-06-23)
-- [Modal pricing](https://modal.com/pricing) (verified 2026-06-23)
-- [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-23)
+- [Modal pricing](https://modal.com/pricing) (verified 2026-06-25)
+- [Modal GPU docs](https://modal.com/docs/guide/gpu) (verified 2026-06-25)
 - [LM Studio](https://lmstudio.ai/) (verified 2026-06-23)
 - [LM Studio developer docs](https://lmstudio.ai/docs/api) (verified 2026-06-23)
 - [LM Studio desktop app terms](https://lmstudio.ai/app-terms) (verified 2026-06-23)

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$22/month + Enterprise custom"
 status: active
 launched: 2024
-last_updated: 2026-06-16
-last_verified: 2026-06-16
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Napkin AI: Features, Pricing & Review (2026)"
 meta_description: "Napkin AI turns plain text into editable diagrams, flowcharts, and infographics. Free tier plus paid plans; exports to PNG, SVG, PDF, and PowerPoint. Reviewed June 2026."
@@ -38,11 +38,11 @@ facts:
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Free plan with weekly AI credits; Plus is $9 per person per month and Pro is $22 per person per month (about 25% off on annual billing), with Enterprise on custom terms. Credits and prices can change, so verify the live pricing page before buying."
+    value: "Free plan with weekly AI credits; Plus is $9 per person per month with 10,000 AI credits; Pro is $22 per person per month with 30,000 AI credits; annual billing saves 25%; Enterprise is custom."
     source: "https://www.napkin.ai/pricing"
     source_label: "Napkin AI pricing"
     source_id: napkin-pricing
-    verified_at: 2026-06-16
+    verified_at: 2026-06-25
     volatility: high
     confidence: medium
     next_review_at: 2026-07-16
@@ -93,7 +93,7 @@ The core loop is fast: write or paste text, let Napkin suggest several visual tr
 | **Exports** | PNG, SVG, PDF, and PowerPoint |
 | **Collaboration** | Share by link; team plans add shared assets and branding |
 | **Free tier** | Yes, with limited AI generations |
-| **Paid plans** | Plus $9/mo and Pro $22/mo per person (about 25% off annual); Enterprise custom |
+| **Paid plans** | Plus $9/mo per person with 10,000 AI credits; Pro $22/mo per person with 30,000 AI credits; Enterprise custom |
 | **Company** | Napkin |
 | **Video generation** | None |
 
@@ -126,7 +126,7 @@ Napkin offers a free plan plus paid tiers. As of June 2026 the live pricing page
 
 Because AI generations are metered by credits and plans can change, confirm the current credit limits and export rights on the live pricing page before committing a team.
 
-Pricing and features verified 2026-06-16 against the [Napkin AI pricing page](https://www.napkin.ai/pricing).
+Pricing and features verified 2026-06-25 against the [Napkin AI pricing page](https://www.napkin.ai/pricing).
 
 ## Failure modes
 
@@ -138,7 +138,7 @@ Pricing and features verified 2026-06-16 against the [Napkin AI pricing page](ht
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-16 against the [Napkin AI pricing page](https://www.napkin.ai/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies product and pricing details against primary sources and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Napkin AI pricing page](https://www.napkin.ai/pricing).
 
 ## FAQ
 

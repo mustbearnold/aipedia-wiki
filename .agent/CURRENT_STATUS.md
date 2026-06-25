@@ -200,6 +200,15 @@ Latest Pinecone/PixVerse/Playground/Qdrant shard passed:
 - `npm run build:fast`
 - `npm run qa:route -- --route /tools/pinecone/ --route /tools/pixverse/ --route /tools/playground-ai/ --route /tools/qdrant/ --route /categories/ai-infrastructure/ --route /categories/ai-search/ --route /categories/ai-image/ --route /categories/ai-video/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`
 
+Latest six-worker 60-tool refresh batch passed:
+
+- `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`
+- `npm run typecheck`
+- `npm run build:fast`
+- `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 4 $(cat .tmp-route-qa-args.txt) --widths 319,360,390,430,768,1024,1366`
+
+This run refreshed 60 tools from Reclaim AI through Supermaven, updated affected category hubs, source registry rows, the page refresh ledger, and `.agent/loop-runs/2026-06-25-six-worker-60-tool-refresh-batch.md`. First grouped check caught and fixed long sentences in Hume and Tana, a banned phrase in Supermaven, five source-registry `last_checked` gaps, and a ledger check race caused by concurrent ledger generation.
+
 Latest completed 60-tool baseline refresh passed:
 
 - `node --check scripts\tool-refresh-batch.mjs`
@@ -252,7 +261,7 @@ Latest completed tool-page template migration passed:
 1. Run `git status --short --branch`.
 2. Read this file and `.agent/PLANS.md`.
 3. Use `$aipedia-tool-refresh-workflow`, then run `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
-4. Continue the next not-recently-refreshed batch, currently starting with Pinecone, PixVerse, Playground AI, and Qdrant, unless a newer user request supersedes it.
+4. Regenerate the next not-recently-refreshed batch after the current verified 60-tool batch is pushed, unless a newer user request supersedes it.
 
 ## Finish Major Work
 

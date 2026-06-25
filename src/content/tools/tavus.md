@@ -2,20 +2,20 @@
 type: tool
 slug: tavus
 title: Tavus
-tagline: "Developer-first real-time AI video agents: CVI, Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking for face-to-face product experiences."
+tagline: "Developer-first real-time AI video agents: CVI, Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking, with Developer plans now adding Starter $22 and Builder $59 before Growth."
 category: ai-video
 secondary_categories: [ai-voice]
 company: Tavus
 url: https://www.tavus.io
 pricing_model: freemium
-price_range: "Developer: free, Starter $59/mo, Growth $397/mo, Enterprise custom, plus pay-as-you-go usage"
+price_range: "Developer: free, newer surface shows Starter $22/mo, Builder $59/mo, Growth $397/mo, Business $975/mo, Enterprise custom, plus pay-as-you-go usage"
 status: active
 launched: 2021-02
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: weekly
 seo_title: "Tavus Review: CVI, Phoenix-4 & Pricing (June 2026)"
-meta_description: "Tavus review updated June 12, 2026. See CVI, Phoenix-4, Raven-1, Sparrow-1, Developer pricing, PALs caveat, overages, concurrency, and avatar-video alternatives."
+meta_description: "Tavus review updated June 25, 2026. See CVI, Phoenix-4, Raven-1, Sparrow-1, Developer pricing, Business tier, PALs caveat, overages, concurrency, and avatar-video alternatives."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://www.tavus.io/cvi"
     source_label: "Tavus CVI product page"
     source_id: tavus-cvi
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
@@ -43,7 +43,7 @@ facts:
     source: "https://docs.tavus.io/sections/conversational-video-interface/overview-cvi"
     source_label: "Tavus CVI docs"
     source_id: tavus-cvi-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
@@ -52,7 +52,7 @@ facts:
     source: "https://www.tavus.io/cvi"
     source_label: "Tavus CVI product page"
     source_id: tavus-cvi
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
@@ -61,25 +61,25 @@ facts:
     source: "https://www.tavus.io/post/phoenix-4-real-time-human-rendering-with-emotional-intelligence"
     source_label: "Tavus Phoenix-4 announcement"
     source_id: tavus-phoenix-4
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-07-09
   pricing_anchor:
-    value: "Developer pricing lists Basic free, Starter $59/mo, Growth $397/mo, and Enterprise custom, with included conversational/video-generation minutes and pay-as-you-go overages; the same public pricing page also exposes a separate consumer PALs track at $0/$20/$50."
+    value: "Developer pricing lists Basic free, a newer surface with Starter $22/mo, Builder $59/mo, Growth $397/mo, Business $975/mo, and Enterprise custom, with included conversational-video minutes, custom replica slots, concurrency caps, and pay-as-you-go overages; the same public pricing page also exposes a separate consumer PALs track."
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
   watch_out_for:
-    value: "Tavus is not a simple no-code avatar-video editor; production buyers must model pay-as-you-go minutes, replica training, concurrency (Growth plan card lists up to 10 concurrent streams), privacy consent, LLM latency, and enterprise terms."
+    value: "Tavus is not a simple no-code avatar-video editor; production buyers must model pay-as-you-go minutes, replica slots, concurrency, privacy consent, LLM latency, and enterprise terms. The current newer Developer plan surface lists Starter at 60 minutes, Builder at 175 minutes, Growth at up to 10 concurrent sessions, and Business at up to 15."
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -95,7 +95,7 @@ not_best_for:
   - cinematic text-to-video generation
   - low-budget workflows that do not need real-time interaction
 quick_answer: >-
-  Tavus is the avatar-video pick when the product requirement is real-time conversation, not a rendered presenter clip. As of June 12, 2026, its developer stack is CVI with Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking. Use it for embedded AI video agents; use HeyGen or Synthesia for scripted business videos, and use Veo, Seedance, Kling, Runway, or Vidu for cinematic scene generation.
+  Tavus is the avatar-video pick when the product requirement is real-time conversation, not a rendered presenter clip. As of June 25, 2026, its developer stack is CVI with Phoenix-4 rendering, Raven-1 perception, and Sparrow-1 turn-taking, and its public Developer pricing now shows Starter $22, Builder $59, Growth $397, and Business $975 before Enterprise. Use it for embedded AI video agents; use HeyGen or Synthesia for scripted business videos, and use Veo, Seedance, Kling, Runway, or Vidu for cinematic scene generation.
 price_history:
   - date: 2026-05-13
     plan: "Basic"
@@ -103,6 +103,7 @@ price_history:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
+    verified_at: 2026-05-13
     note: "Includes 25 minutes of AI conversational video, 5 minutes of AI video generation, 25 stock replicas, 30+ language support, and 1 concurrent stream."
   - date: 2026-05-13
     plan: "Starter"
@@ -110,6 +111,7 @@ price_history:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
+    verified_at: 2026-05-13
     note: "Includes 100 conversational minutes, 10 video-generation minutes, 3 custom replica trainings per month, up to 3 concurrent streams; CVI overage $0.37/min, video-gen overage $1/min, extra replicas $65 each."
   - date: 2026-05-13
     plan: "Growth"
@@ -117,6 +119,7 @@ price_history:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
+    verified_at: 2026-05-13
     note: "Includes 1,250 conversational minutes, 100 video-generation minutes, 7 custom replica trainings per month, 100+ stock replicas, conversation recordings, and 10 concurrent streams; CVI overage $0.32/min, video-gen overage $0.90/min, recordings $0.03/min, extra replicas $40 each."
   - date: 2026-05-13
     plan: "Enterprise"
@@ -124,6 +127,7 @@ price_history:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
+    verified_at: 2026-05-13
     note: "Volume discounts, unlimited custom replicas, custom concurrency, 100% white-label, guaranteed SLAs, enterprise security and compliance, top-tier support, faster boot times."
   - date: 2026-05-08
     plan: "Basic"
@@ -131,6 +135,7 @@ price_history:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
+    verified_at: 2026-05-08
     note: "Includes 25 minutes of AI conversational video, 5 minutes of AI video generation, 25 stock replicas, and 30+ language support."
   - date: 2026-05-08
     plan: "Starter"
@@ -138,6 +143,7 @@ price_history:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
+    verified_at: 2026-05-08
     note: "Includes 100 conversational minutes, 10 video-generation minutes, 3 custom replica trainings per month, and up to 3 concurrent streams."
   - date: 2026-05-08
     plan: "Growth"
@@ -145,14 +151,16 @@ price_history:
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
+    verified_at: 2026-05-08
     note: "Includes 1,250 conversational minutes, 100 video-generation minutes, 7 custom replica trainings per month, 100+ stock replicas, and conversation recordings. Confirm exact concurrent-stream cap before purchase because the public page has inconsistent values."
-  - date: 2026-06-09
+  - date: 2026-06-25
     plan: "Developer pricing"
-    price: "Basic free; Starter $59/mo; Growth $397/mo; Enterprise custom"
+    price: "Basic free; Starter $22/mo; Builder $59/mo; Growth $397/mo; Business $975/mo; Enterprise custom"
     source: "https://www.tavus.io/pricing"
     source_label: "Tavus pricing"
     source_id: tavus-pricing
-    note: "Reverified Developer plan cards. The same page also lists separate PALs consumer plans at Free, Plus $20/mo, and Max $50/mo, so buyers should not confuse PALs minutes with CVI/API production pricing."
+    verified_at: 2026-06-25
+    note: "Reverified current Developer plan cards. Newer pricing surface shows Starter at $22/mo, Builder at $59/mo, Growth at $397/mo, and Business at $975/mo with 4,000 conversational-video minutes, 15 custom replica slots, and up to 15 concurrent sessions. Buyers should not confuse PALs plans with CVI/API production pricing."
 ---
 
 # Tavus
@@ -167,7 +175,7 @@ The current Tavus stack is **CVI** (Conversational Video Interface) with **Phoen
 >
 > **Skip Tavus if you need normal avatar videos.** For scripted sales clips, employee training, onboarding modules, or localization, [HeyGen](/tools/heygen/) and [Synthesia](/tools/synthesia/) are faster to ship and easier for non-engineers.
 >
-> **Best plan logic:** Basic is for prototyping. Starter is the first serious developer tier. Growth is the likely production tier because it adds materially more minutes, stock replicas, custom replica training, recordings, and higher concurrency. Enterprise is for white-label, custom concurrency, SLAs, compliance, and volume discounts.
+> **Best plan logic:** Basic is for prototyping. Starter is a paid test tier. Builder is the first serious developer tier. Growth is the likely first production tier because it adds materially more minutes, stock replicas, recordings, and higher concurrency. Business is for teams that need 4,000 included conversational-video minutes, 15 custom replica slots, 15 concurrent sessions, priority support, and onboarding. Enterprise is for white-label, custom concurrency, SLAs, compliance, and volume discounts.
 
 ## Key Facts
 
@@ -176,9 +184,9 @@ The current Tavus stack is **CVI** (Conversational Video Interface) with **Phoen
 - **Perception model:** Raven-1, which reads facial expression, tone, gaze, emotion, and ambient context.
 - **Turn-taking model:** Sparrow-1, which handles conversational timing and interruption behavior.
 - **Latency positioning:** Tavus markets CVI around sub-500ms average response time and 1080p real-time avatar rendering.
-- **Developer pricing:** Basic free, Starter $59/mo, Growth $397/mo, Enterprise custom, with usage-based overages.
+- **Developer pricing:** Basic free, Starter $22/mo, Builder $59/mo, Growth $397/mo, Business $975/mo, Enterprise custom, with usage-based overages.
 - **Best use:** embedded product experiences where a video agent needs to see, hear, respond, remember, call tools, or use a knowledge base.
-- **Concurrency:** Basic 1 stream, Starter up to 3, Growth 10, Enterprise custom. Tavus's public Growth summary now lists 10 concurrent streams; older procurement notes that quoted "up to 15" are stale, so contracts should still confirm the exact cap.
+- **Concurrency:** Basic 1 stream, Starter has 60 minutes, Builder up to 3 sessions, Growth up to 10 sessions, Business up to 15 sessions, Enterprise custom. Tavus's public pricing page still contains older repeated blocks, so contracts should confirm the exact cap.
 
 ## What It Actually Is
 
@@ -207,13 +215,13 @@ That is a different job from "make a two-minute training video." Tavus is valuab
 Tavus has two buyer tracks on the same pricing page: PALs for consumers and Developer for teams building with APIs. AiPedia ranks Tavus as a developer tool, so the Developer pricing is the commercial surface that matters most.
 
 - **Basic: free.** Includes whitelabeled APIs, 25 minutes of AI conversational video, 5 minutes of AI video generation, access to 25 stock replicas, 30+ language support, and 1 concurrent stream.
-- **Starter: $59/mo plus pay-as-you-go.** Adds 3 custom replica trainings per month, 100 conversational minutes, 10 video-generation minutes, pay-as-you-go with no overage limit, and up to 3 concurrent streams.
-- **Growth: $397/mo plus pay-as-you-go.** Adds 7 custom replica trainings per month, 1,250 conversational minutes, 100 video-generation minutes, 100+ stock replicas, conversation recordings, and up to 10 concurrent streams.
+- **Starter: $22/mo plus pay-as-you-go.** Adds 60 conversational-video minutes, 1 custom replica slot, 1 Google Meet configuration marked coming soon, transcript visibility, and security controls.
+- **Builder: $59/mo plus pay-as-you-go.** Adds 175 conversational-video minutes, 3 custom replica slots, pay-as-you-go with no limit, 25 stock replicas, no watermark, and up to 3 concurrent sessions.
+- **Growth: $397/mo plus pay-as-you-go.** Adds 1,300 conversational-video minutes, 7 custom replica slots, 100+ stock replicas, conversation recordings, no conversation duration limit, no watermark, and up to 10 concurrent sessions.
+- **Business: $975/mo plus pay-as-you-go.** Adds 4,000 conversational-video minutes, 15 custom replica slots, up to 15 concurrent sessions, priority support, and a 1:1 onboarding call.
 - **Enterprise: custom.** Adds unlimited custom replicas, 100% white-label, scaling discounts, custom concurrency, top-tier support, enterprise security and compliance, guaranteed SLAs, and faster boot times.
 
-Current overage anchors on the public pricing page include Starter CVI overage at $0.37/min, Growth CVI overage at $0.32/min, Starter video-generation overage at $1/min, Growth video-generation overage at $0.90/min, and Growth conversation recordings at $0.03/min. Custom replica overages are listed at $65 per replica on Starter and $40 per replica on Growth.
-
-The June 9 refresh of the public pricing page shows Growth at 10 concurrent streams in the Developer plan card. Because Tavus's rendered pricing page repeats comparison blocks, the contracted cap is still worth confirming in writing before launch.
+The June 25 refresh of the public pricing page shows a newer Developer surface with Starter at $22/mo, Builder at $59/mo, Growth at 10 concurrent sessions, and Business at 15 concurrent sessions. Because Tavus's rendered pricing page still repeats older comparison blocks, production buyers should confirm overages, video-generation minutes, replica terms, and contracted caps in writing before launch.
 
 ## Against The Alternatives
 
@@ -225,7 +233,7 @@ The June 9 refresh of the public pricing page shows Growth at 10 concurrent stre
 ## Failure Modes
 
 - **Usage costs can exceed the subscription.** The monthly plan is only the platform fee plus included minutes. Active production agents need a usage model before launch.
-- **Concurrency is a real product constraint.** Growth is currently listed at 10 concurrent streams; teams that need higher fan-out must price into Enterprise and lock the cap in contract.
+- **Concurrency is a real product constraint.** Growth is currently listed at 10 concurrent sessions and Business at 15. Teams that need higher fan-out must price into Enterprise and lock the cap in contract.
 - **LLM latency still matters.** Tavus can handle the video pipeline, but a slow external LLM will still make the conversation feel slow.
 - **Privacy and consent are not optional.** Raven-1-style perception means users may be sharing visual, emotional, voice, and contextual signals. Product teams need explicit consent and clear data handling.
 - **Custom replicas need governance.** Replica training involves real likeness and voice. Brand safety, consent logs, and revocation workflows belong in the launch checklist.
@@ -234,7 +242,7 @@ The June 9 refresh of the public pricing page shows Growth at 10 concurrent stre
 
 ## Methodology
 
-This page was refreshed on 2026-06-12 against Tavus's current pricing page, CVI product page, CVI documentation, and Phoenix-4 announcement. AiPedia treats vendor model claims as primary-source facts and the buying recommendation as editorial analysis.
+This page was refreshed on 2026-06-25 against Tavus's current pricing page, CVI product page, CVI documentation, and Phoenix-4 announcement. AiPedia treats vendor model claims as primary-source facts and the buying recommendation as editorial analysis.
 
 Scores follow the four-dimension rubric at [/about/scoring/](/about/scoring/): utility, value, moat, and longevity.
 
@@ -259,7 +267,7 @@ Only for real-time video agents. For scripted business video, HeyGen and Synthes
 Yes, Tavus includes AI video generation minutes, but its strategic value is live conversational video. If the main need is cinematic footage, start with Veo, Seedance, Kling, Runway, Vidu, or Wan.
 
 **How fresh is the pricing?**
-Pricing and plan details were verified on 2026-06-12. Because Tavus uses subscription plus pay-as-you-go usage, production buyers should verify overages, concurrency (Growth is currently listed at 10 streams), SLAs, and enterprise terms before committing.
+Pricing and plan details were verified on 2026-06-25. Because Tavus uses subscription plus pay-as-you-go usage, production buyers should verify overages, concurrency, SLAs, replica terms, and enterprise terms before committing.
 
 ## Sources
 

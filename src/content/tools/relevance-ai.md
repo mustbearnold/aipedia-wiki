@@ -10,8 +10,8 @@ pricing_model: enterprise
 price_range: "Enterprise contact sales on public pricing page; docs still describe Free, Pro, Team, Actions, and Vendor Credits"
 status: active
 launched: 2023-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,15 +30,15 @@ facts:
     source: "https://relevanceai.com/pricing"
     source_label: "Relevance AI pricing page"
     source_id: relevance-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "As of June 12, 2026, the public pricing page foregrounds Enterprise only: custom Actions, custom Vendor Credits, unlimited agents/tools/users/projects/workforces, 2,000+ integrations, SSO/RBAC/audit logs, and dedicated account management. Docs still define Free at 200 Actions/month plus 1,000 Vendor Credits, Actions at $80 per 1,000 top-up, Vendor Credits at $20 per 10,000 top-up, and BYO API keys on paid plans."
+    value: "As of June 25, 2026, the public pricing page foregrounds Enterprise only: custom Actions, custom Vendor Credits, unlimited agents/tools/users/projects/workforces, 2,000+ integrations, SSO/RBAC/audit logs, and dedicated account management. Docs still define Free at 200 Actions/month plus 1,000 Vendor Credits, Actions at $80 per 1,000 top-up, Vendor Credits at $20 per 10,000 top-up, and BYO API keys on paid plans."
     source: "https://relevanceai.com/pricing"
     source_label: "Relevance AI pricing page"
     source_id: relevance-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://relevanceai.com/docs/admin/subscriptions/plans"
     source_label: "Relevance AI plans and credits docs"
     source_id: relevance-ai-plans-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -74,6 +74,7 @@ price_history:
     source: "https://relevanceai.com/docs/get-started/subscriptions/plans"
     source_label: "Source"
     source_id: relevance-ai-official
+    verified_at: 2025-09
     note: "Relevance AI separated agent steps (Actions) from underlying LLM costs (Vendor Credits) in September 2025."
   - date: 2026-04-17
     plan: "Pro (annual)"
@@ -81,6 +82,7 @@ price_history:
     source: "https://relevanceai.com/pricing"
     source_label: "Source"
     source_id: relevance-ai-official
+    verified_at: 2026-04-17
     note: "Prior verified Pro annual rate; 30,000 actions/yr + $240 Vendor Credits/yr."
   - date: 2026-04-17
     plan: "Team (annual)"
@@ -88,6 +90,7 @@ price_history:
     source: "https://relevanceai.com/pricing"
     source_label: "Source"
     source_id: relevance-ai-official
+    verified_at: 2026-04-17
     note: "Prior verified Team annual rate; 84,000 actions/yr + $840 Vendor Credits/yr."
   - date: 2026-06-09
     plan: "Public pricing page"
@@ -135,7 +138,7 @@ Since September 2025, pricing splits into **Actions** (tool runs) and **Vendor C
 | **Enterprise controls** | 2,000+ integrations · calling/meeting agents · enterprise triggers · agent evaluations · A/B testing and analytics · SSO, RBAC, audit logs |
 | **Procurement note** | Do not quote old Pro/Team public prices without direct re-verification |
 
-Every data point above was re-verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was re-verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -172,7 +175,7 @@ The public pricing page now foregrounds Enterprise rather than a full self-serve
 | Docs: top-up | $80 per 1,000 Actions | Purchased top-ups roll over to next billing cycle | $20 per 10,000 Vendor Credits, roll over while subscribed | Paid plans only |
 | Docs: paid plans | Verify in app or with sales | Plan-specific | Plan-specific | BYO API keys available on paid plans, not Free |
 
-*Prices and allowances verified 2026-06-12 via [Relevance AI pricing](https://relevanceai.com/pricing) and [Relevance AI plans and credits docs](https://relevanceai.com/docs/admin/subscriptions/plans). Old public Pro/Team dollar amounts are historical unless directly re-verified in checkout or with sales.*
+*Prices and allowances verified 2026-06-25 via [Relevance AI pricing](https://relevanceai.com/pricing) and [Relevance AI plans and credits docs](https://relevanceai.com/docs/admin/subscriptions/plans). Old public Pro/Team dollar amounts are historical unless directly re-verified in checkout or with sales.*
 
 Actions are agent steps. Vendor Credits are consumed by the LLM call itself. Complex branching agents burn both faster than simple linear chains. Paid plans support bring-your-own-API-key to bypass Vendor Credits entirely if the customer prefers direct LLM billing.
 
@@ -200,7 +203,7 @@ Actions are agent steps. Vendor Credits are consumed by the LLM call itself. Com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Relevance AI pricing](https://relevanceai.com/pricing) and [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-25 against [Relevance AI pricing](https://relevanceai.com/pricing) and [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans).
 
 ## FAQ
 

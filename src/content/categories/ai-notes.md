@@ -5,10 +5,10 @@ title: AI Note-Taking & Knowledge Management
 description: AI note-taking, customer-success meeting memory, meeting intelligence, source-grounded research notebooks, personal knowledge systems, and workspace knowledge tools.
 tool_count: 13
 seo_title: "Best AI Note-Taking Tools (June 2026), aipedia.wiki"
-meta_description: "Updated June 24, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Tactiq for no-bot browser capture, Otter for live transcription, NotebookLM for source-grounded research artifacts, Capacities for object PKM, Wispr Flow for voice-to-note dictation, Reflect for encrypted linked notes, Obsidian and Logseq for local-first notes, Readwise for reading retention, and Notion AI for team workspaces with credit-risk checks."
+meta_description: "Updated June 25, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Tactiq for no-bot browser capture, Otter for live transcription, NotebookLM for source-grounded research artifacts, Capacities for object PKM, Wispr Flow for voice-to-note dictation, Reflect for encrypted linked notes, Obsidian and Logseq for local-first notes, Readwise for reading retention, and Notion AI for team workspaces with credit-risk checks."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 ---
 
@@ -39,7 +39,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 | **[Mem](/tools/mem/)** | AI notes, search/chat memory, collections, templates, connected email, API keys, and PDF understanding | Best when the note system itself should be searchable and chat-aware; Free is only a light trial and Teams is custom-priced. |
 | **[Reflect](/tools/reflect/)** | Encrypted linked notes, backlinks, calendar context, Kindle/web capture, and personal AI note search | Best when a solo buyer wants a clean networked notebook at $10/month annual-billed, not a broad team wiki or local plugin system. |
 | **[Wispr Flow](/tools/wispr-flow/)** | Voice-to-note dictation across apps | Best when the user's note bottleneck is typing, not meeting capture or source-grounded analysis. |
-| **[Obsidian](/tools/obsidian/)** | Local-first personal knowledge | Best for power users who want markdown files, local control, backlinks, Canvas, 4,468 community plugins, and optional paid Sync/Publish layers. |
+| **[Obsidian](/tools/obsidian/)** | Local-first personal knowledge | Best for power users who want markdown files, local control, backlinks, Canvas, 5,085 community plugins, and optional paid Sync/Publish layers. |
 | **[Logseq](/tools/logseq/)** | Outliner-first local knowledge and block references | Best for Roam-style daily notes, block references, backlinks, graph workflows, and users willing to watch DB-version migration maturity. |
 | **[Readwise Reader](/tools/readwise/)** | Reading capture and highlight retention | Best when articles, newsletters, PDFs, ebooks, highlights, Ghostreader Chat prompts, exports, and daily review are the real note-taking workflow. |
 | **[Hex](/tools/hex/)** | Collaborative analytics notebooks | Best when data-team notes need SQL, Python, apps, Threads, semantic models, and governed AI agents rather than general meeting capture. |
@@ -120,7 +120,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-23)
 - [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-23)
 - [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-23)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-23)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-25)
 - [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-24)
 - [Read AI product overview](https://www.read.ai/) (verified 2026-05-24)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
@@ -150,8 +150,8 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - [Wispr Flow plans docs](https://docs.wisprflow.ai/articles/9559327591-flow-plans-and-what-s-included) (verified 2026-06-23)
 - [Wispr Flow data controls](https://wisprflow.ai/data-controls) (verified 2026-06-23)
 - [Wispr Flow What's New](https://wisprflow.ai/whats-new) (verified 2026-06-23)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-23)
-- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-23)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-25)
+- [Obsidian community plugins](https://community.obsidian.md/) (verified 2026-06-25)
 - [Logseq official site](https://logseq.com/) (verified 2026-06-23)
 - [Logseq docs](https://docs.logseq.com/) (verified 2026-06-23)
 - [Logseq DB May 2026 update](https://discuss.logseq.com/t/whats-new-with-logseq-db-may-16th-2026/35020) (verified 2026-06-23)

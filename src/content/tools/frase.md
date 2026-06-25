@@ -12,8 +12,8 @@ pricing_model: paid
 price_range: "$39-$299/month self-serve; Enterprise custom"
 status: active
 launched: 2018-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   workflow_surface:
@@ -41,7 +41,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -49,7 +49,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://www.frase.io/pricing"
     source_label: "Frase pricing"
     source_id: frase-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -66,7 +66,7 @@ facts:
     source: "https://www.frase.io/features"
     source_label: "Frase features"
     source_id: frase-features
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [seo, content-briefs, content-optimization, ai-writing, serp-analysis, on-page-seo, content-strategy]
@@ -93,6 +93,14 @@ price_history:
     source_id: frase-pricing
     verified_at: 2026-06-23
     note: "Rechecked official pricing. Starter includes 1 seat/site, 10 articles, 50 audit pages, ChatGPT and Google AI visibility, and 3 Content Guard pages. Professional adds 3 seats, 5 sites, 40 articles, 250 audit pages, internal links, Perplexity visibility, and 15 Content Guard pages. Scale adds 5 seats, 10 domains, 100 articles, 1,000 audit pages, Claude/Gemini visibility, exports, and 50 Content Guard pages."
+  - date: 2026-06-25
+    plan: "Starter / Professional / Scale"
+    price: "$39/$103/$239 monthly when billed yearly; $49/$129/$299 month to month"
+    source: "https://www.frase.io/pricing"
+    source_label: "Frase pricing"
+    source_id: frase-pricing
+    verified_at: 2026-06-25
+    note: "Official pricing still lists Starter, Professional, Scale, and Enterprise. Professional and Scale list optional pay-as-you-go overages and $29/mo extra seats; API access is listed at 250, 1,000, and 3,000 requests per month by tier."
 ---
 
 # Frase.io
@@ -123,7 +131,7 @@ Current self-serve pricing lists Starter at $39/month billed yearly or $49/month
 | **Backlink data** | None |
 | **Free trial** | 7-day trial with no credit card |
 
-Every data point above was verified against vendor sources on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -156,7 +164,7 @@ The editor scores drafts in real time against competitors. The AI drafter fills 
 | Professional | $103 yearly / $129 monthly | 40/mo | 3 included (+$29/seat) | **Most teams start here** |
 | Scale | $239 yearly / $299 monthly | 100/mo | 5 included (+$29/seat) | Agencies and high-volume teams |
 
-*Prices verified 2026-06-23 via [Frase pricing](https://www.frase.io/pricing). Annual billing saves 20%. Every current self-serve plan includes Frase Agent, SEO and GEO content optimization, AI visibility tracking, site audits, publishing, API, and MCP access; plans differ by volume, domains, seats, history, and enterprise controls.*
+*Prices verified 2026-06-25 via [Frase pricing](https://www.frase.io/pricing). Annual billing saves 20%. Every current self-serve plan includes Frase Agent, SEO and GEO content optimization, AI visibility tracking, site audits, publishing, API, and MCP access; plans differ by volume, domains, seats, history, and enterprise controls.*
 
 ## Against the alternatives
 
@@ -180,7 +188,7 @@ The editor scores drafts in real time against competitors. The AI drafter fills 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Frase pricing](https://www.frase.io/pricing) and [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Frase pricing](https://www.frase.io/pricing) and [Frase AI Visibility help](https://help.frase.io/article/218-ai-visibility).
 
 ## FAQ
 
