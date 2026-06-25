@@ -16,7 +16,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `67a2815b` on `master`. Latest completed tool batch is the June 24 six-shard 60-tool baseline run: Cody through Lovart.
+- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `48271269` on `master`. Latest completed tool batch is the June 25 four-tool serial shard: Luma, Magnific, Meshy, and OpusClip.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -80,6 +80,12 @@ Completed for June 21-22:
 
 Latest completed batch:
 
+- Four-tool June 25 serial shard from the regenerated due-soon queue: `luma`, `magnific`, `meshy`, and `opusclip`.
+- Affected parent hubs: AI Video, AI Image, AI Design, and AI Writing.
+- Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, and affected parent source/date summaries. Meshy's current individual ladder now includes Pro, Premium, and Ultra before Studio; Magnific API guidance now warns that pay-per-usage is marked for June 30, 2026 discontinuation.
+
+Previous large batch:
+
 - 60-tool six-shard baseline run from `.tmp-tool-refresh-batch.json`: `cody`, `comet`, `continue`, `copy-ai`, `crewai`, `d-id`, `hedra`, `lindy`, `mastra`, `microsoft-agent-framework`, `midjourney`, `notebooklm`, `qodo`, `replit-agent`, `claude`, `decktopus`, `gemini`, `grok`, `n8n`, `claude-code`, `github-copilot`, `grammarly`, `mistral-ai`, `qwen`, `capacities`, `cursor`, `hailuo`, `heygen`, `adobe-firefly`, `argil`, `augment-code`, `base44`, `dia`, `figma`, `chatgpt`, `deepseek`, `meetgeek`, `elevenlabs`, `elicit`, `voxtral`, `windsurf`, `codeium`, `descript`, `perplexity`, `kling`, `runway`, `seedance`, `veo`, `suno`, `synthesia`, `udio`, `bolt`, `lovable`, `mubert`, `pika`, `v0`, `langgraph`, `minimax`, `pipedream`, and `lovart`.
 - Affected parent hubs: AI Automation, AI Chatbots, AI Coding, AI Design, AI Image, AI Infrastructure, AI Music, AI Notes, AI Presentation, AI Research, AI Search, AI Video, AI Voice, and AI Writing.
 - Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, tool-refresh planner same-day exclusion, affected category hubs, and the historical Claude Agent SDK billing news correction.
@@ -103,7 +109,7 @@ Next due-soon tracked-tool queue:
 
 - Regenerate before the next batch with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
 - The planner now excludes tools verified since yesterday by default. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when the user explicitly wants to revisit recent pages.
-- Current regenerated `.tmp-tool-refresh-batch.json` starts with `luma`, `magnific`, `meshy`, `minimax-speech`, `opusclip`, `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, and `retell-ai`, and contains 60 tools across 77 route-QA routes.
+- Current regenerated `.tmp-tool-refresh-batch.json` starts with `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, `retell-ai`, `rork`, `taskade`, `tavus`, `tines`, and `together-ai`, and contains 60 tools across 77 route-QA routes.
 
 Use `$aipedia-tool-refresh-workflow` for the parallel batched tool refresh flow:
 
@@ -163,6 +169,19 @@ Latest planner/source-maintenance pass passed:
 
 The new batch source-health probe selected 170 sources: 158 returned HTTP OK, 12 were unreachable, and 0 had content-hash changes. Clear 404s for `minimax-speech-t2a` and `instantly-leads` were fixed and live-checked. Remaining unreachable sources are mostly 403 or timeout cases: Gemini API pricing/changelog, Jasper credits pricing, Boomy support docs, Imagen docs, Jimeng, Wispr Bloomberg, Ada platform, and similar access-sensitive routes.
 
+Latest four-tool serial shard passed:
+
+- `npm run audit:tool-quality -- --file src/content/tools/luma.md`
+- `npm run audit:tool-quality -- --file src/content/tools/magnific.md`
+- `npm run audit:tool-quality -- --file src/content/tools/meshy.md`
+- `npm run audit:tool-quality -- --file src/content/tools/opusclip.md`
+- `npm run audit:provenance:changed -- --json`
+- `npm run --silent audit:sources -- --json --live --limit 0 ...` across 22 refreshed Luma, Magnific, Meshy, and OpusClip sources
+- `npm run tool:refresh:batch:check -- --file src/content/tools/luma.md --file src/content/tools/magnific.md --file src/content/tools/meshy.md --file src/content/tools/opusclip.md`
+- `npm run typecheck`
+- `npm run build:fast`
+- `npm run qa:route -- --route /tools/luma/ --route /tools/magnific/ --route /tools/meshy/ --route /tools/opusclip/ --route /categories/ai-video/ --route /categories/ai-image/ --route /categories/ai-design/ --route /categories/ai-writing/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`
+
 Latest completed 60-tool baseline refresh passed:
 
 - `node --check scripts\tool-refresh-batch.mjs`
@@ -215,7 +234,7 @@ Latest completed tool-page template migration passed:
 1. Run `git status --short --branch`.
 2. Read this file and `.agent/PLANS.md`.
 3. Use `$aipedia-tool-refresh-workflow`, then run `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
-4. Continue the next not-recently-refreshed batch, currently starting with Luma, Magnific, Meshy, and MiniMax Speech, unless a newer user request supersedes it.
+4. Continue the next not-recently-refreshed batch, currently starting with Pinecone, PixVerse, Playground AI, and Qdrant, unless a newer user request supersedes it.
 
 ## Finish Major Work
 

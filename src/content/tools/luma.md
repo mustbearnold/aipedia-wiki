@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Dream Machine web $9.99-$94.99/mo; Luma app $30-$300/mo; API/credits separate"
 status: active
 launched: 2024-06
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://lumalabs.ai/dream-machine"
     source_label: "Luma Dream Machine product page"
     source_id: luma-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   flagship_model:
@@ -38,8 +38,8 @@ facts:
     source: "https://lumalabs.ai/pricing"
     source_label: "Luma pricing"
     source_id: luma-pricing
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
   pricing_anchor:
@@ -47,8 +47,8 @@ facts:
     source: "https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information"
     source_label: "Dream Machine plans"
     source_id: luma-dream-machine-pricing
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
   resolution_anchor:
@@ -56,8 +56,8 @@ facts:
     source: "https://lumalabs.ai/learning-hub/ray3-faq"
     source_label: "Ray3.14 FAQ"
     source_id: luma-ray314-faq
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: medium
     confidence: high
   audio_path:
@@ -65,8 +65,8 @@ facts:
     source: "https://lumalabs.ai/learning-hub/ray3-faq"
     source_label: "Ray3.14 FAQ"
     source_id: luma-ray314-faq
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: medium
     confidence: high
   watch_out_for:
@@ -74,8 +74,8 @@ facts:
     source: "https://lumalabs.ai/pricing"
     source_label: "Luma pricing"
     source_id: luma-pricing
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
 tags: [ai-video, video-generation, text-to-video, image-to-video, camera-controls, ray3, ray3-14]
@@ -153,6 +153,14 @@ price_history:
     source_id: luma-ray32-news
     verified_at: 2026-06-23
     note: "Ray3.2 launched June 9, 2026 with creative-control, multi-keyframe, HDR/EXR, and API positioning. Luma pricing page still lists Plus $30/month, Pro $90/month, and Ultra $300/month individual plans."
+  - date: 2026-06-25
+    plan: "Ray3.2 and Dream Machine pricing"
+    price: "Dream Machine web $9.99-$94.99/mo; Luma app Plus $30/mo, Pro $90/mo, Ultra $300/mo; API/credits separate"
+    source: "https://lumalabs.ai/pricing"
+    source_label: "Luma pricing"
+    source_id: luma-pricing
+    verified_at: 2026-06-25
+    note: "June 25 recheck found no material change to Luma app individual prices or Dream Machine web plan shape. Ray3.2 remains the current control-forward release and API lane."
 ---
 
 # Luma Dream Machine
@@ -167,6 +175,7 @@ Do not collapse those into one clean "$30 plan" story. Dream Machine web support
 - **2026-06-08:** Luma's broader pricing page separately lists Luma app individual plans: Plus $30/month, Pro $90/month, and Ultra $300/month, plus Team and Enterprise contact-sales paths.
 - **2026-06-08:** Ray3.14 FAQ says the model is web-only rather than API-native, does not generate native audio, supports Draft/540p/720p/1080p, and supports 4K upscaling. Treat API model availability as a fresh procurement check.
 - **2026-06-23:** Ray3.2 is now the current release to evaluate. Luma's June 9 announcement positions Ray3.2 around frame-by-frame direction, multi-keyframe control, longer duration, HDR/EXR output, and API availability. The pricing page still lists individual Plus, Pro, and Ultra at $30/$90/$300 per month.
+- **2026-06-25:** Rechecked Luma pricing, Dream Machine support, Ray3.2 announcement, and Ray3.14 FAQ. No material buyer change found; keep API buyers on an exact model, duration, HDR/EXR, and credit-pricing check.
 
 ## System Verdict
 
@@ -190,7 +199,7 @@ Do not collapse those into one clean "$30 plan" story. Dream Machine web support
 | **API access** | Separate from Dream Machine credits; verify model availability before building |
 | **Company** | Luma AI |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -236,7 +245,7 @@ Subscription pricing via [lumalabs.ai/pricing](https://lumalabs.ai/pricing). Com
 | Luma app Ultra | $300/mo | 15x Pro usage with Luma Agents |
 | Team / Enterprise | Contact sales | Team organization, shared team credits, SSO, custom commitments |
 
-*Prices verified 2026-06-23 via [Dream Machine plan support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information), [lumalabs.ai/pricing](https://lumalabs.ai/pricing), and the [Ray3.2 announcement](https://lumalabs.ai/news/introducing-ray-3-2). Annual billing discounts may apply. API and Dream Machine credits are separate. HDR/EXR work can materially increase credit use versus standard output.*
+*Prices verified 2026-06-25 via [Dream Machine plan support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information), [lumalabs.ai/pricing](https://lumalabs.ai/pricing), and the [Ray3.2 announcement](https://lumalabs.ai/news/introducing-ray-3-2). Annual billing discounts may apply. API and Dream Machine credits are separate. HDR/EXR work can materially increase credit use versus standard output.*
 
 ## Against the alternatives
 
@@ -266,7 +275,7 @@ Subscription pricing via [lumalabs.ai/pricing](https://lumalabs.ai/pricing). Com
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against Dream Machine pricing support, Luma pricing, the Ray3.14 FAQ, the Ray3.2 announcement, Ray3.2 controls documentation, and Luma product pages.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against Dream Machine pricing support, Luma pricing, the Ray3.14 FAQ, the Ray3.2 announcement, Ray3.2 controls documentation, and Luma product pages.
 
 ## FAQ
 
@@ -291,12 +300,12 @@ Ray3.2 is positioned for API workflows, but verify the exact API model list, dur
 
 ## Sources
 
-- [Luma Dream Machine product page](https://lumalabs.ai/dream-machine) (verified 2026-06-23)
-- [Luma Pricing](https://lumalabs.ai/pricing) (verified 2026-06-23)
-- [Dream Machine Plans: Pricing and Credits](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-23)
-- [Ray3.2 announcement](https://lumalabs.ai/news/introducing-ray-3-2) (verified 2026-06-23)
-- [Ray3.2 controls and workflows](https://lumalabs.ai/learning-center/articles/ray-3-2-controls-and-workflows-in-depth) (verified 2026-06-23)
-- [Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-23)
+- [Luma Dream Machine product page](https://lumalabs.ai/dream-machine) (verified 2026-06-25)
+- [Luma Pricing](https://lumalabs.ai/pricing) (verified 2026-06-25)
+- [Dream Machine Plans: Pricing and Credits](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-25)
+- [Ray3.2 announcement](https://lumalabs.ai/news/introducing-ray-3-2) (verified 2026-06-25)
+- [Ray3.2 controls and workflows](https://lumalabs.ai/learning-center/articles/ray-3-2-controls-and-workflows-in-depth) (verified 2026-06-25)
+- [Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-25)
 - [Ray3 announcement](https://lumalabs.ai/news/ray3) (historical launch context)
 
 ## Related

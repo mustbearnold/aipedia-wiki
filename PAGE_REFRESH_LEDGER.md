@@ -137,7 +137,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
 | 2026-06-12 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
 | 2026-06-12 | /tools/openhands/ | Tool | Yes | frontmatter | src/content/tools/openhands.md |
-| 2026-06-12 | /tools/opusclip/ | Tool | Yes | frontmatter | src/content/tools/opusclip.md |
 | 2026-06-12 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
 | 2026-06-12 | /tools/paradox/ | Tool | Yes | frontmatter | src/content/tools/paradox.md |
 | 2026-06-12 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
@@ -443,13 +442,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-23 | /tools/lm-studio/ | Tool | Yes | frontmatter | src/content/tools/lm-studio.md |
 | 2026-06-23 | /tools/logseq/ | Tool | Yes | frontmatter | src/content/tools/logseq.md |
 | 2026-06-23 | /tools/lovo/ | Tool | Yes | frontmatter | src/content/tools/lovo.md |
-| 2026-06-23 | /tools/luma/ | Tool | Yes | frontmatter | src/content/tools/luma.md |
-| 2026-06-23 | /tools/magnific/ | Tool | Yes | frontmatter | src/content/tools/magnific.md |
 | 2026-06-23 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
 | 2026-06-23 | /tools/manus/ | Tool | Yes | frontmatter | src/content/tools/manus.md |
 | 2026-06-23 | /tools/marketmuse/ | Tool | Yes | frontmatter | src/content/tools/marketmuse.md |
 | 2026-06-23 | /tools/mem/ | Tool | Yes | frontmatter | src/content/tools/mem.md |
-| 2026-06-23 | /tools/meshy/ | Tool | Yes | frontmatter | src/content/tools/meshy.md |
 | 2026-06-23 | /tools/modal/ | Tool | Yes | frontmatter | src/content/tools/modal.md |
 | 2026-06-23 | /tools/morphic/ | Tool | Yes | frontmatter | src/content/tools/morphic.md |
 | 2026-06-23 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
@@ -458,8 +454,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-24 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-24 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-24 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-06-24 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-24 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-24 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-24 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
@@ -467,9 +461,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-24 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-24 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
-| 2026-06-24 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-24 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
-| 2026-06-24 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-24 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-24 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-24 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
@@ -491,6 +483,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /tools/coderabbit/ | Tool | Yes | frontmatter | src/content/tools/coderabbit.md |
 | 2026-06-24 | /tools/cody/ | Tool | Yes | frontmatter | src/content/tools/cody.md |
 | 2026-06-24 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
+| 2026-06-24 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
 | 2026-06-24 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
 | 2026-06-24 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
 | 2026-06-24 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
@@ -545,6 +538,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /trends/ | Static page | Yes | page metadata | src/pages/trends/index.astro |
 | 2026-06-24 | /trends/model-availability-churn/ | Trend | Yes | frontmatter | src/content/trends/model-availability-churn.md |
 | 2026-06-25 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-25 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
+| 2026-06-25 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
+| 2026-06-25 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-25 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
 | 2026-06-25 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-25 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-25 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
@@ -553,9 +550,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-25 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-25 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
-| 2026-06-25 | /tools/consensus/ | Tool | Yes | working tree | src/content/tools/consensus.md |
 | 2026-06-25 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
 | 2026-06-25 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
-| 2026-06-25 | /tools/instantly/ | Tool | Yes | working tree | src/content/tools/instantly.md |
-| 2026-06-25 | /tools/minimax-speech/ | Tool | Yes | working tree | src/content/tools/minimax-speech.md |
+| 2026-06-25 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
+| 2026-06-25 | /tools/luma/ | Tool | Yes | working tree | src/content/tools/luma.md |
+| 2026-06-25 | /tools/magnific/ | Tool | Yes | working tree | src/content/tools/magnific.md |
+| 2026-06-25 | /tools/meshy/ | Tool | Yes | working tree | src/content/tools/meshy.md |
+| 2026-06-25 | /tools/minimax-speech/ | Tool | Yes | frontmatter | src/content/tools/minimax-speech.md |
+| 2026-06-25 | /tools/opusclip/ | Tool | Yes | working tree | src/content/tools/opusclip.md |
 | 2026-06-25 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |

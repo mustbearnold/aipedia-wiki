@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$29/mo; Business custom"
 status: active
 launched: 2022
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "OpusClip Review: Pricing, Credits & Best Use Cases (June 2026)"
-meta_description: "OpusClip turns long videos into TikTok, Reels, and Shorts clips with ClipAnything, ReframeAnything, captions, B-roll, scheduler, and virality scoring. Updated June 12, 2026 with current Free, Starter, Pro, Business, credit, and API guidance."
+meta_description: "OpusClip turns long videos into TikTok, Reels, and Shorts clips with ClipAnything, ReframeAnything, captions, B-roll, scheduler, and virality scoring. Updated June 25, 2026 with current Free, Starter, Pro, Business, credit, and API guidance."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://www.opus.pro/pricing"
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,8 +42,8 @@ facts:
     source: "https://www.opus.pro/pricing"
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: medium
   watch_out_for:
@@ -51,8 +51,8 @@ facts:
     source: "https://help.opus.pro/docs/article/how-are-credits-consumed"
     source_label: "OpusClip credit mechanics"
     source_id: opusclip-credit-consumption
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: medium
 tags: [short-form-video, video-editing, tiktok, reels, social-media, opusclip]
@@ -75,6 +75,7 @@ price_history:
     source: "https://www.opus.pro/pricing"
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
+    verified_at: 2026-06-25
     note: "Annual plan shows $174 billed annually with 3,600 credits available instantly"
   - date: 2026-05-09
     plan: "Starter"
@@ -82,6 +83,7 @@ price_history:
     source: "https://www.opus.pro/pricing"
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
+    verified_at: 2026-06-25
     note: "Monthly-only tier; removes watermark, unlocks 150 credits per month"
   - date: 2026-06-08
     plan: "Starter / Pro"
@@ -89,6 +91,7 @@ price_history:
     source: "https://www.opus.pro/pricing"
     source_label: "OpusClip pricing"
     source_id: opusclip-pricing
+    verified_at: 2026-06-25
     note: "Pricing page lists Starter at 150 monthly credits, Pro at 300 monthly credits per pack or 3,600 yearly credits on annual billing, and Business as custom pricing and packs."
   - date: 2026-06-08
     plan: "Credit consumption"
@@ -96,18 +99,27 @@ price_history:
     source: "https://help.opus.pro/docs/article/how-are-credits-consumed"
     source_label: "OpusClip credit mechanics"
     source_id: opusclip-credit-consumption
+    verified_at: 2026-06-25
     note: "Credit use is based on original imported-video length; X posts or schedules consume 1 credit per published clip."
+  - date: 2026-06-25
+    plan: "Starter / Pro / Business"
+    price: "$15/mo Starter; $29/mo Pro monthly or $174/yr; Business custom"
+    source: "https://www.opus.pro/pricing"
+    source_label: "OpusClip pricing"
+    source_id: opusclip-pricing
+    verified_at: 2026-06-25
+    note: "June 25 recheck found no material change to Free, Starter, Pro, Business, or credit-consumption guidance. Credit use remains based on source-video minutes, with X posting/scheduling consuming 1 credit per published clip."
 ---
 
 # OpusClip
 
 OpusClip is an AI video tool that takes long-form source material like podcasts, webinars, interviews, and Twitch streams and produces short-form social clips for TikTok, Reels, and YouTube Shorts. The **ClipAnything** pipeline ranks clip candidates by virality signals. **ReframeAnything** handles 16:9 to 9:16 conversion with subject tracking. AI B-roll and auto-captions round out the production flow.
 
-The company is **OpusClip Inc.** AiPedia's June 8, 2026 refresh treats official OpusClip pricing and help docs as the source of truth for plan, credit, API, export, and team-workspace buying decisions.
+The company is **OpusClip Inc.** AiPedia's June 25, 2026 refresh treats official OpusClip pricing and help docs as the source of truth for plan, credit, API, export, and team-workspace buying decisions.
 
 ## System Verdict
 
-> **Pick OpusClip if you publish long-form content and want short-form clips without editing them by hand.** The ClipAnything pipeline scores each candidate for virality, ReframeAnything keeps subjects centered in vertical crops, and direct scheduling to TikTok, Reels, Shorts, LinkedIn, and X removes the last manual step. It remains one of the clearest first tests for podcast, webinar, livestream, and interview repurposing as of June 12, 2026.
+> **Pick OpusClip if you publish long-form content and want short-form clips without editing them by hand.** The ClipAnything pipeline scores each candidate for virality, ReframeAnything keeps subjects centered in vertical crops, and direct scheduling to TikTok, Reels, Shorts, LinkedIn, and X removes the last manual step. It remains one of the clearest first tests for podcast, webinar, livestream, and interview repurposing as of June 25, 2026.
 >
 > **Skip it if you need frame-accurate manual editing, original video generation, or heavy motion graphics.** OpusClip does not generate new footage. Complex multi-layer timelines belong in Premiere or DaVinci. For clip-first creators who never had long-form source, [Captions](/tools/captions/) or [Descript](/tools/descript/) fit better. If your repurposing workflow is podcast-first and lives close to transcript editing, show notes, and chapter generation, [Castmagic](/tools/castmagic/) is now the direct competitor for the same source material.
 >
@@ -166,7 +178,7 @@ Subscription pricing via [opus.pro/pricing](https://www.opus.pro/pricing):
 
 Credit mechanics: 1 credit equals 1 minute of original source video processed, with partial-minute rounding rules in the help docs. Posting or scheduling to X also costs 1 credit per published clip. Pro adds AI B-roll, team workspace with 2 seats per pack, 6 connected social accounts, Premiere and DaVinci export, scheduling, custom fonts, speech enhancement, more import sources, and limited API access. Extra recurring credits come through additional packs; large teams should ask sales whether Business is cleaner once seats, storage, social accounts, API access, and support matter together.
 
-Prices verified June 12, 2026 via [opus.pro/pricing](https://www.opus.pro/pricing), [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits), and [help.opus.pro credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed). OpusClip's pricing page says Business uses custom pricing and packs for tailored credits, seats, social connections, dedicated storage, API/custom integrations, MSA, priority support, and enterprise security.
+Prices verified June 25, 2026 via [opus.pro/pricing](https://www.opus.pro/pricing), [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits), and [help.opus.pro credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed). OpusClip's pricing page says Business uses custom pricing and packs for tailored credits, seats, social connections, dedicated storage, API/custom integrations, MSA, priority support, and enterprise security.
 
 ## Against the alternatives
 
@@ -194,7 +206,7 @@ Prices verified June 12, 2026 via [opus.pro/pricing](https://www.opus.pro/pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified June 12, 2026 against [opus.pro/pricing](https://www.opus.pro/pricing), [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits), [help.opus.pro credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed), and [ClipAnything docs](https://help.opus.pro/docs/article/9947095-clip-anything).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified June 25, 2026 against [opus.pro/pricing](https://www.opus.pro/pricing), [help.opus.pro plans docs](https://help.opus.pro/docs/article/plans-and-credits), [help.opus.pro credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed), and [ClipAnything docs](https://help.opus.pro/docs/article/9947095-clip-anything).
 
 ## FAQ
 

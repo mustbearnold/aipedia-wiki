@@ -5,10 +5,10 @@ title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Seedance, Kling, Veo, Runway & Tavus"
-meta_description: "Updated June 24, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+meta_description: "Updated June 25, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, OpusClip, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -32,7 +32,7 @@ AI video is no longer one clean product category. On June 9, 2026, the useful bu
 
 **Test [Hailuo 2.3](/tools/hailuo/) as the current budget challenger.** Hailuo 2.3 is the current generation buyers should benchmark against Pika and Luma for low-cost social and ideation work, not the older 2.x branches still mentioned in stale lists. The June 24 MiniMax check keeps pay-as-you-go rates and one-month video packages as the safest purchase math: Hailuo 2.3-Fast starts at $0.19 for a 768p 6-second pay-as-you-go job, packages start at $1,000 for 3,760 video points, token plans need console-level video eligibility confirmation, and Hailuo's public payment policy lists $14.99-$199.99 monthly plan anchors with a July 2025 terms-date caveat. Also separate route controls carefully: MiniMax API docs show Hailuo 2.3/2.3-Fast for current T2V/I2V routes, Hailuo 02 for first-and-last-frame, and S2V-01 for subject-reference generation.
 
-**Use [Luma Dream Machine](/tools/luma/) when camera language is the purchase reason.** The June 23 refresh keeps Dream Machine web pricing separate from broader Luma app pricing: Dream Machine web support lists Free, Lite $9.99/month, Plus $29.99/month, Unlimited $94.99/month, and Enterprise custom, while Luma's main app pricing lists Plus $30/month, Pro $90/month, and Ultra $300/month. Ray3.2 is now the current creative-control release to evaluate, with frame-level direction, multi-keyframe workflows, HDR/EXR output, and API positioning; keep audio and exact API model eligibility as live checks.
+**Use [Luma Dream Machine](/tools/luma/) when camera language is the purchase reason.** The June 25 refresh keeps Dream Machine web pricing separate from broader Luma app pricing: Dream Machine web support lists Free, Lite $9.99/month, Plus $29.99/month, Unlimited $94.99/month, and Enterprise custom, while Luma's main app pricing lists Plus $30/month, Pro $90/month, and Ultra $300/month. Ray3.2 is still the current creative-control release to evaluate, with frame-level direction, multi-keyframe workflows, HDR/EXR output, and API positioning; keep audio and exact API model eligibility as live checks.
 
 **Use [Higgsfield](/tools/higgsfield/) when the job is cinematic camera language, character consistency, and social creative in one multi-model studio.** The June 23 check puts individual annual tiers at Starter $15/mo, Plus $39/mo, Ultra $99/mo, and Teams from $59/seat/mo annual. It also adds a current 30-day Seedance Unlimited add-on signal. The buyer caveat is surface-specific economics: unlimited model and free-generation allowances apply on higgsfield.ai, not MCP, CLI, Canvas, or Supercomputer.
 
@@ -134,7 +134,7 @@ Do not make a wide comparison table the mobile experience. Mobile buyers need st
 
 **YouTube creator:** use the refreshed [YouTube creators AI guide](/guides/best-ai-for-youtube-creators/) when the buyer needs to choose between Descript editing, ChatGPT scripts, Canva or Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, and Runway B-roll. The June 6 guide adds current media-hour, AI-credit, voice-consent, music-rights, generated-video credit, and YouTube altered/synthetic disclosure checks before creators stack subscriptions.
 
-**Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. The June 8 check keeps Starter at $15/month, Pro at $29/month or $174/year, and credit use tied to source-video minutes rather than exported clip count, with limited Pro API access and Business custom integrations needing direct confirmation. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (re-verified June 24, 2026 for media-to-content pipelines, Studio clipping, semantic search, and Claude/MCP library access), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
+**Long-form repurposing buyer:** use [OpusClip](/tools/opusclip/) when the source is already a podcast, webinar, livestream, interview, or YouTube video and the job is finding clips, adding captions, reframing to 9:16, and scheduling Shorts/Reels/TikTok posts. The June 25 check keeps Starter at $15/month, Pro at $29/month or $174/year, and credit use tied to source-video minutes rather than exported clip count, with limited Pro API access and Business custom integrations needing direct confirmation. It is not a text-to-video model; compare it against Descript, Captions, [Castmagic](/tools/castmagic/) (re-verified June 24, 2026 for media-to-content pipelines, Studio clipping, semantic search, and Claude/MCP library access), and InVideo before comparing it against Seedance, Kling, Veo, or Runway.
 
 ## Review Standard
 
@@ -204,11 +204,11 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video) (verified 2026-06-23)
 - [MiniMax token subscription pricing](https://platform.minimax.io/docs/guides/pricing-token-plan) (verified 2026-06-23)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-23)
-- [Luma Dream Machine pricing support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-23)
-- [Luma pricing](https://lumalabs.ai/pricing) (verified 2026-06-23)
-- [Luma Ray3.2 announcement](https://lumalabs.ai/news/introducing-ray-3-2) (verified 2026-06-23)
-- [Luma Ray3.2 controls and workflows](https://lumalabs.ai/learning-center/articles/ray-3-2-controls-and-workflows-in-depth) (verified 2026-06-23)
-- [Luma Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-23)
+- [Luma Dream Machine pricing support](https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information) (verified 2026-06-25)
+- [Luma pricing](https://lumalabs.ai/pricing) (verified 2026-06-25)
+- [Luma Ray3.2 announcement](https://lumalabs.ai/news/introducing-ray-3-2) (verified 2026-06-25)
+- [Luma Ray3.2 controls and workflows](https://lumalabs.ai/learning-center/articles/ray-3-2-controls-and-workflows-in-depth) (verified 2026-06-25)
+- [Luma Ray3.14 FAQ](https://lumalabs.ai/learning-hub/ray3-faq) (verified 2026-06-25)
 - [Hedra pricing](https://www.hedra.com/pricing) (verified 2026-06-22)
 - [Hedra models](https://www.hedra.com/models) (verified 2026-06-22)
 - [Hedra Agent creative workflows](https://www.hedra.com/blog/agent-creative-workflows) (verified 2026-06-22)
@@ -217,9 +217,9 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Higgsfield about](https://higgsfield.ai/about) (verified 2026-06-23)
 - [Higgsfield Seedance Unlimited](https://higgsfield.ai/blog/seedance-unlimited) (verified 2026-06-23)
 - [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-12)
-- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-12)
-- [OpusClip credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed) (verified 2026-06-12)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-25)
+- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-25)
+- [OpusClip credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed) (verified 2026-06-25)
 - [Captions pricing](https://captions.ai/pricing) (verified 2026-06-24)
 - [Captions subscriptions and plans](https://captions.ai/help/docs/subscriptions) (verified 2026-06-24)
 - [Captions AI usage credits](https://captions.ai/help/docs/ai-usage) (verified 2026-06-24)

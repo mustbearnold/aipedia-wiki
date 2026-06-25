@@ -8165,7 +8165,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "luma-official",
@@ -8174,7 +8174,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "luma-pricing",
@@ -8183,7 +8183,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "luma-ray3-news",
@@ -8201,7 +8201,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "luma-ray32-controls",
@@ -8212,7 +8212,7 @@
       "reliability": "medium",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "luma-ray32-news",
@@ -8223,7 +8223,7 @@
       "reliability": "high",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "maf-github",
@@ -8254,14 +8254,14 @@
     },
     {
       "id": "magnific-api-payg",
-      "label": "Magnific API pay-per-use pricing",
-      "url": "https://docs.magnific.com/pricing-payg",
+      "label": "Magnific API pricing",
+      "url": "https://www.magnific.com/api/pricing",
       "type": "pricing",
       "primary": true,
       "reliability": "high",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "magnific-api-pricing",
@@ -8270,7 +8270,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "magnific-official",
@@ -8279,7 +8279,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "magnific-plans-pricing",
@@ -8290,7 +8290,7 @@
       "reliability": "high",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "magnific-pricing",
@@ -8299,7 +8299,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "magnific-upscaler-api",
@@ -8308,7 +8308,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "make-ai-agents",
@@ -8598,7 +8598,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "meshy-api-pricing",
@@ -8609,7 +8609,7 @@
       "reliability": "high",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "meshy-credit-usage",
@@ -8618,7 +8618,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "meshy-ownership",
@@ -8629,18 +8629,18 @@
       "reliability": "high",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "meshy-plan-comparison",
       "label": "Meshy Help Center plan comparison",
-      "url": "https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you-free-vs-pro-vs-studio",
+      "url": "https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you",
       "type": "docs",
       "primary": true,
       "reliability": "high",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "meshy-pricing",
@@ -8649,7 +8649,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "microsoft-build-2026-work-iq",
@@ -9824,7 +9824,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "opusclip-credit-consumption",
@@ -9833,7 +9833,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "opusclip-plans-credits",
@@ -9842,7 +9842,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "opusclip-pricing",
@@ -9851,7 +9851,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-08"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "otter-ai-pricing",

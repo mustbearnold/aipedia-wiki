@@ -7,14 +7,14 @@ category: ai-image
 company: meshy
 url: https://meshy.ai
 pricing_model: freemium
-price_range: "$0-$60/month"
+price_range: "$0-$100/month individual; Studio $60/seat/month; Enterprise custom"
 status: active
 launched: 2023-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Meshy: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 23, 2026: Meshy 6 pricing, credits, ownership, text-to-3D, image-to-3D, low-poly mode, AI texturing, rigging, animation, API, and DCC/game-engine handoff."
+meta_description: "Updated June 25, 2026: Meshy 6 pricing, Pro/Premium/Ultra credits, Studio seat rules, ownership, text-to-3D, image-to-3D, low-poly mode, AI texturing, rigging, animation, API, and DCC/game-engine handoff."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: "https://www.meshy.ai/pricing"
     source_label: "Meshy pricing"
     source_id: meshy-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -41,17 +41,17 @@ facts:
     source: "https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost"
     source_label: "Meshy credit usage help"
     source_id: meshy-credit-usage
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
   watch_out_for:
-    value: "The current Meshy 6 credit math is more expensive than the old Meshy 5 assumptions; Pro's 1,000 monthly credits can disappear quickly if users generate textured assets, retries, retextures, or print-ready outputs."
+    value: "The current Meshy 6 credit math is more expensive than the old Meshy 5 assumptions; Pro's 1,000 monthly credits can disappear quickly if users generate textured assets, retries, retextures, or print-ready outputs. Heavy solo users should compare Premium at 3,000 credits and Ultra at 10,000 credits before jumping to the Studio team plan."
     source: "https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost"
     source_label: "Meshy credit usage help"
     source_id: meshy-credit-usage
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
 tags: [3d-generation, text-to-3d, image-to-3d, ai-texturing, game-assets, ar-vr, rigging, animation, glb, fbx]
@@ -111,16 +111,24 @@ price_history:
   - date: 2026-06-23
     plan: "Free / Pro / Studio / Enterprise"
     price: "$0 / $20/mo or $120/year / $60/mo or $576/year / custom"
-    source: "https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you-free-vs-pro-vs-studio"
+    source: "https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you"
     source_id: meshy-plan-comparison
     source_label: "Meshy plan comparison"
     verified_at: 2026-06-23
     note: "Reverified Help Center plan table, monthly credits, Free Meshy 5-only download limit, Pro API/commercial-rights entry, Studio team credits, and Enterprise SSO/custom scale. API docs still price Meshy 6 textured image/multi-image tasks at 30 credits."
+  - date: 2026-06-25
+    plan: "Free / Pro / Premium / Ultra / Studio / Enterprise"
+    price: "$0 / $20/mo / $40/mo / $100/mo / Studio $60/seat/mo with 2-seat minimum / Enterprise custom"
+    source: "https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you"
+    source_id: meshy-plan-comparison
+    source_label: "Meshy plan comparison"
+    verified_at: 2026-06-25
+    note: "June 25 recheck found the current individual ladder: Free 100 credits, Pro 1,000 credits, Premium 3,000 credits, Ultra 10,000 credits. Studio remains $60/seat/month with 4,000 credits per seat and now requires a team workspace with at least 2 seats."
 ---
 
 # Meshy
 
-Meshy is the aesthetic and usability leader for AI 3D generation. **Meshy 6** is the current generation system as of June 23, 2026. One workspace covers text-to-3D, image-to-3D, low-poly generation, multi-color 3D printing, AI texturing, remeshing, auto-rigging, animation, and export into common 3D workflows.
+Meshy is the aesthetic and usability leader for AI 3D generation. **Meshy 6** is the current generation system as of June 25, 2026. One workspace covers text-to-3D, image-to-3D, low-poly generation, multi-color 3D printing, AI texturing, remeshing, auto-rigging, animation, and export into common 3D workflows.
 
 Outputs export to GLB, FBX, OBJ, USDZ, STL, BLEND, and 3MF. Meshy's public pricing surface also now emphasizes DCC Bridge support for Roblox, Blender, Godot, Unity, Unreal, Maya, and 3ds Max, plus MCP/Skill support for AI-agent workflows on paid plans.
 
@@ -130,7 +138,7 @@ Outputs export to GLB, FBX, OBJ, USDZ, STL, BLEND, and 3MF. Meshy's public prici
 >
 > **Skip it if output quality or production topology is non-negotiable.** Rodin still deserves a look for photoreal hero assets. Tripo3D remains the cleaner shortlist entry when riggable topology is the buying criterion. Luma is now mostly a video/capture workflow rather than a direct generative-3D alternative.
 >
-> **Who pays which tier:** Free for casual testing, but it is now mostly an evaluation lane because Free has 100 monthly credits and Meshy 6 models cannot be downloaded on Free unless previously generated on a paid plan. Pro $20/mo is the first serious creator plan with 1,000 credits, API/plugins, private ownership, and 600+ animation presets. Studio $60/seat/mo is the small-team plan with shared credits. Enterprise is for custom credit balances, SAML SSO, and higher API throughput.
+> **Who pays which tier:** Free for casual testing, but it is now mostly an evaluation lane because Free has 100 monthly credits and Meshy 6 models cannot be downloaded on Free unless previously generated on a paid plan. Pro $20/mo is the first serious creator plan with 1,000 credits, API/plugins, private ownership, and 600+ animation presets. Premium $40/mo and Ultra $100/mo are now the cleaner upgrade path for solo users who need 3,000 or 10,000 credits before team features. Studio $60/seat/mo is the small-team plan, requires at least 2 seats, and includes 4,000 credits per seat. Enterprise is for custom credit balances, SAML SSO, and higher API throughput.
 
 ## Key Facts
 
@@ -144,9 +152,11 @@ Outputs export to GLB, FBX, OBJ, USDZ, STL, BLEND, and 3MF. Meshy's public prici
 | **Credits economy** | Meshy 6 model stage: 20 credits · texture stage/text-to-texture: 10 credits · Meshy 5 legacy model stage: 10 credits |
 | **Commercial rights** | Paid tiers: full private ownership. Free tier: CC BY 4.0 (attribution required) |
 | **Free tier** | 100 credits/mo · 1 queued task · 10 Meshy 5 downloads/mo · Meshy 6 generation but no Free-plan Meshy 6 downloads unless previously generated on paid |
+| **Individual paid tiers** | Pro $20/mo with 1,000 credits · Premium $40/mo with 3,000 credits · Ultra $100/mo with 10,000 credits |
+| **Team tier** | Studio $60/seat/mo, 2-seat minimum, 4,000 credits per seat |
 | **Platforms** | Web app · Roblox · Blender · Godot · Unity · Unreal · Maya · 3ds Max · API |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -181,11 +191,13 @@ Subscription pricing via [meshy.ai/pricing](https://www.meshy.ai/pricing). Month
 | Plan | Monthly | Credits/mo | Concurrent tasks | API | Commercial rights | Who's it for |
 |------|---------|------------|-------|-----|-------------------|--------------|
 | Free | $0 | 100 | 1 | No | CC BY 4.0 (attribution required) | Casual testing |
-| Pro | $20 | 1,000 | 10 | Yes | Private/customer-owned on paid plans | **Most solo creators land here** |
-| Studio | $60/seat | 4,000 | 20 | Yes | Private/customer-owned on paid plans | Small teams with shared credits |
+| Pro | $20 | 1,000 | 10 | Yes | Private/customer-owned on paid plans | **Most solo creators start here** |
+| Premium | $40 | 3,000 | 30 | Yes | Private/customer-owned on paid plans | Solo creators who outgrow Pro |
+| Ultra | $100 | 10,000 | 100 | Yes | Private/customer-owned on paid plans | High-volume solo workflows |
+| Studio | $60/seat, 2-seat minimum | 4,000 per seat | 20 | Yes | Private/customer-owned on paid plans | Small teams with shared credits |
 | Enterprise | Custom | Customizable | 50+ | Highest throughput | Private/customer-owned on paid plans | Studios with SAML SSO and volume needs |
 
-*Prices verified 2026-06-23 via [Meshy pricing](https://www.meshy.ai/pricing) and the [Meshy Help Center plan comparison](https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you-free-vs-pro-vs-studio).*
+*Prices verified 2026-06-25 via [Meshy pricing](https://www.meshy.ai/pricing) and the [Meshy Help Center plan comparison](https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you).*
 
 API and product usage are credit-metered. Meshy's June 2026 help docs say Meshy 6 uses 20 credits for the model stage and 10 credits for the texture stage/text-to-texture. They also say a full Text to 3D or Image to 3D generation is 20 credits total, while the API docs list some Meshy 6 image/multi-image paths at 20 credits without texture and 30 credits with texture. Treat Meshy 6 cost planning as volatile and test the exact workflow before committing to a plan.
 
@@ -206,7 +218,8 @@ API and product usage are credit-metered. Meshy's June 2026 help docs say Meshy 
 
 - **Triangulated meshes need retopology for production rigs.** Meshy output rigs cleanly for quick prototypes. AAA game and film pipelines will re-topologize by hand or in ZBrush.
 - **Hero-asset quality still trails Rodin.** Cinematic close-ups, high-frequency detail on skin or fabric, and complex mechanical assemblies favor Rodin Gen-2.
-- **Credit economy is volatile.** Meshy 6 credit math differs from old Meshy 5 assumptions, and the API docs and Help Center describe different branches for textured image/multi-image jobs. Pro's 1,000 monthly credits can disappear quickly if the real workflow involves retries, retextures, remesh, animation, or print-ready output.
+- **Credit economy is volatile.** Meshy 6 credit math differs from old Meshy 5 assumptions, and the API docs and Help Center describe different branches for textured image/multi-image jobs. Pro's 1,000 monthly credits can disappear quickly if the real workflow involves retries, retextures, remesh, animation, or print-ready output. Compare Premium and Ultra before assuming Studio is the next step.
+- **Studio is a team purchase now.** Meshy's Help Center says individual users cannot directly upgrade from Pro to Studio after June 16, 2026; Studio requires a team workspace and at least 2 seats.
 - **Free tier ships CC BY 4.0.** Attribution is mandatory. Free assets cannot be used in commercial work without visible credit. Paid tiers are the only path to private ownership.
 - **Meshy 6 is current, but Meshy 5 still exists as legacy.** Some help docs distinguish Meshy 6 Current from Meshy 5 Legacy Workspace. Buyers should check which model their workflow, plugin, or API route is actually using.
 - **Category dependency on AR / VR and game-dev demand.** The 3D generation market still hinges on AR / VR adoption curves, Apple Vision Pro uptake, and indie game-dev volume. A soft AR cycle compresses the addressable market.
@@ -215,7 +228,7 @@ API and product usage are credit-metered. Meshy's June 2026 help docs say Meshy 
 
 ## Methodology
 
-This page was rechecked by the aipedia.wiki editorial workflow on June 23, 2026 against [Meshy pricing](https://www.meshy.ai/pricing), the [Meshy Help Center plan comparison](https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you-free-vs-pro-vs-studio), the [Meshy credit usage article](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost), the [Meshy API pricing docs](https://docs.meshy.ai/en/api/pricing), the [Meshy 6 launch post](https://www.meshy.ai/blog/meshy-6-launch), and the [Meshy generated-model ownership article](https://help.meshy.ai/en/articles/10137554-what-is-the-ownership-of-the-generated-models). Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
+This page was rechecked by the aipedia.wiki editorial workflow on June 25, 2026 against [Meshy pricing](https://www.meshy.ai/pricing), the [Meshy Help Center plan comparison](https://help.meshy.ai/en/articles/12062933-which-meshy-plan-is-right-for-you), the [Meshy credit usage article](https://help.meshy.ai/en/articles/10000507-how-many-credits-does-each-generation-task-cost), the [Meshy API pricing docs](https://docs.meshy.ai/en/api/pricing), the [Meshy 6 launch post](https://www.meshy.ai/blog/meshy-6-launch), and the [Meshy generated-model ownership article](https://help.meshy.ai/en/articles/10137554-what-is-the-ownership-of-the-generated-models). Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
 ## FAQ
 
@@ -223,7 +236,7 @@ This page was rechecked by the aipedia.wiki editorial workflow on June 23, 2026 
 Yes, with constraints. The free tier includes 100 credits per month, 1 queued task, and 10 downloads per month for Meshy 5-generated models. Meshy says Meshy 6 models can be generated on Free but cannot be downloaded on Free unless previously generated on a paid plan. Free assets are licensed under CC BY 4.0. Paid plans start at $20/mo (Pro) and unlock private asset ownership.
 
 **What is the current Meshy model?**
-Meshy 6 is current as of June 23, 2026. Meshy's credit-usage help article labels Meshy 6 as current and Meshy 5 as the legacy workspace. The Meshy 6 launch post says the release focuses on cleaner geometry, sharper hard-surface details, Low Poly Mode, multi-color 3D printing, and upgraded APIs.
+Meshy 6 is current as of June 25, 2026. Meshy's credit-usage help article labels Meshy 6 as current and Meshy 5 as the legacy workspace. The Meshy 6 launch post says the release focuses on cleaner geometry, sharper hard-surface details, Low Poly Mode, multi-color 3D printing, and upgraded APIs.
 
 **Which file formats does Meshy export?**
 GLB, FBX, OBJ, USDZ, STL, BLEND, and 3MF. GLB and FBX cover most game-engine and DCC tool imports. USDZ covers Apple AR. STL covers 3D printing.
