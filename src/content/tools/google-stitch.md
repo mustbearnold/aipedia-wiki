@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "Free while in Google Labs; public quotas and paid-tier timing not guaranteed"
 status: active
 launched: 2025-05
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Google Stitch: Features, Pricing & Review (June 2026)"
 meta_description: "Google Stitch is Google Labs' AI-native UI design canvas for prompt, image, text, and code-based interface exploration. Free in Labs; Google has not published durable public quotas or paid-tier timing."
@@ -33,7 +33,7 @@ facts:
     source: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
     source_label: "Google Stitch announcement"
     source_id: google-stitch-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -42,16 +42,16 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Accessible through Google Labs as of 2026-06-23, but Google public pages do not publish durable quota, billing, SLA, or paid-tier timing terms for procurement."
+    value: "Accessible through Google Labs as of 2026-06-25, but Google public pages do not publish durable quota, billing, SLA, or paid-tier timing terms for procurement."
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -60,7 +60,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -69,7 +69,7 @@ facts:
     source: "https://labs.google/stitch/"
     source_label: "Google Labs Stitch"
     source_id: google-stitch-labs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -93,7 +93,7 @@ price_history:
     source: "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/"
     source_label: "Google Stitch announcement"
     source_id: google-stitch-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Google announced Stitch as a Google Labs experiment; public Google sources do not publish durable procurement terms."
   - date: 2026-04-17
     plan: "Labs"
@@ -101,7 +101,7 @@ price_history:
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Rechecked the public Google surface; do not treat third-party quota or paid-tier predictions as stable Google-published procurement terms."
   - date: 2026-06-05
     plan: "Labs"
@@ -109,7 +109,7 @@ price_history:
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Reconfirmed Labs access and the May 19 real-time design update from public Google surfaces. Google public pages do not publish stable quota, paid-tier timing, SLA, or billing terms."
   - date: 2026-06-23
     plan: "Labs"
@@ -117,8 +117,16 @@ price_history:
     source: "https://stitch.withgoogle.com/"
     source_label: "Google Stitch official site"
     source_id: google-stitch-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reconfirmed public Labs access and May 19 real-time design update. Google public pages still do not publish stable quota, paid-tier timing, SLA, or billing terms."
+  - date: 2026-06-25
+    plan: "Labs"
+    price: "Free"
+    source: "https://stitch.withgoogle.com/"
+    source_label: "Google Stitch official site"
+    source_id: google-stitch-pricing
+    verified_at: 2026-06-25
+    note: "Rechecked the public Labs surface. AiPedia still treats quota, paid-tier timing, SLA, and billing terms as unannounced until Google publishes durable commercial terms."
 ---
 
 # Google Stitch
@@ -151,7 +159,7 @@ It is free while inside Google Labs, but Google has not published stable public 
 | **Handoff** | DESIGN.md, MCP server, SDK, Skills, and exports to developer tools |
 | **Pricing caveat** | No durable public quota, SLA, billing, or paid-tier schedule published |
 
-Every data point above was verified against vendor sources on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -184,7 +192,7 @@ Export paths are part of the point, but they are still handoff surfaces, not pro
 | Google Labs (current) | Free | Public Google pages do not publish durable quota, SLA, billing, or paid-tier timing terms |
 | Paid tiers | Not announced | Wait for Google-published commercial terms before budget planning |
 
-*Verified 2026-06-23 via [Google Stitch](https://stitch.withgoogle.com/), the [March Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [May real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/). Third-party quota and paid-tier claims are intentionally not treated as Google-published procurement facts.*
+*Verified 2026-06-25 via [Google Stitch](https://stitch.withgoogle.com/), the [March Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [May real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/). Third-party quota and paid-tier claims are intentionally not treated as Google-published procurement facts.*
 
 ## Against the alternatives
 
@@ -211,13 +219,14 @@ Export paths are part of the point, but they are still handoff surfaces, not pro
 
 ## Recent changes
 
+- **2026-06-25:** Public Labs access still appears active, but Google still has not published durable public quota, SLA, billing, or paid-tier timing terms. AiPedia continues to exclude third-party quota and paid-tier predictions from buyer facts.
 - **2026-06-23:** Public Google surfaces still frame Stitch as a Labs product with the March AI-native design canvas and May 19 real-time Stitch Agent update. AiPedia continues to exclude third-party quota and paid-tier predictions from durable buyer facts until Google publishes commercial terms.
 - **2026-06-05:** Public Google surfaces reconfirmed Stitch as a Labs product with the March AI-native design canvas and May 19 real-time Stitch Agent update. Removed third-party quota and Q4 paid-tier predictions from AiPedia's durable buyer facts until Google publishes commercial terms.
 - **2026-04-17:** Competition tightened when [Anthropic launched Claude Design](/news/2026-04-17-anthropic-launches-claude-design/), a Pro+ prompt-to-prototype product that hands off to Claude Code for build. Stitch keeps an edge on Google's AI-native design-canvas direction; Claude Design pulls ahead when the brief is a slide deck, one-pager, or codebase-aware mockup.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [stitch.withgoogle.com](https://stitch.withgoogle.com/), the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [Google Labs real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis shown. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [stitch.withgoogle.com](https://stitch.withgoogle.com/), the [Google Labs announcement](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/), and the [Google Labs real-time design update](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/).
 
 ## FAQ
 

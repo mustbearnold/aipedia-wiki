@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 self-hosted / $50-$99/mo cloud"
 status: active
 launched: 2023-06
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -27,11 +27,11 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: Best for teams that want a local-first or self-hostable document-chat, RAG, agent, Agent Flow, MCP, Meeting Assistant, and multi-user workspace with broad model-provider choice.
+    value: Best for teams that want a local-first or self-hostable document-chat, RAG, agent, Agent Flow, MCP, Meeting Assistant, and multi-user workspace with broad model-provider choice. Hosted cloud is easier to buy, but current docs say MCP is unavailable there because of security limits around arbitrary code.
     source: https://anythingllm.com/
     source_label: AnythingLLM official site
     source_id: anythingllm-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,16 +41,16 @@ facts:
     source: https://anythingllm.com/pricing
     source_label: AnythingLLM hosted cloud pricing
     source_id: anythingllm-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   open_source_or_local:
-    value: The GitHub repository and desktop changelog are the key proof points for open-source/self-managed evaluation and release velocity.
+    value: The GitHub repository and desktop changelog are the key proof points for open-source/self-managed evaluation and release velocity. The live docs banner advertised v1.14.2 on June 25, while the public GitHub releases page still exposed v1.14.1 and v1.14.0 in its rendered listing.
     source: https://github.com/Mintplex-Labs/anything-llm
     source_label: AnythingLLM GitHub repository
     source_id: anythingllm-repository
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -59,16 +59,16 @@ facts:
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   watch_out_for:
-    value: AnythingLLM is attractive when data locality matters, but buyers must own model selection, retrieval quality, MCP/tool governance, permissions, backups, and security hardening if self-hosting.
+    value: AnythingLLM is attractive when data locality matters, but buyers must own model selection, retrieval quality, MCP/tool governance, permissions, backups, and security hardening if self-hosting. MCP-heavy teams should avoid assuming hosted cloud covers the same tool surface.
     source: https://docs.anythingllm.com/
     source_label: AnythingLLM docs
     source_id: anythingllm-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -86,16 +86,16 @@ not_best_for:
   - teams that don't want to manage infrastructure
   - users without Docker or self-hosting experience
 quick_answer: >-
-  AnythingLLM is an open-source MIT-licensed desktop, Docker, cloud, and mobile-connected app for private document chat, RAG, agents, Agent Flows, MCP tools, Meeting Assistant, and multi-user workspaces. Free self-hosted, or cloud tiers at $50/mo Basic and $99/mo Pro. Pick it for privacy-first or self-managed AI workspaces. Skip it for casual single-PDF chat where ChatPDF or NotebookLM is simpler.
+  AnythingLLM is an open-source MIT-licensed desktop, Docker, cloud, and mobile-connected app for private document chat, RAG, agents, Agent Flows, MCP tools, Meeting Assistant, and multi-user workspaces. Free self-hosted, or cloud tiers at $50/mo Basic and $99/mo Pro. Pick it for privacy-first or self-managed AI workspaces. Hosted cloud is convenient, but MCP requires Desktop or self-hosted because the cloud docs currently block MCP. Skip it for casual single-PDF chat where ChatPDF or NotebookLM is simpler.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Cloud Basic / Pro / Enterprise"
     price: "$50 / $99 per mo / Custom"
     source: "https://anythingllm.com/cloud"
     source_label: "AnythingLLM cloud pricing"
     source_id: anythingllm-pricing
-    verified_at: 2026-06-23
-    note: "Cloud pricing remains unchanged. GitHub releases still show v1.14.1 as the current desktop release, so the buyer story remains private RAG, agents, MCP, Agent Flows, mobile sync, and the v1.14.1 Meeting Assistant overhaul rather than a plan reshuffle."
+    verified_at: 2026-06-25
+    note: "Cloud pricing remains unchanged. Docs banner now says v1.14.2 is live, while the rendered GitHub releases list still exposes v1.14.1 and v1.14.0. Hosted cloud limitations page says MCP is unavailable on cloud; use Desktop or self-hosted for MCP tools."
   - date: 2026-05-13
     plan: "Cloud Basic / Pro"
     price: "$50 / $99 per mo"
@@ -136,7 +136,8 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 
 ## What Changed Since The Last Refresh
 
-- **Pricing is stable, but v1.14.1 moved the product forward.** Basic is still $50/month, Pro is still $99/month, and Enterprise is still custom. The important June change is the desktop app reaching v1.14.1, not a plan reshuffle.
+- **Pricing is stable, but the release surface moved again.** Basic is still $50/month, Pro is still $99/month, and Enterprise is still custom. The docs banner now says v1.14.2 is live, while the public GitHub releases page still renders v1.14.1 and v1.14.0 in its visible listing.
+- **Cloud MCP is not available.** AnythingLLM's hosted-cloud limitations page says MCP is blocked on cloud because of security concerns and the limits of running arbitrary code in hosted environments. Buyers who need MCP should use Desktop or self-hosted AnythingLLM.
 - **Meeting Assistant is materially stronger.** v1.14.1 overhauled Meeting Assistant to be smaller, faster, and more efficient. It adds Intel, AMD, and NVIDIA GPU support, a 92% smaller binary, 15% faster processing, transcription through the Developer API, better context-window overflow handling, basic speaker identification, and dual-channel stereo recording support.
 - **Agent and workflow surface expanded.** Current docs now center AI Agents, custom skills, MCP compatibility, Agent Flows, scheduled jobs, Model Router, Desktop Assistant, Browser Extension, Meeting Assistant, and channels. This is now more than “document chat plus agents.”
 - **v1.14.0 changed default agent behavior.** The changelog says model providers now call tools by default unless you opt out, which should improve agent performance but makes tool governance more important.
@@ -148,13 +149,13 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 |---|---|
 | **License** | MIT (fully open source) |
 | **Platforms** | Desktop (macOS, Windows, Linux), Docker, cloud |
-| **Current desktop version** | v1.14.1 |
+| **Current desktop version** | Docs banner says v1.14.2 is live; public GitHub releases listing still visibly shows v1.14.1 |
 | **Self-hosted cost** | $0 |
 | **Cloud tiers** | Basic $50/mo (under 5 users, under 100 docs), Pro $99/mo (72-hour support SLA), Enterprise custom (on-prem) |
 | **LLM support** | OpenAI, Anthropic, Google, Ollama (local), Groq, Together, and any OpenAI-compatible endpoint |
 | **Vector DB support** | LanceDB (default), Pinecone, Weaviate, Chroma, Qdrant, and more |
 | **Document formats** | PDF, DOCX, TXT, MD, HTML, CSV, JSON, many more |
-| **Agent capabilities** | Built-in skills, custom skills, MCP tools, Agent Flows, scheduled jobs, Model Router, browser extension, Desktop Assistant |
+| **Agent capabilities** | Built-in skills, custom skills, MCP tools, Agent Flows, scheduled jobs, Model Router, browser extension, Desktop Assistant. MCP is Desktop/self-hosted, not hosted cloud. |
 | **Meeting Assistant** | v1.14.1 overhaul with smaller binary, faster processing, Developer API transcription, speaker identification, and dual-channel stereo support |
 
 ## When to pick AnythingLLM
@@ -181,7 +182,7 @@ Built by Mintplex Labs (YC). An MIT-licensed open-source application that combin
 | Cloud Pro | $99/mo | Private instance, RAG and agents, 72-hour support SLA. Startups and larger teams. |
 | Enterprise | Custom | On-premise install, custom SLA, custom domain, custom integration. Large companies. |
 
-Prices verified 2026-06-23 via [anythingllm.com/cloud](https://anythingllm.com/cloud).
+Prices verified 2026-06-25 via [anythingllm.com/cloud](https://anythingllm.com/cloud) and AnythingLLM cloud docs.
 
 ## Failure modes
 
@@ -190,7 +191,7 @@ Prices verified 2026-06-23 via [anythingllm.com/cloud](https://anythingllm.com/c
 - **Default LLM is whatever you configure.** Quality depends entirely on the backing model. Pair with a strong hosted model from OpenAI, Anthropic Claude, Google Gemini, or a strong local model for good results.
 - **Community support model.** Fewer paid support options than enterprise SaaS competitors. Discord + GitHub issues for most users.
 - **Vector DB choice affects performance.** Default LanceDB is fine for small corpora. For 100k+ documents, switch to Pinecone or Qdrant.
-- **MCP and tool calling need guardrails.** v1.14.0 made tool calling opt-out for model providers. That helps agents, but admins should review which MCP servers, skills, and Agent Flows are enabled.
+- **MCP and tool calling need guardrails.** v1.14.0 made tool calling opt-out for model providers. That helps agents, but admins should review which MCP servers, skills, and Agent Flows are enabled. Hosted cloud currently does not support MCP, so MCP-heavy teams should budget for Desktop or self-hosted deployment.
 - **Meeting Assistant is not a full meeting-intelligence suite.** It is stronger after v1.14.1, but Fireflies, Read AI, and Fathom still win when the whole job is team-wide meeting analytics, CRM sync, coaching, and sales-call review.
 
 ## Against the alternatives
@@ -206,7 +207,7 @@ Prices verified 2026-06-23 via [anythingllm.com/cloud](https://anythingllm.com/c
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [anythingllm.com/cloud](https://anythingllm.com/cloud), the [AnythingLLM docs](https://docs.anythingllm.com/), [v1.14.1 release notes](https://docs.anythingllm.com/changelog/v1.14.1), [v1.14.0 release notes](https://docs.anythingllm.com/changelog/v1.14.0), [MCP compatibility docs](https://docs.anythingllm.com/mcp-compatibility/overview), and the [GitHub releases page](https://github.com/Mintplex-Labs/anything-llm/releases).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [anythingllm.com/cloud](https://anythingllm.com/cloud), the [AnythingLLM docs](https://docs.anythingllm.com/), [AnythingLLM cloud limitations](https://docs.anythingllm.com/cloud/limitations), [v1.14.1 release notes](https://docs.anythingllm.com/changelog/v1.14.1), [v1.14.0 release notes](https://docs.anythingllm.com/changelog/v1.14.0), [MCP compatibility docs](https://docs.anythingllm.com/mcp-compatibility/overview), and the [GitHub releases page](https://github.com/Mintplex-Labs/anything-llm/releases).
 
 ## FAQ
 

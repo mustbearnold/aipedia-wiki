@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$39-$59+/user/month"
 status: active
 launched: 2019-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://www.tabnine.com/code-privacy
     source_label: Tabnine code privacy
     source_id: tabnine-privacy
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -41,7 +41,7 @@ facts:
     source: https://www.tabnine.com/pricing
     source_label: Tabnine pricing
     source_id: tabnine-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://www.tabnine.com/
     source_label: Tabnine official site
     source_id: tabnine-official
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -61,7 +61,7 @@ facts:
     source: https://www.tabnine.com/code-privacy
     source_label: Tabnine code privacy
     source_id: tabnine-privacy
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.tabnine.com/pricing
     source_label: Tabnine pricing
     source_id: tabnine-pricing
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -81,7 +81,7 @@ facts:
     source: https://docs.tabnine.com/main/welcome/readme
     source_label: Tabnine docs
     source_id: tabnine-docs
-    verified_at: '2026-06-12'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -110,6 +110,14 @@ price_history:
     source_id: tabnine-pricing
     verified_at: 2026-06-12
     note: "June 1 recheck: Code Assistant Platform remains $39 per user per month on annual subscription, with IDE completions, chat, Jira integration, deployment flexibility, zero retention, SSO, compliance, and license-safe AI language."
+  - date: 2026-06-25
+    plan: "Code Assistant Platform / Agentic Platform"
+    price: "$39 / $59 per user per month, annual subscription"
+    source: "https://www.tabnine.com/pricing"
+    source_label: "Source"
+    source_id: tabnine-pricing
+    verified_at: 2026-06-25
+    note: "June 25 recheck: pricing page still lists Code Assistant Platform at $39/user/mo and Agentic Platform at $59/user/mo, both annual. Agentic adds autonomous agents, Tabnine CLI, Context Engine, MCP tooling, governance controls, and optional Headless Agents."
   - date: 2026-06-01
     plan: "Agentic Platform"
     price: "$59/user/mo annual"
@@ -175,11 +183,11 @@ Models route across Claude, GPT, Gemini, Mistral, Meta, plus Tabnine's Protected
 | **Pricing (June 2026)** | Code Assistant Platform $39/user/mo annual, Agentic Platform $59/user/mo annual |
 | **Agent tooling** | Tabnine CLI, Context Engine, MCP integration, Headless Agents add-on (Agentic Platform) |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## Recent changes
 
-- **2026-06-01:** Pricing still shows two annual paid tiers: Code Assistant Platform at $39/user/mo and Agentic Platform at $59/user/mo. The public page also repeats the 5% handling fee on Tabnine-provided LLM access.
+- **2026-06-25:** Pricing still shows two annual paid tiers: Code Assistant Platform at $39/user/mo and Agentic Platform at $59/user/mo. The public page also repeats the 5% handling fee on Tabnine-provided LLM access and makes Agentic governance controls, MCP access controls, pricing thresholds, and optional Headless Agents prominent in the plan comparison.
 - **2026-05-13:** Tabnine consolidated pricing into two tiers. Code Assistant Platform sits at $39/user/mo (the old Enterprise price) and now includes the full deployment matrix (SaaS, VPC, on-prem, air-gapped) plus SOC 2 / ISO 27001 / GDPR posture for every paid seat. Agentic Platform at $59/user/mo adds autonomous agents with optional oversight, Tabnine CLI for terminal-driven agent work, the Context Engine with unlimited codebase connections (GitHub, GitLab, Bitbucket, Perforce), MCP tool integration, and an optional Headless Agents add-on for CI/CD.
 - **2026-05-13:** The legacy Free tier and $12/user/mo Dev Pro tier are gone. Solo developers no longer have a self-serve entry point below $39.
 - **2026-05-13:** Jira Cloud and Data Center integration now ships on the base Code Assistant Platform rather than being agent-exclusive.
@@ -202,7 +210,7 @@ The moat is compliance depth. SOC 2, ISO 27001, GDPR, IP indemnification, air-ga
 
 ## When to pick something else
 
-- **Best-in-class completion quality:** [GitHub Copilot](/tools/github-copilot/) at $10/user/mo, stronger on raw accuracy and chat.
+- **Strongest mainstream completion quality:** [GitHub Copilot](/tools/github-copilot/) at $10/user/mo, stronger on raw accuracy and chat.
 - **AI-native IDE with agent edits across files:** [Cursor](/tools/cursor/) with frontier-model routing and a stronger full-editor workflow.
 - **Terminal coding agent for working developers:** [Claude](/tools/claude/) Code CLI.
 - **Free unlimited cloud completions:** Codeium.
@@ -217,7 +225,7 @@ Pricing via [tabnine.com/pricing](https://www.tabnine.com/pricing). Annual commi
 | Code Assistant Platform | $39/user/mo | Single- and multi-line completions, IDE chat across SDLC, Jira integration, zero retention, SSO, SOC 2 / ISO 27001 / GDPR, license-safe AI, SaaS + VPC + on-prem + air-gapped deploy | Regulated orgs and compliance-heavy teams |
 | Agentic Platform | $59/user/mo | Everything in Code Assistant plus autonomous agents with user oversight, Tabnine CLI for terminal agent workflows, Context Engine with unlimited codebase connections (GitHub, GitLab, Bitbucket, Perforce), MCP tool integration, optional Headless Agents for CI/CD | **Teams running agent-driven coding loops** |
 
-*Prices verified 2026-06-12 via [tabnine.com/pricing](https://www.tabnine.com/pricing). When using Tabnine-provided LLM access, billing is actual LLM provider price plus a 5% handling fee. Free and $12 Dev Pro tiers retired in the May 2026 reset.*
+*Prices verified 2026-06-25 via [tabnine.com/pricing](https://www.tabnine.com/pricing). When using Tabnine-provided LLM access, billing is actual LLM provider price plus a 5% handling fee. Free and $12 Dev Pro tiers retired in the May 2026 reset.*
 
 ## Against the alternatives
 
@@ -243,7 +251,7 @@ Pricing via [tabnine.com/pricing](https://www.tabnine.com/pricing). Annual commi
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [tabnine.com/pricing](https://www.tabnine.com/pricing), [Tabnine code privacy](https://www.tabnine.com/code-privacy/), and Tabnine documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against [tabnine.com/pricing](https://www.tabnine.com/pricing), [Tabnine code privacy](https://www.tabnine.com/code-privacy/), and Tabnine documentation.
 
 ## FAQ
 

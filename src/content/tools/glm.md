@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "Free Flash models / GLM-5.2 API $1.40/M input, $4.40/M output"
 status: active
 launched: 2022-08
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://huggingface.co/blog/zai-org/glm-52-blog
     source_label: Z.AI GLM-5.2 launch post
     source_id: glm-52-launch
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,16 +41,16 @@ facts:
     source: https://huggingface.co/zai-org/GLM-5.2
     source_label: GLM-5.2 on Hugging Face
     source_id: glm-huggingface
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   pricing_anchor:
-    value: Z.AI pricing lists GLM-5.2 and GLM-5.1 at $1.40/M input tokens and $4.40/M output tokens; GLM-5 at $1.00/M input and $3.20/M output; several Flash models remain free.
+    value: Z.AI pricing lists GLM-5.2 and GLM-5.1 at $1.40/M input tokens, $0.26/M cached input tokens, limited-time free cached-input storage, and $4.40/M output tokens; GLM-5 at $1.00/M input and $3.20/M output; several Flash models remain free.
     source: https://docs.z.ai/guides/overview/pricing
     source_label: Z.AI pricing
     source_id: glm-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -60,7 +60,7 @@ facts:
     source: https://docs.z.ai/guides/llm/glm-5.1
     source_label: Z.AI GLM docs
     source_id: glm-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -69,7 +69,7 @@ facts:
     source: https://huggingface.co/zai-org/GLM-5.2
     source_label: GLM-5.2 on Hugging Face
     source_id: glm-huggingface
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -79,7 +79,7 @@ facts:
     source: https://docs.z.ai/guides/llm/glm-5.1
     source_label: Z.AI GLM docs
     source_id: glm-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -125,11 +125,11 @@ Z.AI's June 2026 GLM-5.2 launch positions it as a substantial long-horizon upgra
 | **Max output** | Verify per hosted route and local-serving configuration |
 | **Coding angle** | Long-horizon coding-agent trajectories with flexible effort modes |
 | **SWE-bench Verified** | 77.8% (GLM-5) |
-| **API pricing** | GLM-5.2 and GLM-5.1 $1.40/M input and $4.40/M output · GLM-5 $1.00/M input and $3.20/M output |
+| **API pricing** | GLM-5.2 and GLM-5.1 $1.40/M input, $0.26/M cached input, and $4.40/M output · GLM-5 $1.00/M input and $3.20/M output |
 | **Free tier** | Flash models listed as free in the Z.AI pricing table |
 | **License** | MIT on GLM-5.2 weights |
 
-Every data point above was verified on 2026-06-23. See Sources.
+Every data point above was verified on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -161,15 +161,15 @@ Usage pricing via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Z.A
 
 | Plan / Model | Price | Notes |
 |---|---|---|
-| GLM-5.2 | $1.40/M input, $4.40/M output | Current flagship for long-horizon agentic engineering and 1M context |
-| GLM-5.1 | $1.40/M input, $4.40/M output | Prior flagship; still listed in the pricing table |
+| GLM-5.2 | $1.40/M input, $0.26/M cached input, $4.40/M output | Current flagship for long-horizon agentic engineering and 1M context; cached-input storage currently listed as limited-time free |
+| GLM-5.1 | $1.40/M input, $0.26/M cached input, $4.40/M output | Prior flagship; still listed in the pricing table with the same cached-input row |
 | GLM-5 | $1.00/M input, $3.20/M output | Previous flagship in the Z.AI price table |
 | GLM-5-Air | $0.10/M input, $1.00/M output | Lower-cost GLM-5 family endpoint |
 | GLM-5-Flash | Free | Lightweight/free endpoint in the current price table |
 | GLM-4.7-Flash | Free | Legacy free Flash endpoint |
 | GLM-4.5-Flash | Free | Legacy free Flash endpoint |
 
-*Prices verified 2026-06-23 via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Self-hosting GLM-5.2 weights can avoid hosted API usage fees, but it shifts cost to GPUs, serving infrastructure, monitoring, and security review.*
+*Prices verified 2026-06-25 via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Self-hosting GLM-5.2 weights can avoid hosted API usage fees, but it shifts cost to GPUs, serving infrastructure, monitoring, and security review.*
 
 ## Against the alternatives
 
@@ -193,7 +193,7 @@ Usage pricing via [Z.AI pricing](https://docs.z.ai/guides/overview/pricing). Z.A
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-23 against [Z.AI GLM-5.2 launch materials](https://huggingface.co/blog/zai-org/glm-52-blog), [Z.AI pricing](https://docs.z.ai/guides/overview/pricing), and [GLM-5.2 on Hugging Face](https://huggingface.co/zai-org/GLM-5.2).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against [Z.AI GLM-5.2 launch materials](https://huggingface.co/blog/zai-org/glm-52-blog), [Z.AI pricing](https://docs.z.ai/guides/overview/pricing), and [GLM-5.2 on Hugging Face](https://huggingface.co/zai-org/GLM-5.2).
 
 ## FAQ
 

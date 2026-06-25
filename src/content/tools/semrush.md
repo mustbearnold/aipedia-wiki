@@ -5,7 +5,7 @@ title: Semrush
 tagline: >-
   The broadest SEO and digital marketing suite, now an Adobe company after the April 28, 2026 acquisition close.
   Covers keyword research, backlinks, site audit, PPC, social, AI visibility, AI PR Toolkit,
-  Copilot, and ContentShake AI across 55+ tools. Classic SEO Toolkit pricing held flat in the June 20, 2026 recheck.
+  Copilot, and ContentShake AI across 55+ tools. Classic SEO Toolkit pricing held flat in the June 25, 2026 recheck.
 category: ai-seo
 company: semrush
 url: https://www.semrush.com
@@ -13,8 +13,8 @@ pricing_model: paid
 price_range: "$139.95-$499.95/month"
 status: active
 launched: 2008-01
-last_updated: 2026-06-20
-last_verified: 2026-06-20
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -36,7 +36,7 @@ facts:
     source: "https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition"
     source_label: "Adobe completes Semrush acquisition"
     source_id: adobe-semrush-close
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   best_for:
@@ -44,15 +44,15 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Semrush SEO Toolkit pricing is subscription plus add-ons. The June 20, 2026 source check found Pro at $139.95/month, Guru at $249.95/month, and Business at $499.95/month before annual discounts, extra users, and separate toolkits."
+    value: "Semrush SEO Toolkit pricing is subscription plus add-ons. The June 25, 2026 source check found Pro at $139.95/month, Guru at $249.95/month, and Business at $499.95/month before annual discounts, extra users, and separate toolkits."
     source: "https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits"
     source_label: "Semrush SEO Toolkit pricing and limits"
     source_id: semrush-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     next_review_at: 2026-08-20
     volatility: high
     confidence: high
@@ -61,7 +61,7 @@ facts:
     source: "https://www.semrush.com/features/"
     source_label: "Semrush features"
     source_id: semrush-features
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   competitive_position:
@@ -69,7 +69,7 @@ facts:
     source: "https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition"
     source_label: "Adobe completes Semrush acquisition"
     source_id: adobe-semrush-close
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   watch_out_for:
@@ -77,7 +77,7 @@ facts:
     source: "https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits"
     source_label: "Semrush SEO Toolkit pricing and limits"
     source_id: semrush-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [seo, keyword-research, backlinks, site-audit, competitor-analysis, ppc, ai-visibility, semrush-copilot, contentshake, ai-visibility-toolkit, ai-pr-toolkit, adobe, geo]
@@ -103,7 +103,7 @@ price_history:
     source: "https://www.semrush.com/kb/1626-ai-visibility-features"
     source_label: "Semrush AI visibility features"
     source_id: semrush-ai-visibility-features
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     note: "Semrush docs list AI Visibility starting at $99/month."
   - date: 2026-04-15
     plan: "Pro"
@@ -111,7 +111,7 @@ price_history:
     source: "https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits"
     source_label: "Semrush SEO Toolkit pricing and limits"
     source_id: semrush-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     note: "Verified unchanged in June 2026 source check."
   - date: 2026-05-13
     plan: "Pro"
@@ -119,15 +119,15 @@ price_history:
     source: "https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits"
     source_label: "Semrush SEO Toolkit pricing and limits"
     source_id: semrush-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     note: "Historic May 2026 price checkpoint; June 2026 refresh treats Semrush One, AI Visibility Toolkit, and toolkit packaging as buyer-specific checkout items."
-  - date: 2026-06-20
+  - date: 2026-06-25
     plan: "Pro / Guru / Business"
     price: "$139.95 / $249.95 / $499.95 per month"
     source: "https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits"
     source_label: "Semrush SEO Toolkit pricing and limits"
     source_id: semrush-pricing
-    verified_at: 2026-06-20
+    verified_at: 2026-06-25
     note: "Rechecked against Semrush SEO Toolkit pricing and limits. Adobe closed the Semrush acquisition April 28, 2026; AI PR Toolkit and Traffic Insights are the notable new current surfaces."
 ---
 
@@ -139,7 +139,7 @@ Semrush Copilot, AI Visibility Toolkit, Semrush One, ContentShake AI, and **AI P
 
 ## Recent changes
 
-- **June 20, 2026:** Rechecked classic SEO Toolkit pricing against [Semrush SEO Toolkit pricing and limits](https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits). Pro is listed at $139.95/month, Guru at $249.95/month, and Business at $499.95/month. The live pricing navigation also lists AI PR Toolkit beside the established SEO, AI Visibility, Traffic & Market, Content, Local, Social, and Advertising toolkits.
+- **June 25, 2026:** Rechecked classic SEO Toolkit pricing against [Semrush SEO Toolkit pricing and limits](https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits). Pro is listed at $139.95/month, Guru at $249.95/month, and Business at $499.95/month. The live pricing navigation also lists AI PR Toolkit beside the established SEO, AI Visibility, Traffic & Market, Content, Local, Social, and Advertising toolkits.
 - **June 11, 2026:** Semrush launched **Traffic Insights** inside Traffic Analytics. The AI-powered feature explains the drivers behind competitor traffic spikes and drops, covering organic, paid, social, and AI traffic. Semrush announced it as "Semrush, an Adobe company."
 - **April 28, 2026:** [Adobe completed the Semrush acquisition](https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition), positioning Semrush as part of Adobe's CX Enterprise brand-visibility stack. Buyer implication: expect deeper Adobe Experience Cloud distribution and enterprise cross-sell, with Semrush product branding still in market.
 - **New surface:** The **AI PR Toolkit** targets media-LLM visibility. Its public page says it helps teams identify the media LLMs cite, pitch with AI, and sync media and AI visibility data.
@@ -168,7 +168,7 @@ Semrush Copilot, AI Visibility Toolkit, Semrush One, ContentShake AI, and **AI P
 | **Tool count** | 55+ across SEO, PPC, social, content, competitive intelligence, and reporting |
 | **Pricing** | Pro $139.95, Guru $249.95, Business $499.95, Enterprise custom |
 
-Every data point above was verified against vendor or Adobe sources on 2026-06-20. See Sources.
+Every data point above was verified against vendor or Adobe sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -197,7 +197,7 @@ The moat is surface area plus Adobe's enterprise channel. Ahrefs beats it for ma
 
 ## Pricing
 
-Classic SEO Toolkit pricing was verified from [Semrush SEO Toolkit pricing and limits](https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits) on 2026-06-20.
+Classic SEO Toolkit pricing was verified from [Semrush SEO Toolkit pricing and limits](https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits) on 2026-06-25.
 
 | Plan | Monthly | Projects/websites monitored | Keywords tracked | Pages crawled per month | Who's it for |
 |------|---------|-----------------------------|------------------|-------------------------|--------------|
@@ -244,7 +244,7 @@ Classic tiers are source-backed here. Semrush One, AI Visibility, AI PR, Content
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). The Moat score was raised to 10 to reflect Adobe's enterprise distribution behind the platform following the April 28, 2026 acquisition. Last verified 2026-06-20 against Semrush SEO Toolkit pricing and limits, Adobe's acquisition-close announcement, Semrush's Traffic Insights launch, the AI PR Toolkit page, Semrush subscription and toolkit docs, Semrush AI visibility docs, and Semrush's final full-year 2025 financial-results release.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). The Moat score was raised to 10 to reflect Adobe's enterprise distribution behind the platform following the April 28, 2026 acquisition. Last verified 2026-06-25 against Semrush SEO Toolkit pricing and limits, Adobe's acquisition-close announcement, Semrush's Traffic Insights launch, the AI PR Toolkit page, Semrush subscription and toolkit docs, Semrush AI visibility docs, and Semrush's final full-year 2025 financial-results release.
 
 ## FAQ
 
@@ -271,13 +271,13 @@ If content workflows drive the use case, Guru or a dedicated content-toolkit che
 
 ## Sources
 
-- [Semrush SEO Toolkit pricing and limits](https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits): Current Pro, Guru, and Business prices, limits, Share of Voice, and API access (verified 2026-06-20)
-- [Adobe completes Semrush acquisition](https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition): April 28, 2026 close and Adobe CX Enterprise positioning (verified 2026-06-20)
-- [Semrush Traffic Insights launch](https://www.semrush.com/news/461510-semrushs-new-traffic-insights-explains-changes-in-competitor-traffic-performance/): June 11, 2026 AI-powered competitor traffic analysis (verified 2026-06-20)
-- [AI PR Toolkit](https://www.semrush.com/pr-toolkit/): Media-LLM citation tracking and AI pitching (verified 2026-06-20)
-- [Semrush AI visibility features](https://www.semrush.com/kb/1626-ai-visibility-features): Semrush One, AI Visibility Toolkit, AI search and prompt-tracking features (verified 2026-06-20)
-- [Semrush full-year 2025 financial results](https://www.semrush.com/news/448771-semrush-announces-fourth-quarter-and-full-year-2025-financial-results/): $443.6M FY2025 revenue and $471.4M ARR (verified 2026-06-20)
-- [Semrush official site](https://www.semrush.com): Product feature documentation (verified 2026-06-20)
+- [Semrush SEO Toolkit pricing and limits](https://www.semrush.com/kb/1547-seo-toolkit-pricing-limits): Current Pro, Guru, and Business prices, limits, Share of Voice, and API access (verified 2026-06-25)
+- [Adobe completes Semrush acquisition](https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition): April 28, 2026 close and Adobe CX Enterprise positioning (verified 2026-06-25)
+- [Semrush Traffic Insights launch](https://www.semrush.com/news/461510-semrushs-new-traffic-insights-explains-changes-in-competitor-traffic-performance/): June 11, 2026 AI-powered competitor traffic analysis (verified 2026-06-25)
+- [AI PR Toolkit](https://www.semrush.com/pr-toolkit/): Media-LLM citation tracking and AI pitching (verified 2026-06-25)
+- [Semrush AI visibility features](https://www.semrush.com/kb/1626-ai-visibility-features): Semrush One, AI Visibility Toolkit, AI search and prompt-tracking features (verified 2026-06-25)
+- [Semrush full-year 2025 financial results](https://www.semrush.com/news/448771-semrush-announces-fourth-quarter-and-full-year-2025-financial-results/): $443.6M FY2025 revenue and $471.4M ARR (verified 2026-06-25)
+- [Semrush official site](https://www.semrush.com): Product feature documentation (verified 2026-06-25)
 
 ## Related
 

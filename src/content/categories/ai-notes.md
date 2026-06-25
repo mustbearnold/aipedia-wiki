@@ -74,7 +74,7 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 
 **Use Otter.ai if:** live transcription, speaker identification, collaborative transcripts, searchable meeting archives, Otter MCP, and education/interview workflows matter most.
 
-**Use Read AI if:** the meeting note should become a report, coaching artifact, searchable workplace record, or productivity signal.
+**Use Read AI if:** the meeting note should become a report, coaching artifact, searchable workplace record, or productivity signal, and the buyer can model file upload credits instead of old upload-minute shorthand.
 
 **Use Granola if:** the user wants bot-free meeting capture, private note editing, limited Basic-history tradeoffs, and upgrade paths into Business or Enterprise.
 
@@ -114,19 +114,19 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-23)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-25)
 - [Fathom product updates](https://help.fathom.video/en/articles/6220097) (verified 2026-06-23)
 - [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017) (verified 2026-06-23)
-- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-23)
+- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-25)
 - [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-23)
 - [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-23)
 - [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-25)
-- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-05-24)
-- [Read AI product overview](https://www.read.ai/) (verified 2026-05-24)
+- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-06-25)
+- [Read AI product overview](https://www.read.ai/) (verified 2026-06-25)
 - [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-05-26)
 - [MeetGeek AI for Customer Success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-05-26)
 - [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-05-26)
-- [Granola pricing](https://www.granola.ai/pricing) (verified 2026-06-23)
+- [Granola pricing](https://www.granola.ai/pricing) (verified 2026-06-25)
 - [Granola security](https://www.granola.ai/security) (verified 2026-06-23)
 - [Tactiq pricing](https://tactiq.io/buy) (verified 2026-06-23)
 - [Tactiq MCP](https://tactiq.io/mcp) (verified 2026-06-23)
@@ -156,8 +156,8 @@ The June 6 [summarization guide](/guides/best-ai-for-summarization/) refresh kee
 - [Logseq docs](https://docs.logseq.com/) (verified 2026-06-23)
 - [Logseq DB May 2026 update](https://discuss.logseq.com/t/whats-new-with-logseq-db-may-16th-2026/35020) (verified 2026-06-23)
 - [Logseq downloads](https://logseq.com/downloads) (verified 2026-06-23)
-- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-23)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-23)
+- [Readwise pricing](https://readwise.io/pricing) (verified 2026-06-25)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-25)
 - [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-23)
 - [Hex pricing](https://hex.tech/pricing/) (verified 2026-06-23)
 - [Hex AI docs](https://learn.hex.tech/docs/getting-started/ai-overview) (verified 2026-06-23)

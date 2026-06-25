@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free; Pro $19.75/user/mo monthly; Enterprise $29.75/user/mo monthly; Enterprise+ $39.75/user/mo monthly
 status: active
 launched: 2021
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.read.ai/plans-pricing"
     source_label: "Read AI plans and pricing"
     source_id: read-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.read.ai/plans-pricing"
     source_label: "Read AI plans and pricing"
     source_id: read-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://www.read.ai/plans-pricing"
     source_label: "Read AI plans and pricing"
     source_id: read-ai-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -74,7 +74,16 @@ price_history:
     source: "https://www.read.ai/plans-pricing"
     source_label: "Read AI plans and pricing"
     source_id: read-ai-official
+    verified_at: 2026-06-25
     note: "Current entry paid plan rechecked. Enterprise is $29.75 monthly or $22.50 annually; Enterprise+ is $39.75 monthly or $29.75 annually and requires 5+ licenses on the public pricing page."
+  - date: 2026-06-25
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://www.read.ai/plans-pricing"
+    source_label: "Read AI plans and pricing"
+    source_id: read-ai-official
+    verified_at: 2026-06-25
+    note: "Official pricing and support pages rechecked: Free remains limited to 5 meetings/month, Pro is $19.75 monthly or $15 annually, Enterprise is $29.75 monthly or $22.50 annually, and Enterprise+ is $39.75 monthly or $29.75 annually with advanced security and retention controls."
 ---
 
 # Read AI
@@ -124,7 +133,7 @@ It competes with [Fathom](/tools/fathom/), [Fireflies](/tools/fireflies/), [Otte
 
 Read AI has a free plan with 5 meeting transcripts per month, unlimited enterprise search, meeting/email/messaging summaries, coaching, basic integrations, topic readouts, 20+ languages, and desktop/mobile apps.
 
-As verified on 2026-06-12, Pro is $19.75 per user per month on monthly billing and $15 per user per month annually. It adds unlimited meeting transcripts, priority report processing, premium integrations, workspace access, unlimited meeting reports, unlimited storage, and 100 upload minutes per month. Enterprise is $29.75 monthly or $22.50 annually, adding audio/video playback, video highlights, premium support, and 200 upload minutes. Enterprise+ requires 5+ licenses and is $39.75 monthly or $29.75 annually, adding HIPAA compliance, SSO/SAML, domain capture, custom retention, workspace onboarding, and 300 upload minutes.
+As verified on 2026-06-25, Pro is $19.75 per user per month on monthly billing and $15 per user per month annually. It adds unlimited meeting transcripts, priority report processing, premium integrations, workspace access, unlimited meeting reports, unlimited storage, and 100 file upload credits per month. Enterprise is $29.75 monthly or $22.50 annually, adding audio/video playback, video highlights, premium support, and 200 file upload credits. Enterprise+ is $39.75 monthly or $29.75 annually, adding HIPAA compliance, SSO/SAML, domain capture, custom retention, workspace onboarding, and 300 file upload credits.
 
 Teams should compare against Fathom if unlimited free transcription is the deciding feature.
 
@@ -154,7 +163,7 @@ It is weaker when a team only wants a simple meeting recorder. The more Read AI 
 
 ## Methodology
 
-Last verified 2026-06-12 against Read AI pricing and product pages. Scoring emphasizes meeting utility, search breadth, integration depth, governance risk, and free-plan limits.
+Last verified 2026-06-25 against Read AI pricing and product pages. Scoring emphasizes meeting utility, search breadth, integration depth, governance risk, and free-plan limits.
 
 ## FAQ
 

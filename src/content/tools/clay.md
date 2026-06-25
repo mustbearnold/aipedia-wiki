@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0; Launch from $167/mo annual or $185/mo monthly; Growth from $446/mo annual or $495/mo monthly; Enterprise custom"
 status: active
 launched: 2021-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,16 +30,16 @@ facts:
     source: "https://www.clay.com"
     source_label: "Clay overview"
     source_id: clay-home
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: 2026-09-18
   pricing_anchor:
-    value: "Clay's June 23 pricing check keeps Free at $0, Launch from $167/mo annual or $185/mo monthly, Growth from $446/mo annual or $495/mo monthly, and Enterprise custom. The buyer math still requires separate modeling of Actions, Data Credits, AI token-priced models, BYO API keys, and top-ups."
+    value: "Clay's June 25 pricing check keeps Free at $0, Launch from $185/mo monthly, Growth from $495/mo monthly, and Enterprise custom. The buyer math still requires separate modeling of Actions, Data Credits, AI token-priced models, BYO API keys, annual billing discounts, and top-ups."
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-18
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://www.clay.com"
     source_label: "Clay overview"
     source_id: clay-home
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-09-18
@@ -57,7 +57,7 @@ facts:
     source: "https://www.clay.com/claygent"
     source_label: "Claygent"
     source_id: clay-claygent
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-18
     volatility: high
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://www.clay.com/mcp"
     source_label: "Clay MCP"
     source_id: clay-mcp
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-18
     volatility: high
     confidence: high
@@ -75,7 +75,7 @@ facts:
     source: "https://university.clay.com/"
     source_label: "Clay University"
     source_id: clay-university
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: 2026-09-18
@@ -84,13 +84,13 @@ facts:
     source: "https://www.clay.com/pricing"
     source_label: "Clay Pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: 2026-08-18
 tags: [data-enrichment, sales-automation, lead-generation, gtm-automation, outreach]
 seo_title: "Clay Review (June 2026): GTM Enrichment, Actions, Claygent, MCP"
-meta_description: "Clay review updated June 23, 2026: pricing, Actions, Data Credits, Claygent, Sculptor, MCP for ChatGPT/Codex/Claude, Sequencer, Ads, CRM enrichment, and GTM workflow risks."
+meta_description: "Clay review updated June 25, 2026: pricing, Actions, Data Credits, Claygent, Sculptor, MCP for ChatGPT/Codex/Claude, Sequencer, Ads, CRM enrichment, and GTM workflow risks."
 author: "aipedia.wiki Editorial"
 best_for:
   - GTM engineers and sales operations teams
@@ -106,13 +106,13 @@ not_best_for:
 quick_answer: >-
   Clay is now best understood as a GTM data and workflow operating layer, not only a lead-enrichment spreadsheet. Pick it when your edge is better account data, 150+ data partners, enrichment waterfalls, Claygent research, Sculptor workflow setup, MCP access from ChatGPT/Codex/Claude, native Sequencer, Ads audiences, and custom outbound logic. Skip it if you want a simpler all-in-one database plus sender like Apollo, or a sender-first cold-email tool like Instantly. The key June 2026 buying risk is not only plan price, but Actions, Data Credits, variable AI token usage, BYO API key tradeoffs, top-ups, and workflow governance.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Launch / Growth / Enterprise recheck"
     price: "$167/$446 annual-card starts; $185/$495 monthly starts; Enterprise custom"
     source: "https://www.clay.com/pricing"
     source_label: "Clay pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Rechecked pricing and GTM workflow surfaces. No material change found; buyers still need to model Actions, Data Credits, AI token-priced models, BYO keys, and top-ups."
   - date: 2026-05-13
     plan: "Free"
@@ -120,7 +120,7 @@ price_history:
     source: "https://www.clay.com/pricing"
     source_label: "Clay pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "500 actions, 100 data credits, unlimited seats, Claygent, multi-provider waterfalls, up to 200 rows per table."
   - date: 2026-06-02
     plan: "Launch / Growth monthly caveat"
@@ -128,7 +128,7 @@ price_history:
     source: "https://www.clay.com/pricing"
     source_label: "Clay pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Official page shows annual plan-card starts and FAQ monthly starts. Use billing toggle/account flow before quoting total cost."
   - date: 2026-06-18
     plan: "Launch"
@@ -136,7 +136,7 @@ price_history:
     source: "https://www.clay.com/pricing"
     source_label: "Clay pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Annual card shows 15K actions/mo, 180K actions/year, and 30K data credits/year. Pricing FAQ says monthly Launch starts at $185/mo with 2,500 Data Credits and 15,000 Actions/mo. Monthly selector text also exposes 3K data credits/mo, so buyers should inspect their live billing toggle."
   - date: 2026-06-18
     plan: "Growth"
@@ -144,7 +144,7 @@ price_history:
     source: "https://www.clay.com/pricing"
     source_label: "Clay pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Annual card shows 40K actions/mo and 72K data credits/year. FAQ says monthly Growth starts at $495/mo with 6,000 Data Credits and 40,000 Actions/mo."
   - date: 2026-06-18
     plan: "Enterprise"
@@ -152,7 +152,7 @@ price_history:
     source: "https://www.clay.com/pricing"
     source_label: "Clay pricing"
     source_id: clay-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Enterprise includes 100K+ Data Credits and 200K+ Actions/mo, Clay API access, data warehouse syncs, SSO, RBAC, additional ads audiences, bulk enrichment, and dedicated GTM support."
 ---
 
@@ -160,7 +160,7 @@ price_history:
 
 Clay is a GTM data and workflow platform. Teams use it to access 150+ data partners, waterfall enrichment providers, enrich CRM and account records, run AI account research with Claygent, build workflows with Sculptor, package reusable Functions, expose approved workflows through MCP, and push the results into CRMs, senders, ad audiences, data warehouses, and reps' day-to-day tools.
 
-As of June 23, 2026, Clay is AiPedia's best sales-tool pick when the bottleneck is **data quality, account signal logic, and GTM workflow design**, not merely sending more email. It is more powerful than a simple prospecting database, but it also demands more RevOps discipline.
+As of June 25, 2026, Clay is AiPedia's best sales-tool pick when the bottleneck is **data quality, account signal logic, and GTM workflow design**, not merely sending more email. It is more powerful than a simple prospecting database, but it also demands more RevOps discipline.
 
 ## System Verdict
 
@@ -198,13 +198,13 @@ Skip Clay if you need the easiest all-in-one sales platform. [Apollo](/tools/apo
 
 ## Pricing And Access
 
-Clay's public pricing on 2026-06-23:
+Clay's public pricing on 2026-06-25:
 
 | Plan | Starting price | Actions | Data Credits | Notes |
 |---|---|---|---|---|
 | Free | $0 | 500 actions/mo | 100 Data Credits/mo | Unlimited seats and tables, multi-provider waterfalls, Claygent enrichment, Clay Sequencer, up to 200 rows per table |
-| Launch | $167/mo annual card; $185/mo monthly FAQ start | 15,000 actions/mo | Annual card shows 30K/year; FAQ says 2,500/mo; monthly selector text shows 3K/mo | Phone enrichment, job-change and signal tracking, email campaign integrations, up to 50K rows per table |
-| Growth | $446/mo annual card; $495/mo monthly FAQ start | 40,000 actions/mo | 72K/year or 6K/mo | CRM auto-sync and enrichment, HTTP API, webhook automation, web intent signals, ads audience push, priority support |
+| Launch | Starts at $185/mo monthly, with annual discounts shown in checkout | 15,000 actions/mo | 2,500 Data Credits/mo in public pricing copy | Phone enrichment, job-change and signal tracking, email campaign integrations, up to 50K rows per table |
+| Growth | Starts at $495/mo monthly, with annual discounts shown in checkout | 40,000 actions/mo | 6,000 Data Credits/mo in public pricing copy | CRM auto-sync and enrichment, HTTP API, webhook automation, web intent signals, ads audience push, priority support |
 | Enterprise | Custom annual commitment | 200,000+ actions/mo | 100,000+ Data Credits/mo | Unlimited Audiences, unlimited row bulk enrichment, Clay API access, data warehouse syncs, SSO, RBAC, more ads audiences, dedicated Growth Strategist |
 
 Do not compare only the plan card. Buyers should model:
@@ -276,15 +276,15 @@ Clay pricing, AI model costs, MCP behavior, and GTM packaging are volatile, so A
 
 ## Sources
 
-- [Clay official site](https://www.clay.com/) (verified 2026-06-23)
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-23)
-- [Claygent](https://www.clay.com/claygent) (verified 2026-06-23)
-- [Sculptor](https://www.clay.com/sculptor) (verified 2026-06-23)
-- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-23)
-- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-23)
-- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-23)
-- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-23)
-- [Clay University](https://university.clay.com/) (verified 2026-06-23)
+- [Clay official site](https://www.clay.com/) (verified 2026-06-25)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-25)
+- [Claygent](https://www.clay.com/claygent) (verified 2026-06-25)
+- [Sculptor](https://www.clay.com/sculptor) (verified 2026-06-25)
+- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-25)
+- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-25)
+- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-25)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-25)
+- [Clay University](https://university.clay.com/) (verified 2026-06-25)
 
 ## Related
 

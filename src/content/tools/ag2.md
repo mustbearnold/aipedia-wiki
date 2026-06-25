@@ -13,8 +13,8 @@ status: active
 launched: 2024-10
 current_version: "0.13.4"
 current_version_date: 2026-06-12
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -33,7 +33,7 @@ facts:
     source: https://www.ag2.ai/
     source_label: AG2 official site
     source_id: ag2-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -42,16 +42,16 @@ facts:
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
   open_source_or_local:
-    value: AG2 is available as an open-source repository and can be installed for local or self-managed agent development. Latest release verified from the GitHub API on June 23, 2026 is v0.13.4 (published 2026-06-12).
+    value: AG2 is available as an open-source repository and can be installed for local or self-managed agent development. Latest rendered release check on June 25, 2026 still found v0.13.4 (published 2026-06-12).
     source: https://github.com/ag2ai/ag2/releases
     source_label: AG2 releases
     source_id: ag2-releases
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -60,7 +60,7 @@ facts:
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -69,7 +69,7 @@ facts:
     source: https://docs.ag2.ai/
     source_label: AG2 docs
     source_id: ag2-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -78,7 +78,7 @@ facts:
     source: https://github.com/ag2ai/ag2
     source_label: AG2 GitHub repository
     source_id: ag2-repository
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-08-13'
@@ -159,7 +159,7 @@ AG2 is free and open source. No commercial tier. You pay only for:
 - **Security hardening** (sandboxing, secrets handling, permissions, and review)
 - **Engineering time** (agent design, testing, deployment, and maintenance)
 
-Verified 2026-06-23 via [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [AG2 releases page](https://github.com/ag2ai/ag2/releases).
+Verified 2026-06-25 via [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), and the [AG2 releases page](https://github.com/ag2ai/ag2/releases).
 
 ## Buyer fit
 
@@ -215,7 +215,7 @@ AG2's openness is the advantage, but it also means production discipline is the 
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), the [AG2 releases page](https://github.com/ag2ai/ag2/releases) (v0.13.4 on 2026-06-12), the [AG2 docs](https://docs.ag2.ai/), and [Build with AG2](https://github.com/ag2ai/build-with-ag2).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [ag2.ai](https://www.ag2.ai/), [AG2 GitHub](https://github.com/ag2ai/ag2), the [AG2 releases page](https://github.com/ag2ai/ag2/releases) (v0.13.4 on 2026-06-12), the [AG2 docs](https://docs.ag2.ai/), and [Build with AG2](https://github.com/ag2ai/build-with-ag2).
 
 ## FAQ
 

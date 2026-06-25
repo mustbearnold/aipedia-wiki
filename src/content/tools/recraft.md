@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$48/month"
 status: active
 launched: 2022-12
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
-seo_title: "Recraft: Features, Pricing & Review (2026)"
-meta_description: "Recraft V4 is the vector-native AI image generator for design assets, readable text, SVG-style output, and brand-consistent graphics. Free tier with daily credits; paid plans start at $10/month."
+seo_title: "Recraft: Features, Pricing & Review (June 2026)"
+meta_description: "Recraft V4.1 is the vector-native AI image generator for design assets, readable text, SVG-style output, and brand-consistent graphics. Free tier with daily credits; paid plans start at $10/month."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -30,11 +30,11 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Vector-native AI image generator with brand-style consistency, readable text-in-image output, and Recraft V4 raster/vector models for design-grade assets. Best for image generation, editing, and visual-production workflows."
+    value: "Vector-native AI image generator with brand-style consistency, readable text-in-image output, and Recraft V4.1 raster/vector models for design-grade assets. Best for image generation, editing, and visual-production workflows."
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -76,6 +76,7 @@ price_history:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
+    verified_at: 2026-06-25
     note: "Verified on recraft.ai/pricing"
   - date: 2026-04-18
     plan: "API raster"
@@ -83,6 +84,7 @@ price_history:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
+    verified_at: 2026-06-25
     note: "$0.08 per vector image"
   - date: 2026-05-24
     plan: "Basic"
@@ -90,12 +92,21 @@ price_history:
     source: "https://www.recraft.ai/pricing"
     source_label: "Source"
     source_id: recraft-pricing
+    verified_at: 2026-06-25
     note: "Pricing and rights rechecked. Recraft FAQ still says subscription credits do not roll over, free outputs are public/owned by Recraft, and paid plans grant full ownership/commercial rights."
+  - date: 2026-06-25
+    plan: "API models"
+    price: "$0.035-$0.30/image"
+    source: "https://www.recraft.ai/pricing?tab=api"
+    source_label: "Source"
+    source_id: recraft-pricing
+    verified_at: 2026-06-25
+    note: "Official API pricing rechecked. V4.1 raster is listed at $0.035/image, V4.1 Pro raster at $0.21/image, V4.1 vector at $0.08/image, and V4.1 Pro Vector at $0.30/image. Older V4 rates remain listed separately."
 ---
 
 # Recraft
 
-Recraft is a **vector-first AI image platform** built around brand-style consistency, on-canvas editing, and native SVG output. The current model family to evaluate is **Recraft V4**, which ships raster, vector, Pro raster, and Pro vector variants for design-grade image generation.
+Recraft is a **vector-first AI image platform** built around brand-style consistency, on-canvas editing, and native SVG output. The current model family to evaluate is **Recraft V4.1**, which ships raster, vector, Pro raster, Utility, and Pro vector variants for design-grade image generation.
 
 The company is **Recraft AI Limited**, registered in London and operating with a San Francisco presence, founded in December 2022 by Anna Veronika Dorogush. Recraft's differentiators are narrow and real: it outputs true SVG-style vectors with editable paths, and it remains one of the most reliable tools for legible text inside generated marketing graphics.
 
@@ -113,13 +124,13 @@ The Agentic Mode turns Recraft into a conversational design assistant on an infi
 
 | | |
 |---|---|
-| **Flagship model** | Recraft V4 raster/vector model family |
+| **Flagship model** | Recraft V4.1 raster/vector model family |
 | **Vector output** | Native SVG with real paths and anchor points |
-| **Text rendering** | Best-in-class legible text inside generated images |
+| **Text rendering** | Strong legible text inside generated images |
 | **Agentic Mode** | Conversational canvas assistant, context-aware edits |
 | **Free tier** | 50 credits/day, public images only, no commercial rights |
 | **Paid plans** | Basic $10 · Advanced $27 · Pro $48 · Teams $55/seat |
-| **API raster** | $0.04 per image |
+| **API raster** | V4.1 from $0.035 per image; V4.1 Pro $0.21 per image |
 | **API vector** | $0.08 per image |
 | **Credit rollover** | No, credits reset monthly |
 | **Company** | Recraft AI Limited (London) |
@@ -172,11 +183,11 @@ API pricing via [recraft.ai/api](https://www.recraft.ai/api):
 | Raster image | $0.04 | All non-vector styles |
 | Vector image | $0.08 | SVG output with real paths |
 
-Prices verified 2026-06-12 via [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), and Recraft FAQ language on ownership, rollovers, and API access.
+Prices verified 2026-06-25 via [Recraft pricing](https://www.recraft.ai/pricing), [Recraft API pricing](https://www.recraft.ai/docs/api-reference/pricing), and Recraft FAQ language on ownership, rollovers, and API access.
 
 ## Against the alternatives
 
-| | Recraft V4 | Midjourney v7 | Flux 1.1 Pro | Ideogram 3.0 |
+| | Recraft V4.1 | Midjourney v7 | Flux 1.1 Pro | Ideogram 3.0 |
 |---|---|---|---|---|
 | **Vector (SVG) output** | Native paths | None | None | None |
 | **Text-in-image** | Best available | Weak | Fair | Strong |
@@ -189,7 +200,7 @@ Prices verified 2026-06-12 via [Recraft pricing](https://www.recraft.ai/pricing)
 
 - **Free tier restricts commercial use.** Free images are public and owned by Recraft. Commercial projects need at minimum the $10/mo Basic tier.
 - **Credits do not roll over.** Unused Basic-tier credits disappear at month-end. Uneven workloads either leave credits on the table or hit top-up fees.
-- **Photorealism trails Midjourney and Flux.** Recraft is strong but not best-in-class for cinematic, painterly, or stock-photo-grade output.
+- **Photorealism trails Midjourney and Flux.** Recraft is strong for design assets but weaker for cinematic, painterly, or stock-photo-grade output.
 - **No video generation.** Motion work needs a second tool alongside Recraft.
 - **Agentic Mode still iterates.** The conversational canvas is powerful but occasionally misinterprets context on longer sessions and needs a manual reset.
 - **Vector output is not infinite-detail.** Complex generated SVGs can contain hundreds of paths and slow down downstream editors on older hardware.
@@ -198,7 +209,7 @@ Prices verified 2026-06-12 via [Recraft pricing](https://www.recraft.ai/pricing)
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft V4 docs](https://www.recraft.ai/docs/recraft-models/recraft-V4), [Recraft API](https://www.recraft.ai/api), and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Recraft pricing](https://www.recraft.ai/pricing), [Recraft API pricing](https://www.recraft.ai/docs/api-reference/pricing), [Recraft API](https://www.recraft.ai/api), and [Recraft company registration](https://find-and-update.company-information.service.gov.uk/company/14525957).
 
 ## FAQ
 

@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2024
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Same.dev: AI App Builder Review & Pricing (2026)"
-meta_description: "Same.dev/Same.new review refreshed June 12, 2026: URL cloning, prompt-built Next.js web apps, Netlify deployment caveats, pricing from free to $100 Ultra, and best alternatives."
+meta_description: "Same.dev/Same.new review refreshed June 25, 2026: URL cloning, prompt-built Next.js web apps, Netlify deployment caveats, pricing from free to $100 Ultra, and best alternatives."
 author: "aipedia.wiki Editorial"
 best_plan: "Pro ($25/mo) for active prototypes; Free for the first clone test."
 affiliate:
@@ -35,15 +35,15 @@ facts:
     source: "https://docs.same.new/get-started/quick-start"
     source_label: "Same quickstart"
     source_id: same-dev-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Free plan includes 500K tokens/mo; paid tiers are Basic $10, Pro $25, Max $50, and Ultra $100 with Ultra overage at $10 per extra 2M tokens."
+    value: "Free plan includes 500K tokens/mo; paid tiers are Basic $10, Pro $25, Max $50, and Ultra $100 with Ultra overage at $10 per extra 2M tokens. Same's docs say unused tokens expire at the end of each billing cycle."
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://docs.same.new/essentials/deploying"
     source_label: "Same deploy docs"
     source_id: same-dev-deploy
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -69,12 +69,21 @@ not_best_for:
 quick_answer: >-
   Same.dev is a browser-based AI app builder that clones existing site designs from a URL and generates Next.js web apps from prompts, images, or references. Pick it for fast design-driven prototypes. Skip it for regulated production apps or deep backend customization; use Cursor or Claude Code when you need full repo control.
 price_history:
+  - date: 2026-06-25
+    plan: "Free / Basic / Pro / Max / Ultra"
+    price: "$0 / $10 / $25 / $50 / $100 per month"
+    source: "https://docs.same.new/usage/pricing"
+    source_label: "Same pricing"
+    source_id: same-dev-pricing
+    verified_at: 2026-06-25
+    note: "Rechecked Same pricing docs. Free remains 500K tokens/month; Basic 2M; Pro 5M; Max 10M; Ultra 20M with $10 per extra 2M tokens. Unused tokens still expire at cycle end."
   - date: 2026-06-01
     plan: "Free / Basic / Pro / Max / Ultra"
     price: "$0 / $10 / $25 / $50 / $100 per month"
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
+    verified_at: 2026-06-25
     note: "June 1 recheck: Free remains 500K tokens/month; Basic 2M; Pro 5M; Max 10M; Ultra 20M with $10 per extra 2M tokens. Download and remix remain paid-tier features."
   - date: 2026-05-13
     plan: "Free"
@@ -82,6 +91,7 @@ price_history:
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged at 500K tokens/mo."
   - date: 2026-05-13
     plan: "Basic"
@@ -89,6 +99,7 @@ price_history:
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged at 2M tokens/mo with premium model, download, and remix."
   - date: 2026-05-13
     plan: "Pro"
@@ -96,6 +107,7 @@ price_history:
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged at 5M tokens/mo with premium model, download, and remix."
   - date: 2026-05-13
     plan: "Max"
@@ -103,6 +115,7 @@ price_history:
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged at 10M tokens/mo."
   - date: 2026-05-13
     plan: "Ultra"
@@ -110,6 +123,7 @@ price_history:
     source: "https://docs.same.new/usage/pricing"
     source_label: "Same pricing"
     source_id: same-dev-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged at 20M tokens/mo plus $10 per additional 2M tokens."
 ---
 
@@ -120,6 +134,8 @@ A **browser-based AI app builder** that generates web applications from a prompt
 Competes directly with [Bolt](/tools/bolt/), [Lovable](/tools/lovable/), [v0](/tools/v0/), and [Replit Agent](/tools/replit-agent/). The differentiator is design cloning, a browser-first edit loop, and an official docs surface around Next.js apps, GitHub, Neon, Supabase, Clerk, and deployment.
 
 Pricing is token-metered with a 500K free tier and four paid tiers from $10 through $100. Overage is pay-as-you-go at $10 per 2M tokens on Ultra. Unused tokens expire at the end of each billing cycle.
+
+June 25, 2026 recheck: Same's pricing docs still show Free, Basic, Pro, Max, and Ultra with the same token pools and Ultra overage. The buyer caveat remains export/deployment control, not a plan-name change.
 
 ## System Verdict
 
@@ -168,7 +184,7 @@ A hosted **vibe-coding** platform where the development loop runs in-browser. Us
 
 - **Bolt-native StackBlitz WebContainer workflow:** [Bolt](/tools/bolt/). More mature sandbox, strong npm ecosystem support in-browser.
 - **Lovable's Supabase-first stack:** [Lovable](/tools/lovable/). Tighter Supabase integration, different pricing philosophy.
-- **v0 for shadcn / Next.js UIs:** [v0](/tools/v0/). Vercel-native, best-in-class for React component generation.
+- **v0 for shadcn / Next.js UIs:** [v0](/tools/v0/). Vercel-native and especially strong for React component generation.
 - **Replit full-hosted dev environment:** [Replit Agent](/tools/replit-agent/). Longer heritage, broader language support, better for backend-heavy apps.
 - **Professional IDE workflow:** [Cursor](/tools/cursor/) or [Windsurf](/tools/windsurf/). Local environment, full repo control, richer refactor tools.
 - **Terminal-first agent on an existing codebase:** [Claude Code](/tools/claude-code/). Strongest agent for real engineering work.
@@ -176,7 +192,7 @@ A hosted **vibe-coding** platform where the development loop runs in-browser. Us
 
 ## Pricing
 
-Verified 2026-06-12 via [docs.same.new/usage/pricing](https://docs.same.new/usage/pricing):
+Verified 2026-06-25 via [docs.same.new/usage/pricing](https://docs.same.new/usage/pricing):
 
 | Plan | Price | Monthly tokens | Key features |
 |---|---|---|---|
@@ -191,7 +207,7 @@ Verified 2026-06-12 via [docs.same.new/usage/pricing](https://docs.same.new/usag
 
 **Overage:** Ultra tier is the only plan with pay-as-you-go overage built in. Lower tiers cap at the monthly pool.
 
-Prices verified 2026-06-12 via [Same pricing docs](https://docs.same.new/usage/pricing), [quickstart](https://docs.same.new/get-started/quick-start), and [deployment docs](https://docs.same.new/essentials/deploying).
+Prices verified 2026-06-25 via [Same pricing docs](https://docs.same.new/usage/pricing), [quickstart](https://docs.same.new/get-started/quick-start), and [deployment docs](https://docs.same.new/essentials/deploying).
 
 ## Against the alternatives
 
@@ -217,7 +233,7 @@ Prices verified 2026-06-12 via [Same pricing docs](https://docs.same.new/usage/p
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against Same quickstart, FAQ, deploy, integrations, and pricing docs.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-25 against Same quickstart, FAQ, deploy, integrations, and pricing docs.
 
 ## FAQ
 

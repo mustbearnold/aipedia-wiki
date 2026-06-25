@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Pro price is region-rendered; API access now routes toward Jasper API"
 status: active
 launched: 2020-09
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,16 +30,16 @@ facts:
     source: https://clipdrop.co/
     source_label: Clipdrop official site
     source_id: clipdrop-official
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: 2026-09-18
   pricing_anchor:
-    value: "Clipdrop's June 18 pricing page still renders Free and Pro, but the Pro amount is region-rendered as '-- per month' in the crawl. Free shows 20/24h quotas for Background Removal, 2x Upscaler, Cleanup, and Relight, 50/24h for Text Remover, and Pro shows 1,000/24h for the major tools."
+    value: "Clipdrop's June 25 pricing page still renders Free and Pro, but the Pro amount is region-rendered as '-- per month' in the crawl. Free shows 20/24h quotas for Background Removal, 2x Upscaler, Cleanup, and Relight, 50/24h for Text Remover, and Pro shows 1,000/24h for the major tools."
     source: https://clipdrop.co/pricing
     source_label: Clipdrop pricing
     source_id: clipdrop-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-18
@@ -48,7 +48,7 @@ facts:
     source: https://clipdrop.co/apis
     source_label: Clipdrop APIs
     source_id: clipdrop-apis
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-18
@@ -57,7 +57,7 @@ facts:
     source: https://clipdrop.co/
     source_label: Clipdrop official site
     source_id: clipdrop-official
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: 2026-09-18
@@ -66,13 +66,13 @@ facts:
     source: https://developers.jasper.ai/docs/using-images
     source_label: Jasper image API docs
     source_id: jasper-image-api
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-18
 tags: [image-editing, background-removal, upscaling, relight, uncrop, stable-diffusion, jasper, api]
 seo_title: "Clipdrop Review (June 2026): Pricing, Jasper API, Image Tools"
-meta_description: "Clipdrop review updated June 18, 2026: current Free/Pro quotas, region-rendered pricing, Jasper ownership, Jasper API migration, background removal, cleanup, uncrop, upscaling, relight, and text removal."
+meta_description: "Clipdrop review updated June 25, 2026: current Free/Pro quotas, region-rendered pricing, Jasper ownership, Jasper API migration, background removal, cleanup, uncrop, upscaling, relight, and text removal."
 author: "aipedia.wiki Editorial"
 best_for:
   - background removal and product-photo cleanup
@@ -87,7 +87,7 @@ not_best_for:
   - high-volume API buyers who have not confirmed Jasper Business API terms
   - teams expecting frontier text-to-image quality
 quick_answer: >-
-  Clipdrop is still active as a Jasper-owned AI image utility suite, not a dead Stability product. Pick it for fast single-action image jobs like background removal, cleanup, uncrop, relight, upscaling, text removal, text-to-image, replace background, and universal resizing. The June 18, 2026 check keeps Free and Pro quotas visible, but the Pro price renders by region and should not be quoted as a universal $9/month. The bigger change is API positioning: Clipdrop's API page now tells users Clipdrop is part of Jasper and points to Jasper's newer image API docs, where image API access requires a Jasper Business plan with API subscription.
+  Clipdrop is still active as a Jasper-owned AI image utility suite, not a dead Stability product. Pick it for fast single-action image jobs like background removal, cleanup, uncrop, relight, upscaling, text removal, text-to-image, replace background, and universal resizing. The June 25, 2026 check keeps Free and Pro quotas visible, but the Pro price renders by region and should not be quoted as a universal $9/month. The bigger change is API positioning: Clipdrop's API page now tells users Clipdrop is part of Jasper and points to Jasper's newer image API docs, where image API access requires a Jasper Business plan with API subscription.
 price_history:
   - date: 2026-06-02
     plan: "Free / Pro"
@@ -95,13 +95,15 @@ price_history:
     source: "https://clipdrop.co/pricing"
     source_label: "Clipdrop pricing"
     source_id: clipdrop-pricing
+    verified_at: 2026-06-25
     note: "Free and Pro quotas visible, but exact Pro amount rendered by region. Do not quote a universal $9/mo price."
-  - date: 2026-06-18
+  - date: 2026-06-25
     plan: "Free"
     price: "$0"
     source: "https://clipdrop.co/pricing"
     source_label: "Clipdrop pricing"
     source_id: clipdrop-pricing
+    verified_at: 2026-06-25
     note: "Pricing page shows Background Removal 20/24h, Image Upscaler x2 20/24h, Cleanup 20/24h, Relight 20/24h, Text Remover 50/24h, plus Text to image, Uncrop, and Replace Background without a visible quota in the crawl."
   - date: 2026-06-18
     plan: "Pro"
@@ -109,6 +111,7 @@ price_history:
     source: "https://clipdrop.co/pricing"
     source_label: "Clipdrop pricing"
     source_id: clipdrop-pricing
+    verified_at: 2026-06-25
     note: "Pro shows skip queue and 1,000/24h limits for Text to image, Uncrop, high-resolution Background Removal, x16 Upscaler, Cleanup, Relight, Text Remover, and Replace Background."
   - date: 2026-06-18
     plan: "API"
@@ -116,6 +119,7 @@ price_history:
     source: "https://developers.jasper.ai/docs/using-images"
     source_label: "Jasper image API docs"
     source_id: jasper-image-api
+    verified_at: 2026-06-25
     note: "Clipdrop API page remains live but points to Jasper API. Jasper image API docs say image endpoints require a Jasper Business plan with an API subscription."
 ---
 
@@ -123,7 +127,7 @@ price_history:
 
 Clipdrop is a Jasper-owned AI image utility suite. It is strongest for single-purpose visual edits: remove the background, clean up unwanted objects or text, uncrop an image, upscale, relight, replace the background, generate a quick image, or resize for social formats.
 
-The important June 18, 2026 correction is that Clipdrop is not dead. Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024. Clipdrop remains live at `clipdrop.co`, but the API story has shifted toward Jasper's business API. That matters more than a small pricing change.
+The important June 25, 2026 correction is that Clipdrop is not dead. Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024. Clipdrop remains live at `clipdrop.co`, but the API story has shifted toward Jasper's business API. That matters more than a small pricing change.
 
 ## System Verdict
 
@@ -175,7 +179,7 @@ This is different from Midjourney, Ideogram, Flux, or GPT Image 2. Those tools a
 
 ## Pricing
 
-Clipdrop pricing page, checked June 18, 2026:
+Clipdrop pricing page, checked June 25, 2026:
 
 | Plan | Price | Visible limits and notes |
 |---|---:|---|
@@ -249,11 +253,11 @@ No for deep editing. Clipdrop is faster for one-action edits. Photoshop with Fir
 
 ## Sources
 
-- [Clipdrop official site](https://clipdrop.co/) (verified 2026-06-18)
-- [Clipdrop pricing](https://clipdrop.co/pricing) (verified 2026-06-18)
-- [Clipdrop APIs](https://clipdrop.co/apis) (verified 2026-06-18)
-- [Clipdrop API contact page](https://clipdrop.co/apis/contact) (verified 2026-06-18)
-- [Jasper image API docs](https://developers.jasper.ai/docs/using-images) (verified 2026-06-18)
-- [Jasper API getting started](https://developers.jasper.ai/docs/getting-started-1) (verified 2026-06-18)
-- [Stability AI divests Init ML to Jasper](https://stability.ai/news-updates/init-ml-divestment) (verified 2026-06-18)
-- [Jasper acquisition announcement via PR Newswire](https://www.prnewswire.com/news-releases/jasper-expands-by-acquiring-image-platform-clipdrop-from-stability-ai-302068891.html) (verified 2026-06-18)
+- [Clipdrop official site](https://clipdrop.co/) (verified 2026-06-25)
+- [Clipdrop pricing](https://clipdrop.co/pricing) (verified 2026-06-25)
+- [Clipdrop APIs](https://clipdrop.co/apis) (verified 2026-06-25)
+- [Clipdrop API contact page](https://clipdrop.co/apis/contact) (verified 2026-06-25)
+- [Jasper image API docs](https://developers.jasper.ai/docs/using-images) (verified 2026-06-25)
+- [Jasper API getting started](https://developers.jasper.ai/docs/getting-started-1) (verified 2026-06-25)
+- [Stability AI divests Init ML to Jasper](https://stability.ai/news-updates/init-ml-divestment) (verified 2026-06-25)
+- [Jasper acquisition announcement via PR Newswire](https://www.prnewswire.com/news-releases/jasper-expands-by-acquiring-image-platform-clipdrop-from-stability-ai-302068891.html) (verified 2026-06-25)

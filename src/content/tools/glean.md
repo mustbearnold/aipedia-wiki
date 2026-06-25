@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2019
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,7 +32,7 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -41,7 +41,7 @@ facts:
     source: https://docs.glean.com/glean-enterprise-flex-pricing
     source_label: Glean Enterprise Flex pricing docs
     source_id: glean-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -50,7 +50,7 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://developers.glean.com/
     source_label: Glean developer platform
     source_id: glean-developers
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -70,7 +70,7 @@ facts:
     source: https://www.glean.com/
     source_label: Glean official site
     source_id: glean-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -167,7 +167,7 @@ The platform is less compelling when the corpus is small, permissions are simple
 
 ## Methodology
 
-Last verified 2026-06-23 against Glean product, connector, developer, MCP, and Enterprise Flex pricing documentation. The public pricing surface still routes buyers to a sales-led enterprise motion rather than published self-serve tiers. Scoring emphasizes enterprise utility, defensibility of the data and connectors layer, and cost and implementation risk.
+Last verified 2026-06-25 against Glean product, connector, developer, MCP, and Enterprise Flex pricing documentation. The public pricing surface still routes buyers to a sales-led enterprise motion rather than published self-serve tiers. Scoring emphasizes enterprise utility, defensibility of the data and connectors layer, and cost and implementation risk.
 
 ## FAQ
 

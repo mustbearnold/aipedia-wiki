@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$42/month annual; Team $20/user/mo annual; Enterprise custom
 status: active
 launched: 2023-08
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,16 +32,16 @@ facts:
     source: "https://ideogram.ai/features/3.0"
     source_label: "Ideogram 3.0 features"
     source_id: ideogram-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   model_surface:
-    value: "Ideogram 3.0 remains the flagship as of 2026-06-12. API buyers should verify current model and endpoint availability in docs because Ideogram has not released a 4.0 line yet."
+    value: "Ideogram 3.0 remains the confirmed web-product flagship as of 2026-06-25. API buyers should verify current model and endpoint availability in docs because third-party pages are now making unsupported 4.0 API claims."
     source: "https://docs.ideogram.ai/"
     source_label: "Ideogram API docs"
     source_id: ideogram-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://ideogram.ai/pricing"
     source_label: "Ideogram pricing"
     source_id: ideogram-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -59,7 +59,7 @@ facts:
     source: "https://docs.ideogram.ai/"
     source_label: "Ideogram API docs"
     source_id: ideogram-docs
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -68,7 +68,7 @@ facts:
     source: "https://ideogram.ai/features/3.0"
     source_label: "Ideogram 3.0 features"
     source_id: ideogram-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -98,6 +98,7 @@ price_history:
     source: "https://ideogram.ai/pricing"
     source_label: "Source"
     source_id: ideogram-pricing
+    verified_at: 2026-06-25
     note: "Ideogram 3.0 launched; pricing restructured."
   - date: 2026-04-17
     plan: "Basic"
@@ -105,6 +106,7 @@ price_history:
     source: "https://ideogram.ai/pricing"
     source_label: "Source"
     source_id: ideogram-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged at April refresh."
   - date: 2026-05-13
     plan: "Plus"
@@ -112,6 +114,7 @@ price_history:
     source: "https://docs.ideogram.ai/plans-and-pricing/available-plans"
     source_label: "Source"
     source_id: ideogram-pricing
+    verified_at: 2026-06-25
     note: "Material restructure. Legacy Basic ($7/$8) closed to new customers. Active tiers are Plus $20/mo (1,000 priority credits, ~4,000 images), Pro $60/mo (3,500 priority credits, ~14,000 images), and a new Team plan at $30/member/month (two-member minimum, 1,500 credits per seat). Free tier moved to 10 slow credits per week."
   - date: 2026-06-05
     plan: "Plus / Pro / Team"
@@ -119,7 +122,16 @@ price_history:
     source: "https://ideogram.ai/pricing"
     source_label: "Source"
     source_id: ideogram-pricing
+    verified_at: 2026-06-25
     note: "Live pricing page rechecked on annual tab. Plus includes 1,000 priority credits/mo, unlimited slow credits, private generation, character consistency, quality export, and top-ups at 150 credits for $4. Pro includes 3,500 priority credits/mo, batch generation, largest queue, and top-ups at 250 credits for $4. Team includes 1,500 priority credits per user/mo, central billing/admin, early collaboration features, and top-ups at $4."
+  - date: 2026-06-25
+    plan: "Plus / Pro / Team"
+    price: "$15/mo annual · $42/mo annual · $20/user/mo annual"
+    source: "https://docs.ideogram.ai/plans-and-pricing/available-plans"
+    source_label: "Ideogram available plans"
+    source_id: ideogram-docs
+    verified_at: 2026-06-25
+    note: "Official docs still direct buyers to the live pricing page for plan names, prices, billing frequency, and feature availability. Top-up docs list $4 packs: 150 credits on Plus and 250 credits on Pro/Team, with top-up credits rolling over."
 ---
 
 # Ideogram
@@ -132,7 +144,7 @@ Competitive signal: [OpenAI launched ChatGPT Images 2.0 and gpt-image-2](/news/2
 
 ## System Verdict
 
-> **Pick Ideogram if the image needs readable text on the first generation.** Best-in-class typography rendering for logos, YouTube thumbnails, posters, and merch. The free tier is usable for evaluation; paid tiers stepped up materially in 2026 but still anchor the typography category.
+> **Pick Ideogram if the image needs readable text on the first generation.** Strong typography rendering for logos, YouTube thumbnails, posters, and merch. The free tier is usable for evaluation; paid tiers stepped up materially in 2026 but still anchor the typography category.
 >
 > **Skip it if overall aesthetic quality outranks typography.** [Midjourney](/tools/midjourney/) still leads on cinematic composition and photoreal detail. [Flux](/tools/flux/) wins on instruction-edit fidelity and open weights. [ChatGPT](/tools/chatgpt/) bundles GPT Image 2 with text chat for casual integrated use.
 >
@@ -156,7 +168,7 @@ Competitive signal: [OpenAI launched ChatGPT Images 2.0 and gpt-image-2](/news/2
 | **Image output per prompt** | 4 |
 | **Styles** | Realistic, Illustration, 3D Render, Anime, Design |
 
-Every data point above was verified on 2026-06-12. See Sources.
+Every data point above was verified on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -196,7 +208,7 @@ Subscription pricing via [ideogram.ai/pricing](https://ideogram.ai/pricing). Ann
 | Enterprise | Contact sales | Custom | Private custom models, custom credits, volume API discounts, priority support | Larger organizations |
 | Legacy Basic | Grandfathered | Varies | Closed to new customers | Existing subscribers only |
 
-*Prices verified 2026-06-12 via [Ideogram pricing](https://ideogram.ai/pricing). The live feature table lists Ideogram 3.0 credit rates at 2, 4, or 6 credits per 4 images depending on Turbo, Default, or Quality speed. Top-up credits are available on paid plans. API and enterprise volume discounts should be checked in current docs before production automation.*
+*Prices verified 2026-06-25 via [Ideogram pricing](https://ideogram.ai/pricing) and [Ideogram plan docs](https://docs.ideogram.ai/plans-and-pricing/available-plans). The docs still direct buyers to the live pricing page for plan names, prices, billing cadence, and feature availability. Top-up credits are available on paid plans and rollover rules differ from monthly priority credits. API and enterprise volume discounts should be checked in current docs before production automation.*
 
 ## Against the alternatives
 
@@ -222,12 +234,13 @@ Subscription pricing via [ideogram.ai/pricing](https://ideogram.ai/pricing). Ann
 
 ## Recent changes
 
+- **2026-06-25:** Official plan docs still route current plan names, prices, and billing cadence to the live pricing page. AiPedia did not add third-party Ideogram 4.0 API pricing claims because they were not confirmed in official Ideogram sources during this refresh.
 - **2026-06-05:** Live pricing page rechecked on annual billing. Plus lists at $15/mo annual, Pro at $42/mo annual, Team at $20/user/mo annual, and Enterprise is contact sales. Free tier remains 10 slow credits/week. Feature table lists Ideogram 3.0 credit rates by speed/quality.
 - **2026-04-21:** Competitive pressure rose when [OpenAI shipped ChatGPT Images 2.0 and gpt-image-2](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/). Ideogram still wins the typography-first benchmark, but the gap is narrower than at the start of 2025.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Ideogram pricing](https://ideogram.ai/pricing), [Ideogram 3.0 launch page](https://ideogram.ai/features/3.0), and [Ideogram docs](https://docs.ideogram.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Ideogram pricing](https://ideogram.ai/pricing), [Ideogram 3.0 launch page](https://ideogram.ai/features/3.0), and [Ideogram docs](https://docs.ideogram.ai/).
 
 ## FAQ
 

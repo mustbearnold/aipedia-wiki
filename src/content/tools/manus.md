@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2025-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Manus Review: Pricing, Meta Unwind Risk & Best Use (June 2026)"
-meta_description: "Updated June 23, 2026: Manus pricing, credit burn, Meta ownership language, June reporting on the Meta unwind, alternatives, and procurement risks for autonomous-agent buyers."
+meta_description: "Updated June 25, 2026: Manus pricing, credit burn, Meta ownership language, June reporting on the Meta unwind, alternatives, and procurement risks for autonomous-agent buyers."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://www.tomshardware.com/tech-industry/artificial-intelligence/meta-cuts-manus-off-from-its-internal-systems-as-china-ordered-breakup-of-2-billion-ai-deal-begins"
     source_label: "Tom's Hardware Meta/Manus unwind reporting"
     source_id: manus-meta-unwind
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://manus.im/pricing"
     source_label: "Source"
     source_id: manus-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -109,19 +109,19 @@ price_history:
     source_id: manus-pricing
     verified_at: 2026-05-24
     note: "Pricing rechecked; official site now states Manus is part of Meta and links to Meta careers/footers."
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Pro Standard"
     price: "$20/mo"
     source: "https://manus.im/pricing"
     source_label: "Manus pricing"
     source_id: manus-pricing
-    verified_at: 2026-06-23
-    note: "Public pricing surface still shows Manus under Meta footer/careers links, but June reporting says Meta is separating from Manus and sunsetting the platform after Beijing's unwind order."
+    verified_at: 2026-06-25
+    note: "Public pricing surface still shows Manus under Meta footer/careers links, while June reporting says Meta is separating from Manus, halting data sharing, and original investors may buy the company back after Beijing's unwind order."
 ---
 
 # Manus
 
-**Manus** is a general-purpose autonomous agent from the team behind Monica.im. The product launched invite-only in **March 2025** and opened to broader access through late 2025. The official Manus pricing page still says **"Manus is now part of Meta"** and carries Meta footer/careers links, but June 2026 reporting says Meta has separated internal operations from Manus and is sunsetting the platform after Beijing ordered the acquisition unwound. Treat Manus as a volatile procurement target until the vendor publishes a clearer post-unwind path.
+**Manus** is a general-purpose autonomous agent from the team behind Monica.im. The product launched invite-only in **March 2025** and opened to broader access through late 2025. The official Manus pricing page still says **"Manus is now part of Meta"** and carries Meta footer/careers links, but June 2026 reporting says Meta has separated internal operations from Manus, halted data sharing, and original investors may buy the company back after Beijing ordered the acquisition unwound. Treat Manus as a volatile procurement target until the vendor publishes a clearer post-unwind path.
 
 Manus runs tasks inside its own sandboxed cloud VM. It browses, writes code, builds slides, operates spreadsheets, and returns a finished artifact. The agent keeps working while the browser tab is closed.
 
@@ -186,7 +186,7 @@ Current plans via [manus.im/pricing](https://manus.im/pricing):
 
 Credits scale with task complexity. A chat-style question can cost under 50 credits. A deep research run covering dozens of sources typically burns 500 to 900 credits.
 
-Prices re-verified 2026-06-23 against the current [Manus pricing page](https://manus.im/pricing) and current reporting on the Meta unwind. The most important buyer change is not the $20 Pro entry price. It is the mismatch between Manus' official Meta branding and June reporting that Meta is separating from Manus and sunsetting the platform.
+Prices re-verified 2026-06-25 against the current [Manus pricing page](https://manus.im/pricing) and current reporting on the Meta unwind. The most important buyer change is not the $20 Pro entry price. It is the mismatch between Manus' official Meta branding and June reporting that Meta is separating from Manus and sunsetting the platform.
 
 ## Against the alternatives
 
@@ -209,7 +209,7 @@ Prices re-verified 2026-06-23 against the current [Manus pricing page](https://m
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary and current news sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against the [Manus pricing page](https://manus.im/pricing), official Manus footer/careers links, and June 2026 reporting on the Meta unwind.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary and current news sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against the [Manus pricing page](https://manus.im/pricing), official Manus footer/careers links, and June 2026 reporting on the Meta unwind.
 
 ## FAQ
 
@@ -224,8 +224,8 @@ Yes, but it is a general agent, not a coding specialist. Simple scripts and prot
 
 ## Sources
 
-- [Manus pricing](https://manus.im/pricing) (verified 2026-06-23): current public pricing surface and official Meta footer/careers language
-- [Tom's Hardware on Meta/Manus unwind reporting](https://www.tomshardware.com/tech-industry/artificial-intelligence/meta-cuts-manus-off-from-its-internal-systems-as-china-ordered-breakup-of-2-billion-ai-deal-begins) (verified 2026-06-23): June 2026 reporting that Meta is separating from Manus and sunsetting the platform
+- [Manus pricing](https://manus.im/pricing) (verified 2026-06-25): current public pricing surface and official Meta footer/careers language
+- [Tom's Hardware on Meta/Manus unwind reporting](https://www.tomshardware.com/tech-industry/artificial-intelligence/meta-cuts-manus-off-from-its-internal-systems-as-china-ordered-breakup-of-2-billion-ai-deal-begins) (verified 2026-06-25): June 2026 reporting that Meta is separating from Manus and sunsetting the platform
 
 ## Related
 

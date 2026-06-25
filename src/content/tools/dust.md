@@ -2,32 +2,39 @@
 type: tool
 slug: dust
 title: Dust
-tagline: Team AI agent platform for custom assistants that search company data, execute actions, connect tools, and run in Slack, Chrome, Zendesk, and APIs.
+tagline: Team AI agent platform for custom assistants that search company data, execute actions, connect tools, and run in Slack, Chrome, Zendesk, and APIs, with Business Pro and Max self-serve seats plus Enterprise.
 category: ai-automation
 secondary_categories: [ai-search, ai-chatbots]
 company: Dust
 url: https://dust.tt
 pricing_model: paid
-price_range: Pro 29 EUR/user/month; Enterprise custom
+price_range: Business Pro $24/seat/month yearly; Max $120/seat/month yearly; Enterprise custom
 status: active
 launched: 2023
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 price_history:
   - date: 2026-05-13
     price: "see note"
     source: https://dust.tt/pricing
     source_label: Dust pricing
     source_id: dust-pricing
-    verified_at: '2026-06-23'
-    note: "Pro plan remains 29 EUR/user/month (excl. tax) from 1 user with 14-day trial. Enterprise stays custom from 100 members. No price change since 2026-05-05; advanced-model lineup now explicitly lists GPT-5, Claude, Gemini, and Mistral on the pricing page."
+    verified_at: '2026-06-25'
+    note: "Superseded by the June 25, 2026 Business Pro and Max self-serve ladder. Older Pro-only EUR pricing should not be used for new buyer guidance."
   - date: 2026-06-02
     price: "see note"
     source: https://dust.tt/home/pricing
     source_label: Dust pricing
     source_id: dust-pricing
-    verified_at: '2026-06-23'
-    note: "June 2 recheck: Pro remains 29 EUR/user/month excluding tax with a 14-day trial from 1 user, and Enterprise remains custom from 100 members with SSO, SCIM, US/EU hosting, larger limits, and Salesforce tooling."
+    verified_at: '2026-06-25'
+    note: "Superseded by the June 25, 2026 Business Pro and Max self-serve ladder. Enterprise remains the custom path for larger security, hosting, and governance needs."
+  - date: 2026-06-25
+    price: "Business Pro $24/seat/mo yearly; Max $120/seat/mo yearly; Enterprise custom"
+    source: https://dust.tt/home/pricing
+    source_label: Dust pricing
+    source_id: dust-pricing
+    verified_at: '2026-06-25'
+    note: "Current pricing page shows Business self-serve seats with Pro and Max annual pricing plus Enterprise. Buyers should confirm monthly billing, included model access, and programmatic usage before rollout."
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -46,18 +53,16 @@ facts:
     source: https://dust.tt/
     source_label: Dust official site
     source_id: dust-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-02'
   pricing_anchor:
-    value: 'Pro 29 EUR/user/month (excl. tax) from 1 user, 14-day trial, fair-use unlimited messages, up to 1GB per user data
-      sources, one private space; Enterprise custom from 100 members with SSO (Okta, Entra ID, Jumpcloud), SCIM, larger limits,
-      US/EU data hosting, and Salesforce tooling.'
+    value: 'Dust now presents Business self-serve pricing with Pro at $24/seat/month yearly and Max at $120/seat/month yearly, plus Enterprise custom. Buyers should validate monthly billing, included model access, programmatic usage, SSO, SCIM, hosting, and governance terms.'
     source: https://dust.tt/pricing
     source_label: Dust pricing
     source_id: dust-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -66,7 +71,7 @@ facts:
     source: https://docs.dust.tt/
     source_label: Dust docs
     source_id: dust-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-02'
@@ -76,7 +81,7 @@ facts:
     source: https://dust.tt/security
     source_label: Dust security
     source_id: dust-security
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-02'
@@ -86,13 +91,13 @@ facts:
     source: https://docs.dust.tt/
     source_label: Dust docs
     source_id: dust-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-12-02'
 tags: [ai-agents, enterprise-ai, internal-tools, slack, data-sources, automation, assistants]
 seo_title: "Dust Review: Team AI Agents, Data Sources & Pricing (June 2026)"
-meta_description: "Dust is a team AI agent platform for custom assistants that search company data, execute actions, connect tools, and run in Slack, Chrome, Zendesk, APIs, and more. Pro remains 29 EUR/user/month."
+meta_description: "Dust is a team AI agent platform for custom assistants that search company data, execute actions, connect tools, and run in Slack, Chrome, Zendesk, APIs, and more. Business Pro starts at $24/seat/mo yearly."
 author: aipedia.wiki Editorial
 best_for:
   - teams building internal AI assistants
@@ -104,7 +109,7 @@ not_best_for:
   - teams needing full enterprise search at Glean scale
   - highly regulated workflows without security review
 quick_answer: >-
-  Dust is a practical team AI-agent platform: connect data sources, build custom agents, let them search company knowledge and execute actions. Pick it for internal assistants and operational workflows. Skip it for solo chatbot use or full enterprise-search deployments.
+  Dust is a practical team AI-agent platform: connect data sources, build custom agents, let them search company knowledge and execute actions. Business Pro starts at $24/seat/mo on annual billing and Max at $120/seat/mo. Pick it for internal assistants and operational workflows. Skip it for solo chatbot use or full enterprise-search deployments.
 ---
 
 # Dust
@@ -130,9 +135,9 @@ It sits between no-code automation and enterprise search. Compared with [Glean](
 | **Data sources** | GitHub, Google Drive, Notion, Slack, and more |
 | **Integrations** | Slack, Zendesk, Chrome Extension, API, GSheet, Zapier |
 | **Security** | SOC 2, zero data retention positioning, private spaces |
-| **Pricing (verified 2026-06-23)** | Pro 29 EUR/user/month excl. tax; Enterprise custom from 100 members |
-| **Pro limits** | Fair-use unlimited messages, programmatic credits, up to 1GB/user data sources, one private space |
-| **Enterprise extras** | SSO (Okta, Entra ID, Jumpcloud), SCIM, US/EU hosting, Salesforce Tool, priority support |
+| **Pricing (verified 2026-06-25)** | Business Pro $24/seat/month yearly; Max $120/seat/month yearly; Enterprise custom |
+| **Business buyer check** | Confirm monthly pricing, model access, programmatic usage, source limits, private spaces, and fair-use terms |
+| **Enterprise extras** | Validate SSO, SCIM, hosting, larger limits, Salesforce tooling, security review, and support terms |
 | **Best fit** | Internal agents for teams |
 
 ## When to pick Dust
@@ -153,9 +158,9 @@ It sits between no-code automation and enterprise search. Compared with [Glean](
 
 ## Pricing
 
-Dust publishes a Pro plan at 29 EUR per user per month, excluding tax, with a 14-day trial. As verified on 2026-06-23, Pro starts from one user and includes advanced models (GPT-5, Claude, Gemini, Mistral), custom action-capable agents, core connections, native integrations, privacy/security features, fair-use unlimited messages, programmatic credits, fixed pricing on additional programmatic usage, up to 1GB per user of data sources, and one private space.
+Dust's pricing page now presents Business self-serve seats rather than the older Pro-only EUR ladder. As verified on 2026-06-25, Business Pro is listed at $24 per seat per month when billed yearly and Max at $120 per seat per month when billed yearly. The buyer read: Pro is the default pilot tier for teams proving workplace agents, while Max is the higher self-serve tier to inspect when model access, limits, or programmatic usage matter.
 
-Enterprise is custom and starts from 100 members. It adds advanced security and controls, larger storage and file limits, custom programmatic pricing, SSO (Okta, Entra ID, Jumpcloud), flexible payment options, priority support and account management, priority access to new features, US/EU data hosting, SCIM provisioning, and the Salesforce Tool.
+Enterprise remains custom. Use it for larger rollouts that need deeper security review, SSO, SCIM, hosting commitments, larger limits, Salesforce tooling, priority support, or custom commercial terms.
 
 The pricing is reasonable for team workflows if agents replace repeated internal support, research, or support-answering labor. It is expensive if used like a casual chatbot.
 
@@ -171,7 +176,7 @@ It is weaker when the organization only wants a general chatbot. The value depen
 - Connect only the sources needed for that workflow.
 - Define which tools an agent may execute and which actions require human review.
 - Decide who owns assistant prompts, source hygiene, and regression testing.
-- Check whether Pro storage, private space, and programmatic usage limits match the pilot.
+- Check whether Pro or Max storage, private space, model access, and programmatic usage limits match the pilot.
 - Move to Enterprise review before broad rollout, SSO, SCIM, hosting requirements, or regulated data.
 
 ## Failure Modes
@@ -185,13 +190,12 @@ It is weaker when the organization only wants a general chatbot. The value depen
 
 ## Recent changes
 
-- **Model lineup rechecked (verified 2026-06-23).** The Dust pricing page explicitly names GPT-5, Claude, Gemini, and Mistral as available advanced models for Pro and Enterprise.
-- **Enterprise SSO providers named.** Okta, Entra ID, and Jumpcloud are now listed by name on the Enterprise tier, alongside SCIM provisioning, US/EU data hosting, and the Salesforce Tool.
-- **Pro pricing unchanged.** 29 EUR/user/month excluding tax, from 1 user, 14-day trial. The fair-use message policy and 1GB-per-user data-source cap also persist.
+- **Pricing ladder changed (verified 2026-06-25).** Dust now presents Business Pro at $24/seat/mo yearly and Max at $120/seat/mo yearly, plus Enterprise custom. Older 29 EUR Pro references should be treated as stale for new procurement.
+- **Enterprise remains sales-led.** Confirm SSO, SCIM, hosting, Salesforce tooling, security review, and support terms directly before a broad rollout.
 
 ## Methodology
 
-Last verified 2026-06-23 against Dust pricing, product, and documentation pages. Scoring emphasizes team utility, action-capable agents, integrations, pricing, and enterprise readiness.
+Last verified 2026-06-25 against Dust pricing, product, and documentation pages. Scoring emphasizes team utility, action-capable agents, integrations, pricing, and enterprise readiness.
 
 ## FAQ
 

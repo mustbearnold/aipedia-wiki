@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2022-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Krea: Features, Pricing & Review (June 2026)"
 meta_description: "Krea is the real-time creative suite for image, video, 3D, lipsync, LoRA, and node workflows. June 2026 pricing check: Free 100 daily compute units; Basic, Pro, Max, Business, and Enterprise differ by model access, rollover, seats, and compute."
@@ -34,7 +34,7 @@ facts:
     source: https://www.krea.ai/
     source_label: Krea official site
     source_id: krea-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -43,7 +43,7 @@ facts:
     source: https://www.krea.ai/pricing
     source_label: Krea pricing
     source_id: krea-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -52,7 +52,7 @@ facts:
     source: https://www.krea.ai/realtime
     source_label: Krea realtime image generation
     source_id: krea-realtime
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -62,7 +62,7 @@ facts:
     source: https://www.krea.ai/video
     source_label: Krea video generator
     source_id: krea-video
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.krea.ai/pricing
     source_label: Krea pricing
     source_id: krea-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -96,7 +96,7 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Source"
     source_id: krea-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified on krea.ai/pricing"
   - date: 2026-04-18
     plan: "Pro"
@@ -104,7 +104,7 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Source"
     source_id: krea-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Unlocks Veo 3, Sora, Kling video access"
   - date: 2026-05-13
     plan: "Pro"
@@ -112,7 +112,7 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Source"
     source_id: krea-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified; Krea 2, Nano Banana Pro, Z-image, Qwen, Hailuo, Runway added to model lineup."
   - date: 2026-06-08
     plan: "Pro"
@@ -120,7 +120,7 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Krea pricing"
     source_id: krea-pricing
-    verified_at: 2026-06-08
+    verified_at: 2026-06-25
     note: "Reverified current plan table: Pro includes all video models including Veo3, Sora, and Kling; Basic/Pro/Max monthly compute does not roll over, while Business/Enterprise can support rollover."
   - date: 2026-06-23
     plan: "Free / Basic / Pro / Max / Business"
@@ -128,8 +128,16 @@ price_history:
     source: "https://www.krea.ai/pricing"
     source_label: "Krea pricing"
     source_id: krea-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Pricing page still centers compute units, yearly discounts, Basic/Pro/Max non-rollover, Business/Enterprise rollover options, unlimited Business members, and Business packs from 20k to 1.5M monthly units."
+  - date: 2026-06-25
+    plan: "Pro / Max / Business"
+    price: "$252 / $756 / $1,920 billed yearly"
+    source: "https://www.krea.ai/pricing"
+    source_label: "Krea pricing"
+    source_id: krea-pricing
+    verified_at: 2026-06-25
+    note: "Official annual pricing page shows Pro at $252/year with 20,000 units, Max at $756/year with 60,000 units, and Business at $1,920/year with 80,000 baseline units. Business packs still range from 20k to 1.5M monthly units."
 ---
 
 # Krea
@@ -157,7 +165,7 @@ Krea sits in an aggregator position: it does not train most of the models it ser
 | **Video models** | Veo 3, Sora, Kling, Runway, Hailuo, Wan, and others (Pro tier and above) |
 | **3D and lipsync** | In-house 3D and lipsync models |
 | **Free tier** | Basic use with pay-as-you-go compute units and limited model access |
-| **Paid plans** | Basic $9 · Pro $35 · Max $70 · Business $200 |
+| **Paid plans** | Basic $9 monthly reference · Pro $35 monthly reference / $252 yearly · Max $70 monthly reference / $756 yearly · Business $200 monthly reference / $1,920 yearly |
 | **Enterprise** | Custom pricing with SAML SSO, audit logs, analytics API |
 | **LoRA training** | Up to 50 images (Basic) · unlimited (Max, 2,000 files) |
 | **Upscaling** | 4K (Basic) · 8K (Pro) · 22K (Max) |
@@ -199,16 +207,16 @@ Subscription pricing via [krea.ai/pricing](https://www.krea.ai/pricing):
 |---|---|---|---|
 | Free | $0 | 100/day, limited models | Trial, hobby use |
 | Basic | $9/mo monthly equivalent; current annual page shows $63 billed yearly | 5,000/mo · commercial license · 4K upscale · selected video models | Image-focused solo creators |
-| Pro | $35/mo monthly equivalent; current annual page shows $252 billed yearly | 20,000/mo · all video models · nodes/apps · 8K upscale | **Most pro creators should land here** |
-| Max | $70/mo monthly equivalent; current annual page shows $756 billed yearly | 60,000/mo · unlimited LoRA jobs · unlimited relaxed in-house generations · 22K upscale | Heavy power users |
-| Business | $200/mo monthly equivalent; current annual page shows $1,920 billed yearly | 80,000/mo baseline · up to 50 seats included · Business terms · spend controls | Teams sharing compute |
+| Pro | $35 monthly reference; current annual page shows $252 billed yearly | 20,000/mo · all video models · nodes/apps · 8K upscale | **Most pro creators should land here** |
+| Max | $70 monthly reference; current annual page shows $756 billed yearly | 60,000/mo · unlimited LoRA jobs · unlimited relaxed in-house generations · 22K upscale | Heavy power users |
+| Business | $200 monthly reference; current annual page shows $1,920 billed yearly | 80,000/mo baseline · up to 50 seats included · Business terms · spend controls | Teams sharing compute |
 | Enterprise | Custom | Custom packs · SAML SSO · audit logs | Compliance-heavy orgs |
 
 The current pricing page emphasizes yearly discounts for individual plans and a Business annual discount. One-time compute packs are available from 2,000 to 50,000 units with 90-day validity.
 
 No public API pricing tier is currently published, although Enterprise plans include analytics API access.
 
-Prices reverified 2026-06-23 via [Krea pricing](https://www.krea.ai/pricing). The checked page lists Krea 2 access across paid tiers, all video models at Pro and above, unlimited relaxed in-house generations at Max and above, Business terms/no-training clauses for teams, unlimited Business members, Business compute packs from 20k to 1.5M units, and Analytics API/SLA/audit-log controls at Enterprise.
+Prices reverified 2026-06-25 via [Krea pricing](https://www.krea.ai/pricing). The checked page lists Krea 2 access across paid tiers, all video models at Pro and above, unlimited relaxed in-house generations at Max and above, Business terms/no-training clauses for teams, unlimited Business members, Business compute packs from 20k to 1.5M units, and Analytics API/SLA/audit-log controls at Enterprise.
 
 ## Against the alternatives
 
@@ -235,7 +243,7 @@ Prices reverified 2026-06-23 via [Krea pricing](https://www.krea.ai/pricing). Th
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [Krea pricing](https://www.krea.ai/pricing), the [Krea homepage](https://www.krea.ai/), [Krea news](https://www.krea.ai/news), and the [Krea Series B coverage from TechCrunch](https://techcrunch.com/2025/04/07/kreas-founders-snubbed-postgrad-grants-from-the-king-of-spain-to-build-their-ai-startup-now-its-valued-at-500m/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [Krea pricing](https://www.krea.ai/pricing), the [Krea homepage](https://www.krea.ai/), [Krea news](https://www.krea.ai/news), and the [Krea Series B coverage from TechCrunch](https://techcrunch.com/2025/04/07/kreas-founders-snubbed-postgrad-grants-from-the-king-of-spain-to-build-their-ai-startup-now-its-valued-at-500m/).
 
 ## FAQ
 

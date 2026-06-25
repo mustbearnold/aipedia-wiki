@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$34/user/month"
 status: active
 launched: 2020-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Fathom: Features, Pricing & Review (June 2026)"
 meta_description: "Fathom is a free AI meeting assistant with unlimited recordings, transcriptions, instant summaries, bot-free capture in beta, and Ask Fathom limits by plan. Plans run Free, Premium $20/mo, Team $19/user/mo, Business $34/user/mo."
@@ -34,7 +34,7 @@ facts:
     source: https://fathom.video/
     source_label: Fathom official site
     source_id: fathom-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -43,7 +43,7 @@ facts:
     source: https://www.fathom.ai/pricing
     source_label: Fathom pricing
     source_id: fathom-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -53,7 +53,7 @@ facts:
     source: https://fathom.video/
     source_label: Fathom official site
     source_id: fathom-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -63,7 +63,7 @@ facts:
     source: https://help.fathom.video/
     source_label: Fathom help center
     source_id: fathom-help
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -72,7 +72,7 @@ facts:
     source: https://help.fathom.video/
     source_label: Fathom help center
     source_id: fathom-help
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-04'
@@ -95,7 +95,7 @@ price_history:
     source: "https://www.fathom.ai/pricing"
     source_label: "Source"
     source_id: fathom-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified on fathom.ai/pricing. Raised from $15/mo in early 2026."
   - date: 2026-04-18
     plan: "Team"
@@ -103,7 +103,7 @@ price_history:
     source: "https://www.fathom.ai/pricing"
     source_label: "Source"
     source_id: fathom-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified on fathom.ai/pricing"
   - date: 2026-04-18
     plan: "Business"
@@ -111,7 +111,7 @@ price_history:
     source: "https://www.fathom.ai/pricing"
     source_label: "Source"
     source_id: fathom-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified on fathom.ai/pricing. Adds CRM Field sync, Deal View, AI scorecards"
   - date: 2026-05-13
     plan: "All tiers"
@@ -119,7 +119,7 @@ price_history:
     source: "https://www.fathom.ai/pricing"
     source_label: "Source"
     source_id: fathom-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Re-verified June 23, 2026. Free / Premium $20 ($16 annual) / Team $19 ($15 annual) / Business $34 ($25 annual) all stable. Pricing page highlights bot-free capture in beta and Account-Wide Ask Fathom lookback differences by tier."
 ---
 
@@ -198,7 +198,7 @@ Pricing via [fathom.ai/pricing](https://www.fathom.ai/pricing):
 
 All paid plans include a 90-day money-back guarantee. Team and Business require a 2-user minimum. CRM sync features cap at 3 users per domain on Team and below.
 
-Prices re-verified 2026-06-23 via [fathom.ai/pricing](https://www.fathom.ai/pricing), [Fathom product updates](https://help.fathom.video/en/articles/6220097), and [Fathom's Account-Wide Ask usage-limit help page](https://help.fathom.video/en/articles/10390017). No core tier moved, but the buyer guidance changed because bot-free capture is still labeled beta and Account-Wide Ask Fathom limits started June 1.
+Prices re-verified 2026-06-25 via [fathom.ai/pricing](https://www.fathom.ai/pricing), [Fathom product updates](https://help.fathom.video/en/articles/6220097), and [Fathom's Account-Wide Ask usage-limit help page](https://help.fathom.video/en/articles/10390017). No core tier moved, but the buyer guidance changed because bot-free capture is still labeled beta and Account-Wide Ask Fathom limits started June 1.
 
 **Note on the 2026 price move:** Premium was $15/mo as of late 2025; it moved to $20/mo monthly (or $16/mo annual) in early 2026. The free tier terms tightened at the same time: advanced summary templates dropped from unlimited to 5 per month.
 
@@ -226,7 +226,7 @@ Prices re-verified 2026-06-23 via [fathom.ai/pricing](https://www.fathom.ai/pric
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [fathom.ai/pricing](https://www.fathom.ai/pricing), [Fathom product updates](https://help.fathom.video/en/articles/6220097), [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017), and the [TechCrunch Series A announcement](https://techcrunch.com/2024/09/19/ai-notetaker-fathom-raises-17m/). For a head-to-head pick against the newly tracked meeting-notes contender, see [MeetGeek](/tools/meetgeek/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [fathom.ai/pricing](https://www.fathom.ai/pricing), [Fathom product updates](https://help.fathom.video/en/articles/6220097), [Fathom Account-Wide Ask usage limits](https://help.fathom.video/en/articles/10390017), and the [TechCrunch Series A announcement](https://techcrunch.com/2024/09/19/ai-notetaker-fathom-raises-17m/). For a head-to-head pick against the newly tracked meeting-notes contender, see [MeetGeek](/tools/meetgeek/).
 
 ## FAQ
 

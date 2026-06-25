@@ -773,3 +773,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Failed then fixed: The first batch check caught long sentences in `hume.md` and `tana.md`, the banned phrase `best-in-class` in `supermaven.md`, and a ledger check race caused by running ledger generation/check concurrently. Split the sentences, replaced the phrase, regenerated the ledger, and reran the grouped batch check successfully.
 - Residual risks: Checkout-gated and account-gated claims remain caveated in content, especially Boomy, Apollo, Jimeng/Dreamina, Gemini Omni API pricing, Ada contact-sales pricing, Tavus overages/concurrency, and Genspark task-level credit burn.
 - Next: Commit, move `master` to the verified batch, push `master`, regenerate the next planner, and continue the next not-recently-refreshed batch.
+
+### 2026-06-25: Second Six-Worker 60-Tool Refresh Batch
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Ran the six-worker `$aipedia-tool-refresh-workflow` across the next 60 planned tools, from Tabnine through Wordtune. Integrated worker edits, updated affected category hubs, refreshed `src/data/source-registry.json`, regenerated `PAGE_REFRESH_LEDGER.md`, and checked all affected rendered routes.
+- Buyer-impact notes: Claude Design now carries the Anthropic metering-doc conflict caveat. DeepL and Deepgram have corrected usage and Gemini timing details. Dust moved off stale EUR shorthand to current Business Pro and Max annual-seat pricing. Exa, GLM, Krea, OmniSEO, Recraft, ServiceNow, Surfer SEO, Val Town, ClickUp, Goose, Readwise, Speechify, Tidio, OpenRouter, Rodin, and Make received current buyer-facing corrections or tightened caveats.
+- Verification: `npm run ledger:pages && npm run ledger:pages:check`; `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`; `npm run audit:provenance:changed -- --json`; `npm run typecheck`; `npm run build:fast`; `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 4 $(cat .tmp-route-qa-args.txt) --widths 319,360,390,430,768,1024,1366`.
+- Failed then fixed: The first grouped batch check failed only on `ledger:pages:check`; rerunning `ledger:pages && ledger:pages:check` fixed it. The first `typecheck` caught a YAML parse error in `src/content/tools/claude-design.md` caused by a colon in an unquoted inline value; changed it to a folded scalar and reran typecheck successfully.
+- Residual risks: Make live source checks included access-sensitive 403s, with at least one primary Make source reachable. Account-gated, checkout-gated, and plan-doc-conflict claims are caveated in the affected pages.
+- Next: Commit, move `master` to the verified batch, push `master`, then regenerate the next planner before launching another six-worker wave.

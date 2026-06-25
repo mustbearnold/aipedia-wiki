@@ -90,7 +90,7 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **June 25 Devin comparison follow-up:** the cleaned-up coding hub separates three buyer lanes cleanly: Devin for async ticket delegation, GitHub Copilot for GitHub-native IDE/PR/SDK/governance workflows, and Val Town for instant hosted TypeScript endpoints, cron jobs, and small automations. Devin pricing still shows Free, Pro $20/month, Max $200/month, Team $80/month plus $40/month per full user, and extra usage at API pricing after included usage is consumed.
 
-**June 14 Val Town update:** [Val Town](/tools/val-town/) remains the tiny TypeScript runtime lane: Free for public vals, Pro at the $21/month yearly-billed headline with $10/month in Townie credit, and Business from $167/month yearly-billed with $100/month in Townie credit. Use Vercel or Vercel Functions when the buyer is building a full-stack app, needs multiple runtimes, or wants app-platform controls; use Val Town for vals, cron jobs, webhooks, and small internal utilities.
+**June 25 Val Town update:** [Val Town](/tools/val-town/) remains the tiny TypeScript runtime lane: Free for public vals, Pro at the $21/month yearly-billed headline with $10/month in Townie credit and 2,000 private vals, and Business from $167/month yearly-billed with $100/month in Townie credit. Use Vercel or Vercel Functions when the buyer is building a full-stack app, needs multiple runtimes, or wants app-platform controls; use Val Town for vals, cron jobs, webhooks, and small internal utilities.
 
 **June 14 Factory update:** [Factory](/tools/factory/) pricing remains unchanged in current docs: Pro is still $20/month, Plus is $100/month, Max is $200/month, and Teams/Enterprise remain custom. The buyer guidance stays conservative: Pro for serious individual evaluation, Plus only when Droid Computers or roughly 5x Pro usage are already useful, and Max only for heavy individual users who need roughly 10x Pro usage plus early access.
 
@@ -114,13 +114,13 @@ AI coding tools now split into five buyer jobs: inline help inside an existing I
 
 **Use [Rork](/tools/rork/) when the coding deliverable is a mobile/app-store prototype instead of a web dashboard.** The June 25 docs check keeps Free as a public web-app test lane, Rork Pro for Android Kotlin/Compose plus Expo/React Native and web apps, and Rork Max from $200/month for SwiftUI iOS, Apple Watch, Vision Pro, native games, and widgets. Public Rork price surfaces can conflict on the exact Pro entry point, so use checkout as the purchase source. It is an app-builder handoff lane, not a replacement for code review, mobile architecture, or production QA.
 
-**Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The June 23 check keeps the active repository at `aaif-goose/goose`, with v1.38.0 as the latest release from June 17, 2026, Apache-2.0 code, 15+ provider routes, 70+ MCP extensions, and no Goose subscription fee. The real cost is the configured LLM plus local permission, extension-trust, and secrets controls.
+**Use [Goose](/tools/goose/) when the buyer wants an open-source local/BYOK agent that crosses coding and general automation.** The June 25 check keeps the active repository at `aaif-goose/goose`, with v1.38.0 as the latest checked release, Apache-2.0 code, 15+ provider routes, 70+ MCP extensions, 50,000+ GitHub stars, and no Goose subscription fee. The real cost is the configured LLM plus local permission, extension-trust, and secrets controls.
 
 **June 24 Cline update:** [Cline](/tools/cline/) is no longer just a "free VS Code extension" buyer lane. Current Cline pages position it as an open-source agent runtime across IDE, CLI, Kanban, SDK, and a separate licensed Spec Driven enterprise platform with LG CNS. Open Source remains free for individual developers, but inference is usage-based or BYOK, and the pricing navigation now shows roughly 64k GitHub stars. Enterprise and Spec Driven are custom/licensed governance and delivery-platform lanes for SSO/RBAC/billing/audit/deployment controls, enterprise context, fixed spec pipelines, and model/deployment boundaries. Teams should review Auto Approve/YOLO plus SDK tool policies before broad automation because unlisted SDK tools default to enabled and auto-approved. Vercel AI Gateway is one supported provider route, not the whole product.
 
 **June 22 Cody update:** [Cody](/tools/cody/) remains a Sourcegraph Enterprise-only code-intelligence lane, not a self-serve Copilot alternative. Current Sourcegraph sources still keep Enterprise starting at $16K with AI-feature credits, org-wide credit pooling, no monthly credit expiry, and renewal rollover; the VS Code Marketplace now warns Cody is no longer available for non-enterprise users even while the listing still carries stale Cody Pro/model-option copy. Evaluate it only when Sourcegraph code graph, Deep Search, MCP/API/CLI access, Cody Gateway/model controls, and enterprise procurement are part of the platform decision.
 
-**Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.2 materials list 1M context, flexible coding effort modes, OpenAI-compatible API pricing, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
+**Use [GLM](/tools/glm/) when the coding question is model backend evaluation.** Z.AI's GLM-5.2 materials list 1M context, flexible coding effort modes, OpenAI-compatible API pricing, cached-input pricing, and MIT Hugging Face weights, with public API pricing at $1.40/M input and $4.40/M output.
 
 **Use [MiniMax](/tools/minimax/) when the coding question is MiniMax-M3 backend evaluation.** The June 21 check keeps MiniMax M3-first: standard M3 pay-as-you-go is listed at $0.30/M input and $1.20/M output for <=512K input, the M3 page positions it around coding, agentic, long-context, and native multimodal work, and >512K input plus Priority tiers still need account-level access confirmation.
 
@@ -309,7 +309,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Mastra pricing](https://mastra.ai/pricing) (verified 2026-06-22)
 - [Mastra model router docs](https://mastra.ai/models) (verified 2026-06-22)
 - [Mastra blog](https://mastra.ai/blog) (verified 2026-06-22)
-- [OpenHands pricing](https://openhands.dev/pricing) (verified 2026-06-12)
+- [OpenHands pricing](https://openhands.dev/pricing) (verified 2026-06-25)
 - [Pieces pricing](https://pieces.app/pricing) (verified 2026-06-25)
 - [Qodo pricing](https://www.qodo.ai/pricing/) (verified 2026-06-22)
 - [Qodo pricing and usage](https://docs.qodo.ai/pricing-and-usage) (verified 2026-06-22)
@@ -335,19 +335,19 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) (verified 2026-06-12)
 - [OpenAI public API pricing](https://openai.com/api/pricing/) (verified 2026-06-12)
 - [Supermaven pricing](https://supermaven.com/pricing) (verified 2026-06-25)
-- [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-12)
+- [Tabnine pricing](https://www.tabnine.com/pricing) (verified 2026-06-25)
 - [Sourcegraph pricing](https://sourcegraph.com/pricing) (verified 2026-06-22)
 - [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody) (verified 2026-06-22)
 - [Sourcegraph Cody plan changes](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans) (verified 2026-06-22)
 - [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider) (verified 2026-06-22)
 - [Sourcegraph AI Terms](https://sourcegraph.com/terms/ai-terms) (verified 2026-06-22)
 - [Cody VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai) (verified 2026-06-22)
-- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-14)
+- [Val Town pricing](https://www.val.town/pricing) (verified 2026-06-25)
 - [Vercel Functions docs](https://vercel.com/docs/functions) (verified 2026-06-14)
 - [Vercel Functions runtimes](https://vercel.com/docs/functions/runtimes) (verified 2026-06-14)
 - [Vercel pricing](https://vercel.com/pricing) (verified 2026-06-14)
-- [Zed pricing](https://zed.dev/pricing) (verified 2026-06-12)
-- [Trae plans and billing](https://docs.trae.ai/ide/new-plans-and-billing) (verified 2026-06-12)
+- [Zed pricing](https://zed.dev/pricing) (verified 2026-06-25)
+- [Trae plans and billing](https://docs.trae.ai/ide/new-plans-and-billing) (verified 2026-06-25)
 - [Gemini Code Assist](https://cloud.google.com/products/gemini/code-assist) (verified 2026-06-22)
 - [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-22)
 - [Gemini API model docs](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-22)
@@ -359,12 +359,12 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Julius credits overview](https://julius.ai/docs/billing/credits-overview) (verified 2026-06-23)
 - [Julius credit billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-23)
 - [Julius data connector overview](https://julius.ai/docs/data-connectors/overview) (verified 2026-06-23)
-- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-23)
-- [Goose GitHub releases](https://github.com/aaif-goose/goose/releases) (verified 2026-06-23)
-- [Goose documentation](https://block.github.io/goose/) (verified 2026-06-23)
-- [Z.AI GLM-5.2 launch post](https://huggingface.co/blog/zai-org/glm-52-blog) (verified 2026-06-23)
+- [Goose GitHub repository](https://github.com/aaif-goose/goose) (verified 2026-06-25)
+- [Goose GitHub releases](https://github.com/aaif-goose/goose/releases) (verified 2026-06-25)
+- [Goose documentation](https://goose-docs.ai/) (verified 2026-06-25)
+- [Z.AI GLM-5.2 launch post](https://huggingface.co/blog/zai-org/glm-52-blog) (verified 2026-06-25)
 - [Z.AI pricing](https://docs.z.ai/guides/overview/pricing) (verified 2026-06-23)
-- [GLM-5.2 on Hugging Face](https://huggingface.co/zai-org/GLM-5.2) (verified 2026-06-23)
+- [GLM-5.2 on Hugging Face](https://huggingface.co/zai-org/GLM-5.2) (verified 2026-06-25)
 - [MiniMax M3 model page](https://www.minimax.io/models/text/m3) (verified 2026-06-21)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-21)
 - [Qwen Cloud model releases](https://docs.qwencloud.com/changelog/models) (verified 2026-06-15)
@@ -376,7 +376,7 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
 - [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-23)
 - [Groq Llama 4 Maverick model card](https://console.groq.com/docs/model/meta-llama/llama-4-maverick-17b-128e-instruct) (verified 2026-06-23)
-- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-23)
+- [Glean developer platform](https://developers.glean.com/) (verified 2026-06-25)
 - [v0 pricing](https://v0.app/pricing) (verified 2026-06-12)
 - [v0 documentation](https://v0.app/docs) (verified 2026-06-12)
 - [Uizard exporting projects and Handoff Mode](https://support.uizard.io/en/articles/6380330-exporting-projects) (verified 2026-06-12)

@@ -8,25 +8,25 @@ company: all-hands-ai
 url: https://docs.openhands.dev/
 github_url: https://github.com/All-Hands-AI/OpenHands
 pricing_model: open-source
-price_range: "Free (MIT, BYOK) · Free Individual SaaS (10 conv/day) · Enterprise custom"
+price_range: "Free (MIT, BYOK) · free Individual cloud · Team and Enterprise commercial tiers"
 status: active
 launched: 2024-03
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 price_history:
   - date: 2026-06-01
     price: "see note"
     source: "https://openhands.dev/pricing"
     source_label: "OpenHands pricing"
     source_id: openhands-pricing
-    verified_at: 2026-06-01
-    change: "June 1 recheck: Local Open Source remains free; SaaS Individual remains free with BYOK or OpenHands provider at cost; Enterprise remains custom for SaaS/self-hosted VPC, SAML/SSO, unlimited concurrent conversations, Large Codebase SDK, priority support, and shared Slack."
+    verified_at: 2026-06-25
+    change: "June 25 recheck: Local Open Source remains free; OpenHands Cloud still has a free Individual plan with BYOK or OpenHands provider token pricing; the public page now describes Team and Enterprise paths for organization control and scale."
   - date: 2026-05-13
     price: "see note"
     source: "https://openhands.dev/pricing"
     source_label: "OpenHands pricing"
     source_id: openhands-pricing
-    verified_at: 2026-06-01
+    verified_at: 2026-06-25
     change: "All Hands AI restructured OpenHands Cloud: the $20/mo Pro tier was retired in favor of a free Individual SaaS plan (10 daily conversations, BYOK or at-cost OpenHands provider) plus custom Enterprise. Self-hosted MIT remains free."
   - date: 2026-04-17
     price: "see note"
@@ -53,30 +53,30 @@ facts:
     source: "https://docs.openhands.dev/"
     source_label: "OpenHands documentation"
     source_id: openhands-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "As of June 2026 OpenHands Cloud has two public tiers: free Individual SaaS (10 daily conversations, BYOK or at-cost OpenHands provider) and custom-priced Enterprise (SAML/SSO, private VPC, unlimited concurrent runs). The $20/mo Pro tier was retired. Self-hosting under MIT remains free."
+    value: "As of June 2026 OpenHands Cloud has a free Individual tier plus commercial Team and Enterprise paths; the pricing FAQ says Individual supports BYOK or the OpenHands LLM provider, while Enterprise is for centrally managed organization deployments. Self-hosting under MIT remains free."
     source: "https://openhands.dev/pricing"
     source_label: "OpenHands pricing"
     source_id: openhands-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
   watch_out_for:
-    value: "Verify current daily conversation caps, model access policy, and Enterprise VPC terms on the live pricing page before procurement. The product moved off a $20/mo Pro tier in 2026."
+    value: "Verify current conversation caps, token pricing, Team features, model access policy, and Enterprise deployment terms on the live pricing page before procurement. The product moved off a $20/mo Pro tier in 2026."
     source: "https://openhands.dev/pricing"
     source_label: "OpenHands pricing"
     source_id: openhands-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [open-source, ai-software-engineer, docker, sandboxed, devin-alternative, multi-model, python, typescript, github-integration, self-hosted, openhands-cloud]
 seo_title: "OpenHands: Features, Pricing & Review (June 2026)"
-meta_description: "OpenHands (formerly OpenDevin) is a free, MIT-licensed AI software engineer maintained by All Hands AI. Self-host free; OpenHands Cloud offers a free Individual SaaS tier (10 conv/day, BYOK) and custom Enterprise. Pro $20/mo retired May 2026."
+meta_description: "OpenHands (formerly OpenDevin) is a free, MIT-licensed AI software engineer maintained by All Hands AI. Self-host free; OpenHands Cloud offers a free Individual plan plus Team and Enterprise paths. Pro $20/mo retired May 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers wanting a free Devin alternative
@@ -88,18 +88,18 @@ not_best_for:
   - beginners needing guided step-by-step help
   - teams requiring managed SLAs with zero infrastructure
 quick_answer: >-
-  OpenHands is the MIT-licensed AI software engineer formerly named OpenDevin, maintained by All Hands AI. Self-host free, or use OpenHands Cloud with a free Individual SaaS tier (10 daily conversations, BYOK or at-cost provider) and a custom Enterprise plan. The $20/mo Pro tier was retired in May 2026. Pick it for autonomous coding on your own stack; skip for inline IDE autocomplete.
+  OpenHands is the MIT-licensed AI software engineer formerly named OpenDevin, maintained by All Hands AI. Self-host free, or use OpenHands Cloud with a free Individual plan plus Team and Enterprise paths. The $20/mo Pro tier was retired in May 2026. Pick it for autonomous coding on your own stack; skip for inline IDE autocomplete.
 ---
 
 # OpenHands
 
 OpenHands is the open-source AI software engineer previously known as OpenDevin, maintained by All Hands AI. It reads, writes, runs, and debugs code inside a Docker sandbox, accessible via CLI, GUI, Python SDK, or OpenHands Cloud ([docs.openhands.dev](https://docs.openhands.dev/)).
 
-The repo carries 75K+ GitHub stars as of June 12, 2026. Model access is bring-your-own or provider-mediated: the stable claim is that OpenHands can be powered with Claude, GPT, or other LLMs through its configuration layer, not that one exact frontier model list will stay current.
+The repo carries 75K+ GitHub stars as of June 2026. Model access is bring-your-own or provider-mediated: the stable claim is that OpenHands can be powered with Claude, GPT, or other LLMs through its configuration layer, not that one exact frontier model list will stay current.
 
 ## Recent developments
 
-- **June 1, 2026:** OpenHands pricing still lists three buying paths: free local Open Source, free SaaS Individual with BYOK or OpenHands provider at cost, and custom Enterprise for SaaS or self-hosted VPC deployments. The old $20/mo Pro tier remains retired.
+- **June 25, 2026:** OpenHands pricing still lists free local Open Source and free Individual cloud access, but the public page now frames commercial buying around Team and Enterprise paths. Confirm Team limits, token pricing, and Enterprise deployment terms before procurement. The old $20/mo Pro tier remains retired.
 
 ## System Verdict
 
@@ -107,7 +107,7 @@ The repo carries 75K+ GitHub stars as of June 12, 2026. Model access is bring-yo
 >
 > **Skip it if IDE autocomplete is the primary need.** OpenHands delegates full tasks; it does not pair-program inline. Cursor or Claude Code fit in-editor workflows better.
 >
-> **Who pays which tier:** Self-host free for developers who run Docker locally. OpenHands Cloud Individual SaaS is free with a 10 daily conversation cap and BYOK (or the OpenHands provider at cost, no markup). Enterprise covers SAML/SSO, private VPC, unlimited concurrent conversations, and the Large Codebase SDK with custom pricing.
+> **Who pays which tier:** Self-host free for developers who run Docker locally. OpenHands Cloud Individual is the no-cost cloud evaluation path with BYOK or OpenHands provider token pricing. Team is the organization step-up to verify for shared work, and Enterprise is the managed-control path for central access, deployment, support, and scale.
 
 ## Key Facts
 
@@ -116,14 +116,14 @@ The repo carries 75K+ GitHub stars as of June 12, 2026. Model access is bring-yo
 | **Former name** | OpenDevin (renamed 2024) |
 | **Maintainer** | All Hands AI |
 | **License** | MIT (core) · Enterprise directory is separate-licensed |
-| **GitHub stars** | 75,500+ (June 1, 2026) |
+| **GitHub stars** | 75K+ (June 2026) |
 | **Interfaces** | CLI · Local GUI · Python SDK · OpenHands Cloud |
 | **Sandbox** | Docker container per task |
-| **Cloud Individual (free)** | 10 daily conversations · BYOK or OpenHands provider at cost · API keys for CLI/SDK |
-| **Cloud Enterprise** | SaaS or self-hosted in your VPC · SAML/SSO · unlimited concurrent runs · Large Codebase SDK · dedicated Slack channel · custom pricing |
+| **Cloud Individual (free)** | BYOK or OpenHands LLM provider token pricing; verify current usage caps |
+| **Cloud commercial tiers** | Team and Enterprise paths for organization control, deployment, and scale; verify live SKU detail |
 | **Model support** | Claude, GPT, and other configurable LLMs; exact provider/model list depends on keys and deployment |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -154,11 +154,12 @@ The moat is low and the team knows it. The architecture is public, the model lay
 | Tier | Cost | Notes |
 |------|------|-------|
 | Self-hosted (MIT) | Free | Full features, BYO API key and infrastructure |
-| Cloud Individual | Free | GitHub login, 10 daily conversations, BYOK or OpenHands provider at cost, no markup |
-| Cloud Enterprise | Custom | SaaS or self-hosted VPC, SAML/SSO, unlimited concurrent runs, Large Codebase SDK, dedicated Slack channel |
+| Cloud Individual | Free | GitHub login, BYOK or OpenHands provider token pricing; verify current usage caps |
+| Team | Commercial | Organization plan surfaced on the live pricing page; verify seats, caps, and collaboration controls |
+| Enterprise | Custom | Organization-wide control, deployment and support terms; verify VPC, identity, and large-codebase entitlements |
 | Model API costs | Usage-based | Depends on the configured provider/model, context size, and number of agent iterations |
 
-*Prices verified 2026-06-12 via [OpenHands pricing](https://openhands.dev/pricing). The $20/mo Pro tier was retired in May 2026; the current free Individual SaaS plan replaces it with a daily conversation cap and the same BYOK/at-cost model. Self-hosting under MIT remains fully free.*
+*Prices verified 2026-06-25 via [OpenHands pricing](https://openhands.dev/pricing). The $20/mo Pro tier was retired in May 2026; the current public page keeps Open Source and Individual as free entry paths and adds Team/Enterprise buying language. Self-hosting under MIT remains fully free.*
 
 ## Against the alternatives
 
@@ -177,7 +178,7 @@ The moat is low and the team knows it. The architecture is public, the model lay
 
 - **No inline autocomplete.** Task-delegation only. Pair-programming requires Cursor or Cline.
 - **Docker dependency for self-hosting.** Full sandbox safety needs Docker. Lightweight mode drops isolation.
-- **Free Cloud caps at 10 conversations per day.** Heavy users should self-host or move to Enterprise.
+- **Cloud limits need live confirmation.** The public pricing page describes free Individual access and commercial Team/Enterprise paths, but buyers should verify current conversation caps and token pricing before relying on the hosted path.
 - **Variable reliability on complex refactors.** Large multi-file changes can exceed context limits or produce code requiring human fix-up.
 - **Low moat.** Architecture is public; commercial services compete on reliability, not novelty.
 - **Slower than IDE tools for one-file edits.** The plan-act-observe loop adds latency. Cline in VS Code wins on micro-edits.
@@ -185,7 +186,7 @@ The moat is low and the team knows it. The architecture is public, the model lay
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [OpenHands documentation](https://docs.openhands.dev/), [OpenHands pricing](https://openhands.dev/pricing), and the [OpenHands GitHub repo](https://github.com/OpenHands/OpenHands).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-25 against [OpenHands documentation](https://docs.openhands.dev/), [OpenHands pricing](https://openhands.dev/pricing), and the [OpenHands GitHub repo](https://github.com/OpenHands/OpenHands).
 
 ## FAQ
 
@@ -193,7 +194,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. OpenDevin was renamed OpenHands in 2024. All development and releases now ship under the OpenHands name, maintained by All Hands AI.
 
 **Is OpenHands free?**
-Self-hosting is fully free under MIT. OpenHands Cloud offers a free Individual SaaS tier via GitHub login: 10 daily conversations, BYOK or the OpenHands provider at cost with no markup. The $20/mo Pro plan was retired in May 2026. Enterprise is custom-priced for SaaS or self-hosted VPC deployments with SAML/SSO, unlimited concurrent runs, and the Large Codebase SDK.
+Self-hosting is fully free under MIT. OpenHands Cloud offers a free Individual tier via GitHub login with BYOK or OpenHands provider token pricing. The $20/mo Pro plan was retired in May 2026. Team and Enterprise are the commercial paths to verify for shared organization control, central access, and deployment terms.
 
 **Does OpenHands work with Claude?**
 Yes. OpenHands is model-agnostic. The project says the CLI can be powered with Claude, GPT, or other LLMs; exact model availability depends on the API keys, hosted provider, and deployment configuration.

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$39/user/month
 status: active
 launched: 2009-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://prezi.com/"
     source_label: "Prezi homepage"
     source_id: prezi-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -52,7 +52,7 @@ facts:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -80,6 +80,7 @@ price_history:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
+    verified_at: 2026-06-25
     note: "Free evaluation tier with limited controls; paid plans unlock stronger privacy, export, recording, and presentation features."
   - date: 2026-05-02
     plan: "Individual tiers"
@@ -87,6 +88,7 @@ price_history:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
+    verified_at: 2026-06-25
     note: "Standard, Plus, and Premium pricing verified against Prezi's public pricing page/search crawl."
   - date: 2026-05-02
     plan: "Teams"
@@ -94,6 +96,7 @@ price_history:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
+    verified_at: 2026-06-25
     note: "Business team tier with collaboration, analytics, custom brand kit, and SSO features."
   - date: 2026-05-13
     plan: "All tiers"
@@ -101,6 +104,7 @@ price_history:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
+    verified_at: 2026-06-25
     note: "Re-verified May 13, 2026. Standard $7, Plus $19, Premium $29 individual annual rates plus $39/user/mo Teams hold steady. Prezi AI features include image generation, animated slide creation from bullets, and document upload (PDF/PPT/Word)."
   - date: 2026-05-24
     plan: "Plans and AI feature access"
@@ -108,7 +112,16 @@ price_history:
     source: "https://prezi.com/pricing/"
     source_label: "Source"
     source_id: prezi-pricing
+    verified_at: 2026-06-25
     note: "Official plan guide rechecked: Basic/Standard include 500 AI credits, Plus and education Plus include unlimited AI generation, and Premium/Business add analytics/support/team administration."
+  - date: 2026-06-25
+    plan: "Plans and AI access"
+    price: "Unchanged"
+    source: "https://prezi.com/pricing/"
+    source_label: "Source"
+    source_id: prezi-pricing
+    verified_at: 2026-06-25
+    note: "Official pricing and support pages rechecked: Standard $7/mo annually, Plus $19/mo annually, Premium $29/mo annually, Teams $39/user/mo annually. Plus and higher include unlimited Prezi AI usage; lower tiers remain credit-limited."
 ---
 
 # Prezi
@@ -144,7 +157,7 @@ The AI era brought **Prezi AI**, a prompt-to-deck generator that builds a full p
 | **Accessibility** | Collaborative editing, commenting, presentation sharing |
 | **Team controls** | Brand kit · SSO · admin controls on Teams/Business |
 
-Every data point above verified against Prezi's published pricing and support sources on 2026-06-12. Exact checkout totals can vary by country, currency, tax, billing cycle, and promotional treatment.
+Every data point above was rechecked against Prezi's published pricing and support sources on 2026-06-25. Exact checkout totals can vary by country, currency, tax, billing cycle, and promotional treatment.
 
 ## What it actually is
 
@@ -191,7 +204,7 @@ Subscription pricing via [prezi.com/pricing](https://prezi.com/pricing):
 
 Actual checkout rates can vary with monthly billing, annual billing, region, taxes, and promotional periods. Verify current exact rates against [prezi.com/pricing](https://prezi.com/pricing) before major pricing citations.
 
-Prices and AI-plan access verified 2026-06-12 via Prezi's public pricing pages and support materials.
+Prices and AI-plan access verified 2026-06-25 via Prezi's public pricing pages and support materials.
 
 ## Against the alternatives
 
@@ -214,13 +227,13 @@ Prices and AI-plan access verified 2026-06-12 via Prezi's public pricing pages a
 - **Export to PDF flattens the interaction.** Prezis that rely on the zoom-pan storytelling lose their distinctiveness when exported as linear PDFs.
 - **Prezi Video requires practice.** Presenter alignment with on-screen content takes rehearsal; the first couple of recordings tend to feel awkward.
 - **Pricing can vary by checkout context.** Prezi publishes annual monthly rates, but final checkout can still vary by region, currency, billing cycle, tax, and active promotions.
-- **AI generation is not best-in-class.** Prezi AI is competitive but not at Gamma's speed or Beautiful.ai's design polish. The AI is a supporting feature, not the lead differentiator.
+- **AI generation is not the lead reason to buy.** Prezi AI is competitive but not at Gamma's speed or Beautiful.ai's design polish. The AI is a supporting feature, not the lead differentiator.
 - **Mobile authoring is limited.** Editing a Prezi on mobile is functional but not where most authoring happens.
 - **Teams tier starts small.** Seat-based Teams pricing starts at low seat counts; enterprise-scale Prezi deployments move to Business tier.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against the [Prezi homepage](https://prezi.com/), [Prezi pricing](https://prezi.com/pricing/), and Prezi support materials.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Prezi homepage](https://prezi.com/), [Prezi pricing](https://prezi.com/pricing/), and Prezi support materials.
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0.01-$0.08 per image / compute list pricing from H100 $3.99/h, as low as $1.89/h"
 status: active
 launched: 2022-10
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: https://fal.ai/
     source_label: fal.ai official site
     source_id: fal-ai-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -40,7 +40,7 @@ facts:
     source: https://fal.ai/pricing
     source_label: fal.ai pricing
     source_id: fal-ai-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -50,7 +50,7 @@ facts:
     source: https://docs.fal.ai/
     source_label: fal.ai docs
     source_id: fal-ai-docs
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://fal.ai/models
     source_label: fal.ai model catalog
     source_id: fal-ai-models
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -69,7 +69,7 @@ facts:
     source: https://fal.ai/pricing
     source_label: fal.ai pricing
     source_id: fal-ai-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-02'
@@ -95,7 +95,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Previously listed rate"
   - date: 2026-05-13
     plan: "A100 on-demand GPU"
@@ -103,7 +103,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "On-demand A100 dropped to $0.99/h (40GB VRAM) at May 2026 refresh"
   - date: 2026-05-13
     plan: "H100 on-demand GPU"
@@ -111,7 +111,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "On-demand H100 listed at $1.89/h (80GB VRAM)"
   - date: 2026-05-13
     plan: "B200 on-demand GPU"
@@ -119,7 +119,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Previously $9.00/h; moved to enterprise contact-sales tier at May 2026 refresh"
   - date: 2026-05-13
     plan: "Seedream V4 image"
@@ -127,7 +127,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Per-output rate verified"
   - date: 2026-05-13
     plan: "Flux Kontext Pro image"
@@ -135,7 +135,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Per-output rate verified"
   - date: 2026-05-13
     plan: "Nano Banana 2 image"
@@ -143,7 +143,7 @@ price_history:
     source: "https://fal.ai/pricing"
     source_label: "Source"
     source_id: fal-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Per-output rate verified; ~25 images per $1"
 ---
 
@@ -180,7 +180,7 @@ A cloud-hosted, serverless inference platform built specifically for generative 
 | **Speed advantage** | Custom CUDA kernels, 5-10s cold starts, 4× faster than some competitors |
 | **Enterprise** | Custom pricing, dedicated inference capacity |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## When to pick Fal.ai
 
@@ -211,7 +211,7 @@ Every data point above was verified against vendor documentation on 2026-06-23. 
 | Compute examples | H100 $3.99/h list, as low as $1.89/h; H200 $4.50/h list, as low as $2.10/h; B200 $6.25/h list, as low as $3.49/h; B300 $8.50/h list, as low as $4.49/h |
 | Free credits | $1 on signup |
 
-fal's model API docs say billing is prepaid-credit based, each model has its own unit, successful outputs are billed, HTTP 500+ server errors are not billed, and time spent waiting in queue is free. Batch inference: 50% of serverless pricing. Verified 2026-06-23 via [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), and [pricepertoken.com/image](https://pricepertoken.com/image).
+fal's model API docs say billing is prepaid-credit based, each model has its own unit, successful outputs are billed, HTTP 500+ server errors are not billed, and time spent waiting in queue is free. Batch inference: 50% of serverless pricing. Verified 2026-06-25 via [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), and [pricepertoken.com/image](https://pricepertoken.com/image).
 
 ## Failure modes
 
@@ -232,7 +232,7 @@ fal's model API docs say billing is prepaid-credit based, each model has its own
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), [docs.fal.ai](https://docs.fal.ai), and [pricepertoken.com/image](https://pricepertoken.com/image).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [fal.ai/pricing](https://fal.ai/pricing), [fal model API pricing docs](https://fal.ai/docs/documentation/model-apis/pricing), [docs.fal.ai](https://docs.fal.ai), and [pricepertoken.com/image](https://pricepertoken.com/image).
 
 ## FAQ
 

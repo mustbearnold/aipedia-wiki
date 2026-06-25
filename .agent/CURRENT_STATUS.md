@@ -209,6 +209,17 @@ Latest six-worker 60-tool refresh batch passed:
 
 This run refreshed 60 tools from Reclaim AI through Supermaven, updated affected category hubs, source registry rows, the page refresh ledger, and `.agent/loop-runs/2026-06-25-six-worker-60-tool-refresh-batch.md`. First grouped check caught and fixed long sentences in Hume and Tana, a banned phrase in Supermaven, five source-registry `last_checked` gaps, and a ledger check race caused by concurrent ledger generation.
 
+Second six-worker 60-tool refresh batch passed locally and is ready to commit/push:
+
+- `npm run ledger:pages && npm run ledger:pages:check`
+- `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`
+- `npm run audit:provenance:changed -- --json`
+- `npm run typecheck`
+- `npm run build:fast`
+- `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 4 $(cat .tmp-route-qa-args.txt) --widths 319,360,390,430,768,1024,1366`
+
+This run refreshed 60 tools from Tabnine through Wordtune, updated affected category hubs, source registry rows, the page refresh ledger, and `.agent/loop-runs/2026-06-25-second-six-worker-60-tool-refresh-batch.md`. First grouped check failed only on `ledger:pages:check`; rerunning `ledger:pages && ledger:pages:check` fixed it. First typecheck caught a YAML scalar issue in Claude Design; it was converted to a folded scalar and typecheck passed.
+
 Latest completed 60-tool baseline refresh passed:
 
 - `node --check scripts\tool-refresh-batch.mjs`
@@ -260,8 +271,9 @@ Latest completed tool-page template migration passed:
 
 1. Run `git status --short --branch`.
 2. Read this file and `.agent/PLANS.md`.
-3. Use `$aipedia-tool-refresh-workflow`, then run `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
-4. Regenerate the next not-recently-refreshed batch after the current verified 60-tool batch is pushed, unless a newer user request supersedes it.
+3. Commit and push the verified Tabnine-through-Wordtune 60-tool batch if it has not already been pushed.
+4. Use `$aipedia-tool-refresh-workflow`, then run `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
+5. Regenerate the next not-recently-refreshed batch after the current verified 60-tool batch is pushed, unless a newer user request supersedes it.
 
 ## Finish Major Work
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0 free / $9.99/mo or $94.99/year c.ai+; temporary promos may appear for eligible users"
 status: active
 launched: 2022-09
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://character.ai/
     source_label: Character.AI official site
     source_id: character-ai-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
@@ -39,7 +39,7 @@ facts:
     source: https://character.ai/subscribe
     source_label: Character.AI c.ai+ pricing
     source_id: character-ai-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -48,7 +48,7 @@ facts:
     source: https://blog.character.ai/creator-bundle/
     source_label: Character.AI creator bundle update
     source_id: character-ai-creator-bundle
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-18'
@@ -57,7 +57,7 @@ facts:
     source: https://blog.character.ai/pipsqueak2-and-more/
     source_label: Character.AI April model and memory update
     source_id: character-ai-pipsqueak2
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-18'
@@ -66,7 +66,7 @@ facts:
     source: https://support.character.ai/hc/en-us/articles/42645561782555-Important-Changes-for-Teens-on-Character-ai
     source_label: Character.AI teen changes help article
     source_id: character-ai-teen-changes-help
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -75,7 +75,7 @@ facts:
     source: https://blog.character.ai/u18-chat-announcement/
     source_label: Character.AI under-18 chat announcement
     source_id: character-ai-u18-announcement
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -84,7 +84,7 @@ facts:
     source: https://blog.character.ai/memory/
     source_label: Character.AI Memory update
     source_id: character-ai-memory
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-18'
@@ -93,13 +93,13 @@ facts:
     source: https://character.ai/video
     source_label: Character.AI AvatarFX
     source_id: character-ai-avatarfx
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-18'
 tags: [ai-chat, roleplay, character, companion, entertainment, creative-writing, community]
 seo_title: "Character AI: Features, Pricing & Review (June 2026)"
-meta_description: "Character AI is a roleplay and creator-character platform. Updated June 23, 2026: c.ai+ pricing, Memory and model changes, AvatarFX, creator tools, and under-18 chat limits."
+meta_description: "Character AI is a roleplay and creator-character platform. Updated June 25, 2026: c.ai+ pricing, Memory and model changes, AvatarFX, creator tools, and under-18 chat limits."
 author: "aipedia.wiki Editorial"
 best_for:
   - conversational roleplay with AI characters
@@ -115,13 +115,13 @@ not_best_for:
 quick_answer: >-
   Character AI is a roleplay, creator-character, and AI entertainment platform, not a general work assistant. The free tier covers casual character chat. c.ai+ is listed at $9.99/month or $94.99/year and now matters for more than convenience: it adds ad-free chats, no slow mode, unlimited voice calls, access to latest and best models, more Memory and pinned memories, Facts, fuller Memory Usage views, AvatarFX access, and early features. Pick it for interactive storytelling, roleplay, and character discovery. Skip it for factual research, coding, commercial work, or under-18 open-ended companion chat.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "c.ai+"
     price: "$9.99/mo or $94.99/year"
     source: "https://character.ai/subscribe"
     source_label: "Character.AI c.ai+ pricing"
     source_id: character-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Official subscribe page still lists $9.99 monthly and $94.99 annual. Summer Flash Sale terms list eligible checkout-dependent promos of $14.99 for the first 3 months or $59.99 for the first year before standard renewal pricing."
   - date: 2026-05-13
     plan: "c.ai+ monthly"
@@ -129,7 +129,7 @@ price_history:
     source: "https://character.ai/subscription/plus/pricing"
     source_label: "Source"
     source_id: character-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Verified on character.ai. Unchanged in May 2026; vendor page emphasized Better Memory, ad-free chats, Charms pack bonus, no slow mode, and unlimited voice calls."
   - date: 2026-05-13
     plan: "c.ai+ annual"
@@ -137,7 +137,7 @@ price_history:
     source: "https://character.ai/subscription/plus/pricing"
     source_label: "Source"
     source_id: character-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "20% off vs $119.88 monthly equivalent. Verified May 2026."
   - date: 2026-06-02
     plan: "c.ai+"
@@ -145,7 +145,7 @@ price_history:
     source: "https://character.ai/subscription/plus/pricing"
     source_label: "Character.AI c.ai+ pricing"
     source_id: character-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Re-verified c.ai+ monthly and annual pricing plus ad-free chats, unlimited voice calls, no slow mode, better memory, early access, and community access."
   - date: 2026-06-18
     plan: "c.ai+"
@@ -153,7 +153,7 @@ price_history:
     source: "https://character.ai/subscribe"
     source_label: "Character.AI c.ai+ pricing"
     source_id: character-ai-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Official subscribe page still lists $9.99 monthly and $94.99 annual. Summer Flash Sale terms list eligible checkout-dependent promos of $14.99 for the first 3 months or $59.99 for the first year before standard renewal pricing."
 ---
 
@@ -176,7 +176,7 @@ Character AI is a consumer AI entertainment platform for talking to, creating, a
 | **Core lane** | Consumer roleplay, character chat, interactive stories, creator discovery, and AI entertainment |
 | **Creator ecosystem** | Character.AI describes millions of Characters, worlds, and stories, with Creator Insights, creator guide updates, creator tags, leaderboards, and a following tab rolling out |
 | **Free tier** | Chat with characters, subject to ads, slow mode, limits, and feature gating |
-| **c.ai+ price** | $9.99/mo or $94.99/year on the June 23, 2026 subscribe page |
+| **c.ai+ price** | $9.99/mo or $94.99/year on the June 25, 2026 subscribe page |
 | **Temporary promo caveat** | Summer Flash Sale terms list eligible new or returning subscriber offers of $14.99 for the first 3 months, or $59.99 for the first year, before standard renewal pricing |
 | **c.ai+ features** | Ad-free chats, bonus on Charms packs, latest and best models, no slow mode, unlimited voice calls, better Memory, more pins, Facts, fuller Memory Usage, customization, early features, community access, and AvatarFX |
 | **Current model direction** | PipSqueak 2 for free users and DeepSqueak for c.ai+ are the named current chat styles in recent Character.AI updates |
@@ -191,7 +191,7 @@ Character AI is a consumer AI entertainment platform for talking to, creating, a
 - **The creator platform expanded.** The June 17 creator update adds a Creator Guide for current chat styles, mobile creation and editing improvements, tags, Creator Insights, creator leaderboards, and a following tab direction. Character.AI is moving closer to a creator-network product than a plain chatbot directory.
 - **AvatarFX changed the paid-plan surface.** The video page says AvatarFX is out for all c.ai+ members, so c.ai+ now includes a character-video generation angle, not only text and voice chat.
 - **Teen safety changed materially.** Character.AI announced that under-18 users will no longer be able to use open-ended chat and will instead be routed toward creative modes. Any recommendation for minors must account for that product change, not just older age-gate language.
-- **The pricing page moved and promos are checkout-dependent.** The durable price is still $9.99/month or $94.99/year, but the official route checked on June 23 is `character.ai/subscribe`, and the Summer Flash Sale terms only apply to eligible users who see the offer.
+- **The pricing page moved and promos are checkout-dependent.** The durable price is still $9.99/month or $94.99/year, but the official route checked on June 25 is `character.ai/subscribe`, and the Summer Flash Sale terms only apply to eligible users who see the offer.
 
 ## When To Pick Character AI
 
@@ -218,7 +218,7 @@ Character AI is a consumer AI entertainment platform for talking to, creating, a
 | c.ai+ annual | $94.99/year | Same as monthly, with the official subscribe page showing 20% savings versus $119.88 |
 | Summer Flash Sale if eligible | $14.99 first 3 months or $59.99 first year | Promotional terms for eligible new or returning subscribers only, then renews at standard pricing |
 
-Prices verified 2026-06-23 via [character.ai/subscribe](https://character.ai/subscribe) and the [c.ai+ Summer Flash Sale terms](https://support.character.ai/hc/en-us/articles/51248493096987-c-ai-Summer-Flash-Sale-Offer-Terms). Promos can vary by account and checkout display, so do not quote them as universally available.
+Prices verified 2026-06-25 via [character.ai/subscribe](https://character.ai/subscribe) and the [c.ai+ Summer Flash Sale terms](https://support.character.ai/hc/en-us/articles/51248493096987-c-ai-Summer-Flash-Sale-Offer-Terms). Promos can vary by account and checkout display, so do not quote them as universally available.
 
 ## Failure Modes
 
@@ -231,7 +231,7 @@ Prices verified 2026-06-23 via [character.ai/subscribe](https://character.ai/sub
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against the [Character.AI subscribe page](https://character.ai/subscribe), [Summer Flash Sale terms](https://support.character.ai/hc/en-us/articles/51248493096987-c-ai-Summer-Flash-Sale-Offer-Terms), [under-18 chat announcement](https://blog.character.ai/u18-chat-announcement/), [teen changes help article](https://support.character.ai/hc/en-us/articles/42645561782555-Important-Changes-for-Teens-on-Character-ai), [creator update](https://blog.character.ai/creator-bundle/), [Memory update](https://blog.character.ai/memory/), [April model and memory update](https://blog.character.ai/pipsqueak2-and-more/), and [AvatarFX page](https://character.ai/video). Scoring uses the four-dimension rubric at [/about/scoring/](/about/scoring/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against the [Character.AI subscribe page](https://character.ai/subscribe), [Summer Flash Sale terms](https://support.character.ai/hc/en-us/articles/51248493096987-c-ai-Summer-Flash-Sale-Offer-Terms), [under-18 chat announcement](https://blog.character.ai/u18-chat-announcement/), [teen changes help article](https://support.character.ai/hc/en-us/articles/42645561782555-Important-Changes-for-Teens-on-Character-ai), [creator update](https://blog.character.ai/creator-bundle/), [Memory update](https://blog.character.ai/memory/), [April model and memory update](https://blog.character.ai/pipsqueak2-and-more/), and [AvatarFX page](https://character.ai/video). Scoring uses the four-dimension rubric at [/about/scoring/](/about/scoring/).
 
 ## FAQ
 

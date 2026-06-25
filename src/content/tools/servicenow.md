@@ -11,8 +11,8 @@ pricing_model: enterprise
 price_range: Custom enterprise pricing
 status: active
 launched: 2004
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-turns-enterprise-AI-chaos-into-control-with-the-platform-for-governed-autonomous-work/default.aspx"
     source_label: "ServiceNow press release (Knowledge 2026)"
     source_id: servicenow-governed-autonomous-work-2026
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
     next_review_at: 2026-08-31
@@ -40,7 +40,7 @@ facts:
     source: "https://www.servicenow.com/products.html"
     source_label: "ServiceNow products"
     source_id: servicenow-products
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: medium
     next_review_at: 2026-08-31
@@ -49,16 +49,16 @@ facts:
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx"
     source_label: "ServiceNow AI Control Tower expansion"
     source_id: servicenow-ai-control-tower-2026
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: medium
     next_review_at: 2026-08-31
   watch_out_for:
-    value: "ServiceNow announcements bundle many SKUs and staged releases. AI Agent Advisor and Intelligent Approvals were slated for May 2026 GA, while AI Control Tower enhancements entered Innovation Lab in May with GA expected August 2026. Confirm contract entitlements and live regional availability before rollout."
+    value: "ServiceNow announcements bundle many SKUs and staged releases. Otto can first be experienced in EmployeeWorks and AI Control Tower, with broader rollout across products over the year; AI Control Tower enhancements entered Innovation Lab in May with GA expected August 2026. Confirm contract entitlements and live regional availability before rollout."
     source: "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Otto-creates-the-unified-AI-experience-for-the-enterprise/default.aspx"
     source_label: "ServiceNow Otto press release"
     source_id: servicenow-otto-2026
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: medium
     next_review_at: 2026-08-31
@@ -67,7 +67,7 @@ facts:
     source: "/news/2026-05-05-servicenow-action-fabric-ai-agent-system/"
     source_label: "ServiceNow Action Fabric coverage"
     source_id: servicenow-action-fabric-2026
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -76,7 +76,7 @@ facts:
     source: "/news/2026-05-06-servicenow-build-agent-coding-tools/"
     source_label: "ServiceNow Build Agent coverage"
     source_id: servicenow-build-agent-2026
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -85,7 +85,7 @@ facts:
     source: "/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/"
     source_label: "ServiceNow + AWS AgentCore + Kiro coverage"
     source_id: servicenow-aws-kiro-2026
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -94,7 +94,7 @@ facts:
     source: "/news/2026-05-06-servicenow-real-time-data-foundation/"
     source_label: "ServiceNow real-time data foundation coverage"
     source_id: servicenow-data-foundation-2026
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -112,12 +112,20 @@ not_best_for:
 quick_answer: >-
   ServiceNow's Otto and AI Control Tower are an enterprise agent/workflow control plane for governed autonomous work. June 2026 verification keeps the buyer story centered on Discover, Observe, Govern, Secure, and Measure, plus Action Fabric MCP, Build Agent, AWS Bedrock AgentCore/Kiro integration, and real-time data foundations. Pick it if you already run ServiceNow and need policy plus audit around agents. Skip it if you want self-serve pricing or lightweight automation.
 price_history:
+  - date: 2026-06-25
+    plan: "Enterprise"
+    price: "Custom"
+    source: "https://www.servicenow.com/products/ai-control-tower.html"
+    source_label: "ServiceNow AI Control Tower"
+    verified_at: 2026-06-25
+    note: "Rechecked AI Control Tower product page and Otto release. AI Control Tower is positioned as vendor-agnostic governance for agents, models, identities, runtime performance, risk, compliance, and value measurement; pricing remains enterprise contract-led."
   - date: 2026-06-09
     plan: "Enterprise"
     price: "Custom"
     source: "https://www.servicenow.com/products.html"
     source_label: "Source"
     source_id: servicenow-products
+    verified_at: 2026-06-25
     note: "Reverified 2026-06-09. Otto, AI Control Tower, Action Fabric, Build Agent, Workflow Data Fabric, AI Agent Advisor, Intelligent Approvals, and Innovation Lab-to-GA timing remain sales/contract dependent."
 ---
 
@@ -125,7 +133,7 @@ price_history:
 
 ServiceNow is an enterprise workflow platform (ITSM + employee + customer + operations workflows) that is repositioning itself as a **governed agent control plane**. At Knowledge 2026 (May 5-6, 2026), ServiceNow described a unified AI experience called **Otto** plus expanded **AI Control Tower**, **Action Fabric**, **Build Agent**, **Workflow Data Fabric**, and **Autonomous Workforce** capabilities aimed at agent deployments with enterprise governance requirements.
 
-The June 9, 2026 recheck keeps ServiceNow in the enterprise-control category rather than the lightweight automation category. The material update is AI Control Tower expansion across five dimensions: Discover, Observe, Govern, Secure, and Measure.
+The June 25, 2026 recheck keeps ServiceNow in the enterprise-control category rather than the lightweight automation category. The material update is AI Control Tower expansion across five dimensions: Discover, Observe, Govern, Secure, and Measure.
 
 ## Key Facts
 
@@ -135,7 +143,7 @@ The June 9, 2026 recheck keeps ServiceNow in the enterprise-control category rat
 | **Unified AI experience** | Otto (announced Knowledge 2026, May 5) |
 | **Governance layer** | AI Control Tower (expanded Knowledge 2026) |
 | **Control Tower dimensions** | Discover · Observe · Govern · Secure · Measure |
-| **Availability caveat** | AI Control Tower enhancements entered Innovation Lab in May; GA expected August 2026 |
+| **Availability caveat** | Otto starts in EmployeeWorks and AI Control Tower; AI Control Tower enhancements entered Innovation Lab in May with GA expected August 2026 |
 | **Agent action layer** | Action Fabric with generally available MCP Server (Claude, Copilot, custom agents) |
 | **App-build layer** | Build Agent reaches Cursor, Windsurf, Claude Code, GitHub Copilot with ServiceNow context |
 | **Data foundation** | Context Engine, Autonomous Data Analytics, Workflow Data Fabric (May 6, 2026) |
@@ -145,7 +153,7 @@ The June 9, 2026 recheck keeps ServiceNow in the enterprise-control category rat
 
 ## Recent developments (May-June 2026)
 
-- **June 9 recheck:** ServiceNow's AI Control Tower expansion remains the key procurement update. The release says Discover covers 30 new enterprise integrations across AWS, Google Cloud, Microsoft Azure, SAP, Oracle, Workday, OT/IoT, and non-human identities; Observe adds Traceloop runtime observability; Govern adds NIST/EU AI Act-aligned risk frameworks; Secure adds Veza-backed access governance and real-time shutoff; Measure adds cost and ROI dashboards.
+- **June 25 recheck:** ServiceNow's AI Control Tower expansion remains the key procurement update. The product page positions AI Control Tower as vendor-agnostic oversight for agents, models, identities, runtime performance, risk, compliance, and value measurement. The release says Discover covers 30 new enterprise integrations across AWS, Google Cloud, Microsoft Azure, SAP, Oracle, Workday, OT/IoT, and non-human identities; Observe adds Traceloop runtime observability; Govern adds NIST/EU AI Act-aligned risk frameworks; Secure adds Veza-backed access governance and real-time shutoff; Measure adds cost and ROI dashboards.
 - **May 6:** [ServiceNow launched a real-time data foundation for autonomous AI](/news/2026-05-06-servicenow-real-time-data-foundation/), including Context Engine, Autonomous Data Analytics, and Workflow Data Fabric positioning for live governed enterprise context.
 - **May 6:** [ServiceNow Build Agent reached Studio and major AI coding tools](/news/2026-05-06-servicenow-build-agent-coding-tools/), extending core skills into Cursor, Windsurf, Claude Code, and GitHub Copilot while keeping ServiceNow platform context and governance.
 - **May 6:** [ServiceNow and AWS linked AI Control Tower, Bedrock AgentCore, and Kiro](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/), adding a Kiro developer path and a shared governance architecture for mutual customers.
@@ -208,10 +216,11 @@ The best early candidates are workflows where ServiceNow already owns the proces
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against ServiceNow's AI Control Tower expansion, Otto launch, product catalog, [Action Fabric coverage](/news/2026-05-05-servicenow-action-fabric-ai-agent-system/), [Build Agent in coding tools coverage](/news/2026-05-06-servicenow-build-agent-coding-tools/), [AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/), and [real-time data foundation coverage](/news/2026-05-06-servicenow-real-time-data-foundation/).
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against ServiceNow's AI Control Tower expansion, Otto launch, product catalog, [Action Fabric coverage](/news/2026-05-05-servicenow-action-fabric-ai-agent-system/), [Build Agent in coding tools coverage](/news/2026-05-06-servicenow-build-agent-coding-tools/), [AWS AgentCore + Kiro integration coverage](/news/2026-05-06-servicenow-aws-agentcore-kiro-integration/), and [real-time data foundation coverage](/news/2026-05-06-servicenow-real-time-data-foundation/).
 
 ## Sources
 
 - [ServiceNow AI Control Tower expansion](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx): Discover, Observe, Govern, Secure, Measure, availability timing, integrations, Traceloop, Veza, NIST/EU AI Act frameworks, cost/ROI dashboards
 - [ServiceNow Otto launch](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Otto-creates-the-unified-AI-experience-for-the-enterprise/default.aspx): Otto unified AI experience, Action Fabric, AI Control Tower, workflow context
 - [ServiceNow products](https://www.servicenow.com/products.html): enterprise SKU and product catalog context
+- [ServiceNow AI Control Tower product page](https://www.servicenow.com/products/ai-control-tower.html): current governance positioning across agents, models, identities, risk, compliance, and value measurement

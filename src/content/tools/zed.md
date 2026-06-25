@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$30/seat/month"
 status: active
 launched: 2024-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,13 +48,13 @@ facts:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
 tags: [code-editor, rust, collaborative, ai-coding, performance, open-source, linux, macos, windows, zeta]
 seo_title: "Zed: Features, Pricing & Review (June 2026)"
-meta_description: "Zed is a native Rust code editor with GPU rendering, real-time multiplayer, and AI via Claude Opus 4.7, OpenAI frontier models, and Gemini. Free tier runs the open-weight Zeta2.1 edit-prediction model. Pro $10/month with $5 in AI credits; Business $30/seat."
+meta_description: "Zed is a native Rust code editor with GPU rendering, real-time multiplayer, hosted AI models, BYOK providers, and Zeta edit prediction. Pro is $10/month with $5 in AI credits; Business is $30/seat."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers who find VS Code sluggish
@@ -75,6 +75,7 @@ price_history:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
+    verified_at: 2026-06-25
     note: "June 1 recheck: Personal includes 2,000 accepted edit predictions and unlimited BYOK/external agents; Pro includes unlimited edit predictions, $5 hosted-token credit, and API list plus 10% usage; Business remains $30/seat/month with org controls and no fixed LLM credit allotment."
   - date: 2026-05-13
     plan: "Pro"
@@ -82,6 +83,7 @@ price_history:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
+    verified_at: 2026-06-25
     note: "Pricing restructured: Pro dropped from $20 to $10/mo, $5 monthly AI credit included, API list plus 10% overage. New Business tier $30/seat launched May 6 replacing Teams."
   - date: 2026-04-15
     plan: "Pro"
@@ -89,6 +91,7 @@ price_history:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
+    verified_at: 2026-06-25
     note: "500 prompts/month included. API list price plus 10% beyond the quota."
   - date: 2026-01-20
     plan: "ACP"
@@ -96,6 +99,7 @@ price_history:
     source: "https://zed.dev/pricing"
     source_label: "Source"
     source_id: zed-pricing
+    verified_at: 2026-06-25
     note: "Agent Client Protocol launched with JetBrains; Zed ships Claude Code, Codex CLI, and Gemini CLI integrations."
 ---
 
@@ -105,7 +109,7 @@ price_history:
 >
 > **May 6, 2026:** **Zed for Business** launched at $30 per seat per month. Org-wide AI policy controls, prompt-sharing and edit-prediction training disabled by default, BYOK for Anthropic, OpenAI, Google, and AWS at no extra charge. Pro pricing simultaneously cut from $20 to **$10/month** with $5 in hosted AI credits included.
 >
-> **April 17, 2026:** [Zed shipped Claude Opus 4.7 support within 24 hours](/news/2026-04-17-opus-4-7-day-two-ide-adoption/) of Anthropic's release, alongside Cursor, Windsurf, and Continue. Model selector lists Opus 4.7 as the default Claude option.
+> **June 25, 2026:** Pricing and AI-plan docs rechecked. Zed Pro remains $10/month with $5 in hosted token credit, Business remains $30/seat/month, and official docs describe hosted AI models, BYOK providers, external agents, spend limits, and a Pro trial that excludes Anthropic Opus models.
 
 Native code editor from Zed Industries, founded by several original authors of Atom and Tree-sitter. Written in Rust with a custom GPU-accelerated rendering engine (GPUI). Startup sits under 100ms. Scrolling stays smooth on 10k-line files.
 
@@ -127,7 +131,7 @@ The editor is free and open-source (Apache 2.0). Runs on macOS, Linux, and Windo
 | **Platforms** | macOS, Linux, Windows (stable Q1 2026) |
 | **License** | Apache 2.0, open-source |
 | **Edit prediction** | Zeta2.1 (May 8, 2026): open-weight, 3x fewer tokens, 28% faster at p50, default in Zed |
-| **AI models** | Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Grok, Ollama BYOK |
+| **AI models** | Zed-hosted models on Pro/Business, plus BYOK providers including Anthropic, OpenAI, Google, Amazon Bedrock, OpenRouter, Mistral, Deepseek, LM Studio, Ollama, and more |
 | **Free tier** | 2,000 accepted edit predictions, unlimited AI with BYOK |
 | **Pro** | $10/month, unlimited edit prediction, $5 in AI credits monthly, API list plus 10% overage |
 | **Business** | $30/seat/month (May 6, 2026): org-wide AI policies, training disabled by default, BYOK at no extra charge |
@@ -135,13 +139,13 @@ The editor is free and open-source (Apache 2.0). Runs on macOS, Linux, and Windo
 | **Multiplayer** | Shared buffers, cursor presence, voice |
 | **Agent Client Protocol** | Claude Code, Codex CLI, Gemini CLI, OpenCode |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
 One native editor covering three jobs: a fast code editor, an AI assistant panel, and a real-time multiplayer surface. Tree-sitter powers syntax and structural parsing across 60+ languages.
 
-AI integration splits into two features. The **Zeta2.1** edit-prediction model (shipped May 8, 2026) runs locally and predicts the next edit, not just the next token, so one tab accepts multi-line changes. Zeta2.1 uses a new "Multi-Region" prompt format that targets only sections requiring changes, cutting output tokens 3x versus Zeta2 and dropping p50 latency from 189ms to 136ms. The weights are open and available on Hugging Face for self-hosting. The assistant panel handles chat, inline transformations, and multi-file context through Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, Grok, or a local Ollama model.
+AI integration splits into two features. The **Zeta2.1** edit-prediction model (shipped May 8, 2026) runs locally and predicts the next edit, not just the next token, so one tab accepts multi-line changes. Zeta2.1 uses a new "Multi-Region" prompt format that targets only sections requiring changes, cutting output tokens 3x versus Zeta2 and dropping p50 latency from 189ms to 136ms. The weights are open and available on Hugging Face for self-hosting. The assistant panel handles chat, inline transformations, and multi-file context through Zed-hosted models on Pro/Business, external agents, BYOK providers, or a local Ollama model.
 
 The Agent Client Protocol (ACP), launched January 2026 in collaboration with JetBrains, ships [Claude Code](/tools/claude-code/), Codex CLI, Gemini CLI, and OpenCode integrations inside the editor. Agent work still happens through these external CLIs, not a native Zed Composer.
 
@@ -171,7 +175,7 @@ The Agent Client Protocol (ACP), launched January 2026 in collaboration with Jet
 | Pro (students) | $0 | Unlimited Zeta2.1 | $5 monthly credit | Verified students |
 | Business | $30/seat/mo | Unlimited Zeta2.1 | BYOK or provider cost plus 10% | Org policy controls, billing, governance |
 
-*Prices verified 2026-06-12 via [zed.dev/pricing](https://zed.dev/pricing), the [Zed AI model docs](https://zed.dev/docs/ai/models), the [Zed for Business launch](https://zed.dev/blog/zed-for-business), and [zed.dev/education](https://zed.dev/education). Pro was cut from $20 to $10 on May 6, 2026. Business launched the same day with org-wide AI policies, prompt-sharing and edit-prediction training off by default, token spend caps, and BYOK at no extra charge. Pro includes a two-week free trial with $20 in token credits. Overages bill at API list price plus 10%, either at month-end or per $10 of usage, whichever comes first. SSO, SAML/OIDC, SCIM, and SOC 2 certification are on the Business roadmap but not shipped yet.*
+*Prices verified 2026-06-25 via [zed.dev/pricing](https://zed.dev/pricing), the [Zed AI model docs](https://zed.dev/docs/ai/models), the [Zed for Business launch](https://zed.dev/blog/zed-for-business), and [zed.dev/education](https://zed.dev/education). Pro was cut from $20 to $10 on May 6, 2026. Business launched the same day with org-wide AI policies, prompt-sharing and edit-prediction training off by default, token spend caps, and BYOK at no extra charge. Pro includes a two-week free trial with $20 in token credits. Overages bill at API list price plus 10%, either at month-end or per $10 of usage, whichever comes first. SSO, SAML/OIDC, SCIM, and SOC 2 certification are on the Business roadmap but not shipped yet.*
 
 ## Against the alternatives
 
@@ -199,7 +203,7 @@ The Agent Client Protocol (ACP), launched January 2026 in collaboration with Jet
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-12 against [zed.dev/pricing](https://zed.dev/pricing), [Zed AI model docs](https://zed.dev/docs/ai/models), the [Zeta2.1 release post](https://zed.dev/blog/zeta2-1), the [Zed for Business launch post](https://zed.dev/blog/zed-for-business), and [zed.dev/docs/ai/edit-prediction](https://zed.dev/docs/ai/edit-prediction).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-25 against [zed.dev/pricing](https://zed.dev/pricing), [Zed AI model docs](https://zed.dev/docs/ai/models), the [Zeta2.1 release post](https://zed.dev/blog/zeta2-1), the [Zed for Business launch post](https://zed.dev/blog/zed-for-business), and [zed.dev/docs/ai/edit-prediction](https://zed.dev/docs/ai/edit-prediction).
 
 ## FAQ
 
@@ -213,7 +217,7 @@ Yes. Windows went stable in Q1 2026 and runs on macOS, Linux, and Windows.
 Zeta2.1 (released May 8, 2026) is Zed's latest edit-prediction model. Uses a "Multi-Region" prompt format that targets only the sections requiring changes, cutting output tokens 3x versus Zeta2, dropping p50 latency from 189ms to 136ms, and lifting acceptance rates by 0.51%. Open-weight on Hugging Face with Rust bindings on PyPI for self-hosting. Unlimited use on Pro and Business; 2,000 accepted predictions on Personal.
 
 **What AI models does Zed support?**
-Claude Opus 4.7, OpenAI frontier models, Gemini 3.1 Pro, and Grok via hosted billing. Local models work through Ollama. BYOK is supported on every tier. Business adds BYOK for Anthropic, OpenAI, Google, and AWS at no extra charge.
+Zed Pro and Business include Zed-hosted models with token-based billing. BYOK is supported on every tier across providers such as Anthropic, OpenAI, Google, Amazon Bedrock, OpenRouter, Mistral, Deepseek, LM Studio, Ollama, and more. Zed's current docs also note that free trials do not include Anthropic Opus models.
 
 **What changed in May 2026?**
 Pro dropped from $20 to $10/month on May 6. Hosted prompts shifted to $5 of token credits per month instead of a flat 500-prompt quota. Teams was retired in favor of the new Business tier at $30/seat with org-wide AI policy controls. Zeta2.1 shipped two days later on May 8.

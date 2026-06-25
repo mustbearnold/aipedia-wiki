@@ -11,15 +11,15 @@ pricing_model: freemium
 price_range: "Free tier (25+ models, 50 req/day) · Pay-as-you-go (5.5% platform fee on 400+ models) · Enterprise custom"
 status: active
 launched: 2023
-last_updated: 2026-06-13
-last_verified: 2026-06-13
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 price_history:
   - date: 2026-05-27
     price: "see note"
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     change: "Public tiers verified: Free (25+ models, 50 requests/day), Pay-as-you-go (5.5% platform fee, 400+ models and 60+ providers), Enterprise (bulk discounts, SSO/SAML, policy controls, support SLA, and custom limits). Failed or fallback attempts are not billed."
   - date: 2026-04-28
     price: "see note"
@@ -27,7 +27,7 @@ price_history:
     source_label: "OpenRouter models"
     source_id: openrouter-official
     verified_at: 2026-04-28
-    change: "Model menu verified to include Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro, Grok 4.3, DeepSeek V4, Kimi K2.6, Qwen 3.6, Mistral 3, Llama 4, Nemotron 3 Nano Omni, and Poolside Laguna XS.2 and M.1."
+    change: "Model menu changes quickly. Recheck the live models page before citing exact frontier model slugs in buyer copy."
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -42,11 +42,11 @@ scores:
   longevity: 8
 facts:
   best_for:
-    value: "Unified LLM API for 400+ models, with OpenAI-compatible requests, provider routing, fallbacks, app attribution, prompt caching, regional routing, Zero Completion Insurance, and per-model token pricing. Best for AI infrastructure, retrieval, vector search, hosting, or developer platforms that want one billing account across providers."
+    value: "Unified AI API for 400+ models, with OpenAI-compatible requests, provider routing, fallbacks, app attribution, prompt caching, regional routing, an image API, Zero Completion Insurance, and per-model token pricing. Best for AI infrastructure, retrieval, vector search, hosting, or developer platforms that want one billing account across providers."
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -54,7 +54,7 @@ facts:
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-27
     volatility: high
     confidence: high
@@ -63,7 +63,7 @@ facts:
     source: "https://openrouter.ai/pricing"
     source_label: "OpenRouter pricing"
     source_id: openrouter-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-27
     volatility: high
     confidence: high
@@ -93,9 +93,11 @@ The product is useful because the model market changes faster than most app code
 ## Recent developments
 
 - **June 13, 2026:** AiPedia added the [AI Model Availability & Churn Tracker](/trends/model-availability-churn/). For OpenRouter buyers, the key rule is simple: use model routing for optionality and fallbacks, but verify direct provider availability before making a model route part of a customer-facing SLA.
+- **June 23, 2026:** OpenRouter introduced a unified Image API with capability discovery across 30+ models from eight providers. Buyer impact: OpenRouter is moving beyond text-only routing, but teams should still verify each provider's rights, retention, and capability limits before shipping image generation.
+- **June 22, 2026:** OpenRouter published governance guidance that frames routing policy as architecture, not just procurement language. Buyer impact: enterprise teams should document which model and provider route each production surface is allowed to use.
 - **May 27, 2026:** [OpenRouter announced a $113M CapitalG-led Series B and said usage reached 25 trillion tokens per week](/news/2026-05-27-openrouter-series-b-model-routing/). The buyer signal is that model routing, governance, failover, and spend visibility are becoming enterprise AI infrastructure, not just developer convenience.
 - **May 13, 2026:** Pricing structure verified. Three tiers: Free (25+ models, 50 requests/day), Pay-as-you-go (5.5% platform fee on 400+ models), Enterprise (custom volume pricing with SSO/SAML and regional routing). Zero Completion Insurance covers failed requests across all tiers.
-- **May 1, 2026:** [xAI moved Grok 4.3 into the API with OpenRouter access](/news/2026-05-03-xai-grok-43-custom-voices-api/), making OpenRouter one of the fastest ways to benchmark Grok's low-price reasoning profile against Claude, Gemini, OpenAI, Kimi, and Qwen without SDK rewrites.
+- **May 1, 2026:** [xAI expanded Grok API access with OpenRouter availability](/news/2026-05-03-xai-grok-43-custom-voices-api/), making OpenRouter one of the fastest ways to benchmark Grok-style reasoning routes against Claude, Gemini, OpenAI, Kimi, and Qwen without SDK rewrites.
 - **April 30, 2026:** [Poolside released Laguna XS.2 (33B MoE, Apache 2.0) for local agentic coding and Laguna M.1 (225B MoE) as a free-tier API](/news/2026-04-30-poolside-laguna-xs2-open-model-local-agentic-coding/). Both models are available through OpenRouter for testing, provider routing, and deployment alongside the other 400+ models.
 - **April 28, 2026:** [NVIDIA launched Nemotron 3 Nano Omni](/news/2026-04-28-nvidia-nemotron-3-nano-omni/) with OpenRouter listed as one of the access routes for the open multimodal agent model.
 - **April 28, 2026:** [Mistral 3 shipped with Large 3 and new Ministral models](/news/2026-04-28-mistral-3-open-model-release/), giving OpenRouter users another open-model family to test against Llama, Qwen, DeepSeek, Gemma, and closed frontier models.
@@ -112,19 +114,20 @@ The product is useful because the model market changes faster than most app code
 
 | | |
 |---|---|
-| **Core product** | Unified API and web chat for 400+ LLMs |
+| **Core product** | Unified API and web chat for 400+ AI models |
 | **API style** | OpenAI-compatible chat completions |
 | **Providers** | 60+ providers on Pay-as-you-go and Enterprise |
 | **Routing** | Provider choice, provider fallback, price/latency sorting, regional routing |
 | **Tool calling** | Available when the underlying model/provider supports it |
-| **Frontier routes** | High-end OpenAI, Anthropic, Google, xAI, DeepSeek, Kimi, Qwen, Mistral, and Llama routes where provider availability and plan policy allow |
+| **Frontier routes** | High-end closed and open model routes where provider availability and plan policy allow |
+| **Image API** | Unified Image API with capability discovery across 30+ models from eight providers |
 | **Free tier** | 25+ models, 50 requests/day |
 | **Pay-as-you-go** | 5.5% platform fee on 400+ models and 60+ providers, prompt caching, activity logs, spend controls |
 | **Enterprise** | Bulk discounts, SSO/SAML, policy controls, support SLA, custom limits |
 | **Reliability** | Zero Completion Insurance covers failed requests |
 | **Best fit** | Developer apps, agent tooling, model comparison |
 
-Verified 2026-06-13 against [openrouter.ai/pricing](https://openrouter.ai/pricing) and the current model-availability tracker.
+Verified 2026-06-25 against [openrouter.ai/pricing](https://openrouter.ai/pricing), OpenRouter docs, current model listings, and the current model-availability tracker.
 
 ## When to pick OpenRouter
 
@@ -149,11 +152,11 @@ Verified 2026-06-13 against [openrouter.ai/pricing](https://openrouter.ai/pricin
 | Pay-as-you-go | 5.5% platform fee on top of per-model token rates | 400+ models, 60+ providers, prompt caching, activity logs, spend controls, failed/fallback attempts not billed |
 | Enterprise | Custom (sales) | Bulk discounts, SSO/SAML, policy controls, support SLA, custom limits |
 
-Per-model token pricing varies by provider route. Some models are free or promotional. The same app can run a free open model for background tasks and Opus 4.7 or GPT-5.5 for final answers.
+Per-model token pricing varies by provider route. Some models are free or promotional. The same app can run a free or low-cost open model for background tasks and a higher-cost frontier route for final answers.
 
 That flexibility is the point and the risk. Without pinned budgets, provider preferences, and model choices, traffic can land on more expensive routes than expected. Prompt caching and the OpenAI-compatible app attribution header help track spend by surface.
 
-Verified 2026-06-12 via [openrouter.ai/pricing](https://openrouter.ai/pricing).
+Verified 2026-06-25 via [openrouter.ai/pricing](https://openrouter.ai/pricing).
 
 ## Failure Modes
 
@@ -165,7 +168,7 @@ Verified 2026-06-12 via [openrouter.ai/pricing](https://openrouter.ai/pricing).
 
 ## Methodology
 
-Last verified 2026-06-13 against OpenRouter's pricing page, developer documentation, model surface, Anthropic's Fable/Mythos access statement, and the May 26 funding/usage announcement. Scoring weighs developer utility, breadth of model access, pricing transparency, durability of the gateway role, and risk from provider dependence.
+Last verified 2026-06-25 against OpenRouter's pricing page, developer documentation, model surface, routing guidance, Anthropic's Fable/Mythos access statement, and the May 26 funding/usage announcement. Scoring weighs developer utility, breadth of model access, pricing transparency, durability of the gateway role, and risk from provider dependence.
 
 ## FAQ
 
@@ -187,6 +190,7 @@ Yes when the selected underlying model and provider support tool/function callin
 - [OpenRouter quickstart](https://openrouter.ai/docs/quickstart)
 - [OpenRouter provider routing docs](https://openrouter.ai/docs/guides/routing/provider-selection)
 - [OpenRouter API reference](https://openrouter.ai/docs/api/reference/overview)
+- [OpenRouter homepage updates](https://openrouter.ai/): June 2026 image API and governance guidance
 
 ## Related
 

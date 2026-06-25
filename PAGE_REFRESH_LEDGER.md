@@ -132,43 +132,27 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-12 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-06-12 | /tools/ollama/ | Tool | Yes | frontmatter | src/content/tools/ollama.md |
-| 2026-06-12 | /tools/omniseo/ | Tool | Yes | frontmatter | src/content/tools/omniseo.md |
 | 2026-06-12 | /tools/open-webui/ | Tool | Yes | frontmatter | src/content/tools/open-webui.md |
 | 2026-06-12 | /tools/openclaw/ | Tool | Yes | frontmatter | src/content/tools/openclaw.md |
-| 2026-06-12 | /tools/openhands/ | Tool | Yes | frontmatter | src/content/tools/openhands.md |
 | 2026-06-12 | /tools/paradox/ | Tool | Yes | frontmatter | src/content/tools/paradox.md |
 | 2026-06-12 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
 | 2026-06-12 | /tools/pitch/ | Tool | Yes | frontmatter | src/content/tools/pitch.md |
-| 2026-06-12 | /tools/prezi/ | Tool | Yes | frontmatter | src/content/tools/prezi.md |
 | 2026-06-12 | /tools/quillbot/ | Tool | Yes | frontmatter | src/content/tools/quillbot.md |
-| 2026-06-12 | /tools/read-ai/ | Tool | Yes | frontmatter | src/content/tools/read-ai.md |
-| 2026-06-12 | /tools/readwise/ | Tool | Yes | frontmatter | src/content/tools/readwise.md |
-| 2026-06-12 | /tools/recraft/ | Tool | Yes | frontmatter | src/content/tools/recraft.md |
 | 2026-06-12 | /tools/reflect/ | Tool | Yes | frontmatter | src/content/tools/reflect.md |
 | 2026-06-12 | /tools/reka/ | Tool | Yes | frontmatter | src/content/tools/reka.md |
 | 2026-06-12 | /tools/replicate/ | Tool | Yes | frontmatter | src/content/tools/replicate.md |
 | 2026-06-12 | /tools/riverside/ | Tool | Yes | frontmatter | src/content/tools/riverside.md |
-| 2026-06-12 | /tools/rodin/ | Tool | Yes | frontmatter | src/content/tools/rodin.md |
 | 2026-06-12 | /tools/rows/ | Tool | Yes | frontmatter | src/content/tools/rows.md |
-| 2026-06-12 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
-| 2026-06-12 | /tools/same-dev/ | Tool | Yes | frontmatter | src/content/tools/same-dev.md |
 | 2026-06-12 | /tools/sanebox/ | Tool | Yes | frontmatter | src/content/tools/sanebox.md |
 | 2026-06-12 | /tools/scite/ | Tool | Yes | frontmatter | src/content/tools/scite.md |
 | 2026-06-12 | /tools/semantic-scholar/ | Tool | Yes | frontmatter | src/content/tools/semantic-scholar.md |
-| 2026-06-12 | /tools/servicenow/ | Tool | Yes | frontmatter | src/content/tools/servicenow.md |
-| 2026-06-12 | /tools/speechify/ | Tool | Yes | frontmatter | src/content/tools/speechify.md |
 | 2026-06-12 | /tools/spellbook/ | Tool | Yes | frontmatter | src/content/tools/spellbook.md |
 | 2026-06-12 | /tools/stable-audio/ | Tool | Yes | frontmatter | src/content/tools/stable-audio.md |
 | 2026-06-12 | /tools/stable-diffusion/ | Tool | Yes | frontmatter | src/content/tools/stable-diffusion.md |
 | 2026-06-12 | /tools/sudowrite/ | Tool | Yes | frontmatter | src/content/tools/sudowrite.md |
-| 2026-06-12 | /tools/surfer-seo/ | Tool | Yes | frontmatter | src/content/tools/surfer-seo.md |
-| 2026-06-12 | /tools/tabnine/ | Tool | Yes | frontmatter | src/content/tools/tabnine.md |
 | 2026-06-12 | /tools/tactiq/ | Tool | Yes | frontmatter | src/content/tools/tactiq.md |
-| 2026-06-12 | /tools/tidio/ | Tool | Yes | frontmatter | src/content/tools/tidio.md |
 | 2026-06-12 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
-| 2026-06-12 | /tools/trae/ | Tool | Yes | frontmatter | src/content/tools/trae.md |
 | 2026-06-12 | /tools/tripo3d/ | Tool | Yes | frontmatter | src/content/tools/tripo3d.md |
-| 2026-06-12 | /tools/typeface/ | Tool | Yes | frontmatter | src/content/tools/typeface.md |
 | 2026-06-12 | /tools/typingmind/ | Tool | Yes | frontmatter | src/content/tools/typingmind.md |
 | 2026-06-12 | /tools/uizard/ | Tool | Yes | frontmatter | src/content/tools/uizard.md |
 | 2026-06-12 | /tools/unbounce/ | Tool | Yes | frontmatter | src/content/tools/unbounce.md |
@@ -177,12 +161,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-12 | /tools/weaviate/ | Tool | Yes | frontmatter | src/content/tools/weaviate.md |
 | 2026-06-12 | /tools/wellsaid/ | Tool | Yes | frontmatter | src/content/tools/wellsaid.md |
 | 2026-06-12 | /tools/whisper/ | Tool | Yes | frontmatter | src/content/tools/whisper.md |
-| 2026-06-12 | /tools/wordtune/ | Tool | Yes | frontmatter | src/content/tools/wordtune.md |
 | 2026-06-12 | /tools/workato/ | Tool | Yes | frontmatter | src/content/tools/workato.md |
 | 2026-06-12 | /tools/writer/ | Tool | Yes | frontmatter | src/content/tools/writer.md |
 | 2026-06-12 | /tools/writesonic/ | Tool | Yes | frontmatter | src/content/tools/writesonic.md |
 | 2026-06-12 | /tools/yi/ | Tool | Yes | frontmatter | src/content/tools/yi.md |
-| 2026-06-12 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
 | 2026-06-12 | /trends/ai-coding-model-arms-race/ | Trend | Yes | frontmatter | src/content/trends/ai-coding-model-arms-race.md |
 | 2026-06-12 | /trends/ai-memory-layer/ | Trend | Yes | frontmatter | src/content/trends/ai-memory-layer.md |
 | 2026-06-12 | /trends/ai-supply-chain-security/ | Trend | Yes | frontmatter | src/content/trends/ai-supply-chain-security.md |
@@ -209,8 +191,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-13 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-06-13 | /robots.txt | Crawl surface | No | git | public/robots.txt |
 | 2026-06-13 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
-| 2026-06-13 | /tools/openrouter/ | Tool | Yes | frontmatter | src/content/tools/openrouter.md |
-| 2026-06-14 | /tools/val-town/ | Tool | Yes | frontmatter | src/content/tools/val-town.md |
 | 2026-06-14 | /workflows/micro-saas-weekend-build/ | Workflow | Yes | frontmatter | src/content/workflows/micro-saas-weekend-build.md |
 | 2026-06-15 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-06-15 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
@@ -257,16 +237,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-18 | /guides/best-ai-for-podcasters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-podcasters.md |
 | 2026-06-18 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
 | 2026-06-18 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
-| 2026-06-18 | /tools/claude-design/ | Tool | Yes | frontmatter | src/content/tools/claude-design.md |
-| 2026-06-18 | /tools/clipdrop/ | Tool | Yes | frontmatter | src/content/tools/clipdrop.md |
 | 2026-06-18 | /tools/cohere/ | Tool | Yes | frontmatter | src/content/tools/cohere.md |
-| 2026-06-18 | /tools/connected-papers/ | Tool | Yes | frontmatter | src/content/tools/connected-papers.md |
 | 2026-06-20 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-20 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-20 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-20 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-20 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
-| 2026-06-20 | /tools/semrush/ | Tool | Yes | frontmatter | src/content/tools/semrush.md |
 | 2026-06-21 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
 | 2026-06-21 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
 | 2026-06-21 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
@@ -312,7 +288,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
 | 2026-06-21 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-21 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
-| 2026-06-21 | /tools/ideogram/ | Tool | Yes | frontmatter | src/content/tools/ideogram.md |
 | 2026-06-21 | /tools/kimi/ | Tool | Yes | frontmatter | src/content/tools/kimi.md |
 | 2026-06-21 | /tools/resemble-ai/ | Tool | Yes | frontmatter | src/content/tools/resemble-ai.md |
 | 2026-06-21 | /tools/you-com/ | Tool | Yes | frontmatter | src/content/tools/you-com.md |
@@ -330,58 +305,23 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-23 | /guides/best-ai-tools-for-agencies/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-agencies.md |
 | 2026-06-23 | /guides/best-ai-voice-youtube/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-voice-youtube.md |
 | 2026-06-23 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
-| 2026-06-23 | /tools/adcreative/ | Tool | Yes | frontmatter | src/content/tools/adcreative.md |
-| 2026-06-23 | /tools/ag2/ | Tool | Yes | frontmatter | src/content/tools/ag2.md |
-| 2026-06-23 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
-| 2026-06-23 | /tools/amplemarket/ | Tool | Yes | frontmatter | src/content/tools/amplemarket.md |
 | 2026-06-23 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
-| 2026-06-23 | /tools/anythingllm/ | Tool | Yes | frontmatter | src/content/tools/anythingllm.md |
-| 2026-06-23 | /tools/beautiful-ai/ | Tool | Yes | frontmatter | src/content/tools/beautiful-ai.md |
-| 2026-06-23 | /tools/cartesia/ | Tool | Yes | frontmatter | src/content/tools/cartesia.md |
-| 2026-06-23 | /tools/character-ai/ | Tool | Yes | frontmatter | src/content/tools/character-ai.md |
-| 2026-06-23 | /tools/chatpdf/ | Tool | Yes | frontmatter | src/content/tools/chatpdf.md |
-| 2026-06-23 | /tools/clay/ | Tool | Yes | frontmatter | src/content/tools/clay.md |
-| 2026-06-23 | /tools/clearscope/ | Tool | Yes | frontmatter | src/content/tools/clearscope.md |
-| 2026-06-23 | /tools/clickup/ | Tool | Yes | frontmatter | src/content/tools/clickup.md |
 | 2026-06-23 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
-| 2026-06-23 | /tools/deepgram/ | Tool | Yes | frontmatter | src/content/tools/deepgram.md |
-| 2026-06-23 | /tools/deepl/ | Tool | Yes | frontmatter | src/content/tools/deepl.md |
 | 2026-06-23 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
-| 2026-06-23 | /tools/doubao/ | Tool | Yes | frontmatter | src/content/tools/doubao.md |
-| 2026-06-23 | /tools/dust/ | Tool | Yes | frontmatter | src/content/tools/dust.md |
-| 2026-06-23 | /tools/eightfold-ai/ | Tool | Yes | frontmatter | src/content/tools/eightfold-ai.md |
-| 2026-06-23 | /tools/exa/ | Tool | Yes | frontmatter | src/content/tools/exa.md |
-| 2026-06-23 | /tools/fal-ai/ | Tool | Yes | frontmatter | src/content/tools/fal-ai.md |
-| 2026-06-23 | /tools/fathom/ | Tool | Yes | frontmatter | src/content/tools/fathom.md |
-| 2026-06-23 | /tools/fireflies/ | Tool | Yes | frontmatter | src/content/tools/fireflies.md |
-| 2026-06-23 | /tools/fireworks-ai/ | Tool | Yes | frontmatter | src/content/tools/fireworks-ai.md |
 | 2026-06-23 | /tools/fish-audio/ | Tool | Yes | frontmatter | src/content/tools/fish-audio.md |
 | 2026-06-23 | /tools/freepik/ | Tool | Yes | frontmatter | src/content/tools/freepik.md |
 | 2026-06-23 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
-| 2026-06-23 | /tools/getresponse/ | Tool | Yes | frontmatter | src/content/tools/getresponse.md |
-| 2026-06-23 | /tools/glean/ | Tool | Yes | frontmatter | src/content/tools/glean.md |
-| 2026-06-23 | /tools/glm/ | Tool | Yes | frontmatter | src/content/tools/glm.md |
-| 2026-06-23 | /tools/google-stitch/ | Tool | Yes | frontmatter | src/content/tools/google-stitch.md |
-| 2026-06-23 | /tools/goose/ | Tool | Yes | frontmatter | src/content/tools/goose.md |
 | 2026-06-23 | /tools/gpt-image-2/ | Tool | Yes | frontmatter | src/content/tools/gpt-image-2.md |
-| 2026-06-23 | /tools/granola/ | Tool | Yes | frontmatter | src/content/tools/granola.md |
 | 2026-06-23 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-06-23 | /tools/hermes-agent/ | Tool | Yes | frontmatter | src/content/tools/hermes-agent.md |
 | 2026-06-23 | /tools/jan-ai/ | Tool | Yes | frontmatter | src/content/tools/jan-ai.md |
 | 2026-06-23 | /tools/kagi/ | Tool | Yes | frontmatter | src/content/tools/kagi.md |
-| 2026-06-23 | /tools/kokoro/ | Tool | Yes | frontmatter | src/content/tools/kokoro.md |
-| 2026-06-23 | /tools/krea/ | Tool | Yes | frontmatter | src/content/tools/krea.md |
-| 2026-06-23 | /tools/langflow/ | Tool | Yes | frontmatter | src/content/tools/langflow.md |
 | 2026-06-23 | /tools/langfuse/ | Tool | Yes | frontmatter | src/content/tools/langfuse.md |
 | 2026-06-23 | /tools/leonardo/ | Tool | Yes | frontmatter | src/content/tools/leonardo.md |
 | 2026-06-23 | /tools/letta/ | Tool | Yes | frontmatter | src/content/tools/letta.md |
-| 2026-06-23 | /tools/linkedin-recruiter/ | Tool | Yes | frontmatter | src/content/tools/linkedin-recruiter.md |
 | 2026-06-23 | /tools/llama/ | Tool | Yes | frontmatter | src/content/tools/llama.md |
 | 2026-06-23 | /tools/lm-studio/ | Tool | Yes | frontmatter | src/content/tools/lm-studio.md |
 | 2026-06-23 | /tools/logseq/ | Tool | Yes | frontmatter | src/content/tools/logseq.md |
-| 2026-06-23 | /tools/lovo/ | Tool | Yes | frontmatter | src/content/tools/lovo.md |
-| 2026-06-23 | /tools/make/ | Tool | Yes | frontmatter | src/content/tools/make.md |
-| 2026-06-23 | /tools/manus/ | Tool | Yes | frontmatter | src/content/tools/manus.md |
 | 2026-06-23 | /tools/mem/ | Tool | Yes | frontmatter | src/content/tools/mem.md |
 | 2026-06-23 | /tools/morphic/ | Tool | Yes | frontmatter | src/content/tools/morphic.md |
 | 2026-06-23 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
@@ -466,16 +406,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
 | 2026-06-25 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
 | 2026-06-25 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
-| 2026-06-25 | /categories/ai-design/ | Category | Yes | working tree | src/content/categories/ai-design.md |
+| 2026-06-25 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-25 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
 | 2026-06-25 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
-| 2026-06-25 | /categories/ai-music/ | Category | Yes | working tree | src/content/categories/ai-music.md |
+| 2026-06-25 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-25 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-06-25 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
-| 2026-06-25 | /categories/ai-research/ | Category | Yes | working tree | src/content/categories/ai-research.md |
-| 2026-06-25 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
+| 2026-06-25 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
+| 2026-06-25 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
+| 2026-06-25 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-25 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
-| 2026-06-25 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-25 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-25 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
 | 2026-06-25 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-25 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
@@ -486,76 +426,136 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-25 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-25 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
-| 2026-06-25 | /tools/activepieces/ | Tool | Yes | working tree | src/content/tools/activepieces.md |
-| 2026-06-25 | /tools/ada/ | Tool | Yes | working tree | src/content/tools/ada.md |
-| 2026-06-25 | /tools/ahrefs/ | Tool | Yes | working tree | src/content/tools/ahrefs.md |
-| 2026-06-25 | /tools/aider/ | Tool | Yes | working tree | src/content/tools/aider.md |
-| 2026-06-25 | /tools/amazon-q/ | Tool | Yes | working tree | src/content/tools/amazon-q.md |
-| 2026-06-25 | /tools/apollo/ | Tool | Yes | working tree | src/content/tools/apollo.md |
-| 2026-06-25 | /tools/assemblyai/ | Tool | Yes | working tree | src/content/tools/assemblyai.md |
-| 2026-06-25 | /tools/boomy/ | Tool | Yes | working tree | src/content/tools/boomy.md |
-| 2026-06-25 | /tools/codex/ | Tool | Yes | working tree | src/content/tools/codex.md |
-| 2026-06-25 | /tools/devin/ | Tool | Yes | working tree | src/content/tools/devin.md |
-| 2026-06-25 | /tools/factory/ | Tool | Yes | working tree | src/content/tools/factory.md |
-| 2026-06-25 | /tools/flux/ | Tool | Yes | working tree | src/content/tools/flux.md |
-| 2026-06-25 | /tools/framer-ai/ | Tool | Yes | working tree | src/content/tools/framer-ai.md |
-| 2026-06-25 | /tools/frase/ | Tool | Yes | working tree | src/content/tools/frase.md |
-| 2026-06-25 | /tools/galileo-ai/ | Tool | Yes | working tree | src/content/tools/galileo-ai.md |
-| 2026-06-25 | /tools/gemini-omni/ | Tool | Yes | working tree | src/content/tools/gemini-omni.md |
+| 2026-06-25 | /tools/activepieces/ | Tool | Yes | frontmatter | src/content/tools/activepieces.md |
+| 2026-06-25 | /tools/ada/ | Tool | Yes | frontmatter | src/content/tools/ada.md |
+| 2026-06-25 | /tools/adcreative/ | Tool | Yes | working tree | src/content/tools/adcreative.md |
+| 2026-06-25 | /tools/ag2/ | Tool | Yes | working tree | src/content/tools/ag2.md |
+| 2026-06-25 | /tools/ahrefs/ | Tool | Yes | frontmatter | src/content/tools/ahrefs.md |
+| 2026-06-25 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
+| 2026-06-25 | /tools/aiva/ | Tool | Yes | working tree | src/content/tools/aiva.md |
+| 2026-06-25 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
+| 2026-06-25 | /tools/amplemarket/ | Tool | Yes | working tree | src/content/tools/amplemarket.md |
+| 2026-06-25 | /tools/anythingllm/ | Tool | Yes | working tree | src/content/tools/anythingllm.md |
+| 2026-06-25 | /tools/apollo/ | Tool | Yes | frontmatter | src/content/tools/apollo.md |
+| 2026-06-25 | /tools/assemblyai/ | Tool | Yes | frontmatter | src/content/tools/assemblyai.md |
+| 2026-06-25 | /tools/beautiful-ai/ | Tool | Yes | working tree | src/content/tools/beautiful-ai.md |
+| 2026-06-25 | /tools/boomy/ | Tool | Yes | frontmatter | src/content/tools/boomy.md |
+| 2026-06-25 | /tools/cartesia/ | Tool | Yes | working tree | src/content/tools/cartesia.md |
+| 2026-06-25 | /tools/character-ai/ | Tool | Yes | working tree | src/content/tools/character-ai.md |
+| 2026-06-25 | /tools/chatpdf/ | Tool | Yes | working tree | src/content/tools/chatpdf.md |
+| 2026-06-25 | /tools/claude-design/ | Tool | Yes | working tree | src/content/tools/claude-design.md |
+| 2026-06-25 | /tools/clay/ | Tool | Yes | working tree | src/content/tools/clay.md |
+| 2026-06-25 | /tools/clearscope/ | Tool | Yes | working tree | src/content/tools/clearscope.md |
+| 2026-06-25 | /tools/clickup/ | Tool | Yes | working tree | src/content/tools/clickup.md |
+| 2026-06-25 | /tools/clipdrop/ | Tool | Yes | working tree | src/content/tools/clipdrop.md |
+| 2026-06-25 | /tools/codex/ | Tool | Yes | frontmatter | src/content/tools/codex.md |
+| 2026-06-25 | /tools/connected-papers/ | Tool | Yes | working tree | src/content/tools/connected-papers.md |
+| 2026-06-25 | /tools/deepgram/ | Tool | Yes | working tree | src/content/tools/deepgram.md |
+| 2026-06-25 | /tools/deepl/ | Tool | Yes | working tree | src/content/tools/deepl.md |
+| 2026-06-25 | /tools/devin/ | Tool | Yes | frontmatter | src/content/tools/devin.md |
+| 2026-06-25 | /tools/doubao/ | Tool | Yes | working tree | src/content/tools/doubao.md |
+| 2026-06-25 | /tools/dust/ | Tool | Yes | working tree | src/content/tools/dust.md |
+| 2026-06-25 | /tools/eightfold-ai/ | Tool | Yes | working tree | src/content/tools/eightfold-ai.md |
+| 2026-06-25 | /tools/exa/ | Tool | Yes | working tree | src/content/tools/exa.md |
+| 2026-06-25 | /tools/factory/ | Tool | Yes | frontmatter | src/content/tools/factory.md |
+| 2026-06-25 | /tools/fal-ai/ | Tool | Yes | working tree | src/content/tools/fal-ai.md |
+| 2026-06-25 | /tools/fathom/ | Tool | Yes | working tree | src/content/tools/fathom.md |
+| 2026-06-25 | /tools/fireflies/ | Tool | Yes | working tree | src/content/tools/fireflies.md |
+| 2026-06-25 | /tools/fireworks-ai/ | Tool | Yes | working tree | src/content/tools/fireworks-ai.md |
+| 2026-06-25 | /tools/flux/ | Tool | Yes | frontmatter | src/content/tools/flux.md |
+| 2026-06-25 | /tools/framer-ai/ | Tool | Yes | frontmatter | src/content/tools/framer-ai.md |
+| 2026-06-25 | /tools/frase/ | Tool | Yes | frontmatter | src/content/tools/frase.md |
+| 2026-06-25 | /tools/galileo-ai/ | Tool | Yes | frontmatter | src/content/tools/galileo-ai.md |
+| 2026-06-25 | /tools/gemini-omni/ | Tool | Yes | frontmatter | src/content/tools/gemini-omni.md |
 | 2026-06-25 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
-| 2026-06-25 | /tools/genspark/ | Tool | Yes | working tree | src/content/tools/genspark.md |
+| 2026-06-25 | /tools/genspark/ | Tool | Yes | frontmatter | src/content/tools/genspark.md |
+| 2026-06-25 | /tools/getresponse/ | Tool | Yes | working tree | src/content/tools/getresponse.md |
 | 2026-06-25 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
-| 2026-06-25 | /tools/groq/ | Tool | Yes | working tree | src/content/tools/groq.md |
-| 2026-06-25 | /tools/gumloop/ | Tool | Yes | working tree | src/content/tools/gumloop.md |
-| 2026-06-25 | /tools/harvey/ | Tool | Yes | working tree | src/content/tools/harvey.md |
-| 2026-06-25 | /tools/helicone/ | Tool | Yes | working tree | src/content/tools/helicone.md |
-| 2026-06-25 | /tools/hex/ | Tool | Yes | working tree | src/content/tools/hex.md |
-| 2026-06-25 | /tools/higgsfield/ | Tool | Yes | working tree | src/content/tools/higgsfield.md |
-| 2026-06-25 | /tools/hireez/ | Tool | Yes | working tree | src/content/tools/hireez.md |
-| 2026-06-25 | /tools/hugging-face/ | Tool | Yes | working tree | src/content/tools/hugging-face.md |
-| 2026-06-25 | /tools/humata/ | Tool | Yes | working tree | src/content/tools/humata.md |
-| 2026-06-25 | /tools/hume-ai/ | Tool | Yes | working tree | src/content/tools/hume-ai.md |
-| 2026-06-25 | /tools/hume/ | Tool | Yes | working tree | src/content/tools/hume.md |
-| 2026-06-25 | /tools/hunyuan/ | Tool | Yes | working tree | src/content/tools/hunyuan.md |
-| 2026-06-25 | /tools/hyperwrite/ | Tool | Yes | working tree | src/content/tools/hyperwrite.md |
-| 2026-06-25 | /tools/imagen/ | Tool | Yes | working tree | src/content/tools/imagen.md |
+| 2026-06-25 | /tools/glean/ | Tool | Yes | working tree | src/content/tools/glean.md |
+| 2026-06-25 | /tools/glm/ | Tool | Yes | working tree | src/content/tools/glm.md |
+| 2026-06-25 | /tools/google-stitch/ | Tool | Yes | working tree | src/content/tools/google-stitch.md |
+| 2026-06-25 | /tools/goose/ | Tool | Yes | working tree | src/content/tools/goose.md |
+| 2026-06-25 | /tools/granola/ | Tool | Yes | working tree | src/content/tools/granola.md |
+| 2026-06-25 | /tools/groq/ | Tool | Yes | frontmatter | src/content/tools/groq.md |
+| 2026-06-25 | /tools/gumloop/ | Tool | Yes | frontmatter | src/content/tools/gumloop.md |
+| 2026-06-25 | /tools/harvey/ | Tool | Yes | frontmatter | src/content/tools/harvey.md |
+| 2026-06-25 | /tools/helicone/ | Tool | Yes | frontmatter | src/content/tools/helicone.md |
+| 2026-06-25 | /tools/hex/ | Tool | Yes | frontmatter | src/content/tools/hex.md |
+| 2026-06-25 | /tools/higgsfield/ | Tool | Yes | frontmatter | src/content/tools/higgsfield.md |
+| 2026-06-25 | /tools/hireez/ | Tool | Yes | frontmatter | src/content/tools/hireez.md |
+| 2026-06-25 | /tools/hugging-face/ | Tool | Yes | frontmatter | src/content/tools/hugging-face.md |
+| 2026-06-25 | /tools/humata/ | Tool | Yes | frontmatter | src/content/tools/humata.md |
+| 2026-06-25 | /tools/hume-ai/ | Tool | Yes | frontmatter | src/content/tools/hume-ai.md |
+| 2026-06-25 | /tools/hume/ | Tool | Yes | frontmatter | src/content/tools/hume.md |
+| 2026-06-25 | /tools/hunyuan/ | Tool | Yes | frontmatter | src/content/tools/hunyuan.md |
+| 2026-06-25 | /tools/hyperwrite/ | Tool | Yes | frontmatter | src/content/tools/hyperwrite.md |
+| 2026-06-25 | /tools/ideogram/ | Tool | Yes | working tree | src/content/tools/ideogram.md |
+| 2026-06-25 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
 | 2026-06-25 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
-| 2026-06-25 | /tools/intercom/ | Tool | Yes | working tree | src/content/tools/intercom.md |
-| 2026-06-25 | /tools/invideo/ | Tool | Yes | working tree | src/content/tools/invideo.md |
-| 2026-06-25 | /tools/jasper/ | Tool | Yes | working tree | src/content/tools/jasper.md |
-| 2026-06-25 | /tools/jetbrains-ai/ | Tool | Yes | working tree | src/content/tools/jetbrains-ai.md |
-| 2026-06-25 | /tools/jimeng/ | Tool | Yes | working tree | src/content/tools/jimeng.md |
-| 2026-06-25 | /tools/julius/ | Tool | Yes | working tree | src/content/tools/julius.md |
-| 2026-06-25 | /tools/kiro/ | Tool | Yes | working tree | src/content/tools/kiro.md |
+| 2026-06-25 | /tools/intercom/ | Tool | Yes | frontmatter | src/content/tools/intercom.md |
+| 2026-06-25 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
+| 2026-06-25 | /tools/jasper/ | Tool | Yes | frontmatter | src/content/tools/jasper.md |
+| 2026-06-25 | /tools/jetbrains-ai/ | Tool | Yes | frontmatter | src/content/tools/jetbrains-ai.md |
+| 2026-06-25 | /tools/jimeng/ | Tool | Yes | frontmatter | src/content/tools/jimeng.md |
+| 2026-06-25 | /tools/julius/ | Tool | Yes | frontmatter | src/content/tools/julius.md |
+| 2026-06-25 | /tools/kiro/ | Tool | Yes | frontmatter | src/content/tools/kiro.md |
+| 2026-06-25 | /tools/kokoro/ | Tool | Yes | working tree | src/content/tools/kokoro.md |
+| 2026-06-25 | /tools/krea/ | Tool | Yes | working tree | src/content/tools/krea.md |
+| 2026-06-25 | /tools/langflow/ | Tool | Yes | working tree | src/content/tools/langflow.md |
+| 2026-06-25 | /tools/linkedin-recruiter/ | Tool | Yes | working tree | src/content/tools/linkedin-recruiter.md |
+| 2026-06-25 | /tools/lovo/ | Tool | Yes | working tree | src/content/tools/lovo.md |
 | 2026-06-25 | /tools/luma/ | Tool | Yes | frontmatter | src/content/tools/luma.md |
 | 2026-06-25 | /tools/magnific/ | Tool | Yes | frontmatter | src/content/tools/magnific.md |
-| 2026-06-25 | /tools/marketmuse/ | Tool | Yes | working tree | src/content/tools/marketmuse.md |
+| 2026-06-25 | /tools/make/ | Tool | Yes | working tree | src/content/tools/make.md |
+| 2026-06-25 | /tools/manus/ | Tool | Yes | working tree | src/content/tools/manus.md |
+| 2026-06-25 | /tools/marketmuse/ | Tool | Yes | frontmatter | src/content/tools/marketmuse.md |
 | 2026-06-25 | /tools/meshy/ | Tool | Yes | frontmatter | src/content/tools/meshy.md |
 | 2026-06-25 | /tools/minimax-speech/ | Tool | Yes | frontmatter | src/content/tools/minimax-speech.md |
-| 2026-06-25 | /tools/modal/ | Tool | Yes | working tree | src/content/tools/modal.md |
-| 2026-06-25 | /tools/napkin/ | Tool | Yes | working tree | src/content/tools/napkin.md |
-| 2026-06-25 | /tools/obsidian/ | Tool | Yes | working tree | src/content/tools/obsidian.md |
+| 2026-06-25 | /tools/modal/ | Tool | Yes | frontmatter | src/content/tools/modal.md |
+| 2026-06-25 | /tools/napkin/ | Tool | Yes | frontmatter | src/content/tools/napkin.md |
+| 2026-06-25 | /tools/obsidian/ | Tool | Yes | frontmatter | src/content/tools/obsidian.md |
+| 2026-06-25 | /tools/omniseo/ | Tool | Yes | working tree | src/content/tools/omniseo.md |
+| 2026-06-25 | /tools/openhands/ | Tool | Yes | working tree | src/content/tools/openhands.md |
+| 2026-06-25 | /tools/openrouter/ | Tool | Yes | working tree | src/content/tools/openrouter.md |
 | 2026-06-25 | /tools/opusclip/ | Tool | Yes | frontmatter | src/content/tools/opusclip.md |
-| 2026-06-25 | /tools/otter-ai/ | Tool | Yes | working tree | src/content/tools/otter-ai.md |
-| 2026-06-25 | /tools/pieces/ | Tool | Yes | working tree | src/content/tools/pieces.md |
+| 2026-06-25 | /tools/otter-ai/ | Tool | Yes | frontmatter | src/content/tools/otter-ai.md |
+| 2026-06-25 | /tools/pieces/ | Tool | Yes | frontmatter | src/content/tools/pieces.md |
 | 2026-06-25 | /tools/pinecone/ | Tool | Yes | frontmatter | src/content/tools/pinecone.md |
 | 2026-06-25 | /tools/pixverse/ | Tool | Yes | frontmatter | src/content/tools/pixverse.md |
 | 2026-06-25 | /tools/playground-ai/ | Tool | Yes | frontmatter | src/content/tools/playground-ai.md |
-| 2026-06-25 | /tools/poe/ | Tool | Yes | working tree | src/content/tools/poe.md |
-| 2026-06-25 | /tools/presentations-ai/ | Tool | Yes | working tree | src/content/tools/presentations-ai.md |
+| 2026-06-25 | /tools/poe/ | Tool | Yes | frontmatter | src/content/tools/poe.md |
+| 2026-06-25 | /tools/presentations-ai/ | Tool | Yes | frontmatter | src/content/tools/presentations-ai.md |
+| 2026-06-25 | /tools/prezi/ | Tool | Yes | working tree | src/content/tools/prezi.md |
 | 2026-06-25 | /tools/qdrant/ | Tool | Yes | frontmatter | src/content/tools/qdrant.md |
-| 2026-06-25 | /tools/reclaim-ai/ | Tool | Yes | working tree | src/content/tools/reclaim-ai.md |
-| 2026-06-25 | /tools/relevance-ai/ | Tool | Yes | working tree | src/content/tools/relevance-ai.md |
-| 2026-06-25 | /tools/retell-ai/ | Tool | Yes | working tree | src/content/tools/retell-ai.md |
-| 2026-06-25 | /tools/rork/ | Tool | Yes | working tree | src/content/tools/rork.md |
-| 2026-06-25 | /tools/supermaven/ | Tool | Yes | working tree | src/content/tools/supermaven.md |
-| 2026-06-25 | /tools/tana/ | Tool | Yes | working tree | src/content/tools/tana.md |
-| 2026-06-25 | /tools/taskade/ | Tool | Yes | working tree | src/content/tools/taskade.md |
-| 2026-06-25 | /tools/tavus/ | Tool | Yes | working tree | src/content/tools/tavus.md |
-| 2026-06-25 | /tools/tines/ | Tool | Yes | working tree | src/content/tools/tines.md |
-| 2026-06-25 | /tools/together-ai/ | Tool | Yes | working tree | src/content/tools/together-ai.md |
-| 2026-06-25 | /tools/vapi/ | Tool | Yes | working tree | src/content/tools/vapi.md |
-| 2026-06-25 | /tools/vidu/ | Tool | Yes | working tree | src/content/tools/vidu.md |
-| 2026-06-25 | /tools/wan/ | Tool | Yes | working tree | src/content/tools/wan.md |
-| 2026-06-25 | /tools/wispr-flow/ | Tool | Yes | working tree | src/content/tools/wispr-flow.md |
+| 2026-06-25 | /tools/read-ai/ | Tool | Yes | working tree | src/content/tools/read-ai.md |
+| 2026-06-25 | /tools/readwise/ | Tool | Yes | working tree | src/content/tools/readwise.md |
+| 2026-06-25 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
+| 2026-06-25 | /tools/recraft/ | Tool | Yes | working tree | src/content/tools/recraft.md |
+| 2026-06-25 | /tools/relevance-ai/ | Tool | Yes | frontmatter | src/content/tools/relevance-ai.md |
+| 2026-06-25 | /tools/retell-ai/ | Tool | Yes | frontmatter | src/content/tools/retell-ai.md |
+| 2026-06-25 | /tools/rodin/ | Tool | Yes | working tree | src/content/tools/rodin.md |
+| 2026-06-25 | /tools/rork/ | Tool | Yes | frontmatter | src/content/tools/rork.md |
+| 2026-06-25 | /tools/rytr/ | Tool | Yes | working tree | src/content/tools/rytr.md |
+| 2026-06-25 | /tools/same-dev/ | Tool | Yes | working tree | src/content/tools/same-dev.md |
+| 2026-06-25 | /tools/semrush/ | Tool | Yes | working tree | src/content/tools/semrush.md |
+| 2026-06-25 | /tools/servicenow/ | Tool | Yes | working tree | src/content/tools/servicenow.md |
+| 2026-06-25 | /tools/speechify/ | Tool | Yes | working tree | src/content/tools/speechify.md |
+| 2026-06-25 | /tools/supermaven/ | Tool | Yes | frontmatter | src/content/tools/supermaven.md |
+| 2026-06-25 | /tools/surfer-seo/ | Tool | Yes | working tree | src/content/tools/surfer-seo.md |
+| 2026-06-25 | /tools/tabnine/ | Tool | Yes | working tree | src/content/tools/tabnine.md |
+| 2026-06-25 | /tools/tana/ | Tool | Yes | frontmatter | src/content/tools/tana.md |
+| 2026-06-25 | /tools/taskade/ | Tool | Yes | frontmatter | src/content/tools/taskade.md |
+| 2026-06-25 | /tools/tavus/ | Tool | Yes | frontmatter | src/content/tools/tavus.md |
+| 2026-06-25 | /tools/tidio/ | Tool | Yes | working tree | src/content/tools/tidio.md |
+| 2026-06-25 | /tools/tines/ | Tool | Yes | frontmatter | src/content/tools/tines.md |
+| 2026-06-25 | /tools/together-ai/ | Tool | Yes | frontmatter | src/content/tools/together-ai.md |
+| 2026-06-25 | /tools/trae/ | Tool | Yes | working tree | src/content/tools/trae.md |
+| 2026-06-25 | /tools/typeface/ | Tool | Yes | working tree | src/content/tools/typeface.md |
+| 2026-06-25 | /tools/val-town/ | Tool | Yes | working tree | src/content/tools/val-town.md |
+| 2026-06-25 | /tools/vapi/ | Tool | Yes | frontmatter | src/content/tools/vapi.md |
+| 2026-06-25 | /tools/vidu/ | Tool | Yes | frontmatter | src/content/tools/vidu.md |
+| 2026-06-25 | /tools/wan/ | Tool | Yes | frontmatter | src/content/tools/wan.md |
+| 2026-06-25 | /tools/wispr-flow/ | Tool | Yes | frontmatter | src/content/tools/wispr-flow.md |
+| 2026-06-25 | /tools/wordtune/ | Tool | Yes | working tree | src/content/tools/wordtune.md |
+| 2026-06-25 | /tools/zed/ | Tool | Yes | working tree | src/content/tools/zed.md |
 | 2026-06-25 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |

@@ -95,7 +95,7 @@ Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and
 
 Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes pages verified since yesterday by default; pass `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only for intentional recent-page revisits.
 
-The current verified batch refreshed `reclaim-ai` through `supermaven` from `.tmp-tool-refresh-batch.json` with six workers. Recompute after this batch is pushed before selecting the next shard.
+The current verified batch refreshed `tabnine` through `wordtune` from `.tmp-tool-refresh-batch.json` with six workers. Recompute after this batch is pushed before selecting the next shard.
 
 Required closeout:
 
@@ -104,6 +104,12 @@ Required closeout:
 - `npm run typecheck`
 - `npm run build:fast`
 - `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --route <changed-tool-and-parent-routes> --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366`
+
+Latest closeout notes:
+
+- Run `npm run ledger:pages && npm run ledger:pages:check` immediately after integrator-owned hub edits. The combined batch checker is still the canonical gate, but prechecking the ledger avoids a slow failed pass.
+- Keep `typecheck` before `build:fast`. It caught a YAML scalar issue in `claude-design.md` that the page-quality and provenance audits did not catch.
+- Keep source registry and category hubs integrator-owned. The workers were most effective when limited to 10 tool markdown files each and asked to report source-registry rows instead of editing shared files.
 
 ## Active: Decision Content Flywheel
 

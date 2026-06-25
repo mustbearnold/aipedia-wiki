@@ -5646,11 +5646,11 @@
     {
       "id": "goose-official",
       "label": "Goose official site",
-      "url": "https://block.github.io/goose/",
+      "url": "https://goose-docs.ai/",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "goose-pricing",
@@ -9811,7 +9811,8 @@
       "url": "https://docs.openhands.dev/",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "openhands-pricing",
@@ -9819,7 +9820,8 @@
       "url": "https://openhands.dev/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "openrouter-official",
@@ -9827,7 +9829,8 @@
       "url": "https://openrouter.ai/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "opusclip-clipanything",
@@ -11289,7 +11292,8 @@
       "url": "https://docs.same.new/essentials/deploying",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "same-dev-official",
@@ -11297,7 +11301,8 @@
       "url": "https://docs.same.new/get-started/quick-start",
       "type": "docs",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "same-dev-pricing",
@@ -11305,7 +11310,8 @@
       "url": "https://docs.same.new/usage/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "sanebox-feature-help",
@@ -11520,7 +11526,8 @@
       "url": "https://www.barchart.com/story/news/1747462/servicenow-hits-1-billion-in-aws-marketplace-transactions-as-enterprises-rapidly-adopt-ai-at-scale",
       "type": "third_party",
       "trust_tier": "secondary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "servicenow-build-agent-2026",
@@ -11528,7 +11535,8 @@
       "url": "https://www.stocktitan.net/news/NOW/service-now-build-agent-now-works-inside-every-major-ai-coding-tool-kqlr2db2b4zm.html",
       "type": "third_party",
       "trust_tier": "secondary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "servicenow-data-foundation-2026",
@@ -11536,7 +11544,8 @@
       "url": "https://www.barchart.com/story/news/1747515/servicenow-launches-the-real-time-data-foundation-that-puts-autonomous-ai-to-work-across-the-enterprise",
       "type": "third_party",
       "trust_tier": "secondary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "servicenow-governed-autonomous-work-2026",
@@ -11580,7 +11589,8 @@
       "url": "https://speechify.com/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "spellbook-associate",
@@ -12124,7 +12134,8 @@
       "url": "https://www.tidio.com/ai-agent/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tidio-overview",
@@ -12132,7 +12143,8 @@
       "url": "https://www.tidio.com/",
       "type": "official",
       "trust_tier": "primary",
-      "volatility": "medium"
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tidio-pricing",
@@ -12140,7 +12152,8 @@
       "url": "https://www.tidio.com/pricing/",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tines-about",
@@ -13376,7 +13389,8 @@
       "url": "https://zed.dev/pricing",
       "type": "pricing",
       "trust_tier": "primary",
-      "volatility": "high"
+      "volatility": "high",
+      "last_checked": "2026-06-25"
     },
     {
       "id": "perplexity-enterprise-comet",
@@ -13458,6 +13472,87 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-24"
+    },
+    {
+      "id": "anythingllm-cloud-limitations",
+      "label": "AnythingLLM cloud limitations",
+      "url": "https://docs.anythingllm.com/cloud/limitations",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "deepl-api-usage-billing",
+      "label": "DeepL API usage and billing",
+      "url": "https://support.deepl.com/hc/en-us/articles/360020685720-Usage-count-and-billing-in-DeepL-API",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "amplemarket-mcp-help",
+      "label": "Amplemarket MCP help",
+      "url": "https://knowledge.amplemarket.com/articles/8022685319-connecting-to-the-amplemarket-mcp-server",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "cartesia-june-2026-promo-terms",
+      "label": "Cartesia June 2026 promotion terms",
+      "url": "https://www.cartesia.ai/legal/promotion-terms-jun-2026",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "servicenow-ai-control-tower-product",
+      "label": "ServiceNow AI Control Tower product page",
+      "url": "https://www.servicenow.com/products/ai-control-tower.html",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "speechify-affiliates",
+      "label": "Speechify affiliates",
+      "url": "https://speechify.com/affiliates/",
+      "type": "affiliate",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "tidio-lyro-limit",
+      "label": "Tidio Lyro AI agent limit help",
+      "url": "https://help.tidio.com/hc/en-us/articles/13924459295900-The-Lyro-AI-agent-limit",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "surfer-june-2026-product-roundup",
+      "label": "Surfer June 2026 product roundup",
+      "url": "https://surferseo.com/blog/whats-new-at-surfer-june-2026-product-roundup/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "rodin-gen-25-80lv",
+      "label": "80 Level Rodin Gen-2.5 coverage",
+      "url": "https://80.lv/articles/how-hyper3d-rodin-gen-2-5-is-bringing-production-level-control-to-ai-3d-generation",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-06-25"
     }
   ]
 }

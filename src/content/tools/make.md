@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$29+/month
 status: active
 launched: 2012-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://www.make.com/en/help"
     source_label: "Make Help Center"
     source_id: make-help
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://www.make.com/en/pricing"
     source_label: "Make pricing"
     source_id: make-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-04
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://www.make.com/en/integrations"
     source_label: "Make app integrations"
     source_id: make-apps
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   ai_agent_surface:
@@ -59,7 +59,7 @@ facts:
     source: "https://www.make.com/en/ai-agents"
     source_label: "Make AI Agents"
     source_id: make-ai-agents
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-04
     volatility: medium
     confidence: high
@@ -68,7 +68,7 @@ facts:
     source: "https://www.make.com/en/pricing"
     source_label: "Make pricing"
     source_id: make-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-04
     volatility: medium
     confidence: high
@@ -95,7 +95,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Credits now the billing unit to accommodate AI modules"
   - date: 2026-04-15
     plan: "Core"
@@ -103,7 +103,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Verified unchanged"
   - date: 2026-05-13
     plan: "Core / Pro / Teams"
@@ -111,7 +111,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Headline price drop. Core $10.59 to $9, Pro $18.82 to $16, Teams $34.12 to $29. Credits and tier features otherwise unchanged."
   - date: 2026-06-04
     plan: "Free / Core / Pro / Teams / Enterprise"
@@ -119,7 +119,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Source"
     source_id: make-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Reverified current pricing, 3,000+ standard apps, MCP Server, AI Web Search beta, Make AI Agents beta, AI Toolkit, and code-app credit usage."
   - date: 2026-06-23
     plan: "Free / Core / Pro / Teams / Enterprise"
@@ -127,7 +127,7 @@ price_history:
     source: "https://www.make.com/en/pricing"
     source_label: "Make pricing"
     source_id: make-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Reverified public pricing, 3,000+ apps, MCP Server, AI Web Search beta, Make AI Agents beta, AI Toolkit, and Make Code App credit usage. Code execution still lists 2 credits per 1 second of code execution time."
 ---
 
@@ -159,7 +159,7 @@ Pricing runs $0 to $29+/month at the public 10K-credit tier, with Enterprise cus
 | **Logic support** | Routers, iterators, aggregators, error handlers, filters |
 | **Template library** | 10,000+ community and official |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -197,7 +197,7 @@ Subscription pricing via [make.com/pricing](https://www.make.com/en/pricing). An
 | Teams | $29 | 10,000/mo | Team management, shared scenarios, roles | Collaborative teams |
 | Enterprise | Custom | Custom | SSO, 24/7 support, enterprise apps, governance, Value Engineering team | Regulated orgs |
 
-*Prices verified 2026-06-23 via [Make pricing](https://www.make.com/en/pricing). Rates shown are for the public 10K-credit monthly tier. Annual billing saves 15% or more. Additional credits are available, and Make's pricing page says code execution consumes 2 credits per 1 second of code execution time.*
+*Prices verified 2026-06-25 via [Make pricing](https://www.make.com/en/pricing). Rates shown are for the public 10K-credit monthly tier. Annual billing saves 15% or more. Additional credits are available, and Make's pricing page says code execution consumes 2 credits per 1 second of code execution time.*
 
 ## Against the alternatives
 
@@ -224,7 +224,7 @@ Subscription pricing via [make.com/pricing](https://www.make.com/en/pricing). An
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against the [Make pricing page](https://www.make.com/en/pricing), [Make AI Agents](https://www.make.com/en/ai-agents), and Make's [help center billing notes](https://help.make.com/adjustments-to-plans-and-pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [Make pricing page](https://www.make.com/en/pricing), [Make AI Agents](https://www.make.com/en/ai-agents), and Make's [help center billing notes](https://help.make.com/adjustments-to-plans-and-pricing).
 
 ## FAQ
 
@@ -245,10 +245,10 @@ No. Make is cloud-only. [n8n](/tools/n8n/) is the standard pick for self-hosted 
 
 ## Sources
 
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-23): current plan rates, credit limits, 3,000+ app count, AI Toolkit, AI Web Search, MCP, Make Code App, and AI Agents pricing-surface signals
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-23): agent positioning and AI app ecosystem
-- [Make integrations directory](https://www.make.com/en/integrations) (verified 2026-06-23): live app catalog
-- [Make billing notes](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-23): extra-credit and custom AI provider changes
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-25): current plan rates, credit limits, 3,000+ app count, AI Toolkit, AI Web Search, MCP, Make Code App, and AI Agents pricing-surface signals
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-25): agent positioning and AI app ecosystem
+- [Make integrations directory](https://www.make.com/en/integrations) (verified 2026-06-25): live app catalog
+- [Make billing notes](https://help.make.com/adjustments-to-plans-and-pricing) (verified 2026-06-25): extra-credit and custom AI provider changes
 
 ## Related
 

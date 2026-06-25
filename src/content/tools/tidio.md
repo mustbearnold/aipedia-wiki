@@ -9,11 +9,11 @@ secondary_categories: [ai-automation]
 company: Tidio
 url: 'https://www.tidio.com'
 pricing_model: freemium
-price_range: $0-$2999+/month
+price_range: $0-$2,999+/month; annual discounts shown separately
 status: active
 launched: 2013-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -22,7 +22,7 @@ affiliate:
   network: direct
   link: null
   application_status: none
-  notes: "Official Tidio affiliate page and help article verified 2026-06-12: up to 30% recurring, 30-day cookie, $50 payout threshold, no paid-search promotion."
+  notes: "Official Tidio affiliate page and help article verified 2026-06-25: up to 30% recurring, 30-day cookie, $50 payout threshold, no paid-search promotion."
 scores:
   utility: 8
   value: 6
@@ -34,15 +34,15 @@ facts:
     source: "https://www.tidio.com/"
     source_label: "Tidio overview"
     source_id: tidio-overview
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Tidio's pricing is multi-axis and complex: a base plan (Starter $24.17, Growth $49.17+, Plus $749/mo annual), plus Lyro AI ($32.50/mo for 50 conversations) and Flows ($24.17/mo) billed separately. Real cost often runs 1.5-2x the base plan."
+    value: "Tidio's pricing is multi-axis and complex: monthly sticker prices show Starter at $29/mo, Growth from $59/mo, Plus at $749/mo, and Premium from $2,999/mo, while annual billing discounts Starter and Growth to $24.17 and $49.17 per month. Lyro and Flows are separate usage lines for most buyers."
     source: "https://www.tidio.com/pricing/"
     source_label: "Tidio pricing"
     source_id: tidio-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -51,7 +51,7 @@ facts:
     source: "https://www.tidio.com/ai-agent/"
     source_label: "Tidio AI agent (Lyro)"
     source_id: tidio-lyro
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   integrations:
@@ -59,7 +59,7 @@ facts:
     source: "https://www.tidio.com/"
     source_label: "Tidio overview"
     source_id: tidio-overview
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   customer_count:
@@ -67,15 +67,15 @@ facts:
     source: "https://www.tidio.com/"
     source_label: "Tidio overview"
     source_id: tidio-overview
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: low
     confidence: medium
   watch_out_for:
-    value: "Lyro and Flows are billed separately from the base chat plan; conversation overages stack quickly; the gap between Growth ($49+) and Plus ($749) is steep with no middle tier; agent-resolution pricing is opaque until you talk to sales."
+    value: "Lyro and Flows are billed separately from the base chat plan for most buyers; the first 50 Lyro conversations are a lifetime free trial rather than a renewing allowance; the gap between Growth and Plus is steep; agent-resolution economics are clearest only on Premium or sales-led terms."
     source: "https://www.tidio.com/pricing/"
     source_label: "Tidio pricing"
     source_id: tidio-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -96,7 +96,7 @@ not_best_for:
   - cost-sensitive customers running high-volume support (separate AI billing punishes them)
   - regulated industries needing detailed model governance
 quick_answer: >-
-  Tidio is a live-chat widget + Lyro AI agent for SMB ecommerce and SaaS. Lyro deflects up to 67% of common questions before a human sees them. Pick it if you're on Shopify or have a small support team and want to ship AI deflection fast. Skip it if you're enterprise-scale or cost-sensitive, separate AI billing stacks fast.
+  Tidio is a live-chat widget + Lyro AI agent for SMB ecommerce and SaaS. Lyro deflects up to 67% of common questions before a human sees them. Pick it if you're on Shopify or have a small support team and want to ship AI deflection fast. Skip it if you're enterprise-scale or cost-sensitive, because separate AI and flow billing stacks fast.
 price_history:
   - date: 2026-05-13
     plan: "Starter"
@@ -118,10 +118,18 @@ price_history:
     verified_at: 2026-05-13
   - date: 2026-05-13
     plan: "Lyro AI Agent (add-on)"
-    price: "$32.50/mo for 50 conversations · scales with volume"
+    price: "First 50 conversations free lifetime · paid monthly limits scale from 50 to 1,000+"
     source: "https://www.tidio.com/pricing/"
     source_label: "Tidio pricing"
-    verified_at: 2026-05-13
+    verified_at: 2026-06-25
+  - date: 2026-06-25
+    plan: "Starter / Growth monthly sticker"
+    price: "$29/mo / $59/mo+ before annual discount"
+    source: "https://www.tidio.com/pricing/"
+    source_label: "Tidio pricing"
+    source_id: tidio-pricing
+    verified_at: 2026-06-25
+    note: "Annual-discount equivalents remain $24.17/mo and $49.17/mo. Plus stays $749/mo and Premium starts at $2,999/mo."
 ---
 
 # Tidio
@@ -134,7 +142,7 @@ The product sits between **free chat widgets** (Crisp, the old Intercom Free) an
 
 > **Pick Tidio if you run a Shopify store or a small SaaS support team** and you want a live-chat widget with an AI agent that ships in a day, costs a few hundred dollars per month, and deflects the common 60-70% of questions without escalating to a human. The Lyro auto-flow setup is fast, and the multi-channel inbox (chat + email + Instagram + WhatsApp + Messenger) is a real time-saver versus stitching tools.
 >
-> **Skip it if you're enterprise-scale or genuinely cost-sensitive on high volume.** Plus is $749/mo and Premium starts at $2,999/mo, and that's *before* Lyro and Flows add-ons stack on top. At enterprise volume, Intercom, Zendesk AI, or Salesforce Service Cloud usually win on per-conversation economics and richer tooling. At budget volume, separate AI billing makes Tidio expensive per resolved ticket.
+> **Skip it if you're enterprise-scale or genuinely cost-sensitive on high volume.** Plus is $749/mo and Premium starts at $2,999/mo; Lyro and Flows usage lines can still change the real bill. At enterprise volume, Intercom, Zendesk AI, or Salesforce Service Cloud usually win on per-conversation economics and richer tooling. At budget volume, separate AI billing makes Tidio expensive per resolved ticket.
 >
 > **Who pays which tier:** Free for shops with under 50 conversations/month, Starter $24.17 for the smallest paid setup, Growth $49.17+ for active support teams, Plus $749 when you need multi-project, custom branding, and OpenAPI, Premium for enterprise with the guaranteed 50% resolution SLA.
 
@@ -146,14 +154,14 @@ The product sits between **free chat widgets** (Crisp, the old Intercom Free) an
 | **Headline AI product** | Lyro AI Agent · resolves up to 67% of common questions |
 | **Plans** | Free · Starter $24.17/mo · Growth $49.17+/mo · Plus $749/mo · Premium $2,999+/mo |
 | **Conversation limits** | Free 50 · Starter 100 · Growth up to 2,000 · Plus custom · Premium custom |
-| **AI add-ons (billed separately)** | Lyro from $32.50/mo (50 conv) · Flows from $24.17/mo (2,000 visitors) |
+| **AI add-ons (billed separately)** | First 50 Lyro conversations are a lifetime free trial, then paid Lyro limits scale by volume · Flows billed separately |
 | **Channels** | Live chat · email · Messenger · Instagram · WhatsApp · email ticketing |
 | **Integrations** | Shopify · WooCommerce · BigCommerce · Salesforce · Zendesk · HubSpot · Klaviyo |
 | **OpenAPI / SDK** | Plus tier and above · Mobile SDK on Premium |
 | **Underlying model** | Not publicly disclosed; closed pipeline behind Lyro |
 | **Customer base** | 300,000+ businesses worldwide |
 
-Every data point above was verified against Tidio pricing and product documentation on 2026-06-12. See Sources.
+Every data point above was verified against Tidio pricing and product documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -198,10 +206,10 @@ Subscription and add-on pricing is managed via [tidio.com/pricing](https://www.t
 | Premium | $2,999+ | Custom | 3,000+ Lyro conversations, **guaranteed 50% resolution**, mobile SDK, Slack support | Enterprise |
 
 **Add-ons (separate):**
-- **Lyro AI Agent:** from $32.50/mo for 50 conversations · scales with volume
-- **Flows:** from $24.17/mo for 2,000 visitors
+- **Lyro AI Agent:** first 50 conversations are free for the project lifetime, then paid monthly limits scale from 50 to 1,000+ or custom volume
+- **Flows:** separate visitor-based add-on; verify current monthly and annual billing toggles
 
-Prices verified 2026-06-12 via [tidio.com/pricing](https://www.tidio.com/pricing/). Check the live page for current billing toggles and exact volume tiers.
+Prices verified 2026-06-25 via [tidio.com/pricing](https://www.tidio.com/pricing/), [Lyro AI Agent](https://www.tidio.com/ai-agent/), and Tidio's Lyro limit help article. Check the live page for current billing toggles and exact volume tiers.
 
 ## Against the alternatives
 
@@ -219,16 +227,16 @@ Prices verified 2026-06-12 via [tidio.com/pricing](https://www.tidio.com/pricing
 ## Failure modes
 
 - **Pricing complexity destroys budget predictability.** Lyro + Flows + conversation overages stack quickly. Build a forecast for actual monthly cost (not just base plan) before signing.
-- **The $49 → $749 gap is massive.** Growth maxes at 2,000 conversations; Plus starts at $749. If your business sits between 2,000 and ~10,000 conversations per month, expect to either upgrade dramatically or operate close to the cap.
+- **The $49 to $749 gap is massive.** Growth maxes at 2,000 conversations; Plus starts at $749. If your business sits between 2,000 and ~10,000 conversations per month, expect to either upgrade dramatically or operate close to the cap.
 - **Lyro resolution rate is "up to 67%."** Real-world deflection varies heavily by industry, KB quality, and how aggressively Lyro is tuned. Run a 30-day pilot before assuming the headline number.
-- **Pay-per-resolution only on Premium.** The contractual "you only pay for resolved tickets" model is locked behind the highest tier. Lower tiers pay for Lyro conversations whether or not they resolve.
+- **Free Lyro is a trial, not a monthly allowance.** Tidio's help center says the first 50 Lyro conversations are non-renewing for each new project. Budget for paid Lyro volume once the pilot ends.
 - **Bot disclosure obligations.** Several jurisdictions (California's BOT Disclosure Act, EU AI Act) require explicit AI disclosure. Tidio supports it; check it's enabled in your config.
 - **Model black-boxing.** Lyro's underlying LLM is not publicly documented. If your compliance team requires named-model disclosure, this is a procurement blocker.
 - **Mobile SDK only on Premium.** In-app chat for native iOS/Android requires the highest tier.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [Tidio pricing](https://www.tidio.com/pricing/) and the [Tidio AI Agent page](https://www.tidio.com/ai-agent/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Tidio pricing](https://www.tidio.com/pricing/), the [Tidio AI Agent page](https://www.tidio.com/ai-agent/), [Tidio Lyro limit help](https://help.tidio.com/hc/en-us/articles/13924459295900-The-Lyro-AI-agent-limit), and [Tidio affiliate page](https://www.tidio.com/partners/affiliate/).
 
 ## FAQ
 
@@ -236,7 +244,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Lyro is Tidio's AI customer-service agent. It reads your knowledge base and product catalog and answers customer questions in the chat widget. It hands off to a human when it doesn't know an answer or detects intent that needs escalation. Tidio reports Lyro can resolve up to 67% of common questions.
 
 **Is Tidio free?**
-Yes, the Free plan covers 50 billable conversations per month and basic features. Most active stores will outgrow it quickly and need Starter ($24.17/mo) or Growth ($49.17+/mo). Lyro on the Free plan is limited; serious deflection requires the paid add-on.
+Yes, the Free plan covers 50 billable conversations per month and basic features. Most active stores will outgrow it quickly and need Starter ($29/mo monthly, or $24.17/mo with annual billing) or Growth ($59/mo+ monthly, or $49.17/mo+ with annual billing). Lyro's first 50 conversations are a non-renewing project trial; serious deflection requires paid Lyro volume.
 
 **How does Tidio compare to Intercom?**
 Tidio is SMB-first; Intercom is mid-market / enterprise. Tidio is cheaper at entry, more complex per-conversation billing. Intercom's Fin AI agent has a per-resolution pricing model that's cleaner at scale. For a 20-seat support team, Intercom usually wins on tooling depth; for a 2-seat Shopify store, Tidio wins on time-to-value and price.

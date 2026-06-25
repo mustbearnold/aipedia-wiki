@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0-$100/month"
 status: active
 launched: 2025-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Trae: ByteDance's AI IDE Review & Pricing (June 2026)"
 meta_description: "Trae is ByteDance's VS Code fork with SOLO agent mode, Claude, GPT, DeepSeek and Gemini models, and token-based pricing from $0 free through $100 Ultra. Lite at $3/mo is the cheapest way to reach Claude and GPT inside an IDE."
@@ -30,19 +30,19 @@ scores:
   longevity: 7
 facts:
   best_for:
-    value: "ByteDance's AI-first IDE. VS Code fork with SOLO autonomous agent, multi-model backbone (Claude, GPT, DeepSeek, Gemini), and aggressive $3-$10 pricing that undercuts Cursor and Windsurf. Best for software development and code-assistant workflows."
+    value: "ByteDance's AI-first IDE. VS Code fork with TRAE IDE SOLO mode, TRAE Work cloud tasks, multi-model routing, and aggressive $3-$10 entry pricing that undercuts Cursor and Windsurf. Best for software development and code-assistant workflows."
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Token-based plans since the February 18, 2026 pricing revamp. Free $0 (5,000 autocompletes, 2 concurrent tasks), Lite $3, Pro $10 with SOLO included, Pro+ $30, Ultra $100. Re-verified May 24, 2026."
+    value: "Token-based plans since the February 18, 2026 pricing revamp. Free $0, Lite $3, Pro $10 with TRAE IDE SOLO mode included and a 7-day trial, Pro+ $30, Ultra $100. Free and Lite cap TRAE Work at 2 concurrent cloud tasks; Pro increases that to 10."
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -51,7 +51,7 @@ facts:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -74,6 +74,7 @@ price_history:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
+    verified_at: 2026-06-25
     note: "Trae moved from fully-free Pro features to tiered token allowances on February 18, 2026."
   - date: 2026-04-18
     plan: "Lite"
@@ -81,6 +82,7 @@ price_history:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
+    verified_at: 2026-06-25
     note: "Verified entry paid tier with premium model access."
   - date: 2026-04-18
     plan: "Pro"
@@ -88,6 +90,7 @@ price_history:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
+    verified_at: 2026-06-25
     note: "Verified, SOLO mode included."
   - date: 2026-05-13
     plan: "All tiers"
@@ -95,6 +98,7 @@ price_history:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
+    verified_at: 2026-06-25
     note: "Re-verified May 13, 2026. Free $0 (5k autocompletes, 2 concurrent tasks), Lite $3/mo ($5 basic + bonus usage, 2 concurrent), Pro $10/mo ($20 basic + bonus, SOLO included, 10 concurrent, 7-day free trial), Pro+ $30/mo (3.5x Pro usage, 15 concurrent), Ultra $100/mo (20x Pro usage, model early access, 20 concurrent). Multi-model backbone unchanged: Claude, OpenAI, DeepSeek, Gemini."
   - date: 2026-05-24
     plan: "All tiers"
@@ -102,14 +106,23 @@ price_history:
     source: "https://www.trae.ai/pricing"
     source_label: "Source"
     source_id: trae-pricing
+    verified_at: 2026-06-25
     note: "Official pricing rechecked: Lite $3, Pro $10 after 7-day trial, Pro+ $30, Ultra $100; Free/Lite cap cloud tasks at 2, Pro at 10, Pro+ at 15, Ultra at 20."
+  - date: 2026-06-25
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://www.trae.ai/pricing"
+    source_label: "Source"
+    source_id: trae-pricing
+    verified_at: 2026-06-25
+    note: "Official pricing rechecked: Lite $3/mo, Pro $10/mo after 7-day trial with TRAE IDE SOLO mode included, Pro+ $30/mo, Ultra $100/mo. Free and Lite cap TRAE Work cloud tasks at 2, Pro at 10, Pro+ at 15, Ultra at 20."
 ---
 
 # Trae
 
-ByteDance's **AI-first IDE**, shipped as a VS Code fork with extensions and keybindings that transfer in one import. Flagship agent is **SOLO mode**, which plans, edits files across the project, and shows live preview without step-by-step approvals. The multi-model backbone covers Claude, OpenAI, DeepSeek, and Gemini routes on a single token-metered bill.
+ByteDance's **AI-first IDE**, shipped as a VS Code fork with extensions and keybindings that transfer in one import. Flagship agent is **TRAE IDE SOLO mode**, which plans, edits files across the project, and shows live preview without step-by-step approvals. TRAE Work adds cloud tasks on Web/Desktop with plan-based concurrency caps.
 
-Pricing went from fully free through 2025 to token-based tiers on **February 18, 2026**. Entry paid plan is **$3/mo Lite**, roughly an order of magnitude under Cursor and Windsurf. Free tier still exists with 5,000 autocompletes and 2 concurrent cloud tasks.
+Pricing went from fully free through 2025 to token-based tiers on **February 18, 2026**. Entry paid plan is **$3/mo Lite**, roughly an order of magnitude under Cursor and Windsurf. Free and Lite tiers still cap TRAE Work at 2 concurrent cloud tasks.
 
 ByteDance's wider AI stack (Doubao, Jimeng, Seedance, Kling) sits behind the same wallet. Trae is best read as a loss-leader play for developer mindshare, not a pure standalone product.
 
@@ -129,18 +142,18 @@ ByteDance's wider AI stack (Doubao, Jimeng, Seedance, Kling) sits behind the sam
 | **Launched** | January 2025 (public preview) |
 | **Pricing shift** | Token-based tiers since February 18, 2026 |
 | **Platforms** | Windows, macOS, Linux (VS Code fork) |
-| **Models supported** | Claude · OpenAI · DeepSeek · Gemini routes |
-| **Agent mode** | SOLO (autonomous planner, multi-file edits, live preview) |
+| **Models supported** | Multi-model routing, with exact model availability controlled by the live pricing and routing policy |
+| **Agent mode** | TRAE IDE SOLO plus TRAE Work cloud tasks |
 | **Design import** | Figma screenshot to React component |
 | **Extensions** | Full VS Code marketplace compatibility |
-| **Free tier** | 5,000 autocompletes/mo · 2 concurrent cloud tasks |
+| **Free tier** | Limited IDE access · 2 concurrent TRAE Work cloud tasks |
 | **Paid entry** | Lite at $3/mo with premium model access |
 
 ## What it actually is
 
 A VS Code fork with ByteDance's AI layer bolted in at the editor level. Users import existing VS Code settings, themes, and extensions on first launch. The differentiator is the agent layer, not the editor chrome.
 
-**SOLO mode** is the headline feature. It takes a natural-language spec, plans the steps, edits multiple files, runs terminal commands, and surfaces a live preview. It is closest in positioning to Cursor's YOLO mode and Windsurf's Cascade.
+**TRAE IDE SOLO mode** is the headline feature. It takes a natural-language spec, plans the steps, edits multiple files, runs terminal commands, and surfaces a live preview. It is closest in positioning to Cursor's YOLO mode and Windsurf's Cascade.
 
 **Builder mode** is the lighter variant for smaller scoped tasks: breaks a request into sub-steps, modifies files, previews results.
 
@@ -166,11 +179,11 @@ A VS Code fork with ByteDance's AI layer bolted in at the editor level. Users im
 
 ## Pricing
 
-Subscription pricing verified 2026-06-12 via [trae.ai/pricing](https://www.trae.ai/pricing):
+Subscription pricing verified 2026-06-25 via [trae.ai/pricing](https://www.trae.ai/pricing):
 
 | Plan | Price | What's included | Who's it for |
 |---|---|---|---|
-| Free | $0 | 5,000 autocompletes/mo, 2 concurrent cloud tasks, limited IDE access | Casual use, learning |
+| Free | $0 | Limited IDE access, 2 concurrent cloud tasks | Casual use, learning |
 | Lite | $3/mo | Unlimited autocomplete, $5 basic + bonus usage, 2 concurrent tasks, premium models | Budget solo devs |
 | Pro | $10/mo | Unlimited autocomplete, $20 basic + bonus usage, **SOLO mode included**, 10 concurrent tasks | **Most paid users land here** |
 | Pro+ | $30/mo | 3.5x Pro usage, 15 concurrent cloud tasks | Heavy agent-run workflows |
@@ -178,11 +191,11 @@ Subscription pricing verified 2026-06-12 via [trae.ai/pricing](https://www.trae.
 
 **Pro includes a 7-day free trial.** Lite had a $3 first-month promo historically; verify current offers on the pricing page.
 
-Models available across paid tiers span Claude, OpenAI, DeepSeek, and Gemini routes. Free tier has limited model selection.
+Model access varies by plan and live routing policy. Free tier has limited model selection.
 
 Usage is metered on a token pool per tier, not unlimited. This shifted on February 18, 2026 from the prior fully-free Pro feature set.
 
-Prices verified 2026-06-12 via [Trae pricing page](https://www.trae.ai/pricing) and current official plan comparison text.
+Prices verified 2026-06-25 via [Trae pricing page](https://www.trae.ai/pricing) and current official plan comparison text.
 
 ## Against the alternatives
 
@@ -201,19 +214,19 @@ Prices verified 2026-06-12 via [Trae pricing page](https://www.trae.ai/pricing) 
 - **Telemetry concerns.** Security researchers have flagged continued data collection even with settings disabled. Regulated codebases should avoid.
 - **Token pool limits surprise users.** The February 18, 2026 shift from fully-free Pro to token-based tiers caught heavy users mid-workflow. Budget the month.
 - **ByteDance geopolitical exposure.** US enterprise buyers in defence, finance, or government-adjacent work may be blocked by procurement policy regardless of the tool's merits.
-- **Model versions lag frontier.** Some currently verified routing targets lag current frontier model versions. Frontier users running Claude Opus 4.7 or OpenAI frontier models on direct subscriptions will notice the gap.
+- **Model routing can lag direct subscriptions.** Exact model availability changes by plan and route. Frontier users should compare Trae against direct Claude, OpenAI, Gemini, and DeepSeek subscriptions before standardizing.
 - **SOLO mode drifts on complex codebases.** Autonomous agents still over-edit unrelated files when the spec is vague. Keep scope tight on legacy projects.
 - **Support is thin compared to Cursor.** Community docs exist, but first-party responsiveness has been uneven during the pricing transition.
 - **Cloud task limits are low on free and Lite.** 2 concurrent tasks is a hard ceiling at the lower tiers, which bottlenecks parallel agent work.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-12 against [trae.ai/pricing](https://www.trae.ai/pricing) and current official plan comparison text.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [trae.ai/pricing](https://www.trae.ai/pricing) and current official plan comparison text.
 
 ## FAQ
 
 **Is Trae free?**
-Yes. The free tier gives 5,000 autocompletes per month and 2 concurrent cloud tasks. Paid tiers start at $3/mo for Lite, which unlocks premium models.
+Yes. The free tier has limited IDE access and 2 concurrent TRAE Work cloud tasks. Paid tiers start at $3/mo for Lite, which unlocks premium models.
 
 **Who owns Trae?**
 ByteDance, the same parent company behind Doubao, Jimeng, Seedance, and Kling. TikTok is also ByteDance.

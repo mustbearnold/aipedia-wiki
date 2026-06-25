@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Plus shown in-app and mobile stores; API available"
 status: active
 launched: 2023-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
@@ -39,7 +39,7 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site pricing surface
     source_id: chatpdf-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: medium
     next_review_at: '2026-08-18'
@@ -48,7 +48,7 @@ facts:
     source: https://apps.apple.com/us/app/chatpdf-chat-pdf-ai/id6742454061
     source_label: ChatPDF App Store listing
     source_id: chatpdf-app-store
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -57,7 +57,7 @@ facts:
     source: https://www.chatpdf.com/pdf-ai
     source_label: ChatPDF PDF AI page
     source_id: chatpdf-pdf-ai
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-18'
@@ -66,7 +66,7 @@ facts:
     source: https://www.chatpdf.com/docs/api/backend
     source_label: ChatPDF backend API docs
     source_id: chatpdf-api
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-18'
@@ -75,7 +75,7 @@ facts:
     source: https://www.chatpdf.com/scholar
     source_label: ChatPDF AI Research
     source_id: chatpdf-scholar
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-09-18'
@@ -84,13 +84,13 @@ facts:
     source: https://www.chatpdf.com/
     source_label: ChatPDF official site
     source_id: chatpdf-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-18'
 tags: [pdf, document-chat, research, rag, citations, study-aid]
 seo_title: "ChatPDF: Features, Pricing & Review (June 2026)"
-meta_description: "ChatPDF review updated June 23, 2026: PDF chat, folders, citations, non-PDF files, YouTube chat, AI Research, flashcards, slides, API limits, and Plus pricing caveats."
+meta_description: "ChatPDF review updated June 25, 2026: PDF chat, folders, citations, non-PDF files, YouTube chat, AI Research, flashcards, slides, API limits, and Plus pricing caveats."
 author: "aipedia.wiki Editorial"
 best_for:
   - students and researchers summarizing PDFs
@@ -105,13 +105,13 @@ not_best_for:
 quick_answer: >-
   ChatPDF is still the fastest "upload a document and ask questions" product for people who want clickable references and a focused document UI. The June 2026 story is broader than PDFs: ChatPDF now promotes multi-file folders, Word/PowerPoint/Markdown/text support, YouTube chat, AI Research, flashcards, slides, AI Writer, AI Detector, mobile apps, desktop app, and a backend API with 2,000-page or 32MB PDF limits. Pick it for simple cited document Q&A and study workflows. Skip it for full literature-review workflow, governed enterprise RAG, or high-stakes research where source inspection and data policy matter more than speed.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Free / Plus / API recheck"
     price: "Free; Plus checkout-dependent; US App Store anchor $14.99/mo or $89.99/year"
     source: "https://www.chatpdf.com/"
     source_label: "ChatPDF official site"
     source_id: chatpdf-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Rechecked official site, feature surfaces, API docs, and mobile-store anchors. No material change found; web Plus remains checkout-dependent."
   - date: 2026-06-12
     plan: "Free"
@@ -119,7 +119,7 @@ price_history:
     source: "https://www.chatpdf.com/"
     source_label: "ChatPDF official site"
     source_id: chatpdf-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Official site confirmed 2 document analyses per day and Plus as the unlimited document analysis tier; the old public /pricing route was not treated as current."
   - date: 2026-06-18
     plan: "Free"
@@ -127,7 +127,7 @@ price_history:
     source: "https://www.chatpdf.com/"
     source_label: "ChatPDF official site"
     source_id: chatpdf-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Official site still says the free plan allows 2 document analyses per day and no sign-up is required for the basic flow."
   - date: 2026-06-18
     plan: "Plus mobile in-app purchase"
@@ -135,13 +135,13 @@ price_history:
     source: "https://apps.apple.com/us/app/chatpdf-chat-pdf-ai/id6742454061"
     source_label: "ChatPDF App Store listing"
     source_id: chatpdf-app-store
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Use as a mobile-store anchor, not a guaranteed web checkout price. Web Plus remains in-app and region/account dependent."
 ---
 
 # ChatPDF
 
-ChatPDF made "talk to your PDF" simple: upload a document, ask questions, and jump back to cited passages. That core still matters, but the June 23, 2026 recheck keeps the product broader than a single-PDF chat box. The official surface includes multi-file folders, Word/PowerPoint/Markdown/text files, YouTube chat, AI Research, flashcards, slides, AI Writer, AI Detector, mobile apps, desktop app, and a backend API.
+ChatPDF made "talk to your PDF" simple: upload a document, ask questions, and jump back to cited passages. That core still matters, but the June 25, 2026 recheck keeps the product broader than a single-PDF chat box. The official surface includes multi-file folders, Word/PowerPoint/Markdown/text files, YouTube chat, AI Research, flashcards, slides, AI Writer, AI Detector, mobile apps, desktop app, and a backend API.
 
 ## System Verdict
 
@@ -201,7 +201,7 @@ ChatPDF made "talk to your PDF" simple: upload a document, ask questions, and ju
 | Plus iOS in-app purchase | $14.99/mo or $89.99/year in the US App Store listing | Mobile Plus subscription, subject to App Store region and in-app purchase terms |
 | API | Account/API gated | Add PDFs by URL, file upload, or manual source ID, then send stateless chat messages |
 
-Free and Plus positioning verified 2026-06-23 via [chatpdf.com](https://www.chatpdf.com). Mobile in-app purchase anchors checked against the [US App Store listing](https://apps.apple.com/us/app/chatpdf-chat-pdf-ai/id6742454061). API source limits verified via [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend), which list 2,000 pages or 32MB per PDF. Web checkout should still be verified inside the live app before quoting a purchase price.
+Free and Plus positioning verified 2026-06-25 via [chatpdf.com](https://www.chatpdf.com). Mobile in-app purchase anchors checked against the [US App Store listing](https://apps.apple.com/us/app/chatpdf-chat-pdf-ai/id6742454061). API source limits verified via [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend), which list 2,000 pages or 32MB per PDF. Web checkout should still be verified inside the live app before quoting a purchase price.
 
 ## Failure Modes
 
@@ -214,7 +214,7 @@ Free and Plus positioning verified 2026-06-23 via [chatpdf.com](https://www.chat
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-23 against [chatpdf.com](https://www.chatpdf.com), [ChatPDF PDF AI](https://www.chatpdf.com/pdf-ai), [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend), [ChatPDF AI Research](https://www.chatpdf.com/scholar), [ChatPDF YouTube Chat](https://www.chatpdf.com/youtube), [ChatPDF AI Flashcards](https://www.chatpdf.com/ai-flashcards), [ChatPDF AI Slides](https://www.chatpdf.com/ai-slides), [ChatPDF Google Play listing](https://play.google.com/store/apps/details?hl=en_US&id=com.chatpdf.android), and [ChatPDF App Store listing](https://apps.apple.com/us/app/chatpdf-chat-pdf-ai/id6742454061). Scoring uses the four-dimension rubric at [/about/scoring/](/about/scoring/).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-25 against [chatpdf.com](https://www.chatpdf.com), [ChatPDF PDF AI](https://www.chatpdf.com/pdf-ai), [ChatPDF backend API docs](https://www.chatpdf.com/docs/api/backend), [ChatPDF AI Research](https://www.chatpdf.com/scholar), [ChatPDF YouTube Chat](https://www.chatpdf.com/youtube), [ChatPDF AI Flashcards](https://www.chatpdf.com/ai-flashcards), [ChatPDF AI Slides](https://www.chatpdf.com/ai-slides), [ChatPDF Google Play listing](https://play.google.com/store/apps/details?hl=en_US&id=com.chatpdf.android), and [ChatPDF App Store listing](https://apps.apple.com/us/app/chatpdf-chat-pdf-ai/id6742454061). Scoring uses the four-dimension rubric at [/about/scoring/](/about/scoring/).
 
 ## FAQ
 

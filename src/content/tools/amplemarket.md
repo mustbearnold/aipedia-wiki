@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$600-$2000+/month"
 status: active
 launched: 2019-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: quarterly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,25 +51,25 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   enterprise_controls:
-    value: Procurement should test CRM integration, deliverability controls, compliance, contact-data provenance, workflow routing, MCP access governance, and role permissions before scaling.
+    value: Procurement should test CRM integration, deliverability controls, compliance, contact-data provenance, workflow routing, MCP access governance, role permissions, the 100 requests/minute MCP rate limit, and enrichment credit costs before scaling.
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
   watch_out_for:
-    value: Do not evaluate Amplemarket as a generic automation tool; its value depends on sales-data quality, outbound volume, CRM hygiene, AI/MCP governance, and whether the team actually uses its sales workflow end to end.
+    value: Do not evaluate Amplemarket as a generic automation tool; its value depends on sales-data quality, outbound volume, CRM hygiene, AI/MCP governance, enrichment credit usage, and whether the team actually uses its sales workflow end to end.
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-23'
+    verified_at: '2026-06-25'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -97,7 +97,7 @@ price_history:
     source: "https://www.amplemarket.com/pricing"
     source_label: "Amplemarket pricing"
     source_id: amplemarket-pricing
-    note: "Rechecked the live pricing page, pricing explainer, MCP help, and June product update. Startup remains $600/mo annual term for 2 users, with the same live-matrix versus pricing-explainer credit-count caveat."
+    note: "Rechecked the live pricing page, pricing explainer, MCP help, and June product update. Startup remains $600/mo annual term for 2 users, with the same live-matrix versus pricing-explainer credit-count caveat. MCP help lists 0.5 credits for enrich_person, extra charges for revealing email or phone, OAuth auth, and a 100 requests/minute/user rate limit."
   - date: 2026-05-02
     verified_at: 2026-05-02
     plan: "Startup"
@@ -179,7 +179,7 @@ The database still covers 200M+ AI-verified contacts, with vendor-reported under
 | **CRM integrations** | Salesforce, HubSpot, Pipedrive (native) |
 | **Onboarding** | Community (Startup) or personalised CSM (Growth, Elite) |
 
-Every data point above was rechecked against Amplemarket's pricing page, pricing explainer, product pages, and June 2026 product updates on 2026-06-23. See Sources.
+Every data point above was rechecked against Amplemarket's pricing page, pricing explainer, product pages, MCP help, and June 2026 product updates on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -226,7 +226,7 @@ Pricing via [amplemarket.com/pricing](https://amplemarket.com/pricing). Annual o
 | Growth | Tailored quote | 4 | 35,000 on live matrix | 5,000 on live matrix | + Voice, Growth deliverability controls | **Working mid-market SDR teams** |
 | Elite | Tailored quote | 10 | 40,000 on live matrix | 9,600 on live matrix | + Inbox, SSO, larger controls | Formal sales orgs at scale |
 
-Prices verified 2026-06-23 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan. The live matrix and March pricing explainer currently disagree on Startup credit counts, so confirm final credits in the order form.
+Prices verified 2026-06-25 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan. The live matrix and March pricing explainer currently disagree on Startup credit counts, so confirm final credits in the order form.
 
 ## Against the alternatives
 
@@ -252,11 +252,11 @@ Prices verified 2026-06-23 via [amplemarket.com/pricing](https://amplemarket.com
 - **Mailboxes-per-user cap.** Startup 2, Growth 4, Elite 8. High-volume senders running many inboxes will feel the ceiling; Instantly runs unlimited by design.
 - **Contact database is narrower than Apollo or ZoomInfo.** 200M+ is enterprise-class but still under Apollo's 400M+ and far under ZoomInfo's 200M+ on depth of firmographic data.
 - **Recently added AI agents still maturing.** Duo Copywriter and Copilot are production-strength in independent reviews. Duo Voice and Inbox receive more mixed feedback on edge-case handling. Duo Competitive Intelligence and Duo Signals were promoted into the Startup bundle by May 2026 and have not yet accumulated comparable third-party validation.
-- **MCP and workflow governance need setup.** Once reps can ask Claude or ChatGPT to search, enrich, build lists, and create sequences, admins need clear permissions, CRM ownership rules, activity-capture settings, and review requirements before allowing broad rollout.
+- **MCP and workflow governance need setup.** Once reps can ask Claude or ChatGPT to search, enrich, build lists, and create sequences, admins need clear permissions, CRM ownership rules, activity-capture settings, review requirements, and credit limits before allowing broad rollout. The help center lists 0.5 credits per person enrichment, extra reveal costs, and a 100 requests/minute/user MCP rate limit.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-23 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), Amplemarket's [June 16, 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026), Amplemarket's [MCP announcement](https://www.amplemarket.com/blog/mcp), and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), Amplemarket's [June 16, 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026), Amplemarket's [MCP announcement](https://www.amplemarket.com/blog/mcp), Amplemarket MCP help, and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
 
 ## FAQ
 
@@ -284,7 +284,7 @@ Duo is Amplemarket's AI agent suite. As of June 2026, six specialised agents sha
 <details>
 <summary>Does Amplemarket offer monthly billing?</summary>
 
-No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-06-23. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
+No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-06-25. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
 
 </details>
 

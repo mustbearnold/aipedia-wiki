@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $89-$899+/month
 status: active
 launched: 2024-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,7 +35,7 @@ facts:
     source: "https://omniseo.com"
     source_label: "OmniSEO homepage"
     source_id: omniseo-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
@@ -43,7 +43,7 @@ facts:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -52,7 +52,7 @@ facts:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-24
     volatility: high
     confidence: medium
@@ -81,6 +81,7 @@ price_history:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
+    verified_at: 2026-06-25
     note: "4 AI channels, 50 saved prompts/month, 5 competitors, 5 seats. First month shown as $45 during 50%-off promotion."
   - date: 2026-05-02
     plan: "Professional"
@@ -88,6 +89,7 @@ price_history:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
+    verified_at: 2026-06-25
     note: "10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats. First month shown as $175 during 50%-off promotion."
   - date: 2026-05-02
     plan: "Enterprise"
@@ -95,6 +97,7 @@ price_history:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
+    verified_at: 2026-06-25
     note: "10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats."
   - date: 2026-05-13
     plan: "All tiers"
@@ -102,6 +105,7 @@ price_history:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
+    verified_at: 2026-06-25
     note: "Pricing verified unchanged. Annual billing remains two months free ($890/yr Essentials, $3,490/yr Professional). 50% first-month promo still live."
   - date: 2026-05-24
     plan: "All tiers"
@@ -109,7 +113,16 @@ price_history:
     source: "https://omniseo.com/pricing/"
     source_label: "Source"
     source_id: omniseo-pricing
+    verified_at: 2026-06-25
     note: "Rechecked against official pricing page: Essentials $89/mo, Professional $349/mo, Enterprise $899+/mo, first-month promo still shown for Essentials and Professional."
+  - date: 2026-06-25
+    plan: "All tiers"
+    price: "Unchanged"
+    source: "https://omniseo.com/pricing/"
+    source_label: "Source"
+    source_id: omniseo-pricing
+    verified_at: 2026-06-25
+    note: "Official pricing rechecked for June 2026: Essentials $89/mo with $45 first month, 4 AI channels, 50 saved prompts, 5 competitors, 5 seats. Professional remains the practical full-channel tier at $349/mo, and Enterprise starts at $899+/mo."
 ---
 
 # OmniSEO
@@ -138,16 +151,17 @@ The product category is still young. The practical question is not "does OmniSEO
 | **Core workflows** | Prompt tracking · competitor analysis · citation analytics · placement recommendations · AI Brand Research |
 | **Pricing** | Essentials $89/mo · Professional $349/mo · Enterprise $899+/mo |
 | **Annual billing** | Two months free listed on public pricing page |
-| **First-month promo** | 50% off Essentials and Professional, verified live on 2026-06-12 |
+| **First-month promo** | 50% off Essentials and Professional, verified live on 2026-06-25 |
 | **Annual billing** | Two months free ($890/yr Essentials, $3,490/yr Professional) |
 | **Free tool** | AI Brand Research lookup |
 
-Every data point above was verified against OmniSEO's published pages on 2026-06-12. See Sources.
+Every data point above was rechecked against OmniSEO's published pages on 2026-06-25. See Sources.
 
 ## Recent changes
 
 - **2026-05-13:** Pricing, channel coverage, and promo terms verified unchanged. The 10-channel set still maps cleanly to the major frontier surfaces tracked by buyers (ChatGPT, Claude, Gemini, Perplexity, Copilot, plus Google AI Overviews/AI Mode). Annual billing terms confirmed as two months free.
 - **2026-05-24:** Official pricing and channel limits rechecked. Essentials remains a four-channel starter plan; Professional remains the practical full-channel plan for most teams tracking AI-search visibility.
+- **2026-06-25:** Pricing and promo terms rechecked. Essentials still starts at $89/mo with the $45 first-month promotional price, while Professional remains the realistic working tier for full-channel tracking.
 
 ## What it actually is
 
@@ -189,7 +203,7 @@ Subscription pricing via [omniseo.com/pricing](https://omniseo.com/pricing/):
 | Professional | $349/mo | 10 AI channels, 100 saved prompts/month, 5 competitors, 10 seats |
 | Enterprise | $899+/mo | 10+ channels, custom regions/model cohorts, 500+ saved prompts/month, monthly AEO/GEO consultations, unlimited seats |
 
-The public pricing page showed 50% off the first month for Essentials ($45) and Professional ($175), verified again on 2026-06-12. Annual billing is listed as two months free ($890/yr Essentials, $3,490/yr Professional). Verify checkout totals before purchase because promotions can change.
+The public pricing page showed 50% off the first month for Essentials ($45) and Professional ($175), verified again on 2026-06-25. Annual billing is listed as two months free ($890/yr Essentials, $3,490/yr Professional). Verify checkout totals before purchase because promotions can change.
 
 ## Against the alternatives
 
@@ -215,7 +229,7 @@ The public pricing page showed 50% off the first month for Essentials ($45) and 
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
-Last verified 2026-06-12 against OmniSEO's homepage, pricing page, and AI Brand Research page.
+Last verified 2026-06-25 against OmniSEO's homepage, pricing page, and AI Brand Research page.
 
 ## FAQ
 

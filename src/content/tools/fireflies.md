@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$39/seat/month"
 status: active
 launched: 2016-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -31,15 +31,15 @@ facts:
     source: "https://fireflies.ai/features"
     source_label: "Fireflies features"
     source_id: fireflies-features
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Free tier (800 min/seat storage), Pro $10/seat/mo annual ($18 monthly), Business $19/seat/mo annual ($29 monthly), Enterprise $39/seat/mo annual. AI credits power advanced features beyond transcription; current help says standard transcription is not charged in credits, base Pro pricing does not include recurring AI credits, new accounts receive one-time credits, and additional credits are purchased as an add-on."
+    value: "Free tier (400 min/team storage), Pro $10/seat/mo annual ($18 monthly), Business $19/seat/mo annual ($29 monthly), Enterprise $39/seat/mo annual. AI credits power advanced features beyond transcription; current pricing and help show plan-included AI credits, while advanced-feature credit use should still be budgeted separately."
     source: "https://fireflies.ai/pricing"
     source_label: "Fireflies.ai Pricing"
     source_id: fireflies-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://fireflies.ai/integrations"
     source_label: "Fireflies integrations"
     source_id: fireflies-integrations
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   ai_search:
@@ -56,7 +56,7 @@ facts:
     source: "https://fireflies.ai/askfred"
     source_label: "Fireflies AskFred"
     source_id: fireflies-askfred
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,7 +64,7 @@ facts:
     source: "https://fireflies.ai/pricing"
     source_label: "Fireflies.ai Pricing"
     source_id: fireflies-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [meeting-transcription, ai-notes, meeting-summary, productivity, zoom-integration]
@@ -81,7 +81,7 @@ not_best_for:
   - teams with strict bot-in-room policies
   - workflows that need Gong-level analytics
 quick_answer: >-
-  Fireflies.ai records and transcribes meetings across Zoom, Teams, Meet, Webex, Live Assist, and Desktop capture, with AskFred for AI search across history. Plans run Free, Pro $10, Business $19, Enterprise from $39/seat (annual). AI credits gate advanced features beyond transcription and should be treated as a separate add-on budget. Pick for CRM-synced sales calls; skip for solo use (Fathom covers basics free).
+  Fireflies.ai records and transcribes meetings across Zoom, Teams, Meet, Webex, Live Assist, and Desktop capture, with AskFred for AI search across history. Plans run Free, Pro $10, Business $19, Enterprise from $39/seat (annual). AI credits gate advanced features beyond transcription and should be budgeted separately. Pick for CRM-synced sales calls; skip for solo use (Fathom covers basics free).
 ---
 
 # Fireflies.ai
@@ -108,11 +108,11 @@ Pricing runs Free, Pro $10/seat/mo, Business $19/seat/mo, and Enterprise from $3
 | **AskFred** | Natural-language search across all transcripts |
 | **Video recording** | Business plan and above |
 | **CRM integrations** | Salesforce, HubSpot, Pipedrive (Business+) |
-| **Free-tier storage** | 800 minutes total (not monthly reset) |
-| **AI credits** | Transcription is not charged in AI credits; advanced features such as Live Assist AskFred, AI Skills, custom summaries, Sales Assist, voice agents, and CRM autofill can consume credits; base Pro pricing does not include recurring AI credits |
+| **Free-tier storage** | 400 minutes per team on the current pricing page |
+| **AI credits** | Transcription is not charged in AI credits; advanced features such as Live Assist AskFred, AI Skills, custom summaries, Sales Assist, voice agents, and CRM autofill can consume credits |
 | **Compliance** | SSO, HIPAA, private storage on Enterprise |
 
-Every data point above was verified against vendor pages on 2026-06-23. See Sources.
+Every data point above was verified against vendor pages on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -144,12 +144,12 @@ Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 
 | Plan | Annual ($/seat/mo) | Monthly | Storage | Video | CRM sync | Who's it for |
 |------|--------------------|---------|---------|-------|----------|--------------|
-| Free | $0 | $0 | 800 min total | No | No | Light personal use |
+| Free | $0 | $0 | 400 min/team | No | No | Light personal use |
 | Pro | $10 | $18 | 8,000 min | No | Limited | Individuals wanting full AskFred |
 | Business | $19 | $29 | Unlimited | Yes | Salesforce, HubSpot, Pipedrive | **Sales teams with CRM workflows** |
 | Enterprise | $39+ | Custom | Unlimited | Yes | All + custom | SSO, HIPAA, compliance |
 
-*Prices verified 2026-06-23 via [fireflies.ai/pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), and the [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits). Annual billing is the posted rate. Fireflies' current AI-credit help says standard transcription, note-taking, and recap emails are covered by plan, while advanced features consume credits. Treat credits as an add-on budget and verify current account allocation before rollout.*
+*Prices verified 2026-06-25 via [fireflies.ai/pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), and the [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits). Annual billing is the posted rate. Fireflies' current AI-credit help says standard transcription, note-taking, and recap emails are covered by plan, while advanced features consume credits. Treat credits as an add-on budget and verify current account allocation before rollout.*
 
 ## Against the alternatives
 
@@ -159,13 +159,13 @@ Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 | **Platform coverage** | Zoom, Teams, Meet, Webex | Zoom, Teams, Meet | Zoom, Teams, Meet |
 | **Cross-meeting search** | AskFred (strong) | OtterAI chat | Basic keyword |
 | **CRM sync** | Salesforce, HubSpot, Pipedrive | Salesforce, HubSpot | HubSpot, Close, Salesforce |
-| **Free tier depth** | 800 min total | 300 min/mo | Unlimited basic |
+| **Free tier depth** | 400 min/team | 300 min/mo | Unlimited basic |
 | **Best viewed as** | CRM-integrated meeting library | Mobile-first transcription | Free-first alternative |
 
 ## Failure modes
 
 - **AI credits cap advanced features even on paid tiers.** "Unlimited transcription" is real, but Live Assist AskFred, AI Skills, custom summary sections, Sales Assist, voice agents, and CRM autofill can consume credits. Base plan price and advanced-feature credit use should be budgeted separately.
-- **Free-tier storage is a hard ceiling.** 800 minutes total, not 800 per month. Once full, you delete old meetings to add new ones. No rolling reset.
+- **Free-tier storage is a hard ceiling.** The current pricing page lists 400 minutes of storage per team. Once full, you delete old meetings to add new ones or upgrade.
 - **Fred is a visible participant.** The bot appears in the attendee list during live meetings. Some legal, healthcare, and compliance-sensitive orgs forbid this.
 - **Accuracy drops on heavy accents, crosstalk, and poor audio.** Real-world transcription accuracy tracks audio quality directly. Clean Zoom audio gets 95%+; noisy conference rooms drop to 80%.
 - **Analytics are metrics, not insights.** Talk-time, sentiment, and topic frequency are raw numbers. No built-in benchmarks or coaching recommendations. Teams wanting deeper rev-intel should evaluate Gong.
@@ -175,12 +175,12 @@ Subscription pricing via [fireflies.ai/pricing](https://fireflies.ai/pricing):
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Fireflies pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), the [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits), and [G2 Fireflies reviews](https://www.g2.com/products/fireflies-ai/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Fireflies pricing](https://fireflies.ai/pricing), the [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans), the [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits), and [G2 Fireflies reviews](https://www.g2.com/products/fireflies-ai/reviews).
 
 ## FAQ
 
 **Is Fireflies.ai free?**
-Yes. The free tier covers transcription and basic summaries up to 800 minutes total storage (not a monthly reset). Delete old meetings to make room. Pro at $10/seat/mo on annual billing unlocks unlimited transcription and full AskFred ([Fireflies pricing](https://fireflies.ai/pricing)).
+Yes. The free tier covers transcription and basic summaries up to the current free storage cap of 400 minutes per team. Delete old meetings to make room. Pro at $10/seat/mo on annual billing unlocks unlimited transcription and full AskFred ([Fireflies pricing](https://fireflies.ai/pricing)).
 
 **What is AskFred?**
 AskFred is Fireflies's natural-language search across all your transcripts. Ask "what objections did customers raise about pricing last quarter?" and it returns cited excerpts from specific meetings. Live Assist AskFred and other advanced Fireflies features can consume AI credits, so teams should verify credit allocation before rollout.

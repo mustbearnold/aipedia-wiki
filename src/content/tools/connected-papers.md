@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$20/month billed annually"
 status: active
 launched: 2020-06
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://www.connectedpapers.com/main"
     source_label: "Connected Papers graph search"
     source_id: connected-papers-main
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   research_positioning:
@@ -55,7 +55,7 @@ facts:
     source: "https://www.connectedpapers.com/about"
     source_label: "Connected Papers about"
     source_id: connected-papers-about
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: low
     confidence: high
   watch_out_for:
@@ -63,7 +63,7 @@ facts:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [academic-search, research, visualization, citations, paper-graph, literature-review]
@@ -89,7 +89,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Source"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     note: "Verified. Billed annually for unlimited graphs."
   - date: 2026-05-13
     plan: "Free / Academic"
@@ -97,7 +97,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Source"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     note: "Re-verified unchanged. Free tier still capped at 5 graphs/month; Academic still cheapest paid productivity upgrade in research tooling."
   - date: 2026-06-02
     plan: "Free / Academic / Business"
@@ -105,7 +105,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     note: "Re-verified current public pricing: Free 5 graphs/month; Academic and Business both unlock unlimited graphs, billed $36 and $120 annually respectively."
   - date: 2026-06-18
     plan: "Free / Academic / Business"
@@ -113,7 +113,7 @@ price_history:
     source: "https://www.connectedpapers.com/pricing"
     source_label: "Connected Papers pricing"
     source_id: connected-papers-pricing
-    verified_at: 2026-06-18
+    verified_at: 2026-06-25
     note: "Current pricing page shows Free sign-up with 5 graphs/month, Academic at USD 6/month billed annually, and Business at USD 20/month billed annually."
 ---
 
@@ -181,7 +181,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 | Academic | USD 6/month (USD 72/year) | Unlimited | Unlimited graph generation for academic, nonprofit, and personal use |
 | Business | USD 20/month (USD 240/year) | Unlimited | Unlimited graph generation for business and industry use |
 
-*Prices verified 2026-06-18 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). The current page presents Free with sign-up, Academic at USD 6/month billed annually, and Business at USD 20/month billed annually.*
+*Prices verified 2026-06-25 via [Connected Papers pricing](https://www.connectedpapers.com/pricing). The current page presents Free with sign-up, Academic at USD 6/month billed annually, and Business at USD 20/month billed annually.*
 
 ## Against the alternatives
 
@@ -208,7 +208,7 @@ The moat is thin. The similarity algorithm is proprietary but the underlying dat
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-18 against [Connected Papers pricing](https://www.connectedpapers.com/pricing), [Connected Papers about](https://www.connectedpapers.com/about), [Connected Papers Premium/multi-origin announcement](https://medium.com/connectedpapers/announcing-premium-accounts-multi-origin-graphs-and-more-92e8dbd66848), and [Semantic Scholar](https://www.semanticscholar.org/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Connected Papers pricing](https://www.connectedpapers.com/pricing), [Connected Papers about](https://www.connectedpapers.com/about), [Connected Papers Premium/multi-origin announcement](https://medium.com/connectedpapers/announcing-premium-accounts-multi-origin-graphs-and-more-92e8dbd66848), and [Semantic Scholar](https://www.semanticscholar.org/).
 
 ## FAQ
 

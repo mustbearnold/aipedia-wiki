@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$239/month + credits"
 status: active
 launched: 2023-09
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://cartesia.ai/sonic"
     source_label: "Cartesia Sonic"
     source_id: cartesia-sonic
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.cartesia.ai/build-with-cartesia/tts-models/latest"
     source_label: "Cartesia Sonic 3.5 docs"
     source_id: cartesia-sonic-latest-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://docs.cartesia.ai/changelog/2026"
     source_label: "Cartesia 2026 changelog"
     source_id: cartesia-changelog-2026
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://docs.cartesia.ai/"
     source_label: "Cartesia docs"
     source_id: cartesia-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   watch_out_for:
@@ -74,7 +74,7 @@ facts:
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
 tags: [ai-voice, tts, text-to-speech, real-time, voice-api, low-latency, voice-agents, sonic, cartesia, line]
@@ -94,13 +94,13 @@ not_best_for:
 quick_answer: >-
   Cartesia is the real-time voice stack to test in 2026 when the job is a low-latency voice agent. Sonic-3.5 is the current flagship TTS model, Ink-2 is the current STT model, and eligible Line agents now run on both by default. Skip it for podcasts or audiobooks where Fish Audio and ElevenLabs rank higher on creator workflow and expressiveness.
 price_history:
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Sonic-3.5 / Ink-2 / Line promo recheck"
     price: "Free / $4 / $39 / $239 annual tiers; Line from $0.06/min"
     source: "https://cartesia.ai/pricing"
     source_label: "Cartesia pricing"
     source_id: cartesia-pricing
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Re-verified pricing and launch positioning for Sonic-3.5 plus Ink-2. Pricing page advertised 3 months free and LEVELUP25 as a limited promo expiring June 25, 2026, so do not treat promo value as durable."
   - date: 2026-03-01
     plan: "Credits"
@@ -175,7 +175,7 @@ Founded in 2023 by MIT and Carnegie Mellon researchers. Integrates natively with
 | **Pricing model** | Bundled credits + prepaid Agent dollars; TTS bills at 15 credits per second of audio; Line starts at $0.06/min |
 | **Compliance** | SOC 2 Type II, HIPAA, PCI Level 1 |
 
-Every data point above was verified against vendor sources on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -214,7 +214,7 @@ The moat is the combination of architecture and integration depth. Competing TTS
 
 TTS is billed at 15 credits per second of generated audio. The current pricing page also lists professional voice cloning as a 225-credit one-time cost, Line at $0.06/min, and Cartesia-provided phone numbers at $0.014/min. UI-created agents and LLM usage during text-to-agent calls remain marked free for a limited time, so production buyers should model that as a future line item rather than permanent zero-cost usage. The June 23 pricing page advertised a limited-time promo expiring June 25, 2026; do not use that promo as durable budget math.
 
-*Prices verified 2026-06-23 via [cartesia.ai/pricing](https://cartesia.ai/pricing), [Cartesia docs](https://docs.cartesia.ai/), and the [2026 changelog](https://docs.cartesia.ai/changelog/2026).*
+*Prices verified 2026-06-25 via [cartesia.ai/pricing](https://cartesia.ai/pricing), [Cartesia docs](https://docs.cartesia.ai/), the [2026 changelog](https://docs.cartesia.ai/changelog/2026), and the June 2026 promotion terms.*
 
 ## Against the alternatives
 
@@ -240,7 +240,7 @@ TTS is billed at 15 credits per second of generated audio. The current pricing p
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-23 against [Cartesia pricing](https://cartesia.ai/pricing), [Cartesia Sonic](https://cartesia.ai/sonic), [Cartesia Sonic 3.5 docs](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest), [Cartesia changelog](https://docs.cartesia.ai/changelog/2026), and [Cartesia docs](https://docs.cartesia.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-25 against [Cartesia pricing](https://cartesia.ai/pricing), [Cartesia Sonic](https://cartesia.ai/sonic), [Cartesia Sonic 3.5 docs](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest), [Cartesia changelog](https://docs.cartesia.ai/changelog/2026), [Cartesia docs](https://docs.cartesia.ai/), and [Cartesia June 2026 promotion terms](https://www.cartesia.ai/legal/promotion-terms-jun-2026).
 
 ## FAQ
 

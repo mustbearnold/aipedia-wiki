@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$149/month
 status: active
 launched: 2019-01
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -21,7 +21,7 @@ affiliate:
   cookie_days: null
   network: direct
   link: null
-  notes: "Official LOVO affiliate page verified 2026-06-23: 20% recurring commission for 24 months, monthly payouts, no minimums, and support/training."
+  notes: "Official LOVO affiliate page verified 2026-06-25: 20% recurring commission for 24 months, monthly payouts, no minimums, and support/training."
 scores:
   utility: 7
   value: 7
@@ -33,7 +33,7 @@ facts:
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-06-23'
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://lovo.ai/pricing
     source_label: LOVO pricing
     source_id: lovo-pricing
-    verified_at: '2026-06-23'
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,7 +51,7 @@ facts:
     source: https://help.lovo.ai/
     source_label: LOVO help center
     source_id: lovo-help
-    verified_at: '2026-06-23'
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -60,7 +60,7 @@ facts:
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-06-23'
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -69,7 +69,7 @@ facts:
     source: https://lovo.ai/
     source_label: LOVO AI official site
     source_id: lovo-official
-    verified_at: '2026-06-23'
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
     next_review_at: '2026-08-13'
@@ -78,7 +78,7 @@ facts:
     source: https://help.lovo.ai/
     source_label: LOVO help center
     source_id: lovo-help
-    verified_at: '2026-06-23'
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -99,7 +99,7 @@ not_best_for:
   - real-time voice synthesis
   - creators chasing top-tier voice naturalness
 quick_answer: >-
-  LOVO (Genny) pairs 500+ voices across 100+ languages with a browser video editor. Pick it for e-learning and explainer workflows that need script, voiceover, and timeline in one tab. Skip it for top-tier naturalness or audiobook narration; a developer API is now publicly promoted, so the long-standing "no API" objection is softer than it was.
+  LOVO (Genny) pairs 500+ voices across 100+ languages with a browser video editor. Pick it for e-learning and explainer workflows that need script, voiceover, and timeline in one tab. Skip it for top-tier naturalness or audiobook narration; a developer API is publicly promoted, but API pricing and rate-limit detail still need live verification.
 price_history:
   - date: 2026-04-17
     plan: "Basic / Pro / Pro+"
@@ -117,14 +117,14 @@ price_history:
     source_id: lovo-pricing
     verified_at: 2026-05-13
     note: "Verified unchanged. Developer API now publicly promoted on lovo.ai (previously gated behind Enterprise)."
-  - date: 2026-06-23
+  - date: 2026-06-25
     plan: "Basic / Pro / Pro+"
     price: "$24 / $48 / $149"
     source: "https://lovo.ai/pricing"
     source_label: "LOVO pricing"
     source_id: lovo-pricing
-    verified_at: 2026-06-23
-    note: "Rechecked official pricing, homepage API positioning, help-center subscription management, and affiliate terms. Consumer plan pricing remains unchanged in this refresh."
+    verified_at: 2026-06-25
+    note: "Rechecked official pricing, homepage API positioning, help-center subscription management, and affiliate terms. Consumer plan pricing remains unchanged in this refresh; API-specific price and rate-limit detail remains less explicit than ElevenLabs or Fish Audio."
 ---
 
 # LOVO (Genny)
@@ -136,7 +136,7 @@ A developer API is now publicly promoted on the homepage (advertised as a 5-line
 ## Recent changes
 
 - **May 2026:** LOVO began publicly promoting a developer API on lovo.ai with a 5-line integration pitch. Tier pricing for the API is not yet broken out in the consumer plan grid, so treat per-character cost and rate limits as something to verify with sales rather than read off the page.
-- **2026-05-13:** Pricing across Basic, Pro, and Pro+ verified unchanged at $24 / $48 / $149/mo.
+- **2026-06-25:** Pricing across Basic, Pro, and Pro+ verified unchanged at $24 / $48 / $149/mo. Affiliate terms still advertise 20% recurring commission for 24 months.
 
 ## System Verdict
 
@@ -160,7 +160,7 @@ A developer API is now publicly promoted on the homepage (advertised as a 5-line
 | **Pricing** | Free · Basic $24 · Pro $48 · Pro+ $149 · Enterprise custom |
 | **Best commercial rights floor** | Paid tiers (Basic and above) |
 
-Every data point verified against vendor documentation on 2026-06-23. See Sources.
+Every data point verified against vendor documentation on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -198,7 +198,7 @@ Subscription pricing via [lovo.ai/pricing](https://lovo.ai/pricing).
 | Pro+ | $149 | ~20 hrs/month | 400GB storage, priority support, all Pro features |
 | Enterprise | Custom | Volume | Custom voices, SSO, SLA, API access |
 
-*Prices verified 2026-06-23 via [LOVO pricing](https://lovo.ai/pricing). Annual billing saves roughly 20-30% across paid tiers.*
+*Prices verified 2026-06-25 via [LOVO pricing](https://lovo.ai/pricing). Annual billing saves roughly 20-30% across paid tiers.*
 
 ## Against the alternatives
 
@@ -222,7 +222,7 @@ Subscription pricing via [lovo.ai/pricing](https://lovo.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against the [LOVO pricing page](https://lovo.ai/pricing), [LOVO official site](https://lovo.ai), [LOVO subscription help](https://lovo.ai/tutorials/billing-and-subscription/view-or-upgrade-subscription-plan), and [LOVO affiliate page](https://lovo.ai/affiliate-program).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against the [LOVO pricing page](https://lovo.ai/pricing), [LOVO official site](https://lovo.ai), [LOVO subscription help](https://lovo.ai/tutorials/billing-and-subscription/view-or-upgrade-subscription-plan), and [LOVO affiliate page](https://lovo.ai/affiliate-program).
 
 ## FAQ
 

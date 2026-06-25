@@ -81,7 +81,7 @@ The June 16 infrastructure update is governed data agents. Google Cloud's [data-
 
 - **Model routing:** Pick [OpenRouter](/tools/openrouter/) when you need one OpenAI-compatible API across many providers.
 - **Direct LLM APIs:** Pick [OpenAI](/tools/chatgpt/), [Claude](/tools/claude/), or [Gemini](/tools/gemini/) when native features, procurement, and provider-specific controls matter.
-- **Cost and latency:** Pick [Mistral AI](/tools/mistral-ai/) or [Groq](/tools/groq/) when you can benchmark quality against real prompts and need tighter unit economics.
+- **Cost and latency:** Pick [Mistral AI](/tools/mistral-ai/), [OpenRouter](/tools/openrouter/), or [Groq](/tools/groq/) when you can benchmark quality against real prompts and need tighter unit economics.
 - **Open-model infrastructure:** Pick [Together AI](/tools/together-ai/) when you need hosted inference, fine-tuning, dedicated endpoints, code sandboxes, and GPU capacity for open-model products. The June 25 check separates serverless model-token pricing from dedicated inference and GPU clusters, so benchmark your actual traffic before assuming a single "open model" unit cost.
 - **Model catalog and experiments:** Pick [Hugging Face](/tools/hugging-face/) for discovery, datasets, model cards, demos, Spaces, ZeroGPU, and endpoints.
 - **Media and community models:** Pick [Replicate](/tools/replicate/) when the job is running image, video, audio, or custom models by API. The June 9 check confirms buyers should model public output-priced examples separately from hardware-time runs and private deployments that can bill while idle.

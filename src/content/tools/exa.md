@@ -9,11 +9,11 @@ category: ai-search
 company: exa-ai
 url: 'https://exa.ai'
 pricing_model: freemium
-price_range: "$0-$449/month"
+price_range: "$0, usage-based API, Websets plans, Enterprise custom"
 status: active
 launched: 2022-03
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -32,16 +32,16 @@ facts:
     source: "https://exa.ai/docs/reference/search-api-guide"
     source_label: "Exa Search API guide"
     source_id: exa-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-02
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Paid endpoint pricing: Search $7/1K requests, Deep Search $12-$15, Contents $1/1K pages, Monitors $15, Answer $5, AI page summaries $1/1K pages, and fixed-effort Agent runs from $0.025 to $2.00 before enrichment add-ons."
+    value: "Paid endpoint pricing: Search $7/1K requests, Deep Search $12-$15, Contents $1/1K pages, Monitors $15, Answer $5, AI page summaries $1/1K pages, and fixed-effort Agent runs from $0.012 to $1.00 before compute, search, and enrichment add-ons."
     source: "https://exa.ai/pricing"
     source_label: "Exa pricing"
     source_id: exa-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-02
     volatility: high
     confidence: high
@@ -50,7 +50,7 @@ facts:
     source: "https://exa.ai/"
     source_label: "Exa homepage"
     source_id: exa-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-02
     volatility: medium
     confidence: high
@@ -59,14 +59,14 @@ facts:
     source: "https://exa.ai/docs/reference/search-api-guide"
     source_label: "Exa Search API guide"
     source_id: exa-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     next_review_at: 2026-09-02
     volatility: medium
     confidence: high
 tags: [search-api, semantic-search, llm-tools, developer-tools, rag, web-search, embeddings, websets]
 seo_title: 'Exa AI: Neural Search API Review & Pricing (June 2026)'
 meta_description: >-
-  Exa AI is a neural search API for LLM agents and RAG. Search $7, Deep Search $12-15, Contents $1, Monitors $15, Answer $5 per 1K. Agent fixed effort runs $0.025-$2.00.
+  Exa AI is a neural search API for LLM agents and RAG. Free tier now allows up to 20,000 requests/month. Search $7, Deep Search $12-15, Contents $1, Monitors $15, Answer $5 per 1K. Agent fixed effort runs $0.012-$1.00.
 author: aipedia.wiki Editorial
 best_for:
   - AI agents needing live semantic web retrieval
@@ -78,7 +78,7 @@ not_best_for:
   - workloads that need full Google index breadth
   - non-developer teams without API capability
 quick_answer: >-
-  Exa AI is a neural search API for LLM apps and agents. Core Search runs $7 per 1,000 requests; Deep Search lands at $12 (or $15 with reasoning); Contents is $1 per 1,000 pages; Monitors $15; Answer $5; AI Page Summaries add $1. Agent fixed effort runs $0.025-$2.00 before enrichment add-ons. Pick it for semantic retrieval in RAG or agent pipelines. Skip for consumer UIs or Google-scale index breadth.
+  Exa AI is a neural search API for LLM apps and agents. Free tier now allows up to 20,000 requests/month. Core Search runs $7 per 1,000 requests; Deep Search lands at $12 (or $15 with reasoning); Contents is $1 per 1,000 pages; Monitors $15; Answer $5; AI Page Summaries add $1. Agent fixed effort runs $0.012-$1.00 before compute, search, and enrichment add-ons. Pick it for semantic retrieval in RAG or agent pipelines. Skip for consumer UIs or Google-scale index breadth.
 price_history:
   - date: 2026-03-03
     plan: "Search (with contents bundled)"
@@ -86,7 +86,7 @@ price_history:
     source: "https://exa.ai/docs/changelog/pricing-update"
     source_label: "Source"
     source_id: exa-pricing-update
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Contents now included free with first 10 results"
   - date: 2026-03-03
     plan: "Deep Search"
@@ -94,7 +94,7 @@ price_history:
     source: "https://exa.ai/docs/changelog/pricing-update"
     source_label: "Source"
     source_id: exa-pricing-update
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "20% reduction at simplification update"
   - date: 2026-03-03
     plan: "Deep Search (Reasoning)"
@@ -102,7 +102,7 @@ price_history:
     source: "https://exa.ai/docs/changelog/pricing-update"
     source_label: "Source"
     source_id: exa-pricing-update
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "New reasoning tier"
   - date: 2026-05-13
     plan: "Search / Deep Search / Monitors / Answer"
@@ -110,7 +110,7 @@ price_history:
     source: "https://exa.ai/pricing"
     source_label: "Source"
     source_id: exa-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "May 2026 refresh - all endpoints verified, AI Page Summaries at $1/1K added separately"
   - date: 2026-06-05
     plan: "API endpoints plus Agent fixed effort"
@@ -118,8 +118,16 @@ price_history:
     source: "https://exa.ai/pricing"
     source_label: "Source"
     source_id: exa-official
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "June 2026 refresh: Agent pricing surfaced with fixed effort modes plus compute and enrichment components."
+  - date: 2026-06-25
+    plan: "Free tier and Agent fixed effort"
+    price: "20,000 free requests/mo; Agent $0.012-$1/run before add-ons"
+    source: "https://exa.ai/pricing"
+    source_label: "Exa pricing"
+    source_id: exa-official
+    verified_at: 2026-06-25
+    note: "Current pricing page raises the visible free tier to 20,000 requests/month and lists Minimal through X-high Agent fixed effort from $0.012 to $1.00/request, with ACU, search, and enrichment billed separately."
 ---
 
 # Exa AI
@@ -130,7 +138,7 @@ No consumer interface. Developer-first product.
 
 ## Recent developments
 
-- **June 23, 2026:** Pricing and Agent positioning reverified. Exa now promotes Exa Agent as an API for frontier web research, with natural-language queries, effort modes, structured output schemas, and optional input data. Fixed-effort Agent modes still run from $0.025 to $2.00 per request before compute, search tool calls, and contact enrichment.
+- **June 25, 2026:** Pricing and Agent positioning reverified. Exa now promotes Exa Agent as an API for frontier web research, with natural-language queries, effort modes, structured output schemas, and optional input data. The visible free tier is now 20,000 requests/month, and fixed-effort Agent modes run from $0.012 to $1.00 per request before ACU compute, search tool calls, and contact enrichment.
 - **May 12, 2026:** [Anthropic launched Claude for Legal with Microsoft 365 plug-ins and 20-plus practice-area MCP connectors](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/). For Exa, the read is that enterprise retrieval is increasingly bundled into the chat assistant via MCP, not procured separately. Exa benefits when teams want a generic neural retrieval primitive across providers, and loses to bundled retrieval when the workflow lives entirely inside one assistant.
 - **March 3, 2026:** [Exa simplified search pricing](https://exa.ai/docs/changelog/pricing-update): contents for the first 10 results are now included with `search` at no extra charge, Deep Search dropped 20% to $12 per 1,000, and a new Deep Search (Reasoning) tier landed at $15 per 1,000. Most agent stacks no longer pay a separate contents charge for primary searches.
 
@@ -140,7 +148,7 @@ No consumer interface. Developer-first product.
 >
 > **Skip it for consumer search, keyword-only lookups, or jobs that need Google-scale coverage.** Obscure, non-English, and very recent pages are patchier than SerpAPI. Index breadth is the trade-off for semantic ranking.
 >
-> **Who pays which tier:** Free tier (1,000 requests/month) for prototyping, pay-as-you-go core search for most production agents, Websets Starter ($49/mo) for B2B research teams, Websets Pro ($449/mo) for scaled lead-gen and enterprise workflows.
+> **Who pays which tier:** Free tier (20,000 requests/month) for prototyping, pay-as-you-go core search for most production agents, Websets for B2B research teams, and Enterprise for high-volume search, custom datasets, security, SLAs, and volume discounts.
 
 ## Key Facts
 
@@ -154,16 +162,16 @@ No consumer interface. Developer-first product.
 | **Answer** | $5 per 1,000 requests (cited answer endpoint) |
 | **AI Page Summaries** | $1 per 1,000 pages across all endpoints |
 | **Additional results** | $1 per 1,000 results beyond 10 |
-| **Agent fixed effort** | Low $0.025, Medium $0.10, High $0.50, X-high $2.00 per request |
-| **Agent add-ons** | $0.0001 per ACU, $0.007/search, $0.02/email enrichment, $0.07/phone enrichment |
-| **Free tier** | 1,000 requests/month, full API access |
+| **Agent fixed effort** | Minimal $0.012, Low $0.025, Medium $0.10, High $0.50, X-high $1.00 per request |
+| **Agent add-ons** | $0.10 per ACU, $0.005/search, $0.02/email enrichment, $0.07/phone enrichment |
+| **Free tier** | 20,000 requests/month |
 | **Websets Starter** | $49/mo: 8,000 credits, 1 seat, 100 results/Webset |
 | **Websets Pro** | $449/mo: 100,000 credits, 10 seats, 1,000 results/Webset |
 | **Enterprise** | Custom volume pricing, SLA, security |
 | **Framework integrations** | LangChain, LlamaIndex (native connectors), MCP-compatible |
 | **Funding** | Series B, $85M (2025) |
 
-Every data point above was verified against vendor documentation on 2026-06-23. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -195,7 +203,7 @@ Pricing via [exa.ai/pricing](https://exa.ai/pricing):
 
 | Plan / Endpoint | Price | What you get |
 |---|---|---|
-| Free | $0 | 1,000 requests/month, full API access |
+| Free | $0 | 20,000 requests/month |
 | Search | $7 / 1K requests | 10 neural results with contents + highlights bundled; $1/1K for extra results |
 | Deep Search | $12 / 1K requests | Multi-step neural research |
 | Deep Search (Reasoning) | $15 / 1K requests | Adds reasoning over multi-step results |
@@ -203,13 +211,13 @@ Pricing via [exa.ai/pricing](https://exa.ai/pricing):
 | Monitors | $15 / 1K requests | Long-running watch jobs |
 | Contents endpoint | $1 / 1K pages | Standalone page retrieval |
 | AI Page Summaries | $1 / 1K pages | Cross-endpoint summary add-on |
-| Agent fixed effort | $0.025-$2.00 / request | Low, Medium, High, and X-high effort modes before add-ons |
-| Agent usage components | Variable | ACU compute, search calls, email enrichment, phone enrichment |
+| Agent fixed effort | $0.012-$1.00 / request | Minimal, Low, Medium, High, and X-high effort modes before add-ons |
+| Agent usage components | Variable | $0.10/ACU compute, $0.005/search, email enrichment, phone enrichment |
 | Websets Starter | $49/mo | 8,000 credits, 1 seat, 100 results/Webset, 2 concurrent |
 | Websets Pro | $449/mo | 100,000 credits, 10 seats, 1,000 results/Webset, 10 concurrent |
 | Enterprise | Custom | Volume pricing, SLA, security review |
 
-Prices verified 2026-06-23 via [Exa pricing](https://exa.ai/pricing), [Exa Agent launch](https://exa.ai/blog/exa-agent), and [Exa pricing update](https://exa.ai/docs/changelog/pricing-update). Startups and education projects can apply for $1,000 in free credits.
+Prices verified 2026-06-25 via [Exa pricing](https://exa.ai/pricing), [Exa Agent launch](https://exa.ai/blog/exa-agent), and [Exa pricing update](https://exa.ai/docs/changelog/pricing-update). Startups and education projects can apply for $1,000 in free credits.
 
 ## Against the alternatives
 
@@ -218,7 +226,7 @@ Prices verified 2026-06-23 via [Exa pricing](https://exa.ai/pricing), [Exa Agent
 | **Ranking approach** | Neural semantic | Google keyword | Agent-optimized mix |
 | **Index breadth** | Narrower | Google-scale | Mid |
 | **Content retrieval** | Bundled (contents endpoint) | Separate scrape | Bundled |
-| **Free tier** | 1,000 requests/month | Limited trial | Monthly free quota |
+| **Free tier** | 20,000 requests/month | Limited trial | Monthly free quota |
 | **Framework integrations** | LangChain, LlamaIndex native | Community wrappers | LangChain native |
 | **B2B research product** | Websets | None | None |
 | **Best viewed as** | Semantic retrieval for LLMs | Google proxy | Agent-tuned search |
@@ -234,12 +242,12 @@ Prices verified 2026-06-23 via [Exa pricing](https://exa.ai/pricing), [Exa Agent
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-23 against [Exa pricing](https://exa.ai/pricing), [Exa Search API guide](https://exa.ai/docs/reference/search-api-guide), [Exa Agent launch](https://exa.ai/blog/exa-agent), [Exa pricing update](https://exa.ai/docs/changelog/pricing-update), and [Exa Series B announcement](https://exa.ai/blog/announcing-series-b).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Exa pricing](https://exa.ai/pricing), [Exa Search API guide](https://exa.ai/docs/reference/search-api-guide), [Exa Agent launch](https://exa.ai/blog/exa-agent), [Exa pricing update](https://exa.ai/docs/changelog/pricing-update), and [Exa Series B announcement](https://exa.ai/blog/announcing-series-b).
 
 ## FAQ
 
 **Is Exa free?**
-Yes, for prototyping. The free tier includes 1,000 requests per month with full API access. Pay-as-you-go Search starts at $7 per 1,000 requests, Deep Search at $12, Answer at $5, and Monitors at $15. AI Page Summaries are $1 per 1,000 pages across endpoints. Agent fixed effort starts at $0.025/request and can rise to $2/request before compute, tool, and enrichment charges.
+Yes, for prototyping. The free tier includes 20,000 requests per month. Pay-as-you-go Search starts at $7 per 1,000 requests, Deep Search at $12, Answer at $5, and Monitors at $15. AI Page Summaries are $1 per 1,000 pages across endpoints. Agent fixed effort starts at $0.012/request and can rise to $1/request before compute, tool, and enrichment charges.
 
 **What is Websets?**
 A B2B research product built on the Exa index. Users describe criteria in natural language. AI agents verify each result before returning it. Starter is $49/mo; Pro is $449/mo.

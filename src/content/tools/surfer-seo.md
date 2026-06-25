@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $99-$299+/month
 status: active
 launched: 2019-06
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -42,7 +42,7 @@ facts:
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -51,7 +51,7 @@ facts:
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   ai_search_visibility:
@@ -59,7 +59,7 @@ facts:
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   tracked_pages:
@@ -67,7 +67,7 @@ facts:
     source: "https://surferseo.com/pricing/"
     source_label: "Surfer SEO pricing"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -76,7 +76,7 @@ facts:
     source: "https://surferseo.com"
     source_label: "Surfer SEO official site"
     source_id: surfer-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: high
     confidence: high
     next_review_at: 2026-09-04
@@ -104,7 +104,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "120 documents, 10 pages tracked, 1 seat, 1 workspace, no AI prompt tracking."
   - date: 2026-05-13
     plan: "Standard"
@@ -112,7 +112,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "360 documents, 25 pages tracked, 3 seats, 1 workspace, AI Tracker (25 prompts/week), Content Audit, Topical Map."
   - date: 2026-05-13
     plan: "Pro"
@@ -120,7 +120,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "360 documents, 50 pages tracked, 5 seats, 5 workspaces, AI Tracker (50 prompts/day), internal linking, content ideas, cannibalization reports."
   - date: 2026-05-13
     plan: "Peace of Mind"
@@ -128,7 +128,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Unlimited documents, 500 pages tracked, 10 seats, unlimited workspaces, AI Tracker (100 prompts/day), API access, dedicated success manager."
   - date: 2026-05-13
     plan: "Enterprise"
@@ -136,7 +136,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "SSO, white-label options, advisory program, priority support, annual contract."
   - date: 2026-06-04
     plan: "Public ladder"
@@ -144,7 +144,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Reverified Discovery, Standard, Pro, Peace of Mind, and Enterprise positioning, including AI Tracker prompt caps and tracked-page limits."
   - date: 2026-05-08
     plan: "Standard"
@@ -152,7 +152,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "360 documents, 3 seats, AI Tracker (25 prompts/week), Content Audit, Topical Map."
   - date: 2026-05-08
     plan: "Pro"
@@ -160,7 +160,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "360 documents, 5 seats, AI Tracker (50 prompts/day), 5 brand workspaces, 200 pages tracked."
   - date: 2026-05-08
     plan: "Peace of Mind"
@@ -168,7 +168,7 @@ price_history:
     source: "https://surferseo.com/pricing/"
     source_label: "Source"
     source_id: surfer-seo-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     note: "Unlimited-style higher tier for AI visibility, optimization, API access, and VIP support; verify active limits before procurement."
 ---
 
@@ -177,6 +177,11 @@ price_history:
 Surfer SEO is a content optimization platform built around real-time SERP scoring. The Content Editor analyzes the top 10 to 50 SERP results for a keyword and scores drafts on NLP entities, keyword density, heading structure, word count, and image usage as users type.
 
 The current pricing page positions Surfer around AI search visibility as well as classic content optimization. It lists Discovery at $49/month, Standard at $99/month, Pro at $182/month, and Peace of Mind at $299/month when billed yearly, with Enterprise starting from around $999/month for custom needs.
+
+## Recent changes
+
+- **June 25, 2026:** Pricing and positioning rechecked. Surfer is now pushing "AI Search Visibility OS" language harder across the homepage, while the public pricing page still shows the Discovery, Standard, Pro, Peace of Mind, and Enterprise ladder.
+- **June 10, 2026:** Surfer's June product roundup emphasized updates that connect SEO work to AI-search visibility, including unified scoring, intent alignment, smarter Auto-Optimize, API work, and auto-linked sources.
 
 ## System Verdict
 
@@ -203,7 +208,7 @@ The current pricing page positions Surfer around AI search visibility as well as
 | **Integrations** | WordPress · Google Docs · ChatGPT · Zapier · Contentful · Surfer API (Enterprise) |
 | **Annual discount** | ~15-20% vs monthly |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -245,7 +250,7 @@ A content optimization editor with a SERP intelligence layer, now extended with 
 
 All paid tiers include Surfy AI writer, Content Score, SERP Analyzer, Content Audit, Topical Map, Internal Linking, Keyword Research, Plagiarism check, and AI Detector + Humanizer. Pro adds internal linking automation, content ideas, and cannibalization reports. Peace of Mind unlocks API access and a dedicated success manager. Enterprise adds SSO, white-label, advisory programs, custom limits, and priority support.
 
-Prices verified 2026-06-12 via [Surfer SEO pricing](https://surferseo.com/pricing/). The public page currently foregrounds annual-billed monthly prices for Discovery, Standard, Pro, and Peace of Mind; verify any monthly-billing toggle, enterprise terms, and current usage limits before procurement.
+Prices verified 2026-06-25 via [Surfer SEO pricing](https://surferseo.com/pricing/). The public page currently foregrounds annual-billed monthly prices for Discovery, Standard, Pro, and Peace of Mind; verify any monthly-billing toggle, enterprise terms, and current usage limits before procurement.
 
 ## Against the alternatives
 
@@ -274,7 +279,7 @@ Prices verified 2026-06-12 via [Surfer SEO pricing](https://surferseo.com/pricin
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Surfer SEO pricing](https://surferseo.com/pricing/) and Surfer help documentation.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Surfer SEO pricing](https://surferseo.com/pricing/) and Surfer help documentation.
 
 ## FAQ
 

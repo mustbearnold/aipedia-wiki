@@ -10,16 +10,16 @@ pricing_model: freemium
 price_range: "$0-$249/year (consumer) + separate Studio and API tiers"
 status: active
 launched: 2017-01
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "40% of every referred sale"
+  commission: "30% of every referred sale on the current affiliate page; older blog copy references 40% on qualifying sales"
   cookie_days: 30
   network: direct
   link: null
-  notes: "Official Speechify affiliate page verified 2026-06-12: 40% of every sale with 30-day cookies; page FAQ also references paid-plan qualification after clicks, so confirm dashboard terms after approval."
+  notes: "Official Speechify affiliate page verified 2026-06-25: 30% of every referred sale with 30-day cookies. A Speechify blog page still references 40% on qualifying sales, so confirm dashboard terms after approval."
 scores:
   utility: 8
   value: 7
@@ -31,15 +31,15 @@ facts:
     source: "https://speechify.com/pricing"
     source_label: "Source"
     source_id: speechify-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: medium
   pricing_anchor:
-    value: "Premium+ at $249/yr remains the only tier with commercial voice cloning rights; Premium holds at $139/yr ($29/mo with 60% annual discount per vendor page)."
+    value: "Premium+ at $249/yr remains the commercial voice-cloning tier; Premium holds at $139/yr, while the vendor page also displays a $29/month sticker with an annual-discount framing."
     source: "https://speechify.com/pricing"
     source_label: "Source"
     source_id: speechify-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -48,7 +48,7 @@ facts:
     source: "https://speechify.com/pricing"
     source_label: "Source"
     source_id: speechify-pricing
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     next_review_at: 2026-08-13
     volatility: high
     confidence: medium
@@ -75,6 +75,7 @@ price_history:
     source: "https://speechify.com/pricing"
     source_label: "Source"
     source_id: speechify-pricing
+    verified_at: 2026-06-25
     note: "New tier added with commercial voice cloning"
   - date: 2026-04-15
     plan: "Premium"
@@ -82,14 +83,16 @@ price_history:
     source: "https://speechify.com/pricing"
     source_label: "Source"
     source_id: speechify-pricing
+    verified_at: 2026-06-25
     note: "Verified unchanged"
-  - date: 2026-05-13
+  - date: 2026-06-25
     plan: "Premium"
     price: "$139/yr"
     source: "https://speechify.com/pricing"
     source_label: "Source"
     source_id: speechify-pricing
-    note: "Re-verified June 2026. Vendor page now displays a $29/month sticker with a 60% annual discount; effective annual rate of $139 unchanged. Premium+ holds at $249/yr."
+    verified_at: 2026-06-25
+    note: "Re-verified June 25, 2026. Vendor page still displays Premium as $139/year with a $29/month sticker/annual-discount framing. Premium+ holds at $249/year. Affiliate page now says 30% per referred sale with 30-day cookies."
 ---
 
 # Speechify
@@ -123,7 +126,7 @@ Three separate products live under the brand: the consumer reader (this page), *
 | **Speechify Studio** | Credit-based: Free 600, Starter $19/mo 7,200, Creator $49/mo 28,800 |
 | **Speechify API** | $10 per 1M chars pay-as-you-go |
 
-Every data point above was verified against vendor sources on 2026-06-12. See Sources.
+Every data point above was verified against vendor sources on 2026-06-25. See Sources.
 
 ## What it actually is
 
@@ -178,7 +181,7 @@ Studio credit rates: 1/sec for voiceover, 3/sec for dubbing, 30/sec for avatars.
 |------|-------|
 | Pay-as-you-go | $10 per 1M characters |
 
-*Prices verified 2026-06-12 via [speechify.com/pricing](https://speechify.com/pricing), [speechify.com/pricing-api](https://speechify.com/pricing-api/), and [costbench.com Speechify 2026](https://costbench.com/software/ai-voice-tools/speechify/). The vendor page now displays Premium as $29/month with a 60% annual discount; the resulting $139/year is unchanged.*
+*Prices verified 2026-06-25 via [speechify.com/pricing](https://speechify.com/pricing), [speechify.com/pricing-api](https://speechify.com/pricing-api/), and [costbench.com Speechify 2026](https://costbench.com/software/ai-voice-tools/speechify/). The vendor page displays Premium as $139/year with a $29/month sticker/annual-discount framing.*
 
 ## Against the alternatives
 
@@ -206,7 +209,7 @@ Studio credit rates: 1/sec for voiceover, 3/sec for dubbing, 30/sec for avatars.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-12 against [speechify.com/pricing](https://speechify.com/pricing), [speechify.com/pricing-api](https://speechify.com/pricing-api/), [costbench Speechify 2026](https://costbench.com/software/ai-voice-tools/speechify/), and [Typecast AI voice cloning comparison 2026](https://typecast.ai/learn/comparing-ai-voice-cloning-services/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-25 against [speechify.com/pricing](https://speechify.com/pricing), [speechify.com/pricing-api](https://speechify.com/pricing-api/), [Speechify affiliates](https://speechify.com/affiliates/), [costbench Speechify 2026](https://costbench.com/software/ai-voice-tools/speechify/), and [Typecast AI voice cloning comparison 2026](https://typecast.ai/learn/comparing-ai-voice-cloning-services/).
 
 ## FAQ
 
@@ -232,6 +235,7 @@ The current flagship voice model. Released in late 2025, it maintains naturalnes
 - [costbench: Speechify pricing 2026](https://costbench.com/software/ai-voice-tools/speechify/): plan structure across all products
 - [Typecast: AI voice cloning services 2026](https://typecast.ai/learn/comparing-ai-voice-cloning-services/): cross-provider pricing comparison
 - [Speechify Studio pricing](https://speechify.com/text-to-speech-api/): credit-based content creation tier
+- [Speechify affiliates](https://speechify.com/affiliates/): current affiliate commission and cookie language
 
 ## Related
 
