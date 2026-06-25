@@ -6,16 +6,16 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 
 ## Current Snapshot
 
-- Last updated: 2026-06-24.
+- Last updated: 2026-06-25.
 - Branch baseline: `codex/refresh-tool-pages-june-23`; latest completed tool batch is the June 24 six-shard 60-tool baseline run from `.tmp-tool-refresh-batch.json`.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `$aipedia-tool-refresh-workflow` now packages the six-shard-worker plus integrator process as a local incubating skill. Use six active workers in the Codex Windows app, and promote it into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
 - The latest completed local batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed freshness batch is the same 60-tool baseline run.
-- The latest completed news pass is Jun 23-24 focused coverage with five individual source-backed stories and no daily desk page.
+- The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
-- The next freshness batch should be regenerated with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`; the planner now excludes same-day refreshed pages by default unless `--include-same-day` is passed.
+- The next freshness batch should be regenerated with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`; the planner now excludes pages verified since yesterday by default unless `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` is passed.
 - The next Decision Content candidate remains `amazon-q-vs-github-copilot`, but freshness batch work is currently in progress.
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports.
@@ -51,6 +51,7 @@ Keep every volatile tool fact, source-backed claim, commercial surface, affected
 - Jun 23-24 focused news coverage: OpenAI Daybreak/Codex Security, Samsung ChatGPT Enterprise and Codex, Claude reliability incidents, GLM-5.2 open-model pressure, and Google AI talent movement.
 - Shared tool-page decision-spine migration across all tool detail routes.
 - Six-shard 60-tool baseline run: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
+- Jun 24-25 news catch-up, planner recent-refresh exclusion, Consensus schedule metadata, and replacement source URLs for MiniMax Speech and Instantly Lead Finder.
 
 ### Latest Completed Batch
 
@@ -89,9 +90,9 @@ Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and
 
 ### Next Batch
 
-Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes same-day refreshed pages by default; pass `--include-same-day` only for intentional revisits.
+Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes pages verified since yesterday by default; pass `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only for intentional recent-page revisits.
 
-Likely affected parent hubs depend on the regenerated batch. Recompute before editing.
+The current regenerated plan starts with `luma`, `magnific`, `meshy`, `minimax-speech`, `opusclip`, `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, and `retell-ai`, then continues through 60 tools and 77 route-QA routes. Likely affected parent hubs depend on the regenerated batch. Recompute before editing.
 
 Required closeout:
 

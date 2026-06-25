@@ -16,7 +16,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `codex/refresh-tool-pages-june-23`. Latest completed tool batch is the June 24 six-shard 60-tool baseline run: Cody through Lovart from `.tmp-tool-refresh-batch.json`.
+- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `67a2815b` on `master`. Latest completed tool batch is the June 24 six-shard 60-tool baseline run: Cody through Lovart.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -25,10 +25,10 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - News catch-up for June 18-22 is complete, and the selected lantern logo is active. The old blue/cyan brand regression was closed.
 - Homepage reported issues are closed: decision-card overcrowding, source/freshness/confidence fallback labels, 319 px portal overflow, orange-brown verified panel styling, and copy density.
 - The model availability tracker interruption is handled: `/trends/model-availability-churn/` is now a simple daily frontier-model availability ledger, `/` and `/news/` are marked for daily refresh, and the Codex app automation `daily-aipedia-news-and-model-availability-refresh` is active. The `/news/` daily automation explicitly requires at least three source-backed AI or AI-tool stories per run.
-- Jun 23-24 focused news coverage is complete with five source-backed individual stories and no daily desk page: OpenAI Daybreak/Codex Security, Samsung ChatGPT Enterprise and Codex, Claude reliability incidents, GLM-5.2 open-model pressure, and Google AI talent movement.
+- Jun 23-25 focused news coverage is complete with source-backed individual stories and no daily desk page. Latest Jun 25 pass added Google Gemini Computer Use preview, GitHub Copilot demand and billing pressure, Gemini 3.5 Pro delay risk, and the OpenAI/Anthropic workforce push.
 - Tool pages now use the shared decision-spine default: hero, decision card, plan guidance, fit, recent changes, alternatives, related comparisons, then collapsed proof/score math and full review notes. Keep future tool-page work in this format unless there is a deliberate template migration.
 - The optimized tool-refresh workflow is now packaged as local skill `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`. Treat it as the incubating playbook before promoting stable behavior into `src/data/aipedia-loops.json`. In the Codex Windows app, use six parallel shard workers with up to 10 tools per worker because six active agents was the observed ceiling on June 24.
-- The tool-refresh planner now includes registered source metadata, scoped `audit:sources` commands, and shard-level `source_ids` so integrators can check source reachability, content-hash changes, and snapshots before spending manual review time.
+- The tool-refresh planner now includes registered source metadata, scoped `audit:sources` commands, shard-level `source_ids`, and a default one-day recent-refresh exclusion so overnight runs do not immediately reselect yesterday's completed high-volatility pages. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when intentionally revisiting recent pages.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -86,6 +86,13 @@ Latest completed batch:
 
 Latest completed news pass:
 
+1. `/news/2026-06-24-google-gemini-computer-use-preview/`
+2. `/news/2026-06-25-github-copilot-best-month-ai-coding-demand/`
+3. `/news/2026-06-25-google-gemini-35-pro-delay-buyer-risk/`
+4. `/news/2026-06-25-openai-anthropic-raise-us-workforce-push/`
+
+Prior Jun 23-24 pass:
+
 1. `/news/2026-06-23-openai-daybreak-codex-security/`
 2. `/news/2026-06-23-samsung-chatgpt-codex-enterprise/`
 3. `/news/2026-06-23-claude-error-rate-fallback-planning/`
@@ -95,8 +102,8 @@ Latest completed news pass:
 Next due-soon tracked-tool queue:
 
 - Regenerate before the next batch with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
-- The planner now excludes tools already verified on the current date by default. Use `--include-same-day` only when the user explicitly wants to revisit same-day refreshed tools.
-- Recompute the next queue after this run; do not rely on the old `cody` pointer.
+- The planner now excludes tools verified since yesterday by default. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when the user explicitly wants to revisit recent pages.
+- Current regenerated `.tmp-tool-refresh-batch.json` starts with `luma`, `magnific`, `meshy`, `minimax-speech`, `opusclip`, `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, and `retell-ai`, and contains 60 tools across 77 route-QA routes.
 
 Use `$aipedia-tool-refresh-workflow` for the parallel batched tool refresh flow:
 
@@ -128,7 +135,7 @@ The Consensus, Beehiiv, BLACKBOX AI, Browserbase, Canva, Captions, Castmagic, Cl
 
 Next active batch:
 
-- Regenerate the planner and skip same-day refreshed pages unless a newer request explicitly revisits them.
+- Regenerate the planner and skip recently refreshed pages unless a newer request explicitly revisits them.
 - Use six shard workers in the Codex Windows app, with up to 10 tool markdown files per worker. The previous one-tool-per-worker run hit the app's active-agent ceiling after six workers, so the workflow now scales by increasing each worker's shard size instead of increasing concurrent agents.
 
 ### Decision Content Flywheel
@@ -140,6 +147,21 @@ Recommended next comparison remains `amazon-q-vs-github-copilot`, but do not sta
 Shared width and card-surface work is complete. Future visual work should inspect page-specific hierarchy and copy density for `/guides/`, `/news/`, `/answers/`, `/trends/`, `/workflows/`, and high-traffic detail templates.
 
 ## Current Verification Baseline
+
+Latest planner/source-maintenance pass passed:
+
+- `npm exec --yes --package=node@24 -- node --test tests/scripts/tool-refresh-batch.test.mjs`
+- `node --check scripts/tool-refresh-batch.mjs`
+- `npm run audit:provenance:changed -- --json`
+- `npm run ledger:pages:check`
+- `node scripts/guard-em-dashes.mjs`
+- `npm run --silent loop:freshness -- --json`
+- `npm run --silent audit:sources -- --json --live --limit 0 --source-id minimax-speech-t2a --source-id instantly-leads`
+- `npm run typecheck`
+- `npm run build:fast`
+- `npm run qa:route -- --route /tools/consensus/ --route /tools/minimax-speech/ --route /tools/instantly/ --route /categories/ai-research/ --route /categories/ai-voice/ --route /categories/ai-automation/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`
+
+The new batch source-health probe selected 170 sources: 158 returned HTTP OK, 12 were unreachable, and 0 had content-hash changes. Clear 404s for `minimax-speech-t2a` and `instantly-leads` were fixed and live-checked. Remaining unreachable sources are mostly 403 or timeout cases: Gemini API pricing/changelog, Jasper credits pricing, Boomy support docs, Imagen docs, Jimeng, Wispr Bloomberg, Ada platform, and similar access-sensitive routes.
 
 Latest completed 60-tool baseline refresh passed:
 
@@ -153,7 +175,7 @@ Latest completed 60-tool baseline refresh passed:
 - `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --widths 319,390,430,768,1024` across 80 routes: `/`, `/tools/`, `/categories/`, `/news/`, `/trends/`, `/trends/model-availability-churn/`, `/compare/`, all 60 refreshed tool routes, and affected category routes.
 - `npm run ledger:pages:check`, `node scripts\guard-em-dashes.mjs`, `npm run audit:provenance:changed -- --json`, `npm run loop:freshness -- --json`, and `git diff --check` passed inside `tool:refresh:batch:check`.
 
-The current planner still shows 0 due-now tool pages but many due-soon facts or sources. Because high-volatility pages can remain due-soon immediately after a refresh, use the current date and the ledger to avoid same-day duplicate refreshes. `build:fast` now takes roughly 65-70 seconds on the optimized path because it still prerenders hundreds of routes and runs guard, indexability, commercial CTA, sitemap, and budget checks. Pay that cost once per batch.
+The current planner still shows 0 due-now tool pages but many due-soon facts or sources. Because high-volatility pages can remain due-soon immediately after a refresh, the planner now skips pages verified since yesterday by default. `build:fast` now takes roughly 65-70 seconds on the optimized path because it still prerenders hundreds of routes and runs guard, indexability, commercial CTA, sitemap, and budget checks. Pay that cost once per batch.
 
 June 24 workflow profiling found the refresh closeout costs are now roughly: `tool:refresh:batch:check` 37 seconds for the 60-tool plan, `typecheck` 32 seconds, `check:quick` 22 seconds, `build:fast` 64 seconds end to end after content-cache optimization, and `qa:route` 107 seconds for 80 routes across 5 widths when using `--concurrency 4`. `scripts/build-fast.mjs` prints stage timings, `scripts/qa-route.mjs` supports `--base-url` plus `--concurrency`, `scripts/tool-refresh-batch.mjs` emits six shard-worker briefs with up to 10 tools per worker, and `scripts/tool-refresh-batch-check.mjs` can consume saved planner JSON with `--plan`.
 
@@ -180,7 +202,7 @@ Latest completed tool-page template migration passed:
 
 ## Known Caveats
 
-- Freshness is green for due-now items, but June 24 due-soon facts still need continued current-source review. The planner can repeat same-day refreshed tools because short review windows keep high-volatility facts near due, so skip same-day repeats or tune the planner before the next large run.
+- Freshness is green for due-now items and high-volatility scheduling metadata. The planner now skips yesterday's refreshed tools by default, but due-soon facts still need continued current-source review.
 - Do not run `npm run typecheck` and `npm run build:fast` in parallel. Astro uses a shared local content data store under `node_modules/.astro`, and concurrent content sync can race. Run them sequentially.
 - `node scripts/audit-site-kpis.mjs --json` still reports `neuronwriter-vs-surfer-seo` below the 700-word comparison KPI threshold. This is known improvement debt, not a failing loop signal.
 - Full local verification remains reliable but should be centralized. Prefer 60-tool planner batches split across six shard workers, integrator-owned shared files, focused worker checks, `tool:refresh:batch:check -- --plan`, `check:smart`, one final `build:fast`, and exact `qa:route` with `--concurrency 4`. For editing loops, use `qa-route --base-url` against the running local server instead of rebuilding.
@@ -193,7 +215,7 @@ Latest completed tool-page template migration passed:
 1. Run `git status --short --branch`.
 2. Read this file and `.agent/PLANS.md`.
 3. Use `$aipedia-tool-refresh-workflow`, then run `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
-4. Continue the next not-refreshed batch unless a newer user request supersedes it.
+4. Continue the next not-recently-refreshed batch, currently starting with Luma, Magnific, Meshy, and MiniMax Speech, unless a newer user request supersedes it.
 
 ## Finish Major Work
 

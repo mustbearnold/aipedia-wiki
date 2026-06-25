@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$47-$358+/month outreach; Lead Finder priced separately"
 status: active
 launched: 2021-10
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -45,11 +45,11 @@ facts:
     confidence: high
   lead_database:
     value: "Instantly Lead Finder/Instantly Credits is sold separately from Outreach plans. Confirm Outreach, Credits, CRM, and add-on needs before treating Instantly as one bundled outbound price."
-    source: "https://instantly.ai/products/lead-finder"
+    source: "https://instantly.ai/b2b-lead-finder"
     source_label: "Instantly Lead Finder"
     source_id: instantly-leads
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-23
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-25
     volatility: high
     confidence: high
   deliverability_focus:
@@ -104,10 +104,10 @@ price_history:
   - date: 2026-05-13
     plan: "Lead Finder Growth"
     price: "$47/mo: 1,500-2,000 lead credits"
-    source: "https://instantly.ai/products/lead-finder"
+    source: "https://instantly.ai/b2b-lead-finder"
     source_label: "Instantly Lead Finder"
     source_id: instantly-leads
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     note: "Lead Finder is now a distinct buying surface, not bundled with Outreach."
   - date: 2026-06-05
     plan: "Outreach / Instantly Credits / VIP"
@@ -243,7 +243,7 @@ Instantly pricing and packaging are volatile, so AiPedia treats it as a monthly 
 
 - [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-23)
 - [Instantly email outreach](https://instantly.ai/products/email-outreach) (verified 2026-06-23)
-- [Instantly Lead Finder](https://instantly.ai/products/lead-finder) (verified 2026-06-23)
+- [Instantly B2B Lead Finder](https://instantly.ai/b2b-lead-finder) (verified 2026-06-25)
 - [Instantly deliverability network](https://instantly.ai/products/deliverability-network) (verified 2026-06-23)
 - [Instantly plans overview](https://help.instantly.ai/en/articles/10273259-plans-overview) (verified 2026-06-23)
 

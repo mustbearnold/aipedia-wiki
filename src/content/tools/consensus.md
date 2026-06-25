@@ -60,6 +60,7 @@ facts:
     source_label: "Consensus product changelog"
     source_id: consensus-changelog
     verified_at: 2026-06-24
+    next_review_at: 2026-06-29
     volatility: high
     confidence: high
   workflow_surface:

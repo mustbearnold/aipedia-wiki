@@ -77,3 +77,39 @@ test('tool refresh planner includes source metadata and scoped source-health com
   assert.match(workerWithSources.prompt, /npm run audit:sources -- --json --limit 0 --source-id/);
   assert.match(report.agent_briefs.integrator_brief.prompt, /Optional source-health commands/);
 });
+
+test('tool refresh planner skips the previous day by default but keeps override knobs', () => {
+  const defaultResult = runNode('scripts/tool-refresh-batch.mjs', [
+    '--json',
+    '--limit',
+    '2',
+  ]);
+
+  assert.equal(defaultResult.status, 0, `planner should emit JSON\nstdout:\n${defaultResult.stdout}\nstderr:\n${defaultResult.stderr}`);
+  const defaultReport = JSON.parse(defaultResult.stdout);
+  assert.equal(defaultReport.exclude_recent_days, 1);
+  assert.equal(typeof defaultReport.exclude_verified_date, 'string');
+
+  const sameDayResult = runNode('scripts/tool-refresh-batch.mjs', [
+    '--json',
+    '--limit',
+    '2',
+    '--include-same-day',
+  ]);
+  assert.equal(sameDayResult.status, 0);
+  const sameDayReport = JSON.parse(sameDayResult.stdout);
+  assert.equal(sameDayReport.exclude_recent_days, null);
+  assert.equal(sameDayReport.exclude_verified_date, null);
+
+  const explicitResult = runNode('scripts/tool-refresh-batch.mjs', [
+    '--json',
+    '--limit',
+    '2',
+    '--exclude-verified-date',
+    '2026-06-20',
+  ]);
+  assert.equal(explicitResult.status, 0);
+  const explicitReport = JSON.parse(explicitResult.stdout);
+  assert.equal(explicitReport.exclude_recent_days, null);
+  assert.equal(explicitReport.exclude_verified_date, '2026-06-20');
+});

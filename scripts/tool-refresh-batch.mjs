@@ -16,7 +16,9 @@ const WINDOW_DAYS = numberArg('--window-days', 365);
 const MAX_CONCURRENT_WORKERS = numberArg('--max-workers', 6);
 const TOOLS_PER_WORKER = numberArg('--tools-per-worker', 10);
 const INCLUDE_SAME_DAY = args.includes('--include-same-day');
-const EXCLUDE_VERIFIED_DATE = valueFor('--exclude-verified-date') || dateContext().currentDate;
+const EXCLUDE_RECENT_DAYS = numberArg('--exclude-recent-days', 1, { allowZero: true });
+const explicitExcludeVerifiedDate = valueFor('--exclude-verified-date');
+const EXCLUDE_VERIFIED_DATE = explicitExcludeVerifiedDate || isoDateDaysAgo(EXCLUDE_RECENT_DAYS);
 const HELP_MODE = args.includes('--help') || args.includes('-h');
 const AGENT_BRIEFS_MODE = args.includes('--agents') || args.includes('--agent-briefs');
 
@@ -37,7 +39,8 @@ function usage() {
     '  --max-workers <n>    Maximum worker subagents to launch at once. Default: 6.',
     '  --tools-per-worker <n>  Maximum tool files assigned to each worker. Default: 10.',
     '  --window-days <n>    Freshness queue window. Default: 365.',
-    '  --exclude-verified-date <YYYY-MM-DD>  Skip tools already verified on or after this date. Default: today.',
+    '  --exclude-recent-days <n>  Skip tools verified in the last n days plus today. Default: 1.',
+    '  --exclude-verified-date <YYYY-MM-DD>  Skip tools already verified on or after this date. Overrides --exclude-recent-days.',
     '  --include-same-day    Include tools already verified today.',
     '  --json               Emit structured JSON.',
     '  --agents             Print shard worker briefs plus an integrator brief.',
@@ -54,11 +57,12 @@ function valueFor(name) {
   return index >= 0 ? args[index + 1] : undefined;
 }
 
-function numberArg(name, fallback) {
+function numberArg(name, fallback, options = {}) {
   const rawValue = valueFor(name);
   if (rawValue === undefined) return fallback;
   const value = Number.parseInt(rawValue, 10);
-  return Number.isFinite(value) && value > 0 ? value : fallback;
+  const minValue = options.allowZero ? 0 : 1;
+  return Number.isFinite(value) && value >= minValue ? value : fallback;
 }
 
 function projectPath(path) {
@@ -217,6 +221,12 @@ function dateContext() {
   return { currentDate, currentMonthYear };
 }
 
+function isoDateDaysAgo(daysAgo) {
+  const date = new Date();
+  date.setUTCDate(date.getUTCDate() - daysAgo);
+  return date.toISOString().slice(0, 10);
+}
+
 function chunk(list, size) {
   const chunks = [];
   for (let index = 0; index < list.length; index += size) {
@@ -361,6 +371,7 @@ const result = {
   limit: LIMIT,
   window_days: WINDOW_DAYS,
   tools_per_worker: TOOLS_PER_WORKER,
+  exclude_recent_days: INCLUDE_SAME_DAY || explicitExcludeVerifiedDate ? null : EXCLUDE_RECENT_DAYS,
   exclude_verified_date: INCLUDE_SAME_DAY ? null : EXCLUDE_VERIFIED_DATE,
   totals: report.totals,
   batch,

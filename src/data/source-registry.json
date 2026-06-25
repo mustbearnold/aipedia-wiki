@@ -6778,11 +6778,11 @@
     {
       "id": "instantly-leads",
       "label": "Instantly Lead Finder",
-      "url": "https://instantly.ai/products/lead-finder",
+      "url": "https://instantly.ai/b2b-lead-finder",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "instantly-official",
@@ -8861,11 +8861,11 @@
     {
       "id": "minimax-speech-t2a",
       "label": "MiniMax T2A docs",
-      "url": "https://platform.minimax.io/docs/api-reference/speech-t2a-intro",
+      "url": "https://platform.minimax.io/docs/api-reference/speech-t2a-http",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "minimax-speech-voice-cloning",

@@ -423,7 +423,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-23 | /tools/hunyuan/ | Tool | Yes | frontmatter | src/content/tools/hunyuan.md |
 | 2026-06-23 | /tools/hyperwrite/ | Tool | Yes | frontmatter | src/content/tools/hyperwrite.md |
 | 2026-06-23 | /tools/imagen/ | Tool | Yes | frontmatter | src/content/tools/imagen.md |
-| 2026-06-23 | /tools/instantly/ | Tool | Yes | frontmatter | src/content/tools/instantly.md |
 | 2026-06-23 | /tools/intercom/ | Tool | Yes | frontmatter | src/content/tools/intercom.md |
 | 2026-06-23 | /tools/invideo/ | Tool | Yes | frontmatter | src/content/tools/invideo.md |
 | 2026-06-23 | /tools/jan-ai/ | Tool | Yes | frontmatter | src/content/tools/jan-ai.md |
@@ -451,7 +450,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-23 | /tools/marketmuse/ | Tool | Yes | frontmatter | src/content/tools/marketmuse.md |
 | 2026-06-23 | /tools/mem/ | Tool | Yes | frontmatter | src/content/tools/mem.md |
 | 2026-06-23 | /tools/meshy/ | Tool | Yes | frontmatter | src/content/tools/meshy.md |
-| 2026-06-23 | /tools/minimax-speech/ | Tool | Yes | frontmatter | src/content/tools/minimax-speech.md |
 | 2026-06-23 | /tools/modal/ | Tool | Yes | frontmatter | src/content/tools/modal.md |
 | 2026-06-23 | /tools/morphic/ | Tool | Yes | frontmatter | src/content/tools/morphic.md |
 | 2026-06-23 | /tools/murf/ | Tool | Yes | frontmatter | src/content/tools/murf.md |
@@ -493,7 +491,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /tools/coderabbit/ | Tool | Yes | frontmatter | src/content/tools/coderabbit.md |
 | 2026-06-24 | /tools/cody/ | Tool | Yes | frontmatter | src/content/tools/cody.md |
 | 2026-06-24 | /tools/comet/ | Tool | Yes | frontmatter | src/content/tools/comet.md |
-| 2026-06-24 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
 | 2026-06-24 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
 | 2026-06-24 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
 | 2026-06-24 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
@@ -552,10 +549,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-25 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-06-25 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
-| 2026-06-25 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-06-25 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-25 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-25 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-25 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
-| 2026-06-25 | /tools/gemini/ | Tool | Yes | working tree | src/content/tools/gemini.md |
-| 2026-06-25 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
+| 2026-06-25 | /tools/consensus/ | Tool | Yes | working tree | src/content/tools/consensus.md |
+| 2026-06-25 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
+| 2026-06-25 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
+| 2026-06-25 | /tools/instantly/ | Tool | Yes | working tree | src/content/tools/instantly.md |
+| 2026-06-25 | /tools/minimax-speech/ | Tool | Yes | working tree | src/content/tools/minimax-speech.md |
 | 2026-06-25 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |

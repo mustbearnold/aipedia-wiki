@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$5-$999/mo subscriptions / $60-$100 per 1M chars PAYG"
 status: active
 launched: 2025-04
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -28,10 +28,10 @@ scores:
 facts:
   best_for:
     value: "Multilingual TTS, long-form speech generation, streaming, and voice cloning API with Speech 2.8 HD/Turbo as the current model family, 300+ system voices, custom cloned voices, and multiple pricing modes."
-    source: "https://platform.minimax.io/docs/api-reference/speech-t2a-intro"
+    source: "https://platform.minimax.io/docs/api-reference/speech-t2a-http"
     source_label: "MiniMax T2A docs"
     source_id: minimax-speech-t2a
-    verified_at: 2026-06-23
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -45,16 +45,16 @@ facts:
     confidence: high
   watch_out_for:
     value: "Model names and billing surfaces changed: Speech 2.8 is latest, Speech 2.6/Speech-02 remain supported, and subscription, token-plan, and pay-as-you-go routes can expose different limits."
-    source: "https://platform.minimax.io/docs/api-reference/speech-t2a-intro"
+    source: "https://platform.minimax.io/docs/api-reference/speech-t2a-http"
     source_label: "MiniMax T2A docs"
     source_id: minimax-speech-t2a
-    verified_at: 2026-06-23
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-10
     volatility: high
     confidence: high
 tags: [tts, voice-cloning, chinese-ai, multilingual, minimax, speech-2-8, api]
 seo_title: "MiniMax Speech Review: Cheap TTS, Voice Cloning and ElevenLabs Alternative"
-meta_description: "MiniMax Speech is a low-cost TTS and voice-cloning API with current Speech 2.8 HD/Turbo models, 300+ system voices, streaming, long-form async generation, and subscription or pay-as-you-go pricing. Verified June 23, 2026."
+meta_description: "MiniMax Speech is a low-cost TTS and voice-cloning API with current Speech 2.8 HD/Turbo models, 300+ system voices, streaming, long-form async generation, and subscription or pay-as-you-go pricing. Verified June 25, 2026."
 author: "aipedia.wiki Editorial"
 best_for:
   - cost-sensitive production tts workloads
@@ -193,7 +193,7 @@ Speed, pitch, volume, bitrate, sample rate, language boost, subtitle output, voi
 
 ## Methodology
 
-This page was rechecked by the aipedia.wiki editorial workflow on June 23, 2026 against the [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro), [MiniMax T2A HTTP docs](https://platform.minimax.io/docs/api-reference/speech-t2a-http), [MiniMax Voice Cloning docs](https://platform.minimax.io/docs/api-reference/voice-cloning-intro), [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), and MiniMax's March 2026 financial-results release. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average).
+This page was rechecked by the aipedia.wiki editorial workflow on June 25, 2026 against the [MiniMax T2A HTTP docs](https://platform.minimax.io/docs/api-reference/speech-t2a-http), [MiniMax Voice Cloning docs](https://platform.minimax.io/docs/api-reference/voice-cloning-intro), [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), and MiniMax's March 2026 financial-results release. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average).
 
 ## FAQ
 
@@ -214,7 +214,7 @@ Yes, but treat it as a consent-sensitive production feature. The current voice-c
 
 ## Sources
 
-- [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro): current models, T2A features, async generation, and voice cloning overview
+- [MiniMax T2A HTTP docs](https://platform.minimax.io/docs/api-reference/speech-t2a-http): current models, T2A features, async generation, and voice cloning overview
 - [MiniMax T2A HTTP docs](https://platform.minimax.io/docs/api-reference/speech-t2a-http): supported model IDs, formats, streaming, and language boost options
 - [MiniMax Voice Cloning docs](https://platform.minimax.io/docs/api-reference/voice-cloning-intro): rapid cloning lifecycle and supported models
 - [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech): subscription tier rates, credits, voice slots, and RPM
