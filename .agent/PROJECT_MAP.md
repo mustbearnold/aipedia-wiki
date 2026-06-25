@@ -4,7 +4,7 @@
 
 AiPedia is an Astro site. Editorial source lives under `src/content/`; route templates, layouts, components, styles, data, and public assets live under `src/` and `public/`.
 
-Read `.agent/CURRENT_STATUS.md` first for the current branch state, recent completions, and active work. Then read `.agent/PLANS.md` for active lanes, `.agent/WORK_LOG.md` for landed milestones, `.agent/LOOPS.md` for repeatable operating loops, and `.agent/OPERATING_RULES.md` for the committed operating rules. The `.agent/` stack replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
+Read `.agent/CURRENT_STATUS.md` first for the current branch state, recent completions, and active work. Then read `.agent/PLANS.md` for active lanes, `.agent/WORK_LOG.md` for landed milestones, `.agent/LOOPS.md` for repeatable operating loops, `.agent/OPERATING_RULES.md` for the committed operating rules, and `workflows/README.md` when running a repeatable workflow. The `.agent/` stack replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
 
 Use the smallest verification command that matches the changed surface. Start with `npm run check:smart` to get a scoped recommendation.
 
@@ -31,6 +31,7 @@ Use the smallest verification command that matches the changed surface. Start wi
 - `public/logos/tools/`: canonical tool logo assets.
 - `public/og/`: generated Open Graph images.
 - `scripts/`: audits, guards, generators, build helpers, and operator tooling.
+- `workflows/`: committed repeatable operating workflows, separate from current-state `.agent/` memory and local-only `.agents/` runtime state.
 - `src/lib/content-models/` and `src/lib/search-catalog.ts`: generated model/search seams audited by `npm run audit:generated-models`.
 - `tests/`: Node script tests and Playwright smoke tests.
 
@@ -62,11 +63,12 @@ Ignore these during code search unless the task is explicitly about generated ou
 - `test-results/`
 - `.worktrees/`
 - `.agents/`
+- `local/`
 - `skills-lock.json`
 
 If `.worktrees/` contains empty or unregistered directories after generated coverage work has merged, remove them. Active Git worktrees must appear in `git worktree list`.
 
-`.agents/` and `skills-lock.json` are gitignored local agent/plugin state. `check-smart` also ignores them during default dirty-path discovery. It does not ignore `.agent/`, which is the canonical AiPedia continuity folder.
+`.agents/`, `local/`, and `skills-lock.json` are gitignored local agent/plugin or machine-helper state. `check-smart` also ignores `.agents/` and `skills-lock.json` during default dirty-path discovery. It does not ignore `.agent/`, which is the canonical AiPedia continuity folder.
 
 ## Verification Router
 

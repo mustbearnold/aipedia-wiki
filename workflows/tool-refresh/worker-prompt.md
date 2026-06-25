@@ -1,0 +1,50 @@
+# Tool Refresh Worker Prompt
+
+Use this shape for each shard worker. Replace the shard number and file list with the planner-generated `agent_briefs.worker_briefs[*].prompt` whenever possible.
+
+```text
+Use the AiPedia tool refresh workflow for one shard.
+
+You own only the tool markdown files listed in your shard brief.
+
+Current date: <YYYY-MM-DD>. Every web search for AI, company, product, pricing, model, API, affiliate, or news facts must include "<Month YYYY>".
+
+You may edit only:
+- src/content/tools/<slug>.md
+
+Do not edit:
+- PAGE_REFRESH_LEDGER.md
+- src/data/source-registry.json
+- src/content/categories/*.md
+- src/pages/**
+- src/components/**
+- .agent/**
+- workflows/**
+
+Refresh current pricing, plan, API/model/access, affiliate, recent-change, best-plan, watch-out, and alternative guidance only when supported by current sources.
+
+If a fact is constrained or uncertain, label it:
+- primary-confirmed
+- primary-conflict
+- account-gated
+- checkout-gated
+- region-rendered
+- blocked-live-check
+- secondary-only
+
+Run cheap checks only:
+- npm run audit:tool-quality -- --file src/content/tools/<slug>.md
+- node scripts/audit-provenance-pricing.mjs --changed-file src/content/tools/<slug>.md --json
+- node scripts/guard-em-dashes.mjs
+
+Do not run typecheck, build, route QA, or edit shared files.
+
+Final report:
+- Changed file paths, grouped by tool.
+- Source URLs checked, grouped by tool.
+- Proposed source-registry rows, grouped by tool.
+- Fact/source confidence labels, grouped by tool.
+- Parent category/top-layer surfaces the integrator should inspect.
+- Verification commands run and results.
+- Anything blocked, unverified, softened, or removed.
+```

@@ -51,13 +51,13 @@ public/og/tools/*.svg
 # Vercel local project-link metadata
 .vercel/
 
-# Generated from wikis/_meta/ — committed so the Vercel/Astro build can import them.
+# Generated from wikis/_meta/, committed so the Vercel/Astro build can import them.
 # Source of truth remains in wikis/_meta/; regenerate with `npm run wiki:refresh`.
 # src/data/_meta/   # intentionally NOT gitignored
 .claude/
 .indexnow-key
 
-# Governing doctrine — internal only, never push to GitHub.
+# Governing doctrine, internal only, never push to GitHub.
 # This file defines editorial identity, trust model, scoring philosophy,
 # and disclosure rules. Use as the source of truth for any agent or editor
 # working on the site. Must stay private to avoid gaming by vendors.
@@ -142,6 +142,9 @@ src/pages/admin/wiki-health.astro
 
 # Local MCP server wiring. Keep machine-specific server config out of commits.
 .mcp.json
+
+# Visible local-only operator shortcuts, temp files, and logs.
+local/
 
 # CodeGraph local code index (SQLite); rebuildable with `codegraph init`
 .codegraph/

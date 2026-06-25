@@ -10,7 +10,8 @@ Audience: maintainers, future agents, and Matt.
 2. `.agent/PLANS.md`: active or immediately resumable plans.
 3. `.agent/LOOPS.md`: repeatable loop commands and rules.
 4. `.agent/OPERATING_RULES.md` and `.agent/PROJECT_MAP.md`: repo rules, paths, and verification map.
-5. `.agent/WORK_LOG.md`: append-only proof trail. Read newest entries only unless investigating history.
+5. `workflows/README.md`: committed repeatable workflow procedures.
+6. `.agent/WORK_LOG.md`: append-only proof trail. Read newest entries only unless investigating history.
 
 Old specs, archived plans, local ignored docs, and stale chat history are not canonical when they conflict with this stack.
 
@@ -27,7 +28,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - The model availability tracker interruption is handled: `/trends/model-availability-churn/` is now a simple daily frontier-model availability ledger, `/` and `/news/` are marked for daily refresh, and the Codex app automation `daily-aipedia-news-and-model-availability-refresh` is active. The `/news/` daily automation explicitly requires at least three source-backed AI or AI-tool stories per run.
 - Jun 23-25 focused news coverage is complete with source-backed individual stories and no daily desk page. Latest Jun 25 pass added Google Gemini Computer Use preview, GitHub Copilot demand and billing pressure, Gemini 3.5 Pro delay risk, and the OpenAI/Anthropic workforce push.
 - Tool pages now use the shared decision-spine default: hero, decision card, plan guidance, fit, recent changes, alternatives, related comparisons, then collapsed proof/score math and full review notes. Keep future tool-page work in this format unless there is a deliberate template migration.
-- The optimized tool-refresh workflow is now packaged as local skill `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`. Treat it as the incubating playbook before promoting stable behavior into `src/data/aipedia-loops.json`. In the Codex Windows app, use six parallel shard workers with up to 10 tools per worker because six active agents was the observed ceiling on June 24.
+- The optimized tool-refresh workflow now has a committed procedure under `workflows/tool-refresh/` and a local skill mirror `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`. Treat `workflows/` as canonical for clean clones, and keep the local skill aligned while tuning. In the Codex Windows app, use six parallel shard workers with up to 10 tools per worker because six active agents was the observed ceiling on June 24.
 - The tool-refresh planner now includes registered source metadata, scoped `audit:sources` commands, shard-level `source_ids`, and a default one-day recent-refresh exclusion so overnight runs do not immediately reselect yesterday's completed high-volatility pages. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when intentionally revisiting recent pages.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 

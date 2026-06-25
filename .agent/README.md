@@ -7,6 +7,7 @@ Start here for committed agent instructions. Do not rely on a root `AGENTS.md`; 
 - `OPERATING_RULES.md` is the primary committed operating guide for agent work.
 - `PROJECT_MAP.md` is the fast orientation map for future agent work.
 - `PLANS.md` is only for active or immediately resumable ExecPlans.
+- `../workflows/` is the committed home for repeatable operating procedures such as tool refresh, news refresh, page refresh, and QA.
 - `archive/` holds completed historical plans and handoffs that should not be loaded by default.
 
 ## Canonical Reading Order
@@ -16,6 +17,7 @@ Start here for committed agent instructions. Do not rely on a root `AGENTS.md`; 
 3. `WORK_LOG.md`
 4. `PROJECT_MAP.md`
 5. `OPERATING_RULES.md`
+6. `../workflows/README.md` when running a repeatable workflow
 
 Keep this directory light. If a plan is complete, summarize the result in `CURRENT_STATUS.md`, append `WORK_LOG.md`, archive the detail, and keep `PLANS.md` focused on active or immediately resumable work.
 

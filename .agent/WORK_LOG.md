@@ -794,3 +794,11 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Failed then fixed: The first smoke `tool:refresh:batch:check` failed only on `ledger:pages:check`, reproducing the prior wasted-pass pattern. Regenerated the ledger first, reran the grouped checker, and it passed.
 - Residual risks: `.agents/skills/aipedia-tool-refresh-workflow/` remains local gitignored skill state, so the committed durable rule lives in `.agent/LOOPS.md`, planner output, tests, and script docs.
 - Next: In the next real 60-tool batch, use generated worker prompts directly from `--agents` or JSON `agent_briefs`, run `npm run ledger:pages && npm run ledger:pages:check` before the grouped checker, and keep `typecheck` after the grouped checker.
+
+### 2026-06-25: Committed Workflow Folder
+
+- Status: Complete locally, pending verification and commit.
+- Branch: `codex/refresh-tool-pages-june-23`.
+- Changed: Added committed `workflows/` as the canonical home for repeatable operating procedures, separate from current-state `.agent/` memory and local-only `.agents/` runtime state. Added the full `workflows/tool-refresh/` procedure, worker prompt, integrator checklist, verification sequence, placeholders for news/page/QA workflows, and reusable run/worker report templates. Updated `.agent` orientation docs to point future agents at `workflows/`.
+- Verification: pending.
+- Residual risks: The new news/page/QA workflow folders are intentionally placeholders; expand them only from real repeated runs.
