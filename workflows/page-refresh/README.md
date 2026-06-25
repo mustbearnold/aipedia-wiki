@@ -15,7 +15,7 @@ npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-wo
 For subagent fanout, also write exact prompt files so paths are not hand-transcribed:
 
 ```bash
-npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --write-agent-prompts local/tmp/page-refresh-prompts --json > .tmp-page-refresh-batch.json
+npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --write-agent-prompts local/tmp/page-refresh-prompts --report-dir local/tmp/page-refresh-reports --write-report-scaffolds --json > .tmp-page-refresh-batch.json
 ```
 
 Inspect the plan:
@@ -55,6 +55,8 @@ Workers must not edit shared files unless assigned:
 - `.agent/**`
 - `workflows/**`
 
+Each worker should write its report to the planner-provided `report_path`. If the worker cannot write to the shared filesystem, it must paste the same JSON schema in its final answer. The report captures route, path, elapsed seconds, changed files, source URLs, confidence labels, caveats, parent-surface notes, checks, and optimization notes. The integrator should read these reports before touching shared files.
+
 ## Integrator
 
 The integrator owns shared state:
@@ -92,7 +94,8 @@ Expensive gates:
 ```bash
 npm run typecheck
 npm run build:fast
-node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 $(node -e "const p=require('./.tmp-page-refresh-batch.json'); console.log(p.commands.route_qa_args)") --widths 319,360,390,430,768,1024,1366 --timing-file local/tmp/page-refresh-route-qa.json
+node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 $(node -e "const p=require('./.tmp-page-refresh-batch.json'); console.log(p.commands.route_qa_args)") --widths 319,360,390,430,768,1024,1366 --timing-file local/tmp/page-refresh-route-qa-content.json
+node -e "const p=require('./.tmp-page-refresh-batch.json'); if (p.commands.interactive_route_qa_args) console.log(p.commands.interactive_route_qa_args)" | xargs -r node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --allow-noindex --skip-comparison-content-checks --timing-file local/tmp/page-refresh-route-qa-interactive.json
 ```
 
 Add page-type-specific checks when relevant:
@@ -101,7 +104,14 @@ Add page-type-specific checks when relevant:
 - Comparison or guide quality: `npm run audit:coverage-quality:changed`
 - Commercial pages: `npm run build:fast` includes commercial CTA checks
 - Static/index pages: include their parent hub and index routes in route QA
-- Intentional noindex interactive pages such as `/compare/build/`: run `qa-route` with `--allow-noindex --skip-comparison-content-checks` so layout, metadata presence, and overflow are checked without applying indexable comparison-page source requirements.
+- Intentional noindex interactive pages such as `/compare/build/`: the planner now splits these into `commands.interactive_routes` and adds the right `qa-route` flags so layout, metadata presence, and overflow are checked without applying indexable comparison-page source requirements.
+
+To time every closeout micro-step, run the planner-provided `commands.timed_closeout` entries instead of the plain commands. Create the timing directory first:
+
+```bash
+mkdir -p local/tmp/page-refresh-timings
+node -e "const p=require('./.tmp-page-refresh-batch.json'); console.log(p.commands.timed_closeout.map(x => x.command).join('\n'))"
+```
 
 ## Closeout Report
 

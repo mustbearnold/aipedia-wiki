@@ -23,6 +23,7 @@ function writeLedger() {
     '| 2026-06-01 | /tools/old-tool/ | Tool | Yes | frontmatter | src/content/tools/old-tool.md |',
     '| 2026-06-02 | /guides/old-guide/ | Guide | Yes | frontmatter | src/content/use-cases/old-guide.md |',
     '| 2026-06-03 | /compare/old-vs-new/ | Comparison | Yes | frontmatter | src/content/comparisons/old-vs-new.md |',
+    '| 2026-06-06 | /compare/build/ | Static page | No | file mtime | src/pages/compare/build.astro |',
     '| 2026-06-04 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |',
     '| 2026-06-05 | /answers/example/ | Answer page | Yes | page metadata | src/pages/answers/example.astro |',
     '',
@@ -47,7 +48,10 @@ test('page refresh planner excludes tools and orders oldest non-tool pages', () 
     assert.ok(!report.batch.some((page) => page.type === 'Tool'));
     assert.equal(report.agent_briefs.worker_briefs.length, 2);
     assert.match(report.agent_briefs.worker_briefs[0].prompt, /Every web search/);
+    assert.match(report.agent_briefs.worker_briefs[0].prompt, /Report schema:/);
+    assert.match(report.agent_briefs.worker_briefs[0].report_path, /page-refresh-shard-01\.json$/);
     assert.match(report.commands.route_qa_args, /--route \/guides\/old-guide\//);
+    assert.match(report.commands.cheap_gates.join('\n'), /AIPEDIA_CURRENT_DATE=/);
     assert.match(report.commands.expensive_gates.at(-1), /--concurrency 6/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
@@ -77,6 +81,9 @@ test('page refresh planner documents the workflow flags', () => {
   assert.match(result.stdout, /--pages-per-worker/);
   assert.match(result.stdout, /--include-tools/);
   assert.match(result.stdout, /--write-agent-prompts/);
+  assert.match(result.stdout, /--report-dir/);
+  assert.match(result.stdout, /--write-report-scaffolds/);
+  assert.match(result.stdout, /--timing-dir/);
   assert.match(result.stdout, /--type/);
 });
 
@@ -106,6 +113,53 @@ test('page refresh planner can write exact agent prompt files', () => {
     assert.ok(existsSync(join(promptDir, 'page-refresh-shard-01.md')));
     assert.ok(existsSync(join(promptDir, 'page-refresh-integrator.md')));
     assert.match(readFileSync(join(promptDir, 'page-refresh-shard-01.md'), 'utf8'), /You are page-refresh-shard-01/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('page refresh planner splits intentional noindex interactive route QA', () => {
+  const { dir, ledger } = writeLedger();
+
+  try {
+    const result = runNode(['--json', '--ledger', ledger, '--type', 'Static page']);
+    assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+
+    assert.deepEqual(report.commands.interactive_routes, ['/compare/build/']);
+    assert.doesNotMatch(report.commands.route_qa_args, /\/compare\/build\//);
+    assert.match(report.commands.interactive_route_qa_args, /--route \/compare\/build\//);
+    assert.match(report.commands.expensive_gates.join('\n'), /--allow-noindex/);
+    assert.match(report.commands.expensive_gates.join('\n'), /--skip-comparison-content-checks/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('page refresh planner can write worker report scaffolds', () => {
+  const { dir, ledger } = writeLedger();
+  const reportDir = join(dir, 'reports');
+
+  try {
+    const result = runNode([
+      '--json',
+      '--ledger',
+      ledger,
+      '--limit',
+      '1',
+      '--report-dir',
+      reportDir,
+      '--write-report-scaffolds',
+    ]);
+    assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+
+    assert.equal(report.worker_report_dir, reportDir);
+    assert.ok(existsSync(join(reportDir, 'page-refresh-shard-01.json')));
+    const scaffold = JSON.parse(readFileSync(join(reportDir, 'page-refresh-shard-01.json'), 'utf8'));
+    assert.equal(scaffold.shard_id, 'page-refresh-shard-01');
+    assert.equal(scaffold.pages.length, 1);
+    assert.equal(scaffold.pages[0].status, 'pending');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

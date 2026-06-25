@@ -19,6 +19,9 @@ const INCLUDE_TOOLS = args.includes('--include-tools');
 const INCLUDE_STATIC = !args.includes('--exclude-static');
 const TYPE_FILTER = valuesFor('--type');
 const PROMPT_DIR = valueFor('--write-agent-prompts');
+const REPORT_DIR = valueFor('--report-dir') || 'local/tmp/page-refresh-reports';
+const WRITE_REPORT_SCAFFOLDS = args.includes('--write-report-scaffolds');
+const TIMING_DIR = valueFor('--timing-dir') || 'local/tmp/page-refresh-timings';
 
 if (HELP_MODE) {
   console.log(usage());
@@ -44,6 +47,10 @@ function usage() {
     '  --agents                Print shard worker prompts plus an integrator brief.',
     '  --write-agent-prompts <dir>',
     '                          Write exact worker and integrator prompts to files.',
+    '  --report-dir <dir>      Worker JSON report directory. Default: local/tmp/page-refresh-reports.',
+    '  --write-report-scaffolds',
+    '                          Write starter worker JSON report files into --report-dir.',
+    '  --timing-dir <dir>      Timing artifact directory. Default: local/tmp/page-refresh-timings.',
     '  --project-dir <dir>     Plan another project root.',
     '  --root <dir>            Alias for --project-dir.',
   ].join('\n');
@@ -148,10 +155,22 @@ function buildBatch(rows) {
 }
 
 function routeRisk(row) {
+  if (routeQaPolicy(row.page).kind === 'interactive-noindex') return 'interactive-noindex';
   if (row.type === 'Static page') return 'top-layer';
   if (['Category', 'Comparison', 'Guide', 'Trend', 'Workflow'].includes(row.type)) return 'buyer-decision';
   if (row.type === 'Answer page') return 'answer-seo';
   return 'content';
+}
+
+function routeQaPolicy(route) {
+  if (route === '/compare/build/') {
+    return {
+      kind: 'interactive-noindex',
+      flags: ['--allow-noindex', '--skip-comparison-content-checks'],
+      reason: 'Builder UI is intentionally noindex and does not use indexable comparison content requirements.',
+    };
+  }
+  return { kind: 'content', flags: [], reason: 'Indexable or hub route uses the standard content QA policy.' };
 }
 
 function chunkPages(batch) {
@@ -164,33 +183,81 @@ function chunkPages(batch) {
 
 function buildCommands(batch) {
   const routes = [...new Set([...batch.map((page) => page.route), '/', '/tools/', '/categories/', '/compare/', '/guides/', '/answers/', '/trends/', '/workflows/'])].filter(Boolean);
+  const routePolicies = Object.fromEntries(routes.map((route) => [route, routeQaPolicy(route)]));
+  const contentRoutes = routes.filter((route) => routePolicies[route].kind === 'content');
+  const interactiveRoutes = routes.filter((route) => routePolicies[route].kind === 'interactive-noindex');
   const paths = [...new Set(batch.map((page) => page.path).filter(Boolean))];
+  const contentRouteArgs = routeArgs(contentRoutes);
+  const interactiveRouteArgs = routeArgs(interactiveRoutes);
+  const widths = '319,360,390,430,768,1024,1366';
+  const contentRouteQa = `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 ${contentRouteArgs} --widths ${widths} --timing-file local/tmp/page-refresh-route-qa-content.json`;
+  const interactiveRouteQa = interactiveRoutes.length
+    ? `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 ${interactiveRouteArgs} --widths ${widths} ${interactivePolicyFlags(interactiveRoutes)} --timing-file local/tmp/page-refresh-route-qa-interactive.json`
+    : undefined;
+  const expensiveGates = [
+    'npm run typecheck',
+    'npm run build:fast',
+    contentRouteQa,
+    interactiveRouteQa,
+  ].filter(Boolean);
   return {
     page_files: paths,
     routes,
-    route_qa_args: routes.map((route) => `--route ${route}`).join(' '),
+    content_routes: contentRoutes,
+    interactive_routes: interactiveRoutes,
+    route_policies: routePolicies,
+    route_qa_args: contentRouteArgs,
+    interactive_route_qa_args: interactiveRouteArgs,
+    timing_dir: TIMING_DIR,
     cheap_gates: [
       'npm run ledger:pages && npm run ledger:pages:check',
       'node scripts/check-frontmatter.mjs --changed',
       'npm run audit:provenance:changed -- --json',
-      'npm run audit:coverage-quality:changed',
+      `env AIPEDIA_CURRENT_DATE=${currentDate()} npm run audit:coverage-quality:changed`,
       'node scripts/guard-em-dashes.mjs',
       'git diff --check',
     ],
-    expensive_gates: [
-      'npm run typecheck',
-      'npm run build:fast',
-      `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 ${routes.map((route) => `--route ${route}`).join(' ')} --widths 319,360,390,430,768,1024,1366 --timing-file local/tmp/page-refresh-route-qa.json`,
-    ],
+    expensive_gates: expensiveGates,
+    timed_closeout: timedCloseoutCommands(expensiveGates),
   };
 }
 
-function buildWorkerBriefs(batch) {
+function routeArgs(routes) {
+  return routes.map((route) => `--route ${route}`).join(' ');
+}
+
+function interactivePolicyFlags(routes) {
+  const flags = new Set();
+  for (const route of routes) {
+    for (const flag of routeQaPolicy(route).flags) flags.add(flag);
+  }
+  return [...flags].join(' ');
+}
+
+function timedCloseoutCommands(expensiveGates) {
+  const cheapGates = [
+    ['ledger', 'npm run ledger:pages && npm run ledger:pages:check'],
+    ['frontmatter', 'node scripts/check-frontmatter.mjs --changed'],
+    ['provenance', 'npm run audit:provenance:changed -- --json'],
+    ['coverage', `env AIPEDIA_CURRENT_DATE=${currentDate()} npm run audit:coverage-quality:changed`],
+    ['em-dash', 'node scripts/guard-em-dashes.mjs'],
+    ['diff-check', 'git diff --check'],
+  ];
+  const expensive = expensiveGates.map((command, index) => [`expensive-${String(index + 1).padStart(2, '0')}`, command]);
+  return [...cheapGates, ...expensive].map(([id, command]) => ({
+    id,
+    timing_file: `${TIMING_DIR}/${id}.time`,
+    command: `/usr/bin/time -f '${id}_seconds=%e' -o ${TIMING_DIR}/${id}.time bash -lc ${JSON.stringify(command)}`,
+  }));
+}
+
+function buildWorkerBriefs(batch, reportDir = REPORT_DIR) {
   const chunks = chunkPages(batch);
   return chunks.map((pages, index) => {
     const id = `page-refresh-shard-${String(index + 1).padStart(2, '0')}`;
     const ownedPaths = [...new Set(pages.map((page) => page.path))];
     const routes = pages.map((page) => page.route);
+    const reportPath = `${reportDir.replace(/\/$/, '')}/${id}.json`;
     return {
       id,
       agent_type: 'worker',
@@ -198,6 +265,7 @@ function buildWorkerBriefs(batch) {
       pages,
       owned_paths: ownedPaths,
       routes,
+      report_path: reportPath,
       do_not_edit: [
         'PAGE_REFRESH_LEDGER.md',
         'src/data/source-registry.json',
@@ -206,12 +274,12 @@ function buildWorkerBriefs(batch) {
         '.agent/**',
         'workflows/**',
       ],
-      prompt: workerPrompt(id, pages, ownedPaths),
+      prompt: workerPrompt(id, pages, ownedPaths, reportPath),
     };
   });
 }
 
-function workerPrompt(id, pages, ownedPaths) {
+function workerPrompt(id, pages, ownedPaths, reportPath) {
   return [
     `You are ${id} in a parallel AiPedia non-tool page-refresh batch.`,
     '',
@@ -229,24 +297,57 @@ function workerPrompt(id, pages, ownedPaths) {
     '',
     'Do not edit PAGE_REFRESH_LEDGER.md, source registry, shared templates, generated assets, or .agent docs. The integrator owns shared files.',
     '',
-    'Final report: changed paths, page-by-page summary, source URLs checked, unresolved or caveated claims, parent/top-layer surfaces the integrator should inspect, route QA risks, checks run, and rough elapsed time.',
+    `Write your machine-readable worker report to ${reportPath}. If your worker cannot write that file, paste the same JSON in your final answer.`,
+    '',
+    'Report schema:',
+    JSON.stringify(workerReportTemplate(id, pages), null, 2),
   ].join('\n');
 }
 
-function integratorPrompt(batch, commands) {
+function workerReportTemplate(id, pages) {
+  return {
+    shard_id: id,
+    started_at: '',
+    finished_at: '',
+    elapsed_seconds: null,
+    changed_paths: [],
+    pages: pages.map((page) => ({
+      route: page.route,
+      path: page.path,
+      status: 'pending',
+      elapsed_seconds: null,
+      source_urls: [],
+      source_confidence: [],
+      caveats: [],
+      parent_surfaces: [],
+      route_qa_risks: [page.route_qa_risk],
+      notes: '',
+    })),
+    checks: [],
+    optimization_notes: [],
+  };
+}
+
+function integratorPrompt(batch, commands, workerBriefs) {
   return [
     'You are the integrator for an AiPedia non-tool page-refresh batch.',
     '',
-    'Review all worker diffs, resolve conflicts, remove unsupported claims, update shared top-layer surfaces and source registry only where needed, regenerate PAGE_REFRESH_LEDGER.md, and run closeout once.',
+    'Review all worker diffs and worker JSON reports, resolve conflicts, remove unsupported claims, update shared top-layer surfaces and source registry only where needed, regenerate PAGE_REFRESH_LEDGER.md, and run closeout once.',
     '',
     `Pages in scope: ${batch.length}`,
     ...batch.map((page) => `- ${page.route} (${page.type}) -> ${page.path}`),
+    '',
+    'Worker reports:',
+    ...workerBriefs.map((brief) => `- ${brief.report_path}`),
     '',
     'Cheap gates:',
     ...commands.cheap_gates.map((command) => `- ${command}`),
     '',
     'Expensive gates:',
     ...commands.expensive_gates.map((command) => `- ${command}`),
+    '',
+    'Timed closeout commands:',
+    ...commands.timed_closeout.map((item) => `- ${item.command}`),
   ].join('\n');
 }
 
@@ -261,14 +362,16 @@ function currentMonthYear() {
 const rows = parseLedger(LEDGER_PATH);
 const batch = buildBatch(rows);
 const commands = buildCommands(batch);
+const workerBriefs = buildWorkerBriefs(batch);
 const agentBriefs = {
   max_parallel_workers: MAX_WORKERS,
   pages_per_worker: PAGES_PER_WORKER,
-  worker_briefs: buildWorkerBriefs(batch),
+  worker_report_dir: REPORT_DIR,
+  worker_briefs: workerBriefs,
   integrator_brief: {
     id: 'page-refresh-integrator',
     title: `Integrate ${batch.length} non-tool page refreshes`,
-    prompt: integratorPrompt(batch, commands),
+    prompt: integratorPrompt(batch, commands, workerBriefs),
   },
 };
 
@@ -285,7 +388,20 @@ function writeAgentPrompts(dir, briefs) {
   return outputDir;
 }
 
+function writeReportScaffolds(dir, briefs) {
+  const outputDir = resolve(PROJECT_DIR, dir);
+  mkdirSync(outputDir, { recursive: true });
+
+  for (const brief of briefs.worker_briefs) {
+    const template = workerReportTemplate(brief.id, brief.pages);
+    writeFileSync(resolve(outputDir, `${brief.id}.json`), `${JSON.stringify(template, null, 2)}\n`);
+  }
+
+  return outputDir;
+}
+
 const promptDir = PROMPT_DIR ? writeAgentPrompts(PROMPT_DIR, agentBriefs) : undefined;
+const reportDir = WRITE_REPORT_SCAFFOLDS ? writeReportScaffolds(REPORT_DIR, agentBriefs) : REPORT_DIR;
 
 const report = {
   generated_at: new Date().toISOString(),
@@ -297,6 +413,7 @@ const report = {
   max_workers: MAX_WORKERS,
   pages_per_worker: PAGES_PER_WORKER,
   prompt_dir: promptDir,
+  worker_report_dir: reportDir,
   batch,
   commands,
   agent_briefs: agentBriefs,

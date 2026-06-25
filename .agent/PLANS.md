@@ -12,8 +12,8 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
 - The latest local batch refreshed 60 tools from Consensus through Kling after using `--include-same-day` intentionally because the default planner had no due tools.
-- A first runnable non-tool page-refresh workflow now exists under `workflows/page-refresh/`, backed by `npm run page:refresh:batch`. It plans oldest-first non-tool pages from `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits six-worker shard prompts, and includes timing-aware route QA at concurrency 6.
-- The first live non-tool page-refresh batch is complete locally. It refreshed 12 routes, recorded worker and closeout timings, and hardened the workflow with prompt-file output, explicit current-date coverage-quality audits, and noindex/interactive route-QA flags.
+- A first runnable non-tool page-refresh workflow now exists under `workflows/page-refresh/`, backed by `npm run page:refresh:batch`. It plans oldest-first non-tool pages from `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits six-worker shard prompts, writes worker JSON report scaffolds, separates standard content route QA from intentional noindex interactive route QA, and emits timed closeout commands.
+- The first live non-tool page-refresh batch is complete and pushed. It refreshed 12 routes, recorded worker and closeout timings, and hardened the workflow with prompt-file output, explicit current-date coverage-quality audits, route-QA policy mapping, and parseable worker report artifacts.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
@@ -131,7 +131,13 @@ Refresh the stale non-tool site surface with the same repeatable, timed, shardab
 npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json > .tmp-page-refresh-batch.json
 ```
 
-The planner reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits worker prompts, emits one integrator prompt, includes cheap and expensive gates, can write exact prompts with `--write-agent-prompts`, and writes final route QA timing through `--timing-file local/tmp/page-refresh-route-qa.json`.
+For subagent fanout, use the optimized artifact-writing command:
+
+```bash
+npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --write-agent-prompts local/tmp/page-refresh-prompts --report-dir local/tmp/page-refresh-reports --write-report-scaffolds --json > .tmp-page-refresh-batch.json
+```
+
+The planner reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits worker prompts, emits one integrator prompt, includes cheap and expensive gates, can write exact prompts with `--write-agent-prompts`, writes worker JSON report scaffolds with `--write-report-scaffolds`, splits route QA by route policy, and emits `commands.timed_closeout` for micro-step timing.
 
 ### First Queue Sample
 
@@ -139,7 +145,7 @@ Batch 01 refreshed `/terms/`, `/disclosure/`, `/reports/`, `/answers/best-ai-for
 
 ### Next
 
-Run the next non-tool page batch with generated prompt files and 12 to 24 pages. Add a parseable worker report artifact so source URLs, caveats, and timing can be integrated without copying chat reports. Consider a route-QA policy map for intentional noindex utility pages after one more builder-like route appears.
+Run the next non-tool page batch with generated prompt files, worker report scaffolds, and 12 to 24 pages. Review the JSON worker reports after completion, compare shard elapsed seconds against route count and source-check count, then scale only after quality and accuracy stay stable.
 
 ## Active: Decision Content Flywheel
 

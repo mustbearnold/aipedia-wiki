@@ -1,9 +1,19 @@
 # AiPedia Work Log
 
-### 2026-06-26: Non-Tool Page Refresh Batch 01
+### 2026-06-26: Non-Tool Page Refresh Workflow Optimization
 
 - Status: Complete locally, verified, pending commit and push.
 - Commit: this commit.
+- Branch: `master`.
+- Changed: Optimized `scripts/page-refresh-batch.mjs` for repeatable speed, efficiency, quality, and accuracy review. The planner now emits worker report paths, can write worker JSON report scaffolds, includes per-worker report schemas in prompts, gives the integrator report paths, separates standard content route QA from intentional noindex interactive route QA, and emits `commands.timed_closeout` for closeout micro-step timing. Updated `workflows/page-refresh/README.md`, planner tests, and agent status docs.
+- Verification: `node --check scripts/page-refresh-batch.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs`; real planner smoke with `--write-agent-prompts`, `--report-dir`, and `--write-report-scaffolds` to `local/tmp/page-refresh-optimization-smoke.json`.
+- Residual risks: This improves workflow instrumentation and routing policy only. The next real batch should validate that worker JSON reports are filled consistently enough for automated aggregation.
+- Next: Run the next 12 to 24 page non-tool batch using generated prompts and report scaffolds, then tune shard sizing from measured worker reports.
+
+### 2026-06-26: Non-Tool Page Refresh Batch 01
+
+- Status: Complete and pushed.
+- Commit: 7fd14b7aa.
 - Branch: `master`.
 - Changed: Ran the first live non-tool page-refresh workflow over 12 routes: terms, disclosure, reports, dead archive, four answer pages, compare-builder, and three comparison pages. Updated affected parent surfaces `/answers/`, `/compare/`, `/categories/ai-voice/`, `/categories/ai-seo/`, and `PAGE_REFRESH_LEDGER.md`. Added planner prompt-file output, fixed coverage-quality current-date handling, added explicit noindex/interactive route-QA flags, and updated the page-refresh workflow docs.
 - Timing: Planner 0.39s; prompt-file generation 0.42s; workers 4m00s, 6m17s, and 2m22s; typecheck 13.00s; build:fast 16.79s; content route QA 20.39s; interactive builder route QA 2.67s. Full receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-01.md`.
