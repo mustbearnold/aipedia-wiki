@@ -5,10 +5,10 @@ title: AI Image Generation
 description: Current AI image tools for generation, photo editing, upscaling, product visuals, text-heavy graphics, creative ideation, and commercially safer Adobe workflows.
 tool_count: 18
 seo_title: "Best AI Image Tools, Photo Editors & 3D Generators (June 2026)"
-meta_description: "Updated June 25, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, NightCafe, Google Nano Banana, deprecated Imagen 4 migration risk, Recraft, Freepik/Magnific, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
+meta_description: "Updated June 26, 2026: compare Midjourney, ChatGPT Images, Adobe Firefly, Canva, Flux, Ideogram, Leonardo AI, NightCafe, Google Nano Banana, deprecated Imagen 4 migration risk, Recraft, Freepik/Magnific, Meshy, Tripo3D, Rodin, and other AI image/3D tools by quality, workflow, pricing risk, text rendering, rights, and production fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 top_picks:
   best_overall:

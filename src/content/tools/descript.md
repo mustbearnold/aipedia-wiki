@@ -10,9 +10,16 @@ pricing_model: freemium
 price_range: "$0-$50/editor/month"
 status: active
 launched: 2017-01
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 price_history:
+  - date: 2026-06-26
+    price: "see note"
+    source: "https://www.descript.com/pricing"
+    source_label: "Descript pricing"
+    source_id: descript-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked official pricing in the June 2026 shard. Free, Hobbyist from $16/month, Creator from $24/month, Business from $50/month, Enterprise custom, media-minute allowances, AI credits, AI avatars, and prompt-based media generation remain the buyer anchors."
   - date: 2026-06-24
     price: "see note"
     source: "https://www.descript.com/pricing"
@@ -242,7 +249,7 @@ Descript is the transcript-first audio and video editor built by Descript Inc., 
 | **Media hours** | Free 60 min/mo · Hobbyist 10 hr/mo · Creator 30 hr/mo (+5 bonus) · Business 40 hr/mo (+10 bonus) |
 | **AI credits** | Free 100 one-time · Hobbyist 400/mo · Creator 800/mo (+500 bonus) · Business 1500/mo (+1000 bonus) |
 
-Every data point above was verified against vendor documentation on 2026-06-24. See Sources.
+Pricing, allowances, and generation features above were rechecked against vendor documentation on 2026-06-26. See Sources.
 
 ## What it actually is
 

@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 free / SuperGrok $30/month / API usage-based / Business and Enterprise custom"
 status: active
 launched: 2023-11
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -40,7 +40,7 @@ facts:
     source: "https://docs.x.ai/developers/models"
     source_label: "xAI model docs"
     source_id: xai-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -49,7 +49,7 @@ facts:
     source: "https://x.ai/pricing"
     source_label: "xAI pricing"
     source_id: xai-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -185,6 +185,14 @@ not_best_for:
 quick_answer: >-
   Grok is xAI's AI assistant, API, Grok Build coding agent, voice, and Imagine stack. Grok 4.3 is the current default API model with 1M context at $1.25/M input and $2.50/M output, while Grok Build adds TUI/headless coding-agent workflows and a 256K-context API model at $1/M input and $2/M output. Pick it for real-time X data, xAI API experiments, Grok Build trials, image/video generation, and voice-agent tests; skip if you need the most predictable enterprise governance, the deepest IDE ecosystem, or a source-first research workflow.
 price_history:
+  - date: 2026-06-26
+    plan: "Grok 4.3 API / SuperGrok"
+    price: "Grok 4.3 $1.25/M input and $2.50/M output; SuperGrok $30/month"
+    source: "https://docs.x.ai/developers/models"
+    source_id: xai-docs
+    source_label: "xAI model docs"
+    verified_at: 2026-06-26
+    note: "June 26 recheck: xAI docs still recommend Grok 4.3 for general text/chat and list Grok Build 0.1 for coding, Grok Imagine for image/video, and Grok Voice API for voice. Public consumer/business packaging remains account-specific enough to verify in the live plan chooser."
   - date: 2026-06-24
     plan: "Grok Build CLI and Grok Build 0.1 API"
     price: "CLI plan/account limits vary; API listed at $1/M input and $2/M output"
@@ -231,7 +239,7 @@ price_history:
 
 > **Not to be confused with [Groq](/tools/groq/)** (the LPU inference provider, different company, different product). This page is xAI's Grok chatbot.
 
-xAI's AI assistant is tightly integrated with X (formerly Twitter) and now spans consumer chat, Business/Enterprise plans, the xAI API, Grok Build CLI, Grok Imagine image/video generation, and a Voice API. As of the June 24, 2026 verification pass, the safest buyer anchor is xAI's own docs.
+xAI's AI assistant is tightly integrated with X (formerly Twitter) and now spans consumer chat, Business/Enterprise plans, the xAI API, Grok Build CLI, Grok Imagine image/video generation, and a Voice API. As of the June 26, 2026 verification pass, the safest buyer anchor is xAI's own docs.
 
 - **Grok 4.3** is the current default text API model, with 1 million tokens of context, configurable reasoning, and $1.25/M input plus $2.50/M output pricing.
 - **Grok Build** is now documented as an interactive and headless coding agent/CLI, while **Grok Build 0.1** remains the dedicated API model for agentic coding workflows at $1/M input and $2/M output.
@@ -277,7 +285,7 @@ Older third-party or news-cycle claims about Grok 4.20 variants, future Grok 5 t
 | **Search tools** | Web Search and X Search can be enabled for current/realtime data |
 | **Memory and API storage** | Consumer Grok lists memory across chats; the Responses API can store previous request/response content on the server unless storage is disabled |
 
-Every data point above was verified on 2026-06-24 against [xAI pricing](https://x.ai/pricing), [xAI API pricing](https://x.ai/api), [xAI model docs](https://docs.x.ai/developers/models), [xAI Grok Build docs](https://docs.x.ai/build/overview), and the [Grok product page](https://x.ai/grok).
+Every data point above was refreshed on 2026-06-26 against [xAI pricing](https://x.ai/pricing), [xAI API pricing](https://x.ai/api), [xAI model docs](https://docs.x.ai/developers/models), [xAI Grok Build docs](https://docs.x.ai/build/overview), and the [Grok product page](https://x.ai/grok).
 
 ## What it actually is
 
@@ -347,7 +355,7 @@ Lite, Heavy, X Premium bundle, region-specific, or account-specific limits are n
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [xAI pricing](https://x.ai/pricing), [xAI API pricing](https://x.ai/api), [xAI model docs](https://docs.x.ai/developers/models), [xAI Grok Build docs](https://docs.x.ai/build/overview), [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise), [xAI Grok product page](https://x.ai/grok), [xAI text docs](https://docs.x.ai/developers/model-capabilities/text/generate-text), [xAI web search docs](https://docs.x.ai/developers/tools/web-search), [xAI X Search docs](https://docs.x.ai/developers/tools/x-search), [xAI code-execution docs](https://docs.x.ai/developers/tools/code-execution), [xAI image docs](https://docs.x.ai/developers/model-capabilities/images/generation), and [xAI video docs](https://docs.x.ai/developers/model-capabilities/video/generation).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last refreshed 2026-06-26 against xAI pricing, API pricing, model docs, Grok Build docs, and Grok product materials; the broader source set also includes xAI text, search, code-execution, image, video, and enterprise docs.
 
 ## FAQ
 
@@ -374,15 +382,15 @@ AiPedia is not publishing a launch date until xAI posts one in current primary s
 
 ## Sources
 
-- [xAI pricing](https://x.ai/pricing): Free, SuperGrok, Business, Enterprise, and account-tier positioning, verified 2026-06-24.
-- [xAI API pricing](https://x.ai/api): Grok 4.3, Grok Build 0.1, Voice, Image, and Video pricing table, verified 2026-06-24.
-- [xAI model docs](https://docs.x.ai/developers/models): Grok 4.3, Grok Build 0.1, Voice, Image, Video, and pricing table, verified 2026-06-24.
-- [xAI Grok Build docs](https://docs.x.ai/build/overview): TUI, headless scripting, custom-model config, and Grok Build 0.1 API route, verified 2026-06-24.
-- [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise): command permission, sandbox, data lifecycle, and team-level ZDR notes, verified 2026-06-24.
-- [xAI Grok product page](https://x.ai/grok): product positioning, memory, search, voice, image, video, and multi-agent surface, verified 2026-06-24.
-- [xAI web search docs](https://docs.x.ai/developers/tools/web-search): current web search tool surface, verified 2026-06-24.
-- [xAI X Search docs](https://docs.x.ai/developers/tools/x-search): X keyword, semantic, user, and thread search tool surface, verified 2026-06-24.
-- [xAI Responses API docs](https://docs.x.ai/developers/model-capabilities/text/generate-text): default request/response storage opt-out and disable-storage caveat, verified 2026-06-24.
+- [xAI pricing](https://x.ai/pricing): Free, SuperGrok, Business, Enterprise, and account-tier positioning, refreshed 2026-06-26.
+- [xAI API pricing](https://x.ai/api): Grok 4.3, Grok Build 0.1, Voice, Image, and Video pricing table, refreshed 2026-06-26.
+- [xAI model docs](https://docs.x.ai/developers/models): Grok 4.3, Grok Build 0.1, Voice, Image, Video, and pricing table, refreshed 2026-06-26.
+- [xAI Grok Build docs](https://docs.x.ai/build/overview): TUI, headless scripting, custom-model config, and Grok Build 0.1 API route, refreshed 2026-06-26.
+- [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise): command permission, sandbox, data lifecycle, and team-level ZDR notes, refreshed 2026-06-26.
+- [xAI Grok product page](https://x.ai/grok): product positioning, memory, search, voice, image, video, and multi-agent surface, refreshed 2026-06-26.
+- [xAI web search docs](https://docs.x.ai/developers/tools/web-search): current web search tool surface, refreshed 2026-06-26.
+- [xAI X Search docs](https://docs.x.ai/developers/tools/x-search): X keyword, semantic, user, and thread search tool surface, refreshed 2026-06-26.
+- [xAI Responses API docs](https://docs.x.ai/developers/model-capabilities/text/generate-text): default request/response storage opt-out and disable-storage caveat, refreshed 2026-06-26.
 
 ## Related
 

@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free, Standard, and Pro credit tiers; verify live pricing before purchase"
 status: active
 launched: 2024-04
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -190,6 +190,14 @@ decision_brief:
       value: "Suno"
       detail: "Udio wins on fidelity and control; Suno wins on ease and vocals."
 price_history:
+  - date: 2026-06-26
+    plan: "Free / Standard / Pro"
+    price: "Credit tiers verified; live dollar pricing and download status require checkout/account confirmation"
+    source: "https://help.udio.com/en/articles/10739134-credits-and-credit-limits"
+    source_label: "Udio credits and credit limits"
+    source_id: udio-credit-limits
+    verified_at: 2026-06-26
+    note: "Rechecked official credit and UMG transition help pages in the June 2026 shard. Keep purchase guidance conservative because downloads remain a transition watch-out and public dollar pricing is not the stable source."
   - date: 2026-05-13
     plan: "Free"
     price: "$0; credits verified"
@@ -225,7 +233,7 @@ UMG signed a licensing deal on October 29, 2025. Warner Music Group followed wit
 ## Recent changes
 
 - **June 6, 2026:** Rechecked Udio's help center and official Warner post. Standard is still documented at 2,400 monthly credits, Pro at 6,000 monthly credits, and free accounts at 10 daily credits plus a 100-credit monthly limit. Udio's help center also says downloading audio, video, and stems is disabled during the UMG partnership transition, which is now the main production-workflow watch-out.
-- **June 24, 2026:** Rechecked the credit guide, UMG transition guide, Warner partnership help page, UMG announcement, and live pricing URL. Udio still documents v1, v1.5, and v1.5 Allegro access during transition, not a newly disclosed public flagship model; AiPedia has removed the unsupported old flagship-model claim from the buyer spine.
+- **June 26, 2026:** Rechecked the credit guide, UMG transition guide, Warner partnership help page, UMG announcement, and live pricing URL. Udio still documents v1, v1.5, and v1.5 Allegro access during transition, not a newly disclosed public flagship model; AiPedia keeps the old unsupported flagship-model claim out of the buyer spine.
 
 ## System Verdict
 

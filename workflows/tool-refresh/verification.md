@@ -45,10 +45,11 @@ Manual fallback:
 ```bash
 npm run typecheck
 npm run build:fast
-node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 4 $(cat local/tmp/route-qa-args.txt) --widths 319,360,390,430,768,1024,1366
+node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 $(cat local/tmp/route-qa-args.txt) --widths 319,360,390,430,768,1024,1366
 ```
 
 Do not run `typecheck` and `build:fast` in parallel. Astro content sync can race on local generated state.
+Use `--timing-file <path>` on `qa-route` when running manually. Runner closeout writes route timing details automatically.
 
 ## Final Sanity
 

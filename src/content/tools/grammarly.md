@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$40/member/month; Enterprise custom"
 status: active
 launched: 2009-07
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -52,7 +52,7 @@ facts:
     source: "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost"
     source_label: "Grammarly Pro pricing support"
     source_id: grammarly-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -70,7 +70,7 @@ facts:
     source: "https://support.grammarly.com/hc/en-us/articles/25043801131149-About-Grammarly-Pro"
     source_label: "About Grammarly Pro"
     source_id: grammarly-pro-support
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -127,7 +127,7 @@ facts:
     source: "https://superhuman.com/plans"
     source_label: "Superhuman plans"
     source_id: grammarly-plans
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -180,6 +180,14 @@ not_best_for:
 quick_answer: >-
   Grammarly is the inline writing layer for Gmail, Docs, Slack, and 1M+ app/site integrations. Pick it for real-time grammar, tone, rewrites, and brand consistency inside existing writing surfaces. Skip it for long-form generation where Claude or ChatGPT produce better drafts.
 price_history:
+  - date: 2026-06-26
+    plan: "Grammarly Pro / Superhuman suite"
+    price: "No plan-price change found: Grammarly Pro $30/member/mo monthly, $60/member quarterly, or $144/member/year; Superhuman Pro $12/member/mo annual or $30 monthly; Superhuman Business $33/member/mo annual or $40 monthly; Enterprise custom"
+    source: "https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost"
+    source_label: "Grammarly Pro pricing support"
+    source_id: grammarly-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked Grammarly Pro support pricing and Superhuman suite plans. GPTZero acquisition coverage remains roadmap context, not a current plan-price change."
   - date: 2026-05-10
     plan: "Pro"
     price: "$12/mo"
@@ -258,7 +266,7 @@ Official pages now describe 40 million daily users, more than 1 million app and 
 | **Developer API** | No public general-purpose writing API for buyers |
 | **Recent strategic move** | Superhuman suite positioning with Superhuman Go, Grammarly, Coda, Superhuman Mail, suite pricing, and a June 2026 GPTZero acquisition agreement |
 
-Every data point above was verified against official Grammarly and Superhuman documentation on 2026-06-24. See Sources.
+Pricing, plan, and enterprise-control data points above were re-verified against official Grammarly and Superhuman documentation on 2026-06-26. See Sources.
 
 ## What it actually is
 
@@ -296,7 +304,7 @@ Subscription pricing via [grammarly.com/plans](https://grammarly.com/plans):
 | Superhuman Business | $33/member/mo annual or $40/member/mo monthly | Grammarly plus Superhuman Mail, Coda, and Go suite workflows | Teams that also want email, docs, and proactive app-context AI |
 | Enterprise | Custom | Advanced security/admin controls, SAML SSO, SCIM, DLP, BYOK, analytics, dedicated support, and unlimited generative AI prompts | Larger teams or regulated industries |
 
-*Prices rechecked 2026-06-24 via Grammarly support, [Grammarly Pro](https://www.grammarly.com/pro), [Superhuman plans](https://superhuman.com/plans), and Superhuman suite support. Grammarly support says Pro replaces the old Grammarly Business plan and allows up to 149 seats. The public checkout can localize by currency, so procurement should verify the checkout currency and seat terms shown to the buyer.*
+*Prices rechecked 2026-06-26 via Grammarly support, [Grammarly Pro](https://www.grammarly.com/pro), [Superhuman plans](https://superhuman.com/plans), and Superhuman suite support. Grammarly support says Pro replaces the old Grammarly Business plan and allows up to 149 seats. The public checkout can localize by currency, so procurement should verify the checkout currency and seat terms shown to the buyer.*
 
 ## Against the alternatives
 

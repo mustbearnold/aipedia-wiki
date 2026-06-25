@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$199/mo self-serve Render plans; custom API/special requests by sales"
 status: active
 launched: 2017-01
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -77,6 +77,14 @@ meta_description: >-
   Mubert creates instrumental AI music from licensed stems. Compare background-music fit, license limits, Content ID restrictions, and when to choose Suno or Udio instead.
 author: "aipedia.wiki Editorial"
 price_history:
+  - date: 2026-06-26
+    plan: "Free / Creator / Pro / Business"
+    price: "$0 / $14 / $39 / $199 per month"
+    source: "https://mubert.com/render/license"
+    source_label: "Mubert license"
+    source_id: mubert-license
+    verified_at: 2026-06-26
+    note: "Rechecked official pricing and license surfaces. Self-serve Render prices, 25% annual-billing language, and Content ID / standalone streaming / stock-site restrictions remain the current buyer anchors. API/custom routes remain sales-led."
   - date: 2026-05-02
     plan: "Pro"
     price: "$39/mo; annual discount advertised"
@@ -127,7 +135,7 @@ quick_answer: >-
 
 ## Recent changes
 
-- **June 24, 2026:** Rechecked the Mubert pricing and license pages. The license page exposes Free at $0, Creator at $14/month, Pro at $39/month, Business at $199/month, a 25% annual-billing discount, and the same Content ID, standalone streaming, and stock-site restrictions. AiPedia now treats these as the current self-serve Render anchors while still sending API/custom use to sales.
+- **June 26, 2026:** Rechecked the Mubert pricing and license pages. The license page exposes Free at $0, Creator at $14/month, Pro at $39/month, Business at $199/month, a 25% annual-billing discount, and the same Content ID, standalone streaming, and stock-site restrictions. AiPedia treats these as the current self-serve Render anchors while still sending API/custom use to sales.
 
 Mubert is an AI music service built around generated instrumental tracks. Its Render product lets creators choose genres, moods, BPM, duration, and license type, then export music for videos, podcasts, streams, ads, client projects, apps, or games depending on the plan.
 
@@ -157,7 +165,7 @@ The important detail is licensing. Mubert can be useful for creator-safe backgro
 | **Standalone music release** | Not licensed for standalone release on streaming platforms or stock-music sites |
 | **API/custom use** | API and custom terms are handled through a sales call |
 
-License exclusions and subscription/perpetual-license paths were rechecked on 2026-06-24 against Mubert's public pricing and license pages.
+License exclusions and subscription/perpetual-license paths were rechecked on 2026-06-26 against Mubert's public pricing and license pages.
 
 ## What it actually is
 
@@ -185,7 +193,7 @@ The license model is the product. Free and Creator are narrow. Pro is where mone
 
 ## Pricing
 
-Subscription pricing is published at [mubert.com/render/pricing](https://mubert.com/render/pricing). Mubert also exposes one-track licenses on the same pricing flow. On 2026-06-24, the public license page exposed the self-serve monthly prices and the Content ID / standalone-release / stock-site disclaimer. Verify the live checkout before procurement because billing toggles and regional presentation can still change.
+Subscription pricing is published at [mubert.com/render/pricing](https://mubert.com/render/pricing). Mubert also exposes one-track licenses on the same pricing flow. On 2026-06-26, the public license page exposed the self-serve monthly prices and the Content ID / standalone-release / stock-site disclaimer. Verify the live checkout before procurement because billing toggles and regional presentation can still change.
 
 | Plan | Monthly | Annual display | Generations | License fit |
 |---|---:|---:|---:|---|
@@ -218,7 +226,7 @@ One-track perpetual licenses were visible in the May 13 capture as a separate bu
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation and public pricing data before publishing tool analysis. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-24 against Mubert's official site, Render pricing page, and license page. Buyers should recheck the live Mubert pricing flow before procurement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that checks vendor documentation and public pricing data before publishing tool analysis. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity). Last verified 2026-06-26 against Mubert's official site, Render pricing page, and license page. Buyers should recheck the live Mubert pricing flow before procurement.
 
 ## FAQ
 

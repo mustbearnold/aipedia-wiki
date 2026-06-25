@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/month + usage credits; Enterprise custom"
 status: active
 launched: 2024-09
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -44,11 +44,11 @@ facts:
     confidence: high
     next_review_at: 2026-06-29
   pricing_anchor:
-    value: "Starter is free with daily Agent credits; Core is $20/month billed annually with $25 monthly credits; Pro is $95/month billed annually with $100 monthly credits, Turbo, up to 10 agents, 28-day database rollbacks, and premium support; Enterprise is custom."
+    value: "Starter is free with daily Agent credits; Core is $25 monthly or $20/month billed annually with $25 monthly credits; Pro is $100 monthly or $90/month billed annually with $100 monthly credits, Turbo, up to 10 agents, 28-day database rollbacks, and premium support; Enterprise is custom."
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -57,7 +57,7 @@ facts:
     source: "https://replit.com/pricing"
     source_label: "Replit pricing"
     source_id: replit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -191,10 +191,10 @@ facts:
     next_review_at: 2026-06-29
 tags: [browser-ide, app-builder, no-local-setup, ai-coding, deployment, non-developer, replit, agent-4]
 seo_title: "Replit Agent: Features, Pricing & Review (June 2026)"
-meta_description: "Replit Agent review updated June 24, 2026: pricing, Agent 4, Skills and Custom Instructions, Package Firewall, App Testing limits, Starter/Core/Pro feature gates, and Claude comparison fit."
+meta_description: "Replit Agent review updated June 26, 2026: pricing, Agent 4, Skills and Custom Instructions, Package Firewall, App Testing limits, Starter/Core/Pro feature gates, and Claude comparison fit."
 author: aipedia.wiki Editorial
 quick_answer: >-
-  Replit Agent builds, runs, tests, and publishes apps from a browser workspace. As of June 24, 2026, treat it as Replit's Agent 4-era app builder rather than the older Agent 3 session-length story: the practical decision is Core for solo prototypes, Pro for Turbo/parallel agents/rollbacks/Custom Instructions, and Enterprise for governance.
+  Replit Agent builds, runs, tests, and publishes apps from a browser workspace. As of June 26, 2026, treat it as Replit's Agent 4-era app builder rather than the older Agent 3 session-length story: the practical decision is Core for solo prototypes, Pro for Turbo/parallel agents/rollbacks/Custom Instructions, and Enterprise for governance.
 best_for:
   - Non-developers building prototypes
   - Rapid idea validation with live deploy
@@ -206,6 +206,14 @@ not_best_for:
   - Complex regulated systems with strict deployment compliance
   - Teams without usage budgets, secrets policy, or review discipline
 price_history:
+  - date: 2026-06-26
+    plan: "Starter / Core / Pro / Enterprise"
+    price: "$0 / $25 monthly or $20 annual / $100 monthly or $90 annual / custom"
+    source: "https://replit.com/pricing"
+    source_label: "Replit pricing"
+    source_id: replit-pricing
+    verified_at: 2026-06-26
+    note: "June 26 recheck: Starter remains free with daily Agent credits; Core shows $25 monthly or $20/month annually; Pro shows $100 monthly or $90/month annually, replacing the prior $95 annual row. Replit still frames Agent usage through monthly credits and effort-sensitive modes."
   - date: 2026-06-24
     plan: "Starter"
     price: "$0"
@@ -360,7 +368,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. Starter is free and currently includes daily Agent credits, a built-in database for full-stack apps, creation of slides/videos/animations, one published project, and private or password-protected deployments. It is enough for exploration, not sustained commercial use.
 
 **Is Replit Agent 3 still the current page?**
-No for buyer guidance. As of June 24, 2026, the old `replit.com/agent3` URL redirects to Replit's Agent 4 page, and current docs describe the broader Agent surface. Treat old Agent 3 session-length claims as historical unless Replit republishes them in current docs.
+No for buyer guidance. As of June 26, 2026, the old `replit.com/agent3` URL redirects to Replit's Agent 4 page, and current docs describe the broader Agent surface. Treat old Agent 3 session-length claims as historical unless Replit republishes them in current docs.
 
 **How do Lite, Economy, Power, High effort, and Turbo work?**
 Lite is for quick scoped edits. Economy optimizes for lower credit usage. Power uses more capable models for harder work. High effort is an opt-in toggle in Economy and Power for the hardest parts of a task. Turbo is a Pro/Enterprise-only Power toggle for faster runs at higher cost.

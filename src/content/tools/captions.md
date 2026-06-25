@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$279.99/month public self-serve; Enterprise custom"
 status: active
 launched: 2021-01
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -26,20 +26,20 @@ scores:
   longevity: 7
 facts:
   product_scope:
-    value: "Creator-first AI video editor covering uploaded footage, prompt-to-video, AI Edit, chat-based editing, custom avatars/digital twins, Mirage-generated actors, AI Creator, AI Ads, AI Skits, AI Lipdub, captions, translation/dubbing, denoise, eye contact correction, and short-form social publishing. Captions says Mirage Studio has merged into Captions, with previous Studio projects and actors accessible from Captions online."
+    value: "Creator-first AI video editor covering uploaded footage, prompt-to-video, AI Edit, chat-based editing, custom avatars/digital twins, Mirage-generated actors, AI Creator, AI Ads, AI Skits, AI Lipdub, captions, translation/dubbing, denoise, eye contact correction, and short-form social publishing. Captions is now built by Mirage, and Mirage's public pages position the company around the Captions app, foundation models, and Mirage API."
     source: "https://captions.ai/"
     source_label: "Captions official site"
     source_id: captions-overview
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
   pricing_anchor:
-    value: "Captions pricing and help docs on 2026-06-24 list free signup, Android Lite at $4.99/month, Pro at $9.99/month with 200 credits, Max at $24.99/month with 500 credits, Scale at $69.99/month with 1,400 credits, Scale 2x at $139.99/month with 2,800 credits, Scale 4x at $279.99/month with 5,600 credits, and Enterprise custom. Captions says pricing page prices are USD and reflect iOS plans only; checkout currency can vary by region."
+    value: "Captions pricing and help docs on 2026-06-26 list free signup, Android Lite at $4.99/month, Pro at $9.99/month with 200 credits, Max at $24.99/month with 500 credits, Scale at $69.99/month with 1,400 credits, Scale 2x at $139.99/month with 2,800 credits, Scale 4x at $279.99/month with 5,600 credits, and Enterprise custom. Captions says prices can vary by region and checkout surface."
     source: "https://captions.ai/help/docs/subscriptions"
     source_label: "Captions subscriptions and plans"
     source_id: captions-subscriptions
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://captions.ai/"
     source_label: "Captions official site"
     source_id: captions-overview
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
@@ -57,25 +57,25 @@ facts:
     source: "https://captions.ai/help/docs/feature-availability"
     source_label: "Captions feature availability"
     source_id: captions-feature-availability
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
   credit_model:
-    value: "AI images, videos, sounds, music, voiceovers, prompt-to-video, AI Edits, AI Creator, AI Ads, AI Skits, and chat editing deduct monthly credits. Current AI usage docs list feature rates such as Prompt to Video at 8 credits/sec, AI Edit at 10-40 credits, AI Creator/Ads/Skits at 1 credit/sec, chat editing at 2 credits/message plus action/generation costs, and model rows including Veo 3.1, Hailuo 2.3 Fast, Kling, Seedance 2.0, Sora 2, Nano Banana, ElevenLabs, and Lyria. Free credits are one-time; paid credits renew monthly; Captions docs conflict on rollover, so buyers should verify the rule inside their account before budgeting."
+    value: "AI images, videos, sounds, music, voiceovers, prompt-to-video, AI Edits, AI Creator, AI Ads, AI Skits, and chat editing deduct monthly credits. Current AI usage docs list feature rates such as Prompt to Video at 8 credits/sec, AI Edit at 10-40 credits, AI Creator/Ads/Skits at 1 credit/sec, chat editing at 2 credits/message plus action/generation costs, and model rows including Veo 3.1, Hailuo 2.3 Fast, Kling, Seedance 2.0, Sora 2, Nano Banana, ElevenLabs, and Lyria. Free credits are one-time; paid credits renew monthly; Captions docs still conflict on rollover, so buyers should verify the rule inside their account before budgeting."
     source: "https://captions.ai/help/docs/ai-usage"
     source_label: "Captions AI usage credits"
     source_id: captions-ai-usage
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
   api_available:
-    value: "Mirage says its research team builds audio/video foundation models and that Mirage APIs power bulk video generation and video captioning. Mirage API docs describe an early-access API beta, so standard Captions app pricing should not be treated as developer API pricing or procurement."
-    source: "https://mirage.app/"
-    source_label: "Mirage official site"
-    source_id: mirage-official
-    verified_at: 2026-06-24
+    value: "Mirage says its team builds the Captions app, Mirage foundation models, and the Mirage API. Captions help docs describe Mirage API access for video captioning and generation with API keys, plus an early-access beta for lifelike video generation, so standard Captions app pricing should not be treated as developer API pricing or procurement."
+    source: "https://captions.ai/help/docs/api/overview"
+    source_label: "Captions Mirage API overview"
+    source_id: captions-mirage-api
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
@@ -104,6 +104,14 @@ price_history:
     source_id: captions-ai-usage
     verified_at: 2026-06-24
     note: "Current AI usage docs still list Pro at 200 credits, Max 500, Scale 1,400, Scale 2x 2,800, Scale 4x 5,600, Pro+ rollover with a 3x cap, and top-ups only for Teams/Business customers plus Scale 4x users. Troubleshooting docs still contradict rollover."
+  - date: 2026-06-26
+    plan: "Public plan ladder and Mirage API recheck"
+    price: "$0 Free; $4.99 Android Lite; $9.99 Pro; $24.99 Max; $69.99 Scale; $139.99 Scale 2x; $279.99 Scale 4x; Enterprise custom"
+    source: "https://captions.ai/help/docs/subscriptions"
+    source_label: "Captions subscriptions and plans"
+    source_id: captions-subscriptions
+    verified_at: 2026-06-26
+    note: "Captions pricing, AI usage, feature availability, and Mirage API docs still support the same self-serve app plan ladder. The Mirage API is a separate developer surface and should not be priced from app-plan credits."
   - date: 2026-06-23
     plan: "Public plan ladder recheck"
     price: "$0 Free; $4.99 Android Lite; $9.99 Pro; $24.99 Max; $69.99 Scale; $139.99 Scale 2x; $279.99 Scale 4x; Enterprise custom"
@@ -161,6 +169,7 @@ Captions.ai is a short-form AI video editor for creators and social teams. It is
 ## Recent changes
 
 - **June 24, 2026:** Rechecked Captions pricing, subscription, credit, platform, Mirage, and API sources. No public self-serve price change found. The Mirage API is now described more clearly as an early-access beta rather than a standard Captions app plan.
+- **June 26, 2026:** Rechecked Captions pricing, subscription, AI usage, feature availability, Mirage company pages, and Mirage API docs. No public self-serve app price change found; developer API procurement remains a separate Mirage surface.
 - **June 23, 2026:** Confirmed the plan ladder, credit allowances, model-specific credit rates, Pro+ rollover language, 3x rollover cap, and narrow top-up eligibility were materially unchanged from the prior refresh.
 - **June 15, 2026:** Added the model-specific credit table and flagged the rollover contradiction. Understanding Credits says Pro and above can roll unused monthly credits into the next billing period with a 3x balance cap, while the troubleshooting page still says unused credits expire at the end of each billing cycle.
 
@@ -186,7 +195,7 @@ Captions.ai is a short-form AI video editor for creators and social teams. It is
 - **Platform caveat:** feature availability differs across iOS, web, and legacy desktop. For example, Captions lists AI Twins, AI Ads, and AI Shorts as unavailable on web, while AI Echo is iOS-only.
 - **Mirage/API context:** Captions says Mirage Studio has merged into Captions, and Mirage's model/help pages describe original video generation with AI actors, voice-driven animation, dynamic settings, and prompt/customization controls. Mirage API docs describe an early-access beta for teams that need programmatic talking-head generation.
 
-Verified against Captions and Mirage official pages on 2026-06-24.
+Verified against Captions and Mirage official pages on 2026-06-26.
 
 ## What It Actually Is
 
@@ -213,7 +222,7 @@ The buyer distinction is important. Captions.ai is not the tool to choose when y
 
 ## Pricing
 
-Use [Captions pricing](https://captions.ai/pricing) and [Captions subscriptions](https://captions.ai/help/docs/subscriptions) as live sources before buying. Current public monthly pricing verified on 2026-06-24:
+Use [Captions pricing](https://captions.ai/pricing) and [Captions subscriptions](https://captions.ai/help/docs/subscriptions) as live sources before buying. Current public monthly pricing verified on 2026-06-26:
 
 - **Free signup:** available, but advanced features require a subscription. The credits help page says free accounts can receive 60-200 credits that do not refresh.
 - **Android Lite:** $4.99/month for essential manual Android tools such as caption/dub, eye contact, denoise, sound generation, and transcript copy.

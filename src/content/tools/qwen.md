@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free open-weight downloads / hosted API priced per model"
 status: active
 launched: 2023-09
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -67,7 +67,7 @@ facts:
     source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
     source_label: "Qwen Cloud pricing docs"
     source_id: qwencloud-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-30
     volatility: high
     confidence: high
@@ -90,6 +90,13 @@ facts:
     volatility: high
     confidence: high
 price_history:
+  - date: 2026-06-26
+    price: "qwen3.7-max list price remains $2.50/M input and $7.50/M output; the 50% Qwen3.7-Max promo page still says the promotion was effective until June 22, 2026. qwen3.7-plus docs still list $0.40/$1.60 up to 256K and $1.20/$4.80 from 256K-1M."
+    source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
+    source_label: "Qwen Cloud pricing docs"
+    source_id: qwencloud-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked Qwen Cloud pricing search/live surfaces. Use list price for conservative purchase math unless checkout or a current marketplace page confirms a still-active discount."
   - date: 2026-06-24
     price: "qwen3.7-max list price remains $2.50/M input and $7.50/M output; the 50% Qwen3.7-Max promo page still says the promotion was effective until June 22, 2026. qwen3.7-plus docs still list $0.40/$1.60 up to 256K and $1.20/$4.80 from 256K-1M."
     source: "https://docs.qwencloud.com/developer-guides/getting-started/pricing"
@@ -268,7 +275,7 @@ Hosted pricing via [Qwen Cloud pricing docs](https://docs.qwencloud.com/develope
 | Qwen-Flash | $0.10/M input, $0.40/M output | New entry tier; Qwen-Turbo no longer receiving updates |
 | Batch invocation | 50% off real-time | Supported models only |
 
-*Qwen3.7-Max and Qwen3.7-Plus pricing verified 2026-06-24 via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), and the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen). Qwen Cloud pricing docs list representative models only and point buyers to marketplace model pages for complete current pricing. Built-in tools can add fees: Web Search is listed at $10 per 1,000 calls and Image Search at $8 per 1,000 calls, while Web Extractor and Code Interpreter are marked free for a limited time. Older qwen-max examples were verified 2026-05-13 via Alibaba Cloud Model Studio pricing. Chinese Mainland deployment rates can differ from International tiers. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
+*Qwen3.7-Max and Qwen3.7-Plus pricing verified 2026-06-26 via [Qwen Cloud pricing docs](https://docs.qwencloud.com/developer-guides/getting-started/pricing), the [Qwen3.7-Max model page](https://www.qwencloud.com/models/qwen3.7-max), and the [Qwen3.7-Max promotion page](https://www.qwencloud.com/promo/discount-qwen). Qwen Cloud pricing docs list representative models only and point buyers to marketplace model pages for complete current pricing. Built-in tools can add fees: Web Search is listed at $10 per 1,000 calls and Image Search at $8 per 1,000 calls, while Web Extractor and Code Interpreter are marked free for a limited time. Older qwen-max examples were verified 2026-05-13 via Alibaba Cloud Model Studio pricing. Chinese Mainland deployment rates can differ from International tiers. Third-party gateways can be useful, but their rates and model availability are separate from Alibaba's official pricing.*
 
 ## Against the alternatives
 

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$10-$120/month"
 status: active
 launched: 2022-07
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -39,7 +39,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: low
     confidence: high
   pricing_anchor:
@@ -47,7 +47,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -56,7 +56,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -65,7 +65,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -74,7 +74,7 @@ facts:
     source: "https://updates.midjourney.com/enterprise-api-survey/"
     source_label: "Midjourney Enterprise API survey"
     source_id: midjourney-enterprise-api-survey
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -83,7 +83,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -92,7 +92,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video"
     source_label: "Midjourney Video docs"
     source_id: midjourney-video-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -101,7 +101,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video"
     source_label: "Midjourney Video docs"
     source_id: midjourney-video-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: low
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord"
     source_label: "Midjourney web vs Discord docs"
     source_id: midjourney-web-vs-discord
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: low
     confidence: high
   coding_agent:
@@ -117,7 +117,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: low
     confidence: high
   enterprise_controls:
@@ -125,7 +125,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   data_retention_or_privacy:
@@ -133,7 +133,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service"
     source_label: "Midjourney terms"
     source_id: midjourney-terms
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -141,7 +141,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service"
     source_label: "Midjourney terms"
     source_id: midjourney-terms
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: low
     confidence: high
   best_for:
@@ -149,7 +149,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
     source_label: "Midjourney version docs"
     source_id: midjourney-version-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   watch_out_for:
@@ -157,7 +157,7 @@ facts:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
 tags: [ai-image, image-generation, image-to-video, text-to-image, midjourney, art, design, creative, v8-1, ai-video]
@@ -176,13 +176,13 @@ not_best_for:
 quick_answer: >-
   Midjourney is the aesthetic-quality leader in AI image generation. V8.1 is now the default model, V7 remains selectable for Omni Reference, and Midjourney Video can animate still images into short clips. No free tier and no generally available public API. Pick it when visual polish or moodboard speed outranks everything else; skip for programmatic workflows, reliable logo text (use Ideogram), long-form video production, or anything that needs free generations to get started.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Basic / Standard / Pro / Mega"
     price: "$10 / $30 / $60 / $120"
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Pricing verified unchanged. Basic, Standard, Pro, and Mega remain the four public subscription tiers; Standard/Pro/Mega add HD video, Pro/Mega add SD video Relax Mode, and extra GPU time remains listed at $4/hr."
   - date: 2024-01-15
     plan: "Mega"
@@ -190,7 +190,7 @@ price_history:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Source"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Mega plan introduced"
   - date: 2026-04-15
     plan: "Basic"
@@ -198,7 +198,7 @@ price_history:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Verified unchanged. All four tiers flat since 2024."
   - date: 2026-06-05
     plan: "Basic / Standard / Pro / Mega"
@@ -206,7 +206,7 @@ price_history:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Pricing verified unchanged at the time. Model status has since moved again: V8.1 is now the default as of the June 2026 update."
   - date: 2026-06-14
     plan: "Basic / Standard / Pro / Mega"
@@ -214,7 +214,7 @@ price_history:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Pricing verified unchanged. V8.1 is now the default model; Midjourney Video is available in Fast Mode on all plans, HD video starts at Standard, and SD video Relax Mode starts at Pro."
   - date: 2026-06-15
     plan: "Basic / Standard / Pro / Mega"
@@ -222,7 +222,7 @@ price_history:
     source: "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
     source_label: "Midjourney plan comparison docs"
     source_id: midjourney-plans-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Pricing verified unchanged. Annual billing lists $8/$24/$48/$96 effective per month; default batch-4 video costs 8 GPU minutes for SD or 26 GPU minutes for HD."
 ---
 
@@ -235,7 +235,7 @@ Pricing runs $10-$120/month, or $8-$96/month effective on annual billing. No fre
 ## Recent developments
 
 - **June 11, 2026:** [V8.1 became the default model](https://updates.midjourney.com/v8-1-is-now-the-default-model/). The default moved from V7 to V8.1; V7 Omni Reference remains available while Midjourney trains the V8 version, and V8.0 Alpha is being deprecated.
-- **June 24, 2026 check:** [Midjourney Video docs](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video), [Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), and [plan docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) keep the buyer math unchanged: V8.1 remains the default model, all plans can generate videos in Fast Mode, Standard/Pro/Mega can generate HD videos, Pro/Mega can use Relax Mode for SD video, and the default batch-4 video job costs 8 GPU minutes for SD or 26 for HD.
+- **June 26, 2026 check:** [Midjourney Video docs](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video), [Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), and [plan docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) keep the buyer math unchanged: V8.1 remains the default model, all plans can generate videos in Fast Mode, Standard/Pro/Mega can generate HD videos, Pro/Mega can use Relax Mode for SD video, and the default batch-4 video job costs 8 GPU minutes for SD or 26 for HD.
 - **April 30, 2026:** [V8.1 updates](https://updates.midjourney.com/v8-1-updates/) brought V8.1 to Discord as well as midjourney.com, improved sharpness and image quality, and made V8.2 rating data part of the model-improvement loop.
 - **April 21, 2026:** [OpenAI launches ChatGPT Images 2.0 and gpt-image-2](/news/2026-04-21-openai-chatgpt-images-2-gpt-image-2/) with native reasoning, 4K output, and multilingual text rendering across 12+ languages. gpt-image-2 is the closest challenger to Midjourney's artistic lead to date, especially on infographics and text-heavy generation. Midjourney retains the cinematic-composition crown; OpenAI bundle-economics pressure the $10/mo Basic tier's entry-point case.
 
@@ -264,7 +264,7 @@ Pricing runs $10-$120/month, or $8-$96/month effective on annual billing. No fre
 | **Commercial rights** | Included on paid tiers, with Pro/Mega required for companies above $1M annual revenue |
 | **Free tier** | None in the current plan comparison |
 
-Every data point above was verified against vendor documentation on 2026-06-24. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-26. See Sources.
 
 ## What it actually is
 
@@ -305,7 +305,7 @@ Subscription pricing via [Midjourney plan docs](https://docs.midjourney.com/hc/e
 | Pro | $60 | $48 (~$576/yr) | 30 hrs | SD + HD Fast | Unlimited images + SD video | Yes | Agency or freelance client work |
 | Mega | $120 | $96 (~$1,152/yr) | 60 hrs | SD + HD Fast | Unlimited images + SD video | Yes | Sustained Fast-mode workloads |
 
-*Prices verified 2026-06-24 via [Midjourney Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans). Annual billing saves 20% across all tiers. Midjourney Video jobs cost more GPU time than images; the docs list default batch-4 cost at 8 GPU minutes for SD video and 26 GPU minutes for HD video.*
+*Prices verified 2026-06-26 via [Midjourney Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans). Annual billing saves 20% across all tiers. Midjourney Video jobs cost more GPU time than images; the docs list default batch-4 cost at 8 GPU minutes for SD video and 26 GPU minutes for HD video.*
 
 ## Against the alternatives
 
@@ -334,7 +334,7 @@ Subscription pricing via [Midjourney plan docs](https://docs.midjourney.com/hc/e
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), [Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), [Video docs](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video), [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially), the [V8.1 default announcement](https://updates.midjourney.com/v8-1-is-now-the-default-model/), the [V8.1 update](https://updates.midjourney.com/v8-1-updates/), the [Enterprise API survey](https://updates.midjourney.com/enterprise-api-survey/), and the [Niji V7 announcement](https://updates.midjourney.com/niji-v7/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version), [Comparing Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans), [Video docs](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video), [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially), the [V8.1 default announcement](https://updates.midjourney.com/v8-1-is-now-the-default-model/), the [V8.1 update](https://updates.midjourney.com/v8-1-updates/), the [Enterprise API survey](https://updates.midjourney.com/enterprise-api-survey/), and the [Niji V7 announcement](https://updates.midjourney.com/niji-v7/).
 
 ## FAQ
 
@@ -364,17 +364,17 @@ Ideogram still edges Midjourney on reliability for dense typography (logos, post
 
 ## Sources
 
-- [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-24): current default model, version history
-- [Comparing Midjourney Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-24): pricing and tier features
-- [Midjourney Video docs](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video) (verified 2026-06-24): image-to-video generation, plan access, GPU cost, and resolution limits
-- [V8.1 default announcement (June 11, 2026)](https://updates.midjourney.com/v8-1-is-now-the-default-model/) (verified 2026-06-24): default-model switch from V7 to V8.1
-- [V8 Alpha update](https://updates.midjourney.com/v8-alpha/) (verified 2026-06-24): V8 Alpha and V8.1 Alpha release notes
-- [V8.1 update (April 30, 2026)](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-24): V8.1 graduation out of alpha-only, server-transition HD note, V8.2 training signal
-- [Niji V7 announcement](https://updates.midjourney.com/niji-v7/) (verified 2026-06-24): anime model release
-- [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially) (verified 2026-06-24): commercial rights and revenue threshold
-- [Enterprise API Survey](https://updates.midjourney.com/enterprise-api-survey/) (verified 2026-06-24): official Enterprise API application status
-- [Web vs Discord](https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord) (verified 2026-06-24): interface parity and tooling differences
-- [Midjourney Terms of Service](https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service) (verified 2026-06-24): asset license and content grant
+- [Midjourney Version docs](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version) (verified 2026-06-26): current default model, version history
+- [Comparing Midjourney Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-26): pricing and tier features
+- [Midjourney Video docs](https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video) (verified 2026-06-26): image-to-video generation, plan access, GPU cost, and resolution limits
+- [V8.1 default announcement (June 11, 2026)](https://updates.midjourney.com/v8-1-is-now-the-default-model/) (verified 2026-06-26): default-model switch from V7 to V8.1
+- [V8 Alpha update](https://updates.midjourney.com/v8-alpha/) (verified 2026-06-26): V8 Alpha and V8.1 Alpha release notes
+- [V8.1 update (April 30, 2026)](https://updates.midjourney.com/v8-1-updates/) (verified 2026-06-26): V8.1 graduation out of alpha-only, server-transition HD note, V8.2 training signal
+- [Niji V7 announcement](https://updates.midjourney.com/niji-v7/) (verified 2026-06-26): anime model release
+- [Using Images & Videos Commercially](https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially) (verified 2026-06-26): commercial rights and revenue threshold
+- [Enterprise API Survey](https://updates.midjourney.com/enterprise-api-survey/) (verified 2026-06-26): official Enterprise API application status
+- [Web vs Discord](https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord) (verified 2026-06-26): interface parity and tooling differences
+- [Midjourney Terms of Service](https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service) (verified 2026-06-26): asset license and content grant
 
 ## Related
 

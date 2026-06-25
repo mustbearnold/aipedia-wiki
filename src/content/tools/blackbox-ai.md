@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "$10-$40/month; Enterprise custom"
 status: active
 launched: 2021
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "BLACKBOX AI: Features, Pricing & Review (June 2026)"
-meta_description: "BLACKBOX AI pricing rechecked June 24, 2026: Pro $10/mo, Pro Plus $20/mo, Pro Max $40/mo, mixed credit rows, Cuelinks paused, and Sovrn unapproved."
+meta_description: "BLACKBOX AI pricing rechecked June 26, 2026: Pro $10/mo, Pro Plus $20/mo, Pro Max $40/mo, mixed credit rows, Cuelinks paused, and Sovrn unapproved."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -24,7 +24,7 @@ affiliate:
   network: null
   link: null
   application_status: none
-  notes: "2026-06-24 audit found no first-party BLACKBOX AI affiliate page. Cuelinks lists a third-party CPC campaign but says the advertiser paused it. Sovrn Commerce lists blackbox.ai domain program approval as open, but AiPedia should treat that as an unapproved network lead until approval, payout, cookie, and tracking terms are verified."
+  notes: "2026-06-26 audit found no first-party BLACKBOX AI affiliate page. Cuelinks lists a third-party CPC campaign but says the advertiser paused it. Sovrn Commerce lists blackbox.ai domain program approval as open, but AiPedia should treat that as an unapproved network lead until approval, payout, cookie, and tracking terms are verified."
 scores:
   utility: 7
   value: 8
@@ -36,14 +36,14 @@ facts:
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   best_paid_tier:
     value: "Pro Plus ($20/month) remains the practical developer tier because it adds App Builder, multi-agent execution, coding agent, remote data analysis, Slack, auto-refill, and E2E chat encryption; verify included credits in checkout because the pricing page mixes card copy with clearer comparison rows"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     confidence: high
   best_for:
@@ -51,7 +51,7 @@ facts:
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
 tags: [ai-coding, coding-agent, app-builder, multi-model, ide, terminal, voice-agent, figma-to-code]
 best_for:
@@ -66,21 +66,21 @@ not_best_for:
 quick_answer: >-
   BLACKBOX AI is compelling if you want a low-cost, multi-model coding platform with lots of surfaces. The tradeoff is trust and polish: it packs in features, but serious teams should test privacy, reliability, and billing clarity before standardizing on it.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Pro / Pro Plus / Pro Max"
     price: "$10 / $20 / $40 per month; credits $20 / $40 / $80"
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Current pricing is unchanged from the prior check: Pro Plus remains the practical tier; the security page still says SOC 2 Type II and ISO 27001 audits are in progress, not completed."
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Affiliate availability"
     price: "No first-party or approved current affiliate CTA"
     source: "https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program"
     source_label: "Cuelinks BLACKBOX AI affiliate listing"
     source_id: blackbox-ai-affiliate-cuelinks
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Cuelinks still lists the BLACKBOX AI campaign as paused by the advertiser. Sovrn Commerce separately lists blackbox.ai domain program approval as open, but AiPedia should treat that as an unapproved network lead until approval, payout, cookie, and tracking terms are verified."
   - date: 2026-06-23
     plan: "Pro / Pro Plus / Pro Max"
@@ -88,7 +88,7 @@ price_history:
     source: "https://www.blackbox.ai/pricing"
     source_label: "BLACKBOX AI pricing"
     source_id: blackbox-ai-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "No material price change. Official pricing now shows the clearest included-credit ladder as $20/$40/$80 in comparison and mobile rows, while some card copy still uses lower subscription-aligned wording."
   - date: 2026-06-23
     plan: "Affiliate availability"
@@ -96,7 +96,7 @@ price_history:
     source: "https://www.cuelinks.com/campaigns/blackbox-ai-affiliate-program"
     source_label: "Cuelinks BLACKBOX AI affiliate listing"
     source_id: blackbox-ai-affiliate-cuelinks
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Cuelinks still lists the BLACKBOX AI campaign as paused by the advertiser. No first-party BLACKBOX affiliate application page was found."
   - date: 2026-06-15
     plan: "Pro / Pro Plus / Pro Max"
@@ -121,7 +121,7 @@ price_history:
     source_label: "Source"
     source_id: blackbox-ai-best-for
     verified_at: 2026-05-10
-    note: "Historical prior-audit note. Superseded by the June 24, 2026 check: current public pricing rows list all chat models, voice agent, and unlimited free agent requests without naming a model-specific free-agent backend."
+    note: "Historical prior-audit note. Superseded by the June 26, 2026 check: current public pricing rows list all chat models, voice agent, and unlimited free agent requests without naming a model-specific free-agent backend."
   - date: 2026-05-10
     plan: "Pro Plus"
     price: "$20/month"
@@ -154,7 +154,7 @@ BLACKBOX AI is a multi-model AI coding platform. Its pricing page presents a bro
 
 The strongest appeal is obvious: lots of AI coding features at aggressive price points. The risk is also obvious: buyers need to test whether the quality, reliability, privacy posture, and billing mechanics match the headline value.
 
-June 24 check: the plan prices are still $10, $20, and $40 per month. The clearest comparison and mobile rows show $20, $40, and $80 in model credits, while the plan cards still use lower subscription-aligned wording such as "$10 worth," "$20 worth," and "$40 worth." Treat checkout and account billing as the source of truth before heavy model use.
+June 26 check: the plan prices are still $10, $20, and $40 per month. The clearest comparison and mobile rows show $20, $40, and $80 in model credits, while the plan cards still use lower subscription-aligned wording such as "$10 worth," "$20 worth," and "$40 worth." Treat checkout and account billing as the source of truth before heavy model use.
 
 ## System Verdict
 
@@ -219,7 +219,7 @@ The security page is more explicit than the pricing page. It says Zero Data Rete
 
 ## Pricing
 
-BLACKBOX AI pricing was verified from the official pricing page on 2026-06-24:
+BLACKBOX AI pricing was verified from the official pricing page on 2026-06-26:
 
 | Plan | Price | Included-credit caveat | Practical meaning |
 |---|---:|---|---|
@@ -252,7 +252,7 @@ The pricing page also references yearly billing at 20% off. Treat model-credit a
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against BLACKBOX AI pricing, docs, security, and enterprise materials, plus current Cuelinks and Sovrn affiliate-directory signals.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against BLACKBOX AI pricing, docs, security, and enterprise materials, plus current Cuelinks and Sovrn affiliate-directory signals.
 
 ## FAQ
 

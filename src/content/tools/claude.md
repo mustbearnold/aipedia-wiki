@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-03
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Claude: Features, Pricing & Review (2026)"
-meta_description: "Updated June 24, 2026: Claude runs Opus 4.8 as the stable high-end route, Fable/Mythos access is account-specific, Agent SDK credits are active, and Claude Design is separately metered."
+meta_description: "Updated June 26, 2026: Claude runs Opus 4.8 as the stable high-end route, Fable/Mythos access is account-specific, Agent SDK credits are active, and Claude Design is separately metered."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://www.anthropic.com/news/fable-mythos-access"
     source_label: "Anthropic Fable/Mythos access statement"
     source_id: anthropic-fable-mythos-access
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -43,7 +43,7 @@ facts:
     source: "https://platform.claude.com/docs/en/about-claude/models/overview"
     source_label: "Anthropic model docs"
     source_id: anthropic-model-overview
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -182,6 +182,14 @@ not_best_for:
 quick_answer: >-
   Claude is Anthropic's assistant, and Opus 4.8 is the current stable buyable high-end route for long-form reasoning, writing coherence, Claude Code workflows, and high-trust enterprise deployments. Claude Fable 5 launched above Opus, but Anthropic's June 12 statement, current model docs, and June 24 named reporting make Fable/Mythos access a live account-eligibility question. Treat Opus 4.8 as the safe default unless your account or contract confirms Fable access. After GPT-5.5, ChatGPT is the stronger default all-purpose assistant; pick Claude when its writing style, long-context discipline, Claude Code, dynamic workflows, or conservative safety posture matters more than breadth.
 price_history:
+  - date: 2026-06-26
+    plan: "Claude pricing, Opus 4.8, and Agent SDK credits"
+    price: "Pro $20/mo; Max from $100/mo; Opus 4.8 API $5/$25 per MTok standard or $10/$50 fast mode; Agent SDK credits remain plan-linked"
+    source: "https://claude.com/pricing"
+    source_id: claude-pricing
+    source_label: "Claude pricing"
+    verified_at: 2026-06-26
+    note: "June 26 recheck: Claude public pricing and Anthropic's Opus 4.8 release pricing remain the buyer anchors. Fable/Mythos availability remains account-specific after Anthropic's June 12 access statement and June 24 named reporting, so Opus 4.8 remains the safe high-end default."
   - date: 2026-06-24
     plan: "Agent SDK monthly credits active"
     price: "Eligible paid users can claim separate monthly Agent SDK credits: Pro $20, Max 5x $100, Max 20x $200, Team Standard $20, Team Premium $100, and seat-based Enterprise Premium $200"
@@ -442,7 +450,7 @@ API pricing via [platform.claude.com](https://platform.claude.com/docs/en/about-
 
 Fast mode on Opus 4.8 is $10 input / $50 output per MTok. Batch API discounts all models 50%. Prompt caching drops cache-hit input to 10% of standard.
 
-Prices and current security-program context verified 2026-06-24 via [Claude pricing](https://claude.com/pricing), [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview), [Anthropic's Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8), the [Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access), Anthropic's [Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan), Anthropic's [API and data-retention docs](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention), and Anthropic's [web search docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool).
+Prices and current security-program context refreshed 2026-06-26 via [Claude pricing](https://claude.com/pricing), [Anthropic model docs](https://platform.claude.com/docs/en/about-claude/models/overview), [Anthropic's Opus 4.8 launch](https://www.anthropic.com/news/claude-opus-4-8), the [Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access), Anthropic's [Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan), Anthropic's [API and data-retention docs](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention), and Anthropic's [web search docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool).
 
 **Opus 4.8 cost-impact note:** standard pricing matches Opus 4.7, while fast mode is now $10 / $50 per MTok. Budget-sensitive API workloads should benchmark standard versus fast mode and set effort levels explicitly before migrating.
 
@@ -480,7 +488,7 @@ This page was produced by the aipedia.wiki editorial pipeline. The system ingest
 
 No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average).
 
-Last verified 2026-06-24 against these sources:
+Last refreshed 2026-06-26 against these sources:
 
 - [Claude pricing](https://claude.com/pricing), Anthropic's [model docs](https://platform.claude.com/docs/en/about-claude/models/overview), the [Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access), and Anthropic's [Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan).
 - Anthropic's [API and data-retention docs](https://platform.claude.com/docs/en/manage-claude/api-and-data-retention), Anthropic's [web search docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool), the [June 14 AI news desk](/news/2026-06-14-ai-news-desk/), and [Business Insider reporting on the Fable access dispute](https://www.businessinsider.com/legion-ai-startup-suing-us-government-new-anthropic-model-fable5-2026-6).
@@ -522,7 +530,7 @@ A prompt-to-prototype product launched April 17, 2026 and available on Claude Pr
 <details>
 <summary>What is Claude Mythos Preview?</summary>
 
-A separate frontier model specialized for defensive cybersecurity, announced as part of Project Glasswing (a consortium including AWS, Apple, Google, and Microsoft). It is not a general-release product, and as of June 24, 2026, buyers should treat Mythos 5 as account-specific and restricted after Anthropic's June 12 Fable/Mythos suspension notice. Treat older invitation-only access references as historical until Anthropic confirms the route for your organization.
+A separate frontier model specialized for defensive cybersecurity, announced as part of Project Glasswing (a consortium including AWS, Apple, Google, and Microsoft). It is not a general-release product, and as of June 26, 2026, buyers should treat Mythos 5 as account-specific and restricted after Anthropic's June 12 Fable/Mythos suspension notice. Treat older invitation-only access references as historical until Anthropic confirms the route for your organization.
 
 </details>
 

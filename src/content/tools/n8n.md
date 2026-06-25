@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "$0 (Community self-host) - €667+/month (Business self-host)"
 status: active
 launched: 2019-06
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -43,7 +43,7 @@ facts:
     source: "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/"
     source_label: "n8n AI Agent node docs"
     source_id: n8n-agent-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -179,6 +179,14 @@ not_best_for:
 quick_answer: >-
   n8n is the source-available automation platform with native AI Agent nodes. Self-host Community for free when someone can operate it. Hosted Starter is €20/mo and hosted Pro is €50/mo; Business is a €667/mo self-host license and Enterprise is custom. Pick it for developer control, EU-hosted cloud data, self-hosting, and AI agents. Skip for non-technical teams or long-tail SaaS coverage.
 price_history:
+  - date: 2026-06-26
+    plan: "Community · Starter · Pro · Business · Enterprise"
+    price: "Community $0 self-host · Starter €20/mo hosted · Pro €50/mo hosted · Business €667/mo self-host · Enterprise custom"
+    source: "https://n8n.io/pricing"
+    source_label: "n8n pricing"
+    source_id: n8n-pricing
+    verified_at: 2026-06-26
+    note: "June 26 recheck: public pricing remains Community self-host free, hosted Starter €20/month, hosted Pro €50/month, Business self-host €667/month, and Enterprise custom, with unlimited users and execution-based usage."
   - date: 2025-10-15
     plan: "Cloud Starter"
     price: "€24/mo"
@@ -219,7 +227,8 @@ n8n is the source-available workflow automation platform built by n8n GmbH. Visu
 
 ## Recent developments
 
-- **June 24, 2026 verification:** Current sources still keep the buyer model unchanged: Community self-host is the free route, hosted Starter is EUR20/month, hosted Pro is EUR50/month, Business is EUR667/month for self-host governance, and Enterprise is custom. GitHub now marks n8n@2.27.3 as the latest release, dated June 19, 2026.
+- **June 26, 2026 verification:** Current sources still keep the buyer model unchanged: Community self-host is the free route, hosted Starter is EUR20/month, hosted Pro is EUR50/month, Business is EUR667/month for self-host governance, and Enterprise is custom. The pricing page still separates hosted Starter/Pro from self-host Business.
+- **June 24, 2026 verification:** Current sources still kept the buyer model unchanged: Community self-host is the free route, hosted Starter is EUR20/month, hosted Pro is EUR50/month, Business is EUR667/month for self-host governance, and Enterprise is custom. GitHub marked n8n@2.27.3 as the latest release, dated June 19, 2026.
 - **May 2026:** Pricing restructured. Starter dropped from €24 to €20/month, Pro from €60 to €50, and Business from €800 to €667 (all annual billing). Every paid tier now includes unlimited users; tiers separate primarily on workflow-execution caps, concurrent executions, and admin features.
 - **June 21, 2026 verification:** n8n's pricing page still says all plans include unlimited users, unlimited workflows, and every integration, with pricing based on monthly workflow executions rather than per-step task counts. Starter and Pro are hosted by n8n; Business is currently self-hosted. The AI Agent docs still say all AI Agent nodes work as a Tools Agent in current versions.
 - **June 21, 2026 buyer-risk check:** Business self-host uses a license key that pings n8n daily for usage tracking, telemetry is enabled by default unless disabled, and Business overages are listed at EUR4,000 for each extra 300,000-execution bucket. Treat Business as procurement for governed self-hosting, not as the next hosted-cloud plan.
@@ -286,7 +295,7 @@ Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing). Public paid p
 | Business (self-host) | €667 | 40,000 | Higher | Unlimited | 6 | SSO / SAML / LDAP, environments, Git version control, self-host scale |
 | Enterprise | Custom | Custom | 200+ | Unlimited | Unlimited | Hosted or self-hosted governance, external secret store, log streaming, extended retention, dedicated support, SLA |
 
-*Prices verified 2026-06-24 via [n8n pricing](https://n8n.io/pricing). Plans include unlimited users, workflows, and integrations. Pricing is based on monthly workflow executions, not per-step cost. Qualifying startups get 50% off the Business plan. Community self-host is free, but n8n's own hosting docs recommend it only for expert users because mistakes can cause data loss, security issues, and downtime. Business overages are listed at EUR4,000 per extra 300,000 executions when the buyer exceeds quota and does not upgrade.*
+*Prices verified 2026-06-26 via [n8n pricing](https://n8n.io/pricing). Plans include unlimited users, workflows, and integrations. Pricing is based on monthly workflow executions, not per-step cost. Qualifying startups get 50% off the Business plan. Community self-host is free, but n8n's own hosting docs recommend it only for expert users because mistakes can cause data loss, security issues, and downtime. Business overages are listed at EUR4,000 per extra 300,000 executions when the buyer exceeds quota and does not upgrade.*
 
 ## Against the alternatives
 
@@ -313,7 +322,7 @@ Subscription pricing via [n8n.io/pricing](https://n8n.io/pricing). Public paid p
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-24 against [n8n pricing](https://n8n.io/pricing), [n8n hosting docs](https://docs.n8n.io/hosting/), [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/), the [n8n GitHub repository](https://github.com/n8n-io/n8n), and the [n8n affiliate program page](https://n8n.io/affiliates/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last refreshed 2026-06-26 against [n8n pricing](https://n8n.io/pricing), [n8n hosting docs](https://docs.n8n.io/hosting/), [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/), the [n8n GitHub repository](https://github.com/n8n-io/n8n), and the [n8n affiliate program page](https://n8n.io/affiliates/).
 
 ## FAQ
 
@@ -334,11 +343,11 @@ n8n prices by workflow execution. The current pricing FAQ defines an execution a
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing): current plan rates, execution limits, AI Workflow Builder credits, EU hosted-data note, overage buckets, license-key metering, and affiliate-program pointer (verified 2026-06-24)
-- [n8n hosting docs](https://docs.n8n.io/hosting/): Community self-host path and self-hosting risk guidance (verified 2026-06-24)
-- [n8n AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): native agent capabilities and Tools Agent behavior (verified 2026-06-24)
-- [n8n GitHub](https://github.com/n8n-io/n8n): source, license, integrations, current release n8n@2.27.3, and self-hostability (verified 2026-06-24)
-- [n8n affiliate program](https://n8n.io/affiliates/): public commission framing; AiPedia has no approved link (verified 2026-06-24)
+- [n8n pricing](https://n8n.io/pricing): current plan rates, execution limits, AI Workflow Builder credits, EU hosted-data note, overage buckets, license-key metering, and affiliate-program pointer (refreshed 2026-06-26)
+- [n8n hosting docs](https://docs.n8n.io/hosting/): Community self-host path and self-hosting risk guidance (refreshed 2026-06-26)
+- [n8n AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): native agent capabilities and Tools Agent behavior (refreshed 2026-06-26)
+- [n8n GitHub](https://github.com/n8n-io/n8n): source, license, integrations, current release, and self-hostability (refreshed 2026-06-26)
+- [n8n affiliate program](https://n8n.io/affiliates/): public commission framing; AiPedia has no approved link (refreshed 2026-06-26)
 
 ## Related
 

@@ -306,7 +306,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "adobe-firefly-product",
@@ -315,7 +315,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "adobe-genai-guidelines",
@@ -774,7 +774,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "anthropic-higher-limits-spacex",
@@ -792,7 +792,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "anthropic-news",
@@ -1089,7 +1089,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "argil-product-showcase",
@@ -1242,7 +1242,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "augment-code-coding-agent",
@@ -1305,7 +1305,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "base44-billing-plans",
@@ -1332,7 +1332,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "beautiful-ai-ai-presentations",
@@ -1413,7 +1413,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "beehiiv-mcp-help",
@@ -1422,7 +1422,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "beehiiv-mcp-v2",
@@ -1449,7 +1449,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "beehiiv-plan-tiers-help",
@@ -1467,7 +1467,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "beehiiv-product-updates",
@@ -1476,7 +1476,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "blackbox-ai-affiliate-cuelinks",
@@ -1485,7 +1485,7 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "blackbox-ai-affiliate-sovrn",
@@ -1503,7 +1503,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "blackbox-ai-desktop-agent",
@@ -1539,7 +1539,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "bolt-docs",
@@ -1557,7 +1557,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "bolt-intro",
@@ -1566,7 +1566,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "bolt-official",
@@ -1575,7 +1575,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "bolt-supported-technologies",
@@ -1584,7 +1584,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "bolt-tokens",
@@ -1593,7 +1593,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "boomy-dolby-remastering-cost",
@@ -1728,7 +1728,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "browserbase-browser-blog",
@@ -1737,7 +1737,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "browserbase-changelog",
@@ -1746,7 +1746,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "browserbase-fetch-blog",
@@ -1782,7 +1782,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "browserbase-search-blog",
@@ -1836,7 +1836,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-ai-2-newsroom",
@@ -1845,7 +1845,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-ai-pass",
@@ -1854,7 +1854,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-ai-product-terms",
@@ -1863,7 +1863,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-business-newsroom",
@@ -1872,7 +1872,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-chatgpt-codex-newsroom",
@@ -1935,7 +1935,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-pro",
@@ -1944,7 +1944,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-shield",
@@ -1953,7 +1953,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "canva-technology-solutions",
@@ -1998,7 +1998,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "capacities-product",
@@ -2028,6 +2028,15 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "capacities-release-66",
+      "label": "Capacities Release 66",
+      "url": "https://capacities.io/whats-new/release-66",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-26"
+    },
+    {
       "id": "capacities-whats-new",
       "label": "Capacities changelog",
       "url": "https://capacities.io/whats-new/",
@@ -2052,7 +2061,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-credits",
@@ -2061,7 +2070,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-feature-availability",
@@ -2070,7 +2079,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-growth-financing",
@@ -2088,7 +2097,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-mirage-model",
@@ -2097,7 +2106,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-mirage-rebrand",
@@ -2106,7 +2115,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-official",
@@ -2115,7 +2124,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-overview",
@@ -2124,7 +2133,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-prompt-to-video",
@@ -2133,7 +2142,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "captions-subscriptions",
@@ -2142,7 +2151,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cartesia-changelog-2026",
@@ -2205,7 +2214,7 @@
       "type": "affiliate",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "castmagic-affiliate-terms",
@@ -2223,7 +2232,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "castmagic-features",
@@ -2241,7 +2250,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "castmagic-pricing",
@@ -2250,7 +2259,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "castmagic-transcripts-api",
@@ -2466,7 +2475,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "claude-code-costs",
@@ -2493,7 +2502,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "claude-code-usage-limits",
@@ -2565,7 +2574,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "claude-release-notes",
@@ -2880,7 +2889,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-enterprise",
@@ -2898,7 +2907,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-ide",
@@ -2907,7 +2916,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-permission-handling",
@@ -2916,7 +2925,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-pricing",
@@ -2925,7 +2934,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-provider-options",
@@ -2934,7 +2943,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-provider-vercel",
@@ -2952,7 +2961,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-sdk",
@@ -2970,7 +2979,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cline-vscode-marketplace",
@@ -3051,7 +3060,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cloudtalk-ai-voice-research",
@@ -3078,7 +3087,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cloudtalk-pricing",
@@ -3087,7 +3096,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "codeium-devin-changelog",
@@ -3186,7 +3195,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "coderabbit-best-paid-tier",
@@ -3195,7 +3204,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "coderabbit-changelog",
@@ -3231,7 +3240,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "coderabbit-slack-agent-docs",
@@ -3285,7 +3294,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cody-model-configuration",
@@ -3303,7 +3312,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cody-plan-changes",
@@ -3321,7 +3330,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cody-vscode-marketplace",
@@ -3330,7 +3339,7 @@
       "type": "third_party",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cognition-devin-desktop-introducing",
@@ -3527,7 +3536,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "consensus-how-it-works",
@@ -3545,7 +3554,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "consensus-pricing",
@@ -3554,7 +3563,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "consensus-search",
@@ -3581,7 +3590,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "continue-hub",
@@ -3599,7 +3608,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "copy-ai-official",
@@ -3608,7 +3617,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "copy-ai-platform",
@@ -3617,7 +3626,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "copy-ai-workflows",
@@ -3626,7 +3635,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "crewai-docs",
@@ -3635,7 +3644,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "crewai-official",
@@ -3644,7 +3653,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "crewai-pricing",
@@ -3653,7 +3662,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "crewai-repository",
@@ -3662,7 +3671,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cursor-bugbot-june-10",
@@ -3752,7 +3761,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "cursor-pricing-policy",
@@ -3788,7 +3797,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "d-id-agentic-videos",
@@ -3797,7 +3806,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "d-id-agents",
@@ -3806,7 +3815,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "d-id-api-pricing",
@@ -3824,7 +3833,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "d-id-official",
@@ -3842,7 +3851,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "dalle-best-for",
@@ -3878,7 +3887,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "decktopus-pricing",
@@ -3887,7 +3896,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "deepgram-changelog",
@@ -4013,7 +4022,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "deepseek-chat",
@@ -4031,7 +4040,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "deepseek-v4-release-note",
@@ -4067,7 +4076,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "devin-docs",
@@ -4121,7 +4130,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "dia-coding-agent",
@@ -4139,7 +4148,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "doubao-docs",
@@ -4265,7 +4274,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "elevenlabs-model-docs",
@@ -4274,7 +4283,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "elevenlabs-model-help",
@@ -4310,7 +4319,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "elevenlabs-scribe-realtime",
@@ -4319,7 +4328,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "elevenlabs-series-d-2026",
@@ -4364,7 +4373,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "elicit-pricing",
@@ -4373,7 +4382,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "exa-agent-launch",
@@ -4553,7 +4562,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "figma-billing",
@@ -4563,6 +4572,15 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-24"
+    },
+    {
+      "id": "figma-config-2026-recap",
+      "label": "Figma Config 2026 recap",
+      "url": "https://www.figma.com/blog/config-2026-recap/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-26"
     },
     {
       "id": "figma-make-advanced",
@@ -4589,7 +4607,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "figma-make-mcp-connectors",
@@ -4607,7 +4625,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "figma-plans-features",
@@ -4616,7 +4634,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "figma-pricing",
@@ -4625,7 +4643,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "firebase-imagen-migration",
@@ -5156,7 +5174,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "github-copilot-ai-credits-announcement",
@@ -5183,7 +5201,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "github-copilot-app-ga",
@@ -5273,7 +5291,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "github-copilot-fable-5-suspension",
@@ -5327,7 +5345,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "github-copilot-plans",
@@ -5336,7 +5354,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "github-copilot-product",
@@ -5551,7 +5569,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "google-gemini-app-io-2026",
@@ -5569,7 +5587,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "google-gemini-docs",
@@ -5578,7 +5596,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "google-gemini-drive-sharing",
@@ -5614,7 +5632,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "google-search-central-ai-features",
@@ -5794,7 +5812,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "grammarly-pricing",
@@ -5803,7 +5821,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "grammarly-pro",
@@ -5992,7 +6010,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "hailuo-23-tool-page",
@@ -6091,7 +6109,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "hedra-enterprise",
@@ -6100,7 +6118,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "hedra-models",
@@ -6118,7 +6136,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "hedra-pricing",
@@ -6127,7 +6145,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "hedra-skills",
@@ -6370,7 +6388,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "heygen-pricing-help",
@@ -7306,7 +7324,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "kling-official",
@@ -7324,7 +7342,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "kokoro-model",
@@ -7754,7 +7772,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lindy-docs",
@@ -7772,7 +7790,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lindy-official",
@@ -7781,7 +7799,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lindy-partnerstack",
@@ -7790,7 +7808,7 @@
       "type": "third_party",
       "trust_tier": "secondary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lindy-pricing",
@@ -7799,7 +7817,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lindy-quickstart",
@@ -7808,7 +7826,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lindy-security",
@@ -7817,7 +7835,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lindy-usage",
@@ -7826,7 +7844,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "linkedin-hiring-assistant",
@@ -8096,7 +8114,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lovable-credits-usage",
@@ -8116,7 +8134,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lovable-github",
@@ -8125,7 +8143,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lovable-official",
@@ -8134,7 +8152,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lovable-plans-credits",
@@ -8143,7 +8161,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lovable-supabase",
@@ -8152,7 +8170,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "lovart-best-for",
@@ -8306,7 +8324,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "maf-overview",
@@ -8492,7 +8510,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mastra-acp",
@@ -8519,7 +8537,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mastra-code-mode",
@@ -8555,7 +8573,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mastra-github",
@@ -8564,7 +8582,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mastra-models",
@@ -8573,7 +8591,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mastra-official",
@@ -8591,7 +8609,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mastra-pricing",
@@ -8600,7 +8618,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "meetgeek-consent",
@@ -8609,7 +8627,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "meetgeek-overview",
@@ -8618,7 +8636,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "low",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "meetgeek-partnerstack",
@@ -8627,7 +8645,7 @@
       "type": "affiliate",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "meetgeek-pricing",
@@ -8636,7 +8654,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mem-get-product",
@@ -8741,7 +8759,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "microsoft-work-iq-apis",
@@ -8768,7 +8786,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "midjourney-commercial-rights",
@@ -8786,7 +8804,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "midjourney-niji-v7-update",
@@ -8804,7 +8822,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "midjourney-terms",
@@ -8813,7 +8831,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "midjourney-v8-alpha-update",
@@ -8849,7 +8867,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "midjourney-video-docs",
@@ -8858,7 +8876,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "midjourney-web-vs-discord",
@@ -8867,7 +8885,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "minimax-m3-coding-tools",
@@ -8912,7 +8930,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "minimax-pricing",
@@ -8984,7 +9002,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mirage-official",
@@ -9074,7 +9092,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mistral-search-toolkit",
@@ -9182,7 +9200,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mubert-official",
@@ -9191,7 +9209,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "mubert-pricing",
@@ -9200,7 +9218,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "murf-api",
@@ -9308,7 +9326,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "n8n-docs",
@@ -9326,7 +9344,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "n8n-hosting-docs",
@@ -9335,7 +9353,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "n8n-pricing",
@@ -9344,7 +9362,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "n8n-release-notes",
@@ -9479,7 +9497,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "notebooklm-official",
@@ -9488,7 +9506,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "notebooklm-pricing",
@@ -9497,7 +9515,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "notion-ai",
@@ -9776,7 +9794,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "openai-chatgpt-pro-tiers",
@@ -9794,7 +9812,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "openai-codex-chatgpt-plan-help",
@@ -9857,7 +9875,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "openai-model-release-notes",
@@ -10055,7 +10073,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "perplexity-docs",
@@ -10082,7 +10100,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "perplexity-max-help",
@@ -10197,7 +10215,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "pika-pricing",
@@ -10206,7 +10224,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "pinecone-assistant-pricing",
@@ -10566,7 +10584,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "qodo-best-paid-tier",
@@ -10575,7 +10593,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "qodo-cli-docs",
@@ -10737,7 +10755,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "qwencloud-qwen37-max",
@@ -10989,7 +11007,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "replit-agent-modes",
@@ -11043,7 +11061,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "replit-ai-billing",
@@ -11088,7 +11106,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "replit-pro-plan",
@@ -11752,7 +11770,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "speechify-affiliates",
@@ -12019,7 +12037,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "suno-series-d",
@@ -12046,7 +12064,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "suno-v55",
@@ -12055,7 +12073,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "superhuman-gptzero-acquisition",
@@ -12190,7 +12208,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "synthesia-product",
@@ -12600,7 +12618,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "udio-pricing",
@@ -12609,7 +12627,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "udio-product",
@@ -12627,7 +12645,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "udio-warner-partnership",
@@ -12636,7 +12654,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "uizard-autodesigner",
@@ -12744,7 +12762,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "v0-docs",
@@ -12753,7 +12771,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "v0-official",
@@ -12762,7 +12780,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "v0-pricing-blog",
@@ -12771,7 +12789,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "trust_tier": "primary",
@@ -12946,7 +12964,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-24",
+      "last_checked": "2026-06-26",
       "id": "voxtral-docs",
       "label": "Mistral audio docs",
       "url": "https://docs.mistral.ai/studio-api/audio/speech_to_text",
@@ -12969,7 +12987,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "voxtral-tts-launch",
@@ -12978,7 +12996,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "wan-huggingface",
@@ -13526,7 +13544,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "xai-grok-product",
@@ -13535,7 +13553,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "xai-pricing",
@@ -13544,7 +13562,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "yi-github",

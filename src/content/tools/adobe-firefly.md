@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$199.99/month
 status: active
 launched: 2023-03
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: "https://www.adobe.com/products/firefly.html"
     source_label: "Adobe Firefly official site"
     source_id: adobe-firefly-product
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -51,7 +51,7 @@ facts:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -60,7 +60,7 @@ facts:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -69,7 +69,7 @@ facts:
     source: "https://www.adobe.com/products/firefly/plans.html"
     source_label: "Adobe Firefly pricing"
     source_id: adobe-firefly-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -186,6 +186,14 @@ not_best_for:
 quick_answer: >-
   Adobe Firefly is Adobe's creative AI suite for images, video, audio, vectors, Boards, Photoshop web/mobile, Express, and partner models. Firefly Image 5/Image5 is the latest image engine/API route, and paid Firefly plans now run from Standard $9.99 to Premium $199.99/month before temporary first-year discounts on bigger plans that Adobe currently says end Aug. 26, 2026. Pick it for Adobe-first production and commercial-safety posture; skip if you want the strongest raw aesthetic model, simple API pricing, or partner-model use without credit-rate and prompt-sharing review.
 price_history:
+  - date: 2026-06-26
+    plan: "Firefly individual plans and partner-model rates"
+    price: "Free daily generations; Standard $9.99/mo, Pro $19.99/mo, Pro Plus $49.99/mo regular or $34.97/mo promo, Premium $199.99/mo regular or $139.91/mo promo"
+    source: "https://www.adobe.com/products/firefly/plans.html"
+    source_label: "Adobe Firefly plans"
+    source_id: adobe-firefly-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked Firefly plans and current promotions. No headline plan-price change found versus June 24; Adobe Help still carries June 2026 promotion details and plan/model exclusions that buyers should review before relying on unlimited-generation wording."
   - date: 2026-06-24
     plan: "Firefly individual plans and partner-model rates"
     price: "Free daily generations; Standard $9.99/mo, Pro $19.99/mo, Pro Plus $49.99/mo regular or $34.97/mo promo, Premium $199.99/mo regular or $139.91/mo promo"
@@ -284,7 +292,7 @@ Use Firefly when the output has to move through Adobe apps or client approval. U
 | **API** | Firefly Services / Firefly API documentation exists; verify entitlement and pricing separately from app plans |
 | **Pricing** | Free access plus Standard $9.99, Pro $19.99, Pro Plus $49.99, Premium $199.99 regular individual plans |
 
-Every current fact above was verified on 2026-06-24 from official Adobe sources. See Sources.
+Current pricing, plan, and partner-model facts above were verified on 2026-06-26 from official Adobe sources. See Sources.
 
 ## What it actually is
 
@@ -360,7 +368,7 @@ Credits also need workflow-level accounting. Adobe says credits can stack across
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
-Last verified 2026-06-24 against Adobe Firefly plans, Firefly product pages, Firefly promotions, Creative Cloud generative AI documentation, Firefly API documentation, partner-model documentation, Adobe GenAI user guidelines, enterprise pages, and affiliate information.
+Last verified 2026-06-26 against Adobe Firefly plans, Firefly product pages, Firefly promotions, Creative Cloud generative AI documentation, Firefly API documentation, partner-model documentation, Adobe GenAI user guidelines, enterprise pages, and affiliate information.
 
 ## FAQ
 

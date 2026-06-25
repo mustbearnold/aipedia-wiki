@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Open source; old Starter/Team pricing no longer published"
 status: active
 launched: 2023-05
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: low
     confidence: high
   pricing_anchor:
@@ -39,7 +39,7 @@ facts:
     source: "https://www.continue.dev/pricing"
     source_label: "Continue pricing"
     source_id: continue-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   team_distribution:
@@ -56,7 +56,7 @@ facts:
     source: "https://www.continue.dev/pricing"
     source_label: "Continue pricing redirect"
     source_id: continue-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   watch_out_for:
@@ -64,12 +64,12 @@ facts:
     source: "https://docs.continue.dev/"
     source_label: "Continue docs"
     source_id: continue-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
 tags: [open-source, ai-checks, pull-request-review, ai-coding, cli, github-status-checks, byok, code-quality]
 seo_title: "Continue.dev Review: Cursor Acquisition, Final Release & Pricing (June 2026)"
-meta_description: "Updated June 24, 2026: Continue has been acquired by Cursor. Its final 2.0.0 open-source coding-agent release remains available, but the repo is read-only and old pricing is no longer live."
+meta_description: "Updated June 26, 2026: Continue has been acquired by Cursor. Its final 2.0.0 open-source coding-agent release remains available, but the repo is read-only and old pricing is no longer live."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers studying open-source coding-agent architecture
@@ -95,13 +95,13 @@ decision_brief:
       value: "Copilot Review"
       detail: "Copilot is packaged; Continue is more standards-as-code."
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Acquisition and pricing redirect"
     price: "Open-source final release; old pricing URL redirects"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Rechecked Continue homepage, pricing redirect, docs, and GitHub repository. Continue still says it was acquired by Cursor; docs and GitHub still show a read-only, no-longer-maintained repo with final 2.0.0 VS Code, CLI, and JetBrains artifacts."
   - date: 2026-06-04
     plan: "Source-controlled checks refresh"
@@ -109,15 +109,15 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-24
-    note: "Historical pricing snapshot. The June 24 check found the pricing URL redirecting to the Cursor acquisition announcement, so these tiers should not be treated as live purchase options."
+    verified_at: 2026-06-26
+    note: "Historical pricing snapshot. The June 26 check found the pricing URL redirecting to the Cursor acquisition announcement, so these tiers should not be treated as live purchase options."
   - date: 2026-03-01
     plan: "Team"
     price: "$20/seat/mo"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Historical Team tier. No longer safe as a live purchase claim after the Cursor acquisition redirect."
   - date: 2026-04-15
     plan: "Solo"
@@ -125,7 +125,7 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Historical solo/open-source snapshot. The final open-source artifacts remain available, but the repo is read-only."
   - date: 2026-05-13
     plan: "Starter"
@@ -133,16 +133,16 @@ price_history:
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-24
-    note: "Historical pay-as-you-go snapshot. The June 24 refresh supersedes this with the acquisition/read-only caveat."
+    verified_at: 2026-06-26
+    note: "Historical pay-as-you-go snapshot. The June 26 refresh supersedes this with the acquisition/read-only caveat."
   - date: 2026-06-01
     plan: "Acquisition and pricing redirect"
     price: "Open-source final release; old pricing URL redirects"
     source: "https://www.continue.dev/pricing"
     source_label: "Source"
     source_id: continue-pricing
-    verified_at: 2026-06-24
-    note: "Re-verified June 24, 2026. Continue says it has been acquired by Cursor. Docs say the repository is read-only and no longer actively maintained, with a final 2.0.0 release of the VS Code extension, CLI, and JetBrains plugin."
+    verified_at: 2026-06-26
+    note: "Re-verified June 26, 2026. Continue says it has been acquired by Cursor. Docs say the repository is read-only and no longer actively maintained, with a final 2.0.0 release of the VS Code extension, CLI, and JetBrains plugin."
 ---
 
 # Continue
@@ -172,7 +172,7 @@ That makes Continue a different buying decision than it was earlier in June. The
 | **Best fit** | Developers studying or forking an open-source coding agent |
 | **Main watch-out** | No actively maintained standalone roadmap from the original Continue project |
 
-Every data point above was verified against vendor documentation on 2026-06-24. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-26. See Sources.
 
 ## What It Actually Is
 
@@ -227,7 +227,7 @@ The important pricing detail is now maintenance, not seat price. If you self-hos
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [Continue homepage](https://www.continue.dev/), the redirected [Continue pricing URL](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [Continue homepage](https://www.continue.dev/), the redirected [Continue pricing URL](https://www.continue.dev/pricing), [Continue docs](https://docs.continue.dev), and the [Continue GitHub repo](https://github.com/continuedev/continue).
 
 ## FAQ
 
@@ -245,10 +245,10 @@ If you still want Continue, test the final CLI or extension against a non-sensit
 
 ## Sources
 
-- [Continue homepage](https://www.continue.dev/) - Cursor acquisition announcement, verified 2026-06-24
-- [Continue docs](https://docs.continue.dev/) - final 2.0.0 release, read-only repository note, and current surfaces, verified 2026-06-24
-- [Continue pricing redirect](https://www.continue.dev/pricing) - old pricing URL redirect behavior, verified 2026-06-24
-- [GitHub: continuedev/continue](https://github.com/continuedev/continue) - read-only open-source repository, Apache-2.0 license, and latest release metadata, verified 2026-06-24
+- [Continue homepage](https://www.continue.dev/) - Cursor acquisition announcement, verified 2026-06-26
+- [Continue docs](https://docs.continue.dev/) - final 2.0.0 release, read-only repository note, and current surfaces, verified 2026-06-26
+- [Continue pricing redirect](https://www.continue.dev/pricing) - old pricing URL redirect behavior, verified 2026-06-26
+- [GitHub: continuedev/continue](https://github.com/continuedev/continue) - read-only open-source repository, Apache-2.0 license, and latest release metadata, verified 2026-06-26
 
 ## Related
 

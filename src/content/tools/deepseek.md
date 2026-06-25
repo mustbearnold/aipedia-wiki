@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: "Free (chat) / Usage-based (V4-Flash from $0.14/M input; V4-Pro quarter-price from $0.435/M input)"
 status: active
 launched: 2023-07
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-04
@@ -40,7 +40,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-04
@@ -49,7 +49,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-04
@@ -67,7 +67,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-04
@@ -76,7 +76,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-04
@@ -118,7 +118,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -142,7 +142,7 @@ facts:
     source: "https://huggingface.co/deepseek-ai"
     source_label: "DeepSeek Hugging Face organization"
     source_id: deepseek-huggingface
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   best_for:
@@ -150,7 +150,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   watch_out_for:
@@ -158,7 +158,7 @@ facts:
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-04
@@ -178,13 +178,13 @@ not_best_for:
 quick_answer: >-
   DeepSeek is one of the cheapest credible frontier-grade LLM stacks. V4-Flash and V4-Pro are the documented production API models with a 1M context window, and current Hugging Face pages now show V4 open-weight releases. V4-Flash bills $0.14/M cache-miss input, $0.0028/M cache-hit, and $0.28/M output; V4-Pro is listed at the adjusted quarter-price after its May promotion. Pick for cost-sensitive API work, coding-model routing, or self-hosting experiments; skip for regulated enterprise or polished consumer UX.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "V4 API and open-weight recheck"
     price: "V4-Flash $0.14/$0.28; V4-Pro $0.435/$0.87 per MTok"
     source: "https://api-docs.deepseek.com/quick_start/pricing"
     source_label: "DeepSeek API pricing docs"
     source_id: deepseek-api-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Official docs still list V4-Flash and V4-Pro with 1M context, 384K max output, cache-hit pricing, OpenAI and Anthropic-compatible endpoints, and July 24 deprecation for legacy aliases; Hugging Face still shows DeepSeek V4 model releases."
   - date: 2025-01-20
     plan: "API"
@@ -310,7 +310,7 @@ Related coverage: [AI Industry Roundup, April 24](/news/2026-04-24-ai-industry-r
 | **Open weights** | DeepSeek V4 releases plus V3, V3.2, and R1 model families on Hugging Face; self-hosting depends on model, license, hardware, and governance |
 | **Compliance posture** | Chinese company · GDPR concerns flagged by Berlin DPA · U.S. export-control scrutiny ongoing |
 
-API, model, context, pricing, and open-weight data above were reverified on 2026-06-24 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the official V4 release note, the API changelog, and DeepSeek's Hugging Face organization. Regulatory and procurement risk notes remain from the prior cited checks.
+API, model, context, pricing, and open-weight data above were reverified on 2026-06-26 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the official V4 release note, the API changelog, and DeepSeek's Hugging Face organization. Regulatory and procurement risk notes remain from the prior cited checks.
 
 ## What it actually is
 
@@ -349,7 +349,7 @@ API pricing via [api-docs.deepseek.com](https://api-docs.deepseek.com/quick_star
 | `deepseek-v4-pro` (quarter-price after June 1 adjustment) | $0.435/M | $0.003625/M | $0.87/M | Premium reasoning runs and large agentic workloads |
 | New account credit | 5M free tokens | n/a | n/a | One-time grant on registration |
 
-*Prices verified 2026-06-24 via [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing). V4-Pro pricing now reflects DeepSeek's June 1 adjustment to one-quarter of the original price after the May promotion ended. Cache-hit input was cut to one-tenth of launch pricing on April 26, 2026. Thinking mode is supported by default on both V4 models and generates additional reasoning tokens, so effective cost per task is higher than the raw input figure suggests.*
+*Prices verified 2026-06-26 via [DeepSeek API pricing](https://api-docs.deepseek.com/quick_start/pricing). V4-Pro pricing now reflects DeepSeek's June 1 adjustment to one-quarter of the original price after the May promotion ended. Cache-hit input was cut to one-tenth of launch pricing on April 26, 2026. Thinking mode is supported by default on both V4 models and generates additional reasoning tokens, so effective cost per task is higher than the raw input figure suggests.*
 
 ## Against the alternatives
 
@@ -379,7 +379,7 @@ API pricing via [api-docs.deepseek.com](https://api-docs.deepseek.com/quick_star
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424), [DeepSeek API changelog](https://api-docs.deepseek.com/updates/), and [DeepSeek Hugging Face](https://huggingface.co/deepseek-ai). R1 paper, chat interface, and regulatory/background items remain from prior cited checks.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [DeepSeek API docs](https://api-docs.deepseek.com/quick_start/pricing), the [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424), [DeepSeek API changelog](https://api-docs.deepseek.com/updates/), and [DeepSeek Hugging Face](https://huggingface.co/deepseek-ai). R1 paper, chat interface, and regulatory/background items remain from prior cited checks.
 
 ## FAQ
 
@@ -387,7 +387,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 Yes. The chat interface at [chat.deepseek.com](https://chat.deepseek.com) is free with no declared usage cap and includes DeepThink reasoning and web search. The API is pay-per-token; new accounts get 5M free tokens on registration.
 
 **Is DeepSeek V4 out?**
-Yes. As of June 24, 2026, V4-Flash and V4-Pro are the documented production models on the API pricing page, both with a 1M context window and 384K maximum output. V4-Pro is listed at the adjusted quarter-price after the May promotion ended. The legacy `deepseek-chat` and `deepseek-reasoner` endpoint names still resolve to V4-Flash modes but are flagged for deprecation.
+Yes. As of June 26, 2026, V4-Flash and V4-Pro are the documented production models on the API pricing page, both with a 1M context window and 384K maximum output. V4-Pro is listed at the adjusted quarter-price after the May promotion ended. The legacy `deepseek-chat` and `deepseek-reasoner` endpoint names still resolve to V4-Flash modes but are flagged for deprecation.
 
 **How does DeepSeek R1 compare to OpenAI o1?**
 At launch (January 2025), R1 matched o1 on AIME 2024 (79.8% vs 79.2%) and MATH-500 (97.3% vs 96.4%). R1 is open-weight and free via chat. Its role today is as the open-weight reasoning baseline, with V4-Flash and V4-Pro handling production thinking-mode workloads on the API.
@@ -400,14 +400,14 @@ For regulated industries, no. The Berlin DPA flagged the app as non-compliant wi
 
 ## Sources
 
-- [DeepSeek API Pricing Docs](https://api-docs.deepseek.com/quick_start/pricing): current per-token rates, V4-Flash and V4-Pro models, and cache discounts verified 2026-06-24
-- [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424): V4-Flash, V4-Pro, 1M context, API availability, open weights, and legacy endpoint deprecation verified 2026-06-24
-- [DeepSeek API changelog](https://api-docs.deepseek.com/updates/): release sequence and current V4-era model history verified 2026-06-24
+- [DeepSeek API Pricing Docs](https://api-docs.deepseek.com/quick_start/pricing): current per-token rates, V4-Flash and V4-Pro models, and cache discounts verified 2026-06-26
+- [DeepSeek V4 release note](https://api-docs.deepseek.com/news/news260424): V4-Flash, V4-Pro, 1M context, API availability, open weights, and legacy endpoint deprecation verified 2026-06-26
+- [DeepSeek API changelog](https://api-docs.deepseek.com/updates/): release sequence and current V4-era model history verified 2026-06-26
 - [DeepSeek-R1 ArXiv paper](https://arxiv.org/abs/2501.12948): benchmark results and architecture
 - [chat.deepseek.com](https://chat.deepseek.com): consumer chat interface
 - [DeepSeek V4 preview coverage](/news/2026-04-24-deepseek-v4-preview-release/): April 24, 2026 preview release note
 - [DeepSeek V4-Pro price-cut coverage](/news/2026-04-27-deepseek-v4-pro-price-cut/): April 27, 2026 temporary discount and cache-hit pricing signal
-- [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai): open-weight model releases verified 2026-06-24
+- [DeepSeek Hugging Face organization](https://huggingface.co/deepseek-ai): open-weight model releases verified 2026-06-26
 - [DeepSeek Wikipedia](https://en.wikipedia.org/wiki/DeepSeek): company and regulatory background
 
 ## Related

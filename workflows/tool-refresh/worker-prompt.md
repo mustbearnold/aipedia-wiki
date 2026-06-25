@@ -1,6 +1,6 @@
 # Tool Refresh Worker Prompt
 
-Use this shape for each shard worker. Replace the shard number and file list with the planner-generated `agent_briefs.worker_briefs[*].prompt` whenever possible.
+Use the planner-generated `agent_briefs.worker_briefs[*].prompt` for each shard worker whenever possible. Do not hand-transcribe shard file lists unless the planner output is unavailable, because filename drift can silently skip a planned tool.
 
 ```text
 Use the AiPedia tool refresh workflow for one shard.

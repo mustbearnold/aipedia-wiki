@@ -7,19 +7,19 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-26.
-- Branch baseline: `codex/refresh-tool-pages-june-23`; latest pushed branch batch is the June 25 third six-worker batch from Zapier through Jan.ai plus workflow no-regression hardening.
+- Branch baseline: `master`; latest local batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling, verified locally and pending commit/push.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
-- The latest pushed branch batch refreshed 54 tools from Zapier through Jan.ai after the previous six-worker batches and serial shards.
+- The latest local batch refreshed 60 tools from Consensus through Kling after using `--include-same-day` intentionally because the default planner had no due tools.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
 - The next freshness batch should be regenerated with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`; the planner now excludes pages verified since yesterday by default unless `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` is passed.
 - The next Decision Content candidate remains `amazon-q-vs-github-copilot`, but freshness batch work is currently in progress.
 - Comparison pages must compare the same buyer job and workflow.
-- Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports.
-- June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The first full 60-tool run took 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core timing was 25m 07s worker collection and 11m 48s integration plus verification. Closeout timings were ledger 2s, `tool:refresh:batch:check` 37s, `typecheck` 32s, `check:quick` 22s, `build:fast` 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s. Future refresh work should use six shard workers with up to 10 tools each, one integrator, the fast batch gate, dev-server route QA while editing, then one `build:fast` at closeout.
+- Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports. Tool-refresh closeout now uses route QA concurrency 6 and writes per-route/per-width timing.
+- June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The June 26 same-day revisit closeout shifted the bottleneck to route QA: closeout timing was ledger 0.6s, grouped check 25.4s, typecheck 16.3s, build:fast 16.4s, and route QA 126.3s at concurrency 4 for 75 routes across seven widths. Rerunning the same route matrix at concurrency 6 passed and wrote route timing in about 85.5s internal duration. Future refresh work should use six shard workers with up to 10 tools each, one integrator, generated worker prompts, the fast batch gate, dev-server route QA while editing, then one `build:fast` and concurrency-6 route QA at closeout.
 
 ## Active: June 24 Site Freshness Baseline Goal
 
@@ -96,7 +96,7 @@ Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and
 
 Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes pages verified since yesterday by default; pass `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only for intentional recent-page revisits.
 
-The current verified batch refreshed `zapier` through `jan-ai` from `.tmp-tool-refresh-batch.json` with six workers. Recompute after this batch is pushed before selecting the next shard.
+The current verified local batch refreshed `consensus` through `kling` from `.tmp-tool-refresh-batch.json` with six workers and one in-thread Captions fix. Recompute after this batch is pushed before selecting the next shard.
 
 Required closeout:
 
@@ -104,7 +104,7 @@ Required closeout:
 - `npm run tool:refresh:batch:check -- --plan <saved-planner-json>`
 - `npm run typecheck`
 - `npm run build:fast`
-- `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 4 --route <changed-tool-and-parent-routes> --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366`
+- `node scripts\qa-route.mjs --site-dir dist-fast/client --concurrency 6 --route <changed-tool-and-parent-routes> --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366`
 
 Latest closeout notes:
 
@@ -114,6 +114,7 @@ Latest closeout notes:
 - `tool:refresh:batch:check` now runs `scripts/check-frontmatter.mjs --changed` so malformed markdown frontmatter is caught before the slower Astro typecheck/build phase.
 - Generated worker prompts now require source-confidence labels for constrained facts: `primary-confirmed`, `primary-conflict`, `account-gated`, `checkout-gated`, `region-rendered`, `blocked-live-check`, and `secondary-only`.
 - Rust runner commands are available for the next batch: use `npm run runner:tool-refresh:plan` to prepare local planner artifacts and worker prompts, then `npm run runner:tool-refresh:closeout` after integration to run the closeout sequence and write a local receipt.
+- Prefer generated worker prompts verbatim. A hand-transcribed worker prompt in the June 26 run skipped `captions.md` and briefly assigned two wrong filenames; integration caught and fixed it, but the avoidable miss cost time.
 - The third six-worker batch needed a planner-route correction after watsonx Orchestrate moved from invalid `ai-enterprise` back to `ai-automation`; if a worker changes a tool's primary category, update `.tmp-tool-refresh-batch.json` and `.tmp-route-qa-args.txt` before route QA.
 
 ## Active: Decision Content Flywheel

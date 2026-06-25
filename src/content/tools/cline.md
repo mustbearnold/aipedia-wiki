@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free open-source runtime; usage-based inference; Enterprise/Spec Driven custom"
 status: active
 launched: 2024-07
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://cline.bot/"
     source_label: "Cline homepage"
     source_id: cline-homepage
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     volatility: medium
     confidence: high
@@ -40,7 +40,7 @@ facts:
     source: "https://cline.bot/pricing"
     source_label: "Cline pricing"
     source_id: cline-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     volatility: high
     confidence: high
@@ -49,7 +49,7 @@ facts:
     source: "https://docs.cline.bot/cline-overview"
     source_label: "Cline overview docs"
     source_id: cline-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     volatility: medium
     confidence: high
@@ -58,7 +58,7 @@ facts:
     source: "https://github.com/cline/cline"
     source_label: "Cline GitHub repository"
     source_id: cline-repository
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     volatility: medium
     confidence: high
@@ -67,7 +67,7 @@ facts:
     source: "https://docs.cline.bot/provider-config/other-30-plus-providers"
     source_label: "Cline provider configuration docs"
     source_id: cline-provider-options
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     volatility: high
     confidence: high
@@ -76,7 +76,7 @@ facts:
     source: "https://cline.bot/ide"
     source_label: "Cline IDE page"
     source_id: cline-ide
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     volatility: medium
     confidence: high
@@ -85,7 +85,7 @@ facts:
     source: "https://docs.cline.bot/sdk/guides/permission-handling"
     source_label: "Cline SDK permission handling docs"
     source_id: cline-permission-handling
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     confidence: high
   spec_driven_enterprise:
@@ -93,7 +93,7 @@ facts:
     source: "https://cline.bot/spec-driven"
     source_label: "Cline Spec Driven"
     source_id: cline-spec-driven
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     volatility: high
     confidence: high
@@ -113,13 +113,13 @@ not_best_for:
 quick_answer: >-
   Pick Cline if you want an open-source, provider-flexible coding-agent runtime across IDE, terminal, Kanban, and SDK workflows. Start with the free Open Source plan and model spend carefully. Move to Enterprise or Spec Driven only when SSO, centralized billing, RBAC, audit, team dashboards, SLA, support, JetBrains enterprise packaging, VPC/on-prem/air-gapped deployment, provider-control requirements, or spec-driven enterprise delivery justify a custom quote.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Open Source / Enterprise / Spec Driven"
     price: "Free for individual developers; usage-based inference or BYOK; Enterprise and Spec Driven custom/licensed"
     source: "https://cline.bot/pricing"
     source_label: "Cline pricing"
     source_id: cline-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Rechecked pricing, homepage, docs, GitHub, provider docs, and Spec Driven. Open Source remains free for individual developers; Spec Driven remains a licensed enterprise lane with LG CNS."
   - date: 2026-06-22
     plan: "Open Source / Enterprise"
@@ -187,7 +187,7 @@ The core buyer promise is still strong: Cline is free for individual developers.
 
 ## Recent Developments
 
-- **June 24, 2026:** Cline pricing and homepage were rechecked. Open Source remains free for individual developers with usage-based inference or BYOK, Enterprise remains custom, the homepage navigation still shows roughly 64k GitHub stars, and the buyer caution still centers on provider budgets plus Auto Approve/SDK permission policies.
+- **June 26, 2026:** Cline pricing and homepage were rechecked. Open Source remains free for individual developers with usage-based inference or BYOK, Enterprise remains custom, the homepage navigation still shows roughly 64k GitHub stars, and the buyer caution still centers on provider budgets plus Auto Approve/SDK permission policies.
 - **June 15, 2026:** Cline's current homepage now gives SpecDriven first-nav placement, and the [Spec Driven page](https://cline.bot/spec-driven) positions it as a licensed Cline x LG CNS enterprise AI agent platform. The buyer split is sharper: Open Source remains the free, provider-flexible runtime for individual developers, while Enterprise and Spec Driven are custom/licensed procurement lanes for governance, enterprise context, spec pipelines, deployment boundaries, and predictable token controls.
 - **June 15, 2026:** Cline pricing, provider docs, overview docs, GitHub, and SDK permission docs were rechecked. Open Source is still free for individual developers with usage-based inference/BYOK, Enterprise remains custom, Cline supports broad provider routing including Vercel AI Gateway and DeepSeek, and SDK tool policies still need explicit review because unlisted tools default to enabled and auto-approved.
 
@@ -195,7 +195,7 @@ The core buyer promise is still strong: Cline is free for individual developers.
 
 > **Pick Cline if you want an open, provider-flexible coding agent that can live in your editor, terminal, CI scripts, or product runtime.** It is much more customizable than a closed AI IDE, and the free Open Source plan makes it easy to test without another seat subscription.
 >
-> Cline's public pages now frame the product around IDE, CLI, Kanban, SDK, and Spec Driven enterprise surfaces, with the homepage showing 8.0M+ installs across platforms and the pricing navigation showing roughly 64k GitHub stars as of June 24, 2026. The VS Code Marketplace listing remains useful for install context, while GitHub documents the Apache-2.0 project, CLI, SDK, VS Code extension, Kanban surface, and JetBrains plugin note.
+> Cline's public pages now frame the product around IDE, CLI, Kanban, SDK, and Spec Driven enterprise surfaces, with the homepage showing 8.0M+ installs across platforms and the pricing navigation showing roughly 64k GitHub stars as of June 26, 2026. The VS Code Marketplace listing remains useful for install context, while GitHub documents the Apache-2.0 project, CLI, SDK, VS Code extension, Kanban surface, and JetBrains plugin note.
 >
 > **Skip it if you want cost certainty or centralized governance out of the box.** [Cursor](/tools/cursor/) is smoother for AI-native IDE adoption, [GitHub Copilot](/tools/github-copilot/) is simpler for GitHub-native teams, and [Claude Code](/tools/claude-code/) is cleaner when the buyer specifically wants Anthropic's terminal-agent lane.
 >
@@ -220,7 +220,7 @@ The core buyer promise is still strong: Cline is free for individual developers.
 | **Public traction** | Homepage says 8.0M+ installs across platforms, and the pricing navigation shows roughly 64k GitHub stars |
 | **Open-source caveat** | Cline's GitHub index says the JetBrains plugin is currently not open-sourced |
 
-Every current fact above was verified against Cline's official pages, docs, repository, and marketplace listing on 2026-06-24. See Sources.
+Every current fact above was verified against Cline's official pages, docs, repository, and marketplace listing on 2026-06-26. See Sources.
 
 ## What It Actually Is
 
@@ -279,7 +279,7 @@ Cline does not publish fixed per-task costs because the bill depends on the mode
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against Cline's homepage, pricing page, overview docs, IDE page, CLI page, SDK page, Enterprise page, Spec Driven page, GitHub repository, VS Code Marketplace listing, provider setup docs, Auto Approve docs, SDK permission docs, and Cline's Vercel AI Gateway provider announcement.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against Cline's homepage, pricing page, overview docs, IDE page, CLI page, SDK page, Enterprise page, Spec Driven page, GitHub repository, VS Code Marketplace listing, provider setup docs, Auto Approve docs, SDK permission docs, and Cline's Vercel AI Gateway provider announcement.
 
 ## FAQ
 

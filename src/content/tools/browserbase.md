@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: "$0, $20/mo, $99/mo, or custom scale plans plus usage"
 status: active
 launched: 2023
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Browserbase: Features, Pricing & Review (June 2026)"
 meta_description: "Browserbase is cloud browser infrastructure for agents, scraping, QA, and web data automation. June 2026 check: plans stay $0, $20, $99, or custom, with usage meters to model carefully."
@@ -34,26 +34,26 @@ facts:
     source: "https://www.browserbase.com"
     source_label: "Browserbase website"
     source_id: browserbase-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   coding_agent:
     value: "Infrastructure for browser-using agents; integrates with developer automation stacks"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   best_for:
     value: "Hosted Chromium browsers, Search API, Fetch API, Runtime, Identity, Model Gateway, Observability, Stagehand, and MCP for web agents"
     source: "https://www.browserbase.com"
     source_id: browserbase-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   pricing_anchor:
     value: "Free remains $0; Developer remains $20/month with 25 concurrent browsers and 100 browser hours; Startup remains $99/month with 100 concurrent browsers and 500 browser hours; Scale remains custom. Usage meters include browser hours, Search, Fetch, Extract, proxy bandwidth, and Model Gateway market-price tokens."
     source: "https://www.browserbase.com/pricing"
     source_label: "Browserbase pricing"
     source_id: browserbase-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-29
@@ -62,7 +62,7 @@ facts:
     source: "https://www.browserbase.com/blog/what-is-a-browserbase-browser"
     source_label: "Browserbase Browser explainer"
     source_id: browserbase-browser-blog
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   stagehand_update:
@@ -70,18 +70,18 @@ facts:
     source: "https://www.browserbase.com/changelog"
     source_label: "Browserbase changelog"
     source_id: browserbase-changelog
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
 tags: [browser-automation, web-agents, ai-infrastructure, playwright, scraping, qa, cloud-browser]
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Developer / Startup usage meters"
     price: "Developer $20/mo, Startup $99/mo; Fetch and Extract overages vary by plan and proxy use"
     source: "https://www.browserbase.com/pricing"
     source_label: "Browserbase pricing"
     source_id: browserbase-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Developer lists 1,000 included Fetch calls, then $1/1k standard or $4/1k with proxies. Startup lists 10,000 included Fetch calls, then $0.50/1k standard or $4/1k with proxies. Extract remains $4/1k standard or $7/1k with proxies."
   - date: 2026-03-16
     plan: "Free"
@@ -89,7 +89,7 @@ price_history:
     source: "https://www.browserbase.com/changelog"
     source_label: "Browserbase changelog"
     source_id: browserbase-changelog
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Free-tier concurrency tripled to make agent prototypes practical without paying."
   - date: 2026-03-11
     plan: "Fetch API"
@@ -97,7 +97,7 @@ price_history:
     source: "https://www.browserbase.com/changelog"
     source_label: "Browserbase changelog"
     source_id: browserbase-changelog
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Launched as a lightweight alternative to browser sessions for read-only extraction."
   - date: 2026-05-13
     plan: "Platform additions"
@@ -105,7 +105,7 @@ price_history:
     source: "https://www.browserbase.com/pricing"
     source_label: "Browserbase pricing"
     source_id: browserbase-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Browserbase Functions (Feb), Fetch API (Mar), Search API (Mar), Model Gateway (Apr), Stagehand 3.3.0 (May), improved Downloads API (May) all ship inside existing pricing. Headline plan prices unchanged: Free, Developer $20, Startup $99, Scale custom."
   - date: 2026-06-01
     plan: "Free / Developer / Startup / Scale"
@@ -113,7 +113,7 @@ price_history:
     source: "https://www.browserbase.com/pricing"
     source_label: "Browserbase pricing"
     source_id: browserbase-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Headline plans remain Free, Developer $20/mo, Startup $99/mo, and Scale custom. The pricing page now frames the platform around Browsers, Web Data APIs, Runtime, Identity, Models, Observability, Stagehand, and MCP."
 best_for:
   - developers building browser-using agents
@@ -142,7 +142,7 @@ Browserbase provides hosted Chromium infrastructure for web agents, scraping, QA
 
 ## What Changed Since The Last Refresh
 
-- Pricing stayed stable on June 24: Free, Developer at $20/month, Startup at $99/month, and Scale custom remain the headline plans.
+- Pricing stayed stable on June 26: Free, Developer at $20/month, Startup at $99/month, and Scale custom remain the headline plans.
 - Browserbase's June 16 explainer frames the product as a real cloud Chromium browser for agents, with identity, observability, persistence, live debugging, Search, Fetch, Functions, Model Gateway, and Stagehand around it.
 - Fetch now matters more for cost planning. Browserbase's May update added markdown and JSON output, raised the cap to 5MB, and prices Extract at $4 per 1,000 pages or $7 per 1,000 pages with proxies.
 - The June pricing table exposes more usage math: Developer Fetch overage is $1 per 1,000 standard calls, while Startup is $0.50 per 1,000 standard calls. Proxy Fetch and Extract stay higher.
@@ -196,7 +196,7 @@ The platform has expanded materially in 2026 without changing headline plan pric
 - **February 10:** Browserbase Functions let teams run TypeScript automation code on Browserbase infrastructure instead of maintaining a separate runner.
 - **January 15:** Session Recordings rebuilt on CDP for pixel-accurate, event-driven playback across multiple tabs.
 
-## Pricing Notes Verified 2026-06-24
+## Pricing Notes Verified 2026-06-26
 
 Browserbase lists four plans. Free includes 3 concurrent browsers, 1 browser hour, 1,000 Search calls, 1,000 Fetch calls, 15-minute sessions, 7-day retention, and $5 in model tokens. Developer is $20/mo with 25 concurrent browsers and 100 browser hours, then $0.12/browser-hour, plus 1,000 included Search calls and 1,000 included Fetch calls. Developer Fetch overage is $1 per 1,000 standard calls or $4 per 1,000 with proxies. Startup is $99/mo with 100 concurrent browsers and 500 browser hours, then $0.10/browser-hour, plus 1,000 Search calls and 10,000 Fetch calls. Startup Fetch overage is $0.50 per 1,000 standard calls or $4 per 1,000 with proxies. Extract is $4 per 1,000 pages standard or $7 per 1,000 with proxies. Scale is custom with 250+ concurrent browsers and enterprise features such as SSO, DPA/BAA options, verified agents, and advanced CAPTCHA solving.
 
@@ -246,4 +246,4 @@ The goal is to learn whether Browserbase removes operational risk or just moves 
 
 ## Methodology
 
-This page was refreshed by the aipedia.wiki editorial pipeline against Browserbase primary sources on June 24, 2026. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). No paid placement or affiliate commission influenced the recommendation.
+This page was refreshed by the aipedia.wiki editorial pipeline against Browserbase primary sources on June 26, 2026. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). No paid placement or affiliate commission influenced the recommendation.

@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "14-day trial; Pro Team from $30/month credit packs; Enterprise custom"
 status: active
 launched: 2022
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Qodo: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 24, 2026: Qodo is an AI code review and governance platform. Trial is 14 days, Pro Team starts at $30/month with shared credits, and Enterprise adds SSO, audit logs, BYOK, analytics, and private deployment."
+meta_description: "Updated June 26, 2026: Qodo is an AI code review and governance platform. Trial is 14 days, Pro Team starts at $30/month with shared credits, and Enterprise adds SSO, audit logs, BYOK, analytics, and private deployment."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://docs.qodo.ai/code-review"
     source_label: "Qodo Review v2 docs"
     source_id: qodo-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   best_paid_tier:
     value: "Pro Team from $30/month for the smallest credit pack, with shared workspace credits, no annual self-serve commitment, overage at the same per-credit rate, and support for up to 30 users; Enterprise is the path for 30+ users, SSO/SAML, audit logs, BYOK, advanced analytics, single-tenant SaaS, on-prem, or air-gapped deployment."
@@ -64,6 +64,14 @@ not_best_for:
 quick_answer: >-
   Qodo is best for teams that care about code review discipline as AI-generated code increases. Pick it when pull-request feedback, IDE review, rules, context, shared credit controls, and enterprise controls matter. Skip it if you want autocomplete or chat-based code generation; Qodo's current public positioning is review and governance, not an all-purpose coding assistant.
 price_history:
+  - date: 2026-06-26
+    plan: "Trial / Pro Team / Enterprise"
+    price: "14-day trial / Pro Team from $30 monthly credit packs / custom"
+    source: "https://www.qodo.ai/pricing/"
+    source_label: "Qodo pricing"
+    source_id: qodo-best-paid-tier
+    verified_at: 2026-06-26
+    note: "June 26 recheck: public pricing still shows a 14-day trial, workspace-level pooled credits at $0.012/credit, Pro Team credit packs from $30/month, no annual self-serve commitment, and Enterprise for 30+ users or governed deployment."
   - date: 2026-06-24
     plan: "Trial / Pro Team / Enterprise"
     price: "14-day trial / Pro Team from $30 monthly credit packs / custom"
@@ -128,7 +136,7 @@ Qodo is an AI code review and code quality platform. It focuses less on writing 
 
 That positioning matters in 2026. AI coding agents can create large diffs quickly, but reviewers still need to understand whether the changes are correct, secure, maintainable, and aligned with team conventions. Qodo is built for that review layer.
 
-The key June 2026 buyer caveat is product packaging. The June 24 pricing recheck still does not show the old permanent Developer free tier or the old $38/user/month Teams plan. Qodo now starts every workspace on a 14-day trial, then uses shared workspace credits with Pro Team credit packs from $30/month and Enterprise for larger or governed deployments. Treat old per-seat advice as historical.
+The key June 2026 buyer caveat is product packaging. The June 26 pricing recheck still does not show the old permanent Developer free tier or the old $38/user/month Teams plan. Qodo now starts every workspace on a 14-day trial, then uses shared workspace credits with Pro Team credit packs from $30/month and Enterprise for larger or governed deployments. Treat old per-seat advice as historical.
 
 ## System Verdict
 
@@ -227,7 +235,7 @@ The pricing FAQ says every code review draws credits from the monthly pool and t
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against Qodo primary sources.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against Qodo primary sources.
 
 ## FAQ
 

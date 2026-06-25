@@ -5,10 +5,10 @@ title: AI Design & App Building
 description: Current AI design tools and app builders for social creative, product design, design systems, web prototypes, full-stack apps, and Vercel-native UI workflows.
 tool_count: 9
 seo_title: "Best AI Design & App Builder Tools (June 2026)"
-meta_description: "Updated June 25, 2026: compare Canva AI, Napkin AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
+meta_description: "Updated June 26, 2026: compare Canva AI, Napkin AI, Claude, Figma, Midjourney, Lovart, Uizard, Unbounce, AdCreative.ai, Adobe Firefly, Google Stitch, Framer, Lovable, Rork, Base44, Bolt.new, and v0 by buyer fit, pricing, workflow, credits, rights review, and production risk."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -32,7 +32,7 @@ As of June 20, 2026, start with the job:
 
 **Use [Napkin AI](/tools/napkin-ai/) when the design task starts as text and needs an explanatory visual.** The June 24 pricing check keeps Free at 500 weekly AI credits, Plus at $9/person/month, and Pro at $22/person/month. It also confirms the 25% annual-billing discount, PPT/SVG export on Plus and Pro, optional Pro credit top-ups, and Napkin's statement that AI subprocessors are contractually barred from training on customer data. It is a diagram/flowchart/slide-visual builder, not a full design system or campaign creative suite.
 
-**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 23 pricing check lists AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites beta on Full seats, Figma Buzz beta across seats, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats. The June 23 model and handoff check confirms Figma Make has multiple selectable non-default models, a default-model caveat, paid-plan verified partner MCP connectors, one-way GitHub push to Figma-created repositories, and credit-burn caveats. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
+**Use [Figma](/tools/figma/) when design quality, design systems, multiplayer review, and handoff matter.** Figma's June 26 check keeps AI add-ons, daily/monthly AI credits by plan, Figma Make, Figma Sites beta on Full seats, Figma Buzz beta across seats, Dev Mode, MCP support, libraries, variables, governance, and enterprise seats in the buyer math. The latest Config 2026 recap adds Code Layers, Motion, shaders, generative plugins, Weave tools, agent skills, web search, connectors, and file attachments, so teams should budget Figma as a broader design-to-agent workspace rather than a static canvas. Pick Figma when the artifact has to survive design critique and developer handoff, not just look plausible in a generator.
 
 **Use [Claude Design](/tools/claude-design/) when a Claude team wants prompt-to-prototype work, decks, one-pagers, and Claude Code handoff in the same ecosystem.** The June 18 check keeps the launch backing-model caveat on Opus 4.7, but updates the buying math: Claude Design is available on Pro, Max, Team, and Enterprise, is metered independently from chat and Claude Code, has recurring weekly allowances, and can use purchasable usage credits. It is strongest when `/design-sync` can pull in an existing design system from Claude Code and weakest when teams need mature Figma-style multiplayer editing, audit logs, or design-ops governance.
 

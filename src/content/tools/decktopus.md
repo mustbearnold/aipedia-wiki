@@ -11,8 +11,8 @@ pricing_model: paid
 price_range: $14.99-$34.99/user/month
 status: active
 launched: 2018-01
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   workflow_surface:
@@ -87,6 +87,14 @@ not_best_for:
 quick_answer: >-
   Decktopus AI is best when the presentation itself needs to collect responses. It generates decks from prompts and pairs them with forms, Q&A, analytics, and custom-domain sharing. Pick it for trainers, educators, consultants, and sales decks with built-in data capture. Skip it for general AI slide generation where Gamma or Beautiful.ai is more polished.
 price_history:
+  - date: 2026-06-26
+    plan: "Pro / Business"
+    price: "$14.99/mo billed annually / $34.99/user/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Decktopus pricing"
+    source_id: decktopus-pricing
+    verified_at: 2026-06-26
+    note: "June 26 recheck: public pricing remains Pro $14.99/month billed annually and Business $34.99/user/month billed annually. Affiliate page still presents 50% commission language; checkout totals, promotions, and localization can vary."
   - date: 2026-05-02
     plan: "Pro"
     price: "$14.99/mo billed annually"
@@ -180,12 +188,13 @@ That makes it less of a pure Gamma competitor and more of a "presentation plus l
 | **Enterprise** | Custom, including corporate-branded slides and branded AI setup |
 | **Cloud product** | Yes, Decktopus says it works on the cloud |
 
-Every data point above was re-verified against Decktopus's official pricing page on 2026-06-24. See Sources.
+Every data point above was re-verified against Decktopus's official pricing page on 2026-06-26. See Sources.
 
 AiPedia has an approved Decktopus affiliate link. Decktopus' public affiliate page lists a 50% commission and 60-day cookie; rankings and recommendations remain editorial.
 
 ## Recent Changes
 
+- **2026-06-26:** Rechecked Decktopus pricing and affiliate surfaces. Pro and Business public prices remain unchanged; affiliate language still describes 50% commission, while final terms remain subject to Decktopus approval and partner terms.
 - **2026-06-24:** Rechecked Decktopus pricing, FAQ, affiliate page, and affiliate terms. Pro remains $14.99/month billed annually with 9,000 AI credits/year. Business remains $34.99/user/month billed annually with 12,000 AI credits/year, custom domain, slide analytics, webhook, and organization features. The pricing FAQ still says AI deck creation costs 30 credits; the public affiliate page still lists 50% commission and a 60-day cookie.
 - **2026-06-05:** Rechecked Decktopus pricing and FAQ while refreshing the Decktopus vs Gamma, Pitch, and Presentations.AI comparison slice. Pro remained $14.99/month billed annually with 9,000 AI credits/year. Business remained $34.99/user/month billed annually with 12,000 AI credits/year, custom domain, slide analytics, webhook, and organization features. The pricing FAQ still said AI deck creation costs 30 credits.
 - **2026-05-28:** Affiliate status and public affiliate terms were rechecked. AiPedia has an approved Decktopus affiliate link; editorial ranking remains independent.
@@ -223,7 +232,7 @@ Subscription pricing via [decktopus.com/pricing](https://www.decktopus.com/prici
 | Business | $34.99/user/mo | 12,000/year | Teams needing analytics, custom domain, webhook, and organization controls |
 | Enterprise | Custom | Custom | Corporate-branded decks, custom layouts, branded AI setup |
 
-Prices verified 2026-06-24. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
+Prices verified 2026-06-26. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
 
 ## Failure Modes
 
@@ -237,7 +246,7 @@ Prices verified 2026-06-24. Annual billing saves 40% vs monthly (Pro $179.99/yea
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies tool details against primary sources and then applies the site scoring rubric. Scoring follows Utility, Value, Moat, and Longevity as explained at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
-Last verified 2026-06-24 against Decktopus's official pricing page, affiliate page, affiliate terms, and public product materials.
+Last verified 2026-06-26 against Decktopus's official pricing page, affiliate page, affiliate terms, and public product materials.
 
 ## FAQ
 

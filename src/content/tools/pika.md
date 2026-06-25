@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$76+/month billed yearly; verify Fancy and monthly checkout live"
 status: active
 launched: 2023-11
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -87,6 +87,14 @@ not_best_for:
 quick_answer: >-
   Pika Labs runs on Pika 2.5 with Pikaffects, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaframes, and Pikaformance for creative-effects video. The free tier is the easiest on-ramp in the category. Basic at $8 unlocks commercial use; Standard at $28 unlocks all resolutions, Pikaframes, and watermark-free downloads. Skip it for multi-shot narratives or API-driven pipelines.
 price_history:
+  - date: 2026-06-26
+    plan: "Basic / Standard / Pro / Fancy"
+    price: "$8 / $28 / $76 billed yearly; Fancy price verify live"
+    source: "https://pika.art/pricing"
+    source_label: "Source"
+    source_id: pika-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked official pricing in the June 2026 shard. Basic, Standard, Pro, credit allowances, Pika 2.5 access, Pikaframes, named creative workflows, and Fancy's 6,000-credit allowance remain visible; Fancy dollar pricing remains a live-check item."
   - date: 2024-02-01
     plan: "Standard (legacy)"
     price: "$8/mo billed yearly"
@@ -145,7 +153,7 @@ Pricing runs from a free tier to paid tiers. The free tier includes 80 monthly v
 
 ## Recent changes
 
-- **2026-06-24:** Rechecked Pika's official pricing page. Basic remains $8/month billed yearly, Standard $28/month billed yearly, and Pro $76/month billed yearly. The page also lists Fancy with 6,000 credits and fastest generations, but the static capture did not expose a clean Fancy dollar row, so AiPedia now treats Fancy pricing as a live-check item.
+- **2026-06-26:** Rechecked Pika's official pricing page. Basic remains $8/month billed yearly, Standard $28/month billed yearly, and Pro $76/month billed yearly. The page also lists Fancy with 6,000 credits and fastest generations, but the static capture did not expose a clean Fancy dollar row, so AiPedia treats Fancy pricing as a live-check item.
 - **2026-06-06:** Rechecked Pika pricing and creative-effects positioning during the Kling/Pika/Runway/Seedance/Synthesia/Veo comparison refresh. The Basic/Standard/Pro/Fancy ladder and Pika 2.5 credit math remain the buyer anchor.
 - **2026-05-13:** Pika restructured its paid ladder. Standard moved from the old $8 entry point to $28 with 700 credits, all resolutions, and Pikaframes. Pro moved to $76 with 2,300 credits. Fancy shows 6,000 credits, but AiPedia now treats its dollar price as a live-check item. A new Basic tier at $8 keeps the cheap entry point with commercial use rights but stays at 80 credits.
 
@@ -170,7 +178,7 @@ Pricing runs from a free tier to paid tiers. The free tier includes 80 monthly v
 | **API access** | Enterprise tier only |
 | **Company** | Pika Labs |
 
-Pricing and feature names were refreshed against the official Pika pricing page on 2026-06-24. See Sources.
+Pricing and feature names were refreshed against the official Pika pricing page on 2026-06-26. See Sources.
 
 ## What it actually is
 
@@ -209,7 +217,7 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 | Pro | $76/mo billed yearly | 2,300 | Faster generations · larger credit allowance |
 | Fancy | Verify live | 6,000 | Fastest generations · largest listed credit allowance |
 
-*Basic, Standard, Pro, credit allowances, and feature access verified 2026-06-24 via [pika.art/pricing](https://pika.art/pricing). Fancy's 6,000-credit allowance was visible, but a clean dollar row was not exposed in the static capture. VAT, monthly billing, and top-tier checkout pricing may vary by country and billing toggle.*
+*Basic, Standard, Pro, credit allowances, and feature access verified 2026-06-26 via [pika.art/pricing](https://pika.art/pricing). Fancy's 6,000-credit allowance was visible, but a clean dollar row was not exposed in the static capture. VAT, monthly billing, and top-tier checkout pricing may vary by country and billing toggle.*
 
 ## Against the alternatives
 
@@ -235,7 +243,7 @@ Subscription pricing via [pika.art/pricing](https://pika.art/pricing). Standard 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [pika.art/pricing](https://pika.art/pricing).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis above. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [pika.art/pricing](https://pika.art/pricing).
 
 ## FAQ
 

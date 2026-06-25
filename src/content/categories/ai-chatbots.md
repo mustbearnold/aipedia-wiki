@@ -5,10 +5,10 @@ title: AI Chatbots & LLMs
 description: General-purpose AI assistants and large language model chatbots for writing, research, coding help, analysis, multimodal work, and everyday decision support.
 tool_count: 17
 seo_title: "Best AI Chatbots & LLMs (June 2026), aipedia.wiki"
-meta_description: "Updated June 25, 2026: compare AI chatbots after Claude, ChatGPT, Gemini, Grok, Mistral, Qwen, DeepSeek, MiniMax, and NotebookLM source rechecks, with current model availability, pricing, API, and governance notes."
+meta_description: "Updated June 26, 2026: compare AI chatbots after Claude, ChatGPT, Gemini, Grok, Mistral, Qwen, DeepSeek, MiniMax, and NotebookLM source rechecks, with current model availability, pricing, API, and governance notes."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 ---
 

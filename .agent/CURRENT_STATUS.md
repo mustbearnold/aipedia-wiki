@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed refresh branch includes the June 25 third six-worker batch from Zapier through Jan.ai plus workflow no-regression hardening.
+- Branch: `master`. Latest local batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling, verified locally and pending commit/push.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -30,6 +30,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - Tool pages now use the shared decision-spine default: hero, decision card, plan guidance, fit, recent changes, alternatives, related comparisons, then collapsed proof/score math and full review notes. Keep future tool-page work in this format unless there is a deliberate template migration.
 - The optimized tool-refresh workflow now has a committed procedure under `workflows/tool-refresh/` and a local skill mirror `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`. Treat `workflows/` as canonical for clean clones, and keep the local skill aligned while tuning. In the Codex Windows app, use six parallel shard workers with up to 10 tools per worker because six active agents was the observed ceiling on June 24.
 - The tool-refresh planner now includes registered source metadata, scoped `audit:sources` commands, shard-level `source_ids`, and a default one-day recent-refresh exclusion so overnight runs do not immediately reselect yesterday's completed high-volatility pages. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when intentionally revisiting recent pages.
+- The latest timing pass changed route QA closeout to concurrency 6 with per-route/per-width timing. Same 75-route, seven-width matrix passed at concurrency 6 after the closeout baseline at concurrency 4 took 126s.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -85,7 +86,13 @@ Latest completed batch:
 - Affected parent hubs: AI Video, AI Image, AI Design, and AI Writing.
 - Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, and affected parent source/date summaries. Meshy's current individual ladder now includes Pro, Premium, and Ultra before Studio; Magnific API guidance now warns that pay-per-usage is marked for June 30, 2026 discontinuation.
 
-Latest completed and pushed branch batch:
+Latest completed local batch, pending commit/push:
+
+- Intentional same-day revisit batch from the regenerated queue with `--include-same-day`: `consensus`, `beehiiv`, `blackbox-ai`, `browserbase`, `canva`, `castmagic`, `cline`, `cloudtalk`, `coderabbit`, `midjourney`, `notebooklm`, `qodo`, `replit-agent`, `claude`, `decktopus`, `gemini`, `grok`, `n8n`, `claude-code`, `github-copilot`, `grammarly`, `mistral-ai`, `qwen`, `capacities`, `cursor`, `hailuo`, `heygen`, `adobe-firefly`, `argil`, `augment-code`, `base44`, `captions`, `cody`, `comet`, `continue`, `copy-ai`, `crewai`, `d-id`, `hedra`, `lindy`, `mastra`, `microsoft-agent-framework`, `dia`, `figma`, `chatgpt`, `deepseek`, `meetgeek`, `elevenlabs`, `elicit`, `voxtral`, `descript`, `suno`, `synthesia`, `udio`, `bolt`, `lovable`, `mubert`, `pika`, `v0`, and `kling`.
+- Material buyer updates: Replit Pro annual effective pricing corrected to $90/month; Figma gained Config 2026/agent-workspace context; Capacities gained Release 66 AI Chat Connectors 2.0; Captions was manually caught after a hand-transcribed worker prompt missed it; Synthesia Studio Express-1 avatar add-on is now primary-confirmed at $1,000/year for annual Studio users.
+- Workflow improvements from the timing review: `audit:tool-quality` now uses local/explicit current date instead of UTC-only date slicing, `qa-route` can write route/viewport timing JSON, runner closeout persists route QA timing, and runner route QA uses concurrency 6 while preserving the same route/viewport coverage.
+
+Previous completed and pushed branch batch:
 
 - Third six-worker June 25 batch from the regenerated due-soon queue: `zapier`, `sudowrite`, `writesonic`, `pitch`, `gamma`, `fish-audio`, `quillbot`, `murf`, `resemble-ai`, `stable-diffusion`, `wellsaid`, `freepik`, `you-com`, `kagi`, `scite`, `semantic-scholar`, `kimi`, `langfuse`, `leonardo`, `letta`, `llama`, `lm-studio`, `logseq`, `mem`, `morphic`, `ollama`, `open-webui`, `paradox`, `reflect`, `reka`, `replicate`, `riverside`, `sanebox`, `spellbook`, `stable-audio`, `tactiq`, `writer`, `rows`, `voiceflow`, `tripo3d`, `typingmind`, `uizard`, `unbounce`, `watsonx-orchestrate`, `weaviate`, `whisper`, `workato`, `yi`, `antigravity`, `cohere`, `gpt-image-2`, `openclaw`, `hermes-agent`, and `jan-ai`.
 - Affected parent hubs inspected: AI Automation, AI Writing, AI Presentation, AI Voice, AI Image, AI Search, AI Research, AI Chatbots, AI Notes, AI Infrastructure, AI Music, AI Design, and AI Coding. The `/tools/` and `/categories/` top-layer routes were covered in route QA.

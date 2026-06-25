@@ -14,8 +14,8 @@ pricing_model: freemium
 price_range: "$0-$109+/month"
 status: active
 launched: 2021-11
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -23,7 +23,7 @@ affiliate:
   cookie_days: 60
   network: "PartnerStack"
   link: null
-  notes: "Official beehiiv partner page verified 2026-06-24: up to 60% for 12 months, 60-day cookie, apply via beehiiv partner page."
+  notes: "Official beehiiv partner page verified 2026-06-26: up to 60% for 12 months, 60-day cookie, apply via beehiiv partner page."
 scores:
   utility: 8
   value: 8
@@ -35,7 +35,7 @@ facts:
     source: https://www.beehiiv.com/
     source_label: beehiiv official site
     source_id: beehiiv-official
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -44,7 +44,7 @@ facts:
     source: https://www.beehiiv.com/pricing
     source_label: beehiiv pricing
     source_id: beehiiv-pricing
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: high
     next_review_at: '2026-08-22'
@@ -53,7 +53,7 @@ facts:
     source: https://developers.beehiiv.com/
     source_label: beehiiv developer docs
     source_id: beehiiv-developer-docs
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -62,7 +62,7 @@ facts:
     source: https://www.beehiiv.com/
     source_label: beehiiv official site
     source_id: beehiiv-official
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -71,7 +71,7 @@ facts:
     source: https://www.beehiiv.com/support/article/39255979546263-getting-started-with-the-beehiiv-mcp
     source_label: beehiiv MCP help
     source_id: beehiiv-mcp-help
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: high
     next_review_at: '2026-06-29'
@@ -80,7 +80,7 @@ facts:
     source: https://product.beehiiv.com/
     source_label: beehiiv product updates
     source_id: beehiiv-product-updates
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: high
     next_review_at: '2026-06-29'
@@ -89,7 +89,7 @@ facts:
     source: https://www.beehiiv.com/pricing
     source_label: beehiiv pricing
     source_id: beehiiv-pricing
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: high
     next_review_at: '2026-08-22'
@@ -110,30 +110,30 @@ not_best_for:
 quick_answer: >-
   Beehiiv is the creator-economy newsletter platform with a built-in monetization and AI-operations stack. Pick it for audience growth, ads, Boosts, MCP-connected workflows, and AI-assisted drafting in one place. Skip it if the goal is a minimalist Substack-style reader network, a full marketing-automation suite, or a simple free sender.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "AI Credit Limits"
     price: "10 / 25 / 50 / 100 per day by tier"
     source: "https://www.beehiiv.com/pricing"
     source_label: "Beehiiv pricing"
     source_id: beehiiv-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Pricing table makes daily AI-credit ceilings explicit across Launch, Scale, Max, and Enterprise; treat this as an AI-usage limit to test before annual billing."
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Launch"
     price: "$0/mo"
     source: "https://www.beehiiv.com/pricing"
     source_label: "Beehiiv pricing"
     source_id: beehiiv-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Free tier verified. Launch includes up to 2,500 subscribers, unlimited sends, newsletters, website, podcast, custom domains, AI Website Builder, API access except Send API, and MCP read access."
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Launch / Scale / Max / Enterprise"
     price: "$0 / $49 monthly or $43 annual-equivalent / $109 monthly or $96 annual-equivalent / custom"
     source: "https://www.beehiiv.com/pricing"
     source_label: "Beehiiv pricing"
     source_id: beehiiv-pricing
-    verified_at: 2026-06-24
-    note: "June 24 refresh confirmed monthly paid billing starts at $49/month, annual starting prices show Scale at $43/month and Max at $96/month for the low-subscriber selector, paid plan pricing scales by active subscriber tier, and Enterprise remains custom."
+    verified_at: 2026-06-26
+    note: "June 26 refresh confirmed monthly paid billing starts at $49/month, annual starting prices show Scale at $43/month and Max at $96/month for the low-subscriber selector, paid plan pricing scales by active subscriber tier, and Enterprise remains custom."
 ---
 
 # Beehiiv
@@ -152,7 +152,7 @@ The pitch is creator-economy first: the operator owns the subscriber list, the m
 
 ## What Changed Since The Last Refresh
 
-The June 24 refresh found that Beehiiv has changed more in workflow than in annual starting price:
+The June 26 refresh found that Beehiiv has changed more in workflow than in annual starting price:
 
 - Pricing still shows Launch at $0, Scale at $43/month annual-equivalent, Max at $96/month annual-equivalent, and Enterprise custom. Monthly billing matters in the buyer copy now because the pricing FAQ says paid plans start at $49/month, while Max monthly starts at $109/month.
 - The pricing comparison table now exposes daily AI Credit Limits of 10, 25, 50, and 100 across the plan columns. Treat that as a usage ceiling to test before annual billing if AI Writer, translation, or MCP-assisted content work is central.
@@ -178,7 +178,7 @@ The June 24 refresh found that Beehiiv has changed more in workflow than in annu
 | **AI credit limits** | Pricing table shows 10 / 25 / 50 / 100 daily AI credits by tier |
 | **Public API** | API docs are public; Send API is Enterprise; MCP read access is available to all users and write access requires paid plans |
 
-Every data point above was verified against vendor documentation on 2026-06-24. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-26. See Sources.
 
 ## What it actually is
 
@@ -216,7 +216,7 @@ Subscription pricing via [beehiiv.com/pricing](https://www.beehiiv.com/pricing).
 | Max | from $109 monthly or $96 annual-equivalent | Up to 100,000 | Removes Beehiiv branding, sponsorship storefront, audio newsletters, appointments, RSS to send, up to 10 publications, unlimited team seats, priority support, Getty credits, dynamic content | Full stack | **Creators running newsletters as a business** |
 | Enterprise | Custom | 100,000+ | Concierge onboarding, dedicated account manager, dedicated IPs, Send API, custom publication limits, SSO, VIP support | Full stack | Publishing teams and media studios |
 
-*Prices verified 2026-06-24 via [Beehiiv pricing](https://www.beehiiv.com/pricing) and the plan-tier help article. Annual billing discounts the starting monthly equivalent to $43 for Scale and $96 for Max. Both paid plans rise with active subscriber count up to a 100,000-subscriber ceiling, and lists above that move to Enterprise. The same pricing table now makes daily AI Credit Limits visible, so run the calculator and test AI-credit burn before annual billing.*
+*Prices verified 2026-06-26 via [Beehiiv pricing](https://www.beehiiv.com/pricing) and the plan-tier help article. Annual billing discounts the starting monthly equivalent to $43 for Scale and $96 for Max. Both paid plans rise with active subscriber count up to a 100,000-subscriber ceiling, and lists above that move to Enterprise. The same pricing table now makes daily AI Credit Limits visible, so run the calculator and test AI-credit burn before annual billing.*
 
 The right default for a serious operator is still Max if the newsletter is already a business. Scale already unlocks Ads, Boosts, paid subscriptions, webhooks, automations, human support, and MCP write access in 2026, so the upgrade case for Max is branding removal, sponsorship storefronts, multi-publication, audio newsletters, RSS to send, priority support, dynamic content, and unlimited team seats. Boosts or Ad Network earnings may recover either subscription once a list has real engagement, but small lists should not assume that.
 
@@ -249,7 +249,7 @@ The right default for a serious operator is still Max if the newsletter is alrea
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-24 against [beehiiv.com](https://www.beehiiv.com), [beehiiv.com/pricing](https://www.beehiiv.com/pricing), the [plan-tier help article](https://www.beehiiv.com/support/article/23874462928663-plan-types-and-subscriber-plan-tier-pricing), [Beehiiv MCP help](https://www.beehiiv.com/support/article/39255979546263-getting-started-with-the-beehiiv-mcp), [product updates](https://product.beehiiv.com/), [developer docs](https://developers.beehiiv.com/), and the [affiliate partner page](https://www.beehiiv.com/partners/affiliate).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and product details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-26 against [beehiiv.com](https://www.beehiiv.com), [beehiiv.com/pricing](https://www.beehiiv.com/pricing), the [plan-tier help article](https://www.beehiiv.com/support/article/23874462928663-plan-types-and-subscriber-plan-tier-pricing), [Beehiiv MCP help](https://www.beehiiv.com/support/article/39255979546263-getting-started-with-the-beehiiv-mcp), [product updates](https://product.beehiiv.com/), [developer docs](https://developers.beehiiv.com/), and the [affiliate partner page](https://www.beehiiv.com/partners/affiliate).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$100/month business plan; Enterprise custom"
 status: active
 launched: 2024
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Augment Code: Features, Pricing & Review (June 2026)"
 meta_description: "Updated June 24, 2026: Augment Code still centers public pricing on Business at $100/month flat for up to 50 seats with $100 included usage, Cosmos, Auggie CLI, MCP/native tools, and Enterprise custom. Model docs list Claude Fable 5, Opus 4.7, GPT-5.5, Kimi K2.6, and Prism routing."
@@ -48,7 +48,7 @@ facts:
     source: "https://www.augmentcode.com/pricing"
     source_label: "Augment pricing"
     source_id: augment-code-best-paid-tier
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-30
     confidence: high
   best_for:
@@ -71,6 +71,14 @@ not_best_for:
 quick_answer: >-
   Augment Code is best viewed as an AI layer for serious existing codebases. Pick it when context quality, IDE flexibility, Cosmos automation, and team-level usage accounting matter more than having a standalone AI IDE. Skip it if you expected the older $20 solo plan or want predictable per-seat pricing without usage metering.
 price_history:
+  - date: 2026-06-26
+    plan: "Business"
+    price: "$100/month flat for up to 50 seats with $100 included usage"
+    source: "https://www.augmentcode.com/pricing"
+    source_label: "Augment pricing"
+    source_id: augment-code-best-paid-tier
+    verified_at: 2026-06-26
+    note: "Rechecked official pricing. Business remains the public self-serve lane with $100/month pooled usage, Cosmos, CLI access, MCP/native tools, pay-as-you-go top-ups, SOC 2 Type II, and no AI training; Enterprise remains custom."
   - date: 2026-06-24
     plan: "Business"
     price: "$100/month flat for up to 50 seats with $100 included usage"
@@ -220,7 +228,7 @@ Pricing via [Augment Code pricing](https://www.augmentcode.com/pricing):
 | Business | $100/month flat | $100/month across LLM tokens, service fee, and Cosmos compute; up to 50 seats | Small and mid-size teams that want Augment without per-seat math |
 | Enterprise | Custom | Custom usage, custom top-up, unlimited users, custom compute, multi-region compute | Larger teams that need SSO/OIDC/SCIM, CMEK, ISO 42001, SIEM, data residency, access controls, audit trails, and dedicated support |
 
-Business usage is dollar-denominated rather than a fixed credit pool. Augment's token-pricing docs say requests draw from three components: LLM tokens at the provider's public API list price, a 40% service fee on LLM usage, and Cosmos compute at $0.19/hour billed in 5-minute increments. Once the included $100 is consumed, billing continues on pay-as-you-go at the same rates with no minimum top-up. Pricing verified 2026-06-24 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing) and [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing).
+Business usage is dollar-denominated rather than a fixed credit pool. Augment's token-pricing docs say requests draw from three components: LLM tokens at the provider's public API list price, a 40% service fee on LLM usage, and Cosmos compute at $0.19/hour billed in 5-minute increments. Once the included $100 is consumed, billing continues on pay-as-you-go at the same rates with no minimum top-up. Pricing verified 2026-06-26 via [augmentcode.com/pricing](https://www.augmentcode.com/pricing) and [Augment token-based pricing](https://docs.augmentcode.com/models/token-based-pricing).
 
 ## Against The Alternatives
 
@@ -245,7 +253,7 @@ Business usage is dollar-denominated rather than a fixed credit pool. Augment's 
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-24 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing), [token-based pricing](https://docs.augmentcode.com/models/token-based-pricing), [available models](https://docs.augmentcode.com/models/available-models), [feature availability](https://docs.augmentcode.com/feature-availability), and Claude Fable 5 changelog.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-26 against primary Augment sources: the [pricing page](https://www.augmentcode.com/pricing), [token-based pricing](https://docs.augmentcode.com/models/token-based-pricing), [available models](https://docs.augmentcode.com/models/available-models), [feature availability](https://docs.augmentcode.com/feature-availability), and Claude Fable 5 changelog.
 
 ## FAQ
 

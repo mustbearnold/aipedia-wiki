@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 25, 2026: Elicit for systematic-review workflow, Semantic Scholar for academic search/API, Scite for citation context/MCP, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for academic Q&A, and nanochat for LLM-training education."
+meta_description: "Updated June 26, 2026: Elicit for systematic-review workflow, Semantic Scholar for academic search/API, Scite for citation context/MCP, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for academic Q&A, and nanochat for LLM-training education."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 ---
 

@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$200/month"
 status: active
 launched: 2023-12
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Gemini: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 25, 2026: Gemini 3.5 Flash remains the stable API route while Computer Use enters public preview and reported Gemini 3.5 Pro timing stays pending."
+meta_description: "Updated June 26, 2026: Gemini 3.5 Flash remains the stable API route while Computer Use enters public preview and reported Gemini 3.5 Pro timing stays pending."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,7 +34,7 @@ facts:
     source: "https://ai.google.dev/gemini-api/docs/models"
     source_label: "Gemini API model docs"
     source_id: google-gemini-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -43,7 +43,7 @@ facts:
     source: "https://support.google.com/gemini/answer/16275805"
     source_label: "Gemini Apps limits and upgrades"
     source_id: google-gemini-app-limits
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -194,6 +194,14 @@ not_best_for:
 quick_answer: >-
   Gemini is the widest Google-native multimodal bundle. Pick it for Workspace, Search, Android, NotebookLM, Antigravity/Jules, Veo/Gemini Omni video, Nano Banana image generation, and Google One benefits in one account. API buyers should separate Gemini 3.5 Flash standard, batch/flex, and priority pricing before budgeting production workloads. If the buyer uses unpaid-tier or Google One Code Assist, plan around Google's June 18, 2026 shift from Gemini CLI/Code Assist IDE extensions to Antigravity CLI and Antigravity. Skip it for Claude Code-style terminal depth or distinctive long-form writing.
 price_history:
+  - date: 2026-06-26
+    plan: "Gemini 3.5 Flash API pricing and 3.5 Pro timing"
+    price: "Gemini 3.5 Flash standard paid tier remains $1.50/M input and $9/M output; Gemini 3.5 Pro remains pending in primary API docs"
+    source: "https://ai.google.dev/gemini-api/docs/pricing"
+    source_id: google-gemini-api-pricing
+    source_label: "Gemini API pricing"
+    verified_at: 2026-06-26
+    note: "June 26 recheck: official pricing still lists Gemini 3.5 Flash at the same standard paid-tier rates. Business Insider reported on June 25 that Gemini 3.5 Pro slipped from June to July; Google primary API docs still do not expose a stable Gemini 3.5 Pro pricing row."
   - date: 2026-06-24
     plan: "Gemini 3.5 Flash API pricing recheck"
     price: "Standard paid tier $1.50/M input and $9/M output; batch/flex is $0.75/M input and $4.50/M output; priority is $2.70/M input and $16.20/M output"
@@ -462,7 +470,7 @@ Code Assist surfaces rechecked 2026-06-24 via [Gemini Code Assist](https://cloud
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against Google's Gemini model, pricing, app-limit, grounding, Code Assist, image, video, Workspace privacy, and Gemini Intelligence sources. Supporting timeline checks include the June 3 Gemini Drive sharing update, May 21 Gemini ADK and Home infrastructure update, May 20 Marketing Live update, May 19 I/O subscription update, and May 19 Antigravity and Managed Agents update.
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last refreshed 2026-06-26 against Google's Gemini model, pricing, app-limit, grounding, Code Assist, image, video, Workspace privacy, and Gemini Intelligence sources. Supporting timeline checks include the June 25 reported Gemini 3.5 Pro delay, June 3 Gemini Drive sharing update, May 21 Gemini ADK and Home infrastructure update, May 20 Marketing Live update, May 19 I/O subscription update, and May 19 Antigravity and Managed Agents update.
 
 ## FAQ
 

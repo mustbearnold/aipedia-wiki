@@ -5,10 +5,10 @@ title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Seedance, Kling, Veo, Runway & Tavus"
-meta_description: "Updated June 25, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, OpusClip, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+meta_description: "Updated June 26, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, OpusClip, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 top_picks:
   best_overall: seedance

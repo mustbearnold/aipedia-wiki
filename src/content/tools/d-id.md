@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "Free trial; paid Studio and API plans"
 status: active
 launched: 2017-01
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -19,7 +19,7 @@ affiliate:
   cookie_days: null
   network: direct
   link: null
-  notes: "Official D-ID affiliate terms verified 2026-06-24: selected-user program, payment only after two consecutive paid months, minimum $30 accumulated fee, and personal/non-commercial sharing limits."
+  notes: "Official D-ID affiliate terms verified 2026-06-26: selected-user program, payment only after two consecutive paid months, minimum $30 accumulated fee, and personal/non-commercial sharing limits."
 scores:
   utility: 8
   value: 6
@@ -31,7 +31,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: medium
     confidence: high
     next_review_at: '2026-07-01'
@@ -40,7 +40,7 @@ facts:
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: high
     next_review_at: '2026-07-01'
@@ -49,7 +49,7 @@ facts:
     source: https://docs.d-id.com/
     source_label: D-ID docs
     source_id: d-id-docs
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: medium
     confidence: high
     next_review_at: '2026-07-01'
@@ -58,7 +58,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: medium
     confidence: high
     next_review_at: '2026-07-01'
@@ -67,7 +67,7 @@ facts:
     source: https://www.d-id.com/agentic-videos/
     source_label: D-ID Agentic Videos
     source_id: d-id-agentic-videos
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: medium
     next_review_at: '2026-07-01'
@@ -76,7 +76,7 @@ facts:
     source: https://www.d-id.com/ai-agents/
     source_label: D-ID AI Agents
     source_id: d-id-agents
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: high
     next_review_at: '2026-07-01'
@@ -85,7 +85,7 @@ facts:
     source: https://www.d-id.com/pricing/studio/
     source_label: D-ID Studio pricing
     source_id: d-id-studio-pricing
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: high
     confidence: high
     next_review_at: '2026-07-01'
@@ -94,7 +94,7 @@ facts:
     source: https://www.d-id.com/affiliate-terms/
     source_label: D-ID affiliate terms
     source_id: d-id-affiliate-terms
-    verified_at: '2026-06-24'
+    verified_at: '2026-06-26'
     volatility: medium
     confidence: high
     next_review_at: '2026-07-01'
@@ -115,13 +115,13 @@ author: aipedia.wiki Editorial
 quick_answer: >-
   D-ID is the right shortlist pick when you need a live visual AI agent or embeddable talking-avatar API. It is not the default choice for cheap pre-rendered avatar videos; compare HeyGen, Synthesia, and Tavus when output volume, avatar polish, or training workflows matter more than real-time interaction.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Studio / API / Visual AI Agents"
     price: "Free trial; paid Studio and API plans"
     source: "https://www.d-id.com/pricing/studio/"
     source_label: "D-ID Studio pricing"
     source_id: d-id-studio-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Rechecked Studio pricing, API pricing, Visual AI Agents, docs, and affiliate terms. Public plan cards remain dynamic, so AiPedia keeps exact old plan prices out and repeats only verified trial, watermark, 15-second rounding, API balance, 200-session starter, and 0.5 credit per 30 seconds agent-response metering notes."
 ---
 
@@ -152,7 +152,7 @@ D-ID is an AI avatar platform for two related jobs: generating talking-avatar vi
 - **Watermark caveat:** D-ID states that Trial and Lite videos carry watermarks, including full-screen watermarking for trial users.
 - **Buyer watch-out:** old exact self-serve prices should not be treated as current unless the live pricing page or logged-in checkout confirms them on the purchase date.
 
-Verified against D-ID official pages on 2026-06-24.
+Verified against D-ID official pages on 2026-06-26.
 
 ## What It Actually Is
 
@@ -186,7 +186,7 @@ Use [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) and [D-ID API pr
 - **Studio paid plans:** verify live minutes, 15-second usage rounding, watermarks, and export rules before buying because plan-card details remain dynamic.
 - **API:** D-ID maintains a separate API pricing page and developer hub, but the Studio pricing FAQ says API minutes are deducted from the same balance as web D-ID. Production agent/video usage should be verified against API packaging and the logged-in balance view, not only a marketing plan card.
 - **Agents:** D-ID says everyone gets 200 free conversation sessions to start; after that, conversation sessions depend on plan and generated agent response video is charged at 0.5 credit per 30 seconds.
-- **What AiPedia no longer repeats:** old Lite/Pro/Advanced dollar figures, old credit counts, and old per-minute estimates that are not tied to the current live balance and 15-second rounding rules. The public Studio pricing page checked on 2026-06-24 does not statically expose enough plan-card detail in a scrape-safe way; check the live page or in-app checkout on the day of purchase.
+- **What AiPedia no longer repeats:** old Lite/Pro/Advanced dollar figures, old credit counts, and old per-minute estimates that are not tied to the current live balance and 15-second rounding rules. The public Studio pricing page checked on 2026-06-26 does not statically expose enough plan-card detail in a scrape-safe way; check the live page or in-app checkout on the day of purchase.
 
 ## Best Plan Guidance
 
@@ -206,7 +206,7 @@ Use [D-ID Studio pricing](https://www.d-id.com/pricing/studio/) and [D-ID API pr
 
 ## Methodology
 
-AiPedia refreshed this page on 2026-06-24 against primary D-ID sources only: the official Visual AI Agents page, Agentic Videos page, Studio pricing page, API pricing page, affiliate terms, and developer docs. V4 Expressive Visual Agents, Agentic Videos, the sub-two-second latency and over-90-percent-accuracy claims, the 5-document / 500K-character knowledge-base limits, the 200 free conversation sessions, 0.5 credit per 30 seconds agent metering, same-balance API minutes, 15-second Studio video-usage rounding, and Trial/Lite watermark caveats were rechecked from live official pages. Older exact prices, unsupported language claims, and unsupported LLM-name claims remain out.
+AiPedia refreshed this page on 2026-06-26 against primary D-ID sources only: the official Visual AI Agents page, Agentic Videos page, Studio pricing page, API pricing page, affiliate terms, and developer docs. V4 Expressive Visual Agents, Agentic Videos, the sub-two-second latency and over-90-percent-accuracy claims, the 5-document / 500K-character knowledge-base limits, the 200 free conversation sessions, 0.5 credit per 30 seconds agent metering, same-balance API minutes, 15-second Studio video-usage rounding, and Trial/Lite watermark caveats were rechecked from live official pages. Older exact prices, unsupported language claims, and unsupported LLM-name claims remain out.
 
 ## FAQ
 
@@ -220,7 +220,7 @@ Not for every buyer. D-ID is strongest when interaction matters. For standard pr
 Yes. D-ID's developer hub includes realtime agents, agent sessions, knowledge, LLM configuration, avatar video APIs, video translate, and embed documentation.
 
 **How much does D-ID cost?**
-AiPedia is not repeating old exact prices because the live public pricing page checked on 2026-06-24 still does not expose enough Studio plan-card detail statically. Use D-ID Studio pricing, API pricing, and logged-in checkout for the current plan, balance, 15-second video-usage rounding, watermark, session, agent-credit, and API details before buying.
+AiPedia is not repeating old exact prices because the live public pricing page checked on 2026-06-26 still does not expose enough Studio plan-card detail statically. Use D-ID Studio pricing, API pricing, and logged-in checkout for the current plan, balance, 15-second video-usage rounding, watermark, session, agent-credit, and API details before buying.
 
 **Does D-ID support live conversational avatars?**
 Yes. D-ID's V4 Expressive Visual Agents product is specifically positioned for real-time avatar interactions, with customizable appearance, voice, personality, RAG knowledge bases, webhooks, and embeddable deployment. D-ID claims sub-two-second response latency. Agentic Videos add a scripted-plus-interactive hybrid mode where viewers can ask questions by voice or chat during a video.
@@ -230,12 +230,12 @@ Avoid D-ID if you only need cheap, high-volume pre-rendered social clips or ente
 
 ## Sources
 
-- [D-ID Visual AI Agents](https://www.d-id.com/ai-agents/): visual agent workflow, knowledge, webhooks, embedded use cases, free sessions, and agent metering, verified 2026-06-24.
-- [D-ID Agentic Videos](https://www.d-id.com/agentic-videos/): interactive video questions, script/knowledge grounding, analytics, V4 agent positioning, and use cases, verified 2026-06-24.
-- [D-ID Studio pricing](https://www.d-id.com/pricing/studio/): Studio pricing surface, free trial, watermark notes, API-key path, 15-second video-usage rounding, and same-balance API minute language, verified 2026-06-24.
-- [D-ID API pricing](https://www.d-id.com/pricing/api/): API pricing surface and developer-hub path, verified 2026-06-24.
-- [D-ID developer docs](https://docs.d-id.com/): realtime agents, videos, SDKs, knowledge, LLMs, and avatar API documentation, verified 2026-06-24.
-- [D-ID affiliate terms](https://www.d-id.com/affiliate-terms/): selected-user affiliate program, payout criteria, minimum payment threshold, and sharing restrictions, verified 2026-06-24.
+- [D-ID Visual AI Agents](https://www.d-id.com/ai-agents/): visual agent workflow, knowledge, webhooks, embedded use cases, free sessions, and agent metering, verified 2026-06-26.
+- [D-ID Agentic Videos](https://www.d-id.com/agentic-videos/): interactive video questions, script/knowledge grounding, analytics, V4 agent positioning, and use cases, verified 2026-06-26.
+- [D-ID Studio pricing](https://www.d-id.com/pricing/studio/): Studio pricing surface, free trial, watermark notes, API-key path, 15-second video-usage rounding, and same-balance API minute language, verified 2026-06-26.
+- [D-ID API pricing](https://www.d-id.com/pricing/api/): API pricing surface and developer-hub path, verified 2026-06-26.
+- [D-ID developer docs](https://docs.d-id.com/): realtime agents, videos, SDKs, knowledge, LLMs, and avatar API documentation, verified 2026-06-26.
+- [D-ID affiliate terms](https://www.d-id.com/affiliate-terms/): selected-user affiliate program, payout criteria, minimum payment threshold, and sharing restrictions, verified 2026-06-26.
 
 ## Related
 

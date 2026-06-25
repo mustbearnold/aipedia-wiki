@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: $0-$30/month
 status: active
 launched: 2023-12
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -191,6 +191,14 @@ decision_brief:
       value: "Udio"
       detail: "Suno is easier; Udio offers stronger edit control."
 price_history:
+  - date: 2026-06-26
+    plan: "Pro / Premier"
+    price: "$10 / $30 monthly; $8 / $24 annual-billing equivalents"
+    source: "https://suno.com/pricing"
+    source_label: "Source"
+    source_id: suno-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked official pricing and blog surfaces in the June 2026 shard. Pro and Premier still anchor commercial rights, v5.5 access, stems, Voices, custom models, add-on credits, and Premier Studio."
   - date: 2026-03-26
     plan: "Pro"
     price: "$10/mo"
@@ -229,12 +237,12 @@ price_history:
 
 ## Recent changes
 
-- **June 24, 2026:** Rechecked Suno pricing, v5.5, Studio, stem-separation updates, and current legal reporting. Official pricing shows Pro at $10 monthly or $8/month billed annually, and Premier at $30 monthly or $24/month billed annually. Prior copy incorrectly treated the annual-billing equivalents as monthly price cuts.
+- **June 26, 2026:** Rechecked Suno pricing, v5.5, Studio, stem-separation updates, Series D coverage, and current legal reporting. Official pricing still shows Pro at $10 monthly or $8/month billed annually, and Premier at $30 monthly or $24/month billed annually.
 - **June 11, 2026:** Suno expanded stem-separation workflows. Auto Split and Split from Mix are listed for Pro and Premier, while Advanced Split is Premier-only.
 - **June 8, 2026:** The American Federation of Musicians sued UMG and Warner Music over alleged licensing of member recordings to Suno and Udio without compensation or credit. This is separate from the major-label copyright suits and keeps the rights picture volatile.
 - **June 3, 2026:** Suno announced a $400M+ Series D at a $5.4B post-money valuation.
 
-Suno is the easiest default AI music generator as of June 24, 2026. The current model story is **v5.5**, released **March 26, 2026**, with Voices, custom style models, and the My Taste preference engine. Premier adds **Suno Studio**, an AI-native music workspace with timeline editing and export-oriented controls. Commercial rights require Pro or Premier. Warner Music Group settled its lawsuit and partnered with Suno in November 2025, but Sony and Universal cases remain active, and the June 2026 musician-union suit adds another licensing risk to watch.
+Suno is the easiest default AI music generator as of June 26, 2026. The current model story is **v5.5**, released **March 26, 2026**, with Voices, custom style models, and the My Taste preference engine. Premier adds **Suno Studio**, an AI-native music workspace with timeline editing and export-oriented controls. Commercial rights require Pro or Premier. Warner Music Group settled its lawsuit and partnered with Suno in November 2025, but Sony and Universal cases remain active, and the June 2026 musician-union suit adds another licensing risk to watch.
 
 ## System Verdict
 

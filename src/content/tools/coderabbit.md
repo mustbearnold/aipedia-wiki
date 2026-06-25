@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "$0-$60/developer/month"
 status: active
 launched: 2023
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "CodeRabbit: Features, Pricing & Review (June 2026)"
-meta_description: "CodeRabbit review updated June 24, 2026: Pro is $24/user/mo annual, Pro+ is $48/user/mo annual, usage add-on credits are $1, and Slack agent work is usage priced."
+meta_description: "CodeRabbit review updated June 26, 2026: Pro is $24/user/mo annual, Pro+ is $48/user/mo annual, usage add-on credits are $1, and Slack agent work is usage priced."
 author: aipedia.wiki Editorial
 affiliate:
   has_program: false
@@ -34,14 +34,14 @@ facts:
     source: "https://docs.coderabbit.ai/"
     source_label: "CodeRabbit platform docs"
     source_id: coderabbit-platform-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   best_paid_tier:
     value: "Pro ($24/user/month annual) for review; Pro+ ($48/user/month annual) for planning, unit tests, merge-conflict help, and higher limits; add credits for deliberate over-limit PR/CLI review volume"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-06-29
     confidence: high
   best_for:
@@ -49,7 +49,7 @@ facts:
     source: "https://www.coderabbit.ai/pricing"
     source_label: "CodeRabbit pricing"
     source_id: coderabbit-best-for
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
 tags: [ai-coding, code-review, pull-requests, github, gitlab, cli, vscode, sast, linters]
 best_for:
@@ -64,13 +64,13 @@ not_best_for:
 quick_answer: >-
   CodeRabbit is useful when pull request review is the bottleneck. Pick it for automated summaries, contextual PR comments, IDE/CLI reviews, linter and SAST support, and OSS-friendly public repository terms. Consider the Slack agent separately for investigation, planning, and PR-opening workflows. Skip it if your team needs deeper architecture review from humans, not more comments.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Pricing and usage refresh"
     price: "Free / Pro $24 annual or $30 monthly / Pro+ $48 annual or $60 monthly / credits at $1 for 4 reviewed files / Slack agent $0.50 per active agent minute"
     source: "https://docs.coderabbit.ai/management/plans"
     source_label: "CodeRabbit plans docs"
     source_id: coderabbit-best-paid-tier
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Rechecked official pricing, plan docs, usage add-on, pricing page, Slack Agent docs, and changelog. Public price anchors are unchanged; the buyer issue remains rolling review limits, fair-use adaptation, and metered over-limit or Slack agent work."
   - date: 2026-06-22
     plan: "Pricing and usage refresh"
@@ -134,7 +134,7 @@ price_history:
 
 CodeRabbit is an AI code review platform for pull requests, IDE reviews, CLI reviews, CodeRabbit Plan, and Slack-based engineering workflows. It connects to GitHub, GitLab, Azure DevOps, and Bitbucket surfaces, summarizes pull requests, comments on changed code, supports linters and SAST tools, and adds workflow features such as Jira/Linear integrations, autofix, docstring generation, MCP connections, issue planning, and usage-priced Slack agent work.
 
-The June 24, 2026 recheck found no public price change. Pro remains $24/developer/month on annual billing, Pro+ remains $48/developer/month on annual billing, the usage add-on remains $1 per credit for four reviewed files, and the public pricing page still lists CodeRabbit Agent for Slack at $0.50 per active agent minute. The buyer risk is not the sticker price. It is how many review loops agents, humans, and automation trigger in a week.
+The June 26, 2026 recheck found no public price change. Pro remains $24/developer/month on annual billing, Pro+ remains $48/developer/month on annual billing, the usage add-on remains $1 per credit for four reviewed files, and the public pricing page still lists CodeRabbit Agent for Slack at $0.50 per active agent minute. The buyer risk is not the sticker price. It is how many review loops agents, humans, and automation trigger in a week.
 
 The best mental model: CodeRabbit is not an AI IDE. It is a review layer for teams already using pull requests.
 
@@ -248,7 +248,7 @@ Current feature limits worth budgeting around: Pro lists 5 MCP connections and 1
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against CodeRabbit primary sources. The check covered refillable review allowances, usage add-on credit pricing, Knowledge Base behavior, Slack Agent billing, CLI positioning, and June changelog updates.
+This page was produced by the aipedia.wiki editorial pipeline. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against CodeRabbit primary sources. The check covered refillable review allowances, usage add-on credit pricing, Knowledge Base behavior, Slack Agent billing, CLI positioning, and June changelog updates.
 
 ## FAQ
 

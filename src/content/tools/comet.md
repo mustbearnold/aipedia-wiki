@@ -11,11 +11,11 @@ pricing_model: freemium
 price_range: "Free browser; paid Perplexity tiers can increase AI capacity"
 status: active
 launched: 2025
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Perplexity Comet: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 24, 2026: Perplexity Comet is a free AI browser for Mac, Windows, iOS, and Android, with paid Perplexity tiers adding Comet Agent, Max Assistant, Computer credits, and enterprise controls."
+meta_description: "Updated June 26, 2026: Perplexity Comet is a free AI browser for Mac, Windows, iOS, and Android, with paid Perplexity tiers adding Comet Agent, Max Assistant, Computer credits, and enterprise controls."
 author: "aipedia.wiki Editorial"
 affiliate:
   has_program: false
@@ -34,36 +34,36 @@ facts:
     source: "https://www.perplexity.ai/comet"
     source_label: "Perplexity Comet page"
     source_id: perplexity-comet
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   best_for:
     value: "Research-first browsing, source-backed search, and AI-assisted navigation"
     source: "https://www.perplexity.ai/comet"
     source_id: perplexity-comet
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
   best_paid_tier:
     value: "Use the free browser first; upgrade Perplexity only when Comet Agent query limits, Max Assistant, Computer credits, advanced models, or enterprise browser controls matter"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_id: perplexity-enterprise-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     confidence: high
   watch_out_for:
     value: "Comet can draft, shop, build, and work across web pages, so sensitive email, finance, shopping, account, and file actions need explicit review and approval."
     source: "https://www.perplexity.ai/comet"
     source_id: perplexity-comet
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     confidence: high
 tags: [browser, ai-browser, perplexity, search, research, answer-engine, citations]
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Comet / Comet Agent / Max Assistant / Enterprise controls"
     price: "Free browser; paid Perplexity tiers lift Comet Agent, Max Assistant, Computer credits, and enterprise controls"
     source: "https://www.perplexity.ai/enterprise/pricing"
     source_label: "Perplexity Enterprise pricing"
     source_id: perplexity-enterprise-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Rechecked official Comet, Enterprise Comet, Enterprise pricing, and Max help pages. Comet remains a free browser route; current paid guidance still hinges on Comet Assistant, Comet Agent limits, Max Assistant, Computer credits, and enterprise controls such as domain blocking, approvals, and agent task limits."
   - date: 2026-06-15
     plan: "Comet / Comet Agent / Max Assistant"
@@ -122,9 +122,9 @@ quick_answer: >-
 
 Perplexity Comet is Perplexity's AI browser. It extends the company's answer-engine workflow into a browsing surface: search, citations, page context, and AI help live inside the browser instead of requiring a separate Perplexity tab. Perplexity positions Comet as a personal assistant browser for understanding pages, researching the web, drafting email, shopping, creating plans, and delegating routine web tasks.
 
-As verified on 2026-06-24, Comet is promoted for Mac, Windows, iOS, and Android. That matters because it is no longer just an experimental desktop browser for Perplexity power users; it is trying to become a daily browser surface.
+As verified on 2026-06-26, Comet is promoted for Mac, Windows, iOS, and Android. That matters because it is no longer just an experimental desktop browser for Perplexity power users; it is trying to become a daily browser surface.
 
-**June 24 control refresh:** Perplexity's current Comet pages highlight understanding pages, building, drafting email, creating study plans, shopping, managing inboxes, ordering groceries, staying on top of finances, and planning vacations. Enterprise Comet adds domain blocks, browser approvals, and agent task limits. That makes Comet useful, but it also changes the buyer standard: email, finance, shopping, account, file, and checkout workflows need explicit review before the assistant acts.
+**June 26 control refresh:** Perplexity's current Comet pages highlight understanding pages, building, drafting email, creating study plans, shopping, managing inboxes, ordering groceries, staying on top of finances, and planning vacations. Enterprise Comet adds domain blocks, browser approvals, and agent task limits. That makes Comet useful, but it also changes the buyer standard: email, finance, shopping, account, file, and checkout workflows need explicit review before the assistant acts.
 
 On April 16, 2026, Perplexity launched [Personal Computer for Mac](/news/2026-04-16-perplexity-personal-computer-mac/) for $200/month Max subscribers. Personal Computer is a persistent local agent that reads and writes files and operates across iMessage, Mail, Calendar, and Comet itself. Mac-based Max users can now treat Comet as the browser front-end of a full Perplexity desktop stack rather than a standalone AI browser. That changes the buyer story: Comet is more compelling when the same subscription also unlocks a 24/7 Mac agent.
 

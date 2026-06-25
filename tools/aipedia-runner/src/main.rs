@@ -254,6 +254,10 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
         "{}-tool-refresh-grouped-check.json",
         Utc::now().format("%Y-%m-%dT%H-%M-%SZ")
     ));
+    let route_qa_timing_path = timing_dir.join(format!(
+        "{}-tool-refresh-route-qa.json",
+        Utc::now().format("%Y-%m-%dT%H-%M-%SZ")
+    ));
 
     let mut commands: Vec<(String, Vec<String>, Option<PathBuf>)> = vec![
         (
@@ -302,14 +306,16 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
             "--site-dir".to_string(),
             "dist-fast/client".to_string(),
             "--concurrency".to_string(),
-            "4".to_string(),
+            "6".to_string(),
         ];
         qa_args.extend(split_shell_words(&route_args));
         qa_args.extend([
             "--widths".to_string(),
             "319,360,390,430,768,1024,1366".to_string(),
+            "--timing-file".to_string(),
+            display_path(project_dir, &route_qa_timing_path),
         ]);
-        commands.push(("route qa".to_string(), qa_args, None));
+        commands.push(("route qa".to_string(), qa_args, Some(route_qa_timing_path)));
     }
 
     let mut results = Vec::new();

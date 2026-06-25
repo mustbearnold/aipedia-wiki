@@ -55,7 +55,16 @@ function daysAgo(value, now) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return null;
   const d = new Date(`${raw}T00:00:00Z`);
   if (Number.isNaN(d.getTime())) return null;
-  return Math.round((new Date(`${now.toISOString().slice(0, 10)}T00:00:00Z`).getTime() - d.getTime()) / 86_400_000);
+  const today = currentDateString(now);
+  return Math.round((new Date(`${today}T00:00:00Z`).getTime() - d.getTime()) / 86_400_000);
+}
+function currentDateString(now) {
+  const override = process.env.AIPEDIA_CURRENT_DATE || process.env.CURRENT_DATE;
+  if (override && /^\d{4}-\d{2}-\d{2}$/.test(override)) return override;
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 const categorySlugs = new Set(

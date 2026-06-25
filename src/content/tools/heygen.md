@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0, Creator $29/mo, Pro from $49/mo, Business $149/mo plus seats, Enterprise custom; API and LiveAvatar pricing are separate"
 status: active
 launched: 2022-11
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -58,7 +58,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -67,7 +67,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -76,7 +76,7 @@ facts:
     source: "https://www.heygen.com/pricing"
     source_label: "HeyGen pricing"
     source_id: heygen-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -186,6 +186,14 @@ facts:
     confidence: high
     next_review_at: 2026-06-30
 price_history:
+  - date: 2026-06-26
+    plan: "Self-serve app plans / API / LiveAvatar"
+    price: "Free $0, Creator $29/mo with 600 credits, Pro from $49/mo with 1,000 credits, Business $149/mo with 1,500 credits plus $20/seat, Enterprise custom; Avatar IV/V API $0.05/sec or $0.0667/sec; LiveAvatar Starter $19/mo, Essential $99/mo, Business $475/mo"
+    source: "https://www.heygen.com/pricing"
+    source_label: "HeyGen pricing"
+    source_id: heygen-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked app pricing, developer pricing, LiveAvatar help, and Social Creator Program sources. No material buyer-price change found versus June 24."
   - date: 2026-06-24
     plan: "Self-serve app plans / API / LiveAvatar"
     price: "Free $0, Creator $29/mo with 600 credits, Pro from $49/mo with 1,000 credits, Business $149/mo with 1,500 credits plus $20/seat, Enterprise custom; Avatar IV/V API $0.05/sec or $0.0667/sec; LiveAvatar Starter $19/mo, Essential $99/mo, Business $475/mo"
@@ -346,7 +354,7 @@ This separation matters for purchasing. A plan that looks cheap for manual video
 
 ## Pricing And Buying Advice
 
-As of June 24, 2026, HeyGen's public app pricing lists:
+As of June 26, 2026, HeyGen's public app pricing lists:
 
 - **Free:** $0, 3 videos per month up to 1 minute each, access to Avatar IV and Video Agent, standard processing, 500+ Stock Digital Twins, one Custom Digital Twin, and 30+ languages.
 - **Creator:** $29/mo, 600 credits, videos up to 30 minutes, one Custom Digital Twin, 700+ Stock Video Avatars, 175+ languages/dialects, 1080p export, brand kit, and watermark removal.
@@ -382,7 +390,7 @@ For LiveAvatar, do not assume ordinary rendered-video subscriptions cover live s
 
 ## Methodology
 
-AiPedia re-verified this page on **June 24, 2026** against HeyGen's pricing page, developer API pricing docs, API pricing help, LiveAvatar help, API docs, security page, trust and safety pages, Avatar V launch material, legacy Unlimited-plan help, and Social Creator Program page. Claims about pricing, model availability, API billing, LiveAvatar streaming, and affiliate eligibility should be reviewed weekly because HeyGen is shipping avatar and API changes quickly.
+AiPedia re-verified this page on **June 26, 2026** against HeyGen's pricing page, developer API pricing docs, API pricing help, LiveAvatar help, API docs, security page, trust and safety pages, Avatar V launch material, legacy Unlimited-plan help, and Social Creator Program page. Claims about pricing, model availability, API billing, LiveAvatar streaming, and affiliate eligibility should be reviewed weekly because HeyGen is shipping avatar and API changes quickly.
 
 ## FAQ
 

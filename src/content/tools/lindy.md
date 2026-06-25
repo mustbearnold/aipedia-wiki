@@ -11,11 +11,11 @@ pricing_model: paid
 price_range: "7-day free trial; $49.99-$199.99/month + Enterprise"
 status: active
 launched: 2022-12
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Lindy Review: Pricing, Trial, Best Plan & Alternatives (June 2026)"
-meta_description: "Lindy pricing, free trial, best plan, use cases, usage limits, security, and alternatives for inbox, meetings, calendar, and follow-up automation. Pricing facts last verified June 24, 2026; buyer-path links updated June 24."
+meta_description: "Lindy pricing, free trial, best plan, use cases, usage limits, security, and alternatives for inbox, meetings, calendar, and follow-up automation. Pricing facts last verified June 26, 2026; buyer-path links updated June 26."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start Lindy free trial"
 best_plan: "Plus at $49.99/month for most solo professionals; Pro only after computer use or heavier usage is proven."
@@ -40,7 +40,7 @@ facts:
     source: https://www.lindy.ai/
     source_label: Lindy official site
     source_id: lindy-official
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
     next_review_at: 2026-07-01
@@ -49,7 +49,7 @@ facts:
     source: https://www.lindy.ai/pricing
     source_label: Lindy pricing
     source_id: lindy-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-01
@@ -58,7 +58,7 @@ facts:
     source: https://www.lindy.ai/pricing
     source_label: Lindy pricing
     source_id: lindy-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-01
@@ -67,7 +67,7 @@ facts:
     source: https://www.lindy.ai/pricing
     source_label: Lindy pricing
     source_id: lindy-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-01
@@ -76,7 +76,7 @@ facts:
     source: https://docs.lindy.ai/start-here/quickstart
     source_label: Lindy quickstart
     source_id: lindy-quickstart
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
     next_review_at: 2026-07-01
@@ -85,7 +85,7 @@ facts:
     source: https://www.lindy.ai/integrations
     source_label: Lindy integrations
     source_id: lindy-integrations
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
     next_review_at: 2026-07-01
@@ -94,7 +94,7 @@ facts:
     source: https://www.lindy.ai/security
     source_label: Lindy security
     source_id: lindy-security
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: medium
     next_review_at: 2026-07-01
@@ -103,7 +103,7 @@ facts:
     source: https://docs.lindy.ai/account-billing/usage
     source_label: Lindy usage docs
     source_id: lindy-usage
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-01
@@ -112,7 +112,7 @@ facts:
     source: https://docs.lindy.ai/account-billing/credits
     source_label: Lindy credits docs
     source_id: lindy-credits
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-01
@@ -121,7 +121,7 @@ facts:
     source: https://market.partnerstack.com/page/lindy
     source_label: PartnerStack Lindy program
     source_id: lindy-partnerstack
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-01
@@ -139,13 +139,13 @@ not_best_for:
 quick_answer: >-
   Lindy is worth testing if your bottleneck is inbox, calendar, meetings, and follow-up work. Start with the 7-day trial, then Plus at $49.99/month if it saves real admin time. Upgrade to Pro or Max only after usage or computer-use needs are proven. Skip it for high-volume backend automation; use n8n, Zapier, or Make instead.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Plus / Pro / Max / Enterprise"
     price: "$49.99 / $99.99 / $199.99 / custom"
     source: "https://www.lindy.ai/pricing"
     source_label: "Lindy pricing"
     source_id: lindy-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Current public pricing still advertises a 7-day trial, Plus, Pro, Max, and Enterprise. AiPedia found a wording mismatch between public pricing and docs about the trial feature set, so buyers should confirm trial entitlements in checkout."
   - date: 2026-05-27
     plan: "Plus / Pro / Max / Enterprise"
@@ -153,7 +153,7 @@ price_history:
     source: "https://www.lindy.ai/pricing"
     source_label: "Lindy pricing"
     source_id: lindy-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Current public pricing page advertises a 7-day free trial, Plus, Pro, Max, and Enterprise. AiPedia no longer found the old standing 400-credit free-plan framing on the public pricing page."
   - date: 2026-05-27
     plan: "Usage and overages"
@@ -161,7 +161,7 @@ price_history:
     source: "https://docs.lindy.ai/account-billing/usage"
     source_label: "Lindy usage docs"
     source_id: lindy-usage
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Unused resources do not roll over; resource-heavy tasks can pause for confirmation; no one-off credit purchase option was listed in the docs reviewed."
 ---
 
@@ -181,7 +181,7 @@ AiPedia may earn a commission if you start Lindy through our link, at no extra c
 
 ## What Changed In This Refresh
 
-- **June 24 source check:** Lindy's public pricing page still lists a 7-day trial, Plus at $49.99/month, Pro at $99.99/month, Max at $199.99/month, and Enterprise by sales contact. The PartnerStack directory still lists 30% for year one and 15% for year two.
+- **June 26 source check:** Lindy's public pricing page still lists a 7-day trial, Plus at $49.99/month, Pro at $99.99/month, Max at $199.99/month, and Enterprise by sales contact. The PartnerStack directory still lists 30% for year one and 15% for year two.
 - **Affiliate link is now live:** AiPedia updated Lindy from applied/no-link to a live PartnerStack affiliate link supplied by the site owner on 2026-05-27.
 - **Old free-tier language was removed:** AiPedia did not find the old standing 400-credit free-plan framing on the current public pricing page. The current public entry point is a 7-day free trial.
 - **Trial wording needs checkout confirmation:** Lindy's public pricing page and docs use different wording about the trial feature set, so AiPedia is not repeating a specific trial entitlement beyond the 7-day trial itself.
@@ -247,7 +247,7 @@ The caveat: custom agents are where usage risk grows. The credit docs say costs 
 
 ## Pricing And Plan Guidance
 
-Current public pricing verified 2026-06-24:
+Current public pricing verified 2026-06-26:
 
 | Plan | Price | Best fit | Buyer's note |
 |---|---:|---|---|
@@ -323,13 +323,13 @@ For the broader routing question, use the [AI Automation buyer paths](/categorie
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, affiliate metadata, pricing pages, and buyer-facing source material, then turns it into source-backed editorial analysis. Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) and is not influenced by affiliate commission.
 
-Last verified 2026-06-24 against Lindy's official pricing page, homepage, quickstart docs, usage docs, credits docs, integrations directory, security overview, and PartnerStack program directory. The site owner supplied the live Lindy affiliate URL on 2026-05-27.
+Last verified 2026-06-26 against Lindy's official pricing page, homepage, quickstart docs, usage docs, credits docs, integrations directory, security overview, and PartnerStack program directory. The site owner supplied the live Lindy affiliate URL on 2026-05-27.
 
 ## FAQ
 
 **Is Lindy free?**
 
-AiPedia did not find a standing free plan on Lindy's current public pricing page during the 2026-06-24 refresh. The current public entry is a 7-day free trial, followed by Plus, Pro, Max, or Enterprise.
+AiPedia did not find a standing free plan on Lindy's current public pricing page during the 2026-06-26 refresh. The current public entry is a 7-day free trial, followed by Plus, Pro, Max, or Enterprise.
 
 **What is the best Lindy plan?**
 
@@ -357,14 +357,14 @@ Yes. AiPedia uses a Lindy PartnerStack affiliate link. The disclosure is shown b
 
 ## Sources
 
-- [Lindy pricing](https://www.lindy.ai/pricing): plan names, trial, prices, inbox limits, Enterprise features, and public FAQ verified 2026-06-24.
-- [Lindy homepage](https://www.lindy.ai/): assistant positioning, inbox/calendar/meeting claims, iMessage/SMS trial framing, and integration positioning verified 2026-06-24.
-- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart): setup, connected email/calendar, automatic inbox/meeting/follow-up behavior, and security statements verified 2026-06-24.
-- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage): billing-cycle reset, non-rollover, usage warnings, overages, and model-cost optimization verified 2026-06-24.
-- [Lindy credits docs](https://docs.lindy.ai/account-billing/credits): custom-agent credit behavior and optimization verified 2026-06-24.
-- [Lindy integrations](https://www.lindy.ai/integrations): integration count and popular integrations verified 2026-06-24.
-- [Lindy security](https://www.lindy.ai/security): encryption, data-training, action-log, compliance, and trust-center claims verified 2026-06-24.
-- [PartnerStack Lindy program](https://market.partnerstack.com/page/lindy): affiliate program offer structure and attribution methods verified 2026-06-24.
+- [Lindy pricing](https://www.lindy.ai/pricing): plan names, trial, prices, inbox limits, Enterprise features, and public FAQ verified 2026-06-26.
+- [Lindy homepage](https://www.lindy.ai/): assistant positioning, inbox/calendar/meeting claims, iMessage/SMS trial framing, and integration positioning verified 2026-06-26.
+- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart): setup, connected email/calendar, automatic inbox/meeting/follow-up behavior, and security statements verified 2026-06-26.
+- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage): billing-cycle reset, non-rollover, usage warnings, overages, and model-cost optimization verified 2026-06-26.
+- [Lindy credits docs](https://docs.lindy.ai/account-billing/credits): custom-agent credit behavior and optimization verified 2026-06-26.
+- [Lindy integrations](https://www.lindy.ai/integrations): integration count and popular integrations verified 2026-06-26.
+- [Lindy security](https://www.lindy.ai/security): encryption, data-training, action-log, compliance, and trust-center claims verified 2026-06-26.
+- [PartnerStack Lindy program](https://market.partnerstack.com/page/lindy): affiliate program offer structure and attribution methods verified 2026-06-26.
 
 ## Related
 

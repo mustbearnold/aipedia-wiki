@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: $0-$169/user/month
 status: active
 launched: 2021-01
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-05
@@ -47,7 +47,7 @@ facts:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   systematic_review_workflow:
@@ -55,7 +55,7 @@ facts:
     source: "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit"
     source_label: "Elicit systematic review documentation"
     source_id: elicit-plan-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   watch_out_for:
@@ -63,14 +63,14 @@ facts:
     source: "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit"
     source_label: "Elicit systematic review documentation"
     source_id: elicit-plan-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-07-05
 tags: [academic-research, literature-review, systematic-review, paper-search, data-extraction, rct, evidence-synthesis]
 seo_title: 'Elicit: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Elicit automates systematic literature review with AI-powered paper search and structured data extraction across 138M+ papers. Basic is free; Pro starts at $29/user/mo billed yearly or $49 monthly. Verified June 24, 2026.
+  Elicit automates systematic literature review with AI-powered paper search and structured data extraction across 138M+ papers. Basic is free; Pro starts at $29/user/mo billed yearly or $49 monthly. Verified June 26, 2026.
 author: aipedia.wiki Editorial
 best_for:
   - academic researchers
@@ -90,7 +90,7 @@ price_history:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "June 24 refresh rechecked the pricing page, Elicit product site, systematic-review help, and API terms. Pro remains the practical systematic-review/API entry tier; Scale adds collaboration and figure interpretation; Enterprise adds larger screening/extraction scale and unlimited API access."
   - date: 2026-05-13
     plan: "Pro"
@@ -98,7 +98,7 @@ price_history:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Pro includes the dedicated systematic-review workflow, 5,000-paper screening, 144 reports or systematic reviews per year, 20 extraction columns, 10 personalized alerts, custom upload extraction, explanations, templates, and API access."
   - date: 2026-05-13
     plan: "Plus"
@@ -106,7 +106,7 @@ price_history:
     source: "https://elicit.com/pricing"
     source_label: "Elicit pricing"
     source_id: elicit-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Plus is surfaced as a yearly-billed plan with 4 automated reports/month, export, 5 table columns at a time, and clinical-trials search. Monthly Plus pricing was not exposed in the captured pricing surface."
 ---
 
@@ -175,7 +175,7 @@ Subscription pricing via [elicit.com/pricing](https://elicit.com/pricing).
 | Scale | $169/user/mo monthly or $49/user/mo billed yearly | 240 reports or systematic reviews/year | Figure extraction, collaboration, admin controls, 30 columns, up to 200 data sources per report | Research teams and labs |
 | Enterprise | Custom | Custom / unlimited | SSO/SAML, 2FA, single-tenancy options, custom sources/templates, unlimited Search API | Institutions and funded review programs |
 
-Prices verified 2026-06-24 via [Elicit pricing](https://elicit.com/pricing), [Elicit's product site](https://elicit.com/), [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit), and [Elicit API terms](https://elicit.com/operations/api-terms). Elicit shows different monthly and yearly surfaces, so buyers should confirm billing cadence before purchase.
+Prices verified 2026-06-26 via [Elicit pricing](https://elicit.com/pricing), [Elicit's product site](https://elicit.com/), [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit), and [Elicit API terms](https://elicit.com/operations/api-terms). Elicit shows different monthly and yearly surfaces, so buyers should confirm billing cadence before purchase.
 
 ## Against The Alternatives
 
@@ -201,7 +201,7 @@ Prices verified 2026-06-24 via [Elicit pricing](https://elicit.com/pricing), [El
 
 ## Methodology
 
-This page was refreshed by the aipedia.wiki editorial pipeline against current vendor sources. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [Elicit pricing](https://elicit.com/pricing), [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit), [Elicit's product site](https://elicit.com/), and [Elicit API terms](https://elicit.com/operations/api-terms).
+This page was refreshed by the aipedia.wiki editorial pipeline against current vendor sources. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [Elicit pricing](https://elicit.com/pricing), [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit), [Elicit's product site](https://elicit.com/), and [Elicit API terms](https://elicit.com/operations/api-terms).
 
 ## FAQ
 

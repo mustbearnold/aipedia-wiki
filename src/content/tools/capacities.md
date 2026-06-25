@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Pro/Believer pricing is region-rendered"
 status: active
 launched: 2021-06
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -38,7 +38,7 @@ facts:
     source: "https://capacities.io/pricing"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-22
     volatility: high
     confidence: high
@@ -51,29 +51,29 @@ facts:
     volatility: low
     confidence: high
   ai_surface:
-    value: "Capacities AI now includes richer note context, saved AI chat objects, AI commands, AI auto-tagging, AI property auto-fill, web search for Capacities AI, Pro image analysis, BYOK-compatible note reading/searching, MCP AI Chat Connectors, and model-provider selection."
-    source: "https://docs.capacities.io/reference/ai-assistant"
-    source_label: "Capacities AI assistant docs"
-    source_id: capacities-ai-assistant-docs
-    verified_at: 2026-06-24
+    value: "Capacities AI now includes richer note context, saved AI chat objects, AI commands, AI auto-tagging, AI property auto-fill, web search for Capacities AI, Pro image analysis, BYOK-compatible note reading/searching, MCP AI Chat Connectors, model-provider selection, and Release 66 connector write actions."
+    source: "https://capacities.io/whats-new/release-66"
+    source_label: "Capacities Release 66"
+    source_id: capacities-release-66
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
   connector_surface:
-    value: "AI Chat Connectors are a Pro beta that lets ChatGPT, Claude, Cursor, Le Chat, and other MCP-compatible tools search notes, read objects, add content to the daily note, and link objects in responses."
-    source: "https://docs.capacities.io/reference/ai-chat-connectors"
-    source_label: "Capacities AI Chat Connectors docs"
-    source_id: capacities-ai-chat-connectors
-    verified_at: 2026-06-24
+    value: "AI Chat Connectors are a Pro AI-enabled surface that lets ChatGPT, Claude, Cursor, Le Chat, and other MCP-compatible tools search notes, read objects, save text, link objects, and, as of Release 66, create pages/tasks/custom objects, update object properties, and append content to objects."
+    source: "https://capacities.io/whats-new/release-66"
+    source_label: "Capacities Release 66"
+    source_id: capacities-release-66
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
   recent_product_change:
-    value: "Release 65 made Bulk Import available to all users, added Image Analysis for Pro, improved recurring tasks, reworked the side panel, and added AI web search and AI chat improvements; the latest What's New page also lists May 2026 v1.65.x continuous improvements above Release 65."
-    source: "https://capacities.io/whats-new/release-65/"
-    source_label: "Capacities Release 65"
-    source_id: capacities-release-65
-    verified_at: 2026-06-24
+    value: "Release 66 added AI Chat Connectors 2.0 write capabilities, concurrent AI chats, AI media-section reading improvements, grouped source cards, mobile linking fixes, editor polish, import fixes, and performance cleanup. Release 65 remains the prior bulk-import and Pro image-analysis milestone."
+    source: "https://capacities.io/whats-new/release-66"
+    source_label: "Capacities Release 66"
+    source_id: capacities-release-66
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -99,8 +99,16 @@ not_best_for:
   - users requiring plain-Markdown portability
   - workflows dependent on heavy plugin ecosystems
 quick_answer: >-
-  Capacities is object-based PKM where every note is a typed object with properties. The June 24 check is product scope, not only pricing: Pro now matters more for AI Chat Connectors, provider choice, richer AI context, image analysis, recurring tasks, and media-aware workflows, while Bulk Import is now available to all users. Pick it for structural thinking and clean auto-links. Skip it for teams, plugin depth, or plain-Markdown portability.
+  Capacities is object-based PKM where every note is a typed object with properties. The June 26 check is product scope, not only pricing: Pro now matters more for AI Chat Connectors 2.0, provider choice, richer AI context, image analysis, recurring tasks, and media-aware workflows, while Bulk Import is available to all users. Pick it for structural thinking and clean auto-links. Skip it for teams, plugin depth, or plain-Markdown portability.
 price_history:
+  - date: 2026-06-26
+    plan: "Free / Pro / Believer"
+    price: "Region-rendered"
+    source: "https://capacities.io/pricing"
+    source_label: "Capacities pricing"
+    source_id: capacities-pricing
+    verified_at: 2026-06-26
+    note: "Pricing remains region-rendered in public crawl. Release 66 is the buyer-relevant change: AI Chat Connectors 2.0 can create pages/tasks/custom objects, update properties, and append content, while still requiring Capacities Pro with AI enabled for the connected space."
   - date: 2026-06-24
     plan: "Free / Pro / Believer"
     price: "Region-rendered"
@@ -163,6 +171,7 @@ The free-core promise is still visible on the pricing page, but detailed plan pr
 - Release 64 also added AI model-provider choice across OpenAI, Gemini, Anthropic, Mistral, and xAI, with model-picker details for EU-hosted models and usage cost.
 - Release 65 made Bulk Import available to all users, brought image analysis to Capacities Pro, improved recurring task edge cases, reworked the side panel, and added AI web search and AI chat polish.
 - The What's New index now lists May 2026 v1.65.x continuous improvements above Release 65, including small fixes, query suggestions for object dashboards, tags view for task dashboards, and an AI panel fix.
+- Release 66 added AI Chat Connectors 2.0, allowing connected assistants to create pages and tasks, create custom objects, update object properties, and append content to objects. It also improved concurrent AI chats, media-section reading, source-card display, mobile linking, imports, and performance.
 - Release 62 and the current docs keep AI Chat Connectors as a Pro beta using MCP, so ChatGPT, Claude, Cursor, Le Chat, and other compatible tools can search notes, read objects, add daily-note content, and link Capacities objects.
 - Release 63 added Related Content, deadlines, Search 3.0, AI chat upgrades, and full Bulk Import access for Believers.
 - Release 61 added AI media analysis for images, including searchable descriptions, OCR-like extraction, and media-specific object categories.
@@ -204,7 +213,7 @@ The free-core promise is still visible on the pricing page, but detailed plan pr
 | **Free tier** | Core product remains free; verify media and plan limits in live regional pricing |
 | **API** | None public |
 
-Every data point was verified against vendor docs on 2026-06-24. See Sources.
+Current AI connector, pricing, and product-change data points were verified against vendor docs on 2026-06-26. See Sources.
 
 ## What it actually is
 
@@ -239,7 +248,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 | Pro | Region-rendered | AI assistant, AI Chat Connectors beta, provider choice, richer AI workflows, and Pro features. |
 | Believer | Region-rendered | Everything in Pro plus support for development and early/beta access such as Bulk Import. |
 
-*Prices verified 2026-06-24 via [capacities.io/pricing](https://capacities.io/pricing). The text crawl confirms the free-core promise, but detailed Pro and Believer prices are region-rendered, so verify your account region before budgeting.*
+*Prices verified 2026-06-26 via [capacities.io/pricing](https://capacities.io/pricing). The text crawl confirms the free-core promise, but detailed Pro and Believer prices are region-rendered, so verify your account region before budgeting.*
 
 ## Against the alternatives
 
@@ -267,7 +276,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [capacities.io/pricing](https://capacities.io/pricing), [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant), [AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors), [Capacities Release 65](https://capacities.io/whats-new/release-65/), and the [Capacities changelog](https://capacities.io/whats-new/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [capacities.io/pricing](https://capacities.io/pricing), [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant), [AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors), [Capacities Release 66](https://capacities.io/whats-new/release-66), and the [Capacities changelog](https://capacities.io/whats-new/).
 
 ## FAQ
 

@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$20-$200/month"
 status: active
 launched: 2025-02
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://code.claude.com/docs/en/overview"
     source_label: "Claude Code docs"
     source_id: claude-code-official
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://claude.com/pricing"
     source_label: "Anthropic pricing"
     source_id: claude-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -78,7 +78,7 @@ facts:
     next_review_at: 2026-06-30
 tags: [cli, ide, agentic-coding, terminal, codebase-wide, autonomous, anthropic, claude-opus, ultraplan, monitor, mcp, skills]
 seo_title: "Claude Code: Features, Pricing & Review (June 2026)"
-meta_description: "Updated June 24, 2026: Claude Code is Anthropic's coding agent for terminal, IDE, desktop, browser, remote repo, GitHub Actions, and SDK work. Opus 4.8 remains the stable route while Agent SDK credits are active for eligible paid users."
+meta_description: "Updated June 26, 2026: Claude Code is Anthropic's coding agent for terminal, IDE, desktop, browser, remote repo, GitHub Actions, and SDK work. Opus 4.8 remains the stable route while Agent SDK credits are active for eligible paid users."
 author: "aipedia.wiki Editorial"
 best_for:
   - professional backend developers
@@ -90,8 +90,16 @@ not_best_for:
   - free-tier developers
   - beginners uncomfortable supervising agentic code changes
 quick_answer: >-
-  Claude Code is Anthropic's agentic coding product for repo-wide work across terminal, IDE, desktop, browser, remote, GitHub Actions, and SDK flows. Pick Max 5x at $100/mo for sustained interactive coding; Pro at $20/mo covers lighter use. Fable 5 and Mythos 5 remain account-specific after the June 12 suspension, so treat Opus 4.8 as the stable high-end route and check /model for account-specific availability. As of June 24, 2026, Anthropic's Agent SDK help says eligible paid users can claim a separate monthly credit pool for Agent SDK, `claude -p`, Claude Code GitHub Actions, and third-party Agent SDK app usage. Normal interactive Claude Code still uses subscription limits.
+  Claude Code is Anthropic's agentic coding product for repo-wide work across terminal, IDE, desktop, browser, remote, GitHub Actions, and SDK flows. Pick Max 5x at $100/mo for sustained interactive coding; Pro at $20/mo covers lighter use. Fable 5 and Mythos 5 remain account-specific after the June 12 suspension, so treat Opus 4.8 as the stable high-end route and check /model for account-specific availability. As of June 26, 2026, Anthropic's Agent SDK help says eligible paid users can claim a separate monthly credit pool for Agent SDK, `claude -p`, Claude Code GitHub Actions, and third-party Agent SDK app usage. Normal interactive Claude Code still uses subscription limits.
 price_history:
+  - date: 2026-06-26
+    plan: "Claude Code and Agent SDK credit split"
+    price: "Included with paid Claude plans; Pro $20/mo, Max 5x $100/mo, Max 20x $200/mo; Agent SDK credits remain separate for eligible paid users"
+    source: "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan"
+    source_label: "Claude Agent SDK credit help"
+    source_id: claude-agent-sdk-credit
+    verified_at: 2026-06-26
+    note: "June 26 recheck: buyer guidance still needs to separate interactive Claude Code subscription limits from Agent SDK, claude -p, GitHub Actions, and third-party Agent SDK usage. Fable/Mythos routes remain account-specific, so Opus 4.8 remains the stable high-end route."
   - date: 2026-06-24
     plan: "Agent SDK / claude -p monthly credits active"
     price: "Eligible paid users can claim separate monthly Agent SDK credits: Pro $20, Max 5x $100, Max 20x $200, Team Standard $20, Team Premium $100, and seat-based Enterprise Premium $200"
@@ -216,6 +224,7 @@ Claude Opus 4.8 (released May 28, 2026) is the stable available high-end Anthrop
 
 - **June 15:** [Disney's AI coding push turned token budgets and release quality into buyer checks](/news/2026-06-15-disney-ai-coding-tokenmaxxing/). The buyer lesson for Claude Code teams is to treat AI usage dashboards as cost and efficiency controls, not productivity scoreboards, and to require tests, review ownership, permission boundaries, and rollback plans before agent-written code reaches production.
 - **June 24:** Anthropic's Agent SDK help now says eligible paid users can claim separate monthly credits for Agent SDK, `claude -p`, Claude Code GitHub Actions, and third-party Agent SDK app usage. Normal interactive Claude Code still uses subscription limits, credits do not roll over, and production automation at scale should still use Claude Platform API keys.
+- **June 26:** Rechecked Claude Code access, Claude pricing, and Agent SDK credit help. The buyer model remains unchanged: interactive Claude Code uses subscription limits, while Agent SDK, `claude -p`, GitHub Actions, and third-party Agent SDK app usage use the separate claimed credit pool for eligible paid users.
 - **June 24:** Business Insider reported that Anthropic partly restored Claude Fable 5 access with nationality-based access controls and compliance screening after the June 12 suspension. Claude Code buyers should still treat /model as the account-level source of truth and keep Opus 4.8 as the stable high-end route.
 - **June 14:** [The June 14 AI news desk](/news/2026-06-14-ai-news-desk/) turns Claude Code route risk into a buyer checklist. Treat Opus 4.8 as the stable high-end route, keep Fable/Mythos pilot notes out of production-default evidence unless your account confirms access, and document fallback routes, staff/client access exposure, retention rules, and review controls before standardizing Claude Code for large teams.
 - **June 14:** Current Claude Code docs now show Windows PowerShell/CMD and WinGet install paths alongside macOS, Linux, WSL, VS Code, JetBrains, desktop, web, and remote surfaces. That removes the old WSL-only caveat, but Windows teams should still verify shell behavior, Git for Windows/Bash availability, local permissions, and MCP/tool execution in their own dev images.
@@ -328,7 +337,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 | API (BYOK) | Pay-per-token | Unrestricted | Commercial products built on Claude Code |
 | Agent SDK / `claude -p` usage | Eligible paid users can claim separate monthly credits | Does not cover normal interactive Claude Code; credits are per-user, monthly, and non-rollover | Personal automation and CI jobs still need account-level billing checks before relying on them |
 
-*Prices and usage-routing guidance verified 2026-06-24 via [Anthropic pricing](https://claude.com/pricing), [Claude Code docs](https://code.claude.com/docs/en/overview), Agent SDK credit help, Claude Code usage-limit guidance, Anthropic's May 6 usage-limit update, and the May 28 Opus 4.8 release. Pro users still see lower rate ceilings than Max tiers; heavy interactive Claude Code workloads should price against Max, Team Premium, Enterprise, or API usage paths. Anthropic's current Agent SDK help says eligible paid users can claim separate monthly credits for non-interactive Agent SDK, `claude -p`, Claude Code GitHub Actions, and third-party Agent SDK usage. Third-party services routing Claude Code through Max subscriptions are restricted per Anthropic's April 2026 policy; use API key path for commercial redistribution.*
+*Prices and usage-routing guidance refreshed 2026-06-26 via [Anthropic pricing](https://claude.com/pricing), [Claude Code docs](https://code.claude.com/docs/en/overview), Agent SDK credit help, Claude Code usage-limit guidance, Anthropic's May 6 usage-limit update, and the May 28 Opus 4.8 release. Pro users still see lower rate ceilings than Max tiers; heavy interactive Claude Code workloads should price against Max, Team Premium, Enterprise, or API usage paths. Anthropic's current Agent SDK help says eligible paid users can claim separate monthly credits for non-interactive Agent SDK, `claude -p`, Claude Code GitHub Actions, and third-party Agent SDK usage. Third-party services routing Claude Code through Max subscriptions are restricted per Anthropic's April 2026 policy; use API key path for commercial redistribution.*
 
 ## Against the alternatives
 
@@ -361,7 +370,7 @@ Subscription pricing via [claude.com/pricing](https://claude.com/pricing). Claud
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-24 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Claude Code cost management](https://code.claude.com/docs/en/costs), [Anthropic pricing](https://claude.com/pricing), [Claude Code usage limits](https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code), [Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan), and the [Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access). The check also used [Business Insider reporting on Fable access](https://www.businessinsider.com/legion-ai-startup-suing-us-government-new-anthropic-model-fable5-2026-6), the [June 14 AI news desk](/news/2026-06-14-ai-news-desk/), [Opus 4.8 and dynamic workflows launch](/news/2026-05-28-claude-opus-48-dynamic-workflows/), and [Anthropic Series H update](/news/2026-05-28-anthropic-series-h-65b-965b-valuation/). It also used the [May 14 Microsoft internal tooling report](/news/2026-05-14-microsoft-claude-code-github-copilot-cli-shift/), [May 14 Agent SDK credit split](/news/2026-05-14-anthropic-claude-agent-sdk-credit-split/), [May 12 Claude for Legal launch](/news/2026-05-12-anthropic-claude-for-legal-plugins-microsoft-365/), [May 6 Managed Agents update](/news/2026-05-06-claude-managed-agents-dreaming-outcomes-orchestration/), and the [May 6 usage-limit update](https://www.anthropic.com/news/higher-limits-spacex).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last refreshed 2026-06-26 against [Claude Code docs](https://code.claude.com/docs/en/overview), [Claude Code cost management](https://code.claude.com/docs/en/costs), [Anthropic pricing](https://claude.com/pricing), [Claude Code usage limits](https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code), [Agent SDK credit help](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan), and the [Fable/Mythos access statement](https://www.anthropic.com/news/fable-mythos-access). The check also used Business Insider reporting on Fable access, the June 14 AI news desk, Opus 4.8 and dynamic workflows launch, and Anthropic Series H update. It also used the May 14 Microsoft internal tooling report, May 14 Agent SDK credit split, May 12 Claude for Legal launch, May 6 Managed Agents update, and the May 6 usage-limit update.
 
 ## FAQ
 
@@ -369,7 +378,7 @@ This page was produced by the aipedia.wiki editorial pipeline, an automated syst
 No. Claude Code is not included in the free Claude tier. Access requires a Claude Pro subscription ($20/mo), Max 5x ($100/mo), Max 20x ($200/mo), or an Anthropic API key with pay-per-token billing ([Claude Code pricing](https://claude.com/pricing)).
 
 **What model does Claude Code run on?**
-Claude Opus 4.8 is the current stable high-end Anthropic model for hard Claude Code work as of June 24, 2026. Fable 5 and Mythos 5 access remains account-specific after the June 12 suspension, so check /model and your account terms before relying on either route. Sonnet 4.6 and Haiku 4.5 are selectable for cost or speed trade-offs. The 1M token context window applies to Opus and Sonnet.
+Claude Opus 4.8 is the current stable high-end Anthropic model for hard Claude Code work as of June 26, 2026. Fable 5 and Mythos 5 access remains account-specific after the June 12 suspension, so check /model and your account terms before relying on either route. Sonnet 4.6 and Haiku 4.5 are selectable for cost or speed trade-offs. The 1M token context window applies to Opus and Sonnet.
 
 **Do Agent SDK credits cover normal Claude Code sessions?**
 No. Anthropic's current help page says the Agent SDK credits cover Agent SDK, `claude -p`, Claude Code GitHub Actions, and third-party Agent SDK app usage after eligible paid users claim the monthly credit. Interactive Claude Code in the terminal or IDE still uses normal subscription limits.

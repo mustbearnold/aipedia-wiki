@@ -10,11 +10,11 @@ pricing_model: freemium
 price_range: "$0-$30+/seat/mo"
 status: active
 launched: 2024-10
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "Bolt.new Review: Pricing, Tokens, Cloud & Best Plan (June 2026)"
-meta_description: "Updated June 24, 2026: Bolt.new pricing, token limits, Bolt Cloud databases, hosting, WebContainers, best plan, alternatives, and production risks."
+meta_description: "Updated June 26, 2026: Bolt.new pricing, token limits, Bolt Cloud databases, hosting, WebContainers, best plan, alternatives, and production risks."
 author: "aipedia.wiki Editorial"
 primary_cta_label: "Start with Bolt.new free"
 best_plan: "Pro at $25/month"
@@ -161,7 +161,7 @@ quick_answer: >-
 
 Bolt.new is StackBlitz's browser-native AI app builder at [bolt.new](https://bolt.new). It lets users describe an idea, generate code, edit files, run the app, debug, manage Bolt Cloud resources, and publish without setting up a local development environment.
 
-As of June 24, 2026, the old "frontend prototype only" description is not good enough. Current Bolt docs describe Bolt Cloud databases, hosting, custom-domain support for Pro users, JavaScript-based backend support, GitHub integration, Figma integration, Stripe integration, Supabase integration, and a model-choice workflow. That makes Bolt a real app-builder buyer option, not just a sandbox.
+As of June 26, 2026, the old "frontend prototype only" description is not good enough. Current Bolt docs describe Bolt Cloud databases, hosting, custom-domain support for Pro users, JavaScript-based backend support, GitHub integration, Figma integration, Stripe integration, Supabase integration, and a model-choice workflow. That makes Bolt a real app-builder buyer option, not just a sandbox.
 
 The buying question is whether you want the browser itself to be the build environment. If yes, Bolt is one of the strongest tools in the category. If you want a guided founder MVP workflow with backend and less code-workspace feel, start with [Lovable](/tools/lovable/). If you are already living in Vercel, Next.js, Tailwind, and shadcn, start with [v0](/tools/v0/).
 
@@ -175,7 +175,7 @@ Do not pick Bolt because you think it eliminates engineering. It still needs rev
 
 ## Recent Developments
 
-- **June 24, 2026 verification:** Current public pricing still shows Free, Pro, Teams, and Enterprise. The June 14 free-domain promo window has passed, so AiPedia does not treat it as durable plan value.
+- **June 26, 2026 verification:** Current public pricing still shows Free, Pro, Teams, and Enterprise. The June 14 free-domain promo window has passed, so AiPedia does not treat it as durable plan value.
 - **Model competition raises the alternatives bar:** Bolt's value is the browser workspace, WebContainers runtime, hosting path, and app-builder ergonomics, not raw model exclusivity. Serious coders comparing Bolt with Claude Code, Cursor, or local IDE workflows should test the same task in each tool before going annual.
 - **Bolt Cloud changes the comparison:** Current docs say Bolt can create and manage databases, handle hosting, publish to a free `.bolt.host` subdomain, and connect custom domains for Pro users.
 - **Supported stack is clearer now:** Bolt supports JavaScript-based web technologies and Node.js for backend work. It does not support PHP or Python backends.
@@ -198,7 +198,7 @@ Do not pick Bolt because you think it eliminates engineering. It still needs rev
 | Stack limit | JavaScript-based web technologies; no PHP or Python backends |
 | Mobile limit | Mobile can start, chat, and publish; Code View, project settings, database controls, and site visibility controls need desktop |
 
-Every fact above was checked against official Bolt and StackBlitz sources on 2026-06-24. See Sources.
+Every fact above was checked against official Bolt and StackBlitz sources on 2026-06-26. See Sources.
 
 ## What Bolt Actually Is
 
@@ -210,7 +210,7 @@ The second moat is workflow compression. The same session can cover prompt-to-co
 
 ## Pricing
 
-Pricing was checked against [Bolt.new pricing](https://bolt.new/pricing) and [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) on 2026-06-24.
+Pricing was checked against [Bolt.new pricing](https://bolt.new/pricing) and [Bolt token docs](https://support.bolt.new/account-and-subscription/tokens) on 2026-06-26.
 
 | Plan | Current public price | Buyer fit |
 |---|---:|---|

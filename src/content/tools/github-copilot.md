@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$100/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -48,7 +48,7 @@ facts:
     source: "https://docs.github.com/en/copilot/get-started/plans"
     source_label: "GitHub Copilot plan docs"
     source_id: github-copilot-plan-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -66,7 +66,7 @@ facts:
     source: "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals"
     source_label: "GitHub Copilot usage-based billing"
     source_id: github-copilot-ai-credits
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -164,7 +164,7 @@ facts:
     next_review_at: 2026-06-30
 tags: [ide, autocomplete, ai-coding, vscode, jetbrains, xcode, neovim, github, microsoft, agent-mode, coding-agent, mcp, ai-credits]
 seo_title: "GitHub Copilot: Features, Pricing & AI Credits Review (June 2026)"
-meta_description: "GitHub Copilot spans IDE help, chat, agent mode, code review, CLI, Spaces, Spark, app, SDK, and cloud-agent workflows. Updated June 25, 2026 for AI Credits, demand signals, and model-route risk."
+meta_description: "GitHub Copilot spans IDE help, chat, agent mode, code review, CLI, Spaces, Spark, app, SDK, and cloud-agent workflows. Updated June 26, 2026 for AI Credits, demand signals, and model-route risk."
 author: "aipedia.wiki Editorial"
 best_for:
   - developers already in the GitHub ecosystem
@@ -179,6 +179,14 @@ not_best_for:
 quick_answer: >-
   GitHub Copilot is the default GitHub-native AI coding stack, native to VS Code, Visual Studio, JetBrains, Xcode, Neovim, GitHub.com, CLI workflows, the generally available GitHub Copilot app, and embeddable Copilot SDK. Pro $10/mo is the entry paid path, while Pro+, Max, Business, and Enterprise matter when chat, agent, code-review, Spark, Spaces, SDK, one-million-token context, higher reasoning, and cloud-agent usage consume AI Credits. GitHub says individual Student, Pro, Pro+, and Max sign-ups are reopening gradually after the earlier pause, but buyers should still verify their exact account path, deprecation dates, and live model routes because Fable 5 remains suspended across Copilot.
 price_history:
+  - date: 2026-06-26
+    plan: "AI Credits, demand signal, and route-risk recheck"
+    price: "No base subscription change: Free; Pro $10; Pro+ $39; Max $100; Business $19/user; Enterprise $39/user"
+    source: "https://docs.github.com/en/copilot/get-started/plans"
+    source_label: "GitHub Copilot plan docs"
+    source_id: github-copilot-plan-docs
+    verified_at: 2026-06-26
+    note: "June 26 recheck: GitHub docs still frame plans around AI Credits and account/surface-specific model access. Business Insider reported today that Copilot demand helped GitHub's best month ever while usage-based billing and 2026 outages remain buyer risks; treat that as secondary context, not a pricing source."
   - date: 2026-06-24
     plan: "AI Credits and organization billing check"
     price: "No base subscription change: Free; Pro $10; Pro+ $39; Max $100; Business $19/user; Enterprise $39/user"
@@ -401,7 +409,7 @@ price_history:
 
 GitHub's AI pair programmer, built by Microsoft and GitHub on top of the repo, issue, pull-request, and Actions graph. It ships across VS Code, Visual Studio, JetBrains, Xcode, Neovim, GitHub.com, CLI, code review, Spaces, Spark, and the cloud Coding Agent.
 
-As of June 24, 2026, the buying question is no longer just "which Copilot plan has which model?" GitHub has moved most non-completion AI work into GitHub AI Credits. Chat, agent mode, Coding Agent, Copilot CLI, code review, Spaces, Spark, third-party agents, one-million-token context, and higher reasoning levels can consume credits. Code completions and next-edit suggestions remain included on paid plans.
+As of June 26, 2026, the buying question is no longer just "which Copilot plan has which model?" GitHub has moved most non-completion AI work into GitHub AI Credits. Chat, agent mode, Coding Agent, Copilot CLI, code review, Spaces, Spark, third-party agents, one-million-token context, and higher reasoning levels can consume credits. Code completions and next-edit suggestions remain included on paid plans.
 
 There is also a rollout wrinkle: GitHub's June 17 changelog says Student, Pro, Pro+, and Max sign-ups are reopening gradually over the next couple of weeks after the earlier pause. Treat the price table as plan math, then verify the exact account, organization, and region before promising a rollout.
 
@@ -573,7 +581,7 @@ Before procurement promises Pro, Pro+, Max, or a self-serve Business rollout, ch
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, normalizes factual claims, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
-Last verified 2026-06-24 against [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/individual-plans), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), [supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models), and [github.com/features/copilot](https://github.com/features/copilot). The platform recheck also used the [Copilot SDK GA changelog](https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/), the [larger context/reasoning changelog](https://github.blog/changelog/2026-06-04-larger-context-windows-and-configurable-reasoning-levels-for-github-copilot/), the [Agent tasks REST API changelog](https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/), and the [Fable 5 suspension note](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/). It also used the [GitHub Copilot app GA changelog](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/), the [Copilot individual sign-ups reopening changelog](https://github.blog/changelog/2026-06-17-copilot-individual-plan-sign-ups-are-reopening/), the [MAI-Code-1-Flash expansion note](https://github.blog/changelog/2026-06-18-mai-code-1-flash-available-on-more-copilot-surfaces/), the [Opus 4.6 fast deprecation note](https://github.blog/changelog/2026-06-18-upcoming-deprecation-of-opus-4-6-fast/), and the [AI credit usage metrics API changelog](https://github.blog/changelog/2026-06-19-ai-credits-consumed-per-user-now-in-the-copilot-usage-metrics-api/).
+Last refreshed 2026-06-26 against [GitHub Copilot plans](https://docs.github.com/en/copilot/get-started/plans), [individual AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/individual-plans), [organization AI Credits billing](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises), [models and pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), [supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models), and [github.com/features/copilot](https://github.com/features/copilot). The platform source set also includes the June Copilot changelog items for SDK GA, larger context/reasoning, Agent tasks, Fable 5 suspension, Copilot app GA, sign-ups reopening, MAI-Code-1-Flash expansion, Opus 4.6 fast deprecation, and AI credit usage metrics.
 
 ## FAQ
 

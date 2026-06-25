@@ -3,7 +3,7 @@
 import { chromium } from '@playwright/test';
 import { spawn } from 'node:child_process';
 import { createServer, get } from 'node:http';
-import { existsSync, statSync } from 'node:fs';
+import { existsSync, mkdirSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { builtSiteDir, resolvePathFromProject } from './lib/built-site-dir.mjs';
@@ -26,6 +26,7 @@ const KNOWN_FLAGS = new Set([
   '--project-dir',
   '--root',
   '--json',
+  '--timing-file',
   '--help',
   '-h',
 ]);
@@ -42,9 +43,11 @@ const VALUE_FLAGS = new Set([
   '--port',
   '--project-dir',
   '--root',
+  '--timing-file',
 ]);
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
+const TIMING_FILE = valueFor('--timing-file');
 
 function hasFlag(flag) {
   return rawArgs.includes(flag) || rawArgs.some((arg) => arg.startsWith(`${flag}=`));
@@ -95,6 +98,7 @@ function usage() {
     '  --port <port>        Static server port. Default: first open local port.',
     '  --project-dir <dir>  Resolve paths from another project root.',
     '  --json               Emit a structured report.',
+    '  --timing-file <path> Write structured route and viewport timing JSON.',
   ].join('\n');
 }
 
@@ -374,6 +378,7 @@ async function evaluateRoute(page, route) {
 }
 
 async function checkRoute({ browser, baseUrl, route, width }) {
+  const startedAt = Date.now();
   const page = await browser.newPage({
     viewport: { width, height: viewportHeight(width) },
     isMobile: width <= 430,
@@ -394,10 +399,12 @@ async function checkRoute({ browser, baseUrl, route, width }) {
   await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
   const metrics = await evaluateRoute(page, route);
   await page.close();
+  const durationMs = Date.now() - startedAt;
 
   const result = {
     route,
     width,
+    duration_ms: durationMs,
     responseStatus: response?.status() ?? null,
     metrics,
     failedRequests,
@@ -438,6 +445,7 @@ function failuresForResult({ route, width, responseStatus, metrics, failedReques
 }
 
 async function runQa({ routes, widths, host, port, siteDir, baseUrl, concurrency }) {
+  const startedAt = Date.now();
   const server = baseUrl ? null : startStaticServer({ host, port, siteDir });
   const resolvedBaseUrl = baseUrl || `http://${host}:${port}`;
   const jobs = routes.flatMap((route) => widths.map((width) => ({ route, width })));
@@ -475,13 +483,36 @@ async function runQa({ routes, widths, host, port, siteDir, baseUrl, concurrency
     concurrency,
     routes,
     widths,
+    duration_ms: Date.now() - startedAt,
+    route_timings: summarizeRouteTimings(results.filter(Boolean)),
     results: results.filter(Boolean),
     failures: results.filter(Boolean).flatMap((result) => result.failures),
     server_output: server?.output() ?? '',
   };
 }
 
+function summarizeRouteTimings(results) {
+  const byRoute = new Map();
+  for (const result of results) {
+    const entry = byRoute.get(result.route) || { route: result.route, total_ms: 0, max_ms: 0, widths: [] };
+    entry.total_ms += result.duration_ms || 0;
+    entry.max_ms = Math.max(entry.max_ms, result.duration_ms || 0);
+    entry.widths.push({ width: result.width, duration_ms: result.duration_ms || 0 });
+    byRoute.set(result.route, entry);
+  }
+  return [...byRoute.values()].map((entry) => {
+    entry.widths.sort((a, b) => a.width - b.width);
+    return entry;
+  }).sort((a, b) => b.total_ms - a.total_ms);
+}
+
 function emitReport(report) {
+  if (TIMING_FILE) {
+    const timingPath = resolve(PROJECT_DIR, TIMING_FILE);
+    mkdirSync(dirname(timingPath), { recursive: true });
+    writeFileSync(timingPath, `${JSON.stringify(report, null, 2)}\n`);
+  }
+
   if (JSON_MODE) {
     process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
     return;

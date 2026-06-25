@@ -10,8 +10,8 @@ pricing_model: enterprise
 price_range: "Enterprise starts at $16K"
 status: active
 launched: 2023-07
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: weekly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://sourcegraph.com/docs/cody"
     source_label: "Sourcegraph Cody docs"
     source_id: cody-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: medium
     confidence: high
@@ -39,7 +39,7 @@ facts:
     source: "https://sourcegraph.com/pricing"
     source_label: "Sourcegraph pricing"
     source_id: cody-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
@@ -48,7 +48,7 @@ facts:
     source: "https://sourcegraph.com/docs/cody"
     source_label: "Sourcegraph Cody docs"
     source_id: cody-docs
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: medium
     confidence: high
@@ -57,7 +57,7 @@ facts:
     source: "https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai"
     source_label: "Cody VS Code Marketplace listing"
     source_id: cody-vscode-marketplace
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: high
     confidence: high
@@ -66,7 +66,7 @@ facts:
     source: "https://sourcegraph.com/docs/model-provider"
     source_label: "Sourcegraph Model Provider docs"
     source_id: cody-model-provider
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: medium
     confidence: high
@@ -75,7 +75,7 @@ facts:
     source: "https://sourcegraph.com/terms/ai-terms"
     source_label: "Sourcegraph AI Terms"
     source_id: sourcegraph-ai-terms
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: medium
     confidence: high
@@ -84,7 +84,7 @@ facts:
     source: "https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai"
     source_label: "Cody VS Code Marketplace listing"
     source_id: cody-vscode-marketplace
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: medium
     confidence: high
@@ -105,13 +105,13 @@ not_best_for:
 quick_answer: >-
   Cody is Sourcegraph's Enterprise AI/code-intelligence layer. Free and Pro were retired on July 23, 2025, and the VS Code Marketplace now warns Cody is not available for non-enterprise users even though the listing still carries stale self-serve/model-copy. Sourcegraph Enterprise starts at $16K with AI-feature credits, code graph context, Deep Search, MCP/API/CLI access, and model-provider controls. Pick it when Sourcegraph is part of the platform decision; skip it for solo or small-team coding.
 price_history:
-  - date: 2026-06-24
+  - date: 2026-06-26
     plan: "Sourcegraph Enterprise"
     price: "Starts at $16K plus AI-feature credits"
     source: "https://sourcegraph.com/pricing"
     source_label: "Sourcegraph pricing"
     source_id: cody-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     note: "Rechecked Sourcegraph pricing, Cody docs, Model Provider docs, AI Terms, plan-change notice, and VS Code Marketplace. Enterprise still starts at $16K with AI-feature credits; Marketplace installs moved to 857,013 while the listing still warns Cody is not available for non-enterprise users."
   - date: 2025-07-23
     plan: "Free and Pro"
@@ -182,7 +182,7 @@ Self-serve is gone. Free and Pro shut down July 23, 2025, Enterprise Starter no 
 | **Compliance** | Enterprise admin controls, model configuration, zero-retention partner LLM posture, Sourcegraph Cloud or self-hosted deployment |
 | **Sibling product** | Amp is the agentic workflow path for former Free/Pro Cody users |
 
-Every data point above was verified against vendor sources on 2026-06-24. See Sources.
+Every data point above was verified against vendor sources on 2026-06-26. See Sources.
 
 ## What it actually is
 
@@ -218,7 +218,7 @@ Amp is the agentic coding path Sourcegraph pointed former Cody Free and Pro user
 |---|---|---|
 | Sourcegraph Enterprise | Starts at $16K | Code graph, cross-repo context, Deep Search, Cody, MCP/API/CLI access, AI-feature credits, org-wide credit pooling, no monthly credit expiry, renewal rollover, admin controls, single-tenant cloud, self-hosted option |
 
-*Pricing verified 2026-06-24 via [Sourcegraph pricing](https://sourcegraph.com/pricing) and the [Cody plan changes notice](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans). Free and Pro were retired on July 23, 2025, Enterprise Starter no longer includes Cody, and the current VS Code Marketplace listing says Cody is no longer available for non-enterprise users. Expect a sales-led enterprise contract, not a self-serve seat checkout.*
+*Pricing verified 2026-06-26 via [Sourcegraph pricing](https://sourcegraph.com/pricing) and the [Cody plan changes notice](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans). Free and Pro were retired on July 23, 2025, Enterprise Starter no longer includes Cody, and the current VS Code Marketplace listing says Cody is no longer available for non-enterprise users. Expect a sales-led enterprise contract, not a self-serve seat checkout.*
 
 ## Against the alternatives
 
@@ -246,7 +246,7 @@ Amp is the agentic coding path Sourcegraph pointed former Cody Free and Pro user
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-24 against [Sourcegraph pricing](https://sourcegraph.com/pricing), [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody), [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider), [Sourcegraph AI Terms](https://sourcegraph.com/terms/ai-terms), the [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai), and [the plan-change announcement](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity; unweighted average). Last verified 2026-06-26 against [Sourcegraph pricing](https://sourcegraph.com/pricing), [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody), [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider), [Sourcegraph AI Terms](https://sourcegraph.com/terms/ai-terms), the [VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai), and [the plan-change announcement](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans).
 
 ## FAQ
 
@@ -270,13 +270,13 @@ Only if cross-repo context and Sourcegraph's platform features pay for themselve
 
 ## Sources
 
-- [Sourcegraph pricing](https://sourcegraph.com/pricing): current Enterprise plan starting price and AI-credit packaging, verified 2026-06-24.
-- [Changes to Cody Free, Pro, and Enterprise Starter plans](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans): July 23, 2025 retirement announcement, verified 2026-06-24.
-- [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody): supported surfaces and Cody feature scope, verified 2026-06-24.
-- [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider): Cody Gateway, model-provider access, rate limits, privacy, and security, verified 2026-06-24.
-- [Sourcegraph AI Terms](https://sourcegraph.com/terms/ai-terms): Enterprise AI ownership, retention, data-use, indemnification, and output-review terms, verified 2026-06-24.
-- [Cody VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai): public extension status, 857,013 installs, stale Cody Pro copy, and non-enterprise availability warning, verified 2026-06-24.
-- [Sourcegraph model configuration docs](https://sourcegraph.com/docs/cody/enterprise/model-configuration): Enterprise model filters and provider/model overrides, verified 2026-06-24.
+- [Sourcegraph pricing](https://sourcegraph.com/pricing): current Enterprise plan starting price and AI-credit packaging, verified 2026-06-26.
+- [Changes to Cody Free, Pro, and Enterprise Starter plans](https://sourcegraph.com/blog/changes-to-cody-free-pro-and-enterprise-starter-plans): July 23, 2025 retirement announcement, verified 2026-06-26.
+- [Sourcegraph Cody docs](https://sourcegraph.com/docs/cody): supported surfaces and Cody feature scope, verified 2026-06-26.
+- [Sourcegraph Model Provider docs](https://sourcegraph.com/docs/model-provider): Cody Gateway, model-provider access, rate limits, privacy, and security, verified 2026-06-26.
+- [Sourcegraph AI Terms](https://sourcegraph.com/terms/ai-terms): Enterprise AI ownership, retention, data-use, indemnification, and output-review terms, verified 2026-06-26.
+- [Cody VS Code Marketplace listing](https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai): public extension status, 857,013 installs, stale Cody Pro copy, and non-enterprise availability warning, verified 2026-06-26.
+- [Sourcegraph model configuration docs](https://sourcegraph.com/docs/cody/enterprise/model-configuration): Enterprise model filters and provider/model overrides, verified 2026-06-26.
 - [GitHub Copilot plan docs](https://docs.github.com/en/copilot/get-started/plans): Copilot Business comparison price
 - [GitHub Copilot organization billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises): Copilot Business AI Credits comparison context
 - [Cursor pricing](https://cursor.com/pricing): Cursor Teams comparison price

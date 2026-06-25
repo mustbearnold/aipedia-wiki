@@ -12,8 +12,8 @@ pricing_model: freemium
 price_range: "$0-$24.99/user/month plus metered APIs"
 status: active
 launched: 2023-09
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -50,7 +50,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -59,7 +59,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -68,7 +68,7 @@ facts:
     source: "https://mistral.ai/pricing"
     source_label: "Mistral AI pricing"
     source_id: mistral-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -180,6 +180,14 @@ not_best_for:
 quick_answer: >-
   Mistral is Europe's credible open-weight LLM lab and model platform. The current public surface spans Vibe (formerly Le Chat), Vibe for Code, Mistral Studio, Search Toolkit, APIs, and the Mistral 3 / Medium 3.5 / Small 4 model family. Pick for EU data sovereignty, model-provider control, open-weight evaluation, or coding/API workflows; skip if you only need the most polished everyday assistant.
 price_history:
+  - date: 2026-06-26
+    plan: "Mistral Vibe / Studio API source check"
+    price: "Free / Pro $14.99/mo / Education $5.99/mo / Team $24.99/user/mo; API pricing remains model-specific"
+    source: "https://mistral.ai/pricing/"
+    source_label: "Mistral AI pricing"
+    source_id: mistral-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked official pricing page and current Vibe/Studio positioning. No material buyer-price change found versus June 24; keep Studio/API budgeting model-specific and verify exact model ID in Studio before procurement."
   - date: 2026-06-24
     plan: "Mistral Vibe / Studio API source check"
     price: "Free / Pro $14.99/mo / Education $5.99/mo / Team $24.99/user/mo; API pricing remains model-specific"
@@ -363,7 +371,7 @@ Consumer and API pricing via [mistral.ai/pricing](https://mistral.ai/pricing). U
 | Devstral 2 / Devstral current alias | $0.40 | $2.00 | Open-weight agentic coding lane on the pricing page; confirm the exact model ID because the model overview marks some Devstral IDs as legacy |
 | Codestral | $0.30 | $0.90 | Premier code specialist |
 
-*Prices verified 2026-06-24 via [mistral.ai/pricing](https://mistral.ai/pricing), current model cards, and [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview). Open-weight models can also be self-hosted or routed through Bedrock, Azure, Fireworks, Together, OpenRouter, Modal, and other providers; benchmark your real prompts and provider route before committing.*
+*Prices verified 2026-06-26 via [mistral.ai/pricing](https://mistral.ai/pricing), current model cards, and [docs.mistral.ai/models/overview](https://docs.mistral.ai/models/overview). Open-weight models can also be self-hosted or routed through Bedrock, Azure, Fireworks, Together, OpenRouter, Modal, and other providers; benchmark your real prompts and provider route before committing.*
 
 ## Against the alternatives
 

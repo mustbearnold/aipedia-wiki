@@ -11,8 +11,8 @@ pricing_model: open-source
 price_range: "Free (open source)"
 status: active
 launched: 2026-04
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/"
     source_label: "Microsoft Build 2026 agent stack"
     source_id: microsoft-build-2026-work-iq
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,22 +39,22 @@ facts:
     source: "https://github.com/microsoft/agent-framework"
     source_label: "Microsoft Agent Framework GitHub"
     source_id: maf-github
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-08-13
     volatility: low
     confidence: high
   watch_out_for:
-    value: "Active 1.x framework cadence plus fast-moving Work IQ/Foundry/Copilot Credit surfaces. As of June 24, GitHub releases show python-1.9.0 from June 18 and dotnet-1.11.0 from June 23; Work IQ APIs are generally available and billed through Copilot Credits. Verify GA access, admin billing controls, provider support, non-Azure data boundaries, and exact .NET/Python package versions before architecture decisions."
+    value: "Active 1.x framework cadence plus fast-moving Work IQ/Foundry/Copilot Credit surfaces. As of June 26, GitHub releases still show python-1.9.0 from June 18 and dotnet-1.11.0 from June 23; Work IQ APIs are generally available and billed through Copilot Credits. Verify GA access, admin billing controls, provider support, non-Azure data boundaries, and exact .NET/Python package versions before architecture decisions."
     source: "https://learn.microsoft.com/en-us/partner-center/announcements/2026-june"
     source_label: "Microsoft Partner Center Work IQ update"
     source_id: microsoft-work-iq-partner-center
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     next_review_at: 2026-07-01
     volatility: medium
     confidence: high
 tags: [agent-framework, microsoft, open-source, autogen-successor, semantic-kernel, azure, microsoft-foundry, enterprise, dotnet, python]
 seo_title: "Microsoft Agent Framework: Features & Review (June 2026)"
-meta_description: "Microsoft Agent Framework is the open-source successor to Semantic Kernel and AutoGen. Updated June 24, 2026 for python-1.9.0, dotnet-1.11.0, Work IQ GA, Copilot Credits, tool approval, and provider-risk guidance."
+meta_description: "Microsoft Agent Framework is the open-source successor to Semantic Kernel and AutoGen. Updated June 26, 2026 for python-1.9.0, dotnet-1.11.0, Work IQ GA, Copilot Credits, tool approval, and provider-risk guidance."
 author: "aipedia.wiki Editorial"
 best_for:
   - Azure and Microsoft Foundry enterprises building AI agents
@@ -67,18 +67,18 @@ not_best_for:
   - solo devs without Azure infrastructure
   - simple agent use cases (framework is heavy)
 quick_answer: >-
-  Microsoft Agent Framework 1.0 shipped April 2026 as the successor to both Semantic Kernel and AutoGen. Its current release stream is python-1.9.0 (June 18) and dotnet-1.11.0 (June 23). It is open source, free, and aligned with Microsoft Foundry, Azure OpenAI, OpenAI, Anthropic, Ollama, GitHub Copilot, and Copilot Studio. As of June 24, Work IQ APIs are generally available with Copilot Credits billing. Pick it for Microsoft-aligned enterprise agent deployments, but pin versions and verify Work IQ access, admin controls, and cost before production architecture.
+  Microsoft Agent Framework 1.0 shipped April 2026 as the successor to both Semantic Kernel and AutoGen. Its current release stream is python-1.9.0 (June 18) and dotnet-1.11.0 (June 23). It is open source, free, and aligned with Microsoft Foundry, Azure OpenAI, OpenAI, Anthropic, Ollama, GitHub Copilot, and Copilot Studio. As of June 26, Work IQ APIs are generally available with Copilot Credits billing. Pick it for Microsoft-aligned enterprise agent deployments, but pin versions and verify Work IQ access, admin controls, and cost before production architecture.
 ---
 
 # Microsoft Agent Framework
 
-Microsoft's consolidated answer to the agent-framework fragmentation of 2024-2025. It merges the orchestration strengths of Semantic Kernel with the multi-agent patterns of AutoGen into one framework. By the June 24 check, the release stream showed python-1.9.0 and dotnet-1.11.0. The June 2026 Build and Work IQ GA updates also make the surrounding Microsoft stack clearer: Agent Framework for code, Microsoft Foundry for model/app development, Work IQ APIs for Microsoft 365 work context, and Agent 365/Defender/Purview-style controls for governed agents.
+Microsoft's consolidated answer to the agent-framework fragmentation of 2024-2025. It merges the orchestration strengths of Semantic Kernel with the multi-agent patterns of AutoGen into one framework. By the June 26 check, the release stream showed python-1.9.0 and dotnet-1.11.0. The June 2026 Build and Work IQ GA updates also make the surrounding Microsoft stack clearer: Agent Framework for code, Microsoft Foundry for model/app development, Work IQ APIs for Microsoft 365 work context, and Agent 365/Defender/Purview-style controls for governed agents.
 
 The current docs lean on **Microsoft Foundry** (renamed from Azure AI Foundry) as the reference platform, but the framework speaks directly to Microsoft Foundry, Anthropic, Azure OpenAI, OpenAI, Ollama, and a growing list of providers.
 
 ## Recent developments
 
-- **June 24, 2026 check:** GitHub releases show python-1.9.0 from June 18 and dotnet-1.11.0 from June 23. Recent release notes include AgentLoopMiddleware, harness tool approval, shell-tool integration, telemetry improvements, and breaking MCP sampling guardrails.
+- **June 26, 2026 check:** GitHub releases show python-1.9.0 from June 18 and dotnet-1.11.0 from June 23. Recent release notes include AgentLoopMiddleware, harness tool approval, shell-tool integration, telemetry improvements, and breaking MCP sampling guardrails.
 - **June 16, 2026 check:** Work IQ APIs are generally available. Microsoft's licensing notice says billing uses Copilot Credits with no separate Work IQ API subscription, SKU, or per-user license, while Partner Center tells administrators to configure consumptive billing, access policies, limits, and alerts before custom or third-party Work IQ agents use Microsoft 365 data.
 - **June 23, 2026:** dotnet-1.11.0 is the checked .NET release line. Recent releases include multiple breaking or experimental changes, so pin tested package versions before production rollout.
 - **June 2, 2026:** [Microsoft Build 2026 put Work IQ APIs, Foundry IQ, Fabric IQ, Copilot Credits, Agent 365, and new Microsoft AI models around the enterprise-agent stack](/news/2026-06-02-microsoft-build-work-iq-agent-stack/). Agent Framework remains the open-source code layer, but Microsoft-aligned buyers should evaluate it with Work IQ, Foundry, and governance controls rather than in isolation.
@@ -134,7 +134,7 @@ Microsoft Agent Framework is free and open source. You pay for:
 
 No framework licensing fees.
 
-Verified 2026-06-24 via [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/), the [Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability), and the [Partner Center Work IQ update](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june).
+Verified 2026-06-26 via [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [agent-framework GitHub releases](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/), the [Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability), and the [Partner Center Work IQ update](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june).
 
 ## Failure modes
 
@@ -158,7 +158,7 @@ Verified 2026-06-24 via [Microsoft Agent Framework overview](https://learn.micro
 
 ## Methodology
 
-Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-24 against the [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [providers overview](https://learn.microsoft.com/en-us/agent-framework/agents/providers/), the [agent-framework GitHub releases page](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/), the [Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability), and the [Partner Center Work IQ update](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june).
+Produced by the aipedia.wiki editorial pipeline. Last verified 2026-06-26 against the [Microsoft Agent Framework overview](https://learn.microsoft.com/en-us/agent-framework/overview/), the [providers overview](https://learn.microsoft.com/en-us/agent-framework/agents/providers/), the [agent-framework GitHub releases page](https://github.com/microsoft/agent-framework/releases), [Microsoft Build 2026](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/), the [Work IQ API announcement](https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/), the [Work IQ licensing notice](https://www.microsoft.com/en-us/licensing/news/work-iq-general-availability), and the [Partner Center Work IQ update](https://learn.microsoft.com/en-us/partner-center/announcements/2026-june).
 
 ## FAQ
 

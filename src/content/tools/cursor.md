@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$120+/user/month; Enterprise custom"
 status: active
 launched: 2023-03
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -48,7 +48,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -57,7 +57,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -66,7 +66,7 @@ facts:
     source: "https://cursor.com/pricing"
     source_label: "Cursor pricing"
     source_id: cursor-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-26
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -177,6 +177,14 @@ not_best_for:
 quick_answer: >-
   Cursor is the strongest GUI-first AI IDE in June 2026, built as a VS Code fork with Composer 2.5, a multi-agent Agents Window, Automations, Cloud Agents, CLI/SDK agent surfaces, Design Mode, and Bugbot. Pick it for editor-native parallel agents and code review; skip it if you want a pure terminal loop (Claude Code) or cheaper GitHub-native completions (GitHub Copilot).
 price_history:
+  - date: 2026-06-26
+    plan: "Individual / Teams / Enterprise"
+    price: "Hobby free; Individual starts at $20/mo; Teams Standard $40/user/mo monthly; Teams Premium $120/user/mo monthly; Enterprise custom"
+    source: "https://cursor.com/pricing"
+    source_label: "Cursor pricing"
+    source_id: cursor-pricing
+    verified_at: 2026-06-26
+    note: "Rechecked official pricing and Teams pricing update. No material buyer-price change found versus June 24; keep Pro+/Ultra amounts and included usage as checkout-verification items."
   - date: 2026-06-24
     plan: "Individual / Teams / Enterprise"
     price: "Hobby free; Individual starts at $20/mo; Teams Standard $40/user/mo monthly; Teams Premium $120/user/mo monthly; Enterprise custom"
@@ -370,7 +378,7 @@ Model usage inside Cursor is billed against plan usage and on-demand usage at mo
 
 Do not assume the $20 Individual starting price covers daily agent work. Cursor's own pricing FAQ recommends Pro+ for daily agent users and Ultra for agent power users, and on-demand usage can continue after included usage is consumed, billed in arrears.
 
-Subscription prices verified 2026-06-24 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-24 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams Standard at $40/user/month, Teams Premium at $120/user/month monthly, and Enterprise custom, with Pro+/Ultra upgrade paths for heavier agent usage and on-demand usage after included usage is consumed. Cursor's June Teams pricing update also adds Premium seats at 5x Standard usage for 3x the cost. Exact Pro+/Ultra checkout amounts, included usage, and billing controls should be verified in the live account screen before procurement.
+Subscription prices verified 2026-06-26 via [cursor.com/pricing](https://cursor.com/pricing). Composer 2.5 token pricing verified 2026-06-24 via [Cursor's Composer 2.5 changelog](https://cursor.com/changelog/composer-2-5). The public pricing surface keeps Hobby free, Individual starting at $20, Teams Standard at $40/user/month, Teams Premium at $120/user/month monthly, and Enterprise custom, with Pro+/Ultra upgrade paths for heavier agent usage and on-demand usage after included usage is consumed. Cursor's June Teams pricing update also adds Premium seats at 5x Standard usage for 3x the cost. Exact Pro+/Ultra checkout amounts, included usage, and billing controls should be verified in the live account screen before procurement.
 
 ## Against the alternatives
 
