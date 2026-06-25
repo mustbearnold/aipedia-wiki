@@ -220,6 +220,13 @@ Second six-worker 60-tool refresh batch passed locally and is ready to commit/pu
 
 This run refreshed 60 tools from Tabnine through Wordtune, updated affected category hubs, source registry rows, the page refresh ledger, and `.agent/loop-runs/2026-06-25-second-six-worker-60-tool-refresh-batch.md`. First grouped check failed only on `ledger:pages:check`; rerunning `ledger:pages && ledger:pages:check` fixed it. First typecheck caught a YAML scalar issue in Claude Design; it was converted to a folded scalar and typecheck passed.
 
+Workflow improvement now complete locally:
+
+- Added `npm run check:frontmatter` and wired it into `tool:refresh:batch:check` so malformed markdown YAML is caught before typecheck/build.
+- Updated planner-generated worker prompts to require source-confidence labels for constrained facts.
+- Updated planner closeout commands to put `npm run ledger:pages && npm run ledger:pages:check` before the grouped checker.
+- Verification passed: `node --check` for the changed scripts, `node --test tests/scripts/tool-refresh-batch.test.mjs`, `npm run check:frontmatter`, planner smoke, `npm run audit:commands`, `npm run ledger:pages && npm run ledger:pages:check`, and `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-workflow-smoke.json`.
+
 Latest completed 60-tool baseline refresh passed:
 
 - `node --check scripts\tool-refresh-batch.mjs`

@@ -193,7 +193,7 @@ function buildCommands(batch) {
       (tool) => `npm run audit:tool-quality -- --file ${tool.path.replace(/\//g, '\\')}`,
     ),
     batch_fast_check: [
-      'npm run ledger:pages',
+      'npm run ledger:pages && npm run ledger:pages:check',
       'npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json',
     ],
     source_health: sourceIds.length ? [
@@ -202,7 +202,7 @@ function buildCommands(batch) {
       `npm run audit:sources -- --live --update-snapshots --limit 0 ${sourceIds.map((sourceId) => `--source-id ${sourceId}`).join(' ')}`,
     ] : [],
     batch_close: [
-      'npm run ledger:pages',
+      'npm run ledger:pages && npm run ledger:pages:check',
       'npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json',
       'npm run typecheck',
       'npm run build:fast',
@@ -296,6 +296,7 @@ function buildAgentBriefs(batch, commands) {
         '- Keep the tool page in the shared decision-spine format: fast verdict, best plan, fit, watch-out, alternatives, recent changes, pricing, sources.',
         '- Update last_verified and fact verified_at fields to the current date only for facts you actually checked.',
         '- If you need a new source-registry row, do not edit the registry. Include the proposed source id, title, URL, type, trust tier, volatility, and last_checked in your final report.',
+        '- Classify each unresolved or constrained source claim as one of: primary-confirmed, primary-conflict, account-gated, checkout-gated, region-rendered, blocked-live-check, secondary-only.',
         '',
         'Worker verification:',
         ...tools.map((tool) => `- npm run audit:tool-quality -- --file ${tool.path.replace(/\//g, '\\')}`),
@@ -306,6 +307,7 @@ function buildAgentBriefs(batch, commands) {
         'Final report:',
         '- Changed file paths, grouped by tool.',
         '- Source URLs checked and any source-registry rows the integrator must add or update, grouped by tool.',
+        '- Fact/source confidence labels, grouped by tool: primary-confirmed, primary-conflict, account-gated, checkout-gated, region-rendered, blocked-live-check, or secondary-only.',
         '- Parent/category/top-layer surfaces the integrator must inspect, grouped by tool.',
         '- Verification commands run and results.',
         '- Anything blocked or not verified.',
@@ -336,8 +338,10 @@ function buildAgentBriefs(batch, commands) {
       'Merge policy:',
       '- Review each worker diff and source list before accepting it.',
       '- Add or update shared source-registry rows once, after deduplicating IDs and URLs.',
+      '- Preserve worker source-confidence labels in content caveats where facts are primary-conflict, account-gated, checkout-gated, region-rendered, blocked-live-check, or secondary-only.',
       '- Use the source-health commands to check registered source reachability and snapshot changes before deciding which facts need deeper refresh.',
       '- Update affected parent category hubs, /tools/, /categories/, top-layer summaries, internal links, and PAGE_REFRESH_LEDGER.md only after all worker tool edits are integrated.',
+      '- Run npm run ledger:pages && npm run ledger:pages:check before the grouped batch checker so a stale ledger does not waste a full validation pass.',
       '- Keep one final verification closeout. Do not run one build per tool.',
       '',
       'Optional source-health commands:',
@@ -383,7 +387,7 @@ const result = {
       'Update tool pages, affected parent hubs, source registry rows, and PAGE_REFRESH_LEDGER.md together.',
     `If using subagents, launch at most ${agentBriefs.max_parallel_workers} shard worker(s) at once, with up to ${agentBriefs.tools_per_worker} tool(s) per worker.`,
     'Run per-tool quality checks while editing.',
-    'Run npm run tool:refresh:batch:check after ledger generation, then one expensive typecheck/build/route-QA closeout for the batch.',
+    'Run npm run ledger:pages && npm run ledger:pages:check before npm run tool:refresh:batch:check, then one expensive typecheck/build/route-QA closeout for the batch.',
     'If one tool blocks on source access, remove it from the batch and continue with the rest.',
   ],
 };

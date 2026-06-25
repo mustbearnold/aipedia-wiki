@@ -46,6 +46,33 @@ test('tool refresh batch check help documents plan files', () => {
   assert.match(result.stdout, /--files-from/);
 });
 
+test('frontmatter check reports malformed YAML before Astro typecheck', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'frontmatter-check-'));
+  const filePath = join(dir, 'broken.md');
+
+  try {
+    writeFileSync(filePath, [
+      '---',
+      'title: Broken',
+      'pricing_anchor:',
+      '  value: metering conflict: unquoted colon',
+      '---',
+      '',
+      'Body.',
+      '',
+    ].join('\n'));
+
+    const result = runNode('scripts/check-frontmatter.mjs', ['--json', '--file', filePath]);
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.failures.length, 1);
+    assert.match(report.failures[0].error, /bad indentation|can not read|mapping/i);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('tool refresh planner includes source metadata and scoped source-health commands', () => {
   const result = runNode('scripts/tool-refresh-batch.mjs', [
     '--json',
@@ -75,7 +102,11 @@ test('tool refresh planner includes source metadata and scoped source-health com
   const workerWithSources = report.agent_briefs.worker_briefs.find((brief) => brief.source_ids.length > 0);
   assert.ok(workerWithSources, 'worker briefs should carry shard source IDs');
   assert.match(workerWithSources.prompt, /npm run audit:sources -- --json --limit 0 --source-id/);
+  assert.match(workerWithSources.prompt, /primary-confirmed/);
+  assert.match(workerWithSources.prompt, /blocked-live-check/);
   assert.match(report.agent_briefs.integrator_brief.prompt, /Optional source-health commands/);
+  assert.match(report.agent_briefs.integrator_brief.prompt, /ledger:pages && npm run ledger:pages:check/);
+  assert.ok(report.commands.batch_fast_check.some((command) => /ledger:pages && npm run ledger:pages:check/.test(command)));
 });
 
 test('tool refresh planner skips the previous day by default but keeps override knobs', () => {

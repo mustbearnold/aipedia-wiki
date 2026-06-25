@@ -20,6 +20,7 @@
     "guard:challenge": "node scripts/guard-challenge.mjs",
     "guard:challenge:check": "node scripts/guard-challenge.mjs --check",
     "guard:baseline": "node scripts/guard-content.mjs --baseline",
+    "check:frontmatter": "node scripts/check-frontmatter.mjs --changed",
     "lint": "npm run guard:check",
     "typecheck": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs check --tsconfig tsconfig.typecheck.json --minimumSeverity error",
     "ops:dashboard": "node scripts/ops-dashboard.mjs",

@@ -110,6 +110,8 @@ Latest closeout notes:
 - Run `npm run ledger:pages && npm run ledger:pages:check` immediately after integrator-owned hub edits. The combined batch checker is still the canonical gate, but prechecking the ledger avoids a slow failed pass.
 - Keep `typecheck` before `build:fast`. It caught a YAML scalar issue in `claude-design.md` that the page-quality and provenance audits did not catch.
 - Keep source registry and category hubs integrator-owned. The workers were most effective when limited to 10 tool markdown files each and asked to report source-registry rows instead of editing shared files.
+- `tool:refresh:batch:check` now runs `scripts/check-frontmatter.mjs --changed` so malformed markdown frontmatter is caught before the slower Astro typecheck/build phase.
+- Generated worker prompts now require source-confidence labels for constrained facts: `primary-confirmed`, `primary-conflict`, `account-gated`, `checkout-gated`, `region-rendered`, `blocked-live-check`, and `secondary-only`.
 
 ## Active: Decision Content Flywheel
 

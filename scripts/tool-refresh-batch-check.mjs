@@ -28,7 +28,7 @@ function usage() {
     '  node scripts/tool-refresh-batch-check.mjs --files-from .agent/tool-refresh-batch.json',
     '  node scripts/tool-refresh-batch-check.mjs --json',
     '',
-    'Runs per-tool quality checks plus changed provenance, freshness, ledger check, em-dash guard, and git diff check.',
+    'Runs per-tool quality checks plus changed frontmatter parsing, changed provenance, freshness, ledger check, em-dash guard, and git diff check.',
     'It does not run typecheck, build, or route QA. Use the batch planner closeout for those.',
   ].join('\n');
 }
@@ -142,6 +142,7 @@ for (const file of toolFiles) {
   commands.push(run(NPM, ['run', 'audit:tool-quality', '--', '--file', file]));
 }
 
+commands.push(run(process.execPath, ['scripts/check-frontmatter.mjs', '--changed']));
 commands.push(run(NPM, ['run', 'audit:provenance:changed', '--', '--json']));
 commands.push(run(NPM, ['run', 'loop:freshness', '--', '--json']));
 commands.push(run(NPM, ['run', 'ledger:pages:check']));
