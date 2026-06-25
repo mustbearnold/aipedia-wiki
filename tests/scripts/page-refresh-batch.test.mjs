@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -76,5 +76,37 @@ test('page refresh planner documents the workflow flags', () => {
   assert.equal(result.status, 0);
   assert.match(result.stdout, /--pages-per-worker/);
   assert.match(result.stdout, /--include-tools/);
+  assert.match(result.stdout, /--write-agent-prompts/);
   assert.match(result.stdout, /--type/);
+});
+
+test('page refresh planner can write exact agent prompt files', () => {
+  const { dir, ledger } = writeLedger();
+  const promptDir = join(dir, 'prompts');
+
+  try {
+    const result = runNode([
+      '--json',
+      '--ledger',
+      ledger,
+      '--limit',
+      '2',
+      '--max-workers',
+      '2',
+      '--pages-per-worker',
+      '1',
+      '--write-agent-prompts',
+      promptDir,
+    ]);
+    assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+
+    assert.equal(report.prompt_dir, promptDir);
+    assert.equal(report.agent_briefs.worker_briefs.length, 2);
+    assert.ok(existsSync(join(promptDir, 'page-refresh-shard-01.md')));
+    assert.ok(existsSync(join(promptDir, 'page-refresh-integrator.md')));
+    assert.match(readFileSync(join(promptDir, 'page-refresh-shard-01.md'), 'utf8'), /You are page-refresh-shard-01/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

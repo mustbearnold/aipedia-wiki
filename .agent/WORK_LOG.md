@@ -1,14 +1,26 @@
 # AiPedia Work Log
 
-### 2026-06-26: Non-Tool Page Refresh Workflow V1
+### 2026-06-26: Non-Tool Page Refresh Batch 01
 
 - Status: Complete locally, verified, pending commit and push.
 - Commit: this commit.
 - Branch: `master`.
+- Changed: Ran the first live non-tool page-refresh workflow over 12 routes: terms, disclosure, reports, dead archive, four answer pages, compare-builder, and three comparison pages. Updated affected parent surfaces `/answers/`, `/compare/`, `/categories/ai-voice/`, `/categories/ai-seo/`, and `PAGE_REFRESH_LEDGER.md`. Added planner prompt-file output, fixed coverage-quality current-date handling, added explicit noindex/interactive route-QA flags, and updated the page-refresh workflow docs.
+- Timing: Planner 0.39s; prompt-file generation 0.42s; workers 4m00s, 6m17s, and 2m22s; typecheck 13.00s; build:fast 16.79s; content route QA 20.39s; interactive builder route QA 2.67s. Full receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-01.md`.
+- Verification: `node --check scripts/page-refresh-batch.mjs`; `node --check scripts/audit-coverage-quality.mjs`; `node --check scripts/qa-route.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs`; `node scripts/check-frontmatter.mjs --changed`; `node scripts/guard-em-dashes.mjs`; `npm run ledger:pages && npm run ledger:pages:check`; `npm run audit:provenance:changed -- --json`; `AIPEDIA_CURRENT_DATE=2026-06-26 npm run audit:coverage-quality:changed`; `AIPEDIA_CURRENT_DATE=2026-06-26 npm run audit:facts`; `npm run check:links`; `npm run typecheck`; `AIPEDIA_CURRENT_DATE=2026-06-26 npm run build:fast`; route QA for 17 content routes x 7 widths; route QA for `/compare/build/` x 7 widths with intentional noindex/interactive flags.
+- Failed then fixed: Manual worker-prompt transcription caused missed `/reports/` and `/dead/` edits even though the planner JSON had correct `index.astro` paths; fixed with `--write-agent-prompts`. `audit:coverage-quality:changed` treated current-day dates as future because it ignored explicit current date; fixed. `qa-route` applied indexable comparison-page assertions to `/compare/build/`; fixed with explicit opt-in flags for noindex interactive routes.
+- Residual risks: Source registry rows were not changed because these are mostly static/answer/comparison pages with inline source lists. Next page-refresh run should add a parseable worker report artifact and keep batch size at 12 to 24 pages until worker report integration stabilizes.
+- Next: Commit and push, then run the next non-tool page batch using generated prompt files.
+
+### 2026-06-26: Non-Tool Page Refresh Workflow V1
+
+- Status: Complete and pushed.
+- Commit: d918f852c.
+- Branch: `master`.
 - Changed: Added `scripts/page-refresh-batch.mjs`, `npm run page:refresh:batch`, focused planner tests, and the first runnable `workflows/page-refresh/` procedure for non-tool page refreshes. The planner reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, sorts oldest-first, supports type filters, emits six-worker shard prompts, emits one integrator prompt, and includes timing-aware route QA at concurrency 6.
 - Verification: `node --check scripts/page-refresh-batch.mjs`; `npm run --silent page:refresh:batch -- --limit 12 --max-workers 3 --pages-per-worker 4 --json > .tmp-page-refresh-batch.json`; `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs`; `npm run audit:commands`; `node scripts/guard-em-dashes.mjs`; `npm run ledger:pages && npm run ledger:pages:check`; `git diff --check`.
 - Residual risks: This creates the repeatable lane but does not refresh page content yet. The first real page batch should capture actual worker, integration, and route QA timings, then feed stable improvements back into the workflow and planner.
-- Next: Commit and push the workflow, then run the first real non-tool page-refresh batch from the generated queue.
+- Next: Use generated prompt files for live page-refresh batches.
 
 ### 2026-06-26: Same-Day Tool Refresh Timing Run and Route QA Optimization
 

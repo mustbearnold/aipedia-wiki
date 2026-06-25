@@ -27,6 +27,8 @@ const KNOWN_FLAGS = new Set([
   '--root',
   '--json',
   '--timing-file',
+  '--allow-noindex',
+  '--skip-comparison-content-checks',
   '--help',
   '-h',
 ]);
@@ -48,6 +50,8 @@ const VALUE_FLAGS = new Set([
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const TIMING_FILE = valueFor('--timing-file');
+const ALLOW_NOINDEX = hasFlag('--allow-noindex');
+const SKIP_COMPARISON_CONTENT_CHECKS = hasFlag('--skip-comparison-content-checks');
 
 function hasFlag(flag) {
   return rawArgs.includes(flag) || rawArgs.some((arg) => arg.startsWith(`${flag}=`));
@@ -99,6 +103,9 @@ function usage() {
     '  --project-dir <dir>  Resolve paths from another project root.',
     '  --json               Emit a structured report.',
     '  --timing-file <path> Write structured route and viewport timing JSON.',
+    '  --allow-noindex      Do not fail routes intentionally marked noindex.',
+    '  --skip-comparison-content-checks',
+    '                       Skip comparison-page source/decision assertions.',
   ].join('\n');
 }
 
@@ -420,7 +427,7 @@ function failuresForResult({ route, width, responseStatus, metrics, failedReques
   if (!metrics.title) failures.push(`${label}: missing document title`);
   if (!metrics.metaDescription) failures.push(`${label}: missing meta description`);
   if (!metrics.canonical) failures.push(`${label}: missing canonical URL`);
-  if (/\bnoindex\b/i.test(metrics.robots)) failures.push(`${label}: route is noindex`);
+  if (!ALLOW_NOINDEX && /\bnoindex\b/i.test(metrics.robots)) failures.push(`${label}: route is noindex`);
   if (!metrics.mainVisible) failures.push(`${label}: main content is missing or not visible`);
   if (!metrics.h1) failures.push(`${label}: missing H1`);
   if (metrics.scrollWidth > metrics.clientWidth + 1) {
@@ -433,7 +440,7 @@ function failuresForResult({ route, width, responseStatus, metrics, failedReques
     failures.push(`${label}: failed request ${request.method} ${request.url}`);
   }
 
-  if (metrics.comparisonChecks) {
+  if (metrics.comparisonChecks && !SKIP_COMPARISON_CONTENT_CHECKS) {
     const checks = metrics.comparisonChecks;
     if (!checks.hasDecisionLanguage) failures.push(`${label}: comparison page lacks visible decision language`);
     if (!checks.hasSourcesHeading) failures.push(`${label}: comparison page lacks a visible Sources heading`);

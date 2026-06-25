@@ -196,12 +196,16 @@ function toolWorkflowLanes(category, tool) {
 function slugFromPath(path) {
   return path.split(/[\\/]/).pop().replace(/\.md$/, '');
 }
-function daysAgo(value, now) {
+function currentDate() {
+  return process.env.AIPEDIA_CURRENT_DATE || process.env.CURRENT_DATE || new Date().toISOString().slice(0, 10);
+}
+
+function daysAgo(value, todayValue) {
   const raw = String(value ?? '').trim().slice(0, 10);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return null;
   const d = new Date(`${raw}T00:00:00Z`);
   if (Number.isNaN(d.getTime())) return null;
-  const today = new Date(`${now.toISOString().slice(0, 10)}T00:00:00Z`);
+  const today = new Date(`${todayValue}T00:00:00Z`);
   return Math.round((today.getTime() - d.getTime()) / 86_400_000);
 }
 function markdownTableLines(body) {
@@ -288,7 +292,7 @@ function changedComparisonFiles() {
   return comparisonFilesFromPaths(gitChangedPaths());
 }
 
-const now = new Date();
+const today = currentDate();
 
 function checkFile(path) {
   const failures = [];
@@ -349,7 +353,7 @@ function checkFile(path) {
   }
 
   // Freshness.
-  const verifiedAge = daysAgo(scalar(fm, 'last_verified'), now);
+  const verifiedAge = daysAgo(scalar(fm, 'last_verified'), today);
   if (verifiedAge === null) failures.push(`${rel}: last_verified is not a valid YYYY-MM-DD date`);
   else if (verifiedAge < 0) failures.push(`${rel}: last_verified is in the future`);
   else if (verifiedAge > VERIFY_MAX_AGE_DAYS) failures.push(`${rel}: last_verified is ${verifiedAge}d old (max ${VERIFY_MAX_AGE_DAYS}d for a new page)`);

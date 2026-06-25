@@ -1,6 +1,11 @@
 ---
 /**
  * /reports/ index — god-tier 10/10 mobile-first.
+ *
+ * Refresh metadata: 2026-06-26 report archive inspected after the first
+ * non-tool page-refresh workflow run. The page remains data-driven from the
+ * reports collection and active tool count, with no hardcoded report facts to
+ * update beyond the verified label.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -53,7 +58,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
         { label: 'aipedia', href: '/' },
         { label: 'Reports' },
       ]}
-      verifiedLabel="Verified June 7, 2026"
+      verifiedLabel="Verified June 26, 2026"
       rankLabel={`${sorted.length} report${sorted.length === 1 ? '' : 's'}`}
     />
 

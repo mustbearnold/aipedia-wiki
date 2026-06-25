@@ -12,6 +12,12 @@ Create a planner JSON from the page refresh ledger:
 npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json > .tmp-page-refresh-batch.json
 ```
 
+For subagent fanout, also write exact prompt files so paths are not hand-transcribed:
+
+```bash
+npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --write-agent-prompts local/tmp/page-refresh-prompts --json > .tmp-page-refresh-batch.json
+```
+
 Inspect the plan:
 
 ```bash
@@ -30,7 +36,7 @@ Default behavior excludes tool pages, because the tool-refresh workflow already 
 
 ## Worker Model
 
-Use up to six workers, with up to 10 page files each. Prefer planner-generated worker prompts from `agent_briefs.worker_briefs[*].prompt`.
+Use up to six workers, with up to 10 page files each. Use the prompt files from `--write-agent-prompts` or copy `agent_briefs.worker_briefs[*].prompt` exactly from the planner JSON. Do not hand-transcribe route paths or owned file lists.
 
 Each worker owns only the files listed in its shard. Workers should refresh:
 
@@ -95,6 +101,7 @@ Add page-type-specific checks when relevant:
 - Comparison or guide quality: `npm run audit:coverage-quality:changed`
 - Commercial pages: `npm run build:fast` includes commercial CTA checks
 - Static/index pages: include their parent hub and index routes in route QA
+- Intentional noindex interactive pages such as `/compare/build/`: run `qa-route` with `--allow-noindex --skip-comparison-content-checks` so layout, metadata presence, and overflow are checked without applying indexable comparison-page source requirements.
 
 ## Closeout Report
 

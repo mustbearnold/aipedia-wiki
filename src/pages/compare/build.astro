@@ -73,8 +73,8 @@ const popularComparisons = [
 ---
 
 <BaseLayout
-  title="Build a comparison · June 2026 · aipedia.wiki"
-  description="Pick any 2 to 4 AI tools from the aipedia.wiki catalog and compare them side by side: scores across Utility, Value, Moat, Longevity, plus pricing, best-for, and skip-if. Updated June 2026."
+  title="Build a comparison · Updated June 26, 2026 · aipedia.wiki"
+  description="Pick any 2 to 4 AI tools from the aipedia.wiki catalog and compare them side by side: scores across Utility, Value, Moat, Longevity, plus pricing, best-for, and skip-if. Updated June 26, 2026."
   robots="noindex, follow"
 >
   <BreadcrumbLD items={[
@@ -93,7 +93,7 @@ const popularComparisons = [
       Build a <span class="accent-gradient-text">head-to-head</span>
     </h1>
     <p class="text-[var(--text-secondary)] text-sm sm:text-base max-w-2xl leading-relaxed">
-      Pick 2 to 4 tools. Compare scores across Utility, Value, Moat, Longevity, plus pricing and use-case fit. Share the URL to send someone a specific comparison.
+      Pick 2 to 4 tools. Compare scores across Utility, Value, Moat, Longevity, plus pricing and use-case fit. Scores come from the current catalog snapshot, so open each tool page before buying.
     </p>
   </section>
 
@@ -136,7 +136,7 @@ const popularComparisons = [
 
     <div id="comparison-cards" class="grid gap-[var(--site-grid-gap)] mb-[var(--site-content-gap)]"></div>
 
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto" style="max-width: 100%; overflow-x: auto;">
       <table id="comparison-table" class="w-full text-[13px] border-collapse">
         <thead></thead>
         <tbody></tbody>
@@ -313,10 +313,11 @@ const popularComparisons = [
         comparisonSection.classList.remove('hidden');
 
         // Cards row
-        const colsClass = selected.length === 2 ? 'grid-cols-2'
-                        : selected.length === 3 ? 'grid-cols-1 md:grid-cols-3'
-                        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4';
-        cardsEl.className = 'grid gap-[var(--site-grid-gap)] mb-[var(--site-content-gap)] ' + colsClass;
+        cardsEl.className = 'grid gap-[var(--site-grid-gap)] mb-[var(--site-content-gap)]';
+        cardsEl.style.display = 'grid';
+        cardsEl.style.gap = 'var(--site-grid-gap)';
+        cardsEl.style.marginBottom = 'var(--site-content-gap)';
+        cardsEl.style.gridTemplateColumns = `repeat(auto-fit, minmax(min(100%, ${selected.length >= 4 ? '13rem' : '16rem'}), 1fr))`;
         cardsEl.innerHTML = '';
         selected.forEach((slug) => {
           const t = TOOL_MAP[slug];
@@ -349,10 +350,10 @@ const popularComparisons = [
           { label: 'Value',     get: (t) => axisCell(t.scores && t.scores.value) },
           { label: 'Moat',      get: (t) => axisCell(t.scores && t.scores.moat) },
           { label: 'Longevity', get: (t) => axisCell(t.scores && t.scores.longevity) },
-          { label: 'Category',  get: (t) => t.category ? `<span class="capitalize">${escapeHtml(t.category.replace('ai-', ''))}</span>` : '—' },
-          { label: 'Company',   get: (t) => escapeHtml(t.company || '—') },
-          { label: 'Price range', get: (t) => escapeHtml(t.price_range || '—') },
-          { label: 'Pricing model', get: (t) => escapeHtml(t.pricing_model || '—') },
+          { label: 'Category',  get: (t) => t.category ? `<span class="capitalize">${escapeHtml(t.category.replace('ai-', ''))}</span>` : 'N/A' },
+          { label: 'Company',   get: (t) => escapeHtml(t.company || 'N/A') },
+          { label: 'Price range', get: (t) => escapeHtml(t.price_range || 'N/A') },
+          { label: 'Pricing model', get: (t) => escapeHtml(t.pricing_model || 'N/A') },
           { label: 'Best for',  get: (t) => listCell(t.best_for) },
           { label: 'Skip if',   get: (t) => listCell(t.not_best_for) },
         ];
@@ -386,11 +387,11 @@ const popularComparisons = [
                   : v >= 7 ? 'text-[var(--accent-secondary)]'
                   : v >= 6 ? 'text-[var(--accent-warning)]'
                   :          'text-[var(--accent-danger)]';
-        return `<span class="font-semibold tabular-nums ${cls}">${v || '—'}</span>`;
+        return `<span class="font-semibold tabular-nums ${cls}">${v || 'N/A'}</span>`;
       }
 
       function listCell(arr) {
-        if (!Array.isArray(arr) || arr.length === 0) return '—';
+        if (!Array.isArray(arr) || arr.length === 0) return 'N/A';
         return '<ul class="list-disc ml-4 space-y-0.5">' + arr.slice(0, 4).map((item) => `<li class="text-[11.5px]">${escapeHtml(item)}</li>`).join('') + '</ul>';
       }
 

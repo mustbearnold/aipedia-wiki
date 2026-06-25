@@ -11,27 +11,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 
 | Last updated | Page | Type | Sitemap | Date source | Source file |
 | --- | --- | --- | --- | --- | --- |
-| 2026-06-01 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
-| 2026-06-06 | /disclosure/ | Static page | Yes | page metadata | src/pages/disclosure.astro |
-| 2026-06-07 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
-| 2026-06-12 | /answers/best-ai-for-students/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-students.astro |
-| 2026-06-12 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
-| 2026-06-12 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
-| 2026-06-12 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-06-12 | /companies/elevenlabs-company/ | Company | Yes | frontmatter | src/content/companies/elevenlabs-company.md |
 | 2026-06-12 | /companies/google-deepmind/ | Company | Yes | frontmatter | src/content/companies/google-deepmind.md |
 | 2026-06-12 | /companies/mistral/ | Company | Yes | frontmatter | src/content/companies/mistral.md |
-| 2026-06-12 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
-| 2026-06-12 | /compare/elevenlabs-vs-murf/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-murf.md |
-| 2026-06-12 | /compare/elevenlabs-vs-wellsaid/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-wellsaid.md |
-| 2026-06-12 | /compare/frase-vs-marketmuse/ | Comparison | Yes | frontmatter | src/content/comparisons/frase-vs-marketmuse.md |
 | 2026-06-12 | /compare/frase-vs-neuronwriter/ | Comparison | Yes | frontmatter | src/content/comparisons/frase-vs-neuronwriter.md |
 | 2026-06-12 | /compare/frase-vs-surfer-seo/ | Comparison | Yes | frontmatter | src/content/comparisons/frase-vs-surfer-seo.md |
 | 2026-06-12 | /compare/gamma-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-pitch.md |
 | 2026-06-12 | /compare/gamma-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/gamma-vs-presentations-ai.md |
 | 2026-06-12 | /compare/gemini-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-grok.md |
 | 2026-06-12 | /compare/pitch-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-presentations-ai.md |
-| 2026-06-12 | /dead/ | Static page | Yes | page metadata | src/pages/dead/index.astro |
 | 2026-06-12 | /dead/bing-chat/ | Dead tool archive | Yes | frontmatter | src/content/dead/bing-chat.md |
 | 2026-06-12 | /dead/google-bard/ | Dead tool archive | Yes | frontmatter | src/content/dead/google-bard.md |
 | 2026-06-12 | /dead/gpt-3-api/ | Dead tool archive | Yes | frontmatter | src/content/dead/gpt-3-api.md |
@@ -206,7 +194,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-18 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
 | 2026-06-18 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
 | 2026-06-20 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
-| 2026-06-20 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
 | 2026-06-20 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-20 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-20 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
@@ -292,8 +279,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /trends/model-availability-churn/ | Trend | Yes | frontmatter | src/content/trends/model-availability-churn.md |
 | 2026-06-25 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-25 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
-| 2026-06-25 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
-| 2026-06-25 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-25 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-25 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-06-25 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
@@ -486,6 +471,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /tools/zapier/ | Tool | Yes | frontmatter | src/content/tools/zapier.md |
 | 2026-06-25 | /tools/zed/ | Tool | Yes | frontmatter | src/content/tools/zed.md |
 | 2026-06-25 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
+| 2026-06-26 | /answers/ | Static page | Yes | working tree | src/pages/answers/index.astro |
+| 2026-06-26 | /answers/best-ai-for-students/ | Static page | Yes | working tree | src/pages/answers/best-ai-for-students.astro |
+| 2026-06-26 | /answers/best-ai-for-writing-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-for-writing-2026.astro |
+| 2026-06-26 | /answers/best-ai-video-generator-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-video-generator-2026.astro |
+| 2026-06-26 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-voice-generator-2026.astro |
 | 2026-06-26 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-26 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-26 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
@@ -496,9 +486,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-26 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-26 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-26 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
 | 2026-06-26 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-06-26 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-06-26 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
 | 2026-06-26 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-06-26 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-06-26 | /compare/build/ | Static page | No | working tree | src/pages/compare/build.astro |
+| 2026-06-26 | /compare/elevenlabs-vs-murf/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-murf.md |
+| 2026-06-26 | /compare/elevenlabs-vs-wellsaid/ | Comparison | Yes | working tree | src/content/comparisons/elevenlabs-vs-wellsaid.md |
+| 2026-06-26 | /compare/frase-vs-marketmuse/ | Comparison | Yes | working tree | src/content/comparisons/frase-vs-marketmuse.md |
+| 2026-06-26 | /dead/ | Static page | Yes | working tree | src/pages/dead/index.astro |
+| 2026-06-26 | /disclosure/ | Static page | Yes | working tree | src/pages/disclosure.astro |
+| 2026-06-26 | /reports/ | Static page | Yes | working tree | src/pages/reports/index.astro |
+| 2026-06-26 | /terms/ | Static page | Yes | working tree | src/pages/terms.astro |
 | 2026-06-26 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-26 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-26 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |

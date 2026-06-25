@@ -32,6 +32,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - The tool-refresh planner now includes registered source metadata, scoped `audit:sources` commands, shard-level `source_ids`, and a default one-day recent-refresh exclusion so overnight runs do not immediately reselect yesterday's completed high-volatility pages. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when intentionally revisiting recent pages.
 - The latest timing pass changed route QA closeout to concurrency 6 with per-route/per-width timing. Same 75-route, seven-width matrix passed at concurrency 6 after the closeout baseline at concurrency 4 took 126s.
 - Non-tool page refresh now has a first runnable repeatable workflow under `workflows/page-refresh/` and a planner command, `npm run page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json`. It reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits worker and integrator prompts, and includes route QA timing at concurrency 6.
+- The first live non-tool page-refresh batch is complete locally: 12 routes across terms, disclosure, reports, answers, compare-builder, dead archive, and three comparison pages. The run added prompt-file generation, fixed coverage-quality timezone handling, added explicit noindex/interactive route-QA flags, and recorded timings in `.agent/loop-runs/2026-06-26-page-refresh-batch-01.md`.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -141,13 +142,13 @@ Do not return to one full build per tool unless a template, runtime, layout, gen
 
 ### Non-Tool Page Refresh Workflow
 
-The first repeatable non-tool page-refresh lane is ready for use:
+The first repeatable non-tool page-refresh lane is now proven on a 12-page live batch:
 
 ```bash
-npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json > .tmp-page-refresh-batch.json
+npm run --silent page:refresh:batch -- --limit 12 --max-workers 3 --pages-per-worker 4 --write-agent-prompts local/tmp/page-refresh-prompts --json > .tmp-page-refresh-batch.json
 ```
 
-The initial queue sample starts with `/terms/`, `/disclosure/`, `/reports/`, several `/answers/` pages, `/compare/build/`, `/dead/`, and comparison pages from June 12 ledger rows. Use filters such as `--type Guide --type Comparison`, `--type Category`, `--exclude-static`, or `--include-tools` only when intentionally changing the lane. After the first real batch, record actual timings and patch `workflows/page-refresh/` plus `scripts/page-refresh-batch.mjs` with whatever the run teaches.
+Batch 01 refreshed `/terms/`, `/disclosure/`, `/reports/`, `/dead/`, four answer pages, `/compare/build/`, and three comparison pages. Use generated prompt files, not hand-transcribed prompts. The measured critical path was the 6m17s worker shard; closeout build was 16.79s, content route QA was 20.39s, and interactive builder QA was 2.67s. Next page-refresh batch can stay at 12 to 24 pages while we add parseable worker report artifacts and route-QA policy mapping.
 
 ### Oldest-First Tool Freshness
 

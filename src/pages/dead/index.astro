@@ -2,6 +2,11 @@
 /**
  * /dead/ index — god-tier 10/10 mobile-first.
  *
+ * Refresh metadata: 2026-06-26 dead archive index inspected during the first
+ * non-tool page-refresh workflow run. It remains data-driven from dead
+ * collection records and dead tool records, with migration shortcuts still
+ * pointing to the highest-risk dead-tool routes.
+ *
  * Refresh metadata: 2026-06-12 dead archive index reflects the June 12
  * dead-archive cluster (8 dead pages) and dead-tool refresh, including the
  * DALL-E 2/3 API removal (May 12) and Grok Code Fast 1 retirement (May 15)
@@ -16,13 +21,13 @@ import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 const allDead = await getCollection('dead');
 const allTools = await getCollection('tools');
 const deadTools = allTools.filter((t: any) => t.data.status === 'dead');
-const LAST_UPDATED_HUMAN = 'June 12, 2026';
+const LAST_UPDATED_HUMAN = 'June 26, 2026';
 const archivePageLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Dead AI Tools Archive',
   url: new URL('/dead/', Astro.site?.href ?? 'https://aipedia.wiki/').href,
-  dateModified: '2026-06-12',
+  dateModified: '2026-06-26',
   description:
     'Archive of discontinued, acquired, pivoted, retired, and dead AI tool records maintained for migration context.',
 };
@@ -121,7 +126,7 @@ const siteBase = Astro.site?.href ?? 'https://aipedia.wiki/';
     <section class="gt-dead-refresh" aria-label="Dead tools archive status">
       <p>
         <strong>Updated {LAST_UPDATED_HUMAN}:</strong>
-        this archive now includes both dedicated shutdown records and dead tool
+        this archive still combines dedicated shutdown records and dead tool
         records such as DALL-E, Phind, Tome, and Grok Code Fast. Use it for
         migration context, not buying recommendations.
       </p>

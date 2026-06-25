@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Plan oldest-first non-tool page refresh batches from PAGE_REFRESH_LEDGER.md.
 
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -18,6 +18,7 @@ const PAGES_PER_WORKER = numberArg('--pages-per-worker', 10);
 const INCLUDE_TOOLS = args.includes('--include-tools');
 const INCLUDE_STATIC = !args.includes('--exclude-static');
 const TYPE_FILTER = valuesFor('--type');
+const PROMPT_DIR = valueFor('--write-agent-prompts');
 
 if (HELP_MODE) {
   console.log(usage());
@@ -41,6 +42,8 @@ function usage() {
     '  --ledger <path>         Ledger markdown path. Default: PAGE_REFRESH_LEDGER.md.',
     '  --json                  Emit structured JSON.',
     '  --agents                Print shard worker prompts plus an integrator brief.',
+    '  --write-agent-prompts <dir>',
+    '                          Write exact worker and integrator prompts to files.',
     '  --project-dir <dir>     Plan another project root.',
     '  --root <dir>            Alias for --project-dir.',
   ].join('\n');
@@ -269,6 +272,21 @@ const agentBriefs = {
   },
 };
 
+function writeAgentPrompts(dir, briefs) {
+  const outputDir = resolve(PROJECT_DIR, dir);
+  mkdirSync(outputDir, { recursive: true });
+
+  for (const brief of briefs.worker_briefs) {
+    writeFileSync(resolve(outputDir, `${brief.id}.md`), `${brief.prompt}\n`);
+  }
+
+  writeFileSync(resolve(outputDir, `${briefs.integrator_brief.id}.md`), `${briefs.integrator_brief.prompt}\n`);
+
+  return outputDir;
+}
+
+const promptDir = PROMPT_DIR ? writeAgentPrompts(PROMPT_DIR, agentBriefs) : undefined;
+
 const report = {
   generated_at: new Date().toISOString(),
   current_date: currentDate(),
@@ -278,6 +296,7 @@ const report = {
   limit: LIMIT,
   max_workers: MAX_WORKERS,
   pages_per_worker: PAGES_PER_WORKER,
+  prompt_dir: promptDir,
   batch,
   commands,
   agent_briefs: agentBriefs,
