@@ -1,8 +1,18 @@
 # AiPedia Work Log
 
-### 2026-06-26: Same-Day Tool Refresh Timing Run and Route QA Optimization
+### 2026-06-26: Non-Tool Page Refresh Workflow V1
 
 - Status: Complete locally, verified, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `scripts/page-refresh-batch.mjs`, `npm run page:refresh:batch`, focused planner tests, and the first runnable `workflows/page-refresh/` procedure for non-tool page refreshes. The planner reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, sorts oldest-first, supports type filters, emits six-worker shard prompts, emits one integrator prompt, and includes timing-aware route QA at concurrency 6.
+- Verification: `node --check scripts/page-refresh-batch.mjs`; `npm run --silent page:refresh:batch -- --limit 12 --max-workers 3 --pages-per-worker 4 --json > .tmp-page-refresh-batch.json`; `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs`; `npm run audit:commands`; `node scripts/guard-em-dashes.mjs`; `npm run ledger:pages && npm run ledger:pages:check`; `git diff --check`.
+- Residual risks: This creates the repeatable lane but does not refresh page content yet. The first real page batch should capture actual worker, integration, and route QA timings, then feed stable improvements back into the workflow and planner.
+- Next: Commit and push the workflow, then run the first real non-tool page-refresh batch from the generated queue.
+
+### 2026-06-26: Same-Day Tool Refresh Timing Run and Route QA Optimization
+
+- Status: Complete and pushed.
 - Branch: `master`.
 - Changed: Ran `$aipedia-tool-refresh-workflow` with six shard workers across a 60-tool intentional same-day revisit plan from Consensus through Kling. Integrated worker edits, manually refreshed the missed `captions.md` page, updated affected category hubs, refreshed `src/data/source-registry.json`, regenerated `PAGE_REFRESH_LEDGER.md`, and checked all affected rendered routes.
 - Buyer-impact notes: Replit Agent now uses the current Pro annual effective price of $90/month; Capacities now includes Release 66 AI Chat Connectors 2.0; Figma now carries Config 2026 Code Layers, Motion, shaders, generative plugins, Weave tools, agent skills, web search, connectors, and file attachments; Synthesia now primary-confirms Studio Express-1 custom avatar add-on pricing at $1,000/year for annual Studio users; Captions recheck keeps the public self-serve ladder stable and separates Mirage API procurement from app-plan credits.
@@ -11,7 +21,7 @@
 - Verification: `node --check scripts/audit-tool-quality.mjs`; `node --check scripts/qa-route.mjs`; `node scripts/check-frontmatter.mjs --changed`; `git diff --check`; `npm run ledger:pages && npm run ledger:pages:check`; `AIPEDIA_CURRENT_DATE=2026-06-26 npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json --timing-file local/tmp/aipedia-runner/manual-timings/2026-06-26-grouped-check.json`; `AIPEDIA_CURRENT_DATE=2026-06-26 npm run runner:tool-refresh:closeout -- --plan .tmp-tool-refresh-batch.json --route-args .tmp-route-qa-args.txt --receipt-dir local/tmp/aipedia-runner/receipts`; `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 $(cat .tmp-route-qa-args.txt) --widths 319,360,390,430,768,1024,1366 --timing-file local/tmp/aipedia-runner/manual-timings/2026-06-26-route-qa-concurrency-6.json`; `cargo fmt --manifest-path tools/aipedia-runner/Cargo.toml --check`; `cargo check --manifest-path tools/aipedia-runner/Cargo.toml`.
 - Failed then fixed: Default planner returned 0 due tools, so this run used `--include-same-day` intentionally. Hand-transcribed worker prompts skipped `captions.md` and briefly assigned `perplexity.md`/`langgraph.md` instead of `comet.md`/`kling.md`; workers corrected the two wrong assignments, and the integrator refreshed Captions manually. Multiple workers hit false `last_verified is in the future` failures because `audit:tool-quality` used UTC date slicing; the audit now accepts explicit/local current dates, and grouped checks pass unshimmed with `AIPEDIA_CURRENT_DATE=2026-06-26`.
 - Residual risks: Dynamic, checkout-gated, region-rendered, account-gated, and primary-conflict claims remain caveated in the affected pages, especially Base44 credits, D-ID live plan cards, Canva regional checkout, Captions credit rollover, Udio/Lovable/Kling account-gated pricing, ChatGPT Go regional pricing, and Google/Decktopus localized plan availability.
-- Next: Commit and push the verified batch, then regenerate the default planner without `--include-same-day` before deciding whether another freshness batch is actually due.
+- Next: Regenerate the default planner without `--include-same-day` before deciding whether another tool freshness batch is actually due.
 
 Purpose: append-only record of major work that has actually landed.
 

@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`. Latest local batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling, verified locally and pending commit/push.
+- Branch: `master`. Latest pushed content batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -31,6 +31,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - The optimized tool-refresh workflow now has a committed procedure under `workflows/tool-refresh/` and a local skill mirror `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`. Treat `workflows/` as canonical for clean clones, and keep the local skill aligned while tuning. In the Codex Windows app, use six parallel shard workers with up to 10 tools per worker because six active agents was the observed ceiling on June 24.
 - The tool-refresh planner now includes registered source metadata, scoped `audit:sources` commands, shard-level `source_ids`, and a default one-day recent-refresh exclusion so overnight runs do not immediately reselect yesterday's completed high-volatility pages. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when intentionally revisiting recent pages.
 - The latest timing pass changed route QA closeout to concurrency 6 with per-route/per-width timing. Same 75-route, seven-width matrix passed at concurrency 6 after the closeout baseline at concurrency 4 took 126s.
+- Non-tool page refresh now has a first runnable repeatable workflow under `workflows/page-refresh/` and a planner command, `npm run page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json`. It reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits worker and integrator prompts, and includes route QA timing at concurrency 6.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -86,7 +87,7 @@ Latest completed batch:
 - Affected parent hubs: AI Video, AI Image, AI Design, and AI Writing.
 - Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, and affected parent source/date summaries. Meshy's current individual ladder now includes Pro, Premium, and Ultra before Studio; Magnific API guidance now warns that pay-per-usage is marked for June 30, 2026 discontinuation.
 
-Latest completed local batch, pending commit/push:
+Latest completed and pushed content batch:
 
 - Intentional same-day revisit batch from the regenerated queue with `--include-same-day`: `consensus`, `beehiiv`, `blackbox-ai`, `browserbase`, `canva`, `castmagic`, `cline`, `cloudtalk`, `coderabbit`, `midjourney`, `notebooklm`, `qodo`, `replit-agent`, `claude`, `decktopus`, `gemini`, `grok`, `n8n`, `claude-code`, `github-copilot`, `grammarly`, `mistral-ai`, `qwen`, `capacities`, `cursor`, `hailuo`, `heygen`, `adobe-firefly`, `argil`, `augment-code`, `base44`, `captions`, `cody`, `comet`, `continue`, `copy-ai`, `crewai`, `d-id`, `hedra`, `lindy`, `mastra`, `microsoft-agent-framework`, `dia`, `figma`, `chatgpt`, `deepseek`, `meetgeek`, `elevenlabs`, `elicit`, `voxtral`, `descript`, `suno`, `synthesia`, `udio`, `bolt`, `lovable`, `mubert`, `pika`, `v0`, and `kling`.
 - Material buyer updates: Replit Pro annual effective pricing corrected to $90/month; Figma gained Config 2026/agent-workspace context; Capacities gained Release 66 AI Chat Connectors 2.0; Captions was manually caught after a hand-transcribed worker prompt missed it; Synthesia Studio Express-1 avatar add-on is now primary-confirmed at $1,000/year for annual Studio users.
@@ -137,6 +138,16 @@ Use `$aipedia-tool-refresh-workflow` for the parallel batched tool refresh flow:
 Do not return to one full build per tool unless a template, runtime, layout, generated asset, high-risk commercial claim, or isolated failure requires it.
 
 ## Active Work
+
+### Non-Tool Page Refresh Workflow
+
+The first repeatable non-tool page-refresh lane is ready for use:
+
+```bash
+npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json > .tmp-page-refresh-batch.json
+```
+
+The initial queue sample starts with `/terms/`, `/disclosure/`, `/reports/`, several `/answers/` pages, `/compare/build/`, `/dead/`, and comparison pages from June 12 ledger rows. Use filters such as `--type Guide --type Comparison`, `--type Category`, `--exclude-static`, or `--include-tools` only when intentionally changing the lane. After the first real batch, record actual timings and patch `workflows/page-refresh/` plus `scripts/page-refresh-batch.mjs` with whatever the run teaches.
 
 ### Oldest-First Tool Freshness
 

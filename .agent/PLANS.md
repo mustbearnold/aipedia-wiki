@@ -7,11 +7,12 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-26.
-- Branch baseline: `master`; latest local batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling, verified locally and pending commit/push.
+- Branch baseline: `master`; latest pushed content batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
 - The latest local batch refreshed 60 tools from Consensus through Kling after using `--include-same-day` intentionally because the default planner had no due tools.
+- A first runnable non-tool page-refresh workflow now exists under `workflows/page-refresh/`, backed by `npm run page:refresh:batch`. It plans oldest-first non-tool pages from `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits six-worker shard prompts, and includes timing-aware route QA at concurrency 6.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
@@ -116,6 +117,28 @@ Latest closeout notes:
 - Rust runner commands are available for the next batch: use `npm run runner:tool-refresh:plan` to prepare local planner artifacts and worker prompts, then `npm run runner:tool-refresh:closeout` after integration to run the closeout sequence and write a local receipt.
 - Prefer generated worker prompts verbatim. A hand-transcribed worker prompt in the June 26 run skipped `captions.md` and briefly assigned two wrong filenames; integration caught and fixed it, but the avoidable miss cost time.
 - The third six-worker batch needed a planner-route correction after watsonx Orchestrate moved from invalid `ai-enterprise` back to `ai-automation`; if a worker changes a tool's primary category, update `.tmp-tool-refresh-batch.json` and `.tmp-route-qa-args.txt` before route QA.
+
+## Active: Non-Tool Page Refresh Workflow
+
+### Objective
+
+Refresh the stale non-tool site surface with the same repeatable, timed, shardable discipline now used for tool pages, without mixing tool-page edits into this lane.
+
+### Current Command
+
+```bash
+npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json > .tmp-page-refresh-batch.json
+```
+
+The planner reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, emits worker prompts, emits one integrator prompt, includes cheap and expensive gates, and writes final route QA timing through `--timing-file local/tmp/page-refresh-route-qa.json`.
+
+### First Queue Sample
+
+The first 12-page sample starts with `/terms/`, `/disclosure/`, `/reports/`, `/answers/best-ai-for-students/`, `/answers/best-ai-for-writing-2026/`, `/answers/best-ai-video-generator-2026/`, `/answers/best-ai-voice-generator-2026/`, `/compare/build/`, `/dead/`, `/compare/elevenlabs-vs-murf/`, `/compare/elevenlabs-vs-wellsaid/`, and `/compare/frase-vs-marketmuse/`.
+
+### Next
+
+Run the first real non-tool page batch with six workers, then review missed steps and timing bottlenecks. Promote stable improvements into `workflows/page-refresh/`, `scripts/page-refresh-batch.mjs`, and tests.
 
 ## Active: Decision Content Flywheel
 
