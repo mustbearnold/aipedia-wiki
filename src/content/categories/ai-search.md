@@ -7,8 +7,8 @@ tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
 meta_description: "Updated June 24, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: weekly
 top_picks:
   best_overall:

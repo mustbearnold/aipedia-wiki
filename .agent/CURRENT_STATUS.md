@@ -16,7 +16,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `48271269` on `master`. Latest completed tool batch is the June 25 four-tool serial shard: Luma, Magnific, Meshy, and OpusClip.
+- Branch: `codex/refresh-tool-pages-june-23`. Latest pushed baseline is `cad52dc26` on `master`. Latest completed local tool batch is the June 25 four-tool serial shard: Pinecone, PixVerse, Playground AI, and Qdrant.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -84,6 +84,12 @@ Latest completed batch:
 - Affected parent hubs: AI Video, AI Image, AI Design, and AI Writing.
 - Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, and affected parent source/date summaries. Meshy's current individual ladder now includes Pro, Premium, and Ultra before Studio; Magnific API guidance now warns that pay-per-usage is marked for June 30, 2026 discontinuation.
 
+Latest local batch, verified and pending push:
+
+- Four-tool June 25 serial shard from the regenerated due-soon queue: `pinecone`, `pixverse`, `playground-ai`, and `qdrant`.
+- Affected parent hubs: AI Infrastructure, AI Search, AI Image, and AI Video.
+- Shared updates: `src/data/source-registry.json`, `PAGE_REFRESH_LEDGER.md`, affected parent source/date summaries, and agent status docs. Current buyer-impact notes: PixVerse changelog now surfaces the June 16, 2026 Upscale feature release; Qdrant v1.18.2 remains the latest checked release but its release date is June 4, 2026 rather than June 12; Pinecone and Playground pricing checks remain stable as of June 25.
+
 Previous large batch:
 
 - 60-tool six-shard baseline run from `.tmp-tool-refresh-batch.json`: `cody`, `comet`, `continue`, `copy-ai`, `crewai`, `d-id`, `hedra`, `lindy`, `mastra`, `microsoft-agent-framework`, `midjourney`, `notebooklm`, `qodo`, `replit-agent`, `claude`, `decktopus`, `gemini`, `grok`, `n8n`, `claude-code`, `github-copilot`, `grammarly`, `mistral-ai`, `qwen`, `capacities`, `cursor`, `hailuo`, `heygen`, `adobe-firefly`, `argil`, `augment-code`, `base44`, `dia`, `figma`, `chatgpt`, `deepseek`, `meetgeek`, `elevenlabs`, `elicit`, `voxtral`, `windsurf`, `codeium`, `descript`, `perplexity`, `kling`, `runway`, `seedance`, `veo`, `suno`, `synthesia`, `udio`, `bolt`, `lovable`, `mubert`, `pika`, `v0`, `langgraph`, `minimax`, `pipedream`, and `lovart`.
@@ -110,6 +116,7 @@ Next due-soon tracked-tool queue:
 - Regenerate before the next batch with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
 - The planner now excludes tools verified since yesterday by default. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when the user explicitly wants to revisit recent pages.
 - Current regenerated `.tmp-tool-refresh-batch.json` starts with `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, `retell-ai`, `rork`, `taskade`, `tavus`, `tines`, and `together-ai`, and contains 60 tools across 77 route-QA routes.
+- The first four tools from that queue are verified locally and pending push; after push, regenerate again and continue with `reclaim-ai`, `relevance-ai`, `retell-ai`, and `rork` unless the planner changes.
 
 Use `$aipedia-tool-refresh-workflow` for the parallel batched tool refresh flow:
 
@@ -181,6 +188,17 @@ Latest four-tool serial shard passed:
 - `npm run typecheck`
 - `npm run build:fast`
 - `npm run qa:route -- --route /tools/luma/ --route /tools/magnific/ --route /tools/meshy/ --route /tools/opusclip/ --route /categories/ai-video/ --route /categories/ai-image/ --route /categories/ai-design/ --route /categories/ai-writing/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`
+
+Latest Pinecone/PixVerse/Playground/Qdrant shard passed:
+
+- `npm run audit:tool-quality -- --file src/content/tools/pinecone.md --file src/content/tools/pixverse.md --file src/content/tools/playground-ai.md --file src/content/tools/qdrant.md`
+- `npm run audit:provenance:changed -- --json`
+- `npm run --silent audit:sources -- --json --live --limit 0` across 13 refreshed Pinecone, PixVerse, Playground AI, and Qdrant sources
+- `npm run ledger:pages && npm run ledger:pages:check`
+- `npm run tool:refresh:batch:check -- --file src/content/tools/pinecone.md --file src/content/tools/pixverse.md --file src/content/tools/playground-ai.md --file src/content/tools/qdrant.md`
+- `npm run typecheck`
+- `npm run build:fast`
+- `npm run qa:route -- --route /tools/pinecone/ --route /tools/pixverse/ --route /tools/playground-ai/ --route /tools/qdrant/ --route /categories/ai-infrastructure/ --route /categories/ai-search/ --route /categories/ai-image/ --route /categories/ai-video/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`
 
 Latest completed 60-tool baseline refresh passed:
 

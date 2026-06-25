@@ -7,11 +7,11 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-25.
-- Branch baseline: `codex/refresh-tool-pages-june-23`; latest completed tool batch is the June 25 four-tool serial shard for Luma, Magnific, Meshy, and OpusClip.
+- Branch baseline: `codex/refresh-tool-pages-june-23`; latest completed local tool batch is the June 25 four-tool serial shard for Pinecone, PixVerse, Playground AI, and Qdrant.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `$aipedia-tool-refresh-workflow` now packages the six-shard-worker plus integrator process as a local incubating skill. Use six active workers in the Codex Windows app, and promote it into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
-- The latest completed local batch refreshed Luma, Magnific, Meshy, and OpusClip after the 60-tool baseline run.
+- The latest completed local batch refreshed Pinecone, PixVerse, Playground AI, and Qdrant after the Luma/Magnific/Meshy/OpusClip shard.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
@@ -54,6 +54,8 @@ Keep every volatile tool fact, source-backed claim, commercial surface, affected
 - Jun 24-25 news catch-up, planner recent-refresh exclusion, Consensus schedule metadata, and replacement source URLs for MiniMax Speech and Instantly Lead Finder.
 - Luma, Magnific, Meshy, and OpusClip June 25 serial shard, including Meshy's updated Pro/Premium/Ultra/Studio ladder and Magnific API pay-per-usage discontinuation caveat.
 
+- Pinecone, PixVerse, Playground AI, and Qdrant June 25 serial shard, including PixVerse Upscale changelog coverage and the Qdrant v1.18.2 release-date correction.
+
 ### Latest Completed Batch
 
 Completed batch:
@@ -93,7 +95,7 @@ Run `typecheck` and `build:fast` sequentially. They both sync Astro content, and
 
 Regenerate the next due-soon batch from `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`. The planner excludes pages verified since yesterday by default; pass `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only for intentional recent-page revisits.
 
-The current regenerated plan starts with `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, `retell-ai`, `rork`, `taskade`, `tavus`, `tines`, and `together-ai`, then continues through 60 tools and 77 route-QA routes. Likely affected parent hubs depend on the regenerated batch. Recompute before editing.
+The current regenerated plan starts with `pinecone`, `pixverse`, `playground-ai`, `qdrant`, `reclaim-ai`, `relevance-ai`, `retell-ai`, `rork`, `taskade`, `tavus`, `tines`, and `together-ai`, then continues through 60 tools. The first four are verified locally and pending push; recompute after they are pushed before selecting the next shard.
 
 Required closeout:
 

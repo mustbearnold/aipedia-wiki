@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: Free Starter, $20/mo Builder, $50/mo Standard minimum, $500/mo Enterprise minimum plus usage
 status: active
 launched: 2019
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-25
+last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -31,7 +31,7 @@ facts:
     source: "https://www.pinecone.io/pricing/"
     source_label: "Pinecone pricing"
     source_id: pinecone-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-25
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -39,8 +39,8 @@ facts:
     source: "https://www.pinecone.io/pricing/"
     source_label: "Pinecone pricing"
     source_id: pinecone-official
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-22
     volatility: high
     confidence: high
   watch_out_for:
@@ -48,13 +48,13 @@ facts:
     source: "https://docs.pinecone.io/guides/manage-cost/understanding-cost"
     source_label: "Pinecone cost docs"
     source_id: pinecone-cost-docs
-    verified_at: 2026-06-12
-    next_review_at: 2026-07-08
+    verified_at: 2026-06-25
+    next_review_at: 2026-07-22
     volatility: high
     confidence: high
 tags: [vector-database, rag, semantic-search, hybrid-search, retrieval, embeddings, enterprise-search]
 seo_title: "Pinecone Review: Vector Database, RAG & Pricing (June 2026)"
-meta_description: "Pinecone is a managed vector database for semantic search, hybrid search, RAG, recommendations, Assistant, inference, and production AI retrieval. Updated June 12, 2026 with current Starter, Builder, Standard, and Enterprise pricing guidance."
+meta_description: "Pinecone is a managed vector database for semantic search, hybrid search, RAG, recommendations, Assistant, inference, and production AI retrieval. Updated June 25, 2026 with current Starter, Builder, Standard, and Enterprise pricing guidance."
 author: aipedia.wiki Editorial
 best_for:
   - production RAG apps that need managed vector search
@@ -74,6 +74,7 @@ price_history:
     source: "https://www.pinecone.io/pricing/"
     source_label: "Pinecone pricing"
     source_id: pinecone-official
+    verified_at: 2026-06-25
     note: "Builder includes higher limits than Starter and blocks additional usage beyond Builder limits rather than billing overage."
   - date: 2026-06-08
     plan: "Standard / Enterprise"
@@ -81,6 +82,7 @@ price_history:
     source: "https://docs.pinecone.io/guides/manage-cost/understanding-cost"
     source_label: "Pinecone cost docs"
     source_id: pinecone-cost-docs
+    verified_at: 2026-06-25
     note: "Standard and Enterprise pay for actual usage above the monthly minimum; usage below the minimum still bills the minimum."
   - date: 2026-06-08
     plan: "Assistant Starter promo"
@@ -88,6 +90,7 @@ price_history:
     source: "https://docs.pinecone.io/guides/assistant/pricing-and-limits"
     source_label: "Pinecone Assistant pricing and limits"
     source_id: pinecone-assistant-pricing
+    verified_at: 2026-06-25
     note: "Starter normally includes 500k input tokens/month; docs list a temporary 1M input-token promo for Marketplace exploration through June 30, 2026."
 ---
 
@@ -136,7 +139,7 @@ The product is strongest when retrieval is a core feature, not a side table.
 
 ## Pricing
 
-As verified on June 12, 2026, Pinecone lists four plans:
+As verified on June 25, 2026, Pinecone lists four plans:
 
 - **Starter:** free. Up to 5 indexes, 2GB storage, 2M write units and 1M read units per month, dense plus sparse plus full-text indexes, community Discord support, and a temporary Assistant input-token promo of 1M/month through June 30, 2026 (the normal Starter input-token line is 500k/month).
 - **Builder:** $20/month flat. Everything in Starter, up to 10 indexes per project, 10GB storage, 5M write units, 2M read units, multiple projects and users, Prometheus and Datadog monitoring, 2M Assistant input tokens, 1M Assistant output tokens, and 10k ingestion units.
@@ -173,7 +176,7 @@ Before choosing Pinecone, test retrieval quality and cost together:
 
 ## Methodology
 
-Last verified June 12, 2026 against Pinecone pricing, cost documentation, and Assistant pricing/limits. Scoring emphasizes production utility, maturity, cost tradeoffs, and alternatives like pgvector.
+Last verified June 25, 2026 against Pinecone pricing, cost documentation, and Assistant pricing/limits. Scoring emphasizes production utility, maturity, cost tradeoffs, and alternatives like pgvector.
 
 ## FAQ
 
