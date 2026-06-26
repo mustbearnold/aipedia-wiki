@@ -265,9 +265,17 @@ struct WorkerReport {
     #[serde(default)]
     pages: Vec<WorkerReportPage>,
     #[serde(default)]
-    checks: Vec<String>,
+    checks: Vec<WorkerReportCheck>,
     #[serde(default)]
     optimization_notes: Vec<String>,
+}
+
+#[derive(Debug, Deserialize)]
+struct WorkerReportCheck {
+    command: String,
+    status: String,
+    #[serde(default)]
+    notes: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -1203,7 +1211,13 @@ fn write_page_report_summary(
             }
         }
         for check in &report.checks {
-            content.push_str(&format!("  - Check: {}\n", check));
+            content.push_str(&format!(
+                "  - Check: {} ({})\n",
+                check.command, check.status
+            ));
+            if !check.notes.trim().is_empty() {
+                content.push_str(&format!("    - Notes: {}\n", check.notes.trim()));
+            }
         }
         for note in &report.optimization_notes {
             content.push_str(&format!("  - Optimization: {}\n", note));
@@ -1596,7 +1610,11 @@ mod tests {
     "route_qa_risks": ["answer-seo"],
     "notes": "ok"
   }],
-  "checks": ["node scripts/check-frontmatter.mjs --changed"],
+  "checks": [{
+    "command": "node scripts/check-frontmatter.mjs --changed",
+    "status": "passed",
+    "notes": "ok"
+  }],
   "optimization_notes": ["Shard size was fine."]
 }
 "#,

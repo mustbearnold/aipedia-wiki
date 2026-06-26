@@ -155,19 +155,28 @@ function buildBatch(rows) {
 }
 
 function routeRisk(row) {
-  if (routeQaPolicy(row.page).kind === 'interactive-noindex') return 'interactive-noindex';
+  const policy = routeQaPolicy(row.page, row.sitemap);
+  if (policy.kind === 'interactive-noindex') return 'interactive-noindex';
+  if (policy.kind === 'archived-noindex') return 'archived-noindex';
   if (row.type === 'Static page') return 'top-layer';
   if (['Category', 'Comparison', 'Guide', 'Trend', 'Workflow'].includes(row.type)) return 'buyer-decision';
   if (row.type === 'Answer page') return 'answer-seo';
   return 'content';
 }
 
-function routeQaPolicy(route) {
+function routeQaPolicy(route, sitemap = 'Yes') {
   if (route === '/compare/build/') {
     return {
       kind: 'interactive-noindex',
       flags: ['--allow-noindex', '--skip-comparison-content-checks'],
       reason: 'Builder UI is intentionally noindex and does not use indexable comparison content requirements.',
+    };
+  }
+  if (sitemap === 'No') {
+    return {
+      kind: 'archived-noindex',
+      flags: [],
+      reason: 'Archived or consolidated content is intentionally noindex; verify content and frontmatter, but skip indexable route QA.',
     };
   }
   return { kind: 'content', flags: [], reason: 'Indexable or hub route uses the standard content QA policy.' };
@@ -182,8 +191,13 @@ function chunkPages(batch) {
 }
 
 function buildCommands(batch) {
-  const routes = [...new Set([...batch.map((page) => page.route), '/', '/tools/', '/categories/', '/compare/', '/guides/', '/answers/', '/trends/', '/workflows/'])].filter(Boolean);
-  const routePolicies = Object.fromEntries(routes.map((route) => [route, routeQaPolicy(route)]));
+  const defaultRoutes = ['/', '/tools/', '/categories/', '/compare/', '/guides/', '/answers/', '/trends/', '/workflows/'];
+  const routeEntries = [
+    ...batch.map((page) => [page.route, routeQaPolicy(page.route, page.sitemap)]),
+    ...defaultRoutes.map((route) => [route, routeQaPolicy(route)]),
+  ].filter(([route]) => Boolean(route));
+  const routes = [...new Set(routeEntries.map(([route]) => route))];
+  const routePolicies = Object.fromEntries(routeEntries);
   const contentRoutes = routes.filter((route) => routePolicies[route].kind === 'content');
   const interactiveRoutes = routes.filter((route) => routePolicies[route].kind === 'interactive-noindex');
   const paths = [...new Set(batch.map((page) => page.path).filter(Boolean))];

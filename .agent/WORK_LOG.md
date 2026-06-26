@@ -1,5 +1,17 @@
 # AiPedia Work Log
 
+### 2026-06-26: Non-Tool Page Refresh Batch 02
+
+- Status: Complete locally, verified, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Ran the Rust page-refresh workflow over 12 comparison and guide routes from Frase/NeuronWriter through heavy-inbox triage. Refreshed affected AI SEO, AI Presentation, AI Chatbots, and AI Automation category hubs plus `/compare/`, `/guides/`, and `PAGE_REFRESH_LEDGER.md`. Hardened the page-refresh planner so archived noindex content routes stay in content/frontmatter verification but skip indexable route QA, and updated the Rust aggregator to parse structured worker check reports.
+- Timing: Worker reports parsed 3/3 with 3935 reported worker seconds, 89 source URLs, 51 confidence labels, 29 caveats, and 75 parent surface notes. Final closeout passed in 51.528s: cheap gates 2.311s, typecheck 12.352s, build:fast 15.761s, and route QA 21.099s for 18 indexable routes across seven widths.
+- Verification: `cargo test --manifest-path tools/aipedia-runner/Cargo.toml`; `npm run runner:page-refresh:reports`; `npm run ledger:pages && npm run ledger:pages:check`; `npm run runner:page-refresh:closeout`.
+- Failed then fixed: The Rust report parser initially rejected structured worker `checks` objects, and the first closeout route QA failed on intentionally archived noindex guide routes. Fixed both workflow issues, regenerated the saved plan route args, and reran closeout cleanly.
+- Residual risks: Source registry rows were not changed because this batch used page-local source lists and parent summaries. Archived noindex pages were refreshed but intentionally excluded from indexable route QA after content/frontmatter checks.
+- Next: Commit and push, then run one more 12 to 18 page non-tool batch before scaling the page workflow further.
+
 ### 2026-06-26: Rust Page Refresh Runner
 
 - Status: Complete locally, verified, pending commit and push.

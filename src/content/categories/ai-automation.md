@@ -75,9 +75,9 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Taskade](/tools/taskade/) when automation belongs inside project work.** The June 25 check keeps Taskade in the AI workspace lane: tasks, docs, mind maps, automations, Genesis apps, agents, model routing, and MCP live beside the team's project state. Public pricing still shows workspace tiers from Free through Starter $6/mo, Pro $16/mo, Business $40/mo, Max $200/mo, and Enterprise $400/mo, but the help-center table can disagree on monthly-style prices, so buyers should confirm the billing toggle before renewal.
 
-**Use [Reclaim.ai](/tools/reclaim-ai/) when automation starts with the calendar.** The June 25 check keeps Reclaim.ai branded from Dropbox, supports Google Calendar and Microsoft Outlook, and positions AI agents around tasks, habits, scheduling links, smart meetings, and team availability. Start with Reclaim when the job is calendar defense, focus-time protection, and task scheduling; skip it if the buyer needs a broad workflow router or an Outlook rollout that depends on delegated/shared calendars, hosted Exchange, Teams status, or Outlook Tasks.
+**Use [Reclaim.ai](/tools/reclaim-ai/) when automation starts with the calendar.** The June 26 check keeps Reclaim.ai branded from Dropbox, supports Google Calendar and Microsoft Outlook, and positions AI agents around tasks, habits, scheduling links, smart meetings, and team availability. Start with Reclaim when the job is calendar defense, focus-time protection, and task scheduling; skip it if the buyer needs a broad workflow router or an Outlook rollout that depends on delegated/shared calendars, hosted Exchange, Teams status, or Outlook Tasks.
 
-**Use [SaneBox](/tools/sanebox/) when automation starts with inbox triage.** The June 9 check updates SaneBox's Appetizer/Snack/Lunch/Dinner pricing ladder and adds an important caveat: SaneDrafts/Reply Draft and SaneSummary are request-only beta AI features, while the durable product remains server-side inbox classification, SaneLater, SaneBlackHole, Daily Digest, reminders, and snooze.
+**Use [SaneBox](/tools/sanebox/) when automation starts with inbox triage.** The June 26 check keeps SaneBox as the server-side inbox classification lane: SaneLater, SaneBlackHole, Daily Digest, reminders, snooze, and client-agnostic filtering matter more than AI branding. Treat SaneDrafts/Reply Draft and SaneSummary as request-only beta AI features, not the reason to buy the product.
 
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** The June 25 check still finds the public pricing page foregrounding Enterprise contact-sales packaging, while docs define Actions, Vendor Credits, rollover behavior, paid top-ups, and BYO API keys on paid plans. Treat old Pro/Team prices as historical unless the app or sales confirms them.
 
@@ -109,7 +109,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Helicone](/tools/helicone/) when automation depends on LLM observability and gateway controls.** It is not a workflow builder; it is the control layer for AI app traffic: request logging, cost tracking, prompt/session debugging, caching, fallbacks, rate limits, 0% markup gateway credits, and bring-your-own provider keys.
 
-**Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data, sales-engagement, enrichment, AI Assistant, MCP/API, and CLI platform, while Amplemarket is the higher-touch AI SDR operating stack with Duo Copilot, Workflows, contact-level signals, MCP access from Claude and ChatGPT, and a $600/month annual Startup plan for two seats. Both need real sender, deliverability, AI-agent, credit, opt-out, and CRM-write governance before scale.
+**Use [Apollo](/tools/apollo/) or [Amplemarket](/tools/amplemarket/) when automation starts with outbound revenue.** Apollo is the broader prospect-data, sales-engagement, enrichment, AI Assistant, MCP/API, and CLI platform, while Amplemarket is the higher-touch AI SDR operating stack with Duo Copilot, Workflows, contact-level signals, MCP access from Claude and ChatGPT, and a $600/month annual Startup plan for two seats. The June 26 lead-generation refresh adds one rule: model credits, export credits, sender rules, opt-out handling, deliverability, and CRM-write permissions need governance before scale.
 
 **Use [Clay](/tools/clay/) when GTM automation starts with enrichment, signals, account research, and actioning GTM data.** The June 25 Clay refresh keeps the read on GTM workflow layer: 150+ data partners, enrichment waterfalls, Claygent, Sculptor workflow setup, Functions, MCP access from ChatGPT/Codex/Claude, native Sequencer, Ads audiences, CRM enrichment, HTTP API, webhooks, and warehouse syncs. Clay still needs the buyer forks from Clay vs Instantly, Clay vs Intercom, Clay vs Make, and Clay vs Zapier, but the current cost question is now Actions, Data Credits, fixed versus token-priced AI models, BYO API keys, no-result behavior, rollover rules, and MCP budget guardrails.
 
@@ -232,7 +232,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Best AI automation platform](/guides/best-ai-automation-platform/) is the primary buyer guide and should stay current weekly while automation pricing and agent surfaces move quickly. The May 13 n8n cloud price cut and the May Make price reduction both flow into this page.
 - [Best AI tools for agencies](/guides/best-ai-tools-for-agencies/) is now the June 6 verified role guide for ChatGPT, Claude, Zapier, n8n, Make, Copy.ai, and client-data guardrails. Keep it aligned with [AI automation agency tech stack](/guides/ai-agency-stack/), sales, support, and lead-generation updates.
 - [AI automation agency tech stack](/guides/ai-agency-stack/) is now the June 6 verified agency delivery-stack page for n8n, Zapier, Make, Claude, ChatGPT, voice agents, Browserbase, and client dashboard decisions. Keep it aligned with the June 24 Claude Agent SDK billing guidance: plan users should budget monthly Claude credits for supported Agent SDK and Claude Code usage, while direct API usage remains separate.
-- [AI lead generation stack](/guides/ai-lead-generation/) is now the June 6 verified buyer flow for Apollo, Clay, Amplemarket, Instantly, and n8n across prospect data, enrichment, AI research, sender handoff, deliverability, and GTM automation. Keep it synchronized with the June 6 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/) because Apollo trial/credit rules, Instantly Outreach versus Credits packaging, Clay's June 23 Actions/Data Credits, Sculptor, MCP, Sequencer, fixed-versus-variable AI pricing, and Amplemarket's June 23 credit-matrix, MCP sequence creation, and Workflows updates all affect outbound-automation advice.
+- [AI lead generation stack](/guides/ai-lead-generation/) is now the June 26 verified buyer flow for Apollo, Clay, Amplemarket, Instantly, and n8n across prospect data, enrichment, AI research, sender handoff, deliverability, and GTM automation. Keep it synchronized with the June 6 verified [cold-email buyer guide](/guides/best-ai-for-cold-email/) because Apollo trial/credit rules, Instantly Outreach versus Credits packaging, Clay Actions/Data Credits, Sculptor, MCP, Sequencer, fixed-versus-variable AI pricing, Instantly credit allowances, and Amplemarket credit-matrix, MCP sequence creation, and Workflows updates all affect outbound-automation advice.
 - [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) is the June 6 verified sales-stack guide for Apollo, Instantly, Clay, Amplemarket, and ChatGPT across prospect data, outbound execution, GTM enrichment, AI SDR workflow, CRM hygiene, and credit/export modeling. Amplemarket's June 23 refresh now requires extra attention to MCP permissions, Workflows routing, and live-matrix credit counts.
 - [Best AI tools for recruiters](/guides/best-ai-tools-for-recruiters/) is the June 6 verified hiring-automation guide for LinkedIn Recruiter + Hiring Assistant, hireEZ, Paradox, Eightfold AI, and ChatGPT, with human-in-the-loop, candidate-data, ATS/CRM, screening, and scheduling cautions.
 - [Best AI tools for customer support](/guides/best-ai-tools-for-customer-support/) is the June 6 verified support-automation buyer guide for Intercom/Fin, Voiceflow, Ada, and Retell AI. Keep it synchronized with Intercom seats/outcomes, Voiceflow builder ownership, Ada's June 23 enterprise CX, structured Playbooks, MCP, SDK, multilingual Knowledge, and handoff-governance positioning, Retell minute billing, included/extra concurrency, the June 15, 2026 legacy endpoint migration, and escalation governance.
@@ -278,10 +278,10 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Gumloop credits docs](https://docs.gumloop.com/core-concepts/credits) (verified 2026-06-23)
 - [Gumloop AI models docs](https://docs.gumloop.com/core-concepts/ai_models) (verified 2026-06-23)
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-23)
-- [Reclaim.ai pricing](https://reclaim.ai/pricing) (verified 2026-06-25)
-- [Reclaim.ai Microsoft Outlook integration help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates) (verified 2026-06-25)
-- [SaneBox pricing](https://www.sanebox.com/pricing) (verified 2026-06-09)
-- [SaneBox Reply Draft help](https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice) (verified 2026-06-09)
+- [Reclaim.ai pricing](https://reclaim.ai/pricing) (verified 2026-06-26)
+- [Reclaim.ai Microsoft Outlook integration help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates) (verified 2026-06-26)
+- [SaneBox pricing](https://www.sanebox.com/pricing) (verified 2026-06-26)
+- [SaneBox Reply Draft help](https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice) (verified 2026-06-26)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-25)
 - [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-25)
 - [ServiceNow AI Control Tower expansion](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx) (verified 2026-06-09)
@@ -345,24 +345,24 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Paradox recruiting solution](https://www.paradox.ai/solutions/recruiters) (verified 2026-06-08)
 - [Workday completes Paradox acquisition](https://investor.workday.com/news-and-events/press-releases/news-details/2025/Workday-Completes-Acquisition-of-Paradox-10-01-2025/default.aspx) (verified 2026-06-08)
 - [Paradox Conversational ATS available through Workday](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Paradox-Conversational-Applicant-Tracking-System-ATS-Now-Available-Through-Workday-Helping-Organizations-Hire-Frontline-Workers-Faster/default.aspx) (verified 2026-06-08)
-- [Apollo pricing](https://www.apollo.io/pricing) (verified 2026-06-23)
-- [Apollo 2026 release notes](https://knowledge.apollo.io/hc/en-us/articles/43226752968077-Release-Notes-2026) (verified 2026-06-23)
-- [Apollo Developer Docs overview](https://docs.apollo.io/reference/overview) (verified 2026-06-23)
-- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-23)
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-23)
-- [Clay official site](https://www.clay.com/) (verified 2026-06-23)
-- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-23)
-- [Clay Sculptor](https://www.clay.com/sculptor) (verified 2026-06-23)
-- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-23)
-- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-23)
-- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-23)
-- [Amplemarket June 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026) (verified 2026-06-23)
+- [Apollo pricing](https://www.apollo.io/pricing) (verified 2026-06-26)
+- [Apollo 2026 release notes](https://knowledge.apollo.io/hc/en-us/articles/43226752968077-Release-Notes-2026) (verified 2026-06-26)
+- [Apollo Developer Docs overview](https://docs.apollo.io/reference/overview) (verified 2026-06-26)
+- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-26)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-26)
+- [Clay official site](https://www.clay.com/) (verified 2026-06-26)
+- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-26)
+- [Clay Sculptor](https://www.clay.com/sculptor) (verified 2026-06-26)
+- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-26)
+- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-26)
+- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-26)
+- [Amplemarket June 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026) (verified 2026-06-26)
 - [Ada platform](https://www.ada.cx/platform) (verified 2026-06-23)
 - [Ada release notes](https://docs.ada.cx/release-notes) (verified 2026-06-23)
 - [Ada Playbooks upgrade](https://docs.ada.cx/2026-06-22-playbooks-enhancements) (verified 2026-06-23)
 - [Ada MCP overview](https://docs.ada.cx/mcp/introduction/overview) (verified 2026-06-23)
-- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-23)
-- [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-05)
+- [Intercom pricing](https://www.intercom.com/pricing) (verified 2026-06-26)
+- [Fin AI Agent pricing](https://fin.ai/pricing) (verified 2026-06-26)
 - [Voiceflow pricing](https://www.voiceflow.com/pricing) (verified 2026-06-10)
 - [Voiceflow documentation](https://docs.voiceflow.com/documentation/Introduction) (verified 2026-06-10)
 - [Retell AI pricing](https://www.retellai.com/pricing) (verified 2026-06-25)
@@ -385,9 +385,9 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [RelationalAI Snowflake agentic decision intelligence](https://www.globenewswire.com/news-release/2026/06/02/3305546/0/en/RelationalAI-Closes-the-AI-Value-Gap-with-New-Agentic-Decision-Intelligence-Capabilities-for-the-Snowflake-AI-Data-Cloud.html) (verified 2026-06-03)
 - [7AI Agentic Security Platform](https://7ai.com/platform) (verified 2026-06-03)
 - [White House AI cybersecurity order](https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/) (verified 2026-06-03)
-- [Apollo AI platform information](https://www.apollo.io/llm-info) (verified 2026-06-23)
-- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-23)
-- [Amplemarket MCP announcement](https://www.amplemarket.com/blog/mcp) (verified 2026-06-23)
+- [Apollo AI platform information](https://www.apollo.io/llm-info) (verified 2026-06-26)
+- [Amplemarket pricing](https://www.amplemarket.com/pricing) (verified 2026-06-26)
+- [Amplemarket MCP announcement](https://www.amplemarket.com/blog/mcp) (verified 2026-06-26)
 - [Browserbase pricing](https://www.browserbase.com/pricing) (verified 2026-06-24)
 - [Browserbase changelog](https://www.browserbase.com/changelog) (verified 2026-06-24)
 - [Browserbase Browser explainer](https://www.browserbase.com/blog/what-is-a-browserbase-browser) (verified 2026-06-24)
@@ -396,15 +396,15 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Helicone pricing](https://www.helicone.ai/pricing) (verified 2026-06-23)
 - [Helicone platform docs](https://docs.helicone.ai/getting-started/platform-overview) (verified 2026-06-23)
 - [Helicone gateway cost-tracking docs](https://docs.helicone.ai/guides/cookbooks/cost-tracking) (verified 2026-06-23)
-- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-23)
-- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-23)
-- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-23)
-- [Clay Sculptor](https://www.clay.com/sculptor) (verified 2026-06-23)
-- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-23)
-- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-23)
-- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-23)
-- [Instantly plans overview](https://help.instantly.ai/en/articles/10273259-instantly-plans-overview) (verified 2026-06-23)
-- [Instantly SuperSearch help](https://help.instantly.ai/en/articles/11364248-supersearch) (verified 2026-06-05)
+- [Clay pricing](https://www.clay.com/pricing) (verified 2026-06-26)
+- [Clay integrations](https://www.clay.com/integrations) (verified 2026-06-26)
+- [Clay MCP](https://www.clay.com/mcp) (verified 2026-06-26)
+- [Clay Sculptor](https://www.clay.com/sculptor) (verified 2026-06-26)
+- [Clay Sequencer](https://www.clay.com/sequencer) (verified 2026-06-26)
+- [Clay changelog](https://www.clay.com/changelog) (verified 2026-06-26)
+- [Instantly pricing](https://instantly.ai/pricing) (verified 2026-06-26)
+- [Instantly plans overview](https://help.instantly.ai/en/articles/10273259-instantly-plans-overview) (verified 2026-06-26)
+- [Instantly SuperSearch help](https://help.instantly.ai/en/articles/11364248-supersearch) (verified 2026-06-26)
 - [ClickUp pricing](https://clickup.com/pricing) (verified 2026-06-23)
 - [ClickUp Brain](https://clickup.com/brain) (verified 2026-06-23)
 - [ClickUp Brain AI help](https://help.clickup.com/hc/en-us/articles/12578085238039-What-is-ClickUp-Brain-AI) (verified 2026-06-23)

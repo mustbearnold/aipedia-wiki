@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`. Latest pushed content batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling.
+- Branch: `master`. Latest pushed content batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling. Latest local verified work is non-tool page-refresh batch 02, pending commit and push.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -33,6 +33,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - The latest timing pass changed route QA closeout to concurrency 6 with per-route/per-width timing. Same 75-route, seven-width matrix passed at concurrency 6 after the closeout baseline at concurrency 4 took 126s.
 - Non-tool page refresh now has a Rust-runner-backed repeatable workflow under `workflows/page-refresh/`. Use `npm run runner:page-refresh:plan`, `npm run runner:page-refresh:reports`, and `npm run runner:page-refresh:closeout` as the default path. The runner wraps the Node planner, writes exact worker prompts and worker JSON report scaffolds, splits standard content route QA from intentional noindex interactive route QA, aggregates worker reports, times every closeout gate, and writes local receipts.
 - The first live non-tool page-refresh batch is complete and pushed: 12 routes across terms, disclosure, reports, answers, compare-builder, dead archive, and three comparison pages. The follow-up optimization pass added parseable worker reports, route-QA policy mapping, and closeout micro-timing so future speed, efficiency, quality, and accuracy reviews have structured data.
+- Non-tool page-refresh batch 02 is verified locally and pending push: 12 comparison and guide routes from Frase/NeuronWriter through heavy-inbox triage, parent hubs `/compare/`, `/guides/`, AI SEO, AI Presentation, AI Chatbots, AI Automation, and `PAGE_REFRESH_LEDGER.md`. Worker reports parsed 3/3 with 89 source URLs, 51 confidence labels, 29 caveats, and 75 parent surface notes. Final closeout passed in 51.528s. The workflow now skips indexable route QA for archived noindex content routes while still checking content/frontmatter.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -151,6 +152,8 @@ npm run runner:page-refresh:closeout
 ```
 
 Batch 01 refreshed `/terms/`, `/disclosure/`, `/reports/`, `/dead/`, four answer pages, `/compare/build/`, and three comparison pages. Use generated prompt files and report scaffolds, not hand-transcribed prompts or chat-only worker summaries. The measured critical path was the 6m17s worker shard; closeout build was 16.79s, content route QA was 20.39s, and interactive builder QA was 2.67s. Next page-refresh batch can stay at 12 to 24 pages while worker reports stabilize, then scale by measured shard duration.
+
+Batch 02 refreshed six comparison routes and six guide routes. Closeout receipt: `local/tmp/aipedia-runner/page-refresh/receipts/2026-06-26T07-03-32Z-page-refresh-closeout.md`. Durable receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-02.md`. Keep the archived-noindex policy: refresh archived pages when selected, but do not include them in indexable route QA unless explicitly testing noindex behavior.
 
 ### Oldest-First Tool Freshness
 

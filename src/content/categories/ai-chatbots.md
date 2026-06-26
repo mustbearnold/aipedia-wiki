@@ -32,7 +32,7 @@ The June 21 comparison-policy cleanup keeps direct chatbot comparisons for same-
 
 The June 5 DeepSeek slice refreshes DeepSeek vs Gemini, [DeepSeek vs Mistral AI](/compare/deepseek-vs-mistral-ai/), and [DeepSeek vs Qwen](/compare/deepseek-vs-qwen/) against official June 2026 sources. The buyer split is now clearer: Gemini is the Google ecosystem and finished-assistant choice, Mistral is the EU/open-weight/platform choice, Qwen is the Alibaba/Qwen Cloud and multilingual model-family choice, and DeepSeek remains the low-cost API/model-routing lever that needs governance review before sensitive production use.
 
-The June 5 Gemini comparison refresh updates the oldest live Gemini cluster: Gemini vs GitHub Copilot, [Gemini vs Grok](/compare/gemini-vs-grok/), Gemini vs Perplexity, and . The refreshed buyer map is: Gemini for Google-native productivity and broad assistant work, Copilot for GitHub-native coding, Grok for X-native social context, Mistral for EU/open-model platform control, Perplexity for cited open-web research, and Qwen for Alibaba/Qwen Cloud plus open-weight model-family evaluation.
+The June 26 Gemini comparison refresh keeps [Gemini vs Grok](/compare/gemini-vs-grok/) current after official Gemini subscription/API and xAI model/API checks. The refreshed buyer map is: Gemini for Google-native productivity, broad assistant work, and API model selection; Grok for X-native social context, xAI model access, and real-time social workflows; Copilot for GitHub-native coding; Mistral for EU/open-model platform control; Perplexity for cited open-web research; and Qwen for Alibaba/Qwen Cloud plus open-weight model-family evaluation. Treat Grok consumer pricing and regional checkout display as live-account checks before quoting a buyer's final monthly cost.
 
 The June 23 Gemini check keeps that lane current: Gemini still belongs here as the Google-native assistant bundle, but coding-oriented buyers on unpaid-tier Gemini Code Assist for individuals or Google One need the June 18, 2026 Antigravity migration caveat before treating Gemini CLI or the old Code Assist IDE extensions as the recommended setup.
 
@@ -230,16 +230,16 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [AiPedia June 15 AI news desk](/news/2026-06-15-ai-news-desk/) (verified 2026-06-15)
 - [AiPedia Google AI search risk checklist](/news/2026-06-15-google-ai-search-liability-gemini-abuse/) (verified 2026-06-15)
 - [Anthropic Chris Olah remarks on Magnifica Humanitas](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical) (verified 2026-05-26)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-23)
-- [Google One AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-23)
-- [Gemini Apps limits](https://support.google.com/gemini/answer/16275805) (verified 2026-06-23)
-- [Google Gemini API model docs](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-23)
-- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-23)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-26)
+- [Google One AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-26)
+- [Gemini Apps limits](https://support.google.com/gemini/answer/16275805) (verified 2026-06-26)
+- [Google Gemini API model docs](https://ai.google.dev/gemini-api/docs/models) (verified 2026-06-26)
+- [Gemini API pricing](https://ai.google.dev/gemini-api/docs/pricing) (verified 2026-06-26)
 - [Perplexity Pro](https://www.perplexity.ai/pro) (verified 2026-06-15)
 - [Grok by xAI](https://x.ai/grok) (verified 2026-06-15)
-- [xAI pricing](https://x.ai/pricing) (verified 2026-06-23)
-- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-23)
-- [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-23)
+- [xAI pricing](https://x.ai/pricing) (verified 2026-06-26)
+- [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-26)
+- [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-26)
 - [Groq official site](https://groq.com/) (verified 2026-06-25)
 - [Groq pricing](https://groq.com/pricing/) (verified 2026-06-25)
 - [Groq model docs](https://console.groq.com/docs/models) (verified 2026-06-25)
