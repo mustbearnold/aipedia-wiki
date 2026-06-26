@@ -7,14 +7,15 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-26.
-- Branch baseline: `master`; latest pushed content batch is the June 26 intentional same-day revisit/tool-refresh timing run from Consensus through Kling. Latest local verified work is non-tool page-refresh batch 02, pending commit and push.
+- Branch baseline: `master`; latest pushed content batch is non-tool page-refresh batch 02. Latest workflow improvement is page-refresh policy and report optimization.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
 - The latest local batch refreshed 60 tools from Consensus through Kling after using `--include-same-day` intentionally because the default planner had no due tools.
 - A first runnable non-tool page-refresh workflow now exists under `workflows/page-refresh/`, backed by `npm run runner:page-refresh:plan`, `npm run runner:page-refresh:reports`, and `npm run runner:page-refresh:closeout`. The Rust runner wraps the Node planner, writes worker prompts and report scaffolds, separates standard content route QA from intentional noindex interactive route QA, aggregates worker reports, times closeout gates, and writes receipts.
 - The first live non-tool page-refresh batch is complete and pushed. It refreshed 12 routes, recorded worker and closeout timings, and hardened the workflow with prompt-file output, explicit current-date coverage-quality audits, route-QA policy mapping, parseable worker report artifacts, and Rust runner orchestration.
-- Non-tool page-refresh batch 02 is verified locally. It refreshed 12 comparison and guide routes, updated affected compare/guides/category parent surfaces, parsed 3/3 worker reports, and passed closeout in 51.528s. The planner now marks archived noindex content routes as content/frontmatter verification only, not indexable route-QA targets.
+- Non-tool page-refresh batch 02 is pushed. It refreshed 12 comparison and guide routes, updated affected compare/guides/category parent surfaces, parsed 3/3 worker reports, and passed closeout in 51.528s.
+- The latest page-refresh workflow optimization adds explicit route QA policy classes and report-level efficiency metrics. The planner now marks archived noindex content routes as content/frontmatter verification only, not indexable route-QA targets. The Rust report summary now shows pages/minute, sources/page, caveats/page, confidence labels/page, failed checks, and parent-surface hints.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
@@ -167,7 +168,7 @@ Closeout passed with 3/3 worker reports parsed, 89 source URLs, 51 confidence la
 
 ### Next
 
-Commit and push batch 02. Then run one more 12 to 18 page non-tool page batch with generated prompt files, worker report scaffolds, and the archived-noindex route policy. Review shard elapsed seconds against route count and source-check count before scaling beyond 18 pages.
+Run one more 12 to 18 page non-tool page batch with generated prompt files, worker report scaffolds, explicit route policy classes, and the archived-noindex route policy. Review shard elapsed seconds, pages/minute, sources/page, parent hints, route QA time, and rework count before scaling beyond 18 pages.
 
 ## Active: Decision Content Flywheel
 

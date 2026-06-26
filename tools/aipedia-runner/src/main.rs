@@ -2,7 +2,7 @@ use anyhow::{bail, Context, Result};
 use chrono::Utc;
 use clap::{Parser, Subcommand};
 use serde::Deserialize;
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 use std::fs;
 use std::io::Write;
 use std::path::{Path, PathBuf};
@@ -1158,6 +1158,12 @@ fn write_page_report_summary(
         .iter()
         .map(|report| report.checks.len())
         .sum();
+    let failed_check_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.checks.iter())
+        .filter(|check| check.status.to_lowercase() != "passed")
+        .count();
     content.push_str("## Totals\n\n");
     content.push_str(&format!(
         "- Reported worker elapsed seconds: {:.2}\n",
@@ -1173,7 +1179,60 @@ fn write_page_report_summary(
         "- Parent surface notes: {}\n",
         parent_surface_count
     ));
-    content.push_str(&format!("- Worker checks recorded: {}\n\n", check_count));
+    content.push_str(&format!("- Worker checks recorded: {}\n", check_count));
+    content.push_str(&format!(
+        "- Worker checks not passed: {}\n\n",
+        failed_check_count
+    ));
+
+    if !summary.parsed.is_empty() {
+        content.push_str("## Worker Efficiency\n\n");
+        for report in &summary.parsed {
+            let pages = report.pages.len();
+            let elapsed_seconds = report.elapsed_seconds.unwrap_or(0.0);
+            let pages_per_minute = if elapsed_seconds > 0.0 {
+                pages as f64 / (elapsed_seconds / 60.0)
+            } else {
+                0.0
+            };
+            let source_total: usize = report.pages.iter().map(|page| page.source_urls.len()).sum();
+            let caveat_total: usize = report.pages.iter().map(|page| page.caveats.len()).sum();
+            let confidence_total: usize = report
+                .pages
+                .iter()
+                .map(|page| page.source_confidence.len())
+                .sum();
+            let failed_checks = report
+                .checks
+                .iter()
+                .filter(|check| check.status.to_lowercase() != "passed")
+                .count();
+
+            content.push_str(&format!(
+                "- {}: {:.2} pages/min, {:.2} sources/page, {:.2} caveats/page, {:.2} confidence labels/page, {} failed check(s)\n",
+                report.shard_id,
+                pages_per_minute,
+                per_page(source_total, pages),
+                per_page(caveat_total, pages),
+                per_page(confidence_total, pages),
+                failed_checks
+            ));
+        }
+        content.push('\n');
+    }
+
+    let parent_hints = parent_surface_hints(summary);
+    if !parent_hints.is_empty() {
+        content.push_str("## Parent Surface Hints\n\n");
+        for (surface, routes) in parent_hints {
+            content.push_str(&format!(
+                "- {}: referenced by {}\n",
+                surface,
+                routes.join(", ")
+            ));
+        }
+        content.push('\n');
+    }
 
     content.push_str("## Planned Pages\n\n");
     for page in &plan.batch {
@@ -1242,6 +1301,38 @@ fn write_page_report_summary(
         .with_context(|| format!("could not write {}", out_path.display()))?;
     println!("Report summary: {}", display_path(project_dir, out_path));
     Ok(())
+}
+
+fn per_page(total: usize, page_count: usize) -> f64 {
+    if page_count == 0 {
+        0.0
+    } else {
+        total as f64 / page_count as f64
+    }
+}
+
+fn parent_surface_hints(summary: &ReportSummary) -> BTreeMap<String, Vec<String>> {
+    let mut hints: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
+
+    for report in &summary.parsed {
+        for page in &report.pages {
+            for surface in &page.parent_surfaces {
+                let surface = surface.trim();
+                if surface.is_empty() {
+                    continue;
+                }
+                hints
+                    .entry(surface.to_string())
+                    .or_default()
+                    .insert(page.route.clone());
+            }
+        }
+    }
+
+    hints
+        .into_iter()
+        .map(|(surface, routes)| (surface, routes.into_iter().collect()))
+        .collect()
 }
 
 fn current_category_route(project_dir: &Path, tool: &Tool) -> Result<Option<String>> {
@@ -1630,6 +1721,11 @@ mod tests {
         assert!(summary.missing.is_empty());
         assert!(summary.invalid.is_empty());
         assert_eq!(summary.parsed[0].pages[0].source_urls.len(), 1);
+        let hints = parent_surface_hints(&summary);
+        assert_eq!(
+            hints.get("/answers/").expect("parent hint should exist")[0],
+            "/example/"
+        );
 
         fs::remove_dir_all(dir).ok();
     }

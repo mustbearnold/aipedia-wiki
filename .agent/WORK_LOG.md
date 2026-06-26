@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-26: Page Refresh Workflow Policy And Report Optimization
+
+- Status: Complete and verified.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Improved the non-tool page-refresh planner and Rust report aggregator after batch 02. Planner routes now carry explicit QA policy classes: `indexable-buyer`, `parent-category`, `top-layer`, `interactive-noindex`, `archived-noindex`, and `content`. Archived noindex content stays in worker refresh and frontmatter checks while skipping indexable route QA. Worker report summaries now include pages/minute, sources/page, caveats/page, confidence labels/page, failed worker checks, and parent-surface hints grouped by the child routes that referenced them. Updated `workflows/page-refresh/README.md` and focused tests.
+- Verification: `node --check scripts/page-refresh-batch.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs`; `cargo fmt --manifest-path tools/aipedia-runner/Cargo.toml --check`; `cargo test --manifest-path tools/aipedia-runner/Cargo.toml`; `npm run runner:page-refresh:plan -- --limit 4 --workers 2 --pages-per-worker 2`; `npm run runner:page-refresh:reports`.
+- Residual risks: This is workflow instrumentation and QA targeting only. The next real batch should confirm the efficiency metrics remain useful with completed worker reports, not just scaffolds.
+- Next: Run one more 12 to 18 page non-tool batch, then compare pages/minute, sources/page, route QA time, and rework count before scaling further.
+
 ### 2026-06-26: Non-Tool Page Refresh Batch 02
 
 - Status: Complete locally, verified, pending commit and push.

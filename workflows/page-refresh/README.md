@@ -30,6 +30,12 @@ Inspect the plan:
 node -e "const p=require('./.tmp-page-refresh-batch.json'); console.log(p.batch.map(x => [x.last_updated, x.type, x.route, x.path].join('  ')).join('\n'))"
 ```
 
+Inspect route QA policy classes:
+
+```bash
+node -e "const p=require('./.tmp-page-refresh-batch.json'); console.log(p.batch.map(x => [x.route_qa_policy.kind, x.route, x.route_qa_policy.reason].join('  ')).join('\n'))"
+```
+
 Useful filters:
 
 ```bash
@@ -39,6 +45,14 @@ npm run page:refresh:batch -- --include-tools --json
 ```
 
 Default behavior excludes tool pages, because the tool-refresh workflow already owns those.
+
+Route QA policy classes:
+
+- `indexable-buyer`: comparison, guide, answer, trend, or workflow pages that should receive normal route QA.
+- `parent-category`: category hubs that summarize child pages and should receive normal route QA.
+- `top-layer`: static or global hubs such as `/`, `/compare/`, `/guides/`, and `/workflows/`.
+- `interactive-noindex`: intentional noindex UI routes such as `/compare/build/`, checked with noindex-aware QA flags.
+- `archived-noindex`: archived or consolidated content that should be refreshed and frontmatter-checked, but skipped in indexable route QA.
 
 ## Worker Model
 
@@ -88,6 +102,15 @@ Before closeout, summarize worker reports:
 npm run runner:page-refresh:reports
 ```
 
+Use the report summary to plan integration. It now includes worker efficiency metrics and parent-surface hints:
+
+- pages per minute
+- sources per page
+- caveats per page
+- confidence labels per page
+- failed worker checks
+- parent surfaces grouped by the child routes that referenced them
+
 ## Verification
 
 Use the Rust runner for closeout:
@@ -125,6 +148,7 @@ Add page-type-specific checks when relevant:
 - Commercial pages: `npm run build:fast` includes commercial CTA checks
 - Static/index pages: include their parent hub and index routes in route QA
 - Intentional noindex interactive pages such as `/compare/build/`: the planner now splits these into `commands.interactive_routes` and adds the right `qa-route` flags so layout, metadata presence, and overflow are checked without applying indexable comparison-page source requirements.
+- Archived noindex content pages: keep them in worker refresh and frontmatter checks, but do not include them in indexable route QA unless the test is explicitly about noindex behavior.
 
 To time every closeout micro-step, run the planner-provided `commands.timed_closeout` entries instead of the plain commands. Create the timing directory first:
 
@@ -155,3 +179,5 @@ Treat this as version one. After each real page-refresh batch:
 2. Patch this workflow and `scripts/page-refresh-batch.mjs` when the improvement is stable.
 3. Patch `tools/aipedia-runner/` when orchestration, timing, receipt, or report aggregation improves.
 4. Update `.agent/WORK_LOG.md` and one loop-run receipt.
+
+Batch sizing rule: use 12 pages until worker report quality is stable, 18 pages for the next scale test, and larger batches only after the slowest shard duration, source-count density, and route-QA time stay predictable.

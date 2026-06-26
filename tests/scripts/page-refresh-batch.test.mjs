@@ -22,6 +22,7 @@ function writeLedger() {
     '| --- | --- | --- | --- | --- | --- |',
     '| 2026-06-01 | /tools/old-tool/ | Tool | Yes | frontmatter | src/content/tools/old-tool.md |',
     '| 2026-06-02 | /guides/old-guide/ | Guide | Yes | frontmatter | src/content/use-cases/old-guide.md |',
+    '| 2026-06-02 | /guides/archived-guide/ | Guide | No | frontmatter | src/content/use-cases/archived-guide.md |',
     '| 2026-06-03 | /compare/old-vs-new/ | Comparison | Yes | frontmatter | src/content/comparisons/old-vs-new.md |',
     '| 2026-06-06 | /compare/build/ | Static page | No | file mtime | src/pages/compare/build.astro |',
     '| 2026-06-04 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |',
@@ -41,9 +42,9 @@ test('page refresh planner excludes tools and orders oldest non-tool pages', () 
 
     assert.equal(report.batch.length, 3);
     assert.deepEqual(report.batch.map((page) => page.route), [
+      '/guides/archived-guide/',
       '/guides/old-guide/',
       '/compare/old-vs-new/',
-      '/categories/ai-writing/',
     ]);
     assert.ok(!report.batch.some((page) => page.type === 'Tool'));
     assert.equal(report.agent_briefs.worker_briefs.length, 2);
@@ -51,6 +52,9 @@ test('page refresh planner excludes tools and orders oldest non-tool pages', () 
     assert.match(report.agent_briefs.worker_briefs[0].prompt, /Report schema:/);
     assert.match(report.agent_briefs.worker_briefs[0].report_path, /page-refresh-shard-01\.json$/);
     assert.match(report.commands.route_qa_args, /--route \/guides\/old-guide\//);
+    assert.doesNotMatch(report.commands.route_qa_args, /\/guides\/archived-guide\//);
+    assert.equal(report.batch[0].route_qa_policy.kind, 'archived-noindex');
+    assert.equal(report.batch[1].route_qa_policy.kind, 'indexable-buyer');
     assert.match(report.commands.cheap_gates.join('\n'), /AIPEDIA_CURRENT_DATE=/);
     assert.match(report.commands.expensive_gates.at(-1), /--concurrency 6/);
   } finally {
@@ -69,6 +73,24 @@ test('page refresh planner can filter by page type', () => {
     assert.equal(report.batch.length, 1);
     assert.equal(report.batch[0].route, '/compare/old-vs-new/');
     assert.equal(report.batch[0].type, 'Comparison');
+    assert.equal(report.batch[0].route_qa_policy.kind, 'indexable-buyer');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('page refresh planner exposes parent-category and top-layer route policy classes', () => {
+  const { dir, ledger } = writeLedger();
+
+  try {
+    const result = runNode(['--json', '--ledger', ledger, '--type', 'Category']);
+    assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+
+    assert.equal(report.batch[0].route, '/categories/ai-writing/');
+    assert.equal(report.batch[0].route_qa_policy.kind, 'parent-category');
+    assert.equal(report.commands.route_policies['/categories/'].kind, 'top-layer');
+    assert.match(report.commands.route_qa_args, /--route \/categories\/ai-writing\//);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

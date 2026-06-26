@@ -151,20 +151,18 @@ function buildBatch(rows) {
       sitemap: row.sitemap,
       date_source: row.date_source,
       route_qa_risk: routeRisk(row),
+      route_qa_policy: routeQaPolicy(row.page, row.sitemap, row.type),
     }));
 }
 
 function routeRisk(row) {
-  const policy = routeQaPolicy(row.page, row.sitemap);
-  if (policy.kind === 'interactive-noindex') return 'interactive-noindex';
-  if (policy.kind === 'archived-noindex') return 'archived-noindex';
-  if (row.type === 'Static page') return 'top-layer';
-  if (['Category', 'Comparison', 'Guide', 'Trend', 'Workflow'].includes(row.type)) return 'buyer-decision';
-  if (row.type === 'Answer page') return 'answer-seo';
-  return 'content';
+  const policy = routeQaPolicy(row.page, row.sitemap, row.type);
+  if (policy.kind === 'parent-category') return 'buyer-decision';
+  if (policy.kind === 'indexable-buyer') return row.type === 'Answer page' ? 'answer-seo' : 'buyer-decision';
+  return policy.kind;
 }
 
-function routeQaPolicy(route, sitemap = 'Yes') {
+function routeQaPolicy(route, sitemap = 'Yes', type = '') {
   if (route === '/compare/build/') {
     return {
       kind: 'interactive-noindex',
@@ -179,8 +177,31 @@ function routeQaPolicy(route, sitemap = 'Yes') {
       reason: 'Archived or consolidated content is intentionally noindex; verify content and frontmatter, but skip indexable route QA.',
     };
   }
-  return { kind: 'content', flags: [], reason: 'Indexable or hub route uses the standard content QA policy.' };
+  if (type === 'Static page' || topLayerRoutes.has(route)) {
+    return {
+      kind: 'top-layer',
+      flags: [],
+      reason: 'Top-layer or static route uses indexable route QA because it summarizes changed child pages.',
+    };
+  }
+  if (type === 'Category') {
+    return {
+      kind: 'parent-category',
+      flags: [],
+      reason: 'Parent category route uses indexable route QA because it summarizes changed child pages.',
+    };
+  }
+  if (['Comparison', 'Guide', 'Answer page', 'Trend', 'Workflow'].includes(type)) {
+    return {
+      kind: 'indexable-buyer',
+      flags: [],
+      reason: 'Indexable buyer-decision route uses the standard content QA policy.',
+    };
+  }
+  return { kind: 'content', flags: [], reason: 'Indexable supporting route uses the standard content QA policy.' };
 }
+
+const topLayerRoutes = new Set(['/', '/tools/', '/categories/', '/compare/', '/guides/', '/answers/', '/trends/', '/workflows/']);
 
 function chunkPages(batch) {
   const chunks = [];
@@ -191,14 +212,14 @@ function chunkPages(batch) {
 }
 
 function buildCommands(batch) {
-  const defaultRoutes = ['/', '/tools/', '/categories/', '/compare/', '/guides/', '/answers/', '/trends/', '/workflows/'];
+  const defaultRoutes = [...topLayerRoutes];
   const routeEntries = [
-    ...batch.map((page) => [page.route, routeQaPolicy(page.route, page.sitemap)]),
+    ...batch.map((page) => [page.route, routeQaPolicy(page.route, page.sitemap, page.type)]),
     ...defaultRoutes.map((route) => [route, routeQaPolicy(route)]),
   ].filter(([route]) => Boolean(route));
   const routes = [...new Set(routeEntries.map(([route]) => route))];
   const routePolicies = Object.fromEntries(routeEntries);
-  const contentRoutes = routes.filter((route) => routePolicies[route].kind === 'content');
+  const contentRoutes = routes.filter((route) => !['archived-noindex', 'interactive-noindex'].includes(routePolicies[route].kind));
   const interactiveRoutes = routes.filter((route) => routePolicies[route].kind === 'interactive-noindex');
   const paths = [...new Set(batch.map((page) => page.path).filter(Boolean))];
   const contentRouteArgs = routeArgs(contentRoutes);
