@@ -31,7 +31,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - The optimized tool-refresh workflow now has a committed procedure under `workflows/tool-refresh/` and a local skill mirror `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`. Treat `workflows/` as canonical for clean clones, and keep the local skill aligned while tuning. In the Codex Windows app, use six parallel shard workers with up to 10 tools per worker because six active agents was the observed ceiling on June 24.
 - The tool-refresh planner now includes registered source metadata, scoped `audit:sources` commands, shard-level `source_ids`, and a default one-day recent-refresh exclusion so overnight runs do not immediately reselect yesterday's completed high-volatility pages. Use `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` only when intentionally revisiting recent pages.
 - The latest timing pass changed route QA closeout to concurrency 6 with per-route/per-width timing. Same 75-route, seven-width matrix passed at concurrency 6 after the closeout baseline at concurrency 4 took 126s.
-- Non-tool page refresh now has a repeatable workflow under `workflows/page-refresh/` and planner command, `npm run page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json`. It reads `PAGE_REFRESH_LEDGER.md`, excludes tool pages by default, writes exact worker prompts, writes worker JSON report scaffolds, splits standard content route QA from intentional noindex interactive route QA, and emits timed closeout commands.
+- Non-tool page refresh now has a Rust-runner-backed repeatable workflow under `workflows/page-refresh/`. Use `npm run runner:page-refresh:plan`, `npm run runner:page-refresh:reports`, and `npm run runner:page-refresh:closeout` as the default path. The runner wraps the Node planner, writes exact worker prompts and worker JSON report scaffolds, splits standard content route QA from intentional noindex interactive route QA, aggregates worker reports, times every closeout gate, and writes local receipts.
 - The first live non-tool page-refresh batch is complete and pushed: 12 routes across terms, disclosure, reports, answers, compare-builder, dead archive, and three comparison pages. The follow-up optimization pass added parseable worker reports, route-QA policy mapping, and closeout micro-timing so future speed, efficiency, quality, and accuracy reviews have structured data.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
@@ -142,10 +142,12 @@ Do not return to one full build per tool unless a template, runtime, layout, gen
 
 ### Non-Tool Page Refresh Workflow
 
-The first repeatable non-tool page-refresh lane is now proven on a 12-page live batch and has an optimized planner contract:
+The first repeatable non-tool page-refresh lane is now proven on a 12-page live batch and has a Rust runner:
 
 ```bash
-npm run --silent page:refresh:batch -- --limit 12 --max-workers 3 --pages-per-worker 4 --write-agent-prompts local/tmp/page-refresh-prompts --report-dir local/tmp/page-refresh-reports --write-report-scaffolds --json > .tmp-page-refresh-batch.json
+npm run runner:page-refresh:plan
+npm run runner:page-refresh:reports
+npm run runner:page-refresh:closeout
 ```
 
 Batch 01 refreshed `/terms/`, `/disclosure/`, `/reports/`, `/dead/`, four answer pages, `/compare/build/`, and three comparison pages. Use generated prompt files and report scaffolds, not hand-transcribed prompts or chat-only worker summaries. The measured critical path was the 6m17s worker shard; closeout build was 16.79s, content route QA was 20.39s, and interactive builder QA was 2.67s. Next page-refresh batch can stay at 12 to 24 pages while worker reports stabilize, then scale by measured shard duration.

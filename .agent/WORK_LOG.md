@@ -1,9 +1,19 @@
 # AiPedia Work Log
 
-### 2026-06-26: Non-Tool Page Refresh Workflow Optimization
+### 2026-06-26: Rust Page Refresh Runner
 
 - Status: Complete locally, verified, pending commit and push.
 - Commit: this commit.
+- Branch: `master`.
+- Changed: Added Rust runner support for non-tool page refreshes with `page-plan`, `page-reports`, `page-closeout`, and `page-run` subcommands. Added npm scripts for the new runner path, page worker report aggregation, split content and interactive route QA closeout, current-date environment propagation, per-command timing, and page-refresh receipts. Updated workflow docs and agent status docs so the Rust runner is the default page-refresh orchestration path.
+- Verification: `cargo fmt --manifest-path tools/aipedia-runner/Cargo.toml --check`; `cargo check --manifest-path tools/aipedia-runner/Cargo.toml`; `cargo test --manifest-path tools/aipedia-runner/Cargo.toml`; `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs`; `npm run runner:page-refresh:plan -- --limit 3 --workers 2 --pages-per-worker 2`; `npm run runner:page-refresh:reports`; `npm run runner:page-refresh:closeout -- --dry-run --skip-build --skip-route-qa`; `npm run audit:commands`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: This is orchestration only. The Node planner, content audits, Astro checks, and Playwright route QA remain the accuracy layer.
+- Next: Commit and push, then use `npm run runner:page-refresh:plan` for the next 12 to 24 page non-tool batch.
+
+### 2026-06-26: Non-Tool Page Refresh Workflow Optimization
+
+- Status: Complete and pushed.
+- Commit: 5657acf64.
 - Branch: `master`.
 - Changed: Optimized `scripts/page-refresh-batch.mjs` for repeatable speed, efficiency, quality, and accuracy review. The planner now emits worker report paths, can write worker JSON report scaffolds, includes per-worker report schemas in prompts, gives the integrator report paths, separates standard content route QA from intentional noindex interactive route QA, and emits `commands.timed_closeout` for closeout micro-step timing. Updated `workflows/page-refresh/README.md`, planner tests, and agent status docs.
 - Verification: `node --check scripts/page-refresh-batch.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs`; real planner smoke with `--write-agent-prompts`, `--report-dir`, and `--write-report-scaffolds` to `local/tmp/page-refresh-optimization-smoke.json`.

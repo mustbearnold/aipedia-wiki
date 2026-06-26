@@ -6,7 +6,13 @@ Tool pages use `workflows/tool-refresh/`. News catch-up uses `workflows/news-ref
 
 ## Plan
 
-Create a planner JSON from the page refresh ledger:
+Use the Rust runner for normal batches. It writes the planner JSON, exact worker prompts, worker report scaffolds, content route args, and interactive route args under `local/tmp/aipedia-runner/page-refresh/`:
+
+```bash
+npm run runner:page-refresh:plan
+```
+
+Create a planner JSON directly from the page refresh ledger only when debugging the Node planner:
 
 ```bash
 npm run --silent page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --json > .tmp-page-refresh-batch.json
@@ -76,7 +82,21 @@ Regenerate the ledger after edits:
 npm run ledger:pages && npm run ledger:pages:check
 ```
 
+Before closeout, summarize worker reports:
+
+```bash
+npm run runner:page-refresh:reports
+```
+
 ## Verification
+
+Use the Rust runner for closeout:
+
+```bash
+npm run runner:page-refresh:closeout
+```
+
+The runner executes the cheap gates, typecheck, build, content route QA, interactive route QA, worker-report summary, per-command timing, and a local receipt in order. Use `-- --skip-build` or `-- --skip-route-qa` only for scoped workflow testing.
 
 Cheap gates:
 
@@ -113,6 +133,8 @@ mkdir -p local/tmp/page-refresh-timings
 node -e "const p=require('./.tmp-page-refresh-batch.json'); console.log(p.commands.timed_closeout.map(x => x.command).join('\n'))"
 ```
 
+The manual timed commands are fallback rails. Prefer `runner:page-refresh:closeout` because it records the same information in one durable receipt.
+
 ## Closeout Report
 
 Report:
@@ -131,5 +153,5 @@ Treat this as version one. After each real page-refresh batch:
 
 1. Record what wasted time or caused misses.
 2. Patch this workflow and `scripts/page-refresh-batch.mjs` when the improvement is stable.
-3. Add tests when the improvement is executable.
+3. Patch `tools/aipedia-runner/` when orchestration, timing, receipt, or report aggregation improves.
 4. Update `.agent/WORK_LOG.md` and one loop-run receipt.

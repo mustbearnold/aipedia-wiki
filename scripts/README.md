@@ -22,6 +22,9 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run tool:refresh:batch:check -- --plan <planner-json>`: runs the fast grouped tool gate from a saved planner JSON file, including changed-frontmatter parsing. Workers should not run this; the integrator runs it after collecting tool edits.
 - `npm run runner:tool-refresh:plan`: uses the Rust workflow runner to create planner JSON, worker prompt files, and route QA args under `local/tmp/aipedia-runner/`.
 - `npm run runner:tool-refresh:closeout`: uses the Rust workflow runner to execute the ledger precheck, grouped batch check, typecheck, build, route QA, and a local receipt in order.
+- `npm run runner:page-refresh:plan`: uses the Rust workflow runner to create non-tool page planner JSON, worker prompt files, worker report scaffolds, and split route QA args under `local/tmp/aipedia-runner/page-refresh/`.
+- `npm run runner:page-refresh:reports`: aggregates page-refresh worker JSON reports into a local summary.
+- `npm run runner:page-refresh:closeout`: uses the Rust workflow runner to execute page-refresh cheap gates, typecheck, build, split route QA, worker-report summary, and a local receipt in order.
 - `npm run qa:route`: route-specific Playwright QA for mobile, tablet, and desktop widths. Use `--base-url http://127.0.0.1:<port>` for no-build checks against a running local server, and `--concurrency 4` for faster route matrices when the server is stable.
 - `npm run check`: broad source, content, link, news, asset, and security checks.
 - `npm run audit:provenance:changed`: scoped provenance and pricing gate for changed tool pages; `npm run audit:provenance` still reports all catalog debt.
@@ -40,7 +43,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `tool-refresh-batch.mjs`: plans grouped tool freshness work. Use `--limit 60 --max-workers 6 --tools-per-worker 10 --json` for machine-readable batch plans and `--agents` for six shard-worker prompts. Planner output includes scoped `audit:sources` commands so integrators can check registered source reachability, content-hash changes, and snapshot updates before manual review.
 - `check-frontmatter.mjs`: parses changed or explicit markdown frontmatter with `js-yaml` and reports file, line, and column for YAML syntax failures.
 - `tool-refresh-batch-check.mjs`: runs the cheap grouped tool gate. It accepts explicit `--file` values or a saved planner JSON through `--plan` or `--files-from`.
-- `tools/aipedia-runner/`: Rust orchestration wrapper around the planner, closeout gates, route-arg generation, worker prompt files, and local receipts.
+- `tools/aipedia-runner/`: Rust orchestration wrapper around the tool and page refresh planners, closeout gates, route-arg generation, worker prompt files, worker report summaries, and local receipts.
 - `qa-route.mjs`: serves the built output and verifies a local route across 360, 390, 430, 768, 1024, and 1366 px unless custom widths are supplied.
 - `npm run guard:challenge`: creates a proposed guard challenge artifact when a guard, audit, check, or fixture may need to change.
 - `npm run guard:challenge:check`: validates accepted guard challenge artifacts have implementer, defender, arbitrator, fixture or test, and verification evidence.

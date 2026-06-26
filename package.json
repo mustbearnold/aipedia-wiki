@@ -106,7 +106,11 @@
     "runner:tool-refresh:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- plan",
     "runner:tool-refresh:route-args": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- route-args",
     "runner:tool-refresh:closeout": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- closeout",
-    "runner:tool-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- run"
+    "runner:tool-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- run",
+    "runner:page-refresh:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-plan",
+    "runner:page-refresh:reports": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-reports",
+    "runner:page-refresh:closeout": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-closeout",
+    "runner:page-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-run"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

@@ -8,7 +8,7 @@ Use it for stable procedures that should survive clean clones, new agents, and f
 
 - `tool-refresh/`: six-worker AI tool page refresh workflow, including worker prompts, integrator checklist, and verification sequence.
 - `news-refresh/`: placeholder for the daily AI news refresh workflow.
-- `page-refresh/`: first runnable non-tool page refresh workflow, including ledger planner, worker prompts, integrator checklist, and timing-aware verification.
+- `page-refresh/`: Rust-runner-backed non-tool page refresh workflow, including ledger planner, worker prompts, worker report scaffolds, integrator checklist, and timing-aware verification.
 - `qa/`: placeholder for route QA, layout checks, and manual inspection routines.
 - `templates/`: reusable report/checklist templates for workflow runs.
 
@@ -38,4 +38,6 @@ Useful commands:
 ```bash
 npm run runner:tool-refresh:plan
 npm run runner:tool-refresh:closeout
+npm run runner:page-refresh:plan
+npm run runner:page-refresh:closeout
 ```
