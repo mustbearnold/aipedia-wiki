@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-headshots
 title: "Best AI for Professional Headshots (June 2026)"
 seo_title: "Best AI for Professional Headshots: Midjourney, ChatGPT & Gemini (June 2026)"
-meta_description: "Updated June 12, 2026: Midjourney is best for portrait direction, ChatGPT is best for guided conservative edits, Gemini is best inside Google workflows, and real photography is safest for regulated profiles."
+meta_description: "Updated June 26, 2026: Midjourney is best for portrait direction, ChatGPT is best for guided conservative edits, Gemini is best inside Google workflows, and real photography is safest for regulated profiles."
 description: "A practical June 2026 guide to AI professional headshots, including likeness, disclosure, consent, brand fit, buying advice, and when a real photographer is still better."
 tools_mentioned: ["midjourney", "chatgpt", "gemini"]
 guide_picks:
@@ -32,8 +32,8 @@ guide_picks:
       - label: "Google AI plans"
         url: "https://one.google.com/about/google-ai-plans/"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 AI headshots can help when you need a quick profile image, but the bar is higher than "looks polished." A good headshot must still look like you, fit the role, and avoid the over-smoothed synthetic style that makes hiring profiles feel untrustworthy.
 
-Verified June 12, 2026 against current official Midjourney, ChatGPT/OpenAI image, Google AI, and Workspace sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified June 26, 2026 against current official Midjourney, ChatGPT/OpenAI image, Google AI, and Workspace sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -53,7 +53,7 @@ Pick **Midjourney** for high-aesthetic portrait exploration, **ChatGPT** for qui
 - **[ChatGPT](/tools/chatgpt/):** best for quick profile variants, edit requests, photo-selection coaching, LinkedIn/resume context, and conservative prompts. Avoid changing identity, age, body shape, credentials, or professional status.
 - **[Gemini](/tools/gemini/):** best for Google ecosystem users and lightweight image/profile workflows around Docs, Drive, Gmail, and resumes. It is not a dedicated headshot studio workflow.
 
-## June 6 Headshot Trust Update
+## June 26 Headshot Trust Update
 
 - **Likeness beats polish.** A glossy image that makes a person look slightly different is worse than a less dramatic real photo.
 - **Use real source photos.** Text-only portrait prompts are too likely to invent identity, age, facial structure, wardrobe, or professional signals.
@@ -141,12 +141,12 @@ Check current vendor pricing before relying on any free tier for production head
 Midjourney is strong for aesthetic portrait concepts, but a real photographer remains the safest quality choice for executive and regulated use.
 
 **How often is this list updated?**
-Verified monthly; latest full check completed 2026-06-12.
+Verified monthly; latest full check completed 2026-06-26.
 
 ## Sources
 
-- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [OpenAI image generation API](https://openai.com/index/image-generation-api/) (verified 2026-06-12)
-- [Google AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-12)
-- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-12)
+- [Midjourney plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-26)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-26)
+- [OpenAI image generation API](https://openai.com/index/image-generation-api/) (verified 2026-06-26)
+- [Google AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-26)
+- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-26)

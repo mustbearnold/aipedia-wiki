@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-excel
 title: "Best AI for Excel and Spreadsheets (June 2026)"
 seo_title: "Best AI for Excel and Spreadsheets: Copilot, ChatGPT, Gemini, Claude, Rows & Julius (June 2026)"
-meta_description: "Updated June 12, 2026: Microsoft 365 Copilot is best inside Excel, ChatGPT is best for general spreadsheet analysis, Gemini is best for Sheets, Claude is best for review, and Rows or Julius fit specialist workflows."
+meta_description: "Updated June 26, 2026: Microsoft 365 Copilot is best inside Excel, ChatGPT is best for general spreadsheet analysis, Gemini is best for Sheets, Claude is best for review, and Rows or Julius fit specialist workflows."
 description: "A current buyer guide to AI for Excel and spreadsheet work, covering native Excel Copilot, file uploads, formula help, Google Sheets, audit review, and what not to automate."
 tools_mentioned: ["chatgpt", "gemini", "claude", "rows", "julius"]
 guide_picks:
@@ -34,8 +34,8 @@ guide_picks:
       - label: "Claude pricing"
         url: "https://claude.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 ---
 
@@ -43,7 +43,7 @@ update_frequency: monthly
 
 The best AI for Excel depends on whether you need help **inside the spreadsheet** or help **around the spreadsheet**. Native Excel work points to Microsoft 365 Copilot. Ad hoc analysis, formulas, CSV cleanup, and explanation often work better in ChatGPT, Gemini, Claude, Rows, or Julius.
 
-Verified June 12, 2026 against current Microsoft, ChatGPT, Claude, Google, Rows, and Julius sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified June 26, 2026 against current Microsoft, ChatGPT, Claude, Google, Rows, and Julius sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -55,7 +55,7 @@ Use **[Gemini](/tools/gemini/)** if your spreadsheet workflow is Google Sheets a
 
 Use **[Claude](/tools/claude/)** when the job is review, explanation, assumptions, controls, and written analysis rather than direct spreadsheet editing.
 
-## June 6 Spreadsheet Workflow Update
+## June 26 Spreadsheet Workflow Update
 
 - **Microsoft 365 Copilot is still the native Excel answer** for teams already standardized on Microsoft 365, but eligibility, app version, storage location, admin controls, and licensing matter before procurement.
 - **ChatGPT remains the best AiPedia-tracked first purchase** for people who analyze spreadsheets alongside PDFs, notes, charts, screenshots, Python checks, and written reports.
@@ -141,15 +141,15 @@ Rows' current AI page positions Rows AI around in-spreadsheet AI access, transfo
 
 ## Sources
 
-- [Get started with Copilot in Excel](https://support.microsoft.com/en-us/copilot-excel?azure-portal=true) (verified 2026-06-12)
-- [Frequently asked questions about Copilot in Excel](https://support.microsoft.com/en-us/office/frequently-asked-questions-about-copilot-in-excel-7a13758f-d61e-4a56-8440-f2c9a07802ec) (verified 2026-06-12)
-- [Microsoft 365 Copilot pricing](https://www.microsoft.com/en-us/microsoft-365/copilot/pricing) (verified 2026-06-12)
-- [Microsoft 365 Copilot release notes](https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes) (verified 2026-06-12)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [Google AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-12)
-- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-12)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
-- [Rows AI](https://rows.com/ai) (verified 2026-06-12)
-- [Rows pricing](https://rows.com/pricing) (verified 2026-06-12)
-- [Julius pricing](https://julius.ai/pricing/) (verified 2026-06-12)
-- [Julius billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-12)
+- [Get started with Copilot in Excel](https://support.microsoft.com/en-us/copilot-excel?azure-portal=true) (verified 2026-06-26)
+- [Frequently asked questions about Copilot in Excel](https://support.microsoft.com/en-us/office/frequently-asked-questions-about-copilot-in-excel-7a13758f-d61e-4a56-8440-f2c9a07802ec) (verified 2026-06-26)
+- [Microsoft 365 Copilot pricing](https://www.microsoft.com/en-us/microsoft-365/copilot/pricing) (verified 2026-06-26)
+- [Microsoft 365 Copilot release notes](https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes) (verified 2026-06-26)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-26)
+- [Google AI plans](https://one.google.com/about/google-ai-plans/) (verified 2026-06-26)
+- [Google Workspace AI](https://workspace.google.com/solutions/ai/) (verified 2026-06-26)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-26)
+- [Rows AI](https://rows.com/ai) (verified 2026-06-26)
+- [Rows pricing](https://rows.com/pricing) (verified 2026-06-26)
+- [Julius pricing](https://julius.ai/pricing/) (verified 2026-06-26)
+- [Julius billing update](https://julius.ai/content/billing-update-messages-to-usage-credits) (verified 2026-06-26)

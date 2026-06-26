@@ -1,5 +1,18 @@
 # AiPedia Work Log
 
+### 2026-06-26: Non-Tool Page Refresh Batch 03
+
+- Status: Complete and verified.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Ran the optimized Rust page-refresh workflow over 18 guide routes from academic writing through LinkedIn, including one archived noindex legal-research guide. Refreshed June 26 verification language, source dates, and targeted buyer notes; updated affected parent surfaces `/guides/`, `/answers/best-ai-for-writing-2026/`, AI Writing, AI Research, AI Coding, AI Design, AI Automation, AI Search, and `PAGE_REFRESH_LEDGER.md`.
+- Timing: Planner 0.73s; bulk source URL check 66.07s for 106 unique URLs; per-page source timing 99.87s across 18 pages; worker reports parsed 6/6 with 175 report source URLs, 35 confidence labels, 21 caveats, and 41 parent notes. Final closeout passed in 62.57s wall time: cheap gates 2.375s, typecheck 14.284s, build:fast 16.124s, and route QA 29.443s for 24 indexable routes across seven widths.
+- Verification: `npm run runner:page-refresh:plan -- --limit 18 --workers 6 --pages-per-worker 3`; grouped current-source searches with `June 2026`; bulk and per-page source URL health checks; `npm run ledger:pages`; `npm run ledger:pages:check`; `npm run runner:page-refresh:reports`; `npm run runner:page-refresh:closeout`.
+- Failed then fixed: Main-thread generated worker reports used `name` instead of the Rust schema's `command` field for checks, so the first report aggregation parsed 0/6. Rewrote the report checks to the schema and reran aggregation cleanly at 6/6.
+- Optimization notes: Source health checks are now the slowest micro-step. Add a bounded concurrent page-source checker with per-domain rate limits and access-sensitive handling for 401, 403, and 429. Also update planner scaffolds so `checks` uses `command`.
+- Residual risks: Some official sources are access-gated or rate-limited from CLI checks. The archived legal-research guide remains noindex and intentionally skipped indexable route QA.
+- Next: Patch the worker-report scaffold schema and source-health helper before scaling above 18 pages.
+
 ### 2026-06-26: Page Refresh Workflow Policy And Report Optimization
 
 - Status: Complete and verified.

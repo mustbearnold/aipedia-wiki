@@ -3,23 +3,23 @@ type: use-case
 slug: best-ai-for-legal-research
 title: "Best AI for Legal Research (Archived)"
 seo_title: "Best AI for Legal Research (Archived, Rechecked June 2026)"
-meta_description: "Archived and rechecked June 12, 2026: AiPedia is keeping this legal-research guide noindexed until it can be rebuilt with jurisdiction caveats, legal-specific sources, citation verification, privilege guidance, and lawyer-review workflows."
+meta_description: "Archived and rechecked June 26, 2026: AiPedia is keeping this legal-research guide noindexed until it can be rebuilt with jurisdiction caveats, legal-specific sources, citation verification, privilege guidance, and lawyer-review workflows."
 description: "This archived route explains why AiPedia removed the old legal-research AI guide from the active index and what evidence is required before a legal AI buyer guide can ship."
 tools_mentioned: ["perplexity", "claude", "chatgpt", "harvey", "spellbook"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-26
+last_verified: 2026-06-26
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI for Legal Research (Archived)
 
-AiPedia removed the previous version of this page from the active index on May 9, 2026. This archive note was rechecked on June 12, 2026 and remains noindexed.
+AiPedia removed the previous version of this page from the active index on May 9, 2026. This archive note was rechecked on June 26, 2026 and remains noindexed.
 
 The old guide made legal-research recommendations using generic AI-model claims, stale pricing/version language, and weak third-party ranking sources. That is not good enough for a high-stakes legal buyer page. A trustworthy legal-research guide needs current source-backed coverage of legal databases, jurisdiction limits, citation reliability, privilege and confidentiality, hallucination risk, professional-responsibility constraints, and human lawyer review.
 
-## June 6, 2026 Status
+## June 26, 2026 Status
 
 AiPedia found stronger legal AI signals since the old page was archived:
 
@@ -58,8 +58,8 @@ Until then, keeping this page indexed would hurt trust more than it would help t
 
 ## Sources
 
-- [Claude for the legal industry](https://claude.com/blog/claude-for-the-legal-industry) (verified 2026-06-12)
-- [Thomson Reuters CoCounsel](https://www.thomsonreuters.com/en/cocounsel) (verified 2026-06-12)
-- [CoCounsel Legal reimagined](https://www.thomsonreuters.com/en-us/posts/innovation/cocounsel-legal-reimagined/) (verified 2026-06-12)
-- [Spellbook pricing](https://spellbook.com/pricing) (verified 2026-06-12)
-- [Harvey official site](https://www.harvey.ai/) (verified 2026-06-12)
+- [Claude for the legal industry](https://claude.com/blog/claude-for-the-legal-industry) (verified 2026-06-26)
+- [Thomson Reuters CoCounsel](https://www.thomsonreuters.com/en/cocounsel) (verified 2026-06-26)
+- [CoCounsel Legal reimagined](https://www.thomsonreuters.com/en-us/posts/innovation/cocounsel-legal-reimagined/) (verified 2026-06-26)
+- [Spellbook pricing](https://spellbook.com/pricing) (verified 2026-06-26)
+- [Harvey official site](https://www.harvey.ai/) (verified 2026-06-26)

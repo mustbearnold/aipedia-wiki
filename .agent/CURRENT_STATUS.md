@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`. Latest pushed content batch is non-tool page-refresh batch 02. Latest workflow improvement is page-refresh policy and report optimization.
+- Branch: `master`. Latest content batch is non-tool page-refresh batch 03. Latest workflow improvement is page-refresh policy and report optimization.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -35,6 +35,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - The first live non-tool page-refresh batch is complete and pushed: 12 routes across terms, disclosure, reports, answers, compare-builder, dead archive, and three comparison pages. The follow-up optimization pass added parseable worker reports, route-QA policy mapping, and closeout micro-timing so future speed, efficiency, quality, and accuracy reviews have structured data.
 - Non-tool page-refresh batch 02 is pushed: 12 comparison and guide routes from Frase/NeuronWriter through heavy-inbox triage, parent hubs `/compare/`, `/guides/`, AI SEO, AI Presentation, AI Chatbots, AI Automation, and `PAGE_REFRESH_LEDGER.md`. Worker reports parsed 3/3 with 89 source URLs, 51 confidence labels, 29 caveats, and 75 parent surface notes. Final closeout passed in 51.528s.
 - Page-refresh workflow optimization is verified: planner routes now carry explicit QA policy classes, archived noindex content remains content/frontmatter-only for QA, and the Rust report summary now emits worker efficiency metrics plus parent-surface hints.
+- Non-tool page-refresh batch 03 is verified: 18 guide routes from academic writing through LinkedIn, with affected `/guides/`, `/answers/best-ai-for-writing-2026/`, AI Writing, AI Research, AI Coding, AI Design, AI Automation, AI Search, and `PAGE_REFRESH_LEDGER.md`. Worker reports parsed 6/6 with 175 report source URLs, 35 confidence labels, 21 caveats, and 41 parent notes. Final closeout passed in 62.57s wall time. One archived noindex legal-research route stayed out of indexable route QA by policy.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -157,6 +158,8 @@ Batch 01 refreshed `/terms/`, `/disclosure/`, `/reports/`, `/dead/`, four answer
 Batch 02 refreshed six comparison routes and six guide routes. Closeout receipt: `local/tmp/aipedia-runner/page-refresh/receipts/2026-06-26T07-03-32Z-page-refresh-closeout.md`. Durable receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-02.md`. Keep the archived-noindex policy: refresh archived pages when selected, but do not include them in indexable route QA unless explicitly testing noindex behavior.
 
 The follow-up workflow optimization added route policy classes and worker efficiency reporting. Use `npm run runner:page-refresh:reports` before integration review; the summary now includes pages/minute, sources/page, caveats/page, confidence labels/page, failed worker checks, and parent-surface hints.
+
+Batch 03 refreshed 18 guide routes from `/guides/best-ai-for-academic-writing/` through `/guides/best-ai-for-linkedin/`. Closeout receipt: `local/tmp/aipedia-runner/page-refresh/receipts/2026-06-26T08-22-14Z-page-refresh-closeout.md`. Durable receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-03.md`. The next workflow patch should add a bounded concurrent page-source health helper and update worker-report check scaffolds from `name` to `command`.
 
 ### Oldest-First Tool Freshness
 

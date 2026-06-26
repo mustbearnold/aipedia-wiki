@@ -7,7 +7,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-26.
-- Branch baseline: `master`; latest pushed content batch is non-tool page-refresh batch 02. Latest workflow improvement is page-refresh policy and report optimization.
+- Branch baseline: `master`; latest content batch is non-tool page-refresh batch 03. Latest workflow improvement is page-refresh policy and report optimization.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
@@ -16,6 +16,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - The first live non-tool page-refresh batch is complete and pushed. It refreshed 12 routes, recorded worker and closeout timings, and hardened the workflow with prompt-file output, explicit current-date coverage-quality audits, route-QA policy mapping, parseable worker report artifacts, and Rust runner orchestration.
 - Non-tool page-refresh batch 02 is pushed. It refreshed 12 comparison and guide routes, updated affected compare/guides/category parent surfaces, parsed 3/3 worker reports, and passed closeout in 51.528s.
 - The latest page-refresh workflow optimization adds explicit route QA policy classes and report-level efficiency metrics. The planner now marks archived noindex content routes as content/frontmatter verification only, not indexable route-QA targets. The Rust report summary now shows pages/minute, sources/page, caveats/page, confidence labels/page, failed checks, and parent-surface hints.
+- Non-tool page-refresh batch 03 is verified. It refreshed 18 guide routes from academic writing through LinkedIn, updated affected guide/category/answer parent surfaces, parsed 6/6 worker reports, and passed closeout in 62.57s wall time.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
@@ -166,9 +167,21 @@ Batch 02 refreshed:
 
 Closeout passed with 3/3 worker reports parsed, 89 source URLs, 51 confidence labels, 29 caveats, 75 parent notes, and 18 indexable routes checked at seven widths. The archived noindex guide routes were content-refreshed and frontmatter-checked, then excluded from indexable route QA by policy.
 
+### Batch 03 Complete
+
+- Started: 2026-06-26.
+- Scope: 18 oldest non-tool guide routes from `/guides/best-ai-for-academic-writing/` through `/guides/best-ai-for-linkedin/`.
+- Planner: `npm run runner:page-refresh:plan -- --limit 18 --workers 6 --pages-per-worker 3`.
+- Timing baseline: planner wall time 0.73s.
+- QA policy mix: 17 `indexable-buyer` guide routes and 1 `archived-noindex` guide route.
+- Integration: refreshed the guide pages, updated affected guide/category/answer/top-layer surfaces, regenerated `PAGE_REFRESH_LEDGER.md`, wrote worker reports, ran `runner:page-refresh:reports`, and ran timed `runner:page-refresh:closeout`.
+- Timing: worker reports parsed 6/6 with 99.78 reported worker seconds, 175 source URLs, 35 confidence labels, 21 caveats, 41 parent notes, and 0 failed worker checks. Closeout passed in 62.57s wall time: cheap gates 2.375s, typecheck 14.284s, build:fast 16.124s, and route QA 29.443s for 24 indexable routes across seven widths.
+- Durable receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-03.md`.
+- Optimization target met: source-health timing is now the clearest bottleneck; add a bounded concurrent source-health helper and update report scaffold `checks` from `name` to `command` before scaling beyond 18 pages.
+
 ### Next
 
-Run one more 12 to 18 page non-tool page batch with generated prompt files, worker report scaffolds, explicit route policy classes, and the archived-noindex route policy. Review shard elapsed seconds, pages/minute, sources/page, parent hints, route QA time, and rework count before scaling beyond 18 pages.
+Patch the workflow to add a bounded concurrent source-health helper and fix report scaffold check keys before scaling beyond 18 pages.
 
 ## Active: Decision Content Flywheel
 
