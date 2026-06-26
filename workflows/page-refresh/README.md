@@ -111,6 +111,14 @@ Use the report summary to plan integration. It now includes worker efficiency me
 - failed worker checks
 - parent surfaces grouped by the child routes that referenced them
 
+Before or during closeout, check page-local source URLs with the bounded concurrent checker:
+
+```bash
+npm run page:source-health -- --plan local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json --out local/tmp/page-refresh-source-health.json
+```
+
+The checker records per-page and per-source timing, treats `401`, `403`, and `429` as access-sensitive instead of dead, and fails only on broken or unreachable source URLs. Use `--concurrency`, `--timeout-ms`, and `--domain-delay-ms` when a batch has dense source lists or a source domain starts rate-limiting.
+
 ## Verification
 
 Use the Rust runner for closeout:
@@ -119,7 +127,7 @@ Use the Rust runner for closeout:
 npm run runner:page-refresh:closeout
 ```
 
-The runner executes the cheap gates, typecheck, build, content route QA, interactive route QA, worker-report summary, per-command timing, and a local receipt in order. Use `-- --skip-build` or `-- --skip-route-qa` only for scoped workflow testing.
+The runner executes the cheap gates, bounded page source health, typecheck, build, content route QA, interactive route QA, worker-report summary, per-command timing, and a local receipt in order. Use `-- --skip-build`, `-- --skip-route-qa`, or `-- --skip-source-health` only for scoped workflow testing.
 
 Cheap gates:
 
@@ -130,6 +138,7 @@ npm run audit:provenance:changed -- --json
 npm run audit:coverage-quality:changed
 node scripts/guard-em-dashes.mjs
 git diff --check
+npm run page:source-health -- --plan local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json --out local/tmp/page-refresh-source-health.json
 ```
 
 Expensive gates:

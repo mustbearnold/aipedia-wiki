@@ -165,6 +165,8 @@ struct PageCloseoutArgs {
     #[arg(long)]
     skip_route_qa: bool,
     #[arg(long)]
+    skip_source_health: bool,
+    #[arg(long)]
     strict_reports: bool,
 }
 
@@ -178,6 +180,8 @@ struct PageRunArgs {
     skip_build: bool,
     #[arg(long)]
     skip_route_qa: bool,
+    #[arg(long)]
+    skip_source_health: bool,
     #[arg(long)]
     strict_reports: bool,
 }
@@ -375,6 +379,7 @@ fn main() -> Result<()> {
                         ),
                         skip_build: args.skip_build,
                         skip_route_qa: args.skip_route_qa,
+                        skip_source_health: args.skip_source_health,
                         strict_reports: args.strict_reports,
                     },
                     cli.dry_run,
@@ -679,6 +684,10 @@ fn page_closeout(project_dir: &Path, args: &PageCloseoutArgs, dry_run: bool) -> 
         "{}-page-refresh-route-qa-interactive.json",
         Utc::now().format("%Y-%m-%dT%H-%M-%SZ")
     ));
+    let source_health_path = timing_dir.join(format!(
+        "{}-page-refresh-source-health.json",
+        Utc::now().format("%Y-%m-%dT%H-%M-%SZ")
+    ));
 
     let mut results = Vec::new();
     let mut steps: Vec<(
@@ -751,14 +760,37 @@ fn page_closeout(project_dir: &Path, args: &PageCloseoutArgs, dry_run: bool) -> 
             None,
             vec![],
         ),
-        (
-            "typecheck".to_string(),
-            npm_bin().to_string(),
-            vec!["run".to_string(), "typecheck".to_string()],
-            None,
-            vec![],
-        ),
     ];
+
+    if !args.skip_source_health {
+        steps.push((
+            "page source health".to_string(),
+            npm_bin().to_string(),
+            vec![
+                "run".to_string(),
+                "page:source-health".to_string(),
+                "--".to_string(),
+                "--plan".to_string(),
+                display_path(project_dir, &plan_path),
+                "--out".to_string(),
+                display_path(project_dir, &source_health_path),
+                "--concurrency".to_string(),
+                "8".to_string(),
+                "--timeout-ms".to_string(),
+                "8000".to_string(),
+            ],
+            Some(source_health_path),
+            vec![],
+        ));
+    }
+
+    steps.push((
+        "typecheck".to_string(),
+        npm_bin().to_string(),
+        vec!["run".to_string(), "typecheck".to_string()],
+        None,
+        vec![],
+    ));
 
     if !args.skip_build {
         steps.push((

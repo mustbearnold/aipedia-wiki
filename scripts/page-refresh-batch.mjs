@@ -229,6 +229,7 @@ function buildCommands(batch) {
   const interactiveRouteQa = interactiveRoutes.length
     ? `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 ${interactiveRouteArgs} --widths ${widths} ${interactivePolicyFlags(interactiveRoutes)} --timing-file local/tmp/page-refresh-route-qa-interactive.json`
     : undefined;
+  const sourceHealth = 'npm run page:source-health -- --out local/tmp/page-refresh-source-health.json';
   const expensiveGates = [
     'npm run typecheck',
     'npm run build:fast',
@@ -243,6 +244,7 @@ function buildCommands(batch) {
     route_policies: routePolicies,
     route_qa_args: contentRouteArgs,
     interactive_route_qa_args: interactiveRouteArgs,
+    source_health: sourceHealth,
     timing_dir: TIMING_DIR,
     cheap_gates: [
       'npm run ledger:pages && npm run ledger:pages:check',
@@ -335,6 +337,7 @@ function workerPrompt(id, pages, ownedPaths, reportPath) {
     `Write your machine-readable worker report to ${reportPath}. If your worker cannot write that file, paste the same JSON in your final answer.`,
     '',
     'Report schema:',
+    'The checks array must use objects with command, status, and notes. Do not use name for check labels.',
     JSON.stringify(workerReportTemplate(id, pages), null, 2),
   ].join('\n');
 }
@@ -359,6 +362,13 @@ function workerReportTemplate(id, pages) {
       notes: '',
     })),
     checks: [],
+    checks_schema: [
+      {
+        command: 'short name of the check or command',
+        status: 'passed | failed | needs-review',
+        notes: 'brief result',
+      },
+    ],
     optimization_notes: [],
   };
 }

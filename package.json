@@ -46,6 +46,7 @@
     "tool:refresh:batch": "node scripts/tool-refresh-batch.mjs",
     "tool:refresh:batch:check": "node scripts/tool-refresh-batch-check.mjs",
     "page:refresh:batch": "node scripts/page-refresh-batch.mjs",
+    "page:source-health": "node scripts/page-source-health.mjs",
     "audit:company": "node scripts/audit-company.mjs --check",
     "company:gaps": "node scripts/audit-company.mjs --gaps",
     "audit:bestof-quality": "node scripts/audit-bestof-quality.mjs",

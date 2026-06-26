@@ -1,5 +1,17 @@
 # AiPedia Work Log
 
+### 2026-06-26: Page Refresh Source Health Optimization
+
+- Status: Complete and verified.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `scripts/page-source-health.mjs` and `npm run page:source-health` for bounded concurrent source URL checks with per-source and per-page timing, timeout controls, per-host pacing, and access-sensitive handling for 401, 403, and 429. Wired source health into Rust `runner:page-refresh:closeout` before typecheck, added `--skip-source-health` for scoped workflow tests, fixed worker report scaffolds so checks use `command`, `status`, and `notes`, updated workflow docs, and normalized `PAGE_REFRESH_LEDGER.md` after the closeout regen.
+- Timing: Focused source-health unit tests run in 299.7ms. A live two-page planner smoke checked 21 source URLs in 5.211s with concurrency 4, replacing the prior serial per-page source-health bottleneck shape from batch 03.
+- Verification: `npm exec --yes --package=node@24 -- node --test tests/scripts/page-refresh-batch.test.mjs tests/scripts/page-source-health.test.mjs`; `cargo test --manifest-path tools/aipedia-runner/Cargo.toml`; `npm run runner:page-refresh:plan -- --limit 2 --workers 1 --pages-per-worker 2`; `npm run page:source-health -- --plan local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json --out local/tmp/aipedia-runner/page-refresh/source-health-smoke.json --concurrency 4 --timeout-ms 8000`; `npm run runner:page-refresh:closeout -- --skip-build --skip-route-qa --skip-source-health`; `npm run audit:commands`; `node scripts/guard-em-dashes.mjs && git diff --check`.
+- Failed then fixed: The new source-health tests first timed out because the synchronous child process blocked the local HTTP server owned by the same test process. Switched the helper to async `execFile` and reran cleanly.
+- Residual risks: The live source-health smoke intentionally failed on an existing content issue: `https://www.canva.com/logo-maker/` returns 404 on `/guides/best-ai-for-logo-design/`. Treat that as the first repair in the next content refresh pass.
+- Next: Fix the Canva source on `/guides/best-ai-for-logo-design/`, then run the next oldest-first non-tool batch with source health enabled.
+
 ### 2026-06-26: Non-Tool Page Refresh Batch 03
 
 - Status: Complete and verified.

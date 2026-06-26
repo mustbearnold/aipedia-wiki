@@ -56,6 +56,7 @@ test('page refresh planner excludes tools and orders oldest non-tool pages', () 
     assert.equal(report.batch[0].route_qa_policy.kind, 'archived-noindex');
     assert.equal(report.batch[1].route_qa_policy.kind, 'indexable-buyer');
     assert.match(report.commands.cheap_gates.join('\n'), /AIPEDIA_CURRENT_DATE=/);
+    assert.match(report.commands.source_health, /page:source-health/);
     assert.match(report.commands.expensive_gates.at(-1), /--concurrency 6/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
@@ -182,6 +183,8 @@ test('page refresh planner can write worker report scaffolds', () => {
     assert.equal(scaffold.shard_id, 'page-refresh-shard-01');
     assert.equal(scaffold.pages.length, 1);
     assert.equal(scaffold.pages[0].status, 'pending');
+    assert.equal(scaffold.checks_schema[0].command, 'short name of the check or command');
+    assert.doesNotMatch(readFileSync(join(reportDir, 'page-refresh-shard-01.json'), 'utf8'), /"name":/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
