@@ -6,6 +6,49 @@ seo_title: "Best AI Tools for Podcasters: Descript, Castmagic, ElevenLabs & Rive
 meta_description: "Updated June 27, 2026: Descript is best for transcript editing, Castmagic for show notes, clips, MCP/library search, and repurposing, ElevenLabs for synthetic voice, and Riverside for remote recording."
 description: "A practical buyer guide to AI podcast workflows covering recording, transcript editing, cleanup, voice generation, show notes, clips, repurposing, consent, disclosure, and synthetic voice risk."
 tools_mentioned: ["descript", "elevenlabs", "castmagic", "riverside"]
+intent_type: specific-workflow
+primary_tool: descript
+affiliate_tools:
+  - descript
+  - castmagic
+commercial_tools:
+  - descript
+configured_affiliate_tools:
+  - castmagic
+competitor_tools:
+  - riverside
+external_competitors:
+  - podcastle
+  - capcut
+buyer_job: Record, edit, repurpose, and publish podcast content faster.
+audience: Podcast hosts, creator teams, and agencies repurposing long-form audio or video.
+not_for:
+  - Studios that need pro DAW mastering only
+  - Teams that only need transcription
+decision_criteria:
+  - Transcript editing
+  - Clip repurposing
+  - Audio cleanup
+  - Publishing handoff
+search_intent: "Best AI Tools for Podcasters (June 2026)"
+conversion_angle: "Audience: Podcast hosts, creator teams, and agencies repurposing long-form audio or video. Buyer job: Record, edit, repurpose, and publish podcast content faster."
+unique_angle: "Podcast-specific workflow guide with recording, editing, and repurposing decisions."
+sibling_cluster: "podcast-production"
+overlap_guard: "Keep this page focused on this buyer job: Record, edit, repurpose, and publish podcast content faster. Do not clone sibling pages by only swapping descript or descript."
+cta_plan:
+  primary: "Lead with descript as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use descript as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: podcast-production
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: Podcast-specific workflow guide with recording, editing, and repurposing decisions.
 guide_picks:
   best_overall:
     tool: descript

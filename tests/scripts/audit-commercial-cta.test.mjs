@@ -240,6 +240,39 @@ function fixtureHtml(anchors) {
   return `<!doctype html><html><body><script>window.__aipediaTrackCommercialCTA = true;</script>${anchors}<p>Affiliate link; no extra cost to you.</p></body></html>`;
 }
 
+function writeTool(projectDir, slug, { title = slug, link = null, status = null, url = `https://example.com/${slug}` } = {}) {
+  const toolDir = join(projectDir, 'src', 'content', 'tools');
+  mkdirSync(toolDir, { recursive: true });
+  const affiliateBlock = link
+    ? [
+        'affiliate:',
+        '  has_program: true',
+        `  link: "${link}"`,
+        `  application_status: ${status ?? 'none'}`,
+      ].join('\n')
+    : '';
+  writeFileSync(join(toolDir, `${slug}.md`), [
+    '---',
+    'type: tool',
+    `slug: ${slug}`,
+    `title: "${title}"`,
+    `url: "${url}"`,
+    affiliateBlock,
+    '---',
+    '',
+  ].filter(Boolean).join('\n'));
+}
+
+function writeRequiredToolStates(projectDir) {
+  writeTool(projectDir, 'chatgpt', { title: 'ChatGPT' });
+  writeTool(projectDir, 'apollo', { title: 'Apollo.io', link: 'https://get.apollo.io/xdiykcapi88b', status: 'approved' });
+  writeTool(projectDir, 'adcreative', { title: 'AdCreative.ai', link: 'https://free-trial.adcreative.ai/46864ltm9g0d', status: 'approved' });
+  writeTool(projectDir, 'unbounce', { title: 'Unbounce', link: 'https://unbounce.partnerlinks.io/f49zh5fwcfoo', status: 'approved' });
+  writeTool(projectDir, 'amplemarket', { title: 'Amplemarket', link: 'https://grow.amplemarket.com/aipediawiki', status: 'approved' });
+  writeTool(projectDir, 'lindy', { title: 'Lindy', link: 'https://try.lindy.ai/a1y1dlsexvk1', status: 'approved' });
+  writeTool(projectDir, 'castmagic', { title: 'Castmagic', link: 'https://castmagic.firstpromoter.com/', status: 'none' });
+}
+
 test('commercial CTA audit validates representative and discovered built money pages', () => {
   const fixture = mkdtempSync(join(tmpdir(), 'aipedia-commercial-cta-'));
 
@@ -284,6 +317,67 @@ test('commercial CTA audit validates representative and discovered built money p
     assert.equal(report.issues.length, 0);
   } finally {
     rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('commercial CTA audit rejects configured-not-live affiliate CTA destinations', () => {
+  const projectDir = mkdtempSync(join(tmpdir(), 'aipedia-commercial-cta-project-'));
+  const siteDir = join(projectDir, 'dist', 'client');
+
+  try {
+    writeRequiredToolStates(projectDir);
+
+    for (const route of routes) {
+      const dir = join(siteDir, route.path);
+      mkdirSync(dir, { recursive: true });
+      const placements = route.requiredPlacements ?? [];
+      const requiredAffiliateLinks = route.requiredAffiliateLinks ?? [];
+      const anchors = [
+        ...requiredAffiliateLinks.map((link, index) => cta(route.pageType, index + 1, placements[index] ?? undefined, link)),
+        ...Array.from({ length: Math.max(route.count - requiredAffiliateLinks.length, 0) }, (_, index) => {
+          const offset = requiredAffiliateLinks.length + index;
+          return cta(route.pageType, offset + 1, placements[offset] ?? undefined);
+        }),
+      ].join('\n');
+      writeFileSync(join(dir, 'index.html'), fixtureHtml(anchors));
+    }
+
+    const badDir = join(siteDir, 'guides', 'castmagic-for-podcasters');
+    mkdirSync(badDir, { recursive: true });
+    writeFileSync(join(badDir, 'index.html'), fixtureHtml(cta('guide', 1, 'guide_top_pick', {
+      href: 'https://castmagic.firstpromoter.com/',
+      toolSlug: 'castmagic',
+      toolName: 'Castmagic',
+      affiliateProgram: 'FirstPromoter',
+    })));
+
+    const result = spawnSync(process.execPath, [
+      'scripts/audit-commercial-cta.mjs',
+      '--json',
+      '--project-dir',
+      projectDir,
+      '--site-dir',
+      siteDir,
+    ], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    });
+
+    assert.notEqual(result.status, 0);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.issues.some((issue) => (
+      issue.code === 'configured-not-live-affiliate-url-rendered' &&
+      issue.route === '/guides/castmagic-for-podcasters/' &&
+      issue.detail.includes('castmagic')
+    )));
+    assert.ok(report.issues.some((issue) => (
+      issue.code === 'affiliate-cta-tool-not-live' &&
+      issue.route === '/guides/castmagic-for-podcasters/' &&
+      issue.detail.includes('castmagic')
+    )));
+  } finally {
+    rmSync(projectDir, { recursive: true, force: true });
   }
 });
 

@@ -6,6 +6,45 @@ seo_title: "Best AI Landing Page Builder for A/B Testing: Unbounce, Instapage, V
 meta_description: "Verified June 27, 2026: the best AI landing page builders for serious A/B and multivariate testing, by buyer profile. Unbounce, Instapage, Leadpages, VWO, Webflow."
 description: "June 27, 2026 buyer guide to the best AI landing page builders for performance marketers running real A/B tests, with honest picks by team size, budget, and testing depth."
 tools_mentioned: ["unbounce"]
+intent_type: specific-workflow
+primary_tool: unbounce
+affiliate_tools:
+  - unbounce
+commercial_tools:
+  - unbounce
+external_competitors:
+  - instapage
+  - leadpages
+  - vwo
+buyer_job: Build and A/B test landing pages for paid acquisition campaigns.
+audience: Growth marketers, agencies, and SMB teams running paid traffic to landing pages.
+not_for:
+  - Teams that only need a website builder
+  - Companies with no traffic for statistically useful testing
+decision_criteria:
+  - A/B testing workflow
+  - Landing-page speed
+  - Template quality
+  - Ad platform fit
+search_intent: "Best AI Landing Page Builder for A/B Testing (June 2026)"
+conversion_angle: "Audience: Growth marketers, agencies, and SMB teams running paid traffic to landing pages. Buyer job: Build and A/B test landing pages for paid acquisition campaigns."
+unique_angle: "A/B testing guide with conversion workflow distinct from general design tools."
+sibling_cluster: "landing-page-ab-testing"
+overlap_guard: "Keep this page focused on this buyer job: Build and A/B test landing pages for paid acquisition campaigns. Do not clone sibling pages by only swapping unbounce or unbounce."
+cta_plan:
+  primary: "Lead with unbounce as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use unbounce as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: landing-page-ab-testing
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: A/B testing guide with conversion workflow distinct from general design tools.
 guide_picks:
   best_overall:
     tool: unbounce

@@ -16,7 +16,7 @@ Run the inventory:
 npm run affiliate:conversion:inventory
 npm run affiliate:conversion:inventory -- --json
 npm run audit:affiliate-conversion
-npm run audit:affiliate-conversion -- --json
+npm run audit:affiliate-conversion -- --strict --json
 ```
 
 As of the first inventory pass, there are 26 configured-link tools, 22 live-approved affiliate tools, and 4 configured-but-not-live tools. The generated registry under `src/data/_meta/tools-registry.json` may lag the markdown source, so use markdown plus this script as the source of truth until the registry generator is repaired.
@@ -90,7 +90,7 @@ Before publishing a page batch:
 
 ```bash
 npm run affiliate:conversion:inventory
-npm run audit:affiliate-conversion -- --json
+npm run audit:affiliate-conversion -- --strict --json
 npm run guard:check
 npm run audit:guide-picks
 npm run audit:provenance:changed -- --json

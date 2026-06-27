@@ -207,7 +207,7 @@ Create source-backed, mobile-first conversion pages around every tool with a con
 - Live-approved affiliate tools: 22.
 - Configured but not live-approved: 4.
 - First-pass scripted page budget: 108 pages, counting existing pages toward coverage when they already match a distinct buyer intent.
-- Existing money-guide audit baseline: 35 money guides, 0 hard errors, 245 warnings for missing new structured metadata fields.
+- Existing money-guide metadata backfill is complete locally and subagent-accepted at 9.9/10: 35 money guides, 0 hard errors, 0 warnings under strict audit after adding the structured conversion, anti-doorway, and CTA-plan contract.
 
 ### Page System
 
@@ -215,7 +215,7 @@ Use the existing `use-cases` guide route first unless a page clearly needs a new
 
 ### Next Implementation Slice
 
-1. Run the inventory and split tools into page batches by category and existing coverage.
+1. Commit and push the 35-guide metadata backfill.
 2. Repair approval metadata or defer monetization for configured-but-not-live tools.
 3. Implement the first five-page cluster for one approved tool with strong fit and existing source coverage.
 4. Add subagent review before finalizing the cluster: SEO/quality, visual/mobile, and accuracy.

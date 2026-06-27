@@ -230,30 +230,22 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /compare/gemini-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/gemini-vs-grok.md |
 | 2026-06-26 | /compare/pitch-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/pitch-vs-presentations-ai.md |
 | 2026-06-26 | /disclosure/ | Static page | Yes | git | src/pages/disclosure.astro |
-| 2026-06-26 | /guides/ai-content-creator-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-content-creator-stack.md |
 | 2026-06-26 | /guides/ai-content-pipeline/ | Guide | No | frontmatter | src/content/use-cases/ai-content-pipeline.md |
 | 2026-06-26 | /guides/ai-customer-support/ | Guide | No | frontmatter | src/content/use-cases/ai-customer-support.md |
-| 2026-06-26 | /guides/ai-lead-generation/ | Guide | Yes | frontmatter | src/content/use-cases/ai-lead-generation.md |
-| 2026-06-26 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
-| 2026-06-26 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
 | 2026-06-26 | /guides/best-ai-for-academic-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-academic-writing.md |
-| 2026-06-26 | /guides/best-ai-for-ad-copy/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-ad-copy.md |
 | 2026-06-26 | /guides/best-ai-for-api-documentation/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-api-documentation.md |
 | 2026-06-26 | /guides/best-ai-for-blog-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-blog-writing.md |
 | 2026-06-26 | /guides/best-ai-for-book-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-book-writing.md |
 | 2026-06-26 | /guides/best-ai-for-brainstorming/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-brainstorming.md |
 | 2026-06-26 | /guides/best-ai-for-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-citations.md |
-| 2026-06-26 | /guides/best-ai-for-cold-email/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-cold-email.md |
 | 2026-06-26 | /guides/best-ai-for-cover-letters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-cover-letters.md |
 | 2026-06-26 | /guides/best-ai-for-data-analysis/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-data-analysis.md |
 | 2026-06-26 | /guides/best-ai-for-debugging/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-debugging.md |
 | 2026-06-26 | /guides/best-ai-for-email-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-email-writing.md |
 | 2026-06-26 | /guides/best-ai-for-excel/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-excel.md |
 | 2026-06-26 | /guides/best-ai-for-headshots/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-headshots.md |
-| 2026-06-26 | /guides/best-ai-for-instagram/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-instagram.md |
 | 2026-06-26 | /guides/best-ai-for-interview-prep/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-interview-prep.md |
 | 2026-06-26 | /guides/best-ai-for-legal-research/ | Guide | No | frontmatter | src/content/use-cases/best-ai-for-legal-research.md |
-| 2026-06-26 | /guides/best-ai-for-linkedin/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-linkedin.md |
 | 2026-06-26 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
 | 2026-06-26 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
 | 2026-06-26 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
@@ -315,7 +307,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-06-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-26 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
-| 2026-06-27 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-27 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-27 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-27 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-27 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
@@ -331,19 +323,19 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-06-27 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
 | 2026-06-27 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
-| 2026-06-27 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-27 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-27 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-27 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-27 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-27 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-27 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-27 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
-| 2026-06-27 | /categories/ai-image/ | Category | Yes | working tree | src/content/categories/ai-image.md |
+| 2026-06-27 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-27 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-27 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
-| 2026-06-27 | /categories/ai-presentation/ | Category | Yes | working tree | src/content/categories/ai-presentation.md |
+| 2026-06-27 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-27 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
-| 2026-06-27 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
-| 2026-06-27 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
+| 2026-06-27 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-27 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-27 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-27 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-27 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -429,41 +421,49 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-27 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-27 | /guides/ai-agency-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-agency-stack.md |
+| 2026-06-27 | /guides/ai-content-creator-stack/ | Guide | Yes | working tree | src/content/use-cases/ai-content-creator-stack.md |
+| 2026-06-27 | /guides/ai-lead-generation/ | Guide | Yes | working tree | src/content/use-cases/ai-lead-generation.md |
 | 2026-06-27 | /guides/ai-solo-founder-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-solo-founder-stack.md |
 | 2026-06-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
 | 2026-06-27 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
+| 2026-06-27 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | working tree | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
 | 2026-06-27 | /guides/best-ai-coding-assistant/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-coding-assistant.md |
+| 2026-06-27 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | working tree | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
+| 2026-06-27 | /guides/best-ai-for-ad-copy/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-ad-copy.md |
 | 2026-06-27 | /guides/best-ai-for-code-review/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-code-review.md |
+| 2026-06-27 | /guides/best-ai-for-cold-email/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-cold-email.md |
+| 2026-06-27 | /guides/best-ai-for-instagram/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-instagram.md |
+| 2026-06-27 | /guides/best-ai-for-linkedin/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-linkedin.md |
 | 2026-06-27 | /guides/best-ai-for-logo-design/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-logo-design.md |
 | 2026-06-27 | /guides/best-ai-for-medical-research/ | Guide | No | frontmatter | src/content/use-cases/best-ai-for-medical-research.md |
-| 2026-06-27 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-meeting-notes.md |
+| 2026-06-27 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-meeting-notes.md |
 | 2026-06-27 | /guides/best-ai-for-newsletter-writers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-newsletter-writers.md |
 | 2026-06-27 | /guides/best-ai-for-photo-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-photo-editing.md |
-| 2026-06-27 | /guides/best-ai-for-podcasters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-podcasters.md |
-| 2026-06-27 | /guides/best-ai-for-presentations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-presentations.md |
+| 2026-06-27 | /guides/best-ai-for-podcasters/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-podcasters.md |
+| 2026-06-27 | /guides/best-ai-for-presentations/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-presentations.md |
 | 2026-06-27 | /guides/best-ai-for-resume-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-resume-writing.md |
-| 2026-06-27 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
-| 2026-06-27 | /guides/best-ai-for-social-media-posts/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-social-media-posts.md |
+| 2026-06-27 | /guides/best-ai-for-seo-content/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-seo-content.md |
+| 2026-06-27 | /guides/best-ai-for-social-media-posts/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-social-media-posts.md |
 | 2026-06-27 | /guides/best-ai-for-sql-queries/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-sql-queries.md |
 | 2026-06-27 | /guides/best-ai-for-summarization/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-summarization.md |
 | 2026-06-27 | /guides/best-ai-for-tiktok/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-tiktok.md |
-| 2026-06-27 | /guides/best-ai-for-transcription/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-transcription.md |
+| 2026-06-27 | /guides/best-ai-for-transcription/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-transcription.md |
 | 2026-06-27 | /guides/best-ai-for-translation/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-translation.md |
 | 2026-06-27 | /guides/best-ai-for-unit-tests/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-unit-tests.md |
-| 2026-06-27 | /guides/best-ai-for-youtube-creators/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-youtube-creators.md |
-| 2026-06-27 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
-| 2026-06-27 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
+| 2026-06-27 | /guides/best-ai-for-youtube-creators/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-youtube-creators.md |
+| 2026-06-27 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
+| 2026-06-27 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
 | 2026-06-27 | /guides/best-ai-music-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-music-generator.md |
-| 2026-06-27 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
-| 2026-06-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
-| 2026-06-27 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
-| 2026-06-27 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
-| 2026-06-27 | /guides/best-ai-research-tool-for-academic-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-research-tool-for-academic-citations.md |
-| 2026-06-27 | /guides/best-ai-sales-platform-for-mid-market-sdr-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md |
-| 2026-06-27 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
-| 2026-06-27 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
-| 2026-06-27 | /guides/best-ai-tool-for-conversion-rate-optimization/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-conversion-rate-optimization.md |
-| 2026-06-27 | /guides/best-ai-tool-for-paid-social-creative-velocity/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-paid-social-creative-velocity.md |
+| 2026-06-27 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
+| 2026-06-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | working tree | src/content/use-cases/best-ai-personal-assistant-for-work.md |
+| 2026-06-27 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
+| 2026-06-27 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
+| 2026-06-27 | /guides/best-ai-research-tool-for-academic-citations/ | Guide | Yes | working tree | src/content/use-cases/best-ai-research-tool-for-academic-citations.md |
+| 2026-06-27 | /guides/best-ai-sales-platform-for-mid-market-sdr-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md |
+| 2026-06-27 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
+| 2026-06-27 | /guides/best-ai-seo-tool/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool.md |
+| 2026-06-27 | /guides/best-ai-tool-for-conversion-rate-optimization/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tool-for-conversion-rate-optimization.md |
+| 2026-06-27 | /guides/best-ai-tool-for-paid-social-creative-velocity/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tool-for-paid-social-creative-velocity.md |
 | 2026-06-27 | /guides/best-ai-tools-for-accountants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-accountants.md |
 | 2026-06-27 | /guides/best-ai-tools-for-agencies/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-agencies.md |
 | 2026-06-27 | /guides/best-ai-tools-for-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-consultants.md |
@@ -474,13 +474,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/best-ai-tools-for-freelancers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-freelancers.md |
 | 2026-06-27 | /guides/best-ai-tools-for-journalists/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-journalists.md |
 | 2026-06-27 | /guides/best-ai-tools-for-lawyers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-lawyers.md |
-| 2026-06-27 | /guides/best-ai-tools-for-marketers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-marketers.md |
+| 2026-06-27 | /guides/best-ai-tools-for-marketers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-marketers.md |
 | 2026-06-27 | /guides/best-ai-tools-for-nonprofits/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-nonprofits.md |
 | 2026-06-27 | /guides/best-ai-tools-for-product-managers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-product-managers.md |
 | 2026-06-27 | /guides/best-ai-tools-for-real-estate-agents/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-real-estate-agents.md |
 | 2026-06-27 | /guides/best-ai-tools-for-recruiters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-recruiters.md |
 | 2026-06-27 | /guides/best-ai-tools-for-researchers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-researchers.md |
-| 2026-06-27 | /guides/best-ai-tools-for-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-sales-teams.md |
+| 2026-06-27 | /guides/best-ai-tools-for-sales-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-tools-for-sales-teams.md |
 | 2026-06-27 | /guides/best-ai-tools-for-small-business/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-small-business.md |
 | 2026-06-27 | /guides/best-ai-tools-for-students/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-students.md |
 | 2026-06-27 | /guides/best-ai-tools-for-teachers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-teachers.md |
@@ -493,10 +493,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/best-free-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-free-ai-tools.md |
 | 2026-06-27 | /guides/best-open-source-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-open-source-ai-tools.md |
 | 2026-06-27 | /guides/best-pay-as-you-go-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-pay-as-you-go-ai-tools.md |
-| 2026-06-27 | /guides/best-podcast-editor-for-transcript-first-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md |
-| 2026-06-27 | /guides/best-presentation-tool-for-remote-sales-and-training/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md |
-| 2026-06-27 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
-| 2026-06-27 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | frontmatter | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
+| 2026-06-27 | /guides/best-podcast-editor-for-transcript-first-editing/ | Guide | Yes | working tree | src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md |
+| 2026-06-27 | /guides/best-presentation-tool-for-remote-sales-and-training/ | Guide | Yes | working tree | src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md |
+| 2026-06-27 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | working tree | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
+| 2026-06-27 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | working tree | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
 | 2026-06-27 | /guides/canva-ai-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/canva-ai-alternatives.md |
 | 2026-06-27 | /guides/chatgpt-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/chatgpt-alternatives.md |
 | 2026-06-27 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
@@ -505,11 +505,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/elevenlabs-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/elevenlabs-alternatives.md |
 | 2026-06-27 | /guides/gemini-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/gemini-alternatives.md |
 | 2026-06-27 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
-| 2026-06-27 | /guides/grammarly-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/grammarly-alternatives.md |
+| 2026-06-27 | /guides/grammarly-alternatives/ | Guide | Yes | working tree | src/content/use-cases/grammarly-alternatives.md |
 | 2026-06-27 | /guides/jasper-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/jasper-alternatives.md |
 | 2026-06-27 | /guides/midjourney-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/midjourney-alternatives.md |
 | 2026-06-27 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
-| 2026-06-27 | /guides/otter-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/otter-ai-alternatives.md |
+| 2026-06-27 | /guides/otter-ai-alternatives/ | Guide | No | working tree | src/content/use-cases/otter-ai-alternatives.md |
 | 2026-06-27 | /guides/perplexity-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/perplexity-alternatives.md |
 | 2026-06-27 | /guides/runway-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/runway-alternatives.md |
 | 2026-06-27 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
@@ -524,13 +524,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-27 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-27 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
-| 2026-06-27 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-27 | /tools/dalle/ | Tool | Yes | working tree | src/content/tools/dalle.md |
-| 2026-06-27 | /tools/dext/ | Tool | Yes | working tree | src/content/tools/dext.md |
-| 2026-06-27 | /tools/grok-code-fast/ | Tool | Yes | working tree | src/content/tools/grok-code-fast.md |
-| 2026-06-27 | /tools/phind/ | Tool | Yes | working tree | src/content/tools/phind.md |
-| 2026-06-27 | /tools/semrush-demo/ | Tool | No | working tree | src/content/tools/semrush-demo.md |
-| 2026-06-27 | /tools/tome/ | Tool | Yes | working tree | src/content/tools/tome.md |
+| 2026-06-27 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-27 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
+| 2026-06-27 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
+| 2026-06-27 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
+| 2026-06-27 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
+| 2026-06-27 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
+| 2026-06-27 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-06-27 | /trends/ | Static page | Yes | page metadata | src/pages/trends/index.astro |
 | 2026-06-27 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |
 | 2026-06-27 | /trends/ai-coding-model-arms-race/ | Trend | Yes | frontmatter | src/content/trends/ai-coding-model-arms-race.md |

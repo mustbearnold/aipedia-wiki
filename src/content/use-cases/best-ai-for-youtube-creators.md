@@ -6,6 +6,46 @@ seo_title: "Best AI Tools for YouTube Creators: Descript, ChatGPT, Canva, Eleven
 meta_description: "Best AI tools for YouTube creators in June 2026: Descript for editing, ChatGPT for scripts, Canva or Midjourney for thumbnails, ElevenLabs for voiceovers, OpusClip for Shorts, and Runway for B-roll."
 description: "A current buyer guide to AI tools for YouTube creators covering scripts, editing, thumbnails, voiceovers, Shorts repurposing, generated B-roll, research, pricing tradeoffs, and creator safety."
 tools_mentioned: ["descript", "chatgpt", "canva", "elevenlabs", "opusclip", "runway", "midjourney", "gemini"]
+intent_type: specific-workflow
+primary_tool: descript
+affiliate_tools:
+  - descript
+commercial_tools:
+  - descript
+competitor_tools:
+  - canva
+external_competitors:
+  - capcut
+  - vidiq
+buyer_job: Edit and repurpose YouTube videos with AI-assisted production tools.
+audience: YouTube creators and small creator teams publishing videos consistently.
+not_for:
+  - Studios that need full pro color and motion workflows
+  - Creators who only need thumbnail generation
+decision_criteria:
+  - Video editing speed
+  - Transcript workflow
+  - Shorts repurposing
+  - Audio cleanup
+search_intent: "Best AI Tools for YouTube Creators (June 2026)"
+conversion_angle: "Audience: YouTube creators and small creator teams publishing videos consistently. Buyer job: Edit and repurpose YouTube videos with AI-assisted production tools."
+unique_angle: "YouTube-specific creator workflow guide distinct from generic content creation."
+sibling_cluster: "youtube-creator-production"
+overlap_guard: "Keep this page focused on this buyer job: Edit and repurpose YouTube videos with AI-assisted production tools. Do not clone sibling pages by only swapping descript or descript."
+cta_plan:
+  primary: "Lead with descript as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use descript as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: youtube-creator-production
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: YouTube-specific creator workflow guide distinct from generic content creation.
 guide_picks:
   best_overall:
     tool: descript

@@ -1043,3 +1043,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: final stale count script passed with 548 tracked rows and 0 stale rows; tool source audit passed for nine source IDs; Semrush archive source audit passed for three source IDs; `runner:tool-refresh:closeout` passed in 51.520s; supplemental route QA passed for `/tools/semrush-demo/` and `/categories/ai-chatbots/`.
 - Durable receipt: `.agent/loop-runs/2026-06-27-final-six-tool-refresh.md`.
 - Next: Commit, push `master`, mark the strict 3-day goal complete, then start the next optimization loop from the now-fresh baseline.
+
+### 2026-06-27: Affiliate Money Guide Metadata Backfill
+
+- Status: Complete locally, verified, accepted by subagents at 9.9/10, pending commit and push.
+- Branch: `master`.
+- Changed: Backfilled structured affiliate conversion metadata onto the 35 existing money guides detected by `audit:affiliate-conversion`, including intent type, editorial `primary_tool`, `commercial_tools`, configured-not-live affiliate tools, competitors, buyer job, audience, not-for, decision criteria, search intent, conversion angle, unique angle, sibling cluster, overlap guard, CTA plan, cluster ID, freshness window, volatile claims, disclosure requirement, and indexability reason. Existing factual copy and `last_verified` dates were preserved.
+- Guardrails: hardened `audit:affiliate-conversion` so `primary_tool` must match `guide_picks.best_overall.tool`, commercial tools must be approved-live affiliates, configured affiliate tools must be configured-not-live, raw affiliate typos fail, and near-duplicate money guides need distinct anti-overlap metadata. Hardened `audit-commercial-cta` so rendered affiliate CTAs fail unless the tool is approved-live.
+- Verification: strict `audit:affiliate-conversion` reports 35 money guides, 22 live affiliate tools, 4 configured-not-live tools, 0 errors, and 0 warnings, down from 245 warnings; focused tests passed 12/12 across `tests/scripts/audit-affiliate-conversion-pages.test.mjs` and `tests/scripts/audit-commercial-cta.test.mjs`; `check:frontmatter`, `ledger:pages && ledger:pages:check`, `guard-em-dashes`, `typecheck`, `build:fast`, and route QA for all 35 guide routes at 319, 360, 390, 430, 768, 1024, and 1366 px passed.
+- Review: trust/schema reviewer and conversion/doorway/CTA reviewer both accepted the final diff at 9.9/10 after earlier rejections were fixed.
+- Durable receipt: `.agent/loop-runs/2026-06-27-affiliate-money-guide-metadata-backfill.md`.
+- Next: Commit and push before creating the first new affiliate page cluster.

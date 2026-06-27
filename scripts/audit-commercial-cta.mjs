@@ -3,6 +3,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import yaml from 'js-yaml';
 import { builtSiteDir } from './lib/built-site-dir.mjs';
 
 const args = process.argv.slice(2);
@@ -177,6 +178,39 @@ const knownCtaEvents = new Set([
 
 const genericCtaLabels = new Set(['try', 'open']);
 const affiliateDisclosureText = 'Affiliate link; no extra cost to you.';
+const toolDir = join(PROJECT_DIR, 'src/content/tools');
+
+function readMarkdownFrontmatter(path) {
+  const text = readFileSync(path, 'utf8');
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  return match ? yaml.load(match[1]) ?? {} : {};
+}
+
+function hasAffiliateLink(tool) {
+  return typeof tool.affiliate?.link === 'string' && tool.affiliate.link.trim().length > 0;
+}
+
+function affiliateState(tool) {
+  if (!hasAffiliateLink(tool)) return 'none';
+  return tool.affiliate?.application_status === 'approved' ? 'live_affiliate' : 'configured_not_live';
+}
+
+function loadToolAffiliateStates() {
+  if (!existsSync(toolDir)) return new Map();
+  return readdirSync(toolDir)
+    .filter((file) => file.endsWith('.md'))
+    .reduce((map, file) => {
+      const frontmatter = readMarkdownFrontmatter(join(toolDir, file));
+      const slug = frontmatter.slug ?? file.replace(/\.md$/, '');
+      map.set(slug, {
+        slug,
+        title: frontmatter.title ?? slug,
+        state: affiliateState(frontmatter),
+        link: frontmatter.affiliate?.link ?? null,
+      });
+      return map;
+    }, new Map());
+}
 
 function routeHtmlPath(pathname) {
   if (pathname === '/') return join(distDir, 'index.html');
@@ -203,6 +237,17 @@ function commercialAnchors(html) {
     attrs: attrsFromTag(match[0]),
     index: match.index ?? 0,
   }));
+}
+
+function isCtaLikeAnchor(anchor) {
+  const className = anchor.attrs.get('class') ?? '';
+  return anchor.attrs.has('data-commercial-cta') ||
+    anchor.attrs.has('data-tool-cta') ||
+    anchor.attrs.has('data-guide-cta') ||
+    anchor.attrs.has('data-category-cta') ||
+    anchor.attrs.has('data-compare-cta') ||
+    anchor.attrs.has('data-analytics-event') ||
+    /\b(cta|btn|button)\b/i.test(className);
 }
 
 function allAnchors(html) {
@@ -279,6 +324,10 @@ if (argumentIssues.length > 0) {
 
 const issues = [];
 const routeReports = [];
+const toolAffiliateStates = loadToolAffiliateStates();
+const configuredNotLiveLinks = new Map(Array.from(toolAffiliateStates.values())
+  .filter((tool) => tool.state === 'configured_not_live' && typeof tool.link === 'string' && tool.link.trim())
+  .map((tool) => [tool.link.trim(), tool.slug]));
 
 if (!existsSync(distDir)) {
   issues.push({ code: 'dist-missing', detail: formatDistLabel(distDir) });
@@ -315,6 +364,18 @@ if (existsSync(distDir)) {
           code: 'affiliate-link-misclassified-commercial-cta',
           route,
           detail: `anchor ${index + 1}: ${partnerLink.toolSlug} ${href}`,
+        });
+      }
+    });
+
+    allAnchors(html).forEach((anchor, index) => {
+      const href = anchor.attrs.get('href') ?? '';
+      const configuredToolSlug = configuredNotLiveLinks.get(href.trim());
+      if (configuredToolSlug && isCtaLikeAnchor(anchor)) {
+        issues.push({
+          code: 'configured-not-live-affiliate-url-rendered',
+          route,
+          detail: `anchor ${index + 1}: ${configuredToolSlug} ${href}`,
         });
       }
     });
@@ -407,6 +468,8 @@ for (const route of routesToCheck) {
     const isSticky = anchor.attrs.get('data-cta-is-sticky');
     const href = anchor.attrs.get('href') ?? '';
     const rel = anchor.attrs.get('rel') ?? '';
+    const toolSlug = anchor.attrs.get('data-cta-tool-slug') ?? '';
+    const toolState = toolAffiliateStates.get(toolSlug)?.state ?? 'unknown';
 
     if (!['affiliate', 'official'].includes(destinationType ?? '')) {
       issues.push({ code: 'commercial-cta-bad-destination-type', route: route.path, detail: `anchor ${index + 1}: ${destinationType}` });
@@ -430,6 +493,14 @@ for (const route of routesToCheck) {
 
     if (isAffiliate === 'true' && !/\bsponsored\b/i.test(rel)) {
       issues.push({ code: 'affiliate-cta-missing-sponsored-rel', route: route.path, detail: `anchor ${index + 1}` });
+    }
+
+    if ((destinationType === 'affiliate' || isAffiliate === 'true') && toolState !== 'live_affiliate') {
+      issues.push({
+        code: 'affiliate-cta-tool-not-live',
+        route: route.path,
+        detail: `anchor ${index + 1}: ${toolSlug || 'missing-tool-slug'} is ${toolState}`,
+      });
     }
 
     if (isAffiliate === 'true' && isSticky === 'true') {

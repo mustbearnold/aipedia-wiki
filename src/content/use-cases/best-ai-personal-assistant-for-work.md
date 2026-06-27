@@ -6,6 +6,45 @@ seo_title: "Best AI Personal Assistant for Work: Lindy, ChatGPT, Zapier & n8n (J
 meta_description: "Updated June 27, 2026: Lindy is the best AI work assistant for inbox, calendar, meetings, and follow-ups. Compare ChatGPT, Zapier, n8n, SaneBox, Fathom, and MeetGeek by job."
 description: "A decision-first guide to AI personal assistants for work, including inbox triage, calendar help, meeting prep, meeting notes, follow-ups, ad hoc drafting, and workflow automation."
 tools_mentioned: [lindy, chatgpt, zapier, n8n, sanebox, fathom, meetgeek, reclaim-ai]
+intent_type: specific-workflow
+primary_tool: lindy
+affiliate_tools:
+  - lindy
+commercial_tools:
+  - lindy
+competitor_tools:
+  - reclaim-ai
+  - sanebox
+  - meetgeek
+buyer_job: Delegate repeatable work tasks to an AI assistant or agent.
+audience: Operators, founders, executives, and small teams automating scheduling, inbox, notes, and admin workflows.
+not_for:
+  - Users who only need a chatbot
+  - Teams without clear repeatable workflows
+decision_criteria:
+  - Workflow automation depth
+  - App integrations
+  - Human approval controls
+  - Setup time
+search_intent: "Best AI Personal Assistant for Work (June 2026)"
+conversion_angle: "Audience: Operators, founders, executives, and small teams automating scheduling, inbox, notes, and admin workflows. Buyer job: Delegate repeatable work tasks to an AI assistant or agent."
+unique_angle: "Work-assistant page focused on delegation workflows rather than one app category."
+sibling_cluster: "work-ai-personal-assistant"
+overlap_guard: "Keep this page focused on this buyer job: Delegate repeatable work tasks to an AI assistant or agent. Do not clone sibling pages by only swapping lindy or lindy."
+cta_plan:
+  primary: "Lead with lindy as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use lindy as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: work-ai-personal-assistant
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: Work-assistant page focused on delegation workflows rather than one app category.
 guide_picks:
   best_overall:
     tool: lindy

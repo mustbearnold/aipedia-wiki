@@ -6,6 +6,49 @@ seo_title: "Best Otter AI Alternatives: Fathom, Fireflies, MeetGeek, Read AI & N
 meta_description: "Updated June 27, 2026: compare Otter AI alternatives for individual notes, team intelligence, customer-success meeting memory, live transcription, meeting reports, and source-grounded review."
 description: "A current buyer guide to Otter AI alternatives, separating individual notetakers, team intelligence, customer-success meeting memory, meeting reports, multilingual coverage, and post-meeting analysis tools."
 tools_mentioned: ["otter-ai", "fathom", "fireflies", "read-ai", "meetgeek", "notebooklm", "castmagic"]
+intent_type: alternative
+primary_tool: fathom
+affiliate_tools:
+  - meetgeek
+  - fireflies
+commercial_tools:
+  - meetgeek
+configured_affiliate_tools:
+  - fireflies
+competitor_tools:
+  - otter-ai
+  - fathom
+external_competitors:
+  - tl-dv
+buyer_job: Find an Otter.ai alternative for meeting notes and customer-call workflows.
+audience: Teams replacing or comparing Otter.ai for meeting transcription, summaries, and action items.
+not_for:
+  - Teams that only need human transcription
+  - Organizations that cannot record meetings
+decision_criteria:
+  - Meeting summary quality
+  - Integrations
+  - Search and sharing
+  - Pricing fit
+search_intent: "Best Otter AI Alternatives (June 2026)"
+conversion_angle: "Audience: Teams replacing or comparing Otter.ai for meeting transcription, summaries, and action items. Buyer job: Find an Otter.ai alternative for meeting notes and customer-call workflows."
+unique_angle: "Real switching-intent page for same-job meeting assistant alternatives."
+sibling_cluster: "otter-ai-alternatives"
+overlap_guard: "Keep this page focused on this buyer job: Find an Otter.ai alternative for meeting notes and customer-call workflows. Do not clone sibling pages by only swapping fathom or meetgeek."
+cta_plan:
+  primary: "Lead with fathom as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use meetgeek as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: otter-ai-alternatives
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: Real switching-intent page for same-job meeting assistant alternatives.
 guide_picks:
   best_overall:
     tool: fathom

@@ -6,6 +6,46 @@ seo_title: "Best AI Sales Platform for Mid-Market SDR Teams: Apollo, Clay, Insta
 meta_description: "Verified June 27, 2026: the best AI sales platforms for 5-50 SDR teams doing real outbound. Apollo for unified prospecting + sequencing, Clay for data enrichment, Instantly for cold email."
 description: "June 10, 2026 buyer guide to the best AI sales platforms for mid-market SDR teams, with honest picks by workflow: prospecting, enrichment, sequencing, dialing."
 tools_mentioned: ["apollo", "clay", "instantly"]
+intent_type: specific-workflow
+primary_tool: apollo
+affiliate_tools:
+  - apollo
+commercial_tools:
+  - apollo
+competitor_tools:
+  - amplemarket
+  - clay
+external_competitors:
+  - outreach
+buyer_job: Choose a sales platform for mid-market SDR prospecting and sequencing.
+audience: SDR managers and revenue teams that need prospect data, sequences, and CRM handoff.
+not_for:
+  - Solo founders who only need a small free contact search
+  - Enterprises requiring separate best-of-breed systems
+decision_criteria:
+  - Database coverage
+  - Sequence management
+  - Team controls
+  - CRM integration
+search_intent: "Best AI Sales Platform for Mid-Market SDR Teams (June 2026)"
+conversion_angle: "Audience: SDR managers and revenue teams that need prospect data, sequences, and CRM handoff. Buyer job: Choose a sales platform for mid-market SDR prospecting and sequencing."
+unique_angle: "Mid-market SDR page with a different buyer and budget from broad lead generation."
+sibling_cluster: "mid-market-sdr-platform"
+overlap_guard: "Keep this page focused on this buyer job: Choose a sales platform for mid-market SDR prospecting and sequencing. Do not clone sibling pages by only swapping apollo or apollo."
+cta_plan:
+  primary: "Lead with apollo as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use apollo as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: mid-market-sdr-platform
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: Mid-market SDR page with a different buyer and budget from broad lead generation.
 guide_picks:
   best_overall:
     tool: apollo

@@ -6,6 +6,46 @@ seo_title: "Best AI Tools for LinkedIn: ChatGPT, Claude, Canva, LinkedIn Premium
 meta_description: "Updated June 26, 2026: compare ChatGPT, Claude, Canva, LinkedIn Premium AI writing, Apollo, and Grammarly for LinkedIn posts, profile polish, creator workflows, B2B outreach, visuals, and authenticity risk."
 description: "A current buyer guide to AI tools for LinkedIn posts, profile optimization, creator workflows, sales outreach, visual assets, writing polish, and what not to automate."
 tools_mentioned: ["chatgpt", "claude", "canva", "apollo", "grammarly"]
+intent_type: specific-workflow
+primary_tool: chatgpt
+affiliate_tools:
+  - apollo
+commercial_tools:
+  - apollo
+competitor_tools:
+  - clay
+  - amplemarket
+external_competitors:
+  - taplio
+buyer_job: Find and engage LinkedIn prospects for B2B sales workflows.
+audience: B2B founders, SDRs, and recruiters using LinkedIn as a prospecting channel.
+not_for:
+  - Consumer social media teams
+  - Users who only need post scheduling
+decision_criteria:
+  - Prospect discovery
+  - Contact enrichment
+  - Sequence handoff
+  - LinkedIn workflow fit
+search_intent: "Best AI Tools for LinkedIn (June 2026)"
+conversion_angle: "Audience: B2B founders, SDRs, and recruiters using LinkedIn as a prospecting channel. Buyer job: Find and engage LinkedIn prospects for B2B sales workflows."
+unique_angle: "LinkedIn-specific buyer guide for prospecting rather than generic social media posting."
+sibling_cluster: "linkedin-prospecting"
+overlap_guard: "Keep this page focused on this buyer job: Find and engage LinkedIn prospects for B2B sales workflows. Do not clone sibling pages by only swapping chatgpt or apollo."
+cta_plan:
+  primary: "Lead with chatgpt as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use apollo as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: linkedin-prospecting
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: LinkedIn-specific buyer guide for prospecting rather than generic social media posting.
 guide_picks:
   best_overall:
     tool: chatgpt

@@ -6,6 +6,48 @@ seo_title: "AI Lead Generation Stack (June 2026): Apollo, Clay, Amplemarket"
 meta_description: "Updated June 26, 2026: Apollo is the best all-in-one AI lead-generation platform, n8n is the best DIY workflow layer, and Amplemarket is the best premium AI SDR suite, with Clay and Instantly requiring credit modeling before scale."
 description: "A current buyer guide to AI lead generation covering prospect data, enrichment, AI research, scoring, sender handoff, compliance, and which tool to buy first."
 tools_mentioned: [apollo, n8n, amplemarket, clay, instantly]
+intent_type: specific-workflow
+primary_tool: apollo
+affiliate_tools:
+  - apollo
+  - amplemarket
+commercial_tools:
+  - apollo
+  - amplemarket
+competitor_tools:
+  - clay
+  - instantly
+external_competitors:
+  - zoominfo
+buyer_job: Choose an AI-assisted lead generation platform for outbound prospecting.
+audience: Founders, SDR leaders, and lean B2B revenue teams building prospect lists and outbound workflows.
+not_for:
+  - Teams that only need a simple CRM
+  - Companies that already have governed enterprise data enrichment contracts
+decision_criteria:
+  - Contact database depth
+  - Email sequencing fit
+  - Enrichment quality
+  - Workflow automation
+search_intent: "AI Lead Generation Stack (June 2026)"
+conversion_angle: "Audience: Founders, SDR leaders, and lean B2B revenue teams building prospect lists and outbound workflows. Buyer job: Choose an AI-assisted lead generation platform for outbound prospecting."
+unique_angle: "Broad lead-generation buyer guide with multiple credible sales platforms and explicit use-case splits."
+sibling_cluster: "lead-generation-platforms"
+overlap_guard: "Keep this page focused on this buyer job: Choose an AI-assisted lead generation platform for outbound prospecting. Do not clone sibling pages by only swapping apollo or apollo, amplemarket."
+cta_plan:
+  primary: "Lead with apollo as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use apollo, amplemarket as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: lead-generation-platforms
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: Broad lead-generation buyer guide with multiple credible sales platforms and explicit use-case splits.
 guide_picks:
   best_overall:
     tool: apollo

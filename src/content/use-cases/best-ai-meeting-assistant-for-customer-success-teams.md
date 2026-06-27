@@ -6,6 +6,49 @@ seo_title: "Best AI Meeting Assistant for Customer Success Teams: MeetGeek, Fath
 meta_description: "MeetGeek is the best AI meeting assistant for customer success teams that need onboarding, renewal, QBR, escalation, and product-feedback calls to become searchable customer context, CRM updates, and action items."
 description: "A buyer guide for customer success and implementation teams choosing an AI meeting assistant for onboarding calls, renewals, QBRs, churn-risk detection, action items, CRM handoff, and customer memory."
 tools_mentioned: ["meetgeek", "fathom", "fireflies", "read-ai", "notebooklm", "otter-ai", "intercom", "notion-ai", "zapier"]
+intent_type: specific-workflow
+primary_tool: meetgeek
+affiliate_tools:
+  - meetgeek
+  - fireflies
+commercial_tools:
+  - meetgeek
+configured_affiliate_tools:
+  - fireflies
+competitor_tools:
+  - otter-ai
+  - fathom
+external_competitors:
+  - gong
+buyer_job: Turn customer calls into summaries, follow-ups, and searchable account context.
+audience: Customer success managers, account teams, and support leaders managing recurring customer calls.
+not_for:
+  - Sales teams needing full revenue intelligence
+  - Teams that cannot record customer meetings
+decision_criteria:
+  - CRM handoff
+  - Action item capture
+  - Team sharing
+  - Call library search
+search_intent: "Best AI Meeting Assistant for Customer Success Teams (June 2026)"
+conversion_angle: "Audience: Customer success managers, account teams, and support leaders managing recurring customer calls. Buyer job: Turn customer calls into summaries, follow-ups, and searchable account context."
+unique_angle: "Customer-success call workflow distinct from generic meeting notes."
+sibling_cluster: "customer-success-meeting-assistant"
+overlap_guard: "Keep this page focused on this buyer job: Turn customer calls into summaries, follow-ups, and searchable account context. Do not clone sibling pages by only swapping meetgeek or meetgeek."
+cta_plan:
+  primary: "Lead with meetgeek as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use meetgeek as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: customer-success-meeting-assistant
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: Customer-success call workflow distinct from generic meeting notes.
 guide_picks:
   best_overall:
     tool: meetgeek

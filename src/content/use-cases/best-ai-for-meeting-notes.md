@@ -6,6 +6,45 @@ seo_title: "Best AI Meeting Notes Tools: Fathom, Fireflies, MeetGeek, Otter & Re
 meta_description: "Updated June 27, 2026: compare Fathom, Fireflies, MeetGeek, Otter, Read AI, NotebookLM, and Castmagic for meeting notes, CS meeting memory, CRM handoff, live transcription, and content repurposing."
 description: "A current buyer guide to AI meeting-note tools for transcripts, summaries, action items, CRM handoff, customer-success meeting memory, live transcription, team meeting intelligence, and post-meeting source review."
 tools_mentioned: ["fathom", "fireflies", "otter-ai", "read-ai", "notebooklm", "meetgeek", "castmagic"]
+intent_type: best-of
+primary_tool: fathom
+affiliate_tools:
+  - fireflies
+configured_affiliate_tools:
+  - fireflies
+competitor_tools:
+  - meetgeek
+  - otter-ai
+  - fathom
+buyer_job: Capture, summarize, and search meeting notes across common meeting platforms.
+audience: Teams that need searchable meeting records and follow-up summaries.
+not_for:
+  - Users who cannot record meetings for compliance reasons
+  - Teams that only need manual notes
+decision_criteria:
+  - Transcription quality
+  - Meeting platform coverage
+  - Search and summaries
+  - Sharing controls
+search_intent: "Best AI for Meeting Notes (June 2026)"
+conversion_angle: "Audience: Teams that need searchable meeting records and follow-up summaries. Buyer job: Capture, summarize, and search meeting notes across common meeting platforms."
+unique_angle: "Core category guide for AI meeting note tools with multiple credible alternatives."
+sibling_cluster: "meeting-notes"
+overlap_guard: "Keep this page focused on this buyer job: Capture, summarize, and search meeting notes across common meeting platforms. Do not clone sibling pages by only swapping fathom or approved affiliate tools only when they are editorially relevant."
+cta_plan:
+  primary: "Lead with fathom as the editorial winner; use a commercial CTA only when the winning or recommended tool is approved-live."
+  secondary: "Use approved affiliate tools only when they are editorially relevant as monetized alternatives only after the verdict and fit guidance."
+  disclosure: "Show the affiliate disclosure beside every commercial CTA and keep official-link fallbacks available."
+canonical_parent: /guides/
+cluster_id: meeting-notes
+freshness_window_days: 45
+volatile_claims:
+  - pricing
+  - plan limits
+  - feature availability
+  - affiliate link status
+monetization_disclosure_required: true
+indexability_reason: Core category guide for AI meeting note tools with multiple credible alternatives.
 guide_picks:
   best_overall:
     tool: fathom
