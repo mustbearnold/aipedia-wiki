@@ -20,6 +20,10 @@ related:
     title: "Best AI Sales Platform for Mid-Market SDR Teams"
     description: "Deep dive on Apollo and the unified-platform decision."
     kind: guide
+  - href: /guides/amplemarket-pricing-for-sdr-teams/
+    title: "Amplemarket Pricing for SDR Teams"
+    description: "Plan fit for agencies using Amplemarket as a named-account outbound lane."
+    kind: guide
   - href: /guides/best-ai-tool-for-paid-social-creative-velocity/
     title: "Best AI Tool for Paid Social Creative Velocity"
     description: "Deep dive on AdCreative for high-velocity creative production."
@@ -108,6 +112,8 @@ Verified June 27, 2026. Annual billing, usage credits, and checkout promotions v
 
 For a 2-person business-development function plus the founder doing pitch work, Apollo + Beautiful.ai + Reclaim can stay lean. Adding Amplemarket and Unbounce moves the stack toward a $1k+/month operating commitment before ad spend.
 
+Use the [Amplemarket pricing guide](/guides/amplemarket-pricing-for-sdr-teams/) before committing an agency sales team to Startup, Growth, or a custom quote.
+
 ## What This Stack Does Not Cover
 
 - **CRM of record.** Apollo's built-in CRM features cover early-stage agencies. Past ~50 active opportunities, move to HubSpot or Salesforce as the CRM and keep Apollo for prospecting and sequencing.
@@ -189,4 +195,5 @@ Internal references:
 - [Beautiful.ai tool page](/tools/beautiful-ai/)
 - [Best AI sales platform for mid-market SDR teams](/guides/best-ai-sales-platform-for-mid-market-sdr-teams/)
 - [Best AI outbound tool for unified prospecting and sequencing](/guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/)
+- [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/)
 - [Best AI landing page builder for A/B testing](/guides/best-ai-landing-page-builder-for-ab-testing/)

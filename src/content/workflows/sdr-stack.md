@@ -20,6 +20,10 @@ related:
     title: "Best AI Outbound Tool for Unified Prospecting and Sequencing"
     description: "Amplemarket deep dive for AI-personalized outbound."
     kind: guide
+  - href: /guides/amplemarket-pricing-for-sdr-teams/
+    title: "Amplemarket Pricing for SDR Teams"
+    description: "Plan-decision guide before adding Amplemarket to the named-account lane."
+    kind: guide
   - href: /workflows/agency-sales-stack/
     title: "Agency Sales Stack"
     description: "Broader new-business-development stack for marketing/creative agencies."
@@ -105,6 +109,8 @@ Verified June 27, 2026. Model the stack by motion:
 
 Per-SDR cost without Amplemarket is usually Apollo plus a small calendar/inbox layer. With Amplemarket, evaluate at the team-package level and tie it to named-account pipeline, not vanity reply-rate improvements.
 
+Use the [Amplemarket pricing guide](/guides/amplemarket-pricing-for-sdr-teams/) when deciding whether Startup, Growth, or a lower-commitment Apollo/Clay/Instantly path fits the team.
+
 ## What This Stack Does Not Cover
 
 - **CRM of record.** This stack assumes Salesforce, HubSpot, Pipedrive, or similar as the CRM. Apollo and Amplemarket both sync bidirectionally.
@@ -181,5 +187,6 @@ Internal references:
 - [SaneBox tool page](/tools/sanebox/)
 - [Best AI sales platform for mid-market SDR teams](/guides/best-ai-sales-platform-for-mid-market-sdr-teams/)
 - [Best AI outbound tool for unified prospecting and sequencing](/guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/)
+- [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/)
 - [Best AI for cold email](/guides/best-ai-for-cold-email/)
 - [Agency sales stack](/workflows/agency-sales-stack/)

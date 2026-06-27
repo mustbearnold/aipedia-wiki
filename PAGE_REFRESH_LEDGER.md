@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-27
-Tracked public pages and crawl surfaces: 552
+Tracked public pages and crawl surfaces: 553
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -39,7 +39,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
 | 2026-06-25 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
 | 2026-06-25 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
-| 2026-06-25 | /tools/amplemarket/ | Tool | Yes | frontmatter | src/content/tools/amplemarket.md |
 | 2026-06-25 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
 | 2026-06-25 | /tools/anythingllm/ | Tool | Yes | frontmatter | src/content/tools/anythingllm.md |
 | 2026-06-25 | /tools/apollo/ | Tool | Yes | frontmatter | src/content/tools/apollo.md |
@@ -233,7 +232,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /guides/ai-content-creator-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-content-creator-stack.md |
 | 2026-06-26 | /guides/ai-content-pipeline/ | Guide | No | frontmatter | src/content/use-cases/ai-content-pipeline.md |
 | 2026-06-26 | /guides/ai-customer-support/ | Guide | No | frontmatter | src/content/use-cases/ai-customer-support.md |
-| 2026-06-26 | /guides/ai-lead-generation/ | Guide | Yes | frontmatter | src/content/use-cases/ai-lead-generation.md |
 | 2026-06-26 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
 | 2026-06-26 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
 | 2026-06-26 | /guides/best-ai-for-academic-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-academic-writing.md |
@@ -429,7 +427,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
 | 2026-06-27 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-27 | /guides/ai-agency-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-agency-stack.md |
+| 2026-06-27 | /guides/ai-lead-generation/ | Guide | Yes | working tree | src/content/use-cases/ai-lead-generation.md |
 | 2026-06-27 | /guides/ai-solo-founder-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-solo-founder-stack.md |
+| 2026-06-27 | /guides/amplemarket-pricing-for-sdr-teams/ | Guide | Yes | working tree | src/content/use-cases/amplemarket-pricing-for-sdr-teams.md |
 | 2026-06-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
 | 2026-06-27 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-27 | /guides/best-ai-coding-assistant/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-coding-assistant.md |
@@ -454,10 +454,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/best-ai-landing-page-builder-for-ab-testing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-landing-page-builder-for-ab-testing.md |
 | 2026-06-27 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
 | 2026-06-27 | /guides/best-ai-music-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-music-generator.md |
-| 2026-06-27 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
+| 2026-06-27 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | working tree | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
 | 2026-06-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
 | 2026-06-27 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
-| 2026-06-27 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
+| 2026-06-27 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
 | 2026-06-27 | /guides/best-ai-research-tool-for-academic-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-research-tool-for-academic-citations.md |
 | 2026-06-27 | /guides/best-ai-sales-platform-for-mid-market-sdr-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md |
 | 2026-06-27 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
@@ -490,7 +490,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/best-ai-tools-under-50-month/ | Guide | No | frontmatter | src/content/use-cases/best-ai-tools-under-50-month.md |
 | 2026-06-27 | /guides/best-ai-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-video-generator.md |
 | 2026-06-27 | /guides/best-ai-voice-youtube/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-voice-youtube.md |
-| 2026-06-27 | /guides/best-client-document-collection-tool-for-bookkeeping-firms/ | Guide | Yes | working tree | src/content/use-cases/best-client-document-collection-tool-for-bookkeeping-firms.md |
+| 2026-06-27 | /guides/best-client-document-collection-tool-for-bookkeeping-firms/ | Guide | Yes | frontmatter | src/content/use-cases/best-client-document-collection-tool-for-bookkeeping-firms.md |
 | 2026-06-27 | /guides/best-free-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-free-ai-tools.md |
 | 2026-06-27 | /guides/best-open-source-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-open-source-ai-tools.md |
 | 2026-06-27 | /guides/best-pay-as-you-go-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-pay-as-you-go-ai-tools.md |
@@ -503,9 +503,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
 | 2026-06-27 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-27 | /guides/deepseek-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/deepseek-alternatives.md |
-| 2026-06-27 | /guides/dext-pricing-for-bookkeeping-firms/ | Guide | Yes | working tree | src/content/use-cases/dext-pricing-for-bookkeeping-firms.md |
-| 2026-06-27 | /guides/dext-vs-autoentry-for-sage-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/dext-vs-autoentry-for-sage-bookkeepers.md |
-| 2026-06-27 | /guides/dext-vs-hubdoc-for-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/dext-vs-hubdoc-for-bookkeepers.md |
+| 2026-06-27 | /guides/dext-pricing-for-bookkeeping-firms/ | Guide | Yes | frontmatter | src/content/use-cases/dext-pricing-for-bookkeeping-firms.md |
+| 2026-06-27 | /guides/dext-vs-autoentry-for-sage-bookkeepers/ | Guide | Yes | frontmatter | src/content/use-cases/dext-vs-autoentry-for-sage-bookkeepers.md |
+| 2026-06-27 | /guides/dext-vs-hubdoc-for-bookkeepers/ | Guide | Yes | frontmatter | src/content/use-cases/dext-vs-hubdoc-for-bookkeepers.md |
 | 2026-06-27 | /guides/elevenlabs-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/elevenlabs-alternatives.md |
 | 2026-06-27 | /guides/gemini-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/gemini-alternatives.md |
 | 2026-06-27 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |
@@ -529,8 +529,9 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-27 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
 | 2026-06-27 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-27 | /tools/amplemarket/ | Tool | Yes | working tree | src/content/tools/amplemarket.md |
 | 2026-06-27 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
-| 2026-06-27 | /tools/dext/ | Tool | Yes | working tree | src/content/tools/dext.md |
+| 2026-06-27 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
 | 2026-06-27 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-06-27 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
 | 2026-06-27 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
@@ -549,8 +550,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
 | 2026-06-27 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-06-27 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
-| 2026-06-27 | /workflows/accountant-stack/ | Workflow | Yes | working tree | src/content/workflows/accountant-stack.md |
-| 2026-06-27 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
+| 2026-06-27 | /workflows/accountant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/accountant-stack.md |
+| 2026-06-27 | /workflows/agency-sales-stack/ | Workflow | Yes | working tree | src/content/workflows/agency-sales-stack.md |
 | 2026-06-27 | /workflows/agentic-coding-workflow/ | Workflow | Yes | frontmatter | src/content/workflows/agentic-coding-workflow.md |
 | 2026-06-27 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
 | 2026-06-27 | /workflows/design-agency-replacement/ | Workflow | Yes | frontmatter | src/content/workflows/design-agency-replacement.md |
@@ -559,7 +560,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /workflows/podcast-automation-stack/ | Workflow | Yes | frontmatter | src/content/workflows/podcast-automation-stack.md |
 | 2026-06-27 | /workflows/research-assistant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/research-assistant-stack.md |
 | 2026-06-27 | /workflows/researcher-stack/ | Workflow | Yes | frontmatter | src/content/workflows/researcher-stack.md |
-| 2026-06-27 | /workflows/sdr-stack/ | Workflow | Yes | frontmatter | src/content/workflows/sdr-stack.md |
+| 2026-06-27 | /workflows/sdr-stack/ | Workflow | Yes | working tree | src/content/workflows/sdr-stack.md |
 | 2026-06-27 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-27 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-27 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |

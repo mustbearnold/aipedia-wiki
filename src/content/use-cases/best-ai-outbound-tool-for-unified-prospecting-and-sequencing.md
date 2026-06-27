@@ -52,7 +52,7 @@ guide_picks:
   best_overall:
     tool: amplemarket
     label: "Best AI-native unified outbound"
-    plan: "Amplemarket Plus"
+    plan: "Startup for a two-user pilot; Growth when Duo Voice and onboarding matter"
     reason: "Amplemarket is purpose-built as AI-native outbound: data + multichannel sequencing + AI personalization + dialer in one workflow, with the AI layer (Duo) embedded throughout rather than bolted on. Best for outbound-led teams that want one tool, not a stack."
     sources:
       - label: "Amplemarket platform"
@@ -84,6 +84,10 @@ related:
     title: "Amplemarket review"
     description: "Full editorial review of the AI-native outbound platform."
     kind: tool
+  - href: /guides/amplemarket-pricing-for-sdr-teams/
+    title: "Amplemarket pricing for SDR teams"
+    description: "Plan-decision guide for Startup, Growth, Elite, and lower-commitment alternatives."
+    kind: guide
   - href: /tools/apollo/
     title: "Apollo review"
     description: "Budget alternative with larger database and lower per-seat cost."
@@ -118,9 +122,9 @@ Use [Clay](/tools/clay/) plus another tool when the bottleneck is high-precision
 
 Three pressures shape the buying decision:
 
-- **AI personalization at scale is the new floor.** Reply rates on generic cold outbound have compressed to 1-2%. Teams that personalize at scale (using AI to research each prospect) are seeing 3-5x lift. The tool's AI personalization depth is the lift, not the sequencing engine.
-- **Integration debt eats real time.** Mid-market teams that stitch ZoomInfo + Outreach + Salesforce + Clay typically lose 10-20% of rep time to broken syncs, duplicate data, and CRM hygiene. Unified platforms collapse this.
-- **Per-seat economics shift the buying calculus.** A unified platform at $150/seat beats four tools at $50-100/seat each. The math compounds with team size.
+- **AI personalization is now the buying test.** Generic cold outbound is easier to ignore, so the question is whether the tool can produce source-backed account research that improves meetings booked on your real ICP. The tool's AI personalization depth is the lift, not the sequencing engine.
+- **Integration debt eats real time.** Mid-market teams that stitch data, sequencing, CRM, enrichment, and AI drafting tools together need RevOps discipline to prevent broken syncs, duplicate data, and CRM hygiene work. Unified platforms reduce some handoffs, but only when the team accepts their opinionated workflow.
+- **Package economics shift the buying calculus.** Amplemarket's public Startup floor is an annual package, while Apollo, Clay, Instantly, Outreach, and Salesloft use different combinations of seats, credits, contacts, send volume, and custom packaging. Compare the working workflow cost, not just a headline seat price.
 
 Amplemarket, Apollo, and the older incumbents (Outreach, Salesloft) all compete in this space. The right choice depends on which trade-off matters most.
 
@@ -140,7 +144,7 @@ Amplemarket, Apollo, and the older incumbents (Outreach, Salesloft) all compete 
 
 The core differentiator is **Duo**, Amplemarket's AI layer. Duo reads each prospect's profile, recent activity, and company context, then writes personalized opening lines per prospect rather than relying on first-name-merge tricks. It also adapts sequence content per reply, surfaces account signals, and suggests sequence design changes based on observed performance.
 
-**Best plan:** Amplemarket Plus is the entry to serious team use with full Duo features and meaningful sequence volumes.
+**Best plan:** Start with the public Startup package only when a two-user named-account pilot can justify the annual commitment. Ask about Growth when Duo Voice, dedicated onboarding, and more users matter.
 
 **Why it wins:**
 
@@ -153,12 +157,12 @@ The core differentiator is **Duo**, Amplemarket's AI layer. Duo reads each prosp
 
 **Watch-outs:**
 
-- Pricing is higher per seat than Apollo. Worth it if Duo lifts reply rates by 2-3x; not worth it otherwise.
+- Pricing is higher commitment than Apollo. Worth it if Duo improves meetings booked enough to pay back the annual package; not worth it if the lift is only nicer copy.
 - Database breadth is competitive but not the largest. For very specific verticals, pair with a targeted data tool.
 - Duo's personalization quality varies by industry. Test on your specific ICP before scaling.
 - The product is European-headquartered with strong EU compliance posture. For US-only teams, this is neutral or slightly positive.
 
-[Try Amplemarket →](https://amplemarket.com/)
+Use the [Amplemarket pricing guide](/guides/amplemarket-pricing-for-sdr-teams/) before booking a sales call, especially if the team is still deciding between Startup, Growth, Apollo, Clay, or Instantly.
 
 ## 2. Apollo: Best Budget Unified Alternative
 
@@ -204,7 +208,7 @@ Pricing starts well above Amplemarket and Apollo. Right answer for teams of 50+ 
 | Need account-level AI research, have sequencing | Clay |
 | Cold-email-led with no sequencing complexity | Instantly |
 | 50+ SDRs, enterprise governance | Outreach or Salesloft |
-| Solo founder doing outbound | Apollo (single seat) or Amplemarket Pro |
+| Solo founder doing outbound | Apollo single seat; defer Amplemarket until named-account outbound is proven |
 
 ## Pricing Reality
 
@@ -239,7 +243,7 @@ Use this as buying guidance, not a fixed stack total:
 <details>
 <summary>Is Amplemarket worth the price premium over Apollo?</summary>
 
-Yes, if Duo's personalization lifts your reply rate by 2-3x on your actual ICP. No, if your audience does not respond to deep personalization (high-volume, simple ICPs often don't). Test before committing.
+Yes, if Duo's personalization improves meetings booked enough to justify the annual package on your actual ICP. No, if your audience does not respond to deep personalization (high-volume, simple ICPs often don't). Test before committing.
 
 </details>
 
@@ -288,5 +292,6 @@ Internal references:
 - [Clay tool page](/tools/clay/)
 - [Instantly tool page](/tools/instantly/)
 - [Best AI sales platform for mid-market SDR teams](/guides/best-ai-sales-platform-for-mid-market-sdr-teams/)
+- [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/)
 - [Best AI for cold email](/guides/best-ai-for-cold-email/)
 - [AI lead generation](/guides/ai-lead-generation/)

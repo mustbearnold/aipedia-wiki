@@ -198,6 +198,8 @@ If workflow handoffs become messy, add **n8n**. Use it to connect systems and ke
 
 If the team wants one premium AI SDR suite and can justify annual platform pricing, evaluate **Amplemarket**. It may replace several tools, but only if the team actually uses the platform end to end.
 
+For plan-level fit, use the [Amplemarket pricing guide for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/) before turning the annual package into a sales-platform commitment.
+
 ## Watch-Outs Before You Buy
 
 **Do not buy based on lead-count promises.** A database size claim does not tell you whether the right people in your exact market are reachable, current, compliant, and responsive.
@@ -254,4 +256,4 @@ It should not. AI can score, enrich, route, summarize, and draft, but humans sho
 ## Related
 
 - **Tools:** [Apollo](/tools/apollo/) · [Clay](/tools/clay/) · [Amplemarket](/tools/amplemarket/) · [n8n](/tools/n8n/) · [Instantly](/tools/instantly/)
-- **Guides:** [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) · [Best AI for cold email](/guides/best-ai-for-cold-email/)
+- **Guides:** [Best AI tools for sales teams](/guides/best-ai-tools-for-sales-teams/) · [Best AI for cold email](/guides/best-ai-for-cold-email/) · [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/)
