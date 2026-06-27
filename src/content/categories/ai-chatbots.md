@@ -66,7 +66,7 @@ For document chat and private RAG, [AnythingLLM](/tools/anythingllm/) and [Open 
 
 For API-first model serving, [OpenRouter](/tools/openrouter/), [Fireworks AI](/tools/fireworks-ai/), and [Groq](/tools/groq/) are tracked in this category because they expose LLM and multimodal model endpoints, but buyers should treat them as infrastructure rather than chatbot subscriptions. The June 25 Groq check keeps the buyer story focused on LPU inference speed, pricing/model docs, Qwen 3.6 27B, Kimi K2 0905 prompt-caching pricing, built-in tools, production throughput, and the July 17, 2026 shutdown warning for Qwen3 32B and Llama 4 Scout on free/developer tiers rather than acquisition rumors. The June 25 Fireworks pricing check keeps serverless inference, cached-token discounts, batch discounts, B200/B300 dedicated deployments, embeddings, and fine-tuning as the important purchase variables.
 
-**June 18 Cohere refresh:** [Cohere](/tools/cohere/) is now best understood as enterprise model infrastructure, retrieval, sovereign deployment, and open model control rather than a consumer chatbot. Command A+ remains the Apache 2.0 agentic flagship, Embed v4 and Rerank 4 remain the RAG moat, and North Mini Code adds a 30B total / 3B active Apache 2.0 coding-model lane. Buyers should not confuse that with Cursor or Copilot: North Mini Code needs a harness, serving path, evals, and policy controls. The official Cohere/Aleph Alpha announcement also turns European sovereign AI from a rumor-cycle note into part of the procurement story.
+**June 27 Cohere refresh:** [Cohere](/tools/cohere/) is now best understood as enterprise model infrastructure, retrieval, sovereign deployment, and open model control rather than a consumer chatbot. Command A+ remains the Apache 2.0 agentic flagship, Embed v4 and Rerank 4 remain the RAG moat, and North Mini Code adds a 30B total / 3B active Apache 2.0 coding-model lane. Buyers should not confuse that with Cursor or Copilot: North Mini Code needs a harness, serving path, evals, and policy controls. The official Cohere/Aleph Alpha announcement also turns European sovereign AI from a rumor-cycle note into part of the procurement story.
 
 For companion-style character chat, [Character.AI](/tools/character-ai/) is a different lane from general assistants. The June 23 recheck keeps the buyer story on "evaluate the entertainment platform": c.ai+ still lists $9.99/month or $94.99/year, but now also matters for latest and best model access, better Memory, Facts, fuller Memory Usage, AvatarFX, and early features. The same refresh also keeps the sharper user-safety caveat: Character.AI says under-18 users are being moved away from open-ended chat and toward creative modes, so do not recommend it to minors as a general companion-chat app.
 
@@ -301,10 +301,10 @@ Do not subscribe to multiple chatbots because each one has a new model announcem
 - [Fireworks serverless pricing docs](https://docs.fireworks.ai/serverless/pricing) (verified 2026-06-23)
 - [Fireworks billing FAQ](https://docs.fireworks.ai/faq-new/billing-pricing/how-much-does-fireworks-cost) (verified 2026-06-23)
 - [Fireworks inference documentation](https://docs.fireworks.ai/guides/inference-introduction) (verified 2026-06-23)
-- [Cohere pricing](https://cohere.com/pricing) (verified 2026-06-18)
-- [Cohere models docs](https://docs.cohere.com/docs/models) (verified 2026-06-18)
-- [Cohere North Mini Code](https://cohere.com/blog/north-mini-code) (verified 2026-06-18)
-- [Cohere and Aleph Alpha](https://cohere.com/blog/cohere-alephalpha-join-forces) (verified 2026-06-18)
+- [Cohere pricing](https://cohere.com/pricing) (verified 2026-06-27)
+- [Cohere models docs](https://docs.cohere.com/docs/models) (verified 2026-06-27)
+- [Cohere North Mini Code](https://cohere.com/blog/north-mini-code) (verified 2026-06-27)
+- [Cohere and Aleph Alpha](https://cohere.com/blog/cohere-alephalpha-join-forces) (verified 2026-06-27)
 - [Ollama official site](https://ollama.com/) (verified 2026-06-23)
 - [Ollama pricing](https://ollama.com/pricing) (verified 2026-06-23)
 - [Ollama model library](https://ollama.com/library) (verified 2026-06-23)

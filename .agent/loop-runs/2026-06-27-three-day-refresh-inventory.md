@@ -1,7 +1,7 @@
 # 2026-06-27 3-Day Refresh Goal Inventory
 
 Cutoff: 2026-06-24 or newer.
-Tracked stale pages after batch 09: 72
+Tracked stale pages after batch 10: 48
 
 ## Progress
 
@@ -10,17 +10,17 @@ Tracked stale pages after batch 09: 72
 - Batch 06 complete and pushed: 19 guide routes and 5 trend routes from open-source AI tools through enterprise agent platforms refreshed plus `/`, `/guides/`, `/trends/`, `/categories/`, and 9 affected category hubs.
 - Batch 07 complete and pushed: 4 trend routes, 12 workflow routes, 3 company profiles, and 5 dead-tool archives refreshed plus `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, and `/llms-full.txt`.
 - Batch 08 verified locally: 24 mixed routes refreshed across dead archives, the April report, static trust pages, one workflow, one guide, trends, answers, companies, robots, and archived noindex surfaces. Affected parent/top-layer pages and five category hubs were updated or route-checked.
-- Batch 09 verified locally: 22 company profiles and 2 guide pages refreshed. Anysphere was corrected for the reported June 2026 SpaceX/Cursor $60B stock acquisition agreement with live CBS/AP, Ars Technica, and Cursor sources. Affected parent/top-layer pages and three category hubs were updated or route-checked.
-- Strict 3-day stale count is now 72 total tracked pages including the 6 ledger-outdated tool rows.
+- Batch 09 complete and pushed: 22 company profiles and 2 guide pages refreshed. Anysphere was corrected for the reported June 2026 SpaceX/Cursor $60B stock acquisition agreement with live CBS/AP, Ars Technica, and Cursor sources. Affected parent/top-layer pages and three category hubs were updated or route-checked.
+- Batch 10 verified locally: 24 mixed guide, static, answer, company, dead archive, and comparison routes refreshed. The batch repaired a broken Pitch source URL before closeout and route-checked affected parent/category surfaces.
+- Strict 3-day stale count is now 48 total tracked pages including the 6 ledger-outdated tool rows.
 
 ## By Type
 
-- Company: 2
-- Comparison: 37
+- Company: 1
+- Comparison: 25
 - Crawl surface: 1
-- Dead tool archive: 1
-- Guide: 16
-- Static page: 8
+- Guide: 13
+- Static page: 1
 - Tool: 6
 - Workflow: 1
 
@@ -28,31 +28,8 @@ Tracked stale pages after batch 09: 72
 
 - 2026-06-12 Tool /tools/phind/ (src/content/tools/phind.md)
 - 2026-06-12 Tool /tools/tome/ (src/content/tools/tome.md)
-- 2026-06-18 Company /companies/cohere/ (src/content/companies/cohere.md)
-- 2026-06-18 Dead tool archive /dead/stability-ai-clipdrop/ (src/content/dead/stability-ai-clipdrop.md)
-- 2026-06-18 Guide /guides/best-ai-for-podcasters/ (src/content/use-cases/best-ai-for-podcasters.md)
-- 2026-06-18 Guide /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ (src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md)
-- 2026-06-18 Guide /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ (src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md)
-- 2026-06-20 Static page /about/ (src/pages/about/index.astro)
-- 2026-06-20 Static page /glossary/ (src/pages/glossary/index.astro)
-- 2026-06-20 Static page /stack-builder/ (src/pages/stack-builder/index.astro)
 - 2026-06-20 Tool /tools/semrush-demo/ (src/content/tools/semrush-demo.md)
-- 2026-06-21 Static page /answers/best-ai-chatbot-2026/ (src/pages/answers/best-ai-chatbot-2026.astro)
-- 2026-06-21 Static page /answers/best-ai-coding-tool-2026/ (src/pages/answers/best-ai-coding-tool-2026.astro)
-- 2026-06-21 Static page /answers/chatgpt-vs-claude-which-is-better/ (src/pages/answers/chatgpt-vs-claude-which-is-better.astro)
 - 2026-06-21 Company /companies/anthropic/ (src/content/companies/anthropic.md)
-- 2026-06-21 Comparison /compare/activepieces-vs-n8n/ (src/content/comparisons/activepieces-vs-n8n.md)
-- 2026-06-21 Comparison /compare/activepieces-vs-zapier/ (src/content/comparisons/activepieces-vs-zapier.md)
-- 2026-06-21 Comparison /compare/aider-vs-claude-code/ (src/content/comparisons/aider-vs-claude-code.md)
-- 2026-06-21 Comparison /compare/beautiful-ai-vs-decktopus/ (src/content/comparisons/beautiful-ai-vs-decktopus.md)
-- 2026-06-21 Comparison /compare/beautiful-ai-vs-gamma/ (src/content/comparisons/beautiful-ai-vs-gamma.md)
-- 2026-06-21 Comparison /compare/beautiful-ai-vs-pitch/ (src/content/comparisons/beautiful-ai-vs-pitch.md)
-- 2026-06-21 Comparison /compare/beautiful-ai-vs-presentations-ai/ (src/content/comparisons/beautiful-ai-vs-presentations-ai.md)
-- 2026-06-21 Comparison /compare/capacities-vs-obsidian/ (src/content/comparisons/capacities-vs-obsidian.md)
-- 2026-06-21 Comparison /compare/chatgpt-vs-claude/ (src/content/comparisons/chatgpt-vs-claude.md)
-- 2026-06-21 Comparison /compare/chatgpt-vs-gemini/ (src/content/comparisons/chatgpt-vs-gemini.md)
-- 2026-06-21 Comparison /compare/chatgpt-vs-grok/ (src/content/comparisons/chatgpt-vs-grok.md)
-- 2026-06-21 Comparison /compare/claude-vs-gemini/ (src/content/comparisons/claude-vs-gemini.md)
 - 2026-06-21 Comparison /compare/claude-vs-grok/ (src/content/comparisons/claude-vs-grok.md)
 - 2026-06-21 Comparison /compare/consensus-vs-elicit/ (src/content/comparisons/consensus-vs-elicit.md)
 - 2026-06-21 Comparison /compare/cursor-vs-windsurf/ (src/content/comparisons/cursor-vs-windsurf.md)
@@ -77,7 +54,6 @@ Tracked stale pages after batch 09: 72
 - 2026-06-21 Comparison /compare/suno-vs-udio/ (src/content/comparisons/suno-vs-udio.md)
 - 2026-06-21 Comparison /compare/veo-vs-kling/ (src/content/comparisons/veo-vs-kling.md)
 - 2026-06-21 Comparison /compare/veo-vs-seedance/ (src/content/comparisons/veo-vs-seedance.md)
-- 2026-06-21 Static page /demo-godtier/ (src/pages/demo-godtier.astro)
 - 2026-06-21 Guide /guides/best-ai-coding-assistant/ (src/content/use-cases/best-ai-coding-assistant.md)
 - 2026-06-21 Guide /guides/claude-alternatives/ (src/content/use-cases/claude-alternatives.md)
 - 2026-06-21 Guide /guides/cursor-alternatives/ (src/content/use-cases/cursor-alternatives.md)

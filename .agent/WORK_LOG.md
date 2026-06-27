@@ -1000,3 +1000,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `runner:page-refresh:closeout` passed in 73.564s with 45 source URLs, 41 ok, 4 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed for `/companies/`, `/categories/ai-writing/`, `/categories/ai-notes/`, and `/categories/ai-voice/` at 319, 360, 390, 430, 768, 1024, and 1366 px.
 - Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-09.md`.
 - Next: Continue oldest-first with 72 tracked pages still older than 2026-06-24.
+
+### 2026-06-27: Page Refresh Batch 10
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed 24 oldest routes across three guides, Cohere company profile, Stability AI Clipdrop dead-tool archive, four static trust/tooling pages, three answer pages, the demo page, and twelve comparison pages.
+- Source repair: Replaced a broken `https://pitch.com/ai-presentation-maker` source in `beautiful-ai-vs-pitch` with the live Pitch home URL after checking candidate Pitch AI routes.
+- Parent and top-layer updates: `/`, `/compare/`, `/answers/`, `/guides/`, `/companies/`, `/dead/`, AI Automation, AI Chatbots, AI SEO, and AI Voice. Supplemental route QA also covered AI Presentation, AI Coding, and AI Notes.
+- Verification: `runner:page-refresh:closeout` passed in 87.189s with 161 source URLs, 147 ok, 14 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed in 11.395s for nine routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-10.md`.
+- Next: Continue oldest-first with 48 tracked pages still older than 2026-06-24.

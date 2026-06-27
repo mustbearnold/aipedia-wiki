@@ -3,16 +3,16 @@ type: company
 slug: cohere
 title: Cohere
 seo_title: "Cohere Company Profile (June 2026), aipedia.wiki"
-meta_description: "Cohere is the enterprise AI company behind Command A+, North Mini Code, Embed, Rerank, North, and Model Vault, with a planned Aleph Alpha sovereign-AI combination. Verified June 18, 2026."
+meta_description: "Cohere is the enterprise AI company behind Command A+, North Mini Code, Embed, Rerank, North, and Model Vault, with a planned Aleph Alpha sovereign-AI combination. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2019
 hq: Toronto, Canada
 funding: "~$1.54B raised before 2026 Series E; Schwarz Group announced EUR 500M structured financing commitment"
 key_products: [cohere]
-last_updated: 2026-06-18
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-18
+last_verified: 2026-06-27
 ---
 
 # Cohere

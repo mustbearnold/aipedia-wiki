@@ -13,31 +13,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | --- | --- | --- | --- | --- | --- |
 | 2026-06-12 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
 | 2026-06-12 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
-| 2026-06-18 | /companies/cohere/ | Company | Yes | frontmatter | src/content/companies/cohere.md |
-| 2026-06-18 | /dead/stability-ai-clipdrop/ | Dead tool archive | Yes | frontmatter | src/content/dead/stability-ai-clipdrop.md |
-| 2026-06-18 | /guides/best-ai-for-podcasters/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-podcasters.md |
-| 2026-06-18 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
-| 2026-06-18 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
-| 2026-06-20 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
-| 2026-06-20 | /glossary/ | Static page | Yes | git | src/pages/glossary/index.astro |
-| 2026-06-20 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-20 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
-| 2026-06-21 | /answers/best-ai-chatbot-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-chatbot-2026.astro |
-| 2026-06-21 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-coding-tool-2026.astro |
-| 2026-06-21 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-06-21 | /companies/anthropic/ | Company | Yes | frontmatter | src/content/companies/anthropic.md |
-| 2026-06-21 | /compare/activepieces-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-n8n.md |
-| 2026-06-21 | /compare/activepieces-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-zapier.md |
-| 2026-06-21 | /compare/aider-vs-claude-code/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-claude-code.md |
-| 2026-06-21 | /compare/beautiful-ai-vs-decktopus/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-decktopus.md |
-| 2026-06-21 | /compare/beautiful-ai-vs-gamma/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-gamma.md |
-| 2026-06-21 | /compare/beautiful-ai-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-pitch.md |
-| 2026-06-21 | /compare/beautiful-ai-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-presentations-ai.md |
-| 2026-06-21 | /compare/capacities-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/capacities-vs-obsidian.md |
-| 2026-06-21 | /compare/chatgpt-vs-claude/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-claude.md |
-| 2026-06-21 | /compare/chatgpt-vs-gemini/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-gemini.md |
-| 2026-06-21 | /compare/chatgpt-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-grok.md |
-| 2026-06-21 | /compare/claude-vs-gemini/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-gemini.md |
 | 2026-06-21 | /compare/claude-vs-grok/ | Comparison | Yes | frontmatter | src/content/comparisons/claude-vs-grok.md |
 | 2026-06-21 | /compare/consensus-vs-elicit/ | Comparison | Yes | frontmatter | src/content/comparisons/consensus-vs-elicit.md |
 | 2026-06-21 | /compare/cursor-vs-windsurf/ | Comparison | Yes | frontmatter | src/content/comparisons/cursor-vs-windsurf.md |
@@ -62,7 +39,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-21 | /compare/suno-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/suno-vs-udio.md |
 | 2026-06-21 | /compare/veo-vs-kling/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-kling.md |
 | 2026-06-21 | /compare/veo-vs-seedance/ | Comparison | Yes | frontmatter | src/content/comparisons/veo-vs-seedance.md |
-| 2026-06-21 | /demo-godtier/ | Static page | Yes | git | src/pages/demo-godtier.astro |
 | 2026-06-21 | /guides/best-ai-coding-assistant/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-coding-assistant.md |
 | 2026-06-21 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
 | 2026-06-21 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
@@ -292,8 +268,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /answers/best-ai-for-writing-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-for-writing-2026.astro |
 | 2026-06-26 | /answers/best-ai-video-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-video-generator-2026.astro |
 | 2026-06-26 | /answers/best-ai-voice-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-voice-generator-2026.astro |
-| 2026-06-26 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
-| 2026-06-26 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-26 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
 | 2026-06-26 | /compare/elevenlabs-vs-murf/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-murf.md |
 | 2026-06-26 | /compare/elevenlabs-vs-wellsaid/ | Comparison | Yes | frontmatter | src/content/comparisons/elevenlabs-vs-wellsaid.md |
@@ -392,61 +366,80 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-27 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-27 | /404/ | Static page | No | git | src/pages/404.astro |
+| 2026-06-27 | /about/ | Static page | Yes | working tree | src/pages/about/index.astro |
 | 2026-06-27 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-27 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
 | 2026-06-27 | /about/scoring/ | Static page | Yes | git | src/pages/about/scoring.astro |
 | 2026-06-27 | /admin/reviews/ | Static page | No | git | src/pages/admin/reviews.astro |
-| 2026-06-27 | /answers/ | Static page | Yes | git | src/pages/answers/index.astro |
+| 2026-06-27 | /answers/ | Static page | Yes | working tree | src/pages/answers/index.astro |
+| 2026-06-27 | /answers/best-ai-chatbot-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-chatbot-2026.astro |
+| 2026-06-27 | /answers/best-ai-coding-tool-2026/ | Static page | Yes | working tree | src/pages/answers/best-ai-coding-tool-2026.astro |
 | 2026-06-27 | /answers/best-ai-image-generator-2026/ | Static page | Yes | page metadata | src/pages/answers/best-ai-image-generator-2026.astro |
 | 2026-06-27 | /answers/best-free-ai-tools-2026/ | Static page | Yes | page metadata | src/pages/answers/best-free-ai-tools-2026.astro |
 | 2026-06-27 | /answers/chatgpt-alternatives-2026/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-alternatives-2026.astro |
+| 2026-06-27 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | working tree | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-06-27 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
 | 2026-06-27 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-27 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
-| 2026-06-27 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
-| 2026-06-27 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
+| 2026-06-27 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-27 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
 | 2026-06-27 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-27 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-27 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
 | 2026-06-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-27 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
-| 2026-06-27 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
+| 2026-06-27 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-27 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-27 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-27 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
+| 2026-06-27 | /categories/ai-seo/ | Category | Yes | working tree | src/content/categories/ai-seo.md |
 | 2026-06-27 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-27 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
-| 2026-06-27 | /categories/ai-writing/ | Category | Yes | working tree | src/content/categories/ai-writing.md |
+| 2026-06-27 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-27 | /companies/ | Static page | Yes | working tree | src/pages/companies/index.astro |
 | 2026-06-27 | /companies/adobe/ | Company | Yes | frontmatter | src/content/companies/adobe.md |
 | 2026-06-27 | /companies/amazon/ | Company | Yes | frontmatter | src/content/companies/amazon.md |
-| 2026-06-27 | /companies/anysphere/ | Company | Yes | working tree | src/content/companies/anysphere.md |
-| 2026-06-27 | /companies/assemblyai/ | Company | Yes | working tree | src/content/companies/assemblyai.md |
-| 2026-06-27 | /companies/bytedance/ | Company | Yes | working tree | src/content/companies/bytedance.md |
-| 2026-06-27 | /companies/character-ai-company/ | Company | Yes | working tree | src/content/companies/character-ai-company.md |
-| 2026-06-27 | /companies/cognition/ | Company | Yes | working tree | src/content/companies/cognition.md |
-| 2026-06-27 | /companies/descript-company/ | Company | Yes | working tree | src/content/companies/descript-company.md |
+| 2026-06-27 | /companies/anysphere/ | Company | Yes | frontmatter | src/content/companies/anysphere.md |
+| 2026-06-27 | /companies/assemblyai/ | Company | Yes | frontmatter | src/content/companies/assemblyai.md |
+| 2026-06-27 | /companies/bytedance/ | Company | Yes | frontmatter | src/content/companies/bytedance.md |
+| 2026-06-27 | /companies/character-ai-company/ | Company | Yes | frontmatter | src/content/companies/character-ai-company.md |
+| 2026-06-27 | /companies/cognition/ | Company | Yes | frontmatter | src/content/companies/cognition.md |
+| 2026-06-27 | /companies/cohere/ | Company | Yes | working tree | src/content/companies/cohere.md |
+| 2026-06-27 | /companies/descript-company/ | Company | Yes | frontmatter | src/content/companies/descript-company.md |
 | 2026-06-27 | /companies/elevenlabs-company/ | Company | Yes | frontmatter | src/content/companies/elevenlabs-company.md |
 | 2026-06-27 | /companies/google-deepmind/ | Company | Yes | frontmatter | src/content/companies/google-deepmind.md |
-| 2026-06-27 | /companies/groq-company/ | Company | Yes | working tree | src/content/companies/groq-company.md |
-| 2026-06-27 | /companies/heygen-company/ | Company | Yes | working tree | src/content/companies/heygen-company.md |
-| 2026-06-27 | /companies/hugging-face/ | Company | Yes | working tree | src/content/companies/hugging-face.md |
-| 2026-06-27 | /companies/luma-company/ | Company | Yes | working tree | src/content/companies/luma-company.md |
-| 2026-06-27 | /companies/meta/ | Company | Yes | working tree | src/content/companies/meta.md |
-| 2026-06-27 | /companies/microsoft/ | Company | Yes | working tree | src/content/companies/microsoft.md |
-| 2026-06-27 | /companies/midjourney/ | Company | Yes | working tree | src/content/companies/midjourney.md |
-| 2026-06-27 | /companies/minimax/ | Company | Yes | working tree | src/content/companies/minimax.md |
+| 2026-06-27 | /companies/groq-company/ | Company | Yes | frontmatter | src/content/companies/groq-company.md |
+| 2026-06-27 | /companies/heygen-company/ | Company | Yes | frontmatter | src/content/companies/heygen-company.md |
+| 2026-06-27 | /companies/hugging-face/ | Company | Yes | frontmatter | src/content/companies/hugging-face.md |
+| 2026-06-27 | /companies/luma-company/ | Company | Yes | frontmatter | src/content/companies/luma-company.md |
+| 2026-06-27 | /companies/meta/ | Company | Yes | frontmatter | src/content/companies/meta.md |
+| 2026-06-27 | /companies/microsoft/ | Company | Yes | frontmatter | src/content/companies/microsoft.md |
+| 2026-06-27 | /companies/midjourney/ | Company | Yes | frontmatter | src/content/companies/midjourney.md |
+| 2026-06-27 | /companies/minimax/ | Company | Yes | frontmatter | src/content/companies/minimax.md |
 | 2026-06-27 | /companies/mistral/ | Company | Yes | frontmatter | src/content/companies/mistral.md |
-| 2026-06-27 | /companies/notion/ | Company | Yes | working tree | src/content/companies/notion.md |
+| 2026-06-27 | /companies/notion/ | Company | Yes | frontmatter | src/content/companies/notion.md |
 | 2026-06-27 | /companies/openai/ | Company | Yes | frontmatter | src/content/companies/openai.md |
-| 2026-06-27 | /companies/perplexity/ | Company | Yes | working tree | src/content/companies/perplexity.md |
-| 2026-06-27 | /companies/replit/ | Company | Yes | working tree | src/content/companies/replit.md |
-| 2026-06-27 | /companies/runway/ | Company | Yes | working tree | src/content/companies/runway.md |
-| 2026-06-27 | /companies/stability-ai/ | Company | Yes | working tree | src/content/companies/stability-ai.md |
-| 2026-06-27 | /companies/suno/ | Company | Yes | working tree | src/content/companies/suno.md |
-| 2026-06-27 | /companies/synthesia-company/ | Company | Yes | working tree | src/content/companies/synthesia-company.md |
-| 2026-06-27 | /companies/xai/ | Company | Yes | working tree | src/content/companies/xai.md |
-| 2026-06-27 | /dead/ | Static page | Yes | page metadata | src/pages/dead/index.astro |
+| 2026-06-27 | /companies/perplexity/ | Company | Yes | frontmatter | src/content/companies/perplexity.md |
+| 2026-06-27 | /companies/replit/ | Company | Yes | frontmatter | src/content/companies/replit.md |
+| 2026-06-27 | /companies/runway/ | Company | Yes | frontmatter | src/content/companies/runway.md |
+| 2026-06-27 | /companies/stability-ai/ | Company | Yes | frontmatter | src/content/companies/stability-ai.md |
+| 2026-06-27 | /companies/suno/ | Company | Yes | frontmatter | src/content/companies/suno.md |
+| 2026-06-27 | /companies/synthesia-company/ | Company | Yes | frontmatter | src/content/companies/synthesia-company.md |
+| 2026-06-27 | /companies/xai/ | Company | Yes | frontmatter | src/content/companies/xai.md |
+| 2026-06-27 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-06-27 | /compare/activepieces-vs-n8n/ | Comparison | Yes | working tree | src/content/comparisons/activepieces-vs-n8n.md |
+| 2026-06-27 | /compare/activepieces-vs-zapier/ | Comparison | Yes | working tree | src/content/comparisons/activepieces-vs-zapier.md |
+| 2026-06-27 | /compare/aider-vs-claude-code/ | Comparison | Yes | working tree | src/content/comparisons/aider-vs-claude-code.md |
+| 2026-06-27 | /compare/beautiful-ai-vs-decktopus/ | Comparison | Yes | working tree | src/content/comparisons/beautiful-ai-vs-decktopus.md |
+| 2026-06-27 | /compare/beautiful-ai-vs-gamma/ | Comparison | Yes | working tree | src/content/comparisons/beautiful-ai-vs-gamma.md |
+| 2026-06-27 | /compare/beautiful-ai-vs-pitch/ | Comparison | Yes | working tree | src/content/comparisons/beautiful-ai-vs-pitch.md |
+| 2026-06-27 | /compare/beautiful-ai-vs-presentations-ai/ | Comparison | Yes | working tree | src/content/comparisons/beautiful-ai-vs-presentations-ai.md |
+| 2026-06-27 | /compare/capacities-vs-obsidian/ | Comparison | Yes | working tree | src/content/comparisons/capacities-vs-obsidian.md |
+| 2026-06-27 | /compare/chatgpt-vs-claude/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-claude.md |
+| 2026-06-27 | /compare/chatgpt-vs-gemini/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-gemini.md |
+| 2026-06-27 | /compare/chatgpt-vs-grok/ | Comparison | Yes | working tree | src/content/comparisons/chatgpt-vs-grok.md |
+| 2026-06-27 | /compare/claude-vs-gemini/ | Comparison | Yes | working tree | src/content/comparisons/claude-vs-gemini.md |
+| 2026-06-27 | /dead/ | Static page | Yes | working tree | src/pages/dead/index.astro |
 | 2026-06-27 | /dead/bing-chat/ | Dead tool archive | Yes | frontmatter | src/content/dead/bing-chat.md |
 | 2026-06-27 | /dead/google-bard/ | Dead tool archive | Yes | frontmatter | src/content/dead/google-bard.md |
 | 2026-06-27 | /dead/gpt-3-api/ | Dead tool archive | Yes | frontmatter | src/content/dead/gpt-3-api.md |
@@ -454,13 +447,17 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /dead/openai-codex/ | Dead tool archive | Yes | frontmatter | src/content/dead/openai-codex.md |
 | 2026-06-27 | /dead/play-ht/ | Dead tool archive | Yes | frontmatter | src/content/dead/play-ht.md |
 | 2026-06-27 | /dead/sora/ | Dead tool archive | Yes | frontmatter | src/content/dead/sora.md |
+| 2026-06-27 | /dead/stability-ai-clipdrop/ | Dead tool archive | Yes | working tree | src/content/dead/stability-ai-clipdrop.md |
+| 2026-06-27 | /demo-godtier/ | Static page | Yes | working tree | src/pages/demo-godtier.astro |
+| 2026-06-27 | /glossary/ | Static page | Yes | working tree | src/pages/glossary/index.astro |
 | 2026-06-27 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
 | 2026-06-27 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-27 | /guides/best-ai-for-logo-design/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-logo-design.md |
 | 2026-06-27 | /guides/best-ai-for-medical-research/ | Guide | No | frontmatter | src/content/use-cases/best-ai-for-medical-research.md |
-| 2026-06-27 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-meeting-notes.md |
-| 2026-06-27 | /guides/best-ai-for-newsletter-writers/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-newsletter-writers.md |
+| 2026-06-27 | /guides/best-ai-for-meeting-notes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-meeting-notes.md |
+| 2026-06-27 | /guides/best-ai-for-newsletter-writers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-newsletter-writers.md |
 | 2026-06-27 | /guides/best-ai-for-photo-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-photo-editing.md |
+| 2026-06-27 | /guides/best-ai-for-podcasters/ | Guide | Yes | working tree | src/content/use-cases/best-ai-for-podcasters.md |
 | 2026-06-27 | /guides/best-ai-for-presentations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-presentations.md |
 | 2026-06-27 | /guides/best-ai-for-resume-writing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-resume-writing.md |
 | 2026-06-27 | /guides/best-ai-for-seo-content/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-seo-content.md |
@@ -476,9 +473,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/best-ai-meeting-assistant-for-customer-success-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-meeting-assistant-for-customer-success-teams.md |
 | 2026-06-27 | /guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-outbound-tool-for-unified-prospecting-and-sequencing.md |
 | 2026-06-27 | /guides/best-ai-personal-assistant-for-work/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-personal-assistant-for-work.md |
+| 2026-06-27 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
 | 2026-06-27 | /guides/best-ai-receipt-tool-for-bookkeepers/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-receipt-tool-for-bookkeepers.md |
 | 2026-06-27 | /guides/best-ai-research-tool-for-academic-citations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-research-tool-for-academic-citations.md |
 | 2026-06-27 | /guides/best-ai-sales-platform-for-mid-market-sdr-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-sales-platform-for-mid-market-sdr-teams.md |
+| 2026-06-27 | /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ | Guide | Yes | working tree | src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md |
 | 2026-06-27 | /guides/best-ai-seo-tool/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-seo-tool.md |
 | 2026-06-27 | /guides/best-ai-tool-for-conversion-rate-optimization/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-conversion-rate-optimization.md |
 | 2026-06-27 | /guides/best-ai-tool-for-paid-social-creative-velocity/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tool-for-paid-social-creative-velocity.md |
@@ -531,6 +530,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-06-27 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-06-27 | /robots.txt | Crawl surface | No | git | public/robots.txt |
+| 2026-06-27 | /stack-builder/ | Static page | Yes | working tree | src/pages/stack-builder/index.astro |
 | 2026-06-27 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
 | 2026-06-27 | /trends/ | Static page | Yes | page metadata | src/pages/trends/index.astro |
 | 2026-06-27 | /trends/agent-commerce/ | Trend | Yes | frontmatter | src/content/trends/agent-commerce.md |

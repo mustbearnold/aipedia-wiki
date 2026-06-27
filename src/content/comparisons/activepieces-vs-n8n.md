@@ -6,10 +6,10 @@ tools: [activepieces, n8n]
 category: ai-automation
 winner: depends
 seo_title: "Activepieces vs n8n: Open-Source Automation or Technical Workflow Control? (June 2026)"
-meta_description: "Activepieces vs n8n, verified June 21, 2026: choose Activepieces for MIT self-hosting, simple per-active-flow pricing, and MCP-first control; choose n8n for deeper workflow operations, code nodes, AI Agent nodes, and execution-based cloud."
+meta_description: "Activepieces vs n8n, verified June 27, 2026: choose Activepieces for MIT self-hosting, simple per-active-flow pricing, and MCP-first control; choose n8n for deeper workflow operations, code nodes, AI Agent nodes, and execution-based cloud."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-21
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -97,15 +97,15 @@ Agencies with engineers should usually test n8n first because it has code nodes,
 
 ## Sources
 
-- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-21)
-- [Activepieces pieces catalog](https://www.activepieces.com/pieces) (verified 2026-06-21)
-- [Activepieces MCP page](https://www.activepieces.com/mcp) (verified 2026-06-21)
-- [Activepieces install docs](https://www.activepieces.com/docs/install/overview) (verified 2026-06-21)
-- [Activepieces MCP tools reference](https://www.activepieces.com/docs/mcp/tools) (verified 2026-06-21)
-- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-21)
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-21)
-- [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-21)
-- [n8n hosting docs](https://docs.n8n.io/hosting/) (verified 2026-06-21)
-- [n8n GitHub repository](https://github.com/n8n-io/n8n) (verified 2026-06-21)
-- [n8n affiliate program](https://n8n.io/affiliates/) (verified 2026-06-21)
+- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-27)
+- [Activepieces pieces catalog](https://www.activepieces.com/pieces) (verified 2026-06-27)
+- [Activepieces MCP page](https://www.activepieces.com/mcp) (verified 2026-06-27)
+- [Activepieces install docs](https://www.activepieces.com/docs/install/overview) (verified 2026-06-27)
+- [Activepieces MCP tools reference](https://www.activepieces.com/docs/mcp/tools) (verified 2026-06-27)
+- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-27)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-27)
+- [n8n AI Agent node docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) (verified 2026-06-27)
+- [n8n hosting docs](https://docs.n8n.io/hosting/) (verified 2026-06-27)
+- [n8n GitHub repository](https://github.com/n8n-io/n8n) (verified 2026-06-27)
+- [n8n affiliate program](https://n8n.io/affiliates/) (verified 2026-06-27)
 - [AI Automation category](/categories/ai-automation/)

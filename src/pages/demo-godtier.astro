@@ -29,7 +29,7 @@ const tool = {
   categorySlug: 'ai-coding',
   url: 'https://code.claude.com',
   pricing_summary: '$20 – $200 / mo',
-  last_verified: '2026-06-12',
+  last_verified: '2026-06-27',
   rank: { label: 'Top pick in AI Coding' },
   score: {
     overall: 9.0,
@@ -49,23 +49,23 @@ const tool = {
     { tone: 'negative' as const, label: 'Skip if', value: 'You need an IDE, visual diffs, or a free tier' },
   ],
   facts: [
-    { label: 'Backing model',  value: 'Claude Opus 4.8 with Sonnet/Haiku options by plan', confidence: 'high', volatility: 'medium', verified: '2026-06-12', source: 'Anthropic release notes' },
-    { label: 'Context window', value: 'Long-context Claude sessions; exact limits vary by model and surface',  confidence: 'medium', volatility: 'medium', verified: '2026-06-12', source: 'Claude model docs' },
-    { label: 'Interface',      value: 'Terminal workflow · macOS, Linux · Windows via WSL', confidence: 'high', volatility: 'low', verified: '2026-06-12', source: 'Claude Code docs' },
-    { label: 'MCP support',    value: 'First-class Model Context Protocol',      confidence: 'high', volatility: 'medium', verified: '2026-06-12', source: 'Claude Code docs' },
-    { label: 'Dynamic workflows', value: 'Research preview on Max, Team, and Enterprise', confidence: 'high', volatility: 'high', verified: '2026-06-12', source: 'Claude Code dynamic workflows' },
-    { label: 'Pricing',        value: 'Pro, Max, Team, Enterprise, and API paths; verify current usage limits before rollout', confidence: 'high', volatility: 'high', verified: '2026-06-12', source: 'Claude pricing' },
+    { label: 'Backing model',  value: 'Claude Opus 4.8 with Sonnet/Haiku options by plan', confidence: 'high', volatility: 'medium', verified: '2026-06-27', source: 'Anthropic release notes' },
+    { label: 'Context window', value: 'Long-context Claude sessions; exact limits vary by model and surface',  confidence: 'medium', volatility: 'medium', verified: '2026-06-27', source: 'Claude model docs' },
+    { label: 'Interface',      value: 'Terminal workflow · macOS, Linux · Windows via WSL', confidence: 'high', volatility: 'low', verified: '2026-06-27', source: 'Claude Code docs' },
+    { label: 'MCP support',    value: 'First-class Model Context Protocol',      confidence: 'high', volatility: 'medium', verified: '2026-06-27', source: 'Claude Code docs' },
+    { label: 'Dynamic workflows', value: 'Research preview on Max, Team, and Enterprise', confidence: 'high', volatility: 'high', verified: '2026-06-27', source: 'Claude Code dynamic workflows' },
+    { label: 'Pricing',        value: 'Pro, Max, Team, Enterprise, and API paths; verify current usage limits before rollout', confidence: 'high', volatility: 'high', verified: '2026-06-27', source: 'Claude pricing' },
   ],
   primary_cta: { label: 'Try Claude Code', href: 'https://code.claude.com', external: true },
   secondary_cta: { label: 'Compare alternatives', href: '/guides/best-ai-coding-assistant/' },
   affiliate: false,
   sources: [
-    { label: 'Claude Code docs',      url: 'https://docs.anthropic.com/en/docs/claude-code/overview', verified: '2026-06-12' },
-    { label: 'Claude pricing',        url: 'https://claude.com/pricing',                            verified: '2026-06-12' },
-    { label: 'Claude Opus 4.8',       url: 'https://www.anthropic.com/news/claude-opus-4-8',          verified: '2026-06-12' },
-    { label: 'Dynamic workflows',     url: 'https://claude.com/blog/introducing-dynamic-workflows-in-claude-code', verified: '2026-06-12' },
-    { label: 'Claude Code llms.txt',  url: 'https://code.claude.com/llms.txt',                       verified: '2026-06-12' },
-    { label: 'Claude plan guidance',  url: 'https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan/', verified: '2026-06-12' },
+    { label: 'Claude Code docs',      url: 'https://docs.anthropic.com/en/docs/claude-code/overview', verified: '2026-06-27' },
+    { label: 'Claude pricing',        url: 'https://claude.com/pricing',                            verified: '2026-06-27' },
+    { label: 'Claude Opus 4.8',       url: 'https://www.anthropic.com/news/claude-opus-4-8',          verified: '2026-06-27' },
+    { label: 'Dynamic workflows',     url: 'https://claude.com/blog/introducing-dynamic-workflows-in-claude-code', verified: '2026-06-27' },
+    { label: 'Claude Code llms.txt',  url: 'https://code.claude.com/llms.txt',                       verified: '2026-06-27' },
+    { label: 'Claude plan guidance',  url: 'https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan/', verified: '2026-06-27' },
   ],
 };
 ---
@@ -81,7 +81,7 @@ const tool = {
         { label: tool.category, href: `/categories/${tool.categorySlug}/` },
         { label: tool.title },
       ]}
-      verifiedLabel="Verified June 12"
+      verifiedLabel="Verified June 27"
       rankLabel={tool.rank.label}
     />
 

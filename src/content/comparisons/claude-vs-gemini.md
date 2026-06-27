@@ -6,10 +6,10 @@ tools: [claude, gemini]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs Gemini: reasoning assistant or Google AI bundle? (June 2026)"
-meta_description: "Claude vs Gemini, verified June 21, 2026: compare Claude Opus 4.8, Claude Code, suspended Fable/Mythos access, Gemini 3.5 Flash, Gemini 3.1 Pro API, Google AI plans, Nano Banana, and Veo."
+meta_description: "Claude vs Gemini, verified June 27, 2026: compare Claude Opus 4.8, Claude Code, suspended Fable/Mythos access, Gemini 3.5 Flash, Gemini 3.1 Pro API, Google AI plans, Nano Banana, and Veo."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-21
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---

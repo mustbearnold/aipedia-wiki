@@ -27,7 +27,7 @@ top_picks:
 
 ## Quick Decision
 
-As of June 23, 2026, **AI SEO** is not one market. It is four buying jobs that are often confused:
+As of June 27, 2026, **AI SEO** is not one market. It is four buying jobs that are often confused:
 
 The June 20 recheck keeps a fifth buying filter: **answer liability and source review**. After WIRED reported that the Munich Regional Court preliminarily held Google liable for false AI Overviews statements, AI-search visibility is no longer only a "who mentions us?" dashboard problem. Buyers now need to know whether a tool can show which prompts, sources, citations, and generated claims created the visibility signal, and whether the team has a review owner before those claims are turned into public pages, PR copy, or executive reports.
 

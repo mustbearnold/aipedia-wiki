@@ -6,10 +6,10 @@ tools: [capacities, obsidian]
 category: ai-notes
 winner: depends
 seo_title: "Capacities vs Obsidian: Object PKM or Local Markdown? (June 2026)"
-meta_description: "Updated June 18, 2026: choose Capacities for hosted object-based PKM with Pro AI connectors and provider choice, or Obsidian for local-first Markdown, plugins, and file ownership."
+meta_description: "Updated June 27, 2026: choose Capacities for hosted object-based PKM with Pro AI connectors and provider choice, or Obsidian for local-first Markdown, plugins, and file ownership."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-18
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -69,7 +69,7 @@ For organizations, Obsidian's commercial license is not required for commercial 
 
 ## Current Fact Check
 
-Verified June 18, 2026 against official Capacities docs/pricing, Capacities Release 64, AI Chat Connector docs, and Obsidian pricing/community pages. Capacities now documents provider choice and BYOK paths; Obsidian's AI story depends on user-selected plugins or external tooling.
+Verified June 27, 2026 against official Capacities docs/pricing, Capacities Release 64, AI Chat Connector docs, and Obsidian pricing/community pages. Capacities now documents provider choice and BYOK paths; Obsidian's AI story depends on user-selected plugins or external tooling.
 
 ## Who Should Choose Capacities
 

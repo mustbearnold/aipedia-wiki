@@ -6,10 +6,10 @@ tools: [activepieces, zapier]
 category: ai-automation
 winner: depends
 seo_title: "Activepieces vs Zapier: Open-Source Control or No-Code Breadth? (June 2026)"
-meta_description: "Activepieces vs Zapier, verified June 21, 2026: choose Activepieces for MIT self-hosting, active-flow pricing, and MCP-first control; choose Zapier for 9,000+ apps, 30,000+ MCP actions, and non-technical rollout."
+meta_description: "Activepieces vs Zapier, verified June 27, 2026: choose Activepieces for MIT self-hosting, active-flow pricing, and MCP-first control; choose Zapier for 9,000+ apps, 30,000+ MCP actions, and non-technical rollout."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-21
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -126,13 +126,13 @@ No. Zapier is a proprietary cloud platform. Use Activepieces or [n8n](/tools/n8n
 
 ## Sources
 
-- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-21)
-- [Activepieces pieces catalog](https://www.activepieces.com/pieces) (verified 2026-06-21)
-- [Activepieces MCP page](https://www.activepieces.com/mcp) (verified 2026-06-21)
-- [Activepieces MCP tools reference](https://www.activepieces.com/docs/mcp/tools) (verified 2026-06-21)
-- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-21)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-21)
-- [Zapier apps directory](https://zapier.com/apps) (verified 2026-06-21)
-- [Zapier AI](https://zapier.com/ai) (verified 2026-06-21)
-- [Zapier MCP guide](https://zapier.com/blog/zapier-mcp-guide/) (verified 2026-06-21)
+- [Activepieces pricing](https://www.activepieces.com/pricing) (verified 2026-06-27)
+- [Activepieces pieces catalog](https://www.activepieces.com/pieces) (verified 2026-06-27)
+- [Activepieces MCP page](https://www.activepieces.com/mcp) (verified 2026-06-27)
+- [Activepieces MCP tools reference](https://www.activepieces.com/docs/mcp/tools) (verified 2026-06-27)
+- [Activepieces GitHub releases](https://github.com/activepieces/activepieces/releases) (verified 2026-06-27)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-27)
+- [Zapier apps directory](https://zapier.com/apps) (verified 2026-06-27)
+- [Zapier AI](https://zapier.com/ai) (verified 2026-06-27)
+- [Zapier MCP guide](https://zapier.com/blog/zapier-mcp-guide/) (verified 2026-06-27)
 - [AI Automation category](/categories/ai-automation/)

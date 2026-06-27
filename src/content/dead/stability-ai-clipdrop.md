@@ -12,17 +12,17 @@ died: 2024-02
 cause: divested
 acquired_by: "Jasper AI"
 seo_title: "Stability AI Clipdrop Ownership: What Happened?"
-meta_description: "Updated June 18, 2026: Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024. Clipdrop remains active at clipdrop.co under Jasper."
+meta_description: "Updated June 27, 2026: Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024. Clipdrop remains active at clipdrop.co under Jasper."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 ---
 
 # Stability AI's Clipdrop Ownership
 
 This archive page tracks the end of Stability AI's ownership of Clipdrop, not the death of Clipdrop itself.
 
-The previous version of this page incorrectly said Stability AI shut Clipdrop down in 2024. Current June 18, 2026 source checks show the active product still resolves at [Clipdrop](/tools/clipdrop/), with live web tools, a pricing page, and API pages. The accurate historical event is that Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024.
+The previous version of this page incorrectly said Stability AI shut Clipdrop down in 2024. Current June 27, 2026 source checks show the active product still resolves at [Clipdrop](/tools/clipdrop/), with live web tools, a pricing page, and API pages. The accurate historical event is that Stability AI divested Init ML, the maker of Clipdrop, to Jasper in February 2024.
 
 ## What Happened
 
@@ -55,8 +55,8 @@ For replacement workflows:
 
 ## Sources
 
-- [Stability AI divests Init ML to Jasper](https://stability.ai/news-updates/init-ml-divestment) (verified 2026-06-18)
-- [Jasper acquisition announcement via PR Newswire](https://www.prnewswire.com/news-releases/jasper-expands-by-acquiring-image-platform-clipdrop-from-stability-ai-302068891.html) (verified 2026-06-18)
-- [Clipdrop official site](https://clipdrop.co/) (verified 2026-06-18)
-- [Clipdrop APIs](https://clipdrop.co/apis) (verified 2026-06-18)
-- [Jasper image API docs](https://developers.jasper.ai/docs/using-images) (verified 2026-06-18)
+- [Stability AI divests Init ML to Jasper](https://stability.ai/news-updates/init-ml-divestment) (verified 2026-06-27)
+- [Jasper acquisition announcement via PR Newswire](https://www.prnewswire.com/news-releases/jasper-expands-by-acquiring-image-platform-clipdrop-from-stability-ai-302068891.html) (verified 2026-06-27)
+- [Clipdrop official site](https://clipdrop.co/) (verified 2026-06-27)
+- [Clipdrop APIs](https://clipdrop.co/apis) (verified 2026-06-27)
+- [Jasper image API docs](https://developers.jasper.ai/docs/using-images) (verified 2026-06-27)
