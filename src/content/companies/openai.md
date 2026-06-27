@@ -3,21 +3,21 @@ type: company
 slug: openai
 title: OpenAI
 seo_title: "OpenAI Company Profile (June 2026), aipedia.wiki"
-meta_description: "OpenAI builds ChatGPT, Codex, GPT Image 2, GPT-5.5, Daybreak, Deployment Company, and gpt-oss models. Verified June 15, 2026 with Visa/ChatGPT payments, GPT-5.2 retirement, and reported state-AG scrutiny noted."
+meta_description: "OpenAI builds ChatGPT, Codex, GPT Image 2, GPT-5.5, Daybreak, Deployment Company, and gpt-oss models. Verified June 27, 2026 with Visa/ChatGPT payments, GPT-5.2 retirement, and reported state-AG scrutiny noted."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2015
 hq: San Francisco, USA
 funding: "$133B+"
 key_products: [chatgpt, codex, gpt-image-2]
-last_updated: 2026-06-15
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-15
+last_verified: 2026-06-27
 ---
 
 # OpenAI
 
-OpenAI, co-founded by Sam Altman in 2015 and headquartered in San Francisco, develops foundation models and AI products including [ChatGPT](/tools/chatgpt/), [Codex](/tools/codex/), GPT Image 2, the new Daybreak general-purpose agent (launched May 11, 2026), the Deployment Company enterprise offering (also May 11), API models, and open-weight gpt-oss models. The company holds a $1.2 trillion valuation as of April 2026 following a $122 billion funding round [5](https://openai.com/index/accelerating-the-next-phase-ai/). As of June 15, 2026, AP reporting and Visa's Intelligent Commerce page make Visa-backed payment flows in ChatGPT a live agent-commerce watch item; OpenAI's release notes say GPT-5.2 models are no longer available in ChatGPT; and Reuters/Wall Street Journal reporting says OpenAI faces a broad state-attorneys-general investigation. The investigation is a legal scrutiny signal, not a finding against the company.
+OpenAI, co-founded by Sam Altman in 2015 and headquartered in San Francisco, develops foundation models and AI products including [ChatGPT](/tools/chatgpt/), [Codex](/tools/codex/), GPT Image 2, the new Daybreak general-purpose agent (launched May 11, 2026), the Deployment Company enterprise offering (also May 11), API models, and open-weight gpt-oss models. The company holds a $1.2 trillion valuation as of April 2026 following a $122 billion funding round [5](https://openai.com/index/accelerating-the-next-phase-ai/). As of June 27, 2026, AP reporting and Visa's Intelligent Commerce page make Visa-backed payment flows in ChatGPT a live agent-commerce watch item; OpenAI's release notes say GPT-5.2 models are no longer available in ChatGPT; and Reuters/Wall Street Journal reporting says OpenAI faces a broad state-attorneys-general investigation. The investigation is a legal scrutiny signal, not a finding against the company.
 
 ## Key Facts
 
@@ -55,6 +55,7 @@ The June 2026 Visa/ChatGPT payment story adds a commerce lane to that pattern. O
 - **June 15, 2026:** AiPedia refreshed OpenAI after AP reported Visa embedded its payment network inside ChatGPT and Visa's Intelligent Commerce page described OpenAI/Visa work on secure, transparent, consumer-controlled agent commerce. [Read AiPedia's Visa/ChatGPT payments coverage](/news/2026-06-10-openai-visa-chatgpt-agent-payments/).
 - **June 13, 2026:** Reuters and the Wall Street Journal reported that a coalition of US state attorneys general opened a broad OpenAI investigation, with document requests covering user impact, data handling, minors, seniors, models, advertising, engagement, and internal policies. The reported probe does not itself change ChatGPT pricing or available model routes, but it raises governance review priority for sensitive deployments. [Read AiPedia's late update](/news/2026-06-13-us-blocks-anthropic-fable-mythos-openai-probe/).
 - **June 13, 2026:** OpenAI's ChatGPT release notes say GPT-5.2 Instant, GPT-5.2 Thinking, and GPT-5.2 Pro are no longer available in ChatGPT as of June 12, with existing conversations continuing on corresponding GPT-5.5 models. This is a model-maintenance signal for buyers with GPT-5.2-specific docs or eval baselines.
+- **June 27, 2026:** Re-verified against official and source-health-checked June 2026 references; ChatGPT, Codex, GPT Image 2, Daybreak, Deployment Company, GPT-5.5, and gpt-oss remain the profile's current OpenAI lineup.
 - **May 11, 2026:** OpenAI launched **Daybreak**, a general-purpose autonomous agent for ChatGPT users, and **Deployment Company**, an enterprise offering for guided rollout of ChatGPT, Codex, Daybreak, and the OpenAI API. Same-day move covered both the consumer-agent flank and the enterprise-services flank.
 - **May 11, 2026:** OpenAI opened an **EU preview of GPT-5.5-Cyber**, a cybersecurity-specialized variant of GPT-5.5. Mirrors the gated-model pattern Anthropic set with Claude Mythos.
 - **May 7, 2026:** Released **Codex Chrome**, bringing Codex into the browser with persistent project context, agentic browsing, and tab-aware coding workflows.

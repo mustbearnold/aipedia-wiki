@@ -48,6 +48,8 @@ decision_picks:
 
 AI coding tools now split into five buyer jobs: inline help inside an existing IDE, full AI-native IDEs, terminal agents, pull-request agents, and app builders for non-developers. Pick the workflow first, then compare price.
 
+The June 27 Cursor worth-it answer keeps the buyer rule simple: pay for Cursor only if the editor-native loop, agents, Bugbot, reviews, and usage controls are part of the daily coding workflow. Otherwise compare GitHub Copilot, Claude Code, Codex, and open/BYOK routes before adding another AI subscription.
+
 **June 15 token-budget governance update:** [Disney's reported AI coding push](/news/2026-06-15-disney-ai-coding-tokenmaxxing/) adds a practical enterprise warning for Cursor, Claude Code, Copilot, Codex, Replit Agent, Devin, and similar tools. Do not measure rollout success by raw tokens, prompts, or agent sessions. Measure reviewed diffs, test-passing changes, defect rate, cycle time, rollback safety, and whether AI-coded work survives release.
 
 **June 15 Codex/Ona update:** [OpenAI's June 11 Ona acquisition agreement](/news/2026-06-11-openai-acquires-ona-codex-persistent-agents/) makes persistent execution a first-class coding-agent buying criterion. For Codex, Claude Code, Cursor, Copilot, Devin, Replit Agent, and model-router stacks, ask where the agent runs, how credentials are scoped, how activity is logged, which actions require review, and what budget controls exist before letting background agents run for hours or days.

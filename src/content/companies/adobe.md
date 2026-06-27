@@ -3,16 +3,16 @@ type: company
 slug: adobe
 title: Adobe
 seo_title: "Adobe Company Profile (June 2026), aipedia.wiki"
-meta_description: "Adobe is the public creative-software giant behind Firefly, its commercially-safe generative AI woven across Photoshop, Illustrator, Premiere, and Express. Verified June 16, 2026."
+meta_description: "Adobe is the public creative-software giant behind Firefly, its commercially-safe generative AI woven across Photoshop, Illustrator, Premiere, and Express. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: bigtech
 founded: 1982
 hq: San Jose, USA
 funding: "Public company (NASDAQ: ADBE)"
 key_products: [adobe-firefly]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Adobe

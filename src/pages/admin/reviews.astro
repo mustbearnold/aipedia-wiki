@@ -1,6 +1,6 @@
 ---
 // Admin moderation dashboard. Basic-auth gated by the Vercel API endpoints it calls.
-// Reviewed 2026-06-13: remains noindex and disallowed in robots.txt.
+// Reviewed 2026-06-27: remains noindex and disallowed in robots.txt.
 // Browser will prompt for username/password on first /api/reviews/admin/* fetch.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
@@ -12,7 +12,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 >
   <div class="max-w-[var(--site-narrow-max)] mx-auto">
     <h1 class="text-2xl font-bold mb-1">Review Moderation</h1>
-    <p class="text-sm text-[var(--text-muted)] mb-[var(--site-content-gap)]">Approve or reject user-submitted reviews. Basic-auth protected. Noindex admin surface reviewed June 13, 2026.</p>
+    <p class="text-sm text-[var(--text-muted)] mb-[var(--site-content-gap)]">Approve or reject user-submitted reviews. Basic-auth protected. Noindex admin surface reviewed June 27, 2026.</p>
 
     <div class="flex gap-[var(--site-chip-gap)] mb-[var(--site-content-gap-sm)]" data-admin-tabs>
       <button type="button" class="px-3 py-1.5 rounded-[var(--site-radius-control)] text-sm font-semibold bg-[var(--accent-primary)] text-[#0b0a14]" data-admin-status="pending">Pending</button>

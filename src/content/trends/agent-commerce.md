@@ -3,13 +3,13 @@ type: trend
 slug: agent-commerce
 title: "Agent Commerce, AI Agents as Economic Actors"
 seo_title: "Agent Commerce: AI Agents in Commerce (June 2026), aipedia.wiki"
-meta_description: "Updated June 15, 2026: Visa's ChatGPT payments move makes agent commerce more concrete, but the buying criteria are still consent, token scope, human approvals, merchant boundaries, and dispute-ready logs."
+meta_description: "Updated June 27, 2026: Visa's ChatGPT payments move makes agent commerce more concrete, but the buying criteria are still consent, token scope, human approvals, merchant boundaries, and dispute-ready logs."
 author: "aipedia.wiki Editorial"
 description: AI agents are starting to research, compare, assemble carts, and initiate payments. The 2026 buying question is not whether agents can shop, but who controls consent, payment tokens, merchant scope, and refund accountability.
 timeframe: Conceptual in 2024, payment-platform pilots and developer tooling through 2025, and moving into production payment infrastructure by June 2026 through Visa, Mastercard, PayPal, Stripe, and ChatGPT payment routes.
 impact: high
-last_updated: 2026-06-15
-last_verified: 2026-06-15
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -58,11 +58,11 @@ Agent commerce is high-impact because it changes both discovery and checkout. Th
 
 ## Sources
 
-- [AP: Visa plugs its payment network into ChatGPT](https://apnews.com/article/visa-chatgpt-openai-shopping-mastercard-d769dec86344cb4977c98789e8ec492f), verified 2026-06-15.
-- [Visa Intelligent Commerce](https://www.visa.com/en-us/solutions/intelligent-commerce), verified 2026-06-15.
-- [Visa Intelligent Commerce Connect announcement](https://investor.visa.com/news/news-details/2026/Visa-Opens-the-Door-to-AI-Driven-Shopping-for-Businesses-Worldwide/default.aspx), verified 2026-06-15.
-- [Mastercard Agent Pay](https://www.mastercard.com/us/en/business/artificial-intelligence/mastercard-agent-pay.html), verified 2026-06-12.
-- [Worldline, ING, and Mastercard live European agentic payment](https://www.mastercard.com/news/europe/en/newsroom/press-releases/en/2026/worldline-ing-and-mastercard-complete-a-live-end-to-end-european-agentic-payment-in-production/), verified 2026-06-12.
-- [PayPal.ai agentic commerce](https://www.paypal.ai/), verified 2026-06-12.
-- [Stripe Agent Toolkit docs](https://docs.stripe.com/agents), verified 2026-06-12.
-- [Stripe Agent Toolkit quickstart](https://docs.stripe.com/agents/quickstart), verified 2026-06-12.
+- [AP: Visa plugs its payment network into ChatGPT](https://apnews.com/article/visa-chatgpt-openai-shopping-mastercard-d769dec86344cb4977c98789e8ec492f), verified 2026-06-27.
+- [Visa Intelligent Commerce](https://www.visa.com/en-us/solutions/intelligent-commerce), verified 2026-06-27.
+- [Visa Intelligent Commerce Connect announcement](https://investor.visa.com/news/news-details/2026/Visa-Opens-the-Door-to-AI-Driven-Shopping-for-Businesses-Worldwide/default.aspx), verified 2026-06-27.
+- [Mastercard Agent Pay](https://www.mastercard.com/us/en/business/artificial-intelligence/mastercard-agent-pay.html), verified 2026-06-27.
+- [Worldline, ING, and Mastercard live European agentic payment](https://www.mastercard.com/news/europe/en/newsroom/press-releases/en/2026/worldline-ing-and-mastercard-complete-a-live-end-to-end-european-agentic-payment-in-production/), verified 2026-06-27.
+- [PayPal.ai agentic commerce](https://www.paypal.ai/), verified 2026-06-27.
+- [Stripe Agent Toolkit docs](https://docs.stripe.com/agents), verified 2026-06-27.
+- [Stripe Agent Toolkit quickstart](https://docs.stripe.com/agents/quickstart), verified 2026-06-27.

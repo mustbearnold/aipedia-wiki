@@ -1,56 +1,32 @@
 # 2026-06-27 3-Day Refresh Goal Inventory
 
 Cutoff: 2026-06-24 or newer.
-Tracked stale pages after batch 07: 120
+Tracked stale pages after batch 08: 96
 
 ## Progress
 
 - Batch 04 complete and pushed: 24 guide routes from logo design through paid-social creative velocity refreshed plus `/guides/`, `/categories/`, and 11 affected category hubs.
 - Batch 05 complete and pushed: 24 guide routes from accountants through free AI tools refreshed plus `/guides/`, `/categories/`, and 13 affected category hubs.
 - Batch 06 complete and pushed: 19 guide routes and 5 trend routes from open-source AI tools through enterprise agent platforms refreshed plus `/`, `/guides/`, `/trends/`, `/categories/`, and 9 affected category hubs.
-- Batch 07 verified locally: 4 trend routes, 12 workflow routes, 3 company profiles, and 5 dead-tool archives refreshed plus `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, and `/llms-full.txt`. Source health, typecheck, build, content route QA, and supplemental parent route QA passed.
-- Strict 3-day stale count is now 120 total tracked pages including the 6 ledger-outdated tool rows.
+- Batch 07 complete and pushed: 4 trend routes, 12 workflow routes, 3 company profiles, and 5 dead-tool archives refreshed plus `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, and `/llms-full.txt`.
+- Batch 08 verified locally: 24 mixed routes refreshed across dead archives, the April report, static trust pages, one workflow, one guide, trends, answers, companies, robots, and archived noindex surfaces. Affected parent/top-layer pages and five category hubs were updated or route-checked.
+- Strict 3-day stale count is now 96 total tracked pages including the 6 ledger-outdated tool rows.
 
 ## By Type
 
-- Company: 27
+- Company: 24
 - Comparison: 37
-- Crawl surface: 2
-- Dead tool archive: 3
-- Guide: 19
-- Report: 1
-- Static page: 20
+- Crawl surface: 1
+- Dead tool archive: 1
+- Guide: 18
+- Static page: 8
 - Tool: 6
-- Trend: 3
-- Workflow: 2
+- Workflow: 1
 
 ## Queue
 
-- 2026-06-12 Dead tool archive /dead/play-ht/ (src/content/dead/play-ht.md)
-- 2026-06-12 Dead tool archive /dead/sora/ (src/content/dead/sora.md)
-- 2026-06-12 Report /reports/2026-04/ (src/content/reports/2026-04.md)
 - 2026-06-12 Tool /tools/phind/ (src/content/tools/phind.md)
 - 2026-06-12 Tool /tools/tome/ (src/content/tools/tome.md)
-- 2026-06-13 Static page /404/ (src/pages/404.astro)
-- 2026-06-13 Static page /about/editorial/ (src/pages/about/editorial.astro)
-- 2026-06-13 Static page /about/scoring/ (src/pages/about/scoring.astro)
-- 2026-06-13 Crawl surface /robots.txt (public/robots.txt)
-- 2026-06-13 Static page /tool-finder/ (src/pages/tool-finder.astro)
-- 2026-06-14 Workflow /workflows/micro-saas-weekend-build/ (src/content/workflows/micro-saas-weekend-build.md)
-- 2026-06-15 Static page /about/our-stack/ (src/pages/about/our-stack.astro)
-- 2026-06-15 Company /companies/openai/ (src/content/companies/openai.md)
-- 2026-06-15 Guide /guides/best-ai-avatar-video-generator/ (src/content/use-cases/best-ai-avatar-video-generator.md)
-- 2026-06-15 Static page /privacy/ (src/pages/privacy.astro)
-- 2026-06-15 Trend /trends/agent-commerce/ (src/content/trends/agent-commerce.md)
-- 2026-06-15 Trend /trends/vibe-coding/ (src/content/trends/vibe-coding.md)
-- 2026-06-16 Static page /admin/reviews/ (src/pages/admin/reviews.astro)
-- 2026-06-16 Static page /answers/best-ai-image-generator-2026/ (src/pages/answers/best-ai-image-generator-2026.astro)
-- 2026-06-16 Static page /answers/best-free-ai-tools-2026/ (src/pages/answers/best-free-ai-tools-2026.astro)
-- 2026-06-16 Static page /answers/chatgpt-alternatives-2026/ (src/pages/answers/chatgpt-alternatives-2026.astro)
-- 2026-06-16 Static page /answers/is-cursor-worth-it/ (src/pages/answers/is-cursor-worth-it.astro)
-- 2026-06-16 Static page /answers/is-midjourney-worth-it/ (src/pages/answers/is-midjourney-worth-it.astro)
-- 2026-06-16 Company /companies/adobe/ (src/content/companies/adobe.md)
-- 2026-06-16 Company /companies/amazon/ (src/content/companies/amazon.md)
 - 2026-06-16 Company /companies/anysphere/ (src/content/companies/anysphere.md)
 - 2026-06-16 Company /companies/assemblyai/ (src/content/companies/assemblyai.md)
 - 2026-06-16 Company /companies/bytedance/ (src/content/companies/bytedance.md)
@@ -73,7 +49,6 @@ Tracked stale pages after batch 07: 120
 - 2026-06-16 Company /companies/suno/ (src/content/companies/suno.md)
 - 2026-06-16 Company /companies/synthesia-company/ (src/content/companies/synthesia-company.md)
 - 2026-06-16 Company /companies/xai/ (src/content/companies/xai.md)
-- 2026-06-16 Trend /trends/geo-trend/ (src/content/trends/geo-trend.md)
 - 2026-06-18 Company /companies/cohere/ (src/content/companies/cohere.md)
 - 2026-06-18 Dead tool archive /dead/stability-ai-clipdrop/ (src/content/dead/stability-ai-clipdrop.md)
 - 2026-06-18 Guide /guides/best-ai-for-meeting-notes/ (src/content/use-cases/best-ai-for-meeting-notes.md)

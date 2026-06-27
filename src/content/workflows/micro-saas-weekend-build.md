@@ -3,13 +3,13 @@ type: workflow
 slug: micro-saas-weekend-build
 title: "Ship a Micro-SaaS Weekend MVP with Cursor, Supabase, Vercel, and Stripe"
 seo_title: "Ship a Micro-SaaS Weekend MVP with AI Coding Tools (2026)"
-meta_description: "Updated June 14, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel Functions, and Stripe without fake fixed-cost or time-saved claims."
+meta_description: "Updated June 27, 2026: a source-backed weekend MVP workflow using Cursor, Supabase, Vercel Functions, and Stripe without fake fixed-cost or time-saved claims."
 description: "Build a small authenticated, billable MVP with AI-assisted coding, Supabase, Vercel, and Stripe while keeping scope, security, and billing risk under control."
 stack: [cursor]
 tools_mentioned: [cursor]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-14
-last_verified: 2026-06-14
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ update_frequency: monthly
 
 A weekend micro-SaaS build should prove a narrow buyer workflow, not pretend a two-day prototype is a production company. The right stack is boring on purpose: AI-assisted coding, managed auth/database, simple hosting, and a payment flow you can test before asking strangers for money.
 
-**AiPedia verdict, verified June 14, 2026:** use [Cursor](/tools/cursor/) for the coding surface, [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/git) for Git-linked preview and production deploys, [Vercel Functions](https://vercel.com/docs/functions) for API routes and payment webhooks, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Keep the weekend MVP on one Vercel deployment path unless a real constraint proves you need another runtime.
+**AiPedia verdict, verified June 27, 2026:** use [Cursor](/tools/cursor/) for the coding surface, [Supabase](https://supabase.com/pricing) for Postgres/auth/storage, [Vercel](https://vercel.com/docs/git) for Git-linked preview and production deploys, [Vercel Functions](https://vercel.com/docs/functions) for API routes and payment webhooks, and [Stripe](https://stripe.com/pricing) or [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) for payments. Keep the weekend MVP on one Vercel deployment path unless a real constraint proves you need another runtime.
 
 **Do not publish this as "ship a full SaaS in 48 hours."** A weekend build can validate the idea, collect emails, run a paid test, or serve a small first cohort. It still needs security review, billing tests, database policies, backups, monitoring, and customer support before it deserves real production trust.
 
@@ -186,14 +186,14 @@ Building too much before testing the one workflow that proves whether anyone wan
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-14
-- [Supabase pricing](https://supabase.com/pricing), verified 2026-06-14
-- [Supabase monthly active users docs](https://supabase.com/docs/guides/platform/manage-your-usage/monthly-active-users), verified 2026-06-14
-- [Vercel Git deployment docs](https://vercel.com/docs/git), verified 2026-06-14
-- [Vercel Hobby plan docs](https://vercel.com/docs/plans/hobby), verified 2026-06-14
-- [Vercel Functions docs](https://vercel.com/docs/functions), verified 2026-06-14
-- [Vercel runtime docs](https://vercel.com/docs/functions/runtimes), verified 2026-06-14
-- [Stripe pricing](https://stripe.com/pricing), verified 2026-06-14
-- [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing), verified 2026-06-14
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-27
+- [Supabase pricing](https://supabase.com/pricing), verified 2026-06-27
+- [Supabase monthly active users docs](https://supabase.com/docs/guides/platform/manage-your-usage/monthly-active-users), verified 2026-06-27
+- [Vercel Git deployment docs](https://vercel.com/docs/git), verified 2026-06-27
+- [Vercel Hobby plan docs](https://vercel.com/docs/plans/hobby), verified 2026-06-27
+- [Vercel Functions docs](https://vercel.com/docs/functions), verified 2026-06-27
+- [Vercel runtime docs](https://vercel.com/docs/functions/runtimes), verified 2026-06-27
+- [Stripe pricing](https://stripe.com/pricing), verified 2026-06-27
+- [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing), verified 2026-06-27
 
 ---

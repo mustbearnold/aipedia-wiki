@@ -979,3 +979,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: source health passed with 185 URLs, 170 ok, 15 access-sensitive, 0 broken, and 0 unreachable; `runner:page-refresh:closeout` passed in 85.882s; supplemental parent route QA passed for `/companies/`, `/dead/`, and `/categories/ai-coding/`; post-LLM update `typecheck` and `build:fast` passed.
 - Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-07.md`.
 - Next: Continue oldest-first with 120 tracked pages still older than 2026-06-24.
+
+### 2026-06-27: Page Refresh Batch 08
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed 24 mixed routes across dead archives, the April report, static trust pages, one workflow, one avatar-video guide, three trend routes, five answer routes, OpenAI/Adobe/Amazon company profiles, robots, and archived noindex surfaces.
+- Parent and top-layer updates: `/`, `/answers/`, `/reports/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, `/guides/`, plus AI Video, AI Image, AI Chatbots, AI Coding, and AI Search category hubs. Supplemental route QA also checked `/about/`.
+- Verification: `runner:page-refresh:closeout` passed in 82.427s with 176 source URLs, 157 ok, 19 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed for nine routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-08.md`.
+- Next: Continue oldest-first with 96 tracked pages still older than 2026-06-24.

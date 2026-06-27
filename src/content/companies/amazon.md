@@ -3,16 +3,16 @@ type: company
 slug: amazon
 title: Amazon
 seo_title: "Amazon Company Profile (June 2026), aipedia.wiki"
-meta_description: "Amazon is the public tech giant behind AWS, the Amazon Q assistant, Bedrock model hosting, and Nova models, and a major Anthropic investor. Verified June 16, 2026."
+meta_description: "Amazon is the public tech giant behind AWS, the Amazon Q assistant, Bedrock model hosting, and Nova models, and a major Anthropic investor. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: bigtech
 founded: 1994
 hq: Seattle, USA
 funding: "Public company (NASDAQ: AMZN)"
 key_products: [amazon-q]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Amazon
