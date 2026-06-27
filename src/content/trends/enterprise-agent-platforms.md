@@ -3,13 +3,13 @@ type: trend
 slug: enterprise-agent-platforms
 title: "Enterprise Agent Platforms Replace One-Off Bots"
 seo_title: "Enterprise Agent Platforms In 2026: Agent 365, Gemini Enterprise, ServiceNow, IBM, and AWS"
-meta_description: "Updated June 12, 2026: enterprise agents are moving from one-off bots into governed platforms with identity, registries, gateways, observability, approvals, security controls, and cost reporting."
+meta_description: "Updated June 27, 2026: enterprise agents are moving from one-off bots into governed platforms with identity, registries, gateways, observability, approvals, security controls, and cost reporting."
 author: "aipedia.wiki Editorial"
 description: Governed agent platforms are replacing ad hoc bots. Identity, registries, observability, approval flows, tool permissions, and cost controls are becoming enterprise requirements.
 timeframe: Accelerated through May-June 2026 as Microsoft Agent 365, Gemini Enterprise agents, ServiceNow AI Control Tower/Action Fabric, IBM watsonx Orchestrate and Sovereign Core, and AWS Bedrock AgentCore pushed agent governance into enterprise buying.
 impact: high
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -66,10 +66,10 @@ Enterprise agents are now a governance category. The winning platform is the one
 
 ## Sources
 
-- [Microsoft Agent 365](https://www.microsoft.com/en-us/microsoft-365/agent-365), verified 2026-06-12.
-- [Microsoft Agent 365 May 2026 update](https://techcommunity.microsoft.com/blog/agent-365-blog/what%E2%80%99s-new-in-agent-365-may-2026/4516340), verified 2026-06-12.
-- [Google Cloud Gemini Enterprise agents](https://cloud.google.com/gemini-enterprise/agents), verified 2026-06-12.
-- [Google Cloud Gemini Enterprise Agent Platform](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-enterprise-agent-platform/), verified 2026-06-12.
-- [ServiceNow AI Control Tower and Action Fabric](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx), verified 2026-06-12.
-- [IBM Think 2026 enterprise AI operating model](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens), verified 2026-06-12.
-- [AWS Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/), verified 2026-06-12.
+- [Microsoft Agent 365](https://www.microsoft.com/en-us/microsoft-agent-365), verified 2026-06-27.
+- [Microsoft Agent 365 May 2026 update](https://techcommunity.microsoft.com/blog/agent-365-blog/what%E2%80%99s-new-in-agent-365-may-2026/4516340), verified 2026-06-27.
+- [Google Cloud Gemini Enterprise agents](https://cloud.google.com/gemini-enterprise/agents), verified 2026-06-27.
+- [Google Cloud Gemini Enterprise Agent Platform](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-enterprise-agent-platform/), verified 2026-06-27.
+- [ServiceNow AI Control Tower and Action Fabric](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx), verified 2026-06-27.
+- [IBM Think 2026 enterprise AI operating model](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens), verified 2026-06-27.
+- [AWS Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/), verified 2026-06-27.

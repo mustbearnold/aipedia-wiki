@@ -866,6 +866,19 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Failed then fixed: The first Magnific API pay-per-use source-health pass returned a 404 for `docs.magnific.com/pricing-payg`; updated the registry and visible sources to `https://www.magnific.com/api/pricing`, added the June 30 discontinuation caveat, and reran source health successfully.
 - Next: Completed by the Pinecone, PixVerse, Playground AI, and Qdrant shard below.
 
+### 2026-06-27: Non-Tool Page Refresh Batch 06
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed 24 routes, including 19 guides from `/guides/best-open-source-ai-tools/` through `/guides/synthesia-alternatives/` and 5 trends from `/trends/ai-coding-model-arms-race/` through `/trends/enterprise-agent-platforms/`. Updated `/`, `/guides/`, `/trends/`, `/categories/`, 9 affected category hubs, and `PAGE_REFRESH_LEDGER.md`. Strict 3-day stale count moved from 169 to 145 tracked pages.
+- Buyer-impact notes: Alternatives and infrastructure guides now show June 27 verification. The trend pages keep historical June 1 and June 4 event dates where those are release facts, while page verification moved to June 27. Homepage guide lanes were inspected for Runway and Synthesia alternatives.
+- Source repairs: Replaced broken Hume, Ideogram, NotebookLM, QuillBot, and Microsoft source routes with live official URLs. Removed duplicate Adobe HelpX credit FAQ source lines that remained unstable under bounded source health while keeping stable Adobe Firefly plans citations.
+- Verification: `npm run page:source-health -- --plan local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json --out local/tmp/aipedia-runner/page-refresh/batch-06-source-health-after-pass2.json --concurrency 8 --timeout-ms 8000`; `npm run ledger:pages && npm run ledger:pages:check`; `node scripts/check-frontmatter.mjs --changed`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run audit:coverage-quality:changed`; `npm run audit:provenance:changed -- --json`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run runner:page-refresh:closeout`; supplemental `node scripts/qa-route.mjs` for 9 category hubs at 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Timing: closeout 83.493s total, cheap gates 2.333s, source health 16.711s, typecheck 14.476s, build:fast 15.739s, content route QA 34.227s, supplemental category route QA 11.496s.
+- Failed then fixed: Initial source-health pass found 3 broken and 4 unreachable URLs. Replacements and source-line cleanup reduced the final pass to 230 URLs, 200 ok, 30 access-sensitive, 0 broken, and 0 unreachable. The first ledger write/check needed the same second write cycle observed in batch 05.
+- Residual risks: Worker report scaffolds parsed 6/6 but were not filled by live subagents because this batch was executed in-thread. Use closeout/source-health/route-QA timings for optimization rather than scaffold worker metrics.
+- Next: Continue the oldest-first strict 3-day queue with 145 stale pages left: 37 comparisons, 30 companies, 21 static pages, 19 guides, 14 workflows, 7 trends, 8 dead archive pages, 6 tools, 2 crawl surfaces, and 1 report.
+
 ### 2026-06-27: Non-Tool Page Refresh Batch 05
 
 - Status: Complete locally, verified, pending commit and push.

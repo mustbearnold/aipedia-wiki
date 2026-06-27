@@ -3,13 +3,13 @@ type: trend
 slug: ai-supply-chain-security
 title: "AI Supply-Chain Security Moves To The Tool Layer"
 seo_title: "AI Supply-Chain Security Moves From Models To MCP Servers, Plugins, and Agent Tools"
-meta_description: "Updated June 12, 2026: AI security risk is moving into MCP servers, plugins, tool adapters, package changes, credentials, and agent permissions. Security reviews now need to cover every tool an agent can call."
+meta_description: "Updated June 27, 2026: AI security risk is moving into MCP servers, plugins, tool adapters, package changes, credentials, and agent permissions. Security reviews now need to cover every tool an agent can call."
 author: "aipedia.wiki Editorial"
 description: Agent tools, MCP servers, plugin adapters, and credential scopes are becoming the AI supply-chain layer. Security reviews now need to include every tool an agent can call.
 timeframe: Became urgent through 2025-2026 as MCP adoption spread, GitHub brought secret and dependency scanning into MCP developer workflows, Claude Code documented third-party MCP risk, and OWASP published an agentic-applications Top 10 for 2026.
 impact: high
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -56,9 +56,9 @@ The AI supply chain now includes every model, tool host, MCP server, plugin, cre
 
 ## Sources
 
-- [GitHub Changelog: secret scanning with GitHub MCP Server](https://github.blog/changelog/2026-05-05-secret-scanning-with-github-mcp-server-is-now-generally-available/), verified 2026-06-12.
-- [GitHub Changelog: dependency scanning with GitHub MCP Server](https://github.blog/changelog/2026-05-05-dependency-scanning-with-github-mcp-server-is-in-public-preview/), verified 2026-06-12.
-- [GitHub Docs: scan for secrets with GitHub MCP Server](https://docs.github.com/en/code-security/how-tos/use-ghas-with-ai-coding-agents/scan-for-secrets-with-github-mcp-server), verified 2026-06-12.
-- [Claude Code security docs](https://code.claude.com/docs/en/security), verified 2026-06-12.
-- [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/), verified 2026-06-12.
-- [OpenAI Agents SDK guardrails](https://openai.github.io/openai-agents-python/guardrails/), verified 2026-06-12.
+- [GitHub Changelog: secret scanning with GitHub MCP Server](https://github.blog/changelog/2026-05-05-secret-scanning-with-github-mcp-server-is-now-generally-available/), verified 2026-06-27.
+- [GitHub Changelog: dependency scanning with GitHub MCP Server](https://github.blog/changelog/2026-05-05-dependency-scanning-with-github-mcp-server-is-in-public-preview/), verified 2026-06-27.
+- [GitHub Docs: scan for secrets with GitHub MCP Server](https://docs.github.com/en/code-security/how-tos/use-ghas-with-ai-coding-agents/scan-for-secrets-with-github-mcp-server), verified 2026-06-27.
+- [Claude Code security docs](https://code.claude.com/docs/en/security), verified 2026-06-27.
+- [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/), verified 2026-06-27.
+- [OpenAI Agents SDK guardrails](https://openai.github.io/openai-agents-python/guardrails/), verified 2026-06-27.

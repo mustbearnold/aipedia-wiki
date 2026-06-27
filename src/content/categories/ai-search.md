@@ -34,7 +34,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Dia](/tools/dia/) when browser context, tabs, meetings, and connected work apps are the AI surface.** The June 24 check keeps Dia in the work-context browser lane: Reports, Morning Brief, Live Work, connected-app context, SSO, MDM controls, admin-managed profiles, SOC 2 Type II coverage, and provider no-training restrictions are now surfaced on the public and security pages. It is still a user browser, not a programmable browser automation API.
 
-**June 7 Perplexity alternatives update:** [Perplexity alternatives](/guides/perplexity-alternatives/) now separates ChatGPT Search for all-purpose AI work, Gemini/Google AI Mode for Google-native research, NotebookLM for owned-source notebooks, Claude for deep synthesis, Kagi for private paid search, and Exa/Perplexity APIs for developer retrieval and answer layers.
+**June 27 Perplexity alternatives update:** [Perplexity alternatives](/guides/perplexity-alternatives/) now separates ChatGPT Search for all-purpose AI work, Gemini/Google AI Mode for Google-native research, NotebookLM for owned-source notebooks, Claude for deep synthesis, Kagi for private paid search, and Exa/Perplexity APIs for developer retrieval and answer layers.
 
 **Use [ChatGPT](/tools/chatgpt/) when search is only one part of the workflow.** ChatGPT Search is the better Perplexity alternative when the buyer also wants writing, coding, file analysis, images, voice, data analysis, projects, and everyday assistant work.
 
@@ -112,7 +112,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 ## Money Pages To Keep Current
 
-- [Perplexity alternatives](/guides/perplexity-alternatives/) is the June 7 verified switching guide for ChatGPT Search, Gemini/Google AI Mode, NotebookLM, Claude, Kagi, Exa, and Perplexity API buyers deciding between cited open-web answers, all-purpose assistants, owned-source research, private paid search, and developer APIs.
+- [Perplexity alternatives](/guides/perplexity-alternatives/) is the June 27 verified switching guide for ChatGPT Search, Gemini/Google AI Mode, NotebookLM, Claude, Kagi, Exa, and Perplexity API buyers deciding between cited open-web answers, all-purpose assistants, owned-source research, private paid search, and developer APIs.
 - [Best AI tools for researchers](/guides/best-ai-tools-for-researchers/) is the June 27 verified research workflow guide and should stay synchronized because research buyers often move between Perplexity, NotebookLM, Elicit, Semantic Scholar, Scite, Consensus, Claude, and ChatGPT for current web research, owned-source notebooks, literature review, and citation context.
 - [Best AI tools for real estate agents](/guides/best-ai-tools-for-real-estate-agents/) now separates Perplexity-style cited market/vendor research from listing copy, listing creative, Zillow lead context, and broker-reviewed client advice.
 - [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 27 verified adjacent guide for Perplexity-led source trails, ChatGPT drafting, Claude memo review, Gamma decks, and Fathom meeting capture.

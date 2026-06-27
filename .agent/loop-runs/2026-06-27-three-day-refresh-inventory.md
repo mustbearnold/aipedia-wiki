@@ -1,13 +1,14 @@
 # 2026-06-27 3-Day Refresh Goal Inventory
 
 Cutoff: 2026-06-24 or newer.
-Tracked stale pages after batch 05: 169
+Tracked stale pages after batch 06: 145
 
 ## Progress
 
 - Batch 04 complete and pushed: 24 guide routes from logo design through paid-social creative velocity refreshed plus `/guides/`, `/categories/`, and 11 affected category hubs.
-- Batch 05 verified locally: 24 guide routes from accountants through free AI tools refreshed plus `/guides/`, `/categories/`, and 13 affected category hubs. Source health, typecheck, build, content route QA, and supplemental category route QA passed.
-- Strict 3-day stale count is now 169 total tracked pages including the 6 ledger-outdated tool rows.
+- Batch 05 complete and pushed: 24 guide routes from accountants through free AI tools refreshed plus `/guides/`, `/categories/`, and 13 affected category hubs.
+- Batch 06 verified locally: 19 guide routes and 5 trend routes from open-source AI tools through enterprise agent platforms refreshed plus `/`, `/guides/`, `/trends/`, `/categories/`, and 9 affected category hubs. Source health, typecheck, build, content route QA, and supplemental category route QA passed.
+- Strict 3-day stale count is now 145 total tracked pages including the 6 ledger-outdated tool rows.
 
 ## By Type
 
@@ -15,11 +16,11 @@ Tracked stale pages after batch 05: 169
 - Comparison: 37
 - Crawl surface: 2
 - Dead tool archive: 8
-- Guide: 38
+- Guide: 19
 - Report: 1
 - Static page: 21
 - Tool: 6
-- Trend: 12
+- Trend: 7
 - Workflow: 14
 
 ## Queue
@@ -34,33 +35,9 @@ Tracked stale pages after batch 05: 169
 - 2026-06-12 Dead tool archive /dead/openai-codex/ (src/content/dead/openai-codex.md)
 - 2026-06-12 Dead tool archive /dead/play-ht/ (src/content/dead/play-ht.md)
 - 2026-06-12 Dead tool archive /dead/sora/ (src/content/dead/sora.md)
-- 2026-06-12 Guide /guides/best-open-source-ai-tools/ (src/content/use-cases/best-open-source-ai-tools.md)
-- 2026-06-12 Guide /guides/best-pay-as-you-go-ai-tools/ (src/content/use-cases/best-pay-as-you-go-ai-tools.md)
-- 2026-06-12 Guide /guides/best-podcast-editor-for-transcript-first-editing/ (src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md)
-- 2026-06-12 Guide /guides/best-presentation-tool-for-remote-sales-and-training/ (src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md)
-- 2026-06-12 Guide /guides/best-presentation-tool-for-smb-sales-teams/ (src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md)
-- 2026-06-12 Guide /guides/best-voice-ai-for-emotion-aware-products/ (src/content/use-cases/best-voice-ai-for-emotion-aware-products.md)
-- 2026-06-12 Guide /guides/canva-ai-alternatives/ (src/content/use-cases/canva-ai-alternatives.md)
-- 2026-06-12 Guide /guides/chatgpt-alternatives/ (src/content/use-cases/chatgpt-alternatives.md)
-- 2026-06-12 Guide /guides/deepseek-alternatives/ (src/content/use-cases/deepseek-alternatives.md)
-- 2026-06-12 Guide /guides/elevenlabs-alternatives/ (src/content/use-cases/elevenlabs-alternatives.md)
-- 2026-06-12 Guide /guides/gemini-alternatives/ (src/content/use-cases/gemini-alternatives.md)
-- 2026-06-12 Guide /guides/grammarly-alternatives/ (src/content/use-cases/grammarly-alternatives.md)
-- 2026-06-12 Guide /guides/jasper-alternatives/ (src/content/use-cases/jasper-alternatives.md)
-- 2026-06-12 Guide /guides/midjourney-alternatives/ (src/content/use-cases/midjourney-alternatives.md)
-- 2026-06-12 Guide /guides/notion-ai-alternatives/ (src/content/use-cases/notion-ai-alternatives.md)
-- 2026-06-12 Guide /guides/otter-ai-alternatives/ (src/content/use-cases/otter-ai-alternatives.md)
-- 2026-06-12 Guide /guides/perplexity-alternatives/ (src/content/use-cases/perplexity-alternatives.md)
-- 2026-06-12 Guide /guides/runway-alternatives/ (src/content/use-cases/runway-alternatives.md)
-- 2026-06-12 Guide /guides/synthesia-alternatives/ (src/content/use-cases/synthesia-alternatives.md)
 - 2026-06-12 Report /reports/2026-04/ (src/content/reports/2026-04.md)
 - 2026-06-12 Tool /tools/phind/ (src/content/tools/phind.md)
 - 2026-06-12 Tool /tools/tome/ (src/content/tools/tome.md)
-- 2026-06-12 Trend /trends/ai-coding-model-arms-race/ (src/content/trends/ai-coding-model-arms-race.md)
-- 2026-06-12 Trend /trends/ai-memory-layer/ (src/content/trends/ai-memory-layer.md)
-- 2026-06-12 Trend /trends/ai-supply-chain-security/ (src/content/trends/ai-supply-chain-security.md)
-- 2026-06-12 Trend /trends/ai-voice-explosion/ (src/content/trends/ai-voice-explosion.md)
-- 2026-06-12 Trend /trends/enterprise-agent-platforms/ (src/content/trends/enterprise-agent-platforms.md)
 - 2026-06-12 Trend /trends/google-stitch-disruption/ (src/content/trends/google-stitch-disruption.md)
 - 2026-06-12 Trend /trends/long-context-standard/ (src/content/trends/long-context-standard.md)
 - 2026-06-12 Trend /trends/open-source-parity/ (src/content/trends/open-source-parity.md)

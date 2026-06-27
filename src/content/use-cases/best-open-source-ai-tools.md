@@ -38,8 +38,8 @@ guide_picks:
       - label: "Open WebUI GitHub"
         url: "https://github.com/open-webui/open-webui"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -49,7 +49,7 @@ Open source AI is not one purchase. Buyers are usually choosing between a local 
 
 For most people, start with **[Ollama](/tools/ollama/)** or **[LM Studio](/tools/lm-studio/)**. Move to **[Open WebUI](/tools/open-webui/)** only when you are ready to run AI like infrastructure.
 
-Verified June 12, 2026 against current official Ollama, LM Studio, Open WebUI, Meta Llama, Mistral, DeepSeek, Black Forest Labs, Stability, Hugging Face, hosted Llama provider pricing, and OpenAI Whisper sources.
+Verified June 27, 2026 against current official Ollama, LM Studio, Open WebUI, Meta Llama, Mistral, DeepSeek, Black Forest Labs, Stability, Hugging Face, hosted Llama provider pricing, and OpenAI Whisper sources.
 
 ## Quick Verdict
 
@@ -157,23 +157,23 @@ LM Studio for local desktop testing, then Ollama if you want a runtime. Avoid se
 
 ## Sources
 
-- [Ollama](https://ollama.com/) (verified 2026-06-12)
-- [Ollama GitHub](https://github.com/ollama/ollama) (verified 2026-06-12)
-- [LM Studio](https://lmstudio.ai/) (verified 2026-06-12)
-- [LM Studio API docs](https://lmstudio.ai/docs/api) (verified 2026-06-12)
-- [LM Studio REST API docs](https://lmstudio.ai/docs/developer/rest) (verified 2026-06-12)
-- [LM Studio free-for-work announcement](https://lmstudio.ai/blog/free-for-work) (verified 2026-06-12)
-- [Open WebUI](https://openwebui.com/) (verified 2026-06-12)
-- [Open WebUI GitHub](https://github.com/open-webui/open-webui) (verified 2026-06-12)
-- [Meta Llama](https://ai.meta.com/llama/) (verified 2026-06-12)
-- [Llama 4 license](https://www.llama.com/llama4/license/) (verified 2026-06-12)
-- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-12)
-- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-12)
-- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-12)
-- [DeepSeek Transparency Center](https://www.deepseek.com/en/transparency/) (verified 2026-06-12)
-- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-12)
-- [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-12)
-- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-12)
+- [Ollama](https://ollama.com/) (verified 2026-06-27)
+- [Ollama GitHub](https://github.com/ollama/ollama) (verified 2026-06-27)
+- [LM Studio](https://lmstudio.ai/) (verified 2026-06-27)
+- [LM Studio API docs](https://lmstudio.ai/docs/api) (verified 2026-06-27)
+- [LM Studio REST API docs](https://lmstudio.ai/docs/developer/rest) (verified 2026-06-27)
+- [LM Studio free-for-work announcement](https://lmstudio.ai/blog/free-for-work) (verified 2026-06-27)
+- [Open WebUI](https://openwebui.com/) (verified 2026-06-27)
+- [Open WebUI GitHub](https://github.com/open-webui/open-webui) (verified 2026-06-27)
+- [Meta Llama](https://ai.meta.com/llama/) (verified 2026-06-27)
+- [Llama 4 license](https://www.llama.com/llama4/license/) (verified 2026-06-27)
+- [Groq Llama 4 Scout model card](https://console.groq.com/docs/model/llama-4-scout-17b-16e-instruct) (verified 2026-06-27)
+- [Together AI pricing](https://www.together.ai/pricing) (verified 2026-06-27)
+- [Mistral AI pricing](https://mistral.ai/pricing) (verified 2026-06-27)
+- [DeepSeek Transparency Center](https://www.deepseek.com/en/transparency/) (verified 2026-06-27)
+- [Black Forest Labs FLUX.2 pricing](https://docs.bfl.ai/quick_start/pricing) (verified 2026-06-27)
+- [FLUX.2 Klein 4B on Hugging Face](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) (verified 2026-06-27)
+- [OpenAI Whisper GitHub](https://github.com/openai/whisper) (verified 2026-06-27)
 
 ## Related
 

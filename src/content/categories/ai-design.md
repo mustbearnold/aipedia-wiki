@@ -173,7 +173,7 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 ## Money Pages To Build Next
 
 - A two-tool app-builder comparison should be rebuilt first from the highest-intent direct substitute pair instead of reviving the old three-way page.
-- [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is the June 7 verified design money-page rotation entry for Canva switching intent: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik for creator assets, Recraft for vector/design-forward brand output, and Ideogram for text-heavy marketing graphics.
+- [Best Canva AI Alternatives](/guides/canva-ai-alternatives/) is the June 27 verified design money-page rotation entry for Canva switching intent: Figma for product design, Firefly for Adobe production, Midjourney for ideation, Freepik for creator assets, Recraft for vector/design-forward brand output, and Ideogram for text-heavy marketing graphics.
 - [Best AI for Logo Design](/guides/best-ai-for-logo-design/) is the June 27 verified logo concepting guide for Ideogram, Recraft, Midjourney, Adobe Firefly, Canva, and ChatGPT, with stronger vector cleanup, commercial-rights, small-size, and trademark-review warnings.
 - is now refreshed around design-system workflow versus Vercel-native implementation, and should stay current because it captures high-intent design-to-code buyers.
 - is now refreshed around vibe-design exploration versus Vercel app-building workflow and should stay monitored while Stitch remains a Labs product.

@@ -3,7 +3,7 @@ type: use-case
 slug: notion-ai-alternatives
 title: "Best Notion AI Alternatives (June 2026)"
 seo_title: "Best Notion AI Alternatives: ChatGPT, Claude, Obsidian, Capacities & NotebookLM (June 2026)"
-meta_description: "Updated June 12, 2026: compare Notion AI alternatives by job: ChatGPT and Claude for assistant work, Obsidian and Capacities for local-first notes, NotebookLM for owned-source research, and external Coda or Anytype routes for database-and-doc workspaces."
+meta_description: "Updated June 27, 2026: compare Notion AI alternatives by job: ChatGPT and Claude for assistant work, Obsidian and Capacities for local-first notes, NotebookLM for owned-source research, and external Coda or Anytype routes for database-and-doc workspaces."
 description: "A current buyer guide to Notion AI alternatives, separating AI workspace assistants from notes apps, local-first knowledge bases, database tools, and Notion-style all-in-one workspaces."
 tools_mentioned: ["notion-ai", "chatgpt", "claude", "obsidian", "capacities", "notebooklm"]
 guide_picks:
@@ -36,8 +36,8 @@ guide_picks:
       - label: "Claude Max plan help"
         url: "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -45,7 +45,7 @@ update_frequency: monthly
 
 Notion AI is two products in one: a writing/research assistant glued onto a workspace, and an AI surface that reads across your Notion pages and databases. The best alternative depends on which half you are replacing. If the assistant is weak, you want a frontier chatbot. If the workspace itself is wrong, you want a different docs, notes, or database tool.
 
-This guide was refreshed on **June 12, 2026** against current official sources from Notion, OpenAI, Anthropic, Obsidian, Capacities, Google, Coda, and Anytype.
+This guide was refreshed on **June 27, 2026** against current official sources from Notion, OpenAI, Anthropic, Obsidian, Capacities, Google, Coda, and Anytype.
 
 ## Quick Verdict
 
@@ -218,14 +218,14 @@ For local-first notes, use Obsidian or Anytype. For chat with strong enterprise 
 
 ## Sources
 
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-12)
-- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-06-12)
-- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-12)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
-- [Claude Max plan help](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-12)
-- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-12)
-- [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-12)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
-- [Coda pricing](https://coda.io/pricing) (verified 2026-06-12)
-- [Coda billing basics](https://help.coda.io/hc/en-us/articles/39555725230989) (verified 2026-06-12)
-- [Anytype docs](https://doc.anytype.io/anytype-docs) (verified 2026-06-12)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-27)
+- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-06-27)
+- [ChatGPT Search Help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-27)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-27)
+- [Claude Max plan help](https://support.claude.com/en/articles/11049741-what-is-the-max-plan) (verified 2026-06-27)
+- [Obsidian pricing](https://obsidian.md/pricing) (verified 2026-06-27)
+- [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-27)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-27)
+- [Coda pricing](https://coda.io/pricing) (verified 2026-06-27)
+- [Coda billing basics](https://help.coda.io/hc/en-us/articles/39555725230989) (verified 2026-06-27)
+- [Anytype docs](https://doc.anytype.io/anytype-docs) (verified 2026-06-27)

@@ -7,8 +7,8 @@ meta_description: "June 2026 Perplexity alternatives guide: ChatGPT Search for a
 description: "A current buyer guide to Perplexity alternatives, separating cited answer engines, Google AI Search, ChatGPT Search, NotebookLM, Claude, Kagi, Exa, and developer APIs by real research workflow."
 tools_mentioned: ["perplexity", "chatgpt", "gemini", "notebooklm", "claude", "kagi", "exa", "you-com", "grok"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 guide_picks:
   best_overall:
@@ -43,7 +43,7 @@ guide_picks:
 
 [Perplexity](/tools/perplexity/) remains one of the cleanest AI answer engines when the job is **ask a web question, get citations, inspect sources, refine, and keep moving**. But the best alternative depends on whether you want a general AI workspace, Google-native research, private search, owned-document analysis, deeper synthesis, or a developer search API.
 
-Verified June 12, 2026 against official Perplexity, OpenAI, Google, NotebookLM, Anthropic, Kagi, and Exa sources. AiPedia may earn from some outbound links, but rankings are editorial and source-backed.
+Verified June 27, 2026 against official Perplexity, OpenAI, Google, NotebookLM, Anthropic, Kagi, and Exa sources. AiPedia may earn from some outbound links, but rankings are editorial and source-backed.
 
 ## Quick Verdict
 
@@ -172,14 +172,14 @@ Exa is the better search/retrieval API when you want to build your own answer la
 
 ## Sources
 
-- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-06-12)
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-12)
-- [ChatGPT Search help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-12)
-- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-06-12)
-- [Google AI subscriptions](https://gemini.google/us/subscriptions/) (verified 2026-06-12)
-- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
-- [Choosing a Claude plan](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan) (verified 2026-06-12)
-- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-12)
-- [Kagi Team plans](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-12)
-- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-12)
+- [Perplexity Enterprise pricing FAQ](https://www.perplexity.ai/help-center/en/articles/10352986-enterprise-pro-pricing-and-billing-frequently-asked-questions) (verified 2026-06-27)
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) (verified 2026-06-27)
+- [ChatGPT Search help](https://help.openai.com/en/articles/9237897-chatgpt-search) (verified 2026-06-27)
+- [ChatGPT pricing](https://chatgpt.com/pricing) (verified 2026-06-27)
+- [Google AI subscriptions](https://gemini.google/us/subscriptions/) (verified 2026-06-27)
+- [NotebookLM upgrade docs](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-27)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-27)
+- [Choosing a Claude plan](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan) (verified 2026-06-27)
+- [Kagi Ultimate plan docs](https://help.kagi.com/kagi/plans/ultimate-plan.html) (verified 2026-06-27)
+- [Kagi Team plans](https://help.kagi.com/kagi/plans/team-plan.html) (verified 2026-06-27)
+- [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-27)

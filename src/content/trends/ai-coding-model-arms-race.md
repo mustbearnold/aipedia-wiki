@@ -3,13 +3,13 @@ type: trend
 slug: ai-coding-model-arms-race
 title: "AI Coding Tools Become Model Marketplaces"
 seo_title: "AI Coding Tools Become Model Marketplaces, Not Single-Model Assistants"
-meta_description: "Updated June 12, 2026: Copilot, Cursor, Claude Code, Codex, and coding agents are converging on model routing, usage billing, cost controls, and security workflows instead of one fixed assistant model."
+meta_description: "Updated June 27, 2026: Copilot, Cursor, Claude Code, Codex, and coding agents are converging on model routing, usage billing, cost controls, and security workflows instead of one fixed assistant model."
 author: "aipedia.wiki Editorial"
 description: Coding assistants are becoming model marketplaces. The winning workflow routes routine work to cheaper lanes, reserves premium models for hard repo tasks, and makes token spend visible before agents run wild.
 timeframe: Accelerated through June 2026 as GitHub Copilot moved users into usage-based billing, Cursor normalized included usage plus on-demand overages, Claude Code emphasized cost tracking, and Codex/Copilot/Cursor/Claude Code all pushed agentic repo workflows.
 impact: high
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -64,9 +64,9 @@ AI coding is now an operations problem as much as a model-quality problem. Pick 
 
 ## Sources
 
-- [GitHub: Copilot is moving to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/), verified 2026-06-12.
-- [GitHub Docs: what changed with Copilot billing](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/what-changed-with-billing), verified 2026-06-12.
-- [GitHub Docs: Copilot requests and premium features](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/copilot-requests), verified 2026-06-12.
-- [Cursor: clarifying our pricing](https://cursor.com/blog/june-2025-pricing), verified 2026-06-12.
-- [Claude Code docs: manage costs effectively](https://code.claude.com/docs/en/costs), verified 2026-06-12.
-- [OpenAI Codex pricing](https://developers.openai.com/codex/pricing), verified 2026-06-12.
+- [GitHub: Copilot is moving to usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/), verified 2026-06-27.
+- [GitHub Docs: what changed with Copilot billing](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/what-changed-with-billing), verified 2026-06-27.
+- [GitHub Docs: Copilot requests and premium features](https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/copilot-requests), verified 2026-06-27.
+- [Cursor: clarifying our pricing](https://cursor.com/blog/june-2025-pricing), verified 2026-06-27.
+- [Claude Code docs: manage costs effectively](https://code.claude.com/docs/en/costs), verified 2026-06-27.
+- [OpenAI Codex pricing](https://developers.openai.com/codex/pricing), verified 2026-06-27.
