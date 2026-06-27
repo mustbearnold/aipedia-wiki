@@ -24,6 +24,8 @@
     "lint": "npm run guard:check",
     "typecheck": "npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs check --tsconfig tsconfig.typecheck.json --minimumSeverity error",
     "ops:dashboard": "node scripts/ops-dashboard.mjs",
+    "agents:backup": "node scripts/backup-agents.mjs",
+    "agents:backup:dry-run": "node scripts/backup-agents.mjs --dry-run",
     "test": "node --test tests/scripts/*.test.mjs",
     "test:scripts": "node --test tests/scripts/*.test.mjs",
     "test:smoke": "npm run smoke:api && npm run smoke:visual",

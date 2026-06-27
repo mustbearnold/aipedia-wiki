@@ -1,0 +1,39 @@
+{
+  "id": "agentic-workflow-software-engineer",
+  "name": "Agentic Workflow Software Engineer",
+  "version": "1.0.0",
+  "created_at": "2026-06-27",
+  "status": "active",
+  "primary_file": "AGENT.md",
+  "purpose": "Create, test, benchmark, improve, and regression-proof repeatable enterprise-grade agentic workflows across major coding-agent platforms.",
+  "platform_targets": [
+    "OpenAI Codex",
+    "Claude Code",
+    "Cursor",
+    "GitHub Copilot coding agents",
+    "local CLI agent runners"
+  ],
+  "priority_order": [
+    "accuracy",
+    "quality",
+    "non_regression",
+    "speed",
+    "efficiency",
+    "token_efficiency",
+    "parallelism"
+  ],
+  "required_artifacts": [
+    "workflow specification",
+    "worker prompt or platform adapter",
+    "verification matrix",
+    "timing schema",
+    "benchmark report",
+    "regression guard",
+    "self-improvement ledger entry"
+  ],
+  "backup_policy": {
+    "command": "npm run agents:backup",
+    "minimum_frequency": "weekly and before major agent edits",
+    "default_destination": "../aipedia-agent-backups"
+  }
+}

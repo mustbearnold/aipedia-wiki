@@ -305,7 +305,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-06-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-26 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
-| 2026-06-27 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-27 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-27 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-27 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-27 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
@@ -368,7 +368,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /companies/suno/ | Company | Yes | frontmatter | src/content/companies/suno.md |
 | 2026-06-27 | /companies/synthesia-company/ | Company | Yes | frontmatter | src/content/companies/synthesia-company.md |
 | 2026-06-27 | /companies/xai/ | Company | Yes | frontmatter | src/content/companies/xai.md |
-| 2026-06-27 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-06-27 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-27 | /compare/activepieces-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-n8n.md |
 | 2026-06-27 | /compare/activepieces-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-zapier.md |
 | 2026-06-27 | /compare/aider-vs-claude-code/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-claude-code.md |
@@ -377,7 +377,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /compare/beautiful-ai-vs-gamma/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-gamma.md |
 | 2026-06-27 | /compare/beautiful-ai-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-pitch.md |
 | 2026-06-27 | /compare/beautiful-ai-vs-presentations-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-presentations-ai.md |
-| 2026-06-27 | /compare/build/ | Static page | No | working tree | src/pages/compare/build.astro |
+| 2026-06-27 | /compare/build/ | Static page | No | git | src/pages/compare/build.astro |
 | 2026-06-27 | /compare/capacities-vs-obsidian/ | Comparison | Yes | frontmatter | src/content/comparisons/capacities-vs-obsidian.md |
 | 2026-06-27 | /compare/chatgpt-vs-claude/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-claude.md |
 | 2026-06-27 | /compare/chatgpt-vs-gemini/ | Comparison | Yes | frontmatter | src/content/comparisons/chatgpt-vs-gemini.md |
@@ -522,11 +522,11 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-06-27 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-06-27 | /robots.txt | Crawl surface | No | git | public/robots.txt |
-| 2026-06-27 | /search/ | Static page | No | working tree | src/pages/search.astro |
+| 2026-06-27 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-27 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-27 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-27 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
-| 2026-06-27 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-27 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-27 | /tools/amplemarket/ | Tool | Yes | frontmatter | src/content/tools/amplemarket.md |
 | 2026-06-27 | /tools/apollo/ | Tool | Yes | frontmatter | src/content/tools/apollo.md |
 | 2026-06-27 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
@@ -548,7 +548,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /trends/geo-trend/ | Trend | Yes | frontmatter | src/content/trends/geo-trend.md |
 | 2026-06-27 | /trends/google-stitch-disruption/ | Trend | Yes | frontmatter | src/content/trends/google-stitch-disruption.md |
 | 2026-06-27 | /trends/long-context-standard/ | Trend | Yes | frontmatter | src/content/trends/long-context-standard.md |
-| 2026-06-27 | /trends/model-availability-churn/ | Trend | Yes | working tree | src/content/trends/model-availability-churn.md |
+| 2026-06-27 | /trends/model-availability-churn/ | Trend | Yes | frontmatter | src/content/trends/model-availability-churn.md |
 | 2026-06-27 | /trends/open-source-parity/ | Trend | Yes | frontmatter | src/content/trends/open-source-parity.md |
 | 2026-06-27 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
 | 2026-06-27 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
