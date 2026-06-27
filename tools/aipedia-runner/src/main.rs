@@ -41,6 +41,10 @@ enum Commands {
     PageCloseout(PageCloseoutArgs),
     /// Plan and optionally run closeout gates for a page refresh batch.
     PageRun(PageRunArgs),
+    /// Plan affiliate conversion clusters and write local runner artifacts.
+    AffiliatePlan(AffiliatePlanArgs),
+    /// Summarize affiliate conversion worker reports from a saved plan.
+    AffiliateReports(AffiliateReportsArgs),
 }
 
 #[derive(Parser, Debug, Clone)]
@@ -186,6 +190,52 @@ struct PageRunArgs {
     strict_reports: bool,
 }
 
+#[derive(Parser, Debug, Clone)]
+struct AffiliatePlanArgs {
+    #[arg(long, default_value_t = 6)]
+    limit: usize,
+    #[arg(long, default_value_t = 3)]
+    workers: usize,
+    #[arg(long, default_value_t = 2)]
+    clusters_per_worker: usize,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-conversion-plan.json"
+    )]
+    out: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/workers"
+    )]
+    worker_dir: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/reports"
+    )]
+    report_dir: PathBuf,
+}
+
+#[derive(Parser, Debug)]
+struct AffiliateReportsArgs {
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-conversion-plan.json"
+    )]
+    plan: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/reports"
+    )]
+    report_dir: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-report-summary.md"
+    )]
+    out: PathBuf,
+    #[arg(long)]
+    strict: bool,
+}
+
 #[derive(Debug, Deserialize)]
 struct Plan {
     batch: Vec<Tool>,
@@ -235,6 +285,27 @@ struct PagePlan {
     batch: Vec<Page>,
     commands: PageCommands,
     agent_briefs: Option<AgentBriefs>,
+}
+
+#[derive(Debug, Deserialize)]
+struct AffiliatePlan {
+    current_date: String,
+    clusters: Vec<AffiliateCluster>,
+    agent_briefs: Option<AgentBriefs>,
+}
+
+#[derive(Debug, Deserialize)]
+struct AffiliateCluster {
+    id: String,
+    primary_tool: String,
+    title: String,
+    monetization_state: String,
+    #[serde(default)]
+    duplicate_intent_risk: String,
+    #[serde(default)]
+    route_qa_risk: String,
+    #[serde(default)]
+    parent_surfaces: Vec<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -307,6 +378,69 @@ struct WorkerReportPage {
 struct ReportSummary {
     expected: usize,
     parsed: Vec<WorkerReport>,
+    missing: Vec<String>,
+    invalid: Vec<(String, String)>,
+}
+
+#[derive(Debug, Deserialize)]
+struct AffiliateWorkerReport {
+    worker_id: String,
+    #[serde(default)]
+    elapsed_seconds: Option<f64>,
+    #[serde(default)]
+    owned_paths: Vec<String>,
+    #[serde(default)]
+    clusters: Vec<AffiliateReportCluster>,
+    #[serde(default)]
+    handoff_notes: String,
+}
+
+#[derive(Debug, Deserialize)]
+struct AffiliateReportCluster {
+    id: String,
+    primary_tool: String,
+    #[serde(default)]
+    status: String,
+    #[serde(default)]
+    source_urls: Vec<String>,
+    #[serde(default)]
+    claim_receipts: Vec<AffiliateClaimReceipt>,
+    #[serde(default)]
+    commercial_cta_notes: Vec<String>,
+    #[serde(default)]
+    parent_surface_notes: Vec<String>,
+    #[serde(default)]
+    duplicate_intent_notes: Vec<String>,
+    #[serde(default)]
+    route_qa_risks: Vec<String>,
+    #[serde(default)]
+    checks: Vec<WorkerReportCheck>,
+    #[serde(default)]
+    handoff_notes: String,
+}
+
+#[derive(Debug, Deserialize)]
+struct AffiliateClaimReceipt {
+    #[serde(default)]
+    claim: String,
+    #[serde(default)]
+    path: String,
+    #[serde(default)]
+    source_url: String,
+    #[serde(default)]
+    verified_at: String,
+    #[serde(default)]
+    confidence: String,
+    #[serde(default)]
+    query: String,
+    #[serde(default)]
+    caveat: String,
+}
+
+#[derive(Debug)]
+struct AffiliateReportSummary {
+    expected: usize,
+    parsed: Vec<AffiliateWorkerReport>,
     missing: Vec<String>,
     invalid: Vec<(String, String)>,
 }
@@ -385,6 +519,18 @@ fn main() -> Result<()> {
                     cli.dry_run,
                 )?;
             }
+            Ok(())
+        }
+        Commands::AffiliatePlan(args) => {
+            plan_affiliate_conversion(&project_dir, &args, cli.dry_run)
+        }
+        Commands::AffiliateReports(args) => {
+            let plan_path = resolve_project_path(&project_dir, &args.plan);
+            let report_dir = resolve_project_path(&project_dir, &args.report_dir);
+            let out_path = resolve_project_path(&project_dir, &args.out);
+            let plan: AffiliatePlan = read_json(&plan_path)?;
+            let summary = read_affiliate_reports(&project_dir, &plan, &report_dir, args.strict)?;
+            write_affiliate_report_summary(&project_dir, &plan, &summary, &out_path)?;
             Ok(())
         }
     }
@@ -525,6 +671,82 @@ fn plan_page_refresh(project_dir: &Path, args: &PageRefreshArgs, dry_run: bool) 
         "Interactive route QA args: {}",
         display_path(project_dir, &interactive_route_args_out)
     );
+    Ok(())
+}
+
+fn plan_affiliate_conversion(
+    project_dir: &Path,
+    args: &AffiliatePlanArgs,
+    dry_run: bool,
+) -> Result<()> {
+    let out_path = resolve_project_path(project_dir, &args.out);
+    let worker_dir = resolve_project_path(project_dir, &args.worker_dir);
+    let report_dir = resolve_project_path(project_dir, &args.report_dir);
+    ensure_parent(&out_path)?;
+    fs::create_dir_all(&worker_dir)
+        .with_context(|| format!("could not create {}", worker_dir.display()))?;
+    fs::create_dir_all(&report_dir)
+        .with_context(|| format!("could not create {}", report_dir.display()))?;
+
+    let planner_args = vec![
+        "run".to_string(),
+        "--silent".to_string(),
+        "affiliate:conversion:plan".to_string(),
+        "--".to_string(),
+        "--limit".to_string(),
+        args.limit.to_string(),
+        "--max-workers".to_string(),
+        args.workers.to_string(),
+        "--clusters-per-worker".to_string(),
+        args.clusters_per_worker.to_string(),
+        "--out".to_string(),
+        display_path(project_dir, &out_path),
+        "--worker-dir".to_string(),
+        display_path(project_dir, &worker_dir),
+        "--report-dir".to_string(),
+        display_path(project_dir, &report_dir),
+        "--write-agent-prompts".to_string(),
+        "--write-report-scaffolds".to_string(),
+        "--json".to_string(),
+    ];
+
+    if dry_run {
+        println!("dry-run: npm {}", planner_args.join(" "));
+        return Ok(());
+    }
+
+    let output = Command::new(npm_bin())
+        .args(&planner_args)
+        .current_dir(project_dir)
+        .output()
+        .context("failed to run affiliate conversion planner")?;
+
+    if !output.status.success() {
+        std::io::stderr().write_all(&output.stderr).ok();
+        bail!(
+            "affiliate conversion planner failed with status {}",
+            status_text(output.status)
+        );
+    }
+
+    fs::write(&out_path, &output.stdout)
+        .with_context(|| format!("could not write {}", out_path.display()))?;
+    let plan: AffiliatePlan = serde_json::from_slice(&output.stdout).with_context(|| {
+        format!(
+            "affiliate planner output was not valid JSON at {}",
+            out_path.display()
+        )
+    })?;
+
+    validate_affiliate_plan_artifacts(&plan, &worker_dir, &report_dir)?;
+
+    println!(
+        "Planned {} affiliate conversion cluster(s)",
+        plan.clusters.len()
+    );
+    println!("Plan: {}", display_path(project_dir, &out_path));
+    println!("Worker prompts: {}", display_path(project_dir, &worker_dir));
+    println!("Worker reports: {}", display_path(project_dir, &report_dir));
     Ok(())
 }
 
@@ -1073,6 +1295,53 @@ fn validate_page_plan_artifacts(
     Ok(())
 }
 
+fn validate_affiliate_plan_artifacts(
+    plan: &AffiliatePlan,
+    worker_dir: &Path,
+    report_dir: &Path,
+) -> Result<()> {
+    let Some(agent_briefs) = &plan.agent_briefs else {
+        bail!("affiliate conversion plan is missing agent_briefs");
+    };
+
+    for worker in &agent_briefs.worker_briefs {
+        let prompt_path = worker_dir.join(format!("{}.md", worker.id));
+        if !prompt_path.exists() {
+            bail!("missing affiliate worker prompt {}", prompt_path.display());
+        }
+        let report_path = worker
+            .report_path
+            .as_ref()
+            .map(PathBuf::from)
+            .unwrap_or_else(|| report_dir.join(format!("{}.json", worker.id)));
+        let report_path = if report_path.is_absolute() {
+            report_path
+        } else if report_path.starts_with(report_dir) {
+            report_path
+        } else {
+            report_dir.join(format!("{}.json", worker.id))
+        };
+        if !report_path.exists() {
+            bail!(
+                "missing affiliate worker report scaffold {}",
+                report_path.display()
+            );
+        }
+    }
+
+    if agent_briefs.integrator_brief.is_some() {
+        let integrator_path = worker_dir.join("integrator.md");
+        if !integrator_path.exists() {
+            bail!(
+                "missing affiliate conversion integrator prompt in {}",
+                worker_dir.display()
+            );
+        }
+    }
+
+    Ok(())
+}
+
 fn write_page_route_args(
     plan: &PagePlan,
     content_route_args_out: &Path,
@@ -1156,11 +1425,14 @@ fn write_page_report_summary(
     content.push_str(&format!("- Missing reports: {}\n", summary.missing.len()));
     content.push_str(&format!("- Invalid reports: {}\n\n", summary.invalid.len()));
 
-    let total_worker_seconds: f64 = summary
+    let mut total_worker_seconds: f64 = summary
         .parsed
         .iter()
         .filter_map(|report| report.elapsed_seconds)
         .sum();
+    if total_worker_seconds.abs() < f64::EPSILON {
+        total_worker_seconds = 0.0;
+    }
     let source_count: usize = summary
         .parsed
         .iter()
@@ -1332,6 +1604,251 @@ fn write_page_report_summary(
     fs::write(out_path, content)
         .with_context(|| format!("could not write {}", out_path.display()))?;
     println!("Report summary: {}", display_path(project_dir, out_path));
+    Ok(())
+}
+
+fn read_affiliate_reports(
+    project_dir: &Path,
+    plan: &AffiliatePlan,
+    report_dir: &Path,
+    strict: bool,
+) -> Result<AffiliateReportSummary> {
+    let worker_briefs = plan
+        .agent_briefs
+        .as_ref()
+        .map(|briefs| briefs.worker_briefs.as_slice())
+        .unwrap_or(&[]);
+    let mut parsed = Vec::new();
+    let mut missing = Vec::new();
+    let mut invalid = Vec::new();
+
+    for worker in worker_briefs {
+        let report_path = worker
+            .report_path
+            .as_ref()
+            .map(|path| resolve_project_path(project_dir, Path::new(path)))
+            .unwrap_or_else(|| report_dir.join(format!("{}.json", worker.id)));
+        if !report_path.exists() {
+            missing.push(display_path(project_dir, &report_path));
+            continue;
+        }
+
+        match read_json::<AffiliateWorkerReport>(&report_path) {
+            Ok(report) => parsed.push(report),
+            Err(error) => {
+                invalid.push((display_path(project_dir, &report_path), error.to_string()))
+            }
+        }
+    }
+
+    if strict && (!missing.is_empty() || !invalid.is_empty()) {
+        bail!(
+            "affiliate worker reports incomplete: {} missing, {} invalid",
+            missing.len(),
+            invalid.len()
+        );
+    }
+
+    Ok(AffiliateReportSummary {
+        expected: worker_briefs.len(),
+        parsed,
+        missing,
+        invalid,
+    })
+}
+
+fn write_affiliate_report_summary(
+    project_dir: &Path,
+    plan: &AffiliatePlan,
+    summary: &AffiliateReportSummary,
+    out_path: &Path,
+) -> Result<()> {
+    ensure_parent(out_path)?;
+    let mut content = String::new();
+    content.push_str("# Affiliate Conversion Worker Report Summary\n\n");
+    content.push_str(&format!("- Current date: {}\n", plan.current_date));
+    content.push_str(&format!("- Clusters in plan: {}\n", plan.clusters.len()));
+    content.push_str(&format!("- Expected reports: {}\n", summary.expected));
+    content.push_str(&format!("- Parsed reports: {}\n", summary.parsed.len()));
+    content.push_str(&format!("- Missing reports: {}\n", summary.missing.len()));
+    content.push_str(&format!("- Invalid reports: {}\n\n", summary.invalid.len()));
+
+    let mut total_worker_seconds: f64 = summary
+        .parsed
+        .iter()
+        .filter_map(|report| report.elapsed_seconds)
+        .sum();
+    if total_worker_seconds.abs() < f64::EPSILON {
+        total_worker_seconds = 0.0;
+    }
+    let source_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .map(|cluster| cluster.source_urls.len())
+        .sum();
+    let claim_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .map(|cluster| {
+            cluster
+                .claim_receipts
+                .iter()
+                .filter(|receipt| !receipt.claim.trim().is_empty())
+                .count()
+        })
+        .sum();
+    let cta_note_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .map(|cluster| cluster.commercial_cta_notes.len())
+        .sum();
+    let duplicate_note_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .map(|cluster| cluster.duplicate_intent_notes.len())
+        .sum();
+    let parent_note_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .map(|cluster| cluster.parent_surface_notes.len())
+        .sum();
+    let route_risk_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .map(|cluster| cluster.route_qa_risks.len())
+        .sum();
+    let check_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .map(|cluster| cluster.checks.len())
+        .sum();
+    let failed_check_count: usize = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .flat_map(|cluster| cluster.checks.iter())
+        .filter(|check| check.status.to_lowercase() != "passed")
+        .count();
+
+    content.push_str("## Totals\n\n");
+    content.push_str(&format!(
+        "- Reported worker elapsed seconds: {:.2}\n",
+        total_worker_seconds
+    ));
+    content.push_str(&format!("- Source URLs checked: {}\n", source_count));
+    content.push_str(&format!("- Claim receipts completed: {}\n", claim_count));
+    content.push_str(&format!("- Commercial CTA notes: {}\n", cta_note_count));
+    content.push_str(&format!(
+        "- Duplicate-intent notes: {}\n",
+        duplicate_note_count
+    ));
+    content.push_str(&format!("- Parent surface notes: {}\n", parent_note_count));
+    content.push_str(&format!("- Route QA risk notes: {}\n", route_risk_count));
+    content.push_str(&format!("- Worker checks recorded: {}\n", check_count));
+    content.push_str(&format!(
+        "- Worker checks not passed: {}\n\n",
+        failed_check_count
+    ));
+
+    content.push_str("## Planned Clusters\n\n");
+    for cluster in &plan.clusters {
+        content.push_str(&format!(
+            "- {}: {} (`{}`), monetization {}, duplicate risk {}, route QA risk {}\n",
+            cluster.id,
+            cluster.title,
+            cluster.primary_tool,
+            cluster.monetization_state,
+            cluster.duplicate_intent_risk,
+            cluster.route_qa_risk
+        ));
+        if !cluster.parent_surfaces.is_empty() {
+            content.push_str(&format!(
+                "  - Parent surfaces: {}\n",
+                cluster.parent_surfaces.join(", ")
+            ));
+        }
+    }
+
+    content.push_str("\n## Worker Reports\n\n");
+    for report in &summary.parsed {
+        content.push_str(&format!(
+            "- {}: {} owned path(s), {} cluster report(s), elapsed {:?} seconds\n",
+            report.worker_id,
+            report.owned_paths.len(),
+            report.clusters.len(),
+            report.elapsed_seconds
+        ));
+        for cluster in &report.clusters {
+            content.push_str(&format!(
+                "  - {} (`{}`): {}, {} source(s), {} completed claim receipt(s), {} duplicate note(s), {} parent note(s), {} CTA note(s), {} route risk(s)\n",
+                cluster.id,
+                cluster.primary_tool,
+                cluster.status,
+                cluster.source_urls.len(),
+                cluster
+                    .claim_receipts
+                    .iter()
+                    .filter(|receipt| !receipt.claim.trim().is_empty())
+                    .count(),
+                cluster.duplicate_intent_notes.len(),
+                cluster.parent_surface_notes.len(),
+                cluster.commercial_cta_notes.len(),
+                cluster.route_qa_risks.len()
+            ));
+            for receipt in &cluster.claim_receipts {
+                if receipt.claim.trim().is_empty() {
+                    continue;
+                }
+                content.push_str(&format!(
+                    "    - Claim: {} ({}, {}, source {}, query {}, path {}, caveat {})\n",
+                    receipt.claim.trim(),
+                    receipt.verified_at.trim(),
+                    receipt.confidence.trim(),
+                    receipt.source_url.trim(),
+                    receipt.query.trim(),
+                    receipt.path.trim(),
+                    receipt.caveat.trim()
+                ));
+            }
+            if !cluster.handoff_notes.trim().is_empty() {
+                content.push_str(&format!(
+                    "    - Handoff: {}\n",
+                    cluster.handoff_notes.trim()
+                ));
+            }
+        }
+        if !report.handoff_notes.trim().is_empty() {
+            content.push_str(&format!("  - Handoff: {}\n", report.handoff_notes.trim()));
+        }
+    }
+
+    if !summary.missing.is_empty() {
+        content.push_str("\n## Missing Reports\n\n");
+        for path in &summary.missing {
+            content.push_str(&format!("- `{}`\n", path));
+        }
+    }
+
+    if !summary.invalid.is_empty() {
+        content.push_str("\n## Invalid Reports\n\n");
+        for (path, error) in &summary.invalid {
+            content.push_str(&format!("- `{}`: {}\n", path, error));
+        }
+    }
+
+    fs::write(out_path, content)
+        .with_context(|| format!("could not write {}", out_path.display()))?;
+    println!(
+        "Affiliate report summary: {}",
+        display_path(project_dir, out_path)
+    );
     Ok(())
 }
 

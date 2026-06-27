@@ -25,6 +25,22 @@ Treat `npm run affiliate:conversion:inventory -- --json` as the source of truth 
 
 The affiliate conversion lane should become runner-backed before it scales beyond small manual slices. Until that runner exists, use this contract as the implementation target.
 
+Current MVP commands:
+
+```bash
+npm run runner:affiliate-conversion:plan
+npm run runner:affiliate-conversion:reports
+```
+
+The planner writes local artifacts under `local/tmp/aipedia-runner/affiliate-conversion/`:
+
+- `affiliate-conversion-plan.json`
+- `workers/*.md`
+- `reports/*.json`
+- `affiliate-report-summary.md`
+
+The MVP is planning and report scaffolding only. It must not edit public content pages, source registry rows, page ledger rows, tool markdown, category hubs, news content, or generated site output.
+
 ### Planner Output
 
 The planner should emit JSON with:

@@ -68,6 +68,7 @@
     "loop:verify": "node scripts/loop-verify.mjs",
     "loop:record": "node scripts/loop-record.mjs",
     "affiliate:conversion:inventory": "node scripts/affiliate-conversion-inventory.mjs",
+    "affiliate:conversion:plan": "node scripts/affiliate-conversion-plan.mjs",
     "qa:route": "node scripts/qa-route.mjs",
     "audit:sources": "node scripts/audit-source-health.mjs",
     "audit:passed-dates": "node scripts/audit-passed-dates.mjs",
@@ -115,7 +116,9 @@
     "runner:page-refresh:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-plan",
     "runner:page-refresh:reports": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-reports",
     "runner:page-refresh:closeout": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-closeout",
-    "runner:page-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-run"
+    "runner:page-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-run",
+    "runner:affiliate-conversion:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-plan",
+    "runner:affiliate-conversion:reports": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-reports"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",
