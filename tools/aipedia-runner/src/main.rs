@@ -45,6 +45,8 @@ enum Commands {
     AffiliatePlan(AffiliatePlanArgs),
     /// Summarize affiliate conversion worker reports from a saved plan.
     AffiliateReports(AffiliateReportsArgs),
+    /// Write a strict-gated affiliate conversion implementation handoff.
+    AffiliateHandoff(AffiliateHandoffArgs),
 }
 
 #[derive(Parser, Debug, Clone)]
@@ -236,6 +238,30 @@ struct AffiliateReportsArgs {
     strict: bool,
 }
 
+#[derive(Parser, Debug)]
+struct AffiliateHandoffArgs {
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-conversion-plan.json"
+    )]
+    plan: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/reports"
+    )]
+    report_dir: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-report-summary.md"
+    )]
+    report_summary: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-implementation-handoff.md"
+    )]
+    out: PathBuf,
+}
+
 #[derive(Debug, Deserialize)]
 struct Plan {
     batch: Vec<Tool>,
@@ -291,6 +317,8 @@ struct PagePlan {
 struct AffiliatePlan {
     current_date: String,
     clusters: Vec<AffiliateCluster>,
+    #[serde(default)]
+    commands: Option<AffiliateCommands>,
     agent_briefs: Option<AgentBriefs>,
 }
 
@@ -299,13 +327,33 @@ struct AffiliateCluster {
     id: String,
     primary_tool: String,
     title: String,
+    #[serde(default)]
+    category: String,
+    #[serde(default)]
+    source_file: String,
     monetization_state: String,
+    #[serde(default)]
+    affiliate_status: String,
+    #[serde(default)]
+    affiliate_network: String,
+    #[serde(default)]
+    buyer_job: String,
     #[serde(default)]
     duplicate_intent_risk: String,
     #[serde(default)]
     route_qa_risk: String,
     #[serde(default)]
+    affected_routes: Vec<String>,
+    #[serde(default)]
     parent_surfaces: Vec<String>,
+}
+
+#[derive(Debug, Deserialize)]
+struct AffiliateCommands {
+    #[serde(default)]
+    cheap_gates: Vec<String>,
+    #[serde(default)]
+    future_rendered_closeout: Vec<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -534,6 +582,7 @@ fn main() -> Result<()> {
             write_affiliate_report_summary(&project_dir, &plan, &summary, &out_path)?;
             Ok(())
         }
+        Commands::AffiliateHandoff(args) => write_affiliate_handoff_command(&project_dir, &args),
     }
 }
 
@@ -2060,6 +2109,361 @@ fn write_affiliate_report_summary(
     Ok(())
 }
 
+fn write_affiliate_handoff_command(project_dir: &Path, args: &AffiliateHandoffArgs) -> Result<()> {
+    let plan_path = resolve_project_path(project_dir, &args.plan);
+    let report_dir = resolve_project_path(project_dir, &args.report_dir);
+    let report_summary_path = resolve_project_path(project_dir, &args.report_summary);
+    let out_path = resolve_project_path(project_dir, &args.out);
+    let plan: AffiliatePlan = read_json(&plan_path)?;
+    let summary = read_affiliate_reports(project_dir, &plan, &report_dir, true)?;
+
+    if implementation_ready_affiliate_clusters(&plan, &summary).is_empty() {
+        bail!("no completed affiliate clusters are implementation-ready");
+    }
+
+    write_affiliate_report_summary(project_dir, &plan, &summary, &report_summary_path)?;
+    write_affiliate_handoff(
+        project_dir,
+        &plan_path,
+        &report_summary_path,
+        &plan,
+        &summary,
+        &out_path,
+    )?;
+    println!(
+        "Affiliate implementation handoff: {}",
+        display_path(project_dir, &out_path)
+    );
+    Ok(())
+}
+
+fn implementation_ready_affiliate_clusters<'a>(
+    plan: &'a AffiliatePlan,
+    summary: &'a AffiliateReportSummary,
+) -> Vec<(
+    &'a AffiliateCluster,
+    &'a AffiliateReportCluster,
+    &'a AffiliateWorkerReport,
+)> {
+    let cluster_map: BTreeMap<&str, &AffiliateCluster> = plan
+        .clusters
+        .iter()
+        .map(|cluster| (cluster.id.as_str(), cluster))
+        .collect();
+    summary
+        .parsed
+        .iter()
+        .flat_map(|report| {
+            let cluster_map = &cluster_map;
+            report.clusters.iter().filter_map(move |cluster| {
+                if cluster.status.trim() != "complete" {
+                    return None;
+                }
+                cluster_map
+                    .get(cluster.id.as_str())
+                    .copied()
+                    .map(|plan_cluster| (plan_cluster, cluster, report))
+            })
+        })
+        .collect()
+}
+
+fn write_affiliate_handoff(
+    project_dir: &Path,
+    plan_path: &Path,
+    report_summary_path: &Path,
+    plan: &AffiliatePlan,
+    summary: &AffiliateReportSummary,
+    out_path: &Path,
+) -> Result<()> {
+    ensure_parent(out_path)?;
+    let ready_clusters = implementation_ready_affiliate_clusters(plan, summary);
+    let ready_cluster_ids: BTreeSet<&str> = ready_clusters
+        .iter()
+        .map(|(_, cluster, _)| cluster.id.as_str())
+        .collect();
+    let deferred_clusters: Vec<(&AffiliateReportCluster, &AffiliateWorkerReport)> = summary
+        .parsed
+        .iter()
+        .flat_map(|report| {
+            report.clusters.iter().filter_map(move |cluster| {
+                if matches!(cluster.status.trim(), "blocked" | "deferred") {
+                    Some((cluster, report))
+                } else {
+                    None
+                }
+            })
+        })
+        .collect();
+    let pending_clusters: Vec<&AffiliateReportCluster> = summary
+        .parsed
+        .iter()
+        .flat_map(|report| report.clusters.iter())
+        .filter(|cluster| cluster.status.trim() == "pending")
+        .collect();
+    let mut route_qa_routes = BTreeSet::new();
+    let mut parent_surfaces = BTreeSet::new();
+    let mut failed_checks = Vec::new();
+
+    for (plan_cluster, report_cluster, report) in &ready_clusters {
+        for route in &plan_cluster.affected_routes {
+            if !route.trim().is_empty() {
+                route_qa_routes.insert(route.trim().to_string());
+            }
+        }
+        route_qa_routes.insert(format!("/tools/{}/", plan_cluster.primary_tool));
+        for route in &plan_cluster.parent_surfaces {
+            if !route.trim().is_empty() {
+                parent_surfaces.insert(route.trim().to_string());
+            }
+        }
+        for check in &report_cluster.checks {
+            if check.status.trim() != "passed" {
+                failed_checks.push(format!(
+                    "{}:{} `{}` status `{}` notes `{}`",
+                    report.worker_id,
+                    report_cluster.id,
+                    check.command.trim(),
+                    check.status.trim(),
+                    check.notes.trim()
+                ));
+            }
+        }
+    }
+
+    let mut content = String::new();
+    content.push_str("# Affiliate Conversion Implementation Handoff\n\n");
+    content.push_str("This artifact is a no-content, reviewer-ready patch plan. It is not a publishing receipt and it does not authorize workers to edit shared files.\n\n");
+    content.push_str("## Inputs\n\n");
+    content.push_str(&format!(
+        "- Plan: `{}`\n",
+        display_path(project_dir, plan_path)
+    ));
+    content.push_str(&format!(
+        "- Report summary: `{}`\n",
+        display_path(project_dir, report_summary_path)
+    ));
+    content.push_str(&format!("- Current date: {}\n", plan.current_date));
+    content.push_str(&format!(
+        "- Strict validation issues: {}\n",
+        summary.validation_issues.len()
+    ));
+    content.push_str(&format!(
+        "- Selected implementation clusters: {}\n\n",
+        ready_clusters.len()
+    ));
+
+    content.push_str("## Selected Clusters\n\n");
+    for (plan_cluster, report_cluster, report) in &ready_clusters {
+        content.push_str(&format!(
+            "### {} (`{}`)\n\n",
+            plan_cluster.title, report_cluster.id
+        ));
+        content.push_str(&format!("- Worker: `{}`\n", report.worker_id));
+        content.push_str(&format!(
+            "- Primary tool: `{}` from `{}`\n",
+            plan_cluster.primary_tool, plan_cluster.source_file
+        ));
+        content.push_str(&format!(
+            "- Category: `{}`\n",
+            empty_as_unknown(&plan_cluster.category)
+        ));
+        content.push_str(&format!("- Buyer job: {}\n", plan_cluster.buyer_job));
+        content.push_str(&format!(
+            "- Monetization: {}, affiliate status {}, network {}\n",
+            plan_cluster.monetization_state,
+            empty_as_unknown(&plan_cluster.affiliate_status),
+            empty_as_unknown(&plan_cluster.affiliate_network)
+        ));
+        content.push_str(&format!(
+            "- Duplicate-intent risk: {}\n",
+            plan_cluster.duplicate_intent_risk
+        ));
+        content.push_str(&format!(
+            "- Route QA risk: {}\n\n",
+            plan_cluster.route_qa_risk
+        ));
+
+        content.push_str("#### Claim Receipts\n\n");
+        for receipt in report_cluster
+            .claim_receipts
+            .iter()
+            .filter(|receipt| !receipt.claim.trim().is_empty())
+        {
+            content.push_str(&format!(
+                "- Claim: {}\n  - Path: `{}`\n  - Source: {}\n  - Verified at: {}\n  - Confidence: {}\n",
+                receipt.claim.trim(),
+                receipt.path.trim(),
+                receipt.source_url.trim(),
+                receipt.verified_at.trim(),
+                receipt.confidence.trim()
+            ));
+            if !receipt.query.trim().is_empty() {
+                content.push_str(&format!("  - Query: {}\n", receipt.query.trim()));
+            }
+            if !receipt.caveat.trim().is_empty() {
+                content.push_str(&format!("  - Caveat: {}\n", receipt.caveat.trim()));
+            }
+        }
+
+        content.push_str("\n#### Duplicate-Intent Decision\n\n");
+        push_note_list(&mut content, &report_cluster.duplicate_intent_notes);
+
+        content.push_str("\n#### Commercial CTA Notes\n\n");
+        push_note_list(&mut content, &report_cluster.commercial_cta_notes);
+
+        content.push_str("\n#### Parent Surface Notes\n\n");
+        push_note_list(&mut content, &report_cluster.parent_surface_notes);
+
+        if !report_cluster.route_qa_risks.is_empty() {
+            content.push_str("\n#### Route QA Risk Notes\n\n");
+            push_note_list(&mut content, &report_cluster.route_qa_risks);
+        }
+
+        if !report_cluster.handoff_notes.trim().is_empty() {
+            content.push_str("\n#### Worker Handoff Notes\n\n");
+            content.push_str(&format!("- {}\n", report_cluster.handoff_notes.trim()));
+        }
+        content.push('\n');
+    }
+
+    content.push_str("## Parent And Top-Layer Surface Checklist\n\n");
+    for route in parent_surfaces {
+        content.push_str(&format!(
+            "- [ ] Inspect and update if affected: `{}`\n",
+            route
+        ));
+    }
+    for route in ["/", "/guides/", "/tools/", "/categories/", "/workflows/"] {
+        content.push_str(&format!(
+            "- [ ] Confirm top-layer consistency if this slice changes linked child content: `{}`\n",
+            route
+        ));
+    }
+
+    content.push_str("\n## Route QA Routes And Risks\n\n");
+    if route_qa_routes.is_empty() {
+        content.push_str("- No route QA routes were derived. The integrator must add changed routes before publishing.\n");
+    } else {
+        for route in route_qa_routes {
+            content.push_str(&format!("- `--route {}`\n", route));
+        }
+    }
+    for (plan_cluster, report_cluster, _) in &ready_clusters {
+        content.push_str(&format!(
+            "- Risk note for `{}`: plan `{}`, worker notes `{}`\n",
+            report_cluster.id,
+            plan_cluster.route_qa_risk,
+            non_empty_notes(&report_cluster.route_qa_risks).join("; ")
+        ));
+    }
+
+    content.push_str("\n## Exact Verification Gates Before Publishing Content\n\n");
+    for command in affiliate_handoff_verification_gates(plan) {
+        content.push_str(&format!("- `{}`\n", command));
+    }
+
+    content.push_str("\n## No-Edit And Shared-File Boundaries\n\n");
+    content.push_str("- Worker-owned content patches may touch only files explicitly assigned by the future integrator.\n");
+    content.push_str("- Workers must not edit `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, category hubs, top-layer pages, `.agent/**`, `workflows/**`, runner code, audit scripts, or generated output.\n");
+    content.push_str("- The integrator owns shared files, source registry rows, parent hubs, top-layer surfaces, route QA scope, final verification, and final receipts.\n");
+    content.push_str("- This handoff is no-content. It does not itself publish, update, refresh, or verify public pages.\n");
+
+    content.push_str("\n## Unresolved Risks And Defer Or Block Items\n\n");
+    if deferred_clusters.is_empty() && pending_clusters.is_empty() && failed_checks.is_empty() {
+        content.push_str(
+            "- No blocked, deferred, pending, or non-passed worker-check items were reported.\n",
+        );
+    }
+    for (cluster, report) in deferred_clusters {
+        content.push_str(&format!(
+            "- {}:{} is `{}`: {}\n",
+            report.worker_id,
+            cluster.id,
+            cluster.status,
+            cluster.handoff_notes.trim()
+        ));
+    }
+    for cluster in pending_clusters {
+        if !ready_cluster_ids.contains(cluster.id.as_str()) {
+            content.push_str(&format!(
+                "- `{}` remains pending and is not implementation-ready.\n",
+                cluster.id
+            ));
+        }
+    }
+    for check in failed_checks {
+        content.push_str(&format!("- Non-passed worker check: {}\n", check));
+    }
+
+    fs::write(out_path, content)
+        .with_context(|| format!("could not write {}", out_path.display()))?;
+    Ok(())
+}
+
+fn affiliate_handoff_verification_gates(plan: &AffiliatePlan) -> Vec<String> {
+    let mut gates = Vec::new();
+    gates.push("npm run runner:affiliate-conversion:reports -- --strict".to_string());
+    if let Some(commands) = &plan.commands {
+        gates.extend(commands.cheap_gates.iter().cloned());
+        gates.push("npm run ledger:pages && npm run ledger:pages:check".to_string());
+        gates.extend(commands.future_rendered_closeout.iter().cloned());
+    } else {
+        gates.extend([
+            "npm run affiliate:conversion:inventory -- --json".to_string(),
+            "npm run audit:affiliate-conversion -- --strict --json".to_string(),
+            "npm run audit:provenance:changed -- --json".to_string(),
+            "npm run ledger:pages && npm run ledger:pages:check".to_string(),
+            "npm run typecheck".to_string(),
+            "npm run build:fast".to_string(),
+            "npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route <changed routes>".to_string(),
+            "git diff --check".to_string(),
+        ]);
+    }
+    gates.push(
+        "Inspect CommercialCTA usage and affiliate disclosure on every changed commercial page."
+            .to_string(),
+    );
+    gates.push(
+        "Run live source checks for every volatile source touched by the content slice."
+            .to_string(),
+    );
+
+    let mut seen = BTreeSet::new();
+    gates
+        .into_iter()
+        .filter(|gate| seen.insert(gate.clone()))
+        .collect()
+}
+
+fn push_note_list(content: &mut String, notes: &[String]) {
+    let notes = non_empty_notes(notes);
+    if notes.is_empty() {
+        content.push_str("- No notes supplied.\n");
+        return;
+    }
+    for note in notes {
+        content.push_str(&format!("- {}\n", note));
+    }
+}
+
+fn non_empty_notes(notes: &[String]) -> Vec<String> {
+    notes
+        .iter()
+        .map(|note| note.trim())
+        .filter(|note| !note.is_empty())
+        .map(str::to_string)
+        .collect()
+}
+
+fn empty_as_unknown(value: &str) -> &str {
+    if value.trim().is_empty() {
+        "unknown"
+    } else {
+        value.trim()
+    }
+}
+
 fn per_page(total: usize, page_count: usize) -> f64 {
     if page_count == 0 {
         0.0
@@ -2418,11 +2822,31 @@ mod tests {
                 id: "affiliate-alpha-tool".to_string(),
                 primary_tool: "alpha-tool".to_string(),
                 title: "Alpha Tool".to_string(),
+                category: "ai-automation".to_string(),
+                source_file: "src/content/tools/alpha-tool.md".to_string(),
                 monetization_state: "live_affiliate".to_string(),
+                affiliate_status: "approved".to_string(),
+                affiliate_network: "partnerstack".to_string(),
+                buyer_job: "Find the next Alpha Tool buyer-intent page.".to_string(),
                 duplicate_intent_risk: "medium".to_string(),
                 route_qa_risk: "commercial-high".to_string(),
+                affected_routes: vec![
+                    "/tools/alpha-tool/".to_string(),
+                    "/guides/alpha-tool-pricing/".to_string(),
+                    "/categories/ai-automation/".to_string(),
+                ],
                 parent_surfaces: vec!["/guides/".to_string(), "/tools/".to_string()],
             }],
+            commands: Some(AffiliateCommands {
+                cheap_gates: vec![
+                    "npm run affiliate:conversion:inventory -- --json".to_string(),
+                    "git diff --check".to_string(),
+                ],
+                future_rendered_closeout: vec![
+                    "npm run typecheck".to_string(),
+                    "npm run build:fast".to_string(),
+                ],
+            }),
             agent_briefs: Some(AgentBriefs {
                 worker_briefs: vec![WorkerBrief {
                     id: "affiliate-worker-1".to_string(),
@@ -2630,5 +3054,63 @@ mod tests {
         let issues = validate_affiliate_worker_report(&plan, &report);
 
         assert!(issues.is_empty(), "{issues:?}");
+    }
+
+    #[test]
+    fn affiliate_handoff_does_not_select_pending_scaffolds() {
+        let plan = sample_affiliate_plan();
+        let report = sample_affiliate_report("pending");
+        let summary = AffiliateReportSummary {
+            expected: 1,
+            parsed: vec![report],
+            missing: Vec::new(),
+            invalid: Vec::new(),
+            validation_issues: Vec::new(),
+        };
+
+        let ready = implementation_ready_affiliate_clusters(&plan, &summary);
+
+        assert!(ready.is_empty());
+    }
+
+    #[test]
+    fn affiliate_handoff_writes_reviewer_ready_patch_plan() {
+        let dir = temp_runner_dir("affiliate-handoff");
+        let project_dir = dir.join("project");
+        fs::create_dir_all(&project_dir).expect("project dir should exist");
+        let out_path = project_dir.join("handoff.md");
+        let plan_path = project_dir.join("affiliate-conversion-plan.json");
+        let summary_path = project_dir.join("affiliate-report-summary.md");
+        let plan = sample_affiliate_plan();
+        let report = sample_affiliate_report("complete");
+        let summary = AffiliateReportSummary {
+            expected: 1,
+            parsed: vec![report],
+            missing: Vec::new(),
+            invalid: Vec::new(),
+            validation_issues: Vec::new(),
+        };
+
+        write_affiliate_handoff(
+            &project_dir,
+            &plan_path,
+            &summary_path,
+            &plan,
+            &summary,
+            &out_path,
+        )
+        .expect("handoff should write");
+        let content = fs::read_to_string(&out_path).expect("handoff should be readable");
+
+        assert!(content.contains("Affiliate Conversion Implementation Handoff"));
+        assert!(content.contains("Selected implementation clusters: 1"));
+        assert!(content.contains("Alpha Tool Pro is the plan to verify."));
+        assert!(content.contains("Approved affiliate CTA still needs disclosure."));
+        assert!(content.contains("Existing guide overlap is distinct by buyer job."));
+        assert!(content.contains("--route /guides/alpha-tool-pricing/"));
+        assert!(content.contains("npm run runner:affiliate-conversion:reports -- --strict"));
+        assert!(content.contains("Workers must not edit `PAGE_REFRESH_LEDGER.md`"));
+
+        fs::remove_dir_all(dir).ok();
     }
 }

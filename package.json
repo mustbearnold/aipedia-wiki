@@ -118,7 +118,8 @@
     "runner:page-refresh:closeout": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-closeout",
     "runner:page-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-run",
     "runner:affiliate-conversion:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-plan",
-    "runner:affiliate-conversion:reports": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-reports"
+    "runner:affiliate-conversion:reports": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-reports",
+    "runner:affiliate-conversion:handoff": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-handoff"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

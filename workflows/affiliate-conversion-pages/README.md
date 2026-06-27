@@ -30,6 +30,7 @@ Current MVP commands:
 ```bash
 npm run runner:affiliate-conversion:plan
 npm run runner:affiliate-conversion:reports
+npm run runner:affiliate-conversion:handoff
 ```
 
 The planner writes local artifacts under `local/tmp/aipedia-runner/affiliate-conversion/`:
@@ -38,8 +39,9 @@ The planner writes local artifacts under `local/tmp/aipedia-runner/affiliate-con
 - `workers/*.md`
 - `reports/*.json`
 - `affiliate-report-summary.md`
+- `affiliate-implementation-handoff.md`
 
-The MVP is planning and report scaffolding only. It must not edit public content pages, source registry rows, page ledger rows, tool markdown, category hubs, news content, or generated site output.
+The MVP is planning, report scaffolding, strict report validation, and no-content implementation handoff only. It must not edit public content pages, source registry rows, page ledger rows, tool markdown, category hubs, news content, or generated site output.
 
 ### Planner Output
 
@@ -125,6 +127,18 @@ npm run runner:affiliate-conversion:reports -- --strict
 ```
 
 Pending scaffold reports may stay blank. Completed clusters must include claim receipts, parent-surface notes, commercial CTA notes for live affiliate tools, duplicate-intent notes for medium or high duplicate risk, and check records with visible notes for non-passed checks. Blocked or deferred clusters must include a rationale in `handoff_notes`.
+
+### Implementation Handoff
+
+After reports pass strict validation, generate a reviewer-ready patch plan:
+
+```bash
+npm run runner:affiliate-conversion:handoff
+```
+
+The handoff command refuses to create an implementation-ready artifact when strict report validation fails or when every cluster is still pending, blocked, or deferred. Pending scaffold reports can summarize, but they are not selected for implementation.
+
+The handoff records the planner path, report summary path, selected complete clusters, claim receipts, duplicate-intent decisions, commercial CTA notes, parent and top-layer surface checklist, route QA routes and risk notes, exact verification gates, no-edit boundaries, integrator-owned shared files, and unresolved blocked or deferred items. It is still no-content and does not authorize public page edits by itself.
 
 ## Page Count Strategy
 
