@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-27
-Tracked public pages and crawl surfaces: 550
+Tracked public pages and crawl surfaces: 551
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -503,6 +503,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-27 | /guides/deepseek-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/deepseek-alternatives.md |
 | 2026-06-27 | /guides/dext-pricing-for-bookkeeping-firms/ | Guide | Yes | working tree | src/content/use-cases/dext-pricing-for-bookkeeping-firms.md |
+| 2026-06-27 | /guides/dext-vs-autoentry-for-sage-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/dext-vs-autoentry-for-sage-bookkeepers.md |
 | 2026-06-27 | /guides/dext-vs-hubdoc-for-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/dext-vs-hubdoc-for-bookkeepers.md |
 | 2026-06-27 | /guides/elevenlabs-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/elevenlabs-alternatives.md |
 | 2026-06-27 | /guides/gemini-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/gemini-alternatives.md |
@@ -528,7 +529,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
 | 2026-06-27 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-27 | /tools/dalle/ | Tool | Yes | frontmatter | src/content/tools/dalle.md |
-| 2026-06-27 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
+| 2026-06-27 | /tools/dext/ | Tool | Yes | working tree | src/content/tools/dext.md |
 | 2026-06-27 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-06-27 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
 | 2026-06-27 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
@@ -547,7 +548,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /trends/sovereign-ai-procurement/ | Trend | Yes | frontmatter | src/content/trends/sovereign-ai-procurement.md |
 | 2026-06-27 | /trends/vibe-coding/ | Trend | Yes | frontmatter | src/content/trends/vibe-coding.md |
 | 2026-06-27 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
-| 2026-06-27 | /workflows/accountant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/accountant-stack.md |
+| 2026-06-27 | /workflows/accountant-stack/ | Workflow | Yes | working tree | src/content/workflows/accountant-stack.md |
 | 2026-06-27 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
 | 2026-06-27 | /workflows/agentic-coding-workflow/ | Workflow | Yes | frontmatter | src/content/workflows/agentic-coding-workflow.md |
 | 2026-06-27 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |

@@ -1,9 +1,23 @@
 # AiPedia Work Log
 
-### 2026-06-27: Dext vs Hubdoc Affiliate Switcher Slice
+### 2026-06-27: Dext vs AutoEntry Sage Bookkeeper Slice
 
 - Status: Verified locally and accepted by visual/mobile and accuracy subagents at 9.9/10.
-- Commit: pending.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `/guides/dext-vs-autoentry-for-sage-bookkeepers/` as the third Dext affiliate conversion page. The page targets Sage-heavy bookkeepers choosing between Dext's practice workflow and AutoEntry's Sage-native credit model. Updated the Dext pricing guide, Dext vs Hubdoc guide, receipt-tool guide, AI Automation category hub, Dext tool page, accountant stack workflow, and `PAGE_REFRESH_LEDGER.md`.
+- Accuracy notes: Dext remains the affiliate best-overall pick for multi-client review, approvals, client submission, and broader accounting-platform handoff. AutoEntry is presented as an official non-affiliate alternative for Sage-first buyers, credit-style document pricing, and Sage bundle considerations. Exact AutoEntry prices were avoided because public pricing is region-sensitive, while the source-backed credit rules and Sage integration facts were retained.
+- Layout repair: Visual/mobile review rejected the first pass because the shared mobile `StickyCTA.astro` styles for the child `CommercialCTA` wrapper, button, and disclosure were scoped away, causing the Dext price line to stack vertically on 319 to 390 px screens. The fix made those selectors global, clamped the sticky info text, hid the price line below 381 px, and reran focused mobile checks.
+- Timing: Focused source health checked 225 source URLs in 23.312s, with 219 ok, 6 access-sensitive, 0 broken, and 0 unreachable. Route QA checked 8 routes across 319, 360, 390, 430, 768, 1024, and 1366 px. Targeted Playwright inspection confirmed the sticky CTA stays contained at 319, 360, and 390 px.
+- Review: Accuracy/SEO accepted at 9.9/10 after stale Dext terminology, over-broad comparative claims, and brittle pricing/ROI wording were fixed. Visual/mobile accepted at 9.9/10 after the sticky CTA containment fix and Playwright probe.
+- Verification: `npm run check:frontmatter`; `node scripts/audit-guide-picks.mjs --json`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run --silent audit:affiliate-conversion -- --strict --json`; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run page:source-health -- --plan local/tmp/dext-vs-autoentry-source-health-plan.json --out local/tmp/dext-vs-autoentry-source-health.json --concurrency 6 --timeout-ms 10000 --domain-delay-ms 150`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --timing-file local/tmp/dext-vs-autoentry-route-qa-timing.json --route /guides/dext-vs-autoentry-for-sage-bookkeepers/ --route /guides/dext-pricing-for-bookkeeping-firms/ --route /guides/dext-vs-hubdoc-for-bookkeepers/ --route /guides/best-ai-receipt-tool-for-bookkeepers/ --route /categories/ai-automation/ --route /guides/ --route /tools/dext/ --route /workflows/accountant-stack/`.
+- Residual risks: This advances the Dext affiliate cluster but does not complete the full every-affiliate-tool objective.
+- Next: Commit and push, then continue either one more distinct Dext intent or the next highest-fit approved affiliate tool from `npm run affiliate:conversion:inventory`.
+
+### 2026-06-27: Dext vs Hubdoc Affiliate Switcher Slice
+
+- Status: Complete and pushed.
+- Commit: `38b3a73d7`.
 - Branch: `master`.
 - Changed: Added `/guides/dext-vs-hubdoc-for-bookkeepers/` as the second Dext affiliate conversion page. The page targets the same-job Dext vs Hubdoc decision for bookkeepers, solo finance operators, and small accounting firms. Updated the Dext pricing guide, receipt-tool guide, AI Automation category hub, and `PAGE_REFRESH_LEDGER.md`.
 - Accuracy notes: The new guide recommends Dext only for multi-client, review-heavy, practice-grade workflows. Hubdoc is presented as a non-affiliate light-capture alternative when the buyer can confirm Xero availability, only needs QuickBooks Online sync, or wants the standalone $12/month Hubdoc route first. The page avoids claiming Hubdoc is included with QuickBooks. Accuracy review rejected the first rendered guide-pick version because Dext was still shown as the "Budget pick"; fixed by adding external non-affiliate guide picks to the schema, renderer, and audit, then making Hubdoc the rendered budget/light-capture pick with an official Hubdoc pricing CTA.
@@ -11,7 +25,7 @@
 - Review: Visual/mobile accepted at 9.9/10 with clean layout and route QA across 319 to 1366 px. Accuracy/SEO rejected the first rendered version because the budget guide-pick card still monetized Dext despite the body recommending Hubdoc for budget/light-capture cases; after the external-pick fix, accuracy rereview accepted at 9.9/10 and verified the built Hubdoc budget CTA is official, non-affiliate, and not tied to Dext.
 - Verification: `npm exec --yes --package=node@24 -- node --test tests/scripts/audit-guide-picks.test.mjs`; `npm run check:frontmatter`; `node scripts/audit-guide-picks.mjs --json`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run --silent audit:affiliate-conversion -- --strict --json`; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run typecheck`; `npm run page:source-health -- --plan local/tmp/dext-vs-hubdoc-source-health-plan.json --out local/tmp/dext-vs-hubdoc-source-health.json --concurrency 6 --timeout-ms 10000 --domain-delay-ms 150`; `npm run build:fast`; `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /guides/dext-vs-hubdoc-for-bookkeepers/ --route /guides/dext-pricing-for-bookkeeping-firms/ --route /guides/best-ai-receipt-tool-for-bookkeepers/ --route /categories/ai-automation/ --route /guides/ --route /tools/dext/ --route /workflows/accountant-stack/ --timing-file local/tmp/dext-vs-hubdoc-route-qa-timing.json`.
 - Residual risks: This is still only the Dext cluster's second new page, not the full affiliate-page objective.
-- Next: Apply any subagent review fixes, rerun focused gates if needed, commit, push, then continue the affiliate buildout.
+- Next: Continue the affiliate buildout.
 
 ### 2026-06-27: Dext Affiliate Plan Guide Slice
 

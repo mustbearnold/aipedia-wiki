@@ -1,6 +1,6 @@
 ---
 /**
- * StickyCTA — bottom-anchored mobile CTA, auto-reparents to <body>.
+ * StickyCTA: bottom-anchored mobile CTA, auto-reparents to <body>.
  *
  * Appears once the user scrolls past `observeSelector` (default .gt-card).
  * Hides when the footer enters the viewport (no overlap with the trust /
@@ -178,28 +178,56 @@ const isAffiliate = affiliateStatus === 'approved' && Boolean(resolvedAffiliateU
     flex: 1;
     min-width: 0;
   }
-  .gt-sticky-info strong { font-size: 14px; color: var(--gt-fg); }
-  .gt-sticky-info span { font-size: 12px; color: var(--gt-subtle); }
-  .gt-sticky-cta-wrap {
+  .gt-sticky-info strong {
+    color: var(--gt-fg);
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .gt-sticky-info span {
+    color: var(--gt-subtle);
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  :global(.gt-sticky-cta-wrap) {
     flex: 0 0 auto;
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 3px;
+    max-width: min(180px, 52vw);
   }
-  .gt-sticky-btn {
+  :global(.gt-sticky-btn) {
     width: auto;
     flex: 0 0 auto;
     padding: 10px 16px;
     min-height: 44px;
     font-size: 14px;
+    max-width: 100%;
+    white-space: nowrap;
   }
-  .gt-sticky-disclosure {
-    max-width: 180px;
+  :global(.gt-sticky-disclosure) {
+    max-width: 100%;
     color: var(--gt-subtle);
     font-size: 10px;
     line-height: 1.25;
     text-align: right;
+  }
+  @media (max-width: 380px) {
+    .gt-sticky {
+      gap: 8px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .gt-sticky-info span {
+      display: none;
+    }
+    :global(.gt-sticky-cta-wrap) {
+      max-width: 56vw;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     .gt-sticky { transition: none; }

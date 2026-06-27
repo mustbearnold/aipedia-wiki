@@ -229,4 +229,5 @@ Sometimes, but only if paperwork volume is high enough. If you only process a ha
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
+- **Buying guides:** [Dext pricing for bookkeeping firms](/guides/dext-pricing-for-bookkeeping-firms/), [Dext vs Hubdoc for bookkeepers](/guides/dext-vs-hubdoc-for-bookkeepers/), [Dext vs AutoEntry for Sage bookkeepers](/guides/dext-vs-autoentry-for-sage-bookkeepers/)
 - **Adjacent tools:** [Zapier](/tools/zapier/), [Make](/tools/make/), [n8n](/tools/n8n/), [Rows](/tools/rows/)

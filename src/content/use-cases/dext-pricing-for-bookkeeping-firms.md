@@ -89,6 +89,9 @@ related:
   - href: /guides/dext-vs-hubdoc-for-bookkeepers/
     title: "Dext vs Hubdoc for bookkeepers"
     description: "Switcher guide for firms choosing between Dext and Hubdoc."
+  - href: /guides/dext-vs-autoentry-for-sage-bookkeepers/
+    title: "Dext vs AutoEntry for Sage bookkeepers"
+    description: "Switcher guide for Sage-heavy firms choosing between Dext and AutoEntry."
   - href: /workflows/accountant-stack/
     title: "Accountant AI stack"
     description: "Dext with scheduling and inbox tools for multi-client practices."
@@ -159,7 +162,7 @@ If the firm cannot name that bottleneck, do not buy the heavier plan yet.
 
 Hubdoc is worth checking when the buyer is already deep in QuickBooks or Xero and the job is basic receipt and bill capture. Hubdoc's QuickBooks page positions it as a document sync layer that publishes receipts and bills into QuickBooks Online with source documents attached. Use the [Dext vs Hubdoc guide](/guides/dext-vs-hubdoc-for-bookkeepers/) when the buyer is deciding between light capture and a practice-grade Dext workflow.
 
-AutoEntry is worth checking when the firm wants usage-based credit pricing and strong Sage alignment. AutoEntry's help and pricing pages describe credit usage by document type: one credit for an invoice or receipt, two credits for line-item extraction or supplier statements, and three credits for a bank or credit-card statement page.
+AutoEntry is worth checking when the firm wants usage-based credit pricing and strong Sage alignment. AutoEntry's help and pricing pages describe credit usage by document type: one credit for an invoice or receipt, two credits for line-item extraction or supplier statements, and three credits for a bank or credit-card statement page. Use the [Dext vs AutoEntry guide](/guides/dext-vs-autoentry-for-sage-bookkeepers/) when Sage depth and document-credit math are the actual decision.
 
 Dext is still the stronger default for a professional bookkeeping workflow when client submission, extraction, review, accounting sync, and practice controls need to live in one workflow.
 
@@ -183,7 +186,7 @@ The buy signal is simple: Dext should save more staff time and review friction t
 | One business with recurring receipt and invoice volume | Dext Business | User count and monthly documents are the main price levers. |
 | Solo bookkeeper testing the workflow | Dext Business trial | Validate document volume, client submission habits, and accounting sync before moving to a practice path. |
 | QuickBooks-only buyer with light capture needs | Hubdoc standalone or built-in capture | A lighter $12/month document-sync layer or built-in accounting capture may be enough before paying for Dext. |
-| Sage-heavy buyer that wants credit-style usage | AutoEntry | AutoEntry's public help and pricing pages still frame usage around document credits. |
+| Sage-heavy buyer that wants credit-style usage | AutoEntry | AutoEntry's public help and pricing pages still frame usage around document credits; compare it against Dext in the [Sage switcher guide](/guides/dext-vs-autoentry-for-sage-bookkeepers/). |
 
 ## Best Plan Guidance
 
@@ -208,3 +211,4 @@ Dext pricing is easiest to justify for firms where document capture is a recurri
 - [Xero Central: Hubdoc in Xero](https://central.xero.com/s/article/Hubdoc-in-Xero), verified June 27, 2026.
 - [AutoEntry credits help](https://help.autoentry.com/en/articles/6007778-what-are-autoentry-credits), verified June 27, 2026.
 - [AutoEntry pricing](https://www.autoentry.com/pricing), verified June 27, 2026.
+- [AutoEntry Sage integration](https://www.autoentry.com/integrations/sage), verified June 27, 2026.

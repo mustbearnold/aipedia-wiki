@@ -7,7 +7,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-27.
-- Branch baseline: `master`; active goal is the June 27 strict 3-day whole-site refresh target. Latest local content batch is the final six tool refresh. Latest workflow improvement is bounded page source-health timing, report-schema hardening, and company-prose overflow containment.
+- Branch baseline: `master`; active goal is affiliate conversion page buildout for every tool with a configured affiliate link. The June 27 strict 3-day whole-site refresh target is complete.
 - New active goal: affiliate conversion page buildout for every tool with a configured affiliate link. Use `npm run affiliate:conversion:inventory` as the current source-of-truth inventory and `workflows/affiliate-conversion-pages/README.md` as the operating procedure.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
@@ -209,7 +209,8 @@ Create source-backed, mobile-first conversion pages around every tool with a con
 - First-pass scripted page budget: 108 pages, counting existing pages toward coverage when they already match a distinct buyer intent.
 - Existing money-guide metadata backfill is complete and subagent-accepted at 9.9/10: 35 money guides, 0 hard errors, 0 warnings under strict audit after adding the structured conversion, anti-doorway, and CTA-plan contract.
 - First new page slice is complete and pushed: `/guides/dext-pricing-for-bookkeeping-firms/` adds a Dext Practice vs Dext Business plan-decision page, updates AI Automation routing, and brought strict affiliate audit to 36 money guides with 0 errors and 0 warnings.
-- Second Dext page slice is locally verified and subagent-accepted at 9.9/10: `/guides/dext-vs-hubdoc-for-bookkeepers/` adds the same-job switcher for Dext vs Hubdoc, updates sibling Dext/receipt guides, updates AI Automation routing, and brings strict affiliate audit to 37 money guides with 0 errors and 0 warnings. The rendered budget pick is now external non-affiliate Hubdoc, not Dext.
+- Second Dext page slice is complete and pushed: `/guides/dext-vs-hubdoc-for-bookkeepers/` adds the same-job switcher for Dext vs Hubdoc, updates sibling Dext/receipt guides, updates AI Automation routing, and brings strict affiliate audit to 37 money guides with 0 errors and 0 warnings. The rendered budget pick is external non-affiliate Hubdoc, not Dext.
+- Third Dext page slice is verified and subagent-accepted at 9.9/10: `/guides/dext-vs-autoentry-for-sage-bookkeepers/` adds the Sage-heavy same-job switcher for Dext vs AutoEntry, updates sibling Dext/receipt guides, AI Automation, the Dext tool page, accountant stack, and the shared mobile sticky CTA containment. Strict affiliate audit reports 38 money guides with 0 errors and 0 warnings.
 
 ### Page System
 
@@ -217,8 +218,8 @@ Use the existing `use-cases` guide route first unless a page clearly needs a new
 
 ### Next Implementation Slice
 
-1. Commit and push the Dext vs Hubdoc slice.
-2. Continue Dext only where intent stays distinct: accountant workflow stack with Dext as the document-intake anchor, or Dext vs AutoEntry for Sage-heavy bookkeeping workflows.
+1. Commit and push the Dext vs AutoEntry slice.
+2. Continue Dext only where intent stays distinct, or move to the next highest-fit approved affiliate tool from the inventory.
 3. Repair approval metadata or defer monetization for configured-but-not-live tools.
 4. Repeat the pattern across the highest-fit approved affiliate tools from `npm run affiliate:conversion:inventory`, using existing guides as coverage where they already satisfy a distinct buyer intent.
 5. Add subagent review before finalizing the cluster: SEO/quality, visual/mobile, and accuracy.

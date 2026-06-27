@@ -96,6 +96,10 @@ related:
     title: "Best AI receipt tool for bookkeepers"
     description: "Broader receipt-capture guide across Dext, Hubdoc, AutoEntry, and built-in accounting tools."
     kind: guide
+  - href: /guides/dext-vs-autoentry-for-sage-bookkeepers/
+    title: "Dext vs AutoEntry for Sage bookkeepers"
+    description: "Switcher guide for Sage-heavy firms comparing Dext with AutoEntry."
+    kind: guide
   - href: /workflows/accountant-stack/
     title: "Accountant AI stack"
     description: "Where Dext fits inside a practical accounting workflow."
@@ -209,6 +213,8 @@ For this buyer, Dext may still be better later, but buying it too early can crea
 Dext is the stronger choice for bookkeeping firms because multi-client document intake is an operating workflow, not just OCR. Hubdoc is the better light-capture choice when the buyer mainly needs documents synced into Xero or QuickBooks Online and the current volume does not justify a heavier practice layer.
 
 If you are a firm choosing a standard workflow for clients, start with Dext. If you are a single business or Xero-led buyer with light capture needs, start with Hubdoc and revisit Dext when volume or review friction becomes obvious.
+
+For Sage-heavy firms, use the [Dext vs AutoEntry guide](/guides/dext-vs-autoentry-for-sage-bookkeepers/) instead. That comparison is a different same-job fork because AutoEntry's credit model and Sage integration change the decision.
 
 ## FAQ
 

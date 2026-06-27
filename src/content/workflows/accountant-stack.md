@@ -20,6 +20,10 @@ related:
     title: "Best AI Tools for Accountants"
     description: "Broader category guide for accounting professionals."
     kind: guide
+  - href: /guides/dext-vs-autoentry-for-sage-bookkeepers/
+    title: "Dext vs AutoEntry for Sage Bookkeepers"
+    description: "Switcher guide for Sage-heavy firms choosing between Dext and AutoEntry."
+    kind: guide
   - href: /workflows/solo-founder-stack/
     title: "Solo Founder AI Stack"
     description: "Founder-side stack that often pairs with bookkeeping tools."
@@ -84,7 +88,7 @@ Verified June 27, 2026. Annual billing and promotions vary by vendor, so use the
 - **SaneBox:** the current public tiers are Snack at $4.99/month, Lunch at $7.99/month, and Dinner at $24.99/month, so most practices should start with Snack or Lunch per inbox.
 - **Consensus:** use the free tier for occasional advisory checks; Pro is currently $15/month or $120/year, while Deep is for heavier literature-review work.
 
-For a practice with 20 client books and a 2-person team, price Dext first, then add roughly one or two inbox/calendar/research subscriptions. If the Dext quote looks high, compare Hubdoc for QuickBooks-native clients and AutoEntry for Sage-heavy workflows before committing.
+For a practice with 20 client books and a 2-person team, price Dext first, then add roughly one or two inbox/calendar/research subscriptions. If the Dext quote looks high, compare Hubdoc for QuickBooks-native clients and use the [Dext vs AutoEntry guide](/guides/dext-vs-autoentry-for-sage-bookkeepers/) for Sage-heavy workflows before committing.
 
 ## What This Stack Does Not Cover
 
@@ -98,12 +102,12 @@ For a practice with 20 client books and a 2-person team, price Dext first, then 
 
 | Practice profile | Adjust to |
 |---|---|
-| Solo bookkeeper with under 10 clients | Dext Prepare (not Practice), skip Consensus |
+| Solo bookkeeper with under 10 clients | Dext Business instead of Practice, skip Consensus |
 | Multi-partner firm with 30+ clients | Add a practice management tool (Karbon or Canopy) |
 | Tax-focused practice | Add specific tax software; this stack handles bookkeeping side |
 | Forensic accounting / specialized advisory | Heavier Consensus use; add specialized research databases |
 | QuickBooks-only practice | Hubdoc instead of Dext if the client's QuickBooks workflow supports it and volume is moderate |
-| Sage-native practice | AutoEntry instead of Dext for tighter Sage integration |
+| Sage-native practice | [AutoEntry instead of Dext](/guides/dext-vs-autoentry-for-sage-bookkeepers/) for Sage-first integration and credit-style document usage |
 
 ## Failure Modes
 
@@ -164,6 +168,8 @@ Different category. Ramp and Brex are corporate cards plus expense software that
 - [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
 - [Hubdoc QuickBooks add-on](https://www.hubdoc.com/quickbooks), verified 2026-06-27
 - [AutoEntry pricing](https://www.autoentry.com/pricing), verified 2026-06-27
+- [AutoEntry credits help](https://help.autoentry.com/en/articles/6007778-what-are-autoentry-credits), verified 2026-06-27
+- [AutoEntry Sage integration](https://www.autoentry.com/integrations/sage), verified 2026-06-27
 - [Ramp pricing](https://ramp.com/pricing), verified 2026-06-27
 
 Internal references:
@@ -172,4 +178,5 @@ Internal references:
 - [Reclaim.ai tool page](/tools/reclaim-ai/)
 - [SaneBox tool page](/tools/sanebox/)
 - [Best AI receipt tool for bookkeepers](/guides/best-ai-receipt-tool-for-bookkeepers/)
+- [Dext vs AutoEntry for Sage bookkeepers](/guides/dext-vs-autoentry-for-sage-bookkeepers/)
 - [Best AI tools for accountants](/guides/best-ai-tools-for-accountants/)
