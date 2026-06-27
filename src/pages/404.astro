@@ -53,10 +53,10 @@ const latestNews = allNews
       Recovery map reviewed <time datetime={LAST_REVIEWED}>{LAST_REVIEWED_HUMAN}</time>
     </p>
 
-    <form class="gt-404-search" role="search" action="/search/" method="get">
+    <form class="gt-search gt-404-search" role="search" action="/search/" method="get">
       <label for="gt-404-search-input" class="gt-sr-only">Search aipedia.wiki</label>
       <div class="gt-search-row">
-        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="gt-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
         <input id="gt-404-search-input" name="q" type="search" autocomplete="off" placeholder={`Search ${allTools.filter((t: any) => t.data.status !== 'dead' && t.data.status !== 'retired' && t.data.status !== 'acquired').length} AI tools`} />
@@ -110,49 +110,6 @@ const latestNews = allNews
       font-size: 12px;
     }
     .gt-404-search { margin-bottom: 32px; }
-    .gt-search-row {
-      display: flex; align-items: center; gap: 10px;
-      min-height: 58px;
-      padding: 7px 7px 7px 16px;
-      border-radius: 16px;
-      border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.22));
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
-        color-mix(in srgb, var(--gt-surface) 92%, transparent);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.08),
-        0 18px 38px -30px rgba(0, 0, 0, 0.78);
-      transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
-    }
-    .gt-search-row:focus-within {
-      border-color: color-mix(in srgb, var(--gt-accent) 72%, white 6%);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.024)),
-        color-mix(in srgb, var(--gt-surface-2) 96%, transparent);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.11),
-        0 0 0 3px rgba(249, 115, 22, 0.14),
-        0 24px 46px -34px rgba(0, 0, 0, 0.86);
-    }
-    .gt-search-row svg { color: color-mix(in srgb, var(--gt-subtle) 78%, var(--gt-accent) 22%); flex: 0 0 auto; }
-    .gt-search-row input {
-      flex: 1; min-width: 0;
-      background: transparent; border: none; outline: none;
-      color: var(--gt-fg); font-size: 16px; font-weight: 560; padding: 10px 6px;
-    }
-    .gt-search-row input::placeholder {
-      color: color-mix(in srgb, var(--gt-subtle) 88%, var(--gt-muted) 12%);
-      font-weight: 460;
-    }
-    .gt-search-submit {
-      flex: 0 0 auto; padding: 10px 16px; min-height: 42px;
-      border-radius: 12px;
-      background: var(--gt-accent); color: var(--gt-on-accent);
-      font-weight: 720; font-size: 14px; border: none; cursor: pointer;
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.18),
-        0 12px 24px -18px rgba(249, 115, 22, 0.82);
-    }
 
     .gt-404-section { margin-bottom: 32px; }
     .gt-tool-list {

@@ -601,38 +601,62 @@
   border: 0;
 }
 
-/* Shared search input pattern with leading icon and optional trailing submit or kbd hint. */
+/* Shared premium search input pattern with leading icon and optional trailing submit or kbd hint. */
 .gt-search { margin-bottom: 16px; }
 .gt-search-row {
+  position: relative;
+  isolation: isolate;
   display: flex;
   align-items: center;
   gap: 10px;
-  min-height: 58px;
-  padding: 7px 7px 7px 16px;
+  min-height: 60px;
+  padding: 7px 7px 7px 17px;
   border-radius: 16px;
   border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.22));
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
-    color-mix(in srgb, var(--gt-surface) 92%, transparent);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.082), rgba(255, 255, 255, 0.014) 54%, rgba(249, 115, 22, 0.048)),
+    color-mix(in srgb, var(--gt-surface) 94%, transparent);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    0 18px 38px -30px rgba(0, 0, 0, 0.78);
+    inset 0 1px 0 rgba(255, 255, 255, 0.105),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.032),
+    0 20px 44px -32px rgba(0, 0, 0, 0.82);
+  overflow: hidden;
   transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.gt-search-row::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: 15px;
+  background:
+    radial-gradient(circle at 24px 0, rgba(249, 115, 22, 0.16), transparent 44%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055), transparent 45%);
+  opacity: 0.86;
+  pointer-events: none;
 }
 .gt-search-row:focus-within {
   border-color: color-mix(in srgb, var(--gt-accent) 72%, white 6%);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.024)),
-    color-mix(in srgb, var(--gt-surface-2) 96%, transparent);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.026) 54%, rgba(249, 115, 22, 0.07)),
+    color-mix(in srgb, var(--gt-surface-2) 97%, transparent);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.13),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
     0 0 0 3px rgba(249, 115, 22, 0.14),
-    0 24px 46px -34px rgba(0, 0, 0, 0.86);
+    0 24px 52px -34px rgba(0, 0, 0, 0.9);
 }
-.gt-search-icon { color: color-mix(in srgb, var(--gt-subtle) 78%, var(--gt-accent) 22%); flex: 0 0 auto; }
+.gt-search-row:hover {
+  border-color: color-mix(in srgb, var(--gt-line-strong) 68%, var(--gt-accent) 32%);
+}
+.gt-search-icon {
+  color: color-mix(in srgb, var(--gt-subtle) 72%, var(--gt-accent) 28%);
+  flex: 0 0 auto;
+}
 .gt-search input {
   flex: 1;
   min-width: 0;
+  min-height: 48px;
   background: transparent;
   border: none;
   outline: none;
@@ -648,7 +672,7 @@
 .gt-search-submit {
   flex: 0 0 auto;
   padding: 10px 16px;
-  min-height: 42px;
+  min-height: 44px;
   border-radius: 12px;
   background: var(--gt-accent);
   color: var(--gt-on-accent);
@@ -683,6 +707,27 @@
 }
 @media (max-width: 599px) {
   .gt-kbd { display: none; }
+}
+@media (max-width: 460px) {
+  .gt-search-row {
+    gap: 7px;
+    min-height: 56px;
+    padding: 5px 5px 5px 12px;
+  }
+  .gt-search-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .gt-search input {
+    min-height: 46px;
+    padding: 9px 2px;
+    font-size: 15px;
+  }
+  .gt-search-submit {
+    min-height: 44px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
 }
 
 /* Horizontal scrollable chip strip - used for filters, popular terms,

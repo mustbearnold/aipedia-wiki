@@ -309,8 +309,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-06-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-26 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
-| 2026-06-27 | / | Static page | Yes | page metadata | src/pages/index.astro |
-| 2026-06-27 | /404/ | Static page | No | git | src/pages/404.astro |
+| 2026-06-27 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-27 | /404/ | Static page | No | working tree | src/pages/404.astro |
 | 2026-06-27 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-27 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
 | 2026-06-27 | /about/our-stack/ | Static page | Yes | git | src/pages/about/our-stack.astro |
@@ -326,7 +326,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
 | 2026-06-27 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-27 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
-| 2026-06-27 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-27 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-27 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
 | 2026-06-27 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-27 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
@@ -429,7 +429,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/amplemarket-pricing-for-sdr-teams/ | Guide | Yes | frontmatter | src/content/use-cases/amplemarket-pricing-for-sdr-teams.md |
 | 2026-06-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
 | 2026-06-27 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
-| 2026-06-27 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | working tree | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
+| 2026-06-27 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
 | 2026-06-27 | /guides/best-ai-coding-assistant/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-coding-assistant.md |
 | 2026-06-27 | /guides/best-ai-for-code-review/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-code-review.md |
 | 2026-06-27 | /guides/best-ai-for-logo-design/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-logo-design.md |
@@ -513,7 +513,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/notion-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/notion-ai-alternatives.md |
 | 2026-06-27 | /guides/otter-ai-alternatives/ | Guide | No | frontmatter | src/content/use-cases/otter-ai-alternatives.md |
 | 2026-06-27 | /guides/perplexity-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/perplexity-alternatives.md |
-| 2026-06-27 | /guides/reclaim-ai-pricing-for-small-teams/ | Guide | Yes | working tree | src/content/use-cases/reclaim-ai-pricing-for-small-teams.md |
+| 2026-06-27 | /guides/reclaim-ai-pricing-for-small-teams/ | Guide | Yes | frontmatter | src/content/use-cases/reclaim-ai-pricing-for-small-teams.md |
 | 2026-06-27 | /guides/runway-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/runway-alternatives.md |
 | 2026-06-27 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
 | 2026-06-27 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
@@ -524,7 +524,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
 | 2026-06-27 | /reports/2026-04/ | Report | Yes | frontmatter | src/content/reports/2026-04.md |
 | 2026-06-27 | /robots.txt | Crawl surface | No | git | public/robots.txt |
-| 2026-06-27 | /search/ | Static page | No | git | src/pages/search.astro |
+| 2026-06-27 | /search/ | Static page | No | working tree | src/pages/search.astro |
 | 2026-06-27 | /sitemap-index.xml | Crawl surface | No | git | astro.config.mjs |
 | 2026-06-27 | /stack-builder/ | Static page | Yes | git | src/pages/stack-builder/index.astro |
 | 2026-06-27 | /tool-finder/ | Static page | No | git | src/pages/tool-finder.astro |
@@ -535,7 +535,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /tools/dext/ | Tool | Yes | frontmatter | src/content/tools/dext.md |
 | 2026-06-27 | /tools/grok-code-fast/ | Tool | Yes | frontmatter | src/content/tools/grok-code-fast.md |
 | 2026-06-27 | /tools/phind/ | Tool | Yes | frontmatter | src/content/tools/phind.md |
-| 2026-06-27 | /tools/reclaim-ai/ | Tool | Yes | working tree | src/content/tools/reclaim-ai.md |
+| 2026-06-27 | /tools/reclaim-ai/ | Tool | Yes | frontmatter | src/content/tools/reclaim-ai.md |
 | 2026-06-27 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
 | 2026-06-27 | /tools/tome/ | Tool | Yes | frontmatter | src/content/tools/tome.md |
 | 2026-06-27 | /trends/ | Static page | Yes | page metadata | src/pages/trends/index.astro |
