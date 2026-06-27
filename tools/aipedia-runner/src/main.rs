@@ -443,6 +443,7 @@ struct AffiliateReportSummary {
     parsed: Vec<AffiliateWorkerReport>,
     missing: Vec<String>,
     invalid: Vec<(String, String)>,
+    validation_issues: Vec<String>,
 }
 
 fn main() -> Result<()> {
@@ -1621,6 +1622,7 @@ fn read_affiliate_reports(
     let mut parsed = Vec::new();
     let mut missing = Vec::new();
     let mut invalid = Vec::new();
+    let mut validation_issues = Vec::new();
 
     for worker in worker_briefs {
         let report_path = worker
@@ -1641,11 +1643,22 @@ fn read_affiliate_reports(
         }
     }
 
+    for report in &parsed {
+        validation_issues.extend(validate_affiliate_worker_report(plan, report));
+    }
+
     if strict && (!missing.is_empty() || !invalid.is_empty()) {
         bail!(
             "affiliate worker reports incomplete: {} missing, {} invalid",
             missing.len(),
             invalid.len()
+        );
+    }
+    if strict && !validation_issues.is_empty() {
+        bail!(
+            "affiliate worker reports failed strict validation: {} issue(s): {}",
+            validation_issues.len(),
+            validation_issues.join("; ")
         );
     }
 
@@ -1654,7 +1667,191 @@ fn read_affiliate_reports(
         parsed,
         missing,
         invalid,
+        validation_issues,
     })
+}
+
+fn validate_affiliate_worker_report(
+    plan: &AffiliatePlan,
+    report: &AffiliateWorkerReport,
+) -> Vec<String> {
+    let cluster_map: BTreeMap<&str, &AffiliateCluster> = plan
+        .clusters
+        .iter()
+        .map(|cluster| (cluster.id.as_str(), cluster))
+        .collect();
+    let mut issues = Vec::new();
+
+    if report.worker_id.trim().is_empty() {
+        issues.push("worker report has empty worker_id".to_string());
+    }
+
+    for cluster in &report.clusters {
+        let label = if cluster.id.trim().is_empty() {
+            format!("{}:{}", report.worker_id, cluster.primary_tool)
+        } else {
+            format!("{}:{}", report.worker_id, cluster.id)
+        };
+        let status = cluster.status.trim();
+        if !matches!(status, "pending" | "complete" | "blocked" | "deferred") {
+            issues.push(format!("{label} has invalid status `{status}`"));
+            continue;
+        }
+
+        let Some(plan_cluster) = cluster_map.get(cluster.id.as_str()).copied() else {
+            issues.push(format!("{label} does not match a planned cluster id"));
+            continue;
+        };
+
+        if cluster.primary_tool.trim().is_empty() {
+            issues.push(format!("{label} has empty primary_tool"));
+        } else if cluster.primary_tool.trim() != plan_cluster.primary_tool {
+            issues.push(format!(
+                "{label} primary_tool `{}` does not match plan `{}`",
+                cluster.primary_tool.trim(),
+                plan_cluster.primary_tool
+            ));
+        }
+
+        if matches!(status, "blocked" | "deferred") && cluster.handoff_notes.trim().is_empty() {
+            issues.push(format!(
+                "{label} is {status} but has no rationale in handoff_notes"
+            ));
+        }
+
+        if status != "complete" {
+            continue;
+        }
+
+        let completed_receipts: Vec<&AffiliateClaimReceipt> = cluster
+            .claim_receipts
+            .iter()
+            .filter(|receipt| {
+                !receipt.claim.trim().is_empty()
+                    || !receipt.path.trim().is_empty()
+                    || !receipt.source_url.trim().is_empty()
+                    || !receipt.verified_at.trim().is_empty()
+                    || !receipt.confidence.trim().is_empty()
+                    || !receipt.query.trim().is_empty()
+                    || !receipt.caveat.trim().is_empty()
+            })
+            .collect();
+        if completed_receipts.is_empty() {
+            issues.push(format!(
+                "{label} is complete but has no completed claim receipts"
+            ));
+        }
+        for (index, receipt) in completed_receipts.iter().enumerate() {
+            issues.extend(validate_affiliate_claim_receipt(&label, index, receipt));
+        }
+
+        if matches!(
+            plan_cluster.duplicate_intent_risk.as_str(),
+            "medium" | "high"
+        ) && !has_non_empty_affiliate_note(&cluster.duplicate_intent_notes)
+        {
+            issues.push(format!(
+                "{label} is complete with {} duplicate-intent risk but has no duplicate_intent_notes",
+                plan_cluster.duplicate_intent_risk
+            ));
+        }
+
+        if !has_non_empty_affiliate_note(&cluster.parent_surface_notes) {
+            issues.push(format!(
+                "{label} is complete but has no parent_surface_notes"
+            ));
+        }
+
+        if plan_cluster.monetization_state == "live_affiliate"
+            && !has_non_empty_affiliate_note(&cluster.commercial_cta_notes)
+        {
+            issues.push(format!(
+                "{label} is complete for a live affiliate tool but has no commercial_cta_notes"
+            ));
+        }
+
+        if cluster.checks.is_empty() {
+            issues.push(format!("{label} is complete but has no checks"));
+        }
+        for (index, check) in cluster.checks.iter().enumerate() {
+            if check.command.trim().is_empty() {
+                issues.push(format!("{label} check {index} has empty command"));
+            }
+            if check.status.trim().is_empty() {
+                issues.push(format!("{label} check {index} has empty status"));
+            }
+            if check.status.trim() != "passed" && check.notes.trim().is_empty() {
+                issues.push(format!(
+                    "{label} check `{}` is not passed but has no notes",
+                    check.command.trim()
+                ));
+            }
+        }
+    }
+
+    issues
+}
+
+fn has_non_empty_affiliate_note(notes: &[String]) -> bool {
+    notes.iter().any(|note| !note.trim().is_empty())
+}
+
+fn validate_affiliate_claim_receipt(
+    label: &str,
+    index: usize,
+    receipt: &AffiliateClaimReceipt,
+) -> Vec<String> {
+    let mut issues = Vec::new();
+    let prefix = format!("{label} claim_receipts[{index}]");
+    let confidence = receipt.confidence.trim();
+
+    if receipt.claim.trim().is_empty() {
+        issues.push(format!("{prefix} has empty claim"));
+    }
+    if receipt.path.trim().is_empty() {
+        issues.push(format!("{prefix} has empty path"));
+    }
+    if receipt.source_url.trim().is_empty() {
+        issues.push(format!("{prefix} has empty source_url"));
+    }
+    if receipt.verified_at.trim().is_empty() {
+        issues.push(format!("{prefix} has empty verified_at"));
+    }
+    if !is_valid_affiliate_confidence(confidence) {
+        issues.push(format!("{prefix} has invalid confidence `{confidence}`"));
+    }
+    if requires_affiliate_caveat(confidence) && receipt.caveat.trim().is_empty() {
+        issues.push(format!(
+            "{prefix} uses confidence `{confidence}` but has no caveat"
+        ));
+    }
+
+    issues
+}
+
+fn is_valid_affiliate_confidence(confidence: &str) -> bool {
+    matches!(
+        confidence,
+        "primary-confirmed"
+            | "primary-conflict"
+            | "account-gated"
+            | "checkout-gated"
+            | "region-rendered"
+            | "blocked-live-check"
+            | "secondary-only"
+    )
+}
+
+fn requires_affiliate_caveat(confidence: &str) -> bool {
+    matches!(
+        confidence,
+        "primary-conflict"
+            | "account-gated"
+            | "checkout-gated"
+            | "region-rendered"
+            | "blocked-live-check"
+            | "secondary-only"
+    )
 }
 
 fn write_affiliate_report_summary(
@@ -1671,7 +1868,11 @@ fn write_affiliate_report_summary(
     content.push_str(&format!("- Expected reports: {}\n", summary.expected));
     content.push_str(&format!("- Parsed reports: {}\n", summary.parsed.len()));
     content.push_str(&format!("- Missing reports: {}\n", summary.missing.len()));
-    content.push_str(&format!("- Invalid reports: {}\n\n", summary.invalid.len()));
+    content.push_str(&format!("- Invalid reports: {}\n", summary.invalid.len()));
+    content.push_str(&format!(
+        "- Strict validation issues: {}\n\n",
+        summary.validation_issues.len()
+    ));
 
     let mut total_worker_seconds: f64 = summary
         .parsed
@@ -1840,6 +2041,13 @@ fn write_affiliate_report_summary(
         content.push_str("\n## Invalid Reports\n\n");
         for (path, error) in &summary.invalid {
             content.push_str(&format!("- `{}`: {}\n", path, error));
+        }
+    }
+
+    if !summary.validation_issues.is_empty() {
+        content.push_str("\n## Strict Validation Issues\n\n");
+        for issue in &summary.validation_issues {
+            content.push_str(&format!("- {}\n", issue));
         }
     }
 
@@ -2203,6 +2411,72 @@ mod tests {
         }
     }
 
+    fn sample_affiliate_plan() -> AffiliatePlan {
+        AffiliatePlan {
+            current_date: "2026-06-27".to_string(),
+            clusters: vec![AffiliateCluster {
+                id: "affiliate-alpha-tool".to_string(),
+                primary_tool: "alpha-tool".to_string(),
+                title: "Alpha Tool".to_string(),
+                monetization_state: "live_affiliate".to_string(),
+                duplicate_intent_risk: "medium".to_string(),
+                route_qa_risk: "commercial-high".to_string(),
+                parent_surfaces: vec!["/guides/".to_string(), "/tools/".to_string()],
+            }],
+            agent_briefs: Some(AgentBriefs {
+                worker_briefs: vec![WorkerBrief {
+                    id: "affiliate-worker-1".to_string(),
+                    title: "Worker 1".to_string(),
+                    prompt: "Prompt".to_string(),
+                    report_path: Some("reports/affiliate-worker-1.json".to_string()),
+                }],
+                integrator_brief: None,
+            }),
+        }
+    }
+
+    fn sample_affiliate_report(status: &str) -> AffiliateWorkerReport {
+        AffiliateWorkerReport {
+            worker_id: "affiliate-worker-1".to_string(),
+            elapsed_seconds: Some(10.0),
+            owned_paths: vec!["src/content/tools/alpha-tool.md".to_string()],
+            clusters: vec![AffiliateReportCluster {
+                id: "affiliate-alpha-tool".to_string(),
+                primary_tool: "alpha-tool".to_string(),
+                status: status.to_string(),
+                source_urls: vec!["https://example.com/pricing".to_string()],
+                claim_receipts: vec![AffiliateClaimReceipt {
+                    claim: "Alpha Tool Pro is the plan to verify.".to_string(),
+                    path: "src/content/use-cases/example.md".to_string(),
+                    source_url: "https://example.com/pricing".to_string(),
+                    verified_at: "2026-06-27".to_string(),
+                    confidence: "primary-confirmed".to_string(),
+                    query: "Alpha Tool pricing June 2026".to_string(),
+                    caveat: String::new(),
+                }],
+                commercial_cta_notes: vec![
+                    "Approved affiliate CTA still needs disclosure.".to_string()
+                ],
+                parent_surface_notes: vec![
+                    "Update /guides/ after content implementation.".to_string()
+                ],
+                duplicate_intent_notes: vec![
+                    "Existing guide overlap is distinct by buyer job.".to_string()
+                ],
+                route_qa_risks: vec![
+                    "Commercial mobile CTA should be route-QA checked.".to_string()
+                ],
+                checks: vec![WorkerReportCheck {
+                    command: "npm run affiliate:conversion:inventory -- --json".to_string(),
+                    status: "passed".to_string(),
+                    notes: "Inventory checked.".to_string(),
+                }],
+                handoff_notes: "Ready for integrator review.".to_string(),
+            }],
+            handoff_notes: "Worker done.".to_string(),
+        }
+    }
+
     #[test]
     fn writes_page_route_args_from_planner_policy() {
         let dir = temp_runner_dir("route-args");
@@ -2277,5 +2551,84 @@ mod tests {
         );
 
         fs::remove_dir_all(dir).ok();
+    }
+
+    #[test]
+    fn pending_affiliate_scaffolds_do_not_fail_validation() {
+        let plan = sample_affiliate_plan();
+        let mut report = sample_affiliate_report("pending");
+        report.clusters[0].claim_receipts = vec![AffiliateClaimReceipt {
+            claim: String::new(),
+            path: String::new(),
+            source_url: String::new(),
+            verified_at: String::new(),
+            confidence: String::new(),
+            query: String::new(),
+            caveat: String::new(),
+        }];
+        report.clusters[0].commercial_cta_notes.clear();
+        report.clusters[0].parent_surface_notes.clear();
+        report.clusters[0].duplicate_intent_notes.clear();
+        report.clusters[0].checks.clear();
+
+        let issues = validate_affiliate_worker_report(&plan, &report);
+
+        assert!(issues.is_empty(), "{issues:?}");
+    }
+
+    #[test]
+    fn strict_affiliate_validation_flags_incomplete_completed_reports() {
+        let plan = sample_affiliate_plan();
+        let mut report = sample_affiliate_report("complete");
+        report.clusters[0].claim_receipts = vec![AffiliateClaimReceipt {
+            claim: "Needs current pricing.".to_string(),
+            path: String::new(),
+            source_url: String::new(),
+            verified_at: String::new(),
+            confidence: "account-gated".to_string(),
+            query: "Alpha Tool pricing June 2026".to_string(),
+            caveat: String::new(),
+        }];
+        report.clusters[0].commercial_cta_notes.clear();
+        report.clusters[0].parent_surface_notes.clear();
+        report.clusters[0].duplicate_intent_notes.clear();
+        report.clusters[0].checks = vec![WorkerReportCheck {
+            command: "npm run affiliate:conversion:inventory -- --json".to_string(),
+            status: "failed".to_string(),
+            notes: String::new(),
+        }];
+
+        let issues = validate_affiliate_worker_report(&plan, &report);
+
+        assert!(issues.iter().any(|issue| issue.contains("empty path")));
+        assert!(issues
+            .iter()
+            .any(|issue| issue.contains("empty source_url")));
+        assert!(issues
+            .iter()
+            .any(|issue| issue.contains("empty verified_at")));
+        assert!(issues.iter().any(|issue| issue.contains("has no caveat")));
+        assert!(issues
+            .iter()
+            .any(|issue| issue.contains("duplicate_intent_notes")));
+        assert!(issues
+            .iter()
+            .any(|issue| issue.contains("parent_surface_notes")));
+        assert!(issues
+            .iter()
+            .any(|issue| issue.contains("commercial_cta_notes")));
+        assert!(issues
+            .iter()
+            .any(|issue| issue.contains("not passed but has no notes")));
+    }
+
+    #[test]
+    fn strict_affiliate_validation_accepts_complete_evidence() {
+        let plan = sample_affiliate_plan();
+        let report = sample_affiliate_report("complete");
+
+        let issues = validate_affiliate_worker_report(&plan, &report);
+
+        assert!(issues.is_empty(), "{issues:?}");
     }
 }

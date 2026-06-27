@@ -63,7 +63,7 @@ Each worker report should include:
     {
       "primary_tool": "",
       "buyer_job": "",
-      "status": "complete|blocked|deferred",
+      "status": "pending|complete|blocked|deferred",
       "changed_files": [],
       "source_urls": [],
       "claim_receipts": [
@@ -77,7 +77,7 @@ Each worker report should include:
           "caveat": ""
         }
       ],
-      "commercial_ctas": [],
+      "commercial_cta_notes": [],
       "parent_surface_notes": [],
       "duplicate_intent_notes": [],
       "route_qa_risks": [],
@@ -117,6 +117,14 @@ git diff --check
 ```
 
 The runner receipt should record planner path, worker report paths, claim receipt count, source count, CTA count, duplicate-intent decisions, reviewer outcomes, command timings, failed-then-fixed checks, and residual risks.
+
+Strict report validation should be run only after workers mark clusters as `complete`, `blocked`, or `deferred`:
+
+```bash
+npm run runner:affiliate-conversion:reports -- --strict
+```
+
+Pending scaffold reports may stay blank. Completed clusters must include claim receipts, parent-surface notes, commercial CTA notes for live affiliate tools, duplicate-intent notes for medium or high duplicate risk, and check records with visible notes for non-passed checks. Blocked or deferred clusters must include a rationale in `handoff_notes`.
 
 ## Page Count Strategy
 
