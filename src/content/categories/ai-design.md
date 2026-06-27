@@ -187,7 +187,7 @@ Do not position Unbounce Starter as the default serious paid-campaign tier. Its 
 - [Best AI for Professional Headshots](/guides/best-ai-for-headshots/) is the June 26 verified trust-sensitive portrait guide for Midjourney, ChatGPT, and Gemini, with likeness, consent, disclosure, regulated-profile, and real-photography watch-outs tightened for buyer safety.
 - [Best AI Tools for Ecommerce](/guides/best-ai-tools-for-ecommerce/) is the June 27 verified ecommerce buyer guide for ChatGPT product/catalog work, Canva publishable store creative, Jasper governed campaign workflow, Perplexity sourced research, and Zapier order/support handoffs.
 - [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 27 verified nonprofit creative and communications guide for Canva for Nonprofits, Google Workspace AI, ChatGPT discounts, Claude nonprofit pricing, donor messaging, and impact-report guardrails.
-- [AI design agency replacement workflow](/workflows/design-agency-replacement/) is now the safer workflow route for buyers trying to replace some agency production work with Midjourney, Figma, Canva, and Adobe Firefly without pretending AI replaces strategy, compliance, or human creative sign-off.
+- [AI design agency replacement workflow](/workflows/design-agency-replacement/) is the June 27 verified workflow route for buyers trying to replace some agency production work with Midjourney, Figma, Canva, and Adobe Firefly without pretending AI replaces strategy, compliance, or human creative sign-off.
 
 ## Sources
 

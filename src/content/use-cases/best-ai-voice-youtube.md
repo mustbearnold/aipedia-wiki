@@ -36,8 +36,8 @@ guide_picks:
     sources:
       - label: "Murf pricing"
         url: "https://murf.ai/pricing"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -47,7 +47,7 @@ For most YouTube creators, start with **[ElevenLabs](/tools/elevenlabs/)**. It i
 
 Do not buy an AI voice tool just because a plan looks cheap. YouTube voiceover depends on audience trust, commercial rights, consent, disclosure, retries, pronunciation fixes, script length, export workflow, and whether the voice makes the channel feel more or less credible.
 
-MiniMax Speech and Murf buying details were rechecked June 23, 2026. Other source rows retain their listed verification dates. AiPedia may earn from some tool links; rankings remain editorial.
+MiniMax Speech and Murf buying details were rechecked June 27, 2026. Other source rows retain their listed verification dates. AiPedia may earn from some tool links; rankings remain editorial.
 
 ## Quick Verdict
 
@@ -149,15 +149,15 @@ Use your own voice if personality, expertise, and trust drive the channel. Use A
 
 ## Sources
 
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
-- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-12)
-- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-12)
-- [Fish Audio API pricing](https://docs.fish.audio/developer-platform/models-pricing/pricing-and-rate-limits) (verified 2026-06-12)
-- [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-06-23)
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-23)
-- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-23)
-- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-12)
-- [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-06-12)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-27)
+- [ElevenLabs API pricing](https://elevenlabs.io/pricing/api) (verified 2026-06-27)
+- [Fish Audio plans](https://fish.audio/plan/) (verified 2026-06-27)
+- [Fish Audio API pricing](https://docs.fish.audio/developer-platform/models-pricing/pricing-and-rate-limits) (verified 2026-06-27)
+- [MiniMax Audio Subscription pricing](https://platform.minimax.io/docs/guides/pricing-speech) (verified 2026-06-27)
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo) (verified 2026-06-27)
+- [Murf pricing](https://murf.ai/pricing) (verified 2026-06-27)
+- [WellSaid pricing](https://wellsaidlabs.com/pricing) (verified 2026-06-27)
+- [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-06-27)
 
 ## Related
 

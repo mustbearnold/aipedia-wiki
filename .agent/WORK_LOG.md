@@ -1022,3 +1022,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `runner:page-refresh:closeout` passed in 80.779s with 141 source URLs, 137 ok, 4 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed in 13.580s for eleven routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
 - Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-11.md`.
 - Next: Continue oldest-first with 24 tracked pages still older than 2026-06-24.
+
+### 2026-06-27: Page Refresh Batch 12
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed the final 18 non-tool stale routes for the strict 3-day target: 13 guides, Anthropic company profile, GitHub Copilot vs Supermaven, `/media-kit/`, `/workflows/design-agency-replacement/`, and `/sitemap-index.xml`.
+- Source repair: Replaced the slow Adobe generative credits FAQ citation with the current Adobe Firefly plans and credits page on affected guide pages, then reran source health successfully.
+- Parent and top-layer updates: `/`, `/guides/`, `/companies/`, `/compare/`, `/workflows/`, AI Coding, AI Automation, AI Music, AI Voice, AI Design, and AI Chatbots.
+- Verification: `runner:page-refresh:closeout` passed in 76.818s with 218 source URLs, 193 ok, 25 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed in 9.384s for seven routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-12.md`.
+- Next: Finish the final six stale tool rows with `$aipedia-tool-refresh-workflow` and the Rust runner.

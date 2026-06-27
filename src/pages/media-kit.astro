@@ -2,7 +2,7 @@
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-// Refresh metadata: 2026-06-22 media kit brand asset refresh after favicon
+// Refresh metadata: 2026-06-27 media kit brand asset refresh after favicon
 // source logo changed from the previous crystal mark to the generated lantern mark.
 const allTools = await getCollection('tools');
 const activeTools = allTools.filter(
@@ -14,8 +14,8 @@ const allUseCases = await getCollection('use-cases');
 const allDead = await getCollection('dead');
 const allNews = await getCollection('news');
 
-const LAST_UPDATED = '2026-06-22';
-const LAST_UPDATED_HUMAN = 'June 22, 2026';
+const LAST_UPDATED = '2026-06-27';
+const LAST_UPDATED_HUMAN = 'June 27, 2026';
 
 const pageName = 'Media Kit & Partnerships, aipedia.wiki';
 const pageDesc =

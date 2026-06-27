@@ -15,6 +15,7 @@ import vercel from '@astrojs/vercel';
 const isDev = process.env.NODE_ENV !== 'production';
 const isFastBuild = process.env.AIPEDIA_FAST_BUILD === '1';
 
+// Refresh metadata: 2026-06-27 sitemap surface rechecked for the strict 3-day refresh goal.
 const SITEMAP_EXCLUDED_PATHS = new Set([
   '/about/editor/',
   '/compare/build/',

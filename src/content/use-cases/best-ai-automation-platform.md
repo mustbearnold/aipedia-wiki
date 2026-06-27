@@ -36,14 +36,14 @@ guide_picks:
     sources:
       - label: "Zapier pricing"
         url: "https://zapier.com/pricing"
-last_updated: 2026-06-23
-last_verified: 2026-06-23
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
 # Best AI Automation Platform (June 2026)
 
-AiPedia rechecked Make in this guide on 2026-06-23 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
+AiPedia rechecked Make in this guide on 2026-06-27 against current official pricing, docs, and product pages. Rankings are editorial. AiPedia may earn affiliate revenue from some tool links, but paid relationships do not determine the winner.
 
 ## Quick Verdict
 
@@ -187,16 +187,16 @@ Use Gumloop when the work is AI-native flows and agents inside a workflow surfac
 
 ## Sources
 
-- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-12)
-- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-12)
-- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-12)
-- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-23)
-- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-23)
-- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-12)
-- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-12)
-- [Relevance AI plans and credits docs](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-12)
-- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-06-12)
-- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-06-12)
-- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage) (verified 2026-06-12)
-- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-06-12)
-- [CrewAI documentation](https://docs.crewai.com/) (verified 2026-06-12)
+- [n8n pricing](https://n8n.io/pricing/) (verified 2026-06-27)
+- [n8n AI documentation](https://docs.n8n.io/advanced-ai/) (verified 2026-06-27)
+- [Zapier pricing](https://zapier.com/pricing) (verified 2026-06-27)
+- [Make pricing](https://www.make.com/en/pricing) (verified 2026-06-27)
+- [Make AI Agents](https://www.make.com/en/ai-agents) (verified 2026-06-27)
+- [Gumloop pricing](https://www.gumloop.com/pricing) (verified 2026-06-27)
+- [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-27)
+- [Relevance AI plans and credits docs](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-27)
+- [Lindy pricing](https://www.lindy.ai/pricing) (verified 2026-06-27)
+- [Lindy quickstart docs](https://docs.lindy.ai/start-here/quickstart) (verified 2026-06-27)
+- [Lindy usage docs](https://docs.lindy.ai/account-billing/usage) (verified 2026-06-27)
+- [Pipedream pricing docs](https://pipedream.com/docs/pricing) (verified 2026-06-27)
+- [CrewAI documentation](https://docs.crewai.com/) (verified 2026-06-27)

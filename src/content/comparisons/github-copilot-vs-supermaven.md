@@ -8,8 +8,8 @@ winner: depends
 seo_title: "GitHub Copilot vs Supermaven: Which Coding Assistant Should You Use? (June 2026)"
 meta_description: "June 2026 GitHub Copilot vs Supermaven comparison: Copilot wins for GitHub-native chat, agents, PRs, and governance; Supermaven wins for fast long-context autocomplete."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-22
-last_verified: 2026-06-22
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---
