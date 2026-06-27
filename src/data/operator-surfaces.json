@@ -11,6 +11,32 @@
       }
     },
     {
+      "id": "workflow-docs",
+      "label": "Committed workflow procedures",
+      "category": "tooling",
+      "checks": ["workflow-contract"],
+      "guidance": [
+        "Workflow changes affect future operators. Keep inputs, outputs, ownership boundaries, verification gates, timing, and failure handling explicit.",
+        "Do not weaken a guard, source, mobile, SEO, affiliate, or non-regression gate without a documented replacement."
+      ],
+      "match": {
+        "prefixes": ["workflows/"]
+      }
+    },
+    {
+      "id": "local-agent-package",
+      "label": "Local agent package and workflow engineering plans",
+      "category": "tooling",
+      "checks": ["workflow-contract"],
+      "guidance": [
+        "Agent-package changes must stay portable and rerunnable without hidden chat state.",
+        "Record verification commands and residual risks when changing workflow engineering instructions or plans."
+      ],
+      "match": {
+        "prefixes": [".Agents/"]
+      }
+    },
+    {
       "id": "phase3-evidence-rail",
       "label": "Phase 3 evidence rail and source-state model",
       "category": "runtime",

@@ -19,7 +19,88 @@ npm run audit:affiliate-conversion
 npm run audit:affiliate-conversion -- --strict --json
 ```
 
-As of the first inventory pass, there are 26 configured-link tools, 22 live-approved affiliate tools, and 4 configured-but-not-live tools. The generated registry under `src/data/_meta/tools-registry.json` may lag the markdown source, so use markdown plus this script as the source of truth until the registry generator is repaired.
+Treat `npm run affiliate:conversion:inventory -- --json` as the source of truth for current counts. Do not copy static inventory totals into status docs unless they were generated during the same implementation pass. The generated registry under `src/data/_meta/tools-registry.json` may lag the markdown source, so use markdown plus this script as the source of truth until the registry generator is repaired.
+
+## Runner Contract Skeleton
+
+The affiliate conversion lane should become runner-backed before it scales beyond small manual slices. Until that runner exists, use this contract as the implementation target.
+
+### Planner Output
+
+The planner should emit JSON with:
+
+- `current_date`: local project date used for verification.
+- `inventory_summary`: configured-link tools, live-approved tools, configured-not-live tools, and recommended planning ceiling from `affiliate:conversion:inventory`.
+- `clusters`: one object per candidate buyer-intent cluster, including `primary_tool`, `monetization_state`, `affiliate_status`, `affiliate_network`, `score`, `archetype`, `buyer_job`, `existing_coverage`, `duplicate_intent_risk`, `required_sources`, `affected_routes`, `parent_surfaces`, `route_qa_risk`, and `recommended_worker_id`.
+- `agent_briefs`: bounded worker prompts and one integrator prompt.
+- `commands`: cheap gates, expensive gates, route QA args, and receipt paths.
+
+### Worker Report Schema
+
+Each worker report should include:
+
+```json
+{
+  "worker_id": "",
+  "owned_paths": [],
+  "clusters": [
+    {
+      "primary_tool": "",
+      "buyer_job": "",
+      "status": "complete|blocked|deferred",
+      "changed_files": [],
+      "source_urls": [],
+      "claim_receipts": [
+        {
+          "claim": "",
+          "path": "",
+          "source_url": "",
+          "verified_at": "YYYY-MM-DD",
+          "confidence": "primary-confirmed|primary-conflict|account-gated|checkout-gated|region-rendered|blocked-live-check|secondary-only",
+          "query": "",
+          "caveat": ""
+        }
+      ],
+      "commercial_ctas": [],
+      "parent_surface_notes": [],
+      "duplicate_intent_notes": [],
+      "route_qa_risks": [],
+      "checks": []
+    }
+  ],
+  "handoff_notes": ""
+}
+```
+
+### Ownership Boundaries
+
+Workers may edit only the assigned guide, comparison, workflow, answer, or tool-support files named in the planner. The integrator owns shared files, source registry rows, parent hubs, top-layer pages, `PAGE_REFRESH_LEDGER.md`, receipts, and final verification.
+
+Workers must not edit:
+
+- `PAGE_REFRESH_LEDGER.md`
+- `src/data/source-registry.json`
+- unrelated parent hubs or top-layer routes
+- `.agent/**`
+- `workflows/**`
+- runner or audit scripts
+
+### Closeout Contract
+
+A runner-backed affiliate batch should close out in this order:
+
+```bash
+npm run affiliate:conversion:inventory -- --json
+npm run audit:affiliate-conversion -- --strict --json
+npm run audit:provenance:changed -- --json
+npm run ledger:pages && npm run ledger:pages:check
+npm run typecheck
+npm run build:fast
+npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route <changed routes>
+git diff --check
+```
+
+The runner receipt should record planner path, worker report paths, claim receipt count, source count, CTA count, duplicate-intent decisions, reviewer outcomes, command timings, failed-then-fixed checks, and residual risks.
 
 ## Page Count Strategy
 

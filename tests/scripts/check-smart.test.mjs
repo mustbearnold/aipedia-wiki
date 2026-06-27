@@ -200,11 +200,41 @@ test('check-smart replaces broad visual smoke with exact route QA for content-on
   assert.ok(!plan.smoke_routes.some((route) => route.command === 'npm run smoke:visual'));
 });
 
-test('check-smart keeps docs and agent files on diff-only verification', () => {
+test('check-smart keeps ordinary docs and .agent continuity files on diff-only verification', () => {
   const plan = planForPaths(['docs/notes.md', '.agent/PLANS.md']);
 
   assert.deepEqual(plan.categories, ['docs']);
   assert.deepEqual(plan.commands, ['git diff --check']);
+});
+
+test('check-smart routes workflow docs through tooling verification', () => {
+  const plan = planForPaths(['workflows/affiliate-conversion-pages/README.md']);
+
+  assert.deepEqual(plan.categories, ['tooling']);
+  assert.ok(plan.surface_ids.includes('workflow-docs'));
+  assert.ok(plan.checks.includes('workflow-contract'));
+  assert.ok(plan.commands.includes('npm run test:scripts'));
+  assert.ok(plan.commands.includes('npm run audit:commands'));
+  assert.ok(plan.commands.includes('git diff --check'));
+  assert.notDeepEqual(plan.commands, ['git diff --check']);
+  assert.ok(plan.guidance.some((line) => line.includes('Workflow changes affect future operators')));
+  assert.ok(!plan.commands.includes('npm run build:fast'));
+});
+
+test('check-smart routes local agent package plans through tooling verification', () => {
+  const plan = planForPaths([
+    '.Agents/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md',
+  ]);
+
+  assert.deepEqual(plan.categories, ['tooling']);
+  assert.ok(plan.surface_ids.includes('local-agent-package'));
+  assert.ok(plan.checks.includes('workflow-contract'));
+  assert.ok(plan.commands.includes('npm run test:scripts'));
+  assert.ok(plan.commands.includes('npm run audit:commands'));
+  assert.ok(plan.commands.includes('git diff --check'));
+  assert.notDeepEqual(plan.commands, ['git diff --check']);
+  assert.ok(plan.guidance.some((line) => line.includes('portable and rerunnable')));
+  assert.ok(!plan.commands.includes('npm run build:fast'));
 });
 
 test('check-smart classifies runtime pages, layout, components, styles, and config as runtime', () => {
@@ -360,6 +390,8 @@ test('operator surface contract names verification surfaces explicitly', () => {
   assert.ok(surfaceIds.includes('scripts'));
   assert.ok(surfaceIds.includes('config'));
   assert.ok(surfaceIds.includes('docs-agent'));
+  assert.ok(surfaceIds.includes('workflow-docs'));
+  assert.ok(surfaceIds.includes('local-agent-package'));
   for (const id of [
     'phase3-evidence-rail',
     'phase3-search-catalog',
