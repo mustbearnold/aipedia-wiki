@@ -32,8 +32,8 @@ guide_picks:
       - label: "Runway pricing"
         url: "https://runwayml.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 The best AI tool for YouTube depends on the bottleneck. A faceless explainer channel needs research, scripting, voice, editing, thumbnails, music rights, and B-roll. A talking-head creator needs scripting, cleanup, captions, clips, and packaging. A Shorts-heavy creator needs fast repurposing and mobile-native edits. No single AI product is the best at every step.
 
-Verified June 12, 2026 against current official Descript, ChatGPT, Canva, ElevenLabs, OpusClip, Runway, Midjourney, Gemini, and YouTube disclosure sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
+Verified June 27, 2026 against current official Descript, ChatGPT, Canva, ElevenLabs, OpusClip, Runway, Midjourney, Gemini, and YouTube disclosure sources. AiPedia may earn from some tool links, but rankings stay editorial and are based on buyer fit, not commission.
 
 ## Quick Verdict
 
@@ -138,12 +138,12 @@ OpenAI's current pricing page lists Free, Go, Plus, Pro, Business, and Enterpris
 
 ## Sources
 
-- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-12)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-12)
-- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-12)
-- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-12)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-12)
-- [Midjourney plan docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-12)
-- [Gemini subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
-- [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-06-12)
+- [Descript pricing](https://www.descript.com/pricing) (verified 2026-06-27)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-27)
+- [Canva AI](https://www.canva.com/canva-ai/) (verified 2026-06-27)
+- [ElevenLabs pricing](https://elevenlabs.io/pricing) (verified 2026-06-27)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-27)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-27)
+- [Midjourney plan docs](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) (verified 2026-06-27)
+- [Gemini subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-27)
+- [YouTube altered or synthetic content disclosure](https://support.google.com/youtube/answer/14328491) (verified 2026-06-27)

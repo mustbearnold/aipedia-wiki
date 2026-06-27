@@ -1,6 +1,6 @@
 # AiPedia Current Status
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
 
 Audience: maintainers, future agents, and Matt.
 
@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`. Latest content batch is non-tool page-refresh batch 03. Latest workflow improvement is bounded page source-health timing and report-schema hardening.
+- Branch: `master`. Active goal is the June 27 strict 3-day whole-site refresh target. Latest completed content batch is non-tool page-refresh batch 04. Latest workflow improvement is bounded page source-health timing and report-schema hardening.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -37,6 +37,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - Page-refresh workflow optimization is verified: planner routes now carry explicit QA policy classes, archived noindex content remains content/frontmatter-only for QA, and the Rust report summary now emits worker efficiency metrics plus parent-surface hints.
 - Non-tool page-refresh batch 03 is verified: 18 guide routes from academic writing through LinkedIn, with affected `/guides/`, `/answers/best-ai-for-writing-2026/`, AI Writing, AI Research, AI Coding, AI Design, AI Automation, AI Search, and `PAGE_REFRESH_LEDGER.md`. Worker reports parsed 6/6 with 175 report source URLs, 35 confidence labels, 21 caveats, and 41 parent notes. Final closeout passed in 62.57s wall time. One archived noindex legal-research route stayed out of indexable route QA by policy.
 - The page-refresh workflow now has `npm run page:source-health`, a bounded concurrent source checker with per-source and per-page timing, per-host delay, timeout controls, and explicit access-sensitive handling for 401, 403, and 429. It is wired into `runner:page-refresh:closeout` before typecheck and can be skipped only for scoped workflow tests with `-- --skip-source-health`. A smoke run over the next two planned pages checked 21 source URLs in 5.211s and correctly flagged one existing 404: `https://www.canva.com/logo-maker/` on `/guides/best-ai-for-logo-design/`.
+- Non-tool page-refresh batch 04 is verified locally: 24 guide routes from logo design through paid-social creative velocity were moved to June 27 verification, with broken Canva, Instapage, Leadpages, Dext, Consensus, AdCreative, Lindy docs, and Adobe source paths repaired or reclassified through live source health. Affected parents `/guides/`, `/categories/`, AI Design, AI Image, AI Presentation, AI Writing, AI SEO, AI Coding, AI Notes, AI Video, AI Voice, AI Automation, and AI Research were updated. Strict 3-day stale count is now 193 tracked pages.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -162,7 +163,7 @@ The follow-up workflow optimization added route policy classes and worker effici
 
 Batch 03 refreshed 18 guide routes from `/guides/best-ai-for-academic-writing/` through `/guides/best-ai-for-linkedin/`. Closeout receipt: `local/tmp/aipedia-runner/page-refresh/receipts/2026-06-26T08-22-14Z-page-refresh-closeout.md`. Durable receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-03.md`. The follow-up workflow patch added bounded concurrent page-source health and updated worker-report scaffolds so check objects use `command`, `status`, and `notes`.
 
-Next page-refresh content move: repair the existing broken Canva Logo Maker source on `/guides/best-ai-for-logo-design/`, then run the next oldest-first non-tool page batch with source health enabled.
+Next page-refresh content move: continue the strict 3-day target from the regenerated queue. The remaining stale count after batch 04 is 193 tracked pages: 62 guides, 37 comparisons, 30 companies, 21 static pages, 14 workflows, 12 trends, 8 dead archive pages, 6 tools, 2 crawl surfaces, and 1 report.
 
 ### Oldest-First Tool Freshness
 

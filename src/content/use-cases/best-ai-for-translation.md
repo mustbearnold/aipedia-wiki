@@ -34,8 +34,8 @@ guide_picks:
       - label: "ChatGPT pricing"
         url: "https://chatgpt.com/pricing/"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -43,7 +43,7 @@ update_frequency: monthly
 
 AI translation is now several buying decisions, not one. The right choice depends on whether the user is translating polished documents, rewriting marketing copy for another market, localizing product strings, checking a casual message, or building translation into an app.
 
-Verified June 12, 2026 against official DeepL, ChatGPT, Google AI, DeepL API, DeepL Translator-language, and Google Cloud Translation pricing sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
+Verified June 27, 2026 against official DeepL, ChatGPT, Google AI, DeepL API, DeepL Translator-language, and Google Cloud Translation pricing sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
 
 ## Quick Verdict
 
@@ -141,15 +141,15 @@ For casual comprehension, yes. For contracts, medical content, financial disclos
 For casual translation, often yes. For professional publishing, recurring terminology, documents, or API localization, compare DeepL, ChatGPT-assisted review, and Google Cloud Translation.
 
 **How often is this guide updated?**
-Monthly, and sooner when pricing, plan structure, language coverage, API behavior, glossary support, privacy terms, or major model changes affect the recommendation. Last verified on 2026-06-12.
+Monthly, and sooner when pricing, plan structure, language coverage, API behavior, glossary support, privacy terms, or major model changes affect the recommendation. Last verified on 2026-06-27.
 
 ## Sources
 
-- [DeepL Pro](https://www.deepl.com/en/pro) (verified 2026-06-12)
-- [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans) (verified 2026-06-12)
-- [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans) (verified 2026-06-12)
-- [DeepL Translator languages](https://support.deepl.com/hc/en-us/articles/360019925219-DeepL-Translator-languages) (verified 2026-06-12)
-- [DeepL glossary help](https://support.deepl.com/hc/en-us/articles/360021634540-About-the-glossary) (verified 2026-06-12)
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
-- [Google Cloud Translation pricing](https://cloud.google.com/translate/pricing) (verified 2026-06-12)
+- [DeepL Pro](https://www.deepl.com/en/pro) (verified 2026-06-27)
+- [About DeepL plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans) (verified 2026-06-27)
+- [DeepL API plans](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans) (verified 2026-06-27)
+- [DeepL Translator languages](https://support.deepl.com/hc/en-us/articles/360019925219-DeepL-Translator-languages) (verified 2026-06-27)
+- [DeepL glossary help](https://support.deepl.com/hc/en-us/articles/360021634540-About-the-glossary) (verified 2026-06-27)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-27)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-27)
+- [Google Cloud Translation pricing](https://cloud.google.com/translate/pricing) (verified 2026-06-27)

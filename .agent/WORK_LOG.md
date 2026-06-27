@@ -1,5 +1,16 @@
 # AiPedia Work Log
 
+### 2026-06-27: Non-Tool Page Refresh Batch 04
+
+- Status: Complete and verified locally.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Refreshed 24 guide routes from `/guides/best-ai-for-logo-design/` through `/guides/best-ai-tool-for-paid-social-creative-velocity/` to June 27 verification. Repaired source-health failures for Canva logo creation, Instapage AdMap, Leadpages A/B testing, Dext business/partner pricing, Consensus subscription plans, AdCreative official product/pricing surface, Lindy docs, and Adobe Firefly plan sourcing. Updated affected parent surfaces `/guides/`, `/categories/`, AI Design, AI Image, AI Presentation, AI Writing, AI SEO, AI Coding, AI Notes, AI Video, AI Voice, AI Automation, AI Research, and `PAGE_REFRESH_LEDGER.md`.
+- Timing: Source health after repairs checked 224 URLs with 0 broken and 0 unreachable in 11.725s. Timed runner closeout passed with source health 12.887s, typecheck 17.468s, build:fast 18.397s, and content route QA 37.220s. Supplemental category route QA passed in 14.190s.
+- Verification: `node scripts/check-frontmatter.mjs --changed`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run audit:coverage-quality:changed`; `npm run audit:provenance:changed -- --json`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run page:source-health -- --plan local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json --out local/tmp/aipedia-runner/page-refresh/batch-04-source-health-after-labels.json --concurrency 8 --timeout-ms 8000`; `npm run ledger:pages && npm run ledger:pages:check`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run runner:page-refresh:closeout`; supplemental `node scripts/qa-route.mjs` for 11 affected category hubs across 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Residual risks: Several official sources are access-sensitive from CLI checks, but none are broken or unreachable. Strict 3-day target remains active with 193 tracked pages older than 2026-06-24.
+- Next: Regenerate the next page-refresh plan and continue the remaining guide/comparison/company/static/workflow/trend/tool/crawl/report refresh waves.
+
 ### 2026-06-26: Page Refresh Source Health Optimization
 
 - Status: Complete and verified.

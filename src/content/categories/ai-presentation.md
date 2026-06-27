@@ -5,10 +5,10 @@ title: AI Presentation Tools
 description: AI tools for turning prompts, outlines, docs, and written ideas into decks, visual stories, and presentation assets.
 tool_count: 8
 seo_title: "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)"
-meta_description: "Updated June 26, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, Napkin AI remains the budget text-to-visuals bridge, and Presentations.AI has a rechecked enterprise/API, data integration, SSO, and auto-refresh lane."
+meta_description: "Updated June 27, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, Napkin AI remains the budget text-to-visuals bridge, and Presentations.AI has a rechecked enterprise/API, data integration, SSO, and auto-refresh lane."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-26
-last_verified: 2026-06-26
+last_verified: 2026-06-27
 update_frequency: monthly
 top_picks:
   best_overall:
@@ -35,7 +35,7 @@ Do not shortlist [Tome](/tools/tome/) for new presentation work. The original To
 
 For prompt-to-prototype work that overlaps deck creation, also evaluate [Claude Design](/tools/claude-design/) (launched April 17, 2026). It competes with Gamma when the buyer wants generated UI mockups, landing-page concepts, and visual design artifacts alongside slide-style output. The June 18 check keeps it in the Claude Pro-and-up lane, avoids claiming a newer Design-specific backing model until Anthropic publishes that on a Claude Design source, and adds the new buyer caveat that Design is metered independently from Claude chat and Claude Code with weekly allowances and usage credits.
 
-The June 6 [Best AI for Presentations](/guides/best-ai-for-presentations/) refresh keeps Gamma as the default prompt-to-deck winner, Canva as the budget/easy-asset lane, Pitch as the team workflow pick, and Beautiful.ai as the controlled business-slide option. The June 26 comparison refresh sharpens the Gamma, Pitch, and Presentations.AI purchase rule: test the workflow on free or entry plans, then upgrade only when branding removal, PowerPoint export, analytics, custom fonts, API access, data-connected refresh, advanced models, brand governance, or AI credits block real work. Canva AI 2.0 is useful for editable designs, brand-aware assets, web research, and presentation-adjacent creative work, but Canva's AI Product Terms make accuracy review, usage limits, licensed-content rights, and AI-audio exceptions explicit buyer responsibilities. Presentations.AI's current English pricing page still shows Starter at $0, Pro at $20/month billed annually, and Gold at $100/month billed annually; older beta-era and $198/year Pro claims should be treated as stale unless they appear in a buyer's live regional checkout. Claude Design access, metering, and Claude pricing were rechecked on **June 18, 2026** against official Anthropic and Claude sources.
+The June 27 [Best AI for Presentations](/guides/best-ai-for-presentations/) refresh keeps Gamma as the default prompt-to-deck winner, Canva as the budget/easy-asset lane, Pitch as the team workflow pick, and Beautiful.ai as the controlled business-slide option. The June 26 comparison refresh sharpens the Gamma, Pitch, and Presentations.AI purchase rule: test the workflow on free or entry plans, then upgrade only when branding removal, PowerPoint export, analytics, custom fonts, API access, data-connected refresh, advanced models, brand governance, or AI credits block real work. Canva AI 2.0 is useful for editable designs, brand-aware assets, web research, and presentation-adjacent creative work, but Canva's AI Product Terms make accuracy review, usage limits, licensed-content rights, and AI-audio exceptions explicit buyer responsibilities. Presentations.AI's current English pricing page still shows Starter at $0, Pro at $20/month billed annually, and Gold at $100/month billed annually; older beta-era and $198/year Pro claims should be treated as stale unless they appear in a buyer's live regional checkout. Claude Design access, metering, and Claude pricing were rechecked on **June 18, 2026** against official Anthropic and Claude sources.
 
 ## Best Tools By Buyer Job
 

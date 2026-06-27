@@ -3,19 +3,19 @@ type: use-case
 slug: best-ai-for-medical-research
 title: "Best AI for Medical Research (Archived)"
 seo_title: "Best AI for Medical Research (Archived)"
-meta_description: "Archived and re-verified June 12, 2026: this medical-research AI guide remains noindexed until AiPedia rebuilds it with medical-specific evidence, privacy, regulatory, and product-source checks."
+meta_description: "Archived and re-verified June 27, 2026: this medical-research AI guide remains noindexed until AiPedia rebuilds it with medical-specific evidence, privacy, regulatory, and product-source checks."
 description: "This archived route explains why AiPedia keeps the old medical-research AI guide out of the active index and where readers should go instead."
 tools_mentioned: ["elicit", "semantic-scholar", "scite", "perplexity", "claude", "chatgpt"]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI for Medical Research (Archived)
 
-AiPedia removed the previous version of this page from the active index on May 9, 2026. This archive note was re-verified on June 12, 2026, and the route remains **noindex**.
+AiPedia removed the previous version of this page from the active index on May 9, 2026. This archive note was re-verified on June 27, 2026, and the route remains **noindex**.
 
 The old guide made high-stakes medical-research recommendations with stale model and pricing language, generic chatbot rankings, weak source trails, and unsupported claims about clinical-trial reasoning, scan analysis, and medical research accuracy. That is not good enough for a medical, biomedical, clinical, or life-sciences buyer page.
 
@@ -61,7 +61,7 @@ AiPedia should only re-index this route after rebuilding it around:
 
 ## Current Source Trail
 
-This archival decision was checked on 2026-06-12 against:
+This archival decision was checked on 2026-06-27 against:
 
 - [FDA Artificial Intelligence in Software as a Medical Device](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device)
 - [FDA Artificial Intelligence and Machine Learning-enabled Medical Devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices)

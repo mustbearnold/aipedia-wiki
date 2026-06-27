@@ -36,8 +36,8 @@ guide_picks:
       - label: "Runway Gen-4.5"
         url: "https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -45,7 +45,7 @@ update_frequency: monthly
 
 TikTok AI tools should be chosen by workflow, not hype. A creator needs hooks, scripts, captions, edits, repurposed clips, thumbnail ideas, subtitle polish, trend judgment, disclosure discipline, and sometimes generated B-roll or avatar video. No single AI tool is best at all of that.
 
-Verified June 12, 2026 against official ChatGPT, Runway, OpusClip, Captions, HeyGen, InVideo, and CapCut-related sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
+Verified June 27, 2026 against official ChatGPT, Runway, OpusClip, Captions, HeyGen, InVideo, and CapCut-related sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
 
 ## Quick Verdict
 
@@ -162,16 +162,16 @@ Only when the avatar is legitimate, consented, and disclosed where needed. Avoid
 They solve different jobs. Runway is for generated clips and production workflow. CapCut is closer to mobile-first editing and publishing.
 
 **How often is this guide updated?**
-Monthly, and sooner when pricing, credits, watermark rules, commercial rights, avatar disclosure rules, or major video-model releases change buyer advice. Last verified on 2026-06-12.
+Monthly, and sooner when pricing, credits, watermark rules, commercial rights, avatar disclosure rules, or major video-model releases change buyer advice. Last verified on 2026-06-27.
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-12)
-- [Runway Gen-4.5](https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5) (verified 2026-06-12)
-- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-12)
-- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-12)
-- [Captions pricing](https://captions.ai/pricing) (verified 2026-06-12)
-- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-12)
-- [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-12)
-- [CapCut](https://www.capcut.com/) (verified 2026-06-12)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-27)
+- [Runway pricing](https://runwayml.com/pricing) (verified 2026-06-27)
+- [Runway Gen-4.5](https://help.runwayml.com/hc/en-us/articles/46974685288467-Creating-with-Gen-4-5) (verified 2026-06-27)
+- [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-27)
+- [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-27)
+- [Captions pricing](https://captions.ai/pricing) (verified 2026-06-27)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-27)
+- [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-27)
+- [CapCut](https://www.capcut.com/) (verified 2026-06-27)

@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-research-tool-for-academic-citations
 title: "Best AI Research Tool for Academic Citations (June 2026)"
 seo_title: "Best AI Research Tool for Academic Citations: Consensus, Elicit, Semantic Scholar (2026)"
-meta_description: "Verified June 12, 2026: the best AI research tools for source-backed academic citations. Consensus, Elicit, Semantic Scholar, Scite, and honest picks by use case."
+meta_description: "Verified June 27, 2026: the best AI research tools for source-backed academic citations. Consensus, Elicit, Semantic Scholar, Scite, and honest picks by use case."
 description: "June 10, 2026 buyer guide to the best AI research tools that surface real, citable academic sources, with picks for grad students, faculty, and policy researchers."
 tools_mentioned: ["consensus", "elicit", "semantic-scholar"]
 guide_picks:
@@ -16,7 +16,7 @@ guide_picks:
       - label: "Consensus product"
         url: "https://consensus.app/"
       - label: "Consensus pricing"
-        url: "https://consensus.app/home/pricing/"
+        url: "https://help.consensus.app/en/articles/10087865-subscription-plans"
   budget:
     tool: semantic-scholar
     label: "Free pick"
@@ -36,8 +36,8 @@ guide_picks:
       - label: "Elicit pricing"
         url: "https://elicit.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /tools/consensus/
@@ -64,7 +64,7 @@ A graduate student writing a thesis, a researcher submitting a grant, or a polic
 
 The right AI research tools for citation work do not synthesize answers from a model's training data. They retrieve, parse, and cite actual papers. This guide picks honestly across the three workflows that actually matter: citation-backed question answering, structured literature review, and free academic search.
 
-AiPedia verified pricing and capabilities on June 12, 2026. The short version: **Consensus** wins citation-backed search because the entire product is built around grounding answers in retrieved papers. **Elicit** wins structured literature reviews. **Semantic Scholar** is the right free fallback for paper discovery without AI summarization.
+AiPedia verified pricing and capabilities on June 27, 2026. The short version: **Consensus** wins citation-backed search because the entire product is built around grounding answers in retrieved papers. **Elicit** wins structured literature reviews. **Semantic Scholar** is the right free fallback for paper discovery without AI summarization.
 
 ## Quick Verdict
 
@@ -186,7 +186,7 @@ Not a replacement for Consensus or Elicit. A companion tool when citation contex
 
 ## Pricing Reality
 
-Verified June 12, 2026:
+Verified June 27, 2026:
 
 Use this as buying guidance, not a fixed stack total:
 
@@ -250,14 +250,14 @@ For citation work, yes, structurally. ChatGPT with web search will still synthes
 
 ## Sources
 
-- [Consensus product page](https://consensus.app/), verified 2026-06-12
-- [Consensus Pro subscription](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), verified 2026-06-12
-- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-12
-- [Elicit product page](https://elicit.com/), verified 2026-06-12
-- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-12
-- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-12
-- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-12
-- [Scite.ai](https://scite.ai/), verified 2026-06-12
+- [Consensus product page](https://consensus.app/), verified 2026-06-27
+- [Consensus Pro subscription](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), verified 2026-06-27
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
+- [Elicit product page](https://elicit.com/), verified 2026-06-27
+- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-27
+- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-27
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-27
+- [Scite.ai](https://scite.ai/), verified 2026-06-27
 
 Internal references:
 

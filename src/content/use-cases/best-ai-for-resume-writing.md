@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-resume-writing
 title: "Best AI for Resume Writing (June 2026)"
 seo_title: "Best AI for Resume Writing: ChatGPT, Claude, Gemini & Grammarly (June 2026)"
-meta_description: "Updated June 12, 2026: ChatGPT is best for tailored resume drafts, Claude for concise editing, Gemini for Google Docs workflows, and Grammarly for final polish."
+meta_description: "Updated June 27, 2026: ChatGPT is best for tailored resume drafts, Claude for concise editing, Gemini for Google Docs workflows, and Grammarly for final polish."
 description: "A June 6, 2026 guide to using AI for resume writing without fake metrics, keyword stuffing, privacy leaks, or generic ATS-optimized fluff."
 tools_mentioned: ["chatgpt", "claude", "gemini", "grammarly", "canva"]
 guide_picks:
@@ -34,8 +34,8 @@ guide_picks:
       - label: "Claude pricing"
         url: "https://claude.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -43,7 +43,7 @@ update_frequency: monthly
 
 AI can improve a resume when it clarifies real experience. It becomes dangerous when it invents metrics, credentials, job titles, dates, tools, employers, or client outcomes.
 
-AiPedia rechecked this guide on June 12, 2026 against current official ChatGPT, Claude, Gemini/Google AI, and Grammarly plan sources. Rankings are editorial. The recommendation is deliberately conservative because a resume is a trust document, not a place to hallucinate your way into an interview.
+AiPedia rechecked this guide on June 27, 2026 against current official ChatGPT, Claude, Gemini/Google AI, and Grammarly plan sources. Rankings are editorial. The recommendation is deliberately conservative because a resume is a trust document, not a place to hallucinate your way into an interview.
 
 ## Quick Verdict
 
@@ -170,13 +170,13 @@ Gemini is the most convenient if your resume already lives in Google Docs and yo
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/): current Free, Plus, Pro, Business, and Enterprise plan surface and business privacy notes. Verified 2026-06-12.
-- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes): current ChatGPT feature and model-access changes. Verified 2026-06-12.
-- [Claude pricing](https://claude.com/pricing): Claude Pro, Max, Team, Enterprise, and platform pricing surface. Verified 2026-06-12.
-- [Claude plan selection help](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan/): individual Free, Pro, Max 5x, and Max 20x plan guidance. Verified 2026-06-12.
-- [Google AI subscriptions](https://gemini.google/us/subscriptions/?hl=en): Google AI Pro/Ultra and Gemini in Gmail, Docs, and more. Verified 2026-06-12.
-- [Grammarly plans](https://www.grammarly.com/plans): current plan surface for writing assistance and team options. Verified 2026-06-12.
-- [Grammarly Pro pricing support](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost): current Pro pricing support detail. Verified 2026-06-12.
+- [ChatGPT pricing](https://chatgpt.com/pricing/): current Free, Plus, Pro, Business, and Enterprise plan surface and business privacy notes. Verified 2026-06-27.
+- [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes): current ChatGPT feature and model-access changes. Verified 2026-06-27.
+- [Claude pricing](https://claude.com/pricing): Claude Pro, Max, Team, Enterprise, and platform pricing surface. Verified 2026-06-27.
+- [Claude plan selection help](https://support.claude.com/en/articles/11049762-choosing-a-claude-ai-plan/): individual Free, Pro, Max 5x, and Max 20x plan guidance. Verified 2026-06-27.
+- [Google AI subscriptions](https://gemini.google/us/subscriptions/?hl=en): Google AI Pro/Ultra and Gemini in Gmail, Docs, and more. Verified 2026-06-27.
+- [Grammarly plans](https://www.grammarly.com/plans): current plan surface for writing assistance and team options. Verified 2026-06-27.
+- [Grammarly Pro pricing support](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost): current Pro pricing support detail. Verified 2026-06-27.
 
 ## Related
 

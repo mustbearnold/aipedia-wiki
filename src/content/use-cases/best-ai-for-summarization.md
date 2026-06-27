@@ -32,8 +32,8 @@ guide_picks:
       - label: "Claude pricing"
         url: "https://claude.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 Good summarization is not just making text shorter. The right tool depends on whether the buyer needs a fast TL;DR, a source-grounded research brief, a searchable meeting recap, a faithful legal or policy digest, or a reading queue turned into decisions.
 
-Verified June 12, 2026 against official ChatGPT, Claude, Google AI, NotebookLM, Fathom, Fireflies, Otter.ai, and Readwise sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
+Verified June 27, 2026 against official ChatGPT, Claude, Google AI, NotebookLM, Fathom, Fireflies, Otter.ai, and Readwise sources. AiPedia may earn from some tool links, but rankings stay editorial and source-backed.
 
 ## Quick Verdict
 
@@ -167,17 +167,17 @@ Use a meeting tool first. Fathom is the best individual default, Fireflies is st
 Use them as drafts. For legal, medical, financial, academic, policy, employment, or public-facing work, verify quotes, dates, numbers, and claims against the original source.
 
 **How often is this guide updated?**
-Monthly, and sooner when pricing, plan limits, context windows, source-grounding features, meeting-transcription policies, or major assistant capabilities change. Last verified on 2026-06-12.
+Monthly, and sooner when pricing, plan limits, context windows, source-grounding features, meeting-transcription policies, or major assistant capabilities change. Last verified on 2026-06-27.
 
 ## Sources
 
-- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-12)
-- [Claude pricing](https://claude.com/pricing) (verified 2026-06-12)
-- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-12)
-- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-12)
-- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-12)
-- [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-12)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
-- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-12)
-- [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-12)
+- [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-27)
+- [Claude pricing](https://claude.com/pricing) (verified 2026-06-27)
+- [Google AI subscriptions](https://gemini.google/subscriptions/) (verified 2026-06-27)
+- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-27)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-27)
+- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-27)
+- [Fireflies AI Credits guide](https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits) (verified 2026-06-27)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-27)
+- [Readwise Reader pricing](https://readwise.io/pricing/reader) (verified 2026-06-27)
+- [Readwise Ghostreader docs](https://docs.readwise.io/reader/guides/ghostreader/overview) (verified 2026-06-27)

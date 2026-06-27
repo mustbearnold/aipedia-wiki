@@ -5,10 +5,10 @@ title: AI Research Tools
 description: Source-backed AI tools for literature review, paper discovery, citation context, research notebooks, academic search, and evidence synthesis.
 tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
-meta_description: "Updated June 26, 2026: Elicit for systematic-review workflow, Semantic Scholar for academic search/API, Scite for citation context/MCP, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for academic Q&A, and nanochat for LLM-training education."
+meta_description: "Updated June 27, 2026: Elicit for systematic-review workflow, Semantic Scholar for academic search/API, Scite for citation context/MCP, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for academic Q&A, and nanochat for LLM-training education."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-26
-last_verified: 2026-06-26
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -38,7 +38,7 @@ For legal and professional-services research, [Harvey](/tools/harvey/) belongs i
 
 The June 26 [interview-prep guide](/guides/best-ai-for-interview-prep/) refresh adds a practical source-grounded research use case: use NotebookLM for a resume/job-description/source packet, Perplexity or Gemini for current company research, and a general assistant only after primary sources are opened. That keeps interview research in the low-stakes preparation lane rather than pretending a chatbot can own evidence judgment.
 
-The June 6 [medical-research archive](/guides/best-ai-for-medical-research/) recheck keeps that route noindexed. Current FDA, NIH, and OpenAI GPT-Rosalind/Rosalind Biodefense sources make the editorial bar higher, not lower: a live medical-research guide needs medical-specific evidence standards, privacy/PHI/IRB caveats, regulator context, clear separation from clinical decision support, and specialist life-sciences model coverage before AiPedia should rank tools for that intent.
+The June 27 [medical-research archive](/guides/best-ai-for-medical-research/) recheck keeps that route noindexed. Current FDA, NIH, and OpenAI GPT-Rosalind/Rosalind Biodefense sources make the editorial bar higher, not lower: a live medical-research guide needs medical-specific evidence standards, privacy/PHI/IRB caveats, regulator context, clear separation from clinical decision support, and specialist life-sciences model coverage before AiPedia should rank tools for that intent.
 
 The wrong move is treating a general chatbot as a research protocol. ChatGPT and Claude can help read, explain, outline, and critique material, but they do not replace database selection, inclusion criteria, source inspection, citation verification, or domain expertise.
 
