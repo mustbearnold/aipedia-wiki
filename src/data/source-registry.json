@@ -10819,7 +10819,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "reclaim-overview",
@@ -10828,7 +10828,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "reclaim-pricing",
@@ -10837,7 +10837,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "reclaim-pricing-help",
@@ -10846,7 +10846,25 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-27"
+    },
+    {
+      "id": "reclaim-security",
+      "label": "Reclaim.ai security",
+      "url": "https://reclaim.ai/security",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-27"
+    },
+    {
+      "id": "reclaim-smart-meetings",
+      "label": "Reclaim.ai Smart Meetings",
+      "url": "https://reclaim.ai/features/smart-meetings",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-27"
     },
     {
       "id": "recraft-pricing",

@@ -9,11 +9,11 @@ secondary_categories: [ai-notes]
 company: Reclaim.ai from Dropbox
 url: 'https://reclaim.ai'
 pricing_model: freemium
-price_range: $0-$22/seat/month annual-billed; Starter and Business monthly available
+price_range: $0-$22/seat/month yearly-billed; monthly toggle and promotions visible at checkout
 status: active
 launched: 2019-06
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -35,15 +35,15 @@ facts:
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: low
     confidence: high
   pricing_anchor:
-    value: "Reclaim.ai's pricing page lists Lite Free, annual-billed Starter at $10/seat/month, Business at $15/seat/month, and Enterprise at $22/seat/month; the same page also exposes monthly Starter at $12/seat/month and Business at $18/seat/month, plus Attendee User add-ons for Smart Meetings with 3+ people."
+    value: "Reclaim.ai's pricing page lists Lite Free, yearly Starter at $10/seat/month, Business at $15/seat/month, and Enterprise at $22/seat/month; the same page exposes a monthly toggle, promotional offers, and Attendee User add-ons for Smart Meetings with 3+ people."
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     next_review_at: 2026-07-09
     volatility: high
     confidence: high
@@ -52,7 +52,7 @@ facts:
     source: "https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates"
     source_label: "Reclaim Outlook integration help"
     source_id: reclaim-outlook-help
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: medium
     confidence: high
   task_integrations:
@@ -60,7 +60,7 @@ facts:
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: medium
     confidence: high
   smart_meetings:
@@ -68,7 +68,7 @@ facts:
     source: "https://reclaim.ai/pricing"
     source_label: "Reclaim.ai pricing"
     source_id: reclaim-pricing
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: medium
     confidence: high
   watch_out_for:
@@ -76,13 +76,13 @@ facts:
     source: "https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates"
     source_label: "Reclaim Outlook integration help"
     source_id: reclaim-outlook-help
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: medium
     confidence: high
 tags: [scheduling, calendar, productivity, time-blocking, focus-time, habits, meetings, google-calendar, task-management]
 seo_title: 'Reclaim.ai: Features, Pricing & Review (June 2026)'
 meta_description: >-
-  Reclaim.ai from Dropbox is an AI calendar for Google Calendar and Outlook. Free Lite; paid annual-billed tiers from $10/seat/month with Smart Meetings, AI agents, and task scheduling.
+  Reclaim.ai from Dropbox is an AI calendar for Google Calendar and Outlook. Free Lite; yearly paid tiers from $10/seat/month with Smart Meetings, AI agents, and task scheduling.
 author: aipedia.wiki Editorial
 best_for:
   - defending focus time on a busy calendar
@@ -98,6 +98,27 @@ not_best_for:
 quick_answer: >-
   Reclaim.ai from Dropbox is an AI scheduling layer for Google Calendar and Microsoft Outlook that defends focus blocks, schedules habits, auto-fits Todoist/Asana/ClickUp/Jira/Linear tasks, and optimizes meetings. Pick it when your calendar is the real bottleneck. Skip it if you only need a simple external booking link or if your Microsoft 365 rollout depends on delegated/shared Outlook calendars.
 price_history:
+  - date: 2026-06-27
+    plan: "Starter"
+    price: "$10/seat/mo yearly-billed; monthly toggle and promotions visible on pricing page"
+    source: "https://reclaim.ai/pricing"
+    source_label: "Reclaim.ai pricing"
+    source_id: reclaim-pricing
+    verified_at: 2026-06-27
+  - date: 2026-06-27
+    plan: "Business"
+    price: "$15/seat/mo yearly-billed; monthly toggle and promotions visible on pricing page"
+    source: "https://reclaim.ai/pricing"
+    source_label: "Reclaim.ai pricing"
+    source_id: reclaim-pricing
+    verified_at: 2026-06-27
+  - date: 2026-06-27
+    plan: "Enterprise"
+    price: "$22/seat/mo yearly-billed; contact sales for enterprise rollout"
+    source: "https://reclaim.ai/pricing"
+    source_label: "Reclaim.ai pricing"
+    source_id: reclaim-pricing
+    verified_at: 2026-06-27
   - date: 2026-06-09
     plan: "Starter"
     price: "$10/seat/mo annual-billed · $12/seat/mo monthly"
@@ -133,7 +154,7 @@ The free Lite plan runs one user with capped features. Paid plans unlock more AI
 >
 > **Skip it if you only need an external booking link or if your Microsoft rollout requires delegated/shared Outlook calendars, Microsoft Teams chat/status sync, Outlook Tasks, or hosted/on-prem Exchange.** [Cal.com](https://cal.com) and Calendly are simpler for booking links. Reclaim earns its price by also defending what is already on your calendar.
 >
-> **Who pays which tier:** Free Lite for personal use, Starter $10/seat/month annual-billed or $12 monthly for small teams that need more AI agents and integrations, Business $15 annual-billed or $18 monthly when team OOO, delegated access, webhooks, and 100-seat scale matter, Enterprise $22 annual-billed for SSO/SCIM and 100+ seats.
+> **Who pays which tier:** Free Lite for personal use, Starter $10/seat/month yearly-billed for small teams that need more AI agents and integrations, Business $15 yearly-billed when team OOO, delegated access, webhooks, and 100-seat scale matter, Enterprise $22 yearly-billed for SSO/SCIM and 100+ seats. Check the live monthly toggle and promotional price before buying.
 
 ## Key Facts
 
@@ -144,14 +165,14 @@ The free Lite plan runs one user with capped features. Paid plans unlock more AI
 | **Task integrations** | Todoist · Asana · ClickUp · Jira · Linear · Google Tasks |
 | **AI scheduling features** | Focus Time · Habits · Buffer Time · Smart Meetings · Meeting Quality · task recommendations · AI agents by plan |
 | **Free tier** | Lite for 1 user · 5 AI agents · 1-week scheduling range · 1 calendar sync · 1 scheduling link · limited integrations |
-| **Paid tiers** | Starter $10 annual-billed / $12 monthly · Business $15 annual-billed / $18 monthly · Enterprise $22 annual-billed |
+| **Paid tiers** | Starter $10 yearly-billed, Business $15 yearly-billed, Enterprise $22 yearly-billed, with monthly toggle and promotions checked at purchase |
 | **Attendee Users** | Smart Meeting attendees without paid seats are free through July 31, 2026; paid AU packs apply afterward |
 | **Team OOO + delegated access** | Business tier and above |
 | **SSO / SCIM** | Enterprise only |
 | **API** | Public API documented for Starter+ |
 | **Native mobile app** | iOS only |
 
-Every data point above was verified against Reclaim.ai pricing, help, and product documentation on 2026-06-25. See Sources.
+Every data point above was verified against Reclaim.ai pricing, help, and product documentation on 2026-06-27. See Sources.
 
 ## What it actually is
 
@@ -183,18 +204,18 @@ The product is now Google Calendar and Outlook native, but Outlook parity is not
 
 ## Pricing
 
-Subscription and team pricing are managed via [reclaim.ai/pricing](https://reclaim.ai/pricing). The published page is reliable for plan gates, but exact prices render by region, billing toggle, and account state, confirm the live page before purchase.
+Subscription and team pricing are managed via [reclaim.ai/pricing](https://reclaim.ai/pricing). The published page is reliable for plan gates, but exact prices render by region, billing toggle, promotion, and account state, confirm the live page before purchase.
 
 | Plan | Annual-billed monthly equivalent | Monthly | Seat cap | Who's it for |
 |------|---------|----------------------------|----------|--------------|
 | Lite | $0 | $0 | 1 | Personal trial; 5 AI agents, 1-week scheduling range, 1 calendar sync, 1 scheduling link |
-| Starter | $10/seat | $12/seat | Up to 10 | Small teams; 10 AI agents, 8-week scheduling range, 3 calendar syncs, 3 scheduling links |
-| Business | $15/seat | $18/seat | Up to 100 | Teams; 50 AI agents, unlimited calendar syncs/scheduling links, webhooks, Team OOO, delegated access |
+| Starter | $10/seat | Check live toggle | Up to 10 | Small teams; 10 AI agents, 8-week scheduling range, 3 calendar syncs, 3 scheduling links |
+| Business | $15/seat | Check live toggle | Up to 100 | Teams; 100 AI agents, 12-week scheduling range, unlimited calendar syncs/scheduling links, webhooks, Team OOO, delegated access |
 | Enterprise | $22/seat | contact sales | 100+ | Unlimited AI agents, SSO/SCIM, org-chart-aware scheduling, custom contracts |
 
 Attendee Users for Smart Meetings with 3+ people are free through July 31, 2026. After that launch promo, AU packs are plan-specific add-ons and include a free paid seat with each pack. Reclaim's own pricing page and help article use slightly different annual-discount language, so treat the checkout screen as the final purchase source.
 
-Prices verified 2026-06-25 via [reclaim.ai/pricing](https://reclaim.ai/pricing).
+Prices verified 2026-06-27 via [reclaim.ai/pricing](https://reclaim.ai/pricing). For the plan-decision version, see [Reclaim.ai pricing for small teams](/guides/reclaim-ai-pricing-for-small-teams/).
 
 ## Against the alternatives
 
@@ -220,7 +241,7 @@ Prices verified 2026-06-25 via [reclaim.ai/pricing](https://reclaim.ai/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-25 against [Reclaim.ai pricing](https://reclaim.ai/pricing), [Reclaim.ai Outlook help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates), and the [Reclaim.ai product overview](https://reclaim.ai/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-27 against [Reclaim.ai pricing](https://reclaim.ai/pricing), [Reclaim.ai Outlook help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates), the [Reclaim.ai product overview](https://reclaim.ai/), and [Reclaim.ai security](https://reclaim.ai/security).
 
 ## FAQ
 
@@ -251,8 +272,10 @@ Reclaim does not publicly document a specific LLM dependency. The "AI" in the pr
 - [Reclaim.ai product overview](https://reclaim.ai/): Habits, Smart Meetings, task integrations, Dropbox branding
 - [Reclaim.ai Outlook integration help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates): Outlook availability and known limitations
 - [Reclaim.ai pricing help](https://help.reclaim.ai/en/articles/6405975-how-reclaim-s-pricing-and-plans-work): Plan mechanics, billing cadence, seat minimums
+- [Reclaim.ai security](https://reclaim.ai/security): Calendar data, privacy, compliance, and deletion posture
 
 ## Related
 
 - **Category:** [AI Automation & Agents](/categories/ai-automation/)
+- **Plan guide:** [Reclaim.ai pricing for small teams](/guides/reclaim-ai-pricing-for-small-teams/)
 - **Adjacent tools:** [Lindy](/tools/lindy/) (agent platform with scheduling) · [Fathom](/tools/fathom/) (meeting notes) · [Fireflies](/tools/fireflies/) (meeting intelligence)

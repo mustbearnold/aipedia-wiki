@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-calendar-for-google-workspace-power-users
 title: "Best AI Calendar for Google Workspace Power Users (June 2026)"
 seo_title: "Best AI Calendar for Google Workspace Power Users: Reclaim, Motion, Sunsama (2026)"
-meta_description: "Verified June 26, 2026: the best AI calendars built around Google Calendar. Reclaim.ai for habit defense and task scheduling, plus honest alternatives by workflow."
+meta_description: "Verified June 27, 2026: the best AI calendars built around Google Calendar. Reclaim.ai for habit defense and task scheduling, plus honest alternatives by workflow."
 description: "June 2026 buyer guide to AI calendars for Google Workspace power users, with honest picks for solo professionals, meeting-heavy roles, and team scheduling."
 tools_mentioned: ["reclaim-ai"]
 intent_type: specific-workflow
@@ -67,20 +67,26 @@ guide_picks:
   pro_team:
     tool: reclaim-ai
     label: "Team pick"
-    plan: "Reclaim Business or team plan"
+    plan: "Reclaim Business"
     reason: "Paid Reclaim seats add longer scheduling ranges, more AI agents, team scheduling controls, and analytics. Right pick for Google Workspace teams of 5-50 who run scheduling against each other."
     sources:
-      - label: "Reclaim Team"
-        url: "https://reclaim.ai/teams"
+      - label: "Reclaim pricing"
+        url: "https://reclaim.ai/pricing"
+      - label: "Reclaim Smart Meetings"
+        url: "https://reclaim.ai/features/smart-meetings"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-26
-last_verified: 2026-06-26
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /tools/reclaim-ai/
     title: "Reclaim.ai review"
     description: "Full editorial review with pricing, features, and verdict."
     kind: tool
+  - href: /guides/reclaim-ai-pricing-for-small-teams/
+    title: "Reclaim.ai pricing for small teams"
+    description: "Plan guide for Lite, Starter, Business, Enterprise, Smart Meetings, and Outlook caveats."
+    kind: guide
   - href: /workflows/solo-founder-stack/
     title: "Solo Founder AI Stack"
     description: "Reclaim plus SaneBox, Apollo, Beautiful.ai, Descript, and Consensus."
@@ -99,7 +105,7 @@ related:
 
 Google Workspace power users have one specific calendar problem: meetings expand to fill the day, leaving focus work to evenings and weekends. Generic time-blocking apps treat this as a discipline problem. The AI-calendar category treats it as a scheduling automation problem, and that framing usually wins.
 
-This guide is for the specific buyer profile: someone who lives in Google Calendar, has 15+ meetings per week, runs recurring habits or deep-work blocks, and wants the calendar to enforce those blocks rather than negotiate them every week. AiPedia verified pricing and capabilities on June 26, 2026.
+This guide is for the specific buyer profile: someone who lives in Google Calendar, has 15+ meetings per week, runs recurring habits or deep-work blocks, and wants the calendar to enforce those blocks rather than negotiate them every week. AiPedia verified pricing and capabilities on June 27, 2026.
 
 The short version: **Reclaim.ai** is the right default for Google Workspace power users because the entire product is built around Google Calendar and its specific quirks. **Motion** is the right alternative if AI task planning is the bottleneck more than calendar defense. **Notion Calendar** is a free option that adds a cleaner Google Calendar client but does not defend focus time.
 
@@ -127,7 +133,7 @@ Reclaim and Motion both check the deep-Google-integration box. Notion Calendar i
 |---|---|---|
 | Habit defense and recurring time blocks | [Reclaim.ai](/tools/reclaim-ai/) | Smart habits, smart 1:1s, focus time auto-scheduled |
 | Task scheduling into available time | Reclaim or Motion | Both auto-schedule; Reclaim is gentler, Motion more aggressive |
-| Team scheduling links with multi-calendar matching | Reclaim Team | Smart Meeting Links handle team availability |
+| Team scheduling links with multi-calendar matching | Reclaim Business | Smart Meetings and scheduling links handle team availability |
 | Beautiful Google Calendar client | Notion Calendar | Free, clean UI, light AI |
 | Booking links for external clients | Calendly or Cal.com | Different category; pair with Reclaim |
 
@@ -137,7 +143,7 @@ Reclaim and Motion both check the deep-Google-integration box. Notion Calendar i
 
 The core mechanic: you create habits (focus time, exercise, lunch, family time, deep work), tasks (with deadlines and priority), and smart 1:1s with teammates. Reclaim scans your Google Calendar for open windows that match the rules you set, then places those blocks. When a meeting tries to land on a defended block, Reclaim either moves the block to another valid window or marks it as a conflict so you can decide.
 
-**Best plan:** Reclaim Lite (free) is enough for most solo users to evaluate. Pro adds higher habit limits, custom integrations, longer scheduling windows. Team adds Smart Meeting Links and team analytics.
+**Best plan:** Reclaim Lite (free) is enough for most solo users to evaluate. Starter is the practical paid path for small teams that need longer scheduling range, more AI agents, more calendar syncs, more scheduling links, and full integrations. Business adds the team-control layer. Use the [Reclaim.ai pricing guide](/guides/reclaim-ai-pricing-for-small-teams/) if plan choice is the buying blocker.
 
 **Why it wins:**
 
@@ -211,18 +217,18 @@ Most Google Workspace power users run Reclaim plus Calendly or Cal.com.
 |---|---|
 | Meetings eat focus time | Reclaim.ai |
 | Tasks pile up and miss deadlines | Motion or Reclaim |
-| Team scheduling and 1:1 finding | Reclaim Team |
+| Team scheduling and 1:1 finding | Reclaim Business |
 | External booking links | Calendly or Cal.com (pair with Reclaim) |
 | Beautiful Google Calendar UI | Notion Calendar + Reclaim |
 | Deep ADHD / executive function support | Sunsama (different paradigm, manual daily planning) |
 
 ## Pricing Reality
 
-Verified June 26, 2026:
+Verified June 27, 2026:
 
 Use this as buying guidance, not a fixed stack total:
 
-- **Reclaim.ai:** Free is the right first test. The current pricing page lists Free, Starter, Business, and Enterprise paths, with annual or new-user promotions changing effective cost. Upgrade when longer scheduling ranges, more AI agents, or team controls matter.
+- **Reclaim.ai:** Lite is the right first test. The current pricing page lists Lite, Starter, Business, and Enterprise paths, with annual billing, monthly toggle behavior, AU add-ons, and new-user promotions changing effective cost. Upgrade when longer scheduling ranges, more AI agents, more syncs, more links, or team controls matter.
 - **Motion:** Budget for a paid AI scheduling subscription rather than a free calendar client. Motion's current pricing page lists Pro AI and Business AI with monthly and annual options, 7,500 or 15,000 AI credits per seat/month, and individual/team pricing differences. Treat AI-credit usage as part of the plan choice, not just the seat price.
 - **Notion Calendar:** Treat it as a free Google Calendar client. Notion workspace and Notion AI pricing are separate decisions.
 - **Calendly and Cal.com:** Use these for external booking links, not calendar defense. Both have free paths; Cal.com lists Teams pricing at $12/user/month on yearly billing, while Calendly pricing varies by Standard, Teams, and Enterprise needs.
@@ -283,9 +289,9 @@ For team scheduling links among Reclaim users, yes. For external booking with pr
 
 ## Sources
 
-- [Reclaim.ai product](https://reclaim.ai/), verified 2026-06-26
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-26
-- [Reclaim Team](https://reclaim.ai/teams), verified 2026-06-26
+- [Reclaim.ai product](https://reclaim.ai/), verified 2026-06-27
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-27
+- [Reclaim Smart Meetings](https://reclaim.ai/features/smart-meetings), verified 2026-06-27
 - [Motion pricing](https://www.usemotion.com/pricing), verified 2026-06-26
 - [Notion Calendar](https://www.notion.com/product/calendar), verified 2026-06-26
 - [Calendly](https://calendly.com/), verified 2026-06-26
@@ -296,6 +302,7 @@ For team scheduling links among Reclaim users, yes. For external booking with pr
 Internal references:
 
 - [Reclaim.ai tool page](/tools/reclaim-ai/)
+- [Reclaim.ai pricing for small teams](/guides/reclaim-ai-pricing-for-small-teams/)
 - [Best AI tools for freelancers](/guides/best-ai-tools-for-freelancers/)
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/)
 - [AI solo founder stack](/guides/ai-solo-founder-stack/)
