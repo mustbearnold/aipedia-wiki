@@ -8,6 +8,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 
 - Last updated: 2026-06-27.
 - Branch baseline: `master`; active goal is the June 27 strict 3-day whole-site refresh target. Latest local content batch is the final six tool refresh. Latest workflow improvement is bounded page source-health timing, report-schema hardening, and company-prose overflow containment.
+- New active goal: affiliate conversion page buildout for every tool with a configured affiliate link. Use `npm run affiliate:conversion:inventory` as the current source-of-truth inventory and `workflows/affiliate-conversion-pages/README.md` as the operating procedure.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
@@ -191,6 +192,34 @@ The strict 3-day target is complete locally across tracked tool and non-tool pag
 ### Objective
 
 Run AiPedia as a repeatable buyer-decision loop: cluster, verify, improve decision page, update hubs, check, record, repeat.
+
+## Active: Affiliate Conversion Page Buildout
+
+### Objective
+
+Create source-backed, mobile-first conversion pages around every tool with a configured affiliate link, while preserving AiPedia trust, avoiding thin doorway pages, and maximizing honest clicks/signups from June 2026 buyer intent.
+
+### Current Inventory
+
+- Source-of-truth command: `npm run affiliate:conversion:inventory`.
+- Money-guide audit command: `npm run audit:affiliate-conversion`.
+- Configured affiliate-link tools: 26.
+- Live-approved affiliate tools: 22.
+- Configured but not live-approved: 4.
+- First-pass scripted page budget: 108 pages, counting existing pages toward coverage when they already match a distinct buyer intent.
+- Existing money-guide audit baseline: 35 money guides, 0 hard errors, 245 warnings for missing new structured metadata fields.
+
+### Page System
+
+Use the existing `use-cases` guide route first unless a page clearly needs a new collection. Prioritize five archetypes only when distinct intent exists: specific ICP winner, workflow stack, same-job switcher, plan decision, and adjacent same-job comparison.
+
+### Next Implementation Slice
+
+1. Run the inventory and split tools into page batches by category and existing coverage.
+2. Repair approval metadata or defer monetization for configured-but-not-live tools.
+3. Implement the first five-page cluster for one approved tool with strong fit and existing source coverage.
+4. Add subagent review before finalizing the cluster: SEO/quality, visual/mobile, and accuracy.
+5. Update parent hubs, ledger, source registry, sitemap/LLM surfaces, and route QA before publishing.
 
 ### Next Candidate
 
