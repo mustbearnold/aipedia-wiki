@@ -10,8 +10,8 @@ pricing_model: free
 price_range: "N/A (discontinued)"
 status: dead
 launched: 2022-04
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: quarterly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-27
     volatility: low
     confidence: medium
   lifecycle_status:
@@ -38,7 +38,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-27
     volatility: low
     confidence: medium
   pricing_anchor:
@@ -46,7 +46,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-27
     volatility: low
     confidence: medium
   migration_surface:
@@ -54,7 +54,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-27
     volatility: low
     confidence: medium
   watch_out_for:
@@ -62,7 +62,7 @@ facts:
     source: "https://news.ycombinator.com/item?id=46594533"
     source_label: "Phind shutdown discussion"
     source_id: phind-official
-    verified_at: 2026-06-12
+    verified_at: 2026-06-27
     volatility: low
     confidence: high
 tags: [search-engine, developer-tools, coding, ai-search, discontinued, shutdown, phind-70b]
@@ -103,7 +103,7 @@ Phind was a developer-focused AI search engine built around the Phind-70B model.
 | **Shutdown context** | Closed roughly one month after a $10M funding round |
 | **Replacement tools** | Perplexity, ChatGPT, Claude, GitHub Copilot |
 
-Every data point above was re-verified as still offline against public shutdown reporting on 2026-06-12. See Sources.
+Every data point above was re-verified as still offline against public shutdown reporting on 2026-06-27. See Sources.
 
 ## What it actually was
 
@@ -135,7 +135,7 @@ No active pricing. Phind shut down January 16, 2026. Former pricing (for histori
 | Pro | $20/mo | Offline |
 | Business | $40/user/mo | Offline |
 
-Verified 2026-06-12 via [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533) and [Devtalk: Phind has shut down](https://devtalk.com/t/phind-has-shut-down/230488).
+Verified 2026-06-27 via [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533) and [Devtalk: Phind has shut down](https://devtalk.com/t/phind-has-shut-down/230488).
 
 ## Against the alternatives
 
@@ -158,7 +158,7 @@ Verified 2026-06-12 via [Phind shutdown on Hacker News](https://news.ycombinator
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-12 against [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533), [Devtalk shutdown thread](https://devtalk.com/t/phind-has-shut-down/230488), and [intelligenttools.co coverage](https://intelligenttools.co/tools/phind).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-27 against [Phind shutdown on Hacker News](https://news.ycombinator.com/item?id=46594533), [Devtalk shutdown thread](https://devtalk.com/t/phind-has-shut-down/230488), and [intelligenttools.co coverage](https://intelligenttools.co/tools/phind).
 
 ## FAQ
 

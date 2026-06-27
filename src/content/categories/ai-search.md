@@ -5,10 +5,10 @@ title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
 tool_count: 8
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 26, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 27, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-27
-last_verified: 2026-06-26
+last_verified: 2026-06-27
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -62,7 +62,7 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Morphic](/tools/morphic/) when the answer engine should be self-hosted.** The June 8 check found Morphic v1.4.0 as the latest stable GitHub release, Apache 2.0 licensing, about 8.9k stars, 2.3k forks, and no first-party public paid SaaS tier. It is not a Perplexity replacement for non-technical users; it is the forkable private answer-engine lane for teams that can own deployment, provider keys, search backends, and uptime.
 
-**June 8 Phind migration cleanup:** Phind is not a live AI search recommendation. AiPedia refreshed the stale Phind comparison routes so they no longer describe fake 2026 Phind pricing, model access, or context windows. Former Phind users should pick by replacement job: ChatGPT vs Phind for a broad assistant, Perplexity vs Phind for cited search, Kagi vs Phind for private paid search, Exa AI vs Phind for retrieval APIs, and Phind vs You.com for grounding/research APIs.
+**June 27 Phind migration cleanup:** Phind is not a live AI search recommendation. AiPedia rechecked the discontinued Phind route so it stays a migration reference, not a fake 2026 buying path. Former Phind users should pick by replacement job: ChatGPT vs Phind for a broad assistant, Perplexity vs Phind for cited search, Kagi vs Phind for private paid search, Exa AI vs Phind for retrieval APIs, and Phind vs You.com for grounding/research APIs.
 
 **Use [Genspark](/tools/genspark/) when search should become work output.** The June 25 membership check frames Genspark as an AI workspace with 100 daily free credits, Plus credit tiers starting at 10,000 credits/month, and Pro starting at 125,000 credits/month, built around Super Agent, documents, slides, sheets, calls, meetings, media, and AI Drive storage rather than a pure citation-first answer engine.
 
@@ -188,4 +188,4 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [xAI X Search docs](https://docs.x.ai/developers/tools/x-search) (verified 2026-06-15)
 - [X Premium+ pricing](https://help.x.com/en/premium-plus-price-update) (verified 2026-06-23)
 - [Bing AI-guided image search](https://blogs.bing.com/search/May-2026/A-Smarter-Way-to-Explore-Images-Has-Come-to-Bing) (verified 2026-05-26)
-- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-23)
+- [Phind shutdown retrospective](https://www.toolsforhumans.ai/ai-tools/phind) (verified 2026-06-27)

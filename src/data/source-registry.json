@@ -333,7 +333,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "low",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "ag2-build-with-ag2",
@@ -3860,7 +3860,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "dalle-best-paid-tier",
@@ -3869,7 +3869,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "dalle-image-generation",
@@ -3878,7 +3878,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "decktopus-official",
@@ -4112,7 +4112,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "dext-pricing",
@@ -4121,7 +4121,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "dia-best-for",
@@ -5893,7 +5893,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "grok-code-fast-pricing",
@@ -5902,7 +5902,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "groq-deprecations",
@@ -10171,7 +10171,8 @@
       "url": "https://news.ycombinator.com/item?id=46594533",
       "type": "third_party",
       "trust_tier": "secondary",
-      "volatility": "low"
+      "volatility": "low",
+      "last_checked": "2026-06-27"
     },
     {
       "id": "phind-shutdown-hn",
@@ -11671,7 +11672,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "semrush-pricing",
@@ -11680,7 +11681,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-20"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "servicenow-action-fabric-2026",
@@ -12523,7 +12524,7 @@
     },
     {
       "trust_tier": "secondary",
-      "last_checked": "2026-05-04",
+      "last_checked": "2026-06-27",
       "id": "tome-venturebeat-discontinued",
       "label": "VentureBeat on Tome discontinuation",
       "url": "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai",

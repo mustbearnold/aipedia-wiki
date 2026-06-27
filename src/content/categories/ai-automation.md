@@ -129,7 +129,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [GetResponse](/tools/getresponse/) when automation is email marketing, webinars, course funnels, and ecommerce nurture.** The June 25 check keeps Starter $19/month, Marketer $59/month, Creator $69/month, Enterprise custom, unlimited monthly email sends, and a 14-day free trial at the 1,000-contact selector. It is a marketing automation tool, not a general agent platform.
 
-**Use [Dext](/tools/dext/) when automation starts with bookkeeping document intake.** It is vertical pre-accounting automation for receipts, invoices, statements, expenses, and accounting handoff, not a general agent platform. Pricing still scales by users and document volume, with the 5-user/250-document baseline, add-on extraction allowances, and 14-day no-payment trial rechecked on June 23.
+**Use [Dext](/tools/dext/) when automation starts with bookkeeping document intake.** It is vertical pre-accounting automation for receipts, invoices, statements, expenses, and accounting handoff, not a general agent platform. Pricing still scales by users and document volume, with the 5-user/250-document baseline, add-on extraction allowances, and 14-day no-payment trial rechecked on June 27.
 
 **Use [Rows](/tools/rows/) when automation starts inside a spreadsheet.** The June 10 check keeps Free at 5 AI tasks/month, Plus at $8/user/month with 200 AI tasks/month, Pro at $79/month plus $8/user with 1,000 AI tasks/month, and Enterprise custom. Rows is strongest when an ops or marketing team wants AI Analyst, `=AI()` cells, Python blocks, and live SaaS data tables in one workbook; skip it when the job is Excel-grade modeling or broad backend workflow orchestration.
 
@@ -331,7 +331,7 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Hermes Agent GitHub releases](https://github.com/NousResearch/hermes-agent/releases) (verified 2026-06-23)
 - [Genspark membership plans](https://www.genspark.ai/helpcenter/membership-plans) (verified 2026-06-23)
 - [GetResponse pricing](https://www.getresponse.com/pricing) (verified 2026-06-23)
-- [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-23)
+- [Dext business plans](https://help.dext.com/en/articles/647776-dext-plans-for-businesses) (verified 2026-06-27)
 - [Rows pricing](https://rows.com/pricing) (verified 2026-06-10)
 - [Rows AI](https://rows.com/ai) (verified 2026-06-10)
 - [Eightfold Talent Acquisition](https://eightfold.ai/products/talent-acquisition/) (verified 2026-06-23)

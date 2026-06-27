@@ -7,7 +7,7 @@ tool_count: 9
 seo_title: "Best AI SEO Tools (June 2026): SEO, GEO, Content Optimization"
 meta_description: "Updated June 27, 2026: compare AI SEO and GEO tools by buyer fit, pricing, Search Console evidence, AI visibility, paid-creative workflow, source-review controls, and current Frase/MarketMuse positioning."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-26
+last_updated: 2026-06-27
 last_verified: 2026-06-27
 update_frequency: weekly
 top_picks:

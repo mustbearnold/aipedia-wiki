@@ -1025,7 +1025,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ### 2026-06-27: Page Refresh Batch 12
 
-- Status: Complete locally, verified, pending commit and push.
+- Status: Complete and pushed.
 - Branch: `master`.
 - Changed: Refreshed the final 18 non-tool stale routes for the strict 3-day target: 13 guides, Anthropic company profile, GitHub Copilot vs Supermaven, `/media-kit/`, `/workflows/design-agency-replacement/`, and `/sitemap-index.xml`.
 - Source repair: Replaced the slow Adobe generative credits FAQ citation with the current Adobe Firefly plans and credits page on affected guide pages, then reran source health successfully.
@@ -1033,3 +1033,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `runner:page-refresh:closeout` passed in 76.818s with 218 source URLs, 193 ok, 25 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed in 9.384s for seven routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
 - Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-12.md`.
 - Next: Finish the final six stale tool rows with `$aipedia-tool-refresh-workflow` and the Rust runner.
+
+### 2026-06-27: Final Six Tool Refresh
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed the final six stale tracked tool rows for the strict 3-day target: Phind, Tome, Semrush Demo, DALL-E, Dext, and Grok Code Fast. Updated affected category hubs, `/`, `/tools/`, `/categories/`, `src/data/source-registry.json`, and `PAGE_REFRESH_LEDGER.md`.
+- Accuracy notes: Semrush Demo remains an archived noindex page and was checked separately with `--allow-noindex`. Grok Code Fast now carries a current xAI-docs conflict caveat instead of asserting a specific redirect target. DALL-E now points at the current OpenAI API deprecations docs URL.
+- Verification: final stale count script passed with 548 tracked rows and 0 stale rows; tool source audit passed for nine source IDs; Semrush archive source audit passed for three source IDs; `runner:tool-refresh:closeout` passed in 51.520s; supplemental route QA passed for `/tools/semrush-demo/` and `/categories/ai-chatbots/`.
+- Durable receipt: `.agent/loop-runs/2026-06-27-final-six-tool-refresh.md`.
+- Next: Commit, push `master`, mark the strict 3-day goal complete, then start the next optimization loop from the now-fresh baseline.
