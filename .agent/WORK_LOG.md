@@ -1,5 +1,18 @@
 # AiPedia Work Log
 
+### 2026-06-27: Dext Affiliate Plan Guide Slice
+
+- Status: Verified locally and accepted by visual/mobile and accuracy subagents at 9.9/10, pending commit.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `/guides/dext-pricing-for-bookkeeping-firms/` as the first new affiliate conversion page after the 35-guide metadata foundation. The page targets the Dext Practice vs Dext Business pricing decision for bookkeeping firms, solo bookkeepers, and one-company finance workflows. Updated the AI Automation category hub to route Dext buyers into the new plan guide, corrected the sibling receipt guide's Hubdoc positioning, and regenerated `PAGE_REFRESH_LEDGER.md`.
+- Accuracy notes: Dext business-plan claims are based on the Dext help article and current public business pricing route. Practice-plan claims are based on the current Dext partner pricing route and partner overview. Hubdoc is now described as Xero-included for eligible Xero business-edition subscriptions or standalone at $12/month, with no QuickBooks-bundled claim. AutoEntry exact credit claims use AutoEntry help and pricing pages; the blocked Sage U.S. page was not used after it returned 403 from this runner.
+- Timing: Focused source health checked 188 source URLs across the new Dext guide, receipt sibling, and AI Automation hub in 18.459s, with 184 ok, 4 access-sensitive, 0 broken, and 0 unreachable. Final route QA checked 6 routes across 319, 360, 390, 430, 768, 1024, and 1366 px in 7.305s. Slowest route totals were `/categories/ai-automation/` at 7.369s and `/guides/dext-pricing-for-bookkeeping-firms/` at 7.237s.
+- Review: Visual/mobile subagent accepted at 9.9/10 after noting the new guide should use `related` instead of `related_links`; that polish is fixed. Accuracy/SEO subagent rejected the first pass over unsupported Hubdoc QuickBooks-bundling claims, then accepted at 9.9/10 after Hubdoc was narrowed to Xero-included or standalone positioning and current supporting sources were added.
+- Verification: `AIPEDIA_CURRENT_DATE=2026-06-27 npm run --silent audit:affiliate-conversion -- --strict --json`; `npm run check:frontmatter`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run ledger:pages && npm run ledger:pages:check`; `npm run typecheck`; `npm run page:source-health -- --plan local/tmp/dext-affiliate-source-health-plan.json --out local/tmp/dext-affiliate-source-health.json --concurrency 6 --timeout-ms 10000 --domain-delay-ms 150`; `npm run build:fast`; `node scripts/qa-route.mjs --site-dir .vercel/output/static --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /guides/dext-pricing-for-bookkeeping-firms/ --route /guides/best-ai-receipt-tool-for-bookkeepers/ --route /categories/ai-automation/ --route /guides/ --route /tools/dext/ --route /workflows/accountant-stack/ --timing-file local/tmp/dext-affiliate-route-qa-timing.json`.
+- Residual risks: This is the first page in the Dext cluster, not the full affiliate-page objective.
+- Next: Commit and push, then continue Dext or another high-fit approved affiliate cluster from the current inventory.
+
 ### 2026-06-27: Non-Tool Page Refresh Batch 04
 
 - Status: Complete and verified locally.
