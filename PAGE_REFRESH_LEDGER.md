@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-27
-Tracked public pages and crawl surfaces: 551
+Tracked public pages and crawl surfaces: 552
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -490,6 +490,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/best-ai-tools-under-50-month/ | Guide | No | frontmatter | src/content/use-cases/best-ai-tools-under-50-month.md |
 | 2026-06-27 | /guides/best-ai-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-video-generator.md |
 | 2026-06-27 | /guides/best-ai-voice-youtube/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-voice-youtube.md |
+| 2026-06-27 | /guides/best-client-document-collection-tool-for-bookkeeping-firms/ | Guide | Yes | working tree | src/content/use-cases/best-client-document-collection-tool-for-bookkeeping-firms.md |
 | 2026-06-27 | /guides/best-free-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-free-ai-tools.md |
 | 2026-06-27 | /guides/best-open-source-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-open-source-ai-tools.md |
 | 2026-06-27 | /guides/best-pay-as-you-go-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-pay-as-you-go-ai-tools.md |

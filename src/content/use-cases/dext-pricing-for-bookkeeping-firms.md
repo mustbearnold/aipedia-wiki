@@ -92,6 +92,9 @@ related:
   - href: /guides/dext-vs-autoentry-for-sage-bookkeepers/
     title: "Dext vs AutoEntry for Sage bookkeepers"
     description: "Switcher guide for Sage-heavy firms choosing between Dext and AutoEntry."
+  - href: /guides/best-client-document-collection-tool-for-bookkeeping-firms/
+    title: "Best client document collection tool for bookkeeping firms"
+    description: "Workflow guide for firms standardizing client document intake around Dext."
   - href: /workflows/accountant-stack/
     title: "Accountant AI stack"
     description: "Dext with scheduling and inbox tools for multi-client practices."
@@ -106,6 +109,8 @@ author: "aipedia.wiki Editorial"
 If you are a bookkeeping firm, the question is not "is Dext cheap?" The better question is whether Dext removes enough receipt, invoice, statement, and client-chasing work to justify a practice workflow.
 
 AiPedia verified Dext's public business pricing, practice pricing, partner pages, and business-plan help article on June 27, 2026. Dext still separates business buyers from accounting-practice buyers. Business plans are organized around users and monthly document volume. Practice pricing uses a plan builder for accounting and bookkeeping firms, with features, client count, credits, support, and workflow needs shaping the quote.
+
+If the buyer is still deciding whether client document collection is the right Dext use case at all, start with the [client document collection workflow guide](/guides/best-client-document-collection-tool-for-bookkeeping-firms/) before comparing plan paths.
 
 ## Quick Verdict
 

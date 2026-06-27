@@ -12,6 +12,10 @@ last_updated: 2026-06-27
 last_verified: 2026-06-27
 update_frequency: monthly
 related:
+  - href: /guides/best-client-document-collection-tool-for-bookkeeping-firms/
+    title: "Best Client Document Collection Tool for Bookkeeping Firms"
+    description: "Dext-led workflow guide for standardizing client document intake."
+    kind: guide
   - href: /guides/best-ai-receipt-tool-for-bookkeepers/
     title: "Best AI Receipt Tool for Bookkeepers"
     description: "Dext deep dive plus Hubdoc and AutoEntry alternatives."
@@ -39,6 +43,8 @@ related:
 A bookkeeper or accountant running multiple client books has a specific constraint: time on receipt entry is time not spent on client advisory. The right AI stack collapses the data-entry layer, defends the deep-work blocks where the actual accounting happens, and triages the email noise that comes with juggling 10-50 client relationships.
 
 AiPedia verified pricing on June 27, 2026.
+
+If the immediate bottleneck is client document intake rather than the whole stack, start with the [client document collection workflow guide](/guides/best-client-document-collection-tool-for-bookkeeping-firms/) and then layer calendar and inbox tools after the Dext workflow is working.
 
 ## Function by function
 
@@ -178,5 +184,6 @@ Internal references:
 - [Reclaim.ai tool page](/tools/reclaim-ai/)
 - [SaneBox tool page](/tools/sanebox/)
 - [Best AI receipt tool for bookkeepers](/guides/best-ai-receipt-tool-for-bookkeepers/)
+- [Best client document collection tool for bookkeeping firms](/guides/best-client-document-collection-tool-for-bookkeeping-firms/)
 - [Dext vs AutoEntry for Sage bookkeepers](/guides/dext-vs-autoentry-for-sage-bookkeepers/)
 - [Best AI tools for accountants](/guides/best-ai-tools-for-accountants/)

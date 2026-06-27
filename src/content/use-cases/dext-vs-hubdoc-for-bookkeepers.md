@@ -100,6 +100,10 @@ related:
     title: "Dext vs AutoEntry for Sage bookkeepers"
     description: "Switcher guide for Sage-heavy firms comparing Dext with AutoEntry."
     kind: guide
+  - href: /guides/best-client-document-collection-tool-for-bookkeeping-firms/
+    title: "Best client document collection tool for bookkeeping firms"
+    description: "Workflow guide for firms standardizing client document intake around Dext."
+    kind: guide
   - href: /workflows/accountant-stack/
     title: "Accountant AI stack"
     description: "Where Dext fits inside a practical accounting workflow."
@@ -121,6 +125,8 @@ AiPedia rechecked Dext business pricing, Dext practice pricing, Dext's business-
 Use [Dext](/tools/dext/) if the buyer is a bookkeeping firm, handles multiple client books, needs review before posting, or has enough recurring receipt and invoice volume that staff time is the expensive part.
 
 Use Hubdoc first if the buyer only needs light document capture, can confirm Hubdoc is available through the current Xero setup, or wants the standalone $12/month Hubdoc path before buying a heavier practice workflow.
+
+If the buyer is not yet comparing brands and mainly needs a firm-wide intake process, use the [client document collection workflow guide](/guides/best-client-document-collection-tool-for-bookkeeping-firms/) instead.
 
 Do not treat Hubdoc as free with QuickBooks unless the current Intuit account or current Intuit source proves that for the buyer. Hubdoc's public QuickBooks page verifies QuickBooks Online sync, not plan inclusion.
 

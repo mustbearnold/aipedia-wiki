@@ -1,5 +1,18 @@
 # AiPedia Work Log
 
+### 2026-06-27: Dext Client Document Collection Workflow Slice
+
+- Status: Verified locally and accepted by accuracy/SEO, affiliate trust, and visual/mobile subagents at 9.9/10, pending final push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `/guides/best-client-document-collection-tool-for-bookkeeping-firms/` as the fifth distinct first-pass Dext affiliate cluster page. The page targets multi-client bookkeeping firms that need one workflow for client submissions, document extraction, review, approvals, statement handling, and accounting handoff. Updated AI Automation, the Dext tool page, the accountant stack workflow, Dext pricing, Dext vs Hubdoc, Dext vs AutoEntry, the broad receipt-tool guide, and `PAGE_REFRESH_LEDGER.md`.
+- Accuracy notes: Dext remains the affiliate best-overall pick only for practice-grade client document collection. Hubdoc is the lighter non-affiliate capture alternative backed by official Hubdoc pricing and QuickBooks pages. AutoEntry is retained as the narrow Sage-heavy credit-style alternative. The page avoids exact AutoEntry pricing and keeps Dext pricing detail in the sibling plan guide.
+- Timing: Source health checked 233 source URLs in 21.583s, with 227 ok, 6 access-sensitive, 0 broken, and 0 unreachable. Clean `build:fast` completed in 13.3s after generated `dist-fast` and `.vercel/output` directories were cleaned. Route QA checked 9 routes across 319, 360, 390, 430, 768, 1024, and 1366 px in 15.586s; the new guide took 7.063s cumulative across widths with a 1.017s max single-width check.
+- Review: Accuracy/SEO accepted at 9.9/10 after the Hubdoc source fix. Affiliate trust initially rejected at 9.8/10 only because rendered output was missing during a stale partial build state, then accepted at 9.9/10 after clean build and route QA evidence. Visual/mobile accepted at 9.9/10 after additional geometry and screenshot inspection against `dist-fast/client`.
+- Verification: `npm run check:frontmatter`; `node scripts/audit-guide-picks.mjs --json`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run --silent audit:affiliate-conversion -- --strict --json`; `npm run ledger:pages && npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run page:source-health -- --plan local/tmp/dext-client-document-source-health-plan.json --out local/tmp/dext-client-document-source-health.json --concurrency 6 --timeout-ms 10000 --domain-delay-ms 150`; `npm run typecheck`; `rm -rf dist-fast .vercel/output && npm run build:fast`; `npm run qa:route -- --route /guides/best-client-document-collection-tool-for-bookkeeping-firms/ --route /guides/dext-pricing-for-bookkeeping-firms/ --route /guides/dext-vs-hubdoc-for-bookkeepers/ --route /guides/dext-vs-autoentry-for-sage-bookkeepers/ --route /guides/best-ai-receipt-tool-for-bookkeepers/ --route /categories/ai-automation/ --route /guides/ --route /tools/dext/ --route /workflows/accountant-stack/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4 --timing-file local/tmp/dext-client-document-route-qa-timing.json`.
+- Residual risks: This completes the first-pass Dext cluster, not the full every-affiliate-tool objective.
+- Next: Commit and push after final subagent closeout, then move to the next approved affiliate tool cluster from `npm run affiliate:conversion:inventory`.
+
 ### 2026-06-27: Dext vs AutoEntry Sage Bookkeeper Slice
 
 - Status: Verified locally and accepted by visual/mobile and accuracy subagents at 9.9/10.

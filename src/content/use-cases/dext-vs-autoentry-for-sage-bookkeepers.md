@@ -105,6 +105,10 @@ related:
     title: "Best AI receipt tool for bookkeepers"
     description: "Broader receipt-capture guide across Dext, Hubdoc, AutoEntry, and built-in accounting tools."
     kind: guide
+  - href: /guides/best-client-document-collection-tool-for-bookkeeping-firms/
+    title: "Best client document collection tool for bookkeeping firms"
+    description: "Workflow guide for firms standardizing client document intake around Dext."
+    kind: guide
   - href: /workflows/accountant-stack/
     title: "Accountant AI stack"
     description: "Where Dext fits inside a practical accounting workflow."
@@ -126,6 +130,8 @@ AiPedia rechecked Dext's business-plan help article, Dext practice pricing, Auto
 Use [Dext](/tools/dext/) if the buyer is a bookkeeping firm that handles multiple client books, works across Sage plus Xero or QuickBooks, and needs client submission, review, supplier rules, approvals, and practice controls in one workflow.
 
 Use AutoEntry first if the buyer is Sage-native, wants a credit-style capture model, or needs to model invoices, receipts, line items, supplier statements, and bank statement pages before paying for a heavier Dext practice setup.
+
+If the buyer is not yet choosing between Dext and AutoEntry, start with the [client document collection workflow guide](/guides/best-client-document-collection-tool-for-bookkeeping-firms/) to decide whether a Dext-led practice intake process is the right job.
 
 Do not choose by sticker price alone. For this buyer, the better question is which tool reduces staff review time, client chasing, and statement-processing friction without breaking the accounting workflow.
 

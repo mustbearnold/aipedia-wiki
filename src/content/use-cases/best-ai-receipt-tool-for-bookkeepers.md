@@ -91,6 +91,10 @@ related:
     title: "Dext vs AutoEntry for Sage Bookkeepers"
     description: "Which capture workflow fits Sage-heavy firms by credit usage, statement volume, and practice controls."
     kind: guide
+  - href: /guides/best-client-document-collection-tool-for-bookkeeping-firms/
+    title: "Best Client Document Collection Tool for Bookkeeping Firms"
+    description: "Workflow guide for firms standardizing client document intake around Dext."
+    kind: guide
   - href: /workflows/accountant-stack/
     title: "Bookkeeper and Accountant AI Stack"
     description: "Dext plus Reclaim and SaneBox for accounting practices."
@@ -116,6 +120,8 @@ The short version: **Dext** is AiPedia's pick for high-volume bookkeeping becaus
 ## Quick Verdict
 
 Use [Dext](/tools/dext/) when receipt and invoice volume is the bottleneck and the books need to land in QuickBooks, Xero, Sage, or another major platform with clean line-item data. Dext's OCR-plus-AI extraction handles the messy mix of formats that real bookkeeping involves.
+
+If the real problem is firm-wide client document collection rather than tool comparison, use the [client document collection workflow guide](/guides/best-client-document-collection-tool-for-bookkeeping-firms/) before choosing a Dext plan or alternative.
 
 Use Hubdoc if you are already on a Xero business-edition subscription that includes Hubdoc, or if the standalone $12/month Hubdoc plan is enough for basic receipt and bill capture. Hubdoc also syncs with QuickBooks Online, but AiPedia did not verify a current QuickBooks bundle.
 
