@@ -83,6 +83,10 @@ related:
     title: "Dext review"
     description: "Full editorial review of the OCR receipt and invoice extraction tool."
     kind: tool
+  - href: /guides/dext-vs-hubdoc-for-bookkeepers/
+    title: "Dext vs Hubdoc for Bookkeepers"
+    description: "Which receipt-capture workflow fits by client count, Xero or QuickBooks setup, and document volume."
+    kind: guide
   - href: /workflows/accountant-stack/
     title: "Bookkeeper and Accountant AI Stack"
     description: "Dext plus Reclaim and SaneBox for accounting practices."

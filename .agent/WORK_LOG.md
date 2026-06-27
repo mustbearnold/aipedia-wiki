@@ -1,9 +1,22 @@
 # AiPedia Work Log
 
+### 2026-06-27: Dext vs Hubdoc Affiliate Switcher Slice
+
+- Status: Verified locally and accepted by visual/mobile and accuracy subagents at 9.9/10.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Added `/guides/dext-vs-hubdoc-for-bookkeepers/` as the second Dext affiliate conversion page. The page targets the same-job Dext vs Hubdoc decision for bookkeepers, solo finance operators, and small accounting firms. Updated the Dext pricing guide, receipt-tool guide, AI Automation category hub, and `PAGE_REFRESH_LEDGER.md`.
+- Accuracy notes: The new guide recommends Dext only for multi-client, review-heavy, practice-grade workflows. Hubdoc is presented as a non-affiliate light-capture alternative when the buyer can confirm Xero availability, only needs QuickBooks Online sync, or wants the standalone $12/month Hubdoc route first. The page avoids claiming Hubdoc is included with QuickBooks. Accuracy review rejected the first rendered guide-pick version because Dext was still shown as the "Budget pick"; fixed by adding external non-affiliate guide picks to the schema, renderer, and audit, then making Hubdoc the rendered budget/light-capture pick with an official Hubdoc pricing CTA.
+- Timing: Focused source health checked 194 source URLs across the Dext switcher, Dext pricing guide, receipt-tool guide, and AI Automation hub in 20.018s, with 188 ok, 6 access-sensitive, 0 broken, and 0 unreachable. Route QA checked 7 routes across 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Review: Visual/mobile accepted at 9.9/10 with clean layout and route QA across 319 to 1366 px. Accuracy/SEO rejected the first rendered version because the budget guide-pick card still monetized Dext despite the body recommending Hubdoc for budget/light-capture cases; after the external-pick fix, accuracy rereview accepted at 9.9/10 and verified the built Hubdoc budget CTA is official, non-affiliate, and not tied to Dext.
+- Verification: `npm exec --yes --package=node@24 -- node --test tests/scripts/audit-guide-picks.test.mjs`; `npm run check:frontmatter`; `node scripts/audit-guide-picks.mjs --json`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run --silent audit:affiliate-conversion -- --strict --json`; `npm run ledger:pages:check`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run typecheck`; `npm run page:source-health -- --plan local/tmp/dext-vs-hubdoc-source-health-plan.json --out local/tmp/dext-vs-hubdoc-source-health.json --concurrency 6 --timeout-ms 10000 --domain-delay-ms 150`; `npm run build:fast`; `node scripts/qa-route.mjs --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /guides/dext-vs-hubdoc-for-bookkeepers/ --route /guides/dext-pricing-for-bookkeeping-firms/ --route /guides/best-ai-receipt-tool-for-bookkeepers/ --route /categories/ai-automation/ --route /guides/ --route /tools/dext/ --route /workflows/accountant-stack/ --timing-file local/tmp/dext-vs-hubdoc-route-qa-timing.json`.
+- Residual risks: This is still only the Dext cluster's second new page, not the full affiliate-page objective.
+- Next: Apply any subagent review fixes, rerun focused gates if needed, commit, push, then continue the affiliate buildout.
+
 ### 2026-06-27: Dext Affiliate Plan Guide Slice
 
-- Status: Verified locally and accepted by visual/mobile and accuracy subagents at 9.9/10, pending commit.
-- Commit: this commit.
+- Status: Complete and pushed.
+- Commit: `a720ded8f`.
 - Branch: `master`.
 - Changed: Added `/guides/dext-pricing-for-bookkeeping-firms/` as the first new affiliate conversion page after the 35-guide metadata foundation. The page targets the Dext Practice vs Dext Business pricing decision for bookkeeping firms, solo bookkeepers, and one-company finance workflows. Updated the AI Automation category hub to route Dext buyers into the new plan guide, corrected the sibling receipt guide's Hubdoc positioning, and regenerated `PAGE_REFRESH_LEDGER.md`.
 - Accuracy notes: Dext business-plan claims are based on the Dext help article and current public business pricing route. Practice-plan claims are based on the current Dext partner pricing route and partner overview. Hubdoc is now described as Xero-included for eligible Xero business-edition subscriptions or standalone at $12/month, with no QuickBooks-bundled claim. AutoEntry exact credit claims use AutoEntry help and pricing pages; the blocked Sage U.S. page was not used after it returned 403 from this runner.

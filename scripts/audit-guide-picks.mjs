@@ -40,7 +40,7 @@ const DEFAULT_REQUIRED_GUIDES = [
 ];
 
 const REQUIRED_SLOTS = ['best_overall', 'budget', 'pro_team'];
-const REQUIRED_PICK_FIELDS = ['tool', 'reason'];
+const REQUIRED_PICK_FIELDS = ['reason'];
 
 function valueFor(name) {
   const equalsArg = args.find((arg) => arg.startsWith(`${name}=`));
@@ -278,6 +278,24 @@ for (const guide of guideBySlug.values()) {
     for (const field of REQUIRED_PICK_FIELDS) {
       if (!String(pick[field] ?? '').trim()) {
         issues.push({ code: 'guide-pick-field-missing', guide: guide.slug, file: rel(guide.path), detail: `${slot}.${field}` });
+      }
+    }
+
+    const hasLocalTool = Boolean(String(pick.tool ?? '').trim());
+    const hasExternalPick = Boolean(String(pick.external_name ?? '').trim() || String(pick.external_url ?? '').trim());
+    if (!hasLocalTool && !hasExternalPick) {
+      issues.push({ code: 'guide-pick-target-missing', guide: guide.slug, file: rel(guide.path), detail: slot });
+    }
+    if (hasLocalTool && hasExternalPick) {
+      issues.push({ code: 'guide-pick-target-ambiguous', guide: guide.slug, file: rel(guide.path), detail: slot });
+    }
+    if (!hasLocalTool && hasExternalPick) {
+      if (!String(pick.external_name ?? '').trim()) {
+        issues.push({ code: 'guide-pick-external-name-missing', guide: guide.slug, file: rel(guide.path), detail: slot });
+      }
+      const externalUrl = String(pick.external_url ?? '').trim();
+      if (!/^https:\/\/[^/]+\S*/i.test(externalUrl)) {
+        issues.push({ code: 'guide-pick-external-url-invalid', guide: guide.slug, file: rel(guide.path), detail: `${slot}: ${externalUrl || '(empty)'}` });
       }
     }
 

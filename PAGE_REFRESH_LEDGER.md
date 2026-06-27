@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-27
-Tracked public pages and crawl surfaces: 549
+Tracked public pages and crawl surfaces: 550
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -503,6 +503,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/cursor-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/cursor-alternatives.md |
 | 2026-06-27 | /guides/deepseek-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/deepseek-alternatives.md |
 | 2026-06-27 | /guides/dext-pricing-for-bookkeeping-firms/ | Guide | Yes | working tree | src/content/use-cases/dext-pricing-for-bookkeeping-firms.md |
+| 2026-06-27 | /guides/dext-vs-hubdoc-for-bookkeepers/ | Guide | Yes | working tree | src/content/use-cases/dext-vs-hubdoc-for-bookkeepers.md |
 | 2026-06-27 | /guides/elevenlabs-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/elevenlabs-alternatives.md |
 | 2026-06-27 | /guides/gemini-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/gemini-alternatives.md |
 | 2026-06-27 | /guides/github-copilot-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/github-copilot-alternatives.md |

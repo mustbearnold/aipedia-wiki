@@ -47,16 +47,32 @@ const toolFacts = z.object({
   watch_out_for: toolFact.optional(),
 }).passthrough().optional();
 
-const guideDecisionPick = z.object({
+const guideDecisionPickSource = z.object({
+  label: z.string(),
+  url: z.string().url(),
+});
+
+const localGuideDecisionPick = z.object({
   tool: z.string(),
   label: z.string().optional(),
   plan: z.string().optional(),
   reason: z.string(),
-  sources: z.array(z.object({
-    label: z.string(),
-    url: z.string().url(),
-  })).optional(),
+  cta_label: z.string().optional(),
+  sources: z.array(guideDecisionPickSource).optional(),
 }).passthrough();
+
+const externalGuideDecisionPick = z.object({
+  external_name: z.string(),
+  external_slug: z.string().optional(),
+  external_url: z.string().url(),
+  label: z.string().optional(),
+  plan: z.string().optional(),
+  reason: z.string(),
+  cta_label: z.string().optional(),
+  sources: z.array(guideDecisionPickSource).optional(),
+}).passthrough();
+
+const guideDecisionPick = z.union([localGuideDecisionPick, externalGuideDecisionPick]);
 
 const decisionPick = z.object({
   tool: z.string(),

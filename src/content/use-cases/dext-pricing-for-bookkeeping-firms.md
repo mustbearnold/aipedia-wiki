@@ -86,6 +86,9 @@ related:
   - href: /guides/best-ai-receipt-tool-for-bookkeepers/
     title: "Best AI receipt tool for bookkeepers"
     description: "Broader comparison of Dext, Hubdoc, AutoEntry, and receipt-capture alternatives."
+  - href: /guides/dext-vs-hubdoc-for-bookkeepers/
+    title: "Dext vs Hubdoc for bookkeepers"
+    description: "Switcher guide for firms choosing between Dext and Hubdoc."
   - href: /workflows/accountant-stack/
     title: "Accountant AI stack"
     description: "Dext with scheduling and inbox tools for multi-client practices."
@@ -154,7 +157,7 @@ If the firm cannot name that bottleneck, do not buy the heavier plan yet.
 
 ## When Hubdoc or AutoEntry May Be Better
 
-Hubdoc is worth checking when the buyer is already deep in QuickBooks or Xero and the job is basic receipt and bill capture. Hubdoc's QuickBooks page positions it as a document sync layer that publishes receipts and bills into QuickBooks Online with source documents attached.
+Hubdoc is worth checking when the buyer is already deep in QuickBooks or Xero and the job is basic receipt and bill capture. Hubdoc's QuickBooks page positions it as a document sync layer that publishes receipts and bills into QuickBooks Online with source documents attached. Use the [Dext vs Hubdoc guide](/guides/dext-vs-hubdoc-for-bookkeepers/) when the buyer is deciding between light capture and a practice-grade Dext workflow.
 
 AutoEntry is worth checking when the firm wants usage-based credit pricing and strong Sage alignment. AutoEntry's help and pricing pages describe credit usage by document type: one credit for an invoice or receipt, two credits for line-item extraction or supplier statements, and three credits for a bank or credit-card statement page.
 

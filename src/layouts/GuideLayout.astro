@@ -39,11 +39,24 @@ interface ToolData {
 }
 
 interface GuidePickData {
-  tool: string;
+  tool?: string;
+  external_name?: string;
+  external_slug?: string;
+  external_url?: string;
   label?: string;
   plan?: string;
   reason: string;
+  cta_label?: string;
   sources?: Array<{ label: string; url: string }>;
+}
+
+interface RenderedGuidePick {
+  title: string;
+  slug: string;
+  url?: string | null;
+  reason?: string;
+  ctaLabel: string;
+  tool?: ToolData;
 }
 
 interface RelatedItem {
@@ -102,6 +115,40 @@ function pickFromGuide(pickSlug?: string): ToolData | undefined {
   return tools.find((t) => t.slug === pickSlug);
 }
 
+function externalSlug(name?: string): string {
+  return String(name ?? 'external-pick')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'external-pick';
+}
+
+function renderedGuidePick(pick?: GuidePickData): RenderedGuidePick | undefined {
+  if (!pick) return undefined;
+  const localTool = pickFromGuide(pick.tool);
+  if (localTool) {
+    return {
+      title: localTool.title,
+      slug: localTool.slug,
+      url: localTool.url ?? null,
+      reason: pick.reason,
+      ctaLabel: pick.cta_label ?? `See ${localTool.title} plans`,
+      tool: localTool,
+    };
+  }
+
+  if (pick.external_name && pick.external_url) {
+    return {
+      title: pick.external_name,
+      slug: pick.external_slug ?? externalSlug(pick.external_name),
+      url: pick.external_url,
+      reason: pick.reason,
+      ctaLabel: pick.cta_label ?? `See ${pick.external_name} plans`,
+    };
+  }
+
+  return undefined;
+}
+
 // Featured pick: configured best_overall, fallback to highest score
 const bestOverallSlug = guidePicks?.best_overall?.tool;
 const featuredTool: ToolData | undefined = bestOverallSlug
@@ -120,8 +167,8 @@ const featuredSummary = featuredPlan
 // Optional tier picks: render their own decision cards if frontmatter
 // provided them, so each tier surfaces its own CTA at the audit-expected
 // placement (guide_decision_budget / guide_decision_pro_team).
-const budgetPickTool = pickFromGuide(guidePicks?.budget?.tool);
-const proTeamPickTool = pickFromGuide(guidePicks?.pro_team?.tool);
+const budgetPick = renderedGuidePick(guidePicks?.budget);
+const proTeamPick = renderedGuidePick(guidePicks?.pro_team);
 
 const breadcrumbLdItems = [
   { name: 'Home', url: siteBase },
@@ -241,59 +288,59 @@ const relatedItems = related.length > 0 ? related : fallbackRelated;
       <p class="gt-sub"><strong>Why:</strong> {featuredReason}</p>
     )}
 
-    {(budgetPickTool || proTeamPickTool) && (
+    {(budgetPick || proTeamPick) && (
       <section class="gt-guide-tiers" aria-labelledby="gt-guide-tiers-h">
         <h2 id="gt-guide-tiers-h" class="gt-section-h">By budget tier</h2>
         <div class="gt-guide-tier-grid">
-          {budgetPickTool && (
+          {budgetPick && (
             <article class="gt-guide-tier-card gt-guide-tier-card-budget">
               <p class="gt-guide-tier-kicker">Budget pick</p>
-              <strong class="gt-guide-tier-title">{budgetPickTool.title}</strong>
-              {guidePicks?.budget?.reason && (
-                <p class="gt-guide-tier-reason">{guidePicks.budget.reason}</p>
+              <strong class="gt-guide-tier-title">{budgetPick.title}</strong>
+              {budgetPick.reason && (
+                <p class="gt-guide-tier-reason">{budgetPick.reason}</p>
               )}
               <CommercialCTA
-                toolName={budgetPickTool.title}
-                toolSlug={budgetPickTool.slug}
-                canonicalUrl={budgetPickTool.url ?? null}
-                affiliateUrl={budgetPickTool.affiliate?.link ?? null}
-                affiliateStatus={budgetPickTool.affiliate?.application_status ?? null}
-                affiliateProgram={budgetPickTool.affiliate?.network ?? null}
-                label={`See ${budgetPickTool.title} plans`}
-                pricingModel={budgetPickTool.pricing_model ?? null}
-                priceRange={budgetPickTool.price_range ?? null}
+                toolName={budgetPick.title}
+                toolSlug={budgetPick.slug}
+                canonicalUrl={budgetPick.url ?? null}
+                affiliateUrl={budgetPick.tool?.affiliate?.link ?? null}
+                affiliateStatus={budgetPick.tool?.affiliate?.application_status ?? null}
+                affiliateProgram={budgetPick.tool?.affiliate?.network ?? null}
+                label={budgetPick.ctaLabel}
+                pricingModel={budgetPick.tool?.pricing_model ?? null}
+                priceRange={budgetPick.tool?.price_range ?? null}
                 pageType="guide"
                 placement="guide_decision_budget"
                 pageSlug={slug}
                 className="gt-btn gt-btn-secondary gt-guide-tier-cta"
-                showDisclosure={budgetPickTool.affiliate?.application_status === 'approved' && Boolean(budgetPickTool.affiliate?.link)}
+                showDisclosure={budgetPick.tool?.affiliate?.application_status === 'approved' && Boolean(budgetPick.tool?.affiliate?.link)}
                 guideCtaMarker
                 arrow="→"
               />
             </article>
           )}
-          {proTeamPickTool && (
+          {proTeamPick && (
             <article class="gt-guide-tier-card gt-guide-tier-card-pro">
               <p class="gt-guide-tier-kicker">Pro / team pick</p>
-              <strong class="gt-guide-tier-title">{proTeamPickTool.title}</strong>
-              {guidePicks?.pro_team?.reason && (
-                <p class="gt-guide-tier-reason">{guidePicks.pro_team.reason}</p>
+              <strong class="gt-guide-tier-title">{proTeamPick.title}</strong>
+              {proTeamPick.reason && (
+                <p class="gt-guide-tier-reason">{proTeamPick.reason}</p>
               )}
               <CommercialCTA
-                toolName={proTeamPickTool.title}
-                toolSlug={proTeamPickTool.slug}
-                canonicalUrl={proTeamPickTool.url ?? null}
-                affiliateUrl={proTeamPickTool.affiliate?.link ?? null}
-                affiliateStatus={proTeamPickTool.affiliate?.application_status ?? null}
-                affiliateProgram={proTeamPickTool.affiliate?.network ?? null}
-                label={`See ${proTeamPickTool.title} plans`}
-                pricingModel={proTeamPickTool.pricing_model ?? null}
-                priceRange={proTeamPickTool.price_range ?? null}
+                toolName={proTeamPick.title}
+                toolSlug={proTeamPick.slug}
+                canonicalUrl={proTeamPick.url ?? null}
+                affiliateUrl={proTeamPick.tool?.affiliate?.link ?? null}
+                affiliateStatus={proTeamPick.tool?.affiliate?.application_status ?? null}
+                affiliateProgram={proTeamPick.tool?.affiliate?.network ?? null}
+                label={proTeamPick.ctaLabel}
+                pricingModel={proTeamPick.tool?.pricing_model ?? null}
+                priceRange={proTeamPick.tool?.price_range ?? null}
                 pageType="guide"
                 placement="guide_decision_pro_team"
                 pageSlug={slug}
                 className="gt-btn gt-btn-secondary gt-guide-tier-cta"
-                showDisclosure={proTeamPickTool.affiliate?.application_status === 'approved' && Boolean(proTeamPickTool.affiliate?.link)}
+                showDisclosure={proTeamPick.tool?.affiliate?.application_status === 'approved' && Boolean(proTeamPick.tool?.affiliate?.link)}
                 guideCtaMarker
                 arrow="→"
               />

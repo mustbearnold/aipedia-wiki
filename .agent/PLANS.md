@@ -208,7 +208,8 @@ Create source-backed, mobile-first conversion pages around every tool with a con
 - Configured but not live-approved: 4.
 - First-pass scripted page budget: 108 pages, counting existing pages toward coverage when they already match a distinct buyer intent.
 - Existing money-guide metadata backfill is complete and subagent-accepted at 9.9/10: 35 money guides, 0 hard errors, 0 warnings under strict audit after adding the structured conversion, anti-doorway, and CTA-plan contract.
-- First new page slice is locally verified: `/guides/dext-pricing-for-bookkeeping-firms/` adds a Dext Practice vs Dext Business plan-decision page, updates AI Automation routing, and brings strict affiliate audit to 36 money guides with 0 errors and 0 warnings.
+- First new page slice is complete and pushed: `/guides/dext-pricing-for-bookkeeping-firms/` adds a Dext Practice vs Dext Business plan-decision page, updates AI Automation routing, and brought strict affiliate audit to 36 money guides with 0 errors and 0 warnings.
+- Second Dext page slice is locally verified and subagent-accepted at 9.9/10: `/guides/dext-vs-hubdoc-for-bookkeepers/` adds the same-job switcher for Dext vs Hubdoc, updates sibling Dext/receipt guides, updates AI Automation routing, and brings strict affiliate audit to 37 money guides with 0 errors and 0 warnings. The rendered budget pick is now external non-affiliate Hubdoc, not Dext.
 
 ### Page System
 
@@ -216,8 +217,8 @@ Use the existing `use-cases` guide route first unless a page clearly needs a new
 
 ### Next Implementation Slice
 
-1. Apply any subagent fixes on the Dext pricing page, then commit and push the Dext slice.
-2. Continue Dext only where intent stays distinct: Hubdoc switcher for multi-client firms, accountant workflow stack with Dext as the document-intake anchor, or Dext vs AutoEntry for Sage-heavy bookkeeping workflows.
+1. Commit and push the Dext vs Hubdoc slice.
+2. Continue Dext only where intent stays distinct: accountant workflow stack with Dext as the document-intake anchor, or Dext vs AutoEntry for Sage-heavy bookkeeping workflows.
 3. Repair approval metadata or defer monetization for configured-but-not-live tools.
 4. Repeat the pattern across the highest-fit approved affiliate tools from `npm run affiliate:conversion:inventory`, using existing guides as coverage where they already satisfy a distinct buyer intent.
 5. Add subagent review before finalizing the cluster: SEO/quality, visual/mobile, and accuracy.

@@ -80,6 +80,47 @@ last_verified: 2026-05-08
 `;
 }
 
+function guideWithExternalBudget(slug) {
+  return `---
+type: use-case
+slug: ${slug}
+title: "Guide"
+tools_mentioned: [alpha, gamma]
+guide_picks:
+  best_overall:
+    tool: alpha
+    label: "Best overall"
+    plan: "Alpha Pro"
+    reason: "Best default for the primary buyer path."
+    sources:
+      - label: "Alpha Pricing"
+        url: "https://example.com/alpha/pricing"
+  budget:
+    external_name: "External Budget Tool"
+    external_slug: external-budget-tool
+    external_url: "https://example.com/external-budget-tool/pricing"
+    label: "Budget pick"
+    plan: "External Starter"
+    reason: "Best low-cost option when the local affiliate pick is too much."
+    sources:
+      - label: "External Pricing"
+        url: "https://example.com/external-budget-tool/pricing"
+  pro_team:
+    tool: gamma
+    label: "Pro/team pick"
+    plan: "Gamma Team"
+    reason: "Best fit for teams that need governance and scale."
+    sources:
+      - label: "Gamma Pricing"
+        url: "https://example.com/gamma/pricing"
+last_updated: 2026-05-08
+last_verified: 2026-05-08
+---
+
+# Guide
+`;
+}
+
 test('guide-picks audit validates required structured buyer picks', () => {
   const fixture = mkdtempSync(join(tmpdir(), 'aipedia-guide-picks-'));
 
@@ -117,6 +158,45 @@ test('guide-picks audit validates required structured buyer picks', () => {
     assert.equal(report.required_guides.length, 1);
     assert.equal(report.guides_with_picks, 1);
     assert.equal(report.issues.length, 0);
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
+test('guide-picks audit allows external non-affiliate picks with official URLs', () => {
+  const fixture = mkdtempSync(join(tmpdir(), 'aipedia-guide-picks-external-'));
+
+  try {
+    const useCasesDir = join(fixture, 'use-cases');
+    const toolsDir = join(fixture, 'tools');
+    mkdirSync(useCasesDir, { recursive: true });
+    mkdirSync(toolsDir, { recursive: true });
+
+    writeFileSync(join(useCasesDir, 'guide-a.md'), guideWithExternalBudget('guide-a'));
+    for (const slug of ['alpha', 'gamma']) {
+      writeFileSync(join(toolsDir, `${slug}.md`), tool(slug));
+    }
+
+    const result = runGuidePicks(
+      '--json',
+      '--use-cases',
+      useCasesDir,
+      '--tools',
+      toolsDir,
+      '--required',
+      'guide-a',
+    );
+
+    assert.equal(
+      result.status,
+      0,
+      `external guide-picks audit failed unexpectedly\nstdout:\n${result.stdout}\nstderr:\n${result.stderr}`,
+    );
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.issues.length, 0);
+    assert.equal(report.guides_with_picks, 1);
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }
