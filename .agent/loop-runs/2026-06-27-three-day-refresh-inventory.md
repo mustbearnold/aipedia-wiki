@@ -1,7 +1,7 @@
 # 2026-06-27 3-Day Refresh Goal Inventory
 
 Cutoff: 2026-06-24 or newer.
-Tracked stale pages after batch 08: 96
+Tracked stale pages after batch 09: 72
 
 ## Progress
 
@@ -10,15 +10,16 @@ Tracked stale pages after batch 08: 96
 - Batch 06 complete and pushed: 19 guide routes and 5 trend routes from open-source AI tools through enterprise agent platforms refreshed plus `/`, `/guides/`, `/trends/`, `/categories/`, and 9 affected category hubs.
 - Batch 07 complete and pushed: 4 trend routes, 12 workflow routes, 3 company profiles, and 5 dead-tool archives refreshed plus `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, and `/llms-full.txt`.
 - Batch 08 verified locally: 24 mixed routes refreshed across dead archives, the April report, static trust pages, one workflow, one guide, trends, answers, companies, robots, and archived noindex surfaces. Affected parent/top-layer pages and five category hubs were updated or route-checked.
-- Strict 3-day stale count is now 96 total tracked pages including the 6 ledger-outdated tool rows.
+- Batch 09 verified locally: 22 company profiles and 2 guide pages refreshed. Anysphere was corrected for the reported June 2026 SpaceX/Cursor $60B stock acquisition agreement with live CBS/AP, Ars Technica, and Cursor sources. Affected parent/top-layer pages and three category hubs were updated or route-checked.
+- Strict 3-day stale count is now 72 total tracked pages including the 6 ledger-outdated tool rows.
 
 ## By Type
 
-- Company: 24
+- Company: 2
 - Comparison: 37
 - Crawl surface: 1
 - Dead tool archive: 1
-- Guide: 18
+- Guide: 16
 - Static page: 8
 - Tool: 6
 - Workflow: 1
@@ -27,32 +28,8 @@ Tracked stale pages after batch 08: 96
 
 - 2026-06-12 Tool /tools/phind/ (src/content/tools/phind.md)
 - 2026-06-12 Tool /tools/tome/ (src/content/tools/tome.md)
-- 2026-06-16 Company /companies/anysphere/ (src/content/companies/anysphere.md)
-- 2026-06-16 Company /companies/assemblyai/ (src/content/companies/assemblyai.md)
-- 2026-06-16 Company /companies/bytedance/ (src/content/companies/bytedance.md)
-- 2026-06-16 Company /companies/character-ai-company/ (src/content/companies/character-ai-company.md)
-- 2026-06-16 Company /companies/cognition/ (src/content/companies/cognition.md)
-- 2026-06-16 Company /companies/descript-company/ (src/content/companies/descript-company.md)
-- 2026-06-16 Company /companies/groq-company/ (src/content/companies/groq-company.md)
-- 2026-06-16 Company /companies/heygen-company/ (src/content/companies/heygen-company.md)
-- 2026-06-16 Company /companies/hugging-face/ (src/content/companies/hugging-face.md)
-- 2026-06-16 Company /companies/luma-company/ (src/content/companies/luma-company.md)
-- 2026-06-16 Company /companies/meta/ (src/content/companies/meta.md)
-- 2026-06-16 Company /companies/microsoft/ (src/content/companies/microsoft.md)
-- 2026-06-16 Company /companies/midjourney/ (src/content/companies/midjourney.md)
-- 2026-06-16 Company /companies/minimax/ (src/content/companies/minimax.md)
-- 2026-06-16 Company /companies/notion/ (src/content/companies/notion.md)
-- 2026-06-16 Company /companies/perplexity/ (src/content/companies/perplexity.md)
-- 2026-06-16 Company /companies/replit/ (src/content/companies/replit.md)
-- 2026-06-16 Company /companies/runway/ (src/content/companies/runway.md)
-- 2026-06-16 Company /companies/stability-ai/ (src/content/companies/stability-ai.md)
-- 2026-06-16 Company /companies/suno/ (src/content/companies/suno.md)
-- 2026-06-16 Company /companies/synthesia-company/ (src/content/companies/synthesia-company.md)
-- 2026-06-16 Company /companies/xai/ (src/content/companies/xai.md)
 - 2026-06-18 Company /companies/cohere/ (src/content/companies/cohere.md)
 - 2026-06-18 Dead tool archive /dead/stability-ai-clipdrop/ (src/content/dead/stability-ai-clipdrop.md)
-- 2026-06-18 Guide /guides/best-ai-for-meeting-notes/ (src/content/use-cases/best-ai-for-meeting-notes.md)
-- 2026-06-18 Guide /guides/best-ai-for-newsletter-writers/ (src/content/use-cases/best-ai-for-newsletter-writers.md)
 - 2026-06-18 Guide /guides/best-ai-for-podcasters/ (src/content/use-cases/best-ai-for-podcasters.md)
 - 2026-06-18 Guide /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ (src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md)
 - 2026-06-18 Guide /guides/best-ai-seo-tool-replacing-surfer-frase-stack/ (src/content/use-cases/best-ai-seo-tool-replacing-surfer-frase-stack.md)

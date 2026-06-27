@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-meeting-notes
 title: "Best AI for Meeting Notes (June 2026)"
 seo_title: "Best AI Meeting Notes Tools: Fathom, Fireflies, MeetGeek, Otter & Read AI (June 2026)"
-meta_description: "Updated June 18, 2026: compare Fathom, Fireflies, MeetGeek, Otter, Read AI, NotebookLM, and Castmagic for meeting notes, CS meeting memory, CRM handoff, live transcription, and content repurposing."
+meta_description: "Updated June 27, 2026: compare Fathom, Fireflies, MeetGeek, Otter, Read AI, NotebookLM, and Castmagic for meeting notes, CS meeting memory, CRM handoff, live transcription, and content repurposing."
 description: "A current buyer guide to AI meeting-note tools for transcripts, summaries, action items, CRM handoff, customer-success meeting memory, live transcription, team meeting intelligence, and post-meeting source review."
 tools_mentioned: ["fathom", "fireflies", "otter-ai", "read-ai", "notebooklm", "meetgeek", "castmagic"]
 guide_picks:
@@ -32,8 +32,8 @@ guide_picks:
       - label: "Fireflies pricing"
         url: "https://fireflies.ai/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-18
-last_verified: 2026-06-18
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -41,7 +41,7 @@ update_frequency: monthly
 
 The best AI meeting-note tool depends on whether you need a personal notetaker, live captions, team meeting intelligence, CRM handoff, enterprise controls, or source-grounded review after the call.
 
-Castmagic was reverified June 18, 2026 against official pricing, product, feature, API, and affiliate sources; the wider Fathom, Fireflies, Otter, Read AI, NotebookLM, and MeetGeek checks remain June 12, 2026. AiPedia may earn from some tool links, including MeetGeek and Castmagic, but the ranking is editorial.
+Fathom, Fireflies, Otter, Read AI, NotebookLM, MeetGeek, and Castmagic were rechecked June 27, 2026 against their official pricing, product, feature, API, and affiliate sources. AiPedia may earn from some tool links, including MeetGeek and Castmagic, but the ranking is editorial.
 
 ## Quick Verdict
 
@@ -124,7 +124,7 @@ Start with the meeting type:
 
 ### 6. MeetGeek
 
-[MeetGeek](/tools/meetgeek/) is the best meeting-notes pick for customer success and implementation teams that want calls to become account memory, not just tidy transcripts. The product auto-joins calendar events on Zoom, Google Meet, and Microsoft Teams, transcribes in 100+ languages, generates summaries and action items, lets users chat with the meeting library, and supports workflow automation through integrations such as Zapier, Make, n8n, Slack Assistant, API, and MCP. AiPedia verified MeetGeek again on June 12, 2026 after the site owner joined its PartnerStack program; the affiliate program lists 30% recurring commissions for 12 months with a 90-day cookie.
+[MeetGeek](/tools/meetgeek/) is the best meeting-notes pick for customer success and implementation teams that want calls to become account memory, not just tidy transcripts. The product auto-joins calendar events on Zoom, Google Meet, and Microsoft Teams, transcribes in 100+ languages, generates summaries and action items, lets users chat with the meeting library, and supports workflow automation through integrations such as Zapier, Make, n8n, Slack Assistant, API, and MCP. AiPedia verified MeetGeek again on June 27, 2026 after the site owner joined its PartnerStack program; the affiliate program lists 30% recurring commissions for 12 months with a 90-day cookie.
 
 **Best for:** customer success teams, implementation teams, agencies, consultants, recruiters, and revenue teams that need customer-call history, action items, renewal context, and cross-language coverage.
 
@@ -168,19 +168,19 @@ Read AI fits when you want meeting reports, coaching, workplace search, email/me
 
 **How often is this guide updated?**
 
-Monthly, and sooner when pricing, plan limits, recording policies, affiliate programs, or major meeting-intelligence features change. Castmagic was last verified on 2026-06-18; the rest of this guide was last broadly verified on 2026-06-12.
+Monthly, and sooner when pricing, plan limits, recording policies, affiliate programs, or major meeting-intelligence features change. This guide was last broadly verified on 2026-06-27.
 
 ## Sources
 
-- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-12)
-- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-12)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
-- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-06-12)
-- [Read AI product overview](https://www.read.ai/) (verified 2026-06-12)
-- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-12)
-- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-06-12)
-- [MeetGeek customer success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-06-12)
-- [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-06-12)
-- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-18)
-- [Castmagic product overview](https://www.castmagic.io/) (verified 2026-06-18)
-- [Castmagic API docs](https://docs.castmagic.io/) (verified 2026-06-18)
+- [Fathom pricing](https://www.fathom.ai/pricing) (verified 2026-06-27)
+- [Fireflies pricing](https://fireflies.ai/pricing) (verified 2026-06-27)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-27)
+- [Read AI pricing](https://www.read.ai/plans-pricing) (verified 2026-06-27)
+- [Read AI product overview](https://www.read.ai/) (verified 2026-06-27)
+- [NotebookLM upgrade information](https://support.google.com/notebooklm/answer/16213268) (verified 2026-06-27)
+- [MeetGeek pricing](https://meetgeek.ai/pricing) (verified 2026-06-27)
+- [MeetGeek customer success playbook](https://meetgeek.ai/blog/ai-for-customer-success) (verified 2026-06-27)
+- [MeetGeek PartnerStack program](https://market.partnerstack.com/page/meetgeek) (verified 2026-06-27)
+- [Castmagic pricing](https://www.castmagic.io/pricing) (verified 2026-06-27)
+- [Castmagic product overview](https://www.castmagic.io/) (verified 2026-06-27)
+- [Castmagic API docs](https://docs.castmagic.io/) (verified 2026-06-27)

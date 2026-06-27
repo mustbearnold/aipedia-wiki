@@ -3,16 +3,16 @@ type: company
 slug: microsoft
 title: Microsoft
 seo_title: "Microsoft Company Profile (June 2026), aipedia.wiki"
-meta_description: "Microsoft is the public software giant embedding AI through Copilot, GitHub Copilot, Azure AI, and the Microsoft Agent Framework, anchored by its OpenAI partnership. Verified June 16, 2026."
+meta_description: "Microsoft is the public software giant embedding AI through Copilot, GitHub Copilot, Azure AI, and the Microsoft Agent Framework, anchored by its OpenAI partnership. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: bigtech
 founded: 1975
 hq: Redmond, USA
 funding: "Public company (NASDAQ: MSFT)"
 key_products: [github-copilot, microsoft-agent-framework]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Microsoft

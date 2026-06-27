@@ -3,16 +3,16 @@ type: company
 slug: midjourney
 title: Midjourney
 seo_title: "Midjourney Company Profile (June 2026), aipedia.wiki"
-meta_description: "Midjourney is the self-funded AI image lab behind the Midjourney generator, founded 2022 by David Holz, profitable with revenue reported well above $200M and no outside funding. Verified June 16, 2026."
+meta_description: "Midjourney is the self-funded AI image lab behind the Midjourney generator, founded 2022 by David Holz, profitable with revenue reported well above $200M and no outside funding. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2022
 hq: San Francisco, USA
 funding: "Self-funded, no outside venture capital; revenue reported significantly above $200M"
 key_products: [midjourney]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Midjourney

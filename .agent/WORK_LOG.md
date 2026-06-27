@@ -989,3 +989,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `runner:page-refresh:closeout` passed in 82.427s with 176 source URLs, 157 ok, 19 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed for nine routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
 - Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-08.md`.
 - Next: Continue oldest-first with 96 tracked pages still older than 2026-06-24.
+
+### 2026-06-27: Page Refresh Batch 09
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed 24 routes: 22 company profiles from Anysphere through xAI plus the meeting-notes and newsletter-writers guide pages.
+- Accuracy repair: Updated Anysphere from stale reported-fundraising context to the June 2026 reported SpaceX/Cursor $60B all-stock acquisition agreement, with live CBS/AP, Ars Technica, and Cursor sources. This also removed the timeout-prone Wikipedia source from the source-health set.
+- Parent and top-layer updates: `/`, `/companies/`, `/guides/`, AI Writing, AI Notes, and AI Voice.
+- Verification: `runner:page-refresh:closeout` passed in 73.564s with 45 source URLs, 41 ok, 4 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed for `/companies/`, `/categories/ai-writing/`, `/categories/ai-notes/`, and `/categories/ai-voice/` at 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-09.md`.
+- Next: Continue oldest-first with 72 tracked pages still older than 2026-06-24.

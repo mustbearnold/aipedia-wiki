@@ -3,16 +3,16 @@ type: company
 slug: replit
 title: Replit
 seo_title: "Replit Company Profile (June 2026), aipedia.wiki"
-meta_description: "Replit is the browser-based coding company behind Replit Agent, founded 2016 by Amjad Masad, valued at $9B and targeting $1B ARR. Verified June 16, 2026."
+meta_description: "Replit is the browser-based coding company behind Replit Agent, founded 2016 by Amjad Masad, valued at $9B and targeting $1B ARR. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2016
 hq: San Francisco, USA
 funding: "~$878M raised; $9B valuation (Series D, March 2026)"
 key_products: [replit-agent]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Replit

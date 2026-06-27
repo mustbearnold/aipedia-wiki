@@ -3,16 +3,16 @@ type: company
 slug: character-ai-company
 title: Character.AI
 seo_title: "Character.AI Company Profile (June 2026), aipedia.wiki"
-meta_description: "Character.AI is the AI companion-chat company founded 2021 by Noam Shazeer and Daniel De Freitas, reshaped by a $2.7B Google deal that returned its founders to Google. Verified June 16, 2026."
+meta_description: "Character.AI is the AI companion-chat company founded 2021 by Noam Shazeer and Daniel De Freitas, reshaped by a $2.7B Google deal that returned its founders to Google. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2021
 hq: Menlo Park, USA
 funding: "~$193M raised; valued ~$1B (May 2026), down from ~$5B before the 2024 Google deal"
 key_products: [character-ai]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Character.AI

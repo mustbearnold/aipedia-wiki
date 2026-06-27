@@ -3,16 +3,16 @@ type: company
 slug: meta
 title: Meta
 seo_title: "Meta Company Profile (June 2026), aipedia.wiki"
-meta_description: "Meta is the public social and tech giant behind the open-weight Llama models, Meta AI assistant, and AI smart glasses, with a massive Superintelligence Labs investment. Verified June 16, 2026."
+meta_description: "Meta is the public social and tech giant behind the open-weight Llama models, Meta AI assistant, and AI smart glasses, with a massive Superintelligence Labs investment. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: bigtech
 founded: 2004
 hq: Menlo Park, USA
 funding: "Public company (NASDAQ: META)"
 key_products: [llama]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Meta

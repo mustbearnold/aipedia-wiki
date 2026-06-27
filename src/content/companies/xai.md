@@ -3,16 +3,16 @@ type: company
 slug: xai
 title: xAI
 seo_title: "xAI Company Profile (June 2026), aipedia.wiki"
-meta_description: "xAI is Elon Musk's AI lab behind Grok, founded 2023, valued around $230B before SpaceX acquired it in February 2026. Verified June 16, 2026."
+meta_description: "xAI is Elon Musk's AI lab behind Grok, founded 2023, valued around $230B before SpaceX acquired it in February 2026. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2023
 hq: Palo Alto, USA
 funding: "~$42B raised; ~$230-250B valuation (Jan 2026); acquired by SpaceX Feb 2026 (combined entity reported near $1.25T)"
 key_products: [grok]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # xAI

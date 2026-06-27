@@ -3,16 +3,16 @@ type: company
 slug: suno
 title: Suno
 seo_title: "Suno Company Profile (June 2026), aipedia.wiki"
-meta_description: "Suno is the AI music company behind the Suno song generator, founded 2021, valued at $5.4B after a $400M round in June 2026, amid major-label copyright litigation and a new licensed model. Verified June 16, 2026."
+meta_description: "Suno is the AI music company behind the Suno song generator, founded 2021, valued at $5.4B after a $400M round in June 2026, amid major-label copyright litigation and a new licensed model. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2021
 hq: Cambridge, USA
 funding: "~$400M Series E at $5.4B valuation (June 2026); up from $2.45B (Nov 2025)"
 key_products: [suno]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Suno

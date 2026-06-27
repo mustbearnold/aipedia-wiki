@@ -7,7 +7,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-27.
-- Branch baseline: `master`; active goal is the June 27 strict 3-day whole-site refresh target. Latest content batch is non-tool page-refresh batch 08. Latest workflow improvement is bounded page source-health timing, report-schema hardening, and company-prose overflow containment.
+- Branch baseline: `master`; active goal is the June 27 strict 3-day whole-site refresh target. Latest content batch is non-tool page-refresh batch 09. Latest workflow improvement is bounded page source-health timing, report-schema hardening, and company-prose overflow containment.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
@@ -18,7 +18,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - The latest page-refresh workflow optimizations add explicit route QA policy classes, report-level efficiency metrics, and bounded concurrent source health. The planner now marks archived noindex content routes as content/frontmatter verification only, not indexable route-QA targets. The Rust report summary now shows pages/minute, sources/page, caveats/page, confidence labels/page, failed checks, and parent-surface hints. `runner:page-refresh:closeout` now runs `npm run page:source-health` before typecheck unless explicitly skipped for workflow testing.
 - Non-tool page-refresh batch 03 is verified. It refreshed 18 guide routes from academic writing through LinkedIn, updated affected guide/category/answer parent surfaces, parsed 6/6 worker reports, and passed closeout in 62.57s wall time.
 - A source-health smoke over the next two planned pages checked 21 source URLs in 5.211s with bounded concurrency and flagged one existing 404 on `/guides/best-ai-for-logo-design/`: `https://www.canva.com/logo-maker/`.
-- Non-tool page-refresh batch 08 is verified locally. It refreshed 24 mixed routes across dead archives, the April report, static trust pages, one workflow, one avatar guide, three trend pages, five answer pages, three company profiles, robots, and archived noindex surfaces. It updated affected parent/top-layer pages plus five category hubs, passed timed closeout in 82.427s, and reduced the strict 3-day stale count from 120 to 96 tracked pages.
+- Non-tool page-refresh batch 09 is verified locally. It refreshed 22 company profiles and 2 guides, updated affected parent/top-layer pages and AI Writing/AI Notes/AI Voice category hubs, repaired Anysphere's stale acquisition context with live June 2026 SpaceX/Cursor sources, passed timed closeout in 73.564s, and reduced the strict 3-day stale count from 96 to 72 tracked pages.
 - The latest completed large batch refreshed 60 tools: Cody, Comet, Continue, Copy.ai, CrewAI, D-ID, Hedra, Lindy, Mastra, Microsoft Agent Framework, Midjourney, NotebookLM, Qodo, Replit Agent, Claude, Decktopus, Gemini, Grok, n8n, Claude Code, GitHub Copilot, Grammarly, Mistral AI, Qwen, Capacities, Cursor, Hailuo, HeyGen, Adobe Firefly, Argil, Augment Code, Base44, Dia, Figma, ChatGPT, DeepSeek, MeetGeek, ElevenLabs, Elicit, Voxtral, Windsurf, Codeium, Descript, Perplexity, Kling, Runway, Seedance, Veo, Suno, Synthesia, Udio, Bolt, Lovable, Mubert, Pika, v0, LangGraph, MiniMax, Pipedream, and Lovart.
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
@@ -183,7 +183,7 @@ Closeout passed with 3/3 worker reports parsed, 89 source URLs, 51 confidence la
 
 ### Next
 
-Continue the strict 3-day target from the regenerated queue. Remaining after batch 08: 96 tracked pages older than 2026-06-24, including 37 comparisons, 24 companies, 18 guides, 8 static pages, 6 tools, 1 workflow, 1 dead archive page, and 1 crawl surface.
+Continue the strict 3-day target from the regenerated queue. Remaining after batch 09: 72 tracked pages older than 2026-06-24, including 37 comparisons, 16 guides, 8 static pages, 6 tools, 2 companies, 1 workflow, 1 dead archive page, and 1 crawl surface.
 
 ## Active: Decision Content Flywheel
 

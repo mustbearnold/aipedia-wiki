@@ -3,16 +3,16 @@ type: company
 slug: perplexity
 title: Perplexity
 seo_title: "Perplexity Company Profile (June 2026), aipedia.wiki"
-meta_description: "Perplexity is the AI answer-engine company behind Perplexity, the Comet browser, and the Sonar API. Founded 2022, led by Aravind Srinivas, valued around $20B. Verified June 16, 2026."
+meta_description: "Perplexity is the AI answer-engine company behind Perplexity, the Comet browser, and the Sonar API. Founded 2022, led by Aravind Srinivas, valued around $20B. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2022
 hq: San Francisco, USA
 funding: "~$1.72B raised; ~$20B valuation (2025-2026)"
 key_products: [perplexity, comet]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Perplexity

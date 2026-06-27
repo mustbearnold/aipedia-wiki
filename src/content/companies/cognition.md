@@ -3,16 +3,16 @@ type: company
 slug: cognition
 title: Cognition
 seo_title: "Cognition Company Profile (June 2026), aipedia.wiki"
-meta_description: "Cognition is the AI lab behind Devin, the autonomous AI software engineer, and owner of Windsurf. Founded 2023, valued around $26B after a $1B raise in May 2026. Verified June 16, 2026."
+meta_description: "Cognition is the AI lab behind Devin, the autonomous AI software engineer, and owner of Windsurf. Founded 2023, valued around $26B after a $1B raise in May 2026. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2023
 hq: San Francisco, USA
 funding: "$1B+ raised; ~$26B post-money valuation (May 2026)"
 key_products: [devin, windsurf]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Cognition

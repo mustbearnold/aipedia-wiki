@@ -3,16 +3,16 @@ type: company
 slug: groq-company
 title: Groq
 seo_title: "Groq Company Profile (June 2026), aipedia.wiki"
-meta_description: "Groq is the AI inference company behind the LPU chip and GroqCloud, founded 2016 by Jonathan Ross, valued at $6.9B with a ~$20B Nvidia licensing deal. Verified June 16, 2026."
+meta_description: "Groq is the AI inference company behind the LPU chip and GroqCloud, founded 2016 by Jonathan Ross, valued at $6.9B with a ~$20B Nvidia licensing deal. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2016
 hq: Mountain View, USA
 funding: "~$750M Series E at $6.9B valuation (Sept 2025); ~$20B Nvidia licensing deal (Dec 2025)"
 key_products: [groq]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Groq

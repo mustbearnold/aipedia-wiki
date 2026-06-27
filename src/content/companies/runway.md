@@ -3,16 +3,16 @@ type: company
 slug: runway
 title: Runway
 seo_title: "Runway Company Profile (June 2026), aipedia.wiki"
-meta_description: "Runway is the applied AI research company behind the Gen-series video models, founded 2018 in New York, valued at $5.3B after a $315M Series E in February 2026. Verified June 16, 2026."
+meta_description: "Runway is the applied AI research company behind the Gen-series video models, founded 2018 in New York, valued at $5.3B after a $315M Series E in February 2026. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2018
 hq: New York, USA
 funding: "~$860M raised; $5.3B valuation (Series E, February 2026)"
 key_products: [runway]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Runway

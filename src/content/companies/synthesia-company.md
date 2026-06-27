@@ -3,16 +3,16 @@ type: company
 slug: synthesia-company
 title: Synthesia
 seo_title: "Synthesia Company Profile (June 2026), aipedia.wiki"
-meta_description: "Synthesia is the AI avatar video company for corporate training and communication, founded 2017 in London, valued at $4B after a $200M Series E. Verified June 16, 2026."
+meta_description: "Synthesia is the AI avatar video company for corporate training and communication, founded 2017 in London, valued at $4B after a $200M Series E. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2017
 hq: London, UK
 funding: "$200M Series E at $4B valuation (January 2026)"
 key_products: [synthesia]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Synthesia

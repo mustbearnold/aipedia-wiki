@@ -3,16 +3,16 @@ type: company
 slug: stability-ai
 title: Stability AI
 seo_title: "Stability AI Company Profile (June 2026), aipedia.wiki"
-meta_description: "Stability AI is the company behind Stable Diffusion and Stable Audio, founded 2019, led by CEO Prem Akkaraju, valued around $2.8B. Verified June 16, 2026."
+meta_description: "Stability AI is the company behind Stable Diffusion and Stable Audio, founded 2019, led by CEO Prem Akkaraju, valued around $2.8B. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2019
 hq: London, UK
 funding: "~$225M raised; reported ~$2.8B valuation (2026)"
 key_products: [stable-diffusion, stable-audio]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Stability AI

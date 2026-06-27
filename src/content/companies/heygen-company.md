@@ -3,16 +3,16 @@ type: company
 slug: heygen-company
 title: HeyGen
 seo_title: "HeyGen Company Profile (June 2026), aipedia.wiki"
-meta_description: "HeyGen is the AI avatar video company founded 2020 in Los Angeles, reaching about $100M ARR turning scripts into videos with lifelike avatars. Verified June 16, 2026."
+meta_description: "HeyGen is the AI avatar video company founded 2020 in Los Angeles, reaching about $100M ARR turning scripts into videos with lifelike avatars. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2020
 hq: Los Angeles, USA
 funding: "~$74M raised; $500M valuation (2024 Series A), reported higher with ~$100M ARR"
 key_products: [heygen]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # HeyGen

@@ -3,16 +3,16 @@ type: company
 slug: luma-company
 title: Luma AI
 seo_title: "Luma AI Company Profile (June 2026), aipedia.wiki"
-meta_description: "Luma AI is the generative video and 3D company behind Dream Machine and the Ray models, founded 2021, valued around $4B after a $900M Series C. Verified June 16, 2026."
+meta_description: "Luma AI is the generative video and 3D company behind Dream Machine and the Ray models, founded 2021, valued around $4B after a $900M Series C. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2021
 hq: Palo Alto, USA
 funding: "$900M Series C at ~$4B valuation (Nov 2025, led by HUMAIN); $1B+ total"
 key_products: [luma]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Luma AI

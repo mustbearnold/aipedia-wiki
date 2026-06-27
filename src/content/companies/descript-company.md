@@ -3,16 +3,16 @@ type: company
 slug: descript-company
 title: Descript
 seo_title: "Descript Company Profile (June 2026), aipedia.wiki"
-meta_description: "Descript is the AI audio and video editing company founded 2017 by Andrew Mason, known for editing media like a doc, with ~$55M ARR and OpenAI Startup Fund backing. Verified June 16, 2026."
+meta_description: "Descript is the AI audio and video editing company founded 2017 by Andrew Mason, known for editing media like a doc, with ~$55M ARR and OpenAI Startup Fund backing. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2017
 hq: San Francisco, USA
 funding: "~$101M raised (Series C, 2022, led by OpenAI Startup Fund); valuation not publicly disclosed"
 key_products: [descript]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Descript

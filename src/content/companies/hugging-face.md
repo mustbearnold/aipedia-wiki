@@ -3,16 +3,16 @@ type: company
 slug: hugging-face
 title: Hugging Face
 seo_title: "Hugging Face Company Profile (June 2026), aipedia.wiki"
-meta_description: "Hugging Face is the open-source AI platform known as the GitHub of AI, hosting millions of models and datasets on the Hub. Founded 2016, valued around $4.5B. Verified June 16, 2026."
+meta_description: "Hugging Face is the open-source AI platform known as the GitHub of AI, hosting millions of models and datasets on the Hub. Founded 2016, valued around $4.5B. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2016
 hq: New York, USA
 funding: "~$400M raised; ~$4.5B valuation (2023 Series D), reported higher in 2026"
 key_products: [hugging-face]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Hugging Face

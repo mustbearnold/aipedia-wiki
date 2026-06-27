@@ -3,16 +3,16 @@ type: company
 slug: minimax
 title: MiniMax
 seo_title: "MiniMax Company Profile (June 2026), aipedia.wiki"
-meta_description: "MiniMax is the Shanghai AI lab behind the Hailuo video model, MiniMax language and speech models, and the Talkie companion app. Founded 2021, Hong Kong IPO January 2026. Verified June 16, 2026."
+meta_description: "MiniMax is the Shanghai AI lab behind the Hailuo video model, MiniMax language and speech models, and the Talkie companion app. Founded 2021, Hong Kong IPO January 2026. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2021
 hq: Shanghai, China
 funding: "~$1.15B raised; Hong Kong IPO Jan 2026 (reported market value ~$6.5B and higher on debut)"
 key_products: [hailuo, minimax, minimax-speech]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # MiniMax

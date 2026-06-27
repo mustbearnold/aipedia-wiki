@@ -72,7 +72,7 @@ The June 25 refresh keeps two voice lanes that are easy to blur. [Whisper](/tool
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 27 verified budget guide that treats ElevenLabs Starter as a low-cost voice test, not a blanket production answer, because credits, model choice, agents, dubbing, music, and API usage can change real cost quickly.
 - [Best AI Tools for YouTube Creators](/guides/best-ai-for-youtube-creators/) is the June 27 verified creator-stack guide for Descript editing, ChatGPT scripts, Canva/Midjourney thumbnails, ElevenLabs narration, OpusClip Shorts, Runway B-roll, and YouTube altered/synthetic disclosure checks.
 - [Best AI Avatar Video Generator](/guides/best-ai-avatar-video-generator/)
-- [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/)
+- [Best AI for Meeting Notes](/guides/best-ai-for-meeting-notes/) is the June 27 verified meeting-notes buyer guide for Fathom, Fireflies, Otter, Read AI, NotebookLM, MeetGeek, and Castmagic.
 - [Best AI Phone System for SMB Sales and Support Teams](/guides/best-ai-phone-system-for-smb-sales-and-support-teams/)
 - [Best AI Meeting Assistant for Customer Success Teams](/guides/best-ai-meeting-assistant-for-customer-success-teams/)
 

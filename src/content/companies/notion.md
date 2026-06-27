@@ -3,16 +3,16 @@ type: company
 slug: notion
 title: Notion
 seo_title: "Notion Company Profile (June 2026), aipedia.wiki"
-meta_description: "Notion is the connected-workspace company behind Notion AI, founded 2013, valued around $11B with 100M+ users, moving from AI assistant to AI agents. Verified June 16, 2026."
+meta_description: "Notion is the connected-workspace company behind Notion AI, founded 2013, valued around $11B with 100M+ users, moving from AI assistant to AI agents. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2013
 hq: San Francisco, USA
 funding: "~$418M raised; ~$11B valuation (Jan 2026 tender)"
 key_products: [notion-ai]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # Notion

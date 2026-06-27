@@ -3,16 +3,16 @@ type: company
 slug: assemblyai
 title: AssemblyAI
 seo_title: "AssemblyAI Company Profile (June 2026), aipedia.wiki"
-meta_description: "AssemblyAI is the speech-to-text company behind the Universal model family and developer transcription API, founded 2017. Verified June 16, 2026."
+meta_description: "AssemblyAI is the speech-to-text company behind the Universal model family and developer transcription API, founded 2017. Verified June 27, 2026."
 author: "aipedia.wiki Editorial"
 company_type: startup
 founded: 2017
 hq: San Francisco, USA
 funding: "~$115M raised across 4 rounds"
 key_products: [assemblyai]
-last_updated: 2026-06-16
+last_updated: 2026-06-27
 update_frequency: monthly
-last_verified: 2026-06-16
+last_verified: 2026-06-27
 ---
 
 # AssemblyAI
