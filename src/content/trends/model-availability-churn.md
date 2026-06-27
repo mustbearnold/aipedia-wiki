@@ -2,77 +2,47 @@
 type: trend
 slug: model-availability-churn
 title: "AI Model Availability Tracker"
-seo_title: "AI Model Availability Tracker: Available or Unavailable Frontier Models"
-meta_description: "Simple June 24, 2026 green/red availability ledger for frontier and widely used AI models."
+seo_title: "AI Model Availability Tracker: GPT-5.6, Claude, Gemini, Grok, and Frontier Model Status"
+meta_description: "June 27, 2026 source-backed triage page for GPT-5.6 and other frontier model availability checks."
 author: "aipedia.wiki Editorial"
-description: "Green means currently available. Red means currently unavailable."
-timeframe: "Checked June 24, 2026."
+description: "Check whether a model name has official release evidence, limited-preview evidence, or needs a vendor-doc recheck."
+timeframe: "Checked June 27, 2026."
 impact: high
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: daily
 ---
 
+<p><strong>Verdict for GPT-5.6 searches:</strong> GPT-5.6 is real, but the current official evidence supports a limited preview, not broad public availability. OpenAI's June 26, 2026 GPT-5.6 Preview System Card describes Sol, Terra, and Luna and says broader availability is planned after the preview period. Treat claims that GPT-5.6 is generally available in ChatGPT or the API as unverified until OpenAI release notes or model docs list that route.</p>
+
+<p>AiPedia only marks a model as available when the vendor's model docs, release notes, or system card make the route clear. If a name is circulating but the source is missing, the safest answer is to recheck the vendor page before making a buying or migration decision.</p>
+
 <section class="availability-ledger" aria-label="Current model availability">
-  <div class="availability-row"><strong>GPT-5.5 Instant</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>GPT-5.5 Pro / GPT-5.5 Thinking</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>GPT-5.6</strong><span class="availability-status is-unavailable">Unavailable</span></div>
-  <div class="availability-row"><strong>GPT-5.4 / GPT-5.4 mini / GPT-5.4 nano</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>GPT-5.3-Codex</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>GPT-5.2 in ChatGPT</strong><span class="availability-status is-unavailable">Unavailable</span></div>
-  <div class="availability-row"><strong>GPT-4.5 in ChatGPT</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>o3 in ChatGPT</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Claude Opus 4.8</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Claude Opus 4.7 / 4.6</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Claude Sonnet 4.6</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Claude Haiku 4.5</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Claude Fable 5</strong><span class="availability-status is-unavailable">Unavailable</span></div>
-  <div class="availability-row"><strong>Claude Mythos 5</strong><span class="availability-status is-unavailable">Unavailable</span></div>
-  <div class="availability-row"><strong>Gemini 3.5 Flash</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Gemini 3.5 Pro</strong><span class="availability-status is-unavailable">Unavailable</span></div>
-  <div class="availability-row"><strong>Gemini 3.1 Pro preview</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Gemini 2.5 Pro / Gemini 2.5 Flash</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Grok 4.3</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Grok Build 0.1</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>DeepSeek-V4-Pro</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>DeepSeek-V4-Flash</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Qwen3.7-Max</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Qwen3.7-Plus</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Kimi K2.6</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Kimi K2.7 Code</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Mistral Medium 3.5</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Mistral Small 4</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Llama 4 Maverick</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Llama 4 Scout</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Llama 4 Behemoth</strong><span class="availability-status is-unavailable">Unavailable</span></div>
-  <div class="availability-row"><strong>MiniMax M3</strong><span class="availability-status is-available">Available</span></div>
-  <div class="availability-row"><strong>Cohere Command A+</strong><span class="availability-status is-available">Available</span></div>
+  <div class="availability-row"><strong>GPT-5.6 Sol, Terra, and Luna</strong><span class="availability-status is-limited">Limited preview</span></div>
+  <div class="availability-row"><strong>GPT-5.6 in general ChatGPT or API availability</strong><span class="availability-status is-unavailable">No public GA source</span></div>
+  <div class="availability-row"><strong>OpenAI GPT route claims beyond the current docs</strong><span class="availability-status is-unavailable">Recheck required</span></div>
+  <div class="availability-row"><strong>Claude route claims</strong><span class="availability-status is-unavailable">Recheck required</span></div>
+  <div class="availability-row"><strong>Gemini route claims</strong><span class="availability-status is-unavailable">Recheck required</span></div>
+  <div class="availability-row"><strong>Grok, DeepSeek, Qwen, Kimi, Mistral, Llama, MiniMax, and Cohere route claims</strong><span class="availability-status is-unavailable">Recheck required</span></div>
 </section>
 
-<details>
-<summary>Sources checked June 24, 2026</summary>
+<h2>What this means</h2>
 
-- [OpenAI model release notes](https://help.openai.com/en/articles/9624314-model-release-notes)
-- [OpenAI ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
-- [OpenAI GPT-5.5](https://openai.com/index/introducing-gpt-5-5/)
-- [Anthropic Claude Fable 5 and Mythos 5 docs](https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5)
-- [Anthropic Claude Opus 4.8 announcement](https://www.anthropic.com/news/claude-opus-4-8)
+<ul>
+  <li>Searches like <code>gpt5.6</code>, <code>gpt-5.6</code>, or <code>gpt 5.6</code> should route here first because model names can arrive before broad access.</li>
+  <li>Limited preview means the model has official evidence, but most buyers should not assume it is available in their product, API account, workspace, or region.</li>
+  <li>For procurement, workflow migration, or benchmark interpretation, check the vendor's current model docs and the tool page that exposes the route.</li>
+</ul>
+
+<details>
+<summary>Sources checked June 27, 2026</summary>
+
+- [OpenAI GPT-5.6 Preview System Card](https://deploymentsafety.openai.com/gpt-5-6-preview)
+- [OpenAI API model docs](https://platform.openai.com/docs/models)
 - [Anthropic Claude models overview](https://docs.anthropic.com/en/docs/about-claude/models/overview)
-- [Google Gemini 3.5 announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/)
-- [Google Gemini API changelog](https://ai.google.dev/gemini-api/docs/changelog)
-- [Google Gemini model lifecycle docs](https://ai.google.dev/gemini-api/docs/model-versions)
-- [GitHub Copilot supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models)
-- [xAI model docs](https://docs.x.ai/developers/models)
-- [AWS Bedrock Grok 4.3 model card](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-3.html)
-- [DeepSeek V4 Preview release](https://api-docs.deepseek.com/news/news260424)
-- [Qwen3.7 official release](https://qwen.ai/blog?id=qwen3.7)
-- [Kimi by Moonshot AI](https://www.moonshot.ai/)
-- [Kimi API Platform](https://platform.kimi.ai/)
+- [Google Gemini API models](https://ai.google.dev/gemini-api/docs/models)
+- [xAI model docs](https://docs.x.ai/docs/models)
 - [Mistral model overview](https://docs.mistral.ai/models/overview)
-- [Mistral Medium 3.5 model card](https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04)
-- [Mistral Small 4 announcement](https://mistral.ai/news/mistral-small-4/)
-- [Meta Llama 4 announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)
-- [MiniMax M3 announcement](https://www.minimax.io/blog/minimax-m3)
 - [Cohere model docs](https://docs.cohere.com/docs/models)
 
 </details>

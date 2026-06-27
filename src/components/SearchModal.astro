@@ -63,16 +63,26 @@ const toolsCount = await getActiveToolCount();
   import { scoreSearchItem, searchItemMatches, searchTerms } from '../lib/search-index';
 
   (() => {
-    if (window.__searchPaletteInit) return;
-    window.__searchPaletteInit = true;
+    if (window.__searchPaletteAbort) window.__searchPaletteAbort.abort();
+    const searchPaletteController = new AbortController();
+    window.__searchPaletteAbort = searchPaletteController;
+    const searchPaletteSignal = searchPaletteController.signal;
 
-    const modal = document.getElementById('search-modal');
-    const input = document.getElementById('search-input');
-    const results = document.getElementById('search-results');
-    const countEl = modal?.querySelector('[data-search-count]');
-    const closeButtons = modal?.querySelectorAll('[data-search-close]');
-    const shortcutHint = modal?.querySelector('[data-search-shortcut]');
-    if (!modal || !input || !results) return;
+    let modal = document.getElementById('search-modal');
+    let input = document.getElementById('search-input');
+    let results = document.getElementById('search-results');
+    let countEl = modal?.querySelector('[data-search-count]');
+    let shortcutHint = modal?.querySelector('[data-search-shortcut]');
+
+    function refreshNodes() {
+      modal = document.getElementById('search-modal');
+      input = document.getElementById('search-input');
+      results = document.getElementById('search-results');
+      countEl = modal?.querySelector('[data-search-count]');
+      shortcutHint = modal?.querySelector('[data-search-shortcut]');
+      if (shortcutHint) shortcutHint.textContent = isMac ? '⌘K' : 'Ctrl K';
+      return Boolean(modal && input && results);
+    }
 
     const RECENT_KEY = 'aipedia:recent-searches';
     const RECENT_MAX = 5;
@@ -82,6 +92,7 @@ const toolsCount = await getActiveToolCount();
       { kind: 'guide',    label: 'Guides',      max: 4 },
       { kind: 'answer',   label: 'Answers',     max: 3 },
       { kind: 'workflow', label: 'Workflows',   max: 3 },
+      { kind: 'model',    label: 'Models',      max: 3 },
       { kind: 'category', label: 'Categories',  max: 3 },
       { kind: 'trend',    label: 'Trends',      max: 3 },
       { kind: 'news',     label: 'News',        max: 3 },
@@ -95,6 +106,7 @@ const toolsCount = await getActiveToolCount();
     let activeIndex = -1;
     let currentRows = [];
     let lastQuery = '';
+    let closeTimer;
     let searchTrackTimer;
     let lastTrackedSearchKey = '';
     const pendingSearchEvents = [];
@@ -109,7 +121,7 @@ const toolsCount = await getActiveToolCount();
     function destinationType(kind) {
       const k = String(kind || '').toLowerCase();
       if (k === 'compare') return 'comparison';
-      if (k === 'tool' || k === 'category' || k === 'guide' || k === 'news' || k === 'workflow' || k === 'answer' || k === 'trend' || k === 'company') return k;
+      if (k === 'tool' || k === 'category' || k === 'guide' || k === 'news' || k === 'workflow' || k === 'answer' || k === 'trend' || k === 'company' || k === 'model') return k;
       return 'internal';
     }
 
@@ -144,7 +156,7 @@ const toolsCount = await getActiveToolCount();
       }
     }
 
-    window.addEventListener('aipedia:analytics-ready', flushSearchEvents);
+    window.addEventListener('aipedia:analytics-ready', flushSearchEvents, { signal: searchPaletteSignal });
 
     function scheduleQueryAnalytics(query, resultCount, source) {
       const q = String(query || '').trim();
@@ -165,7 +177,7 @@ const toolsCount = await getActiveToolCount();
 
     // ── platform key hint ─────────────────────────────────────────
     const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform);
-    if (shortcutHint) shortcutHint.textContent = isMac ? '⌘K' : 'Ctrl K';
+    if (!refreshNodes()) return;
 
     // ── data ──────────────────────────────────────────────────────
     function load() {
@@ -184,6 +196,7 @@ const toolsCount = await getActiveToolCount();
     }
 
     function getMatchesByGroup() {
+      if (!refreshNodes()) return {};
       const qTerms = searchTerms(input.value);
       const query = qTerms.join(' ');
       const out = {};
@@ -291,6 +304,7 @@ const toolsCount = await getActiveToolCount();
     }
 
     function renderEmpty() {
+      if (!refreshNodes()) return;
       const popular = getPopularTools();
       let html = recentChipsHtml();
       if (popular.length > 0) {
@@ -315,14 +329,17 @@ const toolsCount = await getActiveToolCount();
     }
 
     function renderLoading() {
+      if (!refreshNodes()) return;
       results.innerHTML = '<div class="sp-empty">Loading…</div>';
     }
 
     function renderFailed() {
+      if (!refreshNodes()) return;
       results.innerHTML = '<div class="sp-empty">Search unavailable. <a href="/search/">Open full search →</a></div>';
     }
 
     function renderResults() {
+      if (!refreshNodes()) return;
       if (failed) return renderFailed();
       if (!data) { renderLoading(); load().then(renderResults); return; }
       const query = input.value.trim();
@@ -377,6 +394,7 @@ const toolsCount = await getActiveToolCount();
     }
 
     function setActive(idx) {
+      if (!refreshNodes()) return;
       const rows = results.querySelectorAll('.sp-row');
       rows.forEach((el, i) => el.classList.toggle('is-active', i === idx));
       activeIndex = idx;
@@ -390,6 +408,8 @@ const toolsCount = await getActiveToolCount();
 
     // ── open / close ──────────────────────────────────────────────
     function open(trigger = 'unknown') {
+      if (!refreshNodes()) return;
+      window.clearTimeout(closeTimer);
       modal.classList.add('is-visible');
       input.focus({ preventScroll: true });
       requestAnimationFrame(() => modal.classList.add('is-open'));
@@ -404,14 +424,23 @@ const toolsCount = await getActiveToolCount();
       }, 40);
       trackSearchIntent('site_search_open', { trigger });
     }
-    function close() {
+    function close(options: { immediate?: boolean } = {}) {
+      if (!refreshNodes()) {
+        document.body.style.overflow = '';
+        return;
+      }
+      window.clearTimeout(closeTimer);
       modal.classList.remove('is-open');
-      setTimeout(() => modal.classList.remove('is-visible'), 200);
+      if (options.immediate) modal.classList.remove('is-visible');
+      else closeTimer = window.setTimeout(() => modal.classList.remove('is-visible'), 200);
       document.body.style.overflow = '';
       input.blur();
     }
 
-    closeButtons?.forEach((el) => el.addEventListener('click', close));
+    function closeForNavigation() {
+      close({ immediate: true });
+      window.clearTimeout(searchTrackTimer);
+    }
 
     document.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
@@ -454,17 +483,26 @@ const toolsCount = await getActiveToolCount();
           window.location.href = `/search/?q=${encodeURIComponent(input.value.trim())}`;
         }
       }
-    });
+    }, { signal: searchPaletteSignal });
 
-    input.addEventListener('input', () => {
+    document.addEventListener('input', (e) => {
+      if (e.target?.id !== 'search-input') return;
+      if (!refreshNodes()) return;
       const next = input.value.trim();
       if (next === lastQuery) return;
       lastQuery = next;
       renderResults();
-    });
+    }, { signal: searchPaletteSignal });
 
     // Save query on row click + handle recent / clear interactions
-    results.addEventListener('click', (e) => {
+    document.addEventListener('click', (e) => {
+      if (!refreshNodes()) return;
+      const closeTrigger = e.target.closest?.('[data-search-close]');
+      if (closeTrigger) {
+        e.preventDefault();
+        close();
+        return;
+      }
       const clearBtn = e.target.closest('[data-clear-recent]');
       if (clearBtn) {
         e.preventDefault();
@@ -486,7 +524,7 @@ const toolsCount = await getActiveToolCount();
         const rows = Array.from(results.querySelectorAll('.sp-row'));
         trackResultOpen(row, rows.indexOf(row), 'click');
       }
-    });
+    }, { signal: searchPaletteSignal });
 
     // Open from the existing trigger buttons
     function trackResultOpen(row, index, openSource) {
@@ -506,8 +544,18 @@ const toolsCount = await getActiveToolCount();
       });
     }
 
-    document.getElementById('search-trigger')?.addEventListener('click', () => open('header'));
-    document.getElementById('search-trigger-mobile')?.addEventListener('click', () => open('mobile_header'));
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest?.('#search-trigger, #search-trigger-mobile');
+      if (!trigger) return;
+      e.preventDefault();
+      open(trigger.id === 'search-trigger-mobile' ? 'mobile_header' : 'header');
+    }, { signal: searchPaletteSignal });
+    document.addEventListener('astro:before-swap', closeForNavigation, { signal: searchPaletteSignal });
+    document.addEventListener('astro:after-swap', closeForNavigation, { signal: searchPaletteSignal });
+    window.addEventListener('pagehide', closeForNavigation, { signal: searchPaletteSignal });
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') closeForNavigation();
+    }, { signal: searchPaletteSignal });
 
     // Pre-load the search index after the page is idle so the first
     // click on the search trigger renders instantly instead of showing
@@ -524,8 +572,8 @@ const toolsCount = await getActiveToolCount();
     // before idle fires.
     const eagerPrefetch = () => { load(); };
     ['mouseenter', 'focus', 'touchstart'].forEach((ev) => {
-      document.getElementById('search-trigger')?.addEventListener(ev, eagerPrefetch, { once: true, passive: true });
-      document.getElementById('search-trigger-mobile')?.addEventListener(ev, eagerPrefetch, { once: true, passive: true });
+      document.getElementById('search-trigger')?.addEventListener(ev, eagerPrefetch, { once: true, passive: true, signal: searchPaletteSignal });
+      document.getElementById('search-trigger-mobile')?.addEventListener(ev, eagerPrefetch, { once: true, passive: true, signal: searchPaletteSignal });
     });
   })();
 </script>
@@ -578,16 +626,12 @@ const toolsCount = await getActiveToolCount();
   }
 
   #search-shell-inner {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)),
-      var(--bg-base, #0a0a0a);
-    border: 1px solid color-mix(in srgb, var(--gt-line-strong) 84%, rgba(255, 255, 255, 0.2));
-    border-radius: 18px;
+    background: var(--bg-base, #0a0a0a);
+    border: 1px solid var(--gt-line-strong);
+    border-radius: var(--gt-radius);
     box-shadow:
-      0 24px 60px -16px rgba(0, 0, 0, 0.6),
-      0 8px 24px -8px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 0 0 1px rgba(255, 255, 255, 0.025);
+      0 24px 60px -20px rgba(0, 0, 0, 0.62),
+      inset 0 1px 0 rgba(255, 255, 255, 0.055);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -600,19 +644,14 @@ const toolsCount = await getActiveToolCount();
     isolation: isolate;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     margin: 10px;
-    padding: 8px 8px 8px 17px;
-    min-height: 64px;
-    border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.22));
-    border-radius: 16px;
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.082), rgba(255, 255, 255, 0.014) 54%, rgba(249, 115, 22, 0.048)),
-      color-mix(in srgb, var(--gt-surface) 94%, transparent);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.105),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.032),
-      0 20px 44px -32px rgba(0, 0, 0, 0.82);
+    padding: 6px 8px 6px 15px;
+    min-height: 58px;
+    border: 1px solid var(--gt-line-strong);
+    border-radius: var(--gt-radius-sm);
+    background: var(--gt-surface);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
     overflow: hidden;
     transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
   }
@@ -621,28 +660,24 @@ const toolsCount = await getActiveToolCount();
     position: absolute;
     inset: 1px;
     z-index: -1;
-    border-radius: 15px;
+    border-radius: calc(var(--gt-radius-sm) - 1px);
     background:
-      radial-gradient(circle at 24px 0, rgba(249, 115, 22, 0.16), transparent 44%),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.055), transparent 45%);
-    opacity: 0.86;
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05), transparent 42%),
+      linear-gradient(180deg, rgba(249, 115, 22, 0.035), transparent);
+    opacity: 0.74;
     pointer-events: none;
   }
   .sp-input-row:focus-within {
-    border-color: color-mix(in srgb, var(--gt-accent) 72%, white 6%);
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.026) 54%, rgba(249, 115, 22, 0.07)),
-      color-mix(in srgb, var(--gt-surface-2) 97%, transparent);
+    border-color: color-mix(in srgb, var(--gt-accent) 62%, var(--gt-line-strong));
+    background: var(--gt-surface-2);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.13),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.04),
-      0 0 0 3px rgba(249, 115, 22, 0.14),
-      0 24px 52px -34px rgba(0, 0, 0, 0.9);
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 0 0 3px rgba(249, 115, 22, 0.13);
   }
   .sp-input-row:hover {
-    border-color: color-mix(in srgb, var(--gt-line-strong) 68%, var(--gt-accent) 32%);
+    border-color: color-mix(in srgb, var(--gt-line-strong) 72%, var(--gt-accent) 28%);
   }
-  .sp-input-icon { color: color-mix(in srgb, var(--gt-subtle) 72%, var(--gt-accent) 28%); flex: 0 0 auto; }
+  .sp-input-icon { color: color-mix(in srgb, var(--gt-subtle) 78%, var(--gt-accent) 22%); flex: 0 0 auto; }
   #search-input {
     flex: 1;
     min-width: 0;

@@ -71,6 +71,7 @@ export type DestinationType =
   | 'workflow'
   | 'answer'
   | 'trend'
+  | 'model'
   | 'company'
   | 'stack_builder'
   | 'search'

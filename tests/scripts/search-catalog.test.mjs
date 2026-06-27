@@ -4,7 +4,7 @@ import test from 'node:test';
 import { build as bundleModule } from 'esbuild';
 
 const source = readFileSync('src/lib/search-catalog.ts', 'utf8');
-const expectedKinds = ['tool', 'compare', 'guide', 'answer', 'workflow', 'trend', 'news', 'category', 'company'];
+const expectedKinds = ['tool', 'compare', 'guide', 'answer', 'workflow', 'trend', 'news', 'category', 'company', 'model'];
 let catalogModulePromise;
 let searchIndexModulePromise;
 
@@ -68,6 +68,7 @@ test('search catalog shapes every home search result family', () => {
   for (const href of ['/tools/${slug}/', '/compare/${slug}/', '/guides/${slug}/', '/answers/${answer.slug}/', '/workflows/${slug}/', '/trends/${slug}/', '/news/${slug}/', '/categories/${slug}/', '/companies/${slug}/']) {
     assert.ok(source.includes(`href: \`${href}\``), `${href} should remain part of the catalog contract`);
   }
+  assert.ok(source.includes("href = '/trends/model-availability-churn/'"), 'model status lookups should route to the model availability ledger');
 
   assert.match(source, /guide\.data\.noindex\s*!==\s*true/, 'noindex guides should stay out of the catalog');
   assert.match(source, /filter\(isCatalogActiveTool\)/, 'tool filtering should use the exported active-tool predicate');
@@ -370,6 +371,7 @@ test('buyer intent queries resolve through the shared search scoring contract', 
     ['marketing stack', 'ai-automation'],
     ['Claude vs Cursor', 'claude-vs-cursor'],
     ['Anysphere', 'cursor'],
+    ['gpt5.6', 'gpt-model-status'],
   ]) {
     const terms = searchTerms(query);
     const normalized = terms.join(' ');

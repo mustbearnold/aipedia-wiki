@@ -1244,6 +1244,11 @@ function newsDateFmt(iso: string): string {
       import { normalizeSearchText, scoreSearchItem, searchItemMatches, searchTerms } from '../lib/search-index';
 
       (() => {
+        const searchWindow = window as typeof window & { __aipediaHomeSearchAbort?: AbortController };
+        if (searchWindow.__aipediaHomeSearchAbort) searchWindow.__aipediaHomeSearchAbort.abort();
+        const controller = new AbortController();
+        const listenerOptions = { signal: controller.signal };
+        searchWindow.__aipediaHomeSearchAbort = controller;
         const root = document.querySelector('[data-home-search]');
         if (!root) return;
         const input = root.querySelector('[data-home-search-input]');
@@ -1274,7 +1279,7 @@ function newsDateFmt(iso: string): string {
         function destinationType(kind) {
           const k = String(kind || '').toLowerCase();
           if (k === 'compare') return 'comparison';
-          if (k === 'tool' || k === 'category' || k === 'guide' || k === 'news' || k === 'workflow' || k === 'answer' || k === 'trend' || k === 'company') return k;
+          if (k === 'tool' || k === 'category' || k === 'guide' || k === 'news' || k === 'workflow' || k === 'answer' || k === 'trend' || k === 'company' || k === 'model') return k;
           return 'internal';
         }
 
@@ -1306,7 +1311,7 @@ function newsDateFmt(iso: string): string {
             if (window.aipediaAnalytics) window.aipediaAnalytics.track(event.name, event.payload);
             else if (window.gtag) window.gtag('event', event.name, event.payload);
           }
-        });
+        }, listenerOptions);
 
         function scheduleSearchAnalytics(value, resultCount, source) {
           const query = String(value || '').trim();
@@ -1440,8 +1445,8 @@ function newsDateFmt(iso: string): string {
           open();
         }
 
-        input.addEventListener('focus', render);
-        input.addEventListener('input', render);
+        input.addEventListener('focus', render, listenerOptions);
+        input.addEventListener('input', render, listenerOptions);
         input.addEventListener('keydown', (e) => {
           const items = results.querySelectorAll('.gt-search-result');
           if (e.key === 'ArrowDown') {
@@ -1462,25 +1467,25 @@ function newsDateFmt(iso: string): string {
             close();
             input.blur();
           }
-        });
+        }, listenerOptions);
 
         document.addEventListener('click', (e) => {
           if (!root.contains(e.target)) close();
-        });
+        }, listenerOptions);
 
         results.addEventListener('mouseover', (e) => {
           const item = e.target.closest('.gt-search-result');
           if (!item) return;
           const items = Array.from(results.querySelectorAll('.gt-search-result'));
           setActive(items.indexOf(item));
-        });
+        }, listenerOptions);
 
         results.addEventListener('click', (e) => {
           const item = e.target.closest('.gt-search-result');
           if (!item) return;
           const items = Array.from(results.querySelectorAll('.gt-search-result'));
           trackResultOpen(item, items.indexOf(item), 'click');
-        });
+        }, listenerOptions);
 
         function trackResultOpen(row, index, openSource) {
           const href = row.dataset.resultUrl || row.getAttribute('href') || '';
@@ -1507,11 +1512,23 @@ function newsDateFmt(iso: string): string {
             destination_slug: 'search',
             open_source: 'submit',
           });
-        });
+        }, listenerOptions);
 
         input.addEventListener('focus', () => {
           trackSearchIntent('site_search_open', { trigger: 'homepage_input' });
-        }, { once: true });
+        }, { once: true, signal: controller.signal });
+
+        function teardown() {
+          close();
+          window.clearTimeout(searchTrackTimer);
+          controller.abort();
+        }
+
+        document.addEventListener('astro:before-swap', teardown, { once: true, signal: controller.signal });
+        window.addEventListener('pagehide', teardown, { once: true, signal: controller.signal });
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') close();
+        }, listenerOptions);
       })();
     </script>
 
@@ -2198,165 +2215,8 @@ function newsDateFmt(iso: string): string {
       margin: 0;
     }
 
-    /* Typeahead dropdown: drops below the search row.
-       JS injects result rows via innerHTML so these styles must escape
-       Astro's scoped CSS and apply globally via :global(). */
+    /* Typeahead dropdown uses the shared .gt-search-panel tokens. */
     .gt-search { position: relative; }
-    :global(.gt-search-panel) {
-      position: absolute;
-      top: calc(100% + 6px);
-      left: 0;
-      right: 0;
-      z-index: 30;
-      border-radius: var(--gt-radius);
-      border: 1px solid var(--gt-line-strong);
-      background: var(--bg-base, #0a0a0a);
-      box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.6);
-      overflow: hidden;
-      max-height: 60vh;
-      display: flex;
-      flex-direction: column;
-    }
-    :global(.gt-search-panel[hidden]) { display: none; }
-    :global(.gt-search-panel-head) {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--gt-line);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    :global(.gt-search-panel-head span) { color: var(--gt-subtle); }
-    :global(.gt-search-panel-head strong) { color: var(--gt-muted); font-variant-numeric: tabular-nums; }
-    :global(.gt-search-panel-list) {
-      overflow-y: auto;
-      flex: 1 1 auto;
-      background: var(--bg-base, #0a0a0a);
-    }
-    :global(.gt-search-result) {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr) auto;
-      grid-template-rows: auto auto;
-      align-items: center;
-      column-gap: 12px;
-      padding: 10px 14px;
-      text-decoration: none;
-      color: var(--gt-fg);
-      border-bottom: 1px solid var(--gt-line);
-      min-height: 56px;
-      border-left: none;
-    }
-    :global(.gt-search-result:last-child) { border-bottom: none; }
-    :global(.gt-search-result.is-active),
-    :global(.gt-search-result:hover) {
-      background: var(--gt-surface-2);
-    }
-    /* Left cell: official logo, vs-pair logos, or a kind label pill. */
-    :global(.gt-search-result-logo) {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: #ffffff;
-      object-fit: contain;
-      padding: 3px;
-      box-sizing: border-box;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(0, 0, 0, 0.25);
-      flex: none;
-    }
-    :global(html.light .gt-search-result-logo) {
-      background: #f8fafc;
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
-    }
-    :global(.gt-search-result-logo-mono) {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      background: linear-gradient(135deg, rgba(249, 115, 22, 0.18), rgba(251, 146, 60, 0.12));
-      color: var(--gt-fg);
-      font-size: 13px;
-      font-weight: 700;
-    }
-    :global(.gt-search-result-logos) {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      display: inline-flex;
-      align-items: center;
-    }
-    :global(.gt-search-result-logos img) {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      background: #ffffff;
-      object-fit: contain;
-      padding: 2px;
-      box-sizing: border-box;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
-    }
-    :global(.gt-search-result-logos img + img) { margin-left: -8px; }
-    :global(html.light .gt-search-result-logos img) {
-      background: #f8fafc;
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
-    }
-    :global(.gt-search-result-kind) {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      align-self: center;
-      font-size: 9px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gt-accent);
-      background: rgba(249, 115, 22, 0.10);
-      border: 1px solid rgba(249, 115, 22, 0.30);
-      border-radius: 6px;
-      padding: 6px 8px;
-      white-space: nowrap;
-    }
-    :global(.gt-search-result-title) {
-      grid-column: 2;
-      grid-row: 1;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.35;
-      color: var(--gt-fg);
-      display: block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    :global(.gt-search-result-detail) {
-      grid-column: 2;
-      grid-row: 2;
-      font-size: 12px;
-      color: var(--gt-muted);
-      line-height: 1.4;
-      display: block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    :global(.gt-search-result-meta) {
-      grid-column: 3;
-      grid-row: 1 / span 2;
-      align-self: center;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--gt-muted);
-      font-variant-numeric: tabular-nums;
-      white-space: nowrap;
-    }
-    :global(.gt-search-empty) {
-      padding: 16px 14px;
-      font-size: 13px;
-      color: var(--gt-muted);
-      text-align: center;
-    }
 
     /* Section headers ---------------------------------------------- */
     .gt-section-head {

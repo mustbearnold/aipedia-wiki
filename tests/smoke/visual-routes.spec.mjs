@@ -569,6 +569,9 @@ test('search page shows the full catalog and filters it in place', async ({ page
   expect(visibleCards).toBeGreaterThan(0);
   expect(visibleCards).toBeLessThan(totalCards);
   await expect(page.locator('[data-search-card]:visible').first()).toContainText(/Claude/i);
+
+  await page.locator('[data-tool-search]').fill('gpt5.6');
+  await expect(page.locator('[data-search-card]:visible').first()).toContainText(/GPT model status/i);
 });
 
 test('stack builder shows selected roles before budget is chosen', async ({ page }) => {

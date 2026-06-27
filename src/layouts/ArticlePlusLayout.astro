@@ -1,6 +1,6 @@
 ---
 /**
- * ArticlePlusLayout — god-tier 10/10 narrative article (May 2026 onward).
+ * ArticlePlusLayout - god-tier 10/10 narrative article (May 2026 onward).
  *
  * Used for trends, news posts, dead-tool eulogies. Composes Hero + body +
  * citations as a TrustPanel.
@@ -275,6 +275,11 @@ const rankLabel = badge?.text ?? metaExtra ?? (readingMinutes > 0 ? `${readingMi
       border: 1px solid rgba(var(--gt-negative-rgb), 0.42);
       background: rgba(var(--gt-negative-rgb), 0.12);
       color: var(--gt-negative);
+    }
+    .gt-body :global(.availability-status.is-limited) {
+      border: 1px solid rgba(var(--gt-warn-rgb), 0.46);
+      background: rgba(var(--gt-warn-rgb), 0.14);
+      color: var(--gt-warn);
     }
     .gt-body :global(details) {
       margin-top: 18px;

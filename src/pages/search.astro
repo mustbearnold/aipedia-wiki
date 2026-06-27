@@ -41,13 +41,13 @@ const catalogItems = buildSearchCatalog({
   logos: logoManifest as Record<string, string>,
 });
 
-const quickTerms = ['coding agent', 'local model', 'marketing stack', 'Claude vs Cursor', 'ChatGPT', 'Claude', 'Cursor', 'OpenAI', 'Anthropic', 'Google'];
+const quickTerms = ['GPT model status', 'coding agent', 'local model', 'marketing stack', 'Claude vs Cursor', 'ChatGPT', 'Claude', 'Cursor', 'OpenAI', 'Anthropic', 'Google'];
 const totalItems = catalogItems.length;
 ---
 
 <BaseLayout
   title="Search aipedia.wiki"
-  description={`Search and browse ${totalItems} AiPedia tools, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.`}
+  description={`Search and browse ${totalItems} AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.`}
   robots="noindex, follow"
 >
   <div class="sr-only" data-pagefind-ignore>
@@ -57,7 +57,7 @@ const totalItems = catalogItems.length;
   <div class="gt-canvas" data-search-index>
     <Hero
       title="Search"
-      tagline="Find any tool, comparison, or guide. Type a name, company, category, price, or job."
+      tagline="Find any tool, model, comparison, or guide. Type a name, company, category, price, model name, or job."
       breadcrumbs={[
         { label: 'aipedia', href: '/' },
         { label: 'Search' },
@@ -77,7 +77,7 @@ const totalItems = catalogItems.length;
           inputmode="search"
           autocomplete="off"
           spellcheck="false"
-          placeholder={`Search ${totalItems} local pages`}
+          placeholder={`Search ${totalItems} local records`}
           data-tool-search
         />
         <kbd class="gt-kbd" data-search-kbd aria-hidden="true">Ctrl K</kbd>
@@ -164,7 +164,7 @@ const totalItems = catalogItems.length;
     </ol>
 
     <div class="gt-search-empty" data-search-empty hidden>
-      <p>No local pages match that search. Try a different keyword or <a href="/explore/">browse the site map</a>.</p>
+      <p>No local records match that search. Try a different keyword or <a href="/explore/">browse the site map</a>.</p>
     </div>
   </div>
 

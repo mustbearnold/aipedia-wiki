@@ -6,7 +6,7 @@ import { buildEvidenceRailModel, evidenceRailFromDecisionPicks, type EvidenceCon
 import { buildToolPageModel } from './content-models/tool-page-model';
 import { normalizeDecisionPick, type DecisionPick } from './content-models/decision-pick';
 
-export type SearchKind = 'tool' | 'compare' | 'guide' | 'answer' | 'workflow' | 'trend' | 'news' | 'category' | 'company';
+export type SearchKind = 'tool' | 'compare' | 'guide' | 'answer' | 'workflow' | 'trend' | 'news' | 'category' | 'company' | 'model';
 
 export interface SearchCatalogAction {
   label: string;
@@ -78,6 +78,58 @@ const BUYER_INTENT_TERMS_BY_CATEGORY: Record<string, string[]> = {
   'ai-seo': ['marketing stack', 'seo stack', 'content marketing stack'],
   'ai-writing': ['marketing stack', 'content stack', 'copywriting stack'],
 };
+
+const MODEL_STATUS_LOOKUPS = [
+  {
+    slug: 'gpt-model-status',
+    title: 'GPT model status',
+    families: ['GPT', 'OpenAI models'],
+    aliases: ['gpt5.6', 'gpt-5.6', 'gpt 5.6', 'gpt5', 'gpt-5', 'gpt 5', 'gpt-6', 'gpt6', 'openai model', 'openai frontier model'],
+    detail: 'GPT-5.6 is tracked as an official limited preview, not broad public availability.',
+  },
+  {
+    slug: 'claude-model-status',
+    title: 'Claude model status',
+    families: ['Claude', 'Anthropic models'],
+    aliases: ['claude 5', 'claude-5', 'claude opus', 'claude sonnet', 'claude haiku', 'anthropic model', 'anthropic frontier model'],
+  },
+  {
+    slug: 'gemini-model-status',
+    title: 'Gemini model status',
+    families: ['Gemini', 'Google models'],
+    aliases: ['gemini 3.5', 'gemini-3.5', 'gemini 4', 'gemini-4', 'google model', 'google frontier model'],
+  },
+  {
+    slug: 'grok-model-status',
+    title: 'Grok model status',
+    families: ['Grok', 'xAI models'],
+    aliases: ['grok 5', 'grok-5', 'grok code', 'xai model', 'xai frontier model'],
+  },
+  {
+    slug: 'deepseek-model-status',
+    title: 'DeepSeek model status',
+    families: ['DeepSeek'],
+    aliases: ['deepseek r2', 'deepseek-r2', 'deepseek v4', 'deepseek-v4', 'deepseek model'],
+  },
+  {
+    slug: 'mistral-model-status',
+    title: 'Mistral model status',
+    families: ['Mistral'],
+    aliases: ['mistral large', 'mistral medium', 'mistral small', 'mistral model', 'ministral'],
+  },
+  {
+    slug: 'qwen-model-status',
+    title: 'Qwen model status',
+    families: ['Qwen'],
+    aliases: ['qwen 3', 'qwen3', 'qwen 4', 'qwen4', 'qwen model', 'qwen coder'],
+  },
+  {
+    slug: 'llama-model-status',
+    title: 'Llama model status',
+    families: ['Llama', 'Meta models'],
+    aliases: ['llama 5', 'llama-5', 'llama4', 'llama 4', 'meta model', 'meta llama'],
+  },
+] as const;
 
 function uniqueStrings(values: Array<string | undefined | null>): string[] {
   return Array.from(new Set(values.map((value) => String(value ?? '').trim()).filter(Boolean)));
@@ -191,6 +243,59 @@ function answerEvidence(answer: typeof ANSWER_ITEMS[number]): EvidenceRailModel 
     confidence: 'medium',
     diagnostics: ['Answer catalog entries use editorial answer text without structured source references.'],
   });
+}
+
+function modelStatusItems(trends: CatalogEntry[]): SearchCatalogItem[] {
+  const ledger = trends.find((trend) => searchEntrySlug(trend) === 'model-availability-churn');
+  const href = '/trends/model-availability-churn/';
+  const verifiedAt = ledger
+    ? dateishField(ledger.data.last_verified) ?? dateishField(ledger.data.last_updated) ?? dateishField(ledger.data.date)
+    : undefined;
+  const evidence = ledger ? buildEvidenceRailModel({
+    verifiedAt,
+    confidence: 'medium',
+    sources: [{
+      label: ledger.data.title ?? 'AI Model Availability Tracker',
+      url: href,
+      verified_at: verifiedAt,
+      volatility: 'high',
+      used_by: ['evidence'],
+      state: 'inline_only',
+    }],
+    diagnostics: ['Model status search routes ambiguous model names to the availability tracker.'],
+  }) : buildEvidenceRailModel({
+    confidence: 'medium',
+    diagnostics: ['Model status search routes unresolved model names to the availability ledger.'],
+  });
+
+  return MODEL_STATUS_LOOKUPS.map((lookup) => ({
+    kind: 'model' as const,
+    kindLabel: 'Model',
+    slug: lookup.slug,
+    title: lookup.title,
+    href,
+    detail: 'detail' in lookup ? lookup.detail : 'Check the verified availability ledger before trusting a model name, rumor, or routing claim.',
+    meta: 'Model availability',
+    badge: 'Status lookup',
+    priority: 78,
+    tags: uniqueStrings([...lookup.families, ...lookup.aliases, 'model availability', 'model status', 'frontier model']),
+    buyerFit: 'Use this when a model name looks new, ambiguous, or potentially unavailable in your product route.',
+    action: { label: 'Check model status', href },
+    evidence,
+    verifiedAt,
+    sourceLabel: evidence.primaryLabel,
+    search: buildSearchHaystack([
+      lookup.title,
+      lookup.slug,
+      ...lookup.families,
+      ...lookup.aliases,
+      'model availability',
+      'model status',
+      'frontier model',
+      'latest model',
+      'rumored model',
+    ]),
+  }));
 }
 
 export function buildSearchCatalog(input: CatalogInput): SearchCatalogItem[] {
@@ -515,5 +620,6 @@ export function buildSearchCatalog(input: CatalogInput): SearchCatalogItem[] {
     ...newsItems,
     ...categoryItems,
     ...companyItems,
+    ...modelStatusItems(input.trends),
   ].sort((a, b) => b.priority - a.priority || a.title.localeCompare(b.title));
 }
