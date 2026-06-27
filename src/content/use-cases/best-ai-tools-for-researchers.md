@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-tools-for-researchers
 title: "Best AI Tools for Researchers (June 2026)"
 seo_title: "Best AI Tools for Researchers in June 2026: Literature Review, Citations, Source Notebooks & Web Research"
-meta_description: "Updated June 12, 2026: Elicit is best for literature-review workflow, Semantic Scholar is the free academic-search baseline, Perplexity is the cited web research add-on, Claude is best for close reading, and Scite is the citation-context specialist."
+meta_description: "Updated June 27, 2026: Elicit is best for literature-review workflow, Semantic Scholar is the free academic-search baseline, Perplexity is the cited web research add-on, Claude is best for close reading, and Scite is the citation-context specialist."
 description: "A source-backed buyer guide to AI research tools for literature review, paper discovery, citation context, source-grounded notebooks, current web research, and research synthesis."
 tools_mentioned: [elicit, semantic-scholar, perplexity, claude, notebooklm, scite, consensus]
 guide_picks:
@@ -32,14 +32,14 @@ guide_picks:
       - label: "Perplexity Enterprise"
         url: "https://www.perplexity.ai/enterprise"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
 # Best AI Tools for Researchers (June 2026)
 
-AiPedia re-verified this guide on June 12, 2026 against current official Elicit, Semantic Scholar, Perplexity, Anthropic, Google NotebookLM, Scite, and Consensus sources. The ranking is editorial. Paid placement does not decide winners.
+AiPedia re-verified this guide on June 27, 2026 against current official Elicit, Semantic Scholar, Perplexity, Anthropic, Google NotebookLM, Scite, and Consensus sources. The ranking is editorial. Paid placement does not decide winners.
 
 ## Quick Verdict
 
@@ -125,13 +125,13 @@ NotebookLM is strongest when you want answers constrained to uploaded sources. E
 
 ## Sources
 
-- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-12.
-- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-12.
-- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-06-12.
-- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) - verified 2026-06-12.
-- [Claude pricing](https://claude.com/pricing) - verified 2026-06-12.
-- [NotebookLM](https://notebooklm.google/) - verified 2026-06-12.
-- [NotebookLM upgrade help](https://support.google.com/notebooklm/answer/16213268) - verified 2026-06-12.
-- [Scite](https://scite.ai/) - verified 2026-06-12.
-- [Scite pricing](https://scite.ai/pricing) - verified 2026-06-12.
-- [Consensus](https://consensus.app/) - verified 2026-06-12.
+- [Elicit pricing](https://elicit.com/pricing) - verified 2026-06-27.
+- [Semantic Scholar](https://www.semanticscholar.org/) - verified 2026-06-27.
+- [Perplexity Enterprise](https://www.perplexity.ai/enterprise) - verified 2026-06-27.
+- [Perplexity API pricing](https://docs.perplexity.ai/docs/getting-started/pricing) - verified 2026-06-27.
+- [Claude pricing](https://claude.com/pricing) - verified 2026-06-27.
+- [NotebookLM](https://notebooklm.google/) - verified 2026-06-27.
+- [NotebookLM upgrade help](https://support.google.com/notebooklm/answer/16213268) - verified 2026-06-27.
+- [Scite](https://scite.ai/) - verified 2026-06-27.
+- [Scite pricing](https://scite.ai/pricing) - verified 2026-06-27.
+- [Consensus](https://consensus.app/) - verified 2026-06-27.

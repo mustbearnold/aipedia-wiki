@@ -7,7 +7,7 @@ tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Seedance, Kling, Veo, Runway & Tavus"
 meta_description: "Updated June 27, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, OpusClip, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-26
+last_updated: 2026-06-27
 last_verified: 2026-06-27
 update_frequency: weekly
 top_picks:
@@ -52,7 +52,7 @@ AI video is no longer one clean product category. On June 9, 2026, the useful bu
 
 **June 22 Hedra route refresh:** Hedra is now best framed as a creative-agent workspace plus pooled-credit media studio, not just a talking-avatar tool. Current official pricing still lists Basic at $15/month, Creator at $30/month, Professional and Teams at $75/month, and Enterprise custom, while the visible model-rate table now includes Character-3, Veo 3.1, Sora 2 Pro, Kling 2.5 Turbo, MiniMax Hailuo 2.3, image models, and voice models under one credit balance. Use Hedra when the job is character-led creative plus model choice and reusable workflow, but verify the exact model route in-app because public rate rows can move.
 
-The June 6 [best AI video generator guide](/guides/best-ai-video-generator/) refresh now mirrors this hub on mobile: no wide comparison table as the primary experience, separate buying lanes for Seedance, Kling, Veo, Runway, Pika, and HeyGen, plus explicit rights, credit, region, procurement, and production-workflow checks before CTAs.
+The June 27 [best AI video generator guide](/guides/best-ai-video-generator/) refresh now mirrors this hub on mobile: no wide comparison table as the primary experience, separate buying lanes for Seedance, Kling, Veo, Runway, Pika, and HeyGen, plus explicit rights, credit, region, procurement, and production-workflow checks before CTAs.
 
 **June 10 Vidu/Wan route refresh:** [Vidu](/tools/vidu/) remains a reference-consistency and native-audio story-video test, not a default general-video winner. Current API docs put Q3-pro general video at $0.045-$0.12/sec, Q3-turbo at $0.035-$0.065/sec, and Q3-mix reference-to-video up to $0.145/sec. [Wan](/tools/wan/) remains the model/API/open-weights route: Wan2.2 is the Apache 2.0 self-hosting path, Alibaba Cloud Model Studio has route-specific Wan 2.7/2.6 docs, and international pricing examples span roughly $0.015-$0.15/sec depending on model, audio, and resolution.
 

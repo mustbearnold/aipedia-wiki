@@ -7,7 +7,7 @@ tool_count: 9
 seo_title: "Best AI Research Tools: Elicit, Scite, Semantic Scholar & Perplexity (June 2026)"
 meta_description: "Updated June 27, 2026: Elicit for systematic-review workflow, Semantic Scholar for academic search/API, Scite for citation context/MCP, NotebookLM for source-grounded notebooks, Perplexity for cited web research, Consensus for academic Q&A, and nanochat for LLM-training education."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-26
+last_updated: 2026-06-27
 last_verified: 2026-06-27
 update_frequency: monthly
 ---
@@ -73,16 +73,16 @@ Large law firms and legal departments should evaluate Harvey separately from aca
 
 ## Money Guides
 
-- [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/) is the June 6 verified research buyer guide for Elicit, Semantic Scholar, Perplexity, Claude, NotebookLM, Scite, and Consensus across literature review, free academic search, current cited web research, close reading, source notebooks, citation context, and research-integrity rules.
+- [Best AI Tools for Researchers](/guides/best-ai-tools-for-researchers/) is the June 27 verified research buyer guide for Elicit, Semantic Scholar, Perplexity, Claude, NotebookLM, Scite, and Consensus across literature review, free academic search, current cited web research, close reading, source notebooks, citation context, and research-integrity rules.
 - [Best AI for Academic Writing](/guides/best-ai-for-academic-writing/) is the June 26 verified adjacent guide for source-grounded writing, literature-review workflows, citation discovery, and academic-integrity-safe AI use.
 - [Best AI for Citations and References](/guides/best-ai-for-citations/) is the June 26 verified citation-integrity guide for Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus, with mobile-friendly buyer paths for citation context, fixed-source notebooks, cited web research, and literature-review workflows.
-- [Best AI Tools for Students](/guides/best-ai-tools-for-students/) is the June 6 verified student research and study guide for ChatGPT, NotebookLM, Perplexity, Claude, Cursor, Gemini, and Semantic Scholar, with source-grounded class-material study, cited-web research, academic integrity, and coding-assistance boundaries foregrounded.
+- [Best AI Tools for Students](/guides/best-ai-tools-for-students/) is the June 27 verified student research and study guide for ChatGPT, NotebookLM, Perplexity, Claude, Cursor, Gemini, and Semantic Scholar, with source-grounded class-material study, cited-web research, academic integrity, and coding-assistance boundaries foregrounded.
 - [Best AI for Data Analysis](/guides/best-ai-for-data-analysis/) is the June 26 verified adjacent guide for ChatGPT file analysis, Gemini/Google Sheets workflows, Claude analytical critique, Hex governed data-team notebooks, Julius no-code data agents, Rows spreadsheet AI, and Perplexity cited market research.
 - [Best AI for Interview Prep](/guides/best-ai-for-interview-prep/) is the June 26 verified adjacent guide for ethical prep, source-grounded resume/job-description research, spoken roleplay, company-source checking, and technical mock practice.
-- [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 6 verified adjacent guide for source-backed market, company, vendor, meeting, deck, and memo workflows.
-- [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 6 verified research-safety guide for cited web research, fixed source packs, source logs, academic claim checks, account security, and primary-source verification.
-- [Best AI Tools for Lawyers](/guides/best-ai-tools-for-lawyers/) is the June 6 verified legal-research and drafting buyer guide for Harvey, Claude, Spellbook, CoCounsel Legal, and Lexis+ with Protege, with authority, citation, privilege, and matter-data checks foregrounded.
-- [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 6 verified nonprofit research and reporting guide for NotebookLM source packs, Google Workspace AI, ChatGPT discounts, Claude nonprofit pricing, grant workflows, and donor/beneficiary data safety.
+- [Best AI Tools for Consultants](/guides/best-ai-tools-for-consultants/) is the June 27 verified adjacent guide for source-backed market, company, vendor, meeting, deck, and memo workflows.
+- [Best AI Tools for Journalists](/guides/best-ai-tools-for-journalists/) is the June 27 verified research-safety guide for cited web research, fixed source packs, source logs, academic claim checks, account security, and primary-source verification.
+- [Best AI Tools for Lawyers](/guides/best-ai-tools-for-lawyers/) is the June 27 verified legal-research and drafting buyer guide for Harvey, Claude, Spellbook, CoCounsel Legal, and Lexis+ with Protege, with authority, citation, privilege, and matter-data checks foregrounded.
+- [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 27 verified nonprofit research and reporting guide for NotebookLM source packs, Google Workspace AI, ChatGPT discounts, Claude nonprofit pricing, grant workflows, and donor/beneficiary data safety.
 
 AiPedia is intentionally not promoting the old medical-research guide until it is rebuilt with medical-specific sources, privacy guidance, regulator context, high-stakes safety caveats, and current life-sciences AI coverage.
 

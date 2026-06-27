@@ -3,19 +3,19 @@ type: use-case
 slug: best-ai-tools-under-50-month
 title: "Best AI Tools Under $50/Month (Archived, June 2026)"
 seo_title: "Best AI Tools Under $50/Month (Archived, June 2026)"
-meta_description: "Archived under-$50 AI tools page, rechecked June 12, 2026. Use current category, free, and under-$20 buyer guides instead of this broad noindex route."
+meta_description: "Archived under-$50 AI tools page, rechecked June 27, 2026. Use current category, free, and under-$20 buyer guides instead of this broad noindex route."
 description: "Archived under-$50 AI tools page that routes buyers to stronger category, free-plan, and first-paid-plan guides."
 tools_mentioned: [chatgpt, gemini, claude, cursor, github-copilot, runway, midjourney, freepik]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 noindex: true
 ---
 
 # Best AI Tools Under $50/Month (Archived, June 2026)
 
-This page remains intentionally noindexed after the June 6, 2026 refresh. The old under-$50 list was too broad to be useful: a $20 general assistant, a $20 coding IDE, a $29 avatar-video plan, and a $39 coding plan solve different buying problems.
+This page remains intentionally noindexed after the June 27, 2026 refresh. The old under-$50 list was too broad to be useful: a $20 general assistant, a $20 coding IDE, a $29 avatar-video plan, and a $39 coding plan solve different buying problems.
 
 Use these stronger pages instead:
 

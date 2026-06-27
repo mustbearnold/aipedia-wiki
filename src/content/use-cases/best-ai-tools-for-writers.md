@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-tools-for-writers
 title: "Best AI Tools for Writers (June 2026)"
 seo_title: "Best AI Tools for Writers in June 2026: ChatGPT, Claude, Sudowrite, Jasper, Grammarly & Gemini"
-meta_description: "Updated June 12, 2026: ChatGPT is the best default writing assistant, Claude is best for long-form editing, Sudowrite is best for fiction, Jasper is best for brand teams, Grammarly is best for polish, and Gemini is best for Google-native writing."
+meta_description: "Updated June 27, 2026: ChatGPT is the best default writing assistant, Claude is best for long-form editing, Sudowrite is best for fiction, Jasper is best for brand teams, Grammarly is best for polish, and Gemini is best for Google-native writing."
 description: "A current buyer guide to AI writing tools, covering drafting, editing, fiction, brand content, grammar polish, Google Workspace writing, pricing tradeoffs, source-backed limitations, and what not to automate."
 tools_mentioned: [chatgpt, claude, sudowrite, jasper, grammarly, gemini, perplexity, notebooklm]
 guide_picks:
@@ -32,14 +32,14 @@ guide_picks:
       - label: "Jasper pricing"
         url: "https://www.jasper.ai/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
 # Best AI Tools for Writers (June 2026)
 
-AiPedia rechecked this guide on June 12, 2026 against current official ChatGPT, Claude, Sudowrite, Jasper, Grammarly, Gemini, NotebookLM, and Perplexity sources. The best AI writing tool depends on the writing job: drafting, editing, fiction, brand workflow, polish, source work, or Google-native collaboration.
+AiPedia rechecked this guide on June 27, 2026 against current official ChatGPT, Claude, Sudowrite, Jasper, Grammarly, Gemini, NotebookLM, and Perplexity sources. The best AI writing tool depends on the writing job: drafting, editing, fiction, brand workflow, polish, source work, or Google-native collaboration.
 
 AiPedia may earn a commission from some links on this page. Rankings are editorial, source-backed, and not sold.
 
@@ -121,11 +121,11 @@ Yes, if you want an always-on polish layer where you write. ChatGPT and Claude a
 
 ## Sources
 
-- [ChatGPT pricing](https://openai.com/business/chatgpt-pricing/) - verified 2026-06-12.
-- [Claude pricing](https://claude.com/pricing) - verified 2026-06-12.
-- [Sudowrite pricing](https://sudowrite.com/pricing) - verified 2026-06-12.
-- [Jasper pricing](https://www.jasper.ai/pricing) - verified 2026-06-12.
-- [Grammarly plans](https://www.grammarly.com/plans) - verified 2026-06-12.
-- [Gemini subscriptions](https://gemini.google/subscriptions/) - verified 2026-06-12.
-- [NotebookLM upgrade help](https://support.google.com/notebooklm/answer/16213268) - verified 2026-06-12.
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-12.
+- [ChatGPT pricing](https://openai.com/business/chatgpt-pricing/) - verified 2026-06-27.
+- [Claude pricing](https://claude.com/pricing) - verified 2026-06-27.
+- [Sudowrite pricing](https://sudowrite.com/pricing) - verified 2026-06-27.
+- [Jasper pricing](https://www.jasper.ai/pricing) - verified 2026-06-27.
+- [Grammarly plans](https://www.grammarly.com/plans) - verified 2026-06-27.
+- [Gemini subscriptions](https://gemini.google/subscriptions/) - verified 2026-06-27.
+- [NotebookLM upgrade help](https://support.google.com/notebooklm/answer/16213268) - verified 2026-06-27.
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) - verified 2026-06-27.

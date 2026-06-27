@@ -866,6 +866,19 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Failed then fixed: The first Magnific API pay-per-use source-health pass returned a 404 for `docs.magnific.com/pricing-payg`; updated the registry and visible sources to `https://www.magnific.com/api/pricing`, added the June 30 discontinuation caveat, and reran source health successfully.
 - Next: Completed by the Pinecone, PixVerse, Playground AI, and Qdrant shard below.
 
+### 2026-06-27: Non-Tool Page Refresh Batch 05
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed 24 guide routes from `/guides/best-ai-tools-for-accountants/` through `/guides/best-free-ai-tools/`, updated `/guides/`, `/categories/`, 13 affected category hubs, and regenerated `PAGE_REFRESH_LEDGER.md`. Strict 3-day stale count moved from 193 to 169 tracked pages.
+- Buyer-impact notes: Role guides now show June 27 verification language; archived budget pages keep noindex routing but have current recheck framing; the marketer guide no longer relabels old June 6 exact pricing as current and instead uses source-backed billing-cadence caution. Video generator guidance now uses a live Kling 3.0 launch source.
+- Source repairs: Replaced the broken Jasper Brand Voice help URL with `https://www.jasper.ai/brand-voice`. Replaced the unreachable Kuaishou investor Kling 3.0 URL with the live GlobeNewswire copy of the launch release.
+- Verification: `npm run page:source-health -- --plan local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json --out local/tmp/aipedia-runner/page-refresh/batch-05-source-health-after-pass2.json --concurrency 8 --timeout-ms 8000`; `npm run ledger:pages && npm run ledger:pages:check`; `node scripts/check-frontmatter.mjs --changed`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run audit:coverage-quality:changed`; `npm run audit:provenance:changed -- --json`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `AIPEDIA_CURRENT_DATE=2026-06-27 npm run runner:page-refresh:closeout`; supplemental `node scripts/qa-route.mjs` for 13 category hubs at 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Timing: closeout 81.234s total, cheap gates 2.366s, source health 12.261s, typecheck 14.856s, build:fast 16.824s, content route QA 34.922s, supplemental category route QA 16.319s.
+- Failed then fixed: Initial source-health pass found an unreachable Kuaishou URL, then a broken Jasper help URL after replacement; both were fixed and rerun successfully. The first combined ledger generate/check needed a second ledger write before `ledger:pages:check` stabilized.
+- Residual risks: Worker report scaffolds parsed 6/6 but were not filled by live subagents because this batch was executed in-thread. Use closeout/source-health/route-QA timings for optimization rather than scaffold worker metrics.
+- Next: Continue the oldest-first strict 3-day queue with 169 stale pages left: 38 guides, 37 comparisons, 30 companies, 21 static pages, 14 workflows, 12 trends, 8 dead archive pages, 6 tools, 2 crawl surfaces, and 1 report.
+
 ### 2026-06-25: Pinecone, PixVerse, Playground AI, and Qdrant Serial Tool Shard
 
 - Status: Complete, verified, and pushed on `codex/refresh-tool-pages-june-23`.
