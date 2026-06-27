@@ -3,13 +3,13 @@ type: workflow
 slug: research-assistant-stack
 title: "Research Assistant Stack: Perplexity, Claude, Notion AI"
 seo_title: "Research Assistant Stack: Perplexity, Claude & Notion AI (June 2026)"
-meta_description: "Updated June 12, 2026: build a source-backed research workflow with Perplexity, Claude, and Notion AI while avoiding stale citations, unsupported query-limit claims, and hidden Notion AI costs."
+meta_description: "Updated June 27, 2026: build a source-backed research workflow with Perplexity, Claude, and Notion AI while avoiding stale citations, unsupported query-limit claims, and hidden Notion AI costs."
 description: "Answer deep research questions with citations, structured analysis, and organized notes in a human-reviewed workflow."
 stack: [perplexity, claude, notion-ai]
 tools_mentioned: [perplexity, claude, notion-ai]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ update_frequency: monthly
 
 This stack is for analysts, journalists, founders, consultants, and wiki editors who need a repeatable process for cited research, structured reasoning, and durable notes.
 
-**AiPedia verdict, verified June 12, 2026:** use [Perplexity](/tools/perplexity/) for cited discovery and web-grounded first passes, [Claude](/tools/claude/) for careful analysis and long-form synthesis, and [Notion AI](/tools/notion-ai/) when the organization already lives in Notion and wants research to become searchable workspace memory. Do not use this stack as a source of truth without checking the top citations manually.
+**AiPedia verdict, verified June 27, 2026:** use [Perplexity](/tools/perplexity/) for cited discovery and web-grounded first passes, [Claude](/tools/claude/) for careful analysis and long-form synthesis, and [Notion AI](/tools/notion-ai/) when the organization already lives in Notion and wants research to become searchable workspace memory. Do not use this stack as a source of truth without checking the top citations manually.
 
 The value is not that AI "does research." The value is that it makes a human research loop faster: find sources, separate evidence from interpretation, synthesize the answer, store the trail, and revisit the question later.
 
@@ -145,7 +145,7 @@ Treating AI citations as proof. Citations are leads. Verification happens when a
 
 ## System Notes
 
-This page documents an operational research stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-12.
+This page documents an operational research stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-27.
 
 ## Related
 
@@ -154,9 +154,9 @@ This page documents an operational research stack verified by the aipedia.wiki e
 
 ## Sources
 
-- [Perplexity hub](https://www.perplexity.ai/hub), verified 2026-06-12
-- [Perplexity Pro](https://www.perplexity.ai/pro), verified 2026-06-12
-- [Perplexity API rate limits](https://docs.perplexity.ai/docs/admin/rate-limits-usage-tiers), verified 2026-06-12
-- [Claude pricing](https://claude.com/pricing), verified 2026-06-12
-- [Notion pricing](https://www.notion.com/pricing), verified 2026-06-12
-- [Notion AI](https://www.notion.com/product/ai), verified 2026-06-12
+- [Perplexity hub](https://www.perplexity.ai/hub), verified 2026-06-27
+- [Perplexity Pro](https://www.perplexity.ai/pro), verified 2026-06-27
+- [Perplexity API rate limits](https://docs.perplexity.ai/docs/admin/rate-limits-usage-tiers), verified 2026-06-27
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-27
+- [Notion pricing](https://www.notion.com/pricing), verified 2026-06-27
+- [Notion AI](https://www.notion.com/product/ai), verified 2026-06-27

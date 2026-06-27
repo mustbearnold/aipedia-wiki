@@ -1,6 +1,6 @@
 ---
 /**
- * CompanyLayout — god-tier 10/10 mobile-first company profile (May 2026 onward).
+ * CompanyLayout: god-tier 10/10 mobile-first company profile (May 2026 onward).
  *
  * Hero shows company name + founding metadata; DecisionCard surfaces the
  * flagship product CTA; key products render as a list.
@@ -248,13 +248,31 @@ const tagline = metaBits.length > 0 ? metaBits.join(' · ') : description;
       .gt-product-price { text-align: left; }
     }
 
-    .gt-body { margin-bottom: 40px; }
+    .gt-body {
+      margin-bottom: 40px;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
     .gt-body :global(h2) {
       font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
       margin: 36px 0 14px;
     }
     .gt-body :global(p),
     .gt-body :global(li) { font-size: var(--gt-text-prose); line-height: 1.65; }
-    .gt-body :global(a) { color: var(--gt-accent); border-bottom: 1px solid currentColor; text-decoration: none; }
+    .gt-body :global(a) {
+      color: var(--gt-accent);
+      border-bottom: 1px solid currentColor;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .gt-body :global(table) {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+      -webkit-overflow-scrolling: touch;
+    }
   </style>
 </BaseLayout>

@@ -3,13 +3,13 @@ type: trend
 slug: sovereign-ai-procurement
 title: "Sovereign AI Becomes A Procurement Requirement"
 seo_title: "Sovereign AI Procurement In 2026: Data Residency, Local Hosting, AI Act, and Control"
-meta_description: "Updated June 12, 2026: sovereign AI is now a procurement checklist for governments, banks, healthcare, defense-adjacent buyers, and regulated enterprises, with EU AI Act dates, IBM Sovereign Core, AWS European Sovereign Cloud, and Google sovereign-cloud controls shaping contracts."
+meta_description: "Updated June 27, 2026: sovereign AI is now a procurement checklist for governments, banks, healthcare, defense-adjacent buyers, and regulated enterprises, with EU AI Act dates, IBM Sovereign Core, AWS European Sovereign Cloud, and Google sovereign-cloud controls shaping contracts."
 author: "aipedia.wiki Editorial"
 description: Governments and regulated buyers increasingly want AI systems with data residency, operational control, private deployment, auditability, jurisdictional clarity, and clear AI Act or sector compliance support.
 timeframe: Intensified through 2025-2026 as EU AI Act obligations moved into force, AWS European Sovereign Cloud reached GA, IBM launched Sovereign Core, and major cloud providers packaged sovereignty as an AI deployment requirement.
 impact: medium
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -61,11 +61,11 @@ Sovereign AI is useful only when it becomes contract terms and technical evidenc
 
 ## Sources
 
-- [European Commission: AI Act framework and application timeline](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), verified 2026-06-12.
-- [European Commission: GPAI model provider guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers), verified 2026-06-12.
-- [IBM Sovereign Core GA at Think 2026](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-makes-digital-sovereignty-operational-with-general-availability-of-ibm-sovereign-core), verified 2026-06-12.
-- [AWS European Sovereign Cloud launch](https://press.aboutamazon.com/aws/2026/1/aws-launches-aws-european-sovereign-cloud-and-announces-expansion-across-europe), verified 2026-06-12.
-- [AWS EC2 G6 in European Sovereign Cloud Germany](https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-g6-aws-european-sovereign-cloud/), verified 2026-06-12.
-- [Google Cloud sovereign cloud](https://cloud.google.com/sovereign-cloud), verified 2026-06-12.
-- [Google Cloud sovereign cloud platform 2026](https://cloud.google.com/blog/products/identity-security/a-leader-in-forrester-wave-sovereign-cloud-platform-2026), verified 2026-06-12.
-- [Oracle Sovereign AI](https://www.oracle.com/artificial-intelligence/sovereign-ai/), verified 2026-06-12.
+- [European Commission: AI Act framework and application timeline](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), verified 2026-06-27.
+- [European Commission: GPAI model provider guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers), verified 2026-06-27.
+- [IBM Sovereign Core GA at Think 2026](https://newsroom.ibm.com/2026-05-05-think-2026-ibm-makes-digital-sovereignty-operational-with-general-availability-of-ibm-sovereign-core), verified 2026-06-27.
+- [AWS European Sovereign Cloud launch](https://press.aboutamazon.com/aws/2026/1/aws-launches-aws-european-sovereign-cloud-and-announces-expansion-across-europe), verified 2026-06-27.
+- [AWS EC2 G6 in European Sovereign Cloud Germany](https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-g6-aws-european-sovereign-cloud/), verified 2026-06-27.
+- [Google Cloud sovereign cloud](https://cloud.google.com/sovereign-cloud), verified 2026-06-27.
+- [Google Cloud sovereign cloud platform 2026](https://cloud.google.com/blog/products/identity-security/a-leader-in-forrester-wave-sovereign-cloud-platform-2026), verified 2026-06-27.
+- [Oracle Sovereign AI](https://www.oracle.com/artificial-intelligence/sovereign-ai/), verified 2026-06-27.

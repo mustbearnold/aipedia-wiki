@@ -1,6 +1,9 @@
 ---
 /**
- * /dead/ index — god-tier 10/10 mobile-first.
+ * /dead/ index: god-tier 10/10 mobile-first.
+ *
+ * Refresh metadata: 2026-06-27 dead archive index inspected after five dead
+ * archive records moved to current verification.
  *
  * Refresh metadata: 2026-06-26 dead archive index inspected during the first
  * non-tool page-refresh workflow run. It remains data-driven from dead
@@ -21,13 +24,13 @@ import BreadcrumbLD from '../../components/seo/BreadcrumbLD.astro';
 const allDead = await getCollection('dead');
 const allTools = await getCollection('tools');
 const deadTools = allTools.filter((t: any) => t.data.status === 'dead');
-const LAST_UPDATED_HUMAN = 'June 26, 2026';
+const LAST_UPDATED_HUMAN = 'June 27, 2026';
 const archivePageLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Dead AI Tools Archive',
   url: new URL('/dead/', Astro.site?.href ?? 'https://aipedia.wiki/').href,
-  dateModified: '2026-06-26',
+  dateModified: '2026-06-27',
   description:
     'Archive of discontinued, acquired, pivoted, retired, and dead AI tool records maintained for migration context.',
 };

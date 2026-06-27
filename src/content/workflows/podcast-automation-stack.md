@@ -3,13 +3,13 @@ type: workflow
 slug: podcast-automation-stack
 title: "Podcast Automation Stack: Claude, ElevenLabs, Descript, Fish Audio"
 seo_title: "Podcast Automation Stack: Claude, ElevenLabs, Descript & Fish Audio (June 2026)"
-meta_description: "Updated June 12, 2026: turn an interview podcast into a polished episode, show notes, and social clips with Claude, Descript, ElevenLabs, and Fish Audio without hiding consent or credit costs."
+meta_description: "Updated June 27, 2026: turn an interview podcast into a polished episode, show notes, and social clips with Claude, Descript, ElevenLabs, and Fish Audio without hiding consent or credit costs."
 description: "Turn an interview podcast into a polished episode, source notes, and social clips with a human-controlled AI production stack."
 stack: [claude, elevenlabs, descript, fish-audio]
 tools_mentioned: [claude, elevenlabs, descript, fish-audio, castmagic, meetgeek, riverside]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ update_frequency: monthly
 
 This stack is for a solo or small-team interview podcast that wants one repeatable workflow for transcript cleanup, episode structure, show notes, optional voiceover, and short-form clips.
 
-**AiPedia verdict, verified June 12, 2026:** use [Descript](/tools/descript/) as the recording, transcript, edit, and clip workspace; use [Claude](/tools/claude/) for transcript cleanup, show notes, chapters, and repurposing; use [ElevenLabs](/tools/elevenlabs/) for high-quality voice work when the host has consented to cloning or synthetic narration; and use [Fish Audio](/tools/fish-audio/) for lower-cost short-form voice experiments. Keep [Riverside](/tools/riverside/) on the shortlist when live-event recording quality matters more than text-based editing, and use [Castmagic](/tools/castmagic/) or [MeetGeek](/tools/meetgeek/) when all you need is transcript-to-notes output.
+**AiPedia verdict, verified June 27, 2026:** use [Descript](/tools/descript/) as the recording, transcript, edit, and clip workspace; use [Claude](/tools/claude/) for transcript cleanup, show notes, chapters, and repurposing; use [ElevenLabs](/tools/elevenlabs/) for high-quality voice work when the host has consented to cloning or synthetic narration; and use [Fish Audio](/tools/fish-audio/) for lower-cost short-form voice experiments. Keep [Riverside](/tools/riverside/) on the shortlist when live-event recording quality matters more than text-based editing, and use [Castmagic](/tools/castmagic/) or [MeetGeek](/tools/meetgeek/) when all you need is transcript-to-notes output.
 
 The stack can reduce editing time, but it should not hide synthetic voice use. If a generated or cloned voice appears in the episode or clip, disclose it where listeners make trust decisions.
 
@@ -154,7 +154,7 @@ Start with Descript plus Claude for transcript cleanup and show notes. Add Eleve
 
 ## System Notes
 
-This page documents an operational podcast-production stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-12.
+This page documents an operational podcast-production stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-27.
 
 ## Related
 
@@ -163,8 +163,8 @@ This page documents an operational podcast-production stack verified by the aipe
 
 ## Sources
 
-- [Claude pricing](https://claude.com/pricing), verified 2026-06-12
-- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-12
-- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-12
-- [ElevenLabs pricing](https://elevenlabs.io/pricing), verified 2026-06-12
-- [Fish Audio pricing](https://fish.audio/plan/), verified 2026-06-12
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-27
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-27
+- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-27
+- [ElevenLabs pricing](https://elevenlabs.io/pricing), verified 2026-06-27
+- [Fish Audio pricing](https://fish.audio/plan/), verified 2026-06-27

@@ -3,13 +3,13 @@ type: workflow
 slug: accountant-stack
 title: "The Modern Bookkeeper and Accountant AI Stack (June 2026)"
 seo_title: "Modern Bookkeeper and Accountant AI Stack: Dext, Reclaim, SaneBox (2026)"
-meta_description: "Verified June 12, 2026: the working AI stack for independent bookkeepers and accounting practices. Dext for receipts, Reclaim for client work blocks, SaneBox for inbox."
+meta_description: "Verified June 27, 2026: the working AI stack for independent bookkeepers and accounting practices. Dext for receipts, Reclaim for client work blocks, SaneBox for inbox."
 description: "An assembled AI tool stack for independent bookkeepers, accountants, and small accounting practices managing multiple client books."
 stack: [dext, reclaim-ai, sanebox]
 tools_mentioned: [dext, reclaim-ai, sanebox, consensus]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /guides/best-ai-receipt-tool-for-bookkeepers/
@@ -34,7 +34,7 @@ related:
 
 A bookkeeper or accountant running multiple client books has a specific constraint: time on receipt entry is time not spent on client advisory. The right AI stack collapses the data-entry layer, defends the deep-work blocks where the actual accounting happens, and triages the email noise that comes with juggling 10-50 client relationships.
 
-AiPedia verified pricing on June 12, 2026.
+AiPedia verified pricing on June 27, 2026.
 
 ## Function by function
 
@@ -51,7 +51,7 @@ Current stack cost is dominated by the document-capture layer: Dext practice pri
 
 Three constraints specific to accounting work:
 
-- **Multi-client workflow.** A bookkeeper managing 10-50 client books cannot use tools designed for single-business use. Dext Practice tier handles the multi-client client-portal pattern.
+- **Multi-client workflow.** A bookkeeper managing 10-50 client books cannot use tools designed for single-business use. Dext partner program tier handles the multi-client client-portal pattern.
 - **Audit trail matters.** Every receipt, every invoice, every adjustment needs to survive audit. Dext's audit trail is built for this; generic OCR apps are not.
 - **Deep-work blocks are non-negotiable for the actual accounting.** A practice owner who lets every client meeting eat the focus blocks where books actually get closed produces messy books. Reclaim's defense is the difference between clean and messy close.
 
@@ -77,7 +77,7 @@ Three constraints specific to accounting work:
 
 ## Pricing Reality
 
-Verified June 12, 2026. Annual billing and promotions vary by vendor, so use these as checkout checks rather than guaranteed totals.
+Verified June 27, 2026. Annual billing and promotions vary by vendor, so use these as checkout checks rather than guaranteed totals.
 
 - **Dext:** practice pricing is per client per month, with Dext's help center pointing firms back to the official pricing page for the current quote and minimums. This is the line item that determines whether the stack is a solo-bookkeeper stack or a small-firm stack.
 - **Reclaim.ai:** use Free for a solo calendar test, then move to Starter or Business when scheduling range, integrations, or team controls matter; the public page currently shows Starter at $12/seat/month before any annual or promotional discount.
@@ -139,7 +139,7 @@ Do not assume a bundled entitlement without checking the client account. Hubdoc 
 <details>
 <summary>How does this scale to 50+ clients?</summary>
 
-Dext Practice is built for this. The bottleneck at 50+ clients is usually practice management workflow (Karbon, Canopy) rather than the document capture layer.
+Dext partner program is built for this. The bottleneck at 50+ clients is usually practice management workflow (Karbon, Canopy) rather than the document capture layer.
 
 </details>
 
@@ -152,19 +152,19 @@ Different category. Ramp and Brex are corporate cards plus expense software that
 
 ## Sources
 
-- [Dext](https://dext.com/), verified 2026-06-12
-- [Dext Practice](https://dext.com/practices), verified 2026-06-12
-- [Dext practice pricing](https://dext.com/us/partner/pricing), verified 2026-06-12
-- [Dext plans for accountants and bookkeepers](https://help.dext.com/en/articles/273220-dext-plans-for-accountants-and-bookkeepers), verified 2026-06-12
-- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-12
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-12
-- [SaneBox](https://www.sanebox.com/), verified 2026-06-12
-- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-12
-- [Consensus](https://consensus.app/), verified 2026-06-12
-- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-12
-- [Hubdoc QuickBooks add-on](https://www.hubdoc.com/quickbooks), verified 2026-06-12
-- [AutoEntry pricing](https://www.autoentry.com/pricing), verified 2026-06-12
-- [Ramp pricing](https://ramp.com/pricing), verified 2026-06-12
+- [Dext](https://dext.com/), verified 2026-06-27
+- [Dext partner program](https://dext.com/us/partner), verified 2026-06-27
+- [Dext practice pricing](https://dext.com/us/partner/pricing), verified 2026-06-27
+- [Dext plans for accountants and bookkeepers](https://help.dext.com/en/articles/273220-dext-plans-for-accountants-and-bookkeepers), verified 2026-06-27
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-27
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-27
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-27
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-27
+- [Consensus](https://consensus.app/), verified 2026-06-27
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
+- [Hubdoc QuickBooks add-on](https://www.hubdoc.com/quickbooks), verified 2026-06-27
+- [AutoEntry pricing](https://www.autoentry.com/pricing), verified 2026-06-27
+- [Ramp pricing](https://ramp.com/pricing), verified 2026-06-27
 
 Internal references:
 

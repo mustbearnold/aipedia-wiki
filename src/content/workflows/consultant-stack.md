@@ -3,13 +3,13 @@ type: workflow
 slug: consultant-stack
 title: "The Independent Consultant AI Stack (June 2026)"
 seo_title: "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)"
-meta_description: "Verified June 12, 2026: the AI stack for independent consultants. Beautiful.ai for decks, Consensus for research, Reclaim for calendar, SaneBox for email, Descript for content."
+meta_description: "Verified June 27, 2026: the AI stack for independent consultants. Beautiful.ai for decks, Consensus for research, Reclaim for calendar, SaneBox for email, Descript for content."
 description: "An assembled AI stack for independent consultants and boutique consulting firms. Honest tool pairings for deck production, research, calendar defense, and content."
 stack: [beautiful-ai, consensus, reclaim-ai, sanebox, descript]
 tools_mentioned: [beautiful-ai, consensus, reclaim-ai, sanebox, descript, elicit, claude]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /guides/best-presentation-tool-for-smb-sales-teams/
@@ -34,7 +34,7 @@ related:
 
 An independent consultant or boutique consulting firm sells expertise on a clock that runs whether the client is present or not. The right AI stack defends the time that produces revenue (client work), accelerates the work that creates the next engagement (proposals, decks, research), and clears the noise that produces nothing (email triage, scheduling overhead).
 
-AiPedia verified pricing on June 12, 2026.
+AiPedia verified pricing on June 27, 2026.
 
 ## Function by function
 
@@ -81,7 +81,7 @@ Three constraints specific to consulting work:
 
 ## Pricing Reality
 
-Verified June 12, 2026:
+Verified June 27, 2026:
 
 - **Beautiful.ai:** Pro is currently $12/month when billed annually; Team is materially more expensive and only makes sense when multiple consultants share decks and brand controls.
 - **Consensus:** Pro is currently $15/month or $120/year; Deep is $65/month or $540/year and is overkill unless research reviews are part of the paid deliverable.
@@ -148,18 +148,18 @@ Two questions: (1) Did adding the stack increase your effective billable hours p
 
 ## Sources
 
-- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-12
-- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-12
-- [Consensus](https://consensus.app/), verified 2026-06-12
-- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-12
-- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-12
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-12
-- [SaneBox](https://www.sanebox.com/), verified 2026-06-12
-- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-12
-- [Descript](https://www.descript.com/), verified 2026-06-12
-- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-12
-- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-12
-- [Claude pricing](https://claude.com/pricing), verified 2026-06-12
+- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-27
+- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-27
+- [Consensus](https://consensus.app/), verified 2026-06-27
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-27
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-27
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-27
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-27
+- [Descript](https://www.descript.com/), verified 2026-06-27
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-27
+- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-27
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-27
 
 Internal references:
 

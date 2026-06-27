@@ -1,59 +1,36 @@
 # 2026-06-27 3-Day Refresh Goal Inventory
 
 Cutoff: 2026-06-24 or newer.
-Tracked stale pages after batch 06: 145
+Tracked stale pages after batch 07: 120
 
 ## Progress
 
 - Batch 04 complete and pushed: 24 guide routes from logo design through paid-social creative velocity refreshed plus `/guides/`, `/categories/`, and 11 affected category hubs.
 - Batch 05 complete and pushed: 24 guide routes from accountants through free AI tools refreshed plus `/guides/`, `/categories/`, and 13 affected category hubs.
-- Batch 06 verified locally: 19 guide routes and 5 trend routes from open-source AI tools through enterprise agent platforms refreshed plus `/`, `/guides/`, `/trends/`, `/categories/`, and 9 affected category hubs. Source health, typecheck, build, content route QA, and supplemental category route QA passed.
-- Strict 3-day stale count is now 145 total tracked pages including the 6 ledger-outdated tool rows.
+- Batch 06 complete and pushed: 19 guide routes and 5 trend routes from open-source AI tools through enterprise agent platforms refreshed plus `/`, `/guides/`, `/trends/`, `/categories/`, and 9 affected category hubs.
+- Batch 07 verified locally: 4 trend routes, 12 workflow routes, 3 company profiles, and 5 dead-tool archives refreshed plus `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, and `/llms-full.txt`. Source health, typecheck, build, content route QA, and supplemental parent route QA passed.
+- Strict 3-day stale count is now 120 total tracked pages including the 6 ledger-outdated tool rows.
 
 ## By Type
 
-- Company: 30
+- Company: 27
 - Comparison: 37
 - Crawl surface: 2
-- Dead tool archive: 8
+- Dead tool archive: 3
 - Guide: 19
 - Report: 1
-- Static page: 21
+- Static page: 20
 - Tool: 6
-- Trend: 7
-- Workflow: 14
+- Trend: 3
+- Workflow: 2
 
 ## Queue
 
-- 2026-06-12 Company /companies/elevenlabs-company/ (src/content/companies/elevenlabs-company.md)
-- 2026-06-12 Company /companies/google-deepmind/ (src/content/companies/google-deepmind.md)
-- 2026-06-12 Company /companies/mistral/ (src/content/companies/mistral.md)
-- 2026-06-12 Dead tool archive /dead/bing-chat/ (src/content/dead/bing-chat.md)
-- 2026-06-12 Dead tool archive /dead/google-bard/ (src/content/dead/google-bard.md)
-- 2026-06-12 Dead tool archive /dead/gpt-3-api/ (src/content/dead/gpt-3-api.md)
-- 2026-06-12 Dead tool archive /dead/meta-imagine/ (src/content/dead/meta-imagine.md)
-- 2026-06-12 Dead tool archive /dead/openai-codex/ (src/content/dead/openai-codex.md)
 - 2026-06-12 Dead tool archive /dead/play-ht/ (src/content/dead/play-ht.md)
 - 2026-06-12 Dead tool archive /dead/sora/ (src/content/dead/sora.md)
 - 2026-06-12 Report /reports/2026-04/ (src/content/reports/2026-04.md)
 - 2026-06-12 Tool /tools/phind/ (src/content/tools/phind.md)
 - 2026-06-12 Tool /tools/tome/ (src/content/tools/tome.md)
-- 2026-06-12 Trend /trends/google-stitch-disruption/ (src/content/trends/google-stitch-disruption.md)
-- 2026-06-12 Trend /trends/long-context-standard/ (src/content/trends/long-context-standard.md)
-- 2026-06-12 Trend /trends/open-source-parity/ (src/content/trends/open-source-parity.md)
-- 2026-06-12 Trend /trends/sovereign-ai-procurement/ (src/content/trends/sovereign-ai-procurement.md)
-- 2026-06-12 Workflow /workflows/accountant-stack/ (src/content/workflows/accountant-stack.md)
-- 2026-06-12 Workflow /workflows/agency-sales-stack/ (src/content/workflows/agency-sales-stack.md)
-- 2026-06-12 Workflow /workflows/agentic-coding-workflow/ (src/content/workflows/agentic-coding-workflow.md)
-- 2026-06-12 Workflow /workflows/consultant-stack/ (src/content/workflows/consultant-stack.md)
-- 2026-06-12 Workflow /workflows/newsletter-stack/ (src/content/workflows/newsletter-stack.md)
-- 2026-06-12 Workflow /workflows/podcast-automation-stack/ (src/content/workflows/podcast-automation-stack.md)
-- 2026-06-12 Workflow /workflows/research-assistant-stack/ (src/content/workflows/research-assistant-stack.md)
-- 2026-06-12 Workflow /workflows/researcher-stack/ (src/content/workflows/researcher-stack.md)
-- 2026-06-12 Workflow /workflows/sdr-stack/ (src/content/workflows/sdr-stack.md)
-- 2026-06-12 Workflow /workflows/seo-content-pipeline/ (src/content/workflows/seo-content-pipeline.md)
-- 2026-06-12 Workflow /workflows/solo-founder-stack/ (src/content/workflows/solo-founder-stack.md)
-- 2026-06-12 Workflow /workflows/youtube-content-stack/ (src/content/workflows/youtube-content-stack.md)
 - 2026-06-13 Static page /404/ (src/pages/404.astro)
 - 2026-06-13 Static page /about/editorial/ (src/pages/about/editorial.astro)
 - 2026-06-13 Static page /about/scoring/ (src/pages/about/scoring.astro)
@@ -61,7 +38,6 @@ Tracked stale pages after batch 06: 145
 - 2026-06-13 Static page /tool-finder/ (src/pages/tool-finder.astro)
 - 2026-06-14 Workflow /workflows/micro-saas-weekend-build/ (src/content/workflows/micro-saas-weekend-build.md)
 - 2026-06-15 Static page /about/our-stack/ (src/pages/about/our-stack.astro)
-- 2026-06-15 Static page /companies/ (src/pages/companies/index.astro)
 - 2026-06-15 Company /companies/openai/ (src/content/companies/openai.md)
 - 2026-06-15 Guide /guides/best-ai-avatar-video-generator/ (src/content/use-cases/best-ai-avatar-video-generator.md)
 - 2026-06-15 Static page /privacy/ (src/pages/privacy.astro)

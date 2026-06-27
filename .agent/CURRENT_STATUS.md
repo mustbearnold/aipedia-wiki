@@ -17,7 +17,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`. Active goal is the June 27 strict 3-day whole-site refresh target. Latest completed content batch is non-tool page-refresh batch 06. Latest workflow improvement is bounded page source-health timing and report-schema hardening.
+- Branch: `master`. Active goal is the June 27 strict 3-day whole-site refresh target. Latest completed content batch is non-tool page-refresh batch 07. Latest workflow improvement is bounded page source-health timing, report-schema hardening, and company-prose overflow containment.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -37,7 +37,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - Page-refresh workflow optimization is verified: planner routes now carry explicit QA policy classes, archived noindex content remains content/frontmatter-only for QA, and the Rust report summary now emits worker efficiency metrics plus parent-surface hints.
 - Non-tool page-refresh batch 03 is verified: 18 guide routes from academic writing through LinkedIn, with affected `/guides/`, `/answers/best-ai-for-writing-2026/`, AI Writing, AI Research, AI Coding, AI Design, AI Automation, AI Search, and `PAGE_REFRESH_LEDGER.md`. Worker reports parsed 6/6 with 175 report source URLs, 35 confidence labels, 21 caveats, and 41 parent notes. Final closeout passed in 62.57s wall time. One archived noindex legal-research route stayed out of indexable route QA by policy.
 - The page-refresh workflow now has `npm run page:source-health`, a bounded concurrent source checker with per-source and per-page timing, per-host delay, timeout controls, and explicit access-sensitive handling for 401, 403, and 429. It is wired into `runner:page-refresh:closeout` before typecheck and can be skipped only for scoped workflow tests with `-- --skip-source-health`. A smoke run over the next two planned pages checked 21 source URLs in 5.211s and correctly flagged one existing 404: `https://www.canva.com/logo-maker/` on `/guides/best-ai-for-logo-design/`.
-- Non-tool page-refresh batch 06 is verified locally: 19 guide routes and 5 trend routes from open-source AI tools through enterprise agent platforms were moved to June 27 verification, broken Hume, Ideogram, NotebookLM, and Microsoft source paths were replaced with live official routes, duplicate Adobe HelpX credit sources were removed in favor of stable official Adobe plan sources, and affected parents `/`, `/guides/`, `/trends/`, `/categories/`, AI Chatbots, AI Infrastructure, AI Coding, AI Design, AI Image, AI Voice, AI Writing, AI Search, and AI Video were updated. Strict 3-day stale count is now 145 tracked pages.
+- Non-tool page-refresh batch 07 is verified locally: 4 trend routes, 12 workflow routes, 3 company profiles, and 5 dead-tool archive pages were moved to June 27 verification. Broken Google Stitch, Dext, AdCreative, and Meta Emu source paths were replaced with live sources. Affected parents `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, and `/llms-full.txt` were updated. Company prose now wraps long raw source URLs and tables at 319 px. Strict 3-day stale count is now 120 tracked pages.
 - The first full 60-tool workflow baseline completed on June 24, 2026 in 36m 55s through the main route QA, and 41m 31s including documentation, supplemental route QA, and final sanity checks. Core workflow timing: 25m 07s worker collection, then 11m 48s integration and verification. Closeout timings were ledger 2s, batch check 37s, typecheck 32s, check:quick 22s, build:fast 64s, main route QA 107s for 80 routes across five widths, and supplemental route QA 4s for two edited routes missed by the main matrix.
 
 ## Freshness Queue
@@ -163,7 +163,7 @@ The follow-up workflow optimization added route policy classes and worker effici
 
 Batch 03 refreshed 18 guide routes from `/guides/best-ai-for-academic-writing/` through `/guides/best-ai-for-linkedin/`. Closeout receipt: `local/tmp/aipedia-runner/page-refresh/receipts/2026-06-26T08-22-14Z-page-refresh-closeout.md`. Durable receipt: `.agent/loop-runs/2026-06-26-page-refresh-batch-03.md`. The follow-up workflow patch added bounded concurrent page-source health and updated worker-report scaffolds so check objects use `command`, `status`, and `notes`.
 
-Next page-refresh content move: continue the strict 3-day target from the regenerated queue. The remaining stale count after batch 06 is 145 tracked pages: 37 comparisons, 30 companies, 21 static pages, 19 guides, 14 workflows, 7 trends, 8 dead archive pages, 6 tools, 2 crawl surfaces, and 1 report.
+Next page-refresh content move: continue the strict 3-day target from the regenerated queue. The remaining stale count after batch 07 is 120 tracked pages: 37 comparisons, 27 companies, 20 static pages, 19 guides, 3 trends, 2 workflows, 3 dead archive pages, 6 tools, 2 crawl surfaces, and 1 report.
 
 ### Oldest-First Tool Freshness
 

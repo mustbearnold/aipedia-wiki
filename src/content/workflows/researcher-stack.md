@@ -3,13 +3,13 @@ type: workflow
 slug: researcher-stack
 title: "The Independent Researcher AI Stack (June 2026)"
 seo_title: "Independent Researcher AI Stack: Consensus, Elicit, Descript, Reclaim (2026)"
-meta_description: "Verified June 12, 2026: the working AI stack for independent researchers, analysts, and journalists. Consensus for citations, Elicit for literature reviews, Descript for interviews."
+meta_description: "Verified June 27, 2026: the working AI stack for independent researchers, analysts, and journalists. Consensus for citations, Elicit for literature reviews, Descript for interviews."
 description: "An assembled AI stack for independent researchers, policy analysts, science writers, and freelance journalists who produce source-backed work."
 stack: [consensus, descript, reclaim-ai, sanebox]
 tools_mentioned: [consensus, elicit, descript, reclaim-ai, sanebox, claude, semantic-scholar]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /guides/best-ai-research-tool-for-academic-citations/
@@ -34,7 +34,7 @@ related:
 
 An independent researcher, policy analyst, science writer, or freelance journalist works against a specific constraint: every claim has to be source-backed, every citation has to be real, and the deadline is real. Off-the-shelf LLMs fabricate citations. Generic productivity tools do not address research-specific workflows. The right stack solves both.
 
-This stack is for the buyer profile: someone whose output is source-backed writing or analysis. AiPedia verified pricing and capabilities on June 12, 2026.
+This stack is for the buyer profile: someone whose output is source-backed writing or analysis. AiPedia verified pricing and capabilities on June 27, 2026.
 
 ## Function by function
 
@@ -89,7 +89,7 @@ Three constraints unique to research work:
 
 ## Pricing Reality
 
-Verified June 12, 2026:
+Verified June 27, 2026:
 
 - **Consensus:** Pro is currently $15/month or $120/year; Deep is $65/month or $540/year for heavier Deep reviews.
 - **Elicit:** Basic remains the budget path, while Pro is currently $49/user/month billed annually and Scale is $169/user/month billed annually. Do not assume the old low-cost Plus math still applies.
@@ -165,21 +165,21 @@ Useful for general web research. Less useful for academic citations because its 
 
 ## Sources
 
-- [Consensus](https://consensus.app/), verified 2026-06-12
-- [Consensus Pro subscription](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), verified 2026-06-12
-- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-12
-- [Elicit](https://elicit.com/), verified 2026-06-12
-- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-12
-- [Descript](https://www.descript.com/), verified 2026-06-12
-- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-12
-- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-12
-- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-12
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-12
-- [SaneBox](https://www.sanebox.com/), verified 2026-06-12
-- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-12
-- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-12
-- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-12
-- [Claude pricing](https://claude.com/pricing), verified 2026-06-12
+- [Consensus](https://consensus.app/), verified 2026-06-27
+- [Consensus Pro subscription](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), verified 2026-06-27
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
+- [Elicit](https://elicit.com/), verified 2026-06-27
+- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-27
+- [Descript](https://www.descript.com/), verified 2026-06-27
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-27
+- [Descript media minutes and AI credits](https://help.descript.com/hc/en-us/articles/27841674958221-Track-and-understand-your-media-minutes-and-AI-credits), verified 2026-06-27
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-27
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-27
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-27
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-27
+- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-27
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-27
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-27
 
 Internal references:
 

@@ -3,13 +3,13 @@ type: workflow
 slug: seo-content-pipeline
 title: "The AI SEO Content Pipeline (June 2026)"
 seo_title: "AI SEO Content Pipeline: OmniSEO, Descript, Claude (2026)"
-meta_description: "Verified June 12, 2026: a working AI SEO content pipeline. OmniSEO for scoring and linking, Claude for drafting, Descript for video repurposing."
+meta_description: "Verified June 27, 2026: a working AI SEO content pipeline. OmniSEO for scoring and linking, Claude for drafting, Descript for video repurposing."
 description: "An assembled AI tool pipeline for SEO content production at scale, from keyword to published article with audio and video repurposing."
 stack: [omniseo, descript, reclaim-ai]
 tools_mentioned: [omniseo, descript, reclaim-ai, surfer-seo, frase, ahrefs, claude]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /guides/best-ai-seo-tool-replacing-surfer-frase-stack/
@@ -34,7 +34,7 @@ related:
 
 An SEO content team in 2026 has to produce articles that survive the Helpful Content Update bar, get cited by AI Overviews, rank for competitive queries, and repurpose into adjacent formats (newsletter, podcast, social). The right pipeline collapses the four-tool stack of 2023 (keyword research + scoring + drafting + linking) into something a small team can actually run.
 
-This pipeline is for the specific buyer: content marketers, SEO managers, or agencies producing 8-40 articles per month. AiPedia verified pricing on June 12, 2026.
+This pipeline is for the specific buyer: content marketers, SEO managers, or agencies producing 8-40 articles per month. AiPedia verified pricing on June 27, 2026.
 
 ## Stage by stage
 
@@ -98,7 +98,7 @@ The pattern: Ahrefs (or Semrush) for keyword research, OmniSEO for everything in
 
 ## Pricing Reality
 
-Verified June 12, 2026:
+Verified June 27, 2026:
 
 - **Ahrefs:** paid plans now include Starter, Lite, Standard, Advanced, and Enterprise paths; Ahrefs' own pricing guide lists Standard at $249/month and Advanced at $449/month.
 - **Semrush:** the SEO/AI Search pricing page now splits classic SEO and AI-search bundles; Pro-style SEO pricing is around the low $100s annually or $139.95/month monthly, while AI-search bundles cost more.
@@ -176,21 +176,21 @@ All can draft. The key difference is workflow fit: Jasper, Writesonic, and Copy.
 
 ## Sources
 
-- [OmniSEO](https://omniseo.com/), verified 2026-06-12
-- [OmniSEO pricing](https://omniseo.com/pricing/), verified 2026-06-12
-- [Surfer SEO](https://surferseo.com/), verified 2026-06-12
-- [Surfer SEO pricing](https://surferseo.com/pricing/), verified 2026-06-12
-- [Frase](https://www.frase.io/), verified 2026-06-12
-- [Frase pricing](https://www.frase.io/pricing), verified 2026-06-12
-- [Ahrefs](https://ahrefs.com/), verified 2026-06-12
-- [Ahrefs pricing](https://ahrefs.com/pricing), verified 2026-06-12
-- [Ahrefs pricing guide](https://ahrefs.com/blog/ahrefs-pricing/), verified 2026-06-12
-- [Semrush](https://www.semrush.com/), verified 2026-06-12
-- [Semrush SEO and AI Search pricing](https://www.semrush.com/pricing/seo-ai-search/), verified 2026-06-12
-- [Descript](https://www.descript.com/), verified 2026-06-12
-- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-12
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-12
-- [Claude pricing](https://claude.com/pricing), verified 2026-06-12
+- [OmniSEO](https://omniseo.com/), verified 2026-06-27
+- [OmniSEO pricing](https://omniseo.com/pricing/), verified 2026-06-27
+- [Surfer SEO](https://surferseo.com/), verified 2026-06-27
+- [Surfer SEO pricing](https://surferseo.com/pricing/), verified 2026-06-27
+- [Frase](https://www.frase.io/), verified 2026-06-27
+- [Frase pricing](https://www.frase.io/pricing), verified 2026-06-27
+- [Ahrefs](https://ahrefs.com/), verified 2026-06-27
+- [Ahrefs pricing](https://ahrefs.com/pricing), verified 2026-06-27
+- [Ahrefs pricing guide](https://ahrefs.com/blog/ahrefs-pricing/), verified 2026-06-27
+- [Semrush](https://www.semrush.com/), verified 2026-06-27
+- [Semrush SEO and AI Search pricing](https://www.semrush.com/pricing/seo-ai-search/), verified 2026-06-27
+- [Descript](https://www.descript.com/), verified 2026-06-27
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-27
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-27
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-27
 
 Internal references:
 

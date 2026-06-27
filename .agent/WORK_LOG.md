@@ -48,7 +48,7 @@
 
 ### 2026-06-26: Non-Tool Page Refresh Batch 02
 
-- Status: Complete locally, verified, pending commit and push.
+- Status: Complete locally and verified.
 - Commit: this commit.
 - Branch: `master`.
 - Changed: Ran the Rust page-refresh workflow over 12 comparison and guide routes from Frase/NeuronWriter through heavy-inbox triage. Refreshed affected AI SEO, AI Presentation, AI Chatbots, and AI Automation category hubs plus `/compare/`, `/guides/`, and `PAGE_REFRESH_LEDGER.md`. Hardened the page-refresh planner so archived noindex content routes stay in content/frontmatter verification but skip indexable route QA, and updated the Rust aggregator to parse structured worker check reports.
@@ -969,3 +969,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Changed: Added `scripts/audit-hub-staleness.mjs` and `npm run audit:hub-staleness:changed`, then wired it into `tool:refresh:batch:check` so refreshed tool pages cannot point at missing or older parent category hubs. Updated planner-generated worker prompts, workflow docs, and local skill notes to require `price_history[].verified_at` on checked commercial rows and explicit primary-category-change reporting. Updated the Rust runner so route QA args are generated from current tool frontmatter instead of stale planner category routes, and runner receipts now include total, cheap-gate, and expensive-gate timing buckets. Fixed the planner metadata test so it uses `--include-same-day` and does not fail when the freshness queue was just refreshed.
 - Verification: `node --check scripts/audit-hub-staleness.mjs`; `npm run audit:hub-staleness:changed -- --json`; `node --check scripts/tool-refresh-batch.mjs`; `node --check scripts/tool-refresh-batch-check.mjs`; `npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json`; `npm exec --yes --package=node@24 -- node --test tests/scripts/tool-refresh-batch.test.mjs`; `npm run audit:commands`; `cargo fmt --manifest-path tools/aipedia-runner/Cargo.toml --check`; `cargo check --manifest-path tools/aipedia-runner/Cargo.toml`; `cargo test --manifest-path tools/aipedia-runner/Cargo.toml`; `npm run runner:tool-refresh:route-args -- --plan .tmp-tool-refresh-batch.json --out local/tmp/aipedia-runner/review-route-args.txt`; `npm run runner:tool-refresh:closeout -- --plan .tmp-tool-refresh-review-smoke.json --route-args local/tmp/aipedia-runner/review-smoke-route-args.txt --receipt-dir local/tmp/aipedia-runner/review-receipts --skip-build --skip-route-qa`; `npm run ledger:pages && npm run ledger:pages:check`; `git diff --check`; `node scripts/guard-em-dashes.mjs`.
 - Failed then fixed: `cargo fmt --check` initially flagged formatting in the runner timing block; ran `cargo fmt` and reran Rust checks successfully.
+### 2026-06-27: Page Refresh Batch 07
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed 24 routes across trends, workflows, company profiles, and dead-tool archives. Updated `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, `/llms-full.txt`, and `PAGE_REFRESH_LEDGER.md`.
+- Source repairs: Replaced broken Google Stitch, Dext, AdCreative, and Meta Emu source URLs with live current routes.
+- Layout repair: Fixed company-profile prose containment so long Markdown-generated source anchors and tables do not overflow at 319 px. This was found by route QA on `/companies/google-deepmind/` and fixed in `src/layouts/CompanyLayout.astro`.
+- Verification: source health passed with 185 URLs, 170 ok, 15 access-sensitive, 0 broken, and 0 unreachable; `runner:page-refresh:closeout` passed in 85.882s; supplemental parent route QA passed for `/companies/`, `/dead/`, and `/categories/ai-coding/`; post-LLM update `typecheck` and `build:fast` passed.
+- Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-07.md`.
+- Next: Continue oldest-first with 120 tracked pages still older than 2026-06-24.

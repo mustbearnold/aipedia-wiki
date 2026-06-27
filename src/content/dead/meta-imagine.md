@@ -14,8 +14,8 @@ acquired_by: ""
 seo_title: "Meta Imagine: What Happened? (Merged into Meta AI)"
 meta_description: "Meta Imagine at imagine.meta.com was shut down in mid-2024 as Meta consolidated all AI features into Meta AI. Here's what changed and where to find it now."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 ---
 
 # Meta Imagine (Discontinued)
@@ -54,11 +54,11 @@ Image generation remains free in [Meta AI](https://meta.ai). Dedicated tools ali
 
 Meta Imagine shows large platforms prioritize unified products over niche tools. Standalone features risk shutdown during consolidation, as seen with Messenger's web and desktop endings.[1][4] Users should favor integrated AI like Meta AI or versatile alternatives to avoid disruptions.
 
-This case highlights model evolution; Emu's early lead faded, pushing pivots to broader ecosystems. Developers and users benefit from open models like Stable Diffusion for longevity.[Meta Emu model announcement](https://ai.meta.com/research/publications/emu/)
+This case highlights model evolution; Emu's early lead faded, pushing pivots to broader ecosystems. Developers and users benefit from open models like Stable Diffusion for longevity.[Meta Emu model publication](https://ai.meta.com/research/publications/emu-enhancing-image-generation-models-using-photogenic-needles-in-a-haystack/)
 
 ## Sources
 
 - [Meta AI product page](https://meta.ai)
-- [Meta Emu model announcement, November 2023](https://ai.meta.com/research/publications/emu/)
+- [Meta Emu model publication, November 2023](https://ai.meta.com/research/publications/emu-enhancing-image-generation-models-using-photogenic-needles-in-a-haystack/)
 - [1] [TechCrunch on Messenger shutdown](https://techcrunch.com/2026/02/19/meta-is-shutting-down-messengers-standalone-website/)
 - [2] [Inquirer.net on Messenger](https://usa.inquirer.net/189898/meta-shutting-down-messenger-website-in-april-2026)

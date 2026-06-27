@@ -3,13 +3,13 @@ type: workflow
 slug: newsletter-stack
 title: "Newsletter Stack: Claude, Perplexity, and Substack"
 seo_title: "Newsletter Stack: Claude, Perplexity, and Substack (June 2026)"
-meta_description: "Updated June 12, 2026: publish a weekly research-backed newsletter in 3 hours of hands-on time. Stack costs $40/mo. Exact prompts, steps, and failure modes."
+meta_description: "Updated June 27, 2026: publish a weekly research-backed newsletter in 3 hours of hands-on time. Stack costs $40/mo. Exact prompts, steps, and failure modes."
 description: "Publish a weekly research-backed newsletter in 3 hours of hands-on time"
 stack: [claude, perplexity]
 tools_mentioned: [claude, perplexity]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -101,7 +101,7 @@ Claude fact-check flags editorial opinions as "missing citations." Prefix the pr
 | Substack | $0 | Free tier, paid upgrades optional |
 | **Total** | **$40** | Replaces ~10 hours/week of manual research and copy |
 
-*Prices verified 2026-06-12 via [Perplexity pricing](https://www.perplexity.ai/pro) and [claude.com/pricing](https://claude.com/pricing).*
+*Prices verified 2026-06-27 via [Perplexity pricing](https://www.perplexity.ai/pro) and [claude.com/pricing](https://claude.com/pricing).*
 
 ## Who this is for
 
@@ -125,7 +125,7 @@ The reference channel averages ~47% over the past three months. Research-led hoo
 
 ## System Notes
 
-This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-12.
+This page documents an operational stack verified by the aipedia.wiki editorial pipeline. Last verified 2026-06-27.
 
 ## Related
 

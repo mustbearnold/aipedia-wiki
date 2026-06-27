@@ -3,13 +3,13 @@ type: workflow
 slug: agentic-coding-workflow
 title: "Daily Agentic Coding Workflow with Claude Code and Cursor"
 seo_title: "Agentic Coding Workflow: Cursor, Claude Code, Copilot & Codex (June 2026)"
-meta_description: "Updated June 12, 2026: a source-backed workflow for splitting repo work between Cursor, Claude Code, GitHub Copilot, and Codex while controlling agent cost and review risk."
+meta_description: "Updated June 27, 2026: a source-backed workflow for splitting repo work between Cursor, Claude Code, GitHub Copilot, and Codex while controlling agent cost and review risk."
 description: "A current workflow for splitting repo work between Cursor, Claude Code, GitHub Copilot, and Codex while keeping human review, cost control, and safe git checkpoints."
 stack: [claude-code, cursor, github-copilot, codex]
 tools_mentioned: [claude-code, cursor, github-copilot, codex]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 ---
 
@@ -17,7 +17,7 @@ update_frequency: monthly
 
 Agentic coding is now a costed production workflow, not a novelty prompt. The safe pattern in June 2026 is still simple: one tool for fast in-editor flow, one terminal agent for broad repo work, one GitHub-native layer if your team lives in pull requests, and one human checkpoint before merge.
 
-**AiPedia verdict, verified June 12, 2026:** use [Cursor](/tools/cursor/) for daily editing and agent work inside the IDE, use [Claude Code](/tools/claude-code/) for deliberate terminal investigation, keep [GitHub Copilot](/tools/github-copilot/) when the team is already GitHub-native, and use [Codex](/tools/codex/) when you want OpenAI's coding agent to inspect a local project, run checks, and prepare auditable changes.
+**AiPedia verdict, verified June 27, 2026:** use [Cursor](/tools/cursor/) for daily editing and agent work inside the IDE, use [Claude Code](/tools/claude-code/) for deliberate terminal investigation, keep [GitHub Copilot](/tools/github-copilot/) when the team is already GitHub-native, and use [Codex](/tools/codex/) when you want OpenAI's coding agent to inspect a local project, run checks, and prepare auditable changes.
 
 **Do not run this workflow without git discipline.** Every serious agentic session needs a branch, a written task, a scope boundary, tests, and a human diff review. The biggest failure mode is not that the model writes bad code; it is that a broad instruction lets an agent edit too much and spend too much before anyone notices.
 
@@ -172,13 +172,13 @@ Giving agents broad instructions without a task file, branch, tests, and review 
 
 ## Sources
 
-- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-12
-- [Claude Code overview](https://code.claude.com/docs/en/overview), verified 2026-06-12
-- [Claude Code cost management](https://code.claude.com/docs/en/costs), verified 2026-06-12
-- [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-06-12
-- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan), verified 2026-06-12
-- [GitHub Copilot usage-based billing announcement](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/), verified 2026-06-12
-- [GitHub Copilot usage-based billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), verified 2026-06-12
-- [OpenAI Codex pricing](https://developers.openai.com/codex/pricing), verified 2026-06-12
+- [Cursor pricing](https://cursor.com/pricing), verified 2026-06-27
+- [Claude Code overview](https://code.claude.com/docs/en/overview), verified 2026-06-27
+- [Claude Code cost management](https://code.claude.com/docs/en/costs), verified 2026-06-27
+- [Use Claude Code with Pro or Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), verified 2026-06-27
+- [Claude Max plan](https://support.claude.com/en/articles/11049741-what-is-the-max-plan), verified 2026-06-27
+- [GitHub Copilot usage-based billing announcement](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/), verified 2026-06-27
+- [GitHub Copilot usage-based billing docs](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises), verified 2026-06-27
+- [OpenAI Codex pricing](https://developers.openai.com/codex/pricing), verified 2026-06-27
 
 ---

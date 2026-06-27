@@ -3,13 +3,13 @@ type: workflow
 slug: solo-founder-stack
 title: "The Solo Founder AI Stack (June 2026)"
 seo_title: "Solo Founder AI Stack: Calendar, Email, Sales, Decks, Content (2026)"
-meta_description: "Verified June 12, 2026: the AI stack for solo founders running every function alone. Reclaim, SaneBox, Apollo, Beautiful.ai, Descript, with honest pairings and pricing."
+meta_description: "Verified June 27, 2026: the AI stack for solo founders running every function alone. Reclaim, SaneBox, Apollo, Beautiful.ai, Descript, with honest pairings and pricing."
 description: "A working AI tool stack for solo founders who need to run calendar, email, sales, presentations, and content with no team. Honest pairings, not a marketing list."
 stack: [reclaim-ai, sanebox, apollo, beautiful-ai, descript, consensus]
 tools_mentioned: [reclaim-ai, sanebox, apollo, beautiful-ai, descript, consensus, claude, chatgpt]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-12
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /guides/best-ai-calendar-for-google-workspace-power-users/
@@ -34,7 +34,7 @@ related:
 
 A solo founder runs every function: sales, marketing, product, ops, finance, content. The right AI stack is not the longest list. It is the shortest list that covers the load-bearing problems without becoming a second job to maintain.
 
-This stack was assembled for the one-person operator pattern: one owner carrying sales, calendar, inbox, decks, content, and source checks without adding a second job of tool administration. AiPedia verified pricing and capabilities on June 12, 2026.
+This stack was assembled for the one-person operator pattern: one owner carrying sales, calendar, inbox, decks, content, and source checks without adding a second job of tool administration. AiPedia verified pricing and capabilities on June 27, 2026.
 
 The frame: pick one tool per problem, accept that each is mid-tier rather than best-of-breed, and save the time and money for the work that actually moves revenue.
 
@@ -114,7 +114,7 @@ End-of-day takes 15 minutes if the morning was disciplined.
 
 ## Pricing Reality
 
-Verified June 12, 2026 official-source pricing. Annual billing and promotions vary:
+Verified June 27, 2026 official-source pricing. Annual billing and promotions vary:
 
 - **Reclaim.ai:** start on Free; Starter currently shows $12/seat/month before annual or promotional discounts.
 - **SaneBox:** Snack is currently $4.99/month, Lunch $7.99/month, and Dinner $24.99/month.
@@ -192,20 +192,20 @@ If you are already on Microsoft 365 with Copilot, it covers some of what Claude/
 
 ## Sources
 
-- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-12
-- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-12
-- [SaneBox](https://www.sanebox.com/), verified 2026-06-12
-- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-12
-- [Apollo](https://www.apollo.io/), verified 2026-06-12
-- [Apollo pricing](https://www.apollo.io/pricing), verified 2026-06-12
-- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-12
-- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-12
-- [Descript](https://www.descript.com/), verified 2026-06-12
-- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-12
-- [Consensus](https://consensus.app/), verified 2026-06-12
-- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-12
-- [Claude pricing](https://claude.com/pricing), verified 2026-06-12
-- [ChatGPT pricing](https://chatgpt.com/pricing/), verified 2026-06-12
+- [Reclaim.ai](https://reclaim.ai/), verified 2026-06-27
+- [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-27
+- [SaneBox](https://www.sanebox.com/), verified 2026-06-27
+- [SaneBox pricing](https://www.sanebox.com/pricing), verified 2026-06-27
+- [Apollo](https://www.apollo.io/), verified 2026-06-27
+- [Apollo pricing](https://www.apollo.io/pricing), verified 2026-06-27
+- [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-27
+- [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-27
+- [Descript](https://www.descript.com/), verified 2026-06-27
+- [Descript pricing](https://www.descript.com/pricing), verified 2026-06-27
+- [Consensus](https://consensus.app/), verified 2026-06-27
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
+- [Claude pricing](https://claude.com/pricing), verified 2026-06-27
+- [ChatGPT pricing](https://chatgpt.com/pricing/), verified 2026-06-27
 
 Internal references:
 
