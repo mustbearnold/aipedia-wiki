@@ -6,10 +6,10 @@ tools: [hailuo, kling]
 category: ai-video
 winner: kling
 seo_title: "Hailuo AI vs Kling 3.0: Which AI Video Tool Should You Test? (June 2026)"
-meta_description: "Hailuo AI vs Kling 3.0, updated June 15, 2026 with current Hailuo pricing and API caveats. Kling is the stronger cinematic first test; Hailuo is the value route."
+meta_description: "Hailuo AI vs Kling 3.0, updated June 27, 2026 with current Hailuo pricing and API caveats. Kling is the stronger cinematic first test; Hailuo is the value route."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-15
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: weekly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Hailuo AI](/tools/hailuo/) and [Kling 3.0](/tools/kling/) are both China-linked AI video options, but they answer different buyer questions. Hailuo is the MiniMax route for short-form video, fast variants, and API unit math. Kling is Kuaishou's cinematic creator-model family with Video 3.0 and Video 3.0 Omni.
 
-**June 5, 2026 verdict, with Hailuo pricing and API caveats refreshed June 15:** test **Kling first** when the output needs cinematic motion, native audio, references, and multi-shot story control. Test **Hailuo** when the team wants MiniMax API experiments, lower-cost short clips, stylized concepts, or clearer pay-as-you-go and package-pricing math.
+**June 5, 2026 verdict, with Hailuo pricing and API caveats refreshed June 27:** test **Kling first** when the output needs cinematic motion, native audio, references, and multi-shot story control. Test **Hailuo** when the team wants MiniMax API experiments, lower-cost short clips, stylized concepts, or clearer pay-as-you-go and package-pricing math.
 
 ## Quick Answer
 **Most creators:** start with Kling. Kuaishou says Kling AI 3.0 supports Video 3.0 and Video 3.0 Omni, up to 15-second generation, native audio, multimodal input and output, reference-to-video, in-video editing, text preservation, and stronger prompt adherence.
@@ -83,13 +83,13 @@ Kling is the stronger first test when cinematic output, native audio, reference 
 
 ## Sources
 
-- [MiniMax Hailuo 2.3 launch](https://www.minimax.io/news/minimax-hailuo-23), verified 2026-06-15
-- [Hailuo 2.3 model page](https://hailuoai.video/tools/hailuo-2-3-model), verified 2026-06-15
-- [MiniMax video generation API docs](https://platform.minimax.io/docs/api-reference/video-generation-intro), verified 2026-06-15
-- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), verified 2026-06-15
-- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video), verified 2026-06-15
-- [Hailuo AI official site](https://hailuoai.video/), verified 2026-06-15
-- [Hailuo subscription page](https://hailuoai.video/subscribe), checked 2026-06-15
-- [Kuaishou: Kling AI 3.0 launch](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be), verified 2026-06-12
-- [Kling AI](https://klingai.com/), checked 2026-06-12
-- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-12; dynamic page, verify in account
+- [MiniMax Hailuo 2.3 launch](https://www.minimax.io/news/minimax-hailuo-23), verified 2026-06-27
+- [Hailuo 2.3 model page](https://hailuoai.video/tools/hailuo-2-3-model), verified 2026-06-27
+- [MiniMax video generation API docs](https://platform.minimax.io/docs/guides/video-generation), verified 2026-06-27
+- [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), verified 2026-06-27
+- [MiniMax video package pricing](https://platform.minimax.io/docs/guides/pricing-video), verified 2026-06-27
+- [Hailuo AI official site](https://hailuoai.video/), verified 2026-06-27
+- [Hailuo subscription page](https://hailuoai.video/subscribe), checked 2026-06-27
+- [Kuaishou: Kling AI 3.0 launch](https://www.globenewswire.com/news-release/2026/02/05/3232837/0/en/kling-ai-launches-3-0-model-ushering-in-an-era-where-everyone-can-be-a-director.html), verified 2026-06-27
+- [Kling AI](https://klingai.com/), checked 2026-06-27
+- [Kling AI pricing](https://klingai.com/pricing), checked 2026-06-27; dynamic page, verify in account

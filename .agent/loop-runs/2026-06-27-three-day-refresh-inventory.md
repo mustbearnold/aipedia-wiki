@@ -1,7 +1,7 @@
 # 2026-06-27 3-Day Refresh Goal Inventory
 
 Cutoff: 2026-06-24 or newer.
-Tracked stale pages after batch 10: 48
+Tracked stale pages after batch 11: 24
 
 ## Progress
 
@@ -11,13 +11,14 @@ Tracked stale pages after batch 10: 48
 - Batch 07 complete and pushed: 4 trend routes, 12 workflow routes, 3 company profiles, and 5 dead-tool archives refreshed plus `/`, `/trends/`, `/workflows/`, `/companies/`, `/dead/`, AI Coding, `/llms.txt`, and `/llms-full.txt`.
 - Batch 08 verified locally: 24 mixed routes refreshed across dead archives, the April report, static trust pages, one workflow, one guide, trends, answers, companies, robots, and archived noindex surfaces. Affected parent/top-layer pages and five category hubs were updated or route-checked.
 - Batch 09 complete and pushed: 22 company profiles and 2 guide pages refreshed. Anysphere was corrected for the reported June 2026 SpaceX/Cursor $60B stock acquisition agreement with live CBS/AP, Ars Technica, and Cursor sources. Affected parent/top-layer pages and three category hubs were updated or route-checked.
-- Batch 10 verified locally: 24 mixed guide, static, answer, company, dead archive, and comparison routes refreshed. The batch repaired a broken Pitch source URL before closeout and route-checked affected parent/category surfaces.
-- Strict 3-day stale count is now 48 total tracked pages including the 6 ledger-outdated tool rows.
+- Batch 10 complete and pushed: 24 mixed guide, static, answer, company, dead archive, and comparison routes refreshed. The batch repaired a broken Pitch source URL before closeout and route-checked affected parent/category surfaces.
+- Batch 11 verified locally: 24 comparison routes refreshed. The batch repaired broken Pitch, BFL, and MiniMax URLs plus a slow Kuaishou source before closeout and route-checked affected parent/category surfaces.
+- Strict 3-day stale count is now 24 total tracked pages including the 6 ledger-outdated tool rows.
 
 ## By Type
 
 - Company: 1
-- Comparison: 25
+- Comparison: 1
 - Crawl surface: 1
 - Guide: 13
 - Static page: 1
@@ -30,30 +31,6 @@ Tracked stale pages after batch 10: 48
 - 2026-06-12 Tool /tools/tome/ (src/content/tools/tome.md)
 - 2026-06-20 Tool /tools/semrush-demo/ (src/content/tools/semrush-demo.md)
 - 2026-06-21 Company /companies/anthropic/ (src/content/companies/anthropic.md)
-- 2026-06-21 Comparison /compare/claude-vs-grok/ (src/content/comparisons/claude-vs-grok.md)
-- 2026-06-21 Comparison /compare/consensus-vs-elicit/ (src/content/comparisons/consensus-vs-elicit.md)
-- 2026-06-21 Comparison /compare/cursor-vs-windsurf/ (src/content/comparisons/cursor-vs-windsurf.md)
-- 2026-06-21 Comparison /compare/decktopus-vs-gamma/ (src/content/comparisons/decktopus-vs-gamma.md)
-- 2026-06-21 Comparison /compare/decktopus-vs-pitch/ (src/content/comparisons/decktopus-vs-pitch.md)
-- 2026-06-21 Comparison /compare/decktopus-vs-presentations-ai/ (src/content/comparisons/decktopus-vs-presentations-ai.md)
-- 2026-06-21 Comparison /compare/deepseek-vs-mistral-ai/ (src/content/comparisons/deepseek-vs-mistral-ai.md)
-- 2026-06-21 Comparison /compare/deepseek-vs-qwen/ (src/content/comparisons/deepseek-vs-qwen.md)
-- 2026-06-21 Comparison /compare/fireflies-vs-otter-ai/ (src/content/comparisons/fireflies-vs-otter-ai.md)
-- 2026-06-21 Comparison /compare/fish-audio-vs-resemble-ai/ (src/content/comparisons/fish-audio-vs-resemble-ai.md)
-- 2026-06-21 Comparison /compare/fish-audio-vs-voxtral/ (src/content/comparisons/fish-audio-vs-voxtral.md)
-- 2026-06-21 Comparison /compare/flux-vs-stable-diffusion/ (src/content/comparisons/flux-vs-stable-diffusion.md)
-- 2026-06-21 Comparison /compare/github-copilot-vs-tabnine/ (src/content/comparisons/github-copilot-vs-tabnine.md)
-- 2026-06-21 Comparison /compare/grammarly-vs-quillbot/ (src/content/comparisons/grammarly-vs-quillbot.md)
-- 2026-06-21 Comparison /compare/grammarly-vs-wordtune/ (src/content/comparisons/grammarly-vs-wordtune.md)
-- 2026-06-21 Comparison /compare/hailuo-vs-kling/ (src/content/comparisons/hailuo-vs-kling.md)
-- 2026-06-21 Comparison /compare/heygen-vs-synthesia/ (src/content/comparisons/heygen-vs-synthesia.md)
-- 2026-06-21 Comparison /compare/mistral-ai-vs-qwen/ (src/content/comparisons/mistral-ai-vs-qwen.md)
-- 2026-06-21 Comparison /compare/neuronwriter-vs-surfer-seo/ (src/content/comparisons/neuronwriter-vs-surfer-seo.md)
-- 2026-06-21 Comparison /compare/notion-ai-vs-obsidian/ (src/content/comparisons/notion-ai-vs-obsidian.md)
-- 2026-06-21 Comparison /compare/quillbot-vs-wordtune/ (src/content/comparisons/quillbot-vs-wordtune.md)
-- 2026-06-21 Comparison /compare/suno-vs-udio/ (src/content/comparisons/suno-vs-udio.md)
-- 2026-06-21 Comparison /compare/veo-vs-kling/ (src/content/comparisons/veo-vs-kling.md)
-- 2026-06-21 Comparison /compare/veo-vs-seedance/ (src/content/comparisons/veo-vs-seedance.md)
 - 2026-06-21 Guide /guides/best-ai-coding-assistant/ (src/content/use-cases/best-ai-coding-assistant.md)
 - 2026-06-21 Guide /guides/claude-alternatives/ (src/content/use-cases/claude-alternatives.md)
 - 2026-06-21 Guide /guides/cursor-alternatives/ (src/content/use-cases/cursor-alternatives.md)

@@ -1011,3 +1011,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `runner:page-refresh:closeout` passed in 87.189s with 161 source URLs, 147 ok, 14 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed in 11.395s for nine routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
 - Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-10.md`.
 - Next: Continue oldest-first with 48 tracked pages still older than 2026-06-24.
+
+### 2026-06-27: Page Refresh Batch 11
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Refreshed 24 comparison routes across chatbot/model-provider, research, coding, presentation, notes, writing, SEO, image, voice, video, and music lanes.
+- Source repairs: Replaced broken Pitch, BFL, and MiniMax documentation URLs, and replaced the slow Kuaishou investor press-release URL in refreshed comparison citations with the faster GlobeNewswire copy of the same Kling AI 3.0 announcement.
+- Parent and top-layer updates: `/`, `/compare/`, AI Chatbots, AI Research, AI Coding, AI Presentation, AI Music, AI Video, AI Writing, AI Image, AI Notes, AI SEO, and AI Voice.
+- Verification: `runner:page-refresh:closeout` passed in 80.779s with 141 source URLs, 137 ok, 4 access-sensitive, 0 broken, and 0 unreachable; supplemental parent/category route QA passed in 13.580s for eleven routes at 319, 360, 390, 430, 768, 1024, and 1366 px.
+- Durable receipt: `.agent/loop-runs/2026-06-27-page-refresh-batch-11.md`.
+- Next: Continue oldest-first with 24 tracked pages still older than 2026-06-24.

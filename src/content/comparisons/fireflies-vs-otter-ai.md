@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Fireflies.ai vs Otter.ai: Which Meeting Assistant Should You Use?"
 meta_description: "Fireflies.ai vs Otter.ai, refreshed June 2026: compare meeting capture, live transcription, searchable archives, AI credits, Otter MCP, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: quarterly
 canonical_fact_table: true
 ---
@@ -92,7 +92,7 @@ Otter is usually the cleaner fit because live transcription, speaker ID, and col
 
 ## Sources
 
-- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-12)
-- [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-12)
-- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-12)
+- [Fireflies.ai pricing](https://fireflies.ai/pricing) (verified 2026-06-27)
+- [Fireflies pricing guide](https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans) (verified 2026-06-27)
+- [Otter.ai pricing](https://otter.ai/pricing) (verified 2026-06-27)
 - [Fireflies.ai review](/tools/fireflies/) and [Otter.ai review](/tools/otter-ai/)

@@ -6,10 +6,10 @@ tools: [consensus, elicit]
 category: ai-research
 winner: depends
 seo_title: "Consensus vs Elicit: Research Q&A or Systematic Review? (June 2026)"
-meta_description: "Updated June 12, 2026: Consensus is best for fast paper-backed answers and study-agreement signals; Elicit is best for screening, extraction, and systematic review workflows."
+meta_description: "Updated June 27, 2026: Consensus is best for fast paper-backed answers and study-agreement signals; Elicit is best for screening, extraction, and systematic review workflows."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -89,10 +89,10 @@ No. Use both for triage, then inspect methods, populations, limitations, and res
 
 ## Sources
 
-- [Consensus](https://consensus.app/) (verified 2026-06-12)
-- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-12)
-- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-12)
-- [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit) (verified 2026-06-12)
+- [Consensus](https://consensus.app/) (verified 2026-06-27)
+- [Consensus pricing](https://consensus.app/pricing) (verified 2026-06-27)
+- [Elicit pricing](https://elicit.com/pricing) (verified 2026-06-27)
+- [Systematic Reviews in Elicit](https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit) (verified 2026-06-27)
 
 ## Related
 

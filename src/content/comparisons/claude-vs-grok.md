@@ -6,10 +6,10 @@ tools: [claude, grok]
 category: ai-chatbots
 winner: depends
 seo_title: "Claude vs Grok: careful assistant or X-native xAI stack? (June 2026)"
-meta_description: "Claude vs Grok, verified June 21, 2026: compare Claude Opus 4.8 and suspended Fable/Mythos access with Grok 4.3, SuperGrok, xAI API pricing, X search, Imagine, Voice API, and enterprise fit."
+meta_description: "Claude vs Grok, verified June 27, 2026: compare Claude Opus 4.8 and suspended Fable/Mythos access with Grok 4.3, SuperGrok, xAI API pricing, X search, Imagine, Voice API, and enterprise fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-21
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---
@@ -18,7 +18,7 @@ canonical_fact_table: true
 
 [Claude](/tools/claude/) is the better careful assistant for writing, analysis, coding, long documents, and professional trust. [Grok](/tools/grok/) is the better specialist when the buyer wants xAI's stack: Grok app, X-native search, real-time web/X context, Grok Build CLI, Imagine image/video, Voice API, and low-cost Grok 4.3 API pricing.
 
-**Verified June 21, 2026:** Anthropic's current model docs list Claude Opus 4.8 as its stable buyable high-end complex-reasoning and agentic-coding model while Fable/Mythos access remains suspended. xAI's current pricing page lists Grok Free at $0/month and SuperGrok at $30/month, while its model docs list Grok 4.3 with 1M context at $1.25 input and $2.50 output per million tokens. The same model docs warn that real-time data requires enabling Web Search or X Search tools.
+**Verified June 27, 2026:** Anthropic's current model docs list Claude Opus 4.8 as its stable buyable high-end complex-reasoning and agentic-coding model while Fable/Mythos access remains suspended. xAI's current pricing page lists Grok Free at $0/month and SuperGrok at $30/month, while its model docs list Grok 4.3 with 1M context at $1.25 input and $2.50 output per million tokens. The same model docs warn that real-time data requires enabling Web Search or X Search tools.
 
 ## Quick Answer
 

@@ -8,8 +8,8 @@ winner: depends
 seo_title: "Grammarly vs Wordtune: Grammar Layer Or Rewrite Layer? (June 2026)"
 meta_description: "June 2026 Grammarly vs Wordtune comparison: Grammarly wins for grammar, clarity, tone, and teams; Wordtune wins for low-cost voice-preserving rewrites, summaries, and sentence-level polish."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-21
-last_verified: 2026-06-12
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 canonical_fact_table: true
 ---
