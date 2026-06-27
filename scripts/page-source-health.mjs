@@ -16,6 +16,7 @@ const HELP_MODE = args.includes('--help') || args.includes('-h');
 const CONCURRENCY = numberArg('--concurrency', 8);
 const TIMEOUT_MS = numberArg('--timeout-ms', 8000);
 const DOMAIN_DELAY_MS = numberArg('--domain-delay-ms', 150);
+const USER_AGENT = 'Mozilla/5.0 (compatible; AiPediaSourceHealth/1.0; +https://aipedia.wiki)';
 
 if (HELP_MODE) {
   console.log(usage());
@@ -71,9 +72,16 @@ function extractUrls(content) {
   });
 }
 
-function classifyStatus(status, errorCode = '') {
+function isCloudflareResponse(headers) {
+  if (!headers) return false;
+  const server = headers.get('server') || '';
+  return server.toLowerCase().includes('cloudflare') || Boolean(headers.get('cf-ray'));
+}
+
+function classifyStatus(status, errorCode = '', headers) {
   if (status >= 200 && status < 400) return 'ok';
   if ([401, 403, 429].includes(status)) return 'access-sensitive';
+  if (status === 503 && isCloudflareResponse(headers)) return 'access-sensitive';
   if (errorCode === 'timeout' || errorCode === 'network') return 'unreachable';
   return 'broken';
 }
@@ -109,17 +117,13 @@ async function checkUrl(url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    const response = await fetch(url, {
-      method: 'GET',
-      redirect: 'follow',
-      signal: controller.signal,
-      headers: {
-        'user-agent': 'AiPedia source health checker (+https://aipedia.wiki)',
-        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      },
-    });
+    let response = await fetchForHealth(url, controller.signal, 'HEAD');
+    let classification = classifyStatus(response.status, '', response.headers);
+    if (classification === 'broken') {
+      response = await fetchForHealth(url, controller.signal, 'GET');
+      classification = classifyStatus(response.status, '', response.headers);
+    }
     const elapsed_ms = Math.round(performance.now() - started);
-    const classification = classifyStatus(response.status);
     return {
       url,
       status: response.status,
@@ -142,6 +146,18 @@ async function checkUrl(url) {
   } finally {
     clearTimeout(timeout);
   }
+}
+
+function fetchForHealth(url, signal, method) {
+  return fetch(url, {
+    method,
+    redirect: 'follow',
+    signal,
+    headers: {
+      'user-agent': USER_AGENT,
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    },
+  });
 }
 
 async function mapLimit(items, limit, mapper) {

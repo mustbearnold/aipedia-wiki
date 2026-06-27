@@ -95,7 +95,7 @@ Verified June 27, 2026:
 - **Elicit:** Basic remains the budget path, while Pro is currently $49/user/month billed annually and Scale is $169/user/month billed annually. Do not assume the old low-cost Plus math still applies.
 - **Descript:** paid plans start at $16/month, with media hours and AI credits determining whether interview-heavy work needs a higher tier.
 - **Reclaim.ai:** use Free unless interview scheduling and writing blocks need paid scheduling range or team controls.
-- **SaneBox:** Snack is currently $4.99/month and is the first paid inbox-triage step.
+- **SaneBox:** Snack is currently $9.99 month-to-month and is the first serious paid inbox-triage step. Annual and two-year billing lower the effective monthly price.
 - **Claude:** Pro is currently $20/month; heavier research drafting may require Max or API usage.
 - **Semantic Scholar:** free paper discovery and API documentation remain the baseline safety net.
 

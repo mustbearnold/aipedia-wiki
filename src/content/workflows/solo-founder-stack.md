@@ -117,7 +117,7 @@ End-of-day takes 15 minutes if the morning was disciplined.
 Verified June 27, 2026 official-source pricing. Annual billing and promotions vary:
 
 - **Reclaim.ai:** start on Free; Starter currently shows $12/seat/month before annual or promotional discounts.
-- **SaneBox:** Snack is currently $4.99/month, Lunch $7.99/month, and Dinner $24.99/month.
+- **SaneBox:** Snack is currently $9.99 month-to-month, Lunch $17.99 month-to-month, and Dinner $44.99 month-to-month. Annual and two-year billing lower the effective monthly price.
 - **Apollo:** Basic is currently $49/seat/month billed annually, Professional $79/seat/month billed annually, and Organization $119/seat/month billed annually.
 - **Beautiful.ai:** Pro is currently $12/month billed annually; Team is $40/user/month annually or $50/user/month monthly, which is unnecessary for most solo founders.
 - **Descript:** paid plans start at $16/month; media hours and AI credits drive whether content-heavy founders need a higher tier.

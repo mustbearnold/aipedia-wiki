@@ -10,8 +10,8 @@ url: https://business.linkedin.com/hire/recruiter
 pricing_model: enterprise
 price_range: "Contact sales; Hiring Assistant is an add-on"
 status: active
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter + Hiring Assistant"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: medium
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter FAQ"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -47,7 +47,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter + Hiring Assistant"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: medium
     confidence: high
   watch_out_for:
@@ -55,7 +55,7 @@ facts:
     source: "https://business.linkedin.com/hire/recruiter"
     source_label: "LinkedIn Recruiter FAQ"
     source_id: linkedin-recruiter
-    verified_at: 2026-06-25
+    verified_at: 2026-06-27
     volatility: medium
     confidence: high
 tags: [recruiting, sourcing, hiring, talent-acquisition, candidate-outreach]
@@ -79,7 +79,7 @@ quick_answer: >-
 
 LinkedIn Recruiter is LinkedIn's professional recruiting platform. It combines candidate search, projects, InMail, collaboration, reporting, hiring-system integrations, and Hiring Assistant, LinkedIn's AI agent for recruiters.
 
-As of June 25, 2026, AiPedia treats LinkedIn Recruiter + Hiring Assistant as the strongest first evaluation for teams that hire consistently and source candidates through LinkedIn.
+As of June 27, 2026, AiPedia treats LinkedIn Recruiter + Hiring Assistant as the strongest first evaluation for teams that hire consistently and source candidates through LinkedIn.
 
 ## System Verdict
 
@@ -91,7 +91,7 @@ Skip it if you only need job-description drafts or occasional hiring help. [Chat
 
 LinkedIn Recruiter is the paid recruiting platform built around LinkedIn's professional graph. Recruiters use it for advanced candidate search with 40+ filters plus Boolean, projects, collaboration, candidate messaging with up to 150 InMails per month, applicant review, reports, and hiring-system integrations. Hiring Assistant adds AI support on top of that workflow: turning hiring goals into search strategies, finding potential matches, reviewing applicants against criteria, drafting outreach, and helping with prescreening while keeping recruiters in control. LinkedIn's 2026 Hiring Release adds intake improvements that let recruiters flag ideal candidates by LinkedIn URL, clarify commute expectations, and calibrate against more candidates before Hiring Assistant builds its search picture.
 
-LinkedIn's current Recruiter page anchors the value pitch around qualified candidates surfaced in under 5 minutes on average, 4+ hours saved per user per role with Hiring Assistant, 62% fewer profiles reviewed at the same quality bar, and LinkedIn-sourced hires reportedly 37% less likely to leave in year one. LinkedIn's dedicated Hiring Assistant page also cites January 2026 internal data around 1.5 hours saved reviewing applicants. Treat all of these as vendor metrics, not third-party benchmarks.
+LinkedIn's current Recruiter page anchors the value pitch around qualified candidates surfaced in under 5 minutes on average, 4+ hours saved per user per role with Hiring Assistant, 62% fewer profiles reviewed at the same quality bar, and LinkedIn-sourced hires reportedly 37% less likely to leave in year one. Treat all of these as vendor metrics, not third-party benchmarks.
 
 That combination is why AiPedia ranks it as the default first evaluation for consistent hiring teams. The product is not the cheapest option, and it is not a complete ATS by itself, but it owns one of the hardest recruiting assets to replicate: a large, current professional network where candidates already maintain work-history and skills signals.
 
@@ -161,14 +161,13 @@ Hiring Assistant should not be treated as an autonomous decision-maker. LinkedIn
 ## Recent Changes
 
 - **2026-06-23:** Rechecked LinkedIn Recruiter and Hiring Assistant pages. Hiring Assistant remains an add-on to LinkedIn Recruiter, with contact-sales access. The 2026 Hiring Release adds intake calibration updates, including ideal-candidate URLs, clearer commute expectations, and broader candidate calibration.
-- **2026-06-25:** Rechecked LinkedIn Recruiter, Hiring Assistant, and 2026 Hiring Release pages. Contact-sales pricing and add-on positioning remain the stable buyer guidance; no LinkedIn public rate card was found.
+- **2026-06-27:** Rechecked LinkedIn Recruiter and the quarterly product release page. Contact-sales pricing and add-on positioning remain the stable buyer guidance; no LinkedIn public rate card was found.
 
 ## AiPedia Trust Note
 
-This page was refreshed on June 25, 2026 using LinkedIn's current Recruiter, Hiring Assistant, and 2026 Hiring Release pages. AiPedia does not list a paid affiliate program for LinkedIn Recruiter. Scores reflect buyer utility, defensibility, network moat, and procurement risk.
+This page was refreshed on June 27, 2026 using LinkedIn's current Recruiter and quarterly product release pages. AiPedia does not list a paid affiliate program for LinkedIn Recruiter. Scores reflect buyer utility, defensibility, network moat, and procurement risk.
 
 ## Sources
 
 - [LinkedIn Recruiter + Hiring Assistant](https://business.linkedin.com/hire/recruiter)
-- [LinkedIn Hiring Assistant](https://business.linkedin.com/hire/hiring-assistant)
-- [2026 LinkedIn Hiring Release](https://business.linkedin.com/hire/product-update/hire-release)
+- [LinkedIn quarterly product release](https://business.linkedin.com/hire/product-update)

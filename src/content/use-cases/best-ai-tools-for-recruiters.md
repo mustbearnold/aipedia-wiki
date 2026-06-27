@@ -15,8 +15,8 @@ guide_picks:
     sources:
       - label: "LinkedIn Recruiter + Hiring Assistant"
         url: "https://business.linkedin.com/hire/recruiter"
-      - label: "LinkedIn Hiring Assistant"
-        url: "https://business.linkedin.com/hire/hiring-assistant"
+      - label: "LinkedIn quarterly product release"
+        url: "https://business.linkedin.com/hire/product-update"
   budget:
     tool: chatgpt
     label: "Best low-cost recruiting assistant"
@@ -140,7 +140,7 @@ Yes, but only as an assistant for writing, structure, and QA. Do not use it as a
 ## Sources
 
 - [LinkedIn Recruiter + Hiring Assistant](https://business.linkedin.com/hire/recruiter) - verified 2026-06-27.
-- [LinkedIn Hiring Assistant](https://business.linkedin.com/hire/hiring-assistant) - verified 2026-06-27.
+- [LinkedIn quarterly product release](https://business.linkedin.com/hire/product-update) - verified 2026-06-27.
 - [hireEZ AI recruiting platform](https://hireez.com/) - verified 2026-06-27.
 - [Paradox recruiting solution](https://www.paradox.ai/solutions/recruiters) - verified 2026-06-27.
 - [Eightfold Talent Acquisition](https://eightfold.ai/products/talent-acquisition/) - verified 2026-06-27.

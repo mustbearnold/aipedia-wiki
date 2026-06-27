@@ -105,7 +105,7 @@ Verified June 27, 2026. Model the stack by motion:
 - **Apollo:** Basic is currently $49/seat/month billed annually, Professional $79/seat/month billed annually, and Organization $119/seat/month billed annually. Most SDR teams should evaluate Professional first.
 - **Amplemarket:** the public Startup plan starts at $600/month on an annual term with 2 users included. Use it for named-account research and personalization, not as a default seat for every rep.
 - **Reclaim.ai:** Free can test the scheduling workflow; Starter currently shows $12/seat/month before discounts.
-- **SaneBox:** Snack is currently $4.99/month per inbox and Lunch is $7.99/month.
+- **SaneBox:** Snack is currently $9.99 month-to-month per inbox and Lunch is $17.99 month-to-month. Annual and two-year billing lower the effective monthly price.
 
 Per-SDR cost without Amplemarket is usually Apollo plus a small calendar/inbox layer. With Amplemarket, evaluate at the team-package level and tie it to named-account pipeline, not vanity reply-rate improvements.
 

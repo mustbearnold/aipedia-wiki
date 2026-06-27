@@ -91,7 +91,7 @@ Verified June 27, 2026. Annual billing and promotions vary by vendor, so use the
 
 - **Dext:** practice pricing is per client per month, with Dext's help center pointing firms back to the official pricing page for the current quote and minimums. This is the line item that determines whether the stack is a solo-bookkeeper stack or a small-firm stack.
 - **Reclaim.ai:** use Free for a solo calendar test, then move to Starter or Business when scheduling range, integrations, or team controls matter; the public page currently shows Starter at $12/seat/month before any annual or promotional discount.
-- **SaneBox:** the current public tiers are Snack at $4.99/month, Lunch at $7.99/month, and Dinner at $24.99/month, so most practices should start with Snack or Lunch per inbox.
+- **SaneBox:** the current public tiers are Snack at $9.99 month-to-month, Lunch at $17.99 month-to-month, and Dinner at $44.99 month-to-month, with annual and two-year billing lowering the effective monthly price. Most practices should start with Snack or Lunch per inbox.
 - **Consensus:** use the free tier for occasional advisory checks; Pro is currently $15/month or $120/year, while Deep is for heavier literature-review work.
 
 For a practice with 20 client books and a 2-person team, price Dext first, then add roughly one or two inbox/calendar/research subscriptions. If the Dext quote looks high, compare Hubdoc for QuickBooks-native clients and use the [Dext vs AutoEntry guide](/guides/dext-vs-autoentry-for-sage-bookkeepers/) for Sage-heavy workflows before committing.

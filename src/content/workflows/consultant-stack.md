@@ -86,7 +86,7 @@ Verified June 27, 2026:
 - **Beautiful.ai:** Pro is currently $12/month when billed annually; Team is materially more expensive and only makes sense when multiple consultants share decks and brand controls.
 - **Consensus:** Pro is currently $15/month or $120/year; Deep is $65/month or $540/year and is overkill unless research reviews are part of the paid deliverable.
 - **Reclaim.ai:** test on Free, then use Starter or Business when scheduling range, integrations, or team controls matter; the public Starter path currently shows $12/seat/month.
-- **SaneBox:** Snack is currently $4.99/month and is enough for many solo consultants; Lunch adds more inbox capacity at $7.99/month.
+- **SaneBox:** Snack is currently $9.99 month-to-month and is enough for many solo consultants; Lunch adds more inbox capacity at $17.99 month-to-month. Annual and two-year billing lower the effective monthly price.
 - **Descript:** paid plans start at $16/month, with higher creator/business tiers using media hours and AI credits for heavier video work.
 - **Claude:** Pro is currently $20/month; Max and Team are for heavier usage or collaboration.
 

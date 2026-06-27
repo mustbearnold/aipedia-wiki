@@ -77,7 +77,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Reclaim.ai](/tools/reclaim-ai/) when automation starts with the calendar.** The June 27 pricing check keeps Reclaim.ai branded from Dropbox, supports Google Calendar and Microsoft Outlook, and positions AI agents around tasks, habits, scheduling links, smart meetings, and team availability. Start with Reclaim when the job is calendar defense, focus-time protection, and task scheduling; use the [Reclaim.ai pricing guide](/guides/reclaim-ai-pricing-for-small-teams/) when the buyer is choosing Lite, Starter, Business, Enterprise, or Smart Meeting AU add-ons. Skip it if the buyer needs a broad workflow router or an Outlook rollout that depends on delegated/shared calendars, hosted Exchange, Teams status, or Outlook Tasks.
 
-**Use [SaneBox](/tools/sanebox/) when automation starts with inbox triage.** The June 26 check keeps SaneBox as the server-side inbox classification lane: SaneLater, SaneBlackHole, Daily Digest, reminders, snooze, and client-agnostic filtering matter more than AI branding. Treat SaneDrafts/Reply Draft and SaneSummary as request-only beta AI features, not the reason to buy the product.
+**Use [SaneBox](/tools/sanebox/) when automation starts with inbox triage.** The June 27 check keeps SaneBox as the server-side inbox classification lane: SaneLater, SaneBlackHole, Daily Digest, reminders, snooze, and client-agnostic filtering matter more than AI branding. Treat SaneDrafts/Reply Draft and SaneSummary as request-only beta AI features, not the reason to buy the product. Use the [SaneBox pricing guide](/guides/sanebox-pricing-for-heavy-inboxes/) when the buyer is choosing Appetizer, Snack, Lunch, or Dinner.
 
 **Use [Relevance AI](/tools/relevance-ai/) when the purchase question is an AI workforce.** The June 25 check still finds the public pricing page foregrounding Enterprise contact-sales packaging, while docs define Actions, Vendor Credits, rollover behavior, paid top-ups, and BYO API keys on paid plans. Treat old Pro/Team prices as historical unless the app or sales confirms them.
 
@@ -137,7 +137,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [Eightfold AI](/tools/eightfold-ai/) when automation starts with enterprise talent decisions.** Eightfold is not a simple recruiter productivity tool; the June 23 refresh keeps TalentForge, AI Interviewer/360 Interview, AI Interview Companion, Workforce Readiness, talent acquisition, talent management, workforce exchange, resource management, and workforce planning in one skills-intelligence procurement lane.
 
-**Use [LinkedIn Recruiter](/tools/linkedin-recruiter/) when recruiting automation starts with LinkedIn's professional graph.** The June 23 check keeps Hiring Assistant as an add-on to Recruiter, not a standalone autonomous hiring system. It can translate hiring goals into sourcing strategy, surface shortlists, review applicants, draft outreach, and prescreen candidates, while the 2026 Hiring Release adds intake calibration updates around ideal-candidate URLs and commute expectations. Buyers should treat LinkedIn's January 2026 metrics as vendor claims and keep recruiters in the decision loop.
+**Use [LinkedIn Recruiter](/tools/linkedin-recruiter/) when recruiting automation starts with LinkedIn's professional graph.** The June 27 check keeps Hiring Assistant as an add-on to Recruiter, not a standalone autonomous hiring system. It can translate hiring goals into sourcing strategy, surface shortlists, review applicants, draft outreach, and prescreen candidates, while LinkedIn's 2026 product release page adds applicant-management and evaluation updates around Hiring Assistant. Buyers should treat LinkedIn's performance metrics as vendor claims and keep recruiters in the decision loop.
 
 **Use [hireEZ](/tools/hireez/) when recruiting automation needs sourcing plus CRM, rediscovery, applicant match, hiring intelligence, scheduling, job distribution, and ATS workflows.** The June 23 check keeps pricing demo-led and confirms the current official positioning around agentic AI built on the ATS. Separate seats, ATS integration scope, candidate volume, CRM, applicant match, analytics, scheduling, implementation, support, and renewal escalators instead of assuming a self-serve price.
 
@@ -245,6 +245,7 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 - [Dext vs AutoEntry for Sage bookkeepers](/guides/dext-vs-autoentry-for-sage-bookkeepers/) is the June 27 switcher page for Sage-heavy firms deciding between Dext's practice workflow and AutoEntry's credit-style Sage capture.
 - [Best client document collection tool for bookkeeping firms](/guides/best-client-document-collection-tool-for-bookkeeping-firms/) is the June 27 workflow page for multi-client firms standardizing receipt, invoice, statement, review, and accounting handoff around Dext.
 - [Reclaim.ai pricing for small teams](/guides/reclaim-ai-pricing-for-small-teams/) is the June 27 plan-decision page for founders, managers, and small teams choosing between Lite, Starter, Business, Enterprise, Smart Meeting Attendee Users, and Outlook rollout caveats.
+- [SaneBox pricing for heavy inboxes](/guides/sanebox-pricing-for-heavy-inboxes/) is the June 27 plan-decision page for founders, consultants, executives, SDRs, researchers, and operators choosing Appetizer, Snack, Lunch, or Dinner without overbuying email triage.
 - [Best AI personal assistant for work](/guides/best-ai-personal-assistant-for-work/) is the Lindy money page for buyers who want inbox, calendar, meeting, follow-up, and text-delegation help before they choose a workflow platform.
 - [Best AI stack for solo founders](/guides/ai-solo-founder-stack/) is now the June 21 verified founder sequence: manual first, n8n once workflows repeat, Intercom only after real support volume, and explicit budgeting for Copilot AI Credits, Claude Agent SDK and Claude Code plan credits, app-builder credits, Fin outcomes, and workflow executions.
 - [Best AI tools for small business](/guides/best-ai-tools-for-small-business/) is the June 27 verified owner-operator guide for ChatGPT, Gemini, Zapier, Claude, Canva, and Perplexity, with the conservative buying sequence sharpened around general assistant first, Google-native assistant when it reduces switching, and Zapier only after workflows already work manually. It now calls out Zapier's bundled Tables, Forms, MCP, and AI-action packaging plus MCP task-count risk.
@@ -286,8 +287,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Gumloop docs](https://docs.gumloop.com/) (verified 2026-06-23)
 - [Reclaim.ai pricing](https://reclaim.ai/pricing) (verified 2026-06-27)
 - [Reclaim.ai Microsoft Outlook integration help](https://help.reclaim.ai/en/articles/9590707-microsoft-outlook-integration-overview-updates) (verified 2026-06-27)
-- [SaneBox pricing](https://www.sanebox.com/pricing) (verified 2026-06-26)
-- [SaneBox Reply Draft help](https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice) (verified 2026-06-26)
+- [SaneBox pricing](https://www.sanebox.com/pricing) (verified 2026-06-27)
+- [SaneBox Reply Draft help](https://www.sanebox.com/help/464-reply-draft-sanedrafts-automatically-generate-email-replies-in-your-voice) (verified 2026-06-27)
 - [Relevance AI pricing](https://relevanceai.com/pricing) (verified 2026-06-25)
 - [Relevance AI plans and credits documentation](https://relevanceai.com/docs/admin/subscriptions/plans) (verified 2026-06-25)
 - [ServiceNow AI Control Tower expansion](https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx) (verified 2026-06-09)
@@ -345,9 +346,8 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Eightfold TalentForge launch](https://eightfold.ai/company/press/press-releases/eightfold-ushers-in-the-golden-age-of-hr-software-with-launch-of-talentforge/) (verified 2026-06-23)
 - [Eightfold AI Interview Companion launch](https://eightfold.ai/company/press/press-releases/eightfold-ai-expands-talent-agents-across-the-full-interview-journey-introducing-ai-interview-companion-and-new-interview-capabilities/) (verified 2026-06-23)
 - [hireEZ agentic recruiting platform](https://hireez.com/) (verified 2026-06-23)
-- [LinkedIn Recruiter + Hiring Assistant](https://business.linkedin.com/hire/recruiter) (verified 2026-06-23)
-- [LinkedIn Hiring Assistant](https://business.linkedin.com/hire/hiring-assistant) (verified 2026-06-23)
-- [2026 LinkedIn Hiring Release](https://business.linkedin.com/hire/product-update/hire-release) (verified 2026-06-23)
+- [LinkedIn Recruiter + Hiring Assistant](https://business.linkedin.com/hire/recruiter) (verified 2026-06-27)
+- [LinkedIn quarterly product release](https://business.linkedin.com/hire/product-update) (verified 2026-06-27)
 - [Paradox recruiting solution](https://www.paradox.ai/solutions/recruiters) (verified 2026-06-08)
 - [Workday completes Paradox acquisition](https://investor.workday.com/news-and-events/press-releases/news-details/2025/Workday-Completes-Acquisition-of-Paradox-10-01-2025/default.aspx) (verified 2026-06-08)
 - [Paradox Conversational ATS available through Workday](https://investor.workday.com/news-and-events/press-releases/news-details/2026/Paradox-Conversational-Applicant-Tracking-System-ATS-Now-Available-Through-Workday-Helping-Organizations-Hire-Frontline-Workers-Faster/default.aspx) (verified 2026-06-08)

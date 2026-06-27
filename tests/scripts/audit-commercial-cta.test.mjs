@@ -421,6 +421,51 @@ test('commercial CTA audit flags known partner links that are not marked as comm
   }
 });
 
+test('commercial CTA audit blocks retired partner links even when marked as CTAs', () => {
+  const fixture = mkdtempSync(join(tmpdir(), 'aipedia-commercial-cta-retired-affiliate-'));
+
+  try {
+    for (const route of routes) {
+      const dir = join(fixture, route.path);
+      mkdirSync(dir, { recursive: true });
+      const requiredAffiliateLinks = route.requiredAffiliateLinks ?? [];
+      const anchors = [
+        ...requiredAffiliateLinks.map((link, index) => cta(route.pageType, index + 1, undefined, link)),
+        ...Array.from({ length: Math.max(route.count - requiredAffiliateLinks.length, 0) }, (_, index) => cta(route.pageType, requiredAffiliateLinks.length + index + 1)),
+      ].join('\n');
+      writeFileSync(join(dir, 'index.html'), fixtureHtml(anchors));
+    }
+
+    const retiredDir = join(fixture, 'tools', 'sanebox');
+    mkdirSync(retiredDir, { recursive: true });
+    writeFileSync(
+      join(retiredDir, 'index.html'),
+      fixtureHtml(cta('tool', 1, 'tool_hero_primary', {
+        href: 'https://try.sanebox.com/itokxwzvk7c5',
+        toolSlug: 'sanebox',
+        toolName: 'SaneBox',
+        affiliateProgram: 'in-house referral',
+      })),
+    );
+
+    const result = spawnSync(process.execPath, ['scripts/audit-commercial-cta.mjs', '--json', '--site-dir', fixture], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    });
+
+    assert.notEqual(result.status, 0);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.issues.some((issue) => (
+      issue.code === 'retired-affiliate-url-rendered' &&
+      issue.route === '/tools/sanebox/' &&
+      issue.detail.includes('sanebox')
+    )));
+  } finally {
+    rmSync(fixture, { recursive: true, force: true });
+  }
+});
+
 test('commercial CTA audit fails when a required affiliate link is missing from a money route', () => {
   const fixture = mkdtempSync(join(tmpdir(), 'aipedia-commercial-cta-missing-affiliate-'));
 

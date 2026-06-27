@@ -113,6 +113,13 @@ const partnerLinks = {
   },
 };
 const knownPartnerLinks = Object.values(partnerLinks);
+const retiredPartnerLinks = [
+  {
+    href: 'https://try.sanebox.com/itokxwzvk7c5',
+    toolSlug: 'sanebox',
+    reason: 'Referral attribution failed source-health validation on 2026-06-27; keep CTAs official-only until manually validated.',
+  },
+];
 
 const requiredRoutes = [
   { path: '/tools/chatgpt/', minCtas: 2, pageType: 'tool' },
@@ -366,6 +373,18 @@ if (existsSync(distDir)) {
           detail: `anchor ${index + 1}: ${partnerLink.toolSlug} ${href}`,
         });
       }
+    });
+
+    allAnchors(html).forEach((anchor, index) => {
+      const href = anchor.attrs.get('href') ?? '';
+      const retiredLink = retiredPartnerLinks.find((link) => link.href === href.trim());
+      if (!retiredLink) return;
+
+      issues.push({
+        code: 'retired-affiliate-url-rendered',
+        route,
+        detail: `anchor ${index + 1}: ${retiredLink.toolSlug} ${href} (${retiredLink.reason})`,
+      });
     });
 
     allAnchors(html).forEach((anchor, index) => {

@@ -33,7 +33,9 @@ function runHealth(args = []) {
 }
 
 test('page source health treats access-sensitive statuses as passing', async () => {
+  const userAgents = [];
   await withServer((request, response) => {
+    userAgents.push(request.headers['user-agent'] ?? '');
     if (request.url === '/ok') {
       response.writeHead(200).end('ok');
       return;
@@ -72,6 +74,100 @@ test('page source health treats access-sensitive statuses as passing', async () 
       assert.equal(report.totals.sources, 2);
       assert.equal(report.totals.ok, 1);
       assert.equal(report.totals.access_sensitive, 1);
+      assert.equal(report.pages[0].passed, true);
+      assert.ok(userAgents.every((ua) => ua.includes('Mozilla/5.0') && ua.includes('AiPediaSourceHealth')));
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+
+test('page source health treats Cloudflare 503 as access-sensitive but keeps plain 503 broken', async () => {
+  await withServer((request, response) => {
+    if (request.url === '/cloudflare') {
+      response.writeHead(503, {
+        server: 'cloudflare',
+        'cf-ray': 'test-ray',
+      }).end('blocked');
+      return;
+    }
+    if (request.url === '/plain') {
+      response.writeHead(503).end('down');
+      return;
+    }
+    response.writeHead(200).end('ok');
+  }, async (baseUrl) => {
+    const dir = mkdtempSync(join(tmpdir(), 'page-source-health-'));
+    const pagePath = join(dir, 'page.md');
+    const planPath = join(dir, 'plan.json');
+    const outPath = join(dir, 'out.json');
+    writeFileSync(pagePath, `Sources: ${baseUrl}/cloudflare and ${baseUrl}/plain.\n`);
+    writeFileSync(planPath, JSON.stringify({
+      batch: [{ route: '/guide/', path: 'page.md', type: 'Guide', sitemap: 'Yes' }],
+    }));
+
+    try {
+      const result = await runHealth([
+        '--project-dir',
+        dir,
+        '--plan',
+        planPath,
+        '--out',
+        outPath,
+        '--concurrency',
+        '2',
+        '--timeout-ms',
+        '2000',
+      ]);
+      assert.equal(result.status, 1);
+      const report = JSON.parse(readFileSync(outPath, 'utf8'));
+      assert.equal(report.ok, false);
+      assert.equal(report.totals.access_sensitive, 1);
+      assert.equal(report.totals.broken, 1);
+      assert.equal(report.pages[0].passed, false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+
+test('page source health confirms broken HEAD responses with GET before failing', async () => {
+  await withServer((request, response) => {
+    if (request.url === '/head-misreports' && request.method === 'HEAD') {
+      response.writeHead(404).end();
+      return;
+    }
+    if (request.url === '/head-misreports') {
+      response.writeHead(200).end('ok');
+      return;
+    }
+    response.writeHead(404).end('missing');
+  }, async (baseUrl) => {
+    const dir = mkdtempSync(join(tmpdir(), 'page-source-health-'));
+    const pagePath = join(dir, 'page.md');
+    const planPath = join(dir, 'plan.json');
+    const outPath = join(dir, 'out.json');
+    writeFileSync(pagePath, `Source: ${baseUrl}/head-misreports.\n`);
+    writeFileSync(planPath, JSON.stringify({
+      batch: [{ route: '/guide/', path: 'page.md', type: 'Guide', sitemap: 'Yes' }],
+    }));
+
+    try {
+      const result = await runHealth([
+        '--project-dir',
+        dir,
+        '--plan',
+        planPath,
+        '--out',
+        outPath,
+        '--concurrency',
+        '1',
+        '--timeout-ms',
+        '2000',
+      ]);
+      assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+      const report = JSON.parse(readFileSync(outPath, 'utf8'));
+      assert.equal(report.totals.ok, 1);
       assert.equal(report.pages[0].passed, true);
     } finally {
       rmSync(dir, { recursive: true, force: true });

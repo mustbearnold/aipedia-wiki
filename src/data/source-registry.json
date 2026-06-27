@@ -7848,21 +7848,21 @@
     },
     {
       "id": "linkedin-hiring-assistant",
-      "label": "LinkedIn Hiring Assistant",
-      "url": "https://business.linkedin.com/hire/hiring-assistant",
+      "label": "LinkedIn Recruiter and Hiring Assistant",
+      "url": "https://business.linkedin.com/hire/recruiter",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "linkedin-hiring-release-2026",
-      "label": "2026 LinkedIn Hiring Release",
-      "url": "https://business.linkedin.com/hire/product-update/hire-release",
+      "label": "LinkedIn quarterly product release",
+      "url": "https://business.linkedin.com/hire/product-update",
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "linkedin-recruiter",
@@ -7871,7 +7871,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "llama-docs",
@@ -11519,7 +11519,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "sanebox-overview",
@@ -11528,7 +11528,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "sanebox-plan-help",
@@ -11537,7 +11537,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "sanebox-pricing",
@@ -11546,7 +11546,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "sanebox-reply-drafts",
@@ -11555,7 +11555,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "scite-mcp-announcement",
