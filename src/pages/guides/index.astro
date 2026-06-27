@@ -363,15 +363,20 @@ const collectionItems = guides.map((g: any) => ({
     <section class="gt-guide-controls" aria-label="Find guides">
       <form class="gt-guide-search" role="search" onsubmit="return false">
         <label for="guide-search-input" class="gt-sr-only">Search guides</label>
-        <input
-          id="guide-search-input"
-          type="search"
-          inputmode="search"
-          autocomplete="off"
-          spellcheck="false"
-          placeholder={`Search ${guides.length} guides`}
-          data-guide-search
-        />
+        <div class="gt-index-search-row">
+          <svg class="gt-index-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <input
+            id="guide-search-input"
+            type="search"
+            inputmode="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder={`Search ${guides.length} guides`}
+            data-guide-search
+          />
+        </div>
       </form>
       <nav class="gt-guide-filters" aria-label="Filter guides by type">
         <button type="button" class="gt-chip is-active" data-filter="all" data-analytics-event="category_filter_click" data-analytics-source-module="guides_index_filters" data-analytics-category-slug="all" data-analytics-position="top" data-analytics-label="All guides">All <span>{guides.length}</span></button>
@@ -452,22 +457,6 @@ const collectionItems = guides.map((g: any) => ({
     }
     .gt-guide-controls { margin: 0 0 18px; }
     .gt-guide-search { margin: 0 0 10px; }
-    .gt-guide-search input {
-      width: 100%;
-      min-height: 48px;
-      border-radius: var(--gt-radius-sm);
-      border: 1px solid var(--gt-line-strong);
-      background: var(--gt-surface);
-      color: var(--gt-fg);
-      font: inherit;
-      font-size: 15px;
-      padding: 0 14px;
-    }
-    .gt-guide-search input:focus {
-      outline: none;
-      border-color: var(--gt-accent);
-      background: var(--gt-surface-2);
-    }
     .gt-guide-filters {
       display: flex;
       gap: 6px;
@@ -495,7 +484,7 @@ const collectionItems = guides.map((g: any) => ({
     }
     .gt-chip.is-active {
       background: var(--gt-accent);
-      color: #fff;
+      color: var(--gt-on-accent);
       border-color: var(--gt-accent);
     }
     .gt-chip span { font-size: 11px; opacity: 0.75; font-variant-numeric: tabular-nums; }

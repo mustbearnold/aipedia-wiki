@@ -2200,42 +2200,70 @@ function newsDateFmt(iso: string): string {
     .gt-search-row {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 6px 6px 14px;
-      border-radius: var(--gt-radius);
-      border: 1px solid var(--gt-line-strong);
-      background: var(--home-input-bg, var(--gt-surface));
-      transition: border-color 120ms ease, background 120ms ease;
+      gap: 10px;
+      min-height: 58px;
+      padding: 7px 7px 7px 16px;
+      border-radius: 16px;
+      border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.22));
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
+        var(--home-input-bg, color-mix(in srgb, var(--gt-surface) 92%, transparent));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 18px 38px -30px rgba(0, 0, 0, 0.78);
+      transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
     }
     .gt-search-row:focus-within {
-      border-color: var(--gt-accent);
-      background: var(--gt-surface-2);
+      border-color: color-mix(in srgb, var(--gt-accent) 72%, white 6%);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.024)),
+        color-mix(in srgb, var(--gt-surface-2) 96%, transparent);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.11),
+        0 0 0 3px rgba(249, 115, 22, 0.14),
+        0 24px 46px -34px rgba(0, 0, 0, 0.86);
     }
-    .gt-search-icon { color: var(--gt-subtle); flex: 0 0 auto; }
+    .gt-search-icon { color: color-mix(in srgb, var(--gt-subtle) 78%, var(--gt-accent) 22%); flex: 0 0 auto; }
     .gt-search input {
       flex: 1;
       min-width: 0;
+      min-height: 48px;
       background: transparent;
       border: none;
       outline: none;
       color: var(--gt-fg);
       font-size: 16px;
+      font-weight: 560;
       padding: 10px 6px;
     }
-    .gt-search input::placeholder { color: var(--gt-subtle); }
+    .gt-search input::placeholder {
+      color: color-mix(in srgb, var(--gt-subtle) 88%, var(--gt-muted) 12%);
+      font-weight: 460;
+    }
     .gt-search-submit {
       flex: 0 0 auto;
       padding: 10px 16px;
-      min-height: 40px;
-      border-radius: var(--gt-radius-sm);
+      min-height: 42px;
+      border-radius: 12px;
       background: var(--gt-accent);
-      color: #fff;
-      font-weight: 600;
+      color: var(--gt-on-accent);
+      font-weight: 720;
       font-size: 14px;
       border: none;
       cursor: pointer;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        0 12px 24px -18px rgba(249, 115, 22, 0.82);
+      transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
-    .gt-search-submit:hover { background: var(--gt-accent-hover); }
+    .gt-search-submit:hover {
+      background: var(--gt-accent-hover);
+      transform: translateY(-1px);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 16px 28px -20px rgba(249, 115, 22, 0.9);
+    }
+    .gt-search-submit:active { transform: translateY(0); }
     @media (max-width: 460px) {
       .gt-search-row {
         gap: 6px;
@@ -2247,10 +2275,11 @@ function newsDateFmt(iso: string): string {
       }
       .gt-search input {
         font-size: 15px;
-        padding: 8px 2px;
+        min-height: 48px;
+        padding: 9px 2px;
       }
       .gt-search-submit {
-        min-height: 36px;
+        min-height: 44px;
         padding: 8px 11px;
         font-size: 13px;
       }

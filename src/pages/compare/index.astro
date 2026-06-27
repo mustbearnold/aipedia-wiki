@@ -322,15 +322,20 @@ const collectionItems = sorted.map((c) => ({
     <section class="gt-compare-actions" aria-label="Find or build a comparison">
       <form class="gt-compare-search" role="search" onsubmit="return false">
         <label for="compare-search-input" class="gt-sr-only">Search comparisons</label>
-        <input
-          id="compare-search-input"
-          type="search"
-          inputmode="search"
-          autocomplete="off"
-          spellcheck="false"
-          placeholder={`Search ${allComparisons.length} comparisons`}
-          data-compare-search
-        />
+        <div class="gt-index-search-row">
+          <svg class="gt-index-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <input
+            id="compare-search-input"
+            type="search"
+            inputmode="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder={`Search ${allComparisons.length} comparisons`}
+            data-compare-search
+          />
+        </div>
       </form>
       <a
         href="/compare/build/"
@@ -425,22 +430,6 @@ const collectionItems = sorted.map((c) => ({
       grid-template-columns: 1fr;
       gap: 10px;
       margin: 0 0 18px;
-    }
-    .gt-compare-search input {
-      width: 100%;
-      min-height: 48px;
-      border-radius: var(--gt-radius-sm);
-      border: 1px solid var(--gt-line-strong);
-      background: var(--gt-surface);
-      color: var(--gt-fg);
-      font: inherit;
-      font-size: 15px;
-      padding: 0 14px;
-    }
-    .gt-compare-search input:focus {
-      outline: none;
-      border-color: var(--gt-accent);
-      background: var(--gt-surface-2);
     }
     .gt-compare-builder {
       min-height: 48px;

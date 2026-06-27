@@ -10,8 +10,8 @@ pricing_model: paid
 price_range: "$600-$2000+/month"
 status: active
 launched: 2019-01
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-27
+last_verified: 2026-06-27
 update_frequency: quarterly
 affiliate:
   has_program: true
@@ -33,7 +33,7 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-27'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -42,7 +42,7 @@ facts:
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-27'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -51,16 +51,16 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-27'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
   enterprise_controls:
-    value: Procurement should test CRM integration, deliverability controls, compliance, contact-data provenance, workflow routing, MCP access governance, role permissions, the 100 requests/minute MCP rate limit, and enrichment credit costs before scaling.
+    value: Procurement should test CRM integration, deliverability controls, compliance, contact-data provenance, workflow routing, MCP access governance, role permissions, and enrichment credit costs before scaling.
     source: https://www.amplemarket.com/pricing
     source_label: Amplemarket pricing
     source_id: amplemarket-pricing
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-27'
     volatility: high
     confidence: high
     next_review_at: '2026-08-13'
@@ -69,7 +69,7 @@ facts:
     source: https://www.amplemarket.com/
     source_label: Amplemarket official site
     source_id: amplemarket-official
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-27'
     volatility: medium
     confidence: high
     next_review_at: '2026-11-13'
@@ -97,7 +97,7 @@ price_history:
     source: "https://www.amplemarket.com/pricing"
     source_label: "Amplemarket pricing"
     source_id: amplemarket-pricing
-    note: "Rechecked the live pricing page, pricing explainer, MCP help, and June product update. Startup remains $600/mo annual term for 2 users, with the same live-matrix versus pricing-explainer credit-count caveat. MCP help lists 0.5 credits for enrich_person, extra charges for revealing email or phone, OAuth auth, and a 100 requests/minute/user rate limit."
+    note: "Rechecked the live pricing page, pricing explainer, MCP announcement, and June product update. Startup remains $600/mo annual term for 2 users, with the same live-matrix versus pricing-explainer credit-count caveat."
   - date: 2026-05-02
     verified_at: 2026-05-02
     plan: "Startup"
@@ -179,7 +179,7 @@ The database still covers 200M+ AI-verified contacts, with vendor-reported under
 | **CRM integrations** | Salesforce, HubSpot, Pipedrive (native) |
 | **Onboarding** | Community (Startup) or personalised CSM (Growth, Elite) |
 
-Every data point above was rechecked against Amplemarket's pricing page, pricing explainer, product pages, MCP help, and June 2026 product updates on 2026-06-25. See Sources.
+Every data point above was rechecked against Amplemarket's pricing page, pricing explainer, product pages, MCP announcement, and June 2026 product updates on 2026-06-27. See Sources.
 
 ## What it actually is
 
@@ -226,16 +226,16 @@ Pricing via [amplemarket.com/pricing](https://amplemarket.com/pricing). Annual o
 | Growth | Tailored quote | 4 | 35,000 on live matrix | 5,000 on live matrix | + Voice, Growth deliverability controls | **Working mid-market SDR teams** |
 | Elite | Tailored quote | 10 | 40,000 on live matrix | 9,600 on live matrix | + Inbox, SSO, larger controls | Formal sales orgs at scale |
 
-Prices verified 2026-06-25 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan. The live matrix and March pricing explainer currently disagree on Startup credit counts, so confirm final credits in the order form.
+Prices verified 2026-06-27 via [amplemarket.com/pricing](https://amplemarket.com/pricing) and the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing). Every plan requires an annual commitment; no monthly billing. Additional seats purchasable at a per-seat rate quoted with the plan. The live matrix and March pricing explainer currently disagree on Startup credit counts, so confirm final credits in the order form.
 
 ## Against the alternatives
 
 | | Amplemarket Startup | Apollo Professional | Clay Starter |
 |---|---|---|---|
-| **Price floor** | $600/mo (2 users, annual) | $79/user/mo annual | $149/mo flat |
-| **Per-user cost** | $300/user/mo | $79/user/mo | Not per-user |
+| **Price floor** | $600/mo (2 users, annual) | $79/user/mo on annual Professional, or $99 month to month | $149/mo flat |
+| **Per-user cost** | $300/user/mo | $79/user/mo on annual Professional, or $99 month to month | Not per-user |
 | **Billing flexibility** | Annual only | Annual or monthly | Monthly option |
-| **Contact database** | 200M+ (AI-verified) | 400M+ | None (waterfalls others) |
+| **Contact database** | 200M+ (AI-verified) | 230M+ contacts | None (waterfalls others) |
 | **Phone accuracy** | 96.5% (vendor-reported) | Not published | Depends on source |
 | **AI agent suite** | Duo (6 agents as of June 2026, production) | AI Assistant (newer, March 2026) | Claygent (research specialist) |
 | **Dialer** | Included | Included (US) | None |
@@ -250,13 +250,13 @@ Prices verified 2026-06-25 via [amplemarket.com/pricing](https://amplemarket.com
 - **Duo Voice is newer than the marketing implies.** AI voicemails work; ringless voicemail laws vary by US state and by country. Compliance risk sits with the sender, not with Amplemarket.
 - **Duo Inbox is Elite-only by default.** Smaller teams on Growth either pay the add-on rate or manage replies manually.
 - **Mailboxes-per-user cap.** Startup 2, Growth 4, Elite 8. High-volume senders running many inboxes will feel the ceiling; Instantly runs unlimited by design.
-- **Contact database is narrower than Apollo or ZoomInfo.** 200M+ is enterprise-class but still under Apollo's 400M+ and far under ZoomInfo's 200M+ on depth of firmographic data.
+- **Contact database is narrower than Apollo on the current public pages.** 200M+ is enterprise-class, but Apollo's current sales engagement page says 230M+ contacts. Test actual target-market coverage before treating either headline as a quality guarantee.
 - **Recently added AI agents still maturing.** Duo Copywriter and Copilot are production-strength in independent reviews. Duo Voice and Inbox receive more mixed feedback on edge-case handling. Duo Competitive Intelligence and Duo Signals were promoted into the Startup bundle by May 2026 and have not yet accumulated comparable third-party validation.
-- **MCP and workflow governance need setup.** Once reps can ask Claude or ChatGPT to search, enrich, build lists, and create sequences, admins need clear permissions, CRM ownership rules, activity-capture settings, review requirements, and credit limits before allowing broad rollout. The help center lists 0.5 credits per person enrichment, extra reveal costs, and a 100 requests/minute/user MCP rate limit.
+- **MCP and workflow governance need setup.** Once reps can ask Claude or ChatGPT to search, enrich, build lists, and create sequences, admins need clear permissions, CRM ownership rules, activity-capture settings, review requirements, and credit limits before allowing broad rollout.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-25 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), Amplemarket's [June 16, 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026), Amplemarket's [MCP announcement](https://www.amplemarket.com/blog/mcp), Amplemarket MCP help, and independent reviews including [MarketBetter](https://www.marketbetter.ai/blog/amplemarket-pricing-breakdown-2026/) and [G2](https://www.g2.com/products/amplemarket/reviews).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and feature details against primary sources, and generates the analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility, Value, Moat, Longevity, unweighted average). Last verified 2026-06-27 against [Amplemarket pricing](https://amplemarket.com/pricing), the [Amplemarket pricing explainer](https://www.amplemarket.com/blog/amplemarket-pricing), Amplemarket's [June 2026 product update](https://www.amplemarket.com/blog/made-for-you-may-2026), and Amplemarket's [MCP announcement](https://www.amplemarket.com/blog/mcp).
 
 ## FAQ
 
@@ -270,7 +270,7 @@ No. Every tier requires an annual commitment. A free trial is offered on all pla
 <details>
 <summary>How does Amplemarket compare to Apollo?</summary>
 
-Amplemarket is a premium AI SDR platform; Apollo is an all-in-one at founder-friendly pricing. Apollo's Professional tier at $79/user/month (annual) undercuts Amplemarket's Startup by roughly 4x on per-seat cost. Amplemarket wins on the Duo agent suite and phone accuracy (96.5% vs unpublished). Apollo wins on database size (400M+ vs 200M+) and budget flexibility.
+Amplemarket is a premium AI SDR platform; Apollo is an all-in-one at founder-friendly pricing. Apollo's current public pricing page shows Professional at $79/month on annual billing or $99 month to month, which still materially undercuts Amplemarket's $300/user/month Startup math. Amplemarket wins when Duo, Workflows, MCP, voice, and inbox are the buying reasons. Apollo wins on lower-friction testing, budget flexibility, and the broader first-platform path. For the full buying fork, see [Amplemarket vs Apollo](/compare/amplemarket-vs-apollo/).
 
 </details>
 
@@ -284,7 +284,7 @@ Duo is Amplemarket's AI agent suite. As of June 2026, six specialised agents sha
 <details>
 <summary>Does Amplemarket offer monthly billing?</summary>
 
-No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-06-25. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
+No. Every tier is annual-only. Monthly billing is not available at any price point as of 2026-06-27. Apollo, Instantly, and Clay all offer monthly plans if that flexibility is required.
 
 </details>
 
@@ -331,4 +331,4 @@ It also added webhook and HTTP actions in Workflows, CRM-owner routing, custom o
 ## Related
 
 - **Category:** [AI Automation](/categories/ai-automation/)
-- **Buying guides:** [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/) · [Best AI outbound tool for unified prospecting and sequencing](/guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/) · [AI lead generation stack](/guides/ai-lead-generation/)
+- **Buying guides:** [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/) · [Amplemarket vs Apollo](/compare/amplemarket-vs-apollo/) · [Best AI outbound tool for unified prospecting and sequencing](/guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/) · [AI lead generation stack](/guides/ai-lead-generation/)

@@ -24,7 +24,7 @@ html, body {
 }
 
 /* TOC anchor links must clear the sticky nav (~57px) when scrolling into view.
-   Use scroll-margin-top per element only — combining with scroll-padding-top
+   Use scroll-margin-top per element only - combining with scroll-padding-top
    on html stacks the offsets and lands the target too far down. */
 .wiki-prose :is(h1, h2, h3, h4),
 .faq-accordion details {
@@ -36,7 +36,7 @@ html, body {
   navigation: auto;
 }
 
-/* Old page fades out slightly before new page fades in — hides layout-settling flash */
+/* Old page fades out slightly before new page fades in - hides layout-settling flash */
 ::view-transition-old(root) {
   animation: cc-fade-out 220ms cubic-bezier(0.4, 0, 0.2, 1) both;
 }
@@ -295,7 +295,7 @@ html.light .news-default-og-thumb--light {
   display: block;
 }
 
-/* Wiki prose — shared styling for tool and article content */
+/* Wiki prose - shared styling for tool and article content */
 .wiki-prose {
   line-height: 1.8;
 }
@@ -327,7 +327,7 @@ html.light .news-default-og-thumb--light {
 /* Section-specific callouts. Heading IDs are auto-slugified from the text,
    so `## Who It's For` becomes `#who-its-for` etc. These treatments give
    each recurring section type a distinct visual identity. */
-/* System Verdict — the top-of-page agent-authored opinion block.
+/* System Verdict - the top-of-page agent-authored opinion block.
    Visually the strongest section; declares the automated-wiki
    positioning instead of pretending to be a human reviewer. */
 .wiki-prose h2#system-verdict {
@@ -420,7 +420,7 @@ html.light .news-default-og-thumb--light {
 }
 
 /* Label-rows: `**Writers and editors** who need...` become chip cards.
-   Targets `<li>` that starts with a `<strong>` — common pattern in
+   Targets `<li>` that starts with a `<strong>` - common pattern in
    tool-page "Who It's For" / "Limitations" sections. */
 .wiki-prose li:has(> strong:first-child) {
   list-style: none;
@@ -469,7 +469,7 @@ html.light .news-default-og-thumb--light {
 }
 
 /* Pull-quote style for paragraphs that start with a `>`. Markdown
-   blockquote default is bland — give it real weight. */
+   blockquote default is bland - give it real weight. */
 .wiki-prose blockquote {
   border-left: none;
   padding: 1rem 1.25rem;
@@ -695,7 +695,7 @@ html.light .news-default-og-thumb--light {
   }
 }
 
-/* Tool card hover lift — subtle translateY + tinted shadow so the card
+/* Tool card hover lift - subtle translateY + tinted shadow so the card
    feels tactile when hovered. Respects reduced-motion preference. */
 .tool-card {
   will-change: transform, box-shadow, border-color, background;
@@ -862,7 +862,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   touch-action: manipulation;
 }
 
-/* Category rail — horizontal scroll with rich cards. Scrollbar hidden
+/* Category rail - horizontal scroll with rich cards. Scrollbar hidden
    for a cleaner look; users navigate via mouse wheel (vertical wheel
    converts to horizontal scroll via JS when hovering the rail), arrow
    buttons on desktop, or native touch swipe on mobile.
@@ -885,7 +885,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
    gesture doesn't accidentally drag-select text or initiate an HTML5 drag
    on an <a>. On mobile these properties do nothing useful (native scroll
    handles panning, no drag to worry about) but combined on an <a> they
-   cause iOS Safari to require 2 taps to navigate — first tap focuses the
+   cause iOS Safari to require 2 taps to navigate - first tap focuses the
    element, second tap fires the click. Scoping to hover+fine-pointer
    makes mobile taps single-tap as expected. */
 @media (hover: hover) and (pointer: fine) {
@@ -926,7 +926,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   pointer-events: none;
   z-index: 1;
 }
-/* Soft radial glow from the top-left corner — fades to transparent over
+/* Soft radial glow from the top-left corner - fades to transparent over
    ~60% of the card. Reads as "color-coded" at a glance without being loud. */
 .cat-card-glow {
   position: absolute;
@@ -953,7 +953,7 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   transition-duration: 80ms;
 }
 
-/* Tool logo chips inside category cards — bare 24px logos, no ring at
+/* Tool logo chips inside category cards - bare 24px logos, no ring at
    this size (would read as pixel-dust). Fan-out on card hover. */
 .cat-tool-logo {
   flex: none;
@@ -1095,31 +1095,44 @@ a, button, [role="button"], .tool-card, .category-pill, .helpful-btn, .copy-btn 
   gap: 8px;
   margin-left: 4px;
   min-height: 44px;
-  padding: 8px 10px 8px 12px;
+  padding: 8px 10px 8px 13px;
   font-size: 13px;
-  color: var(--text-muted);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  color: var(--text-secondary);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
+    color-mix(in srgb, var(--bg-card) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 78%, rgba(255, 255, 255, 0.22));
+  border-radius: 14px;
   cursor: pointer;
-  box-shadow: none;
-  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 14px 32px -28px rgba(0, 0, 0, 0.82);
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 .nav-search:hover {
-  background: var(--bg-card-hover);
-  border-color: rgba(249, 115, 22, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.026)),
+    color-mix(in srgb, var(--bg-card-hover) 94%, transparent);
+  border-color: rgba(249, 115, 22, 0.34);
   color: var(--text-primary);
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 18px 34px -30px rgba(0, 0, 0, 0.9);
 }
+.nav-search:active { transform: translateY(0); }
 html.light .nav-search {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 14px 30px -28px rgba(43, 31, 18, 0.26);
 }
 html.light .nav-search:hover {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.82) inset,
+    0 18px 34px -30px rgba(43, 31, 18, 0.34);
 }
 .nav-search-icon {
-  color: var(--text-muted);
+  color: color-mix(in srgb, var(--text-muted) 74%, var(--accent-primary-text, #fb923c) 26%);
   flex: none;
   transition: color 160ms ease;
 }
@@ -1129,14 +1142,15 @@ html.light .nav-search:hover {
   font-weight: 500;
 }
 .nav-search-kbd {
-  padding: 2px 6px;
+  padding: 3px 7px;
   font-size: 10.5px;
   font-family: var(--font-mono);
   color: var(--text-secondary);
-  background: var(--bg-card-hover);
-  border: 1px solid var(--border);
-  border-radius: 5px;
+  background: color-mix(in srgb, var(--bg-card-hover) 88%, white 4%);
+  border: 1px solid color-mix(in srgb, var(--border) 82%, rgba(255, 255, 255, 0.16));
+  border-radius: 8px;
   flex: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 @media (min-width: 640px) and (max-width: 900px) {

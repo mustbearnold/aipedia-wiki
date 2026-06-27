@@ -1,6 +1,6 @@
 ---
 /**
- * SearchModal — god-tier command palette (May 2026 onward).
+ * SearchModal - god-tier command palette (May 2026 onward).
  *
  * Opens on Ctrl/Cmd+K (and the header search button). Loads
  * /api/home-search.json on first open, caches in memory for the
@@ -391,11 +391,17 @@ const toolsCount = await getActiveToolCount();
     // ── open / close ──────────────────────────────────────────────
     function open(trigger = 'unknown') {
       modal.classList.add('is-visible');
+      input.focus({ preventScroll: true });
       requestAnimationFrame(() => modal.classList.add('is-open'));
       document.body.style.overflow = 'hidden';
       load().then(() => { if (modal.classList.contains('is-visible')) renderResults(); });
       renderResults();
       requestAnimationFrame(() => input.focus({ preventScroll: true }));
+      setTimeout(() => {
+        if (modal.classList.contains('is-visible') && document.activeElement !== input) {
+          input.focus({ preventScroll: true });
+        }
+      }, 40);
       trackSearchIntent('site_search_open', { trigger });
     }
     function close() {
@@ -572,13 +578,16 @@ const toolsCount = await getActiveToolCount();
   }
 
   #search-shell-inner {
-    background: var(--bg-base, #0a0a0a);
-    border: 1px solid var(--gt-line-strong);
-    border-radius: var(--gt-radius);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)),
+      var(--bg-base, #0a0a0a);
+    border: 1px solid color-mix(in srgb, var(--gt-line-strong) 84%, rgba(255, 255, 255, 0.2));
+    border-radius: 18px;
     box-shadow:
       0 24px 60px -16px rgba(0, 0, 0, 0.6),
       0 8px 24px -8px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(255, 255, 255, 0.02);
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 0 0 1px rgba(255, 255, 255, 0.025);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -589,11 +598,31 @@ const toolsCount = await getActiveToolCount();
   .sp-input-row {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 14px 14px 18px;
-    border-bottom: 1px solid var(--gt-line);
+    gap: 12px;
+    margin: 10px;
+    padding: 8px 8px 8px 16px;
+    min-height: 62px;
+    border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.22));
+    border-radius: 16px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
+      color-mix(in srgb, var(--gt-surface) 92%, transparent);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 18px 38px -32px rgba(0, 0, 0, 0.78);
+    transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
   }
-  .sp-input-icon { color: var(--gt-subtle); flex: 0 0 auto; }
+  .sp-input-row:focus-within {
+    border-color: color-mix(in srgb, var(--gt-accent) 72%, white 6%);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.024)),
+      color-mix(in srgb, var(--gt-surface-2) 96%, transparent);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.11),
+      0 0 0 3px rgba(249, 115, 22, 0.14),
+      0 24px 46px -34px rgba(0, 0, 0, 0.86);
+  }
+  .sp-input-icon { color: color-mix(in srgb, var(--gt-subtle) 78%, var(--gt-accent) 22%); flex: 0 0 auto; }
   #search-input {
     flex: 1;
     min-width: 0;
@@ -602,11 +631,14 @@ const toolsCount = await getActiveToolCount();
     background: transparent;
     color: var(--gt-fg);
     font-size: 17px;
-    font-weight: 500;
-    padding: 4px 0;
+    font-weight: 560;
+    padding: 8px 0;
     font-family: var(--font-sans);
   }
-  #search-input::placeholder { color: var(--gt-subtle); font-weight: 400; }
+  #search-input::placeholder {
+    color: color-mix(in srgb, var(--gt-subtle) 88%, var(--gt-muted) 12%);
+    font-weight: 460;
+  }
   .sp-count {
     flex: 0 0 auto;
     font-size: 11px;
@@ -630,15 +662,59 @@ const toolsCount = await getActiveToolCount();
     display: inline-flex;
     align-items: center;
     padding: 4px 10px;
-    border-radius: 6px;
-    border: 1px solid var(--gt-line-strong);
-    background: var(--gt-surface);
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.16));
+    background: color-mix(in srgb, var(--gt-surface-2) 88%, white 4%);
     color: var(--gt-muted);
     font-size: 11px;
     font-family: inherit;
     font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
   }
   .sp-close:hover kbd { background: var(--gt-surface-2); color: var(--gt-fg); }
+  @media (max-width: 560px) {
+    .sp-input-row {
+      gap: 10px;
+      margin: 8px;
+      min-height: 64px;
+      padding: 8px 8px 8px 14px;
+    }
+    #search-input {
+      flex: 1 1 150px;
+      min-width: 0;
+      min-height: 46px;
+      font-size: 16px;
+      padding: 10px 0;
+    }
+    .sp-count {
+      display: none !important;
+    }
+    .sp-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--gt-surface-2) 88%, white 4%);
+      border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.16));
+    }
+    .sp-close kbd {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      justify-content: center;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      font-size: 0;
+    }
+    .sp-close kbd::before {
+      content: "Esc";
+      font-size: 11px;
+      font-weight: 700;
+    }
+  }
 
   /* Results ------------------------------------------------------- */
   #search-results {
@@ -723,7 +799,7 @@ const toolsCount = await getActiveToolCount();
     min-height: 52px;
     transition: background 80ms ease;
   }
-  /* Tool logo chip — official mark on a white square with subtle ring.
+  /* Tool logo chip - official mark on a white square with subtle ring.
      Same visual language as ToolLogo.astro for consistency across the
      site. */
   .sp-row-logo {
@@ -742,7 +818,7 @@ const toolsCount = await getActiveToolCount();
     background: #f8fafc;
     box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
   }
-  /* Monogram fallback — initials in an accent-tinted square. */
+  /* Monogram fallback - initials in an accent-tinted square. */
   .sp-row-logo-mono {
     display: inline-flex;
     align-items: center;

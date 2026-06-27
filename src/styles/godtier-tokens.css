@@ -12,7 +12,7 @@
  * ============================================================ */
 
 :root {
-  /* Foreground colors — fall through to site tokens, then explicit
+  /* Foreground colors - fall through to site tokens, then explicit
      defaults so a missing token never produces black-on-black. */
   --gt-fg: var(--color-text-primary, #f5f5f5);
   --gt-muted: var(--color-text-secondary, #c9c9c9);
@@ -72,7 +72,7 @@
   --gt-surface-2: rgba(0, 0, 0, 0.06);
 }
 
-/* Canvas helper — pages opt in by wrapping content in .gt-canvas. */
+/* Canvas helper - pages opt in by wrapping content in .gt-canvas. */
 .gt-canvas {
   max-width: var(--gt-canvas-max);
   margin: 0 auto;
@@ -114,7 +114,7 @@
   }
 }
 
-/* Live verification dot — used in hero meta strips site-wide. */
+/* Live verification dot - used in hero meta strips site-wide. */
 .gt-livedot {
   display: inline-block;
   width: 6px;
@@ -133,7 +133,7 @@
   .gt-livedot { animation: none; }
 }
 
-/* Decision grid — tone-coded 3-up card list. Used by Decision component
+/* Decision grid - tone-coded 3-up card list. Used by Decision component
    and any page that wants the same "Buy if / Pick / Skip if" pattern. */
 .gt-decision-grid {
   display: grid;
@@ -189,7 +189,7 @@
   scroll-margin-top: 80px;
 }
 
-/* Global prose rhythm — applied to anything that sits inside .gt-body.
+/* Global prose rhythm - applied to anything that sits inside .gt-body.
    Prevents the "wall of text" problem: caps measure for readability,
    adds breathing room between paragraphs, balances long lines.
 
@@ -239,7 +239,7 @@
 /* ============================================================
    Body-section card treatments. May 2026 onward we visually
    distinguish recurring editorial sections so the body doesn't read
-   as a wall of prose. CSS-only — no content changes — uses
+   as a wall of prose. CSS-only - no content changes - uses
    attribute selectors on the heading IDs that the markdown parser
    already generates.
 
@@ -253,7 +253,7 @@
    - "Key Differences" / "Decision Snapshot" → subtle section panel
    ============================================================ */
 
-/* Lead callout — Quick Answer / Bottom Line / TL;DR / similar */
+/* Lead callout - Quick Answer / Bottom Line / TL;DR / similar */
 .gt-body > h2[id="quick-answer"] + p,
 .gt-body > h2[id="bottom-line"] + p,
 .gt-body > h2[id="tldr"] + p,
@@ -274,7 +274,7 @@
   font-weight: 500;
   text-wrap: pretty;
 }
-/* Red-accent variant for "why this tool is not a current choice" — same
+/* Red-accent variant for "why this tool is not a current choice" - same
    callout box but the accent bar is the negative tone. */
 .gt-body > h2[id^="why-"][id$="-is-not-a-current-choice"] + p {
   border-left-color: var(--gt-negative);
@@ -307,7 +307,7 @@
   line-height: 1.55;
 }
 
-/* "Where X Loses" / "When not to" / "When to pick something else" — negative tone */
+/* "Where X Loses" / "When not to" / "When to pick something else" - negative tone */
 .gt-body > h2[id^="where-"][id*="-loses"] + ul,
 .gt-body > h2[id="when-to-pick-something-else"] + ul,
 .gt-body > h2[id="when-not-to"] + ul,
@@ -335,7 +335,7 @@
   line-height: 1.55;
 }
 
-/* "Who should choose X" / "Which should you buy" — paragraph rendered
+/* "Who should choose X" / "Which should you buy" - paragraph rendered
    as a recommendation card. */
 .gt-body > h2[id^="who-should-choose"] + p,
 .gt-body > h2[id="which-should-you-buy"] + p,
@@ -352,7 +352,7 @@
 }
 
 /* "Key Differences" / "Decision Matrix" / "Workflow Fit" / pricing /
-   notes-style sections — softer panel treatment for pure-prose sections
+   notes-style sections - softer panel treatment for pure-prose sections
    that should still feel like a distinct beat. Also applies to a
    following <ul> when the section is a bullet list. */
 .gt-body > h2[id="key-differences"] + p,
@@ -506,7 +506,7 @@
 .gt-body > h2[id="buyer-recommendations"] + ul > li { margin-bottom: 0; }
 
 /* ============================================================
-   Collapsible body sections — built at build time by
+   Collapsible body sections - built at build time by
    src/plugins/rehype-collapse-sections.mjs. Style globally so the
    accordion looks identical on every layout (tool / comparison /
    guide / company / article-plus).
@@ -601,24 +601,35 @@
   border: 0;
 }
 
-/* Shared search input pattern — pill-shaped with leading icon and
-   optional trailing submit / kbd hint. */
+/* Shared search input pattern with leading icon and optional trailing submit or kbd hint. */
 .gt-search { margin-bottom: 16px; }
 .gt-search-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 6px 6px 14px;
-  border-radius: var(--gt-radius);
-  border: 1px solid var(--gt-line-strong);
-  background: var(--gt-surface);
-  transition: border-color 120ms ease, background 120ms ease;
+  gap: 10px;
+  min-height: 58px;
+  padding: 7px 7px 7px 16px;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--gt-line-strong) 82%, rgba(255, 255, 255, 0.22));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018)),
+    color-mix(in srgb, var(--gt-surface) 92%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 38px -30px rgba(0, 0, 0, 0.78);
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 .gt-search-row:focus-within {
-  border-color: var(--gt-accent);
-  background: var(--gt-surface-2);
+  border-color: color-mix(in srgb, var(--gt-accent) 72%, white 6%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.024)),
+    color-mix(in srgb, var(--gt-surface-2) 96%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    0 0 0 3px rgba(249, 115, 22, 0.14),
+    0 24px 46px -34px rgba(0, 0, 0, 0.86);
 }
-.gt-search-icon { color: var(--gt-subtle); flex: 0 0 auto; }
+.gt-search-icon { color: color-mix(in srgb, var(--gt-subtle) 78%, var(--gt-accent) 22%); flex: 0 0 auto; }
 .gt-search input {
   flex: 1;
   min-width: 0;
@@ -627,38 +638,54 @@
   outline: none;
   color: var(--gt-fg);
   font-size: 16px;
+  font-weight: 560;
   padding: 12px 6px;
 }
-.gt-search input::placeholder { color: var(--gt-subtle); }
+.gt-search input::placeholder {
+  color: color-mix(in srgb, var(--gt-subtle) 88%, var(--gt-muted) 12%);
+  font-weight: 460;
+}
 .gt-search-submit {
   flex: 0 0 auto;
   padding: 10px 16px;
-  min-height: 40px;
-  border-radius: var(--gt-radius-sm);
+  min-height: 42px;
+  border-radius: 12px;
   background: var(--gt-accent);
   color: var(--gt-on-accent);
   -webkit-text-fill-color: var(--gt-on-accent);
-  font-weight: 600;
+  font-weight: 720;
   font-size: 14px;
   border: none;
   cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 12px 24px -18px rgba(249, 115, 22, 0.82);
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
-.gt-search-submit:hover { background: var(--gt-accent-hover); }
+.gt-search-submit:hover {
+  background: var(--gt-accent-hover);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 16px 28px -20px rgba(249, 115, 22, 0.9);
+}
+.gt-search-submit:active { transform: translateY(0); }
 .gt-kbd {
   flex: 0 0 auto;
-  padding: 4px 8px;
-  border-radius: 6px;
-  background: var(--gt-surface-2);
-  border: 1px solid var(--gt-line);
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--gt-surface-2) 88%, white 4%);
+  border: 1px solid color-mix(in srgb, var(--gt-line) 82%, rgba(255, 255, 255, 0.18));
   color: var(--gt-muted);
   font-size: 11px;
   font-family: var(--font-mono);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 @media (max-width: 599px) {
   .gt-kbd { display: none; }
 }
 
-/* Horizontal scrollable chip strip — used for filters, popular terms,
+/* Horizontal scrollable chip strip - used for filters, popular terms,
    alphabetical jumps, jump-to-section pills. */
 .gt-chips {
   display: flex;

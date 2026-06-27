@@ -88,6 +88,10 @@ related:
     title: "Amplemarket pricing for SDR teams"
     description: "Plan-decision guide for Startup, Growth, Elite, and lower-commitment alternatives."
     kind: guide
+  - href: /compare/amplemarket-vs-apollo/
+    title: "Amplemarket vs Apollo"
+    description: "Direct buying fork between a premium AI SDR suite and Apollo's lower-friction GTM platform."
+    kind: comparison
   - href: /tools/apollo/
     title: "Apollo review"
     description: "Budget alternative with larger database and lower per-seat cost."
@@ -162,7 +166,7 @@ The core differentiator is **Duo**, Amplemarket's AI layer. Duo reads each prosp
 - Duo's personalization quality varies by industry. Test on your specific ICP before scaling.
 - The product is European-headquartered with strong EU compliance posture. For US-only teams, this is neutral or slightly positive.
 
-Use the [Amplemarket pricing guide](/guides/amplemarket-pricing-for-sdr-teams/) before booking a sales call, especially if the team is still deciding between Startup, Growth, Apollo, Clay, or Instantly.
+Use the [Amplemarket pricing guide](/guides/amplemarket-pricing-for-sdr-teams/) before booking a sales call, especially if the team is still deciding between Startup, Growth, Apollo, Clay, or Instantly. If the real fork is Apollo or Amplemarket, use the [Amplemarket vs Apollo comparison](/compare/amplemarket-vs-apollo/) before turning either platform into the system of record.
 
 ## 2. Apollo: Best Budget Unified Alternative
 
@@ -172,8 +176,8 @@ Use the [Amplemarket pricing guide](/guides/amplemarket-pricing-for-sdr-teams/) 
 
 **Why it wins this niche:**
 
-- **275M+ contact database**, larger than Amplemarket's.
-- **Lower per-seat** at ~$99/user/mo.
+- **230M+ contact database** on Apollo's current sales engagement page.
+- **Lower per-seat** at $79/month on annual Professional or $99 month to month on Apollo's current public pricing page.
 - **Faster rep ramp**, productive in week one.
 - **Linear pricing** that does not jump at 20 seats.
 
@@ -293,5 +297,6 @@ Internal references:
 - [Instantly tool page](/tools/instantly/)
 - [Best AI sales platform for mid-market SDR teams](/guides/best-ai-sales-platform-for-mid-market-sdr-teams/)
 - [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/)
+- [Amplemarket vs Apollo](/compare/amplemarket-vs-apollo/)
 - [Best AI for cold email](/guides/best-ai-for-cold-email/)
 - [AI lead generation](/guides/ai-lead-generation/)

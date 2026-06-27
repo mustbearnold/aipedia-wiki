@@ -51,7 +51,7 @@ guide_picks:
     tool: apollo
     label: "Best unified pick"
     plan: "Apollo Professional"
-    reason: "Apollo combines a 275M+ contact database, AI prospecting filters, multichannel sequences, dialer, and CRM sync in one platform. The right default for mid-market SDR teams that would otherwise stitch together 3-4 tools."
+    reason: "Apollo combines a 230M+ contact database, AI prospecting filters, multichannel sequences, dialer, and CRM sync in one platform. The right default for mid-market SDR teams that would otherwise stitch together 3-4 tools."
     sources:
       - label: "Apollo platform"
         url: "https://www.apollo.io/product"
@@ -94,6 +94,10 @@ related:
     title: "Best AI Outbound Tool for Unified Prospecting and Sequencing"
     description: "Sibling guide on the AI-native unified outbound buyer profile."
     kind: guide
+  - href: /compare/amplemarket-vs-apollo/
+    title: "Amplemarket vs Apollo"
+    description: "Direct comparison for teams deciding between Apollo and Amplemarket."
+    kind: comparison
   - href: /guides/best-ai-for-cold-email/
     title: "Best AI for Cold Email"
     description: "Broader category guide for cold-email-led teams."
@@ -110,7 +114,7 @@ The short version: **Apollo** wins as the unified default for most mid-market SD
 
 ## Quick Verdict
 
-Use [Apollo](/tools/apollo/) when the team needs prospecting, sequencing, dialing, and CRM sync in one platform. The combined 275M+ contact database, AI-assisted filters, multichannel sequences, and built-in dialer make Apollo the right unified default. The full-stack story is the reason it wins mid-market over best-of-breed approaches.
+Use [Apollo](/tools/apollo/) when the team needs prospecting, sequencing, dialing, and CRM sync in one platform. The combined 230M+ contact database, AI-assisted filters, multichannel sequences, and built-in dialer make Apollo the right unified default. The full-stack story is the reason it wins mid-market over best-of-breed approaches.
 
 Use [Clay](/tools/clay/) when the team has sequencing solved (Outreach, Salesloft, HubSpot) and the bottleneck is data: enrichment waterfalls, AI research, custom signal scoring. Clay is a different category than Apollo, but the most valuable specialist tool in the modern outbound stack.
 
@@ -121,7 +125,7 @@ Use [Instantly](/tools/instantly/) when the GTM is pure cold-email outbound. Ins
 The generic "best sales tool" guide ranks Salesforce or HubSpot at the top because they win the enterprise category. That is the wrong answer for mid-market SDR work, where the buying decision is shaped by three constraints the enterprise tools handle poorly:
 
 - **Speed of rep ramp.** A new SDR needs to be productive in week one, not week six. Apollo's UI density and shallow learning curve beat Salesforce here.
-- **Per-rep economics.** Salesforce + Outreach + ZoomInfo per rep can hit $400+/mo before sequencing volume costs. Apollo Professional sits closer to $99/rep with most of the same capabilities.
+- **Per-rep economics.** Salesforce + Outreach + ZoomInfo per rep can hit $400+/mo before sequencing volume costs. Apollo Professional sits at $79/rep on annual billing or $99 month to month with most of the same capabilities.
 - **Workflow continuity.** Stitching Salesforce, Outreach, ZoomInfo, and a dialer through Zapier breaks more often than it works. Mid-market teams that try this lose 10-20% of rep time to integration debt.
 
 Apollo, Clay, and Instantly each solve a different piece of the mid-market problem. The right answer depends on which piece is the team's biggest constraint.
@@ -145,7 +149,7 @@ Apollo, Clay, and Instantly each solve a different piece of the mid-market probl
 
 **Why it wins:**
 
-- **275M+ contact database** with AI-assisted filters (intent signals, technographic data, hiring signals).
+- **230M+ contact database** with AI-assisted filters (intent signals, technographic data, hiring signals).
 - **Sequences** across email, LinkedIn, and phone in one workflow.
 - **Built-in dialer** with parallel calling and local-presence options.
 - **CRM sync** that actually works (Salesforce, HubSpot, Pipedrive bidirectional).
@@ -160,7 +164,7 @@ Apollo, Clay, and Instantly each solve a different piece of the mid-market probl
 - The sequencing depth is mid-tier. For complex multi-stage campaigns with branching logic, Outreach and Salesloft go deeper.
 - Apollo's own brand is well-known in cold-outbound, which means some prospects pattern-match Apollo emails as spam. Vary the from-domain and template style.
 
-[Try Apollo →](https://www.apollo.io/)
+[See Apollo review and pricing context →](/tools/apollo/)
 
 ## 2. Clay: Best Data Enrichment Specialist
 

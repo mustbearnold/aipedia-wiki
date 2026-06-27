@@ -1,6 +1,6 @@
 ---
 /**
- * /tools/ index — god-tier 10/10 mobile-first.
+ * /tools/ index - god-tier 10/10 mobile-first.
  *
  * Full catalog of active AI tools sorted by score, with category filter chips.
  * Refresh metadata: 2026-06-27 active-tool hub inspected after final six
@@ -617,15 +617,20 @@ const itemList = scoredTools.map((t) => ({
 
     <form class="gt-tools-search" role="search" onsubmit="return false">
       <label for="tools-search-input" class="gt-sr-only">Search tools</label>
-      <input
-        id="tools-search-input"
-        type="search"
-        inputmode="search"
-        autocomplete="off"
-        spellcheck="false"
-        placeholder={`Search ${scoredTools.length} tools`}
-        data-tools-search
-      />
+      <div class="gt-index-search-row">
+        <svg class="gt-index-search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm5.1-2 4.6 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input
+          id="tools-search-input"
+          type="search"
+          inputmode="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder={`Search ${scoredTools.length} tools`}
+          data-tools-search
+        />
+      </div>
     </form>
 
     <nav class="gt-cat-chips" aria-label="Filter by category">
@@ -783,22 +788,6 @@ const itemList = scoredTools.map((t) => ({
       white-space: nowrap;
     }
     .gt-tools-search { margin: 0 0 12px; }
-    .gt-tools-search input {
-      width: 100%;
-      min-height: 48px;
-      border-radius: var(--gt-radius-sm);
-      border: 1px solid var(--gt-line-strong);
-      background: var(--gt-surface);
-      color: var(--gt-fg);
-      font: inherit;
-      font-size: 15px;
-      padding: 0 14px;
-    }
-    .gt-tools-search input:focus {
-      outline: none;
-      border-color: var(--gt-accent);
-      background: var(--gt-surface-2);
-    }
     .gt-cat-chips {
       display: flex; gap: 6px;
       overflow-x: auto;
@@ -827,7 +816,7 @@ const itemList = scoredTools.map((t) => ({
     .gt-chip:hover { background: var(--gt-surface-2); color: var(--gt-fg); }
     .gt-chip.is-active {
       background: var(--gt-accent);
-      color: #fff;
+      color: var(--gt-on-accent);
       border-color: var(--gt-accent);
     }
     .gt-chip span { font-size: 11px; opacity: 0.75; font-variant-numeric: tabular-nums; }
