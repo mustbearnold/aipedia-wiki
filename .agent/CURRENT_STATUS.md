@@ -19,7 +19,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 
 ## Current State
 
-- Branch: `master`. Active goal is the affiliate conversion page buildout across tools with configured affiliate links. The June 27 strict 3-day whole-site refresh target is complete. Latest affiliate slice adds `/guides/argil-pricing-for-ugc-avatar-video-teams/`, refreshes `/tools/argil/`, the avatar-video and Synthesia alternatives sibling guides, AI Video, homepage, top-layer indexes, search/LLM surfaces, source registry, and ledger, and fixes stale or fragile parent-page source-health citations for MiniMax video and Adobe HelpX.
+- Branch: `master`. Highest ongoing priority is daily AI and AI-tools news freshness, before affiliate expansion or broad refresh work, because the public news surface is the clearest signal that AiPedia is current. The affiliate conversion buildout remains active after the daily news pass is complete. The June 27 strict 3-day whole-site refresh target is complete. Latest affiliate slice adds `/guides/argil-pricing-for-ugc-avatar-video-teams/`, refreshes `/tools/argil/`, the avatar-video and Synthesia alternatives sibling guides, AI Video, homepage, top-layer indexes, search/LLM surfaces, source registry, and ledger, and fixes stale or fragile parent-page source-health citations for MiniMax video and Adobe HelpX.
 - Root `DESIGN.md` now defines AiPedia's agent-readable visual identity contract, backed by `npm run design:lint` using `@google/design.md@0.3.0`. `check:smart` routes `DESIGN.md` through the existing Phase 3 design-token surface.
 - Site-wide design consistency pass is verified: `src/styles/godtier-tokens.css` now aliases shared `--gt-*` shape tokens to canonical panel, card, and pill radii, and `tests/scripts/design-tokens.test.mjs` guards that bridge. Full design/build/browser verification passed on June 28, including visual smoke and route QA across 319, 360, 390, 430, 768, 1024, and 1366 px.
 - `npm run qa:agent` is available as a local-only Playwright buyer-journey harness with deterministic timing, layout, CTA, disclosure, and optional PageAgent LLM metrics. Use deterministic mode for routine route QA; use `--page-agent --llm-base-url <url> --model <name>` only when a compatible local or proxied LLM endpoint is ready.
@@ -32,7 +32,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 - Top-layer and detail width parity work is complete and pushed. The homepage, top-layer indexes, and representative detail pages now share the narrow-mobile width discipline requested in browser feedback.
 - News catch-up for June 18-22 is complete, and the selected lantern logo is active. The old blue/cyan brand regression was closed.
 - Homepage reported issues are closed: decision-card overcrowding, source/freshness/confidence fallback labels, 319 px portal overflow, orange-brown verified panel styling, and copy density.
-- The model availability tracker interruption is handled: `/trends/model-availability-churn/` is now a simple daily frontier-model availability ledger, `/` and `/news/` are marked for daily refresh, and the Codex app automation `daily-aipedia-news-and-model-availability-refresh` is active. The `/news/` daily automation explicitly requires at least three source-backed AI or AI-tool stories per run.
+- The model availability tracker interruption is handled: `/trends/model-availability-churn/` is now a simple daily frontier-model availability ledger, `/` and `/news/` are marked for daily refresh, and the Codex app automation `daily-aipedia-news-and-model-availability-refresh` is active. The `/news/` daily automation explicitly requires at least three source-backed AI or AI-tool stories per run. Treat the daily news pass as the first editorial task each day: verify current sources, publish or explicitly record skipped lanes, update `/news/`, `/`, affected top-layer pages, LLM/feed/sitemap surfaces, and the ledger.
 - Jun 23-25 focused news coverage is complete with source-backed individual stories and no daily desk page. Latest Jun 25 pass added Google Gemini Computer Use preview, GitHub Copilot demand and billing pressure, Gemini 3.5 Pro delay risk, and the OpenAI/Anthropic workforce push.
 - Tool pages now use the shared decision-spine default: hero, decision card, plan guidance, fit, recent changes, alternatives, related comparisons, then collapsed proof/score math and full review notes. Keep future tool-page work in this format unless there is a deliberate template migration.
 - The optimized tool-refresh workflow now has a committed procedure under `workflows/tool-refresh/` and a local skill mirror `$aipedia-tool-refresh-workflow` under `.agents/skills/aipedia-tool-refresh-workflow/`. Treat `workflows/` as canonical for clean clones, and keep the local skill aligned while tuning. In the Codex Windows app, use six parallel shard workers with up to 10 tools per worker because six active agents was the observed ceiling on June 24.
@@ -356,9 +356,9 @@ Latest completed tool-page template migration passed:
 
 1. Run `git status --short --branch`.
 2. Read this file and `.agent/PLANS.md`.
-3. Commit and push the verified Tabnine-through-Wordtune 60-tool batch if it has not already been pushed.
-4. Use `$aipedia-tool-refresh-workflow`, then run `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`.
-5. Regenerate the next not-recently-refreshed batch after the current verified 60-tool batch is pushed, unless a newer user request supersedes it.
+3. Run the daily AI and AI-tools news pass first using `workflows/news-refresh/README.md`; search with the current month and year, publish only source-backed stories, or record why a lane was skipped.
+4. Update `/news/`, `/`, affected tool/category/trend pages, LLM/feed/sitemap surfaces, and `PAGE_REFRESH_LEDGER.md` for the news pass.
+5. After daily news is current, continue the affiliate conversion buildout from `.agent/PLANS.md`, or push any already verified local commits if needed.
 
 ## Finish Major Work
 

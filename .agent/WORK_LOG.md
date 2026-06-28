@@ -1176,3 +1176,12 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: page source health passed with 144 source URL occurrences, 95 unique URLs, 49 cache hits, 139 ok, 5 access-sensitive, 0 broken, and 0 unreachable. Strict affiliate audit passed with 46 money guides, 0 errors, and 0 warnings. Selected live-source audit passed for 15 source IDs. `guard:check`, `check:frontmatter`, `audit:provenance:changed`, `audit:facts`, `audit:commands`, `check:links`, `check:news`, `check:security`, `test:scripts` with 444 passing tests, Rust runner tests with 9 passing tests, `typecheck`, `build:fast`, two route-QA matrices, QA agent, generated surface checks, metadata/disclosure checks, date consistency, and `git diff --check` passed.
 - Durable receipt: `.agent/loop-runs/2026-06-28-argil-affiliate-conversion.md`.
 - Next: Commit and push the verified Argil slice, then continue the highest-fit affiliate conversion inventory.
+
+### 2026-06-28: Daily News Priority Raised
+
+- Status: Complete locally, verified, pending push.
+- Branch: `master`.
+- Changed: Promoted daily AI and AI-tools news freshness to the highest ongoing editorial priority in `.agent/CURRENT_STATUS.md` and `.agent/PLANS.md`, ahead of affiliate expansion, broad page refresh, tool refresh, visual polish, and comparison work.
+- Workflow: Expanded `workflows/news-refresh/README.md` from a placeholder into the canonical daily news procedure, covering source discovery, story bar, required surfaces, final verification, and closeout notes.
+- Verification: `node scripts/guard-em-dashes.mjs`, `npm run ledger:pages:check`, and `git diff --check` passed.
+- Next: Run the daily news pass first in the next editorial session, then resume affiliate conversion work after `/news/` and `/` are current.

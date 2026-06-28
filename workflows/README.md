@@ -7,7 +7,7 @@ Use it for stable procedures that should survive clean clones, new agents, and f
 ## Workflow Map
 
 - `tool-refresh/`: six-worker AI tool page refresh workflow, including worker prompts, integrator checklist, and verification sequence.
-- `news-refresh/`: placeholder for the daily AI news refresh workflow.
+- `news-refresh/`: highest-priority daily AI and AI-tools news refresh workflow.
 - `page-refresh/`: Rust-runner-backed non-tool page refresh workflow, including ledger planner, worker prompts, worker report scaffolds, integrator checklist, and timing-aware verification.
 - `qa/`: placeholder for route QA, layout checks, and manual inspection routines.
 - `templates/`: reusable report/checklist templates for workflow runs.
