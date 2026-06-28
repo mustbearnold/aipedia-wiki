@@ -1,6 +1,6 @@
 # AiPedia Operating Rules
 
-This is the committed operating guide for agents working in this repository. Use it as the primary instruction source. Read `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/LOOPS.md` first when resuming a session so you know what is current, active, complete, and repeatable. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
+This is the committed operating guide for agents working in this repository. Use it as the primary instruction source after the root `INDEX.md` map. Read `INDEX.md`, `.agent/CURRENT_STATUS.md`, `.agent/PLANS.md`, `.agent/WORK_LOG.md`, and `.agent/LOOPS.md` first when resuming a session so you know what is current, active, complete, and repeatable. Do not rely on a root `AGENTS.md`; that file is ignored and may be absent in clean clones or worktrees.
 
 ## Mission
 

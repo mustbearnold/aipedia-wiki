@@ -12,7 +12,7 @@ const PROJECT_DIR = resolve(projectDirArg || defaultProjectDir);
 const KNOWN_FLAGS = new Set(['--json', '--project-dir', '--root', '--help', '-h']);
 const PACKAGE_PATH = join(PROJECT_DIR, 'package.json');
 const README_PATH = join(PROJECT_DIR, 'README.md');
-const DOC_PATHS = ['AGENTS.md', 'README.md'].map((path) => join(PROJECT_DIR, path));
+const DOC_PATHS = ['AGENTS.md', 'INDEX.md', 'README.md'].map((path) => join(PROJECT_DIR, path));
 const WORKFLOW_DIR = join(PROJECT_DIR, '.github', 'workflows');
 const REQUIRED_OPERATOR_NPM_SCRIPTS = [
   'audit:coverage-quality:changed',

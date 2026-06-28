@@ -1,0 +1,37 @@
+{
+  "id": "expert-project-manager",
+  "name": "Expert Project Manager Agent",
+  "version": "1.0.0",
+  "created_at": "2026-06-28",
+  "status": "active",
+  "primary_file": "AGENT.md",
+  "purpose": "Coordinate AiPedia repo hygiene, workflow planning, subagent ownership, verification scope, and non-regression closeout.",
+  "platform_targets": [
+    "OpenAI Codex",
+    "Claude Code",
+    "Cursor",
+    "GitHub Copilot coding agents",
+    "local CLI agent runners"
+  ],
+  "required_context": [
+    "INDEX.md",
+    ".agent/CURRENT_STATUS.md",
+    ".agent/PROJECT_MAP.md",
+    ".agent/OPERATING_RULES.md",
+    ".agent/PLANS.md",
+    "workflows/README.md",
+    ".agent/specialists/README.md"
+  ],
+  "required_artifacts": [
+    "implementation checklist",
+    "risk register",
+    "verification plan",
+    "closeout note",
+    "self-improvement ledger entry when the agent workflow changes"
+  ],
+  "backup_policy": {
+    "command": "npm run agents:backup",
+    "minimum_frequency": "weekly and before major specialist edits",
+    "default_destination": "../aipedia-agent-backups"
+  }
+}

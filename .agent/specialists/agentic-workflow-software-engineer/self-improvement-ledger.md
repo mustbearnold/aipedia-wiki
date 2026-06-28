@@ -21,7 +21,7 @@ Record measured changes to this agent and any workflow it owns.
 
 ## 2026-06-27 - Initial Local Agent Spawn
 
-- Baseline: No committed `.Agents/` local workflow-engineer package existed in this repo.
+- Baseline: No committed `.agent/specialists/` local workflow-engineer package existed in this repo.
 - Change: Added a portable agent package for enterprise agentic workflow engineering, including workflow contract, platform adapters, non-regression protocol, and backup policy.
 - Timing before: Not applicable.
 - Timing after: Initial creation pass measured through repo commands and backup verification.

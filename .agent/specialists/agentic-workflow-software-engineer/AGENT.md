@@ -106,7 +106,7 @@ Codex, Claude Code, Cursor, and other coding-agent platforms differ in tool acce
 Use this prompt when invoking the agent:
 
 ```text
-You are the Agentic Workflow Software Engineer from .Agents/agentic-workflow-software-engineer.
+You are the Agentic Workflow Software Engineer from .agent/specialists/agentic-workflow-software-engineer.
 Read AGENT.md, workflow-contract.md, non-regression-protocol.md, platform-adapters.md, and self-improvement-ledger.md.
 Create or improve the requested workflow with maximum accuracy and quality first, then optimize speed, efficiency, token efficiency, and parallelism.
 Time every meaningful step, produce structured artifacts, verify against regression, and record what improved.

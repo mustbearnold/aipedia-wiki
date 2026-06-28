@@ -4,7 +4,7 @@ Astro source for aipedia.wiki, an AI tools encyclopedia and comparison system.
 
 ## Current project state
 
-Start with `.agent/CURRENT_STATUS.md` for the plain-English current state. Use `.agent/PLANS.md` for active work, `.agent/WORK_LOG.md` for completed major work, `.agent/PROJECT_MAP.md` for orientation, and `.agent/OPERATING_RULES.md` for the repo rules.
+Start with `INDEX.md` for the LLM-readable project map, then `.agent/CURRENT_STATUS.md` for the plain-English current state. Use `.agent/PLANS.md` for active work, `.agent/WORK_LOG.md` for completed major work, `.agent/PROJECT_MAP.md` for deeper orientation, and `.agent/OPERATING_RULES.md` for the repo rules.
 
 ## Commands
 
@@ -30,6 +30,7 @@ npm run editorial:weekly
 npm run ledger:pages
 npm run build
 npm run deploy
+npm run agents:backup
 ```
 
 - `npm run check:smart`: recommends the smallest safe verification set for the current diff; use `npm run check:smart:run` to execute it.
@@ -49,6 +50,7 @@ npm run deploy
 - `npm run ledger:pages`: regenerates `PAGE_REFRESH_LEDGER.md` after page or content edits.
 - `npm run build`: full production build for output, runtime, UI, route, or pre-ship validation. Do not use it as routine verification for content/script-only changes.
 - `npm run deploy`: Vercel production deploy after validation.
+- `npm run agents:backup`: backs up tracked specialist agents from `.agent/specialists/` and, by default, local `.agents/` runtime state.
 
 ## Source of truth
 

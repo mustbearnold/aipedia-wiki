@@ -7,7 +7,7 @@
       "category": "docs",
       "match": {
         "prefixes": [".agent/", ".claude/", "docs/"],
-        "files": ["AGENTS.md", "README.md"]
+        "files": ["AGENTS.md", "INDEX.md", "README.md"]
       }
     },
     {
@@ -33,7 +33,7 @@
         "Record verification commands and residual risks when changing workflow engineering instructions or plans."
       ],
       "match": {
-        "prefixes": [".Agents/"]
+        "prefixes": [".agent/specialists/"]
       }
     },
     {
@@ -343,7 +343,7 @@
         "description": "Exact route QA may replace broad smoke:visual only when every changed path is editorial content, agent documentation, source or coverage registry data, page refresh ledger data, LLM text surfaces, or the parent hub files listed here and at least one exact route QA target is present. Runtime layout, component, style, config, script, test, dependency, asset, and API changes still keep broad visual smoke when selected by their surfaces.",
         "match": {
           "prefixes": [".agent/", "docs/"],
-          "files": ["PAGE_REFRESH_LEDGER.md", "AGENTS.md", "README.md"],
+          "files": ["PAGE_REFRESH_LEDGER.md", "AGENTS.md", "INDEX.md", "README.md"],
           "regexes": [
             "^src/content/(?:categories|comparisons|tools)/[^/]+\\.md$",
             "^src/data/(?:coverage-backlog|source-registry)\\.json$",

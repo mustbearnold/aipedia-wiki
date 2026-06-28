@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-28: Root Project Index and Specialist Agent Folder Cleanup
+
+- Status: Complete locally.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added root `INDEX.md` as the LLM-readable project map. Consolidated tracked specialist agents under `.agent/specialists/`, moved the existing workflow-engineer specialist out of the retired `.Agents/` folder, added the new `expert-project-manager` specialist, updated active orientation docs, and repointed `npm run agents:backup` to back up `.agent/specialists/`.
+- Folder contract: `.agent/` is tracked project memory and specialists, `.agent/specialists/` is the durable specialist-agent library, `.agents/` is ignored local runtime state, and `.Agents/` is retired.
+- Verification: `npm run test:scripts`; `npm run audit:commands`; `npm run --silent check:smart -- --json`; `npm run --silent check:smart -- --json --path INDEX.md`; `npm run --silent check:smart -- --json --path .agent/specialists/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md`; `npm run agents:backup:dry-run`; `npm run agents:backup`; `npm run guard:challenge:check`; `npm run ledger:pages:check`; `npm run guard:check`; `npm run audit:facts`; `npm run --silent audit:sources -- --json`; `npm run --silent audit:provenance -- --json`; `npm run check:links`; `npm run check:news`; `node --check scripts/backup-agents.mjs`; `node --check scripts/audit-command-surface.mjs`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: Historical dated run logs may still mention old paths as history; active instructions were updated to current paths. The local `.agents/` folder remains intentionally gitignored runtime state.
+
 ### 2026-06-27: Dext Client Document Collection Workflow Slice
 
 - Status: Verified locally and accepted by accuracy/SEO, affiliate trust, and visual/mobile subagents at 9.9/10, pending final push.

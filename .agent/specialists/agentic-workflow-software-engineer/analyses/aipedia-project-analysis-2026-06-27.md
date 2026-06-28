@@ -1,7 +1,7 @@
 # AiPedia Agentic Workflow Analysis
 
 Date: 2026-06-27
-Analyst: `.Agents/agentic-workflow-software-engineer`
+Analyst: `.agent/specialists/agentic-workflow-software-engineer`
 Scope: workflow architecture, repeatability, accuracy, quality, non-regression, speed, efficiency, token efficiency, and useful parallelism. No project source, content, package, workflow, script, or existing agent files were edited.
 
 ## 1. Executive Summary
@@ -149,7 +149,7 @@ Ranked by quality and accuracy first, then speed and efficiency:
 3. Expand `workflows/qa/README.md`.
    Define visual evidence requirements, viewport matrix, screenshot retention policy, layout precision rubric, and when route QA can replace broad smoke tests.
 
-4. Add `workflows/` and `.Agents/` to `operator-surfaces.json`.
+4. Add `workflows/` and `.agent/specialists/` to `operator-surfaces.json`.
    Map workflow changes to `git diff --check`, `guard-em-dashes`, `audit:commands`, relevant script tests, and `check:quick` when appropriate.
 
 5. Add claim-level source receipts.
@@ -214,7 +214,7 @@ For this project, the self-improvement loop should focus first on affiliate conv
 30 days:
 
 - Build the affiliate conversion runner and report schema.
-- Add `workflows/` and `.Agents/` routing to `check:smart`.
+- Add `workflows/` and `.agent/specialists/` routing to `check:smart`.
 - Fix status-doc inventory drift by making docs cite generated inventory outputs.
 - Expand news refresh and QA workflow placeholders into runnable procedures.
 - Add parseable tool-refresh worker reports.
@@ -249,7 +249,7 @@ Recommended after this report-only change:
 
 - `node scripts/guard-em-dashes.mjs`
 - `git diff --check`
-- `npm run --silent check:smart -- --json --path .Agents/agentic-workflow-software-engineer/analyses/aipedia-project-analysis-2026-06-27.md`
+- `npm run --silent check:smart -- --json --path .agent/specialists/agentic-workflow-software-engineer/analyses/aipedia-project-analysis-2026-06-27.md`
 
 Recommended for future workflow changes:
 

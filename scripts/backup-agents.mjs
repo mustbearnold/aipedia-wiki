@@ -20,7 +20,7 @@ const destinationRoot = resolve(argValue('--dest') ?? defaultDestination);
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
 const backupDir = join(destinationRoot, `agents-${timestamp}`);
 const sourceDirs = [
-  resolve(projectRoot, '.Agents'),
+  resolve(projectRoot, '.agent', 'specialists'),
   ...(includeLowercase ? [resolve(projectRoot, '.agents')] : []),
 ];
 

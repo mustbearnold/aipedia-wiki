@@ -1,7 +1,7 @@
 # AiPedia Workflow Success Roadmap
 
 Date: 2026-06-27
-Source analysis: `.Agents/agentic-workflow-software-engineer/analyses/aipedia-project-analysis-2026-06-27.md`
+Source analysis: `.agent/specialists/agentic-workflow-software-engineer/analyses/aipedia-project-analysis-2026-06-27.md`
 Owner lens: Agentic Workflow Software Engineer
 
 ## Executive Strategy
@@ -25,7 +25,7 @@ North-star outcome: every major AiPedia workflow produces the same durable evide
 | Affiliate conversion is active but under-orchestrated | Affiliate Conversion Runner | Affiliate batches have planner JSON, worker prompts, report scaffolds, claim receipts, route args, strict closeout, and timed receipts. |
 | News refresh workflow is still a placeholder | Daily News Refresh Workflow | Daily runs cover date gaps, sources, no-action receipts, OG assets, affected pages, `/news/`, homepage, feeds, ledger, and route QA. |
 | QA workflow docs are still a placeholder | Canonical QA Workflow | Route QA, screenshot evidence, manual layout rubric, viewport rules, and acceptance criteria are documented and enforceable. |
-| `check:smart` does not classify `workflows/` or `.Agents/` | Operator-Surface Routing | Workflow and agent-package edits route to appropriate cheap gates and focused tests. |
+| `check:smart` does not classify `workflows/` or `.agent/specialists/` | Operator-Surface Routing | Workflow and agent-package edits route to appropriate cheap gates and focused tests. |
 | Current-state docs can drift from script output | Status-Doc Consistency Checks | Scripted inventory counts and status docs cannot silently disagree. |
 | Tool refresh worker reports are less structured than page refresh reports | Parseable Tool Refresh Reports | Tool refresh reports aggregate source counts, caveats, confidence labels, parent notes, and failed checks. |
 | Source verification is not claim-level enough | Claim-Level Source Receipts | Volatile claims record source, date, query, confidence label, caveat, and affected content path. |
@@ -41,14 +41,14 @@ Goal: make workflow and agent-package changes visible to the verification router
 
 Work:
 
-- Add `workflows/`, `.Agents/`, and selected `.agent/` docs to the operator-surface contract.
+- Add `workflows/`, `.agent/specialists/`, and selected `.agent/` docs to the operator-surface contract.
 - Add tests proving the routing.
 - Make docs-only workflow changes trigger at least `git diff --check`, em dash guard, `audit:commands`, and relevant focused script tests where applicable.
 
 Exit criteria:
 
 - `check:smart --path workflows/affiliate-conversion-pages/README.md` recommends more than `git diff --check`.
-- `check:smart --path .Agents/.../plans/<file>.md` recommends docs or workflow-safe checks.
+- `check:smart --path .agent/specialists/.../plans/<file>.md` recommends docs or workflow-safe checks.
 
 ### Phase 1: Commercial Accuracy First
 
@@ -285,7 +285,7 @@ Make workflow and agent-package edits visible to scoped verification.
 
 Success definition:
 
-- `check:smart` recommends meaningful checks for `workflows/**`, `.Agents/**`, and relevant `.agent/**` docs.
+- `check:smart` recommends meaningful checks for `workflows/**`, `.agent/specialists/**`, and relevant `.agent/**` docs.
 - Workflow changes no longer route only to `git diff --check`.
 
 Implementation steps:
@@ -305,7 +305,7 @@ Files likely touched:
 Verification gates:
 
 - `npm run check:smart -- --json --path workflows/affiliate-conversion-pages/README.md`
-- `npm run check:smart -- --json --path .Agents/agentic-workflow-software-engineer/plans/example.md`
+- `npm run check:smart -- --json --path .agent/specialists/agentic-workflow-software-engineer/plans/example.md`
 - `npm run test:scripts -- tests/scripts/check-smart.test.mjs` or equivalent Node test invocation
 - `npm run audit:commands -- --json`
 
@@ -593,7 +593,7 @@ Files likely touched:
 - planner scripts
 - `tools/aipedia-runner/src/main.rs`
 - workflow README files
-- `.Agents/agentic-workflow-software-engineer/platform-adapters.md` if agent package updates are desired later
+- `.agent/specialists/agentic-workflow-software-engineer/platform-adapters.md` if agent package updates are desired later
 
 Verification gates:
 
@@ -660,10 +660,10 @@ Why this first:
 
 Suggested task:
 
-1. Add `workflows/**` and `.Agents/**` surfaces to `src/data/operator-surfaces.json`.
+1. Add `workflows/**` and `.agent/specialists/**` surfaces to `src/data/operator-surfaces.json`.
 2. Add `check-smart` tests for workflow docs and agent-package docs.
 3. Run `npm run check:smart -- --json --path workflows/affiliate-conversion-pages/README.md`.
-4. Run `npm run check:smart -- --json --path .Agents/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md`.
+4. Run `npm run check:smart -- --json --path .agent/specialists/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md`.
 5. Draft affiliate runner schema in `workflows/affiliate-conversion-pages/README.md` or a dedicated workflow design file.
 6. Run `npm run test:scripts`, `npm run audit:commands -- --json`, and `npm run check:quick`.
 

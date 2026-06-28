@@ -2,7 +2,7 @@
 
 This folder is the committed home for repeatable AiPedia operating workflows.
 
-Use it for stable procedures that should survive clean clones, new agents, and future sessions. Keep `.agent/` for current status, work logs, and run receipts. Keep `local/` or local-only ignored folders for personal shortcuts, temporary files, logs, and machine-specific helpers.
+Use it for stable procedures that should survive clean clones, new agents, and future sessions. Keep `.agent/` for current status, work logs, run receipts, and saved specialist agents. Keep `local/` or local-only ignored folders for personal shortcuts, temporary files, logs, and machine-specific helpers.
 
 ## Workflow Map
 
@@ -15,9 +15,11 @@ Use it for stable procedures that should survive clean clones, new agents, and f
 ## Folder Boundaries
 
 - `workflows/`: canonical "how to run it" procedures.
-- `.agent/`: current state, active plans, work logs, loop receipts, and operational memory.
+- `.agent/`: current state, active plans, work logs, loop receipts, operational memory, and tracked specialists.
+- `.agent/specialists/`: durable project-local specialist agents.
 - `.agents/`: local gitignored agent/plugin/skill runtime state.
 - `local/` or other ignored local folders: personal shortcuts, temp planner files, local logs, and machine-specific helpers.
+- `.Agents/`: retired capitalized agent folder. Do not recreate it.
 
 ## Updating Workflows
 

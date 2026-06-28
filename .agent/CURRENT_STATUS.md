@@ -1,23 +1,26 @@
 # AiPedia Current Status
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 Audience: maintainers, future agents, and Matt.
 
 ## Read First
 
-1. `.agent/CURRENT_STATUS.md`: current state and next action.
-2. `.agent/PLANS.md`: active or immediately resumable plans.
-3. `.agent/LOOPS.md`: repeatable loop commands and rules.
-4. `.agent/OPERATING_RULES.md` and `.agent/PROJECT_MAP.md`: repo rules, paths, and verification map.
-5. `workflows/README.md`: committed repeatable workflow procedures.
-6. `.agent/WORK_LOG.md`: append-only proof trail. Read newest entries only unless investigating history.
+1. `INDEX.md`: root LLM-readable repo map and canonical start point.
+2. `.agent/CURRENT_STATUS.md`: current state and next action.
+3. `.agent/PLANS.md`: active or immediately resumable plans.
+4. `.agent/LOOPS.md`: repeatable loop commands and rules.
+5. `.agent/OPERATING_RULES.md` and `.agent/PROJECT_MAP.md`: repo rules, paths, and verification map.
+6. `workflows/README.md`: committed repeatable workflow procedures.
+7. `.agent/specialists/README.md`: saved project-local specialist agents.
+8. `.agent/WORK_LOG.md`: append-only proof trail. Read newest entries only unless investigating history.
 
 Old specs, archived plans, local ignored docs, and stale chat history are not canonical when they conflict with this stack.
 
 ## Current State
 
 - Branch: `master`. Active goal is the affiliate conversion page buildout across tools with configured affiliate links. The June 27 strict 3-day whole-site refresh target is complete. Latest affiliate slice adds `/guides/sanebox-pricing-for-heavy-inboxes/` and demotes SaneBox CTAs to official-link only until referral attribution and current terms are manually validated. This pass also hardened source health and commercial CTA auditing after finding LinkedIn source false negatives and a retired SaneBox referral risk.
+- Root project orientation is cleaned up locally: `INDEX.md` is the LLM-readable entrypoint, tracked specialist agents live under `.agent/specialists/`, `.agents/` remains gitignored local runtime state, and the former `.Agents/` root folder is retired.
 - The TanStack rebuild is not active.
 - The loop system is healthy: latest broad recorded review is 7 ok / 0 attention / 0 skipped after a fresh `npm run build:fast`.
 - Comparison policy is strict: publish `vs` pages only for tools that solve the same buyer job and workflow. Cross-category or different-workflow pages must be deleted or avoided.
@@ -315,9 +318,10 @@ Latest completed tool-page template migration passed:
 - Do not run `npm run typecheck` and `npm run build:fast` in parallel. Astro uses a shared local content data store under `node_modules/.astro`, and concurrent content sync can race. Run them sequentially.
 - `node scripts/audit-site-kpis.mjs --json` still reports `neuronwriter-vs-surfer-seo` below the 700-word comparison KPI threshold. This is known improvement debt, not a failing loop signal.
 - Full local verification remains reliable but should be centralized. Prefer 60-tool planner batches split across six shard workers, integrator-owned shared files, focused worker checks, `tool:refresh:batch:check -- --plan`, `check:smart`, one final `build:fast`, and exact `qa:route` with `--concurrency 4`. For editing loops, use `qa-route --base-url` against the running local server instead of rebuilding.
+- `.agent/specialists/` is the committed specialist-agent library. The initial saved specialists are `expert-project-manager/` and `agentic-workflow-software-engineer/`.
 - `.agents/skills/aipedia-tool-refresh-workflow/` is local skill state and currently gitignored with `.agents/`. Keep improving it in this workspace; move the stable form into the loop registry only after repeated successful runs.
 - Vercel CLI state has been inconsistent across sessions. If Vercel operations are needed, confirm with `vercel --version`; if missing, install with `npm i -g vercel`.
-- `.agents/` and `skills-lock.json` are local agent/plugin state. They are gitignored and ignored by `check-smart` default untracked discovery.
+- `.agents/` and `skills-lock.json` are local agent/plugin state. They are gitignored and ignored by `check-smart` default untracked discovery. The former `.Agents/` root folder is retired and should not be recreated.
 
 ## Start Next Session
 

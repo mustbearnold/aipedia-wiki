@@ -200,10 +200,11 @@ test('check-smart replaces broad visual smoke with exact route QA for content-on
   assert.ok(!plan.smoke_routes.some((route) => route.command === 'npm run smoke:visual'));
 });
 
-test('check-smart keeps ordinary docs and .agent continuity files on diff-only verification', () => {
-  const plan = planForPaths(['docs/notes.md', '.agent/PLANS.md']);
+test('check-smart keeps ordinary docs, root index, and .agent continuity files on diff-only verification', () => {
+  const plan = planForPaths(['INDEX.md', 'docs/notes.md', '.agent/PLANS.md']);
 
   assert.deepEqual(plan.categories, ['docs']);
+  assert.ok(plan.surface_ids.includes('docs-agent'));
   assert.deepEqual(plan.commands, ['git diff --check']);
 });
 
@@ -223,10 +224,11 @@ test('check-smart routes workflow docs through tooling verification', () => {
 
 test('check-smart routes local agent package plans through tooling verification', () => {
   const plan = planForPaths([
-    '.Agents/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md',
+    '.agent/specialists/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md',
   ]);
 
-  assert.deepEqual(plan.categories, ['tooling']);
+  assert.deepEqual(plan.categories, ['docs', 'tooling']);
+  assert.ok(plan.surface_ids.includes('docs-agent'));
   assert.ok(plan.surface_ids.includes('local-agent-package'));
   assert.ok(plan.checks.includes('workflow-contract'));
   assert.ok(plan.commands.includes('npm run test:scripts'));
@@ -426,6 +428,7 @@ test('operator surface contract declares route QA smoke replacement rules', () =
   assert.equal(routeQa.broadVisualSmokeReplacement.id, 'content-route-qa-replaces-broad-smoke');
   assert.ok(routeQa.broadVisualSmokeReplacement.description.includes('Exact route QA may replace broad smoke:visual'));
   assert.ok(routeQa.broadVisualSmokeReplacement.match.prefixes.includes('.agent/'));
+  assert.ok(routeQa.broadVisualSmokeReplacement.match.files.includes('INDEX.md'));
   assert.ok(routeQa.broadVisualSmokeReplacement.match.files.includes('PAGE_REFRESH_LEDGER.md'));
   assert.ok(routeQa.broadVisualSmokeReplacement.match.regexes.includes('^src/content/(?:categories|comparisons|tools)/[^/]+\\.md$'));
 });

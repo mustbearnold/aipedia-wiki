@@ -1,7 +1,7 @@
 # AiPedia Workflow Plan Index
 
 Date: 2026-06-27
-Roadmap: `.Agents/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md`
+Roadmap: `.agent/specialists/agentic-workflow-software-engineer/plans/aipedia-workflow-success-roadmap-2026-06-27.md`
 
 Use this index to choose the next implementation slice. Quality and accuracy outrank speed.
 
@@ -22,7 +22,7 @@ Use this index to choose the next implementation slice. Quality and accuracy out
 
 Start with priority 1, then design priority 2 without content edits.
 
-1. Add routing for `workflows/**` and `.Agents/**`.
+1. Add routing for `workflows/**` and `.agent/specialists/**`.
 2. Add focused `check-smart` tests.
 3. Verify workflow docs no longer route only to `git diff --check`.
 4. Draft affiliate runner schema and report scaffold.

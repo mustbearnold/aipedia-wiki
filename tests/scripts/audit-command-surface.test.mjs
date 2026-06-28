@@ -103,6 +103,18 @@ function writeFixtureProject(workflows, scriptOverrides = {}) {
       '',
     ].join('\n'),
   );
+  writeFileSync(
+    join(dir, 'INDEX.md'),
+    [
+      '# Fixture Index',
+      '',
+      '```bash',
+      'npm run check:smart',
+      'npm run check:quick',
+      '```',
+      '',
+    ].join('\n'),
+  );
 
   const workflowEntries = typeof workflows === 'string' ? [['ci.yml', workflows]] : Object.entries(workflows);
   for (const [name, workflowText] of workflowEntries) {
@@ -315,6 +327,36 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.ok(report.package_referenced_npm_scripts.includes('test:scripts'));
   assert.ok(report.referenced_script_paths.includes('scripts/audit-command-surface.mjs'));
   assert.ok(report.optional_local_script_paths.includes('tools/project-kg/bin/project-kg'));
+});
+
+test('command surface audit scans INDEX.md for npm script references', () => {
+  const dir = writeFixtureProject(STRONG_CI_WORKFLOW);
+  writeFileSync(
+    join(dir, 'INDEX.md'),
+    [
+      '# Fixture Index',
+      '',
+      '```bash',
+      'npm run missing:index-script',
+      '```',
+      '',
+    ].join('\n'),
+  );
+
+  try {
+    const result = spawnSync(process.execPath, ['scripts/audit-command-surface.mjs', '--json', '--project-dir', dir], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    });
+
+    assert.equal(result.status, 1, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.missing_npm_scripts.includes('missing:index-script'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test('command surface audit reports structured invalid arguments', () => {
@@ -722,6 +764,7 @@ test('command surface audit fails closed when required operator docs drop the qu
       '',
     ].join('\n'),
   );
+  writeFileSync(join(dir, 'INDEX.md'), '# Fixture Index\n');
 
   try {
     const result = spawnSync(process.execPath, ['scripts/audit-command-surface.mjs', '--json', '--project-dir', dir], {
