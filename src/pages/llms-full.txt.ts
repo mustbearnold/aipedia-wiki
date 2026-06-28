@@ -3,6 +3,9 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-28 Jun 26-28 focused AI news coverage added with
+// three stories per day; verbose LLM surface remains data-driven through the
+// news collection and was inspected with homepage, RSS, and ledger.
 // Refresh metadata: 2026-06-28 Decktopus affiliate conversion content added
 // /guides/best-ai-proposal-deck-tool-for-consultants/ and refreshed
 // Decktopus, AI Presentation, presentation sibling guides, consultant and

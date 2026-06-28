@@ -25,8 +25,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /tools/seedance/ | Tool | Yes | frontmatter | src/content/tools/seedance.md |
 | 2026-06-24 | /tools/veo/ | Tool | Yes | frontmatter | src/content/tools/veo.md |
 | 2026-06-24 | /tools/windsurf/ | Tool | Yes | frontmatter | src/content/tools/windsurf.md |
-| 2026-06-25 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
-| 2026-06-25 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-25 | /tools/activepieces/ | Tool | Yes | frontmatter | src/content/tools/activepieces.md |
 | 2026-06-25 | /tools/ada/ | Tool | Yes | frontmatter | src/content/tools/ada.md |
 | 2026-06-25 | /tools/adcreative/ | Tool | Yes | frontmatter | src/content/tools/adcreative.md |
@@ -543,7 +541,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-27 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-27 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
-| 2026-06-28 | / | Static page | Yes | page metadata | src/pages/index.astro |
+| 2026-06-28 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-28 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-28 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
@@ -560,8 +558,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
 | 2026-06-28 | /guides/cloudtalk-pricing-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/cloudtalk-pricing-for-smb-sales-and-support-teams.md |
 | 2026-06-28 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
-| 2026-06-28 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-06-28 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-28 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
+| 2026-06-28 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
 | 2026-06-28 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-28 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |

@@ -3,6 +3,9 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-28 Jun 26-28 focused AI news coverage added with
+// three stories per day; LLM concise surface remains data-driven through the
+// news collection and was inspected with homepage, RSS, and ledger.
 // Refresh metadata: 2026-06-28 Decktopus affiliate conversion content added
 // /guides/best-ai-proposal-deck-tool-for-consultants/ and refreshed
 // Decktopus, AI Presentation, presentation sibling guides, consultant and

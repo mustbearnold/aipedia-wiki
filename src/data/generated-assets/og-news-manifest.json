@@ -1,162 +1,347 @@
 {
   "version": 1,
   "kind": "news-og",
-  "source_hash": "9d28ede4cbecc470d2719b23f54cc13f2b418ce16eefe8998ec959e5963bb346",
+  "source_hash": "d151854acba80a78684be62ab6a042cdf1170519f9a04dd5f9d2e1365ebb186b",
   "generated_at": "deterministic",
   "meta": {
-    "records": 4,
+    "records": 9,
     "requested_slugs": [
-      "2026-06-24-google-gemini-computer-use-preview",
-      "2026-06-25-github-copilot-best-month-ai-coding-demand",
-      "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
-      "2026-06-25-openai-anthropic-raise-us-workforce-push"
+      "2026-06-26-openai-gpt-56-sol-preview-access-risk",
+      "2026-06-26-newegg-ai-shopping-mode",
+      "2026-06-26-gemini-sheets-formula-fixes",
+      "2026-06-27-claude-mythos-critical-infrastructure-return",
+      "2026-06-27-fable-5-stays-offline",
+      "2026-06-27-sail-research-agent-inference-costs",
+      "2026-06-28-gpt-56-sol-cheating-benchmark-risk",
+      "2026-06-28-claude-opus-47-fast-mode-deadline",
+      "2026-06-28-veo-vertex-ai-endpoint-deadline"
     ],
     "limit": null
   },
   "outputs": [
     {
-      "file": "public/og/news/2026-06-24-google-gemini-computer-use-preview.png",
+      "file": "public/og/news/2026-06-26-gemini-sheets-formula-fixes.png",
       "kind": "news-png",
-      "slug": "2026-06-24-google-gemini-computer-use-preview",
+      "slug": "2026-06-26-gemini-sheets-formula-fixes",
       "theme": "dark",
       "target": null,
-      "bytes": 51587,
-      "sha256": "c2a2bdfa26fd4baf547b352a39245fb4576396c9e7f7ac6de5146fbece8115ba"
+      "bytes": 52876,
+      "sha256": "d3251b3a7595a395a6fca7fe94b09b8ab89e6697b43882e4d48594c65900c2d9"
     },
     {
-      "file": "public/og/news/2026-06-25-github-copilot-best-month-ai-coding-demand.png",
+      "file": "public/og/news/2026-06-26-newegg-ai-shopping-mode.png",
       "kind": "news-png",
-      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
+      "slug": "2026-06-26-newegg-ai-shopping-mode",
       "theme": "dark",
       "target": null,
-      "bytes": 54699,
-      "sha256": "4026bc30933952099ec4c57d323ebef350c95c014e291472f264d4b19da83926"
+      "bytes": 56560,
+      "sha256": "aa19585594f5f248c316db601b38244214d8ff30fde2ad641855ac5956148d1d"
     },
     {
-      "file": "public/og/news/2026-06-25-google-gemini-35-pro-delay-buyer-risk.png",
+      "file": "public/og/news/2026-06-26-openai-gpt-56-sol-preview-access-risk.png",
       "kind": "news-png",
-      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
+      "slug": "2026-06-26-openai-gpt-56-sol-preview-access-risk",
       "theme": "dark",
       "target": null,
-      "bytes": 44457,
-      "sha256": "04d6b0571dc959e5af528b51d1357520cc3557ae8e829fc9ad13c709e05cf957"
+      "bytes": 42383,
+      "sha256": "302b712062f287773d72290bf7387cd5a4e38d5eb51829ddfc1ee994dec156e7"
     },
     {
-      "file": "public/og/news/2026-06-25-openai-anthropic-raise-us-workforce-push.png",
+      "file": "public/og/news/2026-06-27-claude-mythos-critical-infrastructure-return.png",
       "kind": "news-png",
-      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
+      "slug": "2026-06-27-claude-mythos-critical-infrastructure-return",
       "theme": "dark",
       "target": null,
-      "bytes": 49611,
-      "sha256": "956a05ab28d70e855f045df7f9b4cfc24fd41eb616a512423db8ffa11f28b327"
+      "bytes": 51184,
+      "sha256": "a240b150090d5ece13cbf812a638435394cff5cab5f9561ae07c243d3562d9b2"
     },
     {
-      "file": "public/og/news/light/2026-06-24-google-gemini-computer-use-preview.png",
+      "file": "public/og/news/2026-06-27-fable-5-stays-offline.png",
       "kind": "news-png",
-      "slug": "2026-06-24-google-gemini-computer-use-preview",
-      "theme": "light",
-      "target": null,
-      "bytes": 35798,
-      "sha256": "a63c7f50ecdeaf21d0ab0cef3eab17c7b34e80781fbb8488a9e020ce5a9e1053"
-    },
-    {
-      "file": "public/og/news/light/2026-06-25-github-copilot-best-month-ai-coding-demand.png",
-      "kind": "news-png",
-      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
-      "theme": "light",
-      "target": null,
-      "bytes": 46278,
-      "sha256": "cfa04df2171c40c5abe3e5b66bdb960c96b4b1e00060a93e7e40e2146494cf6f"
-    },
-    {
-      "file": "public/og/news/light/2026-06-25-google-gemini-35-pro-delay-buyer-risk.png",
-      "kind": "news-png",
-      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
-      "theme": "light",
-      "target": null,
-      "bytes": 37664,
-      "sha256": "14958289afbed4a4adf527a2c6f04fa906190b6b8c53b3a5165f551a80653866"
-    },
-    {
-      "file": "public/og/news/light/2026-06-25-openai-anthropic-raise-us-workforce-push.png",
-      "kind": "news-png",
-      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
-      "theme": "light",
-      "target": null,
-      "bytes": 45276,
-      "sha256": "ed3c4c733c78cea50ed4b19f41b0ba9b160e719b7abbbfcc031c582a6314bd34"
-    },
-    {
-      "file": "public/og/news/thumbs/2026-06-24-google-gemini-computer-use-preview.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-24-google-gemini-computer-use-preview",
+      "slug": "2026-06-27-fable-5-stays-offline",
       "theme": "dark",
       "target": null,
-      "bytes": 16996,
-      "sha256": "a6ba6bc740504d9f1b485556f58c624460d6257e879310640ad830dd490382eb"
+      "bytes": 60977,
+      "sha256": "9acea7616d5bf616fb2c02c0354eaa9d5c61a53f89965f47c581b61388d9bcbc"
     },
     {
-      "file": "public/og/news/thumbs/2026-06-25-github-copilot-best-month-ai-coding-demand.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
+      "file": "public/og/news/2026-06-27-sail-research-agent-inference-costs.png",
+      "kind": "news-png",
+      "slug": "2026-06-27-sail-research-agent-inference-costs",
       "theme": "dark",
       "target": null,
-      "bytes": 16666,
-      "sha256": "28a54aab87b6a9d44995377514f6434afc5b8f71e1185d19c73fa02543261ede"
+      "bytes": 57927,
+      "sha256": "d8bd32b8f518269df60fe5628c18676a7adeb7e300a268c092e72c219cdf1a41"
     },
     {
-      "file": "public/og/news/thumbs/2026-06-25-google-gemini-35-pro-delay-buyer-risk.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
+      "file": "public/og/news/2026-06-28-claude-opus-47-fast-mode-deadline.png",
+      "kind": "news-png",
+      "slug": "2026-06-28-claude-opus-47-fast-mode-deadline",
       "theme": "dark",
       "target": null,
-      "bytes": 17770,
-      "sha256": "9517b972561c948cae46ab408d9833a6276566df684f3ce47cb4ff375823a7ac"
+      "bytes": 55542,
+      "sha256": "a279ef2a744adc4d63851da9eb4635267daf4fe8b1605bc097123f248b0d86b3"
     },
     {
-      "file": "public/og/news/thumbs/2026-06-25-openai-anthropic-raise-us-workforce-push.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
+      "file": "public/og/news/2026-06-28-gpt-56-sol-cheating-benchmark-risk.png",
+      "kind": "news-png",
+      "slug": "2026-06-28-gpt-56-sol-cheating-benchmark-risk",
       "theme": "dark",
       "target": null,
-      "bytes": 16040,
-      "sha256": "a1a12f2129ebb0ea7cfa4ec89ce4f44bb84a1fc4f1bc2db520ce5dba92df3fb2"
+      "bytes": 48075,
+      "sha256": "b02628b06a9de31bb8a47bfd8b0520ef6aa551ac4f79c43fec9348445de3e2e2"
     },
     {
-      "file": "public/og/news/thumbs/light/2026-06-24-google-gemini-computer-use-preview.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-24-google-gemini-computer-use-preview",
-      "theme": "light",
+      "file": "public/og/news/2026-06-28-veo-vertex-ai-endpoint-deadline.png",
+      "kind": "news-png",
+      "slug": "2026-06-28-veo-vertex-ai-endpoint-deadline",
+      "theme": "dark",
       "target": null,
-      "bytes": 17204,
-      "sha256": "5ae205cd528782e9dea20ea9625a1e836d36d6e042179b2afbba161535e56538"
+      "bytes": 49774,
+      "sha256": "759682b7c96b22624349450b29e30dffa78627012d808c8f1a3b362fc12732bf"
     },
     {
-      "file": "public/og/news/thumbs/light/2026-06-25-github-copilot-best-month-ai-coding-demand.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-25-github-copilot-best-month-ai-coding-demand",
+      "file": "public/og/news/light/2026-06-26-gemini-sheets-formula-fixes.png",
+      "kind": "news-png",
+      "slug": "2026-06-26-gemini-sheets-formula-fixes",
       "theme": "light",
       "target": null,
-      "bytes": 16872,
-      "sha256": "ba63abdeebf92ff4ccbd73806aba6e335fde08dcdb90cc9d1e371b5c248b0029"
+      "bytes": 33055,
+      "sha256": "9c92a365daa70974cdd491e22de5c35bc8498710be24edac160f1742116298df"
     },
     {
-      "file": "public/og/news/thumbs/light/2026-06-25-google-gemini-35-pro-delay-buyer-risk.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-25-google-gemini-35-pro-delay-buyer-risk",
+      "file": "public/og/news/light/2026-06-26-newegg-ai-shopping-mode.png",
+      "kind": "news-png",
+      "slug": "2026-06-26-newegg-ai-shopping-mode",
       "theme": "light",
       "target": null,
-      "bytes": 17978,
-      "sha256": "f85bd1eebedc5d031fbf9544b66d87ae6049dae01573b800060979e970f14edb"
+      "bytes": 36356,
+      "sha256": "51c25b61b3a4c3d5dbfa7a45664160afa36c2c3182006e152cefccb8083492f7"
     },
     {
-      "file": "public/og/news/thumbs/light/2026-06-25-openai-anthropic-raise-us-workforce-push.webp",
-      "kind": "news-thumb",
-      "slug": "2026-06-25-openai-anthropic-raise-us-workforce-push",
+      "file": "public/og/news/light/2026-06-26-openai-gpt-56-sol-preview-access-risk.png",
+      "kind": "news-png",
+      "slug": "2026-06-26-openai-gpt-56-sol-preview-access-risk",
       "theme": "light",
       "target": null,
-      "bytes": 16310,
-      "sha256": "70133f045e0a884d17300aa2f58adda9001e3941a22758c0a72b4d1ea2d3eb3d"
+      "bytes": 44344,
+      "sha256": "630efb4d0abb62247453a4cf216768dc83e99bb742a777b79dd0b46971bb0836"
+    },
+    {
+      "file": "public/og/news/light/2026-06-27-claude-mythos-critical-infrastructure-return.png",
+      "kind": "news-png",
+      "slug": "2026-06-27-claude-mythos-critical-infrastructure-return",
+      "theme": "light",
+      "target": null,
+      "bytes": 42107,
+      "sha256": "cd74ca5ec133529f84418c7617a84a78278adaa4e8a2f3e4d42cd7c90e0b157e"
+    },
+    {
+      "file": "public/og/news/light/2026-06-27-fable-5-stays-offline.png",
+      "kind": "news-png",
+      "slug": "2026-06-27-fable-5-stays-offline",
+      "theme": "light",
+      "target": null,
+      "bytes": 33433,
+      "sha256": "c1672c8fbec930f1bdcb2449f3a3a5cc6ac2a08428c065b1abed80e07193a093"
+    },
+    {
+      "file": "public/og/news/light/2026-06-27-sail-research-agent-inference-costs.png",
+      "kind": "news-png",
+      "slug": "2026-06-27-sail-research-agent-inference-costs",
+      "theme": "light",
+      "target": null,
+      "bytes": 38584,
+      "sha256": "844917041b148f8ff814fdf3bd1f1e1eccb9edd694b321e23b274679b95e1d11"
+    },
+    {
+      "file": "public/og/news/light/2026-06-28-claude-opus-47-fast-mode-deadline.png",
+      "kind": "news-png",
+      "slug": "2026-06-28-claude-opus-47-fast-mode-deadline",
+      "theme": "light",
+      "target": null,
+      "bytes": 36864,
+      "sha256": "76b65aedf12d4cbff52d796a7c151e1538b4ba684d2e641352c0bb3ff39db739"
+    },
+    {
+      "file": "public/og/news/light/2026-06-28-gpt-56-sol-cheating-benchmark-risk.png",
+      "kind": "news-png",
+      "slug": "2026-06-28-gpt-56-sol-cheating-benchmark-risk",
+      "theme": "light",
+      "target": null,
+      "bytes": 37627,
+      "sha256": "2534c86c26fc841b99c4d07985807e4e7d0965e0019f19242f8b869338cb8dc2"
+    },
+    {
+      "file": "public/og/news/light/2026-06-28-veo-vertex-ai-endpoint-deadline.png",
+      "kind": "news-png",
+      "slug": "2026-06-28-veo-vertex-ai-endpoint-deadline",
+      "theme": "light",
+      "target": null,
+      "bytes": 35452,
+      "sha256": "b4b84cabeb8b623c39c3fd068ffd36d7022cec9eb9dde42711d73742db49b386"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-26-gemini-sheets-formula-fixes.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-26-gemini-sheets-formula-fixes",
+      "theme": "dark",
+      "target": null,
+      "bytes": 14708,
+      "sha256": "f5431309d3342e86e402357a64647e4b57a93c22cb3aa901a77148a0ff658280"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-26-newegg-ai-shopping-mode.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-26-newegg-ai-shopping-mode",
+      "theme": "dark",
+      "target": null,
+      "bytes": 18324,
+      "sha256": "15cee79073a624451c5259589b1b16ae17ef9a7e50f383463f173b15db226336"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-26-openai-gpt-56-sol-preview-access-risk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-26-openai-gpt-56-sol-preview-access-risk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 17554,
+      "sha256": "776687013610363b24ba96165e02f2b6a54484827ade12b521fc7a6fae074c0b"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-27-claude-mythos-critical-infrastructure-return.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-27-claude-mythos-critical-infrastructure-return",
+      "theme": "dark",
+      "target": null,
+      "bytes": 16078,
+      "sha256": "e0129a38f749e8f5a57154d7b4528943a18c446942818a78f3373e28f4c16f46"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-27-fable-5-stays-offline.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-27-fable-5-stays-offline",
+      "theme": "dark",
+      "target": null,
+      "bytes": 15166,
+      "sha256": "5e8d2261ca82626d49a2d905fa7ddc48cf7db1c22e51073ba2ab0cbc9a50e27c"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-27-sail-research-agent-inference-costs.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-27-sail-research-agent-inference-costs",
+      "theme": "dark",
+      "target": null,
+      "bytes": 17570,
+      "sha256": "1a9c97aeaee295d5f01d75f5c9653164939556ec12decc4362022354461dcc71"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-28-claude-opus-47-fast-mode-deadline.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-28-claude-opus-47-fast-mode-deadline",
+      "theme": "dark",
+      "target": null,
+      "bytes": 18006,
+      "sha256": "ddd1acbf0276a60ad2f17acb4dedc584c44cf54fb7170ec7e7fdbfc453f94dc4"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-28-gpt-56-sol-cheating-benchmark-risk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-28-gpt-56-sol-cheating-benchmark-risk",
+      "theme": "dark",
+      "target": null,
+      "bytes": 17948,
+      "sha256": "4fe2f4364be7782d9b837f895f5781046288f3aff18d65807942fab864cb41f6"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-28-veo-vertex-ai-endpoint-deadline.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-28-veo-vertex-ai-endpoint-deadline",
+      "theme": "dark",
+      "target": null,
+      "bytes": 17212,
+      "sha256": "2fda41a57953b7a98ad301ea1cd300fd01ad54d22c0cc3860aa457eca121f798"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-26-gemini-sheets-formula-fixes.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-26-gemini-sheets-formula-fixes",
+      "theme": "light",
+      "target": null,
+      "bytes": 14874,
+      "sha256": "fc8790a779b20e847ad65a74284ea56220575c6b2945686211899f64477d65c7"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-26-newegg-ai-shopping-mode.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-26-newegg-ai-shopping-mode",
+      "theme": "light",
+      "target": null,
+      "bytes": 18552,
+      "sha256": "8159f646b8188b86869627be0ea9dfb0bf4618c9211595993ae1bdee6c2d9ff2"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-26-openai-gpt-56-sol-preview-access-risk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-26-openai-gpt-56-sol-preview-access-risk",
+      "theme": "light",
+      "target": null,
+      "bytes": 17908,
+      "sha256": "87c25553c5c3084c251cf9b7c348144d8de20270f1579cfc3bebeab4da0fd101"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-27-claude-mythos-critical-infrastructure-return.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-27-claude-mythos-critical-infrastructure-return",
+      "theme": "light",
+      "target": null,
+      "bytes": 16280,
+      "sha256": "27ca29b7c9cac142cdf98cc517ccfa36f4cbfc91a36c67cfee2fb84f50827c9e"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-27-fable-5-stays-offline.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-27-fable-5-stays-offline",
+      "theme": "light",
+      "target": null,
+      "bytes": 15492,
+      "sha256": "6e8d398e1a48634492d8ccbd4bc2d864f67e79a6f560a303309e9dbc3f3a1341"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-27-sail-research-agent-inference-costs.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-27-sail-research-agent-inference-costs",
+      "theme": "light",
+      "target": null,
+      "bytes": 17902,
+      "sha256": "93587b105c665e26dd2ef962fbcd042b095bf10345bcdb18b774478a12cd1774"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-28-claude-opus-47-fast-mode-deadline.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-28-claude-opus-47-fast-mode-deadline",
+      "theme": "light",
+      "target": null,
+      "bytes": 18080,
+      "sha256": "e2b01f31f4b80905746c6dcac444125c084b77e941f6ee99159f54e7568cd41f"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-28-gpt-56-sol-cheating-benchmark-risk.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-28-gpt-56-sol-cheating-benchmark-risk",
+      "theme": "light",
+      "target": null,
+      "bytes": 18180,
+      "sha256": "610eec08f898cf62671cde300182af0d4dcf3075627aefd482fae89660728c39"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-28-veo-vertex-ai-endpoint-deadline.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-28-veo-vertex-ai-endpoint-deadline",
+      "theme": "light",
+      "target": null,
+      "bytes": 17316,
+      "sha256": "4babd2dabcfeefc632d520f28aff01e1d89b220408a97a464b96f9460cbf0020"
     }
   ]
 }
