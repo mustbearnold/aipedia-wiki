@@ -11483,7 +11483,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-28"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "rytr-official",
@@ -11492,7 +11492,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-05-28"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "rytr-pricing",
@@ -11501,7 +11501,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-28"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "same-dev-deploy",

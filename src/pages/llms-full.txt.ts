@@ -3,6 +3,11 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-28 Rytr affiliate conversion content added
+// /guides/best-ai-product-description-generator-for-small-ecommerce-stores/
+// and refreshed Rytr, AI Writing, ecommerce sibling guide, source registry,
+// ledger, and LLM maintenance around small-store SKU copy, Unlimited versus
+// Premium plan fit, manual product-claim QA, and affiliate disclosure.
 // Refresh metadata: 2026-06-28 Jun 26-28 focused AI news coverage added with
 // three stories per day; verbose LLM surface remains data-driven through the
 // news collection and was inspected with homepage, RSS, and ledger.
