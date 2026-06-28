@@ -3,6 +3,12 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-28 Decktopus affiliate conversion content added
+// /guides/best-ai-proposal-deck-tool-for-consultants/ and refreshed
+// Decktopus, AI Presentation, presentation sibling guides, consultant and
+// agency workflow surfaces, source registry, ledger, and LLM maintenance around
+// consultant proposal links, forms, analytics, custom domains, Business plan
+// fit, and affiliate disclosure.
 // Refresh metadata: 2026-06-24 Jun 23-24 focused AI news coverage added; verbose LLM surface remains data-driven through the news collection.
 // Refresh metadata: 2026-06-21 Mistral AI vs Poe comparison loop after current
 // Mistral pricing, Vibe, model docs, Search Toolkit, Poe subscription plans,
@@ -489,6 +495,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent affiliate content refresh: June 28, 2026 added the Decktopus consultant proposal-deck guide and refreshed Decktopus, AI Presentation, presentation sibling guides, consultant and agency workflows, source registry, ledger, and LLM maintenance around client proposal links, forms, analytics, custom domains, webhook/team Business plan fit, and affiliate disclosure.');
   lines.push('Recent page refresh: June 27, 2026 refreshed Google Stitch, long-context, open-weight, and sovereign-AI trend pages, twelve workflow stacks, ElevenLabs, Google DeepMind, and Mistral company profiles, five dead-tool archives, homepage, trends index, workflows index, companies index, dead archive, AI Coding, ledger, and route QA; company prose now contains long source links and tables at 319 px without horizontal overflow.');
   lines.push('Recent comparison maintenance: June 21, 2026 removed five false-vs comparison pages, ChatGPT vs Fireflies, ChatGPT vs Hermes Agent, ChatGPT vs Otter.ai, ChatGPT vs You.com, and ElevenLabs vs Otter.ai, because they compared different buyer jobs rather than direct substitutes. The Decision Content Flywheel now auto-selects only same-primary-category comparisons or explicit adjacent workflow exceptions in comparison-policy.json.');
   lines.push('Recent comparison refresh: June 21, 2026 added Activepieces vs n8n and refreshed Activepieces, n8n, AI Automation, source registry, ledger, and LLM maintenance after current Activepieces pricing, pieces, MCP, install, and release checks plus current n8n pricing, AI Agent, hosting, GitHub release, and affiliate checks; buyer guidance now separates Activepieces as the MIT-licensed MCP-first automation lane from n8n as the deeper technical workflow-control platform.');

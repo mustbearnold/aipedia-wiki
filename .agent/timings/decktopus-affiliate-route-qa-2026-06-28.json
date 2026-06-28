@@ -1,0 +1,2489 @@
+{
+  "ok": true,
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "site_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean/dist-fast/client",
+  "base_url": "http://127.0.0.1:45263",
+  "concurrency": 6,
+  "routes": [
+    "/guides/best-ai-proposal-deck-tool-for-consultants/",
+    "/tools/decktopus/",
+    "/categories/ai-presentation/",
+    "/guides/best-ai-for-presentations/",
+    "/guides/best-presentation-tool-for-smb-sales-teams/",
+    "/workflows/agency-sales-stack/",
+    "/workflows/consultant-stack/",
+    "/guides/",
+    "/tools/",
+    "/categories/",
+    "/workflows/",
+    "/",
+    "/explore/",
+    "/search/"
+  ],
+  "widths": [
+    319,
+    360,
+    390,
+    430,
+    768,
+    1024,
+    1366
+  ],
+  "duration_ms": 18458,
+  "route_timings": [
+    {
+      "route": "/search/",
+      "total_ms": 13609,
+      "max_ms": 2250,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 2250
+        },
+        {
+          "width": 360,
+          "duration_ms": 1958
+        },
+        {
+          "width": 390,
+          "duration_ms": 1848
+        },
+        {
+          "width": 430,
+          "duration_ms": 1832
+        },
+        {
+          "width": 768,
+          "duration_ms": 2131
+        },
+        {
+          "width": 1024,
+          "duration_ms": 1919
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1671
+        }
+      ]
+    },
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "total_ms": 7531,
+      "max_ms": 1125,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 1059
+        },
+        {
+          "width": 360,
+          "duration_ms": 1059
+        },
+        {
+          "width": 390,
+          "duration_ms": 1107
+        },
+        {
+          "width": 430,
+          "duration_ms": 1091
+        },
+        {
+          "width": 768,
+          "duration_ms": 1125
+        },
+        {
+          "width": 1024,
+          "duration_ms": 1088
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1002
+        }
+      ]
+    },
+    {
+      "route": "/tools/",
+      "total_ms": 7243,
+      "max_ms": 1081,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 997
+        },
+        {
+          "width": 360,
+          "duration_ms": 1032
+        },
+        {
+          "width": 390,
+          "duration_ms": 1026
+        },
+        {
+          "width": 430,
+          "duration_ms": 1024
+        },
+        {
+          "width": 768,
+          "duration_ms": 1020
+        },
+        {
+          "width": 1024,
+          "duration_ms": 1063
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1081
+        }
+      ]
+    },
+    {
+      "route": "/tools/decktopus/",
+      "total_ms": 7153,
+      "max_ms": 1102,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 975
+        },
+        {
+          "width": 360,
+          "duration_ms": 1044
+        },
+        {
+          "width": 390,
+          "duration_ms": 1050
+        },
+        {
+          "width": 430,
+          "duration_ms": 1014
+        },
+        {
+          "width": 768,
+          "duration_ms": 1102
+        },
+        {
+          "width": 1024,
+          "duration_ms": 957
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1011
+        }
+      ]
+    },
+    {
+      "route": "/guides/",
+      "total_ms": 6991,
+      "max_ms": 1018,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 1016
+        },
+        {
+          "width": 360,
+          "duration_ms": 1018
+        },
+        {
+          "width": 390,
+          "duration_ms": 1007
+        },
+        {
+          "width": 430,
+          "duration_ms": 1010
+        },
+        {
+          "width": 768,
+          "duration_ms": 976
+        },
+        {
+          "width": 1024,
+          "duration_ms": 966
+        },
+        {
+          "width": 1366,
+          "duration_ms": 998
+        }
+      ]
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "total_ms": 6949,
+      "max_ms": 1052,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 1007
+        },
+        {
+          "width": 360,
+          "duration_ms": 967
+        },
+        {
+          "width": 390,
+          "duration_ms": 954
+        },
+        {
+          "width": 430,
+          "duration_ms": 978
+        },
+        {
+          "width": 768,
+          "duration_ms": 953
+        },
+        {
+          "width": 1024,
+          "duration_ms": 1038
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1052
+        }
+      ]
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "total_ms": 6888,
+      "max_ms": 1030,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 1001
+        },
+        {
+          "width": 360,
+          "duration_ms": 990
+        },
+        {
+          "width": 390,
+          "duration_ms": 960
+        },
+        {
+          "width": 430,
+          "duration_ms": 954
+        },
+        {
+          "width": 768,
+          "duration_ms": 971
+        },
+        {
+          "width": 1024,
+          "duration_ms": 982
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1030
+        }
+      ]
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "total_ms": 6802,
+      "max_ms": 1011,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 989
+        },
+        {
+          "width": 360,
+          "duration_ms": 991
+        },
+        {
+          "width": 390,
+          "duration_ms": 928
+        },
+        {
+          "width": 430,
+          "duration_ms": 933
+        },
+        {
+          "width": 768,
+          "duration_ms": 966
+        },
+        {
+          "width": 1024,
+          "duration_ms": 984
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1011
+        }
+      ]
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "total_ms": 6795,
+      "max_ms": 986,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 950
+        },
+        {
+          "width": 360,
+          "duration_ms": 966
+        },
+        {
+          "width": 390,
+          "duration_ms": 985
+        },
+        {
+          "width": 430,
+          "duration_ms": 967
+        },
+        {
+          "width": 768,
+          "duration_ms": 983
+        },
+        {
+          "width": 1024,
+          "duration_ms": 958
+        },
+        {
+          "width": 1366,
+          "duration_ms": 986
+        }
+      ]
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "total_ms": 6748,
+      "max_ms": 999,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 943
+        },
+        {
+          "width": 360,
+          "duration_ms": 999
+        },
+        {
+          "width": 390,
+          "duration_ms": 964
+        },
+        {
+          "width": 430,
+          "duration_ms": 950
+        },
+        {
+          "width": 768,
+          "duration_ms": 958
+        },
+        {
+          "width": 1024,
+          "duration_ms": 988
+        },
+        {
+          "width": 1366,
+          "duration_ms": 946
+        }
+      ]
+    },
+    {
+      "route": "/categories/",
+      "total_ms": 6688,
+      "max_ms": 997,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 929
+        },
+        {
+          "width": 360,
+          "duration_ms": 920
+        },
+        {
+          "width": 390,
+          "duration_ms": 929
+        },
+        {
+          "width": 430,
+          "duration_ms": 950
+        },
+        {
+          "width": 768,
+          "duration_ms": 997
+        },
+        {
+          "width": 1024,
+          "duration_ms": 988
+        },
+        {
+          "width": 1366,
+          "duration_ms": 975
+        }
+      ]
+    },
+    {
+      "route": "/workflows/",
+      "total_ms": 6644,
+      "max_ms": 983,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 908
+        },
+        {
+          "width": 360,
+          "duration_ms": 928
+        },
+        {
+          "width": 390,
+          "duration_ms": 949
+        },
+        {
+          "width": 430,
+          "duration_ms": 958
+        },
+        {
+          "width": 768,
+          "duration_ms": 958
+        },
+        {
+          "width": 1024,
+          "duration_ms": 983
+        },
+        {
+          "width": 1366,
+          "duration_ms": 960
+        }
+      ]
+    },
+    {
+      "route": "/explore/",
+      "total_ms": 6564,
+      "max_ms": 982,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 982
+        },
+        {
+          "width": 360,
+          "duration_ms": 937
+        },
+        {
+          "width": 390,
+          "duration_ms": 937
+        },
+        {
+          "width": 430,
+          "duration_ms": 934
+        },
+        {
+          "width": 768,
+          "duration_ms": 918
+        },
+        {
+          "width": 1024,
+          "duration_ms": 939
+        },
+        {
+          "width": 1366,
+          "duration_ms": 917
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "total_ms": 6034,
+      "max_ms": 1033,
+      "widths": [
+        {
+          "width": 319,
+          "duration_ms": 801
+        },
+        {
+          "width": 360,
+          "duration_ms": 729
+        },
+        {
+          "width": 390,
+          "duration_ms": 785
+        },
+        {
+          "width": 430,
+          "duration_ms": 694
+        },
+        {
+          "width": 768,
+          "duration_ms": 981
+        },
+        {
+          "width": 1024,
+          "duration_ms": 1011
+        },
+        {
+          "width": 1366,
+          "duration_ms": 1033
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "width": 319,
+      "duration_ms": 1059,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Proposal Deck Tool for Consultants: Decktopus Plan Guide (June 2026)",
+        "metaDescription": "Verified June 28, 2026: decide when Decktopus is worth buying for consultant and small-agency proposal decks with forms, analytics, booking, and custom domains.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-proposal-deck-tool-for-consultants/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI Proposal Deck Tool for Consultants (June 2026)",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "width": 360,
+      "duration_ms": 1059,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Proposal Deck Tool for Consultants: Decktopus Plan Guide (June 2026)",
+        "metaDescription": "Verified June 28, 2026: decide when Decktopus is worth buying for consultant and small-agency proposal decks with forms, analytics, booking, and custom domains.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-proposal-deck-tool-for-consultants/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI Proposal Deck Tool for Consultants (June 2026)",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "width": 390,
+      "duration_ms": 1107,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Proposal Deck Tool for Consultants: Decktopus Plan Guide (June 2026)",
+        "metaDescription": "Verified June 28, 2026: decide when Decktopus is worth buying for consultant and small-agency proposal decks with forms, analytics, booking, and custom domains.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-proposal-deck-tool-for-consultants/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI Proposal Deck Tool for Consultants (June 2026)",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "width": 430,
+      "duration_ms": 1091,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Proposal Deck Tool for Consultants: Decktopus Plan Guide (June 2026)",
+        "metaDescription": "Verified June 28, 2026: decide when Decktopus is worth buying for consultant and small-agency proposal decks with forms, analytics, booking, and custom domains.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-proposal-deck-tool-for-consultants/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI Proposal Deck Tool for Consultants (June 2026)",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "width": 768,
+      "duration_ms": 1125,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Proposal Deck Tool for Consultants: Decktopus Plan Guide (June 2026)",
+        "metaDescription": "Verified June 28, 2026: decide when Decktopus is worth buying for consultant and small-agency proposal decks with forms, analytics, booking, and custom domains.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-proposal-deck-tool-for-consultants/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI Proposal Deck Tool for Consultants (June 2026)",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "width": 1024,
+      "duration_ms": 1088,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Proposal Deck Tool for Consultants: Decktopus Plan Guide (June 2026)",
+        "metaDescription": "Verified June 28, 2026: decide when Decktopus is worth buying for consultant and small-agency proposal decks with forms, analytics, booking, and custom domains.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-proposal-deck-tool-for-consultants/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI Proposal Deck Tool for Consultants (June 2026)",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-proposal-deck-tool-for-consultants/",
+      "width": 1366,
+      "duration_ms": 1002,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Proposal Deck Tool for Consultants: Decktopus Plan Guide (June 2026)",
+        "metaDescription": "Verified June 28, 2026: decide when Decktopus is worth buying for consultant and small-agency proposal decks with forms, analytics, booking, and custom domains.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-proposal-deck-tool-for-consultants/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI Proposal Deck Tool for Consultants (June 2026)",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/decktopus/",
+      "width": 319,
+      "duration_ms": 975,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Decktopus AI: Features, Pricing & Review (June 2026)",
+        "metaDescription": "Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34...",
+        "canonical": "https://aipedia.wiki/tools/decktopus/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Decktopus AI",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/decktopus/",
+      "width": 360,
+      "duration_ms": 1044,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Decktopus AI: Features, Pricing & Review (June 2026)",
+        "metaDescription": "Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34...",
+        "canonical": "https://aipedia.wiki/tools/decktopus/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Decktopus AI",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/decktopus/",
+      "width": 390,
+      "duration_ms": 1050,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Decktopus AI: Features, Pricing & Review (June 2026)",
+        "metaDescription": "Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34...",
+        "canonical": "https://aipedia.wiki/tools/decktopus/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Decktopus AI",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/decktopus/",
+      "width": 430,
+      "duration_ms": 1014,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Decktopus AI: Features, Pricing & Review (June 2026)",
+        "metaDescription": "Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34...",
+        "canonical": "https://aipedia.wiki/tools/decktopus/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Decktopus AI",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/decktopus/",
+      "width": 768,
+      "duration_ms": 1102,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Decktopus AI: Features, Pricing & Review (June 2026)",
+        "metaDescription": "Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34...",
+        "canonical": "https://aipedia.wiki/tools/decktopus/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Decktopus AI",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/decktopus/",
+      "width": 1024,
+      "duration_ms": 957,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Decktopus AI: Features, Pricing & Review (June 2026)",
+        "metaDescription": "Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34...",
+        "canonical": "https://aipedia.wiki/tools/decktopus/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Decktopus AI",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/decktopus/",
+      "width": 1366,
+      "duration_ms": 1011,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Decktopus AI: Features, Pricing & Review (June 2026)",
+        "metaDescription": "Decktopus AI generates presentations from prompts and adds forms, Q&A, analytics, custom domains, and AI credits. Pro is $14.99/mo annually; Business is $34...",
+        "canonical": "https://aipedia.wiki/tools/decktopus/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Decktopus AI",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "width": 319,
+      "duration_ms": 1007,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, and Decktopus now has a focused consultant proposal-deck lane.",
+        "canonical": "https://aipedia.wiki/categories/ai-presentation/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Presentation Tools",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "width": 360,
+      "duration_ms": 967,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, and Decktopus now has a focused consultant proposal-deck lane.",
+        "canonical": "https://aipedia.wiki/categories/ai-presentation/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Presentation Tools",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "width": 390,
+      "duration_ms": 954,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, and Decktopus now has a focused consultant proposal-deck lane.",
+        "canonical": "https://aipedia.wiki/categories/ai-presentation/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Presentation Tools",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "width": 430,
+      "duration_ms": 978,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, and Decktopus now has a focused consultant proposal-deck lane.",
+        "canonical": "https://aipedia.wiki/categories/ai-presentation/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Presentation Tools",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "width": 768,
+      "duration_ms": 953,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, and Decktopus now has a focused consultant proposal-deck lane.",
+        "canonical": "https://aipedia.wiki/categories/ai-presentation/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Presentation Tools",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "width": 1024,
+      "duration_ms": 1038,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, and Decktopus now has a focused consultant proposal-deck lane.",
+        "canonical": "https://aipedia.wiki/categories/ai-presentation/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Presentation Tools",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/ai-presentation/",
+      "width": 1366,
+      "duration_ms": 1052,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI Presentation Tools: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma wins prompt-to-deck, Pitch wins team workflow, and Decktopus now has a focused consultant proposal-deck lane.",
+        "canonical": "https://aipedia.wiki/categories/ai-presentation/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Presentation Tools",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "width": 319,
+      "duration_ms": 1001,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI for Presentations: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma is best for prompt-to-deck speed, with a new Decktopus proposal-deck lane for consultants and small agencies.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-for-presentations/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI for Presentations (June 2026)",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "width": 360,
+      "duration_ms": 990,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI for Presentations: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma is best for prompt-to-deck speed, with a new Decktopus proposal-deck lane for consultants and small agencies.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-for-presentations/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI for Presentations (June 2026)",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "width": 390,
+      "duration_ms": 960,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI for Presentations: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma is best for prompt-to-deck speed, with a new Decktopus proposal-deck lane for consultants and small agencies.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-for-presentations/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI for Presentations (June 2026)",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "width": 430,
+      "duration_ms": 954,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI for Presentations: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma is best for prompt-to-deck speed, with a new Decktopus proposal-deck lane for consultants and small agencies.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-for-presentations/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI for Presentations (June 2026)",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "width": 768,
+      "duration_ms": 971,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI for Presentations: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma is best for prompt-to-deck speed, with a new Decktopus proposal-deck lane for consultants and small agencies.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-for-presentations/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI for Presentations (June 2026)",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "width": 1024,
+      "duration_ms": 982,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI for Presentations: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma is best for prompt-to-deck speed, with a new Decktopus proposal-deck lane for consultants and small agencies.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-for-presentations/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI for Presentations (June 2026)",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-ai-for-presentations/",
+      "width": 1366,
+      "duration_ms": 1030,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best AI for Presentations: Gamma, Canva, Pitch & Beautiful.ai (June 2026)",
+        "metaDescription": "Updated June 28, 2026: Gamma is best for prompt-to-deck speed, with a new Decktopus proposal-deck lane for consultants and small agencies.",
+        "canonical": "https://aipedia.wiki/guides/best-ai-for-presentations/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best AI for Presentations (June 2026)",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "width": 319,
+      "duration_ms": 989,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best Presentation Tool for SMB Sales Teams: Beautiful.ai, Pitch, Gamma (2026)",
+        "metaDescription": "Updated June 28, 2026: Beautiful.ai still wins SMB sales decks, with Decktopus routed to proposal links that need forms and analytics.",
+        "canonical": "https://aipedia.wiki/guides/best-presentation-tool-for-smb-sales-teams/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best Presentation Tool for SMB Sales Teams (June 2026)",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "width": 360,
+      "duration_ms": 991,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best Presentation Tool for SMB Sales Teams: Beautiful.ai, Pitch, Gamma (2026)",
+        "metaDescription": "Updated June 28, 2026: Beautiful.ai still wins SMB sales decks, with Decktopus routed to proposal links that need forms and analytics.",
+        "canonical": "https://aipedia.wiki/guides/best-presentation-tool-for-smb-sales-teams/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best Presentation Tool for SMB Sales Teams (June 2026)",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "width": 390,
+      "duration_ms": 928,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best Presentation Tool for SMB Sales Teams: Beautiful.ai, Pitch, Gamma (2026)",
+        "metaDescription": "Updated June 28, 2026: Beautiful.ai still wins SMB sales decks, with Decktopus routed to proposal links that need forms and analytics.",
+        "canonical": "https://aipedia.wiki/guides/best-presentation-tool-for-smb-sales-teams/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best Presentation Tool for SMB Sales Teams (June 2026)",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "width": 430,
+      "duration_ms": 933,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best Presentation Tool for SMB Sales Teams: Beautiful.ai, Pitch, Gamma (2026)",
+        "metaDescription": "Updated June 28, 2026: Beautiful.ai still wins SMB sales decks, with Decktopus routed to proposal links that need forms and analytics.",
+        "canonical": "https://aipedia.wiki/guides/best-presentation-tool-for-smb-sales-teams/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best Presentation Tool for SMB Sales Teams (June 2026)",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "width": 768,
+      "duration_ms": 966,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best Presentation Tool for SMB Sales Teams: Beautiful.ai, Pitch, Gamma (2026)",
+        "metaDescription": "Updated June 28, 2026: Beautiful.ai still wins SMB sales decks, with Decktopus routed to proposal links that need forms and analytics.",
+        "canonical": "https://aipedia.wiki/guides/best-presentation-tool-for-smb-sales-teams/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best Presentation Tool for SMB Sales Teams (June 2026)",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "width": 1024,
+      "duration_ms": 984,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best Presentation Tool for SMB Sales Teams: Beautiful.ai, Pitch, Gamma (2026)",
+        "metaDescription": "Updated June 28, 2026: Beautiful.ai still wins SMB sales decks, with Decktopus routed to proposal links that need forms and analytics.",
+        "canonical": "https://aipedia.wiki/guides/best-presentation-tool-for-smb-sales-teams/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best Presentation Tool for SMB Sales Teams (June 2026)",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/best-presentation-tool-for-smb-sales-teams/",
+      "width": 1366,
+      "duration_ms": 1011,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Best Presentation Tool for SMB Sales Teams: Beautiful.ai, Pitch, Gamma (2026)",
+        "metaDescription": "Updated June 28, 2026: Beautiful.ai still wins SMB sales decks, with Decktopus routed to proposal links that need forms and analytics.",
+        "canonical": "https://aipedia.wiki/guides/best-presentation-tool-for-smb-sales-teams/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Best Presentation Tool for SMB Sales Teams (June 2026)",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "width": 319,
+      "duration_ms": 950,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)",
+        "metaDescription": "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links.",
+        "canonical": "https://aipedia.wiki/workflows/agency-sales-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Agency Sales Stack (June 2026)",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "width": 360,
+      "duration_ms": 966,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)",
+        "metaDescription": "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links.",
+        "canonical": "https://aipedia.wiki/workflows/agency-sales-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Agency Sales Stack (June 2026)",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "width": 390,
+      "duration_ms": 985,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)",
+        "metaDescription": "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links.",
+        "canonical": "https://aipedia.wiki/workflows/agency-sales-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Agency Sales Stack (June 2026)",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "width": 430,
+      "duration_ms": 967,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)",
+        "metaDescription": "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links.",
+        "canonical": "https://aipedia.wiki/workflows/agency-sales-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Agency Sales Stack (June 2026)",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "width": 768,
+      "duration_ms": 983,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)",
+        "metaDescription": "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links.",
+        "canonical": "https://aipedia.wiki/workflows/agency-sales-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Agency Sales Stack (June 2026)",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "width": 1024,
+      "duration_ms": 958,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)",
+        "metaDescription": "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links.",
+        "canonical": "https://aipedia.wiki/workflows/agency-sales-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Agency Sales Stack (June 2026)",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/agency-sales-stack/",
+      "width": 1366,
+      "duration_ms": 986,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)",
+        "metaDescription": "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links.",
+        "canonical": "https://aipedia.wiki/workflows/agency-sales-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Agency Sales Stack (June 2026)",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "width": 319,
+      "duration_ms": 943,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)",
+        "metaDescription": "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox,...",
+        "canonical": "https://aipedia.wiki/workflows/consultant-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Independent Consultant AI Stack (June 2026)",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "width": 360,
+      "duration_ms": 999,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)",
+        "metaDescription": "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox,...",
+        "canonical": "https://aipedia.wiki/workflows/consultant-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Independent Consultant AI Stack (June 2026)",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "width": 390,
+      "duration_ms": 964,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)",
+        "metaDescription": "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox,...",
+        "canonical": "https://aipedia.wiki/workflows/consultant-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Independent Consultant AI Stack (June 2026)",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "width": 430,
+      "duration_ms": 950,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)",
+        "metaDescription": "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox,...",
+        "canonical": "https://aipedia.wiki/workflows/consultant-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Independent Consultant AI Stack (June 2026)",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "width": 768,
+      "duration_ms": 958,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)",
+        "metaDescription": "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox,...",
+        "canonical": "https://aipedia.wiki/workflows/consultant-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Independent Consultant AI Stack (June 2026)",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "width": 1024,
+      "duration_ms": 988,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)",
+        "metaDescription": "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox,...",
+        "canonical": "https://aipedia.wiki/workflows/consultant-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Independent Consultant AI Stack (June 2026)",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/consultant-stack/",
+      "width": 1366,
+      "duration_ms": 946,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)",
+        "metaDescription": "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox,...",
+        "canonical": "https://aipedia.wiki/workflows/consultant-stack/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "The Independent Consultant AI Stack (June 2026)",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/",
+      "width": 319,
+      "duration_ms": 1016,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Buyer Guides · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 112 AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June...",
+        "canonical": "https://aipedia.wiki/guides/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI buyer guides",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/",
+      "width": 360,
+      "duration_ms": 1018,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Buyer Guides · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 112 AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June...",
+        "canonical": "https://aipedia.wiki/guides/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI buyer guides",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/",
+      "width": 390,
+      "duration_ms": 1007,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Buyer Guides · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 112 AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June...",
+        "canonical": "https://aipedia.wiki/guides/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI buyer guides",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/",
+      "width": 430,
+      "duration_ms": 1010,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Buyer Guides · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 112 AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June...",
+        "canonical": "https://aipedia.wiki/guides/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI buyer guides",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/",
+      "width": 768,
+      "duration_ms": 976,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Buyer Guides · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 112 AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June...",
+        "canonical": "https://aipedia.wiki/guides/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI buyer guides",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/",
+      "width": 1024,
+      "duration_ms": 966,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Buyer Guides · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 112 AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June...",
+        "canonical": "https://aipedia.wiki/guides/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI buyer guides",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/guides/",
+      "width": 1366,
+      "duration_ms": 998,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Buyer Guides · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 112 AI tool buyer guides organized by workflow, role, and budget. Best-of rankings, alternatives, stacks, and head-to-head comparisons. Updated June...",
+        "canonical": "https://aipedia.wiki/guides/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI buyer guides",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/",
+      "width": 319,
+      "duration_ms": 997,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "All AI Tools (260) · June 2026 · aipedia.wiki",
+        "metaDescription": "Complete index of all 260 active AI tools reviewed on aipedia.wiki. Sorted by editorial score across 15 categories.",
+        "canonical": "https://aipedia.wiki/tools/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "All AI tools",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/",
+      "width": 360,
+      "duration_ms": 1032,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "All AI Tools (260) · June 2026 · aipedia.wiki",
+        "metaDescription": "Complete index of all 260 active AI tools reviewed on aipedia.wiki. Sorted by editorial score across 15 categories.",
+        "canonical": "https://aipedia.wiki/tools/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "All AI tools",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/",
+      "width": 390,
+      "duration_ms": 1026,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "All AI Tools (260) · June 2026 · aipedia.wiki",
+        "metaDescription": "Complete index of all 260 active AI tools reviewed on aipedia.wiki. Sorted by editorial score across 15 categories.",
+        "canonical": "https://aipedia.wiki/tools/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "All AI tools",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/",
+      "width": 430,
+      "duration_ms": 1024,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "All AI Tools (260) · June 2026 · aipedia.wiki",
+        "metaDescription": "Complete index of all 260 active AI tools reviewed on aipedia.wiki. Sorted by editorial score across 15 categories.",
+        "canonical": "https://aipedia.wiki/tools/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "All AI tools",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/",
+      "width": 768,
+      "duration_ms": 1020,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "All AI Tools (260) · June 2026 · aipedia.wiki",
+        "metaDescription": "Complete index of all 260 active AI tools reviewed on aipedia.wiki. Sorted by editorial score across 15 categories.",
+        "canonical": "https://aipedia.wiki/tools/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "All AI tools",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/",
+      "width": 1024,
+      "duration_ms": 1063,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "All AI Tools (260) · June 2026 · aipedia.wiki",
+        "metaDescription": "Complete index of all 260 active AI tools reviewed on aipedia.wiki. Sorted by editorial score across 15 categories.",
+        "canonical": "https://aipedia.wiki/tools/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "All AI tools",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/tools/",
+      "width": 1366,
+      "duration_ms": 1081,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "All AI Tools (260) · June 2026 · aipedia.wiki",
+        "metaDescription": "Complete index of all 260 active AI tools reviewed on aipedia.wiki. Sorted by editorial score across 15 categories.",
+        "canonical": "https://aipedia.wiki/tools/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "All AI tools",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/",
+      "width": 319,
+      "duration_ms": 929,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Categories · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 15 AI tool category hubs for buyer research. 260 active tools reviewed. Updated June 2026.",
+        "canonical": "https://aipedia.wiki/categories/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Tool Categories",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/",
+      "width": 360,
+      "duration_ms": 920,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Categories · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 15 AI tool category hubs for buyer research. 260 active tools reviewed. Updated June 2026.",
+        "canonical": "https://aipedia.wiki/categories/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Tool Categories",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/",
+      "width": 390,
+      "duration_ms": 929,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Categories · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 15 AI tool category hubs for buyer research. 260 active tools reviewed. Updated June 2026.",
+        "canonical": "https://aipedia.wiki/categories/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Tool Categories",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/",
+      "width": 430,
+      "duration_ms": 950,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Categories · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 15 AI tool category hubs for buyer research. 260 active tools reviewed. Updated June 2026.",
+        "canonical": "https://aipedia.wiki/categories/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Tool Categories",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/",
+      "width": 768,
+      "duration_ms": 997,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Categories · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 15 AI tool category hubs for buyer research. 260 active tools reviewed. Updated June 2026.",
+        "canonical": "https://aipedia.wiki/categories/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Tool Categories",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/",
+      "width": 1024,
+      "duration_ms": 988,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Categories · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 15 AI tool category hubs for buyer research. 260 active tools reviewed. Updated June 2026.",
+        "canonical": "https://aipedia.wiki/categories/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Tool Categories",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/categories/",
+      "width": 1366,
+      "duration_ms": 975,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tool Categories · June 2026 · aipedia.wiki",
+        "metaDescription": "Browse 15 AI tool category hubs for buyer research. 260 active tools reviewed. Updated June 2026.",
+        "canonical": "https://aipedia.wiki/categories/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "AI Tool Categories",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/",
+      "width": 319,
+      "duration_ms": 908,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Workflow Tutorials · aipedia.wiki",
+        "metaDescription": "Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and...",
+        "canonical": "https://aipedia.wiki/workflows/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Workflow tutorials",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/",
+      "width": 360,
+      "duration_ms": 928,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Workflow Tutorials · aipedia.wiki",
+        "metaDescription": "Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and...",
+        "canonical": "https://aipedia.wiki/workflows/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Workflow tutorials",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/",
+      "width": 390,
+      "duration_ms": 949,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Workflow Tutorials · aipedia.wiki",
+        "metaDescription": "Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and...",
+        "canonical": "https://aipedia.wiki/workflows/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Workflow tutorials",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/",
+      "width": 430,
+      "duration_ms": 958,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Workflow Tutorials · aipedia.wiki",
+        "metaDescription": "Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and...",
+        "canonical": "https://aipedia.wiki/workflows/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Workflow tutorials",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/",
+      "width": 768,
+      "duration_ms": 958,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Workflow Tutorials · aipedia.wiki",
+        "metaDescription": "Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and...",
+        "canonical": "https://aipedia.wiki/workflows/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Workflow tutorials",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/",
+      "width": 1024,
+      "duration_ms": 983,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Workflow Tutorials · aipedia.wiki",
+        "metaDescription": "Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and...",
+        "canonical": "https://aipedia.wiki/workflows/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Workflow tutorials",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/workflows/",
+      "width": 1366,
+      "duration_ms": 960,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Workflow Tutorials · aipedia.wiki",
+        "metaDescription": "Real workflow tutorials for solo operators and small teams. Tool stacks for coding agents, design production, podcasts, research pipelines, newsletters, and...",
+        "canonical": "https://aipedia.wiki/workflows/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Workflow tutorials",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/",
+      "width": 319,
+      "duration_ms": 801,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tools Wiki · June 2026 · 260 tools scored",
+        "metaDescription": "Compare 260 AI tools with source-backed reviews, 118 buyer guides, and 389 news items. Updated June 2026. Independent scores. No paid rankings.",
+        "canonical": "https://aipedia.wiki/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "aipedia.wiki",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "duration_ms": 729,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tools Wiki · June 2026 · 260 tools scored",
+        "metaDescription": "Compare 260 AI tools with source-backed reviews, 118 buyer guides, and 389 news items. Updated June 2026. Independent scores. No paid rankings.",
+        "canonical": "https://aipedia.wiki/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "aipedia.wiki",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "duration_ms": 785,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tools Wiki · June 2026 · 260 tools scored",
+        "metaDescription": "Compare 260 AI tools with source-backed reviews, 118 buyer guides, and 389 news items. Updated June 2026. Independent scores. No paid rankings.",
+        "canonical": "https://aipedia.wiki/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "aipedia.wiki",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/",
+      "width": 430,
+      "duration_ms": 694,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tools Wiki · June 2026 · 260 tools scored",
+        "metaDescription": "Compare 260 AI tools with source-backed reviews, 118 buyer guides, and 389 news items. Updated June 2026. Independent scores. No paid rankings.",
+        "canonical": "https://aipedia.wiki/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "aipedia.wiki",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "duration_ms": 981,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tools Wiki · June 2026 · 260 tools scored",
+        "metaDescription": "Compare 260 AI tools with source-backed reviews, 118 buyer guides, and 389 news items. Updated June 2026. Independent scores. No paid rankings.",
+        "canonical": "https://aipedia.wiki/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "aipedia.wiki",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "duration_ms": 1011,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tools Wiki · June 2026 · 260 tools scored",
+        "metaDescription": "Compare 260 AI tools with source-backed reviews, 118 buyer guides, and 389 news items. Updated June 2026. Independent scores. No paid rankings.",
+        "canonical": "https://aipedia.wiki/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "aipedia.wiki",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/",
+      "width": 1366,
+      "duration_ms": 1033,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "AI Tools Wiki · June 2026 · 260 tools scored",
+        "metaDescription": "Compare 260 AI tools with source-backed reviews, 118 buyer guides, and 389 news items. Updated June 2026. Independent scores. No paid rankings.",
+        "canonical": "https://aipedia.wiki/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "aipedia.wiki",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/explore/",
+      "width": 319,
+      "duration_ms": 982,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Explore aipedia.wiki · Site Map · June 2026",
+        "metaDescription": "Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, guides, workflows, answers, and archives.",
+        "canonical": "https://aipedia.wiki/explore/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Explore the wiki",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/explore/",
+      "width": 360,
+      "duration_ms": 937,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Explore aipedia.wiki · Site Map · June 2026",
+        "metaDescription": "Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, guides, workflows, answers, and archives.",
+        "canonical": "https://aipedia.wiki/explore/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Explore the wiki",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/explore/",
+      "width": 390,
+      "duration_ms": 937,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Explore aipedia.wiki · Site Map · June 2026",
+        "metaDescription": "Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, guides, workflows, answers, and archives.",
+        "canonical": "https://aipedia.wiki/explore/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Explore the wiki",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/explore/",
+      "width": 430,
+      "duration_ms": 934,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Explore aipedia.wiki · Site Map · June 2026",
+        "metaDescription": "Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, guides, workflows, answers, and archives.",
+        "canonical": "https://aipedia.wiki/explore/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Explore the wiki",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/explore/",
+      "width": 768,
+      "duration_ms": 918,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Explore aipedia.wiki · Site Map · June 2026",
+        "metaDescription": "Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, guides, workflows, answers, and archives.",
+        "canonical": "https://aipedia.wiki/explore/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Explore the wiki",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/explore/",
+      "width": 1024,
+      "duration_ms": 939,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Explore aipedia.wiki · Site Map · June 2026",
+        "metaDescription": "Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, guides, workflows, answers, and archives.",
+        "canonical": "https://aipedia.wiki/explore/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Explore the wiki",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/explore/",
+      "width": 1366,
+      "duration_ms": 917,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Explore aipedia.wiki · Site Map · June 2026",
+        "metaDescription": "Hub for every main section of aipedia.wiki: tools, categories, comparisons, news, trends, guides, workflows, answers, and archives.",
+        "canonical": "https://aipedia.wiki/explore/",
+        "robots": "index, follow",
+        "mainVisible": true,
+        "h1": "Explore the wiki",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/search/",
+      "width": 319,
+      "duration_ms": 2250,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Search aipedia.wiki",
+        "metaDescription": "Search and browse 900 AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.",
+        "canonical": "https://aipedia.wiki/search/",
+        "robots": "noindex, follow",
+        "mainVisible": true,
+        "h1": "Search",
+        "scrollWidth": 319,
+        "clientWidth": 319,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/search/",
+      "width": 360,
+      "duration_ms": 1958,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Search aipedia.wiki",
+        "metaDescription": "Search and browse 900 AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.",
+        "canonical": "https://aipedia.wiki/search/",
+        "robots": "noindex, follow",
+        "mainVisible": true,
+        "h1": "Search",
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/search/",
+      "width": 390,
+      "duration_ms": 1848,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Search aipedia.wiki",
+        "metaDescription": "Search and browse 900 AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.",
+        "canonical": "https://aipedia.wiki/search/",
+        "robots": "noindex, follow",
+        "mainVisible": true,
+        "h1": "Search",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/search/",
+      "width": 430,
+      "duration_ms": 1832,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Search aipedia.wiki",
+        "metaDescription": "Search and browse 900 AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.",
+        "canonical": "https://aipedia.wiki/search/",
+        "robots": "noindex, follow",
+        "mainVisible": true,
+        "h1": "Search",
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/search/",
+      "width": 768,
+      "duration_ms": 2131,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Search aipedia.wiki",
+        "metaDescription": "Search and browse 900 AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.",
+        "canonical": "https://aipedia.wiki/search/",
+        "robots": "noindex, follow",
+        "mainVisible": true,
+        "h1": "Search",
+        "scrollWidth": 738,
+        "clientWidth": 768,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/search/",
+      "width": 1024,
+      "duration_ms": 1919,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Search aipedia.wiki",
+        "metaDescription": "Search and browse 900 AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.",
+        "canonical": "https://aipedia.wiki/search/",
+        "robots": "noindex, follow",
+        "mainVisible": true,
+        "h1": "Search",
+        "scrollWidth": 994,
+        "clientWidth": 1024,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    },
+    {
+      "route": "/search/",
+      "width": 1366,
+      "duration_ms": 1671,
+      "responseStatus": 200,
+      "metrics": {
+        "title": "Search aipedia.wiki",
+        "metaDescription": "Search and browse 900 AiPedia tools, models, comparisons, guides, answers, workflows, trends, news, categories, and company profiles.",
+        "canonical": "https://aipedia.wiki/search/",
+        "robots": "noindex, follow",
+        "mainVisible": true,
+        "h1": "Search",
+        "scrollWidth": 1336,
+        "clientWidth": 1366,
+        "overflowing": [],
+        "comparisonChecks": null
+      },
+      "failedRequests": [],
+      "failures": []
+    }
+  ],
+  "failures": [],
+  "server_output": "[serve-static] Serving /home/mustbearnold/Projects/aipedia-wiki-clean/dist-fast/client at http://127.0.0.1:45263"
+}

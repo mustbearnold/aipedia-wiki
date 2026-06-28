@@ -3,12 +3,12 @@ type: workflow
 slug: agency-sales-stack
 title: "The Agency Sales Stack (June 2026)"
 seo_title: "Agency Sales Stack: Apollo, Amplemarket, Unbounce, AdCreative, Beautiful.ai (2026)"
-meta_description: "Verified June 27, 2026: the working AI sales stack for marketing and creative agencies. Prospecting, outbound, landing pages, ad creative, decks, with honest pairings."
+meta_description: "Updated June 28, 2026: the agency sales stack for prospecting, outbound, landing pages, ad creative, decks, and Decktopus proposal links."
 description: "An assembled AI sales stack for marketing and creative agencies running new-business development at scale. Honest tool pairings by function, not a marketing list."
-stack: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, reclaim-ai]
-tools_mentioned: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, reclaim-ai, clay]
+stack: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, decktopus, reclaim-ai]
+tools_mentioned: [apollo, amplemarket, unbounce, adcreative, beautiful-ai, decktopus, reclaim-ai, clay]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-27
+last_updated: 2026-06-28
 last_verified: 2026-06-27
 update_frequency: monthly
 related:
@@ -32,13 +32,17 @@ related:
     title: "Best AI Landing Page Builder for A/B Testing"
     description: "Deep dive on Unbounce and Smart Traffic routing."
     kind: guide
+  - href: /guides/best-ai-proposal-deck-tool-for-consultants/
+    title: "Best AI Proposal Deck Tool for Consultants"
+    description: "Decktopus guide for proposal links with forms, analytics, booking, and response capture."
+    kind: guide
 ---
 
 # The Agency Sales Stack (June 2026)
 
 A marketing or creative agency running new-business development has a specific problem: the work that produces revenue (client delivery) and the work that produces new revenue (sales) compete for the same finite team time. The right AI stack lets a small business-development function (often one or two people plus the founder) cover prospecting, outbound, demos, and proposals without distracting the delivery team.
 
-This stack is assembled from the tools that work for agencies of 10-50 people doing $100k-$2M/year in new business. AiPedia verified pricing and capabilities on June 27, 2026.
+This stack is assembled from the tools that work for agencies of 10-50 people doing $100k-$2M/year in new business. AiPedia verified the standing stack on June 27, 2026 and rechecked the Decktopus proposal-link lane on June 28, 2026.
 
 ## Function by function
 
@@ -49,6 +53,7 @@ This stack is assembled from the tools that work for agencies of 10-50 people do
 | Landing pages for campaigns | [Unbounce](/tools/unbounce/) | AI-routed A/B testing for paid-traffic experiments |
 | Ad creative velocity | [AdCreative](/tools/adcreative/) | Scored ad variants for paid social |
 | Pitch decks and proposals | [Beautiful.ai](/tools/beautiful-ai/) | Brand-consistent decks across business-development team |
+| Interactive proposal links | [Decktopus](/tools/decktopus/) | Forms, analytics, custom domains, and response capture |
 | Calendar and meeting management | [Reclaim.ai](/tools/reclaim-ai/) | Smart 1:1s and team scheduling |
 
 Current stack cost splits into two buying paths: Apollo-led volume outbound can stay in the low hundreds per month for a small business-development team, while adding Amplemarket changes the math because its public Startup entry is an annual $600/month package for two users. For agencies whose average new client value exceeds $20k, the stack can still fit acquisition economics, but only if pipeline attribution is clean.
@@ -95,19 +100,22 @@ When prospects move to a meeting, Beautiful.ai produces the pitch deck. Smart Sl
 
 For high-stakes pitches, the business-development lead spends 2-3 hours customizing the standard agency pitch deck. Most agencies have a master Beautiful.ai team workspace with locked brand themes.
 
+Use Decktopus instead when the proposal deck is also a tracked client link with forms, booking, analytics, a custom domain, or response capture. The focused [proposal-deck guide](/guides/best-ai-proposal-deck-tool-for-consultants/) covers the Pro versus Business decision.
+
 ### 6. Calendar and meeting management in Reclaim
 
 Reclaim defends business-development focus blocks against client meeting load and runs smart 1:1s between the business-development lead and the agency principal. For external bookings (prospects scheduling discovery calls), the agency uses Calendly or Cal.com alongside.
 
 ## Pricing Reality
 
-Verified June 27, 2026. Annual billing, usage credits, and checkout promotions vary, so model the stack in lanes:
+Standing stack pricing was verified June 27, 2026. Decktopus proposal pricing was verified June 28, 2026. Annual billing, usage credits, and checkout promotions vary, so model the stack in lanes:
 
 - **Apollo:** Basic is currently $49/seat/month billed annually, Professional $79/seat/month billed annually, and Organization $119/seat/month billed annually. Use Professional when A/B testing, dialer, and advanced sequencing matter.
 - **Amplemarket:** the public Startup plan starts at $600/month on an annual term with 2 users included. That makes it a named-account motion, not a casual add-on for every agency.
 - **Unbounce:** AI traffic optimization currently sits on the Optimize path, with the public pricing page showing a $249/month list point and annual billing savings. Budget it only for paid-traffic campaigns where landing-page conversion lift is measurable.
 - **AdCreative:** keep this as a variable paid-creative line item because public pricing and campaign credit packaging can change at checkout; verify the active plan before promising client output volume.
 - **Beautiful.ai:** Pro is currently $12/month when billed annually, while Team is $40/user/month annually or $50/user/month monthly.
+- **Decktopus:** Pro is currently $14.99/month billed annually, while Business is $34.99/user/month billed annually when proposal analytics, custom domain, webhook, or team features matter.
 - **Reclaim.ai:** Free is enough to test solo scheduling; the public Starter path currently shows $12/seat/month before discounts.
 
 For a 2-person business-development function plus the founder doing pitch work, Apollo + Beautiful.ai + Reclaim can stay lean. Adding Amplemarket and Unbounce moves the stack toward a $1k+/month operating commitment before ad spend.
@@ -183,6 +191,8 @@ Lightly. The deeper deck analytics integration lives in Pitch and Decktopus. If 
 - [AdCreative official site](https://www.adcreative.ai/), verified 2026-06-27
 - [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-27
 - [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-27
+- [Decktopus proposal maker](https://www.decktopus.com/business-proposal-maker), verified 2026-06-28
+- [Decktopus pricing](https://www.decktopus.com/pricing), verified 2026-06-28
 - [Reclaim.ai](https://reclaim.ai/), verified 2026-06-27
 - [Reclaim pricing](https://reclaim.ai/pricing), verified 2026-06-27
 
@@ -193,6 +203,8 @@ Internal references:
 - [Unbounce tool page](/tools/unbounce/)
 - [AdCreative tool page](/tools/adcreative/)
 - [Beautiful.ai tool page](/tools/beautiful-ai/)
+- [Decktopus tool page](/tools/decktopus/)
+- [Best AI proposal deck tool for consultants](/guides/best-ai-proposal-deck-tool-for-consultants/)
 - [Best AI sales platform for mid-market SDR teams](/guides/best-ai-sales-platform-for-mid-market-sdr-teams/)
 - [Best AI outbound tool for unified prospecting and sequencing](/guides/best-ai-outbound-tool-for-unified-prospecting-and-sequencing/)
 - [Amplemarket pricing for SDR teams](/guides/amplemarket-pricing-for-sdr-teams/)

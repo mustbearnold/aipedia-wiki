@@ -11,18 +11,18 @@ pricing_model: paid
 price_range: $14.99-$34.99/user/month
 status: active
 launched: 2018-01
-last_updated: 2026-06-26
-last_verified: 2026-06-26
+last_updated: 2026-06-28
+last_verified: 2026-06-28
 update_frequency: monthly
 affiliate:
   has_program: true
-  commission: "50% commission; affiliate signup page describes 50% recurring commission for each sale"
+  commission: "50% commission on qualifying purchases per the public affiliate page"
   cookie_days: 60
   network: Direct
   link: 'https://www.decktopus.com/?via=wikiaipedia'
   application_status: approved
   approved_date: 2026-05-28
-  notes: "New approved affiliate link provided 2026-05-28. Official Decktopus affiliate page lists 50% commission and 60-day cookie; affiliate signup page describes 50% recurring commission for each sale."
+  notes: "New approved affiliate link provided 2026-05-28. Official Decktopus affiliate page lists 50% commission and 60-day cookie; AiPedia approval status comes from the local tool record."
 scores:
   utility: 7
   value: 6
@@ -30,11 +30,19 @@ scores:
   longevity: 6
 facts:
   best_for:
-    value: "Small teams that want AI-assisted presentation drafts, slide structure, and lightweight editing without building a full design system."
+    value: "Small teams that want AI-assisted presentation drafts, slide structure, lightweight editing, and client-facing proposal or response-capture links without building a full design system."
     source: "https://www.decktopus.com"
     source_label: "Decktopus official site"
     source_id: decktopus-official
-    verified_at: 2026-06-26
+    verified_at: 2026-06-28
+    volatility: medium
+    confidence: high
+  proposal_surface:
+    value: "Decktopus supports proposal decks with built-in forms, form submissions, calendar embedding, view analytics, custom links, and custom domains for client-facing proposal workflows."
+    source: "https://www.decktopus.com/business-proposal-maker"
+    source_label: "Decktopus business proposal maker"
+    source_id: decktopus-proposal-maker
+    verified_at: 2026-06-28
     volatility: medium
     confidence: high
   workflow_surface:
@@ -50,7 +58,7 @@ facts:
     source: "https://www.decktopus.com/pricing"
     source_label: "Decktopus pricing"
     source_id: decktopus-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-28
     next_review_at: 2026-06-30
     volatility: high
     confidence: high
@@ -95,6 +103,14 @@ price_history:
     source_id: decktopus-pricing
     verified_at: 2026-06-26
     note: "June 26 recheck: public pricing remains Pro $14.99/month billed annually and Business $34.99/user/month billed annually. Affiliate page still presents 50% commission language; checkout totals, promotions, and localization can vary."
+  - date: 2026-06-28
+    plan: "Pro / Business"
+    price: "$14.99/mo billed annually / $34.99/user/mo billed annually"
+    source: "https://www.decktopus.com/pricing"
+    source_label: "Decktopus pricing"
+    source_id: decktopus-pricing
+    verified_at: 2026-06-28
+    note: "June 28 proposal-deck pass: public pricing remains Pro $14.99/month billed annually with 9,000 AI credits/year and Business $34.99/user/month billed annually with 12,000 AI credits/year, custom domain, slide analytics, webhook, and team features."
   - date: 2026-05-02
     plan: "Pro"
     price: "$14.99/mo billed annually"
@@ -188,12 +204,13 @@ That makes it less of a pure Gamma competitor and more of a "presentation plus l
 | **Enterprise** | Custom, including corporate-branded slides and branded AI setup |
 | **Cloud product** | Yes, Decktopus says it works on the cloud |
 
-Every data point above was re-verified against Decktopus's official pricing page on 2026-06-26. See Sources.
+Every data point above was re-verified against Decktopus's official pricing and proposal pages on 2026-06-28. See Sources.
 
 AiPedia has an approved Decktopus affiliate link. Decktopus' public affiliate page lists a 50% commission and 60-day cookie; rankings and recommendations remain editorial.
 
 ## Recent Changes
 
+- **2026-06-28:** Added the consultant proposal-deck buying path after rechecking Decktopus proposal, pricing, homepage, and affiliate pages. Pro remains the solo test tier; Business remains the plan to inspect when custom domain, slide analytics, webhook, team workflow, or response routing matters.
 - **2026-06-26:** Rechecked Decktopus pricing and affiliate surfaces. Pro and Business public prices remain unchanged; affiliate language still describes 50% commission, while final terms remain subject to Decktopus approval and partner terms.
 - **2026-06-24:** Rechecked Decktopus pricing, FAQ, affiliate page, and affiliate terms. Pro remains $14.99/month billed annually with 9,000 AI credits/year. Business remains $34.99/user/month billed annually with 12,000 AI credits/year, custom domain, slide analytics, webhook, and organization features. The pricing FAQ still says AI deck creation costs 30 credits; the public affiliate page still lists 50% commission and a 60-day cookie.
 - **2026-06-05:** Rechecked Decktopus pricing and FAQ while refreshing the Decktopus vs Gamma, Pitch, and Presentations.AI comparison slice. Pro remained $14.99/month billed annually with 9,000 AI credits/year. Business remained $34.99/user/month billed annually with 12,000 AI credits/year, custom domain, slide analytics, webhook, and organization features. The pricing FAQ still said AI deck creation costs 30 credits.
@@ -232,7 +249,9 @@ Subscription pricing via [decktopus.com/pricing](https://www.decktopus.com/prici
 | Business | $34.99/user/mo | 12,000/year | Teams needing analytics, custom domain, webhook, and organization controls |
 | Enterprise | Custom | Custom | Corporate-branded decks, custom layouts, branded AI setup |
 
-Prices verified 2026-06-26. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
+Prices verified 2026-06-28. Annual billing saves 40% vs monthly (Pro $179.99/year, Business $419.99/user/year). Monthly billing, promotions, taxes, and currency localization can change checkout totals.
+
+Use the [consultant proposal-deck guide](/guides/best-ai-proposal-deck-tool-for-consultants/) when the buyer is deciding whether Decktopus Pro or Business fits a client proposal workflow.
 
 ## Failure Modes
 
@@ -246,7 +265,7 @@ Prices verified 2026-06-26. Annual billing saves 40% vs monthly (Pro $179.99/yea
 
 This page was produced by the aipedia.wiki editorial pipeline, an automated system that verifies tool details against primary sources and then applies the site scoring rubric. Scoring follows Utility, Value, Moat, and Longevity as explained at [/about/scoring/](https://aipedia.wiki/about/scoring/).
 
-Last verified 2026-06-26 against Decktopus's official pricing page, affiliate page, affiliate terms, and public product materials.
+Last verified 2026-06-28 against Decktopus's official pricing page, proposal maker, affiliate page, and public product materials.
 
 ## FAQ
 
@@ -266,9 +285,11 @@ Yes, if the sales deck should collect lead data, feedback, or qualification resp
 
 - [Decktopus pricing](https://www.decktopus.com/pricing): plan prices, credits, deck-generation cost, Business features, Enterprise positioning
 - [Decktopus official site](https://decktopus.com): product positioning and presentation workflow
+- [Decktopus proposal maker](https://www.decktopus.com/business-proposal-maker): proposal deck, forms, submissions, analytics, custom link, and custom domain claims
 - [Decktopus affiliate program](https://www.decktopus.com/affiliate): public affiliate commission and cookie terms
 
 ## Related
 
 - **Category:** [AI Presentation](/categories/ai-presentation/)
+- **Buyer guide:** [Best AI Proposal Deck Tool for Consultants](/guides/best-ai-proposal-deck-tool-for-consultants/)
 - **Alternatives:** [Gamma](/tools/gamma/) · [Beautiful.ai](/tools/beautiful-ai/) · [Pitch](/tools/pitch/) · [Prezi](/tools/prezi/)

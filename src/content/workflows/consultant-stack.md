@@ -3,18 +3,22 @@ type: workflow
 slug: consultant-stack
 title: "The Independent Consultant AI Stack (June 2026)"
 seo_title: "Independent Consultant AI Stack: Decks, Research, Calendar, Email, Content (2026)"
-meta_description: "Verified June 27, 2026: the AI stack for independent consultants. Beautiful.ai for decks, Consensus for research, Reclaim for calendar, SaneBox for email, Descript for content."
+meta_description: "Updated June 28, 2026: the AI stack for independent consultants, now with the Decktopus proposal-link path beside Beautiful.ai, Consensus, Reclaim, SaneBox, and Descript."
 description: "An assembled AI stack for independent consultants and boutique consulting firms. Honest tool pairings for deck production, research, calendar defense, and content."
-stack: [beautiful-ai, consensus, reclaim-ai, sanebox, descript]
-tools_mentioned: [beautiful-ai, consensus, reclaim-ai, sanebox, descript, elicit, claude]
+stack: [beautiful-ai, decktopus, consensus, reclaim-ai, sanebox, descript]
+tools_mentioned: [beautiful-ai, decktopus, consensus, reclaim-ai, sanebox, descript, elicit, claude]
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-27
+last_updated: 2026-06-28
 last_verified: 2026-06-27
 update_frequency: monthly
 related:
   - href: /guides/best-presentation-tool-for-smb-sales-teams/
     title: "Best Presentation Tool for SMB Sales Teams"
     description: "Beautiful.ai deep dive for client-facing deck production."
+    kind: guide
+  - href: /guides/best-ai-proposal-deck-tool-for-consultants/
+    title: "Best AI Proposal Deck Tool for Consultants"
+    description: "Decktopus deep dive when proposals need forms, analytics, booking, and response capture."
     kind: guide
   - href: /guides/best-ai-research-tool-for-academic-citations/
     title: "Best AI Research Tool for Academic Citations"
@@ -34,13 +38,14 @@ related:
 
 An independent consultant or boutique consulting firm sells expertise on a clock that runs whether the client is present or not. The right AI stack defends the time that produces revenue (client work), accelerates the work that creates the next engagement (proposals, decks, research), and clears the noise that produces nothing (email triage, scheduling overhead).
 
-AiPedia verified pricing on June 27, 2026.
+AiPedia verified the standing stack on June 27, 2026 and rechecked the Decktopus proposal-link lane on June 28, 2026.
 
 ## Function by function
 
 | Function | Tool | Why this one |
 |---|---|---|
 | Client decks and proposals | [Beautiful.ai](/tools/beautiful-ai/) | Brand-consistent slides, fast iteration |
+| Interactive proposal links | [Decktopus](/tools/decktopus/) | Forms, booking, analytics, and response capture |
 | Source-backed research | [Consensus](/tools/consensus/) | Citation-grounded answers, no hallucinated sources |
 | Calendar and habit defense | [Reclaim.ai](/tools/reclaim-ai/) | Auto-defends focus time against client meeting load |
 | Email triage | [SaneBox](/tools/sanebox/) | Routes vendor noise and CCs out of the main inbox |
@@ -76,14 +81,15 @@ Three constraints specific to consulting work:
 
 - Consensus + Claude produce the thought-leadership content (substack, LinkedIn long-form, podcast appearances).
 - Descript edits any podcast or talking-head content.
-- Beautiful.ai produces the proposal decks for new prospects.
+- Beautiful.ai produces the proposal decks for new prospects. Use Decktopus instead when the proposal itself needs forms, booking, analytics, a custom link, or response capture.
 - Reclaim slots business development blocks between delivery commitments.
 
 ## Pricing Reality
 
-Verified June 27, 2026:
+Standing stack pricing was verified June 27, 2026. Decktopus proposal pricing was verified June 28, 2026:
 
 - **Beautiful.ai:** Pro is currently $12/month when billed annually; Team is materially more expensive and only makes sense when multiple consultants share decks and brand controls.
+- **Decktopus:** Pro is currently $14.99/month billed annually; Business is $34.99/user/month billed annually and is the Decktopus path to inspect when proposal analytics, custom domain, webhook, or team features matter.
 - **Consensus:** Pro is currently $15/month or $120/year; Deep is $65/month or $540/year and is overkill unless research reviews are part of the paid deliverable.
 - **Reclaim.ai:** test on Free, then use Starter or Business when scheduling range, integrations, or team controls matter; the public Starter path currently shows $12/seat/month.
 - **SaneBox:** Snack is currently $9.99 month-to-month and is enough for many solo consultants; Lunch adds more inbox capacity at $17.99 month-to-month. Annual and two-year billing lower the effective monthly price.
@@ -150,6 +156,8 @@ Two questions: (1) Did adding the stack increase your effective billable hours p
 
 - [Beautiful.ai](https://www.beautiful.ai/), verified 2026-06-27
 - [Beautiful.ai pricing](https://www.beautiful.ai/pricing), verified 2026-06-27
+- [Decktopus proposal maker](https://www.decktopus.com/business-proposal-maker), verified 2026-06-28
+- [Decktopus pricing](https://www.decktopus.com/pricing), verified 2026-06-28
 - [Consensus](https://consensus.app/), verified 2026-06-27
 - [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
 - [Reclaim.ai](https://reclaim.ai/), verified 2026-06-27
@@ -164,6 +172,8 @@ Two questions: (1) Did adding the stack increase your effective billable hours p
 Internal references:
 
 - [Beautiful.ai tool page](/tools/beautiful-ai/)
+- [Decktopus tool page](/tools/decktopus/)
+- [Best AI proposal deck tool for consultants](/guides/best-ai-proposal-deck-tool-for-consultants/)
 - [Consensus tool page](/tools/consensus/)
 - [Reclaim.ai tool page](/tools/reclaim-ai/)
 - [SaneBox tool page](/tools/sanebox/)

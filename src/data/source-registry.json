@@ -3881,13 +3881,22 @@
       "last_checked": "2026-06-27"
     },
     {
+      "id": "decktopus-affiliate",
+      "label": "Decktopus affiliate program",
+      "url": "https://www.decktopus.com/affiliate",
+      "type": "affiliate",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "decktopus-official",
       "label": "Decktopus official site",
       "url": "https://www.decktopus.com",
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "decktopus-pricing",
@@ -3896,7 +3905,16 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "decktopus-proposal-maker",
+      "label": "Decktopus business proposal maker",
+      "url": "https://www.decktopus.com/business-proposal-maker",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "deepgram-changelog",

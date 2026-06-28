@@ -3,6 +3,12 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-28 Decktopus affiliate conversion content added
+// /guides/best-ai-proposal-deck-tool-for-consultants/ and refreshed
+// Decktopus, AI Presentation, presentation sibling guides, consultant and
+// agency workflow surfaces, source registry, ledger, and LLM maintenance around
+// consultant proposal links, forms, analytics, custom domains, Business plan
+// fit, and affiliate disclosure.
 // Refresh metadata: 2026-06-24 Jun 23-24 focused AI news coverage added; LLM concise surface remains data-driven through the news collection.
 // Refresh metadata: 2026-06-21 Mistral AI vs Poe comparison loop after current
 // Mistral pricing, Vibe, model docs, Search Toolkit, Poe subscription plans,
@@ -516,6 +522,7 @@ export const GET: APIRoute = async () => {
   lines.push('Recent tool refresh: June 14, 2026 updated ChatGPT and the AI Chatbots parent hub with a safety-procurement checklist based on AP and Business Insider OpenAI probe reporting; refreshed /tools/, /categories/, homepage, and LLM surfaces.');
   lines.push('Recent news refresh: June 14, 2026 added buyer-facing AI coverage plus an OpenAI ChatGPT safety-procurement checklist covering multistate probe reporting, Anthropic Fable/Mythos access risk, ChatGPT GPT-5.2 retirement, G7 governance, homepage, /news/, RSS, and LLM surfaces.');
   lines.push('Recent trend refresh: June 24, 2026 simplified the AI Model Availability Tracker into a two-column green/red ledger with only model name and current availability status.');
+  lines.push('Recent affiliate content refresh: June 28, 2026 added the Decktopus consultant proposal-deck guide and refreshed Decktopus, AI Presentation, presentation sibling guides, consultant and agency workflows, source registry, ledger, and LLM maintenance around client proposal links, forms, analytics, custom domains, webhook/team Business plan fit, and affiliate disclosure.');
   lines.push('Recent page refresh: June 27, 2026 refreshed Google Stitch, long-context, open-weight, and sovereign-AI trend pages, twelve workflow stacks, ElevenLabs, Google DeepMind, and Mistral company profiles, five dead-tool archives, homepage, trends, workflows, companies, dead archive, AI Coding, ledger, and route QA; company prose now contains long source links and tables at 319 px without horizontal overflow.');
   lines.push('Recent news refresh: June 13, 2026 covered late-day Claude Fable 5/Mythos 5 access suspension, ChatGPT GPT-5.2 retirement, and reported OpenAI state-attorneys-general scrutiny; refreshed Claude, Claude Code, ChatGPT, Anthropic, OpenAI, AI Chatbots, AI Coding, AI Infrastructure, /news/, RSS, homepage, /explore/, /tools/, /categories/, /companies/, and LLM surfaces.');
   lines.push('Recent maintenance: June 12, 2026 refreshed the May 15 frontier across /about/our-stack/, the landing-page A/B testing guide, and OpenClaw; updated Unbounce, Instapage, VWO, Convert, Leadpages, and OpenClaw source posture plus /about/, /guides/, /tools/, AI Automation, homepage, categories, source registry, and LLM surfaces.');
