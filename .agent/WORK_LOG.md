@@ -1,5 +1,14 @@
 # AiPedia Work Log
 
+### 2026-06-28: Master Mathematician and Coding Expert Specialist
+
+- Status: Verified locally.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `.agent/specialists/master-mathematician-coding-expert/` as the durable specialist for rigorous code review, workflow review, algorithmic analysis, benchmark hygiene, invariants, and non-regression improvement. Registered it in `INDEX.md`, `.agent/specialists/README.md`, `.agent/CURRENT_STATUS.md`, and `.agent/PROJECT_MAP.md`.
+- Verification: `npm run --silent check:smart -- --json`; `npm run test:scripts`; `npm run audit:commands`; `npm run agents:backup:dry-run`; `npm run agents:backup`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: First live review has not happened yet, so the specialist's self-improvement ledger should gain concrete examples after its first code or workflow audit.
+
 ### 2026-06-28: Root Project Index and Specialist Agent Folder Cleanup
 
 - Status: Complete locally.

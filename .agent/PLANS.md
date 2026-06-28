@@ -8,7 +8,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 
 - Last updated: 2026-06-28.
 - Branch baseline: `master`; active goal is affiliate conversion page buildout for every tool with a configured affiliate link. The June 27 strict 3-day whole-site refresh target is complete.
-- Root project orientation cleanup is complete locally: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
+- Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - New active goal: affiliate conversion page buildout for every tool with a configured affiliate link. Use `npm run affiliate:conversion:inventory` as the current source-of-truth inventory and `workflows/affiliate-conversion-pages/README.md` as the operating procedure.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.

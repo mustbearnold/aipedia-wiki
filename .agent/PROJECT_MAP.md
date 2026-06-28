@@ -32,7 +32,7 @@ Use the smallest verification command that matches the changed surface. Start wi
 - `public/og/`: generated Open Graph images.
 - `scripts/`: audits, guards, generators, build helpers, and operator tooling.
 - `workflows/`: committed repeatable operating workflows, separate from current-state `.agent/` memory and local-only `.agents/` runtime state.
-- `.agent/specialists/`: committed project-local specialist agents.
+- `.agent/specialists/`: committed project-local specialist agents, including project management, workflow engineering, and rigorous math/code review specialists.
 - `src/lib/content-models/` and `src/lib/search-catalog.ts`: generated model/search seams audited by `npm run audit:generated-models`.
 - `tests/`: Node script tests and Playwright smoke tests.
 

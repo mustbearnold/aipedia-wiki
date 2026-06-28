@@ -13,6 +13,7 @@ This directory stores durable, project-local specialist agent packages. They are
 
 - `expert-project-manager/`: coordinates project hygiene, folder structure, documentation maps, verification planning, and non-regression closeout.
 - `agentic-workflow-software-engineer/`: creates, benchmarks, improves, and regression-proofs repeatable agentic workflows.
+- `master-mathematician-coding-expert/`: reviews and improves code, workflows, algorithms, timing systems, tests, and architecture with rigorous mathematical reasoning.
 
 ## Use Rules
 

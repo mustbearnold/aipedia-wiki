@@ -151,6 +151,7 @@ Saved project-local specialists live in `.agent/specialists/`.
 
 - `expert-project-manager/`: plans, coordinates, de-risks, and verifies multi-file repo hygiene and workflow changes.
 - `agentic-workflow-software-engineer/`: designs, benchmarks, improves, and regression-proofs repeatable agentic workflows.
+- `master-mathematician-coding-expert/`: reviews and improves code, workflows, algorithms, timing systems, tests, and architecture with rigorous mathematical reasoning.
 
 Back them up with:
 
