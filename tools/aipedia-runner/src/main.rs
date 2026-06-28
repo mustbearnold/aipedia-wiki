@@ -338,8 +338,12 @@ struct CloseoutReceiptCommand {
 #[derive(Debug, Serialize)]
 struct SupersededFailureReceipt {
     receipt: String,
+    superseded_by: String,
     status: String,
     generated_at: Option<String>,
+    failed_command: Option<String>,
+    failed_status: Option<i32>,
+    elapsed_ms: Option<u64>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -2683,7 +2687,7 @@ fn write_receipt(
         widths: route_qa_widths(),
         commands: receipt_commands(project_dir, results),
         superseded_failures: if ok {
-            superseded_failure_receipts(project_dir, receipt_dir, "tool-refresh")
+            superseded_failure_receipts(project_dir, receipt_dir, "tool-refresh", &json_path)
         } else {
             Vec::new()
         },
@@ -2840,7 +2844,7 @@ fn write_page_receipt(
         widths: route_qa_widths(),
         commands: receipt_commands(project_dir, results),
         superseded_failures: if ok {
-            superseded_failure_receipts(project_dir, receipt_dir, "page-refresh")
+            superseded_failure_receipts(project_dir, receipt_dir, "page-refresh", &json_path)
         } else {
             Vec::new()
         },
@@ -2908,6 +2912,7 @@ fn superseded_failure_receipts(
     project_dir: &Path,
     receipt_dir: &Path,
     workflow: &str,
+    superseded_by_path: &Path,
 ) -> Vec<SupersededFailureReceipt> {
     let mut failures = Vec::new();
     let Ok(entries) = fs::read_dir(receipt_dir) else {
@@ -2935,13 +2940,34 @@ fn superseded_failure_receipts(
         if receipt_workflow != workflow || status != "failed" {
             continue;
         }
+        let failed_command = value
+            .get("commands")
+            .and_then(|item| item.as_array())
+            .and_then(|commands| {
+                commands.iter().find(|command| {
+                    command
+                        .get("status")
+                        .and_then(|status| status.as_i64())
+                        .map_or(true, |status| status != 0)
+                })
+            });
         failures.push(SupersededFailureReceipt {
             receipt: display_path(project_dir, &path),
+            superseded_by: display_path(project_dir, superseded_by_path),
             status: status.to_string(),
             generated_at: value
                 .get("generated_at")
                 .and_then(|item| item.as_str())
                 .map(ToString::to_string),
+            failed_command: failed_command
+                .and_then(|command| command.get("label"))
+                .and_then(|item| item.as_str())
+                .map(ToString::to_string),
+            failed_status: failed_command
+                .and_then(|command| command.get("status"))
+                .and_then(|item| item.as_i64())
+                .and_then(|value| value.try_into().ok()),
+            elapsed_ms: value.get("elapsed_ms").and_then(|item| item.as_u64()),
         });
     }
     failures.sort_by(|left, right| left.receipt.cmp(&right.receipt));
@@ -3253,7 +3279,7 @@ mod tests {
         fs::create_dir_all(&report_dir).expect("report dir should exist");
         fs::write(
             receipt_dir.join("2026-06-28T00-00-00Z-page-refresh-closeout.json"),
-            r#"{"schema_version":"aipedia.closeout-receipt.v1","workflow":"page-refresh","status":"failed","generated_at":"2026-06-28T00:00:00Z"}"#,
+            r#"{"schema_version":"aipedia.closeout-receipt.v1","workflow":"page-refresh","status":"failed","generated_at":"2026-06-28T00:00:00Z","elapsed_ms":321,"commands":[{"label":"page source health","status":1,"elapsed_ms":123,"details_path":"timings/source-health.json"}]}"#,
         )
         .expect("old failed receipt should write");
         let plan_path = project_dir.join("page-refresh-batch.json");
@@ -3324,6 +3350,31 @@ mod tests {
                 .len(),
             1
         );
+        let superseded = receipt["superseded_failures"][0]
+            .as_object()
+            .expect("superseded failure should be an object");
+        assert_eq!(
+            superseded
+                .get("failed_command")
+                .and_then(|value| value.as_str()),
+            Some("page source health")
+        );
+        assert_eq!(
+            superseded
+                .get("failed_status")
+                .and_then(|value| value.as_i64()),
+            Some(1)
+        );
+        assert_eq!(
+            superseded
+                .get("elapsed_ms")
+                .and_then(|value| value.as_u64()),
+            Some(321)
+        );
+        assert!(superseded
+            .get("superseded_by")
+            .and_then(|value| value.as_str())
+            .is_some_and(|value| value.ends_with("-page-refresh-closeout.json")));
 
         fs::remove_dir_all(dir).ok();
     }

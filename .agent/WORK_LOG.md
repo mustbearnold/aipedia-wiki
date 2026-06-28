@@ -1,5 +1,14 @@
 # AiPedia Work Log
 
+### 2026-06-28: Workflow Closeout Guard Hardening
+
+- Status: Verified locally.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Strengthened Rust runner JSON receipts so superseded failed closeout receipts now record the passing receipt path, failed command, failed status, and failed elapsed time. Strengthened `audit:date-consistency` so visible markdown source links with verification dates are checked against matching source-registry `last_checked` rows, catching the body-source drift that frontmatter-only checks miss. Updated workflow docs and added a durable run receipt.
+- Verification: `npm exec --yes --package=node@24 -- node --test tests/scripts/audit-date-consistency.test.mjs tests/scripts/page-source-health.test.mjs`; `cargo fmt --manifest-path tools/aipedia-runner/Cargo.toml --check`; `cargo test --manifest-path tools/aipedia-runner/Cargo.toml`.
+- Residual risks: This hardens receipt metadata and visible-source date checking. It does not add a separate repository-wide closeout-receipt audit command yet.
+
 ### 2026-06-28: PageAgent Buyer-Journey QA Harness
 
 - Status: Verified locally.

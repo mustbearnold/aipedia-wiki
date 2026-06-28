@@ -169,10 +169,16 @@ function readMarkdown(path) {
 }
 
 function loadSourceRegistry() {
-  if (!existsSync(SOURCE_REGISTRY_PATH)) return { sources: [], byId: new Map() };
+  if (!existsSync(SOURCE_REGISTRY_PATH)) return { sources: [], byId: new Map(), byUrl: new Map() };
   const registry = JSON.parse(readFileSync(SOURCE_REGISTRY_PATH, 'utf8'));
   const sources = Array.isArray(registry.sources) ? registry.sources : [];
-  return { sources, byId: new Map(sources.map((source) => [String(source.id ?? ''), source])) };
+  const byUrl = new Map();
+  for (const source of sources) {
+    for (const key of urlKeys(source.url)) {
+      if (key && !byUrl.has(key)) byUrl.set(key, source);
+    }
+  }
+  return { sources, byId: new Map(sources.map((source) => [String(source.id ?? ''), source])), byUrl };
 }
 
 function loadLedger() {
@@ -220,6 +226,7 @@ function emptyTotals() {
     static_files: 0,
     source_records: 0,
     visible_dates: 0,
+    visible_source_records: 0,
     ledger_rows_checked: 0,
     registry_rows_checked: 0,
   };
@@ -284,6 +291,42 @@ function visibleVerificationDates(body) {
     if (iso) dates.push({ text: match[1], iso });
   }
   return dates;
+}
+
+function visibleSourceRecords(body) {
+  const records = [];
+  const linkPattern = /\[[^\]]+\]\((https?:\/\/[^)\s]+)\)([^\n]{0,180})/g;
+  for (const match of body.matchAll(linkPattern)) {
+    const iso = verificationDateFromText(match[2] ?? '');
+    if (iso) records.push({ url: cleanVisibleUrl(match[1]), verified_at: iso });
+  }
+  return records;
+}
+
+function verificationDateFromText(text) {
+  const keyword = '(?:verified|rechecked|checked|updated|last verified|source checked|as of)';
+  const isoMatch = String(text).match(new RegExp(`\\b${keyword}\\b[^\\n.]{0,100}?(\\d{4}-\\d{2}-\\d{2})\\b`, 'i'));
+  if (isoMatch) return isoMatch[1];
+  const monthMatch = String(text).match(new RegExp(`\\b${keyword}\\b[^\\n.]{0,100}?((?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2},\\s+\\d{4})`, 'i'));
+  return monthMatch ? monthDateToIso(monthMatch[1]) : '';
+}
+
+function cleanVisibleUrl(raw) {
+  return String(raw ?? '').trim().replace(/[)"'`\].,;:>]+$/g, '');
+}
+
+function urlKeys(raw) {
+  const cleaned = cleanVisibleUrl(raw);
+  if (!cleaned) return [];
+  try {
+    const url = new URL(cleaned);
+    url.hash = '';
+    const exact = url.toString();
+    const withoutTrailingSlash = exact.endsWith('/') ? exact.slice(0, -1) : exact;
+    return unique([exact, withoutTrailingSlash]);
+  } catch {
+    return unique([cleaned, cleaned.endsWith('/') ? cleaned.slice(0, -1) : cleaned]);
+  }
 }
 
 function monthDateToIso(value) {
@@ -374,6 +417,25 @@ for (const file of files) {
       }
       if (pageVerificationDate && dateGreaterThan(visible.iso, pageVerificationDate)) {
         issues.push(issue('visible-date-after-page-date', file, `visible date ${visible.text} is after page verification date ${pageVerificationDate}`, { value: visible.iso }));
+      }
+    }
+
+    const visibleSources = visibleSourceRecords(markdown.body);
+    totals.visible_source_records += visibleSources.length;
+    for (const visibleSource of visibleSources) {
+      checkDate('visible source verified date', file, visibleSource.verified_at, issues);
+      if (pageVerificationDate && dateGreaterThan(visibleSource.verified_at, pageVerificationDate)) {
+        issues.push(issue('visible-source-date-after-page-date', file, `visible source date ${visibleSource.verified_at} is after page verification date ${pageVerificationDate}`, { url: visibleSource.url, value: visibleSource.verified_at }));
+      }
+      const source = urlKeys(visibleSource.url)
+        .map((key) => registry.byUrl.get(key))
+        .find(Boolean);
+      if (!source) continue;
+      const lastChecked = normalizeDateValue(source.last_checked);
+      if (!lastChecked) {
+        issues.push(issue('registry-last-checked-missing-for-visible-source', file, `${source.id} is missing last_checked for visible source ${visibleSource.url}`, { source_id: source.id, url: visibleSource.url }));
+      } else if (isIsoDate(lastChecked) && isIsoDate(visibleSource.verified_at) && lastChecked < visibleSource.verified_at) {
+        issues.push(issue('registry-last-checked-before-visible-source-date', file, `${source.id} last_checked ${lastChecked} is before visible source date ${visibleSource.verified_at}`, { source_id: source.id, url: visibleSource.url }));
       }
     }
 

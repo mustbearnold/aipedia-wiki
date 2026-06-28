@@ -20,7 +20,12 @@ function runAudit(projectDir, args = []) {
   });
 }
 
-function writeFixture({ registryDate = '2026-06-28', ledgerDate = '2026-06-28', visibleDate = '2026-06-28' } = {}) {
+function writeFixture({
+  registryDate = '2026-06-28',
+  ledgerDate = '2026-06-28',
+  visibleDate = '2026-06-28',
+  factVerifiedAt = '2026-06-28',
+} = {}) {
   const dir = mkdtempSync(join(tmpdir(), 'date-consistency-'));
   mkdirSync(join(dir, 'src/content/tools'), { recursive: true });
   mkdirSync(join(dir, 'src/data'), { recursive: true });
@@ -55,12 +60,12 @@ function writeFixture({ registryDate = '2026-06-28', ledgerDate = '2026-06-28', 
     '  pricing_anchor:',
     '    value: Alpha Pro is the plan to verify.',
     '    source_id: alpha-pricing',
-    '    verified_at: 2026-06-28',
+    `    verified_at: ${factVerifiedAt}`,
     '---',
     '',
     '# Alpha',
     '',
-    `Verified against Alpha pricing on ${visibleDate}.`,
+    `- [Alpha pricing](https://example.com/pricing) (verified ${visibleDate})`,
     '',
   ].join('\n'));
   return dir;
@@ -132,6 +137,24 @@ test('date consistency fails when visible verification dates exceed the page dat
     assert.equal(result.status, 1);
     const report = JSON.parse(result.stdout);
     assert.ok(report.issues.some((item) => item.code === 'visible-date-after-page-date'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('date consistency fails when registry last_checked lags a visible source date', async () => {
+  const dir = writeFixture({ registryDate: '2026-06-27', factVerifiedAt: '2026-06-27', visibleDate: '2026-06-28' });
+  try {
+    const result = await runAudit(dir, [
+      '--file',
+      'src/content/tools/alpha.md',
+      '--current-date',
+      '2026-06-28',
+    ]);
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.ok(report.issues.some((item) => item.code === 'registry-last-checked-before-visible-source-date'));
+    assert.equal(report.totals.visible_source_records, 1);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

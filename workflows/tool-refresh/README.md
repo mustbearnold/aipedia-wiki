@@ -77,7 +77,7 @@ Run cheap deterministic gates before expensive rendered gates:
 npm run runner:tool-refresh:closeout
 ```
 
-The runner executes the ledger precheck, grouped batch check, typecheck, build, route-arg generation, route QA, and a local receipt in order.
+The runner executes the ledger precheck, grouped batch check, date consistency, typecheck, build, route-arg generation, route QA, and local Markdown plus JSON receipts in order. The JSON receipt records command statuses, elapsed time, route QA widths, changed routes, source IDs, timing artifact paths, and any earlier failed receipt that the passing run superseded.
 
 Then generate route QA args from the saved planner and run:
 

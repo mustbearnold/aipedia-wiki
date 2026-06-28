@@ -127,7 +127,7 @@ Use the Rust runner for closeout:
 npm run runner:page-refresh:closeout
 ```
 
-The runner executes the cheap gates, bounded page source health, typecheck, build, content route QA, interactive route QA, worker-report summary, per-command timing, and a local receipt in order. Use `-- --skip-build`, `-- --skip-route-qa`, or `-- --skip-source-health` only for scoped workflow testing.
+The runner executes the cheap gates, bounded page source health, typecheck, build, content route QA, interactive route QA, worker-report summary, per-command timing, and local Markdown plus JSON receipts in order. The JSON receipt records command statuses, elapsed time, route QA widths, changed routes, source IDs, timing artifact paths, and any earlier failed receipt that the passing run superseded. Use `-- --skip-build`, `-- --skip-route-qa`, or `-- --skip-source-health` only for scoped workflow testing.
 
 Cheap gates:
 
