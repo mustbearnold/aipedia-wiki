@@ -1,6 +1,6 @@
 ---
 /**
- * ToolLayout — production tool-page template.
+ * ToolLayout: production tool-page template.
  *
  * Visual system promoted from the /demo-claude/ redesign: single-accent
  * palette, flat score card with sparkbars, compact chip strip, inline
@@ -139,6 +139,17 @@ const launchedStr = f.launched ? String(f.launched).slice(0, 4) : '';
 const verifiedStr = f.last_verified
   ? (() => { const d = new Date(String(f.last_verified)); const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`; })()
   : '';
+
+function latestDateString(...values: unknown[]): string | undefined {
+  const timestamps = values
+    .map((value) => value ? new Date(String(value)).getTime() : NaN)
+    .filter((value) => Number.isFinite(value));
+  if (timestamps.length === 0) return undefined;
+  return new Date(Math.max(...timestamps)).toISOString().slice(0, 10);
+}
+
+const schemaDatePublished = f.last_updated ? String(f.last_updated) : undefined;
+const schemaDateModified = latestDateString(f.last_updated, f.last_verified);
 
 // Category rank + percentile. Surfaces "Top pick in {category}" for the
 // highest-scoring tool in a category and "#N in {category}" for the rest.
@@ -326,8 +337,8 @@ const relatedComparisons = allComparisons
     publisher={f.company ?? ''}
     reviewBody={f.tagline ?? f.meta_description ?? ''}
     pageUrl={`${siteBase}tools/${toolSlug}/`}
-    datePublished={f.last_updated ? String(f.last_updated) : undefined}
-    dateModified={f.last_verified ? String(f.last_verified) : undefined}
+    datePublished={schemaDatePublished}
+    dateModified={schemaDateModified}
     slug={toolSlug}
     status={f.status}
   />
@@ -383,7 +394,7 @@ const relatedComparisons = allComparisons
       <span class="t2-eyebrow-trust">Editorial only, no paid placements</span>
     </div>
 
-    <!-- Hero: logo + title + tagline (no meta line — company/verified
+    <!-- Hero: logo + title + tagline (no meta line, company/verified
          already surface in the chip strip below), score card on right. -->
     <header class="t2-hero">
       <div class="t2-hero-main" data-reveal style="--reveal-delay: 120ms">

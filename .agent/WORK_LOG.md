@@ -1,5 +1,17 @@
 # AiPedia Work Log
 
+### 2026-06-28: CloudTalk Affiliate Cluster and Schema Accuracy Pass
+
+- Status: Verified locally, pending push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added `/guides/cloudtalk-pricing-for-smb-sales-and-support-teams/` and `/guides/best-ai-receptionist-for-smb-phone-teams/`. Refreshed the CloudTalk tool page, SMB phone-system guide, AI Automation, AI Voice, homepage, LLM surfaces, source registry, and `PAGE_REFRESH_LEDGER.md`. Fixed the stale MiniMax T2A docs URL caught by page source health. Improved `SoftwareApplicationLD` so mixed-currency or ambiguous pricing emits descriptive offer schema instead of false USD numeric ranges, and so tool JSON-LD `dateModified` cannot trail the page edit date.
+- Timing: Final source health checked 270 URLs in 19.15s with 0 broken and 0 unreachable. Final route QA checked 11 routes across 319, 360, 390, 430, 768, 1024, and 1366 px in 15.10s. Final build passed in 19.69s, typecheck in 14.11s, visual smoke in 38.05s, selected live-source audit in 4.65s, strict affiliate audit in 0.65s, guard in 2.10s, and changed provenance in 0.55s.
+- Review: Accuracy/SEO and workflow/non-regression subagents found MiniMax date/source-registry drift and CloudTalk mixed-currency schema risk. Both were fixed. Initial page source health failed on the retired MiniMax T2A URL and then passed after repair. An incorrect `audit:tool-quality` invocation without `--file` was superseded by passing per-file checks.
+- Verification: `npm run test:scripts`; `npm run guard:check`; `npm run audit:facts`; `npm run --silent audit:sources -- --json`; `npm run --silent audit:provenance -- --json`; `npm run check:links`; `npm run check:news`; `npm run smoke:api`; `npm run check:frontmatter`; `AIPEDIA_CURRENT_DATE=2026-06-28 npm run --silent audit:affiliate-conversion -- --strict --json`; `npm run ledger:pages && npm run ledger:pages:check`; `npm run page:source-health -- --plan local/tmp/cloudtalk-affiliate-cluster/source-health-plan.json --out local/tmp/cloudtalk-affiliate-cluster/page-source-health-after-minimax.json --concurrency 8 --timeout-ms 10000 --domain-delay-ms 150`; `npm run typecheck`; `npm run build:fast`; generated JSON-LD spot checks for CloudTalk and MiniMax; `npm run smoke:visual`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --timing-file local/tmp/cloudtalk-affiliate-cluster/route-qa-post-review-timing.json ...`; selected live `npm run audit:sources`; `git diff --check`.
+- Residual risks: Full provenance still has one inherited non-failing `semrush-demo` high-volatility next-review advisory outside this diff. The CloudTalk cluster advances the affiliate buildout, not the full every-affiliate-tool objective.
+- Next: Add a closeout receipt schema that records status, elapsed time, superseded failures, changed routes, source IDs, and widths; add a date-consistency guard for visible source dates, registry `last_checked`, ledger rows, and tool freshness fields; add source-health URL dedupe/cache.
+
 ### 2026-06-28: Root DESIGN.md Visual Contract
 
 - Status: Verified locally.

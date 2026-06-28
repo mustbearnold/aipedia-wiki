@@ -120,6 +120,17 @@ const priceRange = model.cta.price_range;
 const pricingSummary = priceRange
   ?? (pricingModel === 'free' ? 'Free' : pricingModel === 'freemium' ? 'Free + paid' : 'Paid');
 
+function latestDateString(...values: unknown[]): string | undefined {
+  const timestamps = values
+    .map((value) => value ? new Date(String(value)).getTime() : NaN)
+    .filter((value) => Number.isFinite(value));
+  if (timestamps.length === 0) return undefined;
+  return new Date(Math.max(...timestamps)).toISOString().slice(0, 10);
+}
+
+const schemaDatePublished = model.freshness.last_updated ? String(model.freshness.last_updated) : undefined;
+const schemaDateModified = latestDateString(model.freshness.last_updated, model.freshness.last_verified);
+
 const primaryCtaLabel = model.cta.label === 'Visit tool' ? undefined : model.cta.label;
 const quickAnswer = model.decision.verdict;
 
@@ -260,8 +271,8 @@ const tocItems = (headings ?? [])
     publisher={model.identity.company ?? ''}
     reviewBody={toolTagline ?? f.meta_description ?? ''}
     pageUrl={`${siteBase}tools/${toolSlug}/`}
-    datePublished={model.freshness.last_updated ? String(model.freshness.last_updated) : undefined}
-    dateModified={model.freshness.last_verified ? String(model.freshness.last_verified) : undefined}
+    datePublished={schemaDatePublished}
+    dateModified={schemaDateModified}
     slug={toolSlug}
     status={toolStatus}
   />}

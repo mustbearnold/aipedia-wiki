@@ -919,7 +919,7 @@ const newsThroughLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
 // "Buyer guides checked" date derives from the freshest verification among the
 // guides the refresh module links, so the claim tracks real guide dates rather
 // than a hardcoded one that silently goes stale.
-const refreshGuideSlugs = ['runway-alternatives', 'suno-alternatives', 'synthesia-alternatives'];
+const refreshGuideSlugs = ['cloudtalk-pricing-for-smb-sales-and-support-teams', 'runway-alternatives', 'suno-alternatives'];
 const toIsoDate = (v: any): string =>
   v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? '').slice(0, 10);
 const refreshGuideIso = allGuides
@@ -1224,6 +1224,11 @@ function newsDateFmt(iso: string): string {
       </div>
 
       <nav class="gt-home-refresh-lanes" aria-label="Freshly verified guide links">
+        <a class="gt-home-refresh-lane" href="/guides/cloudtalk-pricing-for-smb-sales-and-support-teams/">
+          <span>Phone-system plan math</span>
+          <strong>CloudTalk pricing</strong>
+          <small>Essential, Expert, AI add-ons</small>
+        </a>
         <a class="gt-home-refresh-lane" href="/guides/runway-alternatives/">
           <span>Video model switches</span>
           <strong>Runway alternatives</strong>
@@ -1233,11 +1238,6 @@ function newsDateFmt(iso: string): string {
           <span>Music rights checks</span>
           <strong>Suno alternatives</strong>
           <small>Suno, Udio, AIVA, Stable Audio</small>
-        </a>
-        <a class="gt-home-refresh-lane" href="/guides/synthesia-alternatives/">
-          <span>Avatar platform swaps</span>
-          <strong>Synthesia alternatives</strong>
-          <small>HeyGen, Tavus, D-ID, Captions</small>
         </a>
       </nav>
     </section>

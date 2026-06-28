@@ -11,7 +11,7 @@ pricing_model: freemium
 price_range: "Free - $0.30/$1.20 per 1M tokens (M3 standard <=512K input)"
 status: active
 launched: 2022
-last_updated: 2026-06-24
+last_updated: 2026-06-28
 last_verified: 2026-06-24
 update_frequency: monthly
 affiliate:
@@ -183,7 +183,7 @@ The June 2026 portfolio is now led by **MiniMax-M3** for text/coding/agentic wor
 
 ## Methodology
 
-This page was rechecked by the aipedia.wiki editorial workflow on June 24, 2026 against the [MiniMax official site](https://www.minimax.io/), [MiniMax M3 model page](https://www.minimax.io/models/text/m3), [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3), [M3 for AI Coding Tools docs](https://platform.minimax.io/docs/guides/text-ai-coding-tools), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), [MiniMax pricing overview](https://platform.minimax.io/docs/pricing/overview), and [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro). Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
+This page was rechecked by the aipedia.wiki editorial workflow on June 24, 2026 against the [MiniMax official site](https://www.minimax.io/), [MiniMax M3 model page](https://www.minimax.io/models/text/m3), [MiniMax M3 launch post](https://www.minimax.io/blog/minimax-m3), [M3 for AI Coding Tools docs](https://platform.minimax.io/docs/guides/text-ai-coding-tools), [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo), [MiniMax pricing overview](https://platform.minimax.io/docs/pricing/overview), and [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-http). Scoring follows the four-dimension rubric at [/about/scoring/](/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average).
 
 ## FAQ
 
@@ -213,7 +213,7 @@ Talkie is MiniMax's character and companion-chat app. It is strategically import
 - [M3 for AI Coding Tools](https://platform.minimax.io/docs/guides/text-ai-coding-tools): coding-tool setup and model naming (verified 2026-06-24)
 - [MiniMax pay-as-you-go pricing](https://platform.minimax.io/docs/guides/pricing-paygo): current text, audio, video, music, image, and MCP usage rates (verified 2026-06-24)
 - [MiniMax platform pricing](https://platform.minimax.io/docs/pricing/overview): Token Plan, Credits, Audio Subscription, Video Packages, and pay-as-you-go route overview
-- [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-intro): current Speech 2.8 and voice API surface
+- [MiniMax T2A API overview](https://platform.minimax.io/docs/api-reference/speech-t2a-http): current Speech 2.8 and voice API surface
 
 ## Related
 

@@ -45,14 +45,35 @@ if (slug) {
   if (relPath) logoUrl = `https://aipedia.wiki${relPath}`;
 }
 
-function parsePriceRange(raw: string): { low: number; high: number } | null {
+type CurrencyAmount = {
+  value: number;
+  currency: string;
+};
+
+function currencyAmounts(raw: string, currency: string, patterns: RegExp[]): CurrencyAmount[] {
+  return patterns.flatMap((pattern) =>
+    [...raw.matchAll(pattern)]
+      .map((match) => Number(match[1]))
+      .filter((value) => Number.isFinite(value))
+      .map((value) => ({ value, currency }))
+  );
+}
+
+function parsePriceRange(raw: string): { low: number; high: number; currency: string } | null {
   if (!raw) return null;
   const lower = raw.toLowerCase();
-  if (lower.includes('free') && !/\d/.test(raw)) return { low: 0, high: 0 };
-  const nums = raw.match(/\d+(?:\.\d+)?/g);
-  if (!nums || nums.length === 0) return null;
-  const parsed = nums.map(Number);
-  return { low: Math.min(...parsed), high: Math.max(...parsed) };
+  if (lower.includes('free') && !/\d/.test(raw)) return { low: 0, high: 0, currency: 'USD' };
+
+  const matches = [
+    ...currencyAmounts(raw, 'USD', [/(?:US\$|\$)\s*(\d+(?:\.\d+)?)/gi, /\bUSD\s*(\d+(?:\.\d+)?)/gi]),
+    ...currencyAmounts(raw, 'EUR', [/(?:EUR|€)\s*(\d+(?:\.\d+)?)/gi, /(\d+(?:\.\d+)?)\s*(?:EUR|€)\b/gi]),
+    ...currencyAmounts(raw, 'GBP', [/(?:GBP|£)\s*(\d+(?:\.\d+)?)/gi, /(\d+(?:\.\d+)?)\s*(?:GBP|£)\b/gi]),
+  ];
+  const currencies = new Set(matches.map((match) => match.currency));
+  if (matches.length === 0 || currencies.size !== 1) return null;
+
+  const values = matches.map((match) => match.value);
+  return { low: Math.min(...values), high: Math.max(...values), currency: [...currencies][0] };
 }
 
 const parsed = parsePriceRange(priceRange);
@@ -60,16 +81,15 @@ const parsed = parsePriceRange(priceRange);
 const offers: Record<string, unknown> = parsed
   ? {
       '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
+      priceCurrency: parsed.currency,
       lowPrice: parsed.low,
       highPrice: parsed.high,
       offerCount: parsed.low === parsed.high ? 1 : 2,
     }
   : {
       '@type': 'Offer',
-      priceCurrency: 'USD',
-      price: 0,
       availability: 'https://schema.org/InStock',
+      ...(priceRange ? { description: `Pricing summary: ${priceRange}` } : {}),
     };
 
 const reviewer = {
