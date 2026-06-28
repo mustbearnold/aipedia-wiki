@@ -301,6 +301,7 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-06-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-26 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
+| 2026-06-27 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-27 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-27 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-27 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
@@ -547,26 +548,25 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-27 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-27 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
-| 2026-06-28 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-28 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
-| 2026-06-28 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-28 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
-| 2026-06-28 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
+| 2026-06-28 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-28 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
 | 2026-06-28 | /guides/best-ai-for-presentations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-presentations.md |
-| 2026-06-28 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
+| 2026-06-28 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
 | 2026-06-28 | /guides/best-ai-proposal-deck-tool-for-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-proposal-deck-tool-for-consultants.md |
-| 2026-06-28 | /guides/best-ai-receptionist-for-smb-phone-teams/ | Guide | Yes | working tree | src/content/use-cases/best-ai-receptionist-for-smb-phone-teams.md |
+| 2026-06-28 | /guides/best-ai-receptionist-for-smb-phone-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-receptionist-for-smb-phone-teams.md |
 | 2026-06-28 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
-| 2026-06-28 | /guides/cloudtalk-pricing-for-smb-sales-and-support-teams/ | Guide | Yes | working tree | src/content/use-cases/cloudtalk-pricing-for-smb-sales-and-support-teams.md |
-| 2026-06-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
-| 2026-06-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
+| 2026-06-28 | /guides/cloudtalk-pricing-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/cloudtalk-pricing-for-smb-sales-and-support-teams.md |
+| 2026-06-28 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
+| 2026-06-28 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-06-28 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-28 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
-| 2026-06-28 | /tools/cloudtalk/ | Tool | Yes | working tree | src/content/tools/cloudtalk.md |
+| 2026-06-28 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-06-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
-| 2026-06-28 | /tools/minimax/ | Tool | Yes | working tree | src/content/tools/minimax.md |
+| 2026-06-28 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
 | 2026-06-28 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-06-28 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
 | 2026-06-28 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |

@@ -26,6 +26,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run runner:page-refresh:reports`: aggregates page-refresh worker JSON reports into a local summary.
 - `npm run runner:page-refresh:closeout`: uses the Rust workflow runner to execute page-refresh cheap gates, typecheck, build, split route QA, worker-report summary, and a local receipt in order.
 - `npm run qa:route`: route-specific Playwright QA for mobile, tablet, and desktop widths. Use `--base-url http://127.0.0.1:<port>` for no-build checks against a running local server, and `--concurrency 4` for faster route matrices when the server is stable.
+- `npm run qa:agent`: local-only Playwright buyer-journey QA with timing, layout, CTA, disclosure, resource, and optional PageAgent token/step metrics. Use deterministic mode by default; add `--page-agent --llm-base-url <url> --model <name>` only when a compatible LLM endpoint is ready.
 - `npm run check`: broad source, content, link, news, asset, and security checks.
 - `npm run audit:provenance:changed`: scoped provenance and pricing gate for changed tool pages; `npm run audit:provenance` still reports all catalog debt.
 - `npm run audit:coverage-quality:changed`: scoped comparison quality gate for changed files; `npm run audit:coverage-quality` still reports all comparison debt.
@@ -45,6 +46,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `tool-refresh-batch-check.mjs`: runs the cheap grouped tool gate. It accepts explicit `--file` values or a saved planner JSON through `--plan` or `--files-from`.
 - `tools/aipedia-runner/`: Rust orchestration wrapper around the tool and page refresh planners, closeout gates, route-arg generation, worker prompt files, worker report summaries, and local receipts.
 - `qa-route.mjs`: serves the built output and verifies a local route across 360, 390, 430, 768, 1024, and 1366 px unless custom widths are supplied.
+- `qa-agent.mjs`: measures buyer-decision, commercial CTA, and layout-consistency journeys across local routes. Optional PageAgent mode injects `page-agent` in the browser and proxies OpenAI-compatible LLM calls through the local QA server so API keys stay out of page reports.
 - `npm run guard:challenge`: creates a proposed guard challenge artifact when a guard, audit, check, or fixture may need to change.
 - `npm run guard:challenge:check`: validates accepted guard challenge artifacts have implementer, defender, arbitrator, fixture or test, and verification evidence.
 - `generate-*.mjs`: generated ledgers, manifests, favicons, logos, and OG assets.

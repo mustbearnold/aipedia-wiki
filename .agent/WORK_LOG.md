@@ -1,5 +1,23 @@
 # AiPedia Work Log
 
+### 2026-06-28: PageAgent Buyer-Journey QA Harness
+
+- Status: Verified locally.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Added `npm run qa:agent`, a local-only Playwright QA harness for buyer-decision, commercial CTA, and layout-consistency journeys. Deterministic mode records route, viewport, timing, resource, overflow, CTA tracking, affiliate disclosure, and journey pass/fail metrics. Optional PageAgent mode injects the browser bundle through the local static server and proxies OpenAI-compatible LLM calls so API keys stay out of browser reports.
+- Verification: `node --check scripts/qa-agent.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/qa-agent.test.mjs`; `git diff --check`; `npm run test:scripts`; `npm run audit:commands`; `npm run ledger:pages:check`; `npm run guard:check`; `npm run audit:facts`; `npm run audit:sources`; `npm run audit:provenance`; `npm run check:links`; `npm run check:news`; `npm run check:security`; `npm run build:fast`; `npm run qa:agent -- --site-dir dist-fast/client --concurrency 2 --widths 390,1024 --route /tools/cloudtalk/ --route /guides/cloudtalk-pricing-for-smb-sales-and-support-teams/ --route /guides/best-ai-receptionist-for-smb-phone-teams/ --out local/tmp/qa-agent-cloudtalk-baseline.json`.
+- Residual risks: Live PageAgent LLM mode still needs a compatible endpoint and model configuration before token and action metrics can be captured in a real run. Deterministic mode is ready for routine local route checks.
+
+### 2026-06-28: Site-Wide Design Consistency Radius Pass
+
+- Status: Verified locally.
+- Commit: pending.
+- Branch: `master`.
+- Changed: Aligned the shared god-tier radius bridge with the root `DESIGN.md` contract by mapping `--gt-radius` to canonical panel radius, `--gt-radius-sm` to canonical card radius, and `--gt-radius-pill` to canonical pill radius. Added design-token test coverage so scoped token files cannot drift back to literal radius values.
+- Verification: `npm run design:lint`; `npm exec --yes --package=node@24 -- node --test tests/scripts/design-tokens.test.mjs tests/scripts/check-smart.test.mjs`; `git diff --check`; changed-file dash scan; `npm run --silent check:smart -- --json`; `npm run test:scripts`; `npm run audit:commands`; `npm run ledger:pages:check`; `npm run guard:check`; `npm run audit:facts`; `npm run audit:sources`; `npm run audit:provenance`; `npm run check:links`; `npm run check:news`; `npm run smoke:api`; `npm run audit:generated-models`; `npm run build:fast`; `npm run smoke:visual`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /categories/ai-automation/ --route /categories/ai-voice/ --route /tools/cloudtalk/ --route /tools/minimax/ --route / --route /tools/ --route /categories/`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --allow-noindex --widths 319,360,390,430,768,1024,1366 --route /search/`.
+- Residual risks: This was a token-level consistency repair, not a full page-by-page visual redesign. The initial route QA command intentionally failed on `/search/` because that route is noindex; it passed when rerun with `--allow-noindex`.
+
 ### 2026-06-28: CloudTalk Affiliate Cluster and Schema Accuracy Pass
 
 - Status: Verified locally, pending push.
