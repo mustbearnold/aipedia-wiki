@@ -215,17 +215,28 @@ async function main() {
     return report;
   });
 
-  await mapLimit(urlEntries, CONCURRENCY, async (entry) => {
-    const pageStart = performance.now();
-    const result = await checkUrl(entry.url);
-    entry.page.elapsed_ms += Math.round(performance.now() - pageStart);
-    entry.page.sources.push(result);
+  const uniqueUrls = [...new Set(urlEntries.map((entry) => entry.url))];
+  const checkedResults = await mapLimit(uniqueUrls, CONCURRENCY, async (url) => checkUrl(url));
+  const resultCache = new Map(checkedResults.map((result) => [result.url, result]));
+  const seenUrls = new Set();
+
+  for (const entry of urlEntries) {
+    const cached = seenUrls.has(entry.url);
+    seenUrls.add(entry.url);
+    const result = resultCache.get(entry.url);
+    if (!result) continue;
+    const pageResult = { ...result, cached };
+    if (!cached) entry.page.elapsed_ms += result.elapsed_ms;
+    entry.page.sources.push(pageResult);
     if (result.classification === 'ok') entry.page.ok += 1;
     if (result.classification === 'access-sensitive') entry.page.access_sensitive += 1;
     if (result.classification === 'broken') entry.page.broken += 1;
     if (result.classification === 'unreachable') entry.page.unreachable += 1;
-    return result;
-  });
+  }
+
+  for (const page of pageReports) {
+    page.sources.sort((a, b) => a.url.localeCompare(b.url));
+  }
 
   for (const page of pageReports) {
     page.elapsed_ms = Math.round(page.elapsed_ms);
@@ -240,7 +251,8 @@ async function main() {
     acc.broken += page.broken;
     acc.unreachable += page.unreachable;
     return acc;
-  }, { pages: 0, sources: 0, ok: 0, access_sensitive: 0, broken: 0, unreachable: 0 });
+  }, { pages: 0, sources: 0, unique_sources: uniqueUrls.length, cache_hits: Math.max(0, urlEntries.length - uniqueUrls.length), ok: 0, access_sensitive: 0, broken: 0, unreachable: 0 });
+  totals.source_occurrences = totals.sources;
   totals.passed = totals.broken === 0 && totals.unreachable === 0;
 
   const report = {
@@ -266,7 +278,7 @@ async function main() {
   if (JSON_MODE) {
     process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
   } else {
-    console.log(`[page-source-health] ${totals.passed ? 'ok' : 'failed'}: ${totals.sources} source URL(s), ${totals.ok} ok, ${totals.access_sensitive} access-sensitive, ${totals.broken} broken, ${totals.unreachable} unreachable in ${report.elapsed_ms}ms.`);
+    console.log(`[page-source-health] ${totals.passed ? 'ok' : 'failed'}: ${totals.sources} source URL occurrence(s), ${totals.unique_sources} unique, ${totals.cache_hits} cache hit(s), ${totals.ok} ok, ${totals.access_sensitive} access-sensitive, ${totals.broken} broken, ${totals.unreachable} unreachable in ${report.elapsed_ms}ms.`);
     if (OUT_PATH) console.log(`[page-source-health] report: ${OUT_PATH}`);
   }
 

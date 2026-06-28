@@ -246,6 +246,7 @@ test('command surface audit verifies documented npm scripts and script paths', (
     'guard:check': [
       'guard-content.mjs',
       'guard-stale-facts.mjs',
+      'audit-date-consistency.mjs',
       'guard-em-dashes.mjs',
       'audit-guide-picks.mjs',
       'audit-tool-logos.mjs',

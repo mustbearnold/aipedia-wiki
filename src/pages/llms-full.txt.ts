@@ -9,6 +9,11 @@
 // agency workflow surfaces, source registry, ledger, and LLM maintenance around
 // consultant proposal links, forms, analytics, custom domains, Business plan
 // fit, and affiliate disclosure.
+// Refresh metadata: 2026-06-28 Argil affiliate conversion content added
+// /guides/argil-pricing-for-ugc-avatar-video-teams/ and refreshed Argil,
+// AI Video, avatar-video sibling guides, source registry, ledger, and LLM
+// maintenance around Classic vs Pro vs Scale, credit burn, Product Showcase,
+// API automation, consent risk, and affiliate disclosure.
 // Refresh metadata: 2026-06-24 Jun 23-24 focused AI news coverage added; verbose LLM surface remains data-driven through the news collection.
 // Refresh metadata: 2026-06-21 Mistral AI vs Poe comparison loop after current
 // Mistral pricing, Vibe, model docs, Search Toolkit, Poe subscription plans,
@@ -495,6 +500,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/argil-pricing-for-ugc-avatar-video-teams/ and refreshed Argil, AI Video, avatar-video sibling guides, source registry, ledger, and LLM maintenance around Classic vs Pro vs Scale, credit burn, Product Showcase, API automation, consent risk, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added the CloudTalk pricing and AI Receptionist guides and refreshed CloudTalk, the SMB phone-system guide, AI Automation, AI Voice, homepage, source registry, ledger, and LLM maintenance around Essential vs Expert plan choice, AI Conversation Intelligence, dialers, AI Receptionist, AI Specialist, caller ID, spam remediation, missed-call routing, escalation, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added the Decktopus consultant proposal-deck guide and refreshed Decktopus, AI Presentation, presentation sibling guides, consultant and agency workflows, source registry, ledger, and LLM maintenance around client proposal links, forms, analytics, custom domains, webhook/team Business plan fit, and affiliate disclosure.');
   lines.push('Recent page refresh: June 27, 2026 refreshed Google Stitch, long-context, open-weight, and sovereign-AI trend pages, twelve workflow stacks, ElevenLabs, Google DeepMind, and Mistral company profiles, five dead-tool archives, homepage, trends index, workflows index, companies index, dead archive, AI Coding, ledger, and route QA; company prose now contains long source links and tables at 319 px without horizontal overflow.');

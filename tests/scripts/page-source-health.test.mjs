@@ -175,6 +175,58 @@ test('page source health confirms broken HEAD responses with GET before failing'
   });
 });
 
+test('page source health checks shared URLs once across a batch', async () => {
+  let sharedRequests = 0;
+  await withServer((request, response) => {
+    if (request.url === '/shared') {
+      sharedRequests += 1;
+      response.writeHead(200).end('ok');
+      return;
+    }
+    response.writeHead(404).end('missing');
+  }, async (baseUrl) => {
+    const dir = mkdtempSync(join(tmpdir(), 'page-source-health-'));
+    const firstPath = join(dir, 'first.md');
+    const secondPath = join(dir, 'second.md');
+    const planPath = join(dir, 'plan.json');
+    const outPath = join(dir, 'out.json');
+    writeFileSync(firstPath, `Source: ${baseUrl}/shared.\n`);
+    writeFileSync(secondPath, `Same source: ${baseUrl}/shared.\n`);
+    writeFileSync(planPath, JSON.stringify({
+      batch: [
+        { route: '/first/', path: 'first.md', type: 'Guide', sitemap: 'Yes' },
+        { route: '/second/', path: 'second.md', type: 'Guide', sitemap: 'Yes' },
+      ],
+    }));
+
+    try {
+      const result = await runHealth([
+        '--project-dir',
+        dir,
+        '--plan',
+        planPath,
+        '--out',
+        outPath,
+        '--concurrency',
+        '2',
+        '--timeout-ms',
+        '2000',
+      ]);
+      assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+      const report = JSON.parse(readFileSync(outPath, 'utf8'));
+      assert.equal(sharedRequests, 1);
+      assert.equal(report.totals.sources, 2);
+      assert.equal(report.totals.source_occurrences, 2);
+      assert.equal(report.totals.unique_sources, 1);
+      assert.equal(report.totals.cache_hits, 1);
+      assert.equal(report.pages[0].sources[0].cached, false);
+      assert.equal(report.pages[1].sources[0].cached, true);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+
 test('page source health fails on broken source URLs', async () => {
   await withServer((request, response) => {
     if (request.url === '/missing') {

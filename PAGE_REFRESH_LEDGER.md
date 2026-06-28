@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-28
-Tracked public pages and crawl surfaces: 559
+Tracked public pages and crawl surfaces: 560
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -244,7 +244,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /guides/best-ai-for-linkedin/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-linkedin.md |
 | 2026-06-26 | /terms/ | Static page | Yes | git | src/pages/terms.astro |
 | 2026-06-26 | /tools/adobe-firefly/ | Tool | Yes | frontmatter | src/content/tools/adobe-firefly.md |
-| 2026-06-26 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-26 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
 | 2026-06-26 | /tools/base44/ | Tool | Yes | frontmatter | src/content/tools/base44.md |
 | 2026-06-26 | /tools/beehiiv/ | Tool | Yes | frontmatter | src/content/tools/beehiiv.md |
@@ -301,7 +300,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-06-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-26 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
-| 2026-06-27 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-27 | /404/ | Static page | No | git | src/pages/404.astro |
 | 2026-06-27 | /about/ | Static page | Yes | git | src/pages/about/index.astro |
 | 2026-06-27 | /about/editorial/ | Static page | Yes | git | src/pages/about/editorial.astro |
@@ -327,7 +325,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-27 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-27 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
-| 2026-06-27 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-27 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-27 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-27 | /companies/adobe/ | Company | Yes | frontmatter | src/content/companies/adobe.md |
@@ -415,7 +412,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/ai-solo-founder-stack/ | Guide | Yes | frontmatter | src/content/use-cases/ai-solo-founder-stack.md |
 | 2026-06-27 | /guides/amplemarket-pricing-for-sdr-teams/ | Guide | Yes | frontmatter | src/content/use-cases/amplemarket-pricing-for-sdr-teams.md |
 | 2026-06-27 | /guides/best-ai-automation-platform/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-automation-platform.md |
-| 2026-06-27 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-27 | /guides/best-ai-calendar-for-google-workspace-power-users/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-calendar-for-google-workspace-power-users.md |
 | 2026-06-27 | /guides/best-ai-coding-assistant/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-coding-assistant.md |
 | 2026-06-27 | /guides/best-ai-email-triage-for-heavy-inboxes/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-email-triage-for-heavy-inboxes.md |
@@ -502,7 +498,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/runway-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/runway-alternatives.md |
 | 2026-06-27 | /guides/sanebox-pricing-for-heavy-inboxes/ | Guide | Yes | frontmatter | src/content/use-cases/sanebox-pricing-for-heavy-inboxes.md |
 | 2026-06-27 | /guides/suno-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/suno-alternatives.md |
-| 2026-06-27 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-27 | /media-kit/ | Static page | Yes | git | src/pages/media-kit.astro |
 | 2026-06-27 | /privacy/ | Static page | Yes | git | src/pages/privacy.astro |
 | 2026-06-27 | /reports/ | Static page | Yes | git | src/pages/reports/index.astro |
@@ -548,22 +543,28 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-27 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-27 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
+| 2026-06-28 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-28 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-28 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
+| 2026-06-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-28 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-28 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
 | 2026-06-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-06-28 | /guides/argil-pricing-for-ugc-avatar-video-teams/ | Guide | Yes | frontmatter | src/content/use-cases/argil-pricing-for-ugc-avatar-video-teams.md |
+| 2026-06-28 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-28 | /guides/best-ai-for-presentations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-presentations.md |
 | 2026-06-28 | /guides/best-ai-phone-system-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-phone-system-for-smb-sales-and-support-teams.md |
 | 2026-06-28 | /guides/best-ai-proposal-deck-tool-for-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-proposal-deck-tool-for-consultants.md |
 | 2026-06-28 | /guides/best-ai-receptionist-for-smb-phone-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-receptionist-for-smb-phone-teams.md |
 | 2026-06-28 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
 | 2026-06-28 | /guides/cloudtalk-pricing-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/cloudtalk-pricing-for-smb-sales-and-support-teams.md |
+| 2026-06-28 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-28 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
 | 2026-06-28 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
 | 2026-06-28 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-28 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-28 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-06-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-06-28 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |

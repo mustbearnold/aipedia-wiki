@@ -1035,7 +1035,7 @@
       "type": "affiliate",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "argil-api-pricing",
@@ -1044,7 +1044,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "argil-docs",
@@ -1053,7 +1053,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "argil-docs-index",
@@ -1062,7 +1062,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "argil-official",
@@ -1071,7 +1071,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "argil-payg-credits",
@@ -1080,7 +1080,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-22"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "argil-pricing",
@@ -1089,7 +1089,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "argil-product-showcase",
@@ -1098,7 +1098,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "arxiv-google-ai-overviews-publisher-ecosystem-2026",
@@ -2124,7 +2124,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "captions-overview",
@@ -6163,7 +6163,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hedra-skills",
@@ -6406,7 +6406,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "heygen-pricing-help",
@@ -9007,11 +9007,11 @@
     {
       "id": "minimax-video-api",
       "label": "MiniMax video generation API docs",
-      "url": "https://platform.minimax.io/docs/api-reference/video-generation-intro",
+      "url": "https://platform.minimax.io/docs/guides/video-generation",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "minimax-video-packages",
@@ -12245,7 +12245,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "synthesia-product",

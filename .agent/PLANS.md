@@ -10,6 +10,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Branch baseline: `master`; active goal is affiliate conversion page buildout for every tool with a configured affiliate link. The June 27 strict 3-day whole-site refresh target is complete.
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - New active goal: affiliate conversion page buildout for every tool with a configured affiliate link. Use `npm run affiliate:conversion:inventory` as the current source-of-truth inventory and `workflows/affiliate-conversion-pages/README.md` as the operating procedure.
+- Latest affiliate slice is complete locally and verified: `/guides/argil-pricing-for-ugc-avatar-video-teams/`, plus Argil, avatar-video, Synthesia alternatives, AI Video, top-layer, search, LLM, source registry, and ledger updates. This pass also implemented `audit:date-consistency`, structured runner closeout JSON receipts, superseded-failure tracking, and URL dedupe/cache metrics in page source health.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
@@ -26,7 +27,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - The latest completed news pass is Jun 24-25 focused coverage with four additional individual source-backed stories and no daily desk page.
 - Tool detail pages now use the decision-spine default in `src/layouts/ToolLayout.astro`; future tool migrations should preserve the short buyer path and keep proof and long review notes collapsed by default.
 - The next freshness batch should be regenerated with `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`; the planner now excludes pages verified since yesterday by default unless `--include-same-day`, `--exclude-recent-days 0`, or an explicit `--exclude-verified-date` is passed.
-- The next Decision Content candidate remains `amazon-q-vs-github-copilot`, but freshness batch work is currently in progress.
+- The next Decision Content candidate remains `amazon-q-vs-github-copilot`, but affiliate conversion work is currently the active editorial lane.
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports. Tool-refresh closeout now uses route QA concurrency 6 and writes per-route/per-width timing.
 - June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The June 26 same-day revisit closeout shifted the bottleneck to route QA: closeout timing was ledger 0.6s, grouped check 25.4s, typecheck 16.3s, build:fast 16.4s, and route QA 126.3s at concurrency 4 for 75 routes across seven widths. Rerunning the same route matrix at concurrency 6 passed and wrote route timing in about 85.5s internal duration. Future refresh work should use six shard workers with up to 10 tools each, one integrator, generated worker prompts, the fast batch gate, dev-server route QA while editing, then one `build:fast` and concurrency-6 route QA at closeout.
@@ -220,8 +221,8 @@ Use the existing `use-cases` guide route first unless a page clearly needs a new
 
 ### Next Implementation Slice
 
-1. Commit and push the Dext client document collection slice.
-2. Move to the next highest-fit approved affiliate tool from the inventory unless a newly discovered Dext intent is genuinely distinct.
+1. Commit and push the verified Argil affiliate conversion slice if it has not already been pushed.
+2. Move to the next highest-fit approved affiliate tool from the inventory unless a newly discovered CloudTalk, Decktopus, Dext, or Argil intent is genuinely distinct and non-duplicative.
 3. Repair approval metadata or defer monetization for configured-but-not-live tools.
 4. Repeat the pattern across the highest-fit approved affiliate tools from `npm run affiliate:conversion:inventory`, using existing guides as coverage where they already satisfy a distinct buyer intent.
 5. Add subagent review before finalizing the cluster: SEO/quality, visual/mobile, and accuracy.

@@ -195,6 +195,7 @@ function buildCommands(batch) {
     batch_fast_check: [
       'npm run ledger:pages && npm run ledger:pages:check',
       'npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json',
+      'npm run audit:date-consistency -- --changed',
     ],
     source_health: sourceIds.length ? [
       `npm run audit:sources -- --json --limit 0 ${sourceIds.map((sourceId) => `--source-id ${sourceId}`).join(' ')}`,
@@ -204,6 +205,7 @@ function buildCommands(batch) {
     batch_close: [
       'npm run ledger:pages && npm run ledger:pages:check',
       'npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json',
+      'npm run audit:date-consistency -- --changed',
       'npm run typecheck',
       'npm run build:fast',
       `npm run qa:route -- ${routes.map((route) => `--route ${route}`).join(' ')} --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4`,

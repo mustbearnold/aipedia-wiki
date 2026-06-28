@@ -249,6 +249,7 @@ function buildCommands(batch) {
     cheap_gates: [
       'npm run ledger:pages && npm run ledger:pages:check',
       'node scripts/check-frontmatter.mjs --changed',
+      'npm run audit:date-consistency -- --changed',
       'npm run audit:provenance:changed -- --json',
       `env AIPEDIA_CURRENT_DATE=${currentDate()} npm run audit:coverage-quality:changed`,
       'node scripts/guard-em-dashes.mjs',
@@ -275,6 +276,7 @@ function timedCloseoutCommands(expensiveGates) {
   const cheapGates = [
     ['ledger', 'npm run ledger:pages && npm run ledger:pages:check'],
     ['frontmatter', 'node scripts/check-frontmatter.mjs --changed'],
+    ['date-consistency', 'npm run audit:date-consistency -- --changed'],
     ['provenance', 'npm run audit:provenance:changed -- --json'],
     ['coverage', `env AIPEDIA_CURRENT_DATE=${currentDate()} npm run audit:coverage-quality:changed`],
     ['em-dash', 'node scripts/guard-em-dashes.mjs'],

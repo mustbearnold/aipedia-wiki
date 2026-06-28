@@ -1165,3 +1165,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Review: trust/schema reviewer and conversion/doorway/CTA reviewer both accepted the final diff at 9.9/10 after earlier rejections were fixed.
 - Durable receipt: `.agent/loop-runs/2026-06-27-affiliate-money-guide-metadata-backfill.md`.
 - Next: Commit and push before creating the first new affiliate page cluster.
+
+### 2026-06-28: Argil Affiliate Conversion Slice
+
+- Status: Complete locally, verified, pending push.
+- Branch: `master`.
+- Changed: Added `/guides/argil-pricing-for-ugc-avatar-video-teams/` as a plan-decision page for Argil Classic, Pro, Scale, Enterprise, credit burn, API usage, Product Showcase, and consent risk. Refreshed `/tools/argil/`, the avatar-video and Synthesia alternatives guides, AI Video, homepage, `/guides/`, `/tools/`, `/categories/`, `/explore/`, `/search/`, LLM surfaces, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+- Guardrails: added `audit:date-consistency` and guard-chain wiring, structured runner closeout JSON receipts, superseded-failure tracking, and global URL dedupe/cache metrics in `page:source-health`. Page and tool refresh planners now include the date-consistency cheap gate in generated closeout commands.
+- Source repairs: replaced the stale MiniMax video API docs URL with the current video generation guide. Removed fragile Adobe HelpX citations from AI Video after narrowing the Adobe Firefly claim to sources that pass automated source health.
+- Verification: page source health passed with 144 source URL occurrences, 95 unique URLs, 49 cache hits, 139 ok, 5 access-sensitive, 0 broken, and 0 unreachable. Strict affiliate audit passed with 46 money guides, 0 errors, and 0 warnings. Selected live-source audit passed for 15 source IDs. `guard:check`, `check:frontmatter`, `audit:provenance:changed`, `audit:facts`, `audit:commands`, `check:links`, `check:news`, `check:security`, `test:scripts` with 444 passing tests, Rust runner tests with 9 passing tests, `typecheck`, `build:fast`, two route-QA matrices, QA agent, generated surface checks, metadata/disclosure checks, date consistency, and `git diff --check` passed.
+- Durable receipt: `.agent/loop-runs/2026-06-28-argil-affiliate-conversion.md`.
+- Next: Commit and push the verified Argil slice, then continue the highest-fit affiliate conversion inventory.

@@ -1,7 +1,7 @@
 use anyhow::{bail, Context, Result};
 use chrono::Utc;
 use clap::{Parser, Subcommand};
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs;
 use std::io::Write;
@@ -275,6 +275,8 @@ struct Tool {
     path: String,
     route: String,
     category_route: Option<String>,
+    #[serde(default)]
+    source_ids: Vec<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -303,6 +305,41 @@ struct CommandResult {
     status: Option<i32>,
     duration_ms: u128,
     details_path: Option<PathBuf>,
+}
+
+#[derive(Debug, Serialize)]
+struct CloseoutReceiptJson {
+    schema_version: String,
+    workflow: String,
+    status: String,
+    generated_at: String,
+    current_date: Option<String>,
+    elapsed_ms: u64,
+    plan: String,
+    route_args: Option<String>,
+    report_dir: Option<String>,
+    report_summary: Option<String>,
+    markdown_receipt: String,
+    changed_routes: Vec<String>,
+    source_ids: Vec<String>,
+    widths: Vec<u16>,
+    commands: Vec<CloseoutReceiptCommand>,
+    superseded_failures: Vec<SupersededFailureReceipt>,
+}
+
+#[derive(Debug, Serialize)]
+struct CloseoutReceiptCommand {
+    label: String,
+    status: Option<i32>,
+    elapsed_ms: u64,
+    details_path: Option<String>,
+}
+
+#[derive(Debug, Serialize)]
+struct SupersededFailureReceipt {
+    receipt: String,
+    status: String,
+    generated_at: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -364,6 +401,8 @@ struct Page {
     path: String,
     last_updated: String,
     route_qa_risk: String,
+    #[serde(default)]
+    source_ids: Vec<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -846,6 +885,16 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
             Some(grouped_check_timing_path),
         ),
         (
+            "date consistency changed".to_string(),
+            vec![
+                "run".to_string(),
+                "audit:date-consistency".to_string(),
+                "--".to_string(),
+                "--changed".to_string(),
+            ],
+            None,
+        ),
+        (
             "typecheck".to_string(),
             vec!["run".to_string(), "typecheck".to_string()],
             None,
@@ -908,6 +957,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
                 &receipt_dir,
                 &plan_path,
                 &route_args_path,
+                &plan,
                 &results,
                 false,
                 closeout_start.elapsed().as_millis(),
@@ -921,6 +971,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
         &receipt_dir,
         &plan_path,
         &route_args_path,
+        &plan,
         &results,
         true,
         closeout_start.elapsed().as_millis(),
@@ -992,6 +1043,21 @@ fn page_closeout(project_dir: &Path, args: &PageCloseoutArgs, dry_run: bool) -> 
             ],
             None,
             vec![],
+        ),
+        (
+            "date consistency changed".to_string(),
+            npm_bin().to_string(),
+            vec![
+                "run".to_string(),
+                "audit:date-consistency".to_string(),
+                "--".to_string(),
+                "--changed".to_string(),
+            ],
+            None,
+            vec![(
+                "AIPEDIA_CURRENT_DATE".to_string(),
+                plan.current_date.clone(),
+            )],
         ),
         (
             "provenance changed".to_string(),
@@ -2530,12 +2596,14 @@ fn write_receipt(
     receipt_dir: &Path,
     plan_path: &Path,
     route_args_path: &Path,
+    plan: &Plan,
     results: &[CommandResult],
     ok: bool,
     total_duration_ms: u128,
 ) -> Result<()> {
     let timestamp = Utc::now().format("%Y-%m-%dT%H-%M-%SZ");
     let path = receipt_dir.join(format!("{}-tool-refresh-closeout.md", timestamp));
+    let json_path = receipt_dir.join(format!("{}-tool-refresh-closeout.json", timestamp));
     let mut content = String::new();
     content.push_str("# AiPedia Runner Tool Refresh Closeout\n\n");
     content.push_str(&format!(
@@ -2558,7 +2626,10 @@ fn write_receipt(
         .filter(|result| {
             matches!(
                 result.label.as_str(),
-                "ledger generate" | "ledger check" | "tool refresh grouped check"
+                "ledger generate"
+                    | "ledger check"
+                    | "tool refresh grouped check"
+                    | "date consistency changed"
             )
         })
         .map(|result| result.duration_ms)
@@ -2588,8 +2659,40 @@ fn write_receipt(
             ));
         }
     }
+    let route_args = fs::read_to_string(route_args_path).unwrap_or_default();
+    let source_ids = sorted_unique(
+        plan.batch
+            .iter()
+            .flat_map(|tool| tool.source_ids.iter().cloned())
+            .collect(),
+    );
+    let json_receipt = CloseoutReceiptJson {
+        schema_version: "aipedia.closeout-receipt.v1".to_string(),
+        workflow: "tool-refresh".to_string(),
+        status: if ok { "passed" } else { "failed" }.to_string(),
+        generated_at: Utc::now().to_rfc3339(),
+        current_date: None,
+        elapsed_ms: to_u64(total_duration_ms),
+        plan: display_path(project_dir, plan_path),
+        route_args: Some(display_path(project_dir, route_args_path)),
+        report_dir: None,
+        report_summary: None,
+        markdown_receipt: display_path(project_dir, &path),
+        changed_routes: routes_from_route_args(&route_args),
+        source_ids,
+        widths: route_qa_widths(),
+        commands: receipt_commands(project_dir, results),
+        superseded_failures: if ok {
+            superseded_failure_receipts(project_dir, receipt_dir, "tool-refresh")
+        } else {
+            Vec::new()
+        },
+    };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
+    fs::write(&json_path, serde_json::to_string_pretty(&json_receipt)?)
+        .with_context(|| format!("could not write {}", json_path.display()))?;
     println!("Receipt: {}", display_path(project_dir, &path));
+    println!("Receipt JSON: {}", display_path(project_dir, &json_path));
     Ok(())
 }
 
@@ -2607,6 +2710,7 @@ fn write_page_receipt(
 ) -> Result<()> {
     let timestamp = Utc::now().format("%Y-%m-%dT%H-%M-%SZ");
     let path = receipt_dir.join(format!("{}-page-refresh-closeout.md", timestamp));
+    let json_path = receipt_dir.join(format!("{}-page-refresh-closeout.json", timestamp));
     let mut content = String::new();
     content.push_str("# AiPedia Runner Page Refresh Closeout\n\n");
     content.push_str(&format!(
@@ -2662,6 +2766,7 @@ fn write_page_receipt(
                 "ledger generate"
                     | "ledger check"
                     | "frontmatter changed"
+                    | "date consistency changed"
                     | "provenance changed"
                     | "coverage quality changed"
                     | "em dash guard"
@@ -2706,9 +2811,141 @@ fn write_page_receipt(
         }
     }
 
+    let json_receipt = CloseoutReceiptJson {
+        schema_version: "aipedia.closeout-receipt.v1".to_string(),
+        workflow: "page-refresh".to_string(),
+        status: if ok { "passed" } else { "failed" }.to_string(),
+        generated_at: Utc::now().to_rfc3339(),
+        current_date: Some(plan.current_date.clone()),
+        elapsed_ms: to_u64(total_duration_ms),
+        plan: display_path(project_dir, plan_path),
+        route_args: None,
+        report_dir: Some(display_path(project_dir, report_dir)),
+        report_summary: Some(display_path(project_dir, report_summary_path)),
+        markdown_receipt: display_path(project_dir, &path),
+        changed_routes: sorted_unique(
+            plan.commands
+                .content_routes
+                .iter()
+                .chain(plan.commands.interactive_routes.iter())
+                .cloned()
+                .collect(),
+        ),
+        source_ids: sorted_unique(
+            plan.batch
+                .iter()
+                .flat_map(|page| page.source_ids.iter().cloned())
+                .collect(),
+        ),
+        widths: route_qa_widths(),
+        commands: receipt_commands(project_dir, results),
+        superseded_failures: if ok {
+            superseded_failure_receipts(project_dir, receipt_dir, "page-refresh")
+        } else {
+            Vec::new()
+        },
+    };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
+    fs::write(&json_path, serde_json::to_string_pretty(&json_receipt)?)
+        .with_context(|| format!("could not write {}", json_path.display()))?;
     println!("Receipt: {}", display_path(project_dir, &path));
+    println!("Receipt JSON: {}", display_path(project_dir, &json_path));
     Ok(())
+}
+
+fn receipt_commands(project_dir: &Path, results: &[CommandResult]) -> Vec<CloseoutReceiptCommand> {
+    results
+        .iter()
+        .map(|result| CloseoutReceiptCommand {
+            label: result.label.clone(),
+            status: result.status,
+            elapsed_ms: to_u64(result.duration_ms),
+            details_path: result
+                .details_path
+                .as_ref()
+                .map(|path| display_path(project_dir, path)),
+        })
+        .collect()
+}
+
+fn routes_from_route_args(input: &str) -> Vec<String> {
+    let words = split_shell_words(input);
+    let mut routes = Vec::new();
+    let mut index = 0;
+    while index < words.len() {
+        if words[index] == "--route" {
+            if let Some(route) = words.get(index + 1) {
+                routes.push(route.clone());
+            }
+            index += 2;
+            continue;
+        }
+        index += 1;
+    }
+    sorted_unique(routes)
+}
+
+fn route_qa_widths() -> Vec<u16> {
+    vec![319, 360, 390, 430, 768, 1024, 1366]
+}
+
+fn sorted_unique(values: Vec<String>) -> Vec<String> {
+    let mut set = BTreeSet::new();
+    for value in values {
+        let trimmed = value.trim();
+        if !trimmed.is_empty() {
+            set.insert(trimmed.to_string());
+        }
+    }
+    set.into_iter().collect()
+}
+
+fn to_u64(value: u128) -> u64 {
+    value.try_into().unwrap_or(u64::MAX)
+}
+
+fn superseded_failure_receipts(
+    project_dir: &Path,
+    receipt_dir: &Path,
+    workflow: &str,
+) -> Vec<SupersededFailureReceipt> {
+    let mut failures = Vec::new();
+    let Ok(entries) = fs::read_dir(receipt_dir) else {
+        return failures;
+    };
+    for entry in entries.flatten() {
+        let path = entry.path();
+        if !path.extension().is_some_and(|ext| ext == "json") {
+            continue;
+        }
+        let Ok(raw) = fs::read_to_string(&path) else {
+            continue;
+        };
+        let Ok(value) = serde_json::from_str::<serde_json::Value>(&raw) else {
+            continue;
+        };
+        let receipt_workflow = value
+            .get("workflow")
+            .and_then(|item| item.as_str())
+            .unwrap_or_default();
+        let status = value
+            .get("status")
+            .and_then(|item| item.as_str())
+            .unwrap_or_default();
+        if receipt_workflow != workflow || status != "failed" {
+            continue;
+        }
+        failures.push(SupersededFailureReceipt {
+            receipt: display_path(project_dir, &path),
+            status: status.to_string(),
+            generated_at: value
+                .get("generated_at")
+                .and_then(|item| item.as_str())
+                .map(ToString::to_string),
+        });
+    }
+    failures.sort_by(|left, right| left.receipt.cmp(&right.receipt));
+    failures
 }
 
 fn split_shell_words(input: &str) -> Vec<String> {
@@ -2796,6 +3033,7 @@ mod tests {
                 path: "src/pages/compare/build.astro".to_string(),
                 last_updated: "2026-06-01".to_string(),
                 route_qa_risk: "interactive-noindex".to_string(),
+                source_ids: vec!["compare-source".to_string()],
             }],
             commands: PageCommands {
                 content_routes: vec!["/".to_string(), "/compare/".to_string()],
@@ -2812,6 +3050,19 @@ mod tests {
                 }],
                 integrator_brief: None,
             }),
+        }
+    }
+
+    fn sample_tool_plan() -> Plan {
+        Plan {
+            batch: vec![Tool {
+                slug: "alpha-tool".to_string(),
+                path: "src/content/tools/alpha-tool.md".to_string(),
+                route: "/tools/alpha-tool/".to_string(),
+                category_route: Some("/categories/ai-automation/".to_string()),
+                source_ids: vec!["alpha-pricing".to_string()],
+            }],
+            agent_briefs: None,
         }
     }
 
@@ -2918,6 +3169,160 @@ mod tests {
         assert_eq!(
             fs::read_to_string(interactive_path).expect("interactive route args should exist"),
             "--route /compare/build/"
+        );
+
+        fs::remove_dir_all(dir).ok();
+    }
+
+    #[test]
+    fn tool_closeout_writes_structured_receipt_json() {
+        let dir = temp_runner_dir("tool-receipt");
+        let project_dir = dir.join("project");
+        let receipt_dir = project_dir.join("receipts");
+        fs::create_dir_all(&receipt_dir).expect("receipt dir should exist");
+        let plan_path = project_dir.join("tool-refresh-batch.json");
+        let route_args_path = project_dir.join("route-args.txt");
+        fs::write(
+            &route_args_path,
+            "--route /tools/alpha-tool/ --route /categories/ai-automation/",
+        )
+        .expect("route args should write");
+        let plan = sample_tool_plan();
+        let results = vec![CommandResult {
+            label: "date consistency changed".to_string(),
+            status: Some(0),
+            duration_ms: 25,
+            details_path: None,
+        }];
+
+        write_receipt(
+            &project_dir,
+            &receipt_dir,
+            &plan_path,
+            &route_args_path,
+            &plan,
+            &results,
+            true,
+            250,
+        )
+        .expect("receipt should write");
+
+        let json_path = fs::read_dir(&receipt_dir)
+            .expect("receipt dir should read")
+            .flatten()
+            .map(|entry| entry.path())
+            .find(|path| {
+                path.to_string_lossy()
+                    .ends_with("-tool-refresh-closeout.json")
+            })
+            .expect("json receipt should exist");
+        let receipt: serde_json::Value =
+            serde_json::from_str(&fs::read_to_string(json_path).expect("json receipt should read"))
+                .expect("json receipt should parse");
+
+        assert_eq!(receipt["schema_version"], "aipedia.closeout-receipt.v1");
+        assert_eq!(receipt["workflow"], "tool-refresh");
+        assert_eq!(receipt["status"], "passed");
+        assert_eq!(receipt["elapsed_ms"], 250);
+        assert!(receipt["changed_routes"]
+            .as_array()
+            .expect("routes should be an array")
+            .iter()
+            .any(|route| route.as_str() == Some("/tools/alpha-tool/")));
+        assert!(receipt["source_ids"]
+            .as_array()
+            .expect("source IDs should be an array")
+            .iter()
+            .any(|source_id| source_id.as_str() == Some("alpha-pricing")));
+        assert!(receipt["widths"]
+            .as_array()
+            .expect("widths should be an array")
+            .iter()
+            .any(|width| width.as_u64() == Some(319)));
+
+        fs::remove_dir_all(dir).ok();
+    }
+
+    #[test]
+    fn page_closeout_json_records_routes_widths_sources_and_superseded_failures() {
+        let dir = temp_runner_dir("page-receipt");
+        let project_dir = dir.join("project");
+        let receipt_dir = project_dir.join("receipts");
+        let report_dir = project_dir.join("reports");
+        fs::create_dir_all(&receipt_dir).expect("receipt dir should exist");
+        fs::create_dir_all(&report_dir).expect("report dir should exist");
+        fs::write(
+            receipt_dir.join("2026-06-28T00-00-00Z-page-refresh-closeout.json"),
+            r#"{"schema_version":"aipedia.closeout-receipt.v1","workflow":"page-refresh","status":"failed","generated_at":"2026-06-28T00:00:00Z"}"#,
+        )
+        .expect("old failed receipt should write");
+        let plan_path = project_dir.join("page-refresh-batch.json");
+        let report_summary_path = project_dir.join("page-report-summary.md");
+        let plan = sample_page_plan(None);
+        let report_summary = ReportSummary {
+            expected: 0,
+            parsed: Vec::new(),
+            missing: Vec::new(),
+            invalid: Vec::new(),
+        };
+        let results = vec![CommandResult {
+            label: "content route qa".to_string(),
+            status: Some(0),
+            duration_ms: 100,
+            details_path: Some(project_dir.join("timings/content-route-qa.json")),
+        }];
+
+        write_page_receipt(
+            &project_dir,
+            &receipt_dir,
+            &plan_path,
+            &report_dir,
+            &report_summary_path,
+            &plan,
+            &report_summary,
+            &results,
+            true,
+            500,
+        )
+        .expect("page receipt should write");
+
+        let json_path = fs::read_dir(&receipt_dir)
+            .expect("receipt dir should read")
+            .flatten()
+            .map(|entry| entry.path())
+            .find(|path| {
+                let name = path.file_name().unwrap_or_default().to_string_lossy();
+                name.ends_with("-page-refresh-closeout.json")
+                    && !name.starts_with("2026-06-28T00-00-00Z")
+            })
+            .expect("new json receipt should exist");
+        let receipt: serde_json::Value =
+            serde_json::from_str(&fs::read_to_string(json_path).expect("json receipt should read"))
+                .expect("json receipt should parse");
+
+        assert_eq!(receipt["workflow"], "page-refresh");
+        assert_eq!(receipt["current_date"], "2026-06-26");
+        assert!(receipt["changed_routes"]
+            .as_array()
+            .expect("routes should be an array")
+            .iter()
+            .any(|route| route.as_str() == Some("/compare/build/")));
+        assert!(receipt["source_ids"]
+            .as_array()
+            .expect("source IDs should be an array")
+            .iter()
+            .any(|source_id| source_id.as_str() == Some("compare-source")));
+        assert!(receipt["widths"]
+            .as_array()
+            .expect("widths should be an array")
+            .iter()
+            .any(|width| width.as_u64() == Some(1366)));
+        assert_eq!(
+            receipt["superseded_failures"]
+                .as_array()
+                .expect("superseded failures should be an array")
+                .len(),
+            1
         );
 
         fs::remove_dir_all(dir).ok();
