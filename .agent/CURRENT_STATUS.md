@@ -20,6 +20,7 @@ Old specs, archived plans, local ignored docs, and stale chat history are not ca
 ## Current State
 
 - Branch: `master`. Active goal is the affiliate conversion page buildout across tools with configured affiliate links. The June 27 strict 3-day whole-site refresh target is complete. Latest affiliate slice adds `/guides/sanebox-pricing-for-heavy-inboxes/` and demotes SaneBox CTAs to official-link only until referral attribution and current terms are manually validated. This pass also hardened source health and commercial CTA auditing after finding LinkedIn source false negatives and a retired SaneBox referral risk.
+- Root `DESIGN.md` now defines AiPedia's agent-readable visual identity contract, backed by `npm run design:lint` using `@google/design.md@0.3.0`. `check:smart` routes `DESIGN.md` through the existing Phase 3 design-token surface.
 - Root project orientation is cleaned up and pushed: `INDEX.md` is the LLM-readable entrypoint, tracked specialist agents live under `.agent/specialists/`, `.agents/` remains gitignored local runtime state, and the former `.Agents/` root folder is retired.
 - Specialist library now includes `expert-project-manager`, `agentic-workflow-software-engineer`, and `master-mathematician-coding-expert`.
 - The TanStack rebuild is not active.

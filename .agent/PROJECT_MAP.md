@@ -4,7 +4,7 @@
 
 AiPedia is an Astro site. Editorial source lives under `src/content/`; route templates, layouts, components, styles, data, and public assets live under `src/` and `public/`.
 
-Read root `INDEX.md` first for the LLM-readable repo map. Then read `.agent/CURRENT_STATUS.md` for the current branch state, recent completions, and active work. Then read `.agent/PLANS.md` for active lanes, `.agent/WORK_LOG.md` for landed milestones, `.agent/LOOPS.md` for repeatable operating loops, `.agent/OPERATING_RULES.md` for the committed operating rules, and `workflows/README.md` when running a repeatable workflow. The `.agent/` stack replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
+Read root `INDEX.md` first for the LLM-readable repo map. Then read `.agent/CURRENT_STATUS.md` for the current branch state, recent completions, and active work. Then read `.agent/PLANS.md` for active lanes, `.agent/WORK_LOG.md` for landed milestones, `.agent/LOOPS.md` for repeatable operating loops, `.agent/OPERATING_RULES.md` for the committed operating rules, `DESIGN.md` before rendered UI or token work, and `workflows/README.md` when running a repeatable workflow. The `.agent/` stack replaces the ignored root `AGENTS.md` as the reliable instruction source for clean worktrees.
 
 Use the smallest verification command that matches the changed surface. Start with `npm run check:smart` to get a scoped recommendation.
 
@@ -45,7 +45,7 @@ Use the smallest verification command that matches the changed surface. Start wi
 - Category buyer path: `src/content/categories/`, `src/lib/content-models/decision-pick.ts`, `src/layouts/CategoryLayout.astro`, and `src/pages/categories/[slug].astro`; canonical model `DecisionPick`; smoke `/categories/ai-coding/`.
 - Compare decision surfaces: `src/content/comparisons/`, `src/layouts/ComparisonLayout.astro`, compare routes, `DecisionCard.astro`, and compare card CSS; canonical models `DecisionPick`, `ToolPageModel`, and `EvidenceRailModel`; smoke `/compare/` and `/compare/chatgpt-vs-claude/`.
 - Motion controller: `src/lib/motion-controller.ts`; canonical model `MotionController`; smoke reduced-motion behavior on `/` and `/search/`.
-- Tokens/CSS: `src/styles/tokens.css` and related route token CSS; canonical model `DesignTokens`; smoke `/`, `/search/`, and `/tools/claude/`.
+- Tokens/CSS/design contract: `DESIGN.md`, `src/styles/tokens.css`, and related route token CSS; canonical model `DesignTokens`; smoke `/`, `/search/`, and `/tools/claude/`.
 
 Use `npm run check:smart -- --json --path <changed-file>` to see the selected Phase 3 surface IDs, required checks, and browser smoke routes. Generated-model/provenance work must keep `npm run audit:generated-models -- --json` reporting `provenance.inline_only_queue` entries for inline or evidence-only source carriers.
 

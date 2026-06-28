@@ -5,6 +5,7 @@ import test from 'node:test';
 
 const ROOT = process.cwd();
 const tokens = () => readFileSync(join(ROOT, 'src/styles/tokens.css'), 'utf8');
+const designContract = () => readFileSync(join(ROOT, 'DESIGN.md'), 'utf8');
 
 function assertAlias(source, alias, target) {
   assert.match(
@@ -52,6 +53,26 @@ test('canonical token file defines required semantic tokens', () => {
     '--z-moat',
   ]) {
     assert.ok(source.includes(token), `missing ${token}`);
+  }
+});
+
+test('root DESIGN.md mirrors the canonical AiPedia visual contract', () => {
+  const source = designContract();
+  for (const required of [
+    'name: "AiPedia design contract"',
+    'primary: "#F97316"',
+    'background-dark: "#0C0A09"',
+    'surface-dark: "#1C1917"',
+    'background-light: "#FAFAF9"',
+    'fontFamily: "Metropolis, sans-serif"',
+    'control: "8px"',
+    'card: "8px"',
+    'panel: "12px"',
+    'Read this file before editing rendered pages',
+    'src/styles/tokens.css',
+    'npm run design:lint',
+  ]) {
+    assert.ok(source.includes(required), `DESIGN.md missing ${required}`);
   }
 });
 
@@ -115,6 +136,8 @@ test('scoped token files consume canonical aliases where values are exact', () =
     ['--gt-muted', '--color-text-secondary'],
     ['--gt-subtle', '--color-text-muted'],
     ['--gt-line', '--color-surface-muted'],
+    ['--gt-radius', '--radius-panel'],
+    ['--gt-radius-sm', '--radius-card'],
     ['--gt-radius-pill', '--radius-pill'],
     ['--gt-text-body', '--font-size-base'],
   ]) {

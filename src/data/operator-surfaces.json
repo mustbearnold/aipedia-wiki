@@ -165,10 +165,10 @@
       "id": "phase3-tokens-css",
       "label": "Phase 3 design tokens and CSS",
       "category": "runtime",
-      "checks": ["design-tokens", "visual-smoke"],
+      "checks": ["design-tokens", "design-contract", "visual-smoke"],
       "routeTypes": ["global CSS", "visual route"],
       "canonicalModel": "DesignTokens",
-      "requiredChecks": ["design-tokens", "visual-smoke"],
+      "requiredChecks": ["design-tokens", "design-contract", "visual-smoke"],
       "smokeRoutes": [
         { "route": "/", "command": "npm run smoke:visual", "focus": "homepage token application" },
         { "route": "/search/", "command": "npm run smoke:visual", "focus": "search token application" },
@@ -176,7 +176,7 @@
       ],
       "auditImpact": "Token/CSS edits require token script tests and visual smoke; provenance is unaffected.",
       "match": {
-        "files": ["src/styles/tokens.css", "tests/scripts/design-tokens.test.mjs"],
+        "files": ["DESIGN.md", "src/styles/tokens.css", "tests/scripts/design-tokens.test.mjs"],
         "prefixes": ["src/styles/"]
       }
     },
@@ -365,6 +365,10 @@
       {
         "checks": ["search-catalog", "tool-page-model", "decision-pick", "motion-controller", "design-tokens"],
         "commands": ["npm run test:scripts"]
+      },
+      {
+        "checks": ["design-contract"],
+        "commands": ["npm run design:lint"]
       },
       {
         "categories": ["content"],

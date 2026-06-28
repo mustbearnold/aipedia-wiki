@@ -329,8 +329,15 @@ test('check-smart routes Phase 3 model, category, motion, and token surfaces', (
   const tokenPlan = planForPaths(['src/styles/tokens.css']);
   assert.ok(tokenPlan.surfaces.some((surface) => surface.id === 'phase3-tokens-css'));
   assert.ok(tokenPlan.checks.includes('design-tokens'));
+  assert.ok(tokenPlan.checks.includes('design-contract'));
+  assert.ok(tokenPlan.commands.includes('npm run design:lint'));
   assert.ok(tokenPlan.commands.includes('npm run test:scripts'));
   assert.ok(tokenPlan.commands.includes('npm run smoke:visual'));
+
+  const contractPlan = planForPaths(['DESIGN.md']);
+  assert.ok(contractPlan.surfaces.some((surface) => surface.id === 'phase3-tokens-css'));
+  assert.ok(contractPlan.checks.includes('design-contract'));
+  assert.ok(contractPlan.commands.includes('npm run design:lint'));
 });
 
 test('check-smart points browser checks at fresh fast-build output after build:fast', () => {

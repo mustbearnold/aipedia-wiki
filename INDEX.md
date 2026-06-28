@@ -10,8 +10,9 @@ AiPedia is an Astro-based AI tools wiki and buying decision engine. The public s
 2. `.agent/PLANS.md` for active or immediately resumable ExecPlans.
 3. `.agent/PROJECT_MAP.md` for detailed surface ownership and verification routing.
 4. `.agent/OPERATING_RULES.md` for source, page freshness, layout, SEO, affiliate, and done criteria.
-5. `workflows/README.md` when running a repeatable workflow.
-6. `.agent/specialists/README.md` when using a saved project-local specialist agent.
+5. `DESIGN.md` before editing rendered pages, shared components, visual hierarchy, route CSS, or design tokens.
+6. `workflows/README.md` when running a repeatable workflow.
+7. `.agent/specialists/README.md` when using a saved project-local specialist agent.
 
 Root `AGENTS.md` can exist in local sessions, but the committed `.agent/` stack is the reliable project memory for clean clones.
 
@@ -30,6 +31,7 @@ src/components/           Reusable UI, SEO, and decision components.
 src/data/                 Source registry, manifests, policies, generated data.
 src/lib/                  Content models, search catalog, shared runtime logic.
 src/styles/               Design tokens and route styles.
+DESIGN.md                 Agent-readable visual identity and consistency contract.
 public/logos/tools/       Canonical tool logos.
 public/og/                Generated Open Graph images.
 scripts/                  Audits, guards, generators, and operator tooling.

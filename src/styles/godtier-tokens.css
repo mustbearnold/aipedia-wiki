@@ -36,9 +36,9 @@
   --gt-warn-rgb: 251, 191, 36;
 
   /* Radii */
-  --gt-radius: 14px;
-  --gt-radius-sm: 10px;
-  --gt-radius-pill: var(--radius-pill);
+  --gt-radius: var(--radius-panel, 12px);
+  --gt-radius-sm: var(--radius-card, 8px);
+  --gt-radius-pill: var(--radius-pill, 999px);
 
   /* Type scale */
   --gt-text-meta: 12px;

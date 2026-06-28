@@ -6,6 +6,8 @@ Astro source for aipedia.wiki, an AI tools encyclopedia and comparison system.
 
 Start with `INDEX.md` for the LLM-readable project map, then `.agent/CURRENT_STATUS.md` for the plain-English current state. Use `.agent/PLANS.md` for active work, `.agent/WORK_LOG.md` for completed major work, `.agent/PROJECT_MAP.md` for deeper orientation, and `.agent/OPERATING_RULES.md` for the repo rules.
 
+Read `DESIGN.md` before editing rendered pages, shared components, route CSS, visual hierarchy, or design tokens.
+
 ## Commands
 
 Use the smallest verification command that matches the change.
@@ -13,6 +15,7 @@ Use the smallest verification command that matches the change.
 ```bash
 npm ci
 npm run check:smart
+npm run design:lint
 npm run check:quick
 npm run ops:dashboard
 npm run loop:system
@@ -34,6 +37,7 @@ npm run agents:backup
 ```
 
 - `npm run check:smart`: recommends the smallest safe verification set for the current diff; use `npm run check:smart:run` to execute it.
+- `npm run design:lint`: validates the root `DESIGN.md` visual contract with the pinned Google Labs design.md CLI.
 - `npm run check:quick`: no-build loop for script/tooling changes; runs script tests, command-surface audit, and bounded asset checks.
 - `npm run ops:dashboard`: read-only operational dashboard for branch state, dirty worktrees, open PRs/issues, and optional saved audit output.
 - `npm run loop:system`: lists the registered AiPedia operating loops; use `npm run loop:all -- --json` for a read-only loop review.

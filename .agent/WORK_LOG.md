@@ -1,5 +1,14 @@
 # AiPedia Work Log
 
+### 2026-06-28: Root DESIGN.md Visual Contract
+
+- Status: Verified locally.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Added root `DESIGN.md` as the agent-readable AiPedia visual identity and consistency contract. Added pinned `npm run design:lint` using `@google/design.md@0.3.0`, routed `DESIGN.md` through the Phase 3 design-token surface in `check:smart`, and updated the design-token/check-smart tests plus root and agent orientation docs.
+- Verification: `npm run design:lint`; `npm exec --yes --package=node@24 -- node --test tests/scripts/design-tokens.test.mjs tests/scripts/check-smart.test.mjs`; `npm run audit:commands`; `npm run --silent check:smart -- --json --path DESIGN.md`; `npm run check:quick`; `npm run build:fast`; `npm run smoke:visual`; `git diff --check`; changed-file em dash scan.
+- Residual risks: The Google Labs design.md CLI is still alpha. The repo pins v0.3.0 for linting and keeps local tests around the most important AiPedia contract fields so future CLI drift is not the only guard.
+
 ### 2026-06-28: Master Mathematician and Coding Expert Specialist
 
 - Status: Verified locally.

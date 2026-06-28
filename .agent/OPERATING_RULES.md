@@ -18,6 +18,8 @@ Mobile-first means the mobile page must be complete, crawlable, fast, and decisi
 
 Every rendered page must obey layout precision. Cards, boxes, rails, lists, headings, CTAs, source chips, and text blocks must sit on a clear grid with consistent gutters, padding, border radii, and visual weight. Text density must match the container: compact cards get one-line or tightly clamped copy, detail pages get readable line length, and repeated cards preserve consistent ratios between heading, body, metadata, and CTA. No text may spill out of a card, collide with neighboring content, wrap into broken letter stacks, create horizontal overflow, or leave awkward orphan labels. If a layout looks asymmetric, cramped, stretched, or mathematically sloppy on any checked viewport, fix it before shipping.
 
+`DESIGN.md` is the agent-readable visual identity contract. Read it before changing rendered pages, layouts, shared components, route CSS, design tokens, cards, CTAs, or visual hierarchy. The CSS implementation source of truth remains `src/styles/tokens.css` and shared layouts/components; update `DESIGN.md` when visual rules or tokens materially change.
+
 ## Current facts and source discipline
 
 When any website page, template, content record, source registry entry, pricing fact, model fact, ranking, recommendation, affiliate surface, or commercial claim is updated, verify volatile facts against current sources as of the actual current date before editing or publishing.
@@ -95,8 +97,9 @@ Before editing:
 
 1. Inspect the relevant files, data models, routes, templates, components, and tests.
 2. Identify the page type or system being changed.
-3. Identify all affected top-layer pages, parent hubs, archive pages, sitemap or LLM surfaces, internal-link blocks, and navigation surfaces that summarize or route to the changed content.
-4. Check whether the change affects SEO, schema, affiliate tracking, mobile UX, performance, or data integrity.
+3. For rendered UI, style, component, or token work, read `DESIGN.md` and identify the existing visual contract being touched.
+4. Identify all affected top-layer pages, parent hubs, archive pages, sitemap or LLM surfaces, internal-link blocks, and navigation surfaces that summarize or route to the changed content.
+5. Check whether the change affects SEO, schema, affiliate tracking, mobile UX, performance, or data integrity.
 5. For complex work, create or update an ExecPlan in `.agent/PLANS.md` unless the task scope forbids touching that file.
 
 During implementation:
