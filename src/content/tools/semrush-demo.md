@@ -10,7 +10,7 @@ pricing_model: paid
 price_range: "$139.95-$499.95/month"
 status: acquired
 launched: 2008-01
-last_updated: 2026-06-27
+last_updated: 2026-06-28
 last_verified: 2026-06-27
 update_frequency: archived
 noindex: true
@@ -44,6 +44,7 @@ facts:
     source_label: "Semrush SEO Toolkit pricing and limits"
     source_id: semrush-pricing
     verified_at: 2026-06-27
+    next_review_at: 2026-07-27
     volatility: high
     confidence: high
   lifecycle_status:

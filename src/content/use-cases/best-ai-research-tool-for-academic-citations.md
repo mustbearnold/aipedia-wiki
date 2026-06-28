@@ -3,8 +3,8 @@ type: use-case
 slug: best-ai-research-tool-for-academic-citations
 title: "Best AI Research Tool for Academic Citations (June 2026)"
 seo_title: "Best AI Research Tool for Academic Citations: Consensus, Elicit, Semantic Scholar (2026)"
-meta_description: "Verified June 27, 2026: the best AI research tools for source-backed academic citations. Consensus, Elicit, Semantic Scholar, Scite, and honest picks by use case."
-description: "June 10, 2026 buyer guide to the best AI research tools that surface real, citable academic sources, with picks for grad students, faculty, and policy researchers."
+meta_description: "Verified June 28, 2026: the best AI research tools for source-backed academic citations. Consensus, Elicit, Semantic Scholar, Scite, and honest picks by use case."
+description: "June 28, 2026 buyer guide to the best AI research tools that surface real, citable academic sources, with picks for grad students, faculty, and policy researchers."
 tools_mentioned: ["consensus", "elicit", "semantic-scholar"]
 intent_type: specific-workflow
 primary_tool: consensus
@@ -49,8 +49,8 @@ guide_picks:
   best_overall:
     tool: consensus
     label: "Best for citation-backed search"
-    plan: "Consensus Premium"
-    reason: "Consensus parses the abstracts of 200M+ papers and returns answers with paper-level citations rather than synthesizing a paragraph that looks correct but cannot be verified. The right default for any researcher who needs to defend a claim with a paper."
+    plan: "Consensus Pro; Deep only for frequent literature-review passes"
+    reason: "Consensus searches a 220M+ paper corpus and returns answers with paper-level citations rather than synthesizing a paragraph that looks correct but cannot be verified. Pro is the practical paid default for routine cited answers; Deep is for repeated literature-review work."
     sources:
       - label: "Consensus product"
         url: "https://consensus.app/"
@@ -75,14 +75,18 @@ guide_picks:
       - label: "Elicit pricing"
         url: "https://elicit.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-27
-last_verified: 2026-06-27
+last_updated: 2026-06-28
+last_verified: 2026-06-28
 update_frequency: monthly
 related:
   - href: /tools/consensus/
     title: "Consensus review"
     description: "Full editorial review of the citation-backed research tool."
     kind: tool
+  - href: /guides/consensus-pricing-for-students-and-researchers/
+    title: "Consensus Pricing for Students and Researchers"
+    description: "Plan guide for Free, Pro, Deep, Teams, and Enterprise."
+    kind: guide
   - href: /workflows/researcher-stack/
     title: "Independent Researcher AI Stack"
     description: "Consensus plus Elicit, Descript, and Semantic Scholar."
@@ -103,7 +107,7 @@ A graduate student writing a thesis, a researcher submitting a grant, or a polic
 
 The right AI research tools for citation work do not synthesize answers from a model's training data. They retrieve, parse, and cite actual papers. This guide picks honestly across the three workflows that actually matter: citation-backed question answering, structured literature review, and free academic search.
 
-AiPedia verified pricing and capabilities on June 27, 2026. The short version: **Consensus** wins citation-backed search because the entire product is built around grounding answers in retrieved papers. **Elicit** wins structured literature reviews. **Semantic Scholar** is the right free fallback for paper discovery without AI summarization.
+AiPedia verified pricing and capabilities on June 28, 2026. The short version: **Consensus** wins citation-backed search because the entire product is built around grounding answers in retrieved papers. **Elicit** wins structured literature reviews. **Semantic Scholar** is the right free fallback for paper discovery without AI summarization.
 
 ## Quick Verdict
 
@@ -138,9 +142,9 @@ Three forces make this a real category, not just "use Google Scholar":
 
 [Consensus](/tools/consensus/) wins citation-backed search because it does the one job that ChatGPT cannot do safely: return an answer to a research question with the actual supporting papers cited.
 
-The product parses the abstracts of 200M+ scientific papers. When you ask "Does intermittent fasting improve cardiovascular outcomes," it retrieves the most relevant papers, applies a quality filter (study type, sample size, journal tier), and returns an answer that points to the underlying papers. Each claim is traceable.
+The product searches a 220M+ paper corpus. When you ask "Does intermittent fasting improve cardiovascular outcomes," it retrieves the most relevant papers, applies a quality filter (study type, sample size, journal tier), and returns an answer that points to the underlying papers. Each claim is traceable.
 
-**Best plan:** Consensus Premium unlocks the heavier-use features and removes free-tier query limits. The free tier is enough to test the workflow.
+**Best plan:** Consensus Pro is the practical paid default for routine citation-backed research. Deep is for frequent literature-review users who can use 200 Deep reviews per month. The free tier is enough to test the workflow.
 
 **Why it wins:**
 
@@ -156,7 +160,7 @@ The product parses the abstracts of 200M+ scientific papers. When you ask "Does 
 - Coverage is excellent for medicine, life sciences, psychology. Less strong in humanities, math, theoretical physics where peer-reviewed paper density is lower or formats differ.
 - The Consensus Meter is informative but not a substitute for understanding the literature yourself. Use it as a starting point.
 
-[Try Consensus free →](https://consensus.app/)
+[See the Consensus pricing guide](/guides/consensus-pricing-for-students-and-researchers/) before upgrading beyond a free test.
 
 ## 2. Elicit: Best for Structured Literature Reviews
 
@@ -225,11 +229,11 @@ Not a replacement for Consensus or Elicit. A companion tool when citation contex
 
 ## Pricing Reality
 
-Verified June 27, 2026:
+Verified June 28, 2026:
 
 Use this as buying guidance, not a fixed stack total:
 
-- **Consensus:** Free is enough for occasional checks. Current Consensus help pages list Pro at $15/month or $120/year, and Deep at $65/month or $540/year for heavier literature review use.
+- **Consensus:** Free is enough for occasional checks. Current Consensus help pages list Pro at $15/month or $120/year, and Deep at $65/month or $540/year for heavier literature review use. The dedicated [Consensus pricing guide](/guides/consensus-pricing-for-students-and-researchers/) explains when Deep is worth it.
 - **Elicit:** Free is useful for casual exploration. The current pricing page lists Pro at $49/month and Scale at $169/month for heavier systematic-review and collaboration workflows.
 - **Semantic Scholar:** Still the best free discovery layer when you need search, related work, citation graph context, and API-backed literature metadata without paying for AI synthesis.
 - **Scite.ai:** Keep it as a paid citation-context specialist. Use the current quote/page for final pricing because academic, personal, and institutional access can vary.
@@ -289,18 +293,19 @@ For citation work, yes, structurally. ChatGPT with web search will still synthes
 
 ## Sources
 
-- [Consensus product page](https://consensus.app/), verified 2026-06-27
-- [Consensus Pro subscription](https://help.consensus.app/en/articles/11408820-what-do-you-get-with-a-pro-subscription), verified 2026-06-27
-- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-27
-- [Elicit product page](https://elicit.com/), verified 2026-06-27
-- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-27
-- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-27
-- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-27
-- [Scite.ai](https://scite.ai/), verified 2026-06-27
+- [Consensus product page](https://consensus.app/), verified 2026-06-28
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans), verified 2026-06-28
+- [Consensus product changelog](https://help.consensus.app/en/articles/11954907-consensus-product-changelog), verified 2026-06-28
+- [Elicit product page](https://elicit.com/), verified 2026-06-28
+- [Elicit pricing](https://elicit.com/pricing), verified 2026-06-28
+- [Semantic Scholar](https://www.semanticscholar.org/), verified 2026-06-28
+- [Semantic Scholar API](https://www.semanticscholar.org/product/api), verified 2026-06-28
+- [Scite.ai](https://scite.ai/), verified 2026-06-28
 
 Internal references:
 
 - [Consensus tool page](/tools/consensus/)
+- [Consensus pricing guide](/guides/consensus-pricing-for-students-and-researchers/)
 - [Elicit tool page](/tools/elicit/)
 - [Semantic Scholar tool page](/tools/semantic-scholar/)
 - [Best AI for citations](/guides/best-ai-for-citations/)

@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-for-citations
 title: "Best AI for Citations and References (June 2026)"
 seo_title: "Best AI for Citations: Scite, Perplexity, NotebookLM & Elicit (June 2026)"
-meta_description: "Updated June 26, 2026: Scite is best for citation context, Perplexity for cited web answers, NotebookLM for source-grounded notes, and Elicit for literature-review references."
+meta_description: "Updated June 28, 2026: Scite is best for citation context, Perplexity for cited web answers, NotebookLM for source-grounded notes, and Elicit for literature-review references."
 description: "A current buyer guide to AI tools for citation context, cited research answers, source-grounded notebooks, literature review references, and bibliography workflows."
 tools_mentioned: ["scite", "perplexity", "notebooklm", "elicit", "semantic-scholar", "consensus"]
 guide_picks:
@@ -32,22 +32,22 @@ guide_picks:
       - label: "Elicit pricing"
         url: "https://elicit.com/pricing"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-26
-last_verified: 2026-06-26
+last_updated: 2026-06-28
+last_verified: 2026-06-28
 update_frequency: monthly
 ---
 
 # Best AI for Citations and References (June 2026)
 
-AiPedia verified this guide on 2026-06-26 against current official Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but citation integrity is the priority.
+AiPedia verified this guide on 2026-06-28 against current official Scite, Semantic Scholar, Elicit, Perplexity, NotebookLM, and Consensus sources. Rankings are editorial. AiPedia may earn affiliate revenue from some outbound links, but citation integrity is the priority.
 
-## June 26 Citation Integrity Update
+## June 28 Citation Integrity Update
 
 The safest citation stack is still workflow-based: use Semantic Scholar for free discovery, Scite when citation context changes the argument, Elicit when references belong inside a literature-review workflow, NotebookLM when the answer must stay grounded in a fixed source pack, and Perplexity for current cited web or company-source trails. Do not treat a generic chatbot as a citation authority unless every source is opened and checked.
 
 For June 2026 buying decisions, the main risk is hidden scope. Citation context, literature-review screening, cited web search, source-grounded note synthesis, and final reference formatting are different jobs. Buy the tool that matches the bottleneck instead of paying for a broad research assistant and hoping it handles all of them.
 
-The June 26 recheck keeps the safety rule unchanged: citation tools can shorten discovery and organization, but they do not remove the need to open the paper, verify the quote or claim, and format the final reference from the original source.
+The June 28 recheck keeps the safety rule unchanged: citation tools can shorten discovery and organization, but they do not remove the need to open the paper, verify the quote or claim, and format the final reference from the original source.
 
 ## Quick Verdict
 
@@ -68,7 +68,7 @@ The June 26 recheck keeps the safety rule unchanged: citation tools can shorten 
 - **Produce cited web summaries:** start with [Perplexity](/tools/perplexity/) because it is fast for linked source trails across current web sources. Source quality varies, so prefer primary sources.
 - **Work from a fixed source library:** start with [NotebookLM](/tools/notebooklm/) because answers stay grounded in uploaded or selected sources. It cannot cite what you did not provide.
 - **Build a review bibliography:** start with [Elicit](/tools/elicit/) because citations connect to screening, extraction, and evidence-table workflows. Extraction fields and inclusion criteria still need human review.
-- **Run quick peer-reviewed claim synthesis:** start with [Consensus](/tools/consensus/) as a discovery aid. Do not cite the summary without opening the underlying studies.
+- **Run quick peer-reviewed claim synthesis:** start with [Consensus](/tools/consensus/) as a discovery aid, then use the [Consensus pricing guide](/guides/consensus-pricing-for-students-and-researchers/) if Pro or Deep becomes the plan decision. Do not cite the summary without opening the underlying studies.
 
 ## What To Buy First
 
@@ -147,10 +147,11 @@ NotebookLM is safest for a fixed class source pack, Semantic Scholar is best for
 
 ## Sources
 
-- [Scite](https://scite.ai/) - citation context and Smart Citations product reference, verified 2026-06-26.
-- [Scite pricing](https://scite.ai/pricing) - individual, team, organization, and developer plan reference, verified 2026-06-26.
-- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search and citation graph reference, verified 2026-06-26.
-- [Elicit pricing](https://elicit.com/pricing) - research workflow and plan reference, verified 2026-06-26.
-- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) - cited research/search and team plan reference, verified 2026-06-26.
-- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-06-26.
-- [Consensus](https://consensus.app/) - academic answer engine reference, verified 2026-06-26.
+- [Scite](https://scite.ai/) - citation context and Smart Citations product reference, verified 2026-06-28.
+- [Scite pricing](https://scite.ai/pricing) - individual, team, organization, and developer plan reference, verified 2026-06-28.
+- [Semantic Scholar](https://www.semanticscholar.org/) - free academic search and citation graph reference, verified 2026-06-28.
+- [Elicit pricing](https://elicit.com/pricing) - research workflow and plan reference, verified 2026-06-28.
+- [Perplexity Enterprise pricing](https://www.perplexity.ai/enterprise/pricing) - cited research/search and team plan reference, browser-verified 2026-06-28 after raw HTTP returned 403.
+- [NotebookLM](https://notebooklm.google/) - source-grounded notebook reference, verified 2026-06-28.
+- [Consensus](https://consensus.app/) - academic answer engine reference, verified 2026-06-28.
+- [Consensus subscription plans](https://help.consensus.app/en/articles/10087865-subscription-plans) - Free, Pro, Deep, Teams, and Enterprise plan reference, verified 2026-06-28.

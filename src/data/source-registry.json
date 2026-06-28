@@ -3527,7 +3527,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "consensus-changelog",
@@ -3536,7 +3536,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "consensus-how-it-works",
@@ -3545,7 +3545,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "consensus-official",
@@ -3554,7 +3554,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "consensus-pricing",
@@ -3563,7 +3563,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "consensus-search",
@@ -3572,7 +3572,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "consensus-subscription-plans",
@@ -3581,7 +3581,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "continue-docs",
@@ -4382,7 +4382,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "elicit-plan-docs",
@@ -4400,7 +4400,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "exa-agent-launch",
@@ -9578,7 +9578,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "notebooklm-pricing",
@@ -10172,7 +10172,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "perplexity-max-help",
@@ -11645,7 +11645,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "scite-pricing",
@@ -11654,7 +11654,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "seedance-ai-independent-disclosure",
@@ -11712,7 +11712,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-25",
+      "last_checked": "2026-06-28",
       "id": "semantic-scholar-api",
       "label": "Semantic Scholar API",
       "url": "https://www.semanticscholar.org/product/api",
@@ -11721,7 +11721,7 @@
     },
     {
       "trust_tier": "primary",
-      "last_checked": "2026-06-25",
+      "last_checked": "2026-06-28",
       "id": "semantic-scholar-official",
       "label": "Semantic Scholar homepage",
       "url": "https://www.semanticscholar.org/",

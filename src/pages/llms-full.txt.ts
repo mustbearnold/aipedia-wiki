@@ -3,6 +3,12 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-28 Consensus affiliate conversion content added
+// /guides/consensus-pricing-for-students-and-researchers/ and refreshed
+// Consensus, academic-citation and citation sibling guides, AI Research,
+// homepage, source registry, ledger, and LLM maintenance around Free vs Pro
+// vs Deep, Teams and Enterprise, Deep reviews, Library and Collections, and
+// affiliate disclosure.
 // Refresh metadata: 2026-06-28 Hume AI affiliate conversion content added
 // /guides/hume-ai-pricing-for-emotion-aware-voice-apps/ and refreshed Hume AI,
 // the emotion-aware voice guide, AI Voice, homepage, source registry, ledger,
@@ -520,6 +526,7 @@ export const GET: APIRoute = async () => {
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
   lines.push('');
+  lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/consensus-pricing-for-students-and-researchers/ and refreshed Consensus, academic-citation and citation sibling guides, AI Research, homepage, source registry, ledger, and LLM maintenance around Free vs Pro vs Deep, Teams and Enterprise, Deep reviews, Library and Collections, formal-review alternatives, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/hume-ai-pricing-for-emotion-aware-voice-apps/ and refreshed Hume AI, the emotion-aware voice guide, AI Voice, homepage, source registry, ledger, and LLM maintenance around EVI minutes, Octave characters, concurrency, voice cloning consent, Enterprise compliance packaging, legacy Expression Measurement caution, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/gamma-pricing-for-founders-and-consultants/ and refreshed Gamma, AI Presentation, presentation and consultant sibling guides, source registry, ledger, and LLM maintenance around Free vs Plus vs Pro vs Ultra, monthly credits, card caps, custom domains, API access, checkout caveats, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/argil-pricing-for-ugc-avatar-video-teams/ and refreshed Argil, AI Video, avatar-video sibling guides, source registry, ledger, and LLM maintenance around Classic vs Pro vs Scale, credit burn, Product Showcase, API automation, consent risk, and affiliate disclosure.');

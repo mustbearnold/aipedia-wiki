@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$65/month; Teams/Enterprise custom"
 status: active
 launched: 2021-11
-last_updated: 2026-06-26
-last_verified: 2026-06-26
+last_updated: 2026-06-28
+last_verified: 2026-06-28
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -34,7 +34,7 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-26
+    verified_at: 2026-06-28
     volatility: medium
     confidence: high
   evidence_surface:
@@ -42,25 +42,25 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-26
+    verified_at: 2026-06-28
     volatility: medium
     confidence: high
   pricing_anchor:
-    value: "Freemium research-search product. The June 26 pricing check confirmed Free, Pro at $15/month or $120/year, Deep at $65/month or $540/year, and Team/Enterprise sales paths; the older $11.99 Premium wording is stale."
-    source: "https://consensus.app/pricing"
-    source_label: "Consensus pricing"
-    source_id: consensus-pricing
-    verified_at: 2026-06-26
-    next_review_at: 2026-06-29
+    value: "Freemium research-search product. The June 28 pricing and subscription check confirmed Free, Pro at $15/month or $120/year, Deep at $65/month or $540/year, and Team/Enterprise custom sales paths; the older Premium wording is stale."
+    source: "https://help.consensus.app/en/articles/10087865-subscription-plans"
+    source_label: "Consensus subscription plans help"
+    source_id: consensus-subscription-plans
+    verified_at: 2026-06-28
+    next_review_at: 2026-07-28
     volatility: high
     confidence: high
   deep_search_update:
-    value: "Consensus 2.0 now lets Deep Search run inside Library and Collections, with longer analysis across up to 50 relevant papers and custom outputs such as PICO or SPIDER reviews, reading lists, scoping maps, and custom reports."
+    value: "Consensus 2.0 lets Deep Search run inside Library and Collections, with longer analysis across up to 50 relevant papers and custom outputs such as PICO or SPIDER reviews, reading lists, scoping maps, and custom reports. The June 22 changelog also added collection sharing and expanded uploads for private research documents."
     source: "https://help.consensus.app/en/articles/11954907-consensus-product-changelog"
     source_label: "Consensus product changelog"
     source_id: consensus-changelog
-    verified_at: 2026-06-26
-    next_review_at: 2026-06-29
+    verified_at: 2026-06-28
+    next_review_at: 2026-07-28
     volatility: high
     confidence: high
   workflow_surface:
@@ -68,7 +68,7 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-26
+    verified_at: 2026-06-28
     volatility: medium
     confidence: medium
   watch_out_for:
@@ -76,7 +76,7 @@ facts:
     source: "https://consensus.app"
     source_label: "Consensus official site"
     source_id: consensus-official
-    verified_at: 2026-06-26
+    verified_at: 2026-06-28
     volatility: medium
     confidence: high
 tags: [research, academic-search, peer-review, evidence-synthesis, science, consensus-meter]
@@ -95,7 +95,7 @@ not_best_for:
   - nuanced interpretation of contested topics
   - users who need full-paper retrieval every time
 quick_answer: >-
-  Consensus is an AI academic search engine indexing 220M+ peer-reviewed papers. The Consensus Meter shows what share of returned studies support, oppose, or qualify a yes/no claim. Free includes limited Pro/Deep use; Pro is $15/month or $120/year for unlimited Pro messages and 15 Deep reviews/month; Deep is $65/month or $540/year for 200 Deep reviews/month. Pick it for fast evidence orientation in scientific and academic literature. Skip for software docs, current events, or high-stakes decisions that require a formal expert review.
+  Consensus is an AI academic search engine indexing 220M+ peer-reviewed papers. The Consensus Meter shows what share of returned studies support, oppose, or qualify a yes/no claim. Free includes limited Pro and Deep use; Pro is $15/month or $120/year for unlimited Pro messages and 15 Deep reviews/month; Deep is $65/month or $540/year for 200 Deep reviews/month. Pick it for fast evidence orientation in scientific and academic literature. Skip for software docs, current events, formal systematic reviews, or high-stakes decisions that require expert review.
 ---
 
 # Consensus
@@ -104,7 +104,7 @@ Consensus is an AI-powered academic search engine built by Consensus Inc. Its cu
 
 Consensus says more than 7 million researchers, students, and professionals use it. Its best fit is questions where the answer lives in peer-reviewed academic literature, not general web pages, software docs, or current events.
 
-June 26, 2026 pricing check: the old `$11.99/mo Premium` language is no longer the safest buyer wording. Consensus now presents a cleaner Free / Pro / Deep ladder, with Pro at `$15/month` or `$120/year` and Deep at `$65/month` or `$540/year`. The June 18 Consensus 2.0 changelog also makes Deep more useful for saved-paper workflows because Deep Search now works inside Library and Collections.
+June 28, 2026 pricing check: the old `$11.99/mo Premium` language is no longer the safest buyer wording. Consensus now presents a cleaner Free / Pro / Deep ladder, with Pro at `$15/month` or `$120/year` and Deep at `$65/month` or `$540/year`. Team and Enterprise plans are custom. The June 18 Consensus 2.0 changelog also makes Deep more useful for saved-paper workflows because Deep Search now works inside Library and Collections, and the June 22 changelog adds collection sharing and expanded uploads for private research documents.
 
 ## System Verdict
 
@@ -121,16 +121,16 @@ June 26, 2026 pricing check: the old `$11.99/mo Premium` language is no longer t
 | **Product type** | AI-powered academic paper search with evidence synthesis |
 | **Papers indexed** | 220M+ peer-reviewed papers; search docs also describe scientific documents from Semantic Scholar, OpenAlex, Consensus's own crawl, and publisher partnerships |
 | **Signature feature** | Consensus Meter (study agreement visualization) |
-| **Free tier** | Basic paper search plus limited Pro/Deep usage; June 26 subscription docs showed 15 Pro messages/month and 3 Deep reviews/month |
+| **Free tier** | Basic paper search plus limited Pro/Deep usage; June 28 subscription docs showed 15 Pro messages/month and 3 Deep reviews/month |
 | **Pro** | $15/month or $120/year; includes unlimited Pro messages and 15 Deep reviews/month |
 | **Deep** | $65/month or $540/year; includes 200 Deep reviews/month |
 | **Teams / Enterprise** | Sales path for teams, labs, departments, and institutions |
 | **Pro features** | Unlimited Pro messages, Study Snapshots, Ask Paper, and a monthly Deep review allowance |
-| **Recent product change** | Deep Search now works inside Library and Collections and can produce custom literature-review outputs |
+| **Recent product change** | Deep Search now works inside Library and Collections and can produce custom literature-review outputs; collection sharing and expanded uploads landed June 22 |
 | **User base** | 7M+ researchers, students, and professionals |
 | **Best-fit coverage** | Scientific and academic questions with dense peer-reviewed literature; weaker for software docs, current events, and sources outside journal literature |
 
-Every data point above was verified against vendor documentation on 2026-06-26. See Sources.
+Every data point above was verified against vendor documentation on 2026-06-28. See Sources.
 
 ## What it actually is
 
@@ -167,7 +167,7 @@ Pricing via [consensus.app/pricing](https://consensus.app/pricing):
 | Deep | $65/mo or $540/yr | 200 Deep reviews/month and the Pro feature set |
 | Teams / Enterprise | Custom | Centralized billing, team/institutional access, admin and higher-volume paths |
 
-Prices verified 2026-06-26 via [Consensus pricing](https://consensus.app/pricing) and the [Consensus subscription plans help page](https://help.consensus.app/en/articles/10087865-subscription-plans).
+Prices verified 2026-06-28 via [Consensus pricing](https://consensus.app/pricing) and the [Consensus subscription plans help page](https://help.consensus.app/en/articles/10087865-subscription-plans).
 
 ## Against the alternatives
 
@@ -191,12 +191,12 @@ Prices verified 2026-06-26 via [Consensus pricing](https://consensus.app/pricing
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [Consensus pricing](https://consensus.app/pricing), the [Consensus subscription plans help page](https://help.consensus.app/en/articles/10087865-subscription-plans), [How Consensus Works](https://help.consensus.app/en/articles/9922673-how-consensus-works), the [Consensus product changelog](https://help.consensus.app/en/articles/11954907-consensus-product-changelog), and [Consensus Search Best Practices](https://consensus.app/home/blog/best-practices/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-28 against [Consensus pricing](https://consensus.app/pricing), the [Consensus subscription plans help page](https://help.consensus.app/en/articles/10087865-subscription-plans), [How Consensus Works](https://help.consensus.app/en/articles/9922673-how-consensus-works), the [Consensus product changelog](https://help.consensus.app/en/articles/11954907-consensus-product-changelog), and [Consensus Search Best Practices](https://consensus.app/home/blog/best-practices/).
 
 ## FAQ
 
 **Is Consensus free?**
-Yes. Free includes basic paper search plus limited AI analysis. The June 26 pricing check found Pro at $15/month or $120/year, and Deep at $65/month or $540/year.
+Yes. Free includes basic paper search plus limited AI analysis. The June 28 pricing check found Pro at $15/month or $120/year, and Deep at $65/month or $540/year.
 
 **How many papers does Consensus index?**
 Consensus says its database covers over 220 million peer-reviewed research papers. Its public search guide says the broader corpus includes scientific documents across domains, primarily peer-reviewed journal articles plus some conference papers and preprints.
@@ -224,4 +224,5 @@ Yes. Consensus ships Teams for research groups and Enterprise for 200+ seat inst
 ## Related
 
 - **Category:** [AI Research](/categories/ai-research/)
+- **Plan guide:** [Consensus Pricing for Students and Researchers](/guides/consensus-pricing-for-students-and-researchers/)
 - **Comparisons:** [Consensus vs Elicit](/compare/consensus-vs-elicit/)

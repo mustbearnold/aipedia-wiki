@@ -3,7 +3,7 @@ type: use-case
 slug: best-ai-tools-for-researchers
 title: "Best AI Tools for Researchers (June 2026)"
 seo_title: "Best AI Tools for Researchers in June 2026: Literature Review, Citations, Source Notebooks & Web Research"
-meta_description: "Updated June 27, 2026: Elicit is best for literature-review workflow, Semantic Scholar is the free academic-search baseline, Perplexity is the cited web research add-on, Claude is best for close reading, and Scite is the citation-context specialist."
+meta_description: "Updated June 28, 2026: Elicit is best for literature-review workflow, Semantic Scholar is the free academic-search baseline, Perplexity is the cited web research add-on, Claude is best for close reading, and Scite is the citation-context specialist."
 description: "A source-backed buyer guide to AI research tools for literature review, paper discovery, citation context, source-grounded notebooks, current web research, and research synthesis."
 tools_mentioned: [elicit, semantic-scholar, perplexity, claude, notebooklm, scite, consensus]
 guide_picks:
@@ -32,7 +32,7 @@ guide_picks:
       - label: "Perplexity Enterprise"
         url: "https://www.perplexity.ai/enterprise"
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-27
+last_updated: 2026-06-28
 last_verified: 2026-06-27
 update_frequency: monthly
 ---
@@ -76,7 +76,7 @@ Best for seeing whether a cited claim is supported, disputed, or merely mentione
 Best when answers should stay grounded in a source library you control. Watch out: it is not a discovery database.
 
 **Claim-level academic Q&A: [Consensus](/tools/consensus/)**
-Best for quick peer-reviewed literature orientation. Watch out: use it as a starting point, not the final conclusion.
+Best for quick peer-reviewed literature orientation. Use the [Consensus pricing guide](/guides/consensus-pricing-for-students-and-researchers/) when deciding between Free, Pro, Deep, Teams, and Enterprise. Watch out: use it as a starting point, not the final conclusion.
 
 ## What To Buy First
 

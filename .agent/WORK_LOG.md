@@ -171,7 +171,7 @@
 
 ### 2026-06-26: Rust Page Refresh Runner
 
-- Status: Complete locally, verified, pending commit and push.
+- Status: Complete, verified, and pushed.
 - Commit: this commit.
 - Branch: `master`.
 - Changed: Added Rust runner support for non-tool page refreshes with `page-plan`, `page-reports`, `page-closeout`, and `page-run` subcommands. Added npm scripts for the new runner path, page worker report aggregation, split content and interactive route QA closeout, current-date environment propagation, per-command timing, and page-refresh receipts. Updated workflow docs and agent status docs so the Rust runner is the default page-refresh orchestration path.
@@ -1185,3 +1185,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Workflow: Expanded `workflows/news-refresh/README.md` from a placeholder into the canonical daily news procedure, covering source discovery, story bar, required surfaces, final verification, and closeout notes.
 - Verification: `node scripts/guard-em-dashes.mjs`, `npm run ledger:pages:check`, and `git diff --check` passed.
 - Next: Run the daily news pass first in the next editorial session, then resume affiliate conversion work after `/news/` and `/` are current.
+
+### 2026-06-28: Consensus Affiliate Conversion Slice
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Added `/guides/consensus-pricing-for-students-and-researchers/` as a plan-decision page for students, labs, clinicians, and research teams choosing Consensus Free, Pro, Deep, Teams, or Enterprise. Refreshed `/tools/consensus/`, academic citation and citation sibling guides, the researcher-tools guide, AI Research, homepage, `/guides/`, `/search/`, LLM surfaces, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+- Freshness repair: Resolved the freshness-loop attention item by adding `next_review_at` to the archived noindex Semrush Demo high-volatility pricing anchor. The freshness queue now reports `high_volatility_missing_next_review=0`.
+- Source notes: Consensus subscription, product, changelog, affiliate redirect, and related research-tool sources were checked against current June 2026 sources. Perplexity Enterprise pricing returned raw HTTP 403 in source audit but loaded in browser, so the related citations guide records it as browser-verified.
+- Verification: `npm run check:news`; `npm run check:frontmatter -- --changed`; `AIPEDIA_CURRENT_DATE=2026-06-28 npm run --silent audit:affiliate-conversion -- --strict --json`; `npm run audit:provenance:changed -- --json`; `npm run audit:guide-picks`; `node scripts/audit-freshness-queue.mjs --json`; selected live-source audit for 15 source IDs; `npm run ledger:pages && npm run ledger:pages:check`; `AIPEDIA_CURRENT_DATE=2026-06-28 npm run guard:check`; `git diff --check`; `npm run typecheck`; `AIPEDIA_CURRENT_DATE=2026-06-28 npm run build:fast`; route QA across affected routes at 319, 360, 390, 430, 768, 1024, and 1366 px with `--allow-noindex`.
+- Next: Rerun the affiliate planner and continue the next approved affiliate cluster.

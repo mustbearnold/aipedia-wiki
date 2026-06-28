@@ -6,6 +6,9 @@
  *   wiki search · portal index · buyer shortcuts · tool records · category rail · news list · TrustPanel
  * Refresh metadata: dateModified: '2026-06-28'
  * Refresh metadata: update_frequency: daily
+ * Refresh metadata: 2026-06-28 homepage inspected after Consensus pricing
+ * guide entered generated guide/search surfaces and AI Research was refreshed.
+ * Homepage recent-guide lanes now include Consensus.
  * Refresh metadata: 2026-06-28 homepage inspected after Gamma pricing guide
  * entered generated guide/search surfaces and Gamma tool-page buying path was
  * refreshed. Homepage remains data-driven.
@@ -935,7 +938,7 @@ const newsThroughLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
 // "Buyer guides checked" date derives from the freshest verification among the
 // guides the refresh module links, so the claim tracks real guide dates rather
 // than a hardcoded one that silently goes stale.
-const refreshGuideSlugs = ['cloudtalk-pricing-for-smb-sales-and-support-teams', 'hume-ai-pricing-for-emotion-aware-voice-apps', 'gamma-pricing-for-founders-and-consultants'];
+const refreshGuideSlugs = ['consensus-pricing-for-students-and-researchers', 'hume-ai-pricing-for-emotion-aware-voice-apps', 'gamma-pricing-for-founders-and-consultants'];
 const toIsoDate = (v: any): string =>
   v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? '').slice(0, 10);
 const refreshGuideIso = allGuides
@@ -1240,10 +1243,10 @@ function newsDateFmt(iso: string): string {
       </div>
 
       <nav class="gt-home-refresh-lanes" aria-label="Freshly verified guide links">
-        <a class="gt-home-refresh-lane" href="/guides/cloudtalk-pricing-for-smb-sales-and-support-teams/">
-          <span>Phone-system plan math</span>
-          <strong>CloudTalk pricing</strong>
-          <small>Essential, Expert, AI add-ons</small>
+        <a class="gt-home-refresh-lane" href="/guides/consensus-pricing-for-students-and-researchers/">
+          <span>Research plan math</span>
+          <strong>Consensus pricing</strong>
+          <small>Free, Pro, Deep, Teams</small>
         </a>
         <a class="gt-home-refresh-lane" href="/guides/hume-ai-pricing-for-emotion-aware-voice-apps/">
           <span>Emotion-aware voice math</span>
