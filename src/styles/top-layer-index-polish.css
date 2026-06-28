@@ -22,7 +22,12 @@
   .gt-news-cards,
   .gt-answer-cards,
   .gt-trend-cards,
-  .gt-wf-cards
+  .gt-wf-cards,
+  .gt-hub-cards,
+  .gt-co-cards,
+  .gt-dead-cards,
+  .gt-report-cards,
+  .sb-role-grid
 )) {
   box-sizing: border-box;
   width: 100%;
@@ -153,7 +158,12 @@
   .gt-news-cards,
   .gt-answer-cards,
   .gt-trend-cards,
-  .gt-wf-cards
+  .gt-wf-cards,
+  .gt-hub-cards,
+  .gt-co-cards,
+  .gt-dead-cards,
+  .gt-report-cards,
+  .sb-role-grid
 ) {
   gap: clamp(12px, 1.5vw, 18px);
 }
@@ -282,7 +292,12 @@
     .gt-news-cards,
     .gt-answer-cards,
     .gt-trend-cards,
-    .gt-wf-cards
+    .gt-wf-cards,
+    .gt-hub-cards,
+    .gt-co-cards,
+    .gt-dead-cards,
+    .gt-report-cards,
+    .sb-role-grid
   )) {
     width: calc(100% + (var(--site-page-gutter) * 2));
     max-width: none;
@@ -298,7 +313,12 @@
     .gt-news-cards,
     .gt-answer-cards,
     .gt-trend-cards,
-    .gt-wf-cards
+    .gt-wf-cards,
+    .gt-hub-cards,
+    .gt-co-cards,
+    .gt-dead-cards,
+    .gt-report-cards,
+    .sb-role-grid
   ) {
     gap: 12px;
   }
