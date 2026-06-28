@@ -3,7 +3,7 @@ type: tool
 slug: hume-ai
 title: Hume AI
 tagline: >-
-  Empathic voice AI with EVI speech-to-speech and Octave TTS. Expression Measurement passed its June 14, 2026 shutdown deadline and should be treated as unavailable unless Hume confirms an exception.
+  Empathic voice AI with EVI speech-to-speech and Octave TTS. The current Hume docs index no longer exposes the old Expression Measurement route, so treat that path as vendor-confirmed migration only.
 category: ai-voice
 company: hume-ai
 url: 'https://www.hume.ai'
@@ -11,8 +11,8 @@ pricing_model: freemium
 price_range: $0-$500/month
 status: active
 launched: 2021-01
-last_updated: 2026-06-25
-last_verified: 2026-06-25
+last_updated: 2026-06-28
+last_verified: 2026-06-28
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -22,7 +22,7 @@ affiliate:
   link: 'https://try.hume.ai/zyy4g71xojh4'
   application_status: approved
   approved_date: 2026-05-02
-  notes: "Approved in PartnerStack per publisher dashboard/user report on 2026-05-02. Marketing-site affiliate link: https://try.hume.ai/zyy4g71xojh4. Direct signup affiliate link: https://try.hume.ai/qj7878adktnk-r9s6xi."
+  notes: "Approved in PartnerStack per publisher dashboard/user report on 2026-05-02. Marketing-site affiliate link: https://try.hume.ai/zyy4g71xojh4. Direct signup affiliate link: https://try.hume.ai/qj7878adktnk-r9s6xi. GET redirect checks passed on 2026-06-28; HEAD requests may return 404 on the PartnerStack redirect."
 scores:
   utility: 8
   value: 8
@@ -34,57 +34,57 @@ facts:
     source: https://www.hume.ai/
     source_label: Hume AI official site
     source_id: hume-ai-official
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-28'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   pricing_anchor:
-    value: Hume AI pricing is API/usage oriented with Free, Starter $3/mo, Creator $14/mo, Pro $70/mo, Scale $200/mo,
-      Business $500/mo, and Enterprise custom packaging as of June 25, 2026; verify credits, concurrency, voice/model
-      access, post-Expression-Measurement migration options, and enterprise terms.
+    value: Hume AI pricing is API/usage oriented with Free, Starter $3/mo, Creator $14/mo (first month $7), Pro $70/mo,
+      Scale $200/mo, Business $500/mo, and Enterprise custom packaging as of June 28, 2026; verify EVI minutes, Octave
+      characters, concurrency, seats, voice cloning, and enterprise terms before purchase.
     source: https://www.hume.ai/pricing
     source_label: Hume AI pricing
     source_id: hume-ai-pricing
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-28'
     volatility: high
     confidence: high
-    next_review_at: '2026-07-23'
+    next_review_at: '2026-07-28'
   api_available:
-    value: Developer docs are the source of truth for authentication, streaming, EVI voice behavior, Octave, SDK integration,
-      and the Expression Measurement sunset timeline.
-    source: https://dev.hume.ai/docs
-    source_label: Hume AI developer docs
-    source_id: hume-ai-docs
-    verified_at: '2026-06-25'
+    value: Developer docs are the source of truth for authentication, streaming, EVI voice behavior, Octave TTS, voice
+      cloning, SDK integration, use-case guidelines, billing, and current API surfaces.
+    source: https://dev.hume.ai/docs/llms.txt
+    source_label: Hume developer docs index
+    source_id: hume-ai-docs-index
+    verified_at: '2026-06-28'
     volatility: medium
     confidence: high
-    next_review_at: '2026-09-23'
+    next_review_at: '2026-09-26'
   model_control:
-    value: Product evaluation should separate Octave voice generation, EVI empathic voice interface, and the now-sunsetting
-      Expression Measurement capability because each has different use cases and risk.
+    value: Product evaluation should separate EVI speech-to-speech, Octave TTS, voice cloning, and safety-review requirements
+      because each has different cost, latency, consent, and risk implications.
     source: https://www.hume.ai/products
     source_label: Hume AI products
     source_id: hume-ai-products
-    verified_at: '2026-06-25'
+    verified_at: '2026-06-28'
     volatility: medium
     confidence: high
     next_review_at: '2026-09-23'
   watch_out_for:
     value: >-
-      Do not start a net-new Expression Measurement implementation without Hume confirmation: docs say endpoints were
-      deprecated May 14, 2026 and became inaccessible June 14, 2026. EVI/Octave projects still need consent, privacy,
-      bias, and safety review.
-    source: https://dev.hume.ai/docs/expression-measurement/overview
-    source_label: Hume Expression Measurement docs
-    source_id: hume-ai-expression-measurement-docs
-    verified_at: '2026-06-25'
+      Do not start a net-new Expression Measurement implementation without Hume confirmation: the current docs index no
+      longer lists that route and the old markdown endpoint returns Page Not Found. EVI/Octave projects still need consent,
+      privacy, bias, and safety review.
+    source: https://dev.hume.ai/docs/llms.txt
+    source_label: Hume developer docs index
+    source_id: hume-ai-docs-index
+    verified_at: '2026-06-28'
     volatility: medium
     confidence: high
-    next_review_at: '2026-09-23'
+    next_review_at: '2026-09-26'
 tags: [voice-ai, empathic-voice, emotion-ai, tts, text-to-speech, speech-to-speech, evi, octave, expression-measurement]
 seo_title: 'Hume AI: Features, Pricing & Review (June 2026 update)'
 meta_description: >-
-  Hume AI ships EVI empathic speech-to-speech and Octave TTS with emotional nuance. Pricing: Free, Starter $3, Creator $14 (first month $7), Pro $70, Scale $200, Business $500. Expression Measurement passed its June 14, 2026 shutdown date.
+  Hume AI ships EVI empathic speech-to-speech and Octave TTS with emotional nuance. Pricing verified June 28, 2026: Free, Starter $3, Creator $14 (first month $7), Pro $70, Scale $200, Business $500, and Enterprise custom.
 author: "aipedia.wiki Editorial"
 best_for:
   - voice agents needing emotional awareness
@@ -97,16 +97,24 @@ not_best_for:
   - self-hosted deployments
   - teams needing a single TTS replacement for ElevenLabs (different positioning)
 quick_answer: >-
-  Hume AI builds empathic voice AI. EVI handles speech-to-speech with emotional awareness; Octave is the TTS model with emotional nuance. Expression Measurement is now a closed migration item: Hume docs say the API was deprecated May 14, 2026 and became inaccessible June 14, 2026. Pick Hume for voice agents where emotion matters. Skip for new emotion-analytics projects unless Hume gives you a current replacement path.
+  Hume AI builds empathic voice AI. EVI handles speech-to-speech with emotional awareness; Octave is the TTS model with emotional nuance. Pick Hume for voice agents where emotional response style matters. Skip for new Expression Measurement projects unless Hume gives you a current replacement path.
 price_history:
+  - date: 2026-06-28
+    plan: "Free / Starter / Creator / Pro / Scale / Business / Enterprise"
+    price: "$0 / $3 / $14 / $70 / $200 / $500 per month / custom"
+    source: "https://www.hume.ai/pricing"
+    source_label: "Hume AI pricing"
+    source_id: hume-ai-pricing
+    verified_at: 2026-06-28
+    note: "Public pricing page rechecked with browser extraction. Current rows list Octave characters, EVI minutes, concurrency, seats, voice cloning, support, and Enterprise compliance packaging."
   - date: 2026-06-25
     plan: "Free / Starter / Creator / Pro / Scale / Business"
     price: "$0 / $3 / $14 / $70 / $200 / $500 per month"
-    source: "https://dev.hume.ai/docs/expression-measurement/overview"
-    source_label: "Hume Expression Measurement docs"
-    source_id: hume-ai-expression-measurement-docs
+    source: "https://www.hume.ai/pricing"
+    source_label: "Hume AI pricing"
+    source_id: hume-ai-pricing
     verified_at: 2026-06-25
-    note: "Reverified subscription ladder and Expression Measurement status after the June 14 shutdown date. EVI and Octave remain the active buyer surfaces."
+    note: "Reverified subscription ladder and treated the legacy Expression Measurement route as a migration caveat. EVI and Octave remain the active buyer surfaces."
   - date: 2026-05-02
     plan: "Starter"
     price: "$3/mo"
@@ -154,7 +162,7 @@ price_history:
     source_label: "Source"
     source_id: hume-ai-pricing
     verified_at: 2026-06-25
-    note: "Pricing page rechecked. Subscription pricing and quota structure remain visible. Expression Measurement docs separately state endpoints were deprecated May 14, 2026 and became inaccessible June 14, 2026."
+    note: "Pricing page rechecked. Subscription pricing and quota structure remain visible. Legacy Expression Measurement availability should be vendor-confirmed before any new build."
 ---
 
 # Hume AI
@@ -163,7 +171,7 @@ Hume AI is the empathic voice research lab turned product company. Founded 2021 
 
 - **EVI (Empathic Voice Interface)** is the speech-to-speech system. Handles interruptions, back-channeling, external LLM routing, and expressive instruction-following. Current production lineup: EVI 3 and EVI 4 mini.
 - **Octave** is the text-to-speech model with voice design, modulation, cloning, and conversion. Emotional nuance is the differentiator, not raw quality.
-- **Expression Measurement API** previously scored emotion in audio, video, text, and images, but Hume's docs now put it past sunset: deprecated May 14, 2026 and no longer accessible after June 14, 2026.
+- **Expression Measurement** is now a legacy/migration caveat. The current Hume docs index no longer lists the old route, and the old markdown endpoint returns Page Not Found.
 - **TADA** is the open-source LLM TTS that streams text and audio together to reduce hallucinations and latency.
 
 Supporting services: Human Feedback API (survey templates + participant pools), Data Library (speech datasets covering 50+ languages and 48 emotions), Study Runner (programmatic human evaluations).
@@ -172,7 +180,7 @@ Supporting services: Human Feedback API (survey templates + participant pools), 
 
 > **Pick Hume AI when emotion is the differentiator in the voice interaction.** Voice agents for therapy, wellness, coaching, and customer support benefit from EVI's prosody-aware responses and interruption handling in ways that generic TTS does not deliver. Starter at $3/mo is one of the cheapest paid voice-AI entry points in the category, and Creator at $14/mo (with a permanent 50% first-month discount to $7) remains competitive for indie developers.
 >
-> **Skip it if raw TTS quality, ultra-low latency, or new emotion-analytics API work is the goal.** [ElevenLabs](/tools/elevenlabs/) leads on voice quality ceiling; [Cartesia](/tools/cartesia/) wins on sub-40ms latency. Hume's Octave is good but not the strongest pick for pure narration. Expression Measurement should be treated as a migration item, not a fresh-build reason, unless Hume confirms a replacement. Also skip if you need self-hosted weights for on-prem deployment; EVI and Octave are both cloud-only.
+> **Skip it if raw TTS quality, ultra-low latency, or new emotion-analytics API work is the goal.** [ElevenLabs](/tools/elevenlabs/) leads on voice quality ceiling; [Cartesia](/tools/cartesia/) wins on low-latency voice-agent infrastructure. Hume's Octave is good but not the strongest pick for pure narration. The legacy Expression Measurement route should be treated as a migration item, not a fresh-build reason, unless Hume confirms a replacement. Also skip if you need self-hosted weights for on-prem deployment; EVI and Octave are both cloud-only.
 >
 > **Who pays which tier:** Free for evaluation (5 min EVI, 10K TTS chars). Starter $3/mo for hobbyist voice-agent builders. Creator $14/mo (first month $7) for indie developers (140K chars + 200 min EVI + 1,000 projects). Pro $70/mo when production usage crosses 1M chars/mo. Scale $200/mo for teams needing 3 seats. Business $500/mo for 5-seat orgs with higher concurrency. Enterprise custom for SOC 2 + GDPR + HIPAA, unlimited usage, and Slack support.
 
@@ -180,32 +188,32 @@ Supporting services: Human Feedback API (survey templates + participant pools), 
 
 | | |
 |---|---|
-| **Core products** | EVI (speech-to-speech) · Octave (TTS) · TADA (open-source) · Expression Measurement sunset docs |
+| **Core products** | EVI (speech-to-speech) · Octave (TTS) · TADA (open-source) · voice cloning docs · use-case guidelines |
 | **EVI versions** | EVI 3 (full) · EVI 4 mini (smaller, faster) |
 | **Languages (datasets / TTS)** | 50+ in the Data Library · multilingual TTS in Octave |
-| **Emotions measured** | 48 distinct emotions in Expression Measurement |
+| **Research/data signals** | Hume's site describes 50+ languages, 48+ emotions, and 600+ voice descriptors across its emotional-intelligence research/data story |
 | **Voice descriptors** | 600+ in the Data Library |
 | **Subscription pricing** | Free · Starter $3 · Creator $14 (first month $7) · Pro $70 · Scale $200 · Business $500 · Enterprise custom |
 | **Octave TTS rate** | $0.05 to $0.15 per 1,000 chars (plan-dependent) |
 | **EVI speech-to-speech** | $0.04 to $0.07 per minute overage |
-| **Expression Measurement** | Deprecated May 14, 2026 · endpoints no longer accessible after June 14, 2026 |
+| **Expression Measurement** | Legacy route no longer appears in the current docs index; old markdown endpoint returns Page Not Found |
 | **Concurrent connections** | 1 Free · 5 Starter/Creator · 10 Pro · 20 Scale · 30 Business · unlimited Enterprise |
 | **Team seats** | Solo through Pro · 3 Scale · 5 Business · custom Enterprise |
 | **Compliance** | SOC 2 · GDPR · HIPAA (Enterprise) |
 | **Voice cloning** | Included on all tiers (create + use) |
 | **Self-hosted** | None on EVI / Octave · TADA is open-source |
 
-Every data point above verified against Hume's published sources on 2026-06-25.
+Every current data point above was verified against Hume's published sources on 2026-06-28.
 
 ## What it actually is
 
-A voice-AI platform with emotion science at the core. The company's research heritage (Cowen's earlier work at Google on facial and vocal emotion) shows up in Expression Measurement's taxonomy of 48 distinct emotions and 600+ voice descriptors, trained on curated datasets covering 50+ languages across multiple domains.
+A voice-AI platform with emotion science at the core. The company's current public site still emphasizes a research/data story spanning 50+ languages, 48+ emotions, and 600+ voice descriptors, while current buyer evaluation should center on EVI, Octave, voice cloning, and safety-review requirements.
 
 **EVI** is the flagship. It's a speech-to-speech system rather than a TTS pipeline: input audio in, response audio out, with the model handling prosody, interruptions, and back-channeling natively. Developers can route the LLM-level reasoning through external models (Claude, GPT, Gemini, open-source) while EVI owns the audio layer.
 
 **Octave** is where voice quality sits. Less polished than ElevenLabs on pure narration but with more emotional range per prompt. Voice design lets developers spec voices by description ("warm, gentle, 40s female") rather than cloning; voice cloning is included on all tiers.
 
-**Expression Measurement** is the academic-heritage product now in sunset. Existing users should treat it as a migration project; new buyers should not evaluate Hume primarily for emotion-analytics API access unless their Hume contact confirms a replacement path.
+**Expression Measurement** should be treated as a legacy path. The current docs index no longer lists the old route, and the old markdown endpoint returns Page Not Found. Existing users should ask Hume for migration guidance; new buyers should not evaluate Hume primarily for that API unless their Hume contact confirms a replacement path.
 
 **TADA** is the open-source play. LLM-TTS architecture where text and audio stream together to reduce hallucination and latency. Useful for teams evaluating Hume's approach before committing to EVI.
 
@@ -213,7 +221,7 @@ A voice-AI platform with emotion science at the core. The company's research her
 
 - **Voice agents where emotion matters.** Therapy, coaching, wellness, customer support, companion apps. EVI's interruption handling and back-channeling feel conversationally different from ChatGPT Voice or ElevenLabs Conversational.
 - **Emotional nuance in narration.** Octave with emotion tags produces delivery variations that straight TTS misses. Useful for character voices, audiobook dramatization, and expressive brand voices.
-- **Migration planning for emotion analytics.** Existing Expression Measurement users now need a post-shutdown migration path. Net-new analytics projects should ask Hume for the replacement path before implementation.
+- **Migration planning for older emotion analytics.** Existing Expression Measurement users should ask Hume for a current replacement path. Net-new analytics projects should not assume the old route remains available.
 - **Budget-friendly voice-AI entry.** Starter at $3/mo stays among the cheapest paid voice-AI entry points. Creator moved to $14/mo as of May 2026 with a permanent 50% first-month discount ($7), still competitive for indie developers wanting 140K TTS chars + 200 EVI minutes. Free tier includes 5 min EVI + 10K TTS chars for evaluation.
 - **External LLM flexibility.** EVI's architecture lets developers bring their own LLM for reasoning while Hume owns the voice layer. Useful for teams already committed to a specific model.
 - **Research-adjacent workflows.** Data Library, Human Feedback API, and Study Runner serve academic and commercial research teams that other voice-AI vendors do not target.
@@ -245,9 +253,9 @@ Usage-based rates (overages or custom workflows):
 |---|---|
 | Octave TTS | $0.05 to $0.15 per 1,000 characters (plan-dependent) |
 | EVI speech-to-speech overage | $0.04 to $0.07 per minute |
-| Expression Measurement | Deprecated May 14, 2026; endpoints no longer accessible after June 14, 2026 |
+| Expression Measurement | Old docs route no longer appears in the current docs index; vendor-confirm before building around it |
 
-Prices verified 2026-06-25 via [Hume pricing](https://www.hume.ai/pricing), [Hume products](https://www.hume.ai/products), and [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview). Voice cloning (create and use) is included on all tiers. Enterprise adds API voice access, SOC 2 / GDPR / HIPAA compliance, Slack support, and custom rate limits.
+Prices verified 2026-06-28 via [Hume pricing](https://www.hume.ai/pricing), [Hume products](https://www.hume.ai/products), and the current [Hume developer docs index](https://dev.hume.ai/docs/llms.txt). Voice cloning (create and use) is included on public tiers. Enterprise adds API voice access, SOC 2 Type II / GDPR / HIPAA packaging, Slack support, and custom rate limits.
 
 ## Against the alternatives
 
@@ -258,7 +266,7 @@ Prices verified 2026-06-25 via [Hume pricing](https://www.hume.ai/pricing), [Hum
 | **Real-time latency** | Higher (EVI roundtrip) | ~75ms on Flash v2.5 | **Sub-40ms** (category leader) |
 | **Voice cloning** | Included all tiers | IVC + PVC on Creator+ | Available |
 | **Speech-to-speech** | **EVI (native)** | Requires Conversational AI setup | Available |
-| **Emotion analytics API** | Sunset: deprecated May 14 / inaccessible June 14, 2026 | None | None |
+| **Emotion analytics API** | Legacy route: vendor-confirm before buying around it | None | None |
 | **Open-source option** | TADA (partial) | None | None |
 | **Entry price** | **$3/mo Starter** ($14 Creator) | $6/mo Starter | Paid tier only |
 | **Best viewed as** | Emotion-AI specialist | Quality + coverage leader | Latency specialist |
@@ -269,18 +277,18 @@ Prices verified 2026-06-25 via [Hume pricing](https://www.hume.ai/pricing), [Hum
 - **Latency on EVI is higher than Cartesia or Flash v2.5.** Speech-to-speech roundtrip is the tradeoff for prosody-aware processing. Real-time agents needing sub-100ms feel should benchmark before committing.
 - **Free tier is tight.** 5 minutes of EVI and 10K TTS chars per month is evaluation-only. Serious usage starts at Starter $3/mo.
 - **Multiple quota types can surprise.** TTS characters, EVI minutes, concurrent connections, and projects all scale independently per tier. Heavy usage on one dimension can force a tier upgrade even if others have headroom.
-- **Expression Measurement is past sunset.** Hume docs say the endpoints were deprecated May 14, 2026 and became inaccessible June 14, 2026. Do not treat older modality pricing as a durable buying reason.
+- **Expression Measurement is not a current buying reason.** The current docs index no longer lists the old route, and the old markdown endpoint returns Page Not Found. Do not treat older modality pricing as a durable buying reason.
 - **Self-hosting is limited.** EVI and Octave are cloud-only. TADA is open-source but it is an LLM-TTS architecture, not a drop-in replacement for EVI or Octave.
 - **Research-voice positioning cuts both ways.** The academic heritage gives Hume credibility on emotion but slows mainstream adoption versus flashier category leaders.
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-25 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), [Hume products](https://www.hume.ai/products), and the [Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-28 against [Hume pricing](https://www.hume.ai/pricing), the [Hume homepage](https://www.hume.ai/), [Hume products](https://www.hume.ai/products), and current Hume EVI, TTS, voice cloning, and use-case guideline docs.
 
 ## FAQ
 
 **What is Hume AI known for?**
-Empathic voice AI. EVI handles prosody-aware speech-to-speech and Octave delivers emotional nuance in TTS. Historically Hume was also known for Expression Measurement, but that API is now past sunset.
+Empathic voice AI. EVI handles prosody-aware speech-to-speech and Octave delivers emotional nuance in TTS. Historically Hume was also known for Expression Measurement, but current buyer evaluation should focus on EVI, Octave, voice cloning, and vendor-confirmed migration guidance.
 
 **What is EVI and how does it differ from ChatGPT Voice or ElevenLabs Conversational?**
 EVI (Empathic Voice Interface) is a speech-to-speech system with native support for interruptions, back-channeling, and prosody-aware responses. ChatGPT Voice and ElevenLabs Conversational focus on voice quality; EVI focuses on conversational feel. Developers route LLM-level reasoning through external models (Claude, GPT, Gemini) while Hume owns the audio layer.
@@ -292,7 +300,7 @@ Yes, the Free tier includes 5 minutes of EVI and 10,000 TTS characters per month
 Octave is Hume's text-to-speech model with voice design, modulation, cloning, and conversion. Emotional range is the differentiator; it does not compete with ElevenLabs v3 on peak narration quality.
 
 **What is Expression Measurement?**
-An API for scoring emotion in audio, video, text, or images. It is now a closed migration risk: Hume docs say Expression Measurement endpoints were deprecated May 14, 2026 and became inaccessible June 14, 2026.
+A legacy Hume capability for emotion scoring. The current docs index no longer lists the old route, and the old markdown endpoint returns Page Not Found, so treat it as a vendor-confirmed migration question rather than a new-build reason.
 
 **What is TADA?**
 Hume's open-source LLM-TTS system that streams text and audio together, reducing hallucinations and latency. Useful as a research-friendly alternative to proprietary TTS architectures but not a drop-in EVI or Octave replacement.
@@ -303,12 +311,16 @@ Yes, voice cloning (create and use) is included on all tiers, including Free. Th
 ## Sources
 
 - [Hume AI pricing](https://www.hume.ai/pricing): current plan prices, quotas, seats, usage rates
-- [Hume AI homepage](https://www.hume.ai/): product descriptions for EVI, Octave, TADA, Expression Measurement
+- [Hume AI homepage](https://www.hume.ai/): current product and research positioning
 - [Hume developer platform](https://dev.hume.ai/): API reference, SDKs, model versioning
-- [Hume Expression Measurement docs](https://dev.hume.ai/docs/expression-measurement/overview): deprecation and June 14, 2026 accessibility cutoff
+- [Hume EVI docs](https://dev.hume.ai/docs/speech-to-speech-evi/overview.md): current EVI behavior and integration docs
+- [Hume TTS docs](https://dev.hume.ai/docs/text-to-speech-tts/overview.md): current Octave TTS behavior and response modes
+- [Hume voice cloning docs](https://dev.hume.ai/docs/voice/voice-cloning.md): voice cloning availability and consent workflow
+- [Hume use-case guidelines](https://dev.hume.ai/docs/resources/use-case-guidelines.md): ethical guidance and scientific best practices
 
 ## Related
 
 - **Category:** [AI Voice](/categories/ai-voice/)
+- **Plan guide:** [Hume AI Pricing for Emotion-Aware Voice Apps](/guides/hume-ai-pricing-for-emotion-aware-voice-apps/)
+- **Workflow guide:** [Best Voice AI for Emotion-Aware Products](/guides/best-voice-ai-for-emotion-aware-products/)
 - **Alternatives:** [ElevenLabs](/tools/elevenlabs/) · [Cartesia](/tools/cartesia/) · [Fish Audio](/tools/fish-audio/) · [Lovo](/tools/lovo/) · [Murf](/tools/murf/)
-- **Use cases:** [Best AI for Voice Agents](/categories/ai-voice/)

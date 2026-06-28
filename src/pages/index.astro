@@ -21,6 +21,9 @@
  * guide entered generated guide/search surfaces.
  * Refresh metadata: 2026-06-28 homepage inspected after Argil pricing guide
  * entered generated guide/search surfaces. Homepage remains data-driven.
+ * Refresh metadata: 2026-06-28 homepage inspected after Hume AI pricing guide
+ * entered generated guide/search surfaces and the AI Voice parent hub was
+ * refreshed. Homepage recent-guide lanes now include Hume.
  * Refresh metadata: 2026-06-27 homepage inspected after final six stale tool
  * rows and no homepage ranking changes were needed.
  * Refresh metadata: 2026-06-27 homepage inspected after final non-tool tail
@@ -932,7 +935,7 @@ const newsThroughLabel = latestNewsDate && !isNaN(latestNewsDate.getTime())
 // "Buyer guides checked" date derives from the freshest verification among the
 // guides the refresh module links, so the claim tracks real guide dates rather
 // than a hardcoded one that silently goes stale.
-const refreshGuideSlugs = ['cloudtalk-pricing-for-smb-sales-and-support-teams', 'runway-alternatives', 'suno-alternatives'];
+const refreshGuideSlugs = ['cloudtalk-pricing-for-smb-sales-and-support-teams', 'hume-ai-pricing-for-emotion-aware-voice-apps', 'gamma-pricing-for-founders-and-consultants'];
 const toIsoDate = (v: any): string =>
   v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? '').slice(0, 10);
 const refreshGuideIso = allGuides
@@ -1242,15 +1245,15 @@ function newsDateFmt(iso: string): string {
           <strong>CloudTalk pricing</strong>
           <small>Essential, Expert, AI add-ons</small>
         </a>
-        <a class="gt-home-refresh-lane" href="/guides/runway-alternatives/">
-          <span>Video model switches</span>
-          <strong>Runway alternatives</strong>
-          <small>Runway, Kling, Veo, Pika</small>
+        <a class="gt-home-refresh-lane" href="/guides/hume-ai-pricing-for-emotion-aware-voice-apps/">
+          <span>Emotion-aware voice math</span>
+          <strong>Hume AI pricing</strong>
+          <small>EVI, Octave, concurrency</small>
         </a>
-        <a class="gt-home-refresh-lane" href="/guides/suno-alternatives/">
-          <span>Music rights checks</span>
-          <strong>Suno alternatives</strong>
-          <small>Suno, Udio, AIVA, Stable Audio</small>
+        <a class="gt-home-refresh-lane" href="/guides/gamma-pricing-for-founders-and-consultants/">
+          <span>Presentation plan math</span>
+          <strong>Gamma pricing</strong>
+          <small>Free, Plus, Pro, Ultra</small>
         </a>
       </nav>
     </section>

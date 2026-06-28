@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-28
-Tracked public pages and crawl surfaces: 562
+Tracked public pages and crawl surfaces: 563
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -86,7 +86,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /tools/hireez/ | Tool | Yes | frontmatter | src/content/tools/hireez.md |
 | 2026-06-25 | /tools/hugging-face/ | Tool | Yes | frontmatter | src/content/tools/hugging-face.md |
 | 2026-06-25 | /tools/humata/ | Tool | Yes | frontmatter | src/content/tools/humata.md |
-| 2026-06-25 | /tools/hume-ai/ | Tool | Yes | frontmatter | src/content/tools/hume-ai.md |
 | 2026-06-25 | /tools/hume/ | Tool | Yes | frontmatter | src/content/tools/hume.md |
 | 2026-06-25 | /tools/hunyuan/ | Tool | Yes | frontmatter | src/content/tools/hunyuan.md |
 | 2026-06-25 | /tools/hyperwrite/ | Tool | Yes | frontmatter | src/content/tools/hyperwrite.md |
@@ -356,7 +355,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /compare/activepieces-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-n8n.md |
 | 2026-06-27 | /compare/activepieces-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-zapier.md |
 | 2026-06-27 | /compare/aider-vs-claude-code/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-claude-code.md |
-| 2026-06-27 | /compare/amplemarket-vs-apollo/ | Comparison | Yes | frontmatter | src/content/comparisons/amplemarket-vs-apollo.md |
 | 2026-06-27 | /compare/beautiful-ai-vs-decktopus/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-decktopus.md |
 | 2026-06-27 | /compare/beautiful-ai-vs-gamma/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-gamma.md |
 | 2026-06-27 | /compare/beautiful-ai-vs-pitch/ | Comparison | Yes | frontmatter | src/content/comparisons/beautiful-ai-vs-pitch.md |
@@ -469,7 +467,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /guides/best-pay-as-you-go-ai-tools/ | Guide | Yes | frontmatter | src/content/use-cases/best-pay-as-you-go-ai-tools.md |
 | 2026-06-27 | /guides/best-podcast-editor-for-transcript-first-editing/ | Guide | Yes | frontmatter | src/content/use-cases/best-podcast-editor-for-transcript-first-editing.md |
 | 2026-06-27 | /guides/best-presentation-tool-for-remote-sales-and-training/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-remote-sales-and-training.md |
-| 2026-06-27 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | frontmatter | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
 | 2026-06-27 | /guides/canva-ai-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/canva-ai-alternatives.md |
 | 2026-06-27 | /guides/chatgpt-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/chatgpt-alternatives.md |
 | 2026-06-27 | /guides/claude-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/claude-alternatives.md |
@@ -536,15 +533,16 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-27 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-27 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
-| 2026-06-28 | / | Static page | Yes | page metadata | src/pages/index.astro |
+| 2026-06-28 | / | Static page | Yes | working tree | src/pages/index.astro |
 | 2026-06-28 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
 | 2026-06-28 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
-| 2026-06-28 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
+| 2026-06-28 | /categories/ai-voice/ | Category | Yes | working tree | src/content/categories/ai-voice.md |
 | 2026-06-28 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
+| 2026-06-28 | /compare/amplemarket-vs-apollo/ | Comparison | Yes | working tree | src/content/comparisons/amplemarket-vs-apollo.md |
 | 2026-06-28 | /explore/ | Static page | Yes | git | src/pages/explore/index.astro |
-| 2026-06-28 | /guides/ | Static page | Yes | git | src/pages/guides/index.astro |
+| 2026-06-28 | /guides/ | Static page | Yes | working tree | src/pages/guides/index.astro |
 | 2026-06-28 | /guides/argil-pricing-for-ugc-avatar-video-teams/ | Guide | Yes | frontmatter | src/content/use-cases/argil-pricing-for-ugc-avatar-video-teams.md |
 | 2026-06-28 | /guides/best-ai-avatar-video-generator/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-avatar-video-generator.md |
 | 2026-06-28 | /guides/best-ai-for-presentations/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-for-presentations.md |
@@ -555,19 +553,22 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /guides/best-ai-tools-for-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-consultants.md |
 | 2026-06-28 | /guides/best-ai-tools-for-ecommerce/ | Guide | Yes | frontmatter | src/content/use-cases/best-ai-tools-for-ecommerce.md |
 | 2026-06-28 | /guides/best-presentation-tool-for-smb-sales-teams/ | Guide | Yes | frontmatter | src/content/use-cases/best-presentation-tool-for-smb-sales-teams.md |
+| 2026-06-28 | /guides/best-voice-ai-for-emotion-aware-products/ | Guide | Yes | working tree | src/content/use-cases/best-voice-ai-for-emotion-aware-products.md |
 | 2026-06-28 | /guides/cloudtalk-pricing-for-smb-sales-and-support-teams/ | Guide | Yes | frontmatter | src/content/use-cases/cloudtalk-pricing-for-smb-sales-and-support-teams.md |
 | 2026-06-28 | /guides/gamma-pricing-for-founders-and-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/gamma-pricing-for-founders-and-consultants.md |
+| 2026-06-28 | /guides/hume-ai-pricing-for-emotion-aware-voice-apps/ | Guide | Yes | working tree | src/content/use-cases/hume-ai-pricing-for-emotion-aware-voice-apps.md |
 | 2026-06-28 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
-| 2026-06-28 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-06-28 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-28 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-28 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
-| 2026-06-28 | /search/ | Static page | No | git | src/pages/search.astro |
+| 2026-06-28 | /search/ | Static page | No | working tree | src/pages/search.astro |
 | 2026-06-28 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
 | 2026-06-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-28 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
 | 2026-06-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
 | 2026-06-28 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
+| 2026-06-28 | /tools/hume-ai/ | Tool | Yes | working tree | src/content/tools/hume-ai.md |
 | 2026-06-28 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
 | 2026-06-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-06-28 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |

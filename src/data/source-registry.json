@@ -6586,16 +6586,61 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-docs-index",
+      "label": "Hume developer docs index",
+      "url": "https://dev.hume.ai/docs/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-evi-docs",
+      "label": "Hume EVI docs",
+      "url": "https://dev.hume.ai/docs/speech-to-speech-evi/overview.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-tts-docs",
+      "label": "Hume TTS docs",
+      "url": "https://dev.hume.ai/docs/text-to-speech-tts/overview.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-voice-cloning-docs",
+      "label": "Hume voice cloning docs",
+      "url": "https://dev.hume.ai/docs/voice/voice-cloning.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-use-case-guidelines",
+      "label": "Hume use case guidelines",
+      "url": "https://dev.hume.ai/docs/resources/use-case-guidelines.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hume-ai-expression-measurement-docs",
-      "label": "Hume Expression Measurement docs",
+      "label": "Hume Expression Measurement legacy docs route",
       "url": "https://dev.hume.ai/docs/expression-measurement/overview",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hume-ai-official",
@@ -6604,7 +6649,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hume-ai-pricing",
@@ -6613,7 +6658,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hume-ai-products",
@@ -6622,7 +6667,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hume-pricing",
@@ -6631,7 +6676,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hume-product",
@@ -6640,7 +6685,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-16"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hunyuan-cloud",
