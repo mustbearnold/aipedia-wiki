@@ -5048,7 +5048,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "gamma-affiliate-help",
+      "label": "Gamma affiliate program help",
+      "url": "https://help.gamma.app/en/articles/11048092-how-do-i-join-the-gamma-affiliate-program",
+      "type": "affiliate",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "gamma-features",
@@ -5066,7 +5075,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "gamma-subscription-help",
@@ -5075,7 +5084,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "gemini-api-changelog",

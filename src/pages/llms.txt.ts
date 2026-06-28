@@ -3,6 +3,12 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-28 Gamma affiliate conversion content added
+// /guides/gamma-pricing-for-founders-and-consultants/ and refreshed Gamma,
+// AI Presentation, presentation and consultant sibling guides, source
+// registry, ledger, and LLM maintenance around Free vs Plus vs Pro vs Ultra,
+// monthly credits, card caps, custom domains, API access, checkout caveats,
+// and affiliate disclosure.
 // Refresh metadata: 2026-06-28 Rytr affiliate conversion content added
 // /guides/best-ai-product-description-generator-for-small-ecommerce-stores/
 // and refreshed Rytr, AI Writing, ecommerce sibling guide, source registry,
@@ -535,6 +541,7 @@ export const GET: APIRoute = async () => {
   lines.push('Recent tool refresh: June 14, 2026 updated ChatGPT and the AI Chatbots parent hub with a safety-procurement checklist based on AP and Business Insider OpenAI probe reporting; refreshed /tools/, /categories/, homepage, and LLM surfaces.');
   lines.push('Recent news refresh: June 14, 2026 added buyer-facing AI coverage plus an OpenAI ChatGPT safety-procurement checklist covering multistate probe reporting, Anthropic Fable/Mythos access risk, ChatGPT GPT-5.2 retirement, G7 governance, homepage, /news/, RSS, and LLM surfaces.');
   lines.push('Recent trend refresh: June 24, 2026 simplified the AI Model Availability Tracker into a two-column green/red ledger with only model name and current availability status.');
+  lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/gamma-pricing-for-founders-and-consultants/ and refreshed Gamma, AI Presentation, presentation and consultant sibling guides, source registry, ledger, and LLM maintenance around Free vs Plus vs Pro vs Ultra, monthly credits, card caps, custom domains, API access, checkout caveats, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/argil-pricing-for-ugc-avatar-video-teams/ and refreshed Argil, AI Video, avatar-video sibling guides, source registry, ledger, and LLM maintenance around Classic vs Pro vs Scale, credit burn, Product Showcase, API automation, consent risk, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added the CloudTalk pricing and AI Receptionist guides and refreshed CloudTalk, the SMB phone-system guide, AI Automation, AI Voice, homepage, source registry, ledger, and LLM maintenance around Essential vs Expert plan choice, AI Conversation Intelligence, dialers, AI Receptionist, AI Specialist, caller ID, spam remediation, missed-call routing, escalation, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added the Decktopus consultant proposal-deck guide and refreshed Decktopus, AI Presentation, presentation sibling guides, consultant and agency workflows, source registry, ledger, and LLM maintenance around client proposal links, forms, analytics, custom domains, webhook/team Business plan fit, and affiliate disclosure.');

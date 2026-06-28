@@ -11,7 +11,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - Daily news is the first editorial task each day. Use `workflows/news-refresh/README.md`, current-month source searches, and strict source-backed story selection before returning to affiliate or freshness batches.
 - Active revenue goal after the daily news pass: affiliate conversion page buildout for every tool with a configured affiliate link. Use `npm run affiliate:conversion:inventory` as the current source-of-truth inventory and `workflows/affiliate-conversion-pages/README.md` as the operating procedure.
-- Latest affiliate slice is complete locally and verified: `/guides/argil-pricing-for-ugc-avatar-video-teams/`, plus Argil, avatar-video, Synthesia alternatives, AI Video, top-layer, search, LLM, source registry, and ledger updates. This pass also implemented `audit:date-consistency`, structured runner closeout JSON receipts, superseded-failure tracking, and URL dedupe/cache metrics in page source health.
+- Latest affiliate slice is complete locally and verified: `/guides/gamma-pricing-for-founders-and-consultants/`, plus Gamma, presentation and consultant sibling guides, AI Presentation, top-layer, search, LLM, source registry, and ledger updates. This pass browser-verified Gamma Individual annual prices, documents the current Gamma source conflict on Pro's 50 versus 60 card cap and Ultra annual availability, and keeps the raw HTTP pricing 403 as a verification caveat.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
 - `workflows/tool-refresh/` now holds the committed six-shard-worker plus integrator process. `$aipedia-tool-refresh-workflow` remains the local skill mirror. Use six active workers in the Codex Windows app, and promote stable behavior into `src/data/aipedia-loops.json` only after the workflow proves stable through repeated use.
@@ -206,15 +206,16 @@ Create source-backed, mobile-first conversion pages around every tool with a con
 
 - Source-of-truth command: `npm run affiliate:conversion:inventory`.
 - Money-guide audit command: `npm run audit:affiliate-conversion`.
-- Configured affiliate-link tools: 26.
-- Live-approved affiliate tools: 22.
+- Configured affiliate-link tools: 25.
+- Live-approved affiliate tools: 21.
 - Configured but not live-approved: 4.
-- First-pass scripted page budget: 108 pages, counting existing pages toward coverage when they already match a distinct buyer intent.
+- First-pass scripted page budget: 103 pages, counting existing pages toward coverage when they already match a distinct buyer intent.
 - Existing money-guide metadata backfill is complete and subagent-accepted at 9.9/10: 35 money guides, 0 hard errors, 0 warnings under strict audit after adding the structured conversion, anti-doorway, and CTA-plan contract.
 - First new page slice is complete and pushed: `/guides/dext-pricing-for-bookkeeping-firms/` adds a Dext Practice vs Dext Business plan-decision page, updates AI Automation routing, and brought strict affiliate audit to 36 money guides with 0 errors and 0 warnings.
 - Second Dext page slice is complete and pushed: `/guides/dext-vs-hubdoc-for-bookkeepers/` adds the same-job switcher for Dext vs Hubdoc, updates sibling Dext/receipt guides, updates AI Automation routing, and brings strict affiliate audit to 37 money guides with 0 errors and 0 warnings. The rendered budget pick is external non-affiliate Hubdoc, not Dext.
 - Third Dext page slice is complete and pushed: `/guides/dext-vs-autoentry-for-sage-bookkeepers/` adds the Sage-heavy same-job switcher for Dext vs AutoEntry, updates sibling Dext/receipt guides, AI Automation, the Dext tool page, accountant stack, and the shared mobile sticky CTA containment.
 - Fourth distinct Dext cluster slice is locally verified and subagent-accepted at 9.9/10: `/guides/best-client-document-collection-tool-for-bookkeeping-firms/` adds the client document collection workflow page for multi-client bookkeeping firms, updates sibling Dext guides, AI Automation, the Dext tool page, accountant stack, and the ledger. Strict affiliate audit reports 39 money guides with 0 errors and 0 warnings.
+- Latest Gamma page slice is locally verified: `/guides/gamma-pricing-for-founders-and-consultants/` adds the Free, Plus, Pro, and Ultra plan-decision page, updates Gamma, presentation and consultant sibling guides, AI Presentation, top-layer surfaces, source registry, and ledger. Strict affiliate audit reports 48 money guides with 0 errors and 0 warnings.
 
 ### Page System
 
@@ -222,8 +223,8 @@ Use the existing `use-cases` guide route first unless a page clearly needs a new
 
 ### Next Implementation Slice
 
-1. Commit and push the verified Argil affiliate conversion slice if it has not already been pushed.
-2. Move to the next highest-fit approved affiliate tool from the inventory unless a newly discovered CloudTalk, Decktopus, Dext, or Argil intent is genuinely distinct and non-duplicative.
+1. Commit and push the verified Gamma affiliate conversion slice if it has not already been pushed.
+2. Rerun `npm run affiliate:conversion:plan -- --limit 12 --json` and move to the next highest-fit approved affiliate tool, likely Hume AI, Consensus, QuillBot, Beautiful.ai, Lindy, or OmniSEO unless the planner changes.
 3. Repair approval metadata or defer monetization for configured-but-not-live tools.
 4. Repeat the pattern across the highest-fit approved affiliate tools from `npm run affiliate:conversion:inventory`, using existing guides as coverage where they already satisfy a distinct buyer intent.
 5. Add subagent review before finalizing the cluster: SEO/quality, visual/mobile, and accuracy.
