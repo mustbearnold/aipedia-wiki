@@ -6,7 +6,7 @@ Branch: `agent-workflow-refactor-codex`
 
 ## Summary
 
-Created a practical Codex operating system for AiPedia: a committed central `AGENTS.md`, an architecture audit, canonical workflow docs, task templates, final report format, future parallel and memory architecture docs, page quality scoring guidance, twelve reusable skills, and two small deterministic helper scripts.
+Created a practical Codex operating system for AiPedia: a committed central `AGENTS.md`, an architecture audit, canonical workflow docs, task templates, final report format, future parallel and memory architecture docs, page quality scoring guidance, twelve reusable skills, and deterministic helper scripts for workflow orientation, skill validation, evidence bundles, parent-surface impact detection, and read-only quality scoring.
 
 This refactor does not change public page content, rendered templates, URLs, SEO metadata, affiliate links, source facts, or generated site output.
 
@@ -17,6 +17,9 @@ This refactor does not change public page content, rendered templates, URLs, SEO
 - Added skill packs for tool refresh, new tool pages, affiliate pages, comparisons, daily news, fact checks, internal linking, SEO briefs, page quality audits, repo maintenance, memory retrieval, and parallel research.
 - Added a deterministic workflow map script.
 - Added a deterministic skill contract checker.
+- Added a deterministic evidence-bundle CLI for one route or content path.
+- Added a parent-surface impact detector for changed routes and shared-file planning.
+- Added a read-only page quality scoring prototype.
 - Narrowed `.gitignore` so only the new canonical docs and root `AGENTS.md` are unignored, while older local-only docs stay ignored.
 
 ## Files Created
@@ -33,6 +36,11 @@ This refactor does not change public page content, rendered templates, URLs, SEO
 - `docs/refactor-report.md`
 - `scripts/agent-workflow-map.mjs`
 - `scripts/check-agent-skills.mjs`
+- `scripts/agent-evidence-bundle.mjs`
+- `scripts/agent-parent-impact.mjs`
+- `scripts/agent-page-quality-score.mjs`
+- `scripts/lib/agent-workflow-utils.mjs`
+- `tests/scripts/agent-workflow-tools.test.mjs`
 - `skills/*/SKILL.md`
 - `skills/*/schema.json`
 - `skills/*/examples/example-input.json`
@@ -55,8 +63,16 @@ This refactor does not change public page content, rendered templates, URLs, SEO
 - `git checkout -b agent-workflow-refactor-codex`
 - `node --check scripts/agent-workflow-map.mjs`
 - `node --check scripts/check-agent-skills.mjs`
+- `node --check scripts/lib/agent-workflow-utils.mjs`
+- `node --check scripts/agent-evidence-bundle.mjs`
+- `node --check scripts/agent-parent-impact.mjs`
+- `node --check scripts/agent-page-quality-score.mjs`
 - `npm run agent:skills:check`
 - `npm run agent:workflow:map -- --json`
+- `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`
+- `npm run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm run agent:impact -- --route /tools/cursor/ --json`
+- `npm run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`
 
 Final no-build verification is recorded below after closeout.
 
@@ -68,11 +84,18 @@ No-build closeout passed:
 
 - `node --check scripts/agent-workflow-map.mjs`
 - `node --check scripts/check-agent-skills.mjs`
+- `node --check scripts/lib/agent-workflow-utils.mjs`
+- `node --check scripts/agent-evidence-bundle.mjs`
+- `node --check scripts/agent-parent-impact.mjs`
+- `node --check scripts/agent-page-quality-score.mjs`
 - `npm run agent:skills:check`
 - `npm run agent:workflow:map -- --json`
+- `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`
+- real-route smoke checks for `agent:evidence`, `agent:impact`, and `agent:score` on `/tools/cursor/`
 - `npm run audit:commands`
 - `node scripts/guard-em-dashes.mjs`
 - `npm run check:quick`
+- `git diff --check`
 
 ## New Workflows
 
@@ -103,6 +126,9 @@ No-build closeout passed:
 
 - `npm run agent:workflow:map`: prints content counts, workflow directories, skills, canonical docs, and command families.
 - `npm run agent:skills:check`: validates skill directory structure, required sections, schemas, and example inputs.
+- `npm run agent:evidence -- --route /tools/cursor/ --json`: builds a compact read-only evidence bundle from page frontmatter, source registry, ledger, links, affiliate state, stale signals, and parent-impact signals.
+- `npm run agent:impact -- --route /tools/cursor/ --json`: detects parent hubs, top-layer routes, referencing pages, shared files, and likely validation checks.
+- `npm run agent:score -- --route /tools/cursor/ --json`: computes read-only page quality dimensions and a recommended action from repository signals.
 
 The requested `tools/page`, `tools/seo`, and similar folders were not created because `tools/*` is intentionally ignored except the Rust runner, and this repo already exposes operator tools through `scripts/` and package commands. The new helper scripts follow that established pattern.
 
@@ -115,19 +141,18 @@ The requested `tools/page`, `tools/seo`, and similar folders were not created be
 
 ## Known Limitations
 
-- No generic evidence-bundle CLI exists yet.
-- No page quality scoring script exists yet.
+- Evidence, impact, and score CLIs are v1 read-only tools. They do not perform live source verification or browser layout inspection.
 - No memory store or vector index exists yet.
 - No Rust task-DAG orchestrator beyond the existing refresh runner was implemented.
 - No CuPy, CUDA, Triton, Faiss, or cuVS code was added.
 
 ## Recommended Next Steps
 
-1. Review and commit the operating-system docs and skills.
-2. Add a read-only evidence-bundle CLI for one route or tool slug.
-3. Add a parent-surface impact detector.
-4. Add a page quality scoring prototype that reads existing audits and ledgers.
-5. Extend the Rust runner only after the evidence-bundle and scoring contracts stabilize.
+1. Open or review the branch PR, then merge once the operating-system direction is accepted.
+2. Use `agent:evidence` and `agent:impact` during the next real page edit, then record any missing signals.
+3. Calibrate `agent:score` against real refresh outcomes before using it for automated prioritization.
+4. Add a durable memory store or JSONL receipt layer after the evidence bundle shape stabilizes.
+5. Extend the Rust runner only after the evidence-bundle and scoring contracts prove stable in live work.
 
 ## Future Rust/CuPy Implementation Path
 

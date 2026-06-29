@@ -8,6 +8,9 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run check:smart:run`: runs that recommendation.
 - `npm run agent:workflow:map`: prints a compact map of content collections, workflows, skills, key docs, and command families for future Codex orientation.
 - `npm run agent:skills:check`: validates the committed `skills/` directories have required sections, parseable schemas, and example inputs.
+- `npm run agent:evidence -- --route /tools/cursor/ --json`: builds a compact read-only evidence bundle from the page, source registry, ledger, internal links, affiliate state, and parent-impact signals.
+- `npm run agent:impact -- --route /tools/cursor/ --json`: detects parent hubs, top-layer routes, shared files, and likely route surfaces affected by a route or content file change.
+- `npm run agent:score -- --route /tools/cursor/ --json`: computes a read-only page quality score from repository signals without live source verification.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
 - `npm run lint`: source/content guard bundle used as the repo lint gate.
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
@@ -18,6 +21,9 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run loop:next`: read-only decision-content flywheel brief for the next buyer-intent cluster.
 - `npm run loop:verify`: date-stable verifier for a decision-content cycle; sets `AIPEDIA_LEDGER_DATE`, runs focused checks, records per-command timing, builds when a route or `--force-build` needs it, and can call route QA.
 - `npm run loop:record`: writes a durable `.agent/loop-runs/` receipt after a cycle.
+- `npm run agent:evidence`: read-only evidence bundle builder for a single route or content path. It is the first deterministic handoff layer between raw repo state and Codex synthesis.
+- `npm run agent:impact`: read-only parent-surface impact detector for route/content changes. Use it before editing shared hubs, ledgers, search, or LLM surfaces.
+- `npm run agent:score`: read-only page quality scoring prototype. Use it for prioritization only; it does not replace current-source verification.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`: plans the next 60-tool freshness batch, including registered source metadata, scoped `audit:sources` commands, routes, parent hubs, closeout commands, and `agent_briefs` for six shard workers.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents`: prints one guarded shard-worker brief per 10-tool shard plus the single integrator brief.
 - `npm run check:frontmatter`: parses changed content frontmatter with `js-yaml` so malformed markdown metadata is caught before Astro typecheck/build.

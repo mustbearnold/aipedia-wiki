@@ -46,6 +46,9 @@ Start scoped:
 ```bash
 npm run check:smart
 npm run check:smart:run
+npm run agent:evidence -- --route /tools/cursor/ --json
+npm run agent:impact -- --route /tools/cursor/ --json
+npm run agent:score -- --route /tools/cursor/ --json
 ```
 
 Common gates:

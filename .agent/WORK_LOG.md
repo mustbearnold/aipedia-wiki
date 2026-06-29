@@ -1,9 +1,18 @@
 # AiPedia Work Log
 
+### 2026-06-29: Evidence, Impact, And Scoring Agent CLIs
+
+- Status: Complete, verified locally, and ready to push on `agent-workflow-refactor-codex`.
+- Commit: this commit.
+- Branch: `agent-workflow-refactor-codex`.
+- Changed: Added `agent:evidence`, `agent:impact`, and `agent:score` read-only CLIs plus shared `scripts/lib/agent-workflow-utils.mjs`. Added fixture tests for evidence bundles, parent-surface detection, quality scoring, and CLI JSON output. Updated operating docs to make the new CLIs the deterministic handoff layer before Codex synthesis.
+- Verification: `node --check scripts/lib/agent-workflow-utils.mjs`; `node --check scripts/agent-evidence-bundle.mjs`; `node --check scripts/agent-parent-impact.mjs`; `node --check scripts/agent-page-quality-score.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`; `npm run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`; `npm run agent:impact -- --route /tools/cursor/ --json`; `npm run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`; `npm run audit:commands`; `npm run check:quick`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
+- Residual risks: The score is a v1 read-only prioritization signal. It does not perform live web verification, rendered layout QA, or subjective editorial review.
+
 ### 2026-06-29: Codex Operating System Refactor
 
-- Status: Verified locally on `agent-workflow-refactor-codex`, pending review or commit.
-- Commit: this commit.
+- Status: Complete, verified, committed, and pushed on `agent-workflow-refactor-codex`.
+- Commit: `cd24fe19`.
 - Branch: `agent-workflow-refactor-codex`.
 - Changed: Promoted root `AGENTS.md` into the committed Codex entrypoint, added architecture audit and operating docs, added canonical workflow, task-template, report-format, memory, scoring, parallel-tooling, and future Rust/CuPy roadmap docs, added twelve reusable skills with schemas and examples, and added `agent:workflow:map` plus `agent:skills:check` helper scripts. Narrowed `.gitignore` so only the requested canonical docs and root `AGENTS.md` are unignored.
 - Verification: `node --check scripts/agent-workflow-map.mjs`; `node --check scripts/check-agent-skills.mjs`; `npm run agent:skills:check`; `npm run agent:workflow:map -- --json`; `npm run audit:commands`; `node scripts/guard-em-dashes.mjs`; `npm run check:quick`.

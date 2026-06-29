@@ -78,6 +78,17 @@ AiPedia needs durable memory that helps future Codex runs retrieve current facts
 }
 ```
 
+## Current CLI
+
+Use the read-only evidence bundle command before a manual page edit:
+
+```bash
+npm run agent:evidence -- --route /tools/cursor/ --json
+npm run agent:evidence -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
+```
+
+The command gathers page frontmatter facts, source IDs, registered source metadata, affiliate state, ledger row, internal links, parent-impact signals, stale-review signals, and recommended update prompts. It does not perform live web verification.
+
 ## Ingestion Sources
 
 - `src/content/**/*.md`

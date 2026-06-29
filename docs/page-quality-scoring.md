@@ -101,7 +101,14 @@ For news:
 
 ## First Script Path
 
-Start with a read-only scorer that consumes:
+The first read-only scorer is available:
+
+```bash
+npm run agent:score -- --route /tools/cursor/ --json
+npm run agent:score -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
+```
+
+It consumes:
 
 - `PAGE_REFRESH_LEDGER.md`
 - frontmatter dates and source refs
@@ -110,4 +117,4 @@ Start with a read-only scorer that consumes:
 - internal link audit output
 - provenance audit output
 
-Output JSON only. Do not make the score write pages directly.
+Output JSON only. Do not make the score write pages directly. The prototype is a prioritization signal and does not perform live source verification.

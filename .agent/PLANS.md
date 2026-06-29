@@ -10,7 +10,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Branch baseline: `agent-workflow-refactor-codex` from `master`; current branch focus is the Codex operating-system refactor. Highest content priority after this branch remains the daily AI and AI-tools news refresh. Affiliate conversion page buildout remains the next revenue loop after the daily news surface is current. The June 27 strict 3-day whole-site refresh target is complete.
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - Daily news is the first editorial task each day. Use `workflows/news-refresh/README.md`, current-month source searches, and strict source-backed story selection before returning to affiliate or freshness batches.
-- Active user-directed goal for June 28: continuously add net-new, source-backed AI tool pages to AiPedia for the full day. Affiliate conversion resumes after the user pauses or ends the tool expansion push.
+- June 28 tool expansion push is paused by user request after nine verified net-new batches. Resume net-new tool pages only after the active workflow-refactor branch is reviewed, merged, or explicitly set aside.
 - Latest affiliate slice is complete, verified, and pushed: `/guides/consensus-pricing-for-students-and-researchers/`, plus Consensus, academic citation and citation sibling guides, the researcher-tools guide, AI Research, top-layer, search, LLM, source registry, and ledger updates. This pass verifies the current Consensus Free, Pro, Deep, Teams, and Enterprise plan math, June 2026 Deep Search Library/Collections updates, and keeps the Perplexity Enterprise pricing raw-HTTP 403 as a browser-verified caveat in the related citations guide.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
@@ -44,12 +44,12 @@ Create a practical, committed Codex operating system for AiPedia so future agent
 - Promote root `AGENTS.md` as the central instruction file.
 - Add architecture audit, operating manual, task templates, report format, workflow docs, parallel tooling architecture, future Rust/CuPy roadmap, memory-system design, page-quality scoring design, and refactor report.
 - Add twelve skills under `skills/` with schemas and examples.
-- Add small deterministic helper scripts for workflow mapping and skill validation.
+- Add deterministic helper scripts for workflow mapping, skill validation, evidence bundles, parent-surface impact detection, and read-only page quality scoring.
 - Keep public routes, content collections, affiliate links, generated assets, SEO metadata, and rendered site behavior unchanged.
 
 ### Status
 
-Implemented and verified locally on `agent-workflow-refactor-codex`. No rendered pages were changed. The branch is ready for review, commit, or push when requested.
+Initial operating-system layer was committed and pushed as `cd24fe19`. The evidence bundle, parent impact, and page quality scoring tools are implemented and verified in this follow-up commit. No rendered pages were changed.
 
 ### Closeout
 
@@ -57,6 +57,13 @@ Implemented and verified locally on `agent-workflow-refactor-codex`. No rendered
 - `npm run agent:workflow:map -- --json`
 - `node --check scripts/agent-workflow-map.mjs`
 - `node --check scripts/check-agent-skills.mjs`
+- `node --check scripts/agent-evidence-bundle.mjs`
+- `node --check scripts/agent-parent-impact.mjs`
+- `node --check scripts/agent-page-quality-score.mjs`
+- `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`
+- `npm run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm run agent:impact -- --route /tools/cursor/ --json`
+- `npm run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`
 - `npm run audit:commands`
 - `npm run check:quick`
 - `node scripts/guard-em-dashes.mjs`

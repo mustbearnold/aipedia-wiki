@@ -122,3 +122,12 @@ Validators should run after synthesis and before publishing:
 ## Current Implementation Fit
 
 The existing Rust runner already proves this model for tool refresh and page refresh. The next step is a generic task-DAG planner that can invoke existing scripts, save compact evidence bundles, and hand a small synthesis payload to Codex.
+
+## Current Helper Commands
+
+```bash
+npm run agent:evidence -- --route /tools/cursor/ --json
+npm run agent:impact -- --route /tools/cursor/ --json
+```
+
+Use `agent:evidence` as the join payload for a single route. Use `agent:impact` before integration so Codex knows which parent hubs, top-layer routes, shared files, and LLM/search surfaces might need inspection.
