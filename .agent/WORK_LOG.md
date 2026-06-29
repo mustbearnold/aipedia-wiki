@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-29: Agent Loop Calibration And JSON Command Cleanup
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Continued the all-night agent-system loop after the news pilot commit. Fixed `agent:score:calibrate` so inline news sources count as source coverage, while registered source IDs and inline URLs remain separate fields. Added regression coverage for inline-sourced news calibration, updated canonical loop-review docs to use `npm --silent run ... -- --json` for machine-readable output, and recorded a fresh broad loop-run receipt at `.agent/loop-runs/system/2026-06-29T08-46-45-787Z-loop-run.json`.
+- Verification: `node --check scripts/agent-score-calibration.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-memory-tools.test.mjs tests/scripts/agent-workflow-tools.test.mjs`; real news calibration for the three June 29 articles now reports 3 to 4 inline sources and no false `source_coverage_gap`; `npm --silent run loop:all -- --json`; `npm --silent run loop:all:record -- --json`; `git diff --check`; `npm run check:quick`.
+- Loop result: broad loop review is green with 7 ok, 0 attention, 0 skipped, and 16 commands. Current recommendations remain `amazon-q-vs-github-copilot` for decision content and Beehiiv `mcp_surface` freshness.
+- Next: Commit and push this second loop, then continue the overnight system loop by either exercising the recommendation path on a real decision-content route or hardening the next agent-tool friction point found during that run.
+
 ### 2026-06-29: Agent System Loop Pilot And June 29 News Refresh
 
 - Status: Verified locally, pending commit and push.

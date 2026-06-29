@@ -62,7 +62,9 @@ export function calibrateScores(projectDir, options = {}) {
     }
 
     const ledgerAge = daysOld(evidence.target.ledger?.last_updated, currentDate);
-    const sourceCount = evidence.source_evidence.source_ids.length;
+    const registeredSourceCount = evidence.source_evidence.source_ids.length;
+    const inlineSourceCount = evidence.source_evidence.inline_source_count || 0;
+    const sourceCount = evidence.source_evidence.total_sources ?? (registeredSourceCount + inlineSourceCount);
     const staleCount = evidence.stale_sections.length;
     const parentSurfaceCount = impact.surfaces.length;
     const label = calibrationLabel({ score, ledgerAge, sourceCount, staleCount, parentSurfaceCount });
@@ -76,11 +78,21 @@ export function calibrateScores(projectDir, options = {}) {
       score: score.score,
       recommended_action: score.recommended_action,
       source_count: sourceCount,
+      registered_source_count: registeredSourceCount,
+      inline_source_count: inlineSourceCount,
       stale_signal_count: staleCount,
       parent_surface_count: parentSurfaceCount,
       dimensions: score.dimensions,
       calibration_label: label,
-      calibration_notes: calibrationNotes({ score, ledgerAge, sourceCount, staleCount, parentSurfaceCount }),
+      calibration_notes: calibrationNotes({
+        score,
+        ledgerAge,
+        sourceCount,
+        registeredSourceCount,
+        inlineSourceCount,
+        staleCount,
+        parentSurfaceCount,
+      }),
     });
   }
 
@@ -103,10 +115,19 @@ function calibrationLabel({ score, ledgerAge, sourceCount, staleCount, parentSur
   return 'review_calibration';
 }
 
-function calibrationNotes({ score, ledgerAge, sourceCount, staleCount, parentSurfaceCount }) {
+function calibrationNotes({
+  score,
+  ledgerAge,
+  sourceCount,
+  registeredSourceCount = sourceCount,
+  inlineSourceCount = 0,
+  staleCount,
+  parentSurfaceCount,
+}) {
   const notes = [];
   if (ledgerAge !== Infinity) notes.push(`ledger age ${ledgerAge} day(s)`);
-  if (sourceCount === 0) notes.push('no source IDs found');
+  if (sourceCount === 0) notes.push('no source coverage found');
+  if (registeredSourceCount === 0 && inlineSourceCount > 0) notes.push(`${inlineSourceCount} inline source(s), 0 registered source IDs`);
   if (staleCount > 0) notes.push(`${staleCount} stale signal(s)`);
   if (score.dimensions.source_quality < 0.45) notes.push('source_quality below 0.45');
   if (score.dimensions.internal_links < 0.5) notes.push('internal_links below 0.5');

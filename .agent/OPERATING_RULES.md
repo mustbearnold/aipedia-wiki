@@ -77,7 +77,7 @@ Comparison pages must compare tools for the same buyer job. Same primary categor
 
 ### Multi-loop registry
 
-Use `npm run loop:system` and `.agent/LOOPS.md` when deciding which repeatable loop fits the work. Use `npm run loop:all -- --json` only for loop-system review or broad operational checkups. Use `npm run loop:all:record -- --json` when that broad review should become durable system history under `.agent/loop-runs/system/`. Normal page work should choose one loop, run it, act on the top signal, verify, and record.
+Use `npm run loop:system` and `.agent/LOOPS.md` when deciding which repeatable loop fits the work. Use `npm --silent run loop:all -- --json` only for loop-system review or broad operational checkups. Use `npm --silent run loop:all:record -- --json` when that broad review should become durable system history under `.agent/loop-runs/system/`. Normal page work should choose one loop, run it, act on the top signal, verify, and record.
 
 The registered loops are Decision Content, Freshness, Trust and Provenance, Revenue and Conversion, Quality Pruning, Performance and UX, and News and Market Change. Loop output is a queue or attention signal, not permission to edit volatile facts without current-source verification.
 

@@ -15,6 +15,7 @@ function writeFixture() {
   for (const subdir of [
     'src/content/tools',
     'src/content/comparisons',
+    'src/content/news',
     'src/content/categories',
     'src/data',
     'src/pages/answers',
@@ -108,6 +109,30 @@ function writeFixture() {
     '',
   ].join('\n'));
 
+  writeFileSync(join(dir, 'src/content/news/2026-06-29-example-news.md'), [
+    '---',
+    'slug: 2026-06-29-example-news',
+    'title: Example News',
+    'description: A source-backed example news item.',
+    'date: 2026-06-29',
+    'category: news',
+    'sources:',
+    '  - url: https://example.com/news',
+    '    title: Example source',
+    '  - url: https://docs.example.com/news',
+    '    title: Example docs source',
+    '---',
+    '',
+    '## Buyer value',
+    '',
+    'Example news helps teams decide when to keep using [Example](/tools/example/).',
+    '',
+    '## What to do',
+    '',
+    'Teams should verify source coverage before changing production workflows.',
+    '',
+  ].join('\n'));
+
   writeFileSync(join(dir, 'src/pages/answers/static-answer.astro'), [
     '---',
     "import BaseLayout from '../../layouts/BaseLayout.astro';",
@@ -174,6 +199,28 @@ test('score calibration handles tools, comparisons, and static Astro routes', ()
     const comparison = report.routes.find((route) => route.route === '/compare/example-vs-other/');
     assert.equal(comparison.calibration_label, 'source_coverage_gap');
     assert.equal(comparison.recommended_action, 'improve_source_coverage');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('score calibration counts inline news sources as source coverage', () => {
+  const dir = writeFixture();
+  try {
+    const report = calibrateScores(dir, {
+      routes: ['/news/2026-06-29-example-news/'],
+      currentDate: '2026-06-29',
+    });
+
+    assert.equal(report.ok, true);
+    assert.equal(report.summary.route_count, 1);
+    const news = report.routes[0];
+    assert.equal(news.collection, 'news');
+    assert.equal(news.source_count, 2);
+    assert.equal(news.registered_source_count, 0);
+    assert.equal(news.inline_source_count, 2);
+    assert.notEqual(news.calibration_label, 'source_coverage_gap');
+    assert.ok(news.calibration_notes.includes('2 inline source(s), 0 registered source IDs'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -115,8 +115,8 @@ Loop review:
 
 ```bash
 npm run loop:system
-npm run loop:all -- --json
-npm run loop:all:record -- --json
+npm --silent run loop:all -- --json
+npm --silent run loop:all:record -- --json
 ```
 
 ## Edit Rules That Prevent Regret

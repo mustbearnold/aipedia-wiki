@@ -7,7 +7,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-29.
-- Branch baseline: `master`; the Codex operating-system refactor was fast-forward merged from `agent-workflow-refactor-codex` at `0ff8fb6a`. An all-night agent-system improvement goal is active: use the new tools on real production routes, evaluate the outputs, patch scripts/docs/tests/workflows, verify, record memory, commit, push, and repeat. The first loop completed the June 29 news refresh pilot and uncovered fixes for static hub impact detection, non-ledger content-route resolution, inline news source accounting, and news-specific buyer-intent scoring.
+- Branch baseline: `master`; the Codex operating-system refactor was fast-forward merged from `agent-workflow-refactor-codex` at `0ff8fb6a`. An all-night agent-system improvement goal is active: use the new tools on real production routes, evaluate the outputs, patch scripts/docs/tests/workflows, verify, record memory, commit, push, and repeat. The first loop completed the June 29 news refresh pilot and uncovered fixes for static hub impact detection, non-ledger content-route resolution, inline news source accounting, and news-specific buyer-intent scoring. The second loop fixed score calibration for inline news sources, cleaned canonical machine-readable loop commands, and recorded a green 7 ok / 0 attention / 0 skipped broad loop receipt.
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - Daily news is the first editorial task each day. Use `workflows/news-refresh/README.md`, current-month source searches, and strict source-backed story selection before returning to affiliate or freshness batches. June 29 coverage is now complete with three source-backed stories, refreshed `/news/`, `/`, RSS, LLM surfaces, cumulative news OG assets, and ledger rows.
 - June 28 tool expansion push is paused by user request after nine verified net-new batches. Resume net-new tool pages only after the daily news surface is current or the user explicitly resumes tool expansion.
@@ -332,8 +332,8 @@ Use the loop system as a queue and attention signal, not as bureaucracy.
 ### Commands
 
 - `npm run loop:system`
-- `npm run loop:all -- --json`
-- `npm run loop:all:record -- --json`
+- `npm --silent run loop:all -- --json`
+- `npm --silent run loop:all:record -- --json`
 - `npm run loop:freshness -- --json`
 - `npm run loop:decision -- --json`
 - `npm run loop:trust -- --json`
