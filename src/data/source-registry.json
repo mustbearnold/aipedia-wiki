@@ -2160,7 +2160,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "capacities-ai-chat-connectors",
@@ -2169,7 +2169,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "capacities-docs",
@@ -2178,7 +2178,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "capacities-pricing",
@@ -2187,7 +2187,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "capacities-product",
@@ -2196,7 +2196,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "capacities-release-64",
@@ -2223,7 +2223,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "capacities-whats-new",
@@ -4958,7 +4958,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "fathom-product-updates",
@@ -5165,7 +5165,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "fireflies-pricing-guide",
@@ -10505,7 +10505,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "notion-ai-meeting-notes",
@@ -10514,16 +10514,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "notion-custom-agent-pricing",
-      "label": "Notion Custom Agent pricing",
-      "url": "https://www.notion.com/help/custom-agent-pricing",
+      "label": "Notion credits for Custom Agents",
+      "url": "https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "notion-help",
@@ -10532,7 +10532,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "notion-pricing",
@@ -10541,7 +10541,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "nvidia-alpamayo-2-super",
@@ -10613,7 +10613,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "obsidian-pricing",
@@ -10622,7 +10622,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "ollama-library",
@@ -11180,7 +11180,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "otter-otterpilot",
@@ -12187,7 +12187,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-05-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "readwise-pricing",
@@ -12196,7 +12196,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "readwise-reader",
@@ -14806,7 +14806,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "wispr-flow-plans-docs",
@@ -14815,7 +14815,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "wispr-flow-privacy",
@@ -14842,7 +14842,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-10"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "wispr-funding-260m",

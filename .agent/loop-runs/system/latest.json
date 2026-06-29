@@ -5,8 +5,8 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-06-29T10:23:41.775Z",
-  "duration_ms": 5043,
+  "generated_at": "2026-06-29T10:36:48.548Z",
+  "duration_ms": 4845,
   "totals": {
     "loops": 7,
     "ok": 7,
@@ -26,7 +26,7 @@
         "severity": "next",
         "confidence": "medium",
         "effort": "large",
-        "action": "Begin the next buyer-decision cycle: capacities-vs-notion-ai.",
+        "action": "Begin the next buyer-decision cycle: captions-vs-heygen.",
         "reason": "top decision-content candidate"
       },
       {
@@ -41,7 +41,7 @@
       }
     ],
     "next_actions": [
-      "decision-content: Begin the next buyer-decision cycle: capacities-vs-notion-ai.",
+      "decision-content: Begin the next buyer-decision cycle: captions-vs-heygen.",
       "freshness: Refresh due fact best_paid_tier on blackbox-ai."
     ]
   },
@@ -50,14 +50,14 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 220,
+      "duration_ms": 217,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 113,
+          "duration_ms": 109,
           "attention_reasons": [],
           "build_freshness": null
         },
@@ -74,21 +74,21 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "ok",
-      "duration_ms": 566,
+      "duration_ms": 560,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "freshness queue",
           "status": "ok",
-          "duration_ms": 225,
+          "duration_ms": 222,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 340,
+          "duration_ms": 337,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -98,28 +98,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 438,
+      "duration_ms": 380,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 177,
+          "duration_ms": 151,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 121,
+          "duration_ms": 110,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 140,
+          "duration_ms": 119,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -129,25 +129,25 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "ok",
-      "duration_ms": 1977,
+      "duration_ms": 1948,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "commercial CTA audit",
           "status": "ok",
-          "duration_ms": 1977,
+          "duration_ms": 1948,
           "attention_reasons": [],
           "build_freshness": {
             "status": "fresh",
             "site_dir": "dist-fast/client",
             "newest_output": {
-              "path": "dist-fast/client/sitemap-0.xml",
-              "mtime": "2026-06-29T10:23:05.103Z"
+              "path": "dist-fast/client/sitemap-index.xml",
+              "mtime": "2026-06-29T10:36:11.449Z"
             },
             "newest_input": {
               "path": "src/data/source-registry.json",
-              "mtime": "2026-06-29T10:22:13.883Z"
+              "mtime": "2026-06-29T10:35:09.057Z"
             },
             "stale_by_ms": 0
           }
@@ -158,28 +158,28 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 511,
+      "duration_ms": 476,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 242,
+          "duration_ms": 234,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 119,
+          "duration_ms": 114,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 149,
+          "duration_ms": 127,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -189,25 +189,25 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "ok",
-      "duration_ms": 804,
+      "duration_ms": 759,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "dist budget",
           "status": "ok",
-          "duration_ms": 189,
+          "duration_ms": 184,
           "attention_reasons": [],
           "build_freshness": {
             "status": "fresh",
             "site_dir": "dist-fast/client",
             "newest_output": {
-              "path": "dist-fast/client/sitemap-0.xml",
-              "mtime": "2026-06-29T10:23:05.103Z"
+              "path": "dist-fast/client/sitemap-index.xml",
+              "mtime": "2026-06-29T10:36:11.449Z"
             },
             "newest_input": {
               "path": "src/data/source-registry.json",
-              "mtime": "2026-06-29T10:22:13.883Z"
+              "mtime": "2026-06-29T10:35:09.057Z"
             },
             "stale_by_ms": 0
           }
@@ -215,18 +215,18 @@
         {
           "label": "indexability audit",
           "status": "ok",
-          "duration_ms": 615,
+          "duration_ms": 575,
           "attention_reasons": [],
           "build_freshness": {
             "status": "fresh",
             "site_dir": "dist-fast/client",
             "newest_output": {
-              "path": "dist-fast/client/sitemap-0.xml",
-              "mtime": "2026-06-29T10:23:05.103Z"
+              "path": "dist-fast/client/sitemap-index.xml",
+              "mtime": "2026-06-29T10:36:11.449Z"
             },
             "newest_input": {
               "path": "src/data/source-registry.json",
-              "mtime": "2026-06-29T10:22:13.883Z"
+              "mtime": "2026-06-29T10:35:09.057Z"
             },
             "stale_by_ms": 0
           }
@@ -237,28 +237,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 527,
+      "duration_ms": 506,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 106,
+          "duration_ms": 102,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 100,
+          "duration_ms": 96,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 321,
+          "duration_ms": 308,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -267,13 +267,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-06-29T10-23-41-775Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-06-29T10-36-48-548Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-06-29T10-12-00-921Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-06-29T10-23-41-775Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-06-29T10:12:00.921Z",
+      "previous_run": "2026-06-29T10:23:41.775Z",
       "status_changes": [],
-      "duration_delta_ms": -800,
+      "duration_delta_ms": -198,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

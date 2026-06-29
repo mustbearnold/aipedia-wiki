@@ -1444,3 +1444,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `agent:evidence`, `agent:score` at 0.87 monitor, `agent:impact`, changed frontmatter, changed coverage quality, selected live-source audits, runner agent plan, ledger generation and check, changed provenance, `check:links`, em-dash guard, `git diff --check`, `guard:check`, `typecheck`, `build:fast`, route QA across affected routes at 319, 360, 390, 430, 768, 1024, and 1366 px, memory recording, and broad loop recording passed.
 - Loop receipt: `.agent/loop-runs/system/2026-06-29T10-23-41-775Z-loop-run.json` with 7 ok, 0 attention, and 0 skipped.
 - Next: Commit and push, then continue with `capacities-vs-notion-ai` unless a fresh `loop:next` result changes the ranking.
+
+### 2026-06-29: Agent System Loop 11, Capacities vs Notion AI
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Added `/compare/capacities-vs-notion-ai/` as a same-workflow notes/workspace comparison. Refreshed Capacities, Notion AI, AI Notes, `/compare/`, `/tools/`, `/categories/`, `/llms.txt`, `/llms-full.txt`, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+- Source notes: Capacities pricing, product, docs, AI assistant, AI Chat Connectors, and Release 66 sources returned HTTP 200. Notion AI, pricing, AI Meeting Notes, Custom Agent credit docs, and help sources returned HTTP 200. The comparison keeps the buyer split explicit: Capacities for solo object-based PKM, Notion AI for team docs, databases, meeting notes, Enterprise Search, and agents.
+- System lesson: `agent:score` first rated the comparison at 0.80 because internal-link coverage was weak. Adding adjacent notes decisions lifted the score to 0.89. The guard also exposed AI Notes registry-date drift for sibling visible source dates; ten official rows were live-checked at HTTP 200 and updated instead of lowering accurate visible dates.
+- Verification: `agent:evidence`, `agent:score` at 0.89 monitor, `agent:impact`, changed frontmatter, changed coverage quality, selected live-source audits for 21 source IDs, runner agent plan, ledger generation and check, changed provenance, `check:links`, em-dash guard, `git diff --check`, `guard:check`, `typecheck`, `build:fast`, route QA across affected routes at 319, 360, 390, 430, 768, 1024, and 1366 px, memory recording, and broad loop recording passed.
+- Loop receipt: `.agent/loop-runs/system/2026-06-29T10-36-48-548Z-loop-run.json` with 7 ok, 0 attention, and 0 skipped.
+- Next: Commit and push, then continue with `captions-vs-heygen` unless a fresh `loop:next` result changes the ranking.

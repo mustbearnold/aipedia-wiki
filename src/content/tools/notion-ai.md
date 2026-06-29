@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "$0-$20/user/month + Custom Agent credits"
 status: active
 launched: 2023-02
-last_updated: 2026-06-24
-last_verified: 2026-06-24
+last_updated: 2026-06-29
+last_verified: 2026-06-29
 update_frequency: monthly
 affiliate:
   has_program: true
@@ -32,7 +32,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -41,7 +41,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -50,7 +50,7 @@ facts:
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -59,7 +59,7 @@ facts:
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -68,7 +68,7 @@ facts:
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -77,7 +77,7 @@ facts:
     source: "https://www.notion.so/help"
     source_label: "Notion help"
     source_id: notion-help
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
   image_generation:
@@ -85,7 +85,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   video_generation:
@@ -93,7 +93,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   real_time_voice:
@@ -101,7 +101,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
   web_browsing:
@@ -109,7 +109,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
   coding_agent:
@@ -117,7 +117,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
   enterprise_controls:
@@ -125,7 +125,7 @@ facts:
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -134,7 +134,7 @@ facts:
     source: "https://www.notion.so/help"
     source_label: "Notion help"
     source_id: notion-help
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
   open_source_or_local:
@@ -142,7 +142,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   best_for:
@@ -150,7 +150,7 @@ facts:
     source: "https://www.notion.so/product/ai"
     source_label: "Notion AI product page"
     source_id: notion-ai
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
   watch_out_for:
@@ -158,7 +158,7 @@ facts:
     source: "https://www.notion.so/pricing"
     source_label: "Notion pricing"
     source_id: notion-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-08-13
@@ -184,7 +184,7 @@ price_history:
     source: "https://www.notion.com/pricing"
     source_label: "Source"
     source_id: notion-pricing
-    verified_at: 2025-05
+    verified_at: 2025-05-01
     note: "Standalone $10 AI add-on removed. AI consolidated under Business and Enterprise. Legacy Plus+AI subscribers grandfathered."
   - date: 2026-04-17
     plan: "Business"
@@ -210,6 +210,14 @@ price_history:
     source_id: notion-pricing
     verified_at: 2026-06-24
     note: "Rechecked Notion pricing, Notion AI product copy, Notion credits docs, and affiliate page. Business remains $20/seat/month, Plus remains $10/seat/month, Free and Plus include trial AI, Custom Agents require Notion credits, agents pause when credits run out, and Workers beta starts using credits on August 11, 2026."
+  - date: 2026-06-29
+    plan: "Business / Plus / Custom Agents / Workers beta"
+    price: "$20/seat/mo · $10/seat/mo · $10 per 1,000 monthly Notion credits"
+    source: "https://www.notion.com/pricing"
+    source_label: "Source"
+    source_id: notion-pricing
+    verified_at: 2026-06-29
+    note: "Rechecked for the Capacities vs Notion AI comparison. Business remains the production AI anchor at $20/seat/month, Plus remains $10/seat/month with trial AI, Custom Agents use Notion credits, and Workers beta starts using credits on August 11, 2026."
 ---
 
 # Notion AI
@@ -243,7 +251,7 @@ Notion retired the standalone $10 AI add-on in May 2025. AI is now consolidated 
 | **Enterprise pricing** | Custom · SAML SSO · audit log · advanced security |
 | **Cloud-only** | No local/offline mode · no BYO-model |
 
-Every data point verified on 2026-06-24 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), and [Notion credits docs](https://www.notion.com/help/category/notion-credits).
+Every data point verified on 2026-06-29 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), and [Notion credits docs](https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents).
 
 ## What it actually is
 
@@ -283,7 +291,7 @@ Pricing via [notion.com/pricing](https://www.notion.com/pricing).
 | Business | $20/seat/month | **Recommended for teams** · Notion Agent · AI Meeting Notes · Enterprise Search · Research Mode · production AI access |
 | Enterprise | Custom | All Business AI · zero data retention with LLM providers · SAML SSO · audit log · advanced security |
 
-*Prices verified 2026-06-24 via [notion.com/pricing](https://www.notion.com/pricing) and [Notion credits docs](https://www.notion.com/help/category/notion-credits). The standalone $10 AI add-on was retired in May 2025. Free and Plus include trial AI capabilities; full production AI requires Business or Enterprise. Custom Agents use Notion credits, with in-product monthly credits listed at $10 per 1,000 monthly credits. Custom Agents pause if credits run out, admins get 80% and 100% usage notifications, and Workers beta starts using credits on August 11, 2026.*
+*Prices verified 2026-06-29 via [notion.com/pricing](https://www.notion.com/pricing) and [Notion credits docs](https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents). The standalone $10 AI add-on was retired in May 2025. Free and Plus include trial AI capabilities; full production AI requires Business or Enterprise. Custom Agents use Notion credits, with in-product monthly credits listed at $10 per 1,000 monthly credits. Custom Agents pause if credits run out, admins get 80% and 100% usage notifications, and Workers beta starts using credits on August 11, 2026.*
 
 ## Against the alternatives
 
@@ -313,7 +321,7 @@ Pricing via [notion.com/pricing](https://www.notion.com/pricing).
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-24 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), [Notion credits docs](https://www.notion.com/help/category/notion-credits), and [notion.com/help](https://www.notion.com/help).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis you are reading. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility × Value × Moat × Longevity, unweighted average). Last verified 2026-06-29 against [notion.com/pricing](https://www.notion.com/pricing), [notion.com/product/ai](https://www.notion.com/product/ai), [Notion credits docs](https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents), and [notion.com/help](https://www.notion.com/help).
 
 ## FAQ
 
@@ -335,14 +343,17 @@ Notion Agent handles ad-hoc, multi-step tasks the user invokes inside the worksp
 **How does Notion AI compare to Claude or ChatGPT?**
 Notion AI wins on workspace context: it searches your pages and databases automatically without file uploads. On raw output quality and model transparency, standalone assistants like Claude and ChatGPT are easier to evaluate because model access is clearer. For teams already in Notion, context may outweigh that opacity. For individuals who mainly want writing assistance, Claude Pro at $20/mo is usually a better fit.
 
+**Notion AI vs Capacities?**
+Choose Notion AI for shared docs, databases, meeting notes, Enterprise Search, and agents. Choose Capacities for solo object-based PKM where notes should become typed objects with properties and backlinks.
+
 ## Sources
 
 - [Notion AI](https://www.notion.com/product/ai): product page
 - [Notion pricing](https://www.notion.com/pricing): current tier pricing
-- [Notion credits docs](https://www.notion.com/help/category/notion-credits): credit pricing, usage notifications, reset behavior, and pause behavior
+- [Notion credits docs](https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents): credit pricing, usage notifications, reset behavior, and pause behavior
 - [Notion help](https://www.notion.com/help): feature documentation
 
 ## Related
 
 - **Category:** [AI Notes & Knowledge](/categories/ai-notes/)
-- **Comparisons:** [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/)
+- **Comparisons:** [Capacities vs Notion AI](/compare/capacities-vs-notion-ai/) · [Notion AI vs Obsidian](/compare/notion-ai-vs-obsidian/)

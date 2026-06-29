@@ -5,10 +5,10 @@ title: AI Note-Taking & Knowledge Management
 description: AI note-taking, customer-success meeting memory, meeting intelligence, source-grounded research notebooks, personal knowledge systems, and workspace knowledge tools.
 tool_count: 13
 seo_title: "Best AI Note-Taking Tools (June 2026), aipedia.wiki"
-meta_description: "Updated June 27, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Tactiq for no-bot browser capture, Otter for live transcription, NotebookLM for source-grounded research artifacts, Capacities for object PKM, Wispr Flow for voice-to-note dictation, Reflect for encrypted linked notes, Obsidian and Logseq for local-first notes, Readwise for reading retention, and Notion AI for team workspaces with credit-risk checks."
+meta_description: "Updated June 29, 2026: compare the best AI note-taking tools: Fireflies for team meeting intelligence, Tactiq for no-bot browser capture, Otter for live transcription, NotebookLM for source-grounded research artifacts, Capacities for object PKM, Wispr Flow for voice-to-note dictation, Reflect for encrypted linked notes, Obsidian and Logseq for local-first notes, Readwise for reading retention, and Notion AI for team workspaces with credit-risk checks."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-27
-last_verified: 2026-06-27
+last_updated: 2026-06-29
+last_verified: 2026-06-29
 update_frequency: monthly
 ---
 
@@ -16,7 +16,7 @@ update_frequency: monthly
 
 AI note-taking now splits into six buyer lanes. The first is **meeting capture and meeting memory**, where [Fathom](/tools/fathom/), [MeetGeek](/tools/meetgeek/), [Fireflies](/tools/fireflies/), [Otter.ai](/tools/otter-ai/), [Read AI](/tools/read-ai/), [Granola](/tools/granola/), and [Tactiq](/tools/tactiq/) record or capture calls, produce transcripts/summaries, extract action items, and push meeting context into team workflows. Granola is the no-bot Mac-first lane for people who want private desktop capture and post-call notes rather than a meeting participant bot. Tactiq is the no-bot browser-extension lane for Google Meet, Zoom, and Microsoft Teams; the June 9 check keeps Free at 10 transcripts/month and 5 AI credits, Pro at $8/user/month annual, Team at $16.67, and Business at $29.17 with MCP/Claude Connector betas. MeetGeek is now the sharper customer-success pick when onboarding, renewal, QBR, escalation, and product-feedback calls need to become searchable account context. The second is **source-grounded research**, where [NotebookLM](/tools/notebooklm/) turns documents, transcripts, and source packs into grounded Q&A, reports, Deep Research, Audio/Video Overviews, data tables, infographics, slide decks, study materials, and review artifacts. The third is **knowledge management**, where [Notion AI](/tools/notion-ai/), [Capacities](/tools/capacities/), [Reflect](/tools/reflect/), [Obsidian](/tools/obsidian/), and [Mem](/tools/mem/) help teams or individuals maintain long-lived notes, wikis, docs, databases, objects, personal memory, and personal knowledge graphs. Capacities' June 23 refresh makes the Pro decision more AI-workflow-driven than the old free-tier summary implied: AI Chat Connectors use MCP to expose a selected space to ChatGPT, Claude, Cursor, Le Chat, and compatible clients, Release 64 adds AI provider choice and recurring tasks, and Release 65 adds Bulk Import for everyone plus Pro image analysis. Reflect is the encrypted linked-notes lane for buyers who want backlinks, Google/Outlook calendar context, GPT-4/Whisper AI, Kindle/web capture, export/API, and a simple $10/month annual-billed plan instead of a team workspace. The fourth is **voice-to-note capture**, where [Wispr Flow](/tools/wispr-flow/) turns spoken thoughts into cleaned-up text across apps; it is useful for drafting notes, memos, CRM updates, tickets, and personal knowledge entries, but it is not a meeting recorder or source-grounded notebook. The fifth is **reading capture and retention**, where [Readwise Reader](/tools/readwise/) captures articles, newsletters, PDFs, ebooks, highlights, Ghostreader prompts, exports, and daily review. The sixth is **analytics notebooks and data-team knowledge**, where [Hex](/tools/hex/) brings SQL, Python, apps, Threads, semantic-model-aware agents, and paid-seat AI credits into one governed workspace.
 
-As of June 27, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, a cloud team workspace, or a local personal vault. The NotebookLM refresh keeps the source-grounded research lane, but adds a sharper rule: use source discovery and Deep Research to speed source-pack building, not to skip source-quality review. NotebookLM's current help table also keeps the privacy split clear: consumer data is not used to train NotebookLM unless feedback is provided, while Workspace and Cloud routes add stronger no-human-review and no-training protections. The refreshed NotebookLM/Obsidian/Otter/Readwise/Notion comparison set separates source-grounded research notebooks, local-first Markdown ownership, live meeting transcription, reading retention, and Notion-native team workspace AI instead of treating every note tool as a generic summarizer.
+As of June 29, 2026, the best purchase depends less on "which AI summarizes best?" and more on where the note lives after capture: a meeting library, a CRM, a renewal brief, a research notebook, a reading-retention loop, an object-based PKM system, an AI note memory system, a cloud team workspace, or a local personal vault. The new [Capacities vs Notion AI](/compare/capacities-vs-notion-ai/) decision page keeps the object-PKM and team-workspace lanes separate: Capacities is the solo typed-object knowledge graph, while Notion AI is the collaborative docs, databases, meetings, search, and agent workspace. The NotebookLM refresh keeps the source-grounded research lane, but adds a sharper rule: use source discovery and Deep Research to speed source-pack building, not to skip source-quality review. NotebookLM's current help table also keeps the privacy split clear: consumer data is not used to train NotebookLM unless feedback is provided, while Workspace and Cloud routes add stronger no-human-review and no-training protections. The refreshed NotebookLM/Obsidian/Otter/Readwise/Notion/Capacities comparison set separates source-grounded research notebooks, local-first Markdown ownership, live meeting transcription, reading retention, object-based PKM, and Notion-native team workspace AI instead of treating every note tool as a generic summarizer.
 
 The June 23 Logseq refresh keeps [Logseq](/tools/logseq/) in the local-first personal knowledge lane, but no longer treats it as a simple "$5 sync add-on" story. The core app remains free/open-source and strong for outliner/block-reference workflows; Sync is better described as beta access tied to Open Collective Sponsor/Backer testing unless the current checkout confirms otherwise; and the active DB-version work adds markdown round-trip, CLI query, graph-view, and sync-hardening signals that buyers should test before migration.
 
@@ -111,6 +111,7 @@ The June 27 [summarization guide](/guides/best-ai-for-summarization/) refresh ke
 - [Best AI Tools for Nonprofits](/guides/best-ai-tools-for-nonprofits/) is the June 27 verified adjacent guide for NotebookLM source packs, board packets, grant guidance, program reports, and donor/beneficiary data boundaries.
 - [Best Free AI Tools](/guides/best-free-ai-tools/) is the June 27 verified no-cost stack guide that keeps NotebookLM in the source-grounded study lane beside ChatGPT, Gemini, Claude, and Perplexity rather than treating every free assistant as interchangeable notes software.
 - [Best AI Tools for Students](/guides/best-ai-tools-for-students/) is the June 27 verified student stack guide that keeps NotebookLM as the assigned-source study lane while separating ChatGPT tutoring, Perplexity cited research, Claude writing feedback, Cursor coding help, Gemini Google-native workflows, and Semantic Scholar paper discovery.
+- [Capacities vs Notion AI](/compare/capacities-vs-notion-ai/) is the June 29 decision page for buyers deciding between solo object-based PKM and team workspace AI.
 
 ## Sources
 
@@ -135,13 +136,13 @@ The June 27 [summarization guide](/guides/best-ai-for-summarization/) refresh ke
 - [The Verge NotebookLM Gemini 3.5 update](https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update) (verified 2026-06-22)
 - [ChatGPT pricing](https://chatgpt.com/pricing/) (verified 2026-06-23)
 - [Claude pricing](https://claude.com/pricing) (verified 2026-06-23)
-- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-24)
-- [Notion credits docs](https://www.notion.com/help/category/notion-credits) (verified 2026-06-24)
-- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-24)
-- [Notion AI Meeting Notes](https://www.notion.com/help/ai-meeting-notes) (verified 2026-06-24)
-- [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-23)
-- [Capacities docs](https://docs.capacities.io/) (verified 2026-06-23)
-- [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors) (verified 2026-06-23)
+- [Notion pricing](https://www.notion.com/pricing) (verified 2026-06-29)
+- [Notion credits docs](https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents) (verified 2026-06-29)
+- [Notion AI product page](https://www.notion.com/product/ai) (verified 2026-06-29)
+- [Notion AI Meeting Notes](https://www.notion.com/help/ai-meeting-notes) (verified 2026-06-29)
+- [Capacities pricing](https://capacities.io/pricing) (verified 2026-06-29)
+- [Capacities docs](https://docs.capacities.io/) (verified 2026-06-29)
+- [Capacities AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors) (verified 2026-06-29)
 - [Capacities Release 64](https://capacities.io/whats-new/release-64/) (verified 2026-06-23)
 - [Capacities Release 65](https://capacities.io/whats-new/release-65/) (verified 2026-06-23)
 - [Mem pricing](https://get.mem.ai/pricing) (verified 2026-06-23)

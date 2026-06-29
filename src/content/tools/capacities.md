@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Free; Pro/Believer pricing is region-rendered"
 status: active
 launched: 2021-06
-last_updated: 2026-06-26
-last_verified: 2026-06-26
+last_updated: 2026-06-29
+last_verified: 2026-06-29
 update_frequency: monthly
 affiliate:
   has_program: false
@@ -30,7 +30,7 @@ facts:
     source: "https://capacities.io/product"
     source_label: "Capacities product"
     source_id: capacities-product
-    verified_at: 2026-06-23
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   pricing_anchor:
@@ -38,7 +38,7 @@ facts:
     source: "https://capacities.io/pricing"
     source_label: "Capacities pricing"
     source_id: capacities-pricing
-    verified_at: 2026-06-26
+    verified_at: 2026-06-29
     next_review_at: 2026-07-22
     volatility: high
     confidence: high
@@ -47,7 +47,7 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   ai_surface:
@@ -55,7 +55,7 @@ facts:
     source: "https://capacities.io/whats-new/release-66"
     source_label: "Capacities Release 66"
     source_id: capacities-release-66
-    verified_at: 2026-06-26
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -64,7 +64,7 @@ facts:
     source: "https://capacities.io/whats-new/release-66"
     source_label: "Capacities Release 66"
     source_id: capacities-release-66
-    verified_at: 2026-06-26
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -73,7 +73,7 @@ facts:
     source: "https://capacities.io/whats-new/release-66"
     source_label: "Capacities Release 66"
     source_id: capacities-release-66
-    verified_at: 2026-06-26
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-06-30
@@ -82,7 +82,7 @@ facts:
     source: "https://docs.capacities.io/"
     source_label: "Capacities docs"
     source_id: capacities-docs
-    verified_at: 2026-06-23
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
 tags: [ai-notes, note-taking, pkm, object-based, knowledge-management]
@@ -99,8 +99,16 @@ not_best_for:
   - users requiring plain-Markdown portability
   - workflows dependent on heavy plugin ecosystems
 quick_answer: >-
-  Capacities is object-based PKM where every note is a typed object with properties. The June 26 check is product scope, not only pricing: Pro now matters more for AI Chat Connectors 2.0, provider choice, richer AI context, image analysis, recurring tasks, and media-aware workflows, while Bulk Import is available to all users. Pick it for structural thinking and clean auto-links. Skip it for teams, plugin depth, or plain-Markdown portability.
+  Capacities is object-based PKM where every note is a typed object with properties. The June 29 check is product scope, not only pricing: Pro now matters more for AI Chat Connectors 2.0, provider choice, richer AI context, image analysis, recurring tasks, and media-aware workflows, while Bulk Import is available to all users. Pick it for structural thinking and clean auto-links. Skip it for teams, plugin depth, or plain-Markdown portability.
 price_history:
+  - date: 2026-06-29
+    plan: "Free / Pro / Believer"
+    price: "Region-rendered"
+    source: "https://capacities.io/pricing"
+    source_label: "Capacities pricing"
+    source_id: capacities-pricing
+    verified_at: 2026-06-29
+    note: "Rechecked for the Capacities vs Notion AI comparison. Public text still supports a free-core starting point while detailed Pro and Believer pricing should be verified in checkout; Release 66 remains the current connector/write-action buyer signal."
   - date: 2026-06-26
     plan: "Free / Pro / Believer"
     price: "Region-rendered"
@@ -213,7 +221,7 @@ The free-core promise is still visible on the pricing page, but detailed plan pr
 | **Free tier** | Core product remains free; verify media and plan limits in live regional pricing |
 | **API** | None public |
 
-Current AI connector, pricing, and product-change data points were verified against vendor docs on 2026-06-26. See Sources.
+Current AI connector, pricing, and product-change data points were verified against vendor docs on 2026-06-29. See Sources.
 
 ## What it actually is
 
@@ -248,7 +256,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 | Pro | Region-rendered | AI assistant, AI Chat Connectors beta, provider choice, richer AI workflows, and Pro features. |
 | Believer | Region-rendered | Everything in Pro plus support for development and early/beta access such as Bulk Import. |
 
-*Prices verified 2026-06-26 via [capacities.io/pricing](https://capacities.io/pricing). The text crawl confirms the free-core promise, but detailed Pro and Believer prices are region-rendered, so verify your account region before budgeting.*
+*Prices verified 2026-06-29 via [capacities.io/pricing](https://capacities.io/pricing). The text crawl confirms the free-core promise, but detailed Pro and Believer prices are region-rendered, so verify your account region before budgeting.*
 
 ## Against the alternatives
 
@@ -276,7 +284,7 @@ The moat: no other mainstream PKM tool enforces object typing at the capture ste
 
 ## Methodology
 
-This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-26 against [capacities.io/pricing](https://capacities.io/pricing), [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant), [AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors), [Capacities Release 66](https://capacities.io/whats-new/release-66), and the [Capacities changelog](https://capacities.io/whats-new/).
+This page was produced by the aipedia.wiki editorial pipeline, an automated system that ingests vendor documentation, verifies pricing and model details against primary sources, and generates the editorial analysis. No individual human wrote this review. Scoring follows the four-dimension rubric at [/about/scoring/](https://aipedia.wiki/about/scoring/) (Utility x Value x Moat x Longevity, unweighted average). Last verified 2026-06-29 against [capacities.io/pricing](https://capacities.io/pricing), [Capacities AI assistant docs](https://docs.capacities.io/reference/ai-assistant), [AI Chat Connectors docs](https://docs.capacities.io/reference/ai-chat-connectors), [Capacities Release 66](https://capacities.io/whats-new/release-66), and the [Capacities changelog](https://capacities.io/whats-new/).
 
 ## FAQ
 
@@ -285,6 +293,9 @@ The core product remains free according to Capacities' pricing page. Verify curr
 
 **Capacities vs Obsidian?**
 Obsidian stores notes as local Markdown files with manual linking. Capacities uses typed objects in a proprietary database with property-driven auto-links and built-in AI. Obsidian suits tinkerers with strong file-ownership preferences. Capacities suits structured thinkers who want the object system out of the box.
+
+**Capacities vs Notion AI?**
+Choose Capacities for solo object-based PKM. Choose Notion AI when the same notes need to become a shared team workspace with databases, meeting notes, search, permissions, and agents.
 
 **Does AI work offline?**
 No. Writing aids and AI Chat require internet. Core note creation, editing, and browsing all work offline with sync on reconnect.
@@ -307,4 +318,4 @@ No. Capacities is solo-focused. No shared workspaces or real-time collaboration.
 ## Related
 
 - **Category:** [AI Notes](/categories/ai-notes/)
-- **Comparisons:** [Capacities vs Obsidian](/compare/capacities-vs-obsidian/)
+- **Comparisons:** [Capacities vs Notion AI](/compare/capacities-vs-notion-ai/) · [Capacities vs Obsidian](/compare/capacities-vs-obsidian/)

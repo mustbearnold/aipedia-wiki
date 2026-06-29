@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-29
-Tracked public pages and crawl surfaces: 607
+Tracked public pages and crawl surfaces: 608
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -18,7 +18,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-24 | /tools/napkin-ai/ | Tool | Yes | frontmatter | src/content/tools/napkin-ai.md |
 | 2026-06-24 | /tools/neuronwriter/ | Tool | Yes | frontmatter | src/content/tools/neuronwriter.md |
 | 2026-06-24 | /tools/nightcafe/ | Tool | Yes | frontmatter | src/content/tools/nightcafe.md |
-| 2026-06-24 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
 | 2026-06-24 | /tools/perplexity/ | Tool | Yes | frontmatter | src/content/tools/perplexity.md |
 | 2026-06-24 | /tools/pipedream/ | Tool | Yes | frontmatter | src/content/tools/pipedream.md |
 | 2026-06-24 | /tools/runway/ | Tool | Yes | frontmatter | src/content/tools/runway.md |
@@ -241,7 +240,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/bolt/ | Tool | Yes | frontmatter | src/content/tools/bolt.md |
 | 2026-06-26 | /tools/browserbase/ | Tool | Yes | frontmatter | src/content/tools/browserbase.md |
 | 2026-06-26 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
-| 2026-06-26 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
 | 2026-06-26 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
 | 2026-06-26 | /tools/castmagic/ | Tool | Yes | frontmatter | src/content/tools/castmagic.md |
 | 2026-06-26 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
@@ -299,7 +297,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
 | 2026-06-27 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-27 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-06-27 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
 | 2026-06-27 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-27 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-27 | /companies/adobe/ | Company | Yes | frontmatter | src/content/companies/adobe.md |
@@ -591,7 +588,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-29 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-29 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-29 | /categories/ai-music/ | Category | Yes | working tree | src/content/categories/ai-music.md |
+| 2026-06-29 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
+| 2026-06-29 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
 | 2026-06-29 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-29 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-29 | /compare/amazon-q-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/amazon-q-vs-github-copilot.md |
@@ -600,7 +598,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /compare/argil-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/argil-vs-synthesia.md |
 | 2026-06-29 | /compare/blackbox-ai-vs-replit-agent/ | Comparison | Yes | frontmatter | src/content/comparisons/blackbox-ai-vs-replit-agent.md |
 | 2026-06-29 | /compare/boomy-vs-suno/ | Comparison | Yes | frontmatter | src/content/comparisons/boomy-vs-suno.md |
-| 2026-06-29 | /compare/boomy-vs-udio/ | Comparison | Yes | working tree | src/content/comparisons/boomy-vs-udio.md |
+| 2026-06-29 | /compare/boomy-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/boomy-vs-udio.md |
+| 2026-06-29 | /compare/capacities-vs-notion-ai/ | Comparison | Yes | working tree | src/content/comparisons/capacities-vs-notion-ai.md |
 | 2026-06-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-29 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
@@ -610,11 +609,13 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
 | 2026-06-29 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-29 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
-| 2026-06-29 | /tools/boomy/ | Tool | Yes | working tree | src/content/tools/boomy.md |
+| 2026-06-29 | /tools/boomy/ | Tool | Yes | frontmatter | src/content/tools/boomy.md |
+| 2026-06-29 | /tools/capacities/ | Tool | Yes | working tree | src/content/tools/capacities.md |
 | 2026-06-29 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-06-29 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-29 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
+| 2026-06-29 | /tools/notion-ai/ | Tool | Yes | working tree | src/content/tools/notion-ai.md |
 | 2026-06-29 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-06-29 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-06-29 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
-| 2026-06-29 | /tools/udio/ | Tool | Yes | working tree | src/content/tools/udio.md |
+| 2026-06-29 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
