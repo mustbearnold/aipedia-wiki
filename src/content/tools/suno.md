@@ -12,7 +12,7 @@ pricing_model: freemium
 price_range: $0-$30/month
 status: active
 launched: 2023-12
-last_updated: 2026-06-26
+last_updated: 2026-06-29
 last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
@@ -364,7 +364,7 @@ No official public one. Suno runs beta access for select partners only and expli
 ## Related
 
 - **Category:** [AI Music Generation](/categories/ai-music/)
-- **Compare:** [Udio](/tools/udio/) · [Mubert](/tools/mubert/) · [Kling](/tools/kling/)
+- **Compare:** [Boomy vs Suno](/compare/boomy-vs-suno/) · [Udio](/tools/udio/) · [Mubert](/tools/mubert/) · [Kling](/tools/kling/)
 - **Guides:** [Best AI Music Generator (2026): Suno vs Udio vs Mubert](/use-cases/best-ai-music-generator/) · [Best AI Stack for Content Creators (2026)](/use-cases/ai-content-creator-stack/) · [Best AI Tools Under $20/Month (2026)](/use-cases/best-ai-tools-under-20-month/)
 
 ## Sources

@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0 free / paid checkout required"
 status: active
 launched: 2021-03
-last_updated: 2026-06-25
+last_updated: 2026-06-29
 last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
@@ -223,4 +223,5 @@ Suno generates stronger songs for most people. Boomy is easier for beginners and
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
+- **Compare:** [Boomy vs Suno](/compare/boomy-vs-suno/)
 - **See also:** [Suno](/tools/suno/) · [Udio](/tools/udio/) · [Mubert](/tools/mubert/) · [AIVA](/tools/aiva/)

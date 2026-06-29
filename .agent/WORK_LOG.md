@@ -1422,3 +1422,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Caveats: OpenAI Evals is a migration bridge because hosted evals become read-only on October 31, 2026 and shut down on November 30, 2026. Guardrails AI hosted or remote-validator pricing was not publicly verified. Inspect AI and LM Evaluation Harness are free frameworks, but buyers still need budgets for model calls, compute, sandboxes, GPUs, storage, output review, and release policy.
 - Durable receipt: `.agent/loop-runs/2026-06-28-tool-expansion-inspect-ai-openai-evals-guardrails-ai-lm-evaluation-harness.md`.
 - Next: Continue the all-day tool expansion queue with the next net-new AI tools, then update the same top-layer, source, logo, OG, and ledger surfaces.
+
+### 2026-06-29: Agent System Loop 09, Boomy vs Suno
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Added `/compare/boomy-vs-suno/` as a same-workflow full-song-generation comparison. Refreshed Boomy, Suno, AI Music, `/compare/`, `/tools/`, `/categories/`, `/llms.txt`, `/llms-full.txt`, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+- Source notes: Suno pricing, plan rights, ownership, stem separation, Studio, v5.5, and Series D context were checked against current official sources. Boomy official, pricing, and terms were reachable on June 29, while Boomy support URLs for commercial rights, downloads, revenue share, and Dolby Remastering returned raw HTTP 403 during the wider audit, so the comparison treats those as access-sensitive and keeps the support source rows on their prior June 25 verification date.
+- System lesson: `agent:score` first rated the comparison at 0.82 because internal-link coverage was weak. Adding relevant music alternatives lifted the score to 0.88 and changed the recommendation to monitor, proving the scoring loop can catch useful editorial improvements before closeout.
+- Verification: `agent:evidence`, `agent:score`, `agent:impact`, changed frontmatter, changed coverage quality, selected live-source audit for 12 reachable source IDs, runner agent plan, ledger generation and check, changed provenance, `check:links`, em-dash guard, `git diff --check`, `guard:check`, `typecheck`, `build:fast`, route QA across affected routes at 319, 360, 390, 430, 768, 1024, and 1366 px, memory recording, and broad loop recording passed. Wider source audit found the expected 10 Boomy support raw-HTTP 403 rows and 12 reachable HTTP 200 rows.
+- Loop receipt: `.agent/loop-runs/system/2026-06-29T10-12-00-921Z-loop-run.json` with 7 ok, 0 attention, and 0 skipped.
+- Next: Commit and push, then continue with `boomy-vs-udio` unless a fresh `loop:next` result changes the ranking.
