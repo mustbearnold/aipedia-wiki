@@ -55,7 +55,7 @@ export function buildEvidenceBundle(projectDir, options = {}) {
   const sourceIds = [...collectSourceIds(markdown.frontmatter)].sort();
   const sourceRows = sourceIds.map((id) => sourceRegistry.get(id)).filter(Boolean);
   const missingSourceIds = sourceIds.filter((id) => !sourceRegistry.has(id));
-  const inlineSources = extractInlineSources(markdown.frontmatter);
+  const inlineSources = extractInlineSources(markdown.frontmatter, markdown.body);
   const facts = extractFacts(markdown.frontmatter);
   const pricingFacts = facts.filter((fact) => /pricing|price|paid|tier|free|plan/i.test(fact.key));
   const internalLinks = collectInternalLinks(markdown.body);
@@ -156,14 +156,43 @@ function extractFacts(frontmatter) {
   return facts;
 }
 
-function extractInlineSources(frontmatter) {
-  if (!Array.isArray(frontmatter.sources)) return [];
-  return frontmatter.sources
+function extractInlineSources(frontmatter, body = '') {
+  const frontmatterSources = Array.isArray(frontmatter.sources) ? frontmatter.sources : [];
+  const sources = frontmatterSources
     .filter((source) => source && typeof source === 'object' && typeof source.url === 'string' && source.url)
     .map((source) => ({
       url: source.url,
       title: source.title ?? '',
     }));
+  for (const source of extractSourcesSectionLinks(body)) sources.push(source);
+  const seen = new Set();
+  return sources.filter((source) => {
+    if (!source.url || seen.has(source.url)) return false;
+    seen.add(source.url);
+    return true;
+  });
+}
+
+function extractSourcesSectionLinks(body) {
+  const lines = body.split(/\r?\n/);
+  const start = lines.findIndex((line) => /^##\s+Sources\b/.test(line.trim()));
+  if (start < 0) return [];
+  const sectionLines = [];
+  for (const line of lines.slice(start + 1)) {
+    if (/^##\s+/.test(line.trim())) break;
+    sectionLines.push(line);
+  }
+  const section = sectionLines.join('\n');
+  const links = [];
+  const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+  let linkMatch;
+  while ((linkMatch = re.exec(section))) {
+    links.push({
+      title: linkMatch[1].trim(),
+      url: linkMatch[2].trim(),
+    });
+  }
+  return links;
 }
 
 function summarizeSources(sources) {

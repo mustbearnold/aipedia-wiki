@@ -3,6 +3,9 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-29 Amazon Q Developer vs GitHub Copilot comparison
+// added; verbose LLM surface remains data-driven through the comparison, tool,
+// and category collections.
 // Refresh metadata: 2026-06-29 focused AI tools news added across the Gemini
 // API key incident, HP/OpenAI Frontier, and Grok 4.5 private beta; verbose
 // LLM surface remains data-driven through the news collection.

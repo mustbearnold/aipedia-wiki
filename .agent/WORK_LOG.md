@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-29: Agent Decision Loop And Comparison Source Scoring
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Continued the all-night agent-system loop by taking the `loop:next` recommendation into a real production comparison route. Added `/compare/amazon-q-vs-github-copilot/`, refreshed the Amazon Q, GitHub Copilot, and AI Coding surfaces that route buyers into it, updated the source registry and ledger, and hardened `agent:evidence` so comparison pages count visible `## Sources` links instead of incorrectly reporting zero source coverage.
+- Verification: `npm --silent run loop:next -- --json`; real evidence and score checks for `/tools/amazon-q/`, `/tools/github-copilot/`, and `/compare/amazon-q-vs-github-copilot/`; `npm run check:frontmatter -- --changed`; `AIPEDIA_CURRENT_DATE=2026-06-29 node scripts/audit-coverage-quality.mjs --changed-file src/content/comparisons/amazon-q-vs-github-copilot.md --json`; `npm run ledger:pages && npm run ledger:pages:check`; `node --check scripts/agent-evidence-bundle.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs tests/scripts/agent-memory-tools.test.mjs`; selected live `npm run audit:sources`; `npm run audit:provenance:changed -- --json`; `npm run check:links`; `npm run guard:check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /compare/amazon-q-vs-github-copilot/ --route /categories/ai-coding/ --route /tools/amazon-q/ --route /tools/github-copilot/ --route /compare/ --route /tools/ --route /categories/`; `npm --silent run agent:memory:record -- --route /compare/amazon-q-vs-github-copilot/ --route /tools/amazon-q/ --route /tools/github-copilot/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/amazon-q-vs-copilot-memory.jsonl --json`; `git diff --check`; `npm run check:quick`; `npm --silent run loop:all:record -- --json`.
+- Loop result: The new comparison now scores 0.85 with six inline official sources and monitor action. Fresh loop receipt `.agent/loop-runs/system/2026-06-29T09-03-31-885Z-loop-run.json` reports 7 ok, 0 attention, and 0 skipped. The loop exposed one remaining workflow-paper-cut: `audit:coverage-quality:changed -- --changed-file ...` expands to conflicting target-mode flags, so the direct `node scripts/audit-coverage-quality.mjs --changed-file ...` invocation was used.
+- Next: Commit and push this third loop, then continue with either the next decision-content recommendation, `antigravity-vs-cursor`, or Beehiiv's due `mcp_surface` freshness fact.
+
 ### 2026-06-29: Agent Loop Calibration And JSON Command Cleanup
 
 - Status: Verified locally, pending commit and push.

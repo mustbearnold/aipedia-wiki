@@ -5,10 +5,10 @@ title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
 tool_count: 37
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 28, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Pydantic AI, BAML, DSPy, Instructor, Mirascope, Outlines, Inspect AI, Guardrails AI, LM Evaluation Harness, OpenAI Evals, Chainlit, Agno, Respan, LiteLLM, LlamaIndex, Haystack, promptfoo, Braintrust, DeepEval, Ragas, OpenPipe, Arize Phoenix, Traceloop, LangWatch, Patronus AI, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
+meta_description: "Updated June 29, 2026: compare Cursor, Claude Code, GitHub Copilot, Amazon Q Developer's Kiro transition, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Mastra, Pydantic AI, BAML, DSPy, Instructor, Mirascope, Outlines, Inspect AI, Guardrails AI, LM Evaluation Harness, OpenAI Evals, Chainlit, Agno, Respan, LiteLLM, LlamaIndex, Haystack, promptfoo, Braintrust, DeepEval, Ragas, OpenPipe, Arize Phoenix, Traceloop, LangWatch, Patronus AI, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-28
-last_verified: 2026-06-28
+last_updated: 2026-06-29
+last_verified: 2026-06-29
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -176,6 +176,8 @@ The June 27 Cursor worth-it answer keeps the buyer rule simple: pay for Cursor o
 **June 22 Grok Build update:** [Grok](/tools/grok/) belongs in the coding-agent comparison set, not only Chatbots/Search. xAI's current docs still describe Grok Build as an interactive TUI and headless coding agent with custom models, skills/plugins, ACP integration, and a Grok Build 0.1 API model at 256K context. Treat it as an xAI-native coding lane to benchmark, while still checking command approvals, sandbox behavior, team/ZDR retention settings, account limits, and repo-quality output before rollout.
 
 **June 23 Amazon Q Developer update:** [Amazon Q Developer](/tools/amazon-q/) is no longer a clean greenfield IDE/plugin purchase. AWS announced that Q Developer IDE plugins and paid subscriptions reach end of support on April 30, 2027, new Q Developer account and subscription creation was blocked starting May 15, 2026, and Kiro is the migration path for IDE/CLI work. Existing AWS-heavy teams can use the runway, but new buyers should evaluate Kiro, Cursor, Copilot, Claude Code, Codex, and other current agent surfaces before committing.
+
+**June 29 Amazon Q vs Copilot decision update:** [Amazon Q Developer vs GitHub Copilot](/compare/amazon-q-vs-github-copilot/) now separates the real buyer lanes. Amazon Q Developer fits existing AWS-heavy teams that need continuity during the Kiro transition window. GitHub Copilot remains the cleaner greenfield default for GitHub-native IDE, pull-request, code-review, CLI, SDK, and Coding Agent workflows, as long as AI Credits and model-route policies are budgeted.
 
 **Use [Cursor](/tools/cursor/) when a developer wants a full AI-native IDE.** The June 23 recheck keeps it the best default for daily coding when the buyer wants Composer 2.5, repo-aware chat, multi-file edits, the Agents Window, Cloud Agents, CLI/SDK automation, Design Mode, Bugbot review, and a VS Code-like surface built around AI rather than an extension. Cursor's May 22 Gartner enterprise-coding-agent recognition is a procurement signal, but teams should still test it on their own repositories against Codex, Claude Code, and GitHub Copilot.
 

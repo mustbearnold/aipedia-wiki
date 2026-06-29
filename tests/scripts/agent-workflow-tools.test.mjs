@@ -141,6 +141,11 @@ function writeFixture() {
     '',
     'Choose Example if you want the test tool. [Example](/tools/example/).',
     '',
+    '## Sources',
+    '',
+    '- [Example source](https://example.com/comparison)',
+    '- [Example docs](https://docs.example.com/comparison)',
+    '',
   ].join('\n'));
 
   writeFileSync(join(dir, 'src/content/use-cases/example-guide.md'), [
@@ -218,6 +223,29 @@ test('agent impact detector finds parent hubs and referencing pages', () => {
     assert.ok(routes.includes('/compare/example-vs-other/'));
     assert.ok(routes.includes('/guides/example-guide/'));
     assert.ok(report.shared_files.includes('src/data/source-registry.json'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('agent evidence counts comparison Sources section links', () => {
+  const dir = writeFixture();
+  try {
+    const evidence = buildEvidenceBundle(dir, {
+      route: '/compare/example-vs-other/',
+      currentDate: '2026-06-29',
+    });
+    const score = scorePage(dir, {
+      route: '/compare/example-vs-other/',
+      currentDate: '2026-06-29',
+    });
+
+    assert.equal(evidence.ok, true);
+    assert.equal(evidence.source_evidence.inline_source_count, 2);
+    assert.equal(evidence.source_evidence.total_sources, 2);
+    assert.equal(score.ok, true);
+    assert.equal(score.evidence_summary.inline_sources, 2);
+    assert.notEqual(score.recommended_action, 'improve_source_coverage');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

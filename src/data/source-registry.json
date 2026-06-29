@@ -648,7 +648,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "amazon-q-end-of-support",
@@ -657,7 +657,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "amazon-q-features",
@@ -666,7 +666,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "amazon-q-official",
@@ -675,7 +675,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "amazon-q-pricing",
@@ -684,7 +684,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "amazon-q-quotas",
@@ -711,7 +711,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "amplemarket-mcp-announcement",
@@ -5678,7 +5678,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "github-copilot-ai-credits-announcement",
@@ -5705,7 +5705,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "github-copilot-app-ga",
@@ -5849,7 +5849,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "github-copilot-plans",
@@ -5858,7 +5858,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "github-copilot-product",

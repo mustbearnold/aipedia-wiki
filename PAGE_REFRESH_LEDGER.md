@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-29
-Tracked public pages and crawl surfaces: 600
+Tracked public pages and crawl surfaces: 601
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -32,7 +32,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /tools/ahrefs/ | Tool | Yes | frontmatter | src/content/tools/ahrefs.md |
 | 2026-06-25 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
 | 2026-06-25 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
-| 2026-06-25 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
 | 2026-06-25 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
 | 2026-06-25 | /tools/anythingllm/ | Tool | Yes | frontmatter | src/content/tools/anythingllm.md |
 | 2026-06-25 | /tools/assemblyai/ | Tool | Yes | frontmatter | src/content/tools/assemblyai.md |
@@ -267,7 +266,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/elicit/ | Tool | Yes | frontmatter | src/content/tools/elicit.md |
 | 2026-06-26 | /tools/figma/ | Tool | Yes | frontmatter | src/content/tools/figma.md |
 | 2026-06-26 | /tools/gemini/ | Tool | Yes | frontmatter | src/content/tools/gemini.md |
-| 2026-06-26 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-26 | /tools/grammarly/ | Tool | Yes | frontmatter | src/content/tools/grammarly.md |
 | 2026-06-26 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
 | 2026-06-26 | /tools/hailuo/ | Tool | Yes | frontmatter | src/content/tools/hailuo.md |
@@ -344,7 +342,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /companies/suno/ | Company | Yes | frontmatter | src/content/companies/suno.md |
 | 2026-06-27 | /companies/synthesia-company/ | Company | Yes | frontmatter | src/content/companies/synthesia-company.md |
 | 2026-06-27 | /companies/xai/ | Company | Yes | frontmatter | src/content/companies/xai.md |
-| 2026-06-27 | /compare/ | Static page | Yes | git | src/pages/compare/index.astro |
 | 2026-06-27 | /compare/activepieces-vs-n8n/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-n8n.md |
 | 2026-06-27 | /compare/activepieces-vs-zapier/ | Comparison | Yes | frontmatter | src/content/comparisons/activepieces-vs-zapier.md |
 | 2026-06-27 | /compare/aider-vs-claude-code/ | Comparison | Yes | frontmatter | src/content/comparisons/aider-vs-claude-code.md |
@@ -525,7 +522,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
 | 2026-06-28 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
 | 2026-06-28 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-28 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-28 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-28 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
@@ -604,10 +600,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-06-28 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
 | 2026-06-28 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
-| 2026-06-29 | / | Static page | Yes | working tree | src/pages/index.astro |
-| 2026-06-29 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
+| 2026-06-29 | / | Static page | Yes | page metadata | src/pages/index.astro |
+| 2026-06-29 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-06-29 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-29 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
+| 2026-06-29 | /compare/amazon-q-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/amazon-q-vs-github-copilot.md |
 | 2026-06-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
-| 2026-06-29 | /news/ | Static page | Yes | working tree | src/pages/news/index.astro |
-| 2026-06-29 | /news/rss.xml | Crawl surface | No | working tree | src/pages/news/rss.xml.ts |
-| 2026-06-29 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-29 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
+| 2026-06-29 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
+| 2026-06-29 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-29 | /tools/amazon-q/ | Tool | Yes | working tree | src/content/tools/amazon-q.md |
+| 2026-06-29 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |

@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0-$100/user/month"
 status: active
 launched: 2021-06
-last_updated: 2026-06-26
+last_updated: 2026-06-29
 last_verified: 2026-06-26
 update_frequency: monthly
 affiliate:
@@ -612,4 +612,5 @@ Yes. Agent mode in VS Code and the Coding Agent both support the Model Context P
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparison:** [Amazon Q Developer vs GitHub Copilot](/compare/amazon-q-vs-github-copilot/)
 - **Alternatives:** [Cursor](/tools/cursor/) · [Claude Code](/tools/claude-code/) · [Cline](/tools/cline/) · [Aider](/tools/aider/) · [Windsurf](/tools/windsurf/) · [Continue](/tools/continue/)

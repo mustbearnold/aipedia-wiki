@@ -3,6 +3,9 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-29 Amazon Q Developer vs GitHub Copilot comparison
+// added; concise LLM surface remains data-driven through the comparison,
+// tool, and category collections.
 // Refresh metadata: 2026-06-29 focused AI tools news added across the Gemini
 // API key incident, HP/OpenAI Frontier, and Grok 4.5 private beta; concise
 // LLM surface remains data-driven through the news collection.

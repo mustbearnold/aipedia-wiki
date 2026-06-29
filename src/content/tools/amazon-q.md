@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0-$19/user/month"
 status: active
 launched: 2023-11
-last_updated: 2026-06-25
+last_updated: 2026-06-29
 last_verified: 2026-06-25
 update_frequency: monthly
 affiliate:
@@ -279,3 +279,4 @@ Yes. AWS indemnifies generated code against third-party copyright claims, matchi
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
+- **Comparison:** [Amazon Q Developer vs GitHub Copilot](/compare/amazon-q-vs-github-copilot/)
