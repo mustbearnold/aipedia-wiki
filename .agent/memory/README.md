@@ -16,3 +16,7 @@ npm --silent run agent:memory:record -- --route /tools/cursor/ --out .agent/memo
 ```
 
 Do not commit noisy exploratory memory. Commit JSONL only when it is a durable receipt or baseline that future agents should retrieve.
+
+Current committed baseline:
+
+- `baselines/2026-06-29-agent-workflow-routes.jsonl`: Cursor and Gemini vs Grok records generated while calibrating the first CPU memory/query path.

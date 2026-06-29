@@ -51,6 +51,7 @@ This refactor does not change public page content, rendered templates, URLs, SEO
 - `tests/scripts/agent-memory-tools.test.mjs`
 - `.agent/memory/README.md`
 - `.agent/memory/schema.json`
+- `.agent/memory/baselines/2026-06-29-agent-workflow-routes.jsonl`
 - `skills/*/SKILL.md`
 - `skills/*/schema.json`
 - `skills/*/examples/example-input.json`
