@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Repo Maintenance Input",
+  "type": "object",
+  "required": ["objective"],
+  "properties": {
+    "objective": { "type": "string" },
+    "affected_area": { "type": "string" },
+    "files": { "type": "array", "items": { "type": "string" } },
+    "current_branch": { "type": "string" },
+    "constraints": { "type": "array", "items": { "type": "string" } },
+    "validation_scope": { "type": "string" }
+  },
+  "additionalProperties": true
+}

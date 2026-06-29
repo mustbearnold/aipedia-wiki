@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tool Page Refresh Input",
+  "type": "object",
+  "required": ["tool_slug", "current_date", "update_reason"],
+  "properties": {
+    "tool_slug": { "type": "string" },
+    "current_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "update_reason": { "type": "string" },
+    "official_url": { "type": "string", "format": "uri" },
+    "pricing_url": { "type": "string", "format": "uri" },
+    "docs_url": { "type": "string", "format": "uri" },
+    "affiliate_url": { "type": "string", "format": "uri" },
+    "scope": { "type": "string", "enum": ["single-tool", "cluster", "batch"] }
+  },
+  "additionalProperties": true
+}

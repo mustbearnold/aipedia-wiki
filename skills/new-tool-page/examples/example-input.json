@@ -1,0 +1,10 @@
+{
+  "tool_name": "ExampleAI",
+  "slug": "exampleai",
+  "category": "ai-infrastructure",
+  "official_url": "https://example.com/",
+  "pricing_url": "https://example.com/pricing",
+  "docs_url": "https://docs.example.com/",
+  "current_date": "2026-06-29",
+  "target_user": "AI engineers evaluating observability tools"
+}

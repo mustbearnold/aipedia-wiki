@@ -1,0 +1,7 @@
+{
+  "source": "src/content/use-cases/best-ai-tools-for-researchers.md",
+  "target_topic": "academic citation tools",
+  "candidate_routes": ["/tools/consensus/", "/compare/consensus-vs-elicit/"],
+  "link_goal": "Help researchers choose a citation workflow.",
+  "current_date": "2026-06-29"
+}

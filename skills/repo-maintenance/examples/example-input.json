@@ -1,0 +1,7 @@
+{
+  "objective": "Add a deterministic skill validation command.",
+  "affected_area": "scripts and skills",
+  "current_branch": "agent-workflow-refactor-codex",
+  "constraints": ["Do not alter rendered pages."],
+  "validation_scope": "no-build"
+}

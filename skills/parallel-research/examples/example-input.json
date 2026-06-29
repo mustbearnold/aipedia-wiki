@@ -1,0 +1,8 @@
+{
+  "workflow": "tool-page-refresh",
+  "scope": "tools:cursor,github-copilot",
+  "parallel_tasks": ["read_current_pages", "fetch_pricing", "scan_related_pages", "check_affiliate_data"],
+  "join_output": "evidence_bundle",
+  "current_date": "2026-06-29",
+  "shared_file_boundaries": ["src/data/source-registry.json", "PAGE_REFRESH_LEDGER.md"]
+}

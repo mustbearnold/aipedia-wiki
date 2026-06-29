@@ -6,6 +6,8 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 
 - `npm run check:smart`: recommends the smallest safe verification set for the current diff. Default dirty-path discovery ignores untracked local-only `.agents/` and `skills-lock.json` artifacts, while preserving `.agent/` continuity docs and explicitly passed paths.
 - `npm run check:smart:run`: runs that recommendation.
+- `npm run agent:workflow:map`: prints a compact map of content collections, workflows, skills, key docs, and command families for future Codex orientation.
+- `npm run agent:skills:check`: validates the committed `skills/` directories have required sections, parseable schemas, and example inputs.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
 - `npm run lint`: source/content guard bundle used as the repo lint gate.
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.

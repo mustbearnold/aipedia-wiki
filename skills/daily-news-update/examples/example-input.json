@@ -1,0 +1,7 @@
+{
+  "target_date": "2026-06-29",
+  "current_date": "2026-06-29",
+  "candidate_topics": ["frontier model access", "AI coding tool pricing", "agent security"],
+  "tool_names": ["ChatGPT", "Claude", "GitHub Copilot"],
+  "importance_notes": "Prioritize stories that change buyer guidance or tool availability."
+}

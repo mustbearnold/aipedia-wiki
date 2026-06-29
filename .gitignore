@@ -69,9 +69,9 @@ trust_cleanup_task.md
 # Internal only.
 affiliate_tracker.md
 affiliate-applications.xlsx
- 
-# generated Pagefind search index 
-public/pagefind/ 
+
+# generated Pagefind search index
+public/pagefind/
 
 # Hermes local plans and agent runtime artifacts
 .hermes/
@@ -139,6 +139,22 @@ src/data/_meta/claim-graph.json
 src/data/_meta/stale-queue.json
 src/data/_meta/signals.jsonl
 src/pages/admin/wiki-health.astro
+
+# Canonical Codex operating-system artifacts. These are intentionally committed
+# even though most local operator docs stay ignored.
+!AGENTS.md
+!docs/
+docs/*
+!docs/agent-audit.md
+!docs/aipedia-agent-workflows.md
+!docs/codex-operating-manual.md
+!docs/codex-task-templates.md
+!docs/codex-report-format.md
+!docs/parallel-tooling-architecture.md
+!docs/rust-cupy-gpu-roadmap.md
+!docs/agent-memory-system.md
+!docs/page-quality-scoring.md
+!docs/refactor-report.md
 
 # Coverage Engine isolated worktrees (one per generated page; merged then removed)
 .worktrees/

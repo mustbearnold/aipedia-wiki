@@ -94,6 +94,8 @@
     "check:quick": "npm run test:scripts && npm run audit:commands && npm run check:assets:quick",
     "check:smart": "node scripts/check-smart.mjs",
     "check:smart:run": "node scripts/check-smart.mjs --run",
+    "agent:workflow:map": "node scripts/agent-workflow-map.mjs",
+    "agent:skills:check": "node scripts/check-agent-skills.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
     "check:security": "npm audit --audit-level=moderate",

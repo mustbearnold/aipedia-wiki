@@ -1,5 +1,14 @@
 # AiPedia Work Log
 
+### 2026-06-29: Codex Operating System Refactor
+
+- Status: Verified locally on `agent-workflow-refactor-codex`, pending review or commit.
+- Commit: this commit.
+- Branch: `agent-workflow-refactor-codex`.
+- Changed: Promoted root `AGENTS.md` into the committed Codex entrypoint, added architecture audit and operating docs, added canonical workflow, task-template, report-format, memory, scoring, parallel-tooling, and future Rust/CuPy roadmap docs, added twelve reusable skills with schemas and examples, and added `agent:workflow:map` plus `agent:skills:check` helper scripts. Narrowed `.gitignore` so only the requested canonical docs and root `AGENTS.md` are unignored.
+- Verification: `node --check scripts/agent-workflow-map.mjs`; `node --check scripts/check-agent-skills.mjs`; `npm run agent:skills:check`; `npm run agent:workflow:map -- --json`; `npm run audit:commands`; `node scripts/guard-em-dashes.mjs`; `npm run check:quick`.
+- Residual risks: Root `AGENTS.md` was previously local-only, so maintainers should confirm the branch-level decision to commit it. Skills validate structure, not editorial quality. Memory and GPU docs are architecture plans, not implementations.
+
 ### 2026-06-28: Workflow Closeout Guard Hardening
 
 - Status: Verified locally.

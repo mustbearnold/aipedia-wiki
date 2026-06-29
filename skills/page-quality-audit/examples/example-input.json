@@ -1,0 +1,7 @@
+{
+  "scope": "affiliate guides",
+  "current_date": "2026-06-29",
+  "dimensions": ["freshness", "buyer_intent", "cta_quality", "trustworthiness"],
+  "edits_allowed": false,
+  "limit": 10
+}

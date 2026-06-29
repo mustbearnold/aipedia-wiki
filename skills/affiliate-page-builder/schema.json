@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Affiliate Page Builder Input",
+  "type": "object",
+  "required": ["buyer_intent_keyword", "audience", "primary_tool", "conversion_goal", "affiliate_status", "current_date"],
+  "properties": {
+    "buyer_intent_keyword": { "type": "string" },
+    "audience": { "type": "string" },
+    "primary_tool": { "type": "string" },
+    "competitors": { "type": "array", "items": { "type": "string" } },
+    "conversion_goal": { "type": "string" },
+    "affiliate_status": { "type": "string", "enum": ["approved", "applied", "paused", "rejected", "none"] },
+    "current_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+  },
+  "additionalProperties": true
+}

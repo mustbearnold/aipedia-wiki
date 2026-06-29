@@ -1,0 +1,7 @@
+{
+  "memory_goal": "Build a compact evidence bundle for a Cursor pricing refresh.",
+  "scope": "tool:cursor",
+  "current_date": "2026-06-29",
+  "data_sources": ["src/content/tools/cursor.md", "src/data/source-registry.json", "PAGE_REFRESH_LEDGER.md"],
+  "output_shape": "evidence_bundle"
+}

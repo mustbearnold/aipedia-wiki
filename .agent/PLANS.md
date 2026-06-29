@@ -6,8 +6,8 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 
 ## Current Snapshot
 
-- Last updated: 2026-06-28.
-- Branch baseline: `master`; highest priority is the daily AI and AI-tools news refresh. Affiliate conversion page buildout remains the next revenue loop after the daily news surface is current. The June 27 strict 3-day whole-site refresh target is complete.
+- Last updated: 2026-06-29.
+- Branch baseline: `agent-workflow-refactor-codex` from `master`; current branch focus is the Codex operating-system refactor. Highest content priority after this branch remains the daily AI and AI-tools news refresh. Affiliate conversion page buildout remains the next revenue loop after the daily news surface is current. The June 27 strict 3-day whole-site refresh target is complete.
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - Daily news is the first editorial task each day. Use `workflows/news-refresh/README.md`, current-month source searches, and strict source-backed story selection before returning to affiliate or freshness batches.
 - Active user-directed goal for June 28: continuously add net-new, source-backed AI tool pages to AiPedia for the full day. Affiliate conversion resumes after the user pauses or ends the tool expansion push.
@@ -32,6 +32,35 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports. Tool-refresh closeout now uses route QA concurrency 6 and writes per-route/per-width timing.
 - June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The June 26 same-day revisit closeout shifted the bottleneck to route QA: closeout timing was ledger 0.6s, grouped check 25.4s, typecheck 16.3s, build:fast 16.4s, and route QA 126.3s at concurrency 4 for 75 routes across seven widths. Rerunning the same route matrix at concurrency 6 passed and wrote route timing in about 85.5s internal duration. Future refresh work should use six shard workers with up to 10 tools each, one integrator, generated worker prompts, the fast batch gate, dev-server route QA while editing, then one `build:fast` and concurrency-6 route QA at closeout.
+
+## Active: Agent Workflow Refactor Codex
+
+### Objective
+
+Create a practical, committed Codex operating system for AiPedia so future agents can choose workflows, gather evidence, use skills, validate work, and report results with less duplicated prompting and fewer factual risks.
+
+### Scope
+
+- Promote root `AGENTS.md` as the central instruction file.
+- Add architecture audit, operating manual, task templates, report format, workflow docs, parallel tooling architecture, future Rust/CuPy roadmap, memory-system design, page-quality scoring design, and refactor report.
+- Add twelve skills under `skills/` with schemas and examples.
+- Add small deterministic helper scripts for workflow mapping and skill validation.
+- Keep public routes, content collections, affiliate links, generated assets, SEO metadata, and rendered site behavior unchanged.
+
+### Status
+
+Implemented and verified locally on `agent-workflow-refactor-codex`. No rendered pages were changed. The branch is ready for review, commit, or push when requested.
+
+### Closeout
+
+- `npm run agent:skills:check`
+- `npm run agent:workflow:map -- --json`
+- `node --check scripts/agent-workflow-map.mjs`
+- `node --check scripts/check-agent-skills.mjs`
+- `npm run audit:commands`
+- `npm run check:quick`
+- `node scripts/guard-em-dashes.mjs`
+- `git diff --check`
 
 ## Active: June 28 Tool Expansion Day
 
