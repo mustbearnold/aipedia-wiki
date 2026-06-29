@@ -7,10 +7,10 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 ## Current Snapshot
 
 - Last updated: 2026-06-29.
-- Branch baseline: `agent-workflow-refactor-codex` from `master`; current branch focus is the Codex operating-system refactor. Highest content priority after this branch remains the daily AI and AI-tools news refresh. Affiliate conversion page buildout remains the next revenue loop after the daily news surface is current. The June 27 strict 3-day whole-site refresh target is complete.
+- Branch baseline: `master`; the Codex operating-system refactor was fast-forward merged from `agent-workflow-refactor-codex` at `0ff8fb6a`. Highest content priority is now the daily AI and AI-tools news refresh. Affiliate conversion page buildout remains the next revenue loop after the daily news surface is current. The June 27 strict 3-day whole-site refresh target is complete.
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - Daily news is the first editorial task each day. Use `workflows/news-refresh/README.md`, current-month source searches, and strict source-backed story selection before returning to affiliate or freshness batches.
-- June 28 tool expansion push is paused by user request after nine verified net-new batches. Resume net-new tool pages only after the active workflow-refactor branch is reviewed, merged, or explicitly set aside.
+- June 28 tool expansion push is paused by user request after nine verified net-new batches. Resume net-new tool pages only after the daily news surface is current or the user explicitly resumes tool expansion.
 - Latest affiliate slice is complete, verified, and pushed: `/guides/consensus-pricing-for-students-and-researchers/`, plus Consensus, academic citation and citation sibling guides, the researcher-tools guide, AI Research, top-layer, search, LLM, source registry, and ledger updates. This pass verifies the current Consensus Free, Pro, Deep, Teams, and Enterprise plan math, June 2026 Deep Search Library/Collections updates, and keeps the Perplexity Enterprise pricing raw-HTTP 403 as a browser-verified caveat in the related citations guide.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
@@ -33,7 +33,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports. Tool-refresh closeout now uses route QA concurrency 6 and writes per-route/per-width timing.
 - June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The June 26 same-day revisit closeout shifted the bottleneck to route QA: closeout timing was ledger 0.6s, grouped check 25.4s, typecheck 16.3s, build:fast 16.4s, and route QA 126.3s at concurrency 4 for 75 routes across seven widths. Rerunning the same route matrix at concurrency 6 passed and wrote route timing in about 85.5s internal duration. Future refresh work should use six shard workers with up to 10 tools each, one integrator, generated worker prompts, the fast batch gate, dev-server route QA while editing, then one `build:fast` and concurrency-6 route QA at closeout.
 
-## Active: Agent Workflow Refactor Codex
+## Completed: Agent Workflow Refactor Codex
 
 ### Objective
 
@@ -49,7 +49,7 @@ Create a practical, committed Codex operating system for AiPedia so future agent
 
 ### Status
 
-Initial operating-system layer was committed and pushed as `cd24fe19`. Evidence, impact, scoring, calibration, memory JSONL, CPU vector query, and Rust task-DAG planning are implemented locally and awaiting final closeout, commit, and push. No rendered pages were changed.
+Merged into `master` at `0ff8fb6a`. Initial operating-system layer was committed as `cd24fe19`; evidence, impact, scoring, calibration, memory JSONL, CPU vector query, and Rust task-DAG planning followed in `e5c7be24`, `e46839f9`, and `0ff8fb6a`. No rendered pages were changed.
 
 ### Closeout
 

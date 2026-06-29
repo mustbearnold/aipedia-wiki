@@ -1,9 +1,18 @@
 # AiPedia Work Log
 
+### 2026-06-29: Codex Workflow Refactor Merged To Master
+
+- Status: Complete, verified, and merged to `master`.
+- Commit: `0ff8fb6a`.
+- Branch: `master`.
+- Changed: Fast-forward merged `agent-workflow-refactor-codex` into `master`, bringing in the central `AGENTS.md`, operating docs, skill packs, evidence/impact/score CLIs, JSONL memory baseline, CPU lexical vector query, score calibration, and Rust `runner:agent-plan` task-DAG contract. Updated `.agent` continuity docs so daily news is the next priority and CuPy remains deferred until measured CPU retrieval, rerank, or dedupe hotspots justify it.
+- Verification: previous branch closeout passed `npm run check:quick`, focused agent tests, Rust fmt/check/test, command audit, em-dash guard, and diff checks. Merge follow-up requires no rendered build because public routes, content facts, templates, metadata, schemas, and affiliate surfaces were unchanged.
+- Residual risks: Generic Rust DAG execution, SQLite/vector storage, browser QA integration, live source verification, CuPy, CUDA, Triton, Faiss, and cuVS remain future work.
+
 ### 2026-06-29: Agent Memory, Calibration, And Rust DAG Contract
 
-- Status: Implemented locally on `agent-workflow-refactor-codex`, pending final closeout, commit, and push.
-- Commit: pending.
+- Status: Complete, verified, and pushed on `agent-workflow-refactor-codex`; merged to `master`.
+- Commit: `e46839f9` and `0ff8fb6a`.
 - Branch: `agent-workflow-refactor-codex`.
 - Changed: Added `agent:memory:record`, `agent:memory:query`, and `agent:score:calibrate`, plus `scripts/lib/agent-cpu-vector.mjs` for CPU-only lexical vectors. Added `.agent/memory/` schema docs, a committed Cursor/Gemini-vs-Grok JSONL baseline, real-route calibration behavior, static Astro route scoring support, and `runner:agent-plan` in the Rust runner to write a task-DAG contract around evidence, impact, score, and memory recording. Updated docs to use `npm --silent run` for machine-readable JSON. CuPy remains deferred until CPU retrieval, rerank, or dedupe metrics justify a warm GPU service.
 - Verification so far: `node --check scripts/lib/agent-workflow-utils.mjs`; `node --check scripts/lib/agent-cpu-vector.mjs`; `node --check scripts/agent-memory-record.mjs`; `node --check scripts/agent-memory-query.mjs`; `node --check scripts/agent-score-calibration.mjs`; `node --check scripts/agent-page-quality-score.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs tests/scripts/agent-memory-tools.test.mjs`; `cargo check --manifest-path tools/aipedia-runner/Cargo.toml`; real-route smoke checks for static answer scoring, memory record/query, score calibration, and `runner:agent-plan`.
@@ -11,8 +20,8 @@
 
 ### 2026-06-29: Evidence, Impact, And Scoring Agent CLIs
 
-- Status: Complete, verified locally, and ready to push on `agent-workflow-refactor-codex`.
-- Commit: this commit.
+- Status: Complete, verified, pushed on `agent-workflow-refactor-codex`, and merged to `master`.
+- Commit: `e5c7be24`.
 - Branch: `agent-workflow-refactor-codex`.
 - Changed: Added `agent:evidence`, `agent:impact`, and `agent:score` read-only CLIs plus shared `scripts/lib/agent-workflow-utils.mjs`. Added fixture tests for evidence bundles, parent-surface detection, quality scoring, and CLI JSON output. Updated operating docs to make the new CLIs the deterministic handoff layer before Codex synthesis.
 - Verification: `node --check scripts/lib/agent-workflow-utils.mjs`; `node --check scripts/agent-evidence-bundle.mjs`; `node --check scripts/agent-parent-impact.mjs`; `node --check scripts/agent-page-quality-score.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`; `npm run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`; `npm run agent:impact -- --route /tools/cursor/ --json`; `npm run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`; `npm run audit:commands`; `npm run check:quick`; `node scripts/guard-em-dashes.mjs`; `git diff --check`.
