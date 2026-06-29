@@ -9,7 +9,7 @@ This manual explains how Codex should work inside `aipedia.wiki`. It is practica
 3. Pick the matching workflow or skill.
 4. Identify volatile facts and affected top-layer pages before editing.
 5. Gather current evidence with official sources where possible.
-6. Build a compact evidence bundle with `npm run agent:evidence -- --route <route> --json` when working on one page.
+6. Build a compact evidence bundle with `npm --silent run agent:evidence -- --route <route> --json` when working on one page.
 7. Patch only the needed files.
 8. Run the smallest valid checks first.
 9. Run rendered checks only when rendered output, runtime behavior, schema, SEO, or deployment confidence is affected.
@@ -57,10 +57,12 @@ For docs, scripts, skills, and workflow-only edits:
 ```bash
 node --check <changed-script>
 npm run agent:skills:check
-npm run agent:workflow:map -- --json
-npm run agent:evidence -- --route /tools/cursor/ --json
-npm run agent:impact -- --route /tools/cursor/ --json
-npm run agent:score -- --route /tools/cursor/ --json
+npm --silent run agent:workflow:map -- --json
+npm --silent run agent:evidence -- --route /tools/cursor/ --json
+npm --silent run agent:impact -- --route /tools/cursor/ --json
+npm --silent run agent:score -- --route /tools/cursor/ --json
+npm --silent run agent:memory:record -- --route /tools/cursor/ --json
+npm --silent run agent:score:calibrate -- --json
 npm run check:quick
 git diff --check
 ```

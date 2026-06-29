@@ -88,3 +88,19 @@ Codex or future Rust orchestrator
 6. Add CuPy micro-batching.
 7. Add Rust task-DAG integration.
 8. Add Triton or CUDA kernels only for profiled hot paths.
+
+## Current CPU Baseline
+
+The current branch uses `cpu-lexical-hash-v1` vectors from `scripts/lib/agent-cpu-vector.mjs`. These vectors support `agent:memory:record` and `agent:memory:query` without a GPU service.
+
+The Rust runner has a bridge command:
+
+```bash
+npm --silent run runner:agent-plan -- --route /tools/cursor/ --current-date 2026-06-29
+```
+
+It writes a task-DAG contract for evidence, impact, score, and memory recording. It does not execute a generic DAG yet.
+
+## CuPy Gate
+
+Do not add CuPy until CPU memory retrieval, reranking, or dedupe produces measured hotspots. The first metrics to collect are memory-record count, query latency, rerank latency, duplicate-candidate volume, and score-calibration mismatch rate.

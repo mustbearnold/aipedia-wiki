@@ -8,9 +8,12 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run check:smart:run`: runs that recommendation.
 - `npm run agent:workflow:map`: prints a compact map of content collections, workflows, skills, key docs, and command families for future Codex orientation.
 - `npm run agent:skills:check`: validates the committed `skills/` directories have required sections, parseable schemas, and example inputs.
-- `npm run agent:evidence -- --route /tools/cursor/ --json`: builds a compact read-only evidence bundle from the page, source registry, ledger, internal links, affiliate state, and parent-impact signals.
-- `npm run agent:impact -- --route /tools/cursor/ --json`: detects parent hubs, top-layer routes, shared files, and likely route surfaces affected by a route or content file change.
-- `npm run agent:score -- --route /tools/cursor/ --json`: computes a read-only page quality score from repository signals without live source verification.
+- `npm --silent run agent:evidence -- --route /tools/cursor/ --json`: builds a compact read-only evidence bundle from the page, source registry, ledger, internal links, affiliate state, and parent-impact signals.
+- `npm --silent run agent:impact -- --route /tools/cursor/ --json`: detects parent hubs, top-layer routes, shared files, and likely route surfaces affected by a route or content file change.
+- `npm --silent run agent:score -- --route /tools/cursor/ --json`: computes a read-only page quality score from repository signals without live source verification.
+- `npm --silent run agent:score:calibrate -- --json`: compares score output with real repo signals across a small mixed-route baseline.
+- `npm --silent run agent:memory:record -- --route /tools/cursor/ --json`: writes JSONL-ready memory records with CPU lexical vectors.
+- `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory.jsonl --query "pricing source gaps" --json`: ranks memory records with the CPU lexical scorer.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
 - `npm run lint`: source/content guard bundle used as the repo lint gate.
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
@@ -24,6 +27,9 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run agent:evidence`: read-only evidence bundle builder for a single route or content path. It is the first deterministic handoff layer between raw repo state and Codex synthesis.
 - `npm run agent:impact`: read-only parent-surface impact detector for route/content changes. Use it before editing shared hubs, ledgers, search, or LLM surfaces.
 - `npm run agent:score`: read-only page quality scoring prototype. Use it for prioritization only; it does not replace current-source verification.
+- `npm run agent:score:calibrate`: score calibration receipt across real route signals. Use `--silent` for machine-readable JSON.
+- `npm run agent:memory:record`: JSONL memory record builder. Defaults to `local/tmp`; pass `--out .agent/memory/agent-memory.jsonl --append` only for durable memory.
+- `npm run agent:memory:query`: CPU lexical vector query over JSONL memory records.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`: plans the next 60-tool freshness batch, including registered source metadata, scoped `audit:sources` commands, routes, parent hubs, closeout commands, and `agent_briefs` for six shard workers.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents`: prints one guarded shard-worker brief per 10-tool shard plus the single integrator brief.
 - `npm run check:frontmatter`: parses changed content frontmatter with `js-yaml` so malformed markdown metadata is caught before Astro typecheck/build.
@@ -33,6 +39,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run runner:page-refresh:plan`: uses the Rust workflow runner to create non-tool page planner JSON, worker prompt files, worker report scaffolds, and split route QA args under `local/tmp/aipedia-runner/page-refresh/`.
 - `npm run runner:page-refresh:reports`: aggregates page-refresh worker JSON reports into a local summary.
 - `npm run runner:page-refresh:closeout`: uses the Rust workflow runner to execute page-refresh cheap gates, typecheck, build, split route QA, worker-report summary, and a local receipt in order.
+- `npm run runner:agent-plan -- --route /tools/cursor/`: writes a local task-DAG contract that joins `agent:evidence`, `agent:impact`, `agent:score`, and `agent:memory:record` without executing the DAG yet.
 - `npm run qa:route`: route-specific Playwright QA for mobile, tablet, and desktop widths. Use `--base-url http://127.0.0.1:<port>` for no-build checks against a running local server, and `--concurrency 4` for faster route matrices when the server is stable.
 - `npm run qa:agent`: local-only Playwright buyer-journey QA with timing, layout, CTA, disclosure, resource, and optional PageAgent token/step metrics. Use deterministic mode by default; add `--page-agent --llm-base-url <url> --model <name>` only when a compatible LLM endpoint is ready.
 - `npm run check`: broad source, content, link, news, asset, and security checks.
@@ -53,6 +60,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `check-frontmatter.mjs`: parses changed or explicit markdown frontmatter with `js-yaml` and reports file, line, and column for YAML syntax failures.
 - `tool-refresh-batch-check.mjs`: runs the cheap grouped tool gate. It accepts explicit `--file` values or a saved planner JSON through `--plan` or `--files-from`.
 - `tools/aipedia-runner/`: Rust orchestration wrapper around the tool and page refresh planners, closeout gates, route-arg generation, worker prompt files, worker report summaries, and local receipts.
+- `runner:agent-plan`: Rust-side bridge contract for future generic agent DAG execution. It currently writes JSON only; Node CLIs remain the stable evidence and memory boundary.
 - `qa-route.mjs`: serves the built output and verifies a local route across 360, 390, 430, 768, 1024, and 1366 px unless custom widths are supplied.
 - `qa-agent.mjs`: measures buyer-decision, commercial CTA, and layout-consistency journeys across local routes. Optional PageAgent mode injects `page-agent` in the browser and proxies OpenAI-compatible LLM calls through the local QA server so API keys stay out of page reports.
 - `npm run guard:challenge`: creates a proposed guard challenge artifact when a guard, audit, check, or fixture may need to change.

@@ -251,6 +251,7 @@ function round(value) {
 function recommendAction(scores, evidence) {
   if (evidence.source_evidence.missing_source_ids.length) return 'fix_missing_sources';
   if (scores.update_urgency >= 0.75) return 'refresh_current_facts';
+  if (scores.source_quality < 0.45) return 'improve_source_coverage';
   if (scores.internal_links < 0.5) return 'improve_internal_links';
   if (scores.cta_quality < 0.6 && evidence.affiliate_notes.state !== 'none') return 'improve_cta_context';
   if (scores.buyer_intent < 0.65) return 'strengthen_buyer_decision_path';

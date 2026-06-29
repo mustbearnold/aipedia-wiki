@@ -83,11 +83,15 @@ AiPedia needs durable memory that helps future Codex runs retrieve current facts
 Use the read-only evidence bundle command before a manual page edit:
 
 ```bash
-npm run agent:evidence -- --route /tools/cursor/ --json
-npm run agent:evidence -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
+npm --silent run agent:evidence -- --route /tools/cursor/ --json
+npm --silent run agent:evidence -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
+npm --silent run agent:memory:record -- --route /tools/cursor/ --json
+npm --silent run agent:memory:query -- --memory local/tmp/agent-memory.jsonl --query "pricing source gaps" --json
 ```
 
 The command gathers page frontmatter facts, source IDs, registered source metadata, affiliate state, ledger row, internal links, parent-impact signals, stale-review signals, and recommended update prompts. It does not perform live web verification.
+
+`agent:memory:record` turns evidence, impact, score, and source rows into JSONL-ready memory records with CPU lexical vectors. It writes to `local/tmp/agent-memory.jsonl` by default. Use `--out .agent/memory/agent-memory.jsonl --append` only for intentional durable project memory.
 
 ## Ingestion Sources
 

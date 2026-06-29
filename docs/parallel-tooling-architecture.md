@@ -126,8 +126,11 @@ The existing Rust runner already proves this model for tool refresh and page ref
 ## Current Helper Commands
 
 ```bash
-npm run agent:evidence -- --route /tools/cursor/ --json
-npm run agent:impact -- --route /tools/cursor/ --json
+npm --silent run agent:evidence -- --route /tools/cursor/ --json
+npm --silent run agent:impact -- --route /tools/cursor/ --json
+npm --silent run agent:memory:record -- --route /tools/cursor/ --json
 ```
 
 Use `agent:evidence` as the join payload for a single route. Use `agent:impact` before integration so Codex knows which parent hubs, top-layer routes, shared files, and LLM/search surfaces might need inspection.
+
+Use `agent:memory:record` after evidence and impact stabilize for a route. It creates JSONL records with CPU lexical vectors so a future Rust task-DAG runner can persist and retrieve compact context without a GPU service.

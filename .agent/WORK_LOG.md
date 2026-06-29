@@ -1,5 +1,14 @@
 # AiPedia Work Log
 
+### 2026-06-29: Agent Memory, Calibration, And Rust DAG Contract
+
+- Status: Implemented locally on `agent-workflow-refactor-codex`, pending final closeout, commit, and push.
+- Commit: pending.
+- Branch: `agent-workflow-refactor-codex`.
+- Changed: Added `agent:memory:record`, `agent:memory:query`, and `agent:score:calibrate`, plus `scripts/lib/agent-cpu-vector.mjs` for CPU-only lexical vectors. Added `.agent/memory/` schema docs, real-route calibration behavior, static Astro route scoring support, and `runner:agent-plan` in the Rust runner to write a task-DAG contract around evidence, impact, score, and memory recording. Updated docs to use `npm --silent run` for machine-readable JSON. CuPy remains deferred until CPU retrieval, rerank, or dedupe metrics justify a warm GPU service.
+- Verification so far: `node --check scripts/lib/agent-workflow-utils.mjs`; `node --check scripts/lib/agent-cpu-vector.mjs`; `node --check scripts/agent-memory-record.mjs`; `node --check scripts/agent-memory-query.mjs`; `node --check scripts/agent-score-calibration.mjs`; `node --check scripts/agent-page-quality-score.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs tests/scripts/agent-memory-tools.test.mjs`; `cargo check --manifest-path tools/aipedia-runner/Cargo.toml`; real-route smoke checks for static answer scoring, memory record/query, score calibration, and `runner:agent-plan`.
+- Residual risks: The memory layer is JSONL plus CPU lexical vectors only. No SQLite/vector database, generic Rust DAG execution, live source verification, browser QA, CuPy, CUDA, Triton, Faiss, or cuVS implementation exists yet.
+
 ### 2026-06-29: Evidence, Impact, And Scoring Agent CLIs
 
 - Status: Complete, verified locally, and ready to push on `agent-workflow-refactor-codex`.

@@ -20,6 +20,9 @@ This refactor does not change public page content, rendered templates, URLs, SEO
 - Added a deterministic evidence-bundle CLI for one route or content path.
 - Added a parent-surface impact detector for changed routes and shared-file planning.
 - Added a read-only page quality scoring prototype.
+- Added score calibration against real route signals.
+- Added JSONL-ready memory records with CPU lexical vectors and query.
+- Added a Rust task-DAG plan contract for future generic agent orchestration.
 - Narrowed `.gitignore` so only the new canonical docs and root `AGENTS.md` are unignored, while older local-only docs stay ignored.
 
 ## Files Created
@@ -39,8 +42,15 @@ This refactor does not change public page content, rendered templates, URLs, SEO
 - `scripts/agent-evidence-bundle.mjs`
 - `scripts/agent-parent-impact.mjs`
 - `scripts/agent-page-quality-score.mjs`
+- `scripts/agent-score-calibration.mjs`
+- `scripts/agent-memory-record.mjs`
+- `scripts/agent-memory-query.mjs`
+- `scripts/lib/agent-cpu-vector.mjs`
 - `scripts/lib/agent-workflow-utils.mjs`
 - `tests/scripts/agent-workflow-tools.test.mjs`
+- `tests/scripts/agent-memory-tools.test.mjs`
+- `.agent/memory/README.md`
+- `.agent/memory/schema.json`
 - `skills/*/SKILL.md`
 - `skills/*/schema.json`
 - `skills/*/examples/example-input.json`
@@ -68,11 +78,15 @@ This refactor does not change public page content, rendered templates, URLs, SEO
 - `node --check scripts/agent-parent-impact.mjs`
 - `node --check scripts/agent-page-quality-score.mjs`
 - `npm run agent:skills:check`
-- `npm run agent:workflow:map -- --json`
+- `npm --silent run agent:workflow:map -- --json`
 - `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`
-- `npm run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`
-- `npm run agent:impact -- --route /tools/cursor/ --json`
-- `npm run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm --silent run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm --silent run agent:impact -- --route /tools/cursor/ --json`
+- `npm --silent run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm --silent run agent:memory:record -- --route /tools/cursor/ --route /compare/gemini-vs-grok/ --current-date 2026-06-29 --out local/tmp/agent-memory-real-routes.jsonl --json`
+- `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory-real-routes.jsonl --query "pricing source coverage comparison" --json`
+- `npm --silent run agent:score:calibrate -- --current-date 2026-06-29 --json`
+- `npm --silent run runner:agent-plan -- --route /tools/cursor/ --current-date 2026-06-29 --out local/tmp/aipedia-runner/agent-dag/cursor-task-graph.json`
 
 Final no-build verification is recorded below after closeout.
 
@@ -88,10 +102,16 @@ No-build closeout passed:
 - `node --check scripts/agent-evidence-bundle.mjs`
 - `node --check scripts/agent-parent-impact.mjs`
 - `node --check scripts/agent-page-quality-score.mjs`
+- `node --check scripts/lib/agent-cpu-vector.mjs`
+- `node --check scripts/agent-memory-record.mjs`
+- `node --check scripts/agent-memory-query.mjs`
+- `node --check scripts/agent-score-calibration.mjs`
 - `npm run agent:skills:check`
-- `npm run agent:workflow:map -- --json`
+- `npm --silent run agent:workflow:map -- --json`
 - `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`
+- `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs tests/scripts/agent-memory-tools.test.mjs`
 - real-route smoke checks for `agent:evidence`, `agent:impact`, and `agent:score` on `/tools/cursor/`
+- real-route memory record, memory query, score calibration, static answer scoring, and Rust `runner:agent-plan` smoke checks
 - `npm run audit:commands`
 - `node scripts/guard-em-dashes.mjs`
 - `npm run check:quick`
@@ -126,9 +146,13 @@ No-build closeout passed:
 
 - `npm run agent:workflow:map`: prints content counts, workflow directories, skills, canonical docs, and command families.
 - `npm run agent:skills:check`: validates skill directory structure, required sections, schemas, and example inputs.
-- `npm run agent:evidence -- --route /tools/cursor/ --json`: builds a compact read-only evidence bundle from page frontmatter, source registry, ledger, links, affiliate state, stale signals, and parent-impact signals.
-- `npm run agent:impact -- --route /tools/cursor/ --json`: detects parent hubs, top-layer routes, referencing pages, shared files, and likely validation checks.
-- `npm run agent:score -- --route /tools/cursor/ --json`: computes read-only page quality dimensions and a recommended action from repository signals.
+- `npm --silent run agent:evidence -- --route /tools/cursor/ --json`: builds a compact read-only evidence bundle from page frontmatter, source registry, ledger, links, affiliate state, stale signals, and parent-impact signals.
+- `npm --silent run agent:impact -- --route /tools/cursor/ --json`: detects parent hubs, top-layer routes, referencing pages, shared files, and likely validation checks.
+- `npm --silent run agent:score -- --route /tools/cursor/ --json`: computes read-only page quality dimensions and a recommended action from repository signals.
+- `npm --silent run agent:score:calibrate -- --json`: compares scores against ledger age, source coverage, stale signals, and parent impact on a mixed route baseline.
+- `npm --silent run agent:memory:record -- --route /tools/cursor/ --json`: writes JSONL-ready memory records with `cpu-lexical-hash-v1` vectors.
+- `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory.jsonl --query "pricing source gaps" --json`: ranks memory records with CPU lexical vectors.
+- `npm --silent run runner:agent-plan -- --route /tools/cursor/`: writes a Rust-side task-DAG contract around the Node evidence and memory commands.
 
 The requested `tools/page`, `tools/seo`, and similar folders were not created because `tools/*` is intentionally ignored except the Rust runner, and this repo already exposes operator tools through `scripts/` and package commands. The new helper scripts follow that established pattern.
 
@@ -141,19 +165,19 @@ The requested `tools/page`, `tools/seo`, and similar folders were not created be
 
 ## Known Limitations
 
-- Evidence, impact, and score CLIs are v1 read-only tools. They do not perform live source verification or browser layout inspection.
-- No memory store or vector index exists yet.
-- No Rust task-DAG orchestrator beyond the existing refresh runner was implemented.
+- Evidence, impact, score, calibration, and memory CLIs are v1 read-only tools. They do not perform live source verification or browser layout inspection.
+- JSONL memory records and CPU lexical vectors exist, but there is no SQLite or vector database yet.
+- The Rust runner writes an agent task-DAG contract, but it does not execute generic DAGs yet.
 - No CuPy, CUDA, Triton, Faiss, or cuVS code was added.
 
 ## Recommended Next Steps
 
 1. Open or review the branch PR, then merge once the operating-system direction is accepted.
-2. Use `agent:evidence` and `agent:impact` during the next real page edit, then record any missing signals.
-3. Calibrate `agent:score` against real refresh outcomes before using it for automated prioritization.
-4. Add a durable memory store or JSONL receipt layer after the evidence bundle shape stabilizes.
-5. Extend the Rust runner only after the evidence-bundle and scoring contracts prove stable in live work.
+2. Use the memory recorder during the next real content refresh and decide whether any JSONL lines should be committed under `.agent/memory/`.
+3. Track score-calibration mismatches from live work before automating prioritization.
+4. Promote the Rust `agent-plan` contract into execution only after the Node evidence and memory contracts prove stable.
+5. Keep CuPy deferred until CPU retrieval, rerank, or dedupe metrics show a real hotspot.
 
 ## Future Rust/CuPy Implementation Path
 
-Start with CPU-only deterministic evidence bundles and JSONL memory objects. Add Rust task-DAG scheduling around existing scripts. Add a long-running Python plus CuPy service only after retrieval, dedupe, and reranking workloads are measured and worth accelerating. Keep final editorial judgment, factual synthesis, page writing, and publishing decisions outside the GPU layer.
+Start with CPU-only deterministic evidence bundles and JSONL memory objects. The current branch now has `cpu-lexical-hash-v1` memory vectors and a Rust task-DAG contract writer. Add Rust task-DAG execution around existing scripts only after the JSON contracts stabilize. Add a long-running Python plus CuPy service only after retrieval, dedupe, and reranking workloads are measured and worth accelerating. Keep final editorial judgment, factual synthesis, page writing, and publishing decisions outside the GPU layer.

@@ -47,6 +47,8 @@ enum Commands {
     AffiliateReports(AffiliateReportsArgs),
     /// Write a strict-gated affiliate conversion implementation handoff.
     AffiliateHandoff(AffiliateHandoffArgs),
+    /// Write a generic agent task-DAG plan around evidence, score, impact, and memory commands.
+    AgentPlan(AgentPlanArgs),
 }
 
 #[derive(Parser, Debug, Clone)]
@@ -260,6 +262,21 @@ struct AffiliateHandoffArgs {
         default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-implementation-handoff.md"
     )]
     out: PathBuf,
+}
+
+#[derive(Parser, Debug)]
+struct AgentPlanArgs {
+    #[arg(long)]
+    route: String,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/agent-dag/agent-task-graph.json"
+    )]
+    out: PathBuf,
+    #[arg(long, default_value = "local/tmp/agent-memory.jsonl")]
+    memory_out: PathBuf,
+    #[arg(long)]
+    current_date: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -626,7 +643,88 @@ fn main() -> Result<()> {
             Ok(())
         }
         Commands::AffiliateHandoff(args) => write_affiliate_handoff_command(&project_dir, &args),
+        Commands::AgentPlan(args) => write_agent_task_graph(&project_dir, &args, cli.dry_run),
     }
+}
+
+fn write_agent_task_graph(project_dir: &Path, args: &AgentPlanArgs, dry_run: bool) -> Result<()> {
+    if args.route.trim().is_empty() {
+        bail!("--route is required");
+    }
+    let out_path = resolve_project_path(project_dir, &args.out);
+    let current_date = args
+        .current_date
+        .clone()
+        .unwrap_or_else(|| Utc::now().date_naive().to_string());
+    let route = args.route.trim();
+    let memory_out = display_path(
+        project_dir,
+        &resolve_project_path(project_dir, &args.memory_out),
+    );
+    let graph = serde_json::json!({
+        "schema_version": "aipedia.agent-task-dag.v1",
+        "generated_at": Utc::now().to_rfc3339(),
+        "current_date": current_date,
+        "route": route,
+        "parallel": [
+            {
+                "id": "evidence",
+                "kind": "read_only_signal",
+                "command": "npm",
+                "args": ["run", "--silent", "agent:evidence", "--", "--route", route, "--current-date", current_date, "--json"]
+            },
+            {
+                "id": "impact",
+                "kind": "read_only_signal",
+                "command": "npm",
+                "args": ["run", "--silent", "agent:impact", "--", "--route", route, "--json"]
+            },
+            {
+                "id": "score",
+                "kind": "read_only_signal",
+                "command": "npm",
+                "args": ["run", "--silent", "agent:score", "--", "--route", route, "--current-date", current_date, "--json"]
+            }
+        ],
+        "join": {
+            "id": "memory_record",
+            "kind": "jsonl_receipt",
+            "command": "npm",
+            "args": ["run", "--silent", "agent:memory:record", "--", "--route", route, "--current-date", current_date, "--out", memory_out, "--json"]
+        },
+        "then": [
+            "codex_synthesis",
+            "patch_or_report",
+            "focused_validation",
+            "update_status_docs"
+        ],
+        "gpu_policy": {
+            "cupy": "defer_until_measured_cpu_retrieval_rerank_or_dedupe_hotspot",
+            "current_vector_layer": "cpu-lexical-hash-v1"
+        },
+        "notes": [
+            "This is a contract artifact. It does not execute tasks yet.",
+            "Use the Node CLIs as the stable evidence and memory boundary before adding Rust execution."
+        ]
+    });
+
+    if dry_run {
+        println!(
+            "dry-run: would write {}",
+            display_path(project_dir, &out_path)
+        );
+        println!("{}", serde_json::to_string_pretty(&graph)?);
+        return Ok(());
+    }
+
+    ensure_parent(&out_path)?;
+    fs::write(
+        &out_path,
+        format!("{}\n", serde_json::to_string_pretty(&graph)?),
+    )
+    .with_context(|| format!("could not write {}", out_path.display()))?;
+    println!("Agent task graph: {}", display_path(project_dir, &out_path));
+    Ok(())
 }
 
 fn plan_tool_refresh(project_dir: &Path, args: &ToolRefreshArgs, dry_run: bool) -> Result<()> {

@@ -104,8 +104,9 @@ For news:
 The first read-only scorer is available:
 
 ```bash
-npm run agent:score -- --route /tools/cursor/ --json
-npm run agent:score -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
+npm --silent run agent:score -- --route /tools/cursor/ --json
+npm --silent run agent:score -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
+npm --silent run agent:score:calibrate -- --json
 ```
 
 It consumes:
@@ -118,3 +119,5 @@ It consumes:
 - provenance audit output
 
 Output JSON only. Do not make the score write pages directly. The prototype is a prioritization signal and does not perform live source verification.
+
+`agent:score:calibrate` compares score output with real repo signals: ledger age, source coverage, stale signals, and parent-impact breadth. Use it after changing score weights or recommendation thresholds.

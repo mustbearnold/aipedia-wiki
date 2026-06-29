@@ -99,6 +99,9 @@
     "agent:evidence": "node scripts/agent-evidence-bundle.mjs",
     "agent:impact": "node scripts/agent-parent-impact.mjs",
     "agent:score": "node scripts/agent-page-quality-score.mjs",
+    "agent:score:calibrate": "node scripts/agent-score-calibration.mjs",
+    "agent:memory:record": "node scripts/agent-memory-record.mjs",
+    "agent:memory:query": "node scripts/agent-memory-query.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
     "check:security": "npm audit --audit-level=moderate",
@@ -127,7 +130,8 @@
     "runner:page-refresh:run": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- page-run",
     "runner:affiliate-conversion:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-plan",
     "runner:affiliate-conversion:reports": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-reports",
-    "runner:affiliate-conversion:handoff": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-handoff"
+    "runner:affiliate-conversion:handoff": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-handoff",
+    "runner:agent-plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- agent-plan"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

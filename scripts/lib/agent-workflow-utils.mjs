@@ -26,6 +26,20 @@ export function valueFor(args, flag) {
   return index >= 0 ? args[index + 1] : undefined;
 }
 
+export function valuesFor(args, flag) {
+  const values = [];
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    if (arg === flag && args[index + 1]) {
+      values.push(args[index + 1]);
+      index += 1;
+    } else if (arg.startsWith(`${flag}=`)) {
+      values.push(arg.slice(flag.length + 1));
+    }
+  }
+  return values.flatMap((value) => String(value).split(',').map((part) => part.trim()).filter(Boolean));
+}
+
 export function hasFlag(args, flag) {
   return args.includes(flag) || args.some((arg) => arg.startsWith(`${flag}=`));
 }
@@ -50,6 +64,14 @@ export function slugFromPath(path) {
 export function readMarkdownFile(projectDir, relativePath) {
   const absolutePath = resolve(projectDir, relativePath);
   const raw = readFileSync(absolutePath, 'utf8');
+  if (!relativePath.endsWith('.md')) {
+    return {
+      path: projectPath(projectDir, absolutePath),
+      raw,
+      frontmatter: {},
+      body: raw,
+    };
+  }
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   const frontmatter = match ? yaml.load(match[1]) ?? {} : {};
   const body = match ? raw.slice(match[0].length) : raw;

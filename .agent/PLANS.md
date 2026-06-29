@@ -44,26 +44,37 @@ Create a practical, committed Codex operating system for AiPedia so future agent
 - Promote root `AGENTS.md` as the central instruction file.
 - Add architecture audit, operating manual, task templates, report format, workflow docs, parallel tooling architecture, future Rust/CuPy roadmap, memory-system design, page-quality scoring design, and refactor report.
 - Add twelve skills under `skills/` with schemas and examples.
-- Add deterministic helper scripts for workflow mapping, skill validation, evidence bundles, parent-surface impact detection, and read-only page quality scoring.
+- Add deterministic helper scripts for workflow mapping, skill validation, evidence bundles, parent-surface impact detection, read-only page quality scoring, score calibration, JSONL memory records, CPU lexical vector query, and Rust task-DAG planning.
 - Keep public routes, content collections, affiliate links, generated assets, SEO metadata, and rendered site behavior unchanged.
 
 ### Status
 
-Initial operating-system layer was committed and pushed as `cd24fe19`. The evidence bundle, parent impact, and page quality scoring tools are implemented and verified in this follow-up commit. No rendered pages were changed.
+Initial operating-system layer was committed and pushed as `cd24fe19`. Evidence, impact, scoring, calibration, memory JSONL, CPU vector query, and Rust task-DAG planning are implemented locally and awaiting final closeout, commit, and push. No rendered pages were changed.
 
 ### Closeout
 
 - `npm run agent:skills:check`
-- `npm run agent:workflow:map -- --json`
+- `npm --silent run agent:workflow:map -- --json`
 - `node --check scripts/agent-workflow-map.mjs`
 - `node --check scripts/check-agent-skills.mjs`
 - `node --check scripts/agent-evidence-bundle.mjs`
 - `node --check scripts/agent-parent-impact.mjs`
 - `node --check scripts/agent-page-quality-score.mjs`
+- `node --check scripts/agent-score-calibration.mjs`
+- `node --check scripts/agent-memory-record.mjs`
+- `node --check scripts/agent-memory-query.mjs`
+- `node --check scripts/lib/agent-cpu-vector.mjs`
 - `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs`
-- `npm run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`
-- `npm run agent:impact -- --route /tools/cursor/ --json`
-- `npm run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm exec --yes --package=node@24 -- node --test tests/scripts/agent-workflow-tools.test.mjs tests/scripts/agent-memory-tools.test.mjs`
+- `npm --silent run agent:evidence -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm --silent run agent:impact -- --route /tools/cursor/ --json`
+- `npm --silent run agent:score -- --route /tools/cursor/ --current-date 2026-06-29 --json`
+- `npm --silent run agent:memory:record -- --route /tools/cursor/ --route /compare/gemini-vs-grok/ --current-date 2026-06-29 --out local/tmp/agent-memory-real-routes.jsonl --json`
+- `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory-real-routes.jsonl --query "pricing source coverage comparison" --json`
+- `npm --silent run agent:score:calibrate -- --current-date 2026-06-29 --json`
+- `npm --silent run runner:agent-plan -- --route /tools/cursor/ --current-date 2026-06-29 --out local/tmp/aipedia-runner/agent-dag/cursor-task-graph.json`
+- `cargo fmt --manifest-path tools/aipedia-runner/Cargo.toml --check`
+- `cargo check --manifest-path tools/aipedia-runner/Cargo.toml`
 - `npm run audit:commands`
 - `npm run check:quick`
 - `node scripts/guard-em-dashes.mjs`

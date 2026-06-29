@@ -46,9 +46,11 @@ Start scoped:
 ```bash
 npm run check:smart
 npm run check:smart:run
-npm run agent:evidence -- --route /tools/cursor/ --json
-npm run agent:impact -- --route /tools/cursor/ --json
-npm run agent:score -- --route /tools/cursor/ --json
+npm --silent run agent:evidence -- --route /tools/cursor/ --json
+npm --silent run agent:impact -- --route /tools/cursor/ --json
+npm --silent run agent:score -- --route /tools/cursor/ --json
+npm --silent run agent:memory:record -- --route /tools/cursor/ --json
+npm --silent run agent:score:calibrate -- --json
 ```
 
 Common gates:
