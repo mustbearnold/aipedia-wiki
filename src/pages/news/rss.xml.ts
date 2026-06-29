@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
+// Refresh metadata: 2026-06-29 June 29 focused AI tools news added across the Gemini API key incident, HP/OpenAI Frontier, and Grok 4.5 private beta; RSS remains data-driven and was inspected with homepage, LLM surfaces, and ledger.
 // Refresh metadata: 2026-06-28 Jun 26-28 focused AI news articles added with three stories per day; RSS remains data-driven and was inspected with homepage, LLM surfaces, and ledger.
 // Refresh metadata: 2026-06-24 Jun 23-24 focused AI news articles added and RSS feed inspected; no daily roundup page added.
 // Refresh metadata: 2026-06-17 June 17 focused Google Pixel/Gemini, Microsoft Copilot Cowork, G7 AI sovereignty, and NVIDIA AI infrastructure coverage added after current June source checks; news archive, sitemap, LLM surfaces, and related routes inspected.

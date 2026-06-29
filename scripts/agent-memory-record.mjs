@@ -80,6 +80,10 @@ export function buildMemoryRecords(projectDir, options = {}) {
       ...impact.surfaces.slice(0, 20).map((surface) => `${surface.route}: ${surface.reason}`),
     ].join('\n');
 
+    const sourceCount = evidence.source_evidence.total_sources
+      ?? evidence.source_evidence.source_ids.length
+      + (evidence.source_evidence.inline_source_count ?? 0);
+
     records.push({
       schema_version: 'aipedia.memory-record.v1',
       id: `page_snapshot:${routeKey}:${currentDate}`,
@@ -93,7 +97,7 @@ export function buildMemoryRecords(projectDir, options = {}) {
       last_verified: evidence.target.last_verified,
       score: score.score,
       recommended_action: score.recommended_action,
-      source_count: evidence.source_evidence.source_ids.length,
+      source_count: sourceCount,
       stale_signal_count: evidence.stale_sections.length,
       parent_surface_count: impact.surfaces.length,
       affiliate_state: evidence.affiliate_notes.state,

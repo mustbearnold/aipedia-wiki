@@ -3,6 +3,9 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-29 focused AI tools news added across the Gemini
+// API key incident, HP/OpenAI Frontier, and Grok 4.5 private beta; verbose
+// LLM surface remains data-driven through the news collection.
 // Refresh metadata: 2026-06-28 tool expansion added Firecrawl, Composio,
 // Dify, Flowise, LangSmith, Tavily, Pydantic AI, Mem0, Braintrust,
 // Portkey, Zep, promptfoo, Arize Phoenix, Ragas, OpenPipe, LangWatch,

@@ -93,6 +93,8 @@ The command gathers page frontmatter facts, source IDs, registered source metada
 
 `agent:memory:record` turns evidence, impact, score, and source rows into JSONL-ready memory records with CPU lexical vectors. It writes to `local/tmp/agent-memory.jsonl` by default. Use `--out .agent/memory/agent-memory.jsonl --append` only for intentional durable project memory.
 
+For content routes that are intentionally absent from `PAGE_REFRESH_LEDGER.md`, such as individual news articles, the agent route resolver falls back to the content collection. News articles also carry inline `sources` URLs rather than source-registry IDs; evidence and memory records count those inline sources separately from registered source IDs.
+
 ## Ingestion Sources
 
 - `src/content/**/*.md`

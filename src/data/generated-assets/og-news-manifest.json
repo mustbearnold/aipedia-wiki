@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "news-og",
-  "source_hash": "d151854acba80a78684be62ab6a042cdf1170519f9a04dd5f9d2e1365ebb186b",
+  "source_hash": "c04881ea1449a4085488ae9e9823e99fb6133dca2dde76dc91efe300b7bfbd54",
   "generated_at": "deterministic",
   "meta": {
-    "records": 9,
+    "records": 12,
     "requested_slugs": [
       "2026-06-26-openai-gpt-56-sol-preview-access-risk",
       "2026-06-26-newegg-ai-shopping-mode",
@@ -14,7 +14,10 @@
       "2026-06-27-sail-research-agent-inference-costs",
       "2026-06-28-gpt-56-sol-cheating-benchmark-risk",
       "2026-06-28-claude-opus-47-fast-mode-deadline",
-      "2026-06-28-veo-vertex-ai-endpoint-deadline"
+      "2026-06-28-veo-vertex-ai-endpoint-deadline",
+      "2026-06-29-google-ai-studio-gemini-api-key-incident",
+      "2026-06-29-openai-hp-frontier-enterprise-rollout",
+      "2026-06-29-grok-45-private-beta-benchmark-caution"
     ],
     "limit": null
   },
@@ -101,6 +104,33 @@
       "sha256": "759682b7c96b22624349450b29e30dffa78627012d808c8f1a3b362fc12732bf"
     },
     {
+      "file": "public/og/news/2026-06-29-google-ai-studio-gemini-api-key-incident.png",
+      "kind": "news-png",
+      "slug": "2026-06-29-google-ai-studio-gemini-api-key-incident",
+      "theme": "dark",
+      "target": null,
+      "bytes": 51640,
+      "sha256": "4c0b612a92272a3af390da1b3f2d2e6f6ec58bb9458ca0181751a136b22a7bb4"
+    },
+    {
+      "file": "public/og/news/2026-06-29-grok-45-private-beta-benchmark-caution.png",
+      "kind": "news-png",
+      "slug": "2026-06-29-grok-45-private-beta-benchmark-caution",
+      "theme": "dark",
+      "target": null,
+      "bytes": 52200,
+      "sha256": "331f90096444769f001d582a7672ef77a220891b42b8a989f665ba23249220a7"
+    },
+    {
+      "file": "public/og/news/2026-06-29-openai-hp-frontier-enterprise-rollout.png",
+      "kind": "news-png",
+      "slug": "2026-06-29-openai-hp-frontier-enterprise-rollout",
+      "theme": "dark",
+      "target": null,
+      "bytes": 44580,
+      "sha256": "5dcb64d18015885c1a5ba8b97917a508dfa70f61ca2d2de5fdfe6f07339703a3"
+    },
+    {
       "file": "public/og/news/light/2026-06-26-gemini-sheets-formula-fixes.png",
       "kind": "news-png",
       "slug": "2026-06-26-gemini-sheets-formula-fixes",
@@ -180,6 +210,33 @@
       "target": null,
       "bytes": 35452,
       "sha256": "b4b84cabeb8b623c39c3fd068ffd36d7022cec9eb9dde42711d73742db49b386"
+    },
+    {
+      "file": "public/og/news/light/2026-06-29-google-ai-studio-gemini-api-key-incident.png",
+      "kind": "news-png",
+      "slug": "2026-06-29-google-ai-studio-gemini-api-key-incident",
+      "theme": "light",
+      "target": null,
+      "bytes": 38732,
+      "sha256": "e366a31c54724cecbac240a3b6f0ccb1eb9e4e78c75b0021f020d43fcc956264"
+    },
+    {
+      "file": "public/og/news/light/2026-06-29-grok-45-private-beta-benchmark-caution.png",
+      "kind": "news-png",
+      "slug": "2026-06-29-grok-45-private-beta-benchmark-caution",
+      "theme": "light",
+      "target": null,
+      "bytes": 37308,
+      "sha256": "f936b4c1dc4b6e89f6050a086fe6cc2d05117542670804dd2ea89c69a965b797"
+    },
+    {
+      "file": "public/og/news/light/2026-06-29-openai-hp-frontier-enterprise-rollout.png",
+      "kind": "news-png",
+      "slug": "2026-06-29-openai-hp-frontier-enterprise-rollout",
+      "theme": "light",
+      "target": null,
+      "bytes": 36660,
+      "sha256": "33d9e1cd54390f5356b228f80212eeab84932fd76aa9ccaf2d57b9f7ddb5b769"
     },
     {
       "file": "public/og/news/thumbs/2026-06-26-gemini-sheets-formula-fixes.webp",
@@ -263,6 +320,33 @@
       "sha256": "2fda41a57953b7a98ad301ea1cd300fd01ad54d22c0cc3860aa457eca121f798"
     },
     {
+      "file": "public/og/news/thumbs/2026-06-29-google-ai-studio-gemini-api-key-incident.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-29-google-ai-studio-gemini-api-key-incident",
+      "theme": "dark",
+      "target": null,
+      "bytes": 17772,
+      "sha256": "9519acc966d66a56c3acb06add5d81c0edec418715d43df690c0c762ab7f35fa"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-29-grok-45-private-beta-benchmark-caution.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-29-grok-45-private-beta-benchmark-caution",
+      "theme": "dark",
+      "target": null,
+      "bytes": 18250,
+      "sha256": "d64693f527c300f19edd9042147f1cd2f1b94be2fc4702c88b194b8299d12ba8"
+    },
+    {
+      "file": "public/og/news/thumbs/2026-06-29-openai-hp-frontier-enterprise-rollout.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-29-openai-hp-frontier-enterprise-rollout",
+      "theme": "dark",
+      "target": null,
+      "bytes": 18008,
+      "sha256": "a519c542e74f5514aa98535cd14e92046936951ef4fa622057063844b8094de2"
+    },
+    {
       "file": "public/og/news/thumbs/light/2026-06-26-gemini-sheets-formula-fixes.webp",
       "kind": "news-thumb",
       "slug": "2026-06-26-gemini-sheets-formula-fixes",
@@ -342,6 +426,33 @@
       "target": null,
       "bytes": 17316,
       "sha256": "4babd2dabcfeefc632d520f28aff01e1d89b220408a97a464b96f9460cbf0020"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-29-google-ai-studio-gemini-api-key-incident.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-29-google-ai-studio-gemini-api-key-incident",
+      "theme": "light",
+      "target": null,
+      "bytes": 17950,
+      "sha256": "3f89298534daaa8bbd5910bcccfe04d6162fecbe306b18c166cc062f25a6593b"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-29-grok-45-private-beta-benchmark-caution.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-29-grok-45-private-beta-benchmark-caution",
+      "theme": "light",
+      "target": null,
+      "bytes": 18360,
+      "sha256": "c65483c5d487f305ecb8ec3e7aa0292a146436f3e92faad2cc6c521e50aa64e8"
+    },
+    {
+      "file": "public/og/news/thumbs/light/2026-06-29-openai-hp-frontier-enterprise-rollout.webp",
+      "kind": "news-thumb",
+      "slug": "2026-06-29-openai-hp-frontier-enterprise-rollout",
+      "theme": "light",
+      "target": null,
+      "bytes": 18298,
+      "sha256": "71776b9c1396312333e58ffccba871ef415065e5036168de9ae04fb6029e4046"
     }
   ]
 }

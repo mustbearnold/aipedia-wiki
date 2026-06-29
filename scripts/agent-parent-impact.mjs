@@ -77,19 +77,24 @@ export function buildImpactReport(projectDir, options = {}) {
   if (target.collection === 'comparisons' && slug) targetLinks.add(`/compare/${slug}/`);
   if (target.collection === 'use-cases' && slug) targetLinks.add(`/guides/${slug}/`);
 
-  for (const page of pages) {
-    if (page.path === target.path) continue;
-    const frontmatterText = JSON.stringify(page.frontmatter);
-    const bodyLinks = collectInternalLinks(page.body);
-    const mentionsSlug = slug && new RegExp(`(^|[^a-z0-9-])${escapeRegExp(slug)}([^a-z0-9-]|$)`, 'i').test(frontmatterText);
-    const linksTarget = bodyLinks.some((link) => targetLinks.has(link));
-    if (!mentionsSlug && !linksTarget) continue;
+  const allowFrontmatterSlugMentions = target.collection !== 'static' && slug.length >= 3;
 
-    const reason = linksTarget
-      ? `contains an internal link to ${route}`
-      : `frontmatter references ${slug}`;
-    const confidence = linksTarget ? 'high' : 'medium';
-    addSurface(page.route, page.path, reason, confidence);
+  if (target.collection !== 'static') {
+    for (const page of pages) {
+      if (page.path === target.path) continue;
+      const frontmatterText = JSON.stringify(page.frontmatter);
+      const bodyLinks = collectInternalLinks(page.body);
+      const mentionsSlug = allowFrontmatterSlugMentions
+        && new RegExp(`(^|[^a-z0-9-])${escapeRegExp(slug)}([^a-z0-9-]|$)`, 'i').test(frontmatterText);
+      const linksTarget = bodyLinks.some((link) => targetLinks.has(link));
+      if (!mentionsSlug && !linksTarget) continue;
+
+      const reason = linksTarget
+        ? `contains an internal link to ${route}`
+        : `frontmatter references ${slug}`;
+      const confidence = linksTarget ? 'high' : 'medium';
+      addSurface(page.route, page.path, reason, confidence);
+    }
   }
 
   if (target.collection === 'tools') {
@@ -121,6 +126,26 @@ export function buildImpactReport(projectDir, options = {}) {
 }
 
 function addGlobalSurfaces(target, frontmatter, addSurface, sharedFiles) {
+  const route = normalizeRoute(target.route || pathToRoute(target.path, frontmatter));
+  if (target.collection === 'static') {
+    if (route === '/news/') {
+      addSurface('/', 'src/pages/index.astro', 'homepage latest-news rail summarizes news changes', 'high');
+      addSurface('/news/rss.xml', 'src/pages/news/rss.xml.ts', 'RSS feed includes news articles', 'high');
+      addSurface('/llms.txt', 'src/pages/llms.txt.ts', 'LLM surface includes news routes', 'high');
+      addSurface('/llms-full.txt', 'src/pages/llms-full.txt.ts', 'full LLM surface includes news content', 'high');
+      return;
+    }
+
+    if (route === '/') {
+      addSurface('/tools/', 'src/pages/tools/index.astro', 'homepage links into tool discovery', 'medium');
+      addSurface('/categories/', 'src/pages/categories/index.astro', 'homepage links into category discovery', 'medium');
+      addSurface('/guides/', 'src/pages/guides/index.astro', 'homepage links into guide discovery', 'medium');
+      addSurface('/news/', 'src/pages/news/index.astro', 'homepage latest-news rail mirrors news recency', 'medium');
+      addSurface('/llms-full.txt', 'src/pages/llms-full.txt.ts', 'full LLM surface may include homepage context', 'medium');
+      return;
+    }
+  }
+
   if (target.collection === 'tools') {
     addSurface('/tools/', 'src/pages/tools/index.astro', 'tool catalog lists and searches tool records', 'high');
     addSurface('/categories/', 'src/pages/categories/index.astro', 'category index summarizes tool inventory', 'medium');

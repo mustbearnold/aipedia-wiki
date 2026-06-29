@@ -205,6 +205,16 @@ export function resolveTarget(projectDir, { route, path, slug, type } = {}) {
         ...collectionForPath(ledgerRow.path),
       };
     }
+
+    const contentPage = allContentPages(projectDir).find((page) => page.route === normalizedRoute);
+    if (contentPage?.path) {
+      return {
+        route: normalizedRoute,
+        path: contentPage.path,
+        ledger_row: null,
+        ...collectionForPath(contentPage.path),
+      };
+    }
   }
 
   if (slug && type) {

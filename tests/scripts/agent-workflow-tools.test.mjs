@@ -16,11 +16,13 @@ function writeFixture() {
     'src/content/categories',
     'src/content/comparisons',
     'src/content/use-cases',
+    'src/content/news',
     'src/data',
     'src/pages/tools',
     'src/pages/categories',
     'src/pages/compare',
     'src/pages/guides',
+    'src/pages/news',
   ]) {
     mkdirSync(join(dir, subdir), { recursive: true });
   }
@@ -34,6 +36,10 @@ function writeFixture() {
     '| 2026-06-01 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |',
     '| 2026-06-01 | /compare/example-vs-other/ | Comparison | Yes | frontmatter | src/content/comparisons/example-vs-other.md |',
     '| 2026-06-01 | /guides/example-guide/ | Guide | Yes | frontmatter | src/content/use-cases/example-guide.md |',
+    '| 2026-06-01 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |',
+    '| 2026-06-01 | /news/rss.xml | RSS feed | Yes | generated | src/pages/news/rss.xml.ts |',
+    '| 2026-06-01 | /llms.txt | LLM surface | Yes | generated | src/pages/llms.txt.ts |',
+    '| 2026-06-01 | /llms-full.txt | LLM surface | Yes | generated | src/pages/llms-full.txt.ts |',
     '| 2026-06-01 | /tools/ | Static page | Yes | file mtime | src/pages/tools/index.astro |',
     '| 2026-06-01 | /categories/ | Static page | Yes | file mtime | src/pages/categories/index.astro |',
     '',
@@ -154,6 +160,30 @@ function writeFixture() {
     '',
   ].join('\n'));
 
+  writeFileSync(join(dir, 'src/content/news/2026-06-01-example-news.md'), [
+    '---',
+    'slug: 2026-06-01-example-news',
+    'title: Example News',
+    'description: News about an example tool.',
+    'date: 2026-06-01',
+    'category: news',
+    'sources:',
+    '  - url: https://example.com/news',
+    '    title: Example source',
+    '  - url: https://docs.example.com/news',
+    '    title: Example docs source',
+    '---',
+    '',
+    '## Buyer value',
+    '',
+    'Example news links to [Example](/tools/example/), not the news hub.',
+    '',
+    '## What to do',
+    '',
+    'Teams should verify the source trail before changing production workflows.',
+    '',
+  ].join('\n'));
+
   return dir;
 }
 
@@ -188,6 +218,65 @@ test('agent impact detector finds parent hubs and referencing pages', () => {
     assert.ok(routes.includes('/compare/example-vs-other/'));
     assert.ok(routes.includes('/guides/example-guide/'));
     assert.ok(report.shared_files.includes('src/data/source-registry.json'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('agent impact detector keeps static news hub impact focused', () => {
+  const dir = writeFixture();
+  try {
+    const report = buildImpactReport(dir, { route: '/news/' });
+
+    assert.equal(report.ok, true);
+    assert.equal(report.target.collection, 'static');
+
+    const routes = report.surfaces.map((surface) => surface.route);
+    assert.ok(routes.includes('/'));
+    assert.ok(routes.includes('/news/rss.xml'));
+    assert.ok(routes.includes('/llms.txt'));
+    assert.ok(routes.includes('/llms-full.txt'));
+    assert.ok(!routes.includes('/news/2026-06-01-example-news/'));
+    assert.equal(report.surfaces.some((surface) => surface.reason === 'frontmatter references news'), false);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('agent tools resolve content routes that are intentionally absent from the ledger', () => {
+  const dir = writeFixture();
+  try {
+    const evidence = buildEvidenceBundle(dir, {
+      route: '/news/2026-06-01-example-news/',
+      currentDate: '2026-06-29',
+    });
+    const impact = buildImpactReport(dir, { route: '/news/2026-06-01-example-news/' });
+
+    assert.equal(evidence.ok, true);
+    assert.equal(evidence.target.collection, 'news');
+    assert.equal(evidence.target.path, 'src/content/news/2026-06-01-example-news.md');
+    assert.equal(evidence.target.ledger, null);
+    assert.equal(evidence.source_evidence.inline_source_count, 2);
+    assert.equal(evidence.source_evidence.total_sources, 2);
+
+    assert.equal(impact.ok, true);
+    assert.equal(impact.target.collection, 'news');
+    const routes = impact.surfaces.map((surface) => surface.route);
+    assert.ok(routes.includes('/news/'));
+    assert.ok(routes.includes('/'));
+    assert.ok(routes.includes('/news/rss.xml'));
+    assert.ok(routes.includes('/llms.txt'));
+    assert.ok(routes.includes('/llms-full.txt'));
+
+    const score = scorePage(dir, {
+      route: '/news/2026-06-01-example-news/',
+      currentDate: '2026-06-29',
+    });
+    assert.equal(score.ok, true);
+    assert.equal(score.evidence_summary.sources, 2);
+    assert.equal(score.evidence_summary.inline_sources, 2);
+    assert.notEqual(score.recommended_action, 'improve_source_coverage');
+    assert.notEqual(score.recommended_action, 'strengthen_buyer_decision_path');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

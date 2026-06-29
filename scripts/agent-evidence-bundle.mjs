@@ -55,6 +55,7 @@ export function buildEvidenceBundle(projectDir, options = {}) {
   const sourceIds = [...collectSourceIds(markdown.frontmatter)].sort();
   const sourceRows = sourceIds.map((id) => sourceRegistry.get(id)).filter(Boolean);
   const missingSourceIds = sourceIds.filter((id) => !sourceRegistry.has(id));
+  const inlineSources = extractInlineSources(markdown.frontmatter);
   const facts = extractFacts(markdown.frontmatter);
   const pricingFacts = facts.filter((fact) => /pricing|price|paid|tier|free|plan/i.test(fact.key));
   const internalLinks = collectInternalLinks(markdown.body);
@@ -93,6 +94,9 @@ export function buildEvidenceBundle(projectDir, options = {}) {
     source_evidence: {
       source_ids: sourceIds,
       missing_source_ids: missingSourceIds,
+      inline_sources: inlineSources,
+      inline_source_count: inlineSources.length,
+      total_sources: sourceIds.length + inlineSources.length,
       registered_sources: sourceRows.map((source) => ({
         id: source.id,
         label: source.label ?? '',
@@ -150,6 +154,16 @@ function extractFacts(frontmatter) {
     });
   }
   return facts;
+}
+
+function extractInlineSources(frontmatter) {
+  if (!Array.isArray(frontmatter.sources)) return [];
+  return frontmatter.sources
+    .filter((source) => source && typeof source === 'object' && typeof source.url === 'string' && source.url)
+    .map((source) => ({
+      url: source.url,
+      title: source.title ?? '',
+    }));
 }
 
 function summarizeSources(sources) {

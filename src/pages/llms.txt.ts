@@ -3,6 +3,9 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-29 focused AI tools news added across the Gemini
+// API key incident, HP/OpenAI Frontier, and Grok 4.5 private beta; concise
+// LLM surface remains data-driven through the news collection.
 // Refresh metadata: 2026-06-28 tool expansion added Firecrawl, Composio,
 // Dify, Flowise, LangSmith, Tavily, Pydantic AI, Mem0, Braintrust,
 // Portkey, Zep, promptfoo, Arize Phoenix, Ragas, OpenPipe, LangWatch,

@@ -113,6 +113,7 @@ It consumes:
 
 - `PAGE_REFRESH_LEDGER.md`
 - frontmatter dates and source refs
+- inline news `sources` URLs
 - `src/data/source-registry.json`
 - affiliate inventory
 - internal link audit output
@@ -121,3 +122,5 @@ It consumes:
 Output JSON only. Do not make the score write pages directly. The prototype is a prioritization signal and does not perform live source verification.
 
 `agent:score:calibrate` compares score output with real repo signals: ledger age, source coverage, stale signals, and parent-impact breadth. Use it after changing score weights or recommendation thresholds.
+
+News scoring uses the news-specific bar from the daily workflow: currentness, source quality, buyer impact, affected-page linking, and readability. Inline article sources count as source coverage, but registered source IDs remain distinct for tool, guide, and pricing fact provenance.

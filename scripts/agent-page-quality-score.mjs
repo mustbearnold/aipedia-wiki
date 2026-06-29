@@ -51,10 +51,12 @@ export function scorePage(projectDir, options = {}) {
   const sourceRegistry = loadSourceRegistry(projectDir);
   const sourceIds = [...collectSourceIds(markdown.frontmatter)];
   const sourceRows = sourceIds.map((id) => sourceRegistry.get(id)).filter(Boolean);
+  const inlineSourceCount = evidence.source_evidence.inline_source_count ?? 0;
+  const totalSourceCount = evidence.source_evidence.total_sources ?? (sourceIds.length + inlineSourceCount);
   const body = markdown.body;
   const links = collectInternalLinks(body);
   const frontmatter = markdown.frontmatter;
-  const sourceQuality = sourceQualityScore(sourceRows, sourceIds.length);
+  const sourceQuality = sourceQualityScore(sourceRows, sourceIds.length, inlineSourceCount);
   const freshness = freshnessScore(frontmatter, evidence.stale_sections, options.currentDate);
   const scores = {
     freshness,
@@ -102,8 +104,9 @@ export function scorePage(projectDir, options = {}) {
     dimensions: Object.fromEntries(Object.entries(scores).map(([key, value]) => [key, round(value)])),
     recommended_action: recommendAction(scores, evidence),
     evidence_summary: {
-      sources: sourceIds.length,
+      sources: totalSourceCount,
       registered_sources: sourceRows.length,
+      inline_sources: inlineSourceCount,
       internal_links: links.length,
       stale_signals: evidence.stale_sections.length,
       affiliate_state: evidence.affiliate_notes.state,
@@ -122,12 +125,15 @@ function freshnessScore(frontmatter, staleSections, currentDate) {
   return clamp01(base - penalty);
 }
 
-function sourceQualityScore(sourceRows, totalSourceIds) {
-  if (totalSourceIds === 0) return 0.2;
-  const registeredRatio = sourceRows.length / totalSourceIds;
-  const primaryRatio = sourceRows.length ? sourceRows.filter((source) => source.trust_tier === 'primary').length / sourceRows.length : 0;
-  const countScore = clamp01(sourceRows.length / 4);
-  return clamp01((registeredRatio * 0.35) + (primaryRatio * 0.4) + (countScore * 0.25));
+function sourceQualityScore(sourceRows, totalSourceIds, inlineSourceCount = 0) {
+  const totalSources = totalSourceIds + inlineSourceCount;
+  if (totalSources === 0) return 0.2;
+  const registeredRatio = totalSourceIds ? sourceRows.length / totalSourceIds : 1;
+  const primaryRatio = sourceRows.length
+    ? sourceRows.filter((source) => source.trust_tier === 'primary').length / sourceRows.length
+    : 0.7;
+  const countScore = clamp01(totalSources / 4);
+  return clamp01((registeredRatio * 0.3) + (primaryRatio * 0.4) + (countScore * 0.3));
 }
 
 function seoScore(frontmatter) {
@@ -163,6 +169,14 @@ function buyerIntentScore(collection, frontmatter, body) {
   }
   if (collection === 'comparisons') {
     return fieldRatio([frontmatter.tools?.length >= 2, frontmatter.winner, /choose|winner|best for/i.test(body)]);
+  }
+  if (collection === 'news') {
+    return fieldRatio([
+      frontmatter.summary,
+      frontmatter.categories?.length,
+      frontmatter.related_tools?.length || frontmatter.affects?.length,
+      /buyer value|what to do|aipedia take|buyer|builders|teams should/i.test(body),
+    ]);
   }
   return fieldRatio([frontmatter.description, /best|avoid|should|winner|plan/i.test(body)]);
 }
