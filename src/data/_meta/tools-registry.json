@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated": "2026-05-20T00:00:00.000000Z",
-  "total_active": 219,
-  "total_dead": 11,
+  "generated": "2026-06-28T00:00:00.000Z",
+  "total_active": 255,
+  "total_dead": 12,
   "tools": {
     "activepieces": {
       "slug": "activepieces",
@@ -201,6 +201,48 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/ag2.md"
+    },
+    "agno": {
+      "slug": "agno",
+      "status": "active",
+      "title": "Agno",
+      "category": "ai-automation",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-infrastructure"
+      ],
+      "company": "Agno",
+      "url": "https://www.agno.com",
+      "pricing_model": "open-source",
+      "price_range": "Free open source; Pro $150/month; Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "agent-framework",
+        "agentos",
+        "multi-agent",
+        "python",
+        "agent-platform",
+        "observability",
+        "runtime-storage",
+        "open-source",
+        "apache-2"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/agno.md"
     },
     "ahrefs": {
       "slug": "ahrefs",
@@ -559,6 +601,89 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/argil.md"
     },
+    "arize-phoenix": {
+      "slug": "arize-phoenix",
+      "status": "active",
+      "title": "Arize Phoenix",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "Arize AI",
+      "url": "https://arize.com/phoenix/",
+      "pricing_model": "freemium",
+      "price_range": "Phoenix open source / AX Pro $50/month / AX Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-observability",
+        "tracing",
+        "evals",
+        "opentelemetry",
+        "prompt-engineering",
+        "experiments",
+        "open-source",
+        "ai-infrastructure"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/arize-phoenix.md"
+    },
+    "baml": {
+      "slug": "baml",
+      "status": "active",
+      "title": "BAML",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-infrastructure",
+        "ai-automation"
+      ],
+      "company": "BoundaryML",
+      "url": "https://docs.boundaryml.com",
+      "pricing_model": "open-source",
+      "price_range": "Free Apache-2.0 framework; model/provider and optional Boundary Studio costs separate",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-framework",
+        "structured-output",
+        "type-safety",
+        "baml",
+        "boundaryml",
+        "generated-client",
+        "evals",
+        "observability",
+        "open-source"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/baml.md"
+    },
     "beautiful-ai": {
       "slug": "beautiful-ai",
       "status": "active",
@@ -724,6 +849,48 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/boomy.md"
+    },
+    "braintrust": {
+      "slug": "braintrust",
+      "status": "active",
+      "title": "Braintrust",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "Braintrust",
+      "url": "https://www.braintrust.dev",
+      "pricing_model": "freemium",
+      "price_range": "$0 Starter / $249 Pro / Enterprise custom, plus usage meters",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-evals",
+        "observability",
+        "tracing",
+        "prompt-testing",
+        "datasets",
+        "experiments",
+        "monitoring",
+        "human-review",
+        "ai-infrastructure"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/braintrust.md"
     },
     "canva": {
       "slug": "canva",
@@ -931,6 +1098,47 @@
         "notes": null
       },
       "page_path": "/tools/castmagic/"
+    },
+    "chainlit": {
+      "slug": "chainlit",
+      "status": "active",
+      "title": "Chainlit",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-infrastructure",
+        "ai-chatbots"
+      ],
+      "company": "Chainlit",
+      "url": "https://chainlit.io",
+      "pricing_model": "open-source",
+      "price_range": "Free Apache-2.0 framework; model, hosting, and support costs separate",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 7,
+        "value": 8,
+        "moat": 6,
+        "longevity": 6
+      },
+      "tags": [
+        "chat-ui",
+        "conversational-ai",
+        "python",
+        "llm-apps",
+        "prototypes",
+        "internal-tools",
+        "open-source",
+        "apache-2"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/chainlit.md"
     },
     "character-ai": {
       "slug": "character-ai",
@@ -1546,6 +1754,47 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/cohere.md"
     },
+    "composio": {
+      "slug": "composio",
+      "status": "active",
+      "title": "Composio",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "Composio",
+      "url": "https://composio.dev",
+      "pricing_model": "freemium",
+      "price_range": "$0-$229/month plus Enterprise",
+      "launched": "2023",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "agent-tools",
+        "mcp",
+        "tool-calling",
+        "ai-infrastructure",
+        "ai-automation",
+        "auth",
+        "integrations"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/composio.md"
+    },
     "connected-papers": {
       "slug": "connected-papers",
       "status": "active",
@@ -1895,6 +2144,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/decktopus.md"
     },
+    "deepeval": {
+      "slug": "deepeval",
+      "status": "active",
+      "title": "DeepEval",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "Confident AI",
+      "url": "https://deepeval.com",
+      "pricing_model": "freemium",
+      "price_range": "DeepEval open source / Confident AI Free / Starter $9.99/user/month / Team and Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-evals",
+        "rag-evaluation",
+        "metrics",
+        "agent-evals",
+        "testing",
+        "ci",
+        "open-source",
+        "python",
+        "confident-ai"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/deepeval.md"
+    },
     "deepl": {
       "slug": "deepl",
       "status": "active",
@@ -2057,6 +2348,47 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/devin.md"
     },
+    "dify": {
+      "slug": "dify",
+      "status": "active",
+      "title": "Dify",
+      "category": "ai-automation",
+      "secondary_categories": [
+        "ai-infrastructure"
+      ],
+      "company": "Dify",
+      "url": "https://dify.ai",
+      "pricing_model": "freemium",
+      "price_range": "Free Sandbox, paid cloud plans, and self-hosted editions",
+      "launched": "2023",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "ai-automation",
+        "ai-app-builder",
+        "agents",
+        "rag",
+        "workflows",
+        "open-source",
+        "chatbot",
+        "self-hosted"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/dify.md"
+    },
     "doubao": {
       "slug": "doubao",
       "status": "active",
@@ -2094,6 +2426,48 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/doubao.md"
+    },
+    "dspy": {
+      "slug": "dspy",
+      "status": "active",
+      "title": "DSPy",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-infrastructure",
+        "ai-automation"
+      ],
+      "company": "Stanford Future Data Systems",
+      "url": "https://dspy.ai",
+      "pricing_model": "open-source",
+      "price_range": "Free MIT framework; model/provider, data, eval, and hosting costs separate",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "prompt-optimization",
+        "llm-programming",
+        "signatures",
+        "modules",
+        "optimizers",
+        "metrics",
+        "agents",
+        "open-source",
+        "python"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/dspy.md"
     },
     "elevenlabs": {
       "slug": "elevenlabs",
@@ -2333,6 +2707,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/figma.md"
     },
+    "firecrawl": {
+      "slug": "firecrawl",
+      "status": "active",
+      "title": "Firecrawl",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-search"
+      ],
+      "company": "Firecrawl",
+      "url": "https://www.firecrawl.dev",
+      "pricing_model": "freemium",
+      "price_range": "Free tier, paid credit plans, and Enterprise",
+      "launched": "2024",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 7,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "web-scraping",
+        "web-data",
+        "crawling",
+        "search-api",
+        "agents",
+        "mcp",
+        "structured-extraction",
+        "ai-infrastructure"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/firecrawl.md"
+    },
     "fireflies": {
       "slug": "fireflies",
       "status": "active",
@@ -2446,6 +2862,47 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/fish-audio.md"
+    },
+    "flowise": {
+      "slug": "flowise",
+      "status": "active",
+      "title": "Flowise",
+      "category": "ai-automation",
+      "secondary_categories": [
+        "ai-infrastructure"
+      ],
+      "company": "FlowiseAI",
+      "url": "https://flowiseai.com",
+      "pricing_model": "open-source",
+      "price_range": "Open-source self-hosting; Flowise Cloud Free and Starter routes",
+      "launched": "2023",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 6,
+        "longevity": 7
+      },
+      "tags": [
+        "ai-automation",
+        "agents",
+        "llm-workflows",
+        "rag",
+        "open-source",
+        "self-hosted",
+        "visual-builder",
+        "agentflow"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/flowise.md"
     },
     "flux": {
       "slug": "flux",
@@ -3253,6 +3710,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/groq.md"
     },
+    "guardrails-ai": {
+      "slug": "guardrails-ai",
+      "status": "active",
+      "title": "Guardrails AI",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "Guardrails AI",
+      "url": "https://www.guardrailsai.com/",
+      "pricing_model": "open-source",
+      "price_range": "Free Apache-2.0 framework; hosted or remote-validator pricing not publicly verified",
+      "launched": "2023-01",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "guardrails",
+        "validators",
+        "llm-safety",
+        "structured-data",
+        "pydantic",
+        "validation",
+        "open-source",
+        "apache-2"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/guardrails-ai.md"
+    },
     "gumloop": {
       "slug": "gumloop",
       "status": "active",
@@ -3368,6 +3867,49 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/harvey.md"
+    },
+    "haystack": {
+      "slug": "haystack",
+      "status": "active",
+      "title": "Haystack",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation",
+        "ai-search"
+      ],
+      "company": "deepset",
+      "url": "https://haystack.deepset.ai",
+      "pricing_model": "freemium",
+      "price_range": "Haystack framework free Apache-2.0 / deepset AI Platform starts free / Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "rag",
+        "agents",
+        "pipelines",
+        "document-stores",
+        "multimodal-search",
+        "components",
+        "deepset",
+        "open-source",
+        "apache-2.0"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/haystack.md"
     },
     "hedra": {
       "slug": "hedra",
@@ -3847,6 +4389,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/imagen.md"
     },
+    "inspect-ai": {
+      "slug": "inspect-ai",
+      "status": "active",
+      "title": "Inspect AI",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "UK AI Security Institute and Meridian Labs",
+      "url": "https://inspect.aisi.org.uk/",
+      "pricing_model": "open-source",
+      "price_range": "Free MIT framework; model APIs, compute, sandboxes, and storage billed separately",
+      "launched": "2024-05",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-evals",
+        "ai-evaluation",
+        "agent-evals",
+        "benchmark",
+        "sandboxing",
+        "open-source",
+        "mit",
+        "uk-ai-security-institute"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/inspect-ai.md"
+    },
     "instantly": {
       "slug": "instantly",
       "status": "active",
@@ -3882,6 +4466,47 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/instantly.md"
+    },
+    "instructor": {
+      "slug": "instructor",
+      "status": "active",
+      "title": "Instructor",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-infrastructure"
+      ],
+      "company": "567 Labs",
+      "url": "https://python.useinstructor.com",
+      "pricing_model": "open-source",
+      "price_range": "Free MIT library; model/provider, hosting, and validation costs separate",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "structured-outputs",
+        "json",
+        "pydantic",
+        "validation",
+        "llm-functions",
+        "open-source",
+        "mit",
+        "python",
+        "provider-adapters"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/instructor.md"
     },
     "intercom": {
       "slug": "intercom",
@@ -4475,6 +5100,91 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/langgraph.md"
     },
+    "langsmith": {
+      "slug": "langsmith",
+      "status": "active",
+      "title": "LangSmith",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "LangChain",
+      "url": "https://smith.langchain.com",
+      "pricing_model": "freemium",
+      "price_range": "$0 Developer / $39 Plus / Enterprise custom, plus usage meters",
+      "launched": "2023",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 7,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "llm-observability",
+        "agent-observability",
+        "tracing",
+        "evals",
+        "langchain",
+        "langgraph",
+        "deployment",
+        "prompts",
+        "sandboxes"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/langsmith.md"
+    },
+    "langwatch": {
+      "slug": "langwatch",
+      "status": "active",
+      "title": "LangWatch",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "LangWatch",
+      "url": "https://langwatch.ai",
+      "pricing_model": "freemium",
+      "price_range": "Developer free / paid plans from €59/month / Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "llmops",
+        "llm-observability",
+        "traces",
+        "evaluations",
+        "ai-gateway",
+        "dspy",
+        "self-hosting",
+        "open-source",
+        "ai-infrastructure"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/langwatch.md"
+    },
     "leonardo": {
       "slug": "leonardo",
       "status": "active",
@@ -4597,6 +5307,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/lindy.md"
     },
+    "litellm": {
+      "slug": "litellm",
+      "status": "active",
+      "title": "LiteLLM",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "Berri AI",
+      "url": "https://www.litellm.ai",
+      "pricing_model": "open-source",
+      "price_range": "Free MIT core outside enterprise directory; Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "llm-gateway",
+        "model-routing",
+        "openai-compatible",
+        "mcp-gateway",
+        "virtual-keys",
+        "cost-tracking",
+        "guardrails",
+        "observability",
+        "open-source"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/litellm.md"
+    },
     "llama": {
       "slug": "llama",
       "status": "active",
@@ -4638,6 +5390,92 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/llama.md"
+    },
+    "llamaindex": {
+      "slug": "llamaindex",
+      "status": "active",
+      "title": "LlamaIndex",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation",
+        "ai-search"
+      ],
+      "company": "LlamaIndex",
+      "url": "https://www.llamaindex.ai",
+      "pricing_model": "freemium",
+      "price_range": "Framework free MIT / LlamaParse Free 10K credits / Starter $50/month / Pro $500/month / Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "rag",
+        "agents",
+        "workflows",
+        "llamacloud",
+        "llamaparse",
+        "data-connectors",
+        "retrieval",
+        "open-source",
+        "python",
+        "typescript"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/llamaindex.md"
+    },
+    "lm-evaluation-harness": {
+      "slug": "lm-evaluation-harness",
+      "status": "active",
+      "title": "LM Evaluation Harness",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding"
+      ],
+      "company": "EleutherAI",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "pricing_model": "open-source",
+      "price_range": "Free MIT framework; model APIs, GPUs, backend extras, and storage billed separately",
+      "launched": "2020-07",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-evals",
+        "benchmarks",
+        "model-evaluation",
+        "eleutherai",
+        "leaderboard",
+        "vllm",
+        "hugging-face",
+        "open-source",
+        "mit"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/lm-evaluation-harness.md"
     },
     "lm-studio": {
       "slug": "lm-studio",
@@ -5116,6 +5954,49 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/mem.md"
     },
+    "mem0": {
+      "slug": "mem0",
+      "status": "active",
+      "title": "Mem0",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-search"
+      ],
+      "company": "Mem0",
+      "url": "https://mem0.ai",
+      "pricing_model": "freemium",
+      "price_range": "Free 10K memories, Starter $19/mo, Growth $79/mo, Pro around $249-$250/mo, Enterprise custom",
+      "launched": "2024",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "agent-memory",
+        "llm-memory",
+        "memory-layer",
+        "rag",
+        "mcp",
+        "open-source",
+        "apache-2",
+        "personalization",
+        "vector-search"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/mem0.md"
+    },
     "meshy": {
       "slug": "meshy",
       "status": "active",
@@ -5327,6 +6208,48 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/minimax-speech.md"
+    },
+    "mirascope": {
+      "slug": "mirascope",
+      "status": "active",
+      "title": "Mirascope",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-infrastructure"
+      ],
+      "company": "Mirascope",
+      "url": "https://mirascope.com",
+      "pricing_model": "open-source",
+      "price_range": "Free MIT SDKs; Mirascope Cloud discontinued",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "llm-sdk",
+        "provider-agnostic",
+        "structured-outputs",
+        "tools",
+        "agents",
+        "opentelemetry",
+        "python",
+        "typescript",
+        "open-source",
+        "mit"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/mirascope.md"
     },
     "mistral-ai": {
       "slug": "mistral-ai",
@@ -5912,6 +6835,47 @@
       "last_verified": null,
       "page_path": "wikis/ai-tools/pages/dead/openai-codex.md"
     },
+    "openai-evals": {
+      "slug": "openai-evals",
+      "status": "active",
+      "title": "OpenAI Evals",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding"
+      ],
+      "company": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/evals",
+      "pricing_model": "paid",
+      "price_range": "MIT open-source repo; OpenAI API usage billed separately; platform Evals scheduled to shut down November 30, 2026",
+      "launched": "2023-03",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 6,
+        "value": 5,
+        "moat": 6,
+        "longevity": 3
+      },
+      "tags": [
+        "openai",
+        "evals",
+        "llm-evals",
+        "graders",
+        "prompt-regression",
+        "api-billing",
+        "migration",
+        "legacy"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/openai-evals.md"
+    },
     "openclaw": {
       "slug": "openclaw",
       "status": "active",
@@ -5997,6 +6961,133 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/openhands.md"
     },
+    "openlit": {
+      "slug": "openlit",
+      "status": "active",
+      "title": "OpenLIT",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "OpenLIT",
+      "url": "https://openlit.io",
+      "pricing_model": "open-source",
+      "price_range": "Self-hosted $0 forever; managed cloud coming soon with no public price verified",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "llm-observability",
+        "opentelemetry",
+        "traces",
+        "evals",
+        "prompt-management",
+        "token-tracking",
+        "cost-tracking",
+        "gpu-monitoring",
+        "open-source",
+        "apache-2"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/openlit.md"
+    },
+    "openpipe": {
+      "slug": "openpipe",
+      "status": "active",
+      "title": "OpenPipe",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "OpenPipe",
+      "url": "https://openpipe.ai",
+      "pricing_model": "paid",
+      "price_range": "Usage-based hosted inference from $0.48 per 1M tokens for <=8B models; Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "fine-tuning",
+        "request-logs",
+        "datasets",
+        "evaluations",
+        "dpo",
+        "hosted-inference",
+        "model-optimization",
+        "ai-infrastructure"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/openpipe.md"
+    },
+    "opik": {
+      "slug": "opik",
+      "status": "active",
+      "title": "Opik",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "Comet",
+      "url": "https://www.comet.com/site/products/opik/",
+      "pricing_model": "freemium",
+      "price_range": "OSS $0; Free Cloud $0; Pro Cloud $19/month; Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-observability",
+        "evals",
+        "agents",
+        "traces",
+        "test-suites",
+        "llm-as-judge",
+        "annotation",
+        "monitoring",
+        "open-source",
+        "apache-2"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/opik.md"
+    },
     "opusclip": {
       "slug": "opusclip",
       "status": "active",
@@ -6072,6 +7163,89 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/otter-ai.md"
+    },
+    "outlines": {
+      "slug": "outlines",
+      "status": "active",
+      "title": "Outlines",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-infrastructure"
+      ],
+      "company": ".txt",
+      "url": "https://dottxt-ai.github.io/outlines/latest/",
+      "pricing_model": "open-source",
+      "price_range": "Free Apache-2.0 library; Dottxt API access available by request with no public rates verified",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "structured-generation",
+        "json-schema",
+        "regex",
+        "grammars",
+        "constrained-decoding",
+        "structured-outputs",
+        "open-source",
+        "apache-2",
+        "dottxt"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/outlines.md"
+    },
+    "patronus-ai": {
+      "slug": "patronus-ai",
+      "status": "active",
+      "title": "Patronus AI",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "Patronus AI, Inc.",
+      "url": "https://www.patronus.ai",
+      "pricing_model": "freemium",
+      "price_range": "Developer free with $10 API credits / evaluator API calls from $10 per 1K / Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 7,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-evals",
+        "agent-evals",
+        "traces",
+        "datasets",
+        "guardrails",
+        "percival",
+        "digital-world-models",
+        "ai-infrastructure",
+        "ai-safety"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/patronus-ai.md"
     },
     "perplexity": {
       "slug": "perplexity",
@@ -6432,6 +7606,48 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/poe.md"
     },
+    "portkey": {
+      "slug": "portkey",
+      "status": "active",
+      "title": "Portkey",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "Portkey",
+      "url": "https://portkey.ai",
+      "pricing_model": "freemium",
+      "price_range": "Developer free / Production $49/month / Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 8,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "ai-gateway",
+        "llm-observability",
+        "routing",
+        "guardrails",
+        "prompt-management",
+        "governance",
+        "caching",
+        "api-keys",
+        "open-source"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/portkey.md"
+    },
     "presentations-ai": {
       "slug": "presentations-ai",
       "status": "active",
@@ -6510,6 +7726,92 @@
         "notes": "Applied via PartnerStack 2026-04-19. 50% commission is a time-limited launch promotion ending July 1, 2026; commission rate post-offer TBD."
       },
       "page_path": "wikis/ai-tools/pages/tools/prezi.md"
+    },
+    "promptfoo": {
+      "slug": "promptfoo",
+      "status": "active",
+      "title": "promptfoo",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "OpenAI",
+      "url": "https://www.promptfoo.dev",
+      "pricing_model": "freemium",
+      "price_range": "Community free / Enterprise custom / On-Premise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 9,
+        "value": 9,
+        "moat": 8,
+        "longevity": 9
+      },
+      "tags": [
+        "llm-evals",
+        "red-teaming",
+        "guardrails",
+        "model-security",
+        "mcp",
+        "code-scanning",
+        "vulnerability-scanning",
+        "open-source",
+        "ai-security"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/promptfoo.md"
+    },
+    "pydantic-ai": {
+      "slug": "pydantic-ai",
+      "status": "active",
+      "title": "Pydantic AI",
+      "category": "ai-coding",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-infrastructure"
+      ],
+      "company": "Pydantic Services Inc.",
+      "url": "https://ai.pydantic.dev",
+      "pricing_model": "open-source",
+      "price_range": "Free MIT-licensed framework; model, infrastructure, and optional Logfire costs separate",
+      "launched": "2024",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "agent-framework",
+        "python",
+        "pydantic",
+        "structured-output",
+        "evals",
+        "mcp",
+        "open-source",
+        "mit",
+        "logfire",
+        "graph"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/pydantic-ai.md"
     },
     "quillbot": {
       "slug": "quillbot",
@@ -6594,6 +7896,47 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/qwen.md"
+    },
+    "ragas": {
+      "slug": "ragas",
+      "status": "active",
+      "title": "Ragas",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "Vibrant Labs",
+      "url": "https://www.ragas.io/",
+      "pricing_model": "open-source",
+      "price_range": "Free open-source framework; model/evaluator usage costs vary",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 9,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-evals",
+        "rag-evaluation",
+        "metrics",
+        "synthetic-test-data",
+        "experiments",
+        "open-source",
+        "python",
+        "ai-infrastructure"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/ragas.md"
     },
     "readwise": {
       "slug": "readwise",
@@ -6911,6 +8254,48 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/resemble-ai.md"
+    },
+    "respan": {
+      "slug": "respan",
+      "status": "active",
+      "title": "Respan",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-coding",
+        "ai-automation"
+      ],
+      "company": "Respan",
+      "url": "https://www.respan.ai",
+      "pricing_model": "freemium",
+      "price_range": "$0 Free; Team paid with additional-seat pricing shown; Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 7,
+        "moat": 7,
+        "longevity": 7
+      },
+      "tags": [
+        "llm-observability",
+        "evals",
+        "prompt-management",
+        "llm-gateway",
+        "traces",
+        "monitoring",
+        "cost-tracking",
+        "openai-compatible",
+        "llmops"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/respan.md"
     },
     "riverside": {
       "slug": "riverside",
@@ -7856,6 +9241,49 @@
       },
       "page_path": "wikis/ai-tools/pages/tools/taskade.md"
     },
+    "tavily": {
+      "slug": "tavily",
+      "status": "active",
+      "title": "Tavily",
+      "category": "ai-search",
+      "secondary_categories": [
+        "ai-infrastructure",
+        "ai-automation"
+      ],
+      "company": "Tavily",
+      "url": "https://www.tavily.com",
+      "pricing_model": "freemium",
+      "price_range": "Free 1,000 credits/month, $0.008/credit PAYG, $30-$500 monthly plans, Enterprise custom",
+      "launched": "2023",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "ai-search",
+        "search-api",
+        "web-search",
+        "rag",
+        "agents",
+        "extraction",
+        "crawl",
+        "research-api",
+        "grounding"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/tavily.md"
+    },
     "tavus": {
       "slug": "tavus",
       "status": "active",
@@ -8019,6 +9447,48 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/tome.md"
+    },
+    "traceloop": {
+      "slug": "traceloop",
+      "status": "active",
+      "title": "Traceloop",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation",
+        "ai-coding"
+      ],
+      "company": "ServiceNow",
+      "url": "https://www.traceloop.com",
+      "pricing_model": "freemium",
+      "price_range": "Free Forever $0/month up to 50K spans / Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 8,
+        "moat": 7,
+        "longevity": 8
+      },
+      "tags": [
+        "llm-observability",
+        "opentelemetry",
+        "openllmetry",
+        "traces",
+        "evaluations",
+        "monitoring",
+        "prompt-management",
+        "ai-infrastructure",
+        "servicenow"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/traceloop.md"
     },
     "trae": {
       "slug": "trae",
@@ -9004,6 +10474,47 @@
         "link": null
       },
       "page_path": "wikis/ai-tools/pages/tools/zed.md"
+    },
+    "zep": {
+      "slug": "zep",
+      "status": "active",
+      "title": "Zep",
+      "category": "ai-infrastructure",
+      "secondary_categories": [
+        "ai-automation"
+      ],
+      "company": "Zep Software, Inc.",
+      "url": "https://www.getzep.com",
+      "pricing_model": "freemium",
+      "price_range": "Free 10k credits/month / Flex $125/month / Flex Plus $375/month / Enterprise custom",
+      "last_updated": "2026-06-28T00:00:00.000Z",
+      "last_verified": "2026-06-28T00:00:00.000Z",
+      "update_frequency": "monthly",
+      "scores": {
+        "utility": 8,
+        "value": 7,
+        "moat": 8,
+        "longevity": 8
+      },
+      "tags": [
+        "agent-memory",
+        "context-engineering",
+        "context-graph",
+        "graph-rag",
+        "temporal-memory",
+        "agents",
+        "graphiti",
+        "byok",
+        "byoc"
+      ],
+      "affiliate": {
+        "has_program": false,
+        "commission": null,
+        "cookie_days": null,
+        "network": null,
+        "link": null
+      },
+      "page_path": "wikis/ai-tools/pages/tools/zep.md"
     }
   }
 }

@@ -3,6 +3,25 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-28 tool expansion added Firecrawl, Composio,
+// Dify, Flowise, LangSmith, Tavily, Pydantic AI, Mem0, Braintrust,
+// Portkey, Zep, promptfoo, Arize Phoenix, Ragas, OpenPipe, LangWatch,
+// Patronus AI, DeepEval, Traceloop, BAML, LiteLLM, LlamaIndex, Haystack,
+// and DSPy as source-backed tool pages, refreshed AI Infrastructure, AI Automation, AI Search, and AI Coding,
+// regenerated logo and OG metadata, and kept the verbose LLM surface
+// data-driven.
+// Refresh metadata: 2026-06-28 tool expansion added Respan, Agno,
+// Instructor, and Chainlit as source-backed tool pages, refreshed
+// AI Infrastructure, AI Automation, AI Coding, and AI Chatbots, regenerated
+// logo and OG metadata, and kept the verbose LLM surface data-driven.
+// Refresh metadata: 2026-06-28 tool expansion added OpenLIT, Opik,
+// Mirascope, and Outlines as source-backed tool pages, refreshed AI
+// Infrastructure, AI Automation, and AI Coding, regenerated logo and OG
+// metadata, and kept the verbose LLM surface data-driven.
+// Refresh metadata: 2026-06-28 tool expansion added Inspect AI, OpenAI Evals,
+// Guardrails AI, and LM Evaluation Harness as source-backed tool pages,
+// refreshed AI Infrastructure, AI Coding, and AI Automation, regenerated logo
+// and OG metadata, and kept the verbose LLM surface data-driven.
 // Refresh metadata: 2026-06-28 Consensus affiliate conversion content added
 // /guides/consensus-pricing-for-students-and-researchers/ and refreshed
 // Consensus, academic-citation and citation sibling guides, AI Research,
@@ -525,6 +544,9 @@ export const GET: APIRoute = async () => {
   lines.push('# aipedia.wiki full manifest');
   lines.push('');
   lines.push('> Extended LLM-friendly site manifest. Enumerates the major active editorial collections across tools, categories, comparisons, buyer guides, answers, news, trends, workflows, reports, companies, and dead-tool records. It does not claim to list every utility, API, prototype, or static policy page. See /llms.txt for the concise version.');
+  lines.push('');
+  lines.push('Recent tool expansion: June 28, 2026 added Firecrawl, Composio, Dify, Flowise, LangSmith, Tavily, Pydantic AI, Mem0, Braintrust, Portkey, Zep, promptfoo, Arize Phoenix, Ragas, OpenPipe, LangWatch, Patronus AI, DeepEval, Traceloop, BAML, LiteLLM, LlamaIndex, Haystack, and DSPy as source-backed tool pages, refreshed AI Infrastructure, AI Automation, AI Search, AI Coding, source registry, logo manifest, OG assets, ledger, homepage, tools index, categories index, and LLM maintenance.');
+  lines.push('Recent tool expansion: June 28, 2026 added Respan, Agno, Instructor, Chainlit, OpenLIT, Opik, Mirascope, Outlines, Inspect AI, OpenAI Evals, Guardrails AI, and LM Evaluation Harness as source-backed tool pages, refreshed AI Infrastructure, AI Automation, AI Coding, AI Chatbots, source registry, logo manifest, OG assets, ledger, homepage, tools index, categories index, and LLM maintenance.');
   lines.push('');
   lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/consensus-pricing-for-students-and-researchers/ and refreshed Consensus, academic-citation and citation sibling guides, AI Research, homepage, source registry, ledger, and LLM maintenance around Free vs Pro vs Deep, Teams and Enterprise, Deep reviews, Library and Collections, formal-review alternatives, and affiliate disclosure.');
   lines.push('Recent affiliate content refresh: June 28, 2026 added /guides/hume-ai-pricing-for-emotion-aware-voice-apps/ and refreshed Hume AI, the emotion-aware voice guide, AI Voice, homepage, source registry, ledger, and LLM maintenance around EVI minutes, Octave characters, concurrency, voice cloning consent, Enterprise compliance packaging, legacy Expression Measurement caution, and affiliate disclosure.');

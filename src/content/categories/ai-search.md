@@ -3,12 +3,12 @@ type: category
 slug: ai-search
 title: AI Search & Research Tools
 description: AI answer engines, private search, research notebooks, semantic search APIs, and source-backed research assistants.
-tool_count: 8
+tool_count: 10
 seo_title: "Best AI Search and Research Tools (June 2026)"
-meta_description: "Updated June 27, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Weaviate/Engram, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, and buyer fit."
+meta_description: "Updated June 28, 2026: compare Perplexity, Comet, Dia, Elicit, Kagi, You.com APIs, ChatGPT Search, Google AI Mode, NotebookLM, Exa, Tavily, LlamaIndex, Haystack, Weaviate/Engram, Mem0, Cohere RAG, Grok X Search, Morphic, and Phind migration paths by citations, privacy, APIs, RAG frameworks, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-27
-last_verified: 2026-06-27
+last_updated: 2026-06-28
+last_verified: 2026-06-28
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -52,7 +52,15 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 
 **Use [Exa](/tools/exa/) when you are building AI search into a product.** It is a developer API lane for semantic search, retrieval, crawling-style workflows, deep research APIs, answer endpoints, monitors, AI page summaries, and Exa Agent runs. The June 23 refresh adds the June 16 Exa Agent launch context: natural-language queries, effort modes, structured output schemas, and optional input data are now part of the API buying surface. Cap result counts, summaries, monitor cadence, enrichment, and Agent effort before traffic grows.
 
+**Use [Tavily](/tools/tavily/) when agent search needs real-time web results plus extraction.** The June 28 check adds Tavily as the search, extract, crawl, map, and research API lane for agents and RAG systems. Start with Researcher for prototypes, Project for early apps, Pay As You Go for spiky usage, and Enterprise when custom rate limits, support, privacy, or volume matter. Credit burn depends on basic versus advanced search, extract batches, mapping, crawl size, research mode, retries, and loop behavior.
+
+**Use [LlamaIndex](/tools/llamaindex/) when search is an app framework over private data.** LlamaIndex belongs here when the buyer is building RAG, context augmentation, indexing, retrieval, workflows, and agents over owned documents or domain-specific data. The framework is free and MIT-licensed, but LlamaParse/LlamaCloud credits, model calls, embeddings, vector storage, and retrieval evals remain separate.
+
+**Use [Haystack](/tools/haystack/) when product search should be built as open-source pipelines.** Haystack is the Apache-2.0 framework lane for RAG systems, document stores, components, agents, tools, and multimodal search apps. The managed deepset AI Platform route is a separate procurement question around deployment, governance, support, and dedicated resources.
+
 **Use [Weaviate](/tools/weaviate/) when search is product infrastructure rather than an answer engine.** The June 10 check keeps Weaviate in the open vector database lane, but Engram's June 3 GA means it now also belongs in agent-memory conversations: it is for teams building retrieval, RAG, hybrid search, and durable scoped context inside products, not for non-technical users replacing Google or Perplexity.
+
+**Use [Mem0](/tools/mem0/) when the search problem is persistent agent memory rather than document retrieval alone.** Mem0 should not replace a vector database for every RAG project, but it is relevant when assistants need scoped, editable memories across users, sessions, and agents.
 
 **Use [Cohere](/tools/cohere/) when the search problem is enterprise retrieval quality and deployment control.** Cohere is not an answer engine, but the June 18 refresh keeps it relevant to AI search infrastructure: Embed v4 and Rerank 4 remain strong RAG primitives, Model Vault supports isolated VPC/on-prem deployment, North Mini Code adds a model-control lane for coding-agent retrieval workflows, and the Cohere/Aleph Alpha announcement sharpens the European sovereign-AI procurement story.
 
@@ -82,7 +90,9 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 | Owned-source research | [NotebookLM](/tools/notebooklm/) | Best for selected PDFs, notes, reports, calls, classes, Drive material, and source-pack artifacts | Discovery and Deep Research still need source-quality review; no public NotebookLM API |
 | Private paid search | [Kagi](/tools/kagi/) | Ad-free search, lenses, ranking controls, Assistant options | Paid search is a harder sell for casual users |
 | Search/retrieval API | [Exa](/tools/exa/) | Search, contents, answer, monitors, summaries, and Agent primitives for AI apps | Value depends on integration quality, request economics, extra results, summaries, monitor usage, enrichment, structured-output needs, and Agent effort |
-| Product RAG and agent memory | [Weaviate](/tools/weaviate/) | Open vector database, managed cloud, hybrid search, hosted embeddings, Query Agent, and Engram memory/context service | Infrastructure ownership, index design, add-on pricing, and app-layer permissions still matter |
+| Real-time agent search API | [Tavily](/tools/tavily/) | Search, extract, crawl, map, and research endpoints for agents and RAG systems | Credits depend on search depth, extraction volume, crawls, maps, research mode, retries, and agent loops |
+| Product RAG and agent memory | [LlamaIndex](/tools/llamaindex/), [Haystack](/tools/haystack/), or [Weaviate](/tools/weaviate/) | LlamaIndex handles context augmentation and agents over data; Haystack handles open-source RAG pipelines; Weaviate handles vector search, hybrid retrieval, Query Agent, and Engram memory/context service | Framework ownership, index design, parsing credits, embeddings, vector storage, add-on pricing, evals, and app-layer permissions still matter |
+| Persistent agent memory | [Mem0](/tools/mem0/) | Managed or self-hosted memories for users, sessions, and agents | Consent, deletion, memory quality, and privacy review matter as much as retrieval quality |
 | Enterprise RAG model stack | [Cohere](/tools/cohere/) | Embed v4, Rerank 4, Command A+, North Mini Code, and Model Vault for private retrieval-heavy systems | Not a human search UI; model serving, Rerank chunk math, deployment terms, and evals remain the buyer's responsibility |
 | Search-to-deliverable AI workspace | [Genspark](/tools/genspark/) | Turns research into docs, slides, sheets, calls, media, and agent outputs | Credit burn and enterprise/API availability need direct verification |
 | Enterprise work search | [Glean](/tools/glean/) | Permission-aware search and agents over company apps and knowledge | Contact-sales pricing and connector/security review are mandatory |
@@ -103,6 +113,10 @@ AI search is not one category anymore. Buyers now choose between **cited answer 
 **Best private search:** [Kagi](/tools/kagi/) for buyers who want to pay for search quality, privacy, and ranking control.
 
 **Best developer API:** [Exa](/tools/exa/) when the search/retrieval layer is being embedded into an AI product.
+
+**Best real-time agent search API:** [Tavily](/tools/tavily/) when builders want search, extract, crawl, map, and research APIs with explicit credit modeling.
+
+**Best RAG framework starting point:** [LlamaIndex](/tools/llamaindex/) when agents over private data and managed LlamaParse/LlamaCloud are likely to matter; [Haystack](/tools/haystack/) when open-source pipeline architecture and document stores are the stronger fit.
 
 **Best search API cross-shop:** [You.com](/tools/you-com/) when builders want search, content extraction, and multi-step research in one vendor instead of a pure semantic-search primitive.
 
@@ -167,8 +181,17 @@ Do not leave this category stale. Google AI Mode, Perplexity Pro/Max/Enterprise,
 - [Exa pricing update](https://exa.ai/docs/changelog/pricing-update) (verified 2026-06-23)
 - [Exa pricing](https://exa.ai/pricing) (verified 2026-06-23)
 - [Exa Agent launch](https://exa.ai/blog/exa-agent) (verified 2026-06-23)
+- [Tavily official site](https://www.tavily.com) (verified 2026-06-28)
+- [Tavily API credits](https://docs.tavily.com/documentation/api-credits) (verified 2026-06-28)
+- [Tavily pricing](https://www.tavily.com/pricing) (verified 2026-06-28)
+- [LlamaIndex framework docs](https://developers.llamaindex.ai/python/framework/index.md) (verified 2026-06-28)
+- [LlamaIndex pricing](https://www.llamaindex.ai/pricing) (verified 2026-06-28)
+- [Haystack introduction docs](https://docs.haystack.deepset.ai/docs/intro) (verified 2026-06-28)
+- [deepset AI Platform pricing](https://www.deepset.ai/pricing) (verified 2026-06-28)
 - [Weaviate pricing](https://weaviate.io/pricing) (verified 2026-06-23)
 - [Weaviate Engram GA announcement](https://weaviate.io/blog/engram-generally-available) (verified 2026-06-23)
+- [Mem0 Platform overview](https://docs.mem0.ai/platform/overview) (verified 2026-06-28)
+- [Mem0 Platform vs Open Source](https://docs.mem0.ai/platform/platform-vs-oss) (verified 2026-06-28)
 - [Cohere pricing](https://cohere.com/pricing) (verified 2026-06-18)
 - [Cohere models docs](https://docs.cohere.com/docs/models) (verified 2026-06-18)
 - [Cohere Rerank docs](https://docs.cohere.com/docs/reranking-with-cohere) (verified 2026-06-18)

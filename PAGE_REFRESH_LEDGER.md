@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-28
-Tracked public pages and crawl surfaces: 564
+Tracked public pages and crawl surfaces: 600
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -308,14 +308,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /answers/chatgpt-vs-claude-which-is-better/ | Static page | Yes | page metadata | src/pages/answers/chatgpt-vs-claude-which-is-better.astro |
 | 2026-06-27 | /answers/is-cursor-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-cursor-worth-it.astro |
 | 2026-06-27 | /answers/is-midjourney-worth-it/ | Static page | Yes | page metadata | src/pages/answers/is-midjourney-worth-it.astro |
-| 2026-06-27 | /categories/ai-chatbots/ | Category | Yes | frontmatter | src/content/categories/ai-chatbots.md |
-| 2026-06-27 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-27 | /categories/ai-design/ | Category | Yes | frontmatter | src/content/categories/ai-design.md |
 | 2026-06-27 | /categories/ai-image/ | Category | Yes | frontmatter | src/content/categories/ai-image.md |
-| 2026-06-27 | /categories/ai-infrastructure/ | Category | Yes | frontmatter | src/content/categories/ai-infrastructure.md |
 | 2026-06-27 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
 | 2026-06-27 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
-| 2026-06-27 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
 | 2026-06-27 | /categories/ai-seo/ | Category | Yes | frontmatter | src/content/categories/ai-seo.md |
 | 2026-06-27 | /companies/ | Static page | Yes | git | src/pages/companies/index.astro |
 | 2026-06-27 | /companies/adobe/ | Company | Yes | frontmatter | src/content/companies/adobe.md |
@@ -527,11 +523,15 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-27 | /workflows/seo-content-pipeline/ | Workflow | Yes | frontmatter | src/content/workflows/seo-content-pipeline.md |
 | 2026-06-27 | /workflows/solo-founder-stack/ | Workflow | Yes | frontmatter | src/content/workflows/solo-founder-stack.md |
 | 2026-06-27 | /workflows/youtube-content-stack/ | Workflow | Yes | frontmatter | src/content/workflows/youtube-content-stack.md |
-| 2026-06-28 | / | Static page | Yes | page metadata | src/pages/index.astro |
-| 2026-06-28 | /categories/ | Static page | Yes | git | src/pages/categories/index.astro |
-| 2026-06-28 | /categories/ai-automation/ | Category | Yes | frontmatter | src/content/categories/ai-automation.md |
+| 2026-06-28 | / | Static page | Yes | working tree | src/pages/index.astro |
+| 2026-06-28 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
+| 2026-06-28 | /categories/ai-automation/ | Category | Yes | working tree | src/content/categories/ai-automation.md |
+| 2026-06-28 | /categories/ai-chatbots/ | Category | Yes | working tree | src/content/categories/ai-chatbots.md |
+| 2026-06-28 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-28 | /categories/ai-infrastructure/ | Category | Yes | working tree | src/content/categories/ai-infrastructure.md |
 | 2026-06-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-28 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
+| 2026-06-28 | /categories/ai-search/ | Category | Yes | working tree | src/content/categories/ai-search.md |
 | 2026-06-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-28 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-28 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
@@ -557,21 +557,57 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /guides/gamma-pricing-for-founders-and-consultants/ | Guide | Yes | frontmatter | src/content/use-cases/gamma-pricing-for-founders-and-consultants.md |
 | 2026-06-28 | /guides/hume-ai-pricing-for-emotion-aware-voice-apps/ | Guide | Yes | frontmatter | src/content/use-cases/hume-ai-pricing-for-emotion-aware-voice-apps.md |
 | 2026-06-28 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
-| 2026-06-28 | /llms-full.txt | Crawl surface | No | git | src/pages/llms-full.txt.ts |
-| 2026-06-28 | /llms.txt | Crawl surface | No | git | src/pages/llms.txt.ts |
+| 2026-06-28 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
+| 2026-06-28 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-28 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-28 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-28 | /search/ | Static page | No | git | src/pages/search.astro |
-| 2026-06-28 | /tools/ | Static page | Yes | git | src/pages/tools/index.astro |
+| 2026-06-28 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
+| 2026-06-28 | /tools/agno/ | Tool | Yes | working tree | src/content/tools/agno.md |
 | 2026-06-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
+| 2026-06-28 | /tools/arize-phoenix/ | Tool | Yes | working tree | src/content/tools/arize-phoenix.md |
+| 2026-06-28 | /tools/baml/ | Tool | Yes | working tree | src/content/tools/baml.md |
+| 2026-06-28 | /tools/braintrust/ | Tool | Yes | working tree | src/content/tools/braintrust.md |
+| 2026-06-28 | /tools/chainlit/ | Tool | Yes | working tree | src/content/tools/chainlit.md |
 | 2026-06-28 | /tools/cloudtalk/ | Tool | Yes | frontmatter | src/content/tools/cloudtalk.md |
+| 2026-06-28 | /tools/composio/ | Tool | Yes | working tree | src/content/tools/composio.md |
 | 2026-06-28 | /tools/consensus/ | Tool | Yes | frontmatter | src/content/tools/consensus.md |
 | 2026-06-28 | /tools/decktopus/ | Tool | Yes | frontmatter | src/content/tools/decktopus.md |
+| 2026-06-28 | /tools/deepeval/ | Tool | Yes | working tree | src/content/tools/deepeval.md |
+| 2026-06-28 | /tools/dify/ | Tool | Yes | working tree | src/content/tools/dify.md |
+| 2026-06-28 | /tools/dspy/ | Tool | Yes | working tree | src/content/tools/dspy.md |
+| 2026-06-28 | /tools/firecrawl/ | Tool | Yes | working tree | src/content/tools/firecrawl.md |
+| 2026-06-28 | /tools/flowise/ | Tool | Yes | working tree | src/content/tools/flowise.md |
 | 2026-06-28 | /tools/gamma/ | Tool | Yes | frontmatter | src/content/tools/gamma.md |
+| 2026-06-28 | /tools/guardrails-ai/ | Tool | Yes | working tree | src/content/tools/guardrails-ai.md |
+| 2026-06-28 | /tools/haystack/ | Tool | Yes | working tree | src/content/tools/haystack.md |
 | 2026-06-28 | /tools/hume-ai/ | Tool | Yes | frontmatter | src/content/tools/hume-ai.md |
+| 2026-06-28 | /tools/inspect-ai/ | Tool | Yes | working tree | src/content/tools/inspect-ai.md |
+| 2026-06-28 | /tools/instructor/ | Tool | Yes | working tree | src/content/tools/instructor.md |
+| 2026-06-28 | /tools/langsmith/ | Tool | Yes | working tree | src/content/tools/langsmith.md |
+| 2026-06-28 | /tools/langwatch/ | Tool | Yes | working tree | src/content/tools/langwatch.md |
+| 2026-06-28 | /tools/litellm/ | Tool | Yes | working tree | src/content/tools/litellm.md |
+| 2026-06-28 | /tools/llamaindex/ | Tool | Yes | working tree | src/content/tools/llamaindex.md |
+| 2026-06-28 | /tools/lm-evaluation-harness/ | Tool | Yes | working tree | src/content/tools/lm-evaluation-harness.md |
+| 2026-06-28 | /tools/mem0/ | Tool | Yes | working tree | src/content/tools/mem0.md |
 | 2026-06-28 | /tools/minimax/ | Tool | Yes | frontmatter | src/content/tools/minimax.md |
+| 2026-06-28 | /tools/mirascope/ | Tool | Yes | working tree | src/content/tools/mirascope.md |
+| 2026-06-28 | /tools/openai-evals/ | Tool | Yes | working tree | src/content/tools/openai-evals.md |
+| 2026-06-28 | /tools/openlit/ | Tool | Yes | working tree | src/content/tools/openlit.md |
+| 2026-06-28 | /tools/openpipe/ | Tool | Yes | working tree | src/content/tools/openpipe.md |
+| 2026-06-28 | /tools/opik/ | Tool | Yes | working tree | src/content/tools/opik.md |
+| 2026-06-28 | /tools/outlines/ | Tool | Yes | working tree | src/content/tools/outlines.md |
+| 2026-06-28 | /tools/patronus-ai/ | Tool | Yes | working tree | src/content/tools/patronus-ai.md |
+| 2026-06-28 | /tools/portkey/ | Tool | Yes | working tree | src/content/tools/portkey.md |
+| 2026-06-28 | /tools/promptfoo/ | Tool | Yes | working tree | src/content/tools/promptfoo.md |
+| 2026-06-28 | /tools/pydantic-ai/ | Tool | Yes | working tree | src/content/tools/pydantic-ai.md |
+| 2026-06-28 | /tools/ragas/ | Tool | Yes | working tree | src/content/tools/ragas.md |
+| 2026-06-28 | /tools/respan/ | Tool | Yes | working tree | src/content/tools/respan.md |
 | 2026-06-28 | /tools/rytr/ | Tool | Yes | frontmatter | src/content/tools/rytr.md |
 | 2026-06-28 | /tools/semrush-demo/ | Tool | No | frontmatter | src/content/tools/semrush-demo.md |
+| 2026-06-28 | /tools/tavily/ | Tool | Yes | working tree | src/content/tools/tavily.md |
+| 2026-06-28 | /tools/traceloop/ | Tool | Yes | working tree | src/content/tools/traceloop.md |
+| 2026-06-28 | /tools/zep/ | Tool | Yes | working tree | src/content/tools/zep.md |
 | 2026-06-28 | /workflows/ | Static page | Yes | git | src/pages/workflows/index.astro |
 | 2026-06-28 | /workflows/agency-sales-stack/ | Workflow | Yes | frontmatter | src/content/workflows/agency-sales-stack.md |
 | 2026-06-28 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |

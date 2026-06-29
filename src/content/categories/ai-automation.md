@@ -3,9 +3,9 @@ type: category
 slug: ai-automation
 title: AI Automation & Agents
 description: Current workflow automation, AI agent platforms, meeting automation, call automation, and operations tools for technical teams, non-technical operators, GTM workflows, customer success, support, sales, and internal automation.
-tool_count: 27
+tool_count: 49
 seo_title: "Best AI Automation Tools & Agent Platforms (June 2026)"
-meta_description: "Updated June 28, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Taskade, Rows, Voiceflow, watsonx Orchestrate, Tines, Reclaim AI, Intercom, Gumloop, Relevance AI, Activepieces, AG2, CrewAI, Langflow, Langfuse, LangGraph, Letta, Glean, Goose, OpenClaw, Browserbase, Modal, Apollo, Lindy, Pipedream, CloudTalk, and MeetGeek by workflow, pricing unit, AI orchestration, governance, and risk."
+meta_description: "Updated June 28, 2026: compare n8n, Zapier, Make, Workato, Microsoft Agent Framework, Gumloop, Activepieces, AG2, Agno, CrewAI, Pydantic AI, BAML, DSPy, Instructor, Chainlit, Respan, OpenLIT, Opik, Inspect AI, Guardrails AI, LiteLLM, LlamaIndex, Haystack, Langflow, Langfuse, LangSmith, Braintrust, Patronus AI, DeepEval, Traceloop, Arize Phoenix, Ragas, OpenPipe, LangWatch, Portkey, Zep, promptfoo, LangGraph, Dify, Flowise, Composio, Firecrawl, Tavily, Mem0, Browserbase, Modal, Apollo, Lindy, and Pipedream by workflow, pricing unit, governance, and risk."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-28
 last_verified: 2026-06-28
@@ -38,6 +38,54 @@ decision_picks:
       - zapier-mcp-guide
       - zapier-pricing
     verified_at: 2026-06-22
+    confidence: high
+  - tool: dify
+    label: Best open-source AI app platform
+    reason: Dify is the stronger shortlist when the buyer needs agents, RAG apps, chatbots, workflows, APIs, and a Dify Cloud or self-host route rather than only app-to-app automation.
+    plan: Sandbox or Community self-hosting for validation
+    source_refs:
+      - dify-pricing
+      - dify-docs
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: flowise
+    label: Best visual LLM workflow builder
+    reason: Flowise fits technical teams that want chatflows, AgentFlow V2, assistants, RAG, tracing, evaluations, and self-hosted LLM workflow experiments.
+    plan: Self-host for serious evaluation, or Flowise Cloud Free for small tests
+    source_refs:
+      - flowise-docs
+      - flowise-cloud-migration
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: agno
+    label: Best AgentOS-style framework
+    reason: Agno fits developer teams that want an open-source SDK plus AgentOS control-plane path for agents, teams, workflows, memory, knowledge, traces, audit logs, and interfaces.
+    plan: Free open source first, Pro at $150/month when live AgentOS control saves engineering time
+    source_refs:
+      - agno-docs
+      - agno-pricing
+      - agno-license
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: guardrails-ai
+    label: Best validated-output guardrail layer
+    reason: Guardrails AI fits automation teams that need reusable validators, Pydantic-style structured outputs, on-fail policies, and input/output guards before workflow actions run.
+    plan: Free Apache-2.0 framework, with hosted or remote-validator pricing confirmed directly
+    source_refs:
+      - guardrails-ai-docs
+      - guardrails-ai-validators
+      - guardrails-ai-license
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: inspect-ai
+    label: Best sandboxed agent eval framework
+    reason: Inspect AI fits automation teams that need repeatable code-defined evals for agentic tasks, tool use, sandboxed runs, scorers, and release evidence.
+    plan: Free MIT framework, with model calls, compute, sandboxes, storage, and review time separate
+    source_refs:
+      - inspect-ai-official
+      - inspect-ai-evals-list
+      - inspect-ai-license
+    verified_at: 2026-06-28
     confidence: high
 ---
 
@@ -93,7 +141,13 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [AG2](/tools/ag2/) when the buyer wants an open-source multi-agent framework rather than a SaaS workflow canvas.** The June 23 release check keeps AG2 v0.13.4 from June 12 as current after v0.13.3 added cross-process Network, sandbox protocol work, background-agent tooling, A2A fixes, and evaluation improvements. v0.13.4 then added AG2 Agent-as-MCP-server support, OAuth Resource Server authentication, SkillPlugin support, Bedrock Beta client support, decoupled usage reporting, and governance examples. It is more AgentOS-shaped than the old page implied, but still a developer framework, not a non-technical ops platform.
 
+**Use [Agno](/tools/agno/) when the buyer wants an owned AgentOS-style platform for production agents.** The June 28 check adds Agno as the Apache-2.0 SDK and control-plane lane for agents, teams, workflows, memory, knowledge, traces, audit logs, runtime storage, and interfaces. Free open source is the validation path, Pro is $150/month for managing production systems, and Enterprise is custom. Treat permissions, secrets, model budgets, memory retention, and human review as part of the implementation.
+
 **Use [CrewAI](/tools/crewai/) when Python developers want role-based multi-agent orchestration.** The June 23 check found CrewAI 1.14.7 as the current stable release and a public pricing split of Free Basic cloud plus custom Enterprise. It belongs here as a framework/cloud-control-plane option, not as a no-code workflow builder.
+
+**Use [Pydantic AI](/tools/pydantic-ai/) when Python teams want typed agent code instead of a visual workflow canvas.** The June 28 check adds it as the Pydantic-native framework lane: typed agents, structured outputs, dependencies, tools, MCP, evals, graph workflows, and provider choice. It is MIT-licensed, but production spend still comes from models, hosting, storage, observability, and engineering ownership.
+
+**Use [DSPy](/tools/dspy/) when automation prompts need measurable optimization.** DSPy belongs here when a repeated agent or workflow step has examples, metrics, and a clear target behavior. It is not a no-code automation builder; it is a coding framework for signatures, modules, metrics, and optimizers, with model-call and data-work costs outside the framework.
 
 **Use [Langflow](/tools/langflow/) when the buyer wants a visual LangChain/LangGraph/RAG canvas, not a broad SaaS automation router.** The June 23 check keeps the post-DataStax-hosted shutdown warning front and center, with the June 2026 release story focused on v1.9-v1.10 memory and stability work. Langflow remains a good prototyping and deployable-flow path, but production teams should pin versions, monitor security releases, and verify managed-hosting terms before treating it as a no-maintenance hosted workflow system.
 
@@ -101,9 +155,65 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 
 **Use [LangGraph](/tools/langgraph/) when engineering needs a low-level orchestration runtime for durable, stateful agents.** The June 23 check keeps the library free/MIT while LangSmith carries the paid layer: Developer $0/seat/month, Plus $39/seat/month, Enterprise custom, and pay-as-you-go trace/deployment meters. It belongs in this category for production agent architecture, not no-code operations routing.
 
+**Use [LangSmith](/tools/langsmith/) when automations and agents need traces, evals, prompt workflows, deployment, and monitoring.** The June 28 check keeps Developer at $0/seat/month, Plus at $39/seat/month, and Enterprise custom, but production teams need separate limits for trace volume, extended retention, deployment runs, deployment uptime, sandboxes, Fleet, Engine, and model/API spend.
+
+**Use [Braintrust](/tools/braintrust/) when agent automation needs release-quality evals.** Braintrust is not a workflow builder; it is the evidence layer for datasets, experiments, traces, scores, prompt comparisons, monitoring, and human review before an agent change ships.
+
+**Use [OpenLIT](/tools/openlit/) when automation traces should fit OpenTelemetry.** OpenLIT is relevant when agent workflows need self-hosted traces, metrics, token and cost tracking, prompt workflows, evals, dashboards, vector database monitoring, and GPU visibility. Cloud pricing was not public in the June 28 check, so treat it as an engineering-owned self-host route first.
+
+**Use [Opik](/tools/opik/) when automation changes need agent eval evidence.** Opik belongs beside agent rollouts that need step-by-step traces, Test Suites, assertions, LLM-as-judge metrics, annotation queues, and production monitoring. Free Cloud is useful for early checks, but span volume and retention decide the paid path.
+
+**Use [Inspect AI](/tools/inspect-ai/) when agent automations need sandboxed, repeatable evals.** Inspect AI belongs here when a workflow uses tools, browsers, code, files, or long-horizon agent actions and the team needs datasets, agents, tools, scorers, Inspect View, and sandbox runs before live rollout. It is an eval framework, not a no-code automation platform.
+
+**Use [Guardrails AI](/tools/guardrails-ai/) when automation outputs must be validated before actions run.** Guardrails AI belongs here when extracted fields, classifications, tool arguments, or workflow decisions need validators, Pydantic-style outputs, Hub installs, on-fail policies, and input/output guards. It reduces unchecked model output risk, but it does not replace traces, evals, or human review for high-risk actions.
+
+**Use [Arize Phoenix](/tools/arize-phoenix/) when automated agents need OpenTelemetry-native trace evidence.** Phoenix belongs in automation when an agent workflow needs traces, evals, prompt iteration, datasets, and experiments tied to real runs rather than only task success screenshots.
+
+**Use [Traceloop](/tools/traceloop/) when agent observability should ride on OpenTelemetry.** Traceloop belongs here when automations need OpenLLMetry traces, quality checks, prompt/model change testing, alerts, and ServiceNow AI Control Tower alignment. Confirm product-roadmap and procurement details because Traceloop is joining ServiceNow.
+
+**Use [LangWatch](/tools/langwatch/) when automation teams want open-source LLMOps.** LangWatch belongs here when traces, evals, datasets, DSPy optimization, self-hosting, and event-sourcing operations need to surround agent workflows before they reach users or tools.
+
+**Use [Respan](/tools/respan/) when automation prompts, evals, and gateway traffic need one evidence trail.** Respan is relevant when an agent workflow needs traces, metrics, evals, prompt management, monitors, spend limits, and an OpenAI-compatible gateway tied to production traffic. Verify Team pricing, retention, data posture, and gateway latency before routing sensitive automations through it.
+
+**Use [Patronus AI](/tools/patronus-ai/) when agent automation needs managed reliability evidence.** Patronus belongs beside agent rollouts that need evaluators, traces, datasets, comparisons, guardrails, Percival-assisted eval creation, and Digital World Model simulation research before risky workflows touch live systems.
+
+**Use [Ragas](/tools/ragas/) when automation evals are code-first.** Ragas is useful when developers need open-source metrics, synthetic test data, and repeatable RAG or LLM evaluation inside CI or notebooks instead of a managed dashboard first.
+
+**Use [DeepEval](/tools/deepeval/) when automation evals should be broad LLM tests in code.** DeepEval fits agent and RAG automation teams that want metrics, test cases, tracing, safety checks, and CI gates before adding a hosted Confident AI workflow.
+
+**Use [OpenPipe](/tools/openpipe/) when repeated automation prompts can become cheaper specialized models.** OpenPipe is relevant when logged agent calls, classification prompts, extraction tasks, or support automations have enough clean examples and stable outputs to justify fine-tuning.
+
+**Use [BAML](/tools/baml/) when automations need typed LLM calls.** BAML is relevant when prompt outputs need generated clients, type safety, robust parsing, tests, streaming, multimodal inputs, and optional Boundary Studio traces before they trigger downstream workflow actions.
+
+**Use [Instructor](/tools/instructor/) when automation steps need validated structured outputs.** Instructor is the lightweight MIT library lane for JSON, Pydantic-style schemas, retries, and provider adapters. It is useful before workflow actions depend on extracted fields, classifications, or tool arguments, but it does not replace evals, traces, or human review.
+
+**Use [LiteLLM](/tools/litellm/) when automated AI traffic needs a self-hosted gateway.** LiteLLM is relevant when agents and workflows call multiple model providers and need an OpenAI-compatible proxy, routing, virtual keys, budgets, guardrails, MCP, spend tracking, and enterprise gateway controls. Review latency, fallback quality, logs, and provider bills before putting it in the live path.
+
+**Use [LlamaIndex](/tools/llamaindex/) or [Haystack](/tools/haystack/) when automations depend on retrieval and private data.** LlamaIndex is the context-augmentation and agents-over-data framework lane, while Haystack is the component-and-pipeline framework lane for RAG, document stores, tools, and agents. Both need retrieval evals, access-control review, model budgets, and hosting ownership.
+
+**Use [Portkey](/tools/portkey/) when automated AI traffic needs gateway governance.** Portkey is relevant to automation teams that route model calls through prompts, guardrails, keys, budgets, caching, logs, and provider policy before agents touch live systems.
+
+**Use [Zep](/tools/zep/) when automated agents need persistent memory.** Zep belongs here when the workflow depends on scoped user/session memory and temporal context graphs, not only one-off prompts or retrieved documents.
+
+**Use [promptfoo](/tools/promptfoo/) when automation needs red-team and guardrail testing.** promptfoo is the testing lane for jailbreaks, vulnerability scans, model security, MCP proxy checks, code scanning, and repeatable eval gates before agents are exposed to users or tools.
+
+**Use [Dify](/tools/dify/) when automation is really an AI app platform decision.** The June 28 check adds Dify as the open-source route for agents, agentic workflows, chatbots, RAG apps, APIs, Dify Cloud, and self-hosted Community Edition. Start with Sandbox or Community self-hosting, then verify message credits, model spend, workspace limits, plugins, and paid self-hosted edition terms before buying.
+
+**Use [Flowise](/tools/flowise/) when technical users want a visual LLM workflow builder.** The June 28 check keeps Flowise in the open-source visual-agent lane: Assistant, Chatflow, Agentflow, AgentFlow V2, RAG pipelines, tracing, evaluations, API routes, and self-hosting. Cloud Starter pricing is not published in the docs, so verify checkout before standardizing on Cloud.
+
+**Use [Chainlit](/tools/chainlit/) when an automation workflow needs a quick conversational review surface.** Chainlit is not a no-code automation platform, but it can expose RAG, agent, or internal workflow prototypes as Python chat apps. Production teams still own auth, persistence, monitoring, UX polish, and support route checks.
+
 **Use [Letta](/tools/letta/) when the agent's memory must persist across sessions and model swaps.** The June 23 check keeps Letta Code Free, Pro $20/month, and Enterprise custom, with Letta Auto quota on Pro, pay-as-you-go overage, and usage-based API Platform billing tied to underlying model token costs. It is strongest when memory governance is a product requirement, not when the job is a stateless workflow.
 
+**Use [Mem0](/tools/mem0/) when the automation product needs persistent user, session, or agent memory.** The June 28 check adds Mem0 as the managed-or-self-hosted memory layer for agents. Use it only with deletion, consent, privacy, and memory-quality controls because bad or stale memories can make agents feel wrong or invasive.
+
 **Use [Browserbase](/tools/browserbase/) when automation needs reliable cloud browsers.** The June 24 refresh keeps the same Free, Developer $20/month, Startup $99/month, and Scale custom pricing, but the product has shifted further into browser-agent infrastructure: real cloud Chromium browsers, Search and Fetch APIs, Extract, Functions runtime, Identity, Model Gateway, Stagehand, MCP, replay, and observability instead of local Playwright infrastructure. High-volume read-only jobs now need separate Fetch/Extract math from browser-hour math.
+
+**Use [Firecrawl](/tools/firecrawl/) when automation needs current web data rather than a browser session.** Firecrawl belongs here when agents need search, scrape, crawl, structured extraction, screenshots, Interact, and LLM-ready markdown. It should be governed by endpoint budgets, retry limits, robots and terms review, and source timestamps.
+
+**Use [Tavily](/tools/tavily/) when automation needs search, extract, crawl, map, or research endpoints.** Tavily is the cleaner route when an agent needs current web search and extraction as API calls rather than browser state. Govern credits by search depth, extraction batches, crawl size, research mode, retries, and agent-loop limits.
+
+**Use [Composio](/tools/composio/) when agents need app actions, OAuth, and MCP access.** Composio is the tool-access layer for agent products, with 1000+ app toolkits, user-scoped auth, session tools, and hosted MCP URLs. It is adjacent to automation but still needs developer ownership of scopes, logs, and write-action approvals.
 
 **Use [Modal](/tools/modal/) when automation is Python jobs, queues, web endpoints, sandboxes, or serverless GPU work rather than SaaS connector routing.** Modal is not a Zapier/n8n replacement; it is the better fit when the automation owner can write Python and wants per-second compute, GPU classes, scheduled jobs, web functions, and infrastructure-as-code ergonomics.
 
@@ -183,12 +293,40 @@ AI automation now splits into four buyer jobs: deterministic workflow automation
 | Security and IT workflow automation | [Tines](/tools/tines/) | Audit logs, RBAC, SSO/SAML, flexible hosting, Workbench, and AI Agent actions for SOC/IT workflows | Starter floor is high and AI Agent usage depends on credits and package limits |
 | Open-source automation and self-hosting | [Activepieces](/tools/activepieces/) | MIT-licensed self-host path, cloud active-flow billing, 754 live catalog pieces, 754 MCP listings, and MCP/AI-agent support | Someone still has to own hosting, secrets, and connector maintenance |
 | Developer multi-agent framework | [AG2](/tools/ag2/) | Apache 2.0 framework for AutoGen-style agent systems, MCP/A2A work, cross-process networks, skills, and sandboxing | Requires Python engineering judgment, tool-governance policy, and production hardening; not a turnkey workflow product |
+| AgentOS-style platform framework | [Agno](/tools/agno/) | Apache-2.0 SDK and control-plane path for agents, teams, workflows, memory, knowledge, traces, audit logs, runtime storage, and interfaces | Permissions, secrets, human review, model budgets, and memory retention need owners |
 | Python multi-agent orchestration | [CrewAI](/tools/crewai/) | Role-based agents, crews, flows, Studio, tracing, triggers, and an Enterprise path | Basic cloud is small; LLM costs and production controls still need engineering ownership |
+| Typed Python agent framework | [Pydantic AI](/tools/pydantic-ai/) | Typed agents, structured outputs, dependencies, tools, MCP, evals, graph workflows, and provider choice | It is a framework, not hosted governance; production reliability remains with the team |
+| LLM program optimization | [DSPy](/tools/dspy/) | Signatures, modules, metrics, and optimizers improve repeated automation prompts when examples exist | Weak metrics, small examples, and optimizer token spend can create false confidence |
 | Visual LangChain/RAG canvas | [Langflow](/tools/langflow/) | Open-source visual builder for agents, MCP servers, RAG, and deployable flows | Pin versions and patch quickly; not a general SaaS automation platform |
 | LLM observability, prompt management, and evals | [Langfuse](/tools/langfuse/) | Open-source traces, prompt management, datasets, annotations, metrics, and eval workflows | Not a gateway; usage-unit and self-hosting operations need ownership |
 | Durable stateful agent runtime | [LangGraph](/tools/langgraph/) | Low-level orchestration for persistence, streaming, human-in-the-loop, and deployment via LangSmith | Multiple LangSmith meters plus separate model/API costs |
+| LangChain-native agent observability | [LangSmith](/tools/langsmith/) | Traces, evals, prompt workflows, monitoring, Deployment, Sandboxes, Fleet, and Engine controls | Trace retention, deployment runs, uptime, sandboxes, and outside model/API spend need separate limits |
+| Agent release evals | [Braintrust](/tools/braintrust/) | Datasets, experiments, traces, scores, prompt testing, monitoring, and review workflows for agent changes | Eval sets, score quality, model spend, usage meters, and human review ownership matter |
+| OpenTelemetry agent observability | [OpenLIT](/tools/openlit/) | Self-hosted OpenTelemetry traces, metrics, token and cost tracking, prompts, evals, dashboards, and infrastructure monitoring | Managed cloud pricing is not public, and telemetry operations remain buyer-owned |
+| Agent Test Suites and evals | [Opik](/tools/opik/) | OSS or hosted traces, Test Suites, assertions, LLM-as-judge metrics, annotation, and production monitoring | Span volume, retention, additional spans, and judge calibration need budget and review |
+| Sandboxed agent evals | [Inspect AI](/tools/inspect-ai/) | Code-defined tasks, datasets, scorers, tools, agents, Inspect View, and sandboxed runs | Model calls, sandbox operations, reviewer time, and private eval data need owners |
+| Validated automation outputs | [Guardrails AI](/tools/guardrails-ai/) | Validators, Hub installs, Pydantic outputs, on-fail policies, and input/output guards before workflow actions | False positives, semantic correctness, hosted pricing, and runtime observability still need review |
+| Managed agent reliability | [Patronus AI](/tools/patronus-ai/) | Evals, traces, datasets, guardrails, Percival-assisted evals, and Digital World Model simulation research | Confirm product lane, retention, enterprise controls, and contract scope |
+| OpenTelemetry agent traces | [Arize Phoenix](/tools/arize-phoenix/) or [Traceloop](/tools/traceloop/) | Traces, evals, prompt iteration, datasets, quality checks, alerts, and experiments around real agent runs | Span quality, span volume, AX overages, Elastic License 2.0 posture, and ServiceNow roadmap risk need review |
+| Open-source LLMOps for agents | [LangWatch](/tools/langwatch/) | Traces, evaluations, datasets, AI gateway workflows, DSPy optimization, and self-hosting | Event volume, retention, self-host operations, and paid-plan currency details need modeling |
+| Code-first automation evals | [DeepEval](/tools/deepeval/) or [Ragas](/tools/ragas/) | DeepEval covers broad LLM, RAG, agent, chatbot, safety, and CI evals; Ragas is sharper for RAG metrics and synthetic test data | Developers still own datasets, evaluator model costs, CI integration, and review workflow |
+| Typed LLM function calls | [BAML](/tools/baml/) | Generated clients, typed outputs, robust parsing, tests, streaming, multimodal inputs, and Boundary Studio traces | It is a framework, not hosted automation governance; model and operations spend remain separate |
+| Validated automation outputs | [Instructor](/tools/instructor/) | Validated JSON, Pydantic-style schemas, retries, and provider adapters before downstream actions run | Structured output does not prove correctness; evals and trace review still matter |
+| LLM gateway and retrieval frameworks | [LiteLLM](/tools/litellm/), [LlamaIndex](/tools/llamaindex/), or [Haystack](/tools/haystack/) | LiteLLM centralizes provider routing; LlamaIndex and Haystack help agents use private data, RAG, pipelines, and document stores | Gateway logs, retrieval permissions, eval quality, model bills, embeddings, storage, and hosting all need owners |
+| LLMOps plus gateway evidence | [Respan](/tools/respan/) | Traces, metrics, evals, prompt management, monitors, spend limits, and an OpenAI-compatible gateway tied to production traffic | Live Team pricing, data handling, retention, and gateway latency need verification |
+| Fine-tuned automation models | [OpenPipe](/tools/openpipe/) | Request logs, datasets, fine-tuning, DPO, evaluations, and hosted inference | Needs clean examples, stable tasks, baseline evals, and rollback plans |
+| AI gateway governance | [Portkey](/tools/portkey/) | Model routing, key control, prompts, guardrails, logs, caching, budgets, and provider policy for automation traffic | Recorded logs, retention, overages, latency, provider spend, and guardrail false positives need testing |
+| Agent memory | [Zep](/tools/zep/) or [Mem0](/tools/mem0/) | Persistent memory and context across users, sessions, agents, and workflows | Consent, deletion, retention, stale memories, and sensitive context governance decide fit |
+| Red-team and guardrail testing | [promptfoo](/tools/promptfoo/) | Local evals, red-team probes, vulnerability scans, guardrails, MCP proxy, and model-security checks | Tests must map to real target apps, remediation owners, and production runtime controls |
+| AI app, agent, workflow, and RAG platform | [Dify](/tools/dify/) | Dify Cloud, self-hosted Community Edition, agents, workflows, chatbots, RAG, APIs, and publishing | Message credits, model-provider spend, workspaces, plugins, and self-hosted edition terms need live checks |
+| Visual LLM workflow builder | [Flowise](/tools/flowise/) | Open-source Assistant, Chatflow, Agentflow, AgentFlow V2, RAG, tracing, evaluations, and self-hosting | Cloud Starter price is not published in docs; self-hosted production needs database, queue, storage, secrets, and model-key ownership |
+| Conversational prototype surface | [Chainlit](/tools/chainlit/) | Python chat UI framework for RAG, agent, internal tool, and workflow demos | Not a no-code automation platform; auth, persistence, hosting, UX, and support need ownership |
 | Persistent-memory agents | [Letta](/tools/letta/) | Open-source memory-first agents, Letta Code, Letta Auto, and usage-based API Platform billing | Memory retention, deletion, sensitive data, and pay-as-you-go overage need controls |
+| Agent memory layer | [Mem0](/tools/mem0/) | Managed or self-hosted persistent memories across users, sessions, and agents | Consent, deletion, memory quality, privacy review, and vector/model ownership need controls |
 | Cloud browser automation for agents | [Browserbase](/tools/browserbase/) | Managed Chromium browsers, Web Data APIs, Functions runtime, identity, Model Gateway, observability, Stagehand, and MCP | Costs move with browser sessions, Fetch/Extract calls, proxies, Model Gateway tokens, and runtime design |
+| Web data for automation agents | [Firecrawl](/tools/firecrawl/) | Search, scrape, crawl, Interact, screenshots, structured extraction, and markdown output for agents | Credit burn, crawl depth, browser minutes, retries, robots, and legal review decide production fit |
+| Search API for automation agents | [Tavily](/tools/tavily/) | Search, extract, crawl, map, and research endpoints for agents and RAG workflows | Credit burn depends on search depth, extract volume, maps, crawls, research mode, retries, and loops |
+| Agent app-action infrastructure | [Composio](/tools/composio/) | 1000+ app toolkits, user-scoped auth, session tools, and hosted MCP access | OAuth scopes, write actions, default user IDs, and tool-call volume need controls |
 | Python jobs, endpoints, queues, and GPU automation | [Modal](/tools/modal/) | Serverless Python functions, web endpoints, scheduled jobs, sandboxes, and per-second GPU billing | Not a no-code app connector; region and non-preemptible multipliers change production cost |
 | LLM observability and gateway control | [Helicone](/tools/helicone/) | Open-source observability, AI Gateway, model-cost routing, caching, failovers, rate limits, and BYOK provider support | Sits in sensitive prompt/data paths; review retention, PII, and proxy mode |
 | Enterprise customer-service AI agents | [Ada](/tools/ada/) | Strong fit for high-volume support teams that need chat, voice, email, SMS, social, Playbooks, MCP-assisted optimization, and handoff governance | Pricing is demo-gated; verify conversation definitions, channel coverage, MCP/SDK scope, and resolution economics |
@@ -320,8 +458,58 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [Langfuse pricing](https://langfuse.com/pricing) (verified 2026-06-23)
 - [Langfuse documentation](https://langfuse.com/docs) (verified 2026-06-23)
 - [LangGraph docs](https://docs.langchain.com/oss/python/langgraph/overview) (verified 2026-06-23)
-- [LangChain pricing](https://www.langchain.com/pricing) (verified 2026-06-23)
-- [LangSmith billing](https://docs.langchain.com/langsmith/billing) (verified 2026-06-23)
+- [LangChain pricing](https://www.langchain.com/pricing) (verified 2026-06-28)
+- [LangSmith billing](https://docs.langchain.com/langsmith/billing) (verified 2026-06-28)
+- [LangSmith observability](https://www.langchain.com/langsmith/observability) (verified 2026-06-28)
+- [LangSmith usage and billing](https://docs.langchain.com/langsmith/usage-and-billing) (verified 2026-06-28)
+- [Braintrust pricing](https://www.braintrust.dev/pricing) (verified 2026-06-28)
+- [OpenLIT pricing](https://openlit.io/pricing) (verified 2026-06-28)
+- [OpenLIT overview docs](https://docs.openlit.io/latest/overview) (verified 2026-06-28)
+- [Opik pricing](https://www.comet.com/site/pricing/) (verified 2026-06-28)
+- [Opik tracing docs](https://www.comet.com/docs/opik/tracing/overview) (verified 2026-06-28)
+- [Opik evaluation docs](https://www.comet.com/docs/opik/evaluation/overview) (verified 2026-06-28)
+- [Inspect AI docs](https://inspect.aisi.org.uk/) (verified 2026-06-28)
+- [Inspect AI evals list](https://inspect.aisi.org.uk/evals/) (verified 2026-06-28)
+- [Inspect AI license](https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/main/LICENSE) (verified 2026-06-28)
+- [Guardrails quickstart](https://docs.guardrailsai.com/docs/getting_started/quickstart.md) (verified 2026-06-28)
+- [Guardrails validators docs](https://docs.guardrailsai.com/docs/concepts/validators.md) (verified 2026-06-28)
+- [Guardrails license](https://raw.githubusercontent.com/guardrails-ai/guardrails/main/LICENSE) (verified 2026-06-28)
+- [Portkey pricing](https://portkey.ai/pricing) (verified 2026-06-28)
+- [Zep pricing](https://www.getzep.com/pricing/) (verified 2026-06-28)
+- [promptfoo pricing](https://www.promptfoo.dev/pricing/) (verified 2026-06-28)
+- [promptfoo docs](https://www.promptfoo.dev/docs/intro/) (verified 2026-06-28)
+- [Pydantic AI docs index](https://ai.pydantic.dev/llms.txt) (verified 2026-06-28)
+- [Pydantic AI license](https://github.com/pydantic/pydantic-ai/blob/main/LICENSE) (verified 2026-06-28)
+- [Agno docs](https://docs.agno.com/introduction) (verified 2026-06-28)
+- [Agno pricing](https://www.agno.com/pricing) (verified 2026-06-28)
+- [Agno license](https://raw.githubusercontent.com/agno-agi/agno/main/LICENSE) (verified 2026-06-28)
+- [DSPy program, don't prompt guide](https://dspy.ai/getting-started/program-dont-prompt/index.md) (verified 2026-06-28)
+- [DSPy license](https://github.com/stanfordnlp/dspy/blob/main/LICENSE) (verified 2026-06-28)
+- [Instructor docs](https://python.useinstructor.com/) (verified 2026-06-28)
+- [Instructor license](https://raw.githubusercontent.com/567-labs/instructor/main/LICENSE) (verified 2026-06-28)
+- [LiteLLM docs](https://docs.litellm.ai/docs/) (verified 2026-06-28)
+- [LiteLLM Enterprise docs](https://docs.litellm.ai/docs/enterprise) (verified 2026-06-28)
+- [LlamaIndex framework docs](https://developers.llamaindex.ai/python/framework/index.md) (verified 2026-06-28)
+- [LlamaIndex pricing](https://www.llamaindex.ai/pricing) (verified 2026-06-28)
+- [Haystack introduction docs](https://docs.haystack.deepset.ai/docs/intro) (verified 2026-06-28)
+- [deepset AI Platform pricing](https://www.deepset.ai/pricing) (verified 2026-06-28)
+- [Dify pricing](https://dify.ai/pricing) (verified 2026-06-28)
+- [Dify introduction docs](https://docs.dify.ai/introduction.md) (verified 2026-06-28)
+- [Dify GitHub repository](https://github.com/langgenius/dify) (verified 2026-06-28)
+- [Flowise introduction docs](https://docs.flowiseai.com/readme.md) (verified 2026-06-28)
+- [Flowise AgentFlow V2 docs](https://docs.flowiseai.com/using-flowise/agentflowv2.md) (verified 2026-06-28)
+- [Flowise Cloud migration docs](https://docs.flowiseai.com/migration-guide/cloud-migration.md) (verified 2026-06-28)
+- [Chainlit docs](https://docs.chainlit.io/get-started/overview) (verified 2026-06-28)
+- [Chainlit license](https://github.com/Chainlit/chainlit/blob/main/LICENSE) (verified 2026-06-28)
+- [Respan pricing](https://www.respan.ai/pricing) (verified 2026-06-28)
+- [Respan gateway docs](https://www.respan.ai/docs/documentation/features/gateway/gateway-quickstart) (verified 2026-06-28)
+- [Respan eval docs](https://www.respan.ai/docs/documentation/features/evals/quickstart) (verified 2026-06-28)
+- [Firecrawl pricing](https://www.firecrawl.dev/pricing) (verified 2026-06-28)
+- [Tavily API credits](https://docs.tavily.com/documentation/api-credits) (verified 2026-06-28)
+- [Mem0 Platform overview](https://docs.mem0.ai/platform/overview) (verified 2026-06-28)
+- [Mem0 Platform vs Open Source](https://docs.mem0.ai/platform/platform-vs-oss) (verified 2026-06-28)
+- [Mem0 pricing](https://mem0.ai/pricing) (verified 2026-06-28)
+- [Composio pricing](https://composio.dev/pricing) (verified 2026-06-28)
 - [Letta Code pricing](https://docs.letta.com/letta-code/pricing) (verified 2026-06-23)
 - [Letta API pricing](https://docs.letta.com/guides/build-with-letta/pricing/) (verified 2026-06-23)
 - [Letta next-phase post](https://www.letta.com/blog/our-next-phase/) (verified 2026-06-23)
@@ -437,6 +625,18 @@ Do not leave this category stale. Automation tools are adding MCP, agent builder
 - [MeetGeek integrations](https://meetgeek.ai/integrations) (verified 2026-05-26)
 - [Tactiq pricing](https://tactiq.io/buy) (verified 2026-06-09)
 - [Tactiq MCP](https://tactiq.io/mcp) (verified 2026-06-09)
+- [Arize Phoenix docs index](https://arize.com/docs/phoenix/llms.txt) (verified 2026-06-28)
+- [Arize pricing](https://arize.com/pricing/) (verified 2026-06-28)
+- [Traceloop docs](https://www.traceloop.com/docs/introduction) (verified 2026-06-28)
+- [Traceloop pricing](https://www.traceloop.com/pricing) (verified 2026-06-28)
+- [Traceloop joins ServiceNow](https://traceloop.com/blog/traceloop-is-joining-servicenow) (verified 2026-06-28)
+- [Patronus AI docs](https://docs.patronus.ai/docs) (verified 2026-06-28)
+- [Patronus AI pricing](https://www.patronus.ai/pricing) (verified 2026-06-28)
+- [DeepEval metrics docs](https://deepeval.com/docs/metrics-introduction) (verified 2026-06-28)
+- [Ragas docs](https://docs.ragas.io/en/stable/) (verified 2026-06-28)
+- [BAML docs index](https://docs.boundaryml.com/llms.txt) (verified 2026-06-28)
+- [OpenPipe pricing](https://docs.openpipe.ai/pricing/pricing) (verified 2026-06-28)
+- [LangWatch pricing](https://langwatch.ai/pricing) (verified 2026-06-28)
 - [Asana StackAI acquisition](https://www.businesswire.com/news/home/20260528515345/en/Asana-Acquires-StackAI-Adding-Cross-System-Execution-for-Human-Agent-Teams) (verified 2026-05-31)
 - [Robinhood agentic trading and card launch](https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/) (verified 2026-05-31)
 - [CoreWeave autonomous agent improvement launch](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx) (verified 2026-05-31)

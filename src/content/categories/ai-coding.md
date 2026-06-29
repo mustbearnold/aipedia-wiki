@@ -3,12 +3,12 @@ type: category
 slug: ai-coding
 title: AI Coding Assistants
 description: Current AI coding assistants, AI-native IDEs, terminal coding agents, PR agents, and app builders for developers, founders, teams, and non-developers.
-tool_count: 31
+tool_count: 37
 seo_title: "Best AI Coding Tools & Copilot Alternatives (June 2026)"
-meta_description: "Updated June 27, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
+meta_description: "Updated June 28, 2026: compare Cursor, Claude Code, GitHub Copilot, Gemini Code Assist and Antigravity, MiniMax-M3, DeepSeek V4, Grok Build, Amazon Q Developer's Kiro transition, Mastra, Pydantic AI, BAML, DSPy, Instructor, Mirascope, Outlines, Inspect AI, Guardrails AI, LM Evaluation Harness, OpenAI Evals, Chainlit, Agno, Respan, LiteLLM, LlamaIndex, Haystack, promptfoo, Braintrust, DeepEval, Ragas, OpenPipe, Arize Phoenix, Traceloop, LangWatch, Patronus AI, Codex, Devin, v0, Replit Agent, Aider, Cline, CodeRabbit, Cody, and Augment by workflow, pricing, autonomy, model-route risk, and team fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-27
-last_verified: 2026-06-27
+last_updated: 2026-06-28
+last_verified: 2026-06-28
 update_frequency: weekly
 top_picks:
   best_overall:
@@ -41,6 +41,125 @@ decision_picks:
       - github-copilot-ai-credits
       - github-copilot-app-ga
     verified_at: 2026-06-24
+    confidence: high
+  - tool: pydantic-ai
+    label: Best typed Python agent framework
+    reason: Pydantic AI is the better shortlist when Python teams want typed agents, structured outputs, dependencies, tools, MCP, evals, graph workflows, and provider choice without adopting a hosted app builder.
+    plan: Free MIT-licensed framework, with model, hosting, storage, and observability costs separate
+    source_refs:
+      - pydantic-ai-docs
+      - pydantic-ai-license
+      - pydantic-ai-github
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: baml
+    label: Best typed LLM function layer
+    reason: BAML is the better shortlist when engineering teams want typed LLM functions, generated clients, robust parsing, tests, streaming, multimodal inputs, and Boundary Studio traces tied to code.
+    plan: Free Apache-2.0 framework, with model and observability costs separate
+    source_refs:
+      - baml-what-is
+      - baml-license
+      - baml-boundary-studio
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: dspy
+    label: Best LLM program optimization framework
+    reason: DSPy is the better shortlist when developers have repeatable LLM tasks, examples, and metrics that can guide signatures, modules, and optimizers instead of hand-tuned prompt sprawl.
+    plan: Free MIT framework, with model calls, data, evals, and hosting separate
+    source_refs:
+      - dspy-program-dont-prompt
+      - dspy-license
+      - dspy-official
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: instructor
+    label: Best structured-output library
+    reason: Instructor is the better shortlist when developers need validated JSON, Pydantic-style schemas, retries, and provider adapters inside application code.
+    plan: Free MIT library, with model calls, retries, evals, and observability separate
+    source_refs:
+      - instructor-docs
+      - instructor-license
+      - instructor-repository
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: mirascope
+    label: Best provider-agnostic LLM SDK
+    reason: Mirascope is the better shortlist when developers want typed provider-agnostic calls, tools, structured outputs, streaming, async workflows, agents, and OpenTelemetry-friendly observability hooks.
+    plan: Free MIT SDKs, with no Mirascope Cloud budget because Cloud is discontinued
+    source_refs:
+      - mirascope-docs
+      - mirascope-cloud
+      - mirascope-license
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: outlines
+    label: Best constrained-generation library
+    reason: Outlines fits developers who need JSON Schema, regex, grammar, or typed-schema constraints during generation instead of relying only on post-hoc JSON repair.
+    plan: Free Apache-2.0 library, with Dottxt API pricing treated as unverified until public rates are available
+    source_refs:
+      - outlines-docs
+      - outlines-license
+      - dottxt-api-docs
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: inspect-ai
+    label: Best custom coding-agent eval framework
+    reason: Inspect AI is the stronger coding-adjacent shortlist when developers need code-defined eval tasks, scorers, tools, agents, sandboxes, and Inspect View for coding or agent behavior.
+    plan: Free MIT framework, with model calls, sandboxes, compute, storage, and review time separate
+    source_refs:
+      - inspect-ai-official
+      - inspect-ai-evals-list
+      - inspect-ai-license
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: guardrails-ai
+    label: Best runtime LLM validation layer
+    reason: Guardrails AI fits coding teams that need validators, Pydantic-style structured outputs, on-fail policies, Hub validators, and input/output guards before app code trusts model results.
+    plan: Free Apache-2.0 framework, with hosted or remote-validator pricing confirmed directly
+    source_refs:
+      - guardrails-ai-docs
+      - guardrails-ai-validators
+      - guardrails-ai-license
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: lm-evaluation-harness
+    label: Best standardized model benchmark harness
+    reason: LM Evaluation Harness fits coding-model evaluations that need reproducible benchmark coverage across local weights, APIs, vLLM, SGLang, Hugging Face, and OpenAI-compatible routes.
+    plan: Free MIT framework, with API, GPU, backend, storage, and review costs separate
+    source_refs:
+      - lm-evaluation-harness-readme
+      - lm-evaluation-harness-license
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: chainlit
+    label: Best quick Python chat UI framework
+    reason: Chainlit fits teams that need a fast conversational AI interface for prototypes, demos, internal tools, RAG workflows, or agent UI review before productizing.
+    plan: Free Apache-2.0 framework, with hosting, model APIs, auth, persistence, and support separate
+    source_refs:
+      - chainlit-docs
+      - chainlit-license
+      - chainlit-repository
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: promptfoo
+    label: Best LLM app security test harness
+    reason: promptfoo is the stronger shortlist when coding teams need local evals, red-team probes, vulnerability scans, guardrails, MCP proxy checks, and AI security testing before release.
+    plan: Community for local tests, Enterprise for shared security workflows
+    source_refs:
+      - promptfoo-pricing
+      - promptfoo-docs
+      - promptfoo-license
+    verified_at: 2026-06-28
+    confidence: high
+  - tool: ragas
+    label: Best code-first RAG evaluation framework
+    reason: Ragas is the better shortlist when developers need open-source metrics, synthetic test data, experiments, and cost-aware eval loops in code for LLM or RAG features.
+    plan: Free Apache-2.0 framework, with model and evaluator costs separate
+    source_refs:
+      - ragas-docs
+      - ragas-metrics
+      - ragas-cost-analysis
+    verified_at: 2026-06-28
     confidence: high
 ---
 
@@ -100,6 +219,34 @@ The June 27 Cursor worth-it answer keeps the buyer rule simple: pay for Cursor o
 
 **June 22 Mastra update:** [Mastra](/tools/mastra/) remains the TypeScript-first agent-framework lane, not a no-code app builder. The current pricing page keeps Starter at $0/month, Teams at $250/month, and Enterprise/self-hosted custom, but the June 22 check sharpens the real cost model around observability events, CPU time, data egress, persistent servers, Memory Gateway input/output at market rate plus 5.5%, memory tokens, retrieval storage, platform storage, LibSQL/Postgres meters, database storage, and outside model-provider spend. Current docs also make Mastra a broader production-agent surface: the model router claims 4,539 models across 133 providers, while June posts added Code Mode, Agent Signals, ACP delegation, and harness architecture guidance. Treat sandbox policy, workspace isolation, tool approvals, and provider-key handling as part of the buying decision.
 
+**June 28 Pydantic AI update:** [Pydantic AI](/tools/pydantic-ai/) is the Python agent-framework lane for teams that want typed agents, structured outputs, dependency injection, tools, MCP, evals, graph workflows, and provider choice in code. It is MIT-licensed, but production buyers should still budget for model APIs, hosting, vector stores, durable execution, secrets, observability, and review workflows.
+
+**June 28 BAML update:** [BAML](/tools/baml/) is the typed LLM function lane for engineering teams that want generated clients, structured outputs, robust parsing, tests, streaming, multimodal inputs, and Boundary Studio traces tied to code. Treat it as a framework choice, not a finished app builder or hosted governance platform.
+
+**June 28 DSPy update:** [DSPy](/tools/dspy/) is the LLM program-optimization lane for coding teams with repeatable tasks, examples, and metrics. Use it when signatures, modules, metrics, and optimizers can replace prompt sprawl. Skip it when the team has no eval signal, because optimizer runs can spend tokens while chasing the wrong behavior.
+
+**June 28 Instructor update:** [Instructor](/tools/instructor/) is the structured-output library lane for developers who need validated JSON, Pydantic-style schemas, retries, and provider adapters inside app code. Use it when extraction, classification, enrichment, or tool arguments need typed outputs. Skip it when the team needs a broader agent runtime, generated-client workflow, hosted traces, or eval operations.
+
+**June 28 Mirascope and Outlines update:** [Mirascope](/tools/mirascope/) and [Outlines](/tools/outlines/) fill two adjacent code-first LLM layers. Mirascope is the provider-agnostic SDK lane for typed calls, tools, structured outputs, streaming, async workflows, agents, and OpenTelemetry-friendly observability hooks. Outlines is the constrained-generation lane for JSON Schema, regex, grammars, and typed schemas during generation. Mirascope Cloud is discontinued, and Dottxt API public rates were not verified, so budget both as libraries first.
+
+**June 28 eval and guardrail update:** [Inspect AI](/tools/inspect-ai/), [Guardrails AI](/tools/guardrails-ai/), [LM Evaluation Harness](/tools/lm-evaluation-harness/), and [OpenAI Evals](/tools/openai-evals/) are coding-adjacent reliability tools, not IDE assistants. Inspect AI is the code-defined agent and safety eval framework, Guardrails AI is the runtime validation layer, and LM Evaluation Harness is the standardized benchmark lane for model comparisons. OpenAI Evals is now a migration item because OpenAI says existing hosted evals become read-only on October 31, 2026 and the dashboard/API shut down on November 30, 2026.
+
+**June 28 Agno and Chainlit update:** [Agno](/tools/agno/) and [Chainlit](/tools/chainlit/) are coding-adjacent framework picks, not IDE assistants. Agno is the AgentOS-style platform lane for agents, teams, workflows, memory, knowledge, traces, audit logs, and interfaces. Chainlit is the quick Python conversational UI lane for prototypes, demos, internal tools, RAG, and agent workflow review. Both need engineering ownership of permissions, hosting, auth, persistence, observability, and model spend.
+
+**June 28 Respan update:** [Respan](/tools/respan/) belongs in coding guidance when code changes alter prompts, model routes, gateway behavior, eval datasets, or production traces. It is the active Keywords AI successor surface and combines observability, evals, prompt management, monitors, spend limits, and an OpenAI-compatible gateway. Verify live Team pricing and data-handling terms before routing sensitive traffic through it.
+
+**June 28 RAG and gateway framework update:** [LiteLLM](/tools/litellm/), [LlamaIndex](/tools/llamaindex/), and [Haystack](/tools/haystack/) are coding-adjacent infrastructure rather than IDE assistants. LiteLLM belongs in codebases that need an OpenAI-compatible gateway and provider routing. LlamaIndex and Haystack belong when developers are building RAG, agents over private data, document pipelines, retrieval, and reusable LLM app architecture.
+
+**June 28 promptfoo update:** [promptfoo](/tools/promptfoo/) is the coding-adjacent test harness for LLM apps, not an IDE assistant. Use it when teams need local evals, red-team probes, vulnerability scans, guardrail tests, model security checks, MCP proxy review, code scanning, and security evidence before a coding agent or LLM feature ships.
+
+**June 28 Braintrust update:** [Braintrust](/tools/braintrust/) is the eval-operations lane for coding teams shipping AI features. It belongs here when code changes alter prompts, model routes, retrieval, or agents and the team needs datasets, experiments, scores, traces, monitoring, and human review to prove the change is safer.
+
+**June 28 Ragas update:** [Ragas](/tools/ragas/) is the code-first evaluation lane for LLM and RAG features. Use it when developers need open-source metrics, synthetic test data, experiments, and cost-aware eval loops inside CI, notebooks, or test harnesses.
+
+**June 28 OpenPipe update:** [OpenPipe](/tools/openpipe/) is the fine-tuning and model-optimization lane for coding teams with production logs. Use it when request logs can become datasets, fine-tuned models, DPO runs, evaluations, and hosted inference that reduce cost or latency.
+
+**June 28 DeepEval, Patronus AI, Traceloop, Arize Phoenix, and LangWatch update:** [DeepEval](/tools/deepeval/) is the code-first LLM eval framework, [Patronus AI](/tools/patronus-ai/) is the managed reliability and Digital World Model lane, and [Traceloop](/tools/traceloop/), [Arize Phoenix](/tools/arize-phoenix/), and [LangWatch](/tools/langwatch/) are coding-adjacent observability tools for AI products, not IDE assistants. Use them when code changes alter prompts, retrieval, agents, traces, evals, datasets, or release evidence.
+
 **June 24 CodeRabbit update:** [CodeRabbit](/tools/coderabbit/) remains the dedicated PR-review lane for teams that want AI summaries, comments, IDE/CLI review, Knowledge Base, linters, SAST hooks, and human approval before merge. The June 24 check keeps Pro at $24/developer/month annual or $30 monthly, Pro+ at $48 annual or $60 monthly, Slack Agent at $0.50 per active agent minute, and adds sharper capacity guidance: Pro, Pro+, and Enterprise review limits are refillable per-developer allowances, while usage add-on credits are $1 each and cover four reviewed files for eligible over-limit PR/CLI reviews. June changelog updates also matter for coding-agent teams: CodeRabbit Plan in VS Code, CLI v0.6.0, automatic repository linking, and newer GitLab/GHES review support.
 
 **June 22 Qodo update:** [Qodo](/tools/qodo/) remains the enterprise code-review governance lane, not an autocomplete replacement. Current pricing no longer shows the old permanent Developer free tier or $38/user/month Teams plan: every workspace starts with a 14-day trial, then Pro Team starts at $30/month with shared credits, overage caps, and support for up to 30 users. Enterprise is the route for SSO/SAML, audit logs, BYOK, advanced analytics, single-tenant SaaS, on-prem, air-gapped deployment, and negotiated contracts. Treat CLI workflows as sales-verified rather than the default reason to buy.
@@ -158,6 +305,25 @@ The June 27 Cursor worth-it answer keeps the buyer rule simple: pay for Cursor o
 | Open-source IDE/CLI/SDK agent runtime | [Cline](/tools/cline/) | Free Open Source plan, broad provider/local/Vercel AI Gateway routing, Plan/Act approvals, MCP, CLI, Kanban, and SDK embedding | Usage-based inference, Auto Approve/SDK permission policy, and Enterprise governance need review |
 | Open-source local/BYOK agent | [Goose](/tools/goose/) | Desktop, CLI, and API agent with model choice, MCP extensions, and Apache-2.0 code | Needs provider-cost controls, secrets hygiene, and local-permission review |
 | Open-source final coding-agent artifact | [Continue](/tools/continue/) | Useful to study, fork, or self-maintain after Cursor acquired Continue | Official repo is read-only, old pricing is no longer live, and new teams should evaluate maintained alternatives |
+| Typed Python agent framework | [Pydantic AI](/tools/pydantic-ai/) | Typed agents, structured outputs, dependencies, tools, MCP, evals, graph workflows, and provider choice | It is not hosted governance; teams still own model spend, deployment, state, secrets, observability, and reliability |
+| Typed LLM function layer | [BAML](/tools/baml/) | Typed function definitions, generated clients, robust parsing, tests, streaming, multimodal inputs, and optional Boundary Studio traces | Framework adoption takes discipline, and model, hosting, CI, and observability costs remain separate |
+| LLM program optimization | [DSPy](/tools/dspy/) | Signatures, modules, metrics, optimizers, and examples help developers tune repeated LLM behavior | Bad metrics, weak examples, optimizer token spend, and missing human review can mislead teams |
+| Structured LLM outputs | [Instructor](/tools/instructor/) | Validated JSON, Pydantic-style schemas, retries, and provider adapters inside application code | A valid object can still be wrong; retry cost, evals, and observability stay with the team |
+| Provider-agnostic LLM SDK | [Mirascope](/tools/mirascope/) | Typed calls, tools, structured outputs, streaming, async workflows, agents, and OpenTelemetry-friendly hooks across providers | Mirascope Cloud is discontinued, so hosted dashboards and retention need another backend |
+| Constrained generation | [Outlines](/tools/outlines/) | JSON Schema, regex, grammar, and typed-schema constraints during generation rather than after-the-fact parsing | Valid shape can still be wrong, and Dottxt API public pricing was not verified |
+| Custom coding-agent evals | [Inspect AI](/tools/inspect-ai/) | Code-defined eval tasks, datasets, scorers, tools, agents, Inspect View, and sandboxed runs | Model calls, sandboxes, judge calibration, private data, and reviewer time need owners |
+| Runtime LLM validation | [Guardrails AI](/tools/guardrails-ai/) | Validators, Pydantic outputs, on-fail policies, Hub installs, and input/output guards before app actions | Validated structure can still be semantically wrong, and hosted pricing was not publicly verified |
+| Standard model benchmarks | [LM Evaluation Harness](/tools/lm-evaluation-harness/) | 60+ benchmark tasks, many variants, and HF, vLLM, API, SGLang, and local-server backends | Benchmarks are not private product regressions; API and GPU costs need limits |
+| OpenAI Evals migration | [OpenAI Evals](/tools/openai-evals/) | Existing OpenAI eval users can inspect and migrate old eval coverage | Hosted evals become read-only on October 31, 2026 and shut down on November 30, 2026 |
+| Agent platform framework | [Agno](/tools/agno/) | Agents, teams, workflows, memory, knowledge, storage, traces, audit logs, interfaces, and AgentOS control-plane path | It is not no-code automation; permissions, secrets, hosting, review gates, and model spend need owners |
+| Conversational AI app UI | [Chainlit](/tools/chainlit/) | Python chat interfaces for prototypes, demos, internal tools, RAG, and agent workflow review | Not a managed chatbot platform; auth, persistence, support, and production UX need engineering work |
+| LLMOps and gateway evidence | [Respan](/tools/respan/) | Traces, evals, prompts, monitors, spend limits, and OpenAI-compatible gateway data in one platform | Live Team pricing, data handling, and latency need verification before sensitive production use |
+| LLM app gateway and RAG frameworks | [LiteLLM](/tools/litellm/), [LlamaIndex](/tools/llamaindex/), or [Haystack](/tools/haystack/) | LiteLLM handles model routing and gateway control; LlamaIndex and Haystack handle retrieval, agents over data, and reusable LLM app pipelines | Frameworks do not remove model, embedding, hosting, evaluation, logging, or access-control work |
+| LLM app security testing | [promptfoo](/tools/promptfoo/) | Local evals, red-team probes, vulnerability scans, guardrails, MCP proxy checks, and model-security testing | Tests need real app targets, remediation owners, false-positive review, and runtime enforcement |
+| AI release-quality evals | [Braintrust](/tools/braintrust/) | Datasets, experiments, traces, scores, monitoring, prompt comparisons, and human review for AI feature changes | Eval data quality, usage meters, model spend, and review ownership decide value |
+| Code-first LLM/RAG evals | [DeepEval](/tools/deepeval/) or [Ragas](/tools/ragas/) | DeepEval is the broader LLM, RAG, agent, chatbot, safety, and CI eval framework; Ragas is sharper for RAG metrics and synthetic test data | Developers own datasets, evaluator model costs, CI integration, and review quality |
+| Fine-tuned model optimization | [OpenPipe](/tools/openpipe/) | Request logs, datasets, fine-tuning, DPO, evaluations, and hosted inference | Needs clean examples, stable tasks, baseline evals, and rollback plans |
+| AI product observability | [Arize Phoenix](/tools/arize-phoenix/), [Traceloop](/tools/traceloop/), [LangWatch](/tools/langwatch/), or [Patronus AI](/tools/patronus-ai/) | Traces, evals, prompt iteration, datasets, experiments, LLMOps, OpenTelemetry, and managed reliability paths | Span/event volume, retention, license posture, acquisition roadmap, and self-hosting operations need modeling |
 | Coding model backend evaluation | [GLM](/tools/glm/) | GLM-5.2 open weights, OpenAI-compatible API pricing, flexible effort modes, and 1M context | Verify endpoint behavior, region, compliance, and output-heavy costs |
 | MiniMax M3 backend evaluation | [MiniMax](/tools/minimax/) | M3 coding/agentic positioning, native multimodality, low standard token price, and MiniMax Code path | Verify 512K vs 1M context access, Priority tier access, data residency, and independent benchmark fit |
 | xAI coding-agent and API evaluation | [Grok](/tools/grok/) | Grok Build CLI/TUI, headless scripting, custom models, skills/plugins, ACP integration, and Grok Build 0.1 API | Newer coding lane; benchmark permissions, sandboxing, ZDR/team settings, account limits, and repo-quality output before rollout |
@@ -253,6 +419,62 @@ Do not publish stale model-version claims. Coding tools route models and change 
 - [xAI Grok Build docs](https://docs.x.ai/build/overview) (verified 2026-06-22)
 - [xAI Grok Build enterprise docs](https://docs.x.ai/build/enterprise) (verified 2026-06-22)
 - [xAI model docs](https://docs.x.ai/developers/models) (verified 2026-06-22)
+- [Pydantic AI docs index](https://ai.pydantic.dev/llms.txt) (verified 2026-06-28)
+- [Pydantic AI GitHub repository](https://github.com/pydantic/pydantic-ai) (verified 2026-06-28)
+- [Pydantic AI license](https://github.com/pydantic/pydantic-ai/blob/main/LICENSE) (verified 2026-06-28)
+- [BAML docs index](https://docs.boundaryml.com/llms.txt) (verified 2026-06-28)
+- [What is BAML](https://docs.boundaryml.com/guide/introduction/what-is-baml.md) (verified 2026-06-28)
+- [BAML license](https://github.com/BoundaryML/baml/blob/canary/LICENSE) (verified 2026-06-28)
+- [DSPy official site](https://dspy.ai/) (verified 2026-06-28)
+- [DSPy program, don't prompt guide](https://dspy.ai/getting-started/program-dont-prompt/index.md) (verified 2026-06-28)
+- [DSPy license](https://github.com/stanfordnlp/dspy/blob/main/LICENSE) (verified 2026-06-28)
+- [Instructor docs](https://python.useinstructor.com/) (verified 2026-06-28)
+- [Instructor license](https://raw.githubusercontent.com/567-labs/instructor/main/LICENSE) (verified 2026-06-28)
+- [Instructor GitHub repository](https://github.com/567-labs/instructor) (verified 2026-06-28)
+- [Mirascope docs](https://mirascope.com/docs) (verified 2026-06-28)
+- [Mirascope Cloud status](https://mirascope.com/cloud) (verified 2026-06-28)
+- [Mirascope license](https://raw.githubusercontent.com/Mirascope/mirascope/main/LICENSE) (verified 2026-06-28)
+- [Outlines docs](https://dottxt-ai.github.io/outlines/latest/) (verified 2026-06-28)
+- [Outlines license](https://raw.githubusercontent.com/dottxt-ai/outlines/main/LICENSE) (verified 2026-06-28)
+- [Dottxt API docs](https://docs.dottxt.ai/api/overview) (verified 2026-06-28)
+- [Inspect AI docs](https://inspect.aisi.org.uk/) (verified 2026-06-28)
+- [Inspect AI evals list](https://inspect.aisi.org.uk/evals/) (verified 2026-06-28)
+- [Inspect AI license](https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/main/LICENSE) (verified 2026-06-28)
+- [Guardrails quickstart](https://docs.guardrailsai.com/docs/getting_started/quickstart.md) (verified 2026-06-28)
+- [Guardrails validators docs](https://docs.guardrailsai.com/docs/concepts/validators.md) (verified 2026-06-28)
+- [Guardrails license](https://raw.githubusercontent.com/guardrails-ai/guardrails/main/LICENSE) (verified 2026-06-28)
+- [LM Evaluation Harness README](https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/main/README.md) (verified 2026-06-28)
+- [LM Evaluation Harness license](https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/main/LICENSE.md) (verified 2026-06-28)
+- [OpenAI evals guide](https://developers.openai.com/api/docs/guides/evals) (verified 2026-06-28)
+- [OpenAI API deprecations](https://developers.openai.com/api/docs/deprecations) (verified 2026-06-28)
+- [OpenAI Evals license](https://raw.githubusercontent.com/openai/evals/main/LICENSE.md) (verified 2026-06-28)
+- [Agno docs](https://docs.agno.com/introduction) (verified 2026-06-28)
+- [Agno pricing](https://www.agno.com/pricing) (verified 2026-06-28)
+- [Agno license](https://raw.githubusercontent.com/agno-agi/agno/main/LICENSE) (verified 2026-06-28)
+- [Chainlit docs](https://docs.chainlit.io/get-started/overview) (verified 2026-06-28)
+- [Chainlit GitHub repository](https://github.com/Chainlit/chainlit) (verified 2026-06-28)
+- [Chainlit license](https://github.com/Chainlit/chainlit/blob/main/LICENSE) (verified 2026-06-28)
+- [Respan pricing](https://www.respan.ai/pricing) (verified 2026-06-28)
+- [Respan gateway docs](https://www.respan.ai/docs/documentation/features/gateway/gateway-quickstart) (verified 2026-06-28)
+- [Respan eval docs](https://www.respan.ai/docs/documentation/features/evals/quickstart) (verified 2026-06-28)
+- [LiteLLM docs](https://docs.litellm.ai/docs/) (verified 2026-06-28)
+- [LlamaIndex framework docs](https://developers.llamaindex.ai/python/framework/index.md) (verified 2026-06-28)
+- [Haystack introduction docs](https://docs.haystack.deepset.ai/docs/intro) (verified 2026-06-28)
+- [promptfoo pricing](https://www.promptfoo.dev/pricing/) (verified 2026-06-28)
+- [promptfoo docs](https://www.promptfoo.dev/docs/intro/) (verified 2026-06-28)
+- [promptfoo license](https://github.com/promptfoo/promptfoo/blob/main/LICENSE) (verified 2026-06-28)
+- [Braintrust pricing](https://www.braintrust.dev/pricing) (verified 2026-06-28)
+- [Braintrust docs index](https://www.braintrust.dev/docs/llms.txt) (verified 2026-06-28)
+- [DeepEval metrics docs](https://deepeval.com/docs/metrics-introduction) (verified 2026-06-28)
+- [Confident AI pricing](https://www.confident-ai.com/pricing) (verified 2026-06-28)
+- [Patronus AI docs](https://docs.patronus.ai/docs) (verified 2026-06-28)
+- [Traceloop docs](https://www.traceloop.com/docs/introduction) (verified 2026-06-28)
+- [Traceloop pricing](https://www.traceloop.com/pricing) (verified 2026-06-28)
+- [Ragas docs](https://docs.ragas.io/en/stable/) (verified 2026-06-28)
+- [Ragas available metrics](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/) (verified 2026-06-28)
+- [OpenPipe pricing](https://docs.openpipe.ai/pricing/pricing) (verified 2026-06-28)
+- [Arize Phoenix docs index](https://arize.com/docs/phoenix/llms.txt) (verified 2026-06-28)
+- [LangWatch docs index](https://langwatch.ai/docs/llms.txt) (verified 2026-06-28)
 - [xAI pricing](https://x.ai/pricing) (verified 2026-06-22)
 - [Cursor pricing](https://cursor.com/pricing) (verified 2026-06-23)
 - [Cursor Teams pricing update](https://cursor.com/blog/teams-pricing-june-2026) (verified 2026-06-23)

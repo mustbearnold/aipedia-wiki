@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "tool-og",
-  "source_hash": "397c2463b443fafaa2133b2c7eef48de11b77bedc602d31238f7205f26dd4421",
+  "source_hash": "9c8734db6ed8a640191fbc0144efe4289de2fdc48b222a50a6913fdfb02230e9",
   "generated_at": "deterministic",
   "meta": {
-    "tools": 220,
+    "tools": 256,
     "limit": null
   },
   "outputs": [
@@ -61,6 +61,15 @@
       "target": null,
       "bytes": 28331,
       "sha256": "705327caadcf513a6487dd5e8945a599d84078b1436b6b7c3d4b67624030546d"
+    },
+    {
+      "file": "public/og/tools/agno.png",
+      "kind": "tool-png",
+      "slug": "agno",
+      "theme": null,
+      "target": null,
+      "bytes": 28854,
+      "sha256": "7e2515216ae28b49649a8fe768e4199aaa4f6dcdec118a655cf32bac536e4b78"
     },
     {
       "file": "public/og/tools/ahrefs.png",
@@ -144,6 +153,24 @@
       "sha256": "c3331601f818a3dbb8cac653353694e70bf4352a6520c8b13bf09c39e17b2cec"
     },
     {
+      "file": "public/og/tools/arize-phoenix.png",
+      "kind": "tool-png",
+      "slug": "arize-phoenix",
+      "theme": null,
+      "target": null,
+      "bytes": 27378,
+      "sha256": "04397a3d576049709d832fac09973d1851deb0d63ee370484fab66def6d2e3b6"
+    },
+    {
+      "file": "public/og/tools/baml.png",
+      "kind": "tool-png",
+      "slug": "baml",
+      "theme": null,
+      "target": null,
+      "bytes": 25899,
+      "sha256": "be6c9250b4299687d2abd7054d5a6ccb73ec5fe09fd7d2cc4f37ae4f2696f7f8"
+    },
+    {
       "file": "public/og/tools/beautiful-ai.png",
       "kind": "tool-png",
       "slug": "beautiful-ai",
@@ -158,8 +185,8 @@
       "slug": "beehiiv",
       "theme": null,
       "target": null,
-      "bytes": 25798,
-      "sha256": "fadd952ab463bfd8caf67f16c3c1a183b7770001b65b36d245c234403dc48506"
+      "bytes": 31106,
+      "sha256": "d76a07f45296d367b132b2536a3072f46467409e5edc4b7d4fce70c8858efb97"
     },
     {
       "file": "public/og/tools/bolt.png",
@@ -178,6 +205,15 @@
       "target": null,
       "bytes": 27778,
       "sha256": "3c012aac576e2ee551a5f99b5e1876106c63d79a87ba62999a02695aa9edb9bf"
+    },
+    {
+      "file": "public/og/tools/braintrust.png",
+      "kind": "tool-png",
+      "slug": "braintrust",
+      "theme": null,
+      "target": null,
+      "bytes": 27700,
+      "sha256": "38d83853421ad7c2858a84781174853a555126676ebdfc021100f4ab7340f9b7"
     },
     {
       "file": "public/og/tools/canva.png",
@@ -223,6 +259,15 @@
       "target": null,
       "bytes": 25327,
       "sha256": "ccdbe5b900b484bfa062ae4a0cdb80b59dde84bd2294c14bed1c31d7e6d80b01"
+    },
+    {
+      "file": "public/og/tools/chainlit.png",
+      "kind": "tool-png",
+      "slug": "chainlit",
+      "theme": null,
+      "target": null,
+      "bytes": 26223,
+      "sha256": "858357a0ac63ff51133e4e6ee76c5af16397853c58210345d79b0d3e9c1ce3dc"
     },
     {
       "file": "public/og/tools/character-ai.png",
@@ -360,6 +405,15 @@
       "sha256": "554052dc1e1a4040b51495107919d85aed147536a662ea11b4052deab5e687cf"
     },
     {
+      "file": "public/og/tools/composio.png",
+      "kind": "tool-png",
+      "slug": "composio",
+      "theme": null,
+      "target": null,
+      "bytes": 27172,
+      "sha256": "3c7075c792cf2391ba3829c4bf01989c1e05b8f36e7c45f1606b734bfdde152c"
+    },
+    {
       "file": "public/og/tools/connected-papers.png",
       "kind": "tool-png",
       "slug": "connected-papers",
@@ -383,8 +437,8 @@
       "slug": "continue",
       "theme": null,
       "target": null,
-      "bytes": 28554,
-      "sha256": "e4501cf3c44160607fdd0f10175b23a83dfbf73e39dbdd5e46f851b08f533080"
+      "bytes": 29272,
+      "sha256": "d5f0126450b2068df4060b4e42d3387819092875675f9d61cd610798425cfc81"
     },
     {
       "file": "public/og/tools/copy-ai.png",
@@ -432,6 +486,15 @@
       "sha256": "60703f71abce378a96b2ed20c1927aa66d99cc9f823d9a8fb523fb25c3b25a8d"
     },
     {
+      "file": "public/og/tools/deepeval.png",
+      "kind": "tool-png",
+      "slug": "deepeval",
+      "theme": null,
+      "target": null,
+      "bytes": 25992,
+      "sha256": "5202b590833bee7c6e6156cd3a2dd3b8055bd6f2b201cc76a89aafcd9e1283d4"
+    },
+    {
       "file": "public/og/tools/deepl.png",
       "kind": "tool-png",
       "slug": "deepl",
@@ -468,6 +531,15 @@
       "sha256": "ceb16862ac81b3a5ccf9b0e9e7e3f8f746870ba3a69cba8bd3fcc13e21aa6a9b"
     },
     {
+      "file": "public/og/tools/dify.png",
+      "kind": "tool-png",
+      "slug": "dify",
+      "theme": null,
+      "target": null,
+      "bytes": 28524,
+      "sha256": "6521dd00e1aa0df5666fd8a3f5b8fd71ddf3c7b69258b9014cc36ccb2a8b279c"
+    },
+    {
       "file": "public/og/tools/doubao.png",
       "kind": "tool-png",
       "slug": "doubao",
@@ -475,6 +547,15 @@
       "target": null,
       "bytes": 26918,
       "sha256": "7f9feefda45107987c17fe56e90060f5695a899e5b526d224c5cdfa790d85eb8"
+    },
+    {
+      "file": "public/og/tools/dspy.png",
+      "kind": "tool-png",
+      "slug": "dspy",
+      "theme": null,
+      "target": null,
+      "bytes": 29181,
+      "sha256": "0c062a2b6859d695c150fcb324f38640cfa4e9f8139ae9e5bfbfb9150f330027"
     },
     {
       "file": "public/og/tools/elevenlabs.png",
@@ -531,6 +612,15 @@
       "sha256": "f97655898af4491ca6a8415dc1a8a25c902429aeb3492ecd7c3fdcb278299cc2"
     },
     {
+      "file": "public/og/tools/firecrawl.png",
+      "kind": "tool-png",
+      "slug": "firecrawl",
+      "theme": null,
+      "target": null,
+      "bytes": 30061,
+      "sha256": "01828457eaae189ca77e8f8786e498355c4134f2be8516b609f902edc69978c1"
+    },
+    {
       "file": "public/og/tools/fireflies.png",
       "kind": "tool-png",
       "slug": "fireflies",
@@ -554,8 +644,17 @@
       "slug": "fish-audio",
       "theme": null,
       "target": null,
-      "bytes": 28939,
-      "sha256": "23ef64fee4451ce36449b85ea6079d2f2593cbd45e5780d0d1d722a574e6d740"
+      "bytes": 29906,
+      "sha256": "218d18f7d8fcbba276a3c0e77c4813ae7bb09fbea9f807aa6329a3a442610c91"
+    },
+    {
+      "file": "public/og/tools/flowise.png",
+      "kind": "tool-png",
+      "slug": "flowise",
+      "theme": null,
+      "target": null,
+      "bytes": 24877,
+      "sha256": "db12dc9998febc998a5491b45a298165e1c2ce313a1b81145e564e2f1f1a8db2"
     },
     {
       "file": "public/og/tools/flux.png",
@@ -572,8 +671,8 @@
       "slug": "framer-ai",
       "theme": null,
       "target": null,
-      "bytes": 26512,
-      "sha256": "b0f8720943e4f7a7950b2082ddfe585e7e97d1fa5ad4a3aada10289eaad77c6e"
+      "bytes": 26529,
+      "sha256": "2635297bfb90c6bb6fb1358d9631558a0b6500b0382bd09ac67ecf987c4df422"
     },
     {
       "file": "public/og/tools/frase.png",
@@ -689,8 +788,8 @@
       "slug": "gpt-image-2",
       "theme": null,
       "target": null,
-      "bytes": 28720,
-      "sha256": "891e5f0d60f345e405be2ae57a2f5d86ecff01a3d424183c7a6dacb2e6cabacd"
+      "bytes": 29604,
+      "sha256": "ae9cfe8d06efb9b81ecfbcba2953260ff347b87eb38baa860bba91c1c14369f8"
     },
     {
       "file": "public/og/tools/grammarly.png",
@@ -729,6 +828,15 @@
       "sha256": "901aa905ce160a5d05dc5880aca764fe958818211bb073da5d9c9e036a562824"
     },
     {
+      "file": "public/og/tools/guardrails-ai.png",
+      "kind": "tool-png",
+      "slug": "guardrails-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 30623,
+      "sha256": "0886cfccf98348a12cdff251c8b5d9459a44a912b234df2f7194ce14d40fdef9"
+    },
+    {
       "file": "public/og/tools/gumloop.png",
       "kind": "tool-png",
       "slug": "gumloop",
@@ -756,6 +864,15 @@
       "sha256": "f68cfeb0b4e7f51eb53a9c4ff1d1f54b72260a981db7f6074e1f0633cb91f373"
     },
     {
+      "file": "public/og/tools/haystack.png",
+      "kind": "tool-png",
+      "slug": "haystack",
+      "theme": null,
+      "target": null,
+      "bytes": 28532,
+      "sha256": "0e8b0b6505b75da3d804d14c8cfb49c0e68b1a393fb643c18b0d513fcf0a2ccd"
+    },
+    {
       "file": "public/og/tools/hedra.png",
       "kind": "tool-png",
       "slug": "hedra",
@@ -779,8 +896,8 @@
       "slug": "hermes-agent",
       "theme": null,
       "target": null,
-      "bytes": 27597,
-      "sha256": "76d3aa112f5a02c46ccce6d76ece8132dcbee61ee176b3e6ef6094e651cfad37"
+      "bytes": 31053,
+      "sha256": "79024e2c563e640bf18e1f0fd2c25a269530996ec161019d1cff2758189d00af"
     },
     {
       "file": "public/og/tools/hex.png",
@@ -824,8 +941,8 @@
       "slug": "hume-ai",
       "theme": null,
       "target": null,
-      "bytes": 27953,
-      "sha256": "78a1d5dce19366dd34ff1acb2d85528d16f3e8bf49794a39926607b5abc94230"
+      "bytes": 27940,
+      "sha256": "d129cc01e9fc10488febad6269d8b34fc9f3fffb4169b75cf25bdc944e32e095"
     },
     {
       "file": "public/og/tools/hunyuan.png",
@@ -860,8 +977,17 @@
       "slug": "imagen",
       "theme": null,
       "target": null,
-      "bytes": 27347,
-      "sha256": "e5708dffd71b75a235d8fae62782bdb4e9b43ad33c784b7a7b4a5cf8aee66401"
+      "bytes": 30503,
+      "sha256": "5cf310dbb00911dffc2e7d1325d38963beb28f2b818c54279ec89e5a7f7f5840"
+    },
+    {
+      "file": "public/og/tools/inspect-ai.png",
+      "kind": "tool-png",
+      "slug": "inspect-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 30226,
+      "sha256": "cb7a0e19e6220b541b076211969712871238e6c1749b5c93f9a8bcfda0ba05a1"
     },
     {
       "file": "public/og/tools/instantly.png",
@@ -871,6 +997,15 @@
       "target": null,
       "bytes": 24874,
       "sha256": "51ae8f0cb56b2a5f4b04c76636f1aa0e0e2c7b1fb0f2b648bdd602d75539af07"
+    },
+    {
+      "file": "public/og/tools/instructor.png",
+      "kind": "tool-png",
+      "slug": "instructor",
+      "theme": null,
+      "target": null,
+      "bytes": 26013,
+      "sha256": "1448a7bcad2412f2f0e6caeaa6f6564bd23d781b9bf003a3d94fa24f1cba8d4e"
     },
     {
       "file": "public/og/tools/intercom.png",
@@ -887,8 +1022,8 @@
       "slug": "invideo",
       "theme": null,
       "target": null,
-      "bytes": 29254,
-      "sha256": "74f1b5b9089e0b970ee9c8a854f99eb96674877daf7c136df4f7555320c905cd"
+      "bytes": 27754,
+      "sha256": "a4416ed6bb793872ecb623e3a6b95c122a5454560b0746cea79e93b8da018f85"
     },
     {
       "file": "public/og/tools/jan-ai.png",
@@ -896,8 +1031,8 @@
       "slug": "jan-ai",
       "theme": null,
       "target": null,
-      "bytes": 27404,
-      "sha256": "b86ff945d207040e8f2a624d5443e01d4f4525ddf258ac30f780ae04db01c5b8"
+      "bytes": 27855,
+      "sha256": "2681cb915ac86d06f4e2dda0bd1dd450dac44fffd23a1e25f0cd2d2827ddd880"
     },
     {
       "file": "public/og/tools/jasper.png",
@@ -1008,6 +1143,24 @@
       "sha256": "de77e2467817eb4803795eb339e457100a036211f02a2078765d1c47aefca4f4"
     },
     {
+      "file": "public/og/tools/langsmith.png",
+      "kind": "tool-png",
+      "slug": "langsmith",
+      "theme": null,
+      "target": null,
+      "bytes": 30563,
+      "sha256": "f552d9145174f6bcf4178881c7dc5ea0cecdd435161874f1c4488dbd74c691e0"
+    },
+    {
+      "file": "public/og/tools/langwatch.png",
+      "kind": "tool-png",
+      "slug": "langwatch",
+      "theme": null,
+      "target": null,
+      "bytes": 23952,
+      "sha256": "f342df15d63f2df7d964591db4ec336b9b87fef46a53fd80beebda03baba2f83"
+    },
+    {
       "file": "public/og/tools/leonardo.png",
       "kind": "tool-png",
       "slug": "leonardo",
@@ -1035,6 +1188,15 @@
       "sha256": "8e235bf2b46f9e7484d7c706b12a86164cd3e7bfeb3dc76bc093bdf510190b8e"
     },
     {
+      "file": "public/og/tools/litellm.png",
+      "kind": "tool-png",
+      "slug": "litellm",
+      "theme": null,
+      "target": null,
+      "bytes": 26077,
+      "sha256": "a1b5057c9c35b0aca4883be0caebfbd194a44caffbfe63c313bb3d301884ecd8"
+    },
+    {
       "file": "public/og/tools/llama.png",
       "kind": "tool-png",
       "slug": "llama",
@@ -1042,6 +1204,24 @@
       "target": null,
       "bytes": 23955,
       "sha256": "49d248bb85eeb8e3942167aca297e4202867398fcc3403d19e91cca6ed0c71f6"
+    },
+    {
+      "file": "public/og/tools/llamaindex.png",
+      "kind": "tool-png",
+      "slug": "llamaindex",
+      "theme": null,
+      "target": null,
+      "bytes": 33934,
+      "sha256": "0c939eb3385ccb87587965e090262d9d2ab88c3755383f0a7ca65bcb3c350944"
+    },
+    {
+      "file": "public/og/tools/lm-evaluation-harness.png",
+      "kind": "tool-png",
+      "slug": "lm-evaluation-harness",
+      "theme": null,
+      "target": null,
+      "bytes": 30717,
+      "sha256": "62054896c3abd0430be644fe2cfb25d3c90e7ba15368f28c94521d56dea4121a"
     },
     {
       "file": "public/og/tools/lm-studio.png",
@@ -1085,8 +1265,8 @@
       "slug": "luma",
       "theme": null,
       "target": null,
-      "bytes": 28499,
-      "sha256": "fdfc7ee47fa2ab650af4c90a25107edfd99bcd6a46e4d879249462327042d71c"
+      "bytes": 28831,
+      "sha256": "115f9dab99f7353e69223f2da829b55e24cc37f1427b5aa105fa38e8d210d3fd"
     },
     {
       "file": "public/og/tools/magnific.png",
@@ -1152,6 +1332,15 @@
       "sha256": "ede56c830bbfcf3d935f12a37a50a297b19974a66828738ca0d464d4281bb320"
     },
     {
+      "file": "public/og/tools/mem0.png",
+      "kind": "tool-png",
+      "slug": "mem0",
+      "theme": null,
+      "target": null,
+      "bytes": 24282,
+      "sha256": "bc9053ca35e216243cc1f5a3297dd12ac26a8642b5e071129e9e74f9a5365f65"
+    },
+    {
       "file": "public/og/tools/meshy.png",
       "kind": "tool-png",
       "slug": "meshy",
@@ -1195,6 +1384,15 @@
       "target": null,
       "bytes": 25038,
       "sha256": "f744f496801c6e69cc26225f48877b914abfc538b76bbb1c44527b48ed6e86bf"
+    },
+    {
+      "file": "public/og/tools/mirascope.png",
+      "kind": "tool-png",
+      "slug": "mirascope",
+      "theme": null,
+      "target": null,
+      "bytes": 26595,
+      "sha256": "209aefa65de6a597b6cbc4d713bc91ce62064cb8731a28a30b963508df55a9b0"
     },
     {
       "file": "public/og/tools/mistral-ai.png",
@@ -1283,8 +1481,8 @@
       "slug": "notion-ai",
       "theme": null,
       "target": null,
-      "bytes": 25731,
-      "sha256": "b9fb798cd5c9a5c558d1aa1f803b7cec8f85d6d5a5b02e61b44ab2b94d9d6166"
+      "bytes": 27654,
+      "sha256": "ae6612f9ec7668a3b91df94f980c51e74ad57dafc429d1b0a1bdb8f20583f8b9"
     },
     {
       "file": "public/og/tools/obsidian.png",
@@ -1323,6 +1521,15 @@
       "sha256": "fa6a6974956e9c2138f27fba6cb29fec11a5727af595ead1c2e812baf8aae57b"
     },
     {
+      "file": "public/og/tools/openai-evals.png",
+      "kind": "tool-png",
+      "slug": "openai-evals",
+      "theme": null,
+      "target": null,
+      "bytes": 29359,
+      "sha256": "e5da596b617aa00a37acfd2185008c72d30028e4fcf65952a54c2c314f573cdd"
+    },
+    {
       "file": "public/og/tools/openclaw.png",
       "kind": "tool-png",
       "slug": "openclaw",
@@ -1341,6 +1548,33 @@
       "sha256": "ada54bf44249b41f6246ab6fc48836ecbcf075dd52bd5bc86389c230da97879c"
     },
     {
+      "file": "public/og/tools/openlit.png",
+      "kind": "tool-png",
+      "slug": "openlit",
+      "theme": null,
+      "target": null,
+      "bytes": 25396,
+      "sha256": "b06a85e5e3acbdb931030bd06e0171aa1aa3ca7f4b67cf2310c09bc72c08f725"
+    },
+    {
+      "file": "public/og/tools/openpipe.png",
+      "kind": "tool-png",
+      "slug": "openpipe",
+      "theme": null,
+      "target": null,
+      "bytes": 24632,
+      "sha256": "ee3543d5dbabd0b63501692f47133e9bfb89688860395a44671b77e1c4e51ad2"
+    },
+    {
+      "file": "public/og/tools/opik.png",
+      "kind": "tool-png",
+      "slug": "opik",
+      "theme": null,
+      "target": null,
+      "bytes": 29052,
+      "sha256": "9bdfbfd9e99758697dc6789e7f5595d9fd9d3cd66c4432408a6967edf75754e2"
+    },
+    {
       "file": "public/og/tools/opusclip.png",
       "kind": "tool-png",
       "slug": "opusclip",
@@ -1357,6 +1591,24 @@
       "target": null,
       "bytes": 25456,
       "sha256": "9bf652ff3df0a8219c96ac1cf39867970281753646b6abf58046a01df88a5e18"
+    },
+    {
+      "file": "public/og/tools/outlines.png",
+      "kind": "tool-png",
+      "slug": "outlines",
+      "theme": null,
+      "target": null,
+      "bytes": 24437,
+      "sha256": "83c45a5dd129e078460e9a063f3fef0da2402da21cedc31dd13abd151f7e9ee0"
+    },
+    {
+      "file": "public/og/tools/patronus-ai.png",
+      "kind": "tool-png",
+      "slug": "patronus-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 30301,
+      "sha256": "da811646576bb0f7fcfebd1e964287a17c07a13a0798a050bfe3dc3279e74e4e"
     },
     {
       "file": "public/og/tools/perplexity.png",
@@ -1382,8 +1634,8 @@
       "slug": "pika",
       "theme": null,
       "target": null,
-      "bytes": 24058,
-      "sha256": "a10d7d17ec99838b5ab3ce56a085bae58252b3d1a8aa867bc4a0db52992be868"
+      "bytes": 31052,
+      "sha256": "ce2f2fdfb08215286a925ad47be09245ee25e20cd0f8c5d248add28b3edb5318"
     },
     {
       "file": "public/og/tools/pipedream.png",
@@ -1431,6 +1683,15 @@
       "sha256": "554d0b439016493866ba50f460f6033a4e1e34dafd1e0267014a71a658de4a1a"
     },
     {
+      "file": "public/og/tools/portkey.png",
+      "kind": "tool-png",
+      "slug": "portkey",
+      "theme": null,
+      "target": null,
+      "bytes": 26457,
+      "sha256": "d8c3e8f65f2f7dd658854ce2d7cc2d4eed47d2cb4ec8c57d8c23f2fc5680f415"
+    },
+    {
       "file": "public/og/tools/presentations-ai.png",
       "kind": "tool-png",
       "slug": "presentations-ai",
@@ -1449,6 +1710,24 @@
       "sha256": "4b8529295d375696a37f532fa567d454ed2a99ef90f57e4f8410f8ab76b27662"
     },
     {
+      "file": "public/og/tools/promptfoo.png",
+      "kind": "tool-png",
+      "slug": "promptfoo",
+      "theme": null,
+      "target": null,
+      "bytes": 28324,
+      "sha256": "913dace8c278b0cca05195df576cea0ae208d4fd427b6457daf677f5690020b6"
+    },
+    {
+      "file": "public/og/tools/pydantic-ai.png",
+      "kind": "tool-png",
+      "slug": "pydantic-ai",
+      "theme": null,
+      "target": null,
+      "bytes": 29292,
+      "sha256": "c46dd2b157a9c1cd603942eaf3fda63e8c64d69ac724cd179e7c50e25cbbf6f8"
+    },
+    {
       "file": "public/og/tools/quillbot.png",
       "kind": "tool-png",
       "slug": "quillbot",
@@ -1463,8 +1742,17 @@
       "slug": "qwen",
       "theme": null,
       "target": null,
-      "bytes": 26756,
-      "sha256": "52d73a696d754c7e3565bff653ad0d4209752e47e25c2302834defebf8556df8"
+      "bytes": 27358,
+      "sha256": "8ac82f74d1fa696daada1ffc6e59f2562cf944cf19946ed875d8f80b03f2f585"
+    },
+    {
+      "file": "public/og/tools/ragas.png",
+      "kind": "tool-png",
+      "slug": "ragas",
+      "theme": null,
+      "target": null,
+      "bytes": 24131,
+      "sha256": "eba0851c5a4451d9bcb2c3454c3ff97cb88b4e9d07ca5bcde0442d283bd73b79"
     },
     {
       "file": "public/og/tools/readwise.png",
@@ -1539,6 +1827,15 @@
       "sha256": "8b09632443732fd6b05c92adda6a963a8ab46395c9bda84765812cf403215cfe"
     },
     {
+      "file": "public/og/tools/respan.png",
+      "kind": "tool-png",
+      "slug": "respan",
+      "theme": null,
+      "target": null,
+      "bytes": 37154,
+      "sha256": "6236fb7faed109721b169f0ce46993eca8796b3319e53b097a07fe6d277e5406"
+    },
+    {
       "file": "public/og/tools/riverside.png",
       "kind": "tool-png",
       "slug": "riverside",
@@ -1553,8 +1850,8 @@
       "slug": "rodin",
       "theme": null,
       "target": null,
-      "bytes": 28114,
-      "sha256": "a8aa1bd50f0eca8643847714510bae909d8a90f53c57695aacc40bfaa20dc026"
+      "bytes": 29516,
+      "sha256": "04a2d9448bafcb5652aed5337f168a36730dcc352f8edc04c201e2257089c195"
     },
     {
       "file": "public/og/tools/rows.png",
@@ -1746,6 +2043,15 @@
       "sha256": "35105163b100ae3dafc5bbdf5bbec9eabefd12260dc0be29163ac7b9eda96125"
     },
     {
+      "file": "public/og/tools/tavily.png",
+      "kind": "tool-png",
+      "slug": "tavily",
+      "theme": null,
+      "target": null,
+      "bytes": 22711,
+      "sha256": "a5bddcd9863058b246c014e4384efdab22708843ed6e40a2629ff40fd9d8c1f1"
+    },
+    {
       "file": "public/og/tools/tavus.png",
       "kind": "tool-png",
       "slug": "tavus",
@@ -1771,6 +2077,15 @@
       "target": null,
       "bytes": 29030,
       "sha256": "7cf6fb3774e03fd7fe376f2803db881e7e386f10effd5ac5aa0591cb17427105"
+    },
+    {
+      "file": "public/og/tools/traceloop.png",
+      "kind": "tool-png",
+      "slug": "traceloop",
+      "theme": null,
+      "target": null,
+      "bytes": 23970,
+      "sha256": "185c285563fb4d48784a4a2d3edd54a775b4e3973ab0ceaf71096b76467188d0"
     },
     {
       "file": "public/og/tools/trae.png",
@@ -1814,8 +2129,8 @@
       "slug": "udio",
       "theme": null,
       "target": null,
-      "bytes": 23373,
-      "sha256": "471b5567feb03f4b63ce6418cb2716a1dd04e3c44bf1ffe98864772b2ead151f"
+      "bytes": 22770,
+      "sha256": "6c06ed03fb4fae7f7132fa48a6de100699a8a9f9e11779d08480323a4f81a2f3"
     },
     {
       "file": "public/og/tools/uizard.png",
@@ -1996,6 +2311,15 @@
       "target": null,
       "bytes": 22441,
       "sha256": "04221a138ce5bf7b51852e924d7b0fab2cc6bf3f1847ba296533de213518d1d0"
+    },
+    {
+      "file": "public/og/tools/zep.png",
+      "kind": "tool-png",
+      "slug": "zep",
+      "theme": null,
+      "target": null,
+      "bytes": 37573,
+      "sha256": "d8b85fbdc8b8de3185e8652cf504d83348ec9180cadc611b3984ec410b8dbd3a"
     }
   ]
 }

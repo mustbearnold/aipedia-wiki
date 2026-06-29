@@ -3,6 +3,25 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-28 tool expansion added Firecrawl, Composio,
+// Dify, Flowise, LangSmith, Tavily, Pydantic AI, Mem0, Braintrust,
+// Portkey, Zep, promptfoo, Arize Phoenix, Ragas, OpenPipe, LangWatch,
+// Patronus AI, DeepEval, Traceloop, BAML, LiteLLM, LlamaIndex, Haystack,
+// and DSPy as source-backed tool pages, refreshed AI Infrastructure, AI Automation, AI Search, and AI Coding,
+// regenerated logo and OG metadata, and kept the concise LLM surface
+// data-driven.
+// Refresh metadata: 2026-06-28 tool expansion added Respan, Agno,
+// Instructor, and Chainlit as source-backed tool pages, refreshed
+// AI Infrastructure, AI Automation, AI Coding, and AI Chatbots, regenerated
+// logo and OG metadata, and kept the concise LLM surface data-driven.
+// Refresh metadata: 2026-06-28 tool expansion added OpenLIT, Opik,
+// Mirascope, and Outlines as source-backed tool pages, refreshed AI
+// Infrastructure, AI Automation, and AI Coding, regenerated logo and OG
+// metadata, and kept the concise LLM surface data-driven.
+// Refresh metadata: 2026-06-28 tool expansion added Inspect AI, OpenAI Evals,
+// Guardrails AI, and LM Evaluation Harness as source-backed tool pages,
+// refreshed AI Infrastructure, AI Coding, and AI Automation, regenerated logo
+// and OG metadata, and kept the concise LLM surface data-driven.
 // Refresh metadata: 2026-06-28 Consensus affiliate conversion content added
 // /guides/consensus-pricing-for-students-and-researchers/ and refreshed
 // Consensus, academic-citation and citation sibling guides, AI Research,
@@ -491,6 +510,9 @@ export const GET: APIRoute = async () => {
   lines.push('# aipedia.wiki');
   lines.push('');
   lines.push(`> Independent AI tools encyclopedia maintained by aipedia.wiki Editorial. ${activeTools.length} active tool pages across ${activeCategories.length} categories, ${comparisons.length} head-to-head comparisons, ${useCases.length} buyer guides. Public pages carry verification metadata and editorial sourcing controls.`);
+  lines.push('');
+  lines.push('Recent tool expansion: June 28, 2026 added Firecrawl, Composio, Dify, Flowise, LangSmith, Tavily, Pydantic AI, Mem0, Braintrust, Portkey, Zep, promptfoo, Arize Phoenix, Ragas, OpenPipe, LangWatch, Patronus AI, DeepEval, Traceloop, BAML, LiteLLM, LlamaIndex, Haystack, and DSPy as source-backed tool pages, refreshed AI Infrastructure, AI Automation, AI Search, AI Coding, source registry, logo manifest, OG assets, ledger, homepage, tools index, categories index, and LLM maintenance.');
+  lines.push('Recent tool expansion: June 28, 2026 added Respan, Agno, Instructor, Chainlit, OpenLIT, Opik, Mirascope, Outlines, Inspect AI, OpenAI Evals, Guardrails AI, and LM Evaluation Harness as source-backed tool pages, refreshed AI Infrastructure, AI Automation, AI Coding, AI Chatbots, source registry, logo manifest, OG assets, ledger, homepage, tools index, categories index, and LLM maintenance.');
   lines.push('');
   lines.push('Recent comparison maintenance: June 21, 2026 removed five false-vs comparison pages, ChatGPT vs Fireflies, ChatGPT vs Hermes Agent, ChatGPT vs Otter.ai, ChatGPT vs You.com, and ElevenLabs vs Otter.ai, because they compared different buyer jobs rather than direct substitutes. The Decision Content Flywheel now auto-selects only same-primary-category comparisons or explicit adjacent workflow exceptions in comparison-policy.json.');
   lines.push('Recent comparison refresh: June 21, 2026 added Activepieces vs n8n and refreshed Activepieces, n8n, AI Automation, source registry, ledger, and LLM maintenance after current Activepieces pricing, pieces, MCP, install, and release checks plus current n8n pricing, AI Agent, hosting, GitHub release, and affiliate checks; buyer guidance now separates Activepieces as the MIT-licensed MCP-first automation lane from n8n as the deeper technical workflow-control platform.');

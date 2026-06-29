@@ -9,7 +9,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "7ai-threat-hunt-skills",
@@ -135,7 +135,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-24"
     },
     {
       "id": "ada-pricing",
@@ -388,6 +388,51 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "agno-docs",
+      "label": "Agno docs",
+      "url": "https://docs.agno.com/introduction",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "agno-license",
+      "label": "Agno license",
+      "url": "https://raw.githubusercontent.com/agno-agi/agno/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "agno-official",
+      "label": "Agno official site",
+      "url": "https://www.agno.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "agno-pricing",
+      "label": "Agno pricing",
+      "url": "https://www.agno.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "agno-repository",
+      "label": "Agno GitHub repository",
+      "url": "https://github.com/agno-agi/agno",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "ahrefs-brand-radar",
@@ -675,7 +720,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "amplemarket-mcp-help",
@@ -702,7 +747,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "amplemarket-product-update-2026-06",
@@ -711,7 +756,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "amplemarket-workflows-launch",
@@ -765,7 +810,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-23"
     },
     {
       "id": "anthropic-fable-mythos-access",
@@ -828,7 +873,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-23"
     },
     {
       "id": "anthropic-project-glasswing-expansion",
@@ -882,7 +927,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "antigravity-docs",
@@ -891,7 +936,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "antigravity-official",
@@ -900,7 +945,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "antigravity-pricing",
@@ -909,7 +954,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "anythingllm-changelog-1141",
@@ -981,7 +1026,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "apollo-api-docs",
@@ -990,7 +1035,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "apollo-data-enrichment",
@@ -1017,7 +1062,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "apollo-sales-engagement",
@@ -1096,6 +1141,42 @@
       "label": "Argil Product Showcase docs",
       "url": "https://docs.argil.ai/resources/product-showcase",
       "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "arize-phoenix-docs",
+      "label": "Phoenix docs index",
+      "url": "https://arize.com/docs/phoenix/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "arize-phoenix-license",
+      "label": "Phoenix license",
+      "url": "https://github.com/arize-ai/phoenix/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "arize-phoenix-official",
+      "label": "Arize Phoenix",
+      "url": "https://arize.com/phoenix/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "arize-pricing",
+      "label": "Arize pricing",
+      "url": "https://arize.com/pricing/",
+      "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-28"
@@ -1233,7 +1314,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "augment-code-best-paid-tier",
@@ -1251,7 +1332,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "augment-code-feature-availability",
@@ -1260,7 +1341,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "augment-code-flagship-model",
@@ -1278,7 +1359,52 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "baml-boundary-studio",
+      "label": "Boundary Studio observability docs",
+      "url": "https://docs.boundaryml.com/guide/boundary-cloud/observability/tracking-usage.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "baml-docs-index",
+      "label": "BAML docs index",
+      "url": "https://docs.boundaryml.com/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "baml-license",
+      "label": "BAML license",
+      "url": "https://github.com/BoundaryML/baml/blob/canary/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "baml-testing-functions",
+      "label": "BAML testing functions docs",
+      "url": "https://docs.boundaryml.com/guide/baml-basics/testing-functions.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "baml-what-is",
+      "label": "BAML introduction",
+      "url": "https://docs.boundaryml.com/guide/introduction/what-is-baml.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "base44-affiliate-program",
@@ -1341,7 +1467,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "beautiful-ai-create-ai-workflow",
@@ -1711,6 +1837,33 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "braintrust-docs",
+      "label": "Braintrust docs index",
+      "url": "https://www.braintrust.dev/docs/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "braintrust-pricing",
+      "label": "Braintrust pricing",
+      "url": "https://www.braintrust.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "braintrust-sdk-license",
+      "label": "Braintrust SDK license",
+      "url": "https://github.com/braintrustdata/braintrust-sdk/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "browserbase-api-chooser",
@@ -2271,6 +2424,42 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "chainlit-docs",
+      "label": "Chainlit docs",
+      "url": "https://docs.chainlit.io/get-started/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "chainlit-license",
+      "label": "Chainlit license",
+      "url": "https://github.com/Chainlit/chainlit/blob/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "chainlit-official",
+      "label": "Chainlit official site",
+      "url": "https://chainlit.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "chainlit-repository",
+      "label": "Chainlit GitHub repository",
+      "url": "https://github.com/Chainlit/chainlit",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "character-ai-about",
       "label": "Character.AI about",
       "url": "https://character.ai/about",
@@ -2484,7 +2673,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-24"
     },
     {
       "id": "claude-code-llms",
@@ -2592,7 +2781,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "clay-claygent",
@@ -2610,7 +2799,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "clay-integrations",
@@ -2619,7 +2808,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "clay-mcp",
@@ -2628,7 +2817,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "clay-official",
@@ -2637,7 +2826,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "clay-sculptor",
@@ -2646,7 +2835,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "clay-sequencer",
@@ -2655,7 +2844,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "clay-university",
@@ -3141,7 +3330,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "codeium-devin-quota",
@@ -3366,7 +3555,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "cohere-command",
@@ -3402,7 +3591,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "cohere-north-mini-code",
@@ -3411,7 +3600,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "cohere-official",
@@ -3429,7 +3618,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-27"
     },
     {
       "id": "cohere-pricing-docs",
@@ -3474,7 +3663,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-15"
+      "last_checked": "2026-06-22"
     },
     {
       "id": "company-newsrooms",
@@ -3483,6 +3672,60 @@
       "type": "newsroom",
       "trust_tier": "secondary",
       "volatility": "medium"
+    },
+    {
+      "id": "composio-auth-docs",
+      "label": "Composio authentication docs",
+      "url": "https://docs.composio.dev/docs/authentication.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "composio-docs",
+      "label": "Composio docs",
+      "url": "https://docs.composio.dev/docs.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "composio-mcp-docs",
+      "label": "Composio MCP session docs",
+      "url": "https://docs.composio.dev/docs/sessions-via-mcp.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "composio-official",
+      "label": "Composio official site",
+      "url": "https://composio.dev/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "composio-pricing",
+      "label": "Composio pricing",
+      "url": "https://composio.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "confident-ai-pricing",
+      "label": "Confident AI pricing",
+      "url": "https://www.confident-ai.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "connected-papers-about",
@@ -3860,7 +4103,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-27"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "dalle-best-paid-tier",
@@ -3917,6 +4160,24 @@
       "last_checked": "2026-06-28"
     },
     {
+      "id": "deepeval-license",
+      "label": "DeepEval license",
+      "url": "https://github.com/confident-ai/deepeval/blob/main/LICENSE.md",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "deepeval-metrics",
+      "label": "DeepEval metrics docs",
+      "url": "https://deepeval.com/docs/metrics-introduction",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "deepgram-changelog",
       "label": "Deepgram developer changelog",
       "url": "https://developers.deepgram.com/changelog",
@@ -3950,7 +4211,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "deepgram-voice-agent",
@@ -3995,7 +4256,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "deepl-official",
@@ -4068,6 +4329,15 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-20"
+    },
+    {
+      "id": "deepset-pricing",
+      "label": "deepset AI Platform pricing",
+      "url": "https://www.deepset.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "descript-changelog",
@@ -4169,6 +4439,78 @@
       "last_checked": "2026-06-26"
     },
     {
+      "id": "dify-docs",
+      "label": "Dify introduction docs",
+      "url": "https://docs.dify.ai/introduction.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dify-github",
+      "label": "Dify GitHub repository",
+      "url": "https://github.com/langgenius/dify",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dify-official",
+      "label": "Dify official site",
+      "url": "https://dify.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dify-pricing",
+      "label": "Dify pricing",
+      "url": "https://dify.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dottxt-api-docs",
+      "label": "Dottxt API docs",
+      "url": "https://docs.dottxt.ai/api/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dottxt-docs",
+      "label": "Dottxt docs index",
+      "url": "https://docs.dottxt.ai/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dottxt-models",
+      "label": "Dottxt API models",
+      "url": "https://docs.dottxt.ai/api/models",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dottxt-official",
+      "label": "Dottxt official site",
+      "url": "https://dottxt.co/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "doubao-docs",
       "label": "Volcengine Doubao docs",
       "url": "https://www.volcengine.com/docs/82379",
@@ -4203,6 +4545,33 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "dspy-license",
+      "label": "DSPy license",
+      "url": "https://github.com/stanfordnlp/dspy/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dspy-official",
+      "label": "DSPy official site",
+      "url": "https://dspy.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "dspy-program-dont-prompt",
+      "label": "DSPy program, don't prompt guide",
+      "url": "https://dspy.ai/getting-started/program-dont-prompt/index.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "dust-docs",
@@ -4328,7 +4697,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "elevenlabs-pricing",
@@ -4673,6 +5042,51 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "firecrawl-docs",
+      "label": "Firecrawl introduction docs",
+      "url": "https://docs.firecrawl.dev/introduction.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "firecrawl-github",
+      "label": "Firecrawl GitHub repository",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "firecrawl-official",
+      "label": "Firecrawl official site",
+      "url": "https://www.firecrawl.dev/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "firecrawl-pricing",
+      "label": "Firecrawl pricing",
+      "url": "https://www.firecrawl.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "firecrawl-scrape-docs",
+      "label": "Firecrawl scrape docs",
+      "url": "https://docs.firecrawl.dev/features/scrape.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "fireflies-ai-credits",
       "label": "Fireflies AI Credits guide",
       "url": "https://guide.fireflies.ai/articles/2114151875-learn-about-ai-credits",
@@ -4808,13 +5222,76 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "flowise-agentflow-v2",
+      "label": "Flowise AgentFlow V2 docs",
+      "url": "https://docs.flowiseai.com/using-flowise/agentflowv2.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "flowise-cloud-migration",
+      "label": "Flowise Cloud migration docs",
+      "url": "https://docs.flowiseai.com/migration-guide/cloud-migration.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "flowise-deployment-docs",
+      "label": "Flowise deployment docs",
+      "url": "https://docs.flowiseai.com/configuration/deployment.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "flowise-docs",
+      "label": "Flowise introduction docs",
+      "url": "https://docs.flowiseai.com/readme.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "flowise-github",
+      "label": "Flowise GitHub repository",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "flowise-official",
+      "label": "Flowise official site",
+      "url": "https://flowiseai.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "flowise-production-docs",
+      "label": "Flowise production docs",
+      "url": "https://docs.flowiseai.com/configuration/running-in-production.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "flux-2-github",
       "label": "Black Forest Labs FLUX.2 GitHub",
       "url": "https://github.com/black-forest-labs/flux2",
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "flux-2-klein-huggingface",
@@ -5033,6 +5510,15 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "gamma-affiliate-help",
+      "label": "Gamma affiliate program help",
+      "url": "https://help.gamma.app/en/articles/11048092-how-do-i-join-the-gamma-affiliate-program",
+      "type": "affiliate",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "gamma-ai-presentation",
       "label": "Gamma AI presentation maker",
       "url": "https://gamma.app/ai-presentation-maker",
@@ -5048,15 +5534,6 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-28"
-    },
-    {
-      "id": "gamma-affiliate-help",
-      "label": "Gamma affiliate program help",
-      "url": "https://help.gamma.app/en/articles/11048092-how-do-i-join-the-gamma-affiliate-program",
-      "type": "affiliate",
-      "trust_tier": "primary",
-      "volatility": "medium",
       "last_checked": "2026-06-28"
     },
     {
@@ -5102,7 +5579,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "gemini-code-assist-business",
@@ -5156,7 +5633,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "getresponse-official",
@@ -5443,7 +5920,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "glean-official",
@@ -5470,7 +5947,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "glm-docs",
@@ -5488,7 +5965,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "glm-official",
@@ -5650,7 +6127,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "google-one-ai-plans",
@@ -5758,7 +6235,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "goose-releases",
@@ -5767,7 +6244,7 @@
       "type": "repository",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "goose-repository",
@@ -5902,7 +6379,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "granola-security",
@@ -5938,7 +6415,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "groq-docs",
@@ -5956,7 +6433,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "groq-official",
@@ -5965,7 +6442,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "groq-pricing",
@@ -5974,7 +6451,52 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "guardrails-ai-docs",
+      "label": "Guardrails quickstart",
+      "url": "https://docs.guardrailsai.com/docs/getting_started/quickstart.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "guardrails-ai-license",
+      "label": "Guardrails license",
+      "url": "https://raw.githubusercontent.com/guardrails-ai/guardrails/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "guardrails-ai-official",
+      "label": "Guardrails AI official site",
+      "url": "https://www.guardrailsai.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "guardrails-ai-repository",
+      "label": "Guardrails GitHub repository",
+      "url": "https://github.com/guardrails-ai/guardrails",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "guardrails-ai-validators",
+      "label": "Guardrails validators docs",
+      "url": "https://docs.guardrailsai.com/docs/concepts/validators.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "gumloop-ai-models",
@@ -6128,6 +6650,24 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "haystack-docs",
+      "label": "Haystack introduction docs",
+      "url": "https://docs.haystack.deepset.ai/docs/intro",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "haystack-license",
+      "label": "Haystack license",
+      "url": "https://github.com/deepset-ai/haystack/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "hedra-agent-workflows",
@@ -6343,7 +6883,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "heygen-api-pricing-help",
@@ -6607,33 +7147,6 @@
       "last_checked": "2026-06-28"
     },
     {
-      "id": "hume-ai-tts-docs",
-      "label": "Hume TTS docs",
-      "url": "https://dev.hume.ai/docs/text-to-speech-tts/overview.md",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "medium",
-      "last_checked": "2026-06-28"
-    },
-    {
-      "id": "hume-ai-voice-cloning-docs",
-      "label": "Hume voice cloning docs",
-      "url": "https://dev.hume.ai/docs/voice/voice-cloning.md",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "medium",
-      "last_checked": "2026-06-28"
-    },
-    {
-      "id": "hume-ai-use-case-guidelines",
-      "label": "Hume use case guidelines",
-      "url": "https://dev.hume.ai/docs/resources/use-case-guidelines.md",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "medium",
-      "last_checked": "2026-06-28"
-    },
-    {
       "id": "hume-ai-expression-measurement-docs",
       "label": "Hume Expression Measurement legacy docs route",
       "url": "https://dev.hume.ai/docs/expression-measurement/overview",
@@ -6665,6 +7178,33 @@
       "label": "Hume AI products",
       "url": "https://www.hume.ai/products",
       "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-tts-docs",
+      "label": "Hume TTS docs",
+      "url": "https://dev.hume.ai/docs/text-to-speech-tts/overview.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-use-case-guidelines",
+      "label": "Hume use case guidelines",
+      "url": "https://dev.hume.ai/docs/resources/use-case-guidelines.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "hume-ai-voice-cloning-docs",
+      "label": "Hume voice cloning docs",
+      "url": "https://dev.hume.ai/docs/voice/voice-cloning.md",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-28"
@@ -6913,6 +7453,42 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "inspect-ai-evals-list",
+      "label": "Inspect AI evals",
+      "url": "https://inspect.aisi.org.uk/evals/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "inspect-ai-license",
+      "label": "Inspect AI license",
+      "url": "https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "inspect-ai-official",
+      "label": "Inspect AI docs",
+      "url": "https://inspect.aisi.org.uk/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "inspect-ai-repository",
+      "label": "Inspect AI GitHub repository",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "instantly-deliverability",
       "label": "Instantly deliverability",
       "url": "https://instantly.ai/products/deliverability-network",
@@ -6946,7 +7522,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "instantly-plans-overview",
@@ -6955,7 +7531,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-26"
     },
     {
       "id": "instantly-warmup",
@@ -6965,6 +7541,33 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "instructor-docs",
+      "label": "Instructor docs",
+      "url": "https://python.useinstructor.com/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "instructor-license",
+      "label": "Instructor license",
+      "url": "https://raw.githubusercontent.com/567-labs/instructor/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "instructor-repository",
+      "label": "Instructor GitHub repository",
+      "url": "https://github.com/567-labs/instructor",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "intercom-copilot-faqs",
@@ -7369,7 +7972,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "kiro-billing-docs",
@@ -7378,7 +7981,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "kiro-coding-agent",
@@ -7692,7 +8295,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "langgraph-repository",
@@ -7710,7 +8313,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-28"
     },
     {
       "id": "langsmith-deployment",
@@ -7719,7 +8322,70 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "langsmith-observability",
+      "label": "LangSmith observability",
+      "url": "https://www.langchain.com/langsmith/observability",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "langsmith-pricing",
+      "label": "LangChain pricing",
+      "url": "https://www.langchain.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "langsmith-usage-billing",
+      "label": "LangSmith usage and billing",
+      "url": "https://docs.langchain.com/langsmith/usage-and-billing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "langwatch-docs",
+      "label": "LangWatch docs index",
+      "url": "https://langwatch.ai/docs/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "langwatch-license",
+      "label": "LangWatch license",
+      "url": "https://github.com/langwatch/langwatch/blob/main/LICENSE.md",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "langwatch-official",
+      "label": "LangWatch official site",
+      "url": "https://langwatch.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "langwatch-pricing",
+      "label": "LangWatch pricing",
+      "url": "https://langwatch.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "leonardo-deprecations",
@@ -7946,6 +8612,42 @@
       "last_checked": "2026-06-27"
     },
     {
+      "id": "litellm-docs",
+      "label": "LiteLLM docs",
+      "url": "https://docs.litellm.ai/docs/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "litellm-enterprise",
+      "label": "LiteLLM Enterprise docs",
+      "url": "https://docs.litellm.ai/docs/enterprise",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "litellm-license",
+      "label": "LiteLLM license",
+      "url": "https://github.com/BerriAI/litellm/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "litellm-llms",
+      "label": "LiteLLM docs index",
+      "url": "https://docs.litellm.ai/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "llama-docs",
       "label": "Llama model documentation",
       "url": "https://www.llama.com/docs/model-cards-and-prompt-formats/",
@@ -8025,6 +8727,60 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-25"
+    },
+    {
+      "id": "llamaindex-framework-docs",
+      "label": "LlamaIndex framework docs",
+      "url": "https://developers.llamaindex.ai/python/framework/index.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "llamaindex-license",
+      "label": "LlamaIndex license",
+      "url": "https://github.com/run-llama/llama_index/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "llamaindex-pricing",
+      "label": "LlamaIndex pricing",
+      "url": "https://www.llamaindex.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "lm-evaluation-harness-license",
+      "label": "LM Evaluation Harness license",
+      "url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/main/LICENSE.md",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "lm-evaluation-harness-readme",
+      "label": "LM Evaluation Harness README",
+      "url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/main/README.md",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "lm-evaluation-harness-repository",
+      "label": "LM Evaluation Harness GitHub repository",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "lm-studio-api-docs",
@@ -8765,6 +9521,69 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "mem0-github",
+      "label": "Mem0 GitHub repository",
+      "url": "https://github.com/mem0ai/mem0",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mem0-license",
+      "label": "Mem0 license",
+      "url": "https://github.com/mem0ai/mem0/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mem0-official",
+      "label": "Mem0 official site",
+      "url": "https://mem0.ai",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mem0-oss-overview",
+      "label": "Mem0 Open Source overview",
+      "url": "https://docs.mem0.ai/open-source/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mem0-platform-overview",
+      "label": "Mem0 Platform overview",
+      "url": "https://docs.mem0.ai/platform/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mem0-platform-vs-oss",
+      "label": "Mem0 Platform vs Open Source",
+      "url": "https://docs.mem0.ai/platform/platform-vs-oss",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mem0-pricing",
+      "label": "Mem0 pricing",
+      "url": "https://mem0.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "meshy-6-launch",
       "label": "Meshy 6 launch post",
       "url": "https://www.meshy.ai/blog/meshy-6-launch",
@@ -8966,7 +9785,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-23"
     },
     {
       "id": "minimax-m3-launch",
@@ -8993,7 +9812,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "minimax-paygo-pricing",
@@ -9011,7 +9830,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "minimax-speech-official",
@@ -9086,6 +9905,60 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "mirascope-cloud",
+      "label": "Mirascope Cloud status",
+      "url": "https://mirascope.com/cloud",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mirascope-docs",
+      "label": "Mirascope docs",
+      "url": "https://mirascope.com/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mirascope-license",
+      "label": "Mirascope license",
+      "url": "https://raw.githubusercontent.com/Mirascope/mirascope/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mirascope-llm-docs",
+      "label": "Mirascope LLM docs",
+      "url": "https://mirascope.com/docs/learn/llm",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mirascope-official",
+      "label": "Mirascope official site",
+      "url": "https://mirascope.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "mirascope-repository",
+      "label": "Mirascope GitHub repository",
+      "url": "https://github.com/Mirascope/mirascope",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "mistral-3-launch",
       "label": "Mistral 3 launch",
       "url": "https://mistral.ai/news/mistral-3",
@@ -9110,7 +9983,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-23"
     },
     {
       "id": "mistral-huggingface",
@@ -9227,7 +10100,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "morphic-github",
@@ -9389,7 +10262,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-22"
+      "last_checked": "2026-06-24"
     },
     {
       "id": "n8n-agent-docs",
@@ -9641,7 +10514,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "nvidia-cosmos-3",
@@ -9650,7 +10523,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "nvidia-dgx-station-windows-2026",
@@ -9659,7 +10532,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "nvidia-enterprise-ai-agents-2026",
@@ -9668,7 +10541,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "nvidia-physical-ai-agent-skills-2026",
@@ -9677,7 +10550,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "nvidia-rtx-spark-windows-ai-pcs",
@@ -9686,7 +10559,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "obsidian-help",
@@ -9914,6 +10787,42 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "openai-evals-deprecations",
+      "label": "OpenAI API deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openai-evals-docs",
+      "label": "OpenAI evals guide",
+      "url": "https://developers.openai.com/api/docs/guides/evals",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openai-evals-license",
+      "label": "OpenAI Evals license",
+      "url": "https://raw.githubusercontent.com/openai/evals/main/LICENSE.md",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openai-evals-repository",
+      "label": "OpenAI Evals GitHub repository",
+      "url": "https://github.com/openai/evals",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "openai-gpt-5-5-announcement",
       "label": "OpenAI GPT-5.5 announcement",
       "url": "https://openai.com/index/introducing-gpt-5-5/",
@@ -9966,6 +10875,15 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-16"
+    },
+    {
+      "id": "openai-promptfoo-acquisition",
+      "label": "OpenAI promptfoo acquisition announcement",
+      "url": "https://openai.com/index/openai-to-acquire-promptfoo/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "openai-realtime-transcription-docs",
@@ -10031,6 +10949,87 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "openlit-docs",
+      "label": "OpenLIT overview docs",
+      "url": "https://docs.openlit.io/latest/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openlit-docs-index",
+      "label": "OpenLIT docs index",
+      "url": "https://docs.openlit.io/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openlit-license",
+      "label": "OpenLIT license",
+      "url": "https://raw.githubusercontent.com/openlit/openlit/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openlit-official",
+      "label": "OpenLIT official site",
+      "url": "https://openlit.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openlit-pricing",
+      "label": "OpenLIT pricing",
+      "url": "https://openlit.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openlit-repository",
+      "label": "OpenLIT GitHub repository",
+      "url": "https://github.com/openlit/openlit",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openpipe-docs",
+      "label": "OpenPipe docs index",
+      "url": "https://docs.openpipe.ai/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openpipe-license",
+      "label": "OpenPipe license",
+      "url": "https://github.com/OpenPipe/OpenPipe/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "openpipe-pricing",
+      "label": "OpenPipe pricing",
+      "url": "https://docs.openpipe.ai/pricing/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "openrouter-official",
       "label": "OpenRouter pricing",
       "url": "https://openrouter.ai/pricing",
@@ -10038,6 +11037,69 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-25"
+    },
+    {
+      "id": "opik-docs",
+      "label": "Opik docs",
+      "url": "https://www.comet.com/docs/opik/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "opik-evaluation-docs",
+      "label": "Opik evaluation docs",
+      "url": "https://www.comet.com/docs/opik/evaluation/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "opik-license",
+      "label": "Opik license",
+      "url": "https://raw.githubusercontent.com/comet-ml/opik/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "opik-official",
+      "label": "Opik product page",
+      "url": "https://www.comet.com/site/products/opik/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "opik-pricing",
+      "label": "Comet pricing",
+      "url": "https://www.comet.com/site/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "opik-repository",
+      "label": "Opik GitHub repository",
+      "url": "https://github.com/comet-ml/opik",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "opik-tracing-docs",
+      "label": "Opik tracing docs",
+      "url": "https://www.comet.com/docs/opik/tracing/overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "opusclip-clipanything",
@@ -10094,6 +11156,33 @@
       "last_checked": "2026-06-06"
     },
     {
+      "id": "outlines-docs",
+      "label": "Outlines docs",
+      "url": "https://dottxt-ai.github.io/outlines/latest/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "outlines-license",
+      "label": "Outlines license",
+      "url": "https://raw.githubusercontent.com/dottxt-ai/outlines/main/LICENSE",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "outlines-repository",
+      "label": "Outlines GitHub repository",
+      "url": "https://github.com/dottxt-ai/outlines",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "paradox-recruiters",
       "label": "Paradox recruiter solution",
       "url": "https://www.paradox.ai/solutions/recruiters",
@@ -10110,6 +11199,51 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-25"
+    },
+    {
+      "id": "patronus-docs",
+      "label": "Patronus AI docs",
+      "url": "https://docs.patronus.ai/docs",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "patronus-dwm-announcement",
+      "label": "Patronus AI Digital World Model announcement",
+      "url": "https://www.patronus.ai/announcements/announcing-our-50m-series-b",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "patronus-evaluator-reference",
+      "label": "Patronus evaluator reference",
+      "url": "https://docs.patronus.ai/docs/evaluators/reference_guide",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "patronus-official",
+      "label": "Patronus AI official site",
+      "url": "https://www.patronus.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "patronus-pricing",
+      "label": "Patronus AI pricing",
+      "url": "https://www.patronus.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "perplexity-agent-tools",
@@ -10477,7 +11611,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "poe-api-docs",
@@ -10486,7 +11620,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "poe-creator-docs",
@@ -10504,7 +11638,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "poe-product",
@@ -10522,7 +11656,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "poe-subscription-plans",
@@ -10531,7 +11665,43 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-21"
+      "last_checked": "2026-06-25"
+    },
+    {
+      "id": "portkey-docs",
+      "label": "Portkey docs",
+      "url": "https://docs.portkey.ai/docs/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "portkey-gateway-github",
+      "label": "Portkey Gateway repository",
+      "url": "https://github.com/Portkey-AI/gateway",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "portkey-gateway-license",
+      "label": "Portkey Gateway license",
+      "url": "https://github.com/Portkey-AI/gateway/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "portkey-pricing",
+      "label": "Portkey pricing",
+      "url": "https://portkey.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "postman-ai-engineer",
@@ -10540,7 +11710,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "presentations-ai-api",
@@ -10613,6 +11783,78 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-15"
+    },
+    {
+      "id": "promptfoo-docs",
+      "label": "promptfoo docs",
+      "url": "https://www.promptfoo.dev/docs/intro/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "promptfoo-joining-openai",
+      "label": "promptfoo joining OpenAI update",
+      "url": "https://www.promptfoo.dev/blog/promptfoo-joining-openai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "promptfoo-license",
+      "label": "promptfoo license",
+      "url": "https://github.com/promptfoo/promptfoo/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "promptfoo-pricing",
+      "label": "promptfoo pricing",
+      "url": "https://www.promptfoo.dev/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "pydantic-ai-docs",
+      "label": "Pydantic AI docs index",
+      "url": "https://ai.pydantic.dev/llms.txt",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "pydantic-ai-github",
+      "label": "Pydantic AI GitHub repository",
+      "url": "https://github.com/pydantic/pydantic-ai",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "pydantic-ai-license",
+      "label": "Pydantic AI license",
+      "url": "https://github.com/pydantic/pydantic-ai/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "pydantic-logfire-pricing",
+      "label": "Pydantic Logfire pricing",
+      "url": "https://pydantic.dev/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "qdrant-best-for",
@@ -10849,6 +12091,60 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "ragas-cost-analysis",
+      "label": "Ragas cost analysis docs",
+      "url": "https://docs.ragas.io/en/stable/howtos/applications/_cost/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "ragas-docs",
+      "label": "Ragas docs",
+      "url": "https://docs.ragas.io/en/stable/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "ragas-license",
+      "label": "Ragas license",
+      "url": "https://github.com/vibrantlabsai/ragas/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "ragas-metrics",
+      "label": "Ragas available metrics",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "ragas-official",
+      "label": "Ragas official site",
+      "url": "https://www.ragas.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "ragas-test-data",
+      "label": "Ragas test data generation",
+      "url": "https://docs.ragas.io/en/stable/concepts/test_data_generation/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "read-ai-official",
       "label": "Read AI plans and pricing",
       "url": "https://www.read.ai/plans-pricing",
@@ -11026,7 +12322,7 @@
       "type": "newsroom",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "relevance-ai-official",
@@ -11035,7 +12331,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "relevance-ai-plans-docs",
@@ -11044,7 +12340,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "replicate-custom-models",
@@ -11236,13 +12532,58 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "respan-evals-docs",
+      "label": "Respan eval docs",
+      "url": "https://www.respan.ai/docs/documentation/features/evals/quickstart",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "respan-gateway-docs",
+      "label": "Respan gateway docs",
+      "url": "https://www.respan.ai/docs/documentation/features/gateway/gateway-quickstart",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "respan-observability",
+      "label": "Respan observability",
+      "url": "https://www.respan.ai/ai-observability",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "respan-official",
+      "label": "Respan official site",
+      "url": "https://www.respan.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "respan-pricing",
+      "label": "Respan pricing",
+      "url": "https://www.respan.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
       "id": "retell-ai-api-deprecation-2026-06-15",
       "label": "Retell AI June 15, 2026 legacy endpoint deprecation",
       "url": "https://docs.retellai.com/deprecation-notice/2026/06-15_legacy_list_endpoints",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "retell-ai-batch-call",
@@ -11251,7 +12592,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "retell-ai-best-for",
@@ -11359,7 +12700,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "rork-best-paid-tier",
@@ -11368,7 +12709,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-09"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "rork-coding-agent",
@@ -12191,7 +13532,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "surfer-changelog",
@@ -12344,7 +13685,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "tabnine-privacy",
@@ -12435,6 +13776,33 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-09"
+    },
+    {
+      "id": "tavily-api-credits",
+      "label": "Tavily credits and pricing docs",
+      "url": "https://docs.tavily.com/documentation/api-credits",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "tavily-official",
+      "label": "Tavily official site",
+      "url": "https://www.tavily.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "tavily-pricing",
+      "label": "Tavily pricing",
+      "url": "https://www.tavily.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "tavus-cvi",
@@ -12620,6 +13988,51 @@
       "url": "https://venturebeat.com/technology/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai",
       "type": "third_party",
       "volatility": "low"
+    },
+    {
+      "id": "traceloop-docs",
+      "label": "Traceloop docs",
+      "url": "https://www.traceloop.com/docs/introduction",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "traceloop-openllmetry-license",
+      "label": "OpenLLMetry license",
+      "url": "https://github.com/traceloop/openllmetry/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "traceloop-openllmetry-readme",
+      "label": "OpenLLMetry repository",
+      "url": "https://github.com/traceloop/openllmetry/blob/main/README.md",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "traceloop-pricing",
+      "label": "Traceloop pricing",
+      "url": "https://www.traceloop.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "traceloop-servicenow",
+      "label": "Traceloop joins ServiceNow",
+      "url": "https://traceloop.com/blog/traceloop-is-joining-servicenow",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     },
     {
       "id": "trae-pricing",
@@ -12907,7 +14320,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-25"
     },
     {
       "id": "vapi-pricing",
@@ -13267,7 +14680,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-03"
+      "last_checked": "2026-06-12"
     },
     {
       "id": "windsurf-docs",
@@ -13780,6 +15193,51 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-25"
+    },
+    {
+      "id": "zep-docs-concepts",
+      "label": "Zep docs concepts",
+      "url": "https://help.getzep.com/concepts",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "zep-graphiti-github",
+      "label": "Graphiti repository",
+      "url": "https://github.com/getzep/graphiti",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "zep-graphiti-license",
+      "label": "Graphiti license",
+      "url": "https://github.com/getzep/graphiti/blob/main/LICENSE",
+      "type": "repository",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "zep-official",
+      "label": "Zep official site",
+      "url": "https://www.getzep.com/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-28"
+    },
+    {
+      "id": "zep-pricing",
+      "label": "Zep pricing",
+      "url": "https://www.getzep.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-28"
     }
   ]
 }

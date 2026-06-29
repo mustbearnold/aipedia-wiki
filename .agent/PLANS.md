@@ -10,7 +10,7 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Branch baseline: `master`; highest priority is the daily AI and AI-tools news refresh. Affiliate conversion page buildout remains the next revenue loop after the daily news surface is current. The June 27 strict 3-day whole-site refresh target is complete.
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - Daily news is the first editorial task each day. Use `workflows/news-refresh/README.md`, current-month source searches, and strict source-backed story selection before returning to affiliate or freshness batches.
-- Active revenue goal after the daily news pass: affiliate conversion page buildout for every tool with a configured affiliate link. Use `npm run affiliate:conversion:inventory` as the current source-of-truth inventory and `workflows/affiliate-conversion-pages/README.md` as the operating procedure.
+- Active user-directed goal for June 28: continuously add net-new, source-backed AI tool pages to AiPedia for the full day. Affiliate conversion resumes after the user pauses or ends the tool expansion push.
 - Latest affiliate slice is complete, verified, and pushed: `/guides/consensus-pricing-for-students-and-researchers/`, plus Consensus, academic citation and citation sibling guides, the researcher-tools guide, AI Research, top-layer, search, LLM, source registry, and ledger updates. This pass verifies the current Consensus Free, Pro, Deep, Teams, and Enterprise plan math, June 2026 Deep Search Library/Collections updates, and keeps the Perplexity Enterprise pricing raw-HTTP 403 as a browser-verified caveat in the related citations guide.
 - The loop system is green: 7 ok / 0 attention / 0 skipped after a fresh build.
 - The active site-freshness lane uses 60-tool planner batches split across six shard workers, up to 10 tool files per worker, not one full build per tool.
@@ -32,6 +32,40 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports. Tool-refresh closeout now uses route QA concurrency 6 and writes per-route/per-width timing.
 - June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The June 26 same-day revisit closeout shifted the bottleneck to route QA: closeout timing was ledger 0.6s, grouped check 25.4s, typecheck 16.3s, build:fast 16.4s, and route QA 126.3s at concurrency 4 for 75 routes across seven widths. Rerunning the same route matrix at concurrency 6 passed and wrote route timing in about 85.5s internal duration. Future refresh work should use six shard workers with up to 10 tools each, one integrator, generated worker prompts, the fast batch gate, dev-server route QA while editing, then one `build:fast` and concurrency-6 route QA at closeout.
+
+## Active: June 28 Tool Expansion Day
+
+### Objective
+
+Continuously expand AiPedia with new, current, source-backed AI tool pages, starting with developer infrastructure and agent automation tools before moving to the next highest-value queue.
+
+### Completed Batches
+
+- Batch 01: Firecrawl, Composio, Dify, and Flowise are added and locally verified.
+- Batch 02: LangSmith, Tavily, Pydantic AI, and Mem0 are added and locally verified.
+- Batch 03: Braintrust, Portkey, Zep, and promptfoo are added and locally verified.
+- Batch 04: Arize Phoenix, Ragas, OpenPipe, and LangWatch are added and locally verified.
+- Batch 05: Patronus AI, DeepEval, Traceloop, and BAML are added and locally verified.
+- Batch 06: LiteLLM, LlamaIndex, Haystack, and DSPy are added and locally verified.
+- Batch 07: Respan, Agno, Instructor, and Chainlit are added and locally verified.
+- Batch 08: OpenLIT, Opik, Mirascope, and Outlines are added and locally verified.
+- Batch 09: Inspect AI, OpenAI Evals, Guardrails AI, and LM Evaluation Harness are added and locally verified.
+- Shared scope: tool markdown, primary source rows, tool registry metadata, logos, OG cards, category context, top-layer refresh metadata, LLM/search surfaces, and ledger rows.
+- Source handling: official pricing, docs, repository, and product pages were checked with June 2026 source searches. Checkout-gated, region-rendered, mismatched, or unpublished plan claims are visible caveats instead of hard assertions.
+
+### Next Batch
+
+- Continue selecting net-new tools with buyer or builder value that are missing from `src/content/tools/`.
+- Prioritize agent infrastructure, evals/observability, retrieval, memory, workflow automation, and high-intent creator/business tools.
+- Before editing, verify candidate absence with `rg --files src/content/tools | rg '<slug>'`, then verify current facts from official June 2026 sources.
+
+### Required Closeout
+
+- `AIPEDIA_CURRENT_DATE=2026-06-28 npm run audit:tool-quality -- --file <new-tool-file>` for each new tool page.
+- `AIPEDIA_CURRENT_DATE=2026-06-28 npm run guard:check`
+- `npm run typecheck`
+- `AIPEDIA_CURRENT_DATE=2026-06-28 AIPEDIA_LEDGER_DATE=2026-06-28 npm run build:fast`
+- Route QA at 319, 360, 390, 430, 768, 1024, and 1366 px for the new tools plus affected category, catalog, homepage, and LLM/search surfaces.
 
 ## Active: June 24 Site Freshness Baseline Goal
 
