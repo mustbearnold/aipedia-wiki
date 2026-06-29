@@ -7,7 +7,7 @@ tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Seedance, Kling, Veo, Runway & Tavus"
 meta_description: "Updated June 28, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, OpusClip, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
-last_updated: 2026-06-28
+last_updated: 2026-06-29
 last_verified: 2026-06-28
 update_frequency: weekly
 top_picks:
@@ -47,6 +47,8 @@ AI video is no longer one clean product category. On June 9, 2026, the useful bu
 **Use [Captions.ai](/tools/captions/) when the avatar job is short-form social editing rather than enterprise presenter video.** The June 24 Captions recheck keeps Android Lite, Pro, Max, Scale, Scale 2x/4x, current credit allowances, model-specific credit rates, the rollover-doc conflict, Scale 4x and legacy Teams/Business top-up eligibility, Mirage actor context, platform limits, and Mirage API early-access beta caveats. Buy Max for AI Twin/custom actor and chat-edit workflows; buy Scale only after measuring credit burn.
 
 **Use [Argil](/tools/argil/) when the avatar job is UGC-style product, creator, or article-to-video output.** The June 28 Argil recheck keeps the public plan prices stable, Classic $39/month, Pro $149/month, Scale $499/month, and Enterprise custom, but the buyer risk is credit mechanics and workflow maturity. The pricing page still conflicts with the Plans docs on Classic credits, 1,600 versus 1,500 credits/month. API and pay-as-you-go docs list Atom video at 160 credits/minute, voice at 20 credits/minute, B-roll at 10-20 credits, and Argil v1 avatar royalty at 20 credits/video. Product Showcase is useful for ecommerce UGC, but Argil labels it V1 and says bugs are expected, so pilot product-holding avatar shots before selling them at scale. Use the [Argil pricing guide](/guides/argil-pricing-for-ugc-avatar-video-teams/) for Classic vs Pro vs Scale and credit modeling.
+
+**June 29 Argil vs HeyGen decision update:** [Argil vs HeyGen](/compare/argil-vs-heygen/) now separates the two avatar-video lanes that get blurred in buying conversations. HeyGen remains the safer default for business presenter video, localization, templates, teams, API, and LiveAvatar. Argil is the sharper test when the job is UGC-style creator output, founder clones, product/social clips, article-to-video, or Product Showcase experiments.
 
 **June 7 switching-route refresh:** AiPedia rechecked the Runway and Synthesia alternatives guides against current official sources. The current hub logic still holds: Seedance first for raw model tests, Kling as the value/cinematic challenger, Veo for Google/API/provenance, Runway for production workflow, Pika/Luma/Hailuo for lighter social experiments, and Synthesia/HeyGen/Tavus/D-ID/Hedra/Argil/Captions for avatar-led business video.
 

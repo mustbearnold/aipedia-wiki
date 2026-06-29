@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-29
-Tracked public pages and crawl surfaces: 602
+Tracked public pages and crawl surfaces: 603
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -268,7 +268,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/grok/ | Tool | Yes | frontmatter | src/content/tools/grok.md |
 | 2026-06-26 | /tools/hailuo/ | Tool | Yes | frontmatter | src/content/tools/hailuo.md |
 | 2026-06-26 | /tools/hedra/ | Tool | Yes | frontmatter | src/content/tools/hedra.md |
-| 2026-06-26 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
 | 2026-06-26 | /tools/kling/ | Tool | Yes | frontmatter | src/content/tools/kling.md |
 | 2026-06-26 | /tools/lindy/ | Tool | Yes | frontmatter | src/content/tools/lindy.md |
 | 2026-06-26 | /tools/lovable/ | Tool | Yes | frontmatter | src/content/tools/lovable.md |
@@ -524,7 +523,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /categories/ai-presentation/ | Category | Yes | frontmatter | src/content/categories/ai-presentation.md |
 | 2026-06-28 | /categories/ai-research/ | Category | Yes | frontmatter | src/content/categories/ai-research.md |
 | 2026-06-28 | /categories/ai-search/ | Category | Yes | frontmatter | src/content/categories/ai-search.md |
-| 2026-06-28 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-28 | /categories/ai-voice/ | Category | Yes | frontmatter | src/content/categories/ai-voice.md |
 | 2026-06-28 | /categories/ai-writing/ | Category | Yes | frontmatter | src/content/categories/ai-writing.md |
 | 2026-06-28 | /compare/amplemarket-vs-apollo/ | Comparison | Yes | frontmatter | src/content/comparisons/amplemarket-vs-apollo.md |
@@ -551,7 +549,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /guides/synthesia-alternatives/ | Guide | Yes | frontmatter | src/content/use-cases/synthesia-alternatives.md |
 | 2026-06-28 | /search/ | Static page | No | git | src/pages/search.astro |
 | 2026-06-28 | /tools/agno/ | Tool | Yes | frontmatter | src/content/tools/agno.md |
-| 2026-06-28 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-28 | /tools/arize-phoenix/ | Tool | Yes | frontmatter | src/content/tools/arize-phoenix.md |
 | 2026-06-28 | /tools/baml/ | Tool | Yes | frontmatter | src/content/tools/baml.md |
 | 2026-06-28 | /tools/braintrust/ | Tool | Yes | frontmatter | src/content/tools/braintrust.md |
@@ -600,16 +597,20 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
 | 2026-06-29 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-29 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-29 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-29 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
+| 2026-06-29 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
 | 2026-06-29 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-29 | /compare/amazon-q-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/amazon-q-vs-github-copilot.md |
-| 2026-06-29 | /compare/antigravity-vs-cursor/ | Comparison | Yes | working tree | src/content/comparisons/antigravity-vs-cursor.md |
+| 2026-06-29 | /compare/antigravity-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/antigravity-vs-cursor.md |
+| 2026-06-29 | /compare/argil-vs-heygen/ | Comparison | Yes | working tree | src/content/comparisons/argil-vs-heygen.md |
 | 2026-06-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-29 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-29 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-29 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-06-29 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
-| 2026-06-29 | /tools/antigravity/ | Tool | Yes | working tree | src/content/tools/antigravity.md |
-| 2026-06-29 | /tools/cursor/ | Tool | Yes | working tree | src/content/tools/cursor.md |
+| 2026-06-29 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
+| 2026-06-29 | /tools/argil/ | Tool | Yes | working tree | src/content/tools/argil.md |
+| 2026-06-29 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-06-29 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
+| 2026-06-29 | /tools/heygen/ | Tool | Yes | working tree | src/content/tools/heygen.md |

@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-29: Argil vs HeyGen Decision Loop
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Continued the all-night agent-system loop with the next decision-content recommendation. Added `/compare/argil-vs-heygen/`, refreshed Argil, HeyGen, AI Video, compare/tools/categories top-layer notes, LLM surfaces, source-registry dates, and `PAGE_REFRESH_LEDGER.md`. The loop also repaired older visible AI Video source-date registry drift surfaced by `audit:date-consistency`, and the ledger generator needed the known second pass before its check became current.
+- Verification: `npm --silent run agent:evidence -- --route /compare/argil-vs-heygen/ --current-date 2026-06-29 --json`; `npm --silent run agent:score -- --route /compare/argil-vs-heygen/ --current-date 2026-06-29 --json`; `npm --silent run agent:impact -- --route /compare/argil-vs-heygen/ --json`; `npm --silent run runner:agent-plan -- --route /compare/argil-vs-heygen/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/argil-vs-heygen-agent-plan.json`; `npm run check:frontmatter -- --changed`; `AIPEDIA_CURRENT_DATE=2026-06-29 npm run audit:coverage-quality:changed -- --changed-file src/content/comparisons/argil-vs-heygen.md --json`; `npm run ledger:pages && npm run ledger:pages:check`; selected live `npm run audit:sources`; `npm run audit:provenance:changed -- --json`; `npm run check:links`; `node scripts/guard-em-dashes.mjs && git diff --check`; `npm run guard:check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /compare/argil-vs-heygen/ --route /categories/ai-video/ --route /tools/argil/ --route /tools/heygen/ --route /compare/ --route /tools/ --route /categories/ --timing-file local/tmp/agent-system-loop/argil-vs-heygen-route-qa-timing.json`; `npm --silent run agent:memory:record -- --route /compare/argil-vs-heygen/ --route /tools/argil/ --route /tools/heygen/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/argil-vs-heygen-memory.jsonl --json`; `npm --silent run loop:all:record -- --json`.
+- Loop result: The new comparison scores 0.90 with ten official inline sources and monitor action. Fresh loop receipt `.agent/loop-runs/system/2026-06-29T09-28-49-543Z-loop-run.json` reports 7 ok, 0 attention, and 0 skipped. Fresh next recommendations are `argil-vs-synthesia` for decision content and Cline `best_for` freshness.
+- Next: Commit and push this sixth loop, then continue the all-night goal with `argil-vs-synthesia` unless the next loop receipt changes the ranking.
+
 ### 2026-06-29: Antigravity vs Cursor Decision Loop
 
 - Status: Verified locally, pending commit and push.

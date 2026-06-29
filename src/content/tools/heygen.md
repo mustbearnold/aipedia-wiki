@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0, Creator $29/mo, Pro from $49/mo, Business $149/mo plus seats, Enterprise custom; API and LiveAvatar pricing are separate"
 status: active
 launched: 2022-11
-last_updated: 2026-06-26
+last_updated: 2026-06-29
 last_verified: 2026-06-26
 update_frequency: weekly
 affiliate:
@@ -428,5 +428,6 @@ No. HeyGen is for avatar-led presenter video. Use Runway, Kling, Seedance, or Ve
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
-- **Compare:** [Synthesia](/tools/synthesia/) · [Tavus](/tools/tavus/) · [D-ID](/tools/d-id/) · [Captions](/tools/captions/) · [Runway](/tools/runway/)
+- **Compare:** [Argil vs HeyGen](/compare/argil-vs-heygen/), [HeyGen vs Synthesia](/compare/heygen-vs-synthesia/)
+- **Compare next:** [Tavus](/tools/tavus/), [D-ID](/tools/d-id/), [Captions](/tools/captions/), [Runway](/tools/runway/)
 - **Guide:** [Best AI Video Generator](/guides/best-ai-video-generator/)

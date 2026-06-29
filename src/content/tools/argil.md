@@ -10,7 +10,7 @@ pricing_model: paid
 price_range: "$39-$499/month; Enterprise custom"
 status: active
 launched: 2023-06
-last_updated: 2026-06-28
+last_updated: 2026-06-29
 last_verified: 2026-06-28
 update_frequency: weekly
 affiliate:
@@ -284,4 +284,5 @@ Start with Classic unless Seedance 2.0 videos, unlimited avatar styles, style ed
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
-- **Compare next:** [HeyGen](/tools/heygen/) · [Synthesia](/tools/synthesia/) · [Captions.ai](/tools/captions/) · [D-ID](/tools/d-id/)
+- **Compare:** [Argil vs HeyGen](/compare/argil-vs-heygen/)
+- **Compare next:** [Synthesia](/tools/synthesia/), [Captions.ai](/tools/captions/), [D-ID](/tools/d-id/)
