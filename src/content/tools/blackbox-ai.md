@@ -11,7 +11,7 @@ pricing_model: paid
 price_range: "$10-$40/month; Enterprise custom"
 status: active
 launched: 2021
-last_updated: 2026-06-26
+last_updated: 2026-06-29
 last_verified: 2026-06-26
 update_frequency: monthly
 seo_title: "BLACKBOX AI: Features, Pricing & Review (June 2026)"
@@ -283,4 +283,5 @@ No first-party or approved AiPedia affiliate CTA was verified. Cuelinks lists a 
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/) · [AI Chatbots](/categories/ai-chatbots/) · [AI Automation](/categories/ai-automation/)
-- **Alternatives:** [Cursor](/tools/cursor/) · [Windsurf](/tools/windsurf/) · [GitHub Copilot](/tools/github-copilot/) · [Claude Code](/tools/claude-code/) · [CodeRabbit](/tools/coderabbit/)
+- **Compare:** [BLACKBOX AI vs Replit Agent](/compare/blackbox-ai-vs-replit-agent/)
+- **Alternatives:** [Cursor](/tools/cursor/), [Windsurf](/tools/windsurf/), [GitHub Copilot](/tools/github-copilot/), [Claude Code](/tools/claude-code/), [CodeRabbit](/tools/coderabbit/)

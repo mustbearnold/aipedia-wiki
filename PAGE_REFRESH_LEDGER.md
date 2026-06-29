@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-29
-Tracked public pages and crawl surfaces: 604
+Tracked public pages and crawl surfaces: 605
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -239,7 +239,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/augment-code/ | Tool | Yes | frontmatter | src/content/tools/augment-code.md |
 | 2026-06-26 | /tools/base44/ | Tool | Yes | frontmatter | src/content/tools/base44.md |
 | 2026-06-26 | /tools/beehiiv/ | Tool | Yes | frontmatter | src/content/tools/beehiiv.md |
-| 2026-06-26 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
 | 2026-06-26 | /tools/bolt/ | Tool | Yes | frontmatter | src/content/tools/bolt.md |
 | 2026-06-26 | /tools/browserbase/ | Tool | Yes | frontmatter | src/content/tools/browserbase.md |
 | 2026-06-26 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
@@ -282,7 +281,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
 | 2026-06-26 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
 | 2026-06-26 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-06-26 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-06-26 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-06-26 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-06-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
@@ -596,13 +594,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-28 | /workflows/consultant-stack/ | Workflow | Yes | frontmatter | src/content/workflows/consultant-stack.md |
 | 2026-06-29 | / | Static page | Yes | page metadata | src/pages/index.astro |
 | 2026-06-29 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
-| 2026-06-29 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
-| 2026-06-29 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
+| 2026-06-29 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
+| 2026-06-29 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
 | 2026-06-29 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-29 | /compare/amazon-q-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/amazon-q-vs-github-copilot.md |
 | 2026-06-29 | /compare/antigravity-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/antigravity-vs-cursor.md |
 | 2026-06-29 | /compare/argil-vs-heygen/ | Comparison | Yes | frontmatter | src/content/comparisons/argil-vs-heygen.md |
-| 2026-06-29 | /compare/argil-vs-synthesia/ | Comparison | Yes | working tree | src/content/comparisons/argil-vs-synthesia.md |
+| 2026-06-29 | /compare/argil-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/argil-vs-synthesia.md |
+| 2026-06-29 | /compare/blackbox-ai-vs-replit-agent/ | Comparison | Yes | working tree | src/content/comparisons/blackbox-ai-vs-replit-agent.md |
 | 2026-06-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-29 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
@@ -610,8 +609,10 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
 | 2026-06-29 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
 | 2026-06-29 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
-| 2026-06-29 | /tools/argil/ | Tool | Yes | working tree | src/content/tools/argil.md |
+| 2026-06-29 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
+| 2026-06-29 | /tools/blackbox-ai/ | Tool | Yes | working tree | src/content/tools/blackbox-ai.md |
 | 2026-06-29 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-06-29 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-29 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
-| 2026-06-29 | /tools/synthesia/ | Tool | Yes | working tree | src/content/tools/synthesia.md |
+| 2026-06-29 | /tools/replit-agent/ | Tool | Yes | working tree | src/content/tools/replit-agent.md |
+| 2026-06-29 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
