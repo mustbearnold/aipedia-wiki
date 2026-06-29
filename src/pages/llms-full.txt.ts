@@ -3,6 +3,8 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-29 Captions.ai vs HeyGen comparison added;
+// verbose LLM surface remains data-driven through comparison/tool/category data.
 // Refresh metadata: 2026-06-29 Capacities vs Notion AI comparison added;
 // verbose LLM surface remains data-driven through comparison/tool/category data.
 // Refresh metadata: 2026-06-29 Boomy vs Udio comparison added; verbose LLM

@@ -5,10 +5,10 @@ title: AI Video Generation
 description: Current AI video tools for raw model testing, conversational video editing, production workflows, budget social clips, avatar videos, localization, and business training.
 tool_count: 27
 seo_title: "Best AI Video Tools (June 2026): Seedance, Kling, Veo, Runway & Tavus"
-meta_description: "Updated June 28, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, OpusClip, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
+meta_description: "Updated June 29, 2026: compare Gemini Omni, Seedance 2.0, Kling 3.0, Veo 3.1, Hailuo 2.3, Runway Max, Luma Ray3.2, OpusClip, Vidu Q3, Wan, Pika, HeyGen, Synthesia, Tavus CVI, Hedra, Captions, Argil, Adobe Firefly, and Sora sunset caveats by model quality, workflow, pricing, and buyer fit."
 author: "aipedia.wiki Editorial"
 last_updated: 2026-06-29
-last_verified: 2026-06-28
+last_verified: 2026-06-29
 update_frequency: weekly
 top_picks:
   best_overall: seedance
@@ -44,13 +44,15 @@ AI video is no longer one clean product category. On June 9, 2026, the useful bu
 
 **Use [the avatar-video guide](/guides/best-ai-avatar-video-generator/), [HeyGen](/tools/heygen/), or [Synthesia](/tools/synthesia/) for avatar video, not cinematic generation.** These tools are for presenter videos, sales outreach, corporate training, dubbing, localization, templates, SCORM/LMS workflows, and business collaboration. They should not be ranked against Seedance, Kling, Veo, or Runway for scene generation.
 
-**Use [Captions.ai](/tools/captions/) when the avatar job is short-form social editing rather than enterprise presenter video.** The June 24 Captions recheck keeps Android Lite, Pro, Max, Scale, Scale 2x/4x, current credit allowances, model-specific credit rates, the rollover-doc conflict, Scale 4x and legacy Teams/Business top-up eligibility, Mirage actor context, platform limits, and Mirage API early-access beta caveats. Buy Max for AI Twin/custom actor and chat-edit workflows; buy Scale only after measuring credit burn.
+**Use [Captions.ai](/tools/captions/) when the avatar job is short-form social editing rather than enterprise presenter video.** The June 29 Captions recheck keeps Android Lite, Pro, Max, Scale, Scale 2x/4x, current credit allowances, model-specific credit rates, the rollover-doc conflict, Scale 4x and legacy Teams/Business top-up eligibility, Mirage actor context, platform limits, and Mirage API early-access beta caveats. Buy Max for AI Twin/custom actor and chat-edit workflows; buy Scale only after measuring credit burn.
 
 **Use [Argil](/tools/argil/) when the avatar job is UGC-style product, creator, or article-to-video output.** The June 28 Argil recheck keeps the public plan prices stable, Classic $39/month, Pro $149/month, Scale $499/month, and Enterprise custom, but the buyer risk is credit mechanics and workflow maturity. The pricing page still conflicts with the Plans docs on Classic credits, 1,600 versus 1,500 credits/month. API and pay-as-you-go docs list Atom video at 160 credits/minute, voice at 20 credits/minute, B-roll at 10-20 credits, and Argil v1 avatar royalty at 20 credits/video. Product Showcase is useful for ecommerce UGC, but Argil labels it V1 and says bugs are expected, so pilot product-holding avatar shots before selling them at scale. Use the [Argil pricing guide](/guides/argil-pricing-for-ugc-avatar-video-teams/) for Classic vs Pro vs Scale and credit modeling.
 
 **June 29 Argil vs HeyGen decision update:** [Argil vs HeyGen](/compare/argil-vs-heygen/) now separates the two avatar-video lanes that get blurred in buying conversations. HeyGen remains the safer default for business presenter video, localization, templates, teams, API, and LiveAvatar. Argil is the sharper test when the job is UGC-style creator output, founder clones, product/social clips, article-to-video, or Product Showcase experiments.
 
 **June 29 Argil vs Synthesia decision update:** [Argil vs Synthesia](/compare/argil-vs-synthesia/) now separates creator-led UGC avatar video from governed enterprise training video. Synthesia is the safer pick for L&D, HR, compliance, SCORM/LMS workflows, SSO, and rollout governance. Argil is the sharper test for UGC ads, founder clones, product/social clips, article-to-video, and ecommerce Product Showcase experiments.
+
+**June 29 Captions.ai vs HeyGen decision update:** [Captions.ai vs HeyGen](/compare/captions-vs-heygen/) now separates short-form creator editing from business presenter video. Captions.ai is the better first test for social clips, captions, AI Twin/custom actor output, AI Edit, dubbing, denoise, and phone-first publishing. HeyGen is the better first test for sales clips, localization, digital twins, templates, teams, API generation, SCORM/LMS routes, and LiveAvatar.
 
 **June 7 switching-route refresh:** AiPedia rechecked the Runway and Synthesia alternatives guides against current official sources. The current hub logic still holds: Seedance first for raw model tests, Kling as the value/cinematic challenger, Veo for Google/API/provenance, Runway for production workflow, Pika/Luma/Hailuo for lighter social experiments, and Synthesia/HeyGen/Tavus/D-ID/Hedra/Argil/Captions for avatar-led business video.
 
@@ -96,7 +98,7 @@ If you need a person on camera, use avatar tools. The [best AI avatar video gene
 
 **Best PixVerse use case:** treat [PixVerse](/tools/pixverse/) as a budget/stylized test bed and API-credit route, not as a default enterprise video system. Its June 25 Platform docs publish C1, V6, V5.6, and V5.5 credit rates, one-time API credit packs, Essential/Scale/Business API memberships, and a June 16 upscale release in the changelog. API memberships are separate from PixVerse Web memberships, so buyers should verify web-plan pricing, watermark rules, commercial rights, and upload/data policy before paying.
 
-**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 23 HeyGen recheck keeps app plans, API-key wallet usage, OAuth/web-plan usage, LiveAvatar streaming, and affiliate terms separate: the app still lists Free, Creator $29/month with 600 credits, Pro from $49/month with 1,000 credits, Business $149/month plus $20/seat with 1,500 credits, and Enterprise custom, while current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar at $7/video, Video Agent at $0.0333/sec, and HyperFrames at $0.10-$0.30/min. LiveAvatar now needs Free and Starter $19/month coverage before Essential $99/month, Business $475/month, and Enterprise custom with a stated $48,800 minimum budget. The pricing help route still matters for API plan caveats, so buyers should use the live pricing page, developer pricing docs, and LiveAvatar help for current purchase math. The June 25 Tavus check keeps Tavus as the API-first live video-agent lane, but the current pricing page now exposes a newer Developer surface with Starter $22/month, Builder $59/month, Growth $397/month, Business $975/month, and Enterprise custom while also rendering older pricing blocks. Buyers should confirm overages, replica terms, and concurrency in writing before procurement. The June 22 D-ID check keeps D-ID as the visual-agent and agentic-video lane: API minutes draw from the same balance as web D-ID, Studio video usage rounds to the nearest 15-second interval, Trial/Lite outputs can carry watermarks, everyone gets 200 free conversation sessions to start, and generated agent response video is metered at 0.5 credit per 30 seconds. The June 24 Captions check keeps Captions as the short-form social editor lane: Max adds AI Twin/custom actors, Mirage-generated actors, chat editing, and 500 credits, while Scale/Scale 2x/Scale 4x only make sense after measuring model-specific credit burn, platform support, Mirage API beta status, and the live-account rollover state. Use the June 28 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 28 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
+**Best avatar-video pick:** [HeyGen](/tools/heygen/) for creator/business presenter video, sales video, localization, digital twins, and fast templates. The June 29 HeyGen recheck keeps app plans, API-key wallet usage, OAuth/web-plan usage, LiveAvatar streaming, and affiliate terms separate: the app still lists Free, Creator $29/month with 600 credits, Pro from $49/month with 1,000 credits, Business $149/month plus $20/seat with 1,500 credits, and Enterprise custom, while current developer pricing lists Avatar IV/V 720p/1080p at $0.05/sec or $0.0667/sec, Cinematic Avatar at $7/video, Video Agent at $0.0333/sec, and HyperFrames at $0.10-$0.30/min. LiveAvatar now needs Free and Starter $19/month coverage before Essential $99/month, Business $475/month, and Enterprise custom with a stated $48,800 minimum budget. The pricing help route still matters for API plan caveats, so buyers should use the live pricing page, developer pricing docs, and LiveAvatar help for current purchase math. The June 25 Tavus check keeps Tavus as the API-first live video-agent lane, but the current pricing page now exposes a newer Developer surface with Starter $22/month, Builder $59/month, Growth $397/month, Business $975/month, and Enterprise custom while also rendering older pricing blocks. Buyers should confirm overages, replica terms, and concurrency in writing before procurement. The June 22 D-ID check keeps D-ID as the visual-agent and agentic-video lane: API minutes draw from the same balance as web D-ID, Studio video usage rounds to the nearest 15-second interval, Trial/Lite outputs can carry watermarks, everyone gets 200 free conversation sessions to start, and generated agent response video is metered at 0.5 credit per 30 seconds. The June 29 Captions check keeps Captions as the short-form social editor lane: Max adds AI Twin/custom actors, Mirage-generated actors, chat editing, and 500 credits, while Scale/Scale 2x/Scale 4x only make sense after measuring model-specific credit burn, platform support, Mirage API beta status, and the live-account rollover state. Use the June 28 verified [avatar-video buyer guide](/guides/best-ai-avatar-video-generator/) when the choice is between HeyGen, Synthesia, Tavus, D-ID, Hedra, Argil, and Captions. If Synthesia is already the incumbent, use the June 28 verified [Synthesia alternatives guide](/guides/synthesia-alternatives/) to decide whether switching is worth the migration cost.
 
 ## What Hurts Trust
 
@@ -222,11 +224,11 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [OpusClip pricing](https://www.opus.pro/pricing) (verified 2026-06-25)
 - [OpusClip plans and credits](https://help.opus.pro/docs/article/plans-and-credits) (verified 2026-06-25)
 - [OpusClip credit mechanics](https://help.opus.pro/docs/article/how-are-credits-consumed) (verified 2026-06-25)
-- [Captions pricing](https://captions.ai/pricing) (verified 2026-06-24)
-- [Captions subscriptions and plans](https://captions.ai/help/docs/subscriptions) (verified 2026-06-24)
-- [Captions AI usage credits](https://captions.ai/help/docs/ai-usage) (verified 2026-06-24)
-- [Captions credits troubleshooting](https://captions.ai/help/docs/troubleshooting/credits) (verified 2026-06-24)
-- [Captions feature availability](https://captions.ai/help/docs/feature-availability) (verified 2026-06-24)
+- [Captions pricing](https://captions.ai/pricing) (verified 2026-06-29)
+- [Captions subscriptions and plans](https://captions.ai/help/docs/subscriptions) (verified 2026-06-29)
+- [Captions AI usage credits](https://captions.ai/help/docs/ai-usage) (verified 2026-06-29)
+- [Captions credits troubleshooting](https://captions.ai/help/docs/troubleshooting/credits) (verified 2026-06-29)
+- [Captions feature availability](https://captions.ai/help/docs/feature-availability) (verified 2026-06-29)
 - [Argil pricing](https://www.argil.ai/pricing) (verified 2026-06-28)
 - [Argil API pricing](https://docs.argil.ai/resources/api-pricings) (verified 2026-06-28)
 - [Argil pay-as-you-go credits](https://docs.argil.ai/resources/pay-as-you-go-pricings) (verified 2026-06-28)
@@ -241,10 +243,10 @@ Yes, but with honest positioning. They are useful for budget testing, effects, o
 - [Alibaba Cloud Wan video generation and editing docs](https://www.alibabacloud.com/help/en/model-studio/video-generate-edit-model/) (verified 2026-06-25)
 - [Alibaba Cloud Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing) (verified 2026-06-25)
 - [Wan2.2 GitHub repository](https://github.com/Wan-Video/Wan2.2) (verified 2026-06-25)
-- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-23)
+- [HeyGen pricing](https://www.heygen.com/pricing) (verified 2026-06-29)
 - [InVideo pricing](https://invideo.io/pricing/) (verified 2026-06-25)
 - [CapCut](https://www.capcut.com/) (verified 2026-06-23)
-- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-23)
+- [HeyGen self-serve API pricing](https://developers.heygen.com/docs/pricing) (verified 2026-06-29)
 - [Tavus pricing](https://www.tavus.io/pricing) (verified 2026-06-25)
 - [Tavus CVI](https://www.tavus.io/cvi) (verified 2026-06-25)
 - [Synthesia pricing](https://www.synthesia.io/pricing) (verified 2026-06-25)

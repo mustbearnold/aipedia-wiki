@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-29
-Tracked public pages and crawl surfaces: 608
+Tracked public pages and crawl surfaces: 609
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -240,7 +240,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/bolt/ | Tool | Yes | frontmatter | src/content/tools/bolt.md |
 | 2026-06-26 | /tools/browserbase/ | Tool | Yes | frontmatter | src/content/tools/browserbase.md |
 | 2026-06-26 | /tools/canva/ | Tool | Yes | frontmatter | src/content/tools/canva.md |
-| 2026-06-26 | /tools/captions/ | Tool | Yes | frontmatter | src/content/tools/captions.md |
 | 2026-06-26 | /tools/castmagic/ | Tool | Yes | frontmatter | src/content/tools/castmagic.md |
 | 2026-06-26 | /tools/chatgpt/ | Tool | Yes | frontmatter | src/content/tools/chatgpt.md |
 | 2026-06-26 | /tools/claude-code/ | Tool | Yes | frontmatter | src/content/tools/claude-code.md |
@@ -589,8 +588,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-29 | /categories/ai-coding/ | Category | Yes | frontmatter | src/content/categories/ai-coding.md |
 | 2026-06-29 | /categories/ai-music/ | Category | Yes | frontmatter | src/content/categories/ai-music.md |
-| 2026-06-29 | /categories/ai-notes/ | Category | Yes | working tree | src/content/categories/ai-notes.md |
-| 2026-06-29 | /categories/ai-video/ | Category | Yes | frontmatter | src/content/categories/ai-video.md |
+| 2026-06-29 | /categories/ai-notes/ | Category | Yes | frontmatter | src/content/categories/ai-notes.md |
+| 2026-06-29 | /categories/ai-video/ | Category | Yes | working tree | src/content/categories/ai-video.md |
 | 2026-06-29 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
 | 2026-06-29 | /compare/amazon-q-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/amazon-q-vs-github-copilot.md |
 | 2026-06-29 | /compare/antigravity-vs-cursor/ | Comparison | Yes | frontmatter | src/content/comparisons/antigravity-vs-cursor.md |
@@ -599,7 +598,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /compare/blackbox-ai-vs-replit-agent/ | Comparison | Yes | frontmatter | src/content/comparisons/blackbox-ai-vs-replit-agent.md |
 | 2026-06-29 | /compare/boomy-vs-suno/ | Comparison | Yes | frontmatter | src/content/comparisons/boomy-vs-suno.md |
 | 2026-06-29 | /compare/boomy-vs-udio/ | Comparison | Yes | frontmatter | src/content/comparisons/boomy-vs-udio.md |
-| 2026-06-29 | /compare/capacities-vs-notion-ai/ | Comparison | Yes | working tree | src/content/comparisons/capacities-vs-notion-ai.md |
+| 2026-06-29 | /compare/capacities-vs-notion-ai/ | Comparison | Yes | frontmatter | src/content/comparisons/capacities-vs-notion-ai.md |
+| 2026-06-29 | /compare/captions-vs-heygen/ | Comparison | Yes | working tree | src/content/comparisons/captions-vs-heygen.md |
 | 2026-06-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-29 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
@@ -610,11 +610,12 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /tools/argil/ | Tool | Yes | frontmatter | src/content/tools/argil.md |
 | 2026-06-29 | /tools/blackbox-ai/ | Tool | Yes | frontmatter | src/content/tools/blackbox-ai.md |
 | 2026-06-29 | /tools/boomy/ | Tool | Yes | frontmatter | src/content/tools/boomy.md |
-| 2026-06-29 | /tools/capacities/ | Tool | Yes | working tree | src/content/tools/capacities.md |
+| 2026-06-29 | /tools/capacities/ | Tool | Yes | frontmatter | src/content/tools/capacities.md |
+| 2026-06-29 | /tools/captions/ | Tool | Yes | working tree | src/content/tools/captions.md |
 | 2026-06-29 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-06-29 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
-| 2026-06-29 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
-| 2026-06-29 | /tools/notion-ai/ | Tool | Yes | working tree | src/content/tools/notion-ai.md |
+| 2026-06-29 | /tools/heygen/ | Tool | Yes | working tree | src/content/tools/heygen.md |
+| 2026-06-29 | /tools/notion-ai/ | Tool | Yes | frontmatter | src/content/tools/notion-ai.md |
 | 2026-06-29 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-06-29 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-06-29 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |

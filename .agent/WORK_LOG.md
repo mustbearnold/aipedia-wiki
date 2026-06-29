@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-29: Captions.ai vs HeyGen Decision Loop
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Continued the all-night agent-system loop with the next decision-content recommendation. Added `/compare/captions-vs-heygen/`, refreshed Captions.ai, HeyGen, AI Video, compare/tools/categories top-layer notes, LLM surfaces, source-registry dates, and `PAGE_REFRESH_LEDGER.md`. The loop verified the buyer split between short-form social editing and business presenter video, kept Captions rollover conflict visible, and avoided a low-context registry patch after inspection showed why source-registry edits need source-ID context.
+- Verification: `npm --silent run agent:evidence -- --route /compare/captions-vs-heygen/ --current-date 2026-06-29 --json`; `npm --silent run agent:score -- --route /compare/captions-vs-heygen/ --current-date 2026-06-29 --json`; `npm --silent run agent:impact -- --route /compare/captions-vs-heygen/ --json`; `npm run check:frontmatter -- --changed`; `AIPEDIA_CURRENT_DATE=2026-06-29 npm run audit:coverage-quality:changed -- --changed-file src/content/comparisons/captions-vs-heygen.md --json`; selected live `npm run audit:sources` with 17 selected Captions/HeyGen source IDs, all 17 HTTP 200 and 0 unreachable; `npm --silent run runner:agent-plan -- --route /compare/captions-vs-heygen/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/captions-vs-heygen-agent-plan.json`; `npm run ledger:pages` and `npm run ledger:pages:check` after the known two-pass wobble; `npm run audit:provenance:changed -- --json`; `npm run check:links`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run guard:check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /compare/captions-vs-heygen/ --route /categories/ai-video/ --route /tools/captions/ --route /tools/heygen/ --route /compare/ --route /tools/ --route /categories/ --timing-file local/tmp/agent-system-loop/captions-vs-heygen-route-qa-timing.json`; `npm --silent run agent:memory:record -- --route /compare/captions-vs-heygen/ --route /tools/captions/ --route /tools/heygen/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/captions-vs-heygen-memory.jsonl --json`; `npm --silent run loop:all:record -- --json`.
+- Loop result: The new comparison scores 0.88 with thirteen official inline sources and monitor action. Fresh loop receipt `.agent/loop-runs/system/2026-06-29T10-54-53-659Z-loop-run.json` reports 7 ok, 0 attention, and 0 skipped. Fresh next recommendations are `captions-vs-synthesia` for decision content and BLACKBOX AI `best_paid_tier` freshness.
+- Next: Commit and push this twelfth loop, then continue the all-night goal with `captions-vs-synthesia` unless the next loop receipt changes the ranking.
+
 ### 2026-06-29: BLACKBOX AI vs Replit Agent Decision Loop
 
 - Status: Verified locally, pending commit and push.
