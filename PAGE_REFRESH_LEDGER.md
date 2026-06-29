@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-29
-Tracked public pages and crawl surfaces: 606
+Tracked public pages and crawl surfaces: 607
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -280,7 +280,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/pika/ | Tool | Yes | frontmatter | src/content/tools/pika.md |
 | 2026-06-26 | /tools/qodo/ | Tool | Yes | frontmatter | src/content/tools/qodo.md |
 | 2026-06-26 | /tools/qwen/ | Tool | Yes | frontmatter | src/content/tools/qwen.md |
-| 2026-06-26 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
 | 2026-06-26 | /tools/v0/ | Tool | Yes | frontmatter | src/content/tools/v0.md |
 | 2026-06-26 | /tools/voxtral/ | Tool | Yes | frontmatter | src/content/tools/voxtral.md |
 | 2026-06-27 | /404/ | Static page | No | git | src/pages/404.astro |
@@ -600,7 +599,8 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /compare/argil-vs-heygen/ | Comparison | Yes | frontmatter | src/content/comparisons/argil-vs-heygen.md |
 | 2026-06-29 | /compare/argil-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/argil-vs-synthesia.md |
 | 2026-06-29 | /compare/blackbox-ai-vs-replit-agent/ | Comparison | Yes | frontmatter | src/content/comparisons/blackbox-ai-vs-replit-agent.md |
-| 2026-06-29 | /compare/boomy-vs-suno/ | Comparison | Yes | working tree | src/content/comparisons/boomy-vs-suno.md |
+| 2026-06-29 | /compare/boomy-vs-suno/ | Comparison | Yes | frontmatter | src/content/comparisons/boomy-vs-suno.md |
+| 2026-06-29 | /compare/boomy-vs-udio/ | Comparison | Yes | working tree | src/content/comparisons/boomy-vs-udio.md |
 | 2026-06-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-29 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
@@ -615,5 +615,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |
 | 2026-06-29 | /tools/heygen/ | Tool | Yes | frontmatter | src/content/tools/heygen.md |
 | 2026-06-29 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
-| 2026-06-29 | /tools/suno/ | Tool | Yes | working tree | src/content/tools/suno.md |
+| 2026-06-29 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-06-29 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
+| 2026-06-29 | /tools/udio/ | Tool | Yes | working tree | src/content/tools/udio.md |

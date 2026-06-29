@@ -223,5 +223,5 @@ Suno generates stronger songs for most people. Boomy is easier for beginners and
 ## Related
 
 - **Category:** [AI Music](/categories/ai-music/)
-- **Compare:** [Boomy vs Suno](/compare/boomy-vs-suno/)
+- **Compare:** [Boomy vs Suno](/compare/boomy-vs-suno/) · [Boomy vs Udio](/compare/boomy-vs-udio/)
 - **See also:** [Suno](/tools/suno/) · [Udio](/tools/udio/) · [Mubert](/tools/mubert/) · [AIVA](/tools/aiva/)

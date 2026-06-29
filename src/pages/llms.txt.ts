@@ -3,6 +3,8 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-29 Boomy vs Udio comparison added; concise LLM
+// surface remains data-driven through comparison/tool/category data.
 // Refresh metadata: 2026-06-29 Boomy vs Suno comparison added; concise LLM
 // surface remains data-driven through comparison/tool/category data.
 // Refresh metadata: 2026-06-29 BLACKBOX AI vs Replit Agent comparison added;

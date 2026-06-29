@@ -20,6 +20,8 @@ AI music is no longer one category. As of June 27, 2026, the buying decision spl
 
 **June 29 Boomy vs Suno decision update:** [Boomy vs Suno](/compare/boomy-vs-suno/) now separates the stronger full-song generator lane from the beginner paid-download lane. Suno is the better default when the buyer wants polished songs, vocals, stems, voice features, and clear public pricing. Boomy is the simpler release experiment when the buyer wants quick generation, paid downloads, and outside distribution after verifying checkout, rights, copyright, and platform policies.
 
+**June 29 Boomy vs Udio decision update:** [Boomy vs Udio](/compare/boomy-vs-udio/) now separates the practical paid-download release-test lane from the in-app music ideation lane. Boomy is the safer production-practical pick when the buyer needs a paid-download path today. Udio remains the stronger creative sandbox for inpainting and section-level ideas, but disabled downloads keep it out of production-first recommendations.
+
 Do not choose purely by the best demo. Choose by rights, editing workflow, plan limits, commercial terms, export availability, and whether the output is a song, a score, a bed, or an audio asset.
 
 ## The Players
@@ -66,6 +68,7 @@ Do not choose purely by the best demo. Choose by rights, editing workflow, plan 
 - [Best AI Tools Under $20/month](/guides/best-ai-tools-under-20-month/) is the June 27 verified budget guide that treats Suno Pro as a genuine low-cost music exception while keeping v5.5 access, credit burn, commercial-use rights, and upgrade pressure in the buyer warning layer.
 - [Best Suno Alternatives](/guides/suno-alternatives/) is the June 7 verified switching guide for ElevenLabs Music, Udio, AIVA, Mubert, Stable Audio, and the rights/export reasons not to choose by demo quality alone.
 - [Boomy vs Suno](/compare/boomy-vs-suno/)
+- [Boomy vs Udio](/compare/boomy-vs-udio/)
 - [Suno vs Udio](/compare/suno-vs-udio/)
 - Keep Mubert as a licensing/background-music alternative inside guide and tool pages rather than recreating Mubert versus song-generator pages.
 

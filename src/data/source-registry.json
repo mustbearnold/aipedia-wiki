@@ -1764,7 +1764,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "boomy-official",
@@ -1845,7 +1845,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "boomy-support-rights-ownership",
@@ -1854,7 +1854,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "boomy-support-royalty-free",
@@ -14158,7 +14158,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "udio-pricing",
@@ -14167,7 +14167,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "udio-product",
@@ -14176,7 +14176,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "udio-umg-partnership-changes",
@@ -14185,16 +14185,16 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "udio-warner-partnership",
-      "label": "Udio with Warner Music Group",
-      "url": "https://www.udio.com/blog/udio-warner",
-      "type": "blog",
+      "label": "Udio Warner Music Group partnership",
+      "url": "https://help.udio.com/en/articles/12874375-udio-warner-music-group-wmg-partnership",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "uizard-autodesigner",

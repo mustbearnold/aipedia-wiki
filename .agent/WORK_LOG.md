@@ -1433,3 +1433,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `agent:evidence`, `agent:score`, `agent:impact`, changed frontmatter, changed coverage quality, selected live-source audit for 12 reachable source IDs, runner agent plan, ledger generation and check, changed provenance, `check:links`, em-dash guard, `git diff --check`, `guard:check`, `typecheck`, `build:fast`, route QA across affected routes at 319, 360, 390, 430, 768, 1024, and 1366 px, memory recording, and broad loop recording passed. Wider source audit found the expected 10 Boomy support raw-HTTP 403 rows and 12 reachable HTTP 200 rows.
 - Loop receipt: `.agent/loop-runs/system/2026-06-29T10-12-00-921Z-loop-run.json` with 7 ok, 0 attention, and 0 skipped.
 - Next: Commit and push, then continue with `boomy-vs-udio` unless a fresh `loop:next` result changes the ranking.
+
+### 2026-06-29: Agent System Loop 10, Boomy vs Udio
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `master`.
+- Changed: Added `/compare/boomy-vs-udio/` as a same-workflow full-song-generation comparison. Refreshed Boomy, Udio, AI Music, `/compare/`, `/tools/`, `/categories/`, `/llms.txt`, `/llms-full.txt`, source registry rows, and `PAGE_REFRESH_LEDGER.md`.
+- Source notes: Udio product, pricing, credit limits, UMG transition, and Warner partnership sources were live-checked on June 29. The Udio Warner registry row was repaired from the blog URL/type to the help-center URL/type used by the page fact record. Boomy official, pricing, terms, rights-after-cancel, rights-ownership, and Dolby Remastering rows returned HTTP 200. Boomy commercial-use, download-limit, and other-distributor support rows returned raw HTTP 403, so those remain access-sensitive and conservatively caveated.
+- System lesson: The loop refined source metadata, not just page copy. The same comparison workflow exposed a source-registry URL mismatch and a more granular Boomy support status split than the prior run.
+- Verification: `agent:evidence`, `agent:score` at 0.87 monitor, `agent:impact`, changed frontmatter, changed coverage quality, selected live-source audits, runner agent plan, ledger generation and check, changed provenance, `check:links`, em-dash guard, `git diff --check`, `guard:check`, `typecheck`, `build:fast`, route QA across affected routes at 319, 360, 390, 430, 768, 1024, and 1366 px, memory recording, and broad loop recording passed.
+- Loop receipt: `.agent/loop-runs/system/2026-06-29T10-23-41-775Z-loop-run.json` with 7 ok, 0 attention, and 0 skipped.
+- Next: Commit and push, then continue with `capacities-vs-notion-ai` unless a fresh `loop:next` result changes the ranking.
