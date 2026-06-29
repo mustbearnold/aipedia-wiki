@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-29: Coverage Quality Wrapper Hardening
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Fixed the `audit:coverage-quality:changed` npm wrapper so operators can append `--changed-file <comparison.md>` without tripping the script's target-mode guard. The script now treats appended `--changed-file` paths as a narrower changed-mode target, which matches the way npm appends arguments to package scripts.
+- Verification: `node --check scripts/audit-coverage-quality.mjs`; `npm exec --yes --package=node@24 -- node --test tests/scripts/audit-coverage-quality.test.mjs`; `AIPEDIA_CURRENT_DATE=2026-06-29 npm run audit:coverage-quality:changed -- --changed-file src/content/comparisons/amazon-q-vs-github-copilot.md --json`; `git diff --check`; `npm run audit:commands`; `npm run check:quick`; `npm --silent run loop:all:record -- --json`.
+- Loop result: Fresh receipt `.agent/loop-runs/system/2026-06-29T09-06-39-881Z-loop-run.json` reports 7 ok, 0 attention, and 0 skipped. Next recommendations remain `antigravity-vs-cursor` and Beehiiv `mcp_surface`.
+- Next: Commit and push this wrapper hardening, then continue the all-night loop with the next recommendation.
+
 ### 2026-06-29: Agent Decision Loop And Comparison Source Scoring
 
 - Status: Verified locally, pending commit and push.

@@ -107,8 +107,8 @@ function collectArgumentIssues() {
 
   if (ALL_MODE) targetModeCount += 1;
   if (FILE_ARG) targetModeCount += 1;
-  if (CHANGED_MODE) targetModeCount += 1;
   if (CHANGED_FILE_ARGS.length > 0) targetModeCount += 1;
+  if (CHANGED_MODE && CHANGED_FILE_ARGS.length === 0) targetModeCount += 1;
 
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index];

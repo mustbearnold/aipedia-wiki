@@ -136,6 +136,29 @@ test('coverage quality changed-file mode checks only supplied comparison files',
   }
 });
 
+test('coverage quality changed package wrapper can be narrowed with changed-file', () => {
+  const dir = writeFixtureProject();
+  writeComparison(dir, 'foo-vs-bar');
+  writeComparison(dir, 'bad-vs-bar', '## Quick Answer\n\nTODO\n');
+
+  try {
+    const result = runCoverageQuality(dir, [
+      '--json',
+      '--changed',
+      '--changed-file',
+      'src/content/comparisons/foo-vs-bar.md',
+    ]);
+
+    assert.equal(result.status, 0, `stdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.mode, 'changed');
+    assert.equal(report.files_checked, 1);
+    assert.deepEqual(report.files, ['src/content/comparisons/foo-vs-bar.md']);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('coverage quality rejects raw Markdown tables on changed comparison pages', () => {
   const dir = writeFixtureProject();
   writeComparison(
