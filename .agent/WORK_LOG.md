@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-29: Antigravity vs Cursor Decision Loop
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Continued the all-night agent-system loop with the next real decision-content recommendation. Added `/compare/antigravity-vs-cursor/`, refreshed Antigravity, Cursor, AI Coding, compare/tools/categories top-layer notes, LLM surfaces, source-registry dates, and `PAGE_REFRESH_LEDGER.md`. The loop also proved the fixed `audit:coverage-quality:changed -- --changed-file ...` wrapper on a second real comparison and repaired the shared `aipedia-news` source-registry date that the changed Antigravity page exposed.
+- Verification: `npm --silent run agent:evidence -- --route /compare/antigravity-vs-cursor/ --current-date 2026-06-29 --json`; `npm --silent run agent:score -- --route /compare/antigravity-vs-cursor/ --current-date 2026-06-29 --json`; `npm --silent run agent:impact -- --route /compare/antigravity-vs-cursor/ --json`; `npm --silent run runner:agent-plan -- --route /compare/antigravity-vs-cursor/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/antigravity-vs-cursor-agent-plan.json`; `npm run check:frontmatter -- --changed`; `AIPEDIA_CURRENT_DATE=2026-06-29 npm run audit:coverage-quality:changed -- --changed-file src/content/comparisons/antigravity-vs-cursor.md --json`; `npm run ledger:pages:check`; selected live `npm run audit:sources`; `npm run audit:provenance:changed -- --json`; `npm run check:links`; `node scripts/guard-em-dashes.mjs && git diff --check`; `npm run guard:check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /compare/antigravity-vs-cursor/ --route /categories/ai-coding/ --route /tools/antigravity/ --route /tools/cursor/ --route /compare/ --route /tools/ --route /categories/ --timing-file local/tmp/agent-system-loop/antigravity-vs-cursor-route-qa-timing.json`; `npm --silent run agent:memory:record -- --route /compare/antigravity-vs-cursor/ --route /tools/antigravity/ --route /tools/cursor/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/antigravity-vs-cursor-memory.jsonl --json`; `npm --silent run loop:all:record -- --json`.
+- Loop result: The new comparison scores 0.86 with nine official inline sources and monitor action. Fresh loop receipt `.agent/loop-runs/system/2026-06-29T09-18-34-592Z-loop-run.json` reports 7 ok, 0 attention, and 0 skipped. Fresh next recommendations are `argil-vs-heygen` for decision content and Cline `best_for` freshness.
+- Next: Commit and push this fifth loop, then continue the all-night goal with `argil-vs-heygen` unless the next loop receipt changes the ranking.
+
 ### 2026-06-29: Coverage Quality Wrapper Hardening
 
 - Status: Verified locally, pending commit and push.

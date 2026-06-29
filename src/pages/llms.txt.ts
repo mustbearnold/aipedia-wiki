@@ -3,6 +3,8 @@
 // Copilot) at the canonical index + category hubs + editorial policy.
 //
 // See also /llms-full.txt for the verbose variant with every page listed.
+// Refresh metadata: 2026-06-29 Antigravity vs Cursor comparison added; concise
+// LLM surface remains data-driven through comparison, tool, and category data.
 // Refresh metadata: 2026-06-29 Amazon Q Developer vs GitHub Copilot comparison
 // added; concise LLM surface remains data-driven through the comparison,
 // tool, and category collections.

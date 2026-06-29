@@ -567,7 +567,7 @@
       "type": "newsroom",
       "trust_tier": "secondary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "aipedia-openai-state-ag-probe",
@@ -927,7 +927,7 @@
       "type": "release_notes",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-27"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "antigravity-docs",
@@ -936,7 +936,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-27"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "antigravity-official",
@@ -954,7 +954,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-27"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "anythingllm-changelog-1141",
@@ -3932,7 +3932,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "cursor-cli",
@@ -3950,7 +3950,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "cursor-data-use",
@@ -4004,7 +4004,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "cursor-pricing-policy",
@@ -6001,7 +6001,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "google-android-show-2026",
@@ -6019,7 +6019,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-25"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "google-cloud-conversational-analytics",
@@ -6127,7 +6127,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-26"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "google-one-ai-plans",

@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-06-29
-Tracked public pages and crawl surfaces: 601
+Tracked public pages and crawl surfaces: 602
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -32,7 +32,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-25 | /tools/ahrefs/ | Tool | Yes | frontmatter | src/content/tools/ahrefs.md |
 | 2026-06-25 | /tools/aider/ | Tool | Yes | frontmatter | src/content/tools/aider.md |
 | 2026-06-25 | /tools/aiva/ | Tool | Yes | frontmatter | src/content/tools/aiva.md |
-| 2026-06-25 | /tools/antigravity/ | Tool | Yes | frontmatter | src/content/tools/antigravity.md |
 | 2026-06-25 | /tools/anythingllm/ | Tool | Yes | frontmatter | src/content/tools/anythingllm.md |
 | 2026-06-25 | /tools/assemblyai/ | Tool | Yes | frontmatter | src/content/tools/assemblyai.md |
 | 2026-06-25 | /tools/beautiful-ai/ | Tool | Yes | frontmatter | src/content/tools/beautiful-ai.md |
@@ -257,7 +256,6 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-26 | /tools/continue/ | Tool | Yes | frontmatter | src/content/tools/continue.md |
 | 2026-06-26 | /tools/copy-ai/ | Tool | Yes | frontmatter | src/content/tools/copy-ai.md |
 | 2026-06-26 | /tools/crewai/ | Tool | Yes | frontmatter | src/content/tools/crewai.md |
-| 2026-06-26 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
 | 2026-06-26 | /tools/d-id/ | Tool | Yes | frontmatter | src/content/tools/d-id.md |
 | 2026-06-26 | /tools/deepseek/ | Tool | Yes | frontmatter | src/content/tools/deepseek.md |
 | 2026-06-26 | /tools/descript/ | Tool | Yes | frontmatter | src/content/tools/descript.md |
@@ -604,11 +602,14 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /categories/ | Static page | Yes | working tree | src/pages/categories/index.astro |
 | 2026-06-29 | /categories/ai-coding/ | Category | Yes | working tree | src/content/categories/ai-coding.md |
 | 2026-06-29 | /compare/ | Static page | Yes | working tree | src/pages/compare/index.astro |
-| 2026-06-29 | /compare/amazon-q-vs-github-copilot/ | Comparison | Yes | working tree | src/content/comparisons/amazon-q-vs-github-copilot.md |
+| 2026-06-29 | /compare/amazon-q-vs-github-copilot/ | Comparison | Yes | frontmatter | src/content/comparisons/amazon-q-vs-github-copilot.md |
+| 2026-06-29 | /compare/antigravity-vs-cursor/ | Comparison | Yes | working tree | src/content/comparisons/antigravity-vs-cursor.md |
 | 2026-06-29 | /llms-full.txt | Crawl surface | No | working tree | src/pages/llms-full.txt.ts |
 | 2026-06-29 | /llms.txt | Crawl surface | No | working tree | src/pages/llms.txt.ts |
 | 2026-06-29 | /news/ | Static page | Yes | page metadata | src/pages/news/index.astro |
 | 2026-06-29 | /news/rss.xml | Crawl surface | No | git | src/pages/news/rss.xml.ts |
 | 2026-06-29 | /tools/ | Static page | Yes | working tree | src/pages/tools/index.astro |
-| 2026-06-29 | /tools/amazon-q/ | Tool | Yes | working tree | src/content/tools/amazon-q.md |
-| 2026-06-29 | /tools/github-copilot/ | Tool | Yes | working tree | src/content/tools/github-copilot.md |
+| 2026-06-29 | /tools/amazon-q/ | Tool | Yes | frontmatter | src/content/tools/amazon-q.md |
+| 2026-06-29 | /tools/antigravity/ | Tool | Yes | working tree | src/content/tools/antigravity.md |
+| 2026-06-29 | /tools/cursor/ | Tool | Yes | working tree | src/content/tools/cursor.md |
+| 2026-06-29 | /tools/github-copilot/ | Tool | Yes | frontmatter | src/content/tools/github-copilot.md |

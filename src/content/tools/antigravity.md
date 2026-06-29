@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "$0-$200+/month; organization access via Google Cloud consumption"
 status: active
 launched: 2025-11
-last_updated: 2026-06-25
+last_updated: 2026-06-29
 last_verified: 2026-06-25
 update_frequency: monthly
 seo_title: "Antigravity Review: CLI Migration, Pricing & Limits (June 2026)"
@@ -278,3 +278,4 @@ For consumer/free/Pro/Ultra usage, yes. Google says Gemini CLI, Gemini Code Assi
 ## Related
 
 - **Category:** [AI Coding](/categories/ai-coding/)
+- **Compare:** [Antigravity vs Cursor](/compare/antigravity-vs-cursor/)
