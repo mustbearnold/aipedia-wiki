@@ -1,0 +1,717 @@
+{
+  "ok": true,
+  "mode": "loop-run",
+  "project_dir": ".",
+  "registry_path": "src/data/aipedia-loops.json",
+  "schema_version": 1,
+  "default_site_dir": "dist-fast/client",
+  "generated_at": "2026-06-29T09:38:53.760Z",
+  "duration_ms": 4723,
+  "totals": {
+    "loops": 7,
+    "ok": 7,
+    "attention": 0,
+    "skipped": 0,
+    "commands": 16
+  },
+  "loops": [
+    {
+      "id": "decision-content",
+      "title": "Decision Content Flywheel",
+      "status": "ok",
+      "purpose": "Pick and improve one real buyer-decision cluster at a time, usually a same-workflow comparison plus its tool pages and parent hubs.",
+      "duration_ms": 214,
+      "commands": [
+        {
+          "label": "next decision cluster",
+          "status": "ok",
+          "command": "node scripts/decision-loop.mjs --json",
+          "duration_ms": 108,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "decision-content-flywheel",
+            "count": 1,
+            "first_cluster": "blackbox-ai-vs-replit-agent"
+          },
+          "stdout_tail": "        \"Parent hubs and top-layer surfaces do not contradict the refreshed child pages.\",\n        \"The page refresh ledger reflects the real editorial scope.\",\n        \"The next cycle can resume from .agent/CURRENT_STATUS.md and .agent/PLANS.md.\"\n      ]\n    }\n  ],\n  \"next_action\": \"Begin with blackbox-ai-vs-replit-agent: verify current facts, write the decision page, update parent surfaces, check, record.\"\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "top coverage candidates",
+          "status": "ok",
+          "command": "node scripts/coverage-next.mjs --json --count 10",
+          "duration_ms": 106,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "count": 10
+          },
+          "stdout_tail": "      \"target_path\": \"src/content/comparisons/cursor-vs-kiro.md\",\n      \"requires_canonical_fact_table\": true,\n      \"canonical_fact_tools\": [\n        \"cursor\"\n      ]\n    }\n  ]\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Did the chosen pair share a real buyer job and workflow?",
+        "Did parent hubs and ledger rows move with the child page?",
+        "Did route QA cover mobile, tablet, and desktop?",
+        "Was the run recorded in .agent/loop-runs?"
+      ],
+      "record_targets": [
+        ".agent/loop-runs/",
+        ".agent/CURRENT_STATUS.md",
+        ".agent/PLANS.md",
+        ".agent/WORK_LOG.md"
+      ]
+    },
+    {
+      "id": "freshness",
+      "title": "Freshness Loop",
+      "status": "ok",
+      "purpose": "Turn stale verification dates, due review windows, and baseline pages into an oldest-first refresh queue.",
+      "duration_ms": 533,
+      "commands": [
+        {
+          "label": "freshness queue",
+          "status": "ok",
+          "command": "node scripts/audit-freshness-queue.mjs --json",
+          "duration_ms": 221,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report",
+            "totals": {
+              "tools": 297,
+              "tools_dead": 4,
+              "facts": 1730,
+              "sources": 1692,
+              "baseline_generic_pages": 0,
+              "due_now": 0,
+              "due_soon": 602,
+              "high_volatility_missing_next_review": 0,
+              "source_registry_invalid_urls": 0,
+              "source_registry_duplicate_ids": 0,
+              "unknown_source_ids": 0,
+              "stale_verification_candidates": 0
+            },
+            "top_review_queue": [
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "best_for",
+                "due_in_days": 0,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "docs_surface",
+                "due_in_days": 0,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "open_source_or_local",
+                "due_in_days": 0,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "pricing_anchor",
+                "due_in_days": 0,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "provider_routing",
+                "due_in_days": 0,
+                "path": "src/content/tools/cline.md"
+              }
+            ]
+          },
+          "stdout_tail": "  },\n  \"source_registry\": {\n    \"invalid_urls\": [],\n    \"duplicate_ids\": [],\n    \"missing_trust_metadata\": [],\n    \"unknown_source_ids\": []\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "weekly editorial queue",
+          "status": "ok",
+          "command": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+          "duration_ms": 312,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "weekly-queue",
+            "totals": {
+              "tools": 297,
+              "tools_dead": 4,
+              "facts": 1730,
+              "sources": 1692,
+              "baseline_generic_pages": 0,
+              "due_now": 0,
+              "due_soon": 602,
+              "high_volatility_missing_next_review": 0,
+              "source_registry_invalid_urls": 0,
+              "source_registry_duplicate_ids": 0,
+              "unknown_source_ids": 0,
+              "stale_verification_candidates": 0
+            },
+            "top_tools": [
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "beehiiv",
+                "title": "Beehiiv",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/beehiiv.md"
+              },
+              {
+                "slug": "blackbox-ai",
+                "title": "BLACKBOX AI",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/blackbox-ai.md"
+              },
+              {
+                "slug": "browserbase",
+                "title": "Browserbase",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/browserbase.md"
+              },
+              {
+                "slug": "canva",
+                "title": "Canva",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/canva.md"
+              }
+            ]
+          },
+          "stdout_tail": "          \"next_review_at\": \"2026-06-29\",\n          \"due_in_days\": 0,\n          \"source_id\": \"castmagic-overview\"\n        }\n      ]\n    }\n  ]\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Is the top queue item actually commercially or editorially important?",
+        "Can the facts be verified from current primary sources?",
+        "Did the ledger date represent the true refresh scope?"
+      ],
+      "record_targets": [
+        "PAGE_REFRESH_LEDGER.md",
+        ".agent/WORK_LOG.md for major batches"
+      ]
+    },
+    {
+      "id": "trust-provenance",
+      "title": "Trust And Provenance Loop",
+      "status": "ok",
+      "purpose": "Find unsupported claims, weak source metadata, pricing provenance gaps, stale facts, and source-registry drift.",
+      "duration_ms": 379,
+      "commands": [
+        {
+          "label": "provenance and pricing",
+          "status": "ok",
+          "command": "node scripts/audit-provenance-pricing.mjs --json",
+          "duration_ms": 148,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report-only",
+            "totals": {
+              "tools_scanned": 301,
+              "fact_records": 1749,
+              "price_history_records": 1379
+            }
+          },
+          "stdout_tail": "    \"high_volatility_missing_next_review\": []\n  },\n  \"pricing\": {\n    \"price_history_missing_source\": [],\n    \"price_history_missing_verified_at\": [],\n    \"price_history_unknown_source_ids\": []\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "source registry health",
+          "status": "ok",
+          "command": "node scripts/audit-source-health.mjs --json",
+          "duration_ms": 110,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report",
+            "totals": {
+              "registry_sources": 1692,
+              "sources_selected": 50,
+              "sources_checked_live": 0,
+              "http_ok": 0,
+              "http_unreachable": 0,
+              "content_changed": 0,
+              "content_unchanged": 0,
+              "missing_snapshots": 0,
+              "registry_issues": 0,
+              "duplicate_source_ids": 0
+            }
+          },
+          "stdout_tail": "        \"url\": \"https://docs.coderabbit.ai/management/plans\",\n        \"type\": \"pricing\",\n        \"volatility\": \"high\",\n        \"trust_tier\": \"primary\"\n      }\n    ]\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "stale facts guard",
+          "status": "ok",
+          "command": "node scripts/guard-stale-facts.mjs --json",
+          "duration_ms": 121,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "guard",
+            "totals": {
+              "required_tools": 10,
+              "comparisons_scanned": 51,
+              "failures": 0,
+              "warnings": 0
+            },
+            "failures_count": 0,
+            "sample_failures": []
+          },
+          "stdout_tail": "      \"coding_agent\",\n      \"best_paid_tier\",\n      \"best_for\"\n    ]\n  },\n  \"failures\": [],\n  \"warnings\": []\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Is each volatile claim tied to a source and date?",
+        "Are high-volatility facts scheduled for review?",
+        "Did any source URL or trust tier drift?"
+      ],
+      "record_targets": [
+        "src/data/source-registry.json",
+        ".agent/WORK_LOG.md for major provenance batches"
+      ]
+    },
+    {
+      "id": "revenue-conversion",
+      "title": "Revenue And Conversion Loop",
+      "status": "ok",
+      "purpose": "Verify commercial CTAs, affiliate disclosure, tracking attributes, CTA labels, and buyer-path clarity.",
+      "duration_ms": 1896,
+      "commands": [
+        {
+          "label": "commercial CTA audit",
+          "status": "ok",
+          "command": "node scripts/audit-commercial-cta.mjs --json --site-dir dist-fast/client",
+          "duration_ms": 1896,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": {
+            "status": "fresh",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-29T09:38:19.441Z"
+            },
+            "newest_input": {
+              "path": "src/data/source-registry.json",
+              "mtime": "2026-06-29T09:36:33.490Z"
+            },
+            "stale_by_ms": 0
+          },
+          "parsed_summary": {},
+          "stdout_tail": "    {\n      \"route\": \"/tools/wordtune/\",\n      \"anchors\": 2,\n      \"page_type_anchors\": 2,\n      \"page_type\": \"any\",\n      \"discovered\": true,\n      \"placements\": [\n        \"tool_h",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Is every commercial CTA honest and useful?",
+        "Is the disclosure close to the buying decision?",
+        "Are placement, tool slug, page type, and event names tracked?"
+      ],
+      "record_targets": [
+        "final report for changed commercial surfaces",
+        ".agent/WORK_LOG.md for major conversion batches"
+      ]
+    },
+    {
+      "id": "quality-pruning",
+      "title": "Quality Pruning Loop",
+      "status": "ok",
+      "purpose": "Find thin content, duplicate pages, false-vs candidates, stale internal links, and pages that should be deleted, merged, or rebuilt.",
+      "duration_ms": 461,
+      "commands": [
+        {
+          "label": "site KPI audit",
+          "status": "ok",
+          "command": "node scripts/audit-site-kpis.mjs --json",
+          "duration_ms": 229,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report"
+          },
+          "stdout_tail": "    \"public_pagefind_tracked\": false,\n    \"report_artifacts_should_stay_untracked\": [\n      \".hermes/\",\n      \"reports/\",\n      \"agent-runs/\"\n    ]\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "comparison quality audit",
+          "status": "ok",
+          "command": "node scripts/audit-coverage-quality.mjs --all --json",
+          "duration_ms": 111,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "all",
+            "failures_count": 0,
+            "sample_failures": []
+          },
+          "stdout_tail": "    \"src/content/comparisons/quillbot-vs-wordtune.md\",\n    \"src/content/comparisons/suno-vs-udio.md\",\n    \"src/content/comparisons/veo-vs-kling.md\",\n    \"src/content/comparisons/veo-vs-seedance.md\"\n  ],\n  \"failures\": [],\n  \"argument_issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "internal link audit",
+          "status": "ok",
+          "command": "node scripts/audit-internal-links.mjs --json",
+          "duration_ms": 120,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "audit",
+            "totals": {
+              "files_scanned": 1045,
+              "broken_tool_slugs": 0,
+              "broken_news_slugs": 0,
+              "broken_unique_slugs": 0,
+              "broken_unique_routes": 0,
+              "issues": 0
+            },
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "    \"reports\": [],\n    \"workflows\": [],\n    \"dead\": [],\n    \"glossary\": [],\n    \"answers\": []\n  },\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Should this page exist as a standalone route?",
+        "Does it satisfy a real buyer intent?",
+        "Would deletion improve the site more than a thin refresh?"
+      ],
+      "record_targets": [
+        "PAGE_REFRESH_LEDGER.md",
+        ".agent/WORK_LOG.md for deletion or merge batches"
+      ]
+    },
+    {
+      "id": "performance-ux",
+      "title": "Performance And UX Loop",
+      "status": "ok",
+      "purpose": "Check build output budgets, route indexability, commercial rendered output, overflow, and mobile/desktop layout precision risk.",
+      "duration_ms": 744,
+      "commands": [
+        {
+          "label": "dist budget",
+          "status": "ok",
+          "command": "node scripts/check-dist-budget.mjs --json --site-dir dist-fast/client --mode fast",
+          "duration_ms": 178,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": {
+            "status": "fresh",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-29T09:38:19.441Z"
+            },
+            "newest_input": {
+              "path": "src/data/source-registry.json",
+              "mtime": "2026-06-29T09:36:33.490Z"
+            },
+            "stale_by_ms": 0
+          },
+          "parsed_summary": {
+            "ok": true,
+            "mode": "budget",
+            "totals": {
+              "budgets_checked": 3,
+              "issues": 0
+            },
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "      \"raw_mb\": 0.8897,\n      \"raw_max_mb\": 1.1,\n      \"gzip_mb\": 0.1676,\n      \"gzip_max_mb\": 0.18\n    }\n  ],\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "indexability audit",
+          "status": "ok",
+          "command": "node scripts/audit-indexability.mjs --json --site-dir dist-fast/client",
+          "duration_ms": 566,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": {
+            "status": "fresh",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-29T09:38:19.441Z"
+            },
+            "newest_input": {
+              "path": "src/data/source-registry.json",
+              "mtime": "2026-06-29T09:36:33.490Z"
+            },
+            "stale_by_ms": 0
+          },
+          "parsed_summary": {
+            "ok": true,
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "    \"/use-cases/best-ai-for-voice-agents/\"\n  ],\n  \"noindex_header_patterns\": [\n    \"/admin/(.*)\",\n    \"/api/(.*)\"\n  ],\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Did the affected routes pass mobile, tablet, and desktop QA?",
+        "Do card grids, gutters, text density, CTA placement, and repeated-card proportions look mathematically disciplined?",
+        "Did build output budgets or search payloads grow?",
+        "Is a full build justified or is exact route QA enough?"
+      ],
+      "record_targets": [
+        "loop receipt for rendered cycles",
+        ".agent/WORK_LOG.md for performance changes"
+      ]
+    },
+    {
+      "id": "news-market",
+      "title": "News And Market Change Loop",
+      "status": "ok",
+      "purpose": "Check news rendering, active-month date coverage, AI news and AI tools news catch-up, recent news cross-links, and market-change queues so product shifts reach affected tool and category pages.",
+      "duration_ms": 496,
+      "commands": [
+        {
+          "label": "news rendering guard",
+          "status": "ok",
+          "command": "node scripts/audit-news-rendering.mjs --json",
+          "duration_ms": 105,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "guard",
+            "totals": {
+              "files_checked": 431,
+              "issues": 0,
+              "min_stories_per_day": 2
+            },
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "  \"argument_issues\": [],\n  \"totals\": {\n    \"files_checked\": 431,\n    \"issues\": 0,\n    \"min_stories_per_day\": 2\n  },\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "news cross-reference audit",
+          "status": "ok",
+          "command": "node scripts/audit-news-xrefs.mjs --json",
+          "duration_ms": 92,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "audit",
+            "totals": {
+              "checked": 3,
+              "gaps": 0,
+              "issues": 0
+            },
+            "issues_count": 0,
+            "sample_issues": [],
+            "gaps_count": 0,
+            "sample_gaps": []
+          },
+          "stdout_tail": "  \"totals\": {\n    \"checked\": 3,\n    \"gaps\": 0,\n    \"issues\": 0\n  },\n  \"gaps\": [],\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "weekly editorial queue",
+          "status": "ok",
+          "command": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+          "duration_ms": 299,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "weekly-queue",
+            "totals": {
+              "tools": 297,
+              "tools_dead": 4,
+              "facts": 1730,
+              "sources": 1692,
+              "baseline_generic_pages": 0,
+              "due_now": 0,
+              "due_soon": 602,
+              "high_volatility_missing_next_review": 0,
+              "source_registry_invalid_urls": 0,
+              "source_registry_duplicate_ids": 0,
+              "unknown_source_ids": 0,
+              "stale_verification_candidates": 0
+            },
+            "top_tools": [
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "beehiiv",
+                "title": "Beehiiv",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/beehiiv.md"
+              },
+              {
+                "slug": "blackbox-ai",
+                "title": "BLACKBOX AI",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/blackbox-ai.md"
+              },
+              {
+                "slug": "browserbase",
+                "title": "Browserbase",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/browserbase.md"
+              },
+              {
+                "slug": "canva",
+                "title": "Canva",
+                "key": "",
+                "due_in_days": 0,
+                "path": "src/content/tools/canva.md"
+              }
+            ]
+          },
+          "stdout_tail": "          \"next_review_at\": \"2026-06-29\",\n          \"due_in_days\": 0,\n          \"source_id\": \"castmagic-overview\"\n        }\n      ]\n    }\n  ]\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Does every active catch-up date expose broad AI news and AI tools or tool-control news when the market produced both?",
+        "Does the market change affect a buying decision?",
+        "Which existing pages need updates beyond the news article?",
+        "Are /news/, homepage latest-news, OG assets, affected-tool links, and source lists complete?",
+        "Did /news/ pass mobile, tablet, desktop, and layout precision QA?"
+      ],
+      "record_targets": [
+        "src/content/news/",
+        "PAGE_REFRESH_LEDGER.md for hubs and crawl surfaces",
+        ".agent/WORK_LOG.md for major news catch-ups"
+      ]
+    }
+  ],
+  "review": {
+    "summary": "7 loop(s) ok; 0 attention; 0 skipped.",
+    "attention_loops": [],
+    "skipped_loops": [],
+    "recommendations": [
+      {
+        "loop_id": "decision-content",
+        "title": "Decision Content Flywheel",
+        "score": 74,
+        "severity": "next",
+        "confidence": "medium",
+        "effort": "large",
+        "action": "Begin the next buyer-decision cycle: blackbox-ai-vs-replit-agent.",
+        "reason": "top decision-content candidate"
+      },
+      {
+        "loop_id": "freshness",
+        "title": "Freshness Loop",
+        "score": 66,
+        "severity": "queue",
+        "confidence": "medium",
+        "effort": "medium",
+        "action": "Refresh due fact best_for on cline.",
+        "reason": "freshness queue due in 0 day(s)"
+      }
+    ],
+    "next_actions": [
+      "decision-content: Begin the next buyer-decision cycle: blackbox-ai-vs-replit-agent.",
+      "freshness: Refresh due fact best_for on cline."
+    ]
+  },
+  "ledger": {
+    "written": true,
+    "file": ".agent/loop-runs/system/2026-06-29T09-38-53-760Z-loop-run.json",
+    "latest_file": ".agent/loop-runs/system/latest.json",
+    "previous_file": ".agent/loop-runs/system/2026-06-29T09-28-49-543Z-loop-run.json",
+    "trend": {
+      "previous_run": "2026-06-29T09:28:49.543Z",
+      "status_changes": [],
+      "duration_delta_ms": -42,
+      "totals_delta": {
+        "ok": 0,
+        "attention": 0,
+        "skipped": 0
+      }
+    }
+  }
+}

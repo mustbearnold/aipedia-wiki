@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-29: Argil vs Synthesia Decision Loop
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `master`.
+- Changed: Continued the all-night agent-system loop with the next decision-content recommendation. Added `/compare/argil-vs-synthesia/`, refreshed Argil, Synthesia, AI Video, compare/tools/categories top-layer notes, LLM surfaces, source-registry dates, and `PAGE_REFRESH_LEDGER.md`. The loop again exposed the ledger generator's two-pass wobble: the first check after generation reported drift, the second generation and check passed.
+- Verification: `npm --silent run agent:evidence -- --route /compare/argil-vs-synthesia/ --current-date 2026-06-29 --json`; `npm --silent run agent:score -- --route /compare/argil-vs-synthesia/ --current-date 2026-06-29 --json`; `npm --silent run agent:impact -- --route /compare/argil-vs-synthesia/ --json`; `npm run check:frontmatter -- --changed`; `AIPEDIA_CURRENT_DATE=2026-06-29 npm run audit:coverage-quality:changed -- --changed-file src/content/comparisons/argil-vs-synthesia.md --json`; selected live `npm run audit:sources`; `npm --silent run runner:agent-plan -- --route /compare/argil-vs-synthesia/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/argil-vs-synthesia-agent-plan.json`; `npm run ledger:pages`; `npm run ledger:pages:check`; `npm run audit:provenance:changed -- --json`; `npm run check:links`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm run guard:check`; `npm run typecheck`; `npm run build:fast`; `npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route /compare/argil-vs-synthesia/ --route /categories/ai-video/ --route /tools/argil/ --route /tools/synthesia/ --route /compare/ --route /tools/ --route /categories/ --timing-file local/tmp/agent-system-loop/argil-vs-synthesia-route-qa-timing.json`; `npm --silent run agent:memory:record -- --route /compare/argil-vs-synthesia/ --route /tools/argil/ --route /tools/synthesia/ --current-date 2026-06-29 --out local/tmp/agent-system-loop/argil-vs-synthesia-memory.jsonl --json`; `npm --silent run loop:all:record -- --json`.
+- Loop result: The new comparison scores 0.90 with ten official inline sources and monitor action. Fresh loop receipt `.agent/loop-runs/system/2026-06-29T09-38-53-760Z-loop-run.json` reports 7 ok, 0 attention, and 0 skipped. Fresh next recommendations are `blackbox-ai-vs-replit-agent` for decision content and Cline `best_for` freshness.
+- Next: Commit and push this seventh loop, then continue the all-night goal with `blackbox-ai-vs-replit-agent` unless the next loop receipt changes the ranking.
+
 ### 2026-06-29: Argil vs HeyGen Decision Loop
 
 - Status: Verified locally, pending commit and push.

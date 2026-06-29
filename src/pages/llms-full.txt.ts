@@ -3,6 +3,8 @@
 // comparisons, guides, answers, news, trends, workflows, reports, companies,
 // and dead-tool records. Intended for crawlers willing to ingest a larger
 // manifest without parsing the sitemap.
+// Refresh metadata: 2026-06-29 Argil vs Synthesia comparison added; verbose LLM
+// surface remains data-driven through comparison, tool, and category data.
 // Refresh metadata: 2026-06-29 Argil vs HeyGen comparison added; verbose LLM
 // surface remains data-driven through comparison, tool, and category data.
 // Refresh metadata: 2026-06-29 Antigravity vs Cursor comparison added; verbose

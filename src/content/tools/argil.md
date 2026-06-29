@@ -284,5 +284,5 @@ Start with Classic unless Seedance 2.0 videos, unlimited avatar styles, style ed
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
-- **Compare:** [Argil vs HeyGen](/compare/argil-vs-heygen/)
-- **Compare next:** [Synthesia](/tools/synthesia/), [Captions.ai](/tools/captions/), [D-ID](/tools/d-id/)
+- **Compare:** [Argil vs HeyGen](/compare/argil-vs-heygen/), [Argil vs Synthesia](/compare/argil-vs-synthesia/)
+- **Compare next:** [Captions.ai](/tools/captions/), [D-ID](/tools/d-id/)

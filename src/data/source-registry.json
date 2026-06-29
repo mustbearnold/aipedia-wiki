@@ -13586,7 +13586,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "synthesia-avatars",
@@ -13595,7 +13595,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "synthesia-enterprise",
@@ -13604,7 +13604,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-05"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "synthesia-express-2",
@@ -13613,7 +13613,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "synthesia-help",
@@ -13631,7 +13631,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-06"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "synthesia-pricing",
@@ -13640,7 +13640,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-28"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "synthesia-product",
@@ -13658,7 +13658,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
     },
     {
       "id": "tabnine-docs",

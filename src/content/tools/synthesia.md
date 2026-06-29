@@ -10,7 +10,7 @@ pricing_model: freemium
 price_range: "Basic free, Starter $29/mo monthly or $18/mo annual, Creator $89/mo monthly or $64/mo annual, Enterprise custom"
 status: active
 launched: 2017-01
-last_updated: 2026-06-26
+last_updated: 2026-06-29
 last_verified: 2026-06-26
 update_frequency: weekly
 affiliate:
@@ -360,5 +360,6 @@ No. Synthesia is a presenter-video and training platform. It may include short g
 ## Related
 
 - **Category:** [AI Video](/categories/ai-video/)
-- **Compare:** [HeyGen](/tools/heygen/) · [Tavus](/tools/tavus/) · [D-ID](/tools/d-id/) · [Runway](/tools/runway/)
+- **Compare:** [HeyGen vs Synthesia](/compare/heygen-vs-synthesia/), [Argil vs Synthesia](/compare/argil-vs-synthesia/)
+- **Compare next:** [Tavus](/tools/tavus/), [D-ID](/tools/d-id/), [Runway](/tools/runway/)
 - **Guide:** [Best AI Video Generator](/guides/best-ai-video-generator/)
