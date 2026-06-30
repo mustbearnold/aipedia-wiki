@@ -102,9 +102,12 @@
         "scripts/agent-closeout-receipt-check.mjs workflow policy validation",
         "tests/scripts/agent-closeout-receipt-check.test.mjs workflow policy tests",
         ".agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json",
-        "bounded runner:tool-refresh dry-run policy proof"
+        "bounded runner:tool-refresh dry-run policy proof",
+        "tools/aipedia-runner/src/main.rs affiliate handoff JSON receipt",
+        "scripts/agent-closeout-receipt-check.mjs affiliate handoff policy validation",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs affiliate handoff policy tests"
       ],
-      "remaining": "Prove page-refresh runner policy on a bounded receipt and extend the policy to affiliate handoff closeouts."
+      "remaining": "Prove page-refresh runner policy on a bounded receipt and prove affiliate handoff policy on a bounded runner-produced handoff JSON."
     },
     {
       "id": "non-stale-scoring",
@@ -159,18 +162,24 @@
     }
   ],
   "current_slice": {
-    "name": "bounded runner workflow-policy proof",
+    "name": "affiliate handoff policy receipts",
     "system_artifacts": [
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json",
+      "tools/aipedia-runner/src/main.rs",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "docs/agentic-tooling-meta-compliance.md",
-      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      "scripts/README.md",
+      "workflows/affiliate-conversion-pages/README.md"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
     "Prove page-refresh runner policy on a bounded receipt.",
-    "Extend closeout policy validation to affiliate handoff receipts.",
+    "Prove affiliate handoff policy on a bounded runner-produced handoff JSON.",
     "Expand the reviewed scoring gold set during real workload pilots.",
     "Pilot one bounded content workload only after page-refresh or affiliate closeout policy coverage is extended."
   ]

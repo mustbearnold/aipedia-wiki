@@ -1615,3 +1615,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: one-tool `runner:tool-refresh:plan`, dry-run `runner:tool-refresh:closeout`, `agent:closeout:check --require-workflow-policy` against the runner JSON receipt, scoped `check:smart`, em-dash guard, `git diff --check`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-15.md`.
 - Next: Commit and push, then prove page-refresh runner policy on a bounded receipt or extend the policy to affiliate handoff receipts.
+
+### 2026-06-30: Agentic Tooling Meta Slice 16, Affiliate Handoff Policy Receipts
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: `runner:affiliate-conversion:handoff` now writes `aipedia.affiliate-handoff-receipt.v1` JSON beside the markdown handoff. `agent:closeout:check --require-workflow-policy` now validates affiliate handoff receipts for selected clusters, evidence counts, strict report status, route QA scope, CommercialCTA and live-source gates, and shared-file no-edit boundaries.
+- System lesson: affiliate implementation packets need machine-readable readiness checks before content workers touch pages. Markdown handoffs alone are too easy for future agents to over-trust.
+- Verification: focused Node syntax and policy tests, focused Rust handoff JSON test, runner help surface, scoped `check:smart`, `git diff --check`, `test:scripts`, `audit:commands`, `check:quick`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-16.md`.
+- Next: Commit and push, then prove page-refresh runner policy on a bounded receipt and prove affiliate handoff policy on a bounded runner-produced handoff JSON.

@@ -40,6 +40,7 @@ The planner writes local artifacts under `local/tmp/aipedia-runner/affiliate-con
 - `reports/*.json`
 - `affiliate-report-summary.md`
 - `affiliate-implementation-handoff.md`
+- `affiliate-implementation-handoff.json`
 
 The MVP is planning, report scaffolding, strict report validation, and no-content implementation handoff only. It must not edit public content pages, source registry rows, page ledger rows, tool markdown, category hubs, news content, or generated site output.
 
@@ -138,7 +139,15 @@ npm run runner:affiliate-conversion:handoff
 
 The handoff command refuses to create an implementation-ready artifact when strict report validation fails or when every cluster is still pending, blocked, or deferred. Pending scaffold reports can summarize, but they are not selected for implementation.
 
-The handoff records the planner path, report summary path, selected complete clusters, claim receipts, duplicate-intent decisions, commercial CTA notes, parent and top-layer surface checklist, route QA routes and risk notes, exact verification gates, no-edit boundaries, integrator-owned shared files, and unresolved blocked or deferred items. It is still no-content and does not authorize public page edits by itself.
+The handoff records the planner path, report summary path, selected complete clusters, claim receipts, duplicate-intent decisions, commercial CTA notes, parent and top-layer surface checklist, route QA routes and risk notes, exact verification gates, no-edit boundaries, integrator-owned shared files, and unresolved blocked or deferred items. It writes both reviewer markdown and `aipedia.affiliate-handoff-receipt.v1` JSON. It is still no-content and does not authorize public page edits by itself.
+
+Validate the JSON sidecar before treating a handoff as implementation-ready:
+
+```bash
+npm --silent run agent:closeout:check -- --receipt local/tmp/aipedia-runner/affiliate-conversion/affiliate-implementation-handoff.json --require-workflow-policy --json
+```
+
+The policy requires at least one selected implementation cluster, zero strict validation issues, no missing or invalid worker reports, passed worker checks, claim receipts, source URLs, commercial CTA notes, duplicate-intent notes, parent-surface notes, route QA routes, parent surfaces, CommercialCTA and live-source verification gates, and explicit no-edit boundaries for `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, shared surfaces, and integrator-owned final verification.
 
 ## Page Count Strategy
 

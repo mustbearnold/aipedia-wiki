@@ -262,6 +262,11 @@ struct AffiliateHandoffArgs {
         default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-implementation-handoff.md"
     )]
     out: PathBuf,
+    #[arg(
+        long,
+        default_value = "local/tmp/aipedia-runner/affiliate-conversion/affiliate-implementation-handoff.json"
+    )]
+    json_out: PathBuf,
 }
 
 #[derive(Parser, Debug)]
@@ -2316,6 +2321,7 @@ fn write_affiliate_handoff_command(project_dir: &Path, args: &AffiliateHandoffAr
     let report_dir = resolve_project_path(project_dir, &args.report_dir);
     let report_summary_path = resolve_project_path(project_dir, &args.report_summary);
     let out_path = resolve_project_path(project_dir, &args.out);
+    let json_out_path = resolve_project_path(project_dir, &args.json_out);
     let plan: AffiliatePlan = read_json(&plan_path)?;
     let summary = read_affiliate_reports(project_dir, &plan, &report_dir, true)?;
 
@@ -2331,10 +2337,15 @@ fn write_affiliate_handoff_command(project_dir: &Path, args: &AffiliateHandoffAr
         &plan,
         &summary,
         &out_path,
+        Some(&json_out_path),
     )?;
     println!(
         "Affiliate implementation handoff: {}",
         display_path(project_dir, &out_path)
+    );
+    println!(
+        "Affiliate implementation handoff JSON: {}",
+        display_path(project_dir, &json_out_path)
     );
     Ok(())
 }
@@ -2377,6 +2388,7 @@ fn write_affiliate_handoff(
     plan: &AffiliatePlan,
     summary: &AffiliateReportSummary,
     out_path: &Path,
+    json_out_path: Option<&Path>,
 ) -> Result<()> {
     ensure_parent(out_path)?;
     let ready_clusters = implementation_ready_affiliate_clusters(plan, summary);
@@ -2432,6 +2444,18 @@ fn write_affiliate_handoff(
             }
         }
     }
+    let route_qa_routes_vec: Vec<String> = route_qa_routes.iter().cloned().collect();
+    let parent_surfaces_vec: Vec<String> = parent_surfaces.iter().cloned().collect();
+    let verification_gates = affiliate_handoff_verification_gates(plan);
+    let no_edit_boundaries = vec![
+        "Workers may touch only explicitly assigned files.".to_string(),
+        "Workers must not edit `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, parent hubs, top-layer pages, `.agent/**`, `workflows/**`, runner code, audit scripts, or generated output.".to_string(),
+        "The integrator owns shared files, route QA scope, final verification, and final receipts.".to_string(),
+        "This handoff is no-content and does not authorize public page edits by itself.".to_string(),
+    ];
+    let deferred_cluster_count = deferred_clusters.len();
+    let pending_cluster_count = pending_clusters.len();
+    let non_passed_check_count = failed_checks.len();
 
     let mut content = String::new();
     content.push_str("# Affiliate Conversion Implementation Handoff\n\n");
@@ -2530,7 +2554,7 @@ fn write_affiliate_handoff(
     }
 
     content.push_str("## Parent And Top-Layer Surface Checklist\n\n");
-    for route in parent_surfaces {
+    for route in &parent_surfaces_vec {
         content.push_str(&format!(
             "- [ ] Inspect and update if affected: `{}`\n",
             route
@@ -2544,10 +2568,10 @@ fn write_affiliate_handoff(
     }
 
     content.push_str("\n## Route QA Routes And Risks\n\n");
-    if route_qa_routes.is_empty() {
+    if route_qa_routes_vec.is_empty() {
         content.push_str("- No route QA routes were derived. The integrator must add changed routes before publishing.\n");
     } else {
-        for route in route_qa_routes {
+        for route in &route_qa_routes_vec {
             content.push_str(&format!("- `--route {}`\n", route));
         }
     }
@@ -2561,15 +2585,14 @@ fn write_affiliate_handoff(
     }
 
     content.push_str("\n## Exact Verification Gates Before Publishing Content\n\n");
-    for command in affiliate_handoff_verification_gates(plan) {
+    for command in &verification_gates {
         content.push_str(&format!("- `{}`\n", command));
     }
 
     content.push_str("\n## No-Edit And Shared-File Boundaries\n\n");
-    content.push_str("- Worker-owned content patches may touch only files explicitly assigned by the future integrator.\n");
-    content.push_str("- Workers must not edit `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, category hubs, top-layer pages, `.agent/**`, `workflows/**`, runner code, audit scripts, or generated output.\n");
-    content.push_str("- The integrator owns shared files, source registry rows, parent hubs, top-layer surfaces, route QA scope, final verification, and final receipts.\n");
-    content.push_str("- This handoff is no-content. It does not itself publish, update, refresh, or verify public pages.\n");
+    for boundary in &no_edit_boundaries {
+        content.push_str(&format!("- {}\n", boundary));
+    }
 
     content.push_str("\n## Unresolved Risks And Defer Or Block Items\n\n");
     if deferred_clusters.is_empty() && pending_clusters.is_empty() && failed_checks.is_empty() {
@@ -2600,6 +2623,128 @@ fn write_affiliate_handoff(
 
     fs::write(out_path, content)
         .with_context(|| format!("could not write {}", out_path.display()))?;
+    if let Some(json_out_path) = json_out_path {
+        write_affiliate_handoff_json(
+            project_dir,
+            plan_path,
+            report_summary_path,
+            out_path,
+            json_out_path,
+            plan,
+            &ready_clusters,
+            summary,
+            &route_qa_routes_vec,
+            &parent_surfaces_vec,
+            &verification_gates,
+            &no_edit_boundaries,
+            deferred_cluster_count,
+            pending_cluster_count,
+            non_passed_check_count,
+        )?;
+    }
+    Ok(())
+}
+
+fn write_affiliate_handoff_json(
+    project_dir: &Path,
+    plan_path: &Path,
+    report_summary_path: &Path,
+    markdown_handoff_path: &Path,
+    json_out_path: &Path,
+    plan: &AffiliatePlan,
+    ready_clusters: &[(
+        &AffiliateCluster,
+        &AffiliateReportCluster,
+        &AffiliateWorkerReport,
+    )],
+    summary: &AffiliateReportSummary,
+    route_qa_routes: &[String],
+    parent_surfaces: &[String],
+    verification_gates: &[String],
+    no_edit_boundaries: &[String],
+    deferred_cluster_count: usize,
+    pending_cluster_count: usize,
+    non_passed_check_count: usize,
+) -> Result<()> {
+    ensure_parent(json_out_path)?;
+    let selected_clusters: Vec<serde_json::Value> = ready_clusters
+        .iter()
+        .map(|(plan_cluster, report_cluster, report)| {
+            serde_json::json!({
+                "id": &report_cluster.id,
+                "primary_tool": &plan_cluster.primary_tool,
+                "worker_id": &report.worker_id,
+                "buyer_job": &plan_cluster.buyer_job,
+                "source_file": &plan_cluster.source_file,
+                "claim_receipt_count": report_cluster.claim_receipts.len(),
+                "source_url_count": report_cluster.source_urls.len(),
+                "commercial_cta_note_count": report_cluster.commercial_cta_notes.len(),
+                "parent_surface_note_count": report_cluster.parent_surface_notes.len(),
+                "duplicate_intent_note_count": report_cluster.duplicate_intent_notes.len(),
+                "route_qa_risk_count": report_cluster.route_qa_risks.len(),
+                "check_count": report_cluster.checks.len(),
+            })
+        })
+        .collect();
+    let claim_receipt_count: usize = ready_clusters
+        .iter()
+        .map(|(_, cluster, _)| cluster.claim_receipts.len())
+        .sum();
+    let source_url_count: usize = ready_clusters
+        .iter()
+        .map(|(_, cluster, _)| cluster.source_urls.len())
+        .sum();
+    let commercial_cta_note_count: usize = ready_clusters
+        .iter()
+        .map(|(_, cluster, _)| cluster.commercial_cta_notes.len())
+        .sum();
+    let duplicate_intent_note_count: usize = ready_clusters
+        .iter()
+        .map(|(_, cluster, _)| cluster.duplicate_intent_notes.len())
+        .sum();
+    let parent_surface_note_count: usize = ready_clusters
+        .iter()
+        .map(|(_, cluster, _)| cluster.parent_surface_notes.len())
+        .sum();
+    let receipt = serde_json::json!({
+        "schema_version": "aipedia.affiliate-handoff-receipt.v1",
+        "workflow": "affiliate-conversion-handoff",
+        "status": "ready",
+        "generated_at": Utc::now().to_rfc3339(),
+        "current_date": &plan.current_date,
+        "plan": display_path(project_dir, plan_path),
+        "report_summary": display_path(project_dir, report_summary_path),
+        "markdown_handoff": display_path(project_dir, markdown_handoff_path),
+        "selected_cluster_count": ready_clusters.len(),
+        "selected_clusters": selected_clusters,
+        "expected_worker_reports": summary.expected,
+        "parsed_worker_reports": summary.parsed.len(),
+        "missing_worker_reports": &summary.missing,
+        "invalid_worker_reports": summary.invalid.iter().map(|(path, error)| {
+            serde_json::json!({ "path": path, "error": error })
+        }).collect::<Vec<_>>(),
+        "strict_validation_issue_count": summary.validation_issues.len(),
+        "claim_receipt_count": claim_receipt_count,
+        "source_url_count": source_url_count,
+        "commercial_cta_note_count": commercial_cta_note_count,
+        "duplicate_intent_note_count": duplicate_intent_note_count,
+        "parent_surface_note_count": parent_surface_note_count,
+        "route_qa_routes": route_qa_routes,
+        "parent_surfaces": parent_surfaces,
+        "verification_gates": verification_gates,
+        "no_edit_boundaries": no_edit_boundaries,
+        "blocked_or_deferred_count": deferred_cluster_count,
+        "pending_count": pending_cluster_count,
+        "non_passed_check_count": non_passed_check_count,
+        "residual_risks": [
+            "This is a no-content implementation handoff and does not itself publish or verify rendered pages."
+        ],
+    });
+    fs::write(
+        json_out_path,
+        format!("{}\n", serde_json::to_string_pretty(&receipt)?),
+    )
+    .with_context(|| format!("could not write {}", json_out_path.display()))?;
     Ok(())
 }
 
@@ -4186,6 +4331,7 @@ console.log(JSON.stringify({
         let project_dir = dir.join("project");
         fs::create_dir_all(&project_dir).expect("project dir should exist");
         let out_path = project_dir.join("handoff.md");
+        let json_path = project_dir.join("handoff.json");
         let plan_path = project_dir.join("affiliate-conversion-plan.json");
         let summary_path = project_dir.join("affiliate-report-summary.md");
         let plan = sample_affiliate_plan();
@@ -4205,9 +4351,14 @@ console.log(JSON.stringify({
             &plan,
             &summary,
             &out_path,
+            Some(&json_path),
         )
         .expect("handoff should write");
         let content = fs::read_to_string(&out_path).expect("handoff should be readable");
+        let receipt: serde_json::Value = serde_json::from_str(
+            &fs::read_to_string(&json_path).expect("handoff JSON should be readable"),
+        )
+        .expect("handoff JSON should parse");
 
         assert!(content.contains("Affiliate Conversion Implementation Handoff"));
         assert!(content.contains("Selected implementation clusters: 1"));
@@ -4217,6 +4368,29 @@ console.log(JSON.stringify({
         assert!(content.contains("--route /guides/alpha-tool-pricing/"));
         assert!(content.contains("npm run runner:affiliate-conversion:reports -- --strict"));
         assert!(content.contains("Workers must not edit `PAGE_REFRESH_LEDGER.md`"));
+        assert_eq!(
+            receipt["schema_version"],
+            "aipedia.affiliate-handoff-receipt.v1"
+        );
+        assert_eq!(receipt["workflow"], "affiliate-conversion-handoff");
+        assert_eq!(receipt["selected_cluster_count"], 1);
+        assert_eq!(receipt["claim_receipt_count"], 1);
+        assert!(receipt["verification_gates"]
+            .as_array()
+            .expect("verification gates should be an array")
+            .iter()
+            .any(|gate| gate
+                .as_str()
+                .expect("gate should be a string")
+                .contains("runner:affiliate-conversion:reports -- --strict")));
+        assert!(receipt["no_edit_boundaries"]
+            .as_array()
+            .expect("no-edit boundaries should be an array")
+            .iter()
+            .any(|boundary| boundary
+                .as_str()
+                .expect("boundary should be a string")
+                .contains("PAGE_REFRESH_LEDGER.md")));
 
         fs::remove_dir_all(dir).ok();
     }

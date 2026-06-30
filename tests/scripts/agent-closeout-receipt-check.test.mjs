@@ -284,6 +284,69 @@ function validPageRunnerReceipt(overrides = {}) {
   return { ...pageReceipt, ...overrides };
 }
 
+function validAffiliateHandoffReceipt(overrides = {}) {
+  return {
+    schema_version: 'aipedia.affiliate-handoff-receipt.v1',
+    workflow: 'affiliate-conversion-handoff',
+    status: 'ready',
+    generated_at: '2026-06-30T03:01:47Z',
+    current_date: '2026-06-30',
+    plan: 'local/tmp/affiliate-plan.json',
+    report_summary: 'local/tmp/affiliate-report-summary.md',
+    markdown_handoff: 'local/tmp/affiliate-handoff.md',
+    selected_cluster_count: 1,
+    selected_clusters: [
+      {
+        id: 'affiliate-alpha-tool',
+        primary_tool: 'alpha-tool',
+        worker_id: 'affiliate-worker-1',
+        buyer_job: 'Find the next Alpha Tool buyer-intent page.',
+        source_file: 'src/content/tools/alpha-tool.md',
+        claim_receipt_count: 1,
+        source_url_count: 2,
+        commercial_cta_note_count: 1,
+        parent_surface_note_count: 1,
+        duplicate_intent_note_count: 1,
+        route_qa_risk_count: 1,
+        check_count: 2,
+      },
+    ],
+    expected_worker_reports: 1,
+    parsed_worker_reports: 1,
+    missing_worker_reports: [],
+    invalid_worker_reports: [],
+    strict_validation_issue_count: 0,
+    claim_receipt_count: 1,
+    source_url_count: 2,
+    commercial_cta_note_count: 1,
+    duplicate_intent_note_count: 1,
+    parent_surface_note_count: 1,
+    route_qa_routes: ['/tools/alpha-tool/', '/guides/alpha-tool-pricing/'],
+    parent_surfaces: ['/tools/', '/guides/'],
+    verification_gates: [
+      'npm run runner:affiliate-conversion:reports -- --strict',
+      'npm run affiliate:conversion:inventory -- --json',
+      'npm run ledger:pages && npm run ledger:pages:check',
+      'npm run typecheck',
+      'npm run build:fast',
+      'Inspect CommercialCTA usage and affiliate disclosure on every changed commercial page.',
+      'Run live source checks for every volatile source touched by the content slice.',
+    ],
+    no_edit_boundaries: [
+      'Workers may touch only explicitly assigned files.',
+      'Workers must not edit `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, parent hubs, top-layer pages, `.agent/**`, `workflows/**`, runner code, audit scripts, or generated output.',
+      'The integrator owns shared files, route QA scope, final verification, and final receipts.',
+    ],
+    blocked_or_deferred_count: 0,
+    pending_count: 0,
+    non_passed_check_count: 0,
+    residual_risks: [
+      'This is a no-content implementation handoff and does not itself publish or verify rendered pages.',
+    ],
+    ...overrides,
+  };
+}
+
 test('closeout receipt check validates latest enforced loop receipt by default', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-loop-'));
   const systemDir = join(dir, '.agent', 'loop-runs', 'system');
@@ -408,6 +471,50 @@ test('closeout receipt check validates workflow-specific runner policies', () =>
     assert.equal(report.ok, true);
     assert.equal(report.require_workflow_policy, true);
     assert.equal(report.totals.receipts, 2);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates affiliate handoff workflow policy receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-affiliate-handoff-'));
+  const path = join(dir, 'affiliate-handoff.json');
+
+  try {
+    writeJson(path, validAffiliateHandoffReceipt());
+    const result = runCheck(['--receipt', path, '--require-workflow-policy', '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'affiliate-handoff');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails affiliate handoff receipts that miss workflow policy evidence', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-affiliate-handoff-'));
+  const path = join(dir, 'affiliate-handoff.json');
+  const receipt = validAffiliateHandoffReceipt({
+    selected_cluster_count: 0,
+    selected_clusters: [],
+    claim_receipt_count: 0,
+    verification_gates: ['npm run runner:affiliate-conversion:reports -- --strict'],
+    no_edit_boundaries: [],
+  });
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-workflow-policy', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('affiliate-handoff-policy-empty'));
+    assert.ok(codes.includes('affiliate-handoff-policy-evidence-missing'));
+    assert.ok(codes.includes('affiliate-handoff-policy-gate-missing'));
+    assert.ok(codes.includes('affiliate-handoff-policy-boundary-missing'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

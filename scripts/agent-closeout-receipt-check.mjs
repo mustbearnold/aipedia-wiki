@@ -164,7 +164,8 @@ function validateReceiptFile(path) {
   const type = receiptType(value);
   if (type === 'loop-run') validateLoopReceipt(value, issues);
   else if (type === 'runner-closeout') validateRunnerReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt nor aipedia.closeout-receipt.v1.'));
+  else if (type === 'affiliate-handoff') validateAffiliateHandoffReceipt(value, issues);
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, nor aipedia.affiliate-handoff-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -181,6 +182,7 @@ function receiptResult(path, type, issues) {
 function receiptType(value) {
   if (!isObject(value)) return 'unknown';
   if (value.schema_version === 'aipedia.closeout-receipt.v1') return 'runner-closeout';
+  if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';
 }
@@ -414,6 +416,131 @@ function validateRunnerWorkflowPolicy(receipt, issues) {
   }
 }
 
+function validateAffiliateHandoffReceipt(value, issues) {
+  requireString(value, 'workflow', issues, { values: ['affiliate-conversion-handoff'] });
+  requireString(value, 'status', issues, { values: ['ready'] });
+  requireIsoString(value, 'generated_at', issues);
+  requireIsoDateString(value, 'current_date', issues);
+  requireString(value, 'plan', issues);
+  requireString(value, 'report_summary', issues);
+  requireString(value, 'markdown_handoff', issues);
+  for (const field of [
+    'selected_cluster_count',
+    'expected_worker_reports',
+    'parsed_worker_reports',
+    'strict_validation_issue_count',
+    'claim_receipt_count',
+    'source_url_count',
+    'commercial_cta_note_count',
+    'duplicate_intent_note_count',
+    'parent_surface_note_count',
+    'blocked_or_deferred_count',
+    'pending_count',
+    'non_passed_check_count',
+  ]) {
+    requireNonNegativeNumber(value, field, issues);
+  }
+  for (const field of [
+    'selected_clusters',
+    'missing_worker_reports',
+    'invalid_worker_reports',
+    'route_qa_routes',
+    'parent_surfaces',
+    'verification_gates',
+    'no_edit_boundaries',
+    'residual_risks',
+  ]) {
+    requireArray(value, field, issues);
+  }
+
+  if (Array.isArray(value.selected_clusters)) {
+    value.selected_clusters.forEach((cluster, index) => validateAffiliateSelectedCluster(cluster, issues, `selected_clusters[${index}]`));
+    if (typeof value.selected_cluster_count === 'number' && value.selected_cluster_count !== value.selected_clusters.length) {
+      issues.push(issue('affiliate-handoff-total-mismatch', `selected_cluster_count is ${value.selected_cluster_count} but selected_clusters has ${value.selected_clusters.length} item(s).`));
+    }
+  }
+
+  if (REQUIRE_WORKFLOW_POLICY) validateAffiliateHandoffPolicy(value, issues);
+}
+
+function validateAffiliateSelectedCluster(cluster, issues, path) {
+  if (!isObject(cluster)) {
+    issues.push(issue('affiliate-handoff-cluster-invalid', `${path} must be an object.`));
+    return;
+  }
+  for (const field of ['id', 'primary_tool', 'worker_id', 'buyer_job', 'source_file']) {
+    requireString(cluster, field, issues, { path: `${path}.${field}` });
+  }
+  for (const field of [
+    'claim_receipt_count',
+    'source_url_count',
+    'commercial_cta_note_count',
+    'parent_surface_note_count',
+    'duplicate_intent_note_count',
+    'route_qa_risk_count',
+    'check_count',
+  ]) {
+    requireNonNegativeNumber(cluster, field, issues, `${path}.${field}`);
+  }
+}
+
+function validateAffiliateHandoffPolicy(value, issues) {
+  if (value.selected_cluster_count === 0) {
+    issues.push(issue('affiliate-handoff-policy-empty', 'Affiliate handoff policy requires at least one selected implementation cluster.'));
+  }
+  for (const [field, label] of [
+    ['claim_receipt_count', 'claim receipts'],
+    ['source_url_count', 'source URLs'],
+    ['commercial_cta_note_count', 'commercial CTA notes'],
+    ['duplicate_intent_note_count', 'duplicate intent notes'],
+    ['parent_surface_note_count', 'parent surface notes'],
+  ]) {
+    if (value[field] === 0) {
+      issues.push(issue('affiliate-handoff-policy-evidence-missing', `Affiliate handoff policy requires ${label}.`));
+    }
+  }
+  if (value.strict_validation_issue_count !== 0) {
+    issues.push(issue('affiliate-handoff-policy-validation-issues', 'Affiliate handoff policy requires strict_validation_issue_count to be 0.'));
+  }
+  if (!Array.isArray(value.missing_worker_reports) || value.missing_worker_reports.length !== 0) {
+    issues.push(issue('affiliate-handoff-policy-missing-reports', 'Affiliate handoff policy requires no missing worker reports.'));
+  }
+  if (!Array.isArray(value.invalid_worker_reports) || value.invalid_worker_reports.length !== 0) {
+    issues.push(issue('affiliate-handoff-policy-invalid-reports', 'Affiliate handoff policy requires no invalid worker reports.'));
+  }
+  if (value.non_passed_check_count !== 0) {
+    issues.push(issue('affiliate-handoff-policy-non-passed-checks', 'Affiliate handoff policy requires every selected worker check to pass.'));
+  }
+  if (!Array.isArray(value.route_qa_routes) || value.route_qa_routes.length === 0) {
+    issues.push(issue('affiliate-handoff-policy-route-qa-empty', 'Affiliate handoff policy requires route_qa_routes.'));
+  }
+  if (!Array.isArray(value.parent_surfaces) || value.parent_surfaces.length === 0) {
+    issues.push(issue('affiliate-handoff-policy-parent-surfaces-empty', 'Affiliate handoff policy requires parent_surfaces.'));
+  }
+
+  const gateStrings = arrayStrings(value.verification_gates);
+  for (const required of [
+    'runner:affiliate-conversion:reports -- --strict',
+    'affiliate:conversion:inventory',
+    'ledger:pages',
+    'typecheck',
+    'build:fast',
+    'CommercialCTA',
+    'live source',
+  ]) {
+    if (!gateStrings.some((gate) => gate.includes(required))) {
+      issues.push(issue('affiliate-handoff-policy-gate-missing', `Affiliate handoff policy requires verification gate containing ${required}.`));
+    }
+  }
+
+  const boundaryText = arrayStrings(value.no_edit_boundaries).join('\n');
+  for (const required of ['PAGE_REFRESH_LEDGER.md', 'src/data/source-registry.json', 'integrator owns']) {
+    if (!boundaryText.includes(required)) {
+      issues.push(issue('affiliate-handoff-policy-boundary-missing', `Affiliate handoff policy requires no-edit boundary containing ${required}.`));
+    }
+  }
+}
+
 function validatePolicyInputFreshness(receipt, issues) {
   if (!isObject(receipt.input_freshness)) {
     issues.push(issue('runner-workflow-policy-input-freshness-missing', `${receipt.workflow} policy requires embedded input_freshness.`));
@@ -483,6 +610,10 @@ function validatePolicyArtifacts(receipt, policy, issues) {
 
 function requiredRouteWidths() {
   return [319, 360, 390, 430, 768, 1024, 1366];
+}
+
+function arrayStrings(value) {
+  return Array.isArray(value) ? value.filter((item) => typeof item === 'string') : [];
 }
 
 function validateCloseoutIdentity(value, issues) {

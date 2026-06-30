@@ -166,10 +166,17 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - The durable proof is `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`.
 - This validates closeout shape and input freshness, not rendered page quality, because build and route QA were intentionally skipped.
 
+### Completed Slice 16
+
+- `runner:affiliate-conversion:handoff` now writes `affiliate-implementation-handoff.json` beside the markdown handoff.
+- The JSON receipt uses `schema_version: aipedia.affiliate-handoff-receipt.v1` and records selected clusters, worker report counts, claim receipts, source URL counts, commercial CTA notes, duplicate-intent notes, parent-surface notes, route QA routes, parent surfaces, verification gates, no-edit boundaries, blocked/deferred counts, and residual risks.
+- `agent:closeout:check --require-workflow-policy` now validates affiliate handoff receipts and fails empty selected clusters, missing evidence, strict validation issues, non-passed checks, missing route QA scope, missing CommercialCTA or live-source gates, and missing shared-file no-edit boundaries.
+- Focused Rust and Node tests prove both the JSON sidecar and the policy pass/fail behavior.
+
 ### Next Slice
 
 1. Prove page-refresh runner policy on a bounded receipt.
-2. Extend closeout policy validation to affiliate handoff receipts.
+2. Prove affiliate handoff policy on a bounded runner-produced handoff JSON.
 3. Expand the reviewed scoring gold set during real workload pilots.
 4. Run one bounded production pilot only after page-refresh or affiliate closeout policy coverage is extended, then record receipts and update memory.
 
