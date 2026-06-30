@@ -1,0 +1,20 @@
+{
+  "schema_version": "aipedia.score-goldset-review.v1",
+  "gold_set_path": ".agent/evals/score-calibration-goldset.json",
+  "gold_set_hash": "cf3e82ac9d02da3f01fb24890df4ac1c6a2d05fa440c1c2d8287cd1f2905f4e9",
+  "changed_cases": [
+    "cline-stale-high-volatility-tool"
+  ],
+  "reviewer": "codex",
+  "reviewed_at": "2026-06-30",
+  "reason": "Expand the June 30 scoring baseline with a high-volatility tool that has strong source volume but multiple due fact checks, and add stale_signal_count_min so stale-pressure expectations can be asserted directly.",
+  "expected_effect": "Gold-set calibration should pass with 7 cases, 0 mismatches, threshold review pass, and one additional refresh_current_facts baseline for stale high-volatility tools.",
+  "review_lenses": [
+    "architecture",
+    "evaluation",
+    "editorial",
+    "risk-confidence",
+    "regression",
+    "rollout"
+  ]
+}

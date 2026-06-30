@@ -239,6 +239,7 @@ const GOLD_BOUND_FIELDS = [
   'score_max',
   'source_count_min',
   'parent_surface_count_min',
+  'stale_signal_count_min',
   'stale_signal_count_max',
   'internal_links_min',
 ];
@@ -394,6 +395,7 @@ function evaluateGoldCase(goldCase, result) {
   compareMax(checks, 'score', expectations.score_max, result.score);
   compareMin(checks, 'source_count', expectations.source_count_min, result.source_count);
   compareMin(checks, 'parent_surface_count', expectations.parent_surface_count_min, result.parent_surface_count);
+  compareMin(checks, 'stale_signal_count', expectations.stale_signal_count_min, result.stale_signal_count);
   compareMax(checks, 'stale_signal_count', expectations.stale_signal_count_max, result.stale_signal_count);
   compareMin(checks, 'internal_links', expectations.internal_links_min, result.dimensions?.internal_links);
 

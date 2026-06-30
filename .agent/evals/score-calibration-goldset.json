@@ -95,6 +95,23 @@
         "internal_links_min": 0.5,
         "stale_signal_count_max": 0
       }
+    },
+    {
+      "id": "cline-stale-high-volatility-tool",
+      "route": "/tools/cline/",
+      "rationale": "High-volatility tool with strong source coverage but multiple due fact checks should remain a refresh-pressure baseline instead of being hidden by source volume.",
+      "expect": {
+        "recommended_action": "refresh_current_facts",
+        "calibration_label": "refresh_pressure",
+        "risk_label": "low",
+        "confidence_label": "high",
+        "stale_decay_label": "medium",
+        "score_min": 0.7,
+        "score_max": 0.8,
+        "source_count_min": 20,
+        "internal_links_min": 0.7,
+        "stale_signal_count_min": 8
+      }
     }
   ]
 }

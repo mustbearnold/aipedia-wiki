@@ -332,6 +332,7 @@ test('score calibration evaluates gold-set expectations', () => {
               stale_decay_label: 'fresh',
               score_min: 0.7,
               source_count_min: 1,
+              stale_signal_count_min: 0,
             },
           },
           {
@@ -435,6 +436,7 @@ test('score calibration reports gold-set mismatches', () => {
             expect: {
               recommended_action: 'monitor',
               confidence_label: 'high',
+              stale_signal_count_min: 1,
             },
           },
         ],
@@ -448,6 +450,7 @@ test('score calibration reports gold-set mismatches', () => {
     const failedFields = report.gold_set.cases[0].checks.filter((check) => !check.ok).map((check) => check.field);
     assert.ok(failedFields.includes('recommended_action'));
     assert.ok(failedFields.includes('confidence_label'));
+    assert.ok(failedFields.includes('stale_signal_count'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
