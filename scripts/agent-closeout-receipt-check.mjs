@@ -540,6 +540,7 @@ function validateLoopEfficiencyMetrics(metrics, receipt, issues) {
     }
   }
   validateEfficiencyArtifactCounts(metrics, receipt, issues, hasScopedEfficiencyMetrics);
+  validateEfficiencyDerivedMetrics(metrics, receipt, issues, hasScopedEfficiencyMetrics);
 }
 
 function validateEfficiencyArtifactCounts(metrics, receipt, issues, hasScopedEfficiencyMetrics) {
@@ -564,6 +565,85 @@ function validateMetricCount(metrics, field, expected, issues, detail) {
   if (typeof metrics[field] === 'number' && metrics[field] !== expected) {
     issues.push(issue('efficiency-metrics-mismatch', detail));
   }
+}
+
+function validateEfficiencyDerivedMetrics(metrics, receipt, issues, hasScopedEfficiencyMetrics) {
+  validateMetricCount(
+    metrics,
+    'average_command_duration_ms',
+    metrics.command_count ? roundMetric(metrics.total_command_duration_ms / metrics.command_count) : 0,
+    issues,
+    'efficiency_metrics.average_command_duration_ms must equal rounded total_command_duration_ms divided by command_count.',
+  );
+  validateMetricCount(
+    metrics,
+    'commands_per_second',
+    metricRate(metrics.command_count, metrics.wall_duration_ms),
+    issues,
+    'efficiency_metrics.commands_per_second must equal rounded command_count per wall_duration_ms.',
+  );
+  validateMetricCount(
+    metrics,
+    'loops_per_second',
+    metricRate(metrics.loop_count, metrics.wall_duration_ms),
+    issues,
+    'efficiency_metrics.loops_per_second must equal rounded loop_count per wall_duration_ms.',
+  );
+  validateMetricCount(
+    metrics,
+    'attention_rate',
+    metricRatio(metrics.attention_loop_count, metrics.loop_count),
+    issues,
+    'efficiency_metrics.attention_rate must equal rounded attention_loop_count divided by loop_count.',
+  );
+  validateMetricCount(
+    metrics,
+    'skipped_rate',
+    metricRatio(metrics.skipped_loop_count, metrics.loop_count),
+    issues,
+    'efficiency_metrics.skipped_rate must equal rounded skipped_loop_count divided by loop_count.',
+  );
+  validateMetricCount(
+    metrics,
+    'system_artifacts_per_second',
+    metricRate(metrics.system_artifact_count, metrics.wall_duration_ms),
+    issues,
+    'efficiency_metrics.system_artifacts_per_second must equal rounded system_artifact_count per wall_duration_ms.',
+  );
+  if (hasScopedEfficiencyMetrics) {
+    validateMetricCount(
+      metrics,
+      'agent_system_artifacts_per_second',
+      metricRate(metrics.agent_system_artifact_count, metrics.wall_duration_ms),
+      issues,
+      'efficiency_metrics.agent_system_artifacts_per_second must equal rounded agent_system_artifact_count per wall_duration_ms.',
+    );
+  }
+  if (Array.isArray(receipt.artifact_refs)) {
+    validateMetricCount(metrics, 'artifact_ref_count', receipt.artifact_refs.length, issues, 'efficiency_metrics.artifact_ref_count must match artifact_refs length.');
+    validateMetricCount(
+      metrics,
+      'embedded_command_artifact_count',
+      receipt.artifact_refs.filter((artifact) => isObject(artifact) && artifact.kind === 'loop-command').length,
+      issues,
+      'efficiency_metrics.embedded_command_artifact_count must match loop-command artifact refs.',
+    );
+  }
+}
+
+function metricRate(count, durationMs) {
+  if (!Number.isFinite(count) || !Number.isFinite(durationMs) || durationMs <= 0) return 0;
+  return roundMetric((count * 1000) / durationMs);
+}
+
+function metricRatio(count, total) {
+  if (!Number.isFinite(count) || !Number.isFinite(total) || total <= 0) return 0;
+  return roundMetric(count / total);
+}
+
+function roundMetric(value) {
+  if (!Number.isFinite(value)) return 0;
+  return Math.round(value * 1000) / 1000;
 }
 
 function validateSlowestCommand(command, issues, path) {

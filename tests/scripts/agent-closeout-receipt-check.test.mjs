@@ -915,21 +915,21 @@ test('closeout receipt check validates DAG artifact refs on loop receipts', () =
         },
       ],
     });
-    writeJson(receiptPath, validLoopReceipt({
-      artifact_refs: [
-        ...validLoopReceipt().artifact_refs,
-        {
-          role: 'output',
-          kind: 'agent-task-dag',
-          path: dagPath,
-        },
-        {
-          role: 'output',
-          kind: 'agent-task-dag-validation-report',
-          path: validationPath,
-        },
-      ],
-    }));
+    const receipt = validLoopReceipt();
+    receipt.artifact_refs.push(
+      {
+        role: 'output',
+        kind: 'agent-task-dag',
+        path: dagPath,
+      },
+      {
+        role: 'output',
+        kind: 'agent-task-dag-validation-report',
+        path: validationPath,
+      },
+    );
+    receipt.efficiency_metrics.artifact_ref_count = receipt.artifact_refs.length;
+    writeJson(receiptPath, receipt);
 
     const result = runCheck([
       '--receipt',
@@ -1138,6 +1138,50 @@ test('closeout receipt check fails partial scoped efficiency metrics', () => {
     const report = JSON.parse(result.stdout);
     const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
     assert.match(details, /agent_content_artifact_count/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails efficiency rate formula drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-rate-formula-drift-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.efficiency_metrics.commands_per_second = 99;
+  receipt.efficiency_metrics.attention_rate = 0.5;
+  receipt.efficiency_metrics.agent_system_artifacts_per_second = 99;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /commands_per_second/);
+    assert.match(details, /attention_rate/);
+    assert.match(details, /agent_system_artifacts_per_second/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails efficiency artifact ref count drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-artifact-ref-count-drift-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.efficiency_metrics.artifact_ref_count = 99;
+  receipt.efficiency_metrics.embedded_command_artifact_count = 2;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /artifact_ref_count/);
+    assert.match(details, /embedded_command_artifact_count/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
