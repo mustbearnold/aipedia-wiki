@@ -1827,3 +1827,15 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-34.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-48-03-374Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 5.130s wall duration, 43,298 full receipt bytes, 24,754 latest receipt bytes, estimated full receipt tokens 10,825, and 12 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then attach DAG validation reports to standard closeout receipts.
+
+### 2026-06-30: Agentic Tooling Meta Slice 35, DAG Closeout Artifact Refs
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: `loop:all:record` now accepts repeatable `--dag-graph <path>` and `--dag-validation-report <path>` arguments and records typed `agent-task-dag` and `agent-task-dag-validation-report` artifact refs.
+- Changed: `agent:closeout:check` now validates those loop receipt artifact refs by reading the referenced graph and validation report JSON. It rejects missing files, invalid JSON, wrong graph schema, wrong validation schema, failed validation reports, and non-zero validation issue counts.
+- System lesson: checked DAG output should not rely on a sidecar file that humans remember to inspect. The standard closeout receipt now carries the proof path and the closeout validator reads it.
+- Verification: syntax checks, focused loop/closeout tests, JSON parse checks, diff guard, em-dash guard, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record` with DAG refs, required closeout validation, and efficiency trends passed.
+- Durable receipt: `.agent/loop-runs/system/2026-06-30T08-57-20-080Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5571 ms, and latest estimated full receipt tokens 10876.
+- Next: Commit and push, then extend the same pattern into runner closeouts or workflow-specific receipts.

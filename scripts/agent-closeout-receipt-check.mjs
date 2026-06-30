@@ -206,6 +206,7 @@ function validateLoopReceipt(value, issues) {
   requireObject(value, 'ledger', issues);
   validateCloseoutIdentity(value, issues);
   validateTraceArtifacts(value, issues);
+  validateDagArtifactRefs(value, issues);
 
   if (isObject(value.totals)) {
     for (const field of ['loops', 'ok', 'attention', 'skipped', 'commands']) {
@@ -956,6 +957,62 @@ function validateTraceArtifacts(value, issues) {
     issues.push(issue('closeout-artifact-refs-empty', 'artifact_refs must include at least one artifact when required.'));
   }
   value.artifact_refs.forEach((artifact, index) => validateArtifactRef(artifact, issues, `artifact_refs[${index}]`));
+}
+
+function validateDagArtifactRefs(value, issues) {
+  if (!Array.isArray(value.artifact_refs)) return;
+  for (const artifact of value.artifact_refs) {
+    if (!isObject(artifact)) continue;
+    if (artifact.kind === 'agent-task-dag') validateAgentTaskDagArtifact(artifact, issues);
+    if (artifact.kind === 'agent-task-dag-validation-report') validateAgentTaskDagValidationArtifact(artifact, issues);
+  }
+}
+
+function validateAgentTaskDagArtifact(artifact, issues) {
+  if (artifact.role !== 'output') {
+    issues.push(issue('dag-artifact-ref-invalid', 'agent-task-dag artifact refs must use role output.'));
+  }
+  const value = readArtifactJson(artifact, issues, 'dag-artifact');
+  if (!value) return;
+  if (value.schema_version !== 'aipedia.agent-task-dag.v1') {
+    issues.push(issue('dag-artifact-invalid', 'agent-task-dag artifact must use schema_version aipedia.agent-task-dag.v1.'));
+  }
+}
+
+function validateAgentTaskDagValidationArtifact(artifact, issues) {
+  if (artifact.role !== 'output') {
+    issues.push(issue('dag-validation-artifact-ref-invalid', 'agent-task-dag-validation-report artifact refs must use role output.'));
+  }
+  const value = readArtifactJson(artifact, issues, 'dag-validation-artifact');
+  if (!value) return;
+  if (value.schema_version !== 'aipedia.agent-task-dag-check.v1') {
+    issues.push(issue('dag-validation-artifact-invalid', 'DAG validation artifact must use schema_version aipedia.agent-task-dag-check.v1.'));
+  }
+  if (value.ok !== true) {
+    issues.push(issue('dag-validation-artifact-failed', 'DAG validation artifact must have ok true.'));
+  }
+  const issuesCount = value?.totals?.issues;
+  if (typeof issuesCount === 'number' && issuesCount !== 0) {
+    issues.push(issue('dag-validation-artifact-failed', 'DAG validation artifact must have zero issues.'));
+  }
+}
+
+function readArtifactJson(artifact, issues, code) {
+  if (typeof artifact.path !== 'string' || !artifact.path.trim()) {
+    issues.push(issue(`${code}-missing-path`, 'DAG artifact refs must include a path.'));
+    return null;
+  }
+  const path = resolve(PROJECT_DIR, artifact.path);
+  if (!existsSync(path)) {
+    issues.push(issue(`${code}-missing`, `DAG artifact does not exist: ${artifact.path}.`));
+    return null;
+  }
+  try {
+    return JSON.parse(readFileSync(path, 'utf8'));
+  } catch (error) {
+    issues.push(issue(`${code}-invalid-json`, `DAG artifact JSON could not parse: ${error.message}`));
+    return null;
+  }
 }
 
 function validateArtifactRef(artifact, issues, path) {

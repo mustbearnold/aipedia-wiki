@@ -550,6 +550,74 @@ test('closeout receipt check validates latest enforced loop receipt by default',
   }
 });
 
+test('closeout receipt check validates DAG artifact refs on loop receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-dag-artifacts-'));
+  const receiptPath = join(dir, 'receipt.json');
+  const dagPath = join(dir, 'agent-task-graph.json');
+  const validationPath = join(dir, 'agent-task-graph.validation.json');
+
+  try {
+    writeJson(dagPath, {
+      schema_version: 'aipedia.agent-task-dag.v1',
+      nodes: [],
+    });
+    writeJson(validationPath, {
+      ok: true,
+      schema_version: 'aipedia.agent-task-dag-check.v1',
+      totals: {
+        issues: 0,
+      },
+    });
+    writeJson(receiptPath, validLoopReceipt({
+      artifact_refs: [
+        ...validLoopReceipt().artifact_refs,
+        {
+          role: 'output',
+          kind: 'agent-task-dag',
+          path: dagPath,
+        },
+        {
+          role: 'output',
+          kind: 'agent-task-dag-validation-report',
+          path: validationPath,
+        },
+      ],
+    }));
+
+    const result = runCheck([
+      '--receipt',
+      receiptPath,
+      '--require-closeout-identity',
+      '--require-trace-artifacts',
+      '--require-efficiency-metrics',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    writeJson(validationPath, {
+      ok: false,
+      schema_version: 'aipedia.agent-task-dag-check.v1',
+      totals: {
+        issues: 1,
+      },
+    });
+    const failed = runCheck([
+      '--receipt',
+      receiptPath,
+      '--require-closeout-identity',
+      '--require-trace-artifacts',
+      '--require-efficiency-metrics',
+      '--json',
+    ]);
+    assert.equal(failed.status, 1);
+    const report = JSON.parse(failed.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('dag-validation-artifact-failed'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates pause receipts', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-pause-'));
   const path = join(dir, 'pause.json');

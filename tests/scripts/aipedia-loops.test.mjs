@@ -232,8 +232,19 @@ test('aipedia loops can write a machine-readable run ledger', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-ledger-'));
   const registry = writeRegistry(dir);
   const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+  const dagPath = join(dir, '.agent', 'evals', 'agent-dag-contracts', 'fixture-dag.json');
+  const dagValidationPath = join(dir, '.agent', 'evals', 'agent-dag-contracts', 'fixture-dag.validation.json');
 
   try {
+    mkdirSync(join(dir, '.agent', 'evals', 'agent-dag-contracts'), { recursive: true });
+    writeFileSync(
+      dagPath,
+      `${JSON.stringify({ schema_version: 'aipedia.agent-task-dag.v1', nodes: [] }, null, 2)}\n`,
+    );
+    writeFileSync(
+      dagValidationPath,
+      `${JSON.stringify({ ok: true, schema_version: 'aipedia.agent-task-dag-check.v1', totals: { issues: 0 } }, null, 2)}\n`,
+    );
     const result = runLoops(
       '--json',
       '--run',
@@ -248,6 +259,10 @@ test('aipedia loops can write a machine-readable run ledger', () => {
       'Fixture risk',
       '--next-action',
       'Fixture next action',
+      '--dag-graph',
+      dagPath,
+      '--dag-validation-report',
+      dagValidationPath,
       `--ledger-dir=${ledgerDir}`,
       `--project-dir=${dir}`,
       `--registry=${registry}`,
@@ -274,6 +289,8 @@ test('aipedia loops can write a machine-readable run ledger', () => {
     assert.ok(latest.trace.span_id.includes('run-001'));
     assert.ok(latest.artifact_refs.some((ref) => ref.kind === 'loop-registry' && ref.role === 'input'));
     assert.ok(latest.artifact_refs.some((ref) => ref.kind === 'loop-run-latest' && ref.role === 'output'));
+    assert.ok(latest.artifact_refs.some((ref) => ref.kind === 'agent-task-dag' && ref.path.endsWith('fixture-dag.json')));
+    assert.ok(latest.artifact_refs.some((ref) => ref.kind === 'agent-task-dag-validation-report' && ref.path.endsWith('fixture-dag.validation.json')));
     assert.deepEqual(latest.ledger.trend.status_changes, []);
     assert.equal(latest.project_dir, '.');
     assert.equal(JSON.stringify(latest).includes('stdout_tail'), false);

@@ -26,9 +26,13 @@ const TRACE_ID = valueFor('--trace-id') || process.env.AIPEDIA_TRACE_ID || '';
 const PARENT_SPAN_ID = valueFor('--parent-span-id') || process.env.AIPEDIA_PARENT_SPAN_ID || '';
 const RESIDUAL_RISKS = valuesFor('--risk').concat(envList('AIPEDIA_RESIDUAL_RISKS'));
 const EXTRA_NEXT_ACTIONS = valuesFor('--next-action').concat(envList('AIPEDIA_NEXT_ACTIONS'));
+const DAG_GRAPH_REFS = valuesFor('--dag-graph').concat(envList('AIPEDIA_DAG_GRAPHS'));
+const DAG_VALIDATION_REPORT_REFS = valuesFor('--dag-validation-report').concat(envList('AIPEDIA_DAG_VALIDATION_REPORTS'));
 const LEDGER_DIR = resolve(PROJECT_DIR, valueFor('--ledger-dir') || '.agent/loop-runs/system');
 const KNOWN_FLAGS = new Set([
   '--all',
+  '--dag-graph',
+  '--dag-validation-report',
   '--dist-dir',
   '--goal-id',
   '--ledger-dir',
@@ -51,6 +55,8 @@ const KNOWN_FLAGS = new Set([
 ]);
 const VALUE_FLAGS = new Set([
   '--dist-dir',
+  '--dag-graph',
+  '--dag-validation-report',
   '--goal-id',
   '--ledger-dir',
   '--loop',
@@ -150,6 +156,8 @@ function usage() {
     '  --parent-span-id <id>   Attach a parent span id when resuming or nesting work.',
     '  --risk <text>           Residual risk. Repeatable.',
     '  --next-action <text>    Next action. Repeatable.',
+    '  --dag-graph <path>      Attach a generated agent task DAG artifact. Repeatable.',
+    '  --dag-validation-report <path>  Attach an agent:dag:check validation report. Repeatable.',
     '  --ledger-dir <dir>      Override the loop-run ledger directory.',
   ].join('\n');
 }
@@ -203,7 +211,7 @@ function runLoopReport(registryData, loops) {
     residual_risks: RESIDUAL_RISKS,
     next_actions: EXTRA_NEXT_ACTIONS,
     trace: traceBlock('loop-run', runId, generatedAt, endedAt, durationMs),
-    artifact_refs: loopArtifactRefs(loopReports),
+    artifact_refs: loopArtifactRefs(loopReports, dagArtifactRefs()),
     duration_ms: durationMs,
     totals,
     loops: loopReports,
@@ -700,6 +708,7 @@ function writeLedger(reportData) {
     trend,
   };
   reportData.artifact_refs = loopArtifactRefs(reportData.loops || [], [
+    ...dagArtifactRefs(),
     artifactRef('output', 'loop-run-receipt', projectPath(runPath), '', 'Timestamped loop receipt JSON.'),
     artifactRef('output', 'loop-run-latest', projectPath(latestPath), '', 'Latest loop receipt summary JSON.'),
   ]);
@@ -826,6 +835,13 @@ function loopArtifactRefs(loopReports, extraRefs = []) {
     }
   }
   return dedupeArtifactRefs(refs);
+}
+
+function dagArtifactRefs() {
+  return [
+    ...DAG_GRAPH_REFS.map((path) => artifactRef('output', 'agent-task-dag', path, '', 'Generated agent task DAG graph.')),
+    ...DAG_VALIDATION_REPORT_REFS.map((path) => artifactRef('output', 'agent-task-dag-validation-report', path, '', 'agent:dag:check validation report for an agent task DAG.')),
+  ];
 }
 
 function artifactRef(role, kind, path, id = '', description = '') {

@@ -110,16 +110,21 @@
         "npm run runner:agent-plan existing DAG bridge",
         "tools/aipedia-runner/src/main.rs aipedia.agent-task-dag.v1 node contract",
         "scripts/runner-agent-plan-checked.mjs",
+        "scripts/aipedia-loops.mjs --dag-graph",
+        "scripts/aipedia-loops.mjs --dag-validation-report",
+        "scripts/agent-closeout-receipt-check.mjs DAG artifact ref validation",
         "npm run agent:dag:check",
         "scripts/agent-task-dag-check.mjs",
         "tests/scripts/agent-task-dag-check.test.mjs",
         "tests/scripts/runner-agent-plan-checked.test.mjs",
+        "tests/scripts/aipedia-loops.test.mjs DAG artifact ref coverage",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs DAG artifact ref coverage",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json",
         "docs/parallel-tooling-architecture.md"
       ],
-      "remaining": "Attach DAG validation reports to standard loop or runner closeout receipts."
+      "remaining": "Extend DAG validation report refs into runner closeouts or workflow-specific receipts."
     },
     {
       "id": "closeout-receipts-traces",
@@ -238,28 +243,26 @@
     }
   ],
   "current_slice": {
-    "name": "checked runner agent plan",
+    "name": "DAG closeout artifact refs",
     "system_artifacts": [
-      "package.json",
-      "scripts/runner-agent-plan-checked.mjs",
-      "tests/scripts/runner-agent-plan-checked.test.mjs",
-      "scripts/README.md",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json",
+      "scripts/aipedia-loops.mjs",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/aipedia-loops.test.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
-      ".agent/PLANS.md",
-      ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-34.md",
-      ".agent/loop-runs/system/2026-06-30T08-48-03-374Z-loop-run.json",
-      ".agent/loop-runs/system/latest.json"
-    ],
+    ".agent/PLANS.md",
+    ".agent/WORK_LOG.md",
+    ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-35.md",
+    ".agent/loop-runs/system/2026-06-30T08-57-20-080Z-loop-run.json",
+    ".agent/loop-runs/system/latest.json"
+  ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Attach DAG validation reports to loop or runner closeout receipts.",
+    "Extend DAG validation refs into runner closeouts or workflow-specific receipts.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",
