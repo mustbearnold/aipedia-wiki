@@ -124,7 +124,7 @@ function usage() {
     '  node scripts/agent-closeout-receipt-check.mjs --all-system --json',
     '',
     'Options:',
-    '  --receipt <path>              Validate a loop, runner, affiliate handoff, or pause receipt JSON file. Repeatable.',
+    '  --receipt <path>              Validate a loop, runner, proof, affiliate handoff, or pause receipt JSON file. Repeatable.',
     '  --path <path>                 Alias for --receipt.',
     '  --all-system                  Validate every .agent/loop-runs/system/*.json receipt.',
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
@@ -168,9 +168,10 @@ function validateReceiptFile(path) {
   const type = receiptType(value);
   if (type === 'loop-run') validateLoopReceipt(value, issues);
   else if (type === 'runner-closeout') validateRunnerReceipt(value, issues);
+  else if (type === 'runner-interrupt-proof') validateRunnerInterruptProof(value, issues);
   else if (type === 'affiliate-handoff') validateAffiliateHandoffReceipt(value, issues);
   else if (type === 'pause-receipt') validatePauseReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.affiliate-handoff-receipt.v1, nor aipedia.pause-receipt.v1.'));
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, nor aipedia.pause-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -187,6 +188,7 @@ function receiptResult(path, type, issues) {
 function receiptType(value) {
   if (!isObject(value)) return 'unknown';
   if (value.schema_version === 'aipedia.closeout-receipt.v1') return 'runner-closeout';
+  if (value.schema_version === 'aipedia.runner-interrupt-proof.v1') return 'runner-interrupt-proof';
   if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
@@ -450,6 +452,154 @@ function validateRunnerInterruptedPauseLink(receipt, issues) {
   if (!hasPauseArtifact) {
     issues.push(issue('runner-interrupted-pause-artifact-missing', 'Runner closeout receipts with interrupted commands must include an output interrupted-pause-receipt artifact_ref matching interrupted_pause_receipt.'));
   }
+}
+
+function validateRunnerInterruptProof(value, issues) {
+  requireBoolean(value, 'ok', issues);
+  requireString(value, 'mode', issues, { values: ['runner-interrupt-proof'] });
+  requireString(value, 'schema_version', issues, {
+    path: 'schema_version',
+    values: ['aipedia.runner-interrupt-proof.v1'],
+  });
+  requireString(value, 'project_dir', issues);
+  requireString(value, 'work_dir', issues);
+  requireString(value, 'proof_dir', issues);
+  requireString(value, 'proof_prefix', issues);
+  requireIsoDateString(value, 'current_date', issues);
+  requireObject(value, 'fixture', issues);
+  requireObject(value, 'runner', issues);
+  requireObject(value, 'artifacts', issues);
+  requireObject(value, 'assertions', issues);
+  requireArray(value, 'validations', issues);
+  requireArray(value, 'issues', issues);
+  requireString(value, 'goal_id', issues);
+  requireString(value, 'run_id', issues);
+  requireStringArray(value, 'next_actions', issues);
+  if (value.residual_risks != null || REQUIRE_CLOSEOUT_IDENTITY) {
+    requireStringArray(value, 'residual_risks', issues);
+  }
+  validateTraceArtifacts(value, issues);
+
+  if (value.ok !== true) {
+    issues.push(issue('runner-proof-not-ok', 'Runner interrupt proof report must be ok.'));
+  }
+  if (Array.isArray(value.issues) && value.issues.length !== 0) {
+    issues.push(issue('runner-proof-issues-not-empty', 'Passing runner interrupt proof reports must have no embedded issues.'));
+  }
+
+  if (isObject(value.fixture)) {
+    for (const field of ['package_json', 'plan', 'route_args', 'receipt_dir', 'ledger_script']) {
+      requireString(value.fixture, field, issues, `fixture.${field}`);
+    }
+  }
+  if (isObject(value.runner)) validateRunnerProofRunner(value.runner, issues);
+  if (isObject(value.artifacts)) validateRunnerProofArtifacts(value, issues);
+  if (isObject(value.assertions)) validateRunnerProofAssertions(value.assertions, issues);
+  if (Array.isArray(value.validations)) validateRunnerProofValidations(value, issues);
+}
+
+function validateRunnerProofRunner(runner, issues) {
+  requireNonNegativeNumber(runner, 'status', issues, 'runner.status');
+  requireBoolean(runner, 'expected_nonzero', issues, 'runner.expected_nonzero');
+  if (runner.signal != null && typeof runner.signal !== 'string') {
+    issues.push(issue('field-invalid', 'runner.signal must be a string when present.'));
+  }
+  if (runner.stdout_tail != null && typeof runner.stdout_tail !== 'string') {
+    issues.push(issue('field-invalid', 'runner.stdout_tail must be a string when present.'));
+  }
+  if (runner.stderr_tail != null && typeof runner.stderr_tail !== 'string') {
+    issues.push(issue('field-invalid', 'runner.stderr_tail must be a string when present.'));
+  }
+  if (runner.expected_nonzero !== true) {
+    issues.push(issue('runner-proof-expected-nonzero-invalid', 'Runner interrupt proof must expect the interrupted closeout to exit non-zero.'));
+  }
+  if (typeof runner.status === 'number' && runner.status === 0) {
+    issues.push(issue('runner-proof-closeout-success', 'Runner interrupt proof must record a non-zero interrupted closeout status.'));
+  }
+}
+
+function validateRunnerProofArtifacts(value, issues) {
+  for (const field of [
+    'pause_receipt',
+    'closeout_receipt',
+    'copied_pause_receipt',
+    'copied_closeout_receipt',
+    'proof_report',
+  ]) {
+    requireString(value.artifacts, field, issues, `artifacts.${field}`);
+  }
+  if (value.report_path != null) {
+    requireString(value, 'report_path', issues);
+    if (typeof value.report_path === 'string' && value.report_path !== value.artifacts.proof_report) {
+      issues.push(issue('runner-proof-report-path-mismatch', 'report_path must match artifacts.proof_report.'));
+    }
+  }
+  if (!REQUIRE_TRACE_ARTIFACTS && value.artifact_refs == null) return;
+  const artifactRefs = Array.isArray(value.artifact_refs) ? value.artifact_refs : [];
+  for (const [kind, path] of [
+    ['interrupted-pause-receipt', value.artifacts.copied_pause_receipt],
+    ['interrupted-closeout-receipt', value.artifacts.copied_closeout_receipt],
+    ['runner-interrupt-proof-report', value.artifacts.proof_report],
+  ]) {
+    if (typeof path === 'string' && path.trim() && !artifactRefs.some((artifact) => (
+      isObject(artifact)
+      && artifact.role === 'output'
+      && artifact.kind === kind
+      && artifact.path === path
+    ))) {
+      issues.push(issue('runner-proof-artifact-ref-missing', `Runner interrupt proof must include an output/${kind} artifact_ref for ${path}.`));
+    }
+  }
+}
+
+function validateRunnerProofAssertions(assertions, issues) {
+  for (const field of [
+    'closeout_failed',
+    'interrupted_command_recorded',
+    'interrupted_pause_receipt_linked',
+    'interrupted_pause_artifact_linked',
+  ]) {
+    requireBoolean(assertions, field, issues, `assertions.${field}`);
+    if (assertions[field] !== true) {
+      issues.push(issue('runner-proof-assertion-failed', `Runner interrupt proof assertion ${field} must be true.`));
+    }
+  }
+}
+
+function validateRunnerProofValidations(value, issues) {
+  if (value.validations.length < 2) {
+    issues.push(issue('runner-proof-validations-missing', 'Runner interrupt proof must include receipt validations for copied pause and closeout receipts.'));
+  }
+  const labels = value.validations
+    .map((validation) => (isObject(validation) && typeof validation.label === 'string' ? validation.label : ''))
+    .filter(Boolean);
+  for (const [label, path] of [
+    ['copied pause receipt', value.artifacts?.copied_pause_receipt],
+    ['copied closeout receipt', value.artifacts?.copied_closeout_receipt],
+  ]) {
+    if (typeof path === 'string' && path.trim() && !labels.includes(path)) {
+      issues.push(issue('runner-proof-validation-missing', `Runner interrupt proof must include validation for ${label}: ${path}.`));
+    }
+  }
+  value.validations.forEach((validation, index) => {
+    const path = `validations[${index}]`;
+    if (!isObject(validation)) {
+      issues.push(issue('runner-proof-validation-invalid', `${path} must be an object.`));
+      return;
+    }
+    requireString(validation, 'label', issues, { path: `${path}.label` });
+    requireNonNegativeNumber(validation, 'status', issues, `${path}.status`);
+    requireBoolean(validation, 'ok', issues, `${path}.ok`);
+    if (validation.stdout_tail != null && typeof validation.stdout_tail !== 'string') {
+      issues.push(issue('runner-proof-validation-invalid', `${path}.stdout_tail must be a string when present.`));
+    }
+    if (validation.stderr_tail != null && typeof validation.stderr_tail !== 'string') {
+      issues.push(issue('runner-proof-validation-invalid', `${path}.stderr_tail must be a string when present.`));
+    }
+    if (validation.status !== 0 || validation.ok !== true) {
+      issues.push(issue('runner-proof-validation-failed', `${path} must be an ok receipt validation with status 0.`));
+    }
+  });
 }
 
 function validateInputFreshness(freshness, receipt, issues) {

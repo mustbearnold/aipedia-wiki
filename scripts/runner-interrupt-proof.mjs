@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
 const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const STARTED_AT = new Date();
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || defaultProjectDir);
 const WORK_DIR = resolve(PROJECT_DIR, valueFor('--work-dir') || 'local/tmp/aipedia-runner-interrupt-proof');
 const PROOF_DIR = resolve(PROJECT_DIR, valueFor('--proof-dir') || '.agent/evals/runner-interrupt-proofs');
@@ -106,10 +107,15 @@ function runProof() {
       work_dir: projectPath(WORK_DIR),
       proof_dir: projectPath(PROOF_DIR),
       proof_prefix: PROOF_PREFIX,
+      goal_id: GOAL_ID,
+      run_id: RUN_ID,
+      current_date: CURRENT_DATE,
       fixture,
       assertions: {
         fixture_written: true,
       },
+      issues: [],
+      residual_risks: ['Dry run writes the fixture only and does not prove interrupted runner closeout behavior.'],
       next_actions: ['Run without --dry-run to execute the real interrupted runner proof.'],
     };
   }
@@ -204,6 +210,9 @@ function runProof() {
     },
     validations,
     issues,
+    residual_risks: issues.length
+      ? ['Interrupted runner proof failed and should not be used as pause/resume evidence until repaired.']
+      : ['Interrupted runner proof validates pause capture and closeout linkage only, not rendered page quality.'],
     next_actions: issues.length
       ? ['Inspect the fixture receipts and runner stderr before relying on interrupted pause capture.']
       : ['Use the copied proof receipts in compliance docs and future regression checks.'],
@@ -216,19 +225,65 @@ function resetFixture() {
 }
 
 function persistReport(report) {
-  if (!REPORT_OUT) return report;
-  const outPath = resolve(PROJECT_DIR, REPORT_OUT);
+  const outPath = REPORT_OUT ? resolve(PROJECT_DIR, REPORT_OUT) : null;
+  const reportPath = outPath ? projectPath(outPath) : '';
   const withPath = {
     ...report,
-    report_path: projectPath(outPath),
+    report_path: reportPath,
+    trace: report.trace || proofTrace(),
     artifacts: {
       ...(report.artifacts || {}),
-      proof_report: projectPath(outPath),
+      proof_report: reportPath || report.artifacts?.proof_report || '',
     },
   };
+  withPath.artifact_refs = report.artifact_refs || proofArtifactRefs(withPath);
+  if (!outPath) return withPath;
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, `${JSON.stringify(withPath, null, 2)}\n`);
   return withPath;
+}
+
+function proofTrace() {
+  const endedAt = new Date();
+  return {
+    trace_id: `trace:${GOAL_ID}:${RUN_ID}`,
+    span_id: `span:runner-interrupt-proof:${RUN_ID}`,
+    parent_span_id: '',
+    name: 'runner-interrupt-proof',
+    started_at: STARTED_AT.toISOString(),
+    ended_at: endedAt.toISOString(),
+    duration_ms: Math.max(0, endedAt.getTime() - STARTED_AT.getTime()),
+  };
+}
+
+function proofArtifactRefs(report) {
+  const refs = [];
+  for (const [kind, path] of [
+    ['proof-fixture-package', report.fixture?.package_json],
+    ['proof-fixture-plan', report.fixture?.plan],
+    ['proof-fixture-route-args', report.fixture?.route_args],
+    ['proof-fixture-receipt-dir', report.fixture?.receipt_dir],
+  ]) {
+    if (path) refs.push({ role: 'input', kind, path });
+  }
+  for (const [kind, path] of [
+    ['interrupted-pause-receipt', report.artifacts?.copied_pause_receipt],
+    ['interrupted-closeout-receipt', report.artifacts?.copied_closeout_receipt],
+    ['runner-interrupt-proof-report', report.artifacts?.proof_report],
+  ]) {
+    if (path) refs.push({ role: 'output', kind, path });
+  }
+  if (Array.isArray(report.validations)) {
+    report.validations.forEach((validation, index) => {
+      refs.push({
+        role: 'embedded',
+        kind: 'proof-validation',
+        id: `validation:${index + 1}`,
+        description: `${validation.label || 'validation'} status ${validation.status}`,
+      });
+    });
+  }
+  return refs;
 }
 
 function writeFixture() {

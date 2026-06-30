@@ -80,7 +80,9 @@
         "runner closeout interrupted_pause_receipt field",
         "runner closeout interrupted-pause-receipt artifact refs",
         "scripts/agent-closeout-receipt-check.mjs interrupted pause link enforcement",
+        "scripts/agent-closeout-receipt-check.mjs runner interrupt proof report validation",
         "tests/scripts/agent-closeout-receipt-check.test.mjs interrupted pause link coverage",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs runner interrupt proof report coverage",
         "tests/scripts/agent-pause-receipt.test.mjs",
         "tests/scripts/agent-closeout-receipt-check.test.mjs pause receipt coverage",
         "tests/scripts/runner-interrupt-proof.test.mjs",
@@ -94,9 +96,12 @@
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-closeout.json",
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-pause.json",
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-closeout.json",
-        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json"
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-interrupted-pause.json",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-interrupted-closeout.json",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-proof-report.json"
       ],
-      "remaining": "Teach agent:closeout:check to validate aipedia.runner-interrupt-proof.v1 reports directly."
+      "remaining": "Keep strict proof-report validation in the interrupt smoke and reuse the pattern for other pause/resume proofs."
     },
     {
       "id": "dag-contracts",
@@ -143,7 +148,10 @@
         "tests/scripts/agent-closeout-receipt-check.test.mjs interrupted pause link tests",
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-closeout.json",
         "scripts/runner-interrupt-proof.mjs",
-        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json"
+        "scripts/agent-closeout-receipt-check.mjs runner interrupt proof report validation",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs runner interrupt proof report coverage",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-proof-report.json"
       ],
       "remaining": "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved."
     },

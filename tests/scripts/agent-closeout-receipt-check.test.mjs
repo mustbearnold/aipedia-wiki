@@ -425,6 +425,112 @@ function validPauseReceipt(overrides = {}) {
   };
 }
 
+function validRunnerInterruptProof(overrides = {}) {
+  const proofPath = '.agent/evals/runner-interrupt-proofs/fixture-proof-report.json';
+  const copiedPause = '.agent/evals/runner-interrupt-proofs/fixture-interrupted-pause.json';
+  const copiedCloseout = '.agent/evals/runner-interrupt-proofs/fixture-interrupted-closeout.json';
+  return {
+    ok: true,
+    mode: 'runner-interrupt-proof',
+    schema_version: 'aipedia.runner-interrupt-proof.v1',
+    project_dir: '.',
+    work_dir: 'local/tmp/aipedia-runner-interrupt-proof',
+    proof_dir: '.agent/evals/runner-interrupt-proofs',
+    proof_prefix: 'fixture-proof',
+    goal_id: '2026-06-30-agentic-tooling-meta-os',
+    run_id: 'fixture-proof-run',
+    current_date: '2026-06-30',
+    fixture: {
+      package_json: 'local/tmp/aipedia-runner-interrupt-proof/package.json',
+      plan: 'local/tmp/aipedia-runner-interrupt-proof/plan.json',
+      route_args: 'local/tmp/aipedia-runner-interrupt-proof/route-args.txt',
+      receipt_dir: 'local/tmp/aipedia-runner-interrupt-proof/receipts',
+      ledger_script: 'node -e "setTimeout(() => process.kill(process.pid, \'SIGINT\'), 25); setTimeout(() => {}, 5000)"',
+    },
+    runner: {
+      status: 1,
+      signal: '',
+      expected_nonzero: true,
+      stdout_tail: '',
+      stderr_tail: 'closeout stopped after interrupted command',
+    },
+    artifacts: {
+      pause_receipt: 'local/tmp/aipedia-runner/pauses/fixture-pause.json',
+      closeout_receipt: 'local/tmp/aipedia-runner-interrupt-proof/receipts/fixture-closeout.json',
+      copied_pause_receipt: copiedPause,
+      copied_closeout_receipt: copiedCloseout,
+      proof_report: proofPath,
+    },
+    assertions: {
+      closeout_failed: true,
+      interrupted_command_recorded: true,
+      interrupted_pause_receipt_linked: true,
+      interrupted_pause_artifact_linked: true,
+    },
+    validations: [
+      {
+        label: copiedPause,
+        status: 0,
+        ok: true,
+        stdout_tail: '{"ok":true}',
+        stderr_tail: '',
+      },
+      {
+        label: copiedCloseout,
+        status: 0,
+        ok: true,
+        stdout_tail: '{"ok":true}',
+        stderr_tail: '',
+      },
+    ],
+    issues: [],
+    residual_risks: [
+      'Interrupted runner proof validates pause capture and closeout linkage only, not rendered page quality.',
+    ],
+    next_actions: [
+      'Use the copied proof receipts in compliance docs and future regression checks.',
+    ],
+    report_path: proofPath,
+    trace: {
+      trace_id: 'trace:meta-goal:runner-interrupt-proof-fixture',
+      span_id: 'span:runner-interrupt-proof:fixture',
+      parent_span_id: '',
+      name: 'runner-interrupt-proof',
+      started_at: '2026-06-30T03:01:47.000Z',
+      ended_at: '2026-06-30T03:01:48.000Z',
+      duration_ms: 1000,
+    },
+    artifact_refs: [
+      {
+        role: 'input',
+        kind: 'proof-fixture-plan',
+        path: 'local/tmp/aipedia-runner-interrupt-proof/plan.json',
+      },
+      {
+        role: 'output',
+        kind: 'interrupted-pause-receipt',
+        path: copiedPause,
+      },
+      {
+        role: 'output',
+        kind: 'interrupted-closeout-receipt',
+        path: copiedCloseout,
+      },
+      {
+        role: 'output',
+        kind: 'runner-interrupt-proof-report',
+        path: proofPath,
+      },
+      {
+        role: 'embedded',
+        kind: 'proof-validation',
+        id: 'validation:1',
+      },
+    ],
+    ...overrides,
+  };
+}
+
 test('closeout receipt check validates latest enforced loop receipt by default', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-loop-'));
   const systemDir = join(dir, '.agent', 'loop-runs', 'system');
@@ -658,6 +764,49 @@ test('closeout receipt check validates interrupted runner pause links', () => {
 
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates runner interrupt proof reports', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-runner-proof-'));
+  const path = join(dir, 'runner-proof.json');
+
+  try {
+    writeJson(path, validRunnerInterruptProof());
+    const result = runCheck(['--receipt', path, '--require-closeout-identity', '--require-trace-artifacts', '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'runner-interrupt-proof');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered runner interrupt proof reports', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-runner-proof-'));
+  const path = join(dir, 'runner-proof.json');
+  const receipt = validRunnerInterruptProof();
+  receipt.assertions.interrupted_pause_artifact_linked = false;
+  receipt.runner.status = 0;
+  receipt.validations[1].ok = false;
+  receipt.validations[1].status = 1;
+  receipt.artifact_refs = receipt.artifact_refs.filter((artifact) => artifact.kind !== 'runner-interrupt-proof-report');
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-trace-artifacts', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('runner-proof-assertion-failed'));
+    assert.ok(codes.includes('runner-proof-closeout-success'));
+    assert.ok(codes.includes('runner-proof-validation-failed'));
+    assert.ok(codes.includes('runner-proof-artifact-ref-missing'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
