@@ -139,16 +139,27 @@ Generated planner inputs now have one shared freshness receipt.
 - Focused tests prove a fresh decision backlog, a stale decision backlog blocker, and current or stale page-ledger states.
 - The first all-workflow receipt is `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json`. It correctly reports decision-content, tool-refresh, and affiliate-conversion fresh, and page-refresh stale because the separate Synthesia content WIP has not had the ledger regenerated.
 
+## Eleventh System Slice
+
+Runner closeouts now embed workflow-specific input-freshness receipts.
+
+- Tool-refresh closeout JSON includes `input_freshness` from `agent-input-freshness-receipt.mjs --workflow tool-refresh`.
+- Page-refresh closeout JSON includes `input_freshness` from `agent-input-freshness-receipt.mjs --workflow page-refresh`.
+- The runner normalizes `project_dir`, `command`, and `exit_code` in the embedded receipt so future agents can replay the exact preflight.
+- `agent:closeout:check` validates `input_freshness` when present, including schema version, workflow match, summary counts, command metadata, and per-workflow status.
+- Focused Rust tests prove both runner closeout paths emit the correct workflow-specific receipt.
+- Focused Node tests prove the closeout validator accepts valid runner receipts and fails a runner receipt whose embedded input-freshness workflow does not match the closeout workflow.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
-| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness`, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Add safe auto-refresh policy for generated inputs where mutation is acceptable, and wire input-freshness receipts into runner closeouts. |
+| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Add safe auto-refresh policy for generated inputs where mutation is acceptable. |
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, `agent:closeout:check --require-trace-artifacts` | Expand trace refs into workflow-specific closeout policies and bounded production pilots. |
+| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, `agent:closeout:check --require-trace-artifacts` | Expand trace refs into workflow-specific closeout policies and bounded production pilots. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json` | Expand the gold set during real workload pilots and add governance for deliberate baseline changes. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |

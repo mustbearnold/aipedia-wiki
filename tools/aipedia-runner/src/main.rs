@@ -349,6 +349,7 @@ struct CloseoutReceiptJson {
     commands: Vec<CloseoutReceiptCommand>,
     superseded_failures: Vec<SupersededFailureReceipt>,
     system_progress: Option<serde_json::Value>,
+    input_freshness: Option<serde_json::Value>,
 }
 
 #[derive(Debug, Serialize)]
@@ -2860,6 +2861,7 @@ fn write_receipt(
         commands,
         superseded_failures,
         system_progress: runner_system_progress(project_dir),
+        input_freshness: runner_input_freshness(project_dir, "tool-refresh"),
     };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
     fs::write(&json_path, serde_json::to_string_pretty(&json_receipt)?)
@@ -3057,6 +3059,7 @@ fn write_page_receipt(
         commands,
         superseded_failures,
         system_progress: runner_system_progress(project_dir),
+        input_freshness: runner_input_freshness(project_dir, "page-refresh"),
     };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
     fs::write(&json_path, serde_json::to_string_pretty(&json_receipt)?)
@@ -3495,6 +3498,46 @@ fn runner_system_progress(project_dir: &Path) -> Option<serde_json::Value> {
     Some(value)
 }
 
+fn runner_input_freshness(project_dir: &Path, workflow: &str) -> Option<serde_json::Value> {
+    let script = project_dir.join("scripts/agent-input-freshness-receipt.mjs");
+    if !script.exists() {
+        return None;
+    }
+    let script_display = display_path(project_dir, &script);
+    let output = Command::new(node_bin())
+        .arg(&script_display)
+        .arg("--workflow")
+        .arg(workflow)
+        .arg("--json")
+        .arg("--project-dir=.")
+        .current_dir(project_dir)
+        .output()
+        .ok()?;
+    let mut value = serde_json::from_slice::<serde_json::Value>(&output.stdout).ok()?;
+    if let Some(object) = value.as_object_mut() {
+        object.insert(
+            "project_dir".to_string(),
+            serde_json::Value::String(".".to_string()),
+        );
+        object.insert(
+            "command".to_string(),
+            serde_json::Value::String(format!(
+                "node {} --workflow {} --json --project-dir=.",
+                script_display, workflow
+            )),
+        );
+        object.insert(
+            "exit_code".to_string(),
+            output
+                .status
+                .code()
+                .map(|code| serde_json::Value::Number(code.into()))
+                .unwrap_or(serde_json::Value::Null),
+        );
+    }
+    Some(value)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -3533,6 +3576,38 @@ mod tests {
 }));"#,
         )
         .expect("system progress fixture should write");
+    }
+
+    fn write_input_freshness_script(project_dir: &Path) {
+        let script_dir = project_dir.join("scripts");
+        fs::create_dir_all(&script_dir).expect("script dir should exist");
+        fs::write(
+            script_dir.join("agent-input-freshness-receipt.mjs"),
+            r#"const workflowIndex = process.argv.indexOf("--workflow");
+const workflow = workflowIndex >= 0 ? process.argv[workflowIndex + 1] : "unknown";
+console.log(JSON.stringify({
+  ok: true,
+  mode: "input-freshness-receipt",
+  schema_version: "aipedia.input-freshness-receipt.v1",
+  project_dir: process.cwd(),
+  require_fresh: false,
+  workflows: [{
+    id: workflow,
+    kind: `${workflow}-input`,
+    ok: true,
+    status: "fresh",
+    next_action: ""
+  }],
+  summary: {
+    workflow_count: 1,
+    ok_count: 1,
+    attention_count: 0,
+    stale_count: 0
+  },
+  next_actions: []
+}));"#,
+        )
+        .expect("input freshness fixture should write");
     }
 
     fn sample_page_plan(report_path: Option<String>) -> PagePlan {
@@ -3692,6 +3767,7 @@ mod tests {
         let receipt_dir = project_dir.join("receipts");
         fs::create_dir_all(&receipt_dir).expect("receipt dir should exist");
         write_system_progress_script(&project_dir);
+        write_input_freshness_script(&project_dir);
         let plan_path = project_dir.join("tool-refresh-batch.json");
         let route_args_path = project_dir.join("route-args.txt");
         fs::write(
@@ -3788,6 +3864,18 @@ mod tests {
             receipt["system_progress"]["command"],
             "node scripts/agent-system-progress-check.mjs --json --project-dir=."
         );
+        assert_eq!(
+            receipt["input_freshness"]["schema_version"],
+            "aipedia.input-freshness-receipt.v1"
+        );
+        assert_eq!(
+            receipt["input_freshness"]["workflows"][0]["id"],
+            "tool-refresh"
+        );
+        assert_eq!(
+            receipt["input_freshness"]["command"],
+            "node scripts/agent-input-freshness-receipt.mjs --workflow tool-refresh --json --project-dir=."
+        );
 
         fs::remove_dir_all(dir).ok();
     }
@@ -3801,6 +3889,7 @@ mod tests {
         fs::create_dir_all(&receipt_dir).expect("receipt dir should exist");
         fs::create_dir_all(&report_dir).expect("report dir should exist");
         write_system_progress_script(&project_dir);
+        write_input_freshness_script(&project_dir);
         fs::write(
             receipt_dir.join("2026-06-28T00-00-00Z-page-refresh-closeout.json"),
             r#"{"schema_version":"aipedia.closeout-receipt.v1","workflow":"page-refresh","status":"failed","generated_at":"2026-06-28T00:00:00Z","elapsed_ms":321,"commands":[{"label":"page source health","status":1,"elapsed_ms":123,"details_path":"timings/source-health.json"}]}"#,
@@ -3929,6 +4018,14 @@ mod tests {
             .is_some_and(|value| value.ends_with("-page-refresh-closeout.json")));
         assert_eq!(receipt["system_progress"]["project_dir"], ".");
         assert_eq!(receipt["system_progress"]["has_system_artifact"], true);
+        assert_eq!(
+            receipt["input_freshness"]["schema_version"],
+            "aipedia.input-freshness-receipt.v1"
+        );
+        assert_eq!(
+            receipt["input_freshness"]["workflows"][0]["id"],
+            "page-refresh"
+        );
 
         fs::remove_dir_all(dir).ok();
     }

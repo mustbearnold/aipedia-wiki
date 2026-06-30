@@ -171,6 +171,31 @@ function validRunnerReceipt(overrides = {}) {
     ],
     superseded_failures: [],
     system_progress: validLoopReceipt().system_progress,
+    input_freshness: {
+      ok: true,
+      mode: 'input-freshness-receipt',
+      schema_version: 'aipedia.input-freshness-receipt.v1',
+      project_dir: '.',
+      command: 'node scripts/agent-input-freshness-receipt.mjs --workflow tool-refresh --json --project-dir=.',
+      exit_code: 0,
+      require_fresh: false,
+      workflows: [
+        {
+          id: 'tool-refresh',
+          kind: 'tool-refresh-freshness-report',
+          ok: true,
+          status: 'fresh',
+          next_action: '',
+        },
+      ],
+      summary: {
+        workflow_count: 1,
+        ok_count: 1,
+        attention_count: 0,
+        stale_count: 0,
+      },
+      next_actions: [],
+    },
     ...overrides,
   };
 }
@@ -271,6 +296,26 @@ test('closeout receipt check validates runner closeout receipts', () => {
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.receipts[0].type, 'runner-closeout');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails runner receipts with mismatched input freshness workflow', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-input-freshness-'));
+  const path = join(dir, 'runner.json');
+  const receipt = validRunnerReceipt();
+  receipt.input_freshness.workflows[0].id = 'page-refresh';
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('input-freshness-workflow-missing'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

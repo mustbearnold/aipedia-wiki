@@ -31,12 +31,14 @@
         "npm run agent:input-freshness",
         ".agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json",
         "tools/aipedia-runner/src/main.rs strict planner flags",
+        "tools/aipedia-runner/src/main.rs runner input_freshness closeout field",
         "tests/scripts/tool-refresh-batch.test.mjs planner input_freshness",
         "tests/scripts/page-refresh-batch.test.mjs stale ledger blocker",
         "tests/scripts/affiliate-conversion-plan.test.mjs inventory input_freshness",
-        "tests/scripts/agent-input-freshness-receipt.test.mjs shared receipt tests"
+        "tests/scripts/agent-input-freshness-receipt.test.mjs shared receipt tests",
+        "tools/aipedia-runner/src/main.rs runner closeout input freshness tests"
       ],
-      "remaining": "Add safe auto-refresh modes where mutation is acceptable and wire shared input-freshness receipts into runner closeouts."
+      "remaining": "Add safe auto-refresh modes where mutation is acceptable."
     },
     {
       "id": "system-progress-checkpoint",
@@ -89,7 +91,10 @@
         "agent:closeout:check --require-closeout-identity",
         "scripts/aipedia-loops.mjs trace and artifact_refs",
         "tools/aipedia-runner/src/main.rs trace and artifact_refs",
-        "agent:closeout:check --require-trace-artifacts"
+        "agent:closeout:check --require-trace-artifacts",
+        "tools/aipedia-runner/src/main.rs input_freshness closeout field",
+        "scripts/agent-closeout-receipt-check.mjs input_freshness validation",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs input_freshness workflow mismatch test"
       ],
       "remaining": "Expand trace refs into workflow-specific closeout policies and bounded production pilots."
     },
@@ -143,14 +148,11 @@
     }
   ],
   "current_slice": {
-    "name": "shared input freshness receipts",
+    "name": "runner input freshness closeout receipts",
     "system_artifacts": [
-      "scripts/agent-input-freshness-receipt.mjs",
-      "tests/scripts/agent-input-freshness-receipt.test.mjs",
-      "package.json",
-      ".agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json",
-      ".agent/LOOPS.md",
-      "docs/codex-operating-manual.md",
+      "tools/aipedia-runner/src/main.rs",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
     ],
@@ -158,9 +160,9 @@
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Add runner closeout integration for shared input-freshness receipts.",
     "Add safe auto-refresh policy for stale generated planner inputs where mutation is acceptable.",
     "Add governance for deliberate score gold-set baseline changes.",
+    "Expand workflow-specific closeout policies now that closeouts include system progress, trace artifacts, and input freshness.",
     "Pilot one bounded content workload only after the next system slice is verified."
   ]
 }

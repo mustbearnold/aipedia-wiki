@@ -269,6 +269,9 @@ function validateRunnerReceipt(value, issues) {
   if (value.system_progress != null) {
     validateSystemProgress(value.system_progress, { ok: value.status === 'passed' }, issues);
   }
+  if (value.input_freshness != null) {
+    validateInputFreshness(value.input_freshness, value, issues);
+  }
 }
 
 function validateRunnerCommand(command, issues, path) {
@@ -281,6 +284,55 @@ function validateRunnerCommand(command, issues, path) {
     issues.push(issue('runner-command-status-invalid', `${path}.status must be a number or null.`));
   }
   requireNonNegativeNumber(command, 'elapsed_ms', issues, `${path}.elapsed_ms`);
+}
+
+function validateInputFreshness(freshness, receipt, issues) {
+  if (!isObject(freshness)) {
+    issues.push(issue('input-freshness-invalid', 'input_freshness must be an object.'));
+    return;
+  }
+  requireBoolean(freshness, 'ok', issues, 'input_freshness.ok');
+  requireString(freshness, 'mode', issues, { path: 'input_freshness.mode', values: ['input-freshness-receipt'] });
+  requireString(freshness, 'schema_version', issues, {
+    path: 'input_freshness.schema_version',
+    values: ['aipedia.input-freshness-receipt.v1'],
+  });
+  requireString(freshness, 'project_dir', issues, { path: 'input_freshness.project_dir' });
+  requireString(freshness, 'command', issues, { path: 'input_freshness.command' });
+  requireNonNegativeNumber(freshness, 'exit_code', issues, 'input_freshness.exit_code');
+  requireArray(freshness, 'workflows', issues, 'input_freshness.workflows');
+  requireObject(freshness, 'summary', issues, 'input_freshness.summary');
+  requireArray(freshness, 'next_actions', issues, 'input_freshness.next_actions');
+
+  if (Array.isArray(freshness.workflows)) {
+    if (!freshness.workflows.some((workflow) => isObject(workflow) && workflow.id === receipt.workflow)) {
+      issues.push(issue('input-freshness-workflow-missing', `input_freshness.workflows must include ${receipt.workflow}.`));
+    }
+    freshness.workflows.forEach((workflow, index) => validateInputFreshnessWorkflow(workflow, issues, `input_freshness.workflows[${index}]`));
+  }
+
+  if (isObject(freshness.summary)) {
+    for (const field of ['workflow_count', 'ok_count', 'attention_count', 'stale_count']) {
+      requireNonNegativeNumber(freshness.summary, field, issues, `input_freshness.summary.${field}`);
+    }
+    if (Array.isArray(freshness.workflows) && freshness.summary.workflow_count !== freshness.workflows.length) {
+      issues.push(issue('input-freshness-total-mismatch', `input_freshness.summary.workflow_count is ${freshness.summary.workflow_count} but workflows has ${freshness.workflows.length} item(s).`));
+    }
+  }
+}
+
+function validateInputFreshnessWorkflow(workflow, issues, path) {
+  if (!isObject(workflow)) {
+    issues.push(issue('input-freshness-workflow-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(workflow, 'id', issues, { path: `${path}.id` });
+  requireString(workflow, 'kind', issues, { path: `${path}.kind` });
+  requireBoolean(workflow, 'ok', issues, `${path}.ok`);
+  requireString(workflow, 'status', issues, { path: `${path}.status` });
+  if (workflow.next_action != null && typeof workflow.next_action !== 'string') {
+    issues.push(issue('input-freshness-workflow-invalid', `${path}.next_action must be a string when present.`));
+  }
 }
 
 function validateCloseoutIdentity(value, issues) {
