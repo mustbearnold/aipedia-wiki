@@ -20,24 +20,44 @@ const RUN_ALL = hasFlag('--all');
 const SITE_DIR_ARG = valueFor('--site-dir') || valueFor('--dist-dir') || '';
 const WRITE_LEDGER = hasFlag('--write-ledger');
 const REQUIRE_SYSTEM_PROGRESS = hasFlag('--require-system-progress');
+const GOAL_ID = valueFor('--goal-id') || process.env.AIPEDIA_GOAL_ID || 'unscoped-goal';
+const RUN_ID = valueFor('--run-id') || process.env.AIPEDIA_RUN_ID || '';
+const RESIDUAL_RISKS = valuesFor('--risk').concat(envList('AIPEDIA_RESIDUAL_RISKS'));
+const EXTRA_NEXT_ACTIONS = valuesFor('--next-action').concat(envList('AIPEDIA_NEXT_ACTIONS'));
 const LEDGER_DIR = resolve(PROJECT_DIR, valueFor('--ledger-dir') || '.agent/loop-runs/system');
 const KNOWN_FLAGS = new Set([
   '--all',
   '--dist-dir',
+  '--goal-id',
   '--ledger-dir',
   '--json',
   '--loop',
+  '--next-action',
   '--project-dir',
   '--registry',
   '--root',
   '--run',
   '--require-system-progress',
+  '--risk',
+  '--run-id',
   '--site-dir',
   '--write-ledger',
   '--help',
   '-h',
 ]);
-const VALUE_FLAGS = new Set(['--dist-dir', '--ledger-dir', '--loop', '--project-dir', '--registry', '--root', '--site-dir']);
+const VALUE_FLAGS = new Set([
+  '--dist-dir',
+  '--goal-id',
+  '--ledger-dir',
+  '--loop',
+  '--next-action',
+  '--project-dir',
+  '--registry',
+  '--risk',
+  '--root',
+  '--run-id',
+  '--site-dir',
+]);
 const STALE_BUILD_GRACE_MS = 1000;
 
 if (HELP_MODE) {
@@ -117,6 +137,10 @@ function usage() {
     '  --project-dir <dir>     Project root. Alias: --root.',
     '  --write-ledger          Persist this run under .agent/loop-runs/system/.',
     '  --require-system-progress  Fail this run if no system artifact changed.',
+    '  --goal-id <id>          Attach a goal id to the closeout receipt.',
+    '  --run-id <id>           Attach a run id. Defaults to loop-run:<generated_at>.',
+    '  --risk <text>           Residual risk. Repeatable.',
+    '  --next-action <text>    Next action. Repeatable.',
     '  --ledger-dir <dir>      Override the loop-run ledger directory.',
   ].join('\n');
 }
@@ -144,6 +168,7 @@ function briefReport(registryData, loops) {
 
 function runLoopReport(registryData, loops) {
   const startedAt = performance.now();
+  const generatedAt = new Date().toISOString();
   const loopReports = loops.map(runLoop);
   const totals = {
     loops: loopReports.length,
@@ -160,7 +185,11 @@ function runLoopReport(registryData, loops) {
     registry_path: projectPath(REGISTRY_PATH),
     schema_version: registryData.schema_version || 1,
     default_site_dir: defaultSiteDir,
-    generated_at: new Date().toISOString(),
+    generated_at: generatedAt,
+    goal_id: GOAL_ID,
+    run_id: RUN_ID || `loop-run:${generatedAt}`,
+    residual_risks: RESIDUAL_RISKS,
+    next_actions: EXTRA_NEXT_ACTIONS,
     duration_ms: Math.round(performance.now() - startedAt),
     totals,
     loops: loopReports,
@@ -606,6 +635,10 @@ function latestLedgerSummary(reportData) {
     schema_version: copy.schema_version,
     default_site_dir: copy.default_site_dir,
     generated_at: copy.generated_at,
+    goal_id: copy.goal_id || 'unscoped-goal',
+    run_id: copy.run_id || '',
+    residual_risks: copy.residual_risks || [],
+    next_actions: copy.next_actions || [],
     duration_ms: copy.duration_ms,
     totals: copy.totals,
     review: copy.review,
@@ -764,6 +797,14 @@ function valuesFor(flag) {
     }
   }
   return values;
+}
+
+function envList(name) {
+  const value = process.env[name] || '';
+  return value
+    .split(/\r?\n|;;/)
+    .map((part) => part.trim())
+    .filter(Boolean);
 }
 
 function hasFlag(flag) {

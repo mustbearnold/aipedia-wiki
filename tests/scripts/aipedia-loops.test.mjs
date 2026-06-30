@@ -240,6 +240,14 @@ test('aipedia loops can write a machine-readable run ledger', () => {
       '--loop',
       'clean-loop',
       '--write-ledger',
+      '--goal-id',
+      'meta-goal',
+      '--run-id',
+      'run-001',
+      '--risk',
+      'Fixture risk',
+      '--next-action',
+      'Fixture next action',
       `--ledger-dir=${ledgerDir}`,
       `--project-dir=${dir}`,
       `--registry=${registry}`,
@@ -255,10 +263,16 @@ test('aipedia loops can write a machine-readable run ledger', () => {
     const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
     const fullRun = JSON.parse(readFileSync(join(ledgerDir, timestampedRuns[0]), 'utf8'));
     assert.equal(latest.totals.ok, 1);
+    assert.equal(latest.goal_id, 'meta-goal');
+    assert.equal(latest.run_id, 'run-001');
+    assert.deepEqual(latest.residual_risks, ['Fixture risk']);
+    assert.deepEqual(latest.next_actions, ['Fixture next action']);
     assert.deepEqual(latest.ledger.trend.status_changes, []);
     assert.equal(latest.project_dir, '.');
     assert.equal(JSON.stringify(latest).includes('stdout_tail'), false);
     assert.equal(JSON.stringify(fullRun).includes('stdout_tail'), true);
+    assert.equal(fullRun.goal_id, 'meta-goal');
+    assert.equal(fullRun.run_id, 'run-001');
 
     rmSync(join(ledgerDir, timestampedRuns[0]), { force: true });
     const secondResult = runLoops(

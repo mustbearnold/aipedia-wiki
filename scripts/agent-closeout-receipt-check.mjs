@@ -12,6 +12,7 @@ const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const ALL_SYSTEM = hasFlag('--all-system');
 const REQUIRE_SYSTEM_PROGRESS = hasFlag('--require-system-progress');
+const REQUIRE_CLOSEOUT_IDENTITY = hasFlag('--require-closeout-identity');
 const EXPLICIT_RECEIPTS = valuesFor('--receipt').concat(valuesFor('--path'));
 const KNOWN_FLAGS = new Set([
   '--all-system',
@@ -21,6 +22,7 @@ const KNOWN_FLAGS = new Set([
   '--path',
   '--project-dir',
   '--receipt',
+  '--require-closeout-identity',
   '--require-system-progress',
   '--root',
 ]);
@@ -51,6 +53,7 @@ const report = {
   mode: 'closeout-receipt-check',
   project_dir: PROJECT_DIR,
   require_system_progress: REQUIRE_SYSTEM_PROGRESS,
+  require_closeout_identity: REQUIRE_CLOSEOUT_IDENTITY,
   totals: {
     receipts: receipts.length,
     ok: receipts.filter((receipt) => receipt.ok).length,
@@ -75,6 +78,7 @@ function usage() {
     '  --path <path>                 Alias for --receipt.',
     '  --all-system                  Validate every .agent/loop-runs/system/*.json receipt.',
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
+    '  --require-closeout-identity   Require goal_id, run_id, residual_risks, and next_actions.',
     '  --project-dir <dir>           Project root. Alias: --root.',
     '  --json                        Emit a structured report.',
   ].join('\n');
@@ -141,6 +145,7 @@ function validateLoopReceipt(value, issues) {
   requireArray(value, 'loops', issues);
   requireObject(value, 'review', issues);
   requireObject(value, 'ledger', issues);
+  validateCloseoutIdentity(value, issues);
 
   if (isObject(value.totals)) {
     for (const field of ['loops', 'ok', 'attention', 'skipped', 'commands']) {
@@ -239,6 +244,7 @@ function validateRunnerReceipt(value, issues) {
   requireArray(value, 'widths', issues);
   requireArray(value, 'commands', issues);
   requireArray(value, 'superseded_failures', issues);
+  validateCloseoutIdentity(value, issues);
 
   if (value.workflow === 'tool-refresh') {
     requireString(value, 'route_args', issues);
@@ -269,6 +275,23 @@ function validateRunnerCommand(command, issues, path) {
     issues.push(issue('runner-command-status-invalid', `${path}.status must be a number or null.`));
   }
   requireNonNegativeNumber(command, 'elapsed_ms', issues, `${path}.elapsed_ms`);
+}
+
+function validateCloseoutIdentity(value, issues) {
+  const hasAny = value.goal_id != null || value.run_id != null || value.residual_risks != null || value.next_actions != null;
+  if (!hasAny && !REQUIRE_CLOSEOUT_IDENTITY) return;
+  if (typeof value.goal_id !== 'string' || !value.goal_id.trim()) {
+    issues.push(issue('closeout-goal-id-missing', 'goal_id must be a non-empty string when closeout identity is required or partially present.'));
+  }
+  if (typeof value.run_id !== 'string' || !value.run_id.trim()) {
+    issues.push(issue('closeout-run-id-missing', 'run_id must be a non-empty string when closeout identity is required or partially present.'));
+  }
+  if (!Array.isArray(value.residual_risks)) {
+    issues.push(issue('closeout-risks-invalid', 'residual_risks must be an array.'));
+  }
+  if (!Array.isArray(value.next_actions)) {
+    issues.push(issue('closeout-next-actions-invalid', 'next_actions must be an array.'));
+  }
 }
 
 function requireObject(value, field, issues, path = field) {

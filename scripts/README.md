@@ -16,15 +16,15 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory.jsonl --query "pricing source gaps" --json`: ranks memory records with the CPU lexical scorer.
 - `npm --silent run agent:system-progress -- --require-system-artifact --json`: fails content-only diffs when a loop claims operating-system progress.
 - `npm --silent run agent:pause-receipt -- --goal-id <id> --safe-resume-step <step> --in-progress-step <step> --json`: writes a structured pause/resume receipt with dirty-tree state, validation done/pending, must-not-repeat items, and next commands.
-- `npm --silent run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --json`: validates loop or runner closeout receipt JSON contracts and can require enforced system-progress evidence.
+- `npm --silent run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --json`: validates loop or runner closeout receipt JSON contracts and can require enforced system-progress evidence plus `goal_id`, `run_id`, `residual_risks`, and `next_actions`.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
 - `npm run lint`: source/content guard bundle used as the repo lint gate.
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
 - `npm run ops:dashboard`: read-only branch, worktree, PR/issue, and optional audit summary for daily operations.
 - `npm run loop:system`: lists every registered AiPedia operating loop and its read-only commands.
 - `npm run loop:all`: runs every registered loop read-only and reports `ok`, `attention`, `skipped`, ranked recommendations, and built-output freshness for rendered-output loops. Stale or unknown build freshness is reported as attention.
-- `npm run loop:all:record`: runs every registered loop and writes a JSON receipt plus `latest.json` under `.agent/loop-runs/system/`, including a `system_progress` block.
-- `npm run loop:all:record -- --require-system-progress`: fails a recorded loop when no system artifact changed. Use this for operating-system goal closeouts so content-only work cannot count as system progress.
+- `npm run loop:all:record`: runs every registered loop and writes a JSON receipt plus `latest.json` under `.agent/loop-runs/system/`, including closeout identity fields and a `system_progress` block.
+- `npm run loop:all:record -- --goal-id <id> --run-id <id> --risk <text> --next-action <text> --require-system-progress`: fails a recorded loop when no system artifact changed and records explicit closeout identity. Use this for operating-system goal closeouts so content-only work cannot count as system progress.
 - `npm run loop:next`: read-only decision-content flywheel brief for the next buyer-intent cluster. Add `-- --fail-on-stale-backlog` in automation so stale `src/data/coverage-backlog.json` cannot silently drive work.
 - `npm run loop:verify`: date-stable verifier for a decision-content cycle; sets `AIPEDIA_LEDGER_DATE`, runs focused checks, records per-command timing, builds when a route or `--force-build` needs it, and can call route QA.
 - `npm run loop:record`: writes a durable `.agent/loop-runs/` receipt after a cycle.
@@ -36,7 +36,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run agent:memory:query`: CPU lexical vector query over JSONL memory records.
 - `npm run agent:system-progress`: read-only system-progress checkpoint. Use `-- --require-system-artifact` before recording an agent-system loop so content-only changes cannot count as operating-system progress.
 - `npm run agent:pause-receipt`: writes `.agent/loop-runs/pauses/*-pause-receipt.json` unless `--out` is supplied. Long-running goals should use it before pausing or handing off.
-- `npm run agent:closeout:check`: validates loop-run and Rust runner closeout JSON receipts. Use `-- --require-system-progress` for June 30 meta-goal closeouts.
+- `npm run agent:closeout:check`: validates loop-run and Rust runner closeout JSON receipts. Use `-- --require-system-progress --require-closeout-identity` for June 30 meta-goal closeouts.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`: plans the next 60-tool freshness batch, including registered source metadata, scoped `audit:sources` commands, routes, parent hubs, closeout commands, and `agent_briefs` for six shard workers.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents`: prints one guarded shard-worker brief per 10-tool shard plus the single integrator brief.
 - `npm run check:frontmatter`: parses changed content frontmatter with `js-yaml` so malformed markdown metadata is caught before Astro typecheck/build.
@@ -65,11 +65,11 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `loop-record.mjs`: creates `.agent/loop-runs/YYYY-MM-DD-slug.md` receipts for completed or attempted cycles.
 - `agent-system-progress-check.mjs`: classifies changed files as system, content, or other artifacts and can fail when no system artifact is present.
 - `agent-pause-receipt.mjs`: writes structured JSON pause receipts so future agents can resume from files rather than chat memory.
-- `agent-closeout-receipt-check.mjs`: validates system loop and Rust runner closeout receipts, including optional enforced system-progress fields.
+- `agent-closeout-receipt-check.mjs`: validates system loop and Rust runner closeout receipts, including optional enforced system-progress and closeout-identity fields.
 - `tool-refresh-batch.mjs`: plans grouped tool freshness work. Use `--limit 60 --max-workers 6 --tools-per-worker 10 --json` for machine-readable batch plans and `--agents` for six shard-worker prompts. Planner output includes scoped `audit:sources` commands so integrators can check registered source reachability, content-hash changes, and snapshot updates before manual review.
 - `check-frontmatter.mjs`: parses changed or explicit markdown frontmatter with `js-yaml` and reports file, line, and column for YAML syntax failures.
 - `tool-refresh-batch-check.mjs`: runs the cheap grouped tool gate. It accepts explicit `--file` values or a saved planner JSON through `--plan` or `--files-from`.
-- `tools/aipedia-runner/`: Rust orchestration wrapper around the tool and page refresh planners, closeout gates, route-arg generation, worker prompt files, worker report summaries, and local receipts. Runner closeout JSON includes `system_progress` when the Node checkpoint script is available.
+- `tools/aipedia-runner/`: Rust orchestration wrapper around the tool and page refresh planners, closeout gates, route-arg generation, worker prompt files, worker report summaries, and local receipts. Runner closeout JSON includes `goal_id`, `run_id`, `residual_risks`, `next_actions`, and `system_progress` when the Node checkpoint script is available.
 - `runner:agent-plan`: Rust-side bridge contract for future generic agent DAG execution. It currently writes JSON only; Node CLIs remain the stable evidence and memory boundary.
 - `qa-route.mjs`: serves the built output and verifies a local route across 360, 390, 430, 768, 1024, and 1366 px unless custom widths are supplied.
 - `qa-agent.mjs`: measures buyer-decision, commercial CTA, and layout-consistency journeys across local routes. Optional PageAgent mode injects `page-agent` in the browser and proxies OpenAI-compatible LLM calls through the local QA server so API keys stay out of page reports.

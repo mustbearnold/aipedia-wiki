@@ -330,6 +330,10 @@ struct CloseoutReceiptJson {
     workflow: String,
     status: String,
     generated_at: String,
+    goal_id: String,
+    run_id: String,
+    residual_risks: Vec<String>,
+    next_actions: Vec<String>,
     current_date: Option<String>,
     elapsed_ms: u64,
     plan: String,
@@ -2704,7 +2708,13 @@ fn write_receipt(
     ok: bool,
     total_duration_ms: u128,
 ) -> Result<()> {
-    let timestamp = Utc::now().format("%Y-%m-%dT%H-%M-%SZ");
+    let now = Utc::now();
+    let timestamp = now.format("%Y-%m-%dT%H-%M-%SZ").to_string();
+    let generated_at = now.to_rfc3339();
+    let goal_id = closeout_goal_id();
+    let run_id = closeout_run_id("tool-refresh", &generated_at);
+    let residual_risks = closeout_list("AIPEDIA_RESIDUAL_RISKS");
+    let next_actions = closeout_list("AIPEDIA_NEXT_ACTIONS");
     let path = receipt_dir.join(format!("{}-tool-refresh-closeout.md", timestamp));
     let json_path = receipt_dir.join(format!("{}-tool-refresh-closeout.json", timestamp));
     let mut content = String::new();
@@ -2713,7 +2723,9 @@ fn write_receipt(
         "- Status: {}\n",
         if ok { "passed" } else { "failed" }
     ));
-    content.push_str(&format!("- Generated: {}\n", Utc::now().to_rfc3339()));
+    content.push_str(&format!("- Generated: {}\n", generated_at));
+    content.push_str(&format!("- Goal ID: `{}`\n", goal_id));
+    content.push_str(&format!("- Run ID: `{}`\n", run_id));
     content.push_str(&format!(
         "- Plan: `{}`\n",
         display_path(project_dir, plan_path)
@@ -2773,7 +2785,11 @@ fn write_receipt(
         schema_version: "aipedia.closeout-receipt.v1".to_string(),
         workflow: "tool-refresh".to_string(),
         status: if ok { "passed" } else { "failed" }.to_string(),
-        generated_at: Utc::now().to_rfc3339(),
+        generated_at,
+        goal_id,
+        run_id,
+        residual_risks,
+        next_actions,
         current_date: None,
         elapsed_ms: to_u64(total_duration_ms),
         plan: display_path(project_dir, plan_path),
@@ -2812,7 +2828,13 @@ fn write_page_receipt(
     ok: bool,
     total_duration_ms: u128,
 ) -> Result<()> {
-    let timestamp = Utc::now().format("%Y-%m-%dT%H-%M-%SZ");
+    let now = Utc::now();
+    let timestamp = now.format("%Y-%m-%dT%H-%M-%SZ").to_string();
+    let generated_at = now.to_rfc3339();
+    let goal_id = closeout_goal_id();
+    let run_id = closeout_run_id("page-refresh", &generated_at);
+    let residual_risks = closeout_list("AIPEDIA_RESIDUAL_RISKS");
+    let next_actions = closeout_list("AIPEDIA_NEXT_ACTIONS");
     let path = receipt_dir.join(format!("{}-page-refresh-closeout.md", timestamp));
     let json_path = receipt_dir.join(format!("{}-page-refresh-closeout.json", timestamp));
     let mut content = String::new();
@@ -2821,7 +2843,9 @@ fn write_page_receipt(
         "- Status: {}\n",
         if ok { "passed" } else { "failed" }
     ));
-    content.push_str(&format!("- Generated: {}\n", Utc::now().to_rfc3339()));
+    content.push_str(&format!("- Generated: {}\n", generated_at));
+    content.push_str(&format!("- Goal ID: `{}`\n", goal_id));
+    content.push_str(&format!("- Run ID: `{}`\n", run_id));
     content.push_str(&format!("- Current date: {}\n", plan.current_date));
     content.push_str(&format!(
         "- Plan: `{}`\n",
@@ -2919,7 +2943,11 @@ fn write_page_receipt(
         schema_version: "aipedia.closeout-receipt.v1".to_string(),
         workflow: "page-refresh".to_string(),
         status: if ok { "passed" } else { "failed" }.to_string(),
-        generated_at: Utc::now().to_rfc3339(),
+        generated_at,
+        goal_id,
+        run_id,
+        residual_risks,
+        next_actions,
         current_date: Some(plan.current_date.clone()),
         elapsed_ms: to_u64(total_duration_ms),
         plan: display_path(project_dir, plan_path),
@@ -2971,6 +2999,34 @@ fn receipt_commands(project_dir: &Path, results: &[CommandResult]) -> Vec<Closeo
                 .map(|path| display_path(project_dir, path)),
         })
         .collect()
+}
+
+fn closeout_goal_id() -> String {
+    closeout_env("AIPEDIA_GOAL_ID").unwrap_or_else(|| "unscoped-goal".to_string())
+}
+
+fn closeout_run_id(workflow: &str, generated_at: &str) -> String {
+    closeout_env("AIPEDIA_RUN_ID").unwrap_or_else(|| format!("{workflow}:{generated_at}"))
+}
+
+fn closeout_list(name: &str) -> Vec<String> {
+    let Some(value) = closeout_env(name) else {
+        return Vec::new();
+    };
+    value
+        .lines()
+        .flat_map(|line| line.split(";;"))
+        .map(str::trim)
+        .filter(|item| !item.is_empty())
+        .map(str::to_string)
+        .collect()
+}
+
+fn closeout_env(name: &str) -> Option<String> {
+    std::env::var(name)
+        .ok()
+        .map(|value| value.trim().to_string())
+        .filter(|value| !value.is_empty())
 }
 
 fn routes_from_route_args(input: &str) -> Vec<String> {
@@ -3408,6 +3464,22 @@ mod tests {
         assert_eq!(receipt["schema_version"], "aipedia.closeout-receipt.v1");
         assert_eq!(receipt["workflow"], "tool-refresh");
         assert_eq!(receipt["status"], "passed");
+        assert!(!receipt["goal_id"]
+            .as_str()
+            .expect("goal id should be a string")
+            .is_empty());
+        assert!(!receipt["run_id"]
+            .as_str()
+            .expect("run id should be a string")
+            .is_empty());
+        assert!(receipt["residual_risks"]
+            .as_array()
+            .expect("residual risks should be an array")
+            .is_empty());
+        assert!(receipt["next_actions"]
+            .as_array()
+            .expect("next actions should be an array")
+            .is_empty());
         assert_eq!(receipt["elapsed_ms"], 250);
         assert!(receipt["changed_routes"]
             .as_array()
@@ -3493,6 +3565,22 @@ mod tests {
                 .expect("json receipt should parse");
 
         assert_eq!(receipt["workflow"], "page-refresh");
+        assert!(!receipt["goal_id"]
+            .as_str()
+            .expect("goal id should be a string")
+            .is_empty());
+        assert!(!receipt["run_id"]
+            .as_str()
+            .expect("run id should be a string")
+            .is_empty());
+        assert!(receipt["residual_risks"]
+            .as_array()
+            .expect("residual risks should be an array")
+            .is_empty());
+        assert!(receipt["next_actions"]
+            .as_array()
+            .expect("next actions should be an array")
+            .is_empty());
         assert_eq!(receipt["current_date"], "2026-06-26");
         assert!(receipt["changed_routes"]
             .as_array()

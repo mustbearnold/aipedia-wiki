@@ -35,12 +35,13 @@
         "npm run agent:system-progress",
         "scripts/aipedia-loops.mjs system_progress receipt field",
         "npm run loop:all:record -- --require-system-progress --json",
+        "loop:all:record closeout identity fields",
         "tests/scripts/agent-system-progress-check.test.mjs",
         "tests/scripts/aipedia-loops.test.mjs",
         ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json",
         "tools/aipedia-runner/src/main.rs runner system_progress closeout field"
       ],
-      "remaining": "Add goal/run identity, residual risk, and next-action fields to closeout receipts."
+      "remaining": "Keep system-progress enforcement attached to every meta closeout and bounded production pilot."
     },
     {
       "id": "pause-resume-receipts",
@@ -71,9 +72,12 @@
         "scripts/agent-closeout-receipt-check.mjs",
         "npm run agent:closeout:check",
         "tests/scripts/agent-closeout-receipt-check.test.mjs",
-        "tools/aipedia-runner/src/main.rs runner system_progress closeout field"
+        "tools/aipedia-runner/src/main.rs runner system_progress closeout field",
+        "scripts/aipedia-loops.mjs goal_id run_id residual_risks next_actions",
+        "tools/aipedia-runner/src/main.rs goal_id run_id residual_risks next_actions",
+        "agent:closeout:check --require-closeout-identity"
       ],
-      "remaining": "Adopt goal_id, run_id, trace/span refs, supersession, source IDs, route widths, command timings, residual risk fields, and runner system-progress fields consistently."
+      "remaining": "Add trace/span refs, artifact refs, and broader closeout-identity enforcement across workflow-specific closeouts."
     },
     {
       "id": "non-stale-scoring",
@@ -116,19 +120,21 @@
     }
   ],
   "current_slice": {
-    "name": "rust runner system-progress closeout receipts",
+    "name": "closeout identity fields",
     "system_artifacts": [
       "tools/aipedia-runner/src/main.rs",
+      "scripts/aipedia-loops.mjs",
       "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/aipedia-loops.test.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "scripts/README.md",
-      "docs/agentic-tooling-meta-compliance.md"
+      "docs/agentic-tooling-meta-compliance.md",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Add goal_id, run_id, residual-risk, and next-action fields to closeout receipts.",
     "Extend stale-input policy to page/tool/affiliate planners.",
     "Add non-stale scoring risk/confidence fields and stale-decay tests.",
     "Pilot one bounded content workload only after the system slice is verified."

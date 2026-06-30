@@ -25,6 +25,10 @@ function validLoopReceipt(overrides = {}) {
     schema_version: 1,
     default_site_dir: 'dist-fast/client',
     generated_at: '2026-06-30T03:01:47.100Z',
+    goal_id: 'meta-goal',
+    run_id: 'loop-run:fixture',
+    residual_risks: [],
+    next_actions: ['Continue the fixture.'],
     duration_ms: 123,
     totals: {
       loops: 1,
@@ -100,6 +104,10 @@ function validRunnerReceipt(overrides = {}) {
     workflow: 'tool-refresh',
     status: 'passed',
     generated_at: '2026-06-30T03:01:47Z',
+    goal_id: 'meta-goal',
+    run_id: 'runner-run:fixture',
+    residual_risks: [],
+    next_actions: ['Continue the runner fixture.'],
     current_date: null,
     elapsed_ms: 250,
     plan: 'local/tmp/plan.json',
@@ -157,6 +165,30 @@ test('closeout receipt check fails enforced loop receipts without system progres
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.equal(report.receipts[0].issues[0].code, 'system-progress-missing');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails receipts without required closeout identity', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-missing-identity-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  delete receipt.goal_id;
+  delete receipt.run_id;
+  delete receipt.residual_risks;
+  delete receipt.next_actions;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-closeout-identity', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('closeout-goal-id-missing'));
+    assert.ok(codes.includes('closeout-run-id-missing'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

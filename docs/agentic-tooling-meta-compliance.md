@@ -74,16 +74,26 @@ Rust runner closeouts now join the same system-progress contract.
 - Rust tests assert the field on both tool and page closeout receipts.
 - `agent:closeout:check` validates runner `system_progress` when present.
 
+## Fifth System Slice
+
+Loop and runner closeouts now share explicit closeout identity fields.
+
+- `loop:all:record` accepts `--goal-id`, `--run-id`, repeatable `--risk`, and repeatable `--next-action`.
+- Loop receipts and `latest.json` include `goal_id`, `run_id`, `residual_risks`, and `next_actions`.
+- Rust runner tool-refresh and page-refresh closeout JSON include the same fields, with environment overrides from `AIPEDIA_GOAL_ID`, `AIPEDIA_RUN_ID`, `AIPEDIA_RESIDUAL_RISKS`, and `AIPEDIA_NEXT_ACTIONS`.
+- `agent:closeout:check --require-closeout-identity` enforces the identity field contract for meta-goal closeouts.
+- Focused Node and Rust tests cover loop identity persistence, missing identity failures, and runner receipt shape.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
 | Stale input handling | Partial | `decision-loop --fail-on-stale-backlog` | Extend to page/tool/affiliate planners. |
-| System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Add goal/run identity and risk fields. |
+| System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | existing runner and loop receipts, `agent:closeout:check` | Normalize `goal_id`, `run_id`, spans, source IDs, route widths, supersession, and residual risks. |
+| Closeout receipts/traces | Partial | existing runner and loop receipts, `agent:closeout:check`, loop and runner closeout identity fields | Add trace/span refs and require identity in more closeout paths. |
 | Non-stale scoring | Partial | `agent:score`, calibration docs | Add risk/confidence fields, score decay tests, and gold-set calibration. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
