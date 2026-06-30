@@ -1865,3 +1865,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-37.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-17-30-980Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5097 ms, latest estimated full receipt tokens 10845, and latest system artifact count 8.
 - Next: Commit and push, then wire this mode into the standard meta closeout command surface.
+### 2026-06-30: Agentic Tooling Meta Slice 38, Strict Meta Closeout Command
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `npm run agent:meta:closeout`, a strict public closeout command for the latest June 30 meta-goal loop receipt. It requires system progress, closeout identity, trace artifacts, efficiency metrics, and checked DAG proof artifacts.
+- Changed: `audit:commands` now requires `agent:meta:closeout` as an operator command and checks the exact command string, including `--require-dag-proof`. Operator docs now point meta-goal closeouts at the strict command.
+- System lesson: a hard validator mode is only useful when the public command surface makes it the default path. The audit invariant prevents future drift from removing the DAG proof requirement silently.
+- Verification: focused syntax, focused command-surface tests, command audit, live strict meta closeout, live stale-receipt negative proof, JSON parse checks, em-dash guard, diff guard, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record` with DAG refs, strict `agent:meta:closeout`, and efficiency trends passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-38.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-28-35-675Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5097 ms, latest estimated full receipt tokens 10785, and latest system artifact count 9.
+- Next: Commit and push, then use strict meta closeout for every continuing DAG-planned June 30 meta-goal closeout and move to the next system target.

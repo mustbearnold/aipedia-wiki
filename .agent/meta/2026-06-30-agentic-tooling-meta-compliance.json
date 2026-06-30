@@ -114,6 +114,8 @@
         "scripts/aipedia-loops.mjs --dag-validation-report",
         "scripts/agent-closeout-receipt-check.mjs DAG artifact ref validation",
         "scripts/agent-closeout-receipt-check.mjs --require-dag-proof",
+        "package.json agent:meta:closeout",
+        "scripts/audit-command-surface.mjs exact agent:meta:closeout invariant",
         "scripts/agent-closeout-receipt-check.mjs DAG validation-report path matching",
         "tools/aipedia-runner/src/main.rs runner AIPEDIA_DAG_GRAPHS artifact refs",
         "tools/aipedia-runner/src/main.rs runner AIPEDIA_DAG_VALIDATION_REPORTS artifact refs",
@@ -124,6 +126,7 @@
         "tests/scripts/aipedia-loops.test.mjs DAG artifact ref coverage",
         "tests/scripts/agent-closeout-receipt-check.test.mjs DAG artifact ref coverage",
         "tests/scripts/agent-closeout-receipt-check.test.mjs required DAG proof coverage",
+        "tests/scripts/audit-command-surface.test.mjs agent:meta:closeout invariant",
         "tools/aipedia-runner/src/main.rs runner DAG artifact ref test",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
@@ -131,7 +134,7 @@
         ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json",
         "docs/parallel-tooling-architecture.md"
       ],
-      "remaining": "Wire --require-dag-proof into the standard meta closeout command surface where DAG planning is expected."
+      "remaining": "Use strict meta closeout on every continuing DAG-planned meta-goal closeout and keep the command-surface invariant enforced."
     },
     {
       "id": "closeout-receipts-traces",
@@ -251,24 +254,27 @@
     }
   ],
   "current_slice": {
-    "name": "Required DAG proof closeout mode",
+    "name": "Strict meta closeout command surface",
     "system_artifacts": [
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "package.json",
+      "scripts/audit-command-surface.mjs",
+      "tests/scripts/audit-command-surface.test.mjs",
+      "scripts/README.md",
+      ".agent/LOOPS.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-37.md",
-      ".agent/loop-runs/system/2026-06-30T09-17-30-980Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-38.md",
+      ".agent/loop-runs/system/2026-06-30T09-28-35-675Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Wire --require-dag-proof into the standard meta closeout command surface where DAG planning is expected.",
+    "Use npm run agent:meta:closeout -- --json for every continuing June 30 DAG-planned meta-goal closeout.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",

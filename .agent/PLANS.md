@@ -381,12 +381,23 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-17-30-980Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5097 ms, and latest estimated full receipt tokens 10845.
 
+### Completed Slice 38
+
+- Added `npm run agent:meta:closeout` as the strict June 30 meta-goal closeout command.
+- The command validates `.agent/loop-runs/system/latest.json` and requires system progress, closeout identity, trace artifacts, efficiency metrics, and checked DAG proof artifacts.
+- `audit:commands` now requires `agent:meta:closeout` as an operator command and checks the exact command string, including `--require-dag-proof`.
+- Operator docs now point meta-goal closeouts to `npm run agent:meta:closeout -- --json`.
+- Live strict meta closeout passed on `.agent/loop-runs/system/latest.json`.
+- Live negative proof rejected `.agent/loop-runs/system/2026-06-30T08-48-03-374Z-loop-run.json` with missing DAG graph and validation refs.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-28-35-675Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5097 ms, latest estimated full receipt tokens 10785, and latest system artifact count 9.
+
 ### Next Slice
 
-1. Wire `--require-dag-proof` into the standard meta closeout command surface where DAG planning is expected.
-2. Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.
-3. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
-4. Add exact model-token usage and correction rate when reliable inputs are available.
+1. Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.
+2. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
+3. Add exact model-token usage and correction rate when reliable inputs are available.
+4. Keep `npm run agent:meta:closeout -- --json` as the required closeout for DAG-planned June 30 meta-goal work.
 
 ### Required Closeout Before Completion
 
@@ -394,7 +405,7 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - `npm run check:smart` scoped to changed system files.
 - `npm run check:quick` when package scripts, test harnesses, or shared guards change.
 - `npm --silent run loop:system -- --json` and `npm --silent run loop:all:record -- --goal-id <id> --run-id <id> --risk <text> --next-action <text> --require-system-progress --json`.
-- `npm --silent run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --json`.
+- `npm --silent run agent:meta:closeout -- --json`.
 - Durable `.agent/loop-runs/` receipt and `.agent` memory updates.
 - Commit and push to remote.
 - Goal remains active until the operating system is materially implemented to the standard in `docs/agentic-tooling-meta-compliance.md`.
