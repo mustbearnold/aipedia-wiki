@@ -164,7 +164,91 @@ test('loop efficiency trends summarize recent metric receipts', () => {
     assert.deepEqual(report.stability_summary.new_attention_loops, ['performance-ux']);
     assert.deepEqual(report.stability_summary.resolved_attention_loops, []);
     assert.equal(report.stability_summary.command_status_changes, 1);
+    assert.equal(report.correction_summary.loop_previous_attention_count, 1);
+    assert.equal(report.correction_summary.loop_resolved_attention_count, 0);
+    assert.equal(report.correction_summary.loop_regressed_attention_count, 1);
+    assert.equal(report.correction_summary.command_regressed_attention_count, 1);
     assert.equal(report.slowest_commands[0].label, 'indexability audit');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('loop efficiency trends reports correction rates from resolved attention', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-efficiency-corrections-'));
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+
+  try {
+    mkdirSync(ledgerDir, { recursive: true });
+    writeReceipt(ledgerDir, '2026-06-30T00-00-00-000Z-loop-run.json', loopReceipt({
+      generated_at: '2026-06-30T00:00:00.000Z',
+      run_id: 'attention-run',
+      loops: [
+        {
+          id: 'freshness',
+          status: 'attention',
+          commands: [
+            {
+              label: 'freshness queue',
+              status: 'attention',
+            },
+          ],
+        },
+        {
+          id: 'performance-ux',
+          status: 'attention',
+          commands: [
+            {
+              label: 'indexability audit',
+              status: 'attention',
+            },
+          ],
+        },
+      ],
+    }));
+    writeReceipt(ledgerDir, '2026-06-30T01-00-00-000Z-loop-run.json', loopReceipt({
+      generated_at: '2026-06-30T01:00:00.000Z',
+      run_id: 'correction-run',
+      loops: [
+        {
+          id: 'freshness',
+          status: 'ok',
+          commands: [
+            {
+              label: 'freshness queue',
+              status: 'ok',
+            },
+          ],
+        },
+        {
+          id: 'performance-ux',
+          status: 'attention',
+          commands: [
+            {
+              label: 'indexability audit',
+              status: 'attention',
+            },
+          ],
+        },
+      ],
+    }));
+
+    const result = runTrends('--json', '--project-dir', dir, '--max-runs', '2');
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.correction_summary.has_comparison, true);
+    assert.equal(report.correction_summary.loop_previous_attention_count, 2);
+    assert.equal(report.correction_summary.loop_resolved_attention_count, 1);
+    assert.equal(report.correction_summary.loop_persistent_attention_count, 1);
+    assert.equal(report.correction_summary.loop_regressed_attention_count, 0);
+    assert.equal(report.correction_summary.loop_correction_rate, 0.5);
+    assert.equal(report.correction_summary.command_previous_attention_count, 2);
+    assert.equal(report.correction_summary.command_resolved_attention_count, 1);
+    assert.equal(report.correction_summary.command_correction_rate, 0.5);
+    assert.deepEqual(report.correction_summary.resolved_loops.map((item) => item.loop_id), ['freshness']);
+    assert.deepEqual(report.correction_summary.persistent_attention_loops, ['performance-ux']);
+    assert.deepEqual(report.correction_summary.resolved_commands.map((item) => item.label), ['freshness queue']);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

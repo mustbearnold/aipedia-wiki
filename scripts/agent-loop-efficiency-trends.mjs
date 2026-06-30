@@ -93,6 +93,7 @@ function buildTrendReport() {
   const metricsRecords = records.filter((record) => record.efficiency_metrics);
   const summary = trendSummary(records, metricsRecords);
   const stability = stabilitySummary(records);
+  const correction = correctionSummary(records);
   const ok = !issues.some((item) => item.code !== 'missing-efficiency-metrics')
     && (!FAIL_ON_MISSING_METRICS || missingMetrics.length === 0);
 
@@ -100,8 +101,9 @@ function buildTrendReport() {
     ...baseReport(ok, issues, records),
     summary,
     stability_summary: stability,
+    correction_summary: correction,
     slowest_commands: slowestCommandTrends(metricsRecords),
-    next_actions: nextActions(issues, summary, stability),
+    next_actions: nextActions(issues, summary, stability, correction),
   };
 }
 
@@ -327,13 +329,143 @@ function stabilitySummary(records) {
   };
 }
 
-function nextActions(issues, summary, stability) {
+function correctionSummary(records) {
+  const previous = records.length > 1 ? records.at(-2) : null;
+  const latest = records.at(-1) || null;
+  if (!previous || !latest) {
+    return {
+      has_comparison: false,
+      previous_run: previous?.generated_at || '',
+      latest_run: latest?.generated_at || '',
+      loop_previous_attention_count: 0,
+      loop_resolved_attention_count: 0,
+      loop_persistent_attention_count: 0,
+      loop_regressed_attention_count: 0,
+      loop_correction_rate: 0,
+      command_previous_attention_count: 0,
+      command_resolved_attention_count: 0,
+      command_persistent_attention_count: 0,
+      command_regressed_attention_count: 0,
+      command_correction_rate: 0,
+      resolved_loops: [],
+      persistent_attention_loops: [],
+      regressed_loops: [],
+      resolved_commands: [],
+      persistent_attention_commands: [],
+      regressed_commands: [],
+    };
+  }
+
+  const previousLoopStatuses = new Map((previous.loops || []).map((loop) => [loop.id, loop.status || '']));
+  const latestLoopStatuses = new Map((latest.loops || []).map((loop) => [loop.id, loop.status || '']));
+  const previousCommandStatuses = commandStatusMap(previous);
+  const latestCommandStatuses = commandStatusMap(latest);
+
+  const loopPreviousAttention = [...previousLoopStatuses].filter(([, status]) => status === 'attention');
+  const resolvedLoops = loopPreviousAttention
+    .filter(([id]) => latestLoopStatuses.has(id) && latestLoopStatuses.get(id) !== 'attention')
+    .map(([id, previousStatus]) => ({
+      loop_id: id,
+      previous: previousStatus,
+      current: latestLoopStatuses.get(id),
+    }))
+    .sort((left, right) => left.loop_id.localeCompare(right.loop_id));
+  const persistentLoops = loopPreviousAttention
+    .filter(([id]) => latestLoopStatuses.get(id) === 'attention')
+    .map(([id]) => id)
+    .sort();
+  const regressedLoops = [...latestLoopStatuses]
+    .filter(([id, status]) => status === 'attention' && previousLoopStatuses.has(id) && previousLoopStatuses.get(id) !== 'attention')
+    .map(([id, currentStatus]) => ({
+      loop_id: id,
+      previous: previousLoopStatuses.get(id),
+      current: currentStatus,
+    }))
+    .sort((left, right) => left.loop_id.localeCompare(right.loop_id));
+
+  const commandPreviousAttention = [...previousCommandStatuses.values()].filter((command) => command.status === 'attention');
+  const resolvedCommands = commandPreviousAttention
+    .filter((command) => latestCommandStatuses.has(command.key) && latestCommandStatuses.get(command.key).status !== 'attention')
+    .map((command) => ({
+      loop_id: command.loop_id,
+      label: command.label,
+      previous: command.status,
+      current: latestCommandStatuses.get(command.key).status,
+    }))
+    .sort(sortCommandChange);
+  const persistentCommands = commandPreviousAttention
+    .filter((command) => latestCommandStatuses.get(command.key)?.status === 'attention')
+    .map((command) => ({
+      loop_id: command.loop_id,
+      label: command.label,
+    }))
+    .sort(sortCommandChange);
+  const regressedCommands = [...latestCommandStatuses.values()]
+    .filter((command) => command.status === 'attention'
+      && previousCommandStatuses.has(command.key)
+      && previousCommandStatuses.get(command.key).status !== 'attention')
+    .map((command) => ({
+      loop_id: command.loop_id,
+      label: command.label,
+      previous: previousCommandStatuses.get(command.key).status,
+      current: command.status,
+    }))
+    .sort(sortCommandChange);
+
+  return {
+    has_comparison: true,
+    previous_run: previous.generated_at,
+    latest_run: latest.generated_at,
+    loop_previous_attention_count: loopPreviousAttention.length,
+    loop_resolved_attention_count: resolvedLoops.length,
+    loop_persistent_attention_count: persistentLoops.length,
+    loop_regressed_attention_count: regressedLoops.length,
+    loop_correction_rate: ratio(resolvedLoops.length, loopPreviousAttention.length),
+    command_previous_attention_count: commandPreviousAttention.length,
+    command_resolved_attention_count: resolvedCommands.length,
+    command_persistent_attention_count: persistentCommands.length,
+    command_regressed_attention_count: regressedCommands.length,
+    command_correction_rate: ratio(resolvedCommands.length, commandPreviousAttention.length),
+    resolved_loops: resolvedLoops,
+    persistent_attention_loops: persistentLoops,
+    regressed_loops: regressedLoops,
+    resolved_commands: resolvedCommands,
+    persistent_attention_commands: persistentCommands,
+    regressed_commands: regressedCommands,
+  };
+}
+
+function commandStatusMap(record) {
+  const statuses = new Map();
+  for (const loop of record.loops || []) {
+    for (const command of loop.commands || []) {
+      const key = `${loop.id || ''}::${command.label || ''}`;
+      if (!loop.id || !command.label) continue;
+      statuses.set(key, {
+        key,
+        loop_id: loop.id,
+        label: command.label,
+        status: command.status || '',
+      });
+    }
+  }
+  return statuses;
+}
+
+function sortCommandChange(left, right) {
+  return left.loop_id.localeCompare(right.loop_id) || left.label.localeCompare(right.label);
+}
+
+function nextActions(issues, summary, stability, correction) {
   const actions = [];
   if (issues.some((item) => item.code === 'missing-efficiency-metrics')) {
     actions.push('Run loop:all:record again so newer receipts include efficiency_metrics, or use --max-runs to scope to metric-aware receipts.');
   }
   if (stability?.command_status_change_rate > 0.2) {
     actions.push('Inspect command status churn before treating the latest speed movement as stable.');
+  }
+  if (correction?.loop_regressed_attention_count > correction?.loop_resolved_attention_count) {
+    actions.push('Inspect new attention regressions before claiming the latest loop improved quality.');
   }
   if (summary?.latest?.persisted_full_receipt_bytes > 50000) {
     actions.push('Review receipt size and decide whether summarized command tails can replace verbose embedded output.');

@@ -11,6 +11,7 @@ const LEDGER_SCRIPT_PATH = join(process.cwd(), 'scripts', 'generate-page-refresh
 function runReceipt(args = []) {
   return spawnSync(process.execPath, [SCRIPT_PATH, ...args], {
     cwd: process.cwd(),
+    env: { ...process.env, AIPEDIA_LEDGER_DATE: '2026-06-30' },
     encoding: 'utf8',
   });
 }
