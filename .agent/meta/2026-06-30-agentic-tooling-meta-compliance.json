@@ -23,9 +23,16 @@
       "status": "partial",
       "evidence": [
         "scripts/decision-loop.mjs --fail-on-stale-backlog",
-        "tests/scripts/decision-loop.test.mjs stale backlog blocker"
+        "tests/scripts/decision-loop.test.mjs stale backlog blocker",
+        "scripts/tool-refresh-batch.mjs --fail-on-stale-inputs",
+        "scripts/page-refresh-batch.mjs --fail-on-stale-ledger",
+        "scripts/affiliate-conversion-plan.mjs --fail-on-stale-inputs",
+        "tools/aipedia-runner/src/main.rs strict planner flags",
+        "tests/scripts/tool-refresh-batch.test.mjs planner input_freshness",
+        "tests/scripts/page-refresh-batch.test.mjs stale ledger blocker",
+        "tests/scripts/affiliate-conversion-plan.test.mjs inventory input_freshness"
       ],
-      "remaining": "Extend the same stale-input policy to other planners and optionally add safe auto-refresh modes."
+      "remaining": "Add safe auto-refresh modes or all-workflow enforcement receipts for stale generated planner inputs."
     },
     {
       "id": "system-progress-checkpoint",
@@ -120,13 +127,15 @@
     }
   ],
   "current_slice": {
-    "name": "closeout identity fields",
+    "name": "planner stale-input gates",
     "system_artifacts": [
       "tools/aipedia-runner/src/main.rs",
-      "scripts/aipedia-loops.mjs",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/aipedia-loops.test.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "scripts/tool-refresh-batch.mjs",
+      "scripts/page-refresh-batch.mjs",
+      "scripts/affiliate-conversion-plan.mjs",
+      "tests/scripts/tool-refresh-batch.test.mjs",
+      "tests/scripts/page-refresh-batch.test.mjs",
+      "tests/scripts/affiliate-conversion-plan.test.mjs",
       "scripts/README.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
@@ -135,7 +144,6 @@
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Extend stale-input policy to page/tool/affiliate planners.",
     "Add non-stale scoring risk/confidence fields and stale-decay tests.",
     "Pilot one bounded content workload only after the system slice is verified."
   ]

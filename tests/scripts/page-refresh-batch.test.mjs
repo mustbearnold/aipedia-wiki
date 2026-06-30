@@ -1,12 +1,19 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
 
 function runNode(args = []) {
   return spawnSync(process.execPath, ['scripts/page-refresh-batch.mjs', ...args], {
+    cwd: process.cwd(),
+    encoding: 'utf8',
+  });
+}
+
+function runLedger(projectDir, args = []) {
+  return spawnSync(process.execPath, ['scripts/generate-page-refresh-ledger.mjs', '--project-dir', projectDir, ...args], {
     cwd: process.cwd(),
     encoding: 'utf8',
   });
@@ -185,6 +192,48 @@ test('page refresh planner can write worker report scaffolds', () => {
     assert.equal(scaffold.pages[0].status, 'pending');
     assert.equal(scaffold.checks_schema[0].command, 'short name of the check or command');
     assert.doesNotMatch(readFileSync(join(reportDir, 'page-refresh-shard-01.json'), 'utf8'), /"name":/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('page refresh planner can fail on stale default ledger input', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'page-refresh-stale-ledger-'));
+  const guideDir = join(dir, 'src', 'content', 'use-cases');
+  const ledger = join(dir, 'PAGE_REFRESH_LEDGER.md');
+
+  try {
+    mkdirSync(guideDir, { recursive: true });
+    writeFileSync(join(guideDir, 'old-guide.md'), [
+      '---',
+      'slug: old-guide',
+      'title: Old Guide',
+      'last_updated: 2026-06-01',
+      '---',
+      '',
+      'Body.',
+      '',
+    ].join('\n'));
+
+    const ledgerResult = runLedger(dir, ['--date', '2026-06-27', '--json']);
+    assert.equal(ledgerResult.status, 0, `${ledgerResult.stdout}\n${ledgerResult.stderr}`);
+    writeFileSync(ledger, `${readFileSync(ledger, 'utf8')}\n<!-- stale -->\n`);
+
+    const result = runNode([
+      '--json',
+      '--project-dir',
+      dir,
+      '--ledger',
+      ledger,
+      '--fail-on-stale-ledger',
+    ]);
+    assert.equal(result.status, 1, `${result.stdout}\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.mode, 'stale-inputs');
+    assert.equal(report.input_freshness.kind, 'page-refresh-ledger');
+    assert.equal(report.input_freshness.status, 'stale');
+    assert.match(report.input_freshness.next_action, /ledger:pages/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

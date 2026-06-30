@@ -83,12 +83,16 @@ test('tool refresh planner includes source metadata and scoped source-health com
     '--tools-per-worker',
     '1',
     '--include-same-day',
+    '--fail-on-stale-inputs',
   ]);
 
   assert.equal(result.status, 0, `planner should emit JSON\nstdout:\n${result.stdout}\nstderr:\n${result.stderr}`);
   const report = JSON.parse(result.stdout);
 
   assert.ok(report.batch.length > 0);
+  assert.equal(report.fail_on_stale_inputs, true);
+  assert.equal(report.input_freshness.ok, true);
+  assert.equal(report.input_freshness.kind, 'tool-refresh-freshness-report');
   assert.ok(report.commands.source_ids.length > 0);
   assert.ok(report.commands.source_health.length >= 3);
   assert.match(report.commands.source_health[0], /npm run audit:sources -- --json --limit 0 --source-id/);

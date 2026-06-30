@@ -751,6 +751,7 @@ fn plan_tool_refresh(project_dir: &Path, args: &ToolRefreshArgs, dry_run: bool) 
         args.workers.to_string(),
         "--tools-per-worker".to_string(),
         args.tools_per_worker.to_string(),
+        "--fail-on-stale-inputs".to_string(),
         "--json".to_string(),
     ];
 
@@ -821,6 +822,7 @@ fn plan_page_refresh(project_dir: &Path, args: &PageRefreshArgs, dry_run: bool) 
         "--report-dir".to_string(),
         display_path(project_dir, &report_dir),
         "--write-report-scaffolds".to_string(),
+        "--fail-on-stale-ledger".to_string(),
         "--json".to_string(),
     ];
 
@@ -903,6 +905,7 @@ fn plan_affiliate_conversion(
         display_path(project_dir, &report_dir),
         "--write-agent-prompts".to_string(),
         "--write-report-scaffolds".to_string(),
+        "--fail-on-stale-inputs".to_string(),
         "--json".to_string(),
     ];
 

@@ -82,13 +82,16 @@ function runPlan(projectDir, extraArgs = []) {
 test('affiliate conversion planner emits schema-first clusters from inventory data', () => {
   const projectDir = makeProject();
   try {
-    const result = runPlan(projectDir, ['--limit', '2', '--max-workers', '2', '--clusters-per-worker', '1', '--json']);
+    const result = runPlan(projectDir, ['--limit', '2', '--max-workers', '2', '--clusters-per-worker', '1', '--fail-on-stale-inputs', '--json']);
     assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
     const plan = JSON.parse(result.stdout);
 
     assert.equal(plan.schema_version, 1);
     assert.equal(plan.workflow, 'affiliate-conversion-planning');
     assert.equal(plan.current_date, '2026-06-27');
+    assert.equal(plan.fail_on_stale_inputs, true);
+    assert.equal(plan.input_freshness.ok, true);
+    assert.equal(plan.input_freshness.kind, 'affiliate-conversion-inventory');
     assert.equal(plan.inventory_summary.affiliate_link_tools, 2);
     assert.equal(plan.inventory_summary.live_affiliate_tools, 1);
     assert.equal(plan.inventory_summary.configured_not_live_tools, 1);

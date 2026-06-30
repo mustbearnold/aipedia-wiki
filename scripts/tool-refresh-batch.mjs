@@ -19,6 +19,8 @@ const INCLUDE_SAME_DAY = args.includes('--include-same-day');
 const EXCLUDE_RECENT_DAYS = numberArg('--exclude-recent-days', 1, { allowZero: true });
 const explicitExcludeVerifiedDate = valueFor('--exclude-verified-date');
 const EXCLUDE_VERIFIED_DATE = explicitExcludeVerifiedDate || isoDateDaysAgo(EXCLUDE_RECENT_DAYS);
+const FAIL_ON_STALE_INPUTS = args.includes('--fail-on-stale-inputs');
+const MAX_INPUT_AGE_MINUTES = numberArg('--max-input-age-minutes', 10, { allowZero: true });
 const HELP_MODE = args.includes('--help') || args.includes('-h');
 const AGENT_BRIEFS_MODE = args.includes('--agents') || args.includes('--agent-briefs');
 
@@ -42,6 +44,8 @@ function usage() {
     '  --exclude-recent-days <n>  Skip tools verified in the last n days plus today. Default: 1.',
     '  --exclude-verified-date <YYYY-MM-DD>  Skip tools already verified on or after this date. Overrides --exclude-recent-days.',
     '  --include-same-day    Include tools already verified today.',
+    '  --fail-on-stale-inputs  Fail if the live freshness report is missing or older than --max-input-age-minutes.',
+    '  --max-input-age-minutes <n>  Maximum age for generated planner inputs. Default: 10.',
     '  --json               Emit structured JSON.',
     '  --agents             Print shard worker briefs plus an integrator brief.',
     '  --agent-briefs       Alias for --agents.',
@@ -229,6 +233,40 @@ function isoDateDaysAgo(daysAgo) {
   return date.toISOString().slice(0, 10);
 }
 
+function inputFreshness(kind, generatedAt) {
+  const generatedMs = Date.parse(generatedAt || '');
+  const ageMs = Number.isNaN(generatedMs) ? null : Math.max(0, Date.now() - generatedMs);
+  const maxAgeMs = MAX_INPUT_AGE_MINUTES * 60 * 1000;
+  const ok = ageMs != null && ageMs <= maxAgeMs;
+  return {
+    ok,
+    kind,
+    generated_at: generatedAt || '',
+    age_ms: ageMs,
+    max_age_ms: maxAgeMs,
+    stale: !ok,
+    source: 'live audit-freshness-queue report',
+    next_action: ok ? '' : 'Rerun npm run tool:refresh:batch so the planner consumes a fresh freshness queue report.',
+  };
+}
+
+function staleInputReport(inputFreshness) {
+  return {
+    ok: false,
+    mode: 'stale-inputs',
+    project_dir: PROJECT_DIR,
+    input_freshness: inputFreshness,
+  };
+}
+
+function emitStaleInputReport(reportData) {
+  if (JSON_MODE) {
+    process.stdout.write(`${JSON.stringify(reportData, null, 2)}\n`);
+    return;
+  }
+  console.error(`[tool-refresh-batch] ${reportData.input_freshness.next_action}`);
+}
+
 function chunk(list, size) {
   const chunks = [];
   for (let index = 0; index < list.length; index += size) {
@@ -368,6 +406,11 @@ function buildAgentBriefs(batch, commands) {
 }
 
 const report = freshnessReport();
+const inputFreshnessReport = inputFreshness('tool-refresh-freshness-report', report.generated_at);
+if (FAIL_ON_STALE_INPUTS && !inputFreshnessReport.ok) {
+  emitStaleInputReport(staleInputReport(inputFreshnessReport));
+  process.exit(1);
+}
 const batch = buildBatch(report);
 const commands = buildCommands(batch);
 const agentBriefs = buildAgentBriefs(batch, commands);
@@ -377,6 +420,8 @@ const result = {
   project_dir: PROJECT_DIR,
   limit: LIMIT,
   window_days: WINDOW_DAYS,
+  fail_on_stale_inputs: FAIL_ON_STALE_INPUTS,
+  input_freshness: inputFreshnessReport,
   tools_per_worker: TOOLS_PER_WORKER,
   exclude_recent_days: INCLUDE_SAME_DAY || explicitExcludeVerifiedDate ? null : EXCLUDE_RECENT_DAYS,
   exclude_verified_date: INCLUDE_SAME_DAY ? null : EXCLUDE_VERIFIED_DATE,

@@ -84,12 +84,22 @@ Loop and runner closeouts now share explicit closeout identity fields.
 - `agent:closeout:check --require-closeout-identity` enforces the identity field contract for meta-goal closeouts.
 - Focused Node and Rust tests cover loop identity persistence, missing identity failures, and runner receipt shape.
 
+## Sixth System Slice
+
+Planner stale-input gates now cover the major refresh planners.
+
+- `tool-refresh-batch.mjs --fail-on-stale-inputs` validates that the live freshness report has a fresh `generated_at` and emits `input_freshness` in the plan.
+- `page-refresh-batch.mjs --fail-on-stale-ledger` blocks when the default `PAGE_REFRESH_LEDGER.md` is out of date, with an actionable `ledger:pages` recovery step.
+- `affiliate-conversion-plan.mjs --fail-on-stale-inputs` validates that the live affiliate inventory has a fresh `generated_at` and emits `input_freshness` in the plan.
+- The Rust runner forwards strict stale-input flags for tool, page, and affiliate planning.
+- Focused planner tests cover passing live inputs and a stale default page-ledger blocker.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
-| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog` | Extend to page/tool/affiliate planners. |
+| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags | Add safe auto-refresh or all-workflow enforcement receipts. |
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |

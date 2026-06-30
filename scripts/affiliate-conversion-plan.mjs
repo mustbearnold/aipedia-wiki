@@ -17,6 +17,8 @@ const CONFIDENCE_LABELS = [
   'blocked-live-check',
   'secondary-only',
 ];
+const FAIL_ON_STALE_INPUTS = hasFlag('--fail-on-stale-inputs');
+const MAX_INPUT_AGE_MINUTES = numberFor('--max-input-age-minutes', 10, { allowZero: true });
 
 function valuesFor(flag, { fallback = '' } = {}) {
   for (let index = 0; index < process.argv.length; index += 1) {
@@ -27,9 +29,10 @@ function valuesFor(flag, { fallback = '' } = {}) {
   return fallback;
 }
 
-function numberFor(flag, fallback) {
+function numberFor(flag, fallback, options = {}) {
   const value = Number(valuesFor(flag, { fallback: String(fallback) }));
-  return Number.isFinite(value) && value > 0 ? Math.floor(value) : fallback;
+  const minValue = options.allowZero ? 0 : 1;
+  return Number.isFinite(value) && value >= minValue ? Math.floor(value) : fallback;
 }
 
 function hasFlag(flag) {
@@ -63,6 +66,8 @@ function usage() {
     '  --report-dir <path>          Worker report scaffold output directory.',
     '  --write-agent-prompts        Write worker and integrator prompt files.',
     '  --write-report-scaffolds     Write JSON report scaffolds.',
+    '  --fail-on-stale-inputs       Fail if the live affiliate inventory is missing or older than --max-input-age-minutes.',
+    '  --max-input-age-minutes <n>  Maximum age for generated planner inputs. Default: 10.',
     '  --json                       Print planner JSON.',
   ].join('\n');
 }
@@ -289,6 +294,41 @@ function blankReport(workerId, clusters) {
   };
 }
 
+function inputFreshness(generatedAt) {
+  const generatedMs = Date.parse(generatedAt || '');
+  const ageMs = Number.isNaN(generatedMs) ? null : Math.max(0, Date.now() - generatedMs);
+  const maxAgeMs = MAX_INPUT_AGE_MINUTES * 60 * 1000;
+  const ok = ageMs != null && ageMs <= maxAgeMs;
+  return {
+    ok,
+    kind: 'affiliate-conversion-inventory',
+    generated_at: generatedAt || '',
+    age_ms: ageMs,
+    max_age_ms: maxAgeMs,
+    stale: !ok,
+    source: 'live affiliate-conversion-inventory report',
+    next_action: ok ? '' : 'Rerun npm run affiliate:conversion:plan so the planner consumes a fresh affiliate inventory report.',
+  };
+}
+
+function staleInputReport(inputFreshness) {
+  return {
+    ok: false,
+    mode: 'stale-inputs',
+    workflow: 'affiliate-conversion-planning',
+    project_dir: PROJECT_DIR,
+    input_freshness: inputFreshness,
+  };
+}
+
+function emitStaleInputReport(report) {
+  if (hasFlag('--json')) {
+    console.log(JSON.stringify(report, null, 2));
+    return;
+  }
+  console.error(report.input_freshness.next_action);
+}
+
 function writeWorkerArtifacts(plan, workerDir, reportDir, { writePrompts, writeReports }) {
   if (writePrompts) {
     mkdirSync(workerDir, { recursive: true });
@@ -316,7 +356,7 @@ function writeWorkerArtifacts(plan, workerDir, reportDir, { writePrompts, writeR
   }
 }
 
-function buildPlan({ inventory, limit, maxWorkers, clustersPerWorker, workerDir, reportDir }) {
+function buildPlan({ inventory, limit, maxWorkers, clustersPerWorker, workerDir, reportDir, inputFreshness }) {
   const planCurrentDate = currentDate();
   const clusters = selectTools(inventory, limit).map(buildCluster);
   const workerClusters = chunk(clusters, clustersPerWorker, maxWorkers);
@@ -338,6 +378,8 @@ function buildPlan({ inventory, limit, maxWorkers, clustersPerWorker, workerDir,
     workflow: 'affiliate-conversion-planning',
     current_date: planCurrentDate,
     generated_at: new Date().toISOString(),
+    fail_on_stale_inputs: FAIL_ON_STALE_INPUTS,
+    input_freshness: inputFreshness,
     inventory_summary: {
       generated_at: inventory.generated_at,
       total_tool_files: inventory.total_tool_files,
@@ -392,7 +434,12 @@ function main() {
   const jsonMode = hasFlag('--json');
 
   const inventory = runInventory();
-  const plan = buildPlan({ inventory, limit, maxWorkers, clustersPerWorker, workerDir, reportDir });
+  const freshness = inputFreshness(inventory.generated_at);
+  if (FAIL_ON_STALE_INPUTS && !freshness.ok) {
+    emitStaleInputReport(staleInputReport(freshness));
+    process.exit(1);
+  }
+  const plan = buildPlan({ inventory, limit, maxWorkers, clustersPerWorker, workerDir, reportDir, inputFreshness: freshness });
 
   if (outPath) {
     mkdirSync(path.dirname(outPath), { recursive: true });
