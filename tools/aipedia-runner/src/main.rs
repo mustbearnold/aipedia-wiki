@@ -4231,13 +4231,23 @@ fn runner_system_progress(project_dir: &Path) -> Option<serde_json::Value> {
         return None;
     }
     let script_display = display_path(project_dir, &script);
-    let output = Command::new(node_bin())
+    let observed_dirty_before_agent = closeout_list("AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT");
+    let mut command = Command::new(node_bin());
+    command
         .arg(&script_display)
         .arg("--json")
-        .arg("--project-dir=.")
-        .current_dir(project_dir)
-        .output()
-        .ok()?;
+        .arg("--project-dir=.");
+    let mut display_args = vec![
+        script_display.clone(),
+        "--json".to_string(),
+        "--project-dir=.".to_string(),
+    ];
+    for path in &observed_dirty_before_agent {
+        command.arg("--observed-dirty-before-agent").arg(path);
+        display_args.push("--observed-dirty-before-agent".to_string());
+        display_args.push(path.clone());
+    }
+    let output = command.current_dir(project_dir).output().ok()?;
     let mut value = serde_json::from_slice::<serde_json::Value>(&output.stdout).ok()?;
     if let Some(object) = value.as_object_mut() {
         object.insert(
@@ -4246,7 +4256,7 @@ fn runner_system_progress(project_dir: &Path) -> Option<serde_json::Value> {
         );
         object.insert(
             "command".to_string(),
-            serde_json::Value::String(format!("node {} --json --project-dir=.", script_display)),
+            serde_json::Value::String(format!("node {}", display_args.join(" "))),
         );
         object.insert(
             "exit_code".to_string(),
@@ -4345,17 +4355,34 @@ mod tests {
         fs::create_dir_all(&script_dir).expect("script dir should exist");
         fs::write(
             script_dir.join("agent-system-progress-check.mjs"),
-            r#"console.log(JSON.stringify({
+            r#"const observed = [];
+for (let index = 0; index < process.argv.length; index += 1) {
+  if (process.argv[index] === "--observed-dirty-before-agent") observed.push(process.argv[index + 1]);
+}
+console.log(JSON.stringify({
   ok: true,
   mode: "system-progress-check",
   project_dir: process.cwd(),
   require_system_artifact: false,
+  observed_dirty_before_agent: observed,
+  has_observed_dirty_baseline: observed.length > 0,
+  missing_observed_dirty_paths: [],
   changed_paths: ["tools/aipedia-runner/src/main.rs"],
   system_artifacts: ["tools/aipedia-runner/src/main.rs"],
   content_artifacts: [],
   other_artifacts: [],
   has_system_artifact: true,
   content_only: false,
+  agent_changed_paths: ["tools/aipedia-runner/src/main.rs"],
+  agent_system_artifacts: ["tools/aipedia-runner/src/main.rs"],
+  agent_content_artifacts: [],
+  agent_other_artifacts: [],
+  has_agent_system_artifact: true,
+  agent_content_only: false,
+  preexisting_dirty_paths: observed,
+  preexisting_system_artifacts: [],
+  preexisting_content_artifacts: observed,
+  preexisting_other_artifacts: [],
   next_action: "System artifact present or enforcement disabled."
 }));"#,
         )
@@ -4765,6 +4792,10 @@ console.log(JSON.stringify({
         let _dag_graphs = EnvGuard::set("AIPEDIA_DAG_GRAPHS", dag_graph_path);
         let _dag_validation_reports =
             EnvGuard::set("AIPEDIA_DAG_VALIDATION_REPORTS", dag_validation_path);
+        let _observed_dirty = EnvGuard::set(
+            "AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT",
+            "src/content/tools/synthesia.md;;src/data/source-registry.json",
+        );
         fs::write(
             &route_args_path,
             "--route /tools/alpha-tool/ --route /categories/ai-automation/",
@@ -4875,7 +4906,25 @@ console.log(JSON.stringify({
         assert_eq!(receipt["system_progress"]["has_system_artifact"], true);
         assert_eq!(
             receipt["system_progress"]["command"],
-            "node scripts/agent-system-progress-check.mjs --json --project-dir=."
+            "node scripts/agent-system-progress-check.mjs --json --project-dir=. --observed-dirty-before-agent src/content/tools/synthesia.md --observed-dirty-before-agent src/data/source-registry.json"
+        );
+        assert_eq!(
+            receipt["system_progress"]["observed_dirty_before_agent"],
+            serde_json::json!([
+                "src/content/tools/synthesia.md",
+                "src/data/source-registry.json"
+            ])
+        );
+        assert_eq!(
+            receipt["system_progress"]["preexisting_content_artifacts"],
+            serde_json::json!([
+                "src/content/tools/synthesia.md",
+                "src/data/source-registry.json"
+            ])
+        );
+        assert_eq!(
+            receipt["system_progress"]["agent_system_artifacts"],
+            serde_json::json!(["tools/aipedia-runner/src/main.rs"])
         );
         assert_eq!(
             receipt["input_freshness"]["schema_version"],
