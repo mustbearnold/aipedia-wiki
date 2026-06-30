@@ -150,12 +150,24 @@ Runner closeouts now embed workflow-specific input-freshness receipts.
 - Focused Rust tests prove both runner closeout paths emit the correct workflow-specific receipt.
 - Focused Node tests prove the closeout validator accepts valid runner receipts and fails a runner receipt whose embedded input-freshness workflow does not match the closeout workflow.
 
+## Twelfth System Slice
+
+Generated planner inputs now have an explicit safe auto-refresh policy.
+
+- `agent:input-freshness -- --workflow <id> --refresh-stale --json` produces a non-mutating `refresh_plan` for stale inputs.
+- `--apply-refreshes` executes eligible refresh commands and re-checks the selected workflows.
+- Tracked generated-file refreshes require both explicit `--workflow <id>` and `--allow-tracked-mutations`.
+- Decision-content backlog refreshes write `src/data/coverage-backlog.json` through `audit-coverage-gaps.mjs`.
+- Page-refresh ledger refreshes write `PAGE_REFRESH_LEDGER.md` through `generate-page-refresh-ledger.mjs`.
+- Focused tests prove blocked tracked refreshes without acknowledgement, successful decision backlog refresh, and successful page ledger refresh in fixture projects.
+- A live dry-run against the current stale page ledger produced a planned refresh without changing the separate Synthesia content WIP.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
-| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Add safe auto-refresh policy for generated inputs where mutation is acceptable. |
+| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness --refresh-stale`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Prove the refresh policy through one bounded runner or content pilot and decide which workflows should auto-apply in automation. |
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |

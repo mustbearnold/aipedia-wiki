@@ -105,6 +105,59 @@ test('input freshness receipt fails stale decision backlog when required', () =>
   }
 });
 
+test('input freshness receipt blocks tracked refreshes without mutation acknowledgement', () => {
+  const dir = makeProject();
+  try {
+    writeBacklog(dir, '2026-06-01T00:00:00.000Z');
+    const result = runReceipt([
+      '--project-dir',
+      dir,
+      '--workflow',
+      'decision-content',
+      '--refresh-stale',
+      '--apply-refreshes',
+      '--require-fresh',
+      '--json',
+    ]);
+
+    assert.equal(result.status, 1, `${result.stdout}\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.refresh_plan[0].status, 'blocked');
+    assert.match(report.refresh_plan[0].blocked_reasons.join('\n'), /allow-tracked-mutations/);
+    assert.equal(JSON.parse(readFileSync(join(dir, 'src', 'data', 'coverage-backlog.json'), 'utf8')).generated_at, '2026-06-01T00:00:00.000Z');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('input freshness receipt can refresh stale decision backlog with explicit policy flags', () => {
+  const dir = makeProject();
+  try {
+    writeBacklog(dir, '2026-06-01T00:00:00.000Z');
+    const result = runReceipt([
+      '--project-dir',
+      dir,
+      '--workflow',
+      'decision-content',
+      '--refresh-stale',
+      '--apply-refreshes',
+      '--allow-tracked-mutations',
+      '--require-fresh',
+      '--json',
+    ]);
+
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.workflows[0].status, 'fresh');
+    assert.equal(report.refresh_plan[0].status, 'applied');
+    assert.equal(report.refresh_plan[0].after_ok, true);
+    assert.notEqual(JSON.parse(readFileSync(join(dir, 'src', 'data', 'coverage-backlog.json'), 'utf8')).generated_at, '2026-06-01T00:00:00.000Z');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('input freshness receipt reports page ledger current and stale states', () => {
   const dir = makeProject();
   try {
@@ -138,6 +191,38 @@ test('input freshness receipt reports page ledger current and stale states', () 
     const staleReport = JSON.parse(staleResult.stdout);
     assert.equal(staleReport.workflows[0].status, 'stale');
     assert.match(staleReport.workflows[0].next_action, /ledger:pages/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('input freshness receipt can refresh stale page ledger with explicit policy flags', () => {
+  const dir = makeProject();
+  try {
+    const ledgerResult = runLedger(dir, ['--date', '2026-06-30', '--json']);
+    assert.equal(ledgerResult.status, 0, `${ledgerResult.stdout}\n${ledgerResult.stderr}`);
+
+    const ledger = join(dir, 'PAGE_REFRESH_LEDGER.md');
+    writeFileSync(ledger, `${readFileSync(ledger, 'utf8')}\n<!-- stale -->\n`);
+    const result = runReceipt([
+      '--project-dir',
+      dir,
+      '--workflow',
+      'page-refresh',
+      '--refresh-stale',
+      '--apply-refreshes',
+      '--allow-tracked-mutations',
+      '--require-fresh',
+      '--json',
+    ]);
+
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.workflows[0].status, 'current');
+    assert.equal(report.refresh_plan[0].status, 'applied');
+    assert.equal(report.refresh_plan[0].after_ok, true);
+    assert.equal(readFileSync(ledger, 'utf8').includes('<!-- stale -->'), false);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

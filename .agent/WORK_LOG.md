@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta OS Slice 12
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added safe generated-input refresh policy to `agent:input-freshness`. `--refresh-stale` now emits a non-mutating refresh plan; `--apply-refreshes` executes eligible refresh commands and re-checks selected workflows; tracked generated-file writes require explicit `--workflow <id>` plus `--allow-tracked-mutations`. Decision-content can explicitly regenerate `src/data/coverage-backlog.json`, and page-refresh can explicitly regenerate `PAGE_REFRESH_LEDGER.md`.
+- Verification: `node --check scripts/agent-input-freshness-receipt.mjs`; `node --test tests/scripts/agent-input-freshness-receipt.test.mjs`; `npm --silent run agent:input-freshness -- --workflow page-refresh --refresh-stale --json`; `npm --silent run agent:input-freshness -- --help`; JSON parse check for `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json`; `npm run check:smart -- --path scripts/agent-input-freshness-receipt.mjs --path tests/scripts/agent-input-freshness-receipt.test.mjs --path docs/agentic-tooling-meta-compliance.md --path docs/codex-operating-manual.md --path scripts/README.md --path .agent/CURRENT_STATUS.md --path .agent/PLANS.md --path .agent/LOOPS.md --path .agent/meta/2026-06-30-agentic-tooling-meta-compliance.json --run --json`; `npm run check:quick`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm --silent run loop:system -- --json`; `npm --silent run loop:all:record -- --goal-id 2026-06-30-agentic-tooling-meta-os --run-id 2026-06-30-slice-12-input-refresh-policy --risk "Input refreshes can now apply safely with explicit flags, but automation should not auto-apply tracked mutations until a bounded pilot proves the policy." --next-action "Add governance for deliberate score gold-set baseline changes." --next-action "Expand workflow-specific closeout policies now that closeouts include system progress, trace artifacts, and input freshness." --next-action "Prove the input refresh policy through one bounded runner or content pilot." --require-system-progress --json`; `npm --silent run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --json`.
+- Loop result: Focused input-freshness tests pass 6/6. Full script suite passes 482/482 in both scoped smart and quick gates. Live page-refresh dry-run planned the stale ledger refresh without mutating the separate Synthesia content WIP. Enforced receipt `.agent/loop-runs/system/2026-06-30T04-45-17-805Z-loop-run.json` validates with 0 issues and records 4 ok, 3 attention, 0 skipped.
+- Next: Add governance for deliberate score gold-set baseline changes.
+
 ### 2026-06-30: Agentic Tooling Meta OS Slice 11
 
 - Status: Verified locally, pending commit and push.

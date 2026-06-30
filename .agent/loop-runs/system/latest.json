@@ -5,25 +5,25 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-06-30T04:36:29.283Z",
+  "generated_at": "2026-06-30T04:45:17.805Z",
   "goal_id": "2026-06-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-11-runner-input-freshness",
+  "run_id": "2026-06-30-slice-12-input-refresh-policy",
   "residual_risks": [
-    "Runner closeouts now record input freshness, but auto-refresh policy still needs explicit mutation rules."
+    "Input refreshes can now apply safely with explicit flags, but automation should not auto-apply tracked mutations until a bounded pilot proves the policy."
   ],
   "next_actions": [
-    "Add safe auto-refresh policy for stale generated planner inputs where mutation is acceptable.",
     "Add governance for deliberate score gold-set baseline changes.",
-    "Expand workflow-specific closeout policies and prove them on a bounded real workload."
+    "Expand workflow-specific closeout policies now that closeouts include system progress, trace artifacts, and input freshness.",
+    "Prove the input refresh policy through one bounded runner or content pilot."
   ],
   "trace": {
-    "trace_id": "2026-06-30-agentic-tooling-meta-os:2026-06-30-slice-11-runner-input-freshness",
-    "span_id": "span:loop-run:2026-06-30-slice-11-runner-input-freshness:2026-06-30T04:36:29.283Z",
+    "trace_id": "2026-06-30-agentic-tooling-meta-os:2026-06-30-slice-12-input-refresh-policy",
+    "span_id": "span:loop-run:2026-06-30-slice-12-input-refresh-policy:2026-06-30T04:45:17.805Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-06-30T04:36:29.283Z",
-    "ended_at": "2026-06-30T04:36:34.462Z",
-    "duration_ms": 5179
+    "started_at": "2026-06-30T04:45:17.805Z",
+    "ended_at": "2026-06-30T04:45:22.991Z",
+    "duration_ms": 5187
   },
   "artifact_refs": [
     {
@@ -35,7 +35,7 @@
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-06-30T04-36-29-283Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-06-30T04-45-17-805Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -290,7 +290,7 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 5179,
+  "duration_ms": 5187,
   "totals": {
     "loops": 7,
     "ok": 4,
@@ -394,27 +394,29 @@
     "require_system_artifact": true,
     "changed_paths": [
       ".agent/CURRENT_STATUS.md",
+      ".agent/LOOPS.md",
       ".agent/PLANS.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "docs/codex-operating-manual.md",
       "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-input-freshness-receipt.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tools/aipedia-runner/src/main.rs"
+      "tests/scripts/agent-input-freshness-receipt.test.mjs"
     ],
     "system_artifacts": [
       ".agent/CURRENT_STATUS.md",
+      ".agent/LOOPS.md",
       ".agent/PLANS.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "docs/codex-operating-manual.md",
       "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tools/aipedia-runner/src/main.rs"
+      "scripts/agent-input-freshness-receipt.mjs",
+      "tests/scripts/agent-input-freshness-receipt.test.mjs"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -432,21 +434,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 233,
+      "duration_ms": 221,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 118,
+          "duration_ms": 112,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 115,
+          "duration_ms": 108,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -456,7 +458,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 594,
+      "duration_ms": 581,
       "attention_reasons": [
         "due_now=49"
       ],
@@ -465,7 +467,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 252,
+          "duration_ms": 229,
           "attention_reasons": [
             "due_now=49"
           ],
@@ -474,7 +476,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 341,
+          "duration_ms": 352,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -484,28 +486,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 416,
+      "duration_ms": 410,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 154,
+          "duration_ms": 160,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 116,
+          "duration_ms": 119,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 145,
+          "duration_ms": 131,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -515,7 +517,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 2065,
+      "duration_ms": 2051,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -524,7 +526,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 2065,
+          "duration_ms": 2051,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -548,14 +550,14 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 514,
+      "duration_ms": 509,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 253,
+          "duration_ms": 252,
           "attention_reasons": [],
           "build_freshness": null
         },
@@ -569,7 +571,7 @@
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 133,
+          "duration_ms": 129,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -579,7 +581,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 800,
+      "duration_ms": 818,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -589,7 +591,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 197,
+          "duration_ms": 207,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -610,7 +612,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 603,
+          "duration_ms": 611,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -634,28 +636,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 557,
+      "duration_ms": 596,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 113,
+          "duration_ms": 126,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 103,
+          "duration_ms": 119,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 341,
+          "duration_ms": 350,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -664,13 +666,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-06-30T04-36-29-283Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-06-30T04-45-17-805Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-06-30T04-27-27-272Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-06-30T04-36-29-283Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-06-30T04:27:27.272Z",
+      "previous_run": "2026-06-30T04:36:29.283Z",
       "status_changes": [],
-      "duration_delta_ms": 178,
+      "duration_delta_ms": 8,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

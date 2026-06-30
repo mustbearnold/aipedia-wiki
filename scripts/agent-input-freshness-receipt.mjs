@@ -12,16 +12,22 @@ const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || D
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const REQUIRE_FRESH = hasFlag('--require-fresh');
+const REFRESH_STALE = hasFlag('--refresh-stale') || hasFlag('--apply-refreshes');
+const APPLY_REFRESHES = hasFlag('--apply-refreshes');
+const ALLOW_TRACKED_MUTATIONS = hasFlag('--allow-tracked-mutations');
 const OUT_PATH = valueFor('--out');
 const MAX_GENERATED_AGE_MINUTES = numberFor('--max-generated-age-minutes', 10, { allowZero: true });
 const MAX_BACKLOG_AGE_DAYS = numberFor('--max-backlog-age-days', 2, { allowZero: true });
 const KNOWN_FLAGS = new Set([
   '--all',
+  '--allow-tracked-mutations',
+  '--apply-refreshes',
   '--json',
   '--max-backlog-age-days',
   '--max-generated-age-minutes',
   '--out',
   '--project-dir',
+  '--refresh-stale',
   '--require-fresh',
   '--root',
   '--workflow',
@@ -48,8 +54,24 @@ if (argumentIssues.length) {
   process.exit(2);
 }
 
+const explicitWorkflows = [...new Set(valuesFor('--workflow'))];
 const selectedWorkflows = selectedWorkflowIds();
-const checks = selectedWorkflows.map((workflow) => checkWorkflow(workflow));
+let checks = selectedWorkflows.map((workflow) => checkWorkflow(workflow));
+let refreshPlan = REFRESH_STALE ? checks.filter((check) => !check.ok).map((check) => buildRefreshPlan(check)) : [];
+if (APPLY_REFRESHES && refreshPlan.length) {
+  refreshPlan = refreshPlan.map((refresh) => applyRefresh(refresh));
+  if (refreshPlan.some((refresh) => refresh.applied)) {
+    checks = selectedWorkflows.map((workflow) => checkWorkflow(workflow));
+    refreshPlan = refreshPlan.map((refresh) => {
+      const after = checks.find((check) => check.id === refresh.id);
+      return {
+        ...refresh,
+        after_status: after?.status || '',
+        after_ok: after?.ok === true,
+      };
+    });
+  }
+}
 const nextActions = [...new Set(checks.filter((check) => !check.ok && check.next_action).map((check) => check.next_action))];
 const report = {
   ok: checks.every((check) => check.ok),
@@ -58,9 +80,13 @@ const report = {
   generated_at: new Date().toISOString(),
   project_dir: PROJECT_DIR,
   require_fresh: REQUIRE_FRESH,
+  refresh_stale: REFRESH_STALE,
+  apply_refreshes: APPLY_REFRESHES,
+  allow_tracked_mutations: ALLOW_TRACKED_MUTATIONS,
   max_generated_age_minutes: MAX_GENERATED_AGE_MINUTES,
   max_backlog_age_days: MAX_BACKLOG_AGE_DAYS,
   workflows: checks,
+  refresh_plan: refreshPlan.map(stripPolicy),
   summary: {
     workflow_count: checks.length,
     ok_count: checks.filter((check) => check.ok).length,
@@ -90,6 +116,9 @@ function usage() {
     '  --all                         Check every known workflow input. Default when no --workflow is supplied.',
     '  --workflow <id>                Check one workflow input. Repeatable. Known IDs: decision-content, tool-refresh, page-refresh, affiliate-conversion.',
     '  --require-fresh                Exit non-zero if any checked input is stale, missing, invalid, or failed.',
+    '  --refresh-stale                Add a policy plan for stale generated inputs.',
+    '  --apply-refreshes              Execute eligible refresh commands, then re-check selected workflows.',
+    '  --allow-tracked-mutations      Permit explicit tracked generated-file refreshes when applying.',
     '  --max-generated-age-minutes <n> Maximum age for live generated reports. Default: 10.',
     '  --max-backlog-age-days <n>     Maximum age for coverage backlog. Default: 2.',
     '  --out <path>                   Write receipt JSON.',
@@ -177,6 +206,125 @@ function checkWorkflow(workflow) {
     ok: false,
     status: 'unknown',
     next_action: `Remove unknown workflow ${workflow} from the input freshness receipt.`,
+  };
+}
+
+function refreshPolicyFor(workflow) {
+  if (workflow === 'decision-content') {
+    return {
+      id: workflow,
+      mutation_policy: 'tracked-generated',
+      requires_tracked_mutation_ack: true,
+      requires_explicit_workflow: true,
+      writes: ['src/data/coverage-backlog.json'],
+      commands: [
+        {
+          label: 'coverage backlog',
+          display: 'node scripts/audit-coverage-gaps.mjs --json --out src/data/coverage-backlog.json --project-dir .',
+          script: 'audit-coverage-gaps.mjs',
+          args: ['--json', '--out', 'src/data/coverage-backlog.json', '--project-dir', PROJECT_DIR],
+        },
+      ],
+      next_action: 'Run npm run agent:input-freshness -- --workflow decision-content --refresh-stale --apply-refreshes --allow-tracked-mutations --require-fresh --json.',
+    };
+  }
+  if (workflow === 'page-refresh') {
+    return {
+      id: workflow,
+      mutation_policy: 'tracked-generated',
+      requires_tracked_mutation_ack: true,
+      requires_explicit_workflow: true,
+      writes: ['PAGE_REFRESH_LEDGER.md'],
+      commands: [
+        {
+          label: 'page refresh ledger',
+          display: 'node scripts/generate-page-refresh-ledger.mjs --json --project-dir .',
+          script: 'generate-page-refresh-ledger.mjs',
+          args: ['--json', '--project-dir', PROJECT_DIR],
+        },
+      ],
+      next_action: 'Run npm run agent:input-freshness -- --workflow page-refresh --refresh-stale --apply-refreshes --allow-tracked-mutations --require-fresh --json.',
+    };
+  }
+  return null;
+}
+
+function buildRefreshPlan(check) {
+  const policy = refreshPolicyFor(check.id);
+  if (!policy) {
+    return {
+      id: check.id,
+      ok: false,
+      status: 'manual',
+      before_status: check.status,
+      mutation_policy: 'none',
+      writes: [],
+      commands: [],
+      blocked_reasons: ['No deterministic generated-input refresh command is configured for this workflow.'],
+      next_action: check.next_action || `Manually refresh ${check.id}, then rerun input freshness.`,
+    };
+  }
+
+  const missingRequirements = [];
+  if (policy.requires_tracked_mutation_ack && !ALLOW_TRACKED_MUTATIONS) {
+    missingRequirements.push('Tracked generated-file mutations require --allow-tracked-mutations.');
+  }
+  if (policy.requires_explicit_workflow && !explicitWorkflows.includes(check.id)) {
+    missingRequirements.push(`Tracked generated-file refreshes require explicit --workflow ${check.id}.`);
+  }
+
+  const status = APPLY_REFRESHES && missingRequirements.length ? 'blocked' : APPLY_REFRESHES ? 'ready' : 'planned';
+  return {
+    id: check.id,
+    ok: status === 'planned',
+    status,
+    before_status: check.status,
+    mutation_policy: policy.mutation_policy,
+    requires_tracked_mutation_ack: policy.requires_tracked_mutation_ack,
+    requires_explicit_workflow: policy.requires_explicit_workflow,
+    writes: policy.writes,
+    commands: policy.commands.map((command) => ({ label: command.label, command: command.display })),
+    required_flags: missingRequirements,
+    blocked_reasons: APPLY_REFRESHES ? missingRequirements : [],
+    next_action: missingRequirements.length ? `${missingRequirements.join(' ')} ${policy.next_action}` : policy.next_action,
+    policy,
+  };
+}
+
+function applyRefresh(refresh) {
+  if (refresh.status !== 'ready') return stripPolicy(refresh);
+  const commandResults = refresh.policy.commands.map(runRefreshCommand);
+  const ok = commandResults.every((command) => command.ok);
+  return stripPolicy({
+    ...refresh,
+    ok,
+    status: ok ? 'applied' : 'failed',
+    applied: ok,
+    command_results: commandResults,
+    blocked_reasons: ok ? [] : ['At least one refresh command failed.'],
+  });
+}
+
+function stripPolicy(refresh) {
+  const copy = { ...refresh };
+  delete copy.policy;
+  return copy;
+}
+
+function runRefreshCommand(command) {
+  const scriptPath = resolve(SCRIPT_DIR, command.script);
+  const child = spawnSync(process.execPath, [scriptPath, ...command.args], {
+    cwd: PROJECT_DIR,
+    encoding: 'utf8',
+    timeout: 120000,
+  });
+  return {
+    label: command.label,
+    command: command.display,
+    ok: child.status === 0,
+    exit_code: child.status,
+    stdout_tail: tail(child.stdout),
+    stderr_tail: tail(child.stderr),
   };
 }
 
