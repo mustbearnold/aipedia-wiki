@@ -254,6 +254,9 @@ function validateRunnerReceipt(value, issues) {
   if (Array.isArray(value.commands)) {
     value.commands.forEach((command, index) => validateRunnerCommand(command, issues, `commands[${index}]`));
   }
+  if (value.system_progress != null) {
+    validateSystemProgress(value.system_progress, { ok: value.status === 'passed' }, issues);
+  }
 }
 
 function validateRunnerCommand(command, issues, path) {

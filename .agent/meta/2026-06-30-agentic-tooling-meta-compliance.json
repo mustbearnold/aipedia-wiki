@@ -37,9 +37,10 @@
         "npm run loop:all:record -- --require-system-progress --json",
         "tests/scripts/agent-system-progress-check.test.mjs",
         "tests/scripts/aipedia-loops.test.mjs",
-        ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json"
+        ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json",
+        "tools/aipedia-runner/src/main.rs runner system_progress closeout field"
       ],
-      "remaining": "Extend this checkpoint into Rust runner closeout receipts and add closeout receipt schema validation."
+      "remaining": "Add goal/run identity, residual risk, and next-action fields to closeout receipts."
     },
     {
       "id": "pause-resume-receipts",
@@ -69,7 +70,8 @@
         ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json",
         "scripts/agent-closeout-receipt-check.mjs",
         "npm run agent:closeout:check",
-        "tests/scripts/agent-closeout-receipt-check.test.mjs"
+        "tests/scripts/agent-closeout-receipt-check.test.mjs",
+        "tools/aipedia-runner/src/main.rs runner system_progress closeout field"
       ],
       "remaining": "Adopt goal_id, run_id, trace/span refs, supersession, source IDs, route widths, command timings, residual risk fields, and runner system-progress fields consistently."
     },
@@ -114,21 +116,18 @@
     }
   ],
   "current_slice": {
-    "name": "closeout receipt schema validation",
+    "name": "rust runner system-progress closeout receipts",
     "system_artifacts": [
+      "tools/aipedia-runner/src/main.rs",
       "scripts/agent-closeout-receipt-check.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "package.json",
       "scripts/README.md",
-      ".agent/LOOPS.md",
-      "docs/agentic-tooling-meta-compliance.md",
-      ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json"
+      "docs/agentic-tooling-meta-compliance.md"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Extend agent:system-progress into Rust runner closeout receipts.",
     "Add goal_id, run_id, residual-risk, and next-action fields to closeout receipts.",
     "Extend stale-input policy to page/tool/affiliate planners.",
     "Add non-stale scoring risk/confidence fields and stale-decay tests.",

@@ -342,6 +342,7 @@ struct CloseoutReceiptJson {
     widths: Vec<u16>,
     commands: Vec<CloseoutReceiptCommand>,
     superseded_failures: Vec<SupersededFailureReceipt>,
+    system_progress: Option<serde_json::Value>,
 }
 
 #[derive(Debug, Serialize)]
@@ -2789,6 +2790,7 @@ fn write_receipt(
         } else {
             Vec::new()
         },
+        system_progress: runner_system_progress(project_dir),
     };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
     fs::write(&json_path, serde_json::to_string_pretty(&json_receipt)?)
@@ -2946,6 +2948,7 @@ fn write_page_receipt(
         } else {
             Vec::new()
         },
+        system_progress: runner_system_progress(project_dir),
     };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
     fs::write(&json_path, serde_json::to_string_pretty(&json_receipt)?)
@@ -3130,6 +3133,41 @@ fn status_text(status: ExitStatus) -> String {
         .unwrap_or_else(|| "signal".to_string())
 }
 
+fn runner_system_progress(project_dir: &Path) -> Option<serde_json::Value> {
+    let script = project_dir.join("scripts/agent-system-progress-check.mjs");
+    if !script.exists() {
+        return None;
+    }
+    let script_display = display_path(project_dir, &script);
+    let output = Command::new(node_bin())
+        .arg(&script_display)
+        .arg("--json")
+        .arg("--project-dir=.")
+        .current_dir(project_dir)
+        .output()
+        .ok()?;
+    let mut value = serde_json::from_slice::<serde_json::Value>(&output.stdout).ok()?;
+    if let Some(object) = value.as_object_mut() {
+        object.insert(
+            "project_dir".to_string(),
+            serde_json::Value::String(".".to_string()),
+        );
+        object.insert(
+            "command".to_string(),
+            serde_json::Value::String(format!("node {} --json --project-dir=.", script_display)),
+        );
+        object.insert(
+            "exit_code".to_string(),
+            output
+                .status
+                .code()
+                .map(|code| serde_json::Value::Number(code.into()))
+                .unwrap_or(serde_json::Value::Null),
+        );
+    }
+    Some(value)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -3146,6 +3184,28 @@ mod tests {
         ));
         fs::create_dir_all(&path).expect("temp runner dir should be created");
         path
+    }
+
+    fn write_system_progress_script(project_dir: &Path) {
+        let script_dir = project_dir.join("scripts");
+        fs::create_dir_all(&script_dir).expect("script dir should exist");
+        fs::write(
+            script_dir.join("agent-system-progress-check.mjs"),
+            r#"console.log(JSON.stringify({
+  ok: true,
+  mode: "system-progress-check",
+  project_dir: process.cwd(),
+  require_system_artifact: false,
+  changed_paths: ["tools/aipedia-runner/src/main.rs"],
+  system_artifacts: ["tools/aipedia-runner/src/main.rs"],
+  content_artifacts: [],
+  other_artifacts: [],
+  has_system_artifact: true,
+  content_only: false,
+  next_action: "System artifact present or enforcement disabled."
+}));"#,
+        )
+        .expect("system progress fixture should write");
     }
 
     fn sample_page_plan(report_path: Option<String>) -> PagePlan {
@@ -3304,6 +3364,7 @@ mod tests {
         let project_dir = dir.join("project");
         let receipt_dir = project_dir.join("receipts");
         fs::create_dir_all(&receipt_dir).expect("receipt dir should exist");
+        write_system_progress_script(&project_dir);
         let plan_path = project_dir.join("tool-refresh-batch.json");
         let route_args_path = project_dir.join("route-args.txt");
         fs::write(
@@ -3363,6 +3424,12 @@ mod tests {
             .expect("widths should be an array")
             .iter()
             .any(|width| width.as_u64() == Some(319)));
+        assert_eq!(receipt["system_progress"]["project_dir"], ".");
+        assert_eq!(receipt["system_progress"]["has_system_artifact"], true);
+        assert_eq!(
+            receipt["system_progress"]["command"],
+            "node scripts/agent-system-progress-check.mjs --json --project-dir=."
+        );
 
         fs::remove_dir_all(dir).ok();
     }
@@ -3375,6 +3442,7 @@ mod tests {
         let report_dir = project_dir.join("reports");
         fs::create_dir_all(&receipt_dir).expect("receipt dir should exist");
         fs::create_dir_all(&report_dir).expect("report dir should exist");
+        write_system_progress_script(&project_dir);
         fs::write(
             receipt_dir.join("2026-06-28T00-00-00Z-page-refresh-closeout.json"),
             r#"{"schema_version":"aipedia.closeout-receipt.v1","workflow":"page-refresh","status":"failed","generated_at":"2026-06-28T00:00:00Z","elapsed_ms":321,"commands":[{"label":"page source health","status":1,"elapsed_ms":123,"details_path":"timings/source-health.json"}]}"#,
@@ -3473,6 +3541,8 @@ mod tests {
             .get("superseded_by")
             .and_then(|value| value.as_str())
             .is_some_and(|value| value.ends_with("-page-refresh-closeout.json")));
+        assert_eq!(receipt["system_progress"]["project_dir"], ".");
+        assert_eq!(receipt["system_progress"]["has_system_artifact"], true);
 
         fs::remove_dir_all(dir).ok();
     }

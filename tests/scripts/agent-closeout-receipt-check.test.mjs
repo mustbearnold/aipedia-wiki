@@ -119,6 +119,7 @@ function validRunnerReceipt(overrides = {}) {
       },
     ],
     superseded_failures: [],
+    system_progress: validLoopReceipt().system_progress,
     ...overrides,
   };
 }

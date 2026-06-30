@@ -65,16 +65,25 @@ Closeout receipts now have a deterministic validator.
 - `--all-system` validated 22 existing system loop receipts with 0 issues.
 - Focused tests cover valid enforced loop receipts, missing system-progress failures, valid runner closeouts, and malformed runner commands.
 
+## Fourth System Slice
+
+Rust runner closeouts now join the same system-progress contract.
+
+- Tool-refresh and page-refresh closeout JSON include `system_progress` when `scripts/agent-system-progress-check.mjs` is available.
+- The embedded project dir and command string are normalized for portable receipts.
+- Rust tests assert the field on both tool and page closeout receipts.
+- `agent:closeout:check` validates runner `system_progress` when present.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
 | Stale input handling | Partial | `decision-loop --fail-on-stale-backlog` | Extend to page/tool/affiliate planners. |
-| System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress` | Extend to Rust runner closeouts and closeout schema validation. |
+| System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Add goal/run identity and risk fields. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | existing runner and loop receipts, `agent:closeout:check` | Normalize `goal_id`, `run_id`, spans, source IDs, route widths, and supersession. |
+| Closeout receipts/traces | Partial | existing runner and loop receipts, `agent:closeout:check` | Normalize `goal_id`, `run_id`, spans, source IDs, route widths, supersession, and residual risks. |
 | Non-stale scoring | Partial | `agent:score`, calibration docs | Add risk/confidence fields, score decay tests, and gold-set calibration. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
