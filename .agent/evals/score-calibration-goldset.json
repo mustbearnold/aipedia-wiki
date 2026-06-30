@@ -97,6 +97,42 @@
       }
     },
     {
+      "id": "ai-content-pipeline-source-gap-guide",
+      "route": "/guides/ai-content-pipeline/",
+      "rationale": "Current guide with no source coverage and no buyer-decision fields should remain a source-coverage remediation baseline instead of being treated as a normal current guide.",
+      "expect": {
+        "recommended_action": "improve_source_coverage",
+        "calibration_label": "source_coverage_gap",
+        "risk_label": "low",
+        "confidence_label": "low",
+        "stale_decay_label": "fresh",
+        "score_max": 0.5,
+        "source_count_max": 0,
+        "source_quality_max": 0.25,
+        "buyer_intent_max": 0.1,
+        "stale_signal_count_max": 0
+      }
+    },
+    {
+      "id": "api-documentation-guide-decision-path-gap",
+      "route": "/guides/best-ai-for-api-documentation/",
+      "rationale": "Guide with strong inline source coverage but missing buyer-job decision fields should stay a guide-decision-path remediation baseline, not a source gap.",
+      "expect": {
+        "recommended_action": "strengthen_buyer_decision_path",
+        "calibration_label": "review_calibration",
+        "risk_label": "low",
+        "confidence_label": "high",
+        "stale_decay_label": "fresh",
+        "score_min": 0.6,
+        "score_max": 0.7,
+        "source_count_min": 20,
+        "source_quality_min": 0.8,
+        "buyer_intent_max": 0.1,
+        "internal_links_min": 0.5,
+        "stale_signal_count_max": 0
+      }
+    },
+    {
       "id": "cline-stale-high-volatility-tool",
       "route": "/tools/cline/",
       "rationale": "High-volatility tool with strong source coverage but multiple due fact checks should remain a refresh-pressure baseline instead of being hidden by source volume.",

@@ -17,6 +17,7 @@ function writeFixture() {
     'src/content/comparisons',
     'src/content/news',
     'src/content/categories',
+    'src/content/use-cases',
     'src/data',
     'src/pages/answers',
   ]) {
@@ -130,6 +131,24 @@ function writeFixture() {
     '## What to do',
     '',
     'Teams should verify source coverage before changing production workflows.',
+    '',
+  ].join('\n'));
+
+  writeFileSync(join(dir, 'src/content/use-cases/weak-guide.md'), [
+    '---',
+    'slug: weak-guide',
+    'title: Weak Guide',
+    'seo_title: Weak Guide',
+    'meta_description: Weak guide fixture.',
+    'last_verified: 2026-06-28',
+    'source_refs:',
+    '  - example-pricing',
+    '---',
+    '',
+    'This guide has source coverage but lacks buyer-job fields.',
+    '',
+    'Compare [Example](/tools/example/) with [Other](/compare/example-vs-other/).',
+    'Read the [category](/categories/ai-coding/) and [news](/news/2026-06-29-example-news/).',
     '',
   ].join('\n'));
 
@@ -346,6 +365,23 @@ test('score calibration evaluates gold-set expectations', () => {
               confidence_label: 'low',
               stale_decay_label: 'fresh',
               score_max: 0.75,
+              source_count_max: 0,
+              source_quality_max: 0.25,
+            },
+          },
+          {
+            id: 'guide-decision-path-gap',
+            route: '/guides/weak-guide/',
+            rationale: 'Guide fixture has source coverage but lacks buyer-job fields, so decision-path remediation should remain visible.',
+            expect: {
+              recommended_action: 'strengthen_buyer_decision_path',
+              calibration_label: 'review_calibration',
+              risk_label: 'low',
+              confidence_label: 'high',
+              stale_decay_label: 'fresh',
+              source_count_min: 1,
+              buyer_intent_max: 0.1,
+              internal_links_min: 0.5,
             },
           },
         ],
@@ -354,7 +390,7 @@ test('score calibration evaluates gold-set expectations', () => {
 
     assert.equal(report.ok, true);
     assert.equal(report.gold_set.ok, true);
-    assert.equal(report.gold_set.case_count, 2);
+    assert.equal(report.gold_set.case_count, 3);
     assert.equal(report.gold_set.mismatch_count, 0);
     assert.equal(report.gold_set_governance.ok, true);
     assert.equal(report.gold_set_governance.status, 'pass');
@@ -437,6 +473,8 @@ test('score calibration reports gold-set mismatches', () => {
               recommended_action: 'monitor',
               confidence_label: 'high',
               stale_signal_count_min: 1,
+              source_count_max: -1,
+              buyer_intent_max: 0,
             },
           },
         ],
@@ -451,6 +489,8 @@ test('score calibration reports gold-set mismatches', () => {
     assert.ok(failedFields.includes('recommended_action'));
     assert.ok(failedFields.includes('confidence_label'));
     assert.ok(failedFields.includes('stale_signal_count'));
+    assert.ok(failedFields.includes('source_count'));
+    assert.ok(failedFields.includes('buyer_intent'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -238,10 +238,16 @@ const GOLD_BOUND_FIELDS = [
   'score_min',
   'score_max',
   'source_count_min',
+  'source_count_max',
+  'source_quality_min',
+  'source_quality_max',
+  'buyer_intent_min',
+  'buyer_intent_max',
   'parent_surface_count_min',
   'stale_signal_count_min',
   'stale_signal_count_max',
   'internal_links_min',
+  'internal_links_max',
 ];
 const REQUIRED_REVIEW_LENSES = [
   'architecture',
@@ -394,10 +400,16 @@ function evaluateGoldCase(goldCase, result) {
   compareMin(checks, 'score', expectations.score_min, result.score);
   compareMax(checks, 'score', expectations.score_max, result.score);
   compareMin(checks, 'source_count', expectations.source_count_min, result.source_count);
+  compareMax(checks, 'source_count', expectations.source_count_max, result.source_count);
+  compareMin(checks, 'source_quality', expectations.source_quality_min, result.dimensions?.source_quality);
+  compareMax(checks, 'source_quality', expectations.source_quality_max, result.dimensions?.source_quality);
+  compareMin(checks, 'buyer_intent', expectations.buyer_intent_min, result.dimensions?.buyer_intent);
+  compareMax(checks, 'buyer_intent', expectations.buyer_intent_max, result.dimensions?.buyer_intent);
   compareMin(checks, 'parent_surface_count', expectations.parent_surface_count_min, result.parent_surface_count);
   compareMin(checks, 'stale_signal_count', expectations.stale_signal_count_min, result.stale_signal_count);
   compareMax(checks, 'stale_signal_count', expectations.stale_signal_count_max, result.stale_signal_count);
   compareMin(checks, 'internal_links', expectations.internal_links_min, result.dimensions?.internal_links);
+  compareMax(checks, 'internal_links', expectations.internal_links_max, result.dimensions?.internal_links);
 
   return {
     id: goldCase.id,
@@ -411,6 +423,11 @@ function evaluateGoldCase(goldCase, result) {
       risk_label: result.risk_profile?.label || '',
       confidence_label: result.confidence_profile?.label || '',
       stale_decay_label: result.stale_decay?.label || '',
+      source_count: result.source_count,
+      stale_signal_count: result.stale_signal_count,
+      source_quality: result.dimensions?.source_quality,
+      buyer_intent: result.dimensions?.buyer_intent,
+      internal_links: result.dimensions?.internal_links,
     },
     checks,
   };

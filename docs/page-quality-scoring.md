@@ -158,7 +158,7 @@ Output JSON only. Do not make the score write pages directly. The scorer is a pr
 
 ## Gold-Set Calibration
 
-Gold-set calibration turns scoring expectations into a regression gate. The committed baseline lives at `.agent/evals/score-calibration-goldset.json` and covers seven real routes:
+Gold-set calibration turns scoring expectations into a regression gate. The committed baseline lives at `.agent/evals/score-calibration-goldset.json` and covers nine real routes:
 
 - `/tools/cursor/`: current high-volatility tool with broad parent impact should stay `monitor`, high confidence, low risk, and low stale decay.
 - `/compare/gemini-vs-grok/`: current inline-source comparison should stay high confidence, avoid a source-gap false positive, and keep the internal-link remediation.
@@ -166,6 +166,8 @@ Gold-set calibration turns scoring expectations into a regression gate. The comm
 - `/compare/argil-vs-synthesia/`: fresh same-workflow comparison should stay a high-confidence monitor baseline with strong inline-source and internal-link coverage.
 - `/guides/argil-pricing-for-ugc-avatar-video-teams/`: fresh affiliate buyer guide should stay a high-confidence monitor baseline with source coverage, CTA context, and a distinct buyer job.
 - `/news/2026-06-29-google-ai-studio-gemini-api-key-incident/`: current source-backed news should stay a high-confidence monitor baseline under the news profile.
+- `/guides/ai-content-pipeline/`: source-gap guide should stay `improve_source_coverage` with zero source coverage.
+- `/guides/best-ai-for-api-documentation/`: source-backed guide with weak buyer-job fields should stay `strengthen_buyer_decision_path`, not a source gap.
 - `/tools/cline/`: stale high-volatility tool should stay a `refresh_current_facts` baseline even though source volume is strong.
 
 `agent:score:calibrate -- --gold-set <path>` emits:
@@ -176,8 +178,8 @@ Gold-set calibration turns scoring expectations into a regression gate. The comm
 
 A scoring change is not ready if the gold-set receipt has `ok: false`, `gold_set.ok: false`, `gold_set_governance.ok: false`, or `threshold_review.status: "review"` unless the change deliberately updates the baseline and the matching review record explains why.
 
-Gold-set numeric bounds support `score_min`, `score_max`, `source_count_min`, `parent_surface_count_min`, `stale_signal_count_min`, `stale_signal_count_max`, and `internal_links_min`.
+Gold-set numeric bounds support `score_min`, `score_max`, `source_count_min`, `source_count_max`, `source_quality_min`, `source_quality_max`, `buyer_intent_min`, `buyer_intent_max`, `parent_surface_count_min`, `stale_signal_count_min`, `stale_signal_count_max`, `internal_links_min`, and `internal_links_max`.
 
-Deliberate baseline changes should run with `--require-gold-set-review` and a JSON review file that uses `schema_version: "aipedia.score-goldset-review.v1"`, matches the normalized `gold_set_hash`, lists `changed_cases`, and covers the architecture, evaluation, editorial, risk-confidence, regression, and rollout review lenses. Slice 18 expanded the baseline with review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json` and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`. Slice 52 added `stale_signal_count_min`, the Cline stale-tool baseline, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-52-stale-tool-goldset.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-52-stale-tool-goldset.json`.
+Deliberate baseline changes should run with `--require-gold-set-review` and a JSON review file that uses `schema_version: "aipedia.score-goldset-review.v1"`, matches the normalized `gold_set_hash`, lists `changed_cases`, and covers the architecture, evaluation, editorial, risk-confidence, regression, and rollout review lenses. Slice 18 expanded the baseline with review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json` and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`. Slice 52 added `stale_signal_count_min`, the Cline stale-tool baseline, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-52-stale-tool-goldset.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-52-stale-tool-goldset.json`. Slice 53 added source-quality and buyer-intent bounds, two guide remediation baselines, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-53-source-gap-guide-decision.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-53-source-gap-guide-decision.json`.
 
 News scoring uses the news-specific bar from the daily workflow: currentness, source quality, buyer impact, affected-page linking, and readability. Inline article sources count as source coverage, but registered source IDs remain distinct for tool, guide, and pricing fact provenance.

@@ -1,0 +1,21 @@
+{
+  "schema_version": "aipedia.score-goldset-review.v1",
+  "gold_set_path": ".agent/evals/score-calibration-goldset.json",
+  "gold_set_hash": "e70a1e80af38a02a8635fcf367502b02378a35b21c9a35faf4bed6731e29e3a7",
+  "changed_cases": [
+    "ai-content-pipeline-source-gap-guide",
+    "api-documentation-guide-decision-path-gap"
+  ],
+  "reviewer": "codex",
+  "reviewed_at": "2026-06-30",
+  "reason": "Expand the June 30 scoring baseline with real guide routes that separate source-coverage remediation from guide decision-path remediation, and add numeric dimension bounds for source_count, source_quality, buyer_intent, and internal_links.",
+  "expected_effect": "Gold-set calibration should pass with 9 cases, 0 mismatches, threshold review pass, one source_coverage_gap guide baseline, and one strengthen_buyer_decision_path guide baseline with strong source coverage.",
+  "review_lenses": [
+    "architecture",
+    "evaluation",
+    "editorial",
+    "risk-confidence",
+    "regression",
+    "rollout"
+  ]
+}

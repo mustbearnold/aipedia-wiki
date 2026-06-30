@@ -234,10 +234,12 @@
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-50-final-efficiency-trends.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-51-final-efficiency-trends.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-52-final-efficiency-trends.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-53-final-efficiency-trends.json",
         ".agent/loop-runs/system/2026-06-30T21-18-45-125Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T21-27-44-729Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T21-37-14-562Z-loop-run.json",
-        ".agent/loop-runs/system/2026-06-30T21-48-22-246Z-loop-run.json"
+        ".agent/loop-runs/system/2026-06-30T21-48-22-246Z-loop-run.json",
+        ".agent/loop-runs/system/2026-06-30T22-04-06-253Z-loop-run.json"
       ],
       "remaining": "Run positive bounded page/tool policy proofs after the separate stale ledger/content WIP is resolved, then track their proof receipts."
     },
@@ -267,9 +269,18 @@
         "tests/scripts/agent-memory-tools.test.mjs stale_signal_count_min mismatch coverage",
         ".agent/evals/score-goldset-change-reviews/2026-06-30-slice-52-stale-tool-goldset.json",
         ".agent/evals/score-calibration-receipts/2026-06-30-slice-52-stale-tool-goldset.json",
-        "7-case reviewed score gold set"
+        "7-case reviewed score gold set",
+        "source_count_max gold-set expectation",
+        "source_quality_min and source_quality_max gold-set expectations",
+        "buyer_intent_min and buyer_intent_max gold-set expectations",
+        "internal_links_max gold-set expectation",
+        "tests/scripts/agent-memory-tools.test.mjs source_count_max mismatch coverage",
+        "tests/scripts/agent-memory-tools.test.mjs buyer_intent_max mismatch coverage",
+        ".agent/evals/score-goldset-change-reviews/2026-06-30-slice-53-source-gap-guide-decision.json",
+        ".agent/evals/score-calibration-receipts/2026-06-30-slice-53-source-gap-guide-decision.json",
+        "9-case reviewed score gold set"
       ],
-      "remaining": "Keep expanding reviewed gold-set coverage for source-gap remediation, guide decision-path cases, and future page profiles during real-workload pilots."
+      "remaining": "Keep expanding reviewed gold-set coverage for page-type-specific risk and confidence edge cases during real-workload pilots."
     },
     {
       "id": "speed-token-efficiency",
@@ -295,6 +306,7 @@
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-50-final-efficiency-trends.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-51-final-efficiency-trends.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-52-final-efficiency-trends.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-53-final-efficiency-trends.json",
         ".agent/loop-runs/system/2026-06-30T06-15-03-030Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T06-36-23-004Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T21-09-17-496Z-loop-run.json",
@@ -302,6 +314,7 @@
         ".agent/loop-runs/system/2026-06-30T21-27-44-729Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T21-37-14-562Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T21-48-22-246Z-loop-run.json",
+        ".agent/loop-runs/system/2026-06-30T22-04-06-253Z-loop-run.json",
         "tests/scripts/aipedia-loops.test.mjs efficiency metrics ledger coverage",
         "tests/scripts/agent-closeout-receipt-check.test.mjs efficiency metrics validation coverage",
         "tests/scripts/agent-loop-efficiency-trends.test.mjs trend summary coverage",
@@ -338,16 +351,16 @@
     }
   ],
   "current_slice": {
-    "name": "Stale-signal score gold-set lower bounds",
+    "name": "Source-gap and guide decision score gold-set bounds",
     "system_artifacts": [
       "scripts/agent-score-calibration.mjs",
       "tests/scripts/agent-memory-tools.test.mjs",
       ".agent/evals/score-calibration-goldset.json",
-      ".agent/evals/score-goldset-change-reviews/2026-06-30-slice-52-stale-tool-goldset.json",
-      ".agent/evals/score-calibration-receipts/2026-06-30-slice-52-stale-tool-goldset.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-52-final-efficiency-trends.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-52.md",
-      ".agent/loop-runs/system/2026-06-30T21-48-22-246Z-loop-run.json",
+      ".agent/evals/score-goldset-change-reviews/2026-06-30-slice-53-source-gap-guide-decision.json",
+      ".agent/evals/score-calibration-receipts/2026-06-30-slice-53-source-gap-guide-decision.json",
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-53-final-efficiency-trends.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-53.md",
+      ".agent/loop-runs/system/2026-06-30T22-04-06-253Z-loop-run.json",
       ".agent/loop-runs/system/latest.json",
       "docs/page-quality-scoring.md",
       "docs/agentic-tooling-meta-compliance.md",
@@ -365,7 +378,7 @@
     "Use correction_summary in trend receipts before claiming quality improved from a speed or receipt-size movement.",
     "Resolve separate content WIP, rerun npm run agent:proof:readiness -- --json, then run page-refresh and tool-refresh positive policy proofs.",
     "Add configured proof receipt paths for page-refresh and tool-refresh to .agent/meta/proof-readiness-targets.json when those positive proofs are complete.",
-    "Expand reviewed scoring coverage for source-gap remediation and guide decision-path cases during real workload pilots.",
+    "Expand reviewed scoring coverage for page-type-specific risk and confidence edge cases during real workload pilots.",
     "Add exact model-token usage and exact correction counts when measurable.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP."
   ]
