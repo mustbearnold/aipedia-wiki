@@ -34,6 +34,13 @@
     "recommended_action": {
       "type": "string"
     },
+    "expires_after_days": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "retrieval_priority": {
+      "type": "string"
+    },
     "cpu_vector": {
       "type": "object",
       "required": ["model", "dimensions", "values"],

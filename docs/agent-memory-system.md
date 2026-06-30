@@ -93,6 +93,10 @@ The command gathers page frontmatter facts, source IDs, registered source metada
 
 `agent:memory:record` turns evidence, impact, score, and source rows into JSONL-ready memory records with CPU lexical vectors. It writes to `local/tmp/agent-memory.jsonl` by default. Use `--out .agent/memory/agent-memory.jsonl --append` only for intentional durable project memory.
 
+New records include explicit `expires_after_days` and `retrieval_priority` fields. Page snapshots default to 90 days, quality and impact notes default to 180 days, and source records default to 30, 60, or 90 days based on source volatility.
+
+`agent:memory:query` enforces expiration by default. Pass `--current-date YYYY-MM-DD` for deterministic retrieval, `--route /path/` to promote same-route memory, or `--include-expired` when investigating history. Query results keep `score` as the raw lexical score, add `rank_score` for promotion/freshness ordering, and include a `retrieval` block with priority, promotion weight, freshness weight, age, expiration date, and expired status.
+
 For content routes that are intentionally absent from `PAGE_REFRESH_LEDGER.md`, such as individual news articles, the agent route resolver falls back to the content collection. News articles also carry inline `sources` URLs rather than source-registry IDs; evidence and memory records count those inline sources separately from registered source IDs.
 
 ## Ingestion Sources
@@ -117,6 +121,8 @@ Use shorter lifetimes for volatile claims:
 - Logos and official URLs: 90 days.
 - Editorial quality notes: 90 to 180 days.
 - Historical receipts: no expiration, but low retrieval priority.
+
+Expired records are excluded from normal query results. `--include-expired` keeps them visible with a strong freshness penalty and `retrieval.expired: true`.
 
 ## Retrieval Output Rule
 

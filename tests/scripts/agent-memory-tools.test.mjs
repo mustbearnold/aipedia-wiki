@@ -179,6 +179,81 @@ test('memory recorder writes JSONL records and query ranks them', () => {
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test('memory query filters expired records and promotes primary same-route sources', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'agent-memory-policy-'));
+  try {
+    mkdirSync(join(dir, 'local/tmp'), { recursive: true });
+    const records = [
+      {
+        schema_version: 'aipedia.memory-record.v1',
+        id: 'expired-pricing',
+        type: 'pricing_fact',
+        observed_at: '2026-05-01',
+        route: '/tools/example/',
+        expires_after_days: 14,
+        embedding_text: 'pricing source gap official',
+        cpu_vector: buildSparseVector('pricing source gap official'),
+      },
+      {
+        schema_version: 'aipedia.memory-record.v1',
+        id: 'current-quality-note',
+        type: 'quality_note',
+        observed_at: '2026-06-29',
+        route: '/tools/example/',
+        expires_after_days: 180,
+        embedding_text: 'pricing source gap official',
+        cpu_vector: buildSparseVector('pricing source gap official'),
+      },
+      {
+        schema_version: 'aipedia.memory-record.v1',
+        id: 'current-primary-source',
+        type: 'source_record',
+        observed_at: '2026-06-29',
+        route: '/tools/example/',
+        source: {
+          id: 'example-pricing',
+          label: 'Example pricing',
+          trust_tier: 'primary',
+          volatility: 'high',
+        },
+        embedding_text: 'pricing source gap official',
+        cpu_vector: buildSparseVector('pricing source gap official'),
+      },
+    ];
+    writeFileSync(join(dir, 'local/tmp/memory-policy.jsonl'), `${records.map((record) => JSON.stringify(record)).join('\n')}\n`);
+
+    const query = queryMemory(dir, {
+      memoryPath: 'local/tmp/memory-policy.jsonl',
+      query: 'pricing source gap official',
+      route: '/tools/example/',
+      currentDate: '2026-06-30',
+      limit: 10,
+    });
+
+    assert.equal(query.ok, true);
+    assert.deepEqual(query.matches.map((match) => match.id), ['current-primary-source', 'current-quality-note']);
+    assert.equal(query.matches[0].retrieval.priority, 'primary_source:same_route');
+    assert.equal(query.matches[0].retrieval.expired, false);
+    assert.ok(query.matches[0].rank_score > query.matches[0].score);
+
+    const withExpired = queryMemory(dir, {
+      memoryPath: 'local/tmp/memory-policy.jsonl',
+      query: 'pricing source gap official',
+      route: '/tools/example/',
+      currentDate: '2026-06-30',
+      includeExpired: true,
+      limit: 10,
+    });
+    const expired = withExpired.matches.find((match) => match.id === 'expired-pricing');
+    assert.equal(expired.retrieval.expired, true);
+    assert.equal(expired.retrieval.freshness_weight, 0.2);
+    assert.equal(expired.retrieval.expires_at, '2026-05-15');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('score calibration handles tools, comparisons, and static Astro routes', () => {
   const dir = writeFixture();
   try {

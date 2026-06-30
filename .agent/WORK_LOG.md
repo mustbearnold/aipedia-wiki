@@ -1685,3 +1685,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: bounded `runner:page-refresh:closeout --dry-run` produced a runner page-refresh receipt from the existing local plan and reports; `agent:closeout:check --require-workflow-policy` rejected it with exactly `runner-workflow-policy-input-freshness-stale`; focused closeout tests, scoped `check:smart`, `check:quick`, `loop:system`, enforced `loop:all:record`, efficiency trends, JSON parse checks, diff guard, and `agent:closeout:check --require-efficiency-metrics` passed.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-22.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T06-24-53-589Z-loop-run.json`.
 - Next: Run a positive bounded page-refresh policy proof after the separate Synthesia content WIP is resolved, or continue with another system target that does not touch the content WIP.
+
+### 2026-06-30: Agentic Tooling Meta Slice 23, Memory Retrieval Expiration And Promotion
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added expiration filtering, include-expired mode, deterministic current-date evaluation, same-route promotion, raw score plus boosted rank score, and per-match retrieval metadata to `agent:memory:query`. `agent:memory:record` now writes explicit expiration and retrieval-priority fields.
+- System lesson: durable memory needs freshness policy at retrieval time, not just at record time. A stale but lexically perfect memory item should not outrank current source evidence.
+- Verification: focused syntax and memory tests passed. Live `/tools/cursor/` memory smoke wrote 12 records and ranked the current primary Cursor pricing source first for `cursor pricing source` with priority `primary_source:same_route`. Scoped `check:smart`, `git diff --check`, em-dash scan, JSON parse checks, `check:quick`, `loop:system`, enforced `loop:all:record`, efficiency trends, and required closeout validation passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-23.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T06-36-23-004Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 5.221s wall duration, 42,868 full receipt bytes, 24,324 latest receipt bytes, estimated full receipt tokens 10,717, and 12 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then continue with correction-rate metrics or another unblocked system target.

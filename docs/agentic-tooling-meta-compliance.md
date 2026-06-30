@@ -265,6 +265,18 @@ Page-refresh workflow policy now has a runner-produced stale-input blocker proof
 - A focused page-refresh regression test proves that a passed page-refresh runner receipt with stale `input_freshness` fails only on `runner-workflow-policy-input-freshness-stale`.
 - This is a negative proof, not a positive rendered page-refresh proof. The positive proof remains blocked until the separate Synthesia content WIP is integrated and `PAGE_REFRESH_LEDGER.md` can be regenerated safely.
 
+## Twenty-Third System Slice
+
+Memory retrieval now enforces expiration and promotion rules.
+
+- `agent:memory:record` writes explicit `expires_after_days` and `retrieval_priority` fields on page snapshots, quality notes, impact summaries, and source records.
+- `agent:memory:query` hides expired records by default, supports `--include-expired` for historical investigation, accepts deterministic `--current-date`, and uses `--route` to promote same-route context.
+- Query results keep `score` as the raw lexical score, add `rank_score` for promotion and freshness ordering, and expose a `retrieval` block with priority, promotion weight, freshness weight, age, expiry window, expiry date, and expired status.
+- Focused tests prove expired filtering, include-expired behavior, primary same-route source promotion, and rank-score separation from raw lexical score.
+- A live `/tools/cursor/` memory smoke ranked the current primary Cursor pricing source first for `cursor pricing source`.
+- Enforced loop receipt `.agent/loop-runs/system/2026-06-30T06-36-23-004Z-loop-run.json` passed required system-progress, identity, trace-artifact, and efficiency-metric closeout validation.
+- The live two-run trend check saw 2 metric-aware receipts, 0 missing metrics, median wall duration 5101 ms, latest full receipt bytes 42868, 0 loop status changes, and 0 command status changes.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -277,7 +289,7 @@ Page-refresh workflow policy now has a runner-produced stale-input blocker proof
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json` | Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts, loop `efficiency_metrics`, `agent:closeout:check --require-efficiency-metrics`, `agent:efficiency:trends`, `stability_summary`, focused loop, closeout, and trend tests | Add exact model token usage and correction rate when the runtime exposes them. |
-| Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
+| Memory/retrieval | Partial | JSONL memory tools, `expires_after_days`, `retrieval_priority`, `agent:memory:query` expiration filtering, same-route promotion, rank scores, retrieval metadata, focused memory tests, live `/tools/cursor/` memory smoke, `.agent/loop-runs/system/2026-06-30T06-36-23-004Z-loop-run.json` | Add compaction or promotion receipts if durable memory grows large. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |
 
 ## Review Lenses

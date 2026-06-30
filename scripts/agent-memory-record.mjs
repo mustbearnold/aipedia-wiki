@@ -101,6 +101,8 @@ export function buildMemoryRecords(projectDir, options = {}) {
       stale_signal_count: evidence.stale_sections.length,
       parent_surface_count: impact.surfaces.length,
       affiliate_state: evidence.affiliate_notes.state,
+      expires_after_days: 90,
+      retrieval_priority: 'page_context',
       embedding_text: compactText(embeddingText),
       cpu_vector: buildSparseVector(embeddingText),
     });
@@ -117,6 +119,8 @@ export function buildMemoryRecords(projectDir, options = {}) {
       recommended_action: score.recommended_action,
       stale_signals: evidence.stale_sections,
       recommended_updates: evidence.recommended_updates,
+      expires_after_days: 180,
+      retrieval_priority: 'quality_note',
       cpu_vector: buildSparseVector(`${route} ${score.recommended_action} ${JSON.stringify(score.dimensions)} ${evidence.recommended_updates.join(' ')}`),
     });
 
@@ -130,6 +134,8 @@ export function buildMemoryRecords(projectDir, options = {}) {
       surfaces: impact.surfaces.slice(0, 50),
       shared_files: impact.shared_files,
       recommended_checks: impact.recommended_checks,
+      expires_after_days: 180,
+      retrieval_priority: 'impact_context',
       cpu_vector: buildSparseVector(`${route} ${impact.surfaces.map((surface) => `${surface.route} ${surface.reason}`).join(' ')}`),
     });
 
@@ -142,6 +148,8 @@ export function buildMemoryRecords(projectDir, options = {}) {
         route,
         path: evidence.target.path,
         source,
+        expires_after_days: sourceRecordExpiryDays(source),
+        retrieval_priority: source.trust_tier === 'primary' ? 'primary_source' : 'source',
         cpu_vector: buildSparseVector(`${route} ${source.id} ${source.label} ${source.type} ${source.trust_tier} ${source.volatility}`),
       });
     }
@@ -186,6 +194,13 @@ function keyForRoute(route) {
 
 function compactText(text) {
   return String(text).replace(/\s+/g, ' ').trim().slice(0, 4000);
+}
+
+function sourceRecordExpiryDays(source) {
+  const volatility = String(source?.volatility || '').toLowerCase();
+  if (volatility === 'high') return 30;
+  if (volatility === 'medium') return 60;
+  return 90;
 }
 
 if (isCli) {
