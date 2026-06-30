@@ -873,6 +873,18 @@ function validateMetaProofReadinessReceipt(value, issues) {
     requireNonNegativeNumber(value.inputs, 'input_freshness_exit_code', issues, 'inputs.input_freshness_exit_code');
     requireString(value.inputs, 'git_status_source', issues, { path: 'inputs.git_status_source' });
     requireNonNegativeNumber(value.inputs, 'git_status_exit_code', issues, 'inputs.git_status_exit_code');
+    if (value.inputs.proof_target_registry_source != null) {
+      requireString(value.inputs, 'proof_target_registry_source', issues, { path: 'inputs.proof_target_registry_source' });
+    }
+    if (value.inputs.proof_target_registry_status != null) {
+      requireString(value.inputs, 'proof_target_registry_status', issues, {
+        path: 'inputs.proof_target_registry_status',
+        values: ['absent', 'loaded', 'missing', 'invalid'],
+      });
+    }
+    if (value.inputs.proof_target_registry_issue_count != null) {
+      requireNonNegativeNumber(value.inputs, 'proof_target_registry_issue_count', issues, 'inputs.proof_target_registry_issue_count');
+    }
   }
 
   if (Array.isArray(value.targets)) {

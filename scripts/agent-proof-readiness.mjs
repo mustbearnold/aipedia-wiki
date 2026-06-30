@@ -15,7 +15,9 @@ const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const INPUT_FRESHNESS_PATH = valueFor('--input-freshness');
 const GIT_STATUS_PATH = valueFor('--git-status-file');
 const OUT_PATH = valueFor('--out') || valueFor('--receipt-out');
-const TARGETS = {
+const PROOF_TARGETS_PATH = valueFor('--proof-targets') || '.agent/meta/proof-readiness-targets.json';
+const PROOF_TARGETS_EXPLICIT = hasFlag('--proof-targets');
+const DEFAULT_TARGETS = {
   'page-refresh-policy': {
     id: 'page-refresh-policy',
     workflow: 'page-refresh',
@@ -74,15 +76,14 @@ const TARGETS = {
       'Run the bounded affiliate handoff proof and validate the handoff receipt with agent:closeout:check --require-workflow-policy.',
     ],
     blocked_next_actions: affiliateBlockedActions,
-    proof_receipts: [
-      '.agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json',
-    ],
+    proof_receipts: [],
     proved_next_actions: [
       'Use the durable affiliate handoff proof as the positive policy baseline and move to the next unproved proof target.',
     ],
   },
 };
-const KNOWN_TARGETS = Object.keys(TARGETS);
+let TARGETS = DEFAULT_TARGETS;
+const KNOWN_TARGETS = Object.keys(DEFAULT_TARGETS);
 const KNOWN_FLAGS = new Set([
   '--git-status-file',
   '--help',
@@ -91,11 +92,12 @@ const KNOWN_FLAGS = new Set([
   '--json',
   '--out',
   '--project-dir',
+  '--proof-targets',
   '--receipt-out',
   '--root',
   '--target',
 ]);
-const VALUE_FLAGS = new Set(['--git-status-file', '--input-freshness', '--out', '--project-dir', '--receipt-out', '--root', '--target']);
+const VALUE_FLAGS = new Set(['--git-status-file', '--input-freshness', '--out', '--project-dir', '--proof-targets', '--receipt-out', '--root', '--target']);
 
 if (HELP_MODE) {
   console.log(usage());
@@ -114,6 +116,28 @@ if (argumentIssues.length) {
   });
   process.exit(2);
 }
+
+const proofTargetRegistry = readProofTargetRegistry();
+if (proofTargetRegistry.issues.length) {
+  emit({
+    ok: false,
+    mode: 'meta-proof-readiness',
+    schema_version: 'aipedia.meta-proof-readiness.v1',
+    project_dir: PROJECT_DIR,
+    argument_issues: [],
+    registry_issues: proofTargetRegistry.issues,
+    selected_targets: [],
+    inputs: {
+      proof_target_registry_source: proofTargetRegistry.source,
+      proof_target_registry_status: proofTargetRegistry.status,
+      proof_target_registry_issue_count: proofTargetRegistry.issues.length,
+    },
+    targets: [],
+    next_actions: ['Fix the proof-readiness target registry, then rerun proof readiness.'],
+  });
+  process.exit(2);
+}
+TARGETS = applyProofTargetRegistry(DEFAULT_TARGETS, proofTargetRegistry.report);
 
 const selectedTargets = valuesFor('--target').length ? [...new Set(valuesFor('--target'))] : KNOWN_TARGETS;
 const selectedWorkflows = [...new Set(selectedTargets.map((target) => TARGETS[target]?.workflow).filter(Boolean))];
@@ -140,6 +164,9 @@ const report = {
     input_freshness_exit_code: inputFreshness.exit_code,
     git_status_source: gitStatus.source,
     git_status_exit_code: gitStatus.exit_code,
+    proof_target_registry_source: proofTargetRegistry.source,
+    proof_target_registry_status: proofTargetRegistry.status,
+    proof_target_registry_issue_count: proofTargetRegistry.issues.length,
   },
   targets,
   next_actions: [...new Set(targets.flatMap((target) => target.next_actions))],
@@ -172,10 +199,104 @@ function usage() {
     '  --input-freshness <path>   Read an existing input-freshness receipt instead of running one.',
     '  --git-status-file <path>   Read fixture git status text instead of running git status --short.',
     '  --out <path>               Write the JSON readiness receipt to a file. Alias: --receipt-out.',
+    '  --proof-targets <path>     Read configured durable proof receipts. Default: .agent/meta/proof-readiness-targets.json.',
     '  --project-dir <dir>        Project root. Alias: --root.',
     '  --json                     Emit a structured report.',
     '  --help                     Show this help.',
   ].join('\n');
+}
+
+function readProofTargetRegistry() {
+  const path = resolve(PROJECT_DIR, PROOF_TARGETS_PATH);
+  const source = projectPath(path);
+  if (!existsSync(path)) {
+    return {
+      source,
+      status: PROOF_TARGETS_EXPLICIT ? 'missing' : 'absent',
+      report: null,
+      issues: PROOF_TARGETS_EXPLICIT
+        ? [blocker('proof-target-registry-missing', `Proof target registry not found: ${source}.`)]
+        : [],
+    };
+  }
+
+  try {
+    const report = JSON.parse(readFileSync(path, 'utf8'));
+    const issues = validateProofTargetRegistry(report, source);
+    return {
+      source,
+      status: issues.length ? 'invalid' : 'loaded',
+      report: issues.length ? null : report,
+      issues,
+    };
+  } catch (error) {
+    return {
+      source,
+      status: 'invalid',
+      report: null,
+      issues: [blocker('proof-target-registry-invalid-json', `Could not parse proof target registry ${source}: ${error.message}.`)],
+    };
+  }
+}
+
+function validateProofTargetRegistry(value, source) {
+  const issues = [];
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return [blocker('proof-target-registry-invalid', `Proof target registry ${source} must be an object.`)];
+  }
+  if (value.schema_version !== 'aipedia.meta-proof-readiness-targets.v1') {
+    issues.push(blocker('proof-target-registry-schema-invalid', `Proof target registry ${source} has unsupported schema_version.`));
+  }
+  if (!Array.isArray(value.targets)) {
+    issues.push(blocker('proof-target-registry-targets-invalid', `Proof target registry ${source} must include a targets array.`));
+    return issues;
+  }
+  const seen = new Set();
+  value.targets.forEach((target, index) => {
+    const path = `targets[${index}]`;
+    if (!target || typeof target !== 'object' || Array.isArray(target)) {
+      issues.push(blocker('proof-target-registry-target-invalid', `${path} must be an object.`));
+      return;
+    }
+    if (typeof target.id !== 'string' || !target.id.trim()) {
+      issues.push(blocker('proof-target-registry-target-id-invalid', `${path}.id must be a non-empty string.`));
+      return;
+    }
+    if (seen.has(target.id)) {
+      issues.push(blocker('proof-target-registry-target-duplicate', `${path}.id duplicates ${target.id}.`));
+    }
+    seen.add(target.id);
+    if (!KNOWN_TARGETS.includes(target.id)) {
+      issues.push(blocker('proof-target-registry-target-unknown', `${path}.id is not a known proof target: ${target.id}.`));
+    }
+    if (target.proof_receipts != null && !isStringArray(target.proof_receipts)) {
+      issues.push(blocker('proof-target-registry-receipts-invalid', `${path}.proof_receipts must be an array of strings when present.`));
+    }
+    if (target.proved_next_actions != null && !isStringArray(target.proved_next_actions)) {
+      issues.push(blocker('proof-target-registry-actions-invalid', `${path}.proved_next_actions must be an array of strings when present.`));
+    }
+  });
+  return issues;
+}
+
+function applyProofTargetRegistry(defaultTargets, registry) {
+  const targets = Object.fromEntries(Object.entries(defaultTargets).map(([id, config]) => [
+    id,
+    {
+      ...config,
+      proof_receipts: [...(config.proof_receipts || [])],
+      proved_next_actions: [...(config.proved_next_actions || [])],
+    },
+  ]));
+  for (const target of registry?.targets || []) {
+    if (!targets[target.id]) continue;
+    targets[target.id] = {
+      ...targets[target.id],
+      proof_receipts: Array.isArray(target.proof_receipts) ? [...target.proof_receipts] : targets[target.id].proof_receipts,
+      proved_next_actions: Array.isArray(target.proved_next_actions) ? [...target.proved_next_actions] : targets[target.id].proved_next_actions,
+    };
+  }
+  return targets;
 }
 
 function writeReadinessReceipt(report) {
@@ -583,6 +704,10 @@ function tail(text) {
 
 function blocker(code, message, details = {}) {
   return { code, message, ...details };
+}
+
+function isStringArray(value) {
+  return Array.isArray(value) && value.every((item) => typeof item === 'string' && item.trim());
 }
 
 function emit(report) {

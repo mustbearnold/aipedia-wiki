@@ -133,6 +133,26 @@ function writeAffiliateProof(root, receipt) {
   writeJson(join(dir, '2026-06-30-slice-44-affiliate-handoff-policy-proof.json'), receipt);
 }
 
+function writeProofTargetRegistry(root, overrides = {}) {
+  const dir = join(root, '.agent', 'meta');
+  mkdirSync(dir, { recursive: true });
+  writeJson(join(dir, 'proof-readiness-targets.json'), {
+    schema_version: 'aipedia.meta-proof-readiness-targets.v1',
+    targets: [
+      {
+        id: 'affiliate-handoff-policy',
+        proof_receipts: [
+          '.agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json',
+        ],
+        proved_next_actions: [
+          'Use the durable affiliate handoff proof as the positive policy baseline and move to the next unproved proof target.',
+        ],
+      },
+    ],
+    ...overrides,
+  });
+}
+
 test('proof readiness reports page-refresh policy ready when inputs are fresh and content tree is clean', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-ready-'));
   try {
@@ -300,6 +320,7 @@ test('proof readiness marks affiliate handoff proved when durable receipt valida
     writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'affiliate-conversion': 'fresh' }));
     writeFileSync(join(root, 'status.txt'), '');
     writeAffiliateProof(root, validAffiliateHandoffReceipt());
+    writeProofTargetRegistry(root);
 
     const result = runReadiness([
       '--project-dir',
@@ -320,6 +341,7 @@ test('proof readiness marks affiliate handoff proved when durable receipt valida
     assert.equal(report.targets[0].status, 'proved');
     assert.equal(report.targets[0].proof_completion.status, 'proved');
     assert.equal(report.targets[0].proof_completion.valid_count, 1);
+    assert.equal(report.inputs.proof_target_registry_status, 'loaded');
     assert.equal(report.targets[0].readiness_checks[0].id, 'proof-completion');
     assert.match(
       report.targets[0].recommended_commands[0],
@@ -335,6 +357,7 @@ test('proof readiness does not mark invalid durable proof receipts proved', () =
   try {
     writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'affiliate-conversion': 'fresh' }));
     writeFileSync(join(root, 'status.txt'), '');
+    writeProofTargetRegistry(root);
     writeAffiliateProof(root, validAffiliateHandoffReceipt({
       selected_cluster_count: 0,
       selected_clusters: [],
@@ -366,6 +389,93 @@ test('proof readiness does not mark invalid durable proof receipts proved', () =
     const codes = report.targets[0].proof_completion.receipts[0].issues.map((item) => item.code);
     assert.ok(codes.includes('affiliate-handoff-policy-empty'));
     assert.ok(codes.includes('affiliate-handoff-policy-evidence-missing'));
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('proof readiness does not count proof receipts unless the registry configures them', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-registry-'));
+  try {
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'affiliate-conversion': 'fresh' }));
+    writeFileSync(join(root, 'status.txt'), '');
+    writeAffiliateProof(root, validAffiliateHandoffReceipt());
+
+    const untracked = runReadiness([
+      '--project-dir',
+      root,
+      '--input-freshness',
+      'freshness.json',
+      '--git-status-file',
+      'status.txt',
+      '--target',
+      'affiliate-handoff-policy',
+      '--json',
+    ]);
+    assert.equal(untracked.status, 0, untracked.stderr || untracked.stdout);
+    const untrackedReport = JSON.parse(untracked.stdout);
+    assert.equal(untrackedReport.summary.ready_count, 1);
+    assert.equal(untrackedReport.summary.proved_count, 0);
+    assert.equal(untrackedReport.targets[0].proof_completion.status, 'untracked');
+    assert.equal(untrackedReport.inputs.proof_target_registry_status, 'absent');
+
+    writeProofTargetRegistry(root);
+    const proved = runReadiness([
+      '--project-dir',
+      root,
+      '--input-freshness',
+      'freshness.json',
+      '--git-status-file',
+      'status.txt',
+      '--target',
+      'affiliate-handoff-policy',
+      '--proof-targets',
+      '.agent/meta/proof-readiness-targets.json',
+      '--json',
+    ]);
+    assert.equal(proved.status, 0, proved.stderr || proved.stdout);
+    const provedReport = JSON.parse(proved.stdout);
+    assert.equal(provedReport.summary.ready_count, 0);
+    assert.equal(provedReport.summary.proved_count, 1);
+    assert.equal(provedReport.targets[0].proof_completion.status, 'proved');
+    assert.equal(provedReport.inputs.proof_target_registry_status, 'loaded');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('proof readiness fails closed on malformed proof target registries', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-registry-invalid-'));
+  try {
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'affiliate-conversion': 'fresh' }));
+    writeFileSync(join(root, 'status.txt'), '');
+    writeProofTargetRegistry(root, {
+      targets: [
+        {
+          id: 'not-a-known-target',
+          proof_receipts: ['local/tmp/proof.json'],
+        },
+      ],
+    });
+
+    const result = runReadiness([
+      '--project-dir',
+      root,
+      '--input-freshness',
+      'freshness.json',
+      '--git-status-file',
+      'status.txt',
+      '--target',
+      'affiliate-handoff-policy',
+      '--proof-targets',
+      '.agent/meta/proof-readiness-targets.json',
+      '--json',
+    ]);
+    assert.equal(result.status, 2);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.inputs.proof_target_registry_status, 'invalid');
+    assert.deepEqual(report.registry_issues.map((item) => item.code), ['proof-target-registry-target-unknown']);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

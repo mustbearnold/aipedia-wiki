@@ -1,0 +1,23 @@
+{
+  "schema_version": "aipedia.meta-proof-readiness-targets.v1",
+  "updated_at": "2026-06-30",
+  "targets": [
+    {
+      "id": "page-refresh-policy",
+      "proof_receipts": []
+    },
+    {
+      "id": "tool-refresh-policy",
+      "proof_receipts": []
+    },
+    {
+      "id": "affiliate-handoff-policy",
+      "proof_receipts": [
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json"
+      ],
+      "proved_next_actions": [
+        "Use the durable affiliate handoff proof as the positive policy baseline and move to the next unproved proof target."
+      ]
+    }
+  ]
+}

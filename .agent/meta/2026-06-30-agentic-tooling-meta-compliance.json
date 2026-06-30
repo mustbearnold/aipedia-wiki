@@ -35,6 +35,8 @@
         "scripts/agent-proof-readiness.mjs affiliate-handoff-policy readiness",
         "scripts/agent-proof-readiness.mjs proof_completion status",
         "scripts/agent-proof-readiness.mjs --out receipt writer",
+        "scripts/agent-proof-readiness.mjs --proof-targets registry loader",
+        ".agent/meta/proof-readiness-targets.json",
         "live agent:proof:readiness page-refresh-policy blocker report",
         "live agent:proof:readiness affiliate-handoff-policy ready report",
         "live agent:proof:readiness affiliate-handoff-policy proved report",
@@ -51,12 +53,15 @@
         "tests/scripts/agent-proof-readiness.test.mjs page-refresh proof readiness coverage",
         "tests/scripts/agent-proof-readiness.test.mjs proof-completion coverage",
         "tests/scripts/agent-proof-readiness.test.mjs readiness receipt output coverage",
+        "tests/scripts/agent-proof-readiness.test.mjs proof target registry coverage",
         ".agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T10-34-13-642Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T10-44-23-012Z-loop-run.json",
+        ".agent/loop-runs/system/2026-06-30T11-00-13-064Z-loop-run.json",
         ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json",
         ".agent/evals/proof-readiness-receipts/2026-06-30-slice-46-proof-readiness-state.json",
+        ".agent/evals/proof-readiness-receipts/2026-06-30-slice-47-proof-registry-state.json",
         "tools/aipedia-runner/src/main.rs runner closeout input freshness tests"
       ],
       "remaining": "Resolve separate content WIP before page-refresh or tool-refresh positive policy proofs, then add their durable proof paths."
@@ -196,6 +201,7 @@
         "scripts/agent-closeout-receipt-check.mjs affiliate handoff policy validation",
         "scripts/agent-proof-readiness.mjs proof-completion validation",
         "scripts/agent-closeout-receipt-check.mjs meta-proof-readiness validation",
+        "scripts/agent-closeout-receipt-check.mjs proof target registry metadata validation",
         "tests/scripts/agent-closeout-receipt-check.test.mjs affiliate handoff policy tests",
         "tests/scripts/agent-proof-readiness.test.mjs valid and invalid proof-completion tests",
         "tests/scripts/agent-closeout-receipt-check.test.mjs meta proof readiness receipt coverage",
@@ -213,7 +219,8 @@
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-proof-report.json",
         ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json",
         ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json",
-        ".agent/evals/proof-readiness-receipts/2026-06-30-slice-46-proof-readiness-state.json"
+        ".agent/evals/proof-readiness-receipts/2026-06-30-slice-46-proof-readiness-state.json",
+        ".agent/evals/proof-readiness-receipts/2026-06-30-slice-47-proof-registry-state.json"
       ],
       "remaining": "Run positive bounded page/tool policy proofs after the separate stale ledger/content WIP is resolved, then track their proof receipts."
     },
@@ -291,7 +298,7 @@
     }
   ],
   "current_slice": {
-    "name": "Durable proof readiness state receipts",
+    "name": "Data-driven proof target registry",
     "system_artifacts": [
       "scripts/agent-proof-readiness.mjs",
       "scripts/agent-closeout-receipt-check.mjs",
@@ -299,23 +306,24 @@
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "scripts/README.md",
       ".agent/LOOPS.md",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-46-proof-readiness-state.json",
+      ".agent/meta/proof-readiness-targets.json",
+      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-47-proof-registry-state.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-46.md",
-      ".agent/loop-runs/system/2026-06-30T10-44-23-012Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-47.md",
+      ".agent/loop-runs/system/2026-06-30T11-00-13-064Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Use .agent/evals/proof-readiness-receipts/2026-06-30-slice-46-proof-readiness-state.json as the durable blocked/proved-state receipt until the content WIP is resolved.",
+    "Use .agent/evals/proof-readiness-receipts/2026-06-30-slice-47-proof-registry-state.json as the durable blocked/proved-state receipt until the content WIP is resolved.",
     "Resolve separate content WIP, rerun npm run agent:proof:readiness -- --json, then run page-refresh and tool-refresh positive policy proofs.",
-    "Add configured proof receipt paths for page-refresh and tool-refresh when those positive proofs are complete.",
+    "Add configured proof receipt paths for page-refresh and tool-refresh to .agent/meta/proof-readiness-targets.json when those positive proofs are complete.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP."
