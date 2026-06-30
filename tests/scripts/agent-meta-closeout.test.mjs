@@ -252,6 +252,92 @@ function validRunnerReceipt() {
   };
 }
 
+function validTrendReceipt() {
+  const run = {
+    path: '.agent/loop-runs/system/fixture-loop-run.json',
+    generated_at: '2026-06-30T21:18:45.125Z',
+    run_id: 'fixture-trend',
+    ok: true,
+    has_efficiency_metrics: true,
+    wall_duration_ms: 4608,
+    total_command_duration_ms: 4607,
+    command_count: 16,
+    loop_count: 7,
+    attention_rate: 0.429,
+    persisted_full_receipt_bytes: 43714,
+    persisted_latest_receipt_bytes: 25170,
+    estimated_full_receipt_tokens: 10929,
+    system_artifact_count: 13,
+  };
+  return {
+    ok: true,
+    mode: 'loop-efficiency-trends',
+    schema_version: 'aipedia.loop-efficiency-trends.v1',
+    generated_at: '2026-06-30T21:20:12.450Z',
+    project_dir: '.',
+    ledger_dir: '.agent/loop-runs/system',
+    receipt_path: '.agent/evals/efficiency-trends-receipts/fixture.json',
+    max_runs: 1,
+    fail_on_missing_metrics: true,
+    totals: {
+      analyzed_runs: 1,
+      metrics_runs: 1,
+      missing_metrics_runs: 0,
+    },
+    issues: [],
+    runs: [run],
+    summary: {
+      first_run: run.generated_at,
+      latest_run: run.generated_at,
+      metrics_coverage_rate: 1,
+      median_wall_duration_ms: run.wall_duration_ms,
+      median_total_command_duration_ms: run.total_command_duration_ms,
+      median_attention_rate: run.attention_rate,
+      median_full_receipt_bytes: run.persisted_full_receipt_bytes,
+      median_latest_receipt_bytes: run.persisted_latest_receipt_bytes,
+      median_estimated_full_receipt_tokens: run.estimated_full_receipt_tokens,
+      latest: run,
+      delta_from_previous: null,
+    },
+    stability_summary: {
+      loop_status_comparisons: 0,
+      loop_status_changes: 0,
+      loop_status_change_rate: 0,
+      command_status_comparisons: 0,
+      command_status_changes: 0,
+      command_status_change_rate: 0,
+      persistent_attention_loops: [],
+      latest_attention_loops: [],
+      new_attention_loops: [],
+      resolved_attention_loops: [],
+      recent_loop_status_changes: [],
+    },
+    correction_summary: {
+      has_comparison: false,
+      previous_run: '',
+      latest_run: run.generated_at,
+      loop_previous_attention_count: 0,
+      loop_resolved_attention_count: 0,
+      loop_persistent_attention_count: 0,
+      loop_regressed_attention_count: 0,
+      loop_correction_rate: 0,
+      command_previous_attention_count: 0,
+      command_resolved_attention_count: 0,
+      command_persistent_attention_count: 0,
+      command_regressed_attention_count: 0,
+      command_correction_rate: 0,
+      resolved_loops: [],
+      persistent_attention_loops: [],
+      regressed_loops: [],
+      resolved_commands: [],
+      persistent_attention_commands: [],
+      regressed_commands: [],
+    },
+    slowest_commands: [],
+    next_actions: ['Keep measuring trend receipts.'],
+  };
+}
+
 test('meta closeout router validates latest loop receipt by default', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-loop-'));
   try {
@@ -287,6 +373,24 @@ test('meta closeout router adds workflow policy for runner receipts', () => {
     assert.ok(report.strict_flags.includes('--require-workflow-policy'));
     assert.equal(report.checker_report.require_workflow_policy, true);
     assert.equal(report.checker_report.receipts[0].type, 'runner-closeout');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('meta closeout router validates loop efficiency trend receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-trend-'));
+  try {
+    writeJson(join(root, 'trend.json'), validTrendReceipt());
+
+    const result = runRouter(['--project-dir', root, '--receipt', 'trend.json', '--json']);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.closeout_profile, 'efficiency-trends');
+    assert.equal(report.requires_workflow_policy, false);
+    assert.deepEqual(report.strict_flags, []);
+    assert.equal(report.checker_report.receipts[0].type, 'loop-efficiency-trends');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

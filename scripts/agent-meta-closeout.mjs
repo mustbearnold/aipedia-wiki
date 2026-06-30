@@ -22,6 +22,7 @@ const STRICT_META_FLAGS = [
   '--require-efficiency-metrics',
   '--require-dag-proof',
 ];
+const STRICT_RECEIPT_TYPES = new Set(['loop-run', 'runner-closeout']);
 
 if (HELP_MODE) {
   console.log(usage());
@@ -53,8 +54,7 @@ const checkerArgs = [
   '--project-dir',
   PROJECT_DIR,
   ...route.receipts.flatMap((receipt) => ['--receipt', receipt.path]),
-  ...STRICT_META_FLAGS,
-  ...(route.requires_workflow_policy ? ['--require-workflow-policy'] : []),
+  ...route.strict_flags,
   '--json',
 ];
 const checker = spawnSync(process.execPath, checkerArgs, {
@@ -98,6 +98,7 @@ function usage() {
     '  latest-loop      Default .agent/loop-runs/system/latest.json strict loop proof.',
     '  explicit-loop    Explicit loop-run receipt strict proof.',
     '  runner-closeout  Explicit Rust runner receipt strict proof plus workflow-policy checks.',
+    '  efficiency-trends Durable loop efficiency trend receipt validation.',
     '',
     'Options:',
     '  --receipt <path>     Receipt to validate. Repeatable. Alias: --path.',
@@ -113,7 +114,8 @@ function buildRoute() {
     : ['.agent/loop-runs/system/latest.json'];
   const receipts = rawPaths.map((rawPath) => inspectReceipt(rawPath));
   const routeIssues = receipts.flatMap((receipt) => receipt.route_issues);
-  const unsupported = receipts.filter((receipt) => !['loop-run', 'runner-closeout'].includes(receipt.type));
+  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends']);
+  const unsupported = receipts.filter((receipt) => !supportedTypes.has(receipt.type));
   for (const receipt of unsupported) {
     routeIssues.push(issue(
       'unsupported-receipt-type',
@@ -122,7 +124,17 @@ function buildRoute() {
   }
   const hasRunner = receipts.some((receipt) => receipt.type === 'runner-closeout');
   const hasLoop = receipts.some((receipt) => receipt.type === 'loop-run');
-  const profile = profileFor({ explicit: EXPLICIT_RECEIPTS.length > 0, hasRunner, hasLoop });
+  const hasTrend = receipts.some((receipt) => receipt.type === 'loop-efficiency-trends');
+  const strictFlags = [
+    ...(receipts.some((receipt) => STRICT_RECEIPT_TYPES.has(receipt.type)) ? STRICT_META_FLAGS : []),
+    ...(hasRunner ? ['--require-workflow-policy'] : []),
+  ];
+  const profile = profileFor({
+    explicit: EXPLICIT_RECEIPTS.length > 0,
+    hasRunner,
+    hasLoop,
+    hasTrend,
+  });
   return {
     ok: routeIssues.length === 0,
     mode: 'meta-closeout-router',
@@ -131,10 +143,7 @@ function buildRoute() {
     route_issues: routeIssues,
     closeout_profile: profile,
     requires_workflow_policy: hasRunner,
-    strict_flags: [
-      ...STRICT_META_FLAGS,
-      ...(hasRunner ? ['--require-workflow-policy'] : []),
-    ],
+    strict_flags: strictFlags,
     receipts: receipts.map(({ route_issues, ...receipt }) => receipt),
   };
 }
@@ -163,11 +172,15 @@ function inspectReceipt(rawPath) {
   };
 }
 
-function profileFor({ explicit, hasRunner, hasLoop }) {
+function profileFor({ explicit, hasRunner, hasLoop, hasTrend }) {
+  if (hasRunner && hasLoop && hasTrend) return 'mixed-loop-runner-trends';
+  if (hasRunner && hasTrend) return 'mixed-runner-trends';
+  if (hasLoop && hasTrend) return 'mixed-loop-trends';
   if (hasRunner && hasLoop) return 'mixed-loop-runner';
   if (hasRunner) return 'runner-closeout';
   if (hasLoop && explicit) return 'explicit-loop';
   if (hasLoop) return 'latest-loop';
+  if (hasTrend) return 'efficiency-trends';
   return 'unsupported';
 }
 
@@ -176,6 +189,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.closeout-receipt.v1') return 'runner-closeout';
   if (value.schema_version === 'aipedia.runner-interrupt-proof.v1') return 'runner-interrupt-proof';
   if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
+  if (value.schema_version === 'aipedia.loop-efficiency-trends.v1') return 'loop-efficiency-trends';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';
