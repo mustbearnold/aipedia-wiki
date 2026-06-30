@@ -31,6 +31,8 @@ function writeFixture() {
     '| --- | --- | --- | --- | --- | --- |',
     '| 2026-06-28 | /tools/example/ | Tool | Yes | frontmatter | src/content/tools/example.md |',
     '| 2026-06-28 | /compare/example-vs-other/ | Comparison | Yes | frontmatter | src/content/comparisons/example-vs-other.md |',
+    '| 2026-06-28 | /guides/weak-guide/ | Guide | Yes | frontmatter | src/content/use-cases/weak-guide.md |',
+    '| 2026-06-28 | /guides/affiliate-guide/ | Guide | Yes | frontmatter | src/content/use-cases/affiliate-guide.md |',
     '| 2026-06-28 | /answers/static-answer/ | Static page | Yes | page metadata | src/pages/answers/static-answer.astro |',
     '',
   ].join('\n'));
@@ -149,6 +151,31 @@ function writeFixture() {
     '',
     'Compare [Example](/tools/example/) with [Other](/compare/example-vs-other/).',
     'Read the [category](/categories/ai-coding/) and [news](/news/2026-06-29-example-news/).',
+    '',
+  ].join('\n'));
+
+  writeFileSync(join(dir, 'src/content/use-cases/affiliate-guide.md'), [
+    '---',
+    'slug: affiliate-guide',
+    'title: Affiliate Guide',
+    'seo_title: Affiliate Guide',
+    'meta_description: Affiliate guide fixture.',
+    'buyer_job: Pick an example tool plan',
+    'audience: Developers',
+    'affiliate_tools:',
+    '  - example',
+    'source_refs:',
+    '  - example-pricing',
+    'last_verified: 2026-06-28',
+    'affiliate:',
+    '  has_program: true',
+    '  application_status: approved',
+    '  link: https://example.com/ref',
+    '---',
+    '',
+    'This affiliate buyer guide has a real source trail and internal links, but weak CTA disclosure context.',
+    '',
+    'Review [Example](/tools/example/), [Other](/compare/example-vs-other/), [AI Coding](/categories/ai-coding/), and [latest news](/news/2026-06-29-example-news/).',
     '',
   ].join('\n'));
 
@@ -344,12 +371,15 @@ test('score calibration evaluates gold-set expectations', () => {
             route: '/tools/example/',
             rationale: 'Fresh source-backed tool fixture should still expose internal-link remediation.',
             expect: {
+              page_profile: 'tool_high_volatility',
               recommended_action: 'improve_internal_links',
               calibration_label: 'internal_link_gap',
               risk_label: 'low',
               confidence_label: 'high',
               stale_decay_label: 'fresh',
               score_min: 0.7,
+              risk_score_max: 0.25,
+              confidence_score_min: 0.8,
               source_count_min: 1,
               stale_signal_count_min: 0,
             },
@@ -359,12 +389,15 @@ test('score calibration evaluates gold-set expectations', () => {
             route: '/compare/example-vs-other/',
             rationale: 'Comparison fixture has no source coverage and should remain a source gap.',
             expect: {
+              page_profile: 'comparison',
               recommended_action: 'improve_source_coverage',
               calibration_label: 'source_coverage_gap',
               risk_label: 'low',
               confidence_label: 'low',
               stale_decay_label: 'fresh',
               score_max: 0.75,
+              risk_score_max: 0.3,
+              confidence_score_max: 0.6,
               source_count_max: 0,
               source_quality_max: 0.25,
             },
@@ -374,13 +407,34 @@ test('score calibration evaluates gold-set expectations', () => {
             route: '/guides/weak-guide/',
             rationale: 'Guide fixture has source coverage but lacks buyer-job fields, so decision-path remediation should remain visible.',
             expect: {
+              page_profile: 'guide',
               recommended_action: 'strengthen_buyer_decision_path',
               calibration_label: 'review_calibration',
               risk_label: 'low',
               confidence_label: 'high',
               stale_decay_label: 'fresh',
+              risk_score_max: 0.25,
+              confidence_score_min: 0.8,
               source_count_min: 1,
               buyer_intent_max: 0.1,
+              internal_links_min: 0.5,
+            },
+          },
+          {
+            id: 'affiliate-buyer-cta-risk',
+            route: '/guides/affiliate-guide/',
+            rationale: 'Affiliate buyer fixture has source coverage but weak CTA disclosure context, so profile-specific risk and confidence pressure should remain visible.',
+            expect: {
+              page_profile: 'affiliate_buyer',
+              recommended_action: 'improve_cta_context',
+              calibration_label: 'review_calibration',
+              risk_label: 'medium',
+              confidence_label: 'medium',
+              stale_decay_label: 'fresh',
+              risk_score_min: 0.35,
+              confidence_score_min: 0.6,
+              confidence_score_max: 0.8,
+              source_count_min: 1,
               internal_links_min: 0.5,
             },
           },
@@ -390,7 +444,7 @@ test('score calibration evaluates gold-set expectations', () => {
 
     assert.equal(report.ok, true);
     assert.equal(report.gold_set.ok, true);
-    assert.equal(report.gold_set.case_count, 3);
+    assert.equal(report.gold_set.case_count, 4);
     assert.equal(report.gold_set.mismatch_count, 0);
     assert.equal(report.gold_set_governance.ok, true);
     assert.equal(report.gold_set_governance.status, 'pass');
@@ -412,6 +466,7 @@ test('score calibration requires matching review for deliberate gold-set changes
         route: '/compare/example-vs-other/',
         rationale: 'Comparison fixture has no source coverage and should remain a source gap.',
         expect: {
+          page_profile: 'comparison',
           recommended_action: 'improve_source_coverage',
           calibration_label: 'source_coverage_gap',
           risk_label: 'low',
@@ -470,11 +525,13 @@ test('score calibration reports gold-set mismatches', () => {
             id: 'bad-expectation',
             route: '/compare/example-vs-other/',
             expect: {
+              page_profile: 'guide',
               recommended_action: 'monitor',
               confidence_label: 'high',
               stale_signal_count_min: 1,
               source_count_max: -1,
               buyer_intent_max: 0,
+              risk_score_min: 0.99,
             },
           },
         ],
@@ -487,10 +544,12 @@ test('score calibration reports gold-set mismatches', () => {
     assert.equal(report.threshold_review.status, 'review');
     const failedFields = report.gold_set.cases[0].checks.filter((check) => !check.ok).map((check) => check.field);
     assert.ok(failedFields.includes('recommended_action'));
+    assert.ok(failedFields.includes('page_profile'));
     assert.ok(failedFields.includes('confidence_label'));
     assert.ok(failedFields.includes('stale_signal_count'));
     assert.ok(failedFields.includes('source_count'));
     assert.ok(failedFields.includes('buyer_intent'));
+    assert.ok(failedFields.includes('risk_score'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

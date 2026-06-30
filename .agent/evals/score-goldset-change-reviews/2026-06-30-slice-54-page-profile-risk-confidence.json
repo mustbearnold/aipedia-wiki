@@ -1,0 +1,28 @@
+{
+  "schema_version": "aipedia.score-goldset-review.v1",
+  "gold_set_path": ".agent/evals/score-calibration-goldset.json",
+  "gold_set_hash": "09f1f8af2129539270afbd91bcfd2d73f2b6b36546493d204fcc19513e8203fa",
+  "changed_cases": [
+    "cursor-current-tool",
+    "gemini-vs-grok-internal-link-gap",
+    "writing-answer-refresh-pressure",
+    "argil-vs-synthesia-fresh-comparison",
+    "argil-pricing-affiliate-buyer-guide",
+    "gemini-api-key-news-current",
+    "ai-content-pipeline-source-gap-guide",
+    "api-documentation-guide-decision-path-gap",
+    "cline-stale-high-volatility-tool"
+  ],
+  "reviewer": "codex",
+  "reviewed_at": "2026-06-30",
+  "reason": "Slice 54 made score calibration page-profile aware by requiring page_profile expectations and adding risk_score and confidence_score bounds. The stale high-volatility Cline baseline deliberately moves from low risk to medium risk because the scoring model now adds active freshness pressure for high-volatility tool profiles.",
+  "expected_effect": "Gold-set calibration should keep all 9 real-route cases passing while detecting page profile drift, risk score drift, confidence score drift, and high-volatility stale-tool risk regressions.",
+  "review_lenses": [
+    "architecture",
+    "evaluation",
+    "editorial",
+    "risk-confidence",
+    "regression",
+    "rollout"
+  ]
+}

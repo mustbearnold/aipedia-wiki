@@ -228,6 +228,7 @@ function evaluateGoldSet(goldSet, results) {
 }
 
 const REQUIRED_GOLD_EXPECTATIONS = [
+  'page_profile',
   'recommended_action',
   'calibration_label',
   'risk_label',
@@ -243,6 +244,10 @@ const GOLD_BOUND_FIELDS = [
   'source_quality_max',
   'buyer_intent_min',
   'buyer_intent_max',
+  'risk_score_min',
+  'risk_score_max',
+  'confidence_score_min',
+  'confidence_score_max',
   'parent_surface_count_min',
   'stale_signal_count_min',
   'stale_signal_count_max',
@@ -392,6 +397,7 @@ function evaluateGoldCase(goldCase, result) {
     };
   }
 
+  compareEqual(checks, 'page_profile', expectations.page_profile, result.scoring_model?.page_profile);
   compareEqual(checks, 'recommended_action', expectations.recommended_action, result.recommended_action);
   compareEqual(checks, 'calibration_label', expectations.calibration_label, result.calibration_label);
   compareEqual(checks, 'risk_label', expectations.risk_label, result.risk_profile?.label);
@@ -405,6 +411,10 @@ function evaluateGoldCase(goldCase, result) {
   compareMax(checks, 'source_quality', expectations.source_quality_max, result.dimensions?.source_quality);
   compareMin(checks, 'buyer_intent', expectations.buyer_intent_min, result.dimensions?.buyer_intent);
   compareMax(checks, 'buyer_intent', expectations.buyer_intent_max, result.dimensions?.buyer_intent);
+  compareMin(checks, 'risk_score', expectations.risk_score_min, result.risk_profile?.score);
+  compareMax(checks, 'risk_score', expectations.risk_score_max, result.risk_profile?.score);
+  compareMin(checks, 'confidence_score', expectations.confidence_score_min, result.confidence_profile?.score);
+  compareMax(checks, 'confidence_score', expectations.confidence_score_max, result.confidence_profile?.score);
   compareMin(checks, 'parent_surface_count', expectations.parent_surface_count_min, result.parent_surface_count);
   compareMin(checks, 'stale_signal_count', expectations.stale_signal_count_min, result.stale_signal_count);
   compareMax(checks, 'stale_signal_count', expectations.stale_signal_count_max, result.stale_signal_count);
@@ -417,11 +427,14 @@ function evaluateGoldCase(goldCase, result) {
     ok: checks.every((check) => check.ok),
     rationale: goldCase.rationale,
     actual: {
+      page_profile: result.scoring_model?.page_profile || '',
       score: result.score,
       recommended_action: result.recommended_action,
       calibration_label: result.calibration_label,
       risk_label: result.risk_profile?.label || '',
+      risk_score: result.risk_profile?.score,
       confidence_label: result.confidence_profile?.label || '',
+      confidence_score: result.confidence_profile?.score,
       stale_decay_label: result.stale_decay?.label || '',
       source_count: result.source_count,
       stale_signal_count: result.stale_signal_count,

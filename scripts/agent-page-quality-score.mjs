@@ -81,8 +81,8 @@ export function scorePage(projectDir, options = {}) {
   const weights = scoreWeightsFor(pageProfile.profile);
   const rawScore = weightedScore(scores, weights);
   const qualityScore = clamp01(rawScore - staleDecay.score_penalty);
-  const riskProfile = riskProfileFor({ evidence, frontmatter, scores, staleDecay });
-  const confidenceProfile = confidenceProfileFor({ evidence, scores, staleDecay, riskProfile });
+  const riskProfile = riskProfileFor({ evidence, frontmatter, scores, staleDecay, pageProfile });
+  const confidenceProfile = confidenceProfileFor({ evidence, scores, staleDecay, riskProfile, pageProfile });
 
   return {
     ok: true,
@@ -113,7 +113,7 @@ export function scorePage(projectDir, options = {}) {
     stale_decay: staleDecay,
     risk_profile: riskProfile,
     confidence_profile: confidenceProfile,
-    recommended_action: recommendAction(scores, evidence, riskProfile, confidenceProfile),
+    recommended_action: recommendAction(scores, evidence, riskProfile, confidenceProfile, pageProfile),
     evidence_summary: {
       sources: totalSourceCount,
       registered_sources: sourceRows.length,
@@ -326,12 +326,19 @@ function weightedScore(scores, weights) {
   return weightTotal ? total / weightTotal : average(Object.values(scores));
 }
 
-function riskProfileFor({ evidence, frontmatter, scores, staleDecay }) {
+function riskProfileFor({ evidence, frontmatter, scores, staleDecay, pageProfile = { profile: 'default' } }) {
   const missingSourceCount = evidence.source_evidence.missing_source_ids.length;
   const highSeverityCount = evidence.stale_sections.filter((signal) => signal.severity === 'high').length;
   const lowConfidenceFacts = evidence.current_page_claims.filter((fact) => fact.confidence && !/^(high|primary-confirmed)$/i.test(fact.confidence));
   const liveAffiliate = evidence.affiliate_notes.state === 'live_affiliate';
   const noindex = Boolean(frontmatter.noindex || frontmatter.draft);
+  const sourceCount = evidence.source_evidence.total_sources ?? 0;
+  const pageTypePressure = pageTypeRiskPressure(pageProfile.profile, {
+    liveAffiliate,
+    sourceCount,
+    scores,
+    staleDecay,
+  });
   const riskScore = clamp01(
     (staleDecay.decay * 0.34) +
     (clamp01(highSeverityCount / 3) * 0.18) +
@@ -339,7 +346,8 @@ function riskProfileFor({ evidence, frontmatter, scores, staleDecay }) {
     ((1 - scores.source_quality) * 0.13) +
     ((liveAffiliate && scores.cta_quality < 0.6 ? 1 : 0) * 0.08) +
     (clamp01(lowConfidenceFacts.length / 3) * 0.06) +
-    ((noindex ? 1 : 0) * 0.03),
+    ((noindex ? 1 : 0) * 0.03) +
+    pageTypePressure.score,
   );
   const factors = [];
   if (staleDecay.label !== 'fresh') factors.push(`${staleDecay.label} stale decay`);
@@ -349,10 +357,12 @@ function riskProfileFor({ evidence, frontmatter, scores, staleDecay }) {
   if (liveAffiliate && scores.cta_quality < 0.6) factors.push('live affiliate page with weak CTA context');
   if (lowConfidenceFacts.length) factors.push(`${lowConfidenceFacts.length} constrained fact(s) below high confidence`);
   if (noindex) factors.push('noindex or draft flag present');
+  factors.push(...pageTypePressure.factors);
 
   return {
     label: riskLabel(riskScore),
     score: round(riskScore),
+    page_profile: pageProfile.profile,
     factors,
   };
 }
@@ -363,15 +373,21 @@ function riskLabel(score) {
   return 'low';
 }
 
-function confidenceProfileFor({ evidence, scores, staleDecay, riskProfile }) {
+function confidenceProfileFor({ evidence, scores, staleDecay, riskProfile, pageProfile = { profile: 'default' } }) {
   const sourceCoverage = evidence.source_evidence.total_sources > 0 ? 1 : 0.35;
+  const pageTypeAdjustment = pageTypeConfidenceAdjustment(pageProfile.profile, {
+    sourceCount: evidence.source_evidence.total_sources ?? 0,
+    liveAffiliate: evidence.affiliate_notes.state === 'live_affiliate',
+    scores,
+  });
   const confidenceScore = clamp01(
     (scores.source_quality * 0.3) +
     (scores.trustworthiness * 0.22) +
     (scores.page_completeness * 0.16) +
     (scores.freshness * 0.16) +
     ((1 - riskProfile.score) * 0.1) +
-    (sourceCoverage * 0.06),
+    (sourceCoverage * 0.06) +
+    pageTypeAdjustment.score,
   );
   const reasons = [];
   if (scores.source_quality >= 0.75) reasons.push('source quality is strong');
@@ -379,10 +395,12 @@ function confidenceProfileFor({ evidence, scores, staleDecay, riskProfile }) {
   if (scores.page_completeness < 0.65) reasons.push('page completeness is below target');
   if (riskProfile.label !== 'low') reasons.push(`${riskProfile.label} risk profile`);
   if (evidence.source_evidence.total_sources === 0) reasons.push('no source coverage found');
+  reasons.push(...pageTypeAdjustment.reasons);
 
   return {
     label: confidenceLabel(confidenceScore),
     score: round(confidenceScore),
+    page_profile: pageProfile.profile,
     reasons,
   };
 }
@@ -391,6 +409,48 @@ function confidenceLabel(score) {
   if (score >= 0.8) return 'high';
   if (score >= 0.6) return 'medium';
   return 'low';
+}
+
+function pageTypeRiskPressure(profile, { liveAffiliate, sourceCount, scores, staleDecay }) {
+  const factors = [];
+  let score = 0;
+  if (profile === 'affiliate_buyer' && liveAffiliate && scores.cta_quality < 0.85) {
+    score += 0.32;
+    factors.push('affiliate buyer profile requires strong CTA disclosure context');
+  }
+  if (profile === 'news' && sourceCount < 2) {
+    score += sourceCount === 0 ? 0.18 : 0.1;
+    factors.push('news profile has thin source coverage');
+  }
+  if (profile === 'comparison' && sourceCount < 2) {
+    score += sourceCount === 0 ? 0.08 : 0.04;
+    factors.push('comparison profile has thin source coverage');
+  }
+  if (profile === 'tool_high_volatility' && staleDecay.label !== 'fresh') {
+    score += staleDecay.label === 'high' ? 0.16 : 0.08;
+    factors.push('high-volatility tool profile has active freshness pressure');
+  }
+  return {
+    score: clamp01(score),
+    factors,
+  };
+}
+
+function pageTypeConfidenceAdjustment(profile, { sourceCount, liveAffiliate, scores }) {
+  const reasons = [];
+  let score = 0;
+  if (profile === 'news' && sourceCount < 2) {
+    score -= sourceCount === 0 ? 0.25 : 0.12;
+    reasons.push('news profile needs multiple current sources');
+  }
+  if (profile === 'affiliate_buyer' && liveAffiliate && scores.cta_quality < 0.85) {
+    score -= 0.18;
+    reasons.push('affiliate buyer profile needs stronger CTA disclosure context');
+  }
+  return {
+    score,
+    reasons,
+  };
 }
 
 function seoScore(frontmatter) {
@@ -519,11 +579,12 @@ function round(value) {
   return Math.round(clamp01(value) * 100) / 100;
 }
 
-function recommendAction(scores, evidence, riskProfile = { label: 'low' }, confidenceProfile = { label: 'high' }) {
+function recommendAction(scores, evidence, riskProfile = { label: 'low' }, confidenceProfile = { label: 'high' }, pageProfile = { profile: 'default' }) {
   if (evidence.source_evidence.missing_source_ids.length) return 'fix_missing_sources';
   if (scores.update_urgency >= 0.75) return 'refresh_current_facts';
   if (scores.source_quality < 0.45) return 'improve_source_coverage';
   if (riskProfile.label === 'high' || confidenceProfile.label === 'low') return 'risk_confidence_review';
+  if (pageProfile.profile === 'affiliate_buyer' && evidence.affiliate_notes.state !== 'none' && scores.cta_quality < 0.85) return 'improve_cta_context';
   if (scores.internal_links < 0.5) return 'improve_internal_links';
   if (scores.cta_quality < 0.6 && evidence.affiliate_notes.state !== 'none') return 'improve_cta_context';
   if (scores.buyer_intent < 0.65) return 'strengthen_buyer_decision_path';

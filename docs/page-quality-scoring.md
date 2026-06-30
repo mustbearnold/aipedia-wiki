@@ -68,8 +68,8 @@ The v2 scorer also emits:
 
 - `scoring_model`: page profile, freshness window, source window, weights, and applied score penalty.
 - `stale_decay`: page age, source age, stale-signal decay, and `fresh`, `low`, `medium`, or `high` label.
-- `risk_profile`: deterministic risk score and factors such as missing source IDs, high-severity stale signals, weak source quality, and weak live-affiliate CTA context.
-- `confidence_profile`: deterministic confidence score and reasons based on source quality, freshness, completeness, risk, and source coverage.
+- `risk_profile`: deterministic risk score, page profile, and factors such as missing source IDs, high-severity stale signals, weak source quality, weak live-affiliate CTA context, thin source coverage by page type, and active stale pressure on high-volatility tools.
+- `confidence_profile`: deterministic confidence score, page profile, and reasons based on source quality, freshness, completeness, risk, source coverage, and profile-specific requirements such as affiliate buyer CTA disclosure context.
 - `evidence_summary` labels for quick loop dashboards.
 
 ## Implemented Weighting
@@ -168,18 +168,18 @@ Gold-set calibration turns scoring expectations into a regression gate. The comm
 - `/news/2026-06-29-google-ai-studio-gemini-api-key-incident/`: current source-backed news should stay a high-confidence monitor baseline under the news profile.
 - `/guides/ai-content-pipeline/`: source-gap guide should stay `improve_source_coverage` with zero source coverage.
 - `/guides/best-ai-for-api-documentation/`: source-backed guide with weak buyer-job fields should stay `strengthen_buyer_decision_path`, not a source gap.
-- `/tools/cline/`: stale high-volatility tool should stay a `refresh_current_facts` baseline even though source volume is strong.
+- `/tools/cline/`: stale high-volatility tool should stay a `refresh_current_facts` and medium-risk baseline even though source volume is strong.
 
 `agent:score:calibrate -- --gold-set <path>` emits:
 
-- `gold_set`: case count, mismatch count, per-case checks, actual labels, and threshold expectations.
+- `gold_set`: case count, mismatch count, per-case checks, actual page profile, labels, scores, and threshold expectations.
 - `gold_set_governance`: normalized gold-set hash, required review schema, required review lenses, case-structure checks, and optional matching review record.
 - `threshold_review`: pass or review status for unsafe threshold combinations, including high-risk monitor actions, low-confidence weak remediation, high stale decay with high score, and gold-set mismatches.
 
 A scoring change is not ready if the gold-set receipt has `ok: false`, `gold_set.ok: false`, `gold_set_governance.ok: false`, or `threshold_review.status: "review"` unless the change deliberately updates the baseline and the matching review record explains why.
 
-Gold-set numeric bounds support `score_min`, `score_max`, `source_count_min`, `source_count_max`, `source_quality_min`, `source_quality_max`, `buyer_intent_min`, `buyer_intent_max`, `parent_surface_count_min`, `stale_signal_count_min`, `stale_signal_count_max`, `internal_links_min`, and `internal_links_max`.
+Gold-set cases require `page_profile`, `recommended_action`, `calibration_label`, `risk_label`, `confidence_label`, and `stale_decay_label`. Numeric bounds support `score_min`, `score_max`, `source_count_min`, `source_count_max`, `source_quality_min`, `source_quality_max`, `buyer_intent_min`, `buyer_intent_max`, `risk_score_min`, `risk_score_max`, `confidence_score_min`, `confidence_score_max`, `parent_surface_count_min`, `stale_signal_count_min`, `stale_signal_count_max`, `internal_links_min`, and `internal_links_max`.
 
-Deliberate baseline changes should run with `--require-gold-set-review` and a JSON review file that uses `schema_version: "aipedia.score-goldset-review.v1"`, matches the normalized `gold_set_hash`, lists `changed_cases`, and covers the architecture, evaluation, editorial, risk-confidence, regression, and rollout review lenses. Slice 18 expanded the baseline with review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json` and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`. Slice 52 added `stale_signal_count_min`, the Cline stale-tool baseline, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-52-stale-tool-goldset.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-52-stale-tool-goldset.json`. Slice 53 added source-quality and buyer-intent bounds, two guide remediation baselines, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-53-source-gap-guide-decision.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-53-source-gap-guide-decision.json`.
+Deliberate baseline changes should run with `--require-gold-set-review` and a JSON review file that uses `schema_version: "aipedia.score-goldset-review.v1"`, matches the normalized `gold_set_hash`, lists `changed_cases`, and covers the architecture, evaluation, editorial, risk-confidence, regression, and rollout review lenses. Slice 18 expanded the baseline with review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json` and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`. Slice 52 added `stale_signal_count_min`, the Cline stale-tool baseline, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-52-stale-tool-goldset.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-52-stale-tool-goldset.json`. Slice 53 added source-quality and buyer-intent bounds, two guide remediation baselines, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-53-source-gap-guide-decision.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-53-source-gap-guide-decision.json`. Slice 54 added required page-profile expectations, risk-score and confidence-score bounds, profile-aware affiliate buyer and high-volatility risk pressure, review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-54-page-profile-risk-confidence.json`, and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-54-page-profile-risk-confidence.json`.
 
 News scoring uses the news-specific bar from the daily workflow: currentness, source quality, buyer impact, affected-page linking, and readability. Inline article sources count as source coverage, but registered source IDs remain distinct for tool, guide, and pricing fact provenance.
