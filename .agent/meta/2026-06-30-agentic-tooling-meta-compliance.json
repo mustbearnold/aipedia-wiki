@@ -1,0 +1,131 @@
+{
+  "schema_version": "aipedia.meta-compliance.v1",
+  "date": "2026-06-30",
+  "objective": "June 30 AiPedia Agentic Tooling Meta Operating System",
+  "status": "partial",
+  "source_specs": [
+    "original massive Codex operating-system refactor prompt",
+    "six-specialist-reviewed June 30 meta spec",
+    "active /goal objective"
+  ],
+  "workstreams": [
+    {
+      "id": "spec-compliance-audit",
+      "status": "partial",
+      "evidence": [
+        ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+        "docs/agentic-tooling-meta-compliance.md"
+      ],
+      "remaining": "Keep this audit current after each system slice and promote completed items only with verification evidence."
+    },
+    {
+      "id": "stale-input-handling",
+      "status": "partial",
+      "evidence": [
+        "scripts/decision-loop.mjs --fail-on-stale-backlog",
+        "tests/scripts/decision-loop.test.mjs stale backlog blocker"
+      ],
+      "remaining": "Extend the same stale-input policy to other planners and optionally add safe auto-refresh modes."
+    },
+    {
+      "id": "system-progress-checkpoint",
+      "status": "partial",
+      "evidence": [
+        "scripts/agent-system-progress-check.mjs",
+        "npm run agent:system-progress",
+        "tests/scripts/agent-system-progress-check.test.mjs"
+      ],
+      "remaining": "Wire this checkpoint into loop closeout receipts and runner workflows so content-only cycles cannot be recorded as system progress."
+    },
+    {
+      "id": "pause-resume-receipts",
+      "status": "partial",
+      "evidence": [
+        "scripts/agent-pause-receipt.mjs",
+        "npm run agent:pause-receipt",
+        "tests/scripts/agent-pause-receipt.test.mjs"
+      ],
+      "remaining": "Wire pause receipts into runner and goal closeout flows, and add schema validation for committed receipts."
+    },
+    {
+      "id": "dag-contracts",
+      "status": "partial",
+      "evidence": [
+        "npm run runner:agent-plan existing DAG bridge",
+        "docs/parallel-tooling-architecture.md"
+      ],
+      "remaining": "Standardize node IDs, permissions, validators, traces, and artifact refs across tool refresh, page refresh, decision, affiliate, and news workflows."
+    },
+    {
+      "id": "closeout-receipts-traces",
+      "status": "partial",
+      "evidence": [
+        "existing runner closeout receipts",
+        "system loop JSON receipts"
+      ],
+      "remaining": "Adopt goal_id, run_id, trace/span refs, supersession, source IDs, route widths, command timings, and residual risk fields consistently."
+    },
+    {
+      "id": "non-stale-scoring",
+      "status": "partial",
+      "evidence": [
+        "scripts/agent-page-quality-score.mjs",
+        "scripts/agent-score-calibration.mjs",
+        "docs/page-quality-scoring.md"
+      ],
+      "remaining": "Add explicit risk/confidence fields, page-type score schema, stale decay tests, and calibration gold-set receipts."
+    },
+    {
+      "id": "speed-token-efficiency",
+      "status": "partial",
+      "evidence": [
+        "six-worker tool refresh workflow",
+        "route QA timing files",
+        "runner closeout timing receipts"
+      ],
+      "remaining": "Add first-class metrics for token/context budget, correction rate, flake rate, and system-progress-per-loop."
+    },
+    {
+      "id": "memory-retrieval",
+      "status": "partial",
+      "evidence": [
+        "scripts/agent-memory-record.mjs",
+        "scripts/agent-memory-query.mjs",
+        ".agent/memory/schema.json"
+      ],
+      "remaining": "Enforce expiration and promotion rules during retrieval and pause/resume."
+    },
+    {
+      "id": "rust-cupy-gpu-gating",
+      "status": "partial",
+      "evidence": [
+        "docs/rust-cupy-gpu-roadmap.md",
+        "CPU lexical memory query baseline"
+      ],
+      "remaining": "Add measurable hotspot gates before any Rust expansion, CuPy service, or GPU retrieval work."
+    }
+  ],
+  "current_slice": {
+    "name": "stale input, system progress, and pause receipt hardening",
+    "system_artifacts": [
+      "scripts/decision-loop.mjs",
+      "scripts/agent-system-progress-check.mjs",
+      "scripts/agent-pause-receipt.mjs",
+      "tests/scripts/decision-loop.test.mjs",
+      "tests/scripts/agent-system-progress-check.test.mjs",
+      "tests/scripts/agent-pause-receipt.test.mjs",
+      "package.json",
+      "scripts/README.md",
+      "docs/agentic-tooling-meta-compliance.md"
+    ],
+    "content_artifacts": [],
+    "content_only_progress": false
+  },
+  "next_system_targets": [
+    "Wire agent:system-progress into loop record or runner closeout receipts.",
+    "Add closeout receipt schema validation.",
+    "Extend stale-input policy to page/tool/affiliate planners.",
+    "Add non-stale scoring risk/confidence fields and stale-decay tests.",
+    "Pilot one bounded content workload only after the system slice is verified."
+  ]
+}

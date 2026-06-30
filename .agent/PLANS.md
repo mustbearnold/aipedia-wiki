@@ -6,7 +6,10 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 
 ## Current Snapshot
 
-- Last updated: 2026-06-29.
+- Last updated: 2026-06-30.
+- Active branch: `agent-os-absolute-meta-2026-06-30`.
+- Current goal: implement the June 30, 2026 AiPedia Agentic Tooling Meta Operating System. Treat content as bounded pilot data only. Do not count content-only work as progress toward this goal.
+- Slice 01 is verified locally: stale backlog enforcement, system-progress checking, durable pause receipts, compliance docs, and focused tests are in place. Pre-existing Captions/Synthesia content WIP remains separate and must not be staged with system commits.
 - Branch baseline: `master`; the Codex operating-system refactor was fast-forward merged from `agent-workflow-refactor-codex` at `0ff8fb6a`. An all-night agent-system improvement goal is active: use the new tools on real production routes, evaluate the outputs, patch scripts/docs/tests/workflows, verify, record memory, commit, push, and repeat. The first loop completed the June 29 news refresh pilot and uncovered fixes for static hub impact detection, non-ledger content-route resolution, inline news source accounting, and news-specific buyer-intent scoring. The second loop fixed score calibration for inline news sources, cleaned canonical machine-readable loop commands, and recorded a green 7 ok / 0 attention / 0 skipped broad loop receipt. The third loop created `/compare/amazon-q-vs-github-copilot/` from the `loop:next` recommendation and fixed comparison evidence extraction so `## Sources` section links count toward source coverage. The fourth loop fixed the coverage-quality npm-wrapper conflict when `--changed-file` is appended to `audit:coverage-quality:changed`. The fifth loop created `/compare/antigravity-vs-cursor/`, refreshed Antigravity, Cursor, AI Coding, top-layer, LLM, source-registry, and ledger surfaces, and repaired the `aipedia-news` registry date exposed by the changed Antigravity page. The sixth loop created `/compare/argil-vs-heygen/`, refreshed Argil, HeyGen, AI Video, top-layer, LLM, source-registry, and ledger surfaces, and repaired older AI Video visible-source registry dates exposed by the stricter guard. The seventh loop created `/compare/argil-vs-synthesia/`, refreshed Argil, Synthesia, AI Video, top-layer, LLM, source-registry, and ledger surfaces, and verified current official Argil/Synthesia source rows. The eighth loop created `/compare/blackbox-ai-vs-replit-agent/`, refreshed BLACKBOX AI, Replit Agent, AI Coding, top-layer, LLM, source-registry, and ledger surfaces, verified eighteen live primary sources, and corrected the Replit Pro annual price back to the official $95/month annual value after the loop caught a stale local $90 value. The ninth loop created `/compare/boomy-vs-suno/`, refreshed Boomy, Suno, AI Music, top-layer, LLM, source-registry, and ledger surfaces, and used score feedback to improve internal-link coverage before closeout. The tenth loop created `/compare/boomy-vs-udio/`, refreshed Boomy, Udio, AI Music, top-layer, LLM, source-registry, and ledger surfaces, and repaired the Udio Warner source-registry URL/type mismatch. The eleventh loop created `/compare/capacities-vs-notion-ai/`, refreshed Capacities, Notion AI, AI Notes, top-layer, LLM, source-registry, and ledger surfaces, used score feedback to add adjacent-decision links, and repaired AI Notes visible-source registry drift after live-checking ten sibling sources. The twelfth loop created `/compare/captions-vs-heygen/`, refreshed Captions.ai, HeyGen, AI Video, top-layer, LLM, source-registry, and ledger surfaces, verified seventeen live official source rows, recorded memory, and passed route QA across 319 to 1366 px.
 - Root project orientation cleanup is complete and pushed: `INDEX.md` is the canonical LLM-readable repo map, tracked specialists are under `.agent/specialists/`, `.agents/` remains local ignored runtime state, and `.Agents/` is retired.
 - Daily news is the first editorial task each day. Use `workflows/news-refresh/README.md`, current-month source searches, and strict source-backed story selection before returning to affiliate or freshness batches. June 29 coverage is now complete with three source-backed stories, refreshed `/news/`, `/`, RSS, LLM surfaces, cumulative news OG assets, and ledger rows.
@@ -32,6 +35,38 @@ For current state, read `.agent/CURRENT_STATUS.md` first. For completed work, re
 - Comparison pages must compare the same buyer job and workflow.
 - Route QA for rendered work uses 360, 390, 430, 768, 1024, and 1366 px. Add 319 px for homepage, nav, card grids, or narrow-mobile risk. Add 346 px when reproducing in-app browser reports. Tool-refresh closeout now uses route QA concurrency 6 and writes per-route/per-width timing.
 - June 24 workflow profiling found `build:fast` was the bottleneck at about 166.9 seconds end to end before optimization. Production-only content collection caching dropped `build:fast` to about 65 seconds end to end and Astro static prerender from about 2m 13s to about 37 seconds. The June 26 same-day revisit closeout shifted the bottleneck to route QA: closeout timing was ledger 0.6s, grouped check 25.4s, typecheck 16.3s, build:fast 16.4s, and route QA 126.3s at concurrency 4 for 75 routes across seven widths. Rerunning the same route matrix at concurrency 6 passed and wrote route timing in about 85.5s internal duration. Future refresh work should use six shard workers with up to 10 tools each, one integrator, generated worker prompts, the fast batch gate, dev-server route QA while editing, then one `build:fast` and concurrency-6 route QA at closeout.
+
+## Active: June 30 Agentic Tooling Meta OS
+
+### Objective
+
+Implement the June 30 meta spec as a working, measured, pause-safe, replayable AiPedia agent operating system. Every loop must improve or validate a system artifact: scripts, runner behavior, schema contracts, workflow docs, skills, scoring, memory, receipts, pause/resume, DAG planning, eval harnesses, or automation.
+
+### Completed Slice 01
+
+- Added `loop:next --fail-on-stale-backlog` so stale or invalid coverage backlog input can block planner use.
+- Added `npm run agent:system-progress` to reject content-only progress claims.
+- Added `npm run agent:pause-receipt` to write durable pause/resume JSON receipts.
+- Added compliance audit docs under `.agent/meta/` and `docs/`.
+- Added focused tests for stale backlog enforcement, progress classification, and pause receipt generation.
+
+### Next Slice
+
+1. Wire `agent:system-progress` into loop-run or runner closeout receipts.
+2. Add closeout receipt schema validation with required goal, run, artifact, command, timing, changed-file, risk, and next-action fields.
+3. Extend stale-input gates to page/tool/affiliate planners that can drive stale work.
+4. Add non-stale scoring with risk/confidence fields, score decay, calibration checks, and tests.
+5. Run one bounded production pilot only after the next system slice is verified, then record receipts and update memory.
+
+### Required Closeout Before Completion
+
+- Focused script and schema tests for each changed system artifact.
+- `npm run check:smart` scoped to changed system files.
+- `npm run check:quick` when package scripts, test harnesses, or shared guards change.
+- `npm --silent run loop:system -- --json` and `npm --silent run loop:all -- --json`.
+- Durable `.agent/loop-runs/` receipt and `.agent` memory updates.
+- Commit and push to remote.
+- Goal remains active until the operating system is materially implemented to the standard in `docs/agentic-tooling-meta-compliance.md`.
 
 ## Completed: Agent Workflow Refactor Codex
 

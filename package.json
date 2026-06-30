@@ -102,6 +102,8 @@
     "agent:score:calibrate": "node scripts/agent-score-calibration.mjs",
     "agent:memory:record": "node scripts/agent-memory-record.mjs",
     "agent:memory:query": "node scripts/agent-memory-query.mjs",
+    "agent:system-progress": "node scripts/agent-system-progress-check.mjs",
+    "agent:pause-receipt": "node scripts/agent-pause-receipt.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
     "check:security": "npm audit --audit-level=moderate",

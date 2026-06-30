@@ -14,6 +14,8 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm --silent run agent:score:calibrate -- --json`: compares score output with real repo signals across a small mixed-route baseline.
 - `npm --silent run agent:memory:record -- --route /tools/cursor/ --json`: writes JSONL-ready memory records with CPU lexical vectors.
 - `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory.jsonl --query "pricing source gaps" --json`: ranks memory records with the CPU lexical scorer.
+- `npm --silent run agent:system-progress -- --require-system-artifact --json`: fails content-only diffs when a loop claims operating-system progress.
+- `npm --silent run agent:pause-receipt -- --goal-id <id> --safe-resume-step <step> --in-progress-step <step> --json`: writes a structured pause/resume receipt with dirty-tree state, validation done/pending, must-not-repeat items, and next commands.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
 - `npm run lint`: source/content guard bundle used as the repo lint gate.
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
@@ -21,7 +23,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run loop:system`: lists every registered AiPedia operating loop and its read-only commands.
 - `npm run loop:all`: runs every registered loop read-only and reports `ok`, `attention`, `skipped`, ranked recommendations, and built-output freshness for rendered-output loops. Stale or unknown build freshness is reported as attention.
 - `npm run loop:all:record`: runs every registered loop and writes a JSON receipt plus `latest.json` under `.agent/loop-runs/system/`.
-- `npm run loop:next`: read-only decision-content flywheel brief for the next buyer-intent cluster.
+- `npm run loop:next`: read-only decision-content flywheel brief for the next buyer-intent cluster. Add `-- --fail-on-stale-backlog` in automation so stale `src/data/coverage-backlog.json` cannot silently drive work.
 - `npm run loop:verify`: date-stable verifier for a decision-content cycle; sets `AIPEDIA_LEDGER_DATE`, runs focused checks, records per-command timing, builds when a route or `--force-build` needs it, and can call route QA.
 - `npm run loop:record`: writes a durable `.agent/loop-runs/` receipt after a cycle.
 - `npm run agent:evidence`: read-only evidence bundle builder for a single route or content path. It is the first deterministic handoff layer between raw repo state and Codex synthesis.
@@ -30,6 +32,8 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run agent:score:calibrate`: score calibration receipt across real route signals. Use `--silent` for machine-readable JSON.
 - `npm run agent:memory:record`: JSONL memory record builder. Defaults to `local/tmp`; pass `--out .agent/memory/agent-memory.jsonl --append` only for durable memory.
 - `npm run agent:memory:query`: CPU lexical vector query over JSONL memory records.
+- `npm run agent:system-progress`: read-only system-progress checkpoint. Use `-- --require-system-artifact` before recording an agent-system loop so content-only changes cannot count as operating-system progress.
+- `npm run agent:pause-receipt`: writes `.agent/loop-runs/pauses/*-pause-receipt.json` unless `--out` is supplied. Long-running goals should use it before pausing or handing off.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`: plans the next 60-tool freshness batch, including registered source metadata, scoped `audit:sources` commands, routes, parent hubs, closeout commands, and `agent_briefs` for six shard workers.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents`: prints one guarded shard-worker brief per 10-tool shard plus the single integrator brief.
 - `npm run check:frontmatter`: parses changed content frontmatter with `js-yaml` so malformed markdown metadata is caught before Astro typecheck/build.
@@ -53,9 +57,11 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `guard-*.mjs`: fail-fast editorial and policy guards.
 - `audit-*.mjs`: source, SEO, conversion, data, command, freshness, and quality checks.
 - `aipedia-loops.mjs`: shared loop registry runner for Decision Content, Freshness, Trust, Conversion, Quality Pruning, Performance/UX, and News/Market loops. Loop definitions live in `src/data/aipedia-loops.json`. Use `--write-ledger` only for deliberate broad-review receipts.
-- `decision-loop.mjs`: chooses the next same-buyer-job cluster and prints the source, working-set, related-surface discovery, mobile and desktop route QA, verification, and recording brief. It skips blocked or review-only false-vs candidates from `src/data/comparison-policy.json`.
+- `decision-loop.mjs`: chooses the next same-buyer-job cluster and prints the source, working-set, related-surface discovery, mobile and desktop route QA, verification, and recording brief. It skips blocked or review-only false-vs candidates from `src/data/comparison-policy.json`. Use `--fail-on-stale-backlog` when a fresh backlog is required.
 - `loop-verify.mjs`: executes the loop verification plan with one explicit ledger date so timezone differences do not break ledger, guard, or build checks. It delegates overlapping checks to `check-smart:run`, records per-command durations, and only adds fallback `build:fast` for route QA or `--force-build`.
 - `loop-record.mjs`: creates `.agent/loop-runs/YYYY-MM-DD-slug.md` receipts for completed or attempted cycles.
+- `agent-system-progress-check.mjs`: classifies changed files as system, content, or other artifacts and can fail when no system artifact is present.
+- `agent-pause-receipt.mjs`: writes structured JSON pause receipts so future agents can resume from files rather than chat memory.
 - `tool-refresh-batch.mjs`: plans grouped tool freshness work. Use `--limit 60 --max-workers 6 --tools-per-worker 10 --json` for machine-readable batch plans and `--agents` for six shard-worker prompts. Planner output includes scoped `audit:sources` commands so integrators can check registered source reachability, content-hash changes, and snapshot updates before manual review.
 - `check-frontmatter.mjs`: parses changed or explicit markdown frontmatter with `js-yaml` and reports file, line, and column for YAML syntax failures.
 - `tool-refresh-batch-check.mjs`: runs the cheap grouped tool gate. It accepts explicit `--file` values or a saved planner JSON through `--plan` or `--files-from`.

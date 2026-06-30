@@ -9,6 +9,7 @@ const args = process.argv.slice(2);
 const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
 const JSON_MODE = args.includes('--json');
 const HELP_MODE = args.includes('--help') || args.includes('-h');
+const FAIL_ON_STALE_BACKLOG = args.includes('--fail-on-stale-backlog') || args.includes('--require-fresh-backlog');
 const COUNT = numberValue('--count', 1);
 const SLUG = valueFor('--slug') || '';
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || defaultProjectDir);
@@ -19,7 +20,18 @@ const CATEGORIES_DIR = join(PROJECT_DIR, 'src', 'content', 'categories');
 const COMPARISON_POLICY_PATH = join(PROJECT_DIR, 'src', 'data', 'comparison-policy.json');
 const ROUTE_QA_WIDTHS = [360, 390, 430, 768, 1024, 1366];
 const BACKLOG_STALE_DAYS = 2;
-const KNOWN_FLAGS = new Set(['--backlog', '--count', '--json', '--project-dir', '--root', '--slug', '--help', '-h']);
+const KNOWN_FLAGS = new Set([
+  '--backlog',
+  '--count',
+  '--json',
+  '--project-dir',
+  '--root',
+  '--slug',
+  '--fail-on-stale-backlog',
+  '--require-fresh-backlog',
+  '--help',
+  '-h',
+]);
 const VALUE_FLAGS = new Set(['--backlog', '--count', '--project-dir', '--root', '--slug']);
 const CANONICAL_FACT_TOOLS = new Set([
   'chatgpt',
@@ -66,6 +78,22 @@ if (!existsSync(BACKLOG_PATH)) {
 }
 
 const backlog = JSON.parse(readFileSync(BACKLOG_PATH, 'utf8'));
+const warnings = backlogWarnings(backlog.generated_at);
+const staleInputPolicy = staleBacklogPolicy(warnings);
+if (FAIL_ON_STALE_BACKLOG && warnings.length > 0) {
+  emitReport({
+    ok: false,
+    mode: 'stale-backlog',
+    project_dir: PROJECT_DIR,
+    backlog_path: projectPath(BACKLOG_PATH),
+    backlog_generated_at: backlog.generated_at ?? '',
+    warnings,
+    stale_input_policy: { ...staleInputPolicy, status: 'blocked' },
+    clusters: [],
+    next_action: 'Run npm run coverage:backlog, then rerun npm run loop:next -- --fail-on-stale-backlog --json.',
+  });
+  process.exit(3);
+}
 const comparisonPolicy = existsSync(COMPARISON_POLICY_PATH)
   ? JSON.parse(readFileSync(COMPARISON_POLICY_PATH, 'utf8'))
   : { blocked_pairs: [] };
@@ -75,7 +103,6 @@ const blockedPairs = new Set(
 const workflowLanes = comparisonPolicy.workflow_lanes || {};
 const existingPairs = existingComparisonPairs();
 const comparisonBacklog = backlog.backlog?.comparisons ?? [];
-const warnings = backlogWarnings(backlog.generated_at);
 const candidates = comparisonBacklog
   .filter((item) => item?.tools?.length >= 2)
   .filter((item) => !SLUG || item.slug === SLUG)
@@ -91,6 +118,7 @@ emitReport({
   backlog_path: projectPath(BACKLOG_PATH),
   backlog_generated_at: backlog.generated_at ?? '',
   warnings,
+  stale_input_policy: staleInputPolicy,
   count: candidates.length,
   clusters: candidates,
   next_action: candidates.length
@@ -112,6 +140,9 @@ function usage() {
     '  --slug <slug>          Brief a specific comparison slug from the backlog.',
     '  --backlog <path>       Coverage backlog path. Defaults to src/data/coverage-backlog.json.',
     '  --project-dir <dir>    Project root. Alias: --root.',
+    '  --fail-on-stale-backlog',
+    '                         Exit non-zero when the backlog is stale, missing generated_at, or invalid.',
+    '  --require-fresh-backlog Alias for --fail-on-stale-backlog.',
   ].join('\n');
 }
 
@@ -149,6 +180,9 @@ function emitReport(report) {
       console.log('');
       console.log('Warnings:');
       for (const warning of report.warnings) console.log(`  - ${warning.message}`);
+      if (report.stale_input_policy?.enforce_flag) {
+        console.log(`  - Enforce this in automation with ${report.stale_input_policy.enforce_flag}.`);
+      }
     }
     console.log('');
     console.log('Loop:');
@@ -168,6 +202,20 @@ function emitReport(report) {
     for (const check of cluster.route_qa.checks) console.log(`  - ${check}`);
     console.log('');
   }
+}
+
+function staleBacklogPolicy(warnings) {
+  const staleWarnings = warnings.filter((warning) =>
+    ['backlog-generated-at-missing', 'backlog-generated-at-invalid', 'backlog-stale'].includes(warning.code),
+  );
+  return {
+    input: 'src/data/coverage-backlog.json',
+    max_age_days: BACKLOG_STALE_DAYS,
+    status: staleWarnings.length ? 'warning' : 'fresh',
+    warning_codes: staleWarnings.map((warning) => warning.code),
+    refresh_command: 'npm run coverage:backlog',
+    enforce_flag: '--fail-on-stale-backlog',
+  };
 }
 
 function flatWorkingSet(workingSet) {

@@ -150,6 +150,7 @@ docs/*
 !docs/codex-operating-manual.md
 !docs/codex-task-templates.md
 !docs/codex-report-format.md
+!docs/agentic-tooling-meta-compliance.md
 !docs/parallel-tooling-architecture.md
 !docs/rust-cupy-gpu-roadmap.md
 !docs/agent-memory-system.md

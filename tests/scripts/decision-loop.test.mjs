@@ -128,6 +128,26 @@ test('decision loop warns when the coverage backlog is stale', () => {
     const report = JSON.parse(result.stdout);
     assert.ok(report.warnings.some((warning) => warning.code === 'backlog-stale'));
     assert.match(report.warnings[0].message, /coverage:backlog/);
+    assert.equal(report.stale_input_policy.status, 'warning');
+    assert.equal(report.stale_input_policy.enforce_flag, '--fail-on-stale-backlog');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('decision loop can block stale backlog input when freshness is required', () => {
+  const dir = writeFixtureProject({ generatedAt: '2026-06-01T00:00:00.000Z' });
+
+  try {
+    const result = runDecisionLoop('--json', '--fail-on-stale-backlog', `--project-dir=${dir}`);
+    assert.equal(result.status, 3, result.stderr);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.mode, 'stale-backlog');
+    assert.equal(report.stale_input_policy.status, 'blocked');
+    assert.ok(report.warnings.some((warning) => warning.code === 'backlog-stale'));
+    assert.match(report.next_action, /coverage:backlog/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
