@@ -1752,3 +1752,15 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-28.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-37-37-688Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.921s wall duration, 42,847 full receipt bytes, 24,303 latest receipt bytes, estimated full receipt tokens 10,712, and 8 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then embed interrupted pause receipt paths into failed runner closeout receipts and artifact refs.
+
+### 2026-06-30: Agentic Tooling Meta Slice 29, Linked Interrupted Pause Receipts
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Failed Rust runner closeout receipts now include `interrupted_pause_receipt` when automatic pause capture runs, and artifact refs now include `kind: interrupted-pause-receipt` pointing at the same path. Markdown closeout receipts print the pause path for human resume.
+- System lesson: a terminal bail message is not durable enough. The failed closeout receipt itself has to point at the pause receipt so a future agent can resume from either artifact.
+- Verification: Rust format, check, tests, scoped `check:smart --run`, `check:quick`, live interrupt fixture rerun, copied proof receipt validation, linked-proof JSON assertion, enforced `loop:all:record`, efficiency trends, and required closeout validation passed.
+- Durable proof: `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-pause.json` and `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-closeout.json`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-29.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-47-07-903Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.859s wall duration, 42,941 full receipt bytes, 24,397 latest receipt bytes, estimated full receipt tokens 10,736, and 9 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then enforce interrupted pause receipt links in `agent:closeout:check`.

@@ -1,0 +1,114 @@
+{
+  "schema_version": "aipedia.pause-receipt.v1",
+  "goal_id": "2026-06-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-29-closeout-pause-link:interrupted-pause",
+  "paused_at": "2026-06-30T07:42:42.667Z",
+  "pause_reason": "user",
+  "latest_safe_resume_step": "Read this pause receipt, inspect git status, then decide whether to rerun the interrupted tool-refresh command `ledger generate`.",
+  "in_progress_step": "Runner tool-refresh command `ledger generate` was interrupted.",
+  "dirty_tree_summary": [
+    " M src/content/tools/synthesia.md",
+    " M src/data/coverage-backlog.json",
+    " M src/data/source-registry.json",
+    " M tools/aipedia-runner/src/main.rs",
+    "?? src/content/comparisons/captions-vs-synthesia.md"
+  ],
+  "files_touched_by_agent": [
+    "tools/aipedia-runner/src/main.rs"
+  ],
+  "files_observed_dirty_before_agent": [
+    "src/content/tools/synthesia.md",
+    "src/data/coverage-backlog.json",
+    "src/data/source-registry.json",
+    "src/content/comparisons/captions-vs-synthesia.md"
+  ],
+  "child_workers": [],
+  "open_questions": [],
+  "blocked_on": [
+    "Interrupted runner command: ledger generate."
+  ],
+  "must_not_repeat": [
+    "Do not assume the interrupted command completed."
+  ],
+  "next_commands": [
+    "npm run runner:tool-refresh:closeout"
+  ],
+  "validation_done": [
+    "Detected interrupted runner command: ledger generate."
+  ],
+  "validation_pending": [
+    "Review partial command output and any closeout receipt before retrying."
+  ],
+  "source_cutoff": "2026-06-30",
+  "trace": {
+    "trace_id": "2026-06-30-agentic-tooling-meta-os:2026-06-30-slice-29-closeout-pause-link:interrupted-pause",
+    "span_id": "span:pause-receipt:2026-06-30-slice-29-closeout-pause-link:interrupted-pause:2026-06-30t07:42:42.656z",
+    "parent_span_id": "",
+    "name": "pause-receipt",
+    "started_at": "2026-06-30T07:42:42.656Z",
+    "ended_at": "2026-06-30T07:42:42.667Z",
+    "duration_ms": 11
+  },
+  "artifact_refs": [
+    {
+      "role": "output",
+      "kind": "pause-receipt",
+      "path": "local/tmp/aipedia-runner/pauses/2026-06-30T07-42-42-255Z-tool-refresh-interrupted-pause.json",
+      "description": "Written pause receipt JSON."
+    },
+    {
+      "role": "input",
+      "kind": "git-status",
+      "id": "dirty-tree",
+      "description": "Captured 5 git status entries at pause time."
+    },
+    {
+      "role": "dirty",
+      "kind": "agent-touched-file",
+      "path": "tools/aipedia-runner/src/main.rs",
+      "description": "Dirty file attributed to this agent run."
+    },
+    {
+      "role": "input",
+      "kind": "observed-dirty-before-agent",
+      "path": "src/content/tools/synthesia.md",
+      "description": "Dirty file observed before this agent run and excluded from touched files."
+    },
+    {
+      "role": "input",
+      "kind": "observed-dirty-before-agent",
+      "path": "src/data/coverage-backlog.json",
+      "description": "Dirty file observed before this agent run and excluded from touched files."
+    },
+    {
+      "role": "input",
+      "kind": "observed-dirty-before-agent",
+      "path": "src/data/source-registry.json",
+      "description": "Dirty file observed before this agent run and excluded from touched files."
+    },
+    {
+      "role": "input",
+      "kind": "observed-dirty-before-agent",
+      "path": "src/content/comparisons/captions-vs-synthesia.md",
+      "description": "Dirty file observed before this agent run and excluded from touched files."
+    },
+    {
+      "role": "embedded",
+      "kind": "next-command",
+      "id": "next-command:1",
+      "description": "npm run runner:tool-refresh:closeout"
+    },
+    {
+      "role": "embedded",
+      "kind": "validation-done",
+      "id": "validation-done:1",
+      "description": "Detected interrupted runner command: ledger generate."
+    },
+    {
+      "role": "embedded",
+      "kind": "validation-pending",
+      "id": "validation-pending:1",
+      "description": "Review partial command output and any closeout receipt before retrying."
+    }
+  ]
+}

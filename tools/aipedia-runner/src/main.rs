@@ -393,6 +393,8 @@ struct CloseoutReceiptJson {
     widths: Vec<u16>,
     commands: Vec<CloseoutReceiptCommand>,
     superseded_failures: Vec<SupersededFailureReceipt>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    interrupted_pause_receipt: Option<String>,
     system_progress: Option<serde_json::Value>,
     input_freshness: Option<serde_json::Value>,
 }
@@ -1380,6 +1382,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
                 &results,
                 false,
                 closeout_start.elapsed().as_millis(),
+                interrupted_pause.as_deref(),
             )?;
             if let Some(path) = interrupted_pause {
                 bail!(
@@ -1401,6 +1404,7 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
         &results,
         true,
         closeout_start.elapsed().as_millis(),
+        None,
     )?;
     println!("Closeout passed");
     Ok(())
@@ -1660,6 +1664,7 @@ fn page_closeout(project_dir: &Path, args: &PageCloseoutArgs, dry_run: bool) -> 
                 &results,
                 false,
                 closeout_start.elapsed().as_millis(),
+                interrupted_pause.as_deref(),
             )?;
             if let Some(path) = interrupted_pause {
                 bail!(
@@ -1683,6 +1688,7 @@ fn page_closeout(project_dir: &Path, args: &PageCloseoutArgs, dry_run: bool) -> 
         &results,
         true,
         closeout_start.elapsed().as_millis(),
+        None,
     )?;
     println!("Page closeout passed");
     Ok(())
@@ -3195,6 +3201,7 @@ fn write_receipt(
     results: &[CommandResult],
     ok: bool,
     total_duration_ms: u128,
+    interrupted_pause_receipt: Option<&str>,
 ) -> Result<()> {
     let now = Utc::now();
     let timestamp = now.format("%Y-%m-%dT%H-%M-%SZ").to_string();
@@ -3229,6 +3236,12 @@ fn write_receipt(
     content.push_str(&format!("- Span ID: `{}`\n", trace.span_id));
     content.push_str(&format!("- Plan: `{}`\n", plan_display));
     content.push_str(&format!("- Route args: `{}`\n\n", route_args_display));
+    if let Some(pause_receipt) = interrupted_pause_receipt {
+        content.push_str(&format!(
+            "- Interrupted pause receipt: `{}`\n\n",
+            pause_receipt
+        ));
+    }
     content.push_str("## Timing\n\n");
     content.push_str(&format!("- Total closeout: {} ms\n", total_duration_ms));
     let cheap_ms: u128 = results
@@ -3295,6 +3308,7 @@ fn write_receipt(
         changed_routes: &changed_routes,
         source_ids: &source_ids,
         commands: &commands,
+        interrupted_pause_receipt,
     });
     let json_receipt = CloseoutReceiptJson {
         schema_version: "aipedia.closeout-receipt.v1".to_string(),
@@ -3319,6 +3333,7 @@ fn write_receipt(
         widths,
         commands,
         superseded_failures,
+        interrupted_pause_receipt: interrupted_pause_receipt.map(str::to_string),
         system_progress: runner_system_progress(project_dir),
         input_freshness: runner_input_freshness(project_dir, "tool-refresh"),
     };
@@ -3341,6 +3356,7 @@ fn write_page_receipt(
     results: &[CommandResult],
     ok: bool,
     total_duration_ms: u128,
+    interrupted_pause_receipt: Option<&str>,
 ) -> Result<()> {
     let now = Utc::now();
     let timestamp = now.format("%Y-%m-%dT%H-%M-%SZ").to_string();
@@ -3381,6 +3397,12 @@ fn write_page_receipt(
         "- Worker report summary: `{}`\n\n",
         report_summary_display
     ));
+    if let Some(pause_receipt) = interrupted_pause_receipt {
+        content.push_str(&format!(
+            "- Interrupted pause receipt: `{}`\n\n",
+            pause_receipt
+        ));
+    }
 
     content.push_str("## Scope\n\n");
     content.push_str(&format!("- Pages planned: {}\n", plan.batch.len()));
@@ -3493,6 +3515,7 @@ fn write_page_receipt(
         changed_routes: &changed_routes,
         source_ids: &source_ids,
         commands: &commands,
+        interrupted_pause_receipt,
     });
     let json_receipt = CloseoutReceiptJson {
         schema_version: "aipedia.closeout-receipt.v1".to_string(),
@@ -3517,6 +3540,7 @@ fn write_page_receipt(
         widths,
         commands,
         superseded_failures,
+        interrupted_pause_receipt: interrupted_pause_receipt.map(str::to_string),
         system_progress: runner_system_progress(project_dir),
         input_freshness: runner_input_freshness(project_dir, "page-refresh"),
     };
@@ -3555,6 +3579,7 @@ struct CloseoutArtifactInputs<'a> {
     changed_routes: &'a [String],
     source_ids: &'a [String],
     commands: &'a [CloseoutReceiptCommand],
+    interrupted_pause_receipt: Option<&'a str>,
 }
 
 fn closeout_trace(
@@ -3655,6 +3680,15 @@ fn closeout_artifact_refs(inputs: CloseoutArtifactInputs<'_>) -> Vec<CloseoutArt
         None,
         Some("Machine-readable closeout receipt."),
     ));
+    if let Some(pause_receipt) = inputs.interrupted_pause_receipt {
+        refs.push(artifact_ref(
+            "output",
+            "interrupted-pause-receipt",
+            Some(pause_receipt),
+            None,
+            Some("Pause receipt written after an interrupted closeout command."),
+        ));
+    }
     for route in inputs.changed_routes {
         refs.push(artifact_ref(
             "route",
@@ -4447,6 +4481,7 @@ console.log(JSON.stringify({
             &results,
             true,
             250,
+            None,
         )
         .expect("receipt should write");
 
@@ -4536,6 +4571,65 @@ console.log(JSON.stringify({
     }
 
     #[test]
+    fn tool_closeout_failed_receipt_links_interrupted_pause_receipt() {
+        let dir = temp_runner_dir("tool-interrupted-pause-link");
+        let project_dir = dir.join("project");
+        let receipt_dir = project_dir.join("receipts");
+        fs::create_dir_all(&receipt_dir).expect("receipt dir should exist");
+        let plan_path = project_dir.join("tool-refresh-batch.json");
+        let route_args_path = project_dir.join("route-args.txt");
+        fs::write(&route_args_path, "--route /tools/alpha-tool/").expect("route args should write");
+        let plan = sample_tool_plan();
+        let pause_receipt = "local/tmp/aipedia-runner/pauses/interrupted-pause.json";
+        let results = vec![CommandResult {
+            label: "ledger generate".to_string(),
+            status: Some(130),
+            interrupted: true,
+            duration_ms: 130,
+            details_path: None,
+        }];
+
+        write_receipt(
+            &project_dir,
+            &receipt_dir,
+            &plan_path,
+            &route_args_path,
+            &plan,
+            &results,
+            false,
+            130,
+            Some(pause_receipt),
+        )
+        .expect("receipt should write");
+
+        let json_path = fs::read_dir(&receipt_dir)
+            .expect("receipt dir should read")
+            .flatten()
+            .map(|entry| entry.path())
+            .find(|path| {
+                path.to_string_lossy()
+                    .ends_with("-tool-refresh-closeout.json")
+            })
+            .expect("json receipt should exist");
+        let receipt: serde_json::Value =
+            serde_json::from_str(&fs::read_to_string(json_path).expect("json receipt should read"))
+                .expect("json receipt should parse");
+
+        assert_eq!(receipt["status"], "failed");
+        assert_eq!(receipt["interrupted_pause_receipt"], pause_receipt);
+        assert_eq!(receipt["commands"][0]["interrupted"], true);
+        assert!(receipt["artifact_refs"]
+            .as_array()
+            .expect("artifact refs should be an array")
+            .iter()
+            .any(|artifact| artifact["kind"] == "interrupted-pause-receipt"
+                && artifact["role"] == "output"
+                && artifact["path"] == pause_receipt));
+
+        fs::remove_dir_all(dir).ok();
+    }
+
+    #[test]
     fn page_closeout_json_records_routes_widths_sources_and_superseded_failures() {
         let dir = temp_runner_dir("page-receipt");
         let project_dir = dir.join("project");
@@ -4578,6 +4672,7 @@ console.log(JSON.stringify({
             &results,
             true,
             500,
+            None,
         )
         .expect("page receipt should write");
 
