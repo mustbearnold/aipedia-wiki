@@ -7,7 +7,12 @@ use std::fs;
 use std::io::Write;
 use std::path::{Path, PathBuf};
 use std::process::{Command, ExitStatus, Stdio};
+use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::OnceLock;
 use std::time::Instant;
+
+static INTERRUPTED: AtomicBool = AtomicBool::new(false);
+static INTERRUPT_HANDLER_INSTALL: OnceLock<std::result::Result<(), String>> = OnceLock::new();
 
 #[derive(Parser, Debug)]
 #[command(name = "aipedia-runner")]
@@ -359,6 +364,7 @@ struct IntegratorBrief {
 struct CommandResult {
     label: String,
     status: Option<i32>,
+    interrupted: bool,
     duration_ms: u128,
     details_path: Option<PathBuf>,
 }
@@ -418,6 +424,7 @@ struct CloseoutArtifactRef {
 struct CloseoutReceiptCommand {
     label: String,
     status: Option<i32>,
+    interrupted: bool,
     elapsed_ms: u64,
     details_path: Option<String>,
 }
@@ -875,6 +882,69 @@ fn append_repeated(command_args: &mut Vec<String>, flag: &str, values: &[String]
     }
 }
 
+fn write_interrupted_runner_pause_receipt(
+    project_dir: &Path,
+    workflow: &str,
+    label: &str,
+    dry_run: bool,
+) -> Result<Option<String>> {
+    let generated_at = Utc::now();
+    let workflow_slug = workflow.replace('_', "-");
+    let out = PathBuf::from(format!(
+        "local/tmp/aipedia-runner/pauses/{}-{}-interrupted-pause.json",
+        generated_at.format("%Y-%m-%dT%H-%M-%S-%3fZ"),
+        workflow_slug
+    ));
+    let args = interrupted_runner_pause_args(workflow, label, &generated_at.to_rfc3339(), out);
+    let out_path = runner_pause_out_path(project_dir, &args);
+    let out_display = display_path(project_dir, &out_path);
+    write_runner_pause_receipt(project_dir, &args, dry_run)?;
+    Ok(Some(out_display))
+}
+
+fn interrupted_runner_pause_args(
+    workflow: &str,
+    label: &str,
+    generated_at: &str,
+    out: PathBuf,
+) -> PauseArgs {
+    PauseArgs {
+        safe_resume_step: format!(
+            "Read this pause receipt, inspect git status, then decide whether to rerun the interrupted {workflow} command `{label}`."
+        ),
+        in_progress_step: format!("Runner {workflow} command `{label}` was interrupted."),
+        reason: "user".to_string(),
+        goal_id: Some(closeout_goal_id()),
+        run_id: Some(interrupted_pause_run_id(workflow, generated_at)),
+        source_cutoff: closeout_env("AIPEDIA_CURRENT_DATE")
+            .or_else(|| Some(Utc::now().date_naive().to_string())),
+        out: Some(out),
+        next_command: vec![workflow_resume_command(workflow)],
+        validation_done: vec![format!("Detected interrupted runner command: {label}.")],
+        validation_pending: vec![
+            "Review partial command output and any closeout receipt before retrying.".to_string(),
+        ],
+        must_not_repeat: vec!["Do not assume the interrupted command completed.".to_string()],
+        observed_dirty_before_agent: closeout_list("AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT"),
+        open_question: Vec::new(),
+        blocked_on: vec![format!("Interrupted runner command: {label}.")],
+    }
+}
+
+fn interrupted_pause_run_id(workflow: &str, generated_at: &str) -> String {
+    closeout_env("AIPEDIA_RUN_ID")
+        .map(|run_id| format!("{run_id}:interrupted-pause"))
+        .unwrap_or_else(|| format!("{workflow}:interrupted-pause:{generated_at}"))
+}
+
+fn workflow_resume_command(workflow: &str) -> String {
+    match workflow {
+        "tool-refresh" => "npm run runner:tool-refresh:closeout".to_string(),
+        "page-refresh" => "npm run runner:page-refresh:closeout".to_string(),
+        _ => format!("Rerun the interrupted {workflow} runner command after review."),
+    }
+}
+
 fn write_agent_task_graph(project_dir: &Path, args: &AgentPlanArgs, dry_run: bool) -> Result<()> {
     if args.route.trim().is_empty() {
         bail!("--route is required");
@@ -1285,6 +1355,22 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
         }
 
         if results.last().and_then(|result| result.status).unwrap_or(1) != 0 {
+            let interrupted_pause = if results.last().is_some_and(|result| result.interrupted) {
+                match write_interrupted_runner_pause_receipt(
+                    project_dir,
+                    "tool-refresh",
+                    &label,
+                    dry_run,
+                ) {
+                    Ok(path) => path,
+                    Err(error) => {
+                        eprintln!("could not write interrupted pause receipt: {error}");
+                        None
+                    }
+                }
+            } else {
+                None
+            };
             write_receipt(
                 project_dir,
                 &receipt_dir,
@@ -1295,6 +1381,13 @@ fn closeout(project_dir: &Path, args: &CloseoutArgs, dry_run: bool) -> Result<()
                 false,
                 closeout_start.elapsed().as_millis(),
             )?;
+            if let Some(path) = interrupted_pause {
+                bail!(
+                    "closeout stopped after interrupted command: {}. Pause receipt: {}",
+                    label,
+                    path
+                );
+            }
             bail!("closeout stopped after failed command: {}", label);
         }
     }
@@ -1540,6 +1633,22 @@ fn page_closeout(project_dir: &Path, args: &PageCloseoutArgs, dry_run: bool) -> 
         )?);
 
         if results.last().and_then(|result| result.status).unwrap_or(1) != 0 {
+            let interrupted_pause = if results.last().is_some_and(|result| result.interrupted) {
+                match write_interrupted_runner_pause_receipt(
+                    project_dir,
+                    "page-refresh",
+                    &label,
+                    dry_run,
+                ) {
+                    Ok(path) => path,
+                    Err(error) => {
+                        eprintln!("could not write interrupted pause receipt: {error}");
+                        None
+                    }
+                }
+            } else {
+                None
+            };
             write_page_receipt(
                 project_dir,
                 &receipt_dir,
@@ -1552,6 +1661,13 @@ fn page_closeout(project_dir: &Path, args: &PageCloseoutArgs, dry_run: bool) -> 
                 false,
                 closeout_start.elapsed().as_millis(),
             )?;
+            if let Some(path) = interrupted_pause {
+                bail!(
+                    "page closeout stopped after interrupted command: {}. Pause receipt: {}",
+                    label,
+                    path
+                );
+            }
             bail!("page closeout stopped after failed command: {}", label);
         }
     }
@@ -1606,11 +1722,14 @@ fn run_command_with_env(
         return Ok(CommandResult {
             label: label.to_string(),
             status: Some(0),
+            interrupted: false,
             duration_ms: 0,
             details_path,
         });
     }
 
+    ensure_interrupt_handler()?;
+    INTERRUPTED.store(false, Ordering::SeqCst);
     let start = Instant::now();
     let mut command = Command::new(program);
     command
@@ -1625,17 +1744,20 @@ fn run_command_with_env(
     let status = command
         .status()
         .with_context(|| format!("failed to run {}", label))?;
+    let interrupted = INTERRUPTED.swap(false, Ordering::SeqCst) || status_was_interrupted(status);
     let duration_ms = start.elapsed().as_millis();
     println!(
-        "<== {}: {}ms status {}",
+        "<== {}: {}ms status {}{}",
         label,
         duration_ms,
-        status_text(status)
+        status_text(status),
+        if interrupted { " interrupted" } else { "" }
     );
 
     Ok(CommandResult {
         label: label.to_string(),
         status: status.code(),
+        interrupted,
         duration_ms,
         details_path,
     })
@@ -3412,6 +3534,7 @@ fn receipt_commands(project_dir: &Path, results: &[CommandResult]) -> Vec<Closeo
         .map(|result| CloseoutReceiptCommand {
             label: result.label.clone(),
             status: result.status,
+            interrupted: result.interrupted,
             elapsed_ms: to_u64(result.duration_ms),
             details_path: result
                 .details_path
@@ -3793,11 +3916,41 @@ fn git_bin() -> &'static str {
     }
 }
 
+fn ensure_interrupt_handler() -> Result<()> {
+    match INTERRUPT_HANDLER_INSTALL.get_or_init(|| {
+        ctrlc::set_handler(|| {
+            INTERRUPTED.store(true, Ordering::SeqCst);
+        })
+        .map_err(|error| error.to_string())
+    }) {
+        Ok(()) => Ok(()),
+        Err(error) => bail!("failed to install runner interrupt handler: {}", error),
+    }
+}
+
 fn status_text(status: ExitStatus) -> String {
-    status
-        .code()
-        .map(|code| code.to_string())
-        .unwrap_or_else(|| "signal".to_string())
+    if let Some(code) = status.code() {
+        return code.to_string();
+    }
+    if let Some(signal) = status_signal(status) {
+        return format!("signal {}", signal);
+    }
+    "signal".to_string()
+}
+
+fn status_was_interrupted(status: ExitStatus) -> bool {
+    status.code() == Some(130) || matches!(status_signal(status), Some(2 | 15))
+}
+
+#[cfg(unix)]
+fn status_signal(status: ExitStatus) -> Option<i32> {
+    use std::os::unix::process::ExitStatusExt;
+    status.signal()
+}
+
+#[cfg(not(unix))]
+fn status_signal(_status: ExitStatus) -> Option<i32> {
+    None
 }
 
 fn runner_system_progress(project_dir: &Path) -> Option<serde_json::Value> {
@@ -3987,6 +4140,107 @@ console.log(JSON.stringify({
             }],
             agent_briefs: None,
         }
+    }
+
+    #[test]
+    fn interrupted_pause_args_preserve_resume_boundary() {
+        let previous_dirty = std::env::var("AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT").ok();
+        std::env::set_var(
+            "AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT",
+            "src/content/tools/synthesia.md;;src/data/source-registry.json",
+        );
+
+        let args = interrupted_runner_pause_args(
+            "tool-refresh",
+            "typecheck",
+            "2026-06-30T00:00:00Z",
+            PathBuf::from("local/tmp/interrupted-pause.json"),
+        );
+
+        match previous_dirty {
+            Some(value) => std::env::set_var("AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT", value),
+            None => std::env::remove_var("AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT"),
+        }
+
+        assert_eq!(args.reason, "user");
+        assert!(args
+            .safe_resume_step
+            .contains("interrupted tool-refresh command `typecheck`"));
+        assert!(args
+            .in_progress_step
+            .contains("command `typecheck` was interrupted"));
+        assert_eq!(
+            args.next_command,
+            vec!["npm run runner:tool-refresh:closeout".to_string()]
+        );
+        assert!(args
+            .validation_done
+            .contains(&"Detected interrupted runner command: typecheck.".to_string()));
+        assert!(args
+            .must_not_repeat
+            .contains(&"Do not assume the interrupted command completed.".to_string()));
+        assert!(args
+            .blocked_on
+            .contains(&"Interrupted runner command: typecheck.".to_string()));
+        assert_eq!(
+            args.observed_dirty_before_agent,
+            vec![
+                "src/content/tools/synthesia.md".to_string(),
+                "src/data/source-registry.json".to_string()
+            ]
+        );
+        assert!(args
+            .run_id
+            .as_deref()
+            .expect("interrupted pause run id should exist")
+            .contains("interrupted-pause"));
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn runner_command_marks_signal_exit_interrupted() {
+        let dir = temp_runner_dir("signal-interrupt");
+        let project_dir = dir.join("project");
+        fs::create_dir_all(&project_dir).expect("project dir should exist");
+
+        let result = run_command(
+            &project_dir,
+            "signal command",
+            "sh",
+            &["-c".to_string(), "kill -INT $$".to_string()],
+            None,
+            false,
+        )
+        .expect("signal command should run");
+
+        assert_eq!(result.status, None);
+        assert!(result.interrupted);
+
+        fs::remove_dir_all(dir).ok();
+    }
+
+    #[test]
+    fn receipt_commands_records_interrupted_flag() {
+        let dir = temp_runner_dir("interrupted-command-receipt");
+        let project_dir = dir.join("project");
+        fs::create_dir_all(&project_dir).expect("project dir should exist");
+        let commands = receipt_commands(
+            &project_dir,
+            &[CommandResult {
+                label: "typecheck".to_string(),
+                status: None,
+                interrupted: true,
+                duration_ms: 130,
+                details_path: None,
+            }],
+        );
+
+        assert_eq!(commands.len(), 1);
+        assert_eq!(commands[0].label, "typecheck");
+        assert_eq!(commands[0].status, None);
+        assert!(commands[0].interrupted);
+
+        fs::remove_dir_all(dir).ok();
     }
 
     fn sample_affiliate_plan() -> AffiliatePlan {
@@ -4179,6 +4433,7 @@ console.log(JSON.stringify({
         let results = vec![CommandResult {
             label: "date consistency changed".to_string(),
             status: Some(0),
+            interrupted: false,
             duration_ms: 25,
             details_path: None,
         }];
@@ -4307,6 +4562,7 @@ console.log(JSON.stringify({
         let results = vec![CommandResult {
             label: "content route qa".to_string(),
             status: Some(0),
+            interrupted: false,
             duration_ms: 100,
             details_path: Some(project_dir.join("timings/content-route-qa.json")),
         }];

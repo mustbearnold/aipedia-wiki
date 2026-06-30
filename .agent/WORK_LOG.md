@@ -1729,3 +1729,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-26.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-13-28-570Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.904s wall duration, 42,933 full receipt bytes, 24,389 latest receipt bytes, estimated full receipt tokens 10,734, and 11 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then evaluate automatic runner pause capture after the explicit path is used in one real workflow.
+
+### 2026-06-30: Agentic Tooling Meta Slice 27, Interrupted Runner Pause Capture
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added interruption detection to Rust runner closeout child commands. Tool-refresh and page-refresh closeouts now record an `interrupted` flag for SIGINT, SIGTERM, or status 130, attempt a validated interrupted pause receipt before bailing, preserve `AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT`, and serialize the interrupted flag in closeout command receipts.
+- System lesson: pause/resume safety needs to cover the failure mode users actually create during long-running work: stopping a closeout mid-command. Ordinary failed-command receipts are not enough because resume guidance must say whether the command was incomplete.
+- Verification: `cargo fmt`, `cargo fmt --check`, `cargo check`, `cargo test`, JSON parse, em-dash guard, scoped `check:smart`, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record`, efficiency trends, and required closeout validation passed. Focused Rust tests prove interrupted pause args, self-SIGINT child detection, and command receipt serialization.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-27.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-29-33-698Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.891s wall duration, 42,785 full receipt bytes, 24,241 latest receipt bytes, estimated full receipt tokens 10,697, and 9 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then prove automatic pause capture on a deliberately interrupted safe long-running runner workflow.
