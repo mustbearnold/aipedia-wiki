@@ -248,6 +248,7 @@ test('score calibration evaluates gold-set expectations', () => {
           {
             id: 'fresh-tool-internal-link-gap',
             route: '/tools/example/',
+            rationale: 'Fresh source-backed tool fixture should still expose internal-link remediation.',
             expect: {
               recommended_action: 'improve_internal_links',
               calibration_label: 'internal_link_gap',
@@ -261,6 +262,7 @@ test('score calibration evaluates gold-set expectations', () => {
           {
             id: 'comparison-source-gap',
             route: '/compare/example-vs-other/',
+            rationale: 'Comparison fixture has no source coverage and should remain a source gap.',
             expect: {
               recommended_action: 'improve_source_coverage',
               calibration_label: 'source_coverage_gap',
@@ -278,7 +280,67 @@ test('score calibration evaluates gold-set expectations', () => {
     assert.equal(report.gold_set.ok, true);
     assert.equal(report.gold_set.case_count, 2);
     assert.equal(report.gold_set.mismatch_count, 0);
+    assert.equal(report.gold_set_governance.ok, true);
+    assert.equal(report.gold_set_governance.status, 'pass');
+    assert.match(report.gold_set_governance.gold_set_hash, /^[a-f0-9]{64}$/);
     assert.equal(report.threshold_review.status, 'pass');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('score calibration requires matching review for deliberate gold-set changes', () => {
+  const dir = writeFixture();
+  const goldSet = {
+    schema_version: 'aipedia.score-goldset.v1',
+    name: 'fixture gold set',
+    cases: [
+      {
+        id: 'comparison-source-gap',
+        route: '/compare/example-vs-other/',
+        rationale: 'Comparison fixture has no source coverage and should remain a source gap.',
+        expect: {
+          recommended_action: 'improve_source_coverage',
+          calibration_label: 'source_coverage_gap',
+          risk_label: 'low',
+          confidence_label: 'low',
+          stale_decay_label: 'fresh',
+          score_max: 0.75,
+        },
+      },
+    ],
+  };
+
+  try {
+    const missingReview = calibrateScores(dir, {
+      currentDate: '2026-06-29',
+      goldSet,
+      requireGoldSetReview: true,
+    });
+    assert.equal(missingReview.ok, false);
+    assert.equal(missingReview.gold_set_governance.status, 'review');
+    assert.ok(missingReview.gold_set_governance.issues.some((issue) => issue.code === 'review-missing'));
+
+    const reviewed = calibrateScores(dir, {
+      currentDate: '2026-06-29',
+      goldSet,
+      requireGoldSetReview: true,
+      goldSetReview: {
+        schema_version: 'aipedia.score-goldset-review.v1',
+        gold_set_path: '',
+        gold_set_hash: missingReview.gold_set_governance.gold_set_hash,
+        changed_cases: ['comparison-source-gap'],
+        reviewer: 'fixture-reviewer',
+        reviewed_at: '2026-06-30',
+        reason: 'Fixture proves deliberate gold-set changes require a matching review record.',
+        expected_effect: 'No score threshold change, only governance validation.',
+        review_lenses: ['architecture', 'evaluation', 'editorial', 'risk-confidence', 'regression', 'rollout'],
+      },
+    });
+
+    assert.equal(reviewed.ok, true);
+    assert.equal(reviewed.gold_set_governance.ok, true);
+    assert.equal(reviewed.gold_set_governance.review.changed_cases[0], 'comparison-source-gap');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

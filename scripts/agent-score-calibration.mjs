@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -20,6 +21,8 @@ const projectDir = resolve(valueFor(args, '--project-dir') || valueFor(args, '--
 const currentDate = valueFor(args, '--current-date') || process.env.AIPEDIA_CURRENT_DATE || new Date().toISOString().slice(0, 10);
 const outPath = valueFor(args, '--out');
 const goldSetPath = valueFor(args, '--gold-set');
+const goldSetReviewPath = valueFor(args, '--gold-set-review');
+const requireGoldSetReview = hasFlag(args, '--require-gold-set-review');
 const jsonMode = hasFlag(args, '--json');
 const helpMode = hasFlag(args, '--help') || hasFlag(args, '-h');
 const isCli = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
@@ -35,6 +38,7 @@ function usage() {
     '  node scripts/agent-score-calibration.mjs --route /tools/cursor/ --route /compare/gemini-vs-grok/ --json',
     '  node scripts/agent-score-calibration.mjs --routes-file local/tmp/routes.txt --current-date 2026-06-29 --out local/tmp/calibration.json',
     '  node scripts/agent-score-calibration.mjs --gold-set .agent/evals/score-calibration-goldset.json --json',
+    '  node scripts/agent-score-calibration.mjs --gold-set .agent/evals/score-calibration-goldset.json --require-gold-set-review --gold-set-review .agent/evals/score-goldset-change-reviews/<review>.json --json',
     '',
     'Compares read-only quality scores with ledger age, source coverage, stale signals, and impact breadth.',
   ].join('\n');
@@ -43,6 +47,9 @@ function usage() {
 export function calibrateScores(projectDir, options = {}) {
   const currentDate = options.currentDate || new Date().toISOString().slice(0, 10);
   const goldSet = normalizeGoldSet(options.goldSet);
+  const goldSetGovernance = evaluateGoldSetGovernance(goldSet, options.goldSetReview, {
+    requireReview: options.requireGoldSetReview,
+  });
   const routes = options.routes?.length
     ? options.routes
     : goldSet?.cases.length
@@ -109,12 +116,16 @@ export function calibrateScores(projectDir, options = {}) {
   const goldSetReport = evaluateGoldSet(goldSet, results);
   const thresholdReview = thresholdReviewFor(results, goldSetReport);
   return {
-    ok: results.every((result) => result.ok) && (goldSetReport ? goldSetReport.ok : true) && thresholdReview.status === 'pass',
+    ok: results.every((result) => result.ok)
+      && (goldSetReport ? goldSetReport.ok : true)
+      && (goldSetGovernance ? goldSetGovernance.ok : true)
+      && thresholdReview.status === 'pass',
     schema_version: 'aipedia.score-calibration.v1',
     generated_at: new Date().toISOString(),
     current_date: currentDate,
     routes: results,
     gold_set: goldSetReport,
+    gold_set_governance: goldSetGovernance,
     threshold_review: thresholdReview,
     summary: summarize(results),
   };
@@ -214,6 +225,144 @@ function evaluateGoldSet(goldSet, results) {
     mismatch_count: mismatchCount,
     cases,
   };
+}
+
+const REQUIRED_GOLD_EXPECTATIONS = [
+  'recommended_action',
+  'calibration_label',
+  'risk_label',
+  'confidence_label',
+  'stale_decay_label',
+];
+const GOLD_BOUND_FIELDS = [
+  'score_min',
+  'score_max',
+  'source_count_min',
+  'parent_surface_count_min',
+  'stale_signal_count_max',
+  'internal_links_min',
+];
+const REQUIRED_REVIEW_LENSES = [
+  'architecture',
+  'evaluation',
+  'editorial',
+  'risk-confidence',
+  'regression',
+  'rollout',
+];
+
+function evaluateGoldSetGovernance(goldSet, review, options = {}) {
+  if (!goldSet) return null;
+  const issues = [];
+  const caseIds = new Set();
+  const routes = new Set();
+  for (const goldCase of goldSet.cases) {
+    if (caseIds.has(goldCase.id)) issues.push(governanceIssue('duplicate-case-id', `Duplicate gold-set case id ${goldCase.id}.`));
+    caseIds.add(goldCase.id);
+    if (routes.has(goldCase.route)) issues.push(governanceIssue('duplicate-route', `Duplicate gold-set route ${goldCase.route}.`));
+    routes.add(goldCase.route);
+    if (!goldCase.rationale.trim()) issues.push(governanceIssue('case-rationale-missing', `${goldCase.id} must include a rationale.`));
+    const expect = goldCase.expect || {};
+    for (const field of REQUIRED_GOLD_EXPECTATIONS) {
+      if (expect[field] == null || expect[field] === '') {
+        issues.push(governanceIssue('case-expectation-missing', `${goldCase.id} must include expect.${field}.`));
+      }
+    }
+    if (!GOLD_BOUND_FIELDS.some((field) => expect[field] != null && expect[field] !== '')) {
+      issues.push(governanceIssue('case-bound-missing', `${goldCase.id} must include at least one numeric bound expectation.`));
+    }
+  }
+
+  const goldSetHash = hashGoldSet(goldSet);
+  const normalizedReview = normalizeGoldSetReview(review);
+  if (options.requireReview && !normalizedReview) {
+    issues.push(governanceIssue('review-missing', 'A gold-set review record is required when --require-gold-set-review is used.'));
+  }
+  if (normalizedReview) validateGoldSetReview(normalizedReview, goldSet, goldSetHash, caseIds, issues);
+
+  return {
+    ok: issues.length === 0,
+    status: issues.length ? 'review' : 'pass',
+    gold_set_hash: goldSetHash,
+    required_review: options.requireReview === true,
+    review_schema_version: 'aipedia.score-goldset-review.v1',
+    required_review_lenses: REQUIRED_REVIEW_LENSES,
+    review: normalizedReview,
+    issues,
+    change_policy: {
+      deliberate_changes_require_review: true,
+      review_must_match_hash: true,
+      review_must_name_changed_cases: true,
+    },
+  };
+}
+
+function validateGoldSetReview(review, goldSet, goldSetHash, caseIds, issues) {
+  if (review.schema_version !== 'aipedia.score-goldset-review.v1') {
+    issues.push(governanceIssue('review-schema-invalid', 'Gold-set review schema_version must be aipedia.score-goldset-review.v1.'));
+  }
+  if (goldSet.path && review.gold_set_path !== goldSet.path) {
+    issues.push(governanceIssue('review-path-mismatch', `Gold-set review path must be ${goldSet.path}.`));
+  }
+  if (review.gold_set_hash !== goldSetHash) {
+    issues.push(governanceIssue('review-hash-mismatch', 'Gold-set review hash must match the normalized gold set.'));
+  }
+  for (const field of ['reviewer', 'reason', 'expected_effect']) {
+    if (!review[field]) issues.push(governanceIssue('review-field-missing', `Gold-set review must include ${field}.`));
+  }
+  if (!review.changed_cases.length) {
+    issues.push(governanceIssue('review-changed-cases-missing', 'Gold-set review must list changed_cases.'));
+  }
+  for (const changedCase of review.changed_cases) {
+    if (!caseIds.has(changedCase)) issues.push(governanceIssue('review-case-unknown', `Gold-set review references unknown case ${changedCase}.`));
+  }
+  for (const lens of REQUIRED_REVIEW_LENSES) {
+    if (!review.review_lenses.includes(lens)) issues.push(governanceIssue('review-lens-missing', `Gold-set review must include review lens ${lens}.`));
+  }
+}
+
+function normalizeGoldSetReview(review) {
+  if (!review) return null;
+  return {
+    schema_version: review.schema_version || '',
+    path: review.path || '',
+    gold_set_path: review.gold_set_path || '',
+    gold_set_hash: review.gold_set_hash || '',
+    changed_cases: Array.isArray(review.changed_cases) ? review.changed_cases.filter(Boolean) : [],
+    reviewer: review.reviewer || review.changed_by || '',
+    reviewed_at: review.reviewed_at || '',
+    reason: review.reason || '',
+    expected_effect: review.expected_effect || '',
+    review_lenses: Array.isArray(review.review_lenses) ? review.review_lenses.filter(Boolean) : [],
+  };
+}
+
+function hashGoldSet(goldSet) {
+  return createHash('sha256').update(stableJson({
+    schema_version: goldSet.schema_version,
+    name: goldSet.name,
+    description: goldSet.description,
+    cases: goldSet.cases
+      .map((goldCase) => ({
+        id: goldCase.id,
+        route: goldCase.route,
+        rationale: goldCase.rationale,
+        expect: goldCase.expect,
+      }))
+      .sort((a, b) => a.id.localeCompare(b.id)),
+  })).digest('hex');
+}
+
+function stableJson(value) {
+  if (Array.isArray(value)) return `[${value.map(stableJson).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableJson(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function governanceIssue(code, detail) {
+  return { code, detail };
 }
 
 function evaluateGoldCase(goldCase, result) {
@@ -361,6 +510,17 @@ function goldSetFromFile(projectDir, path) {
   return parsed;
 }
 
+function goldSetReviewFromFile(projectDir, path) {
+  if (!path) return null;
+  const absolutePath = resolve(projectDir, path);
+  if (!existsSync(absolutePath)) {
+    throw new Error(`gold set review file not found: ${projectPath(projectDir, absolutePath)}`);
+  }
+  const parsed = JSON.parse(readFileSync(absolutePath, 'utf8'));
+  parsed.path = projectPath(projectDir, absolutePath);
+  return parsed;
+}
+
 function writeJson(projectDir, outPath, report) {
   const absoluteOut = resolve(projectDir, outPath);
   mkdirSync(dirname(absoluteOut), { recursive: true });
@@ -374,8 +534,10 @@ if (isCli) {
     ...routesFromFile(valueFor(args, '--routes-file')),
   ];
   let goldSet = null;
+  let goldSetReview = null;
   try {
     goldSet = goldSetFromFile(projectDir, goldSetPath);
+    goldSetReview = goldSetReviewFromFile(projectDir, goldSetReviewPath);
   } catch (error) {
     const report = {
       ok: false,
@@ -390,7 +552,13 @@ if (isCli) {
     }
     process.exit(2);
   }
-  const report = calibrateScores(projectDir, { routes, currentDate, goldSet });
+  const report = calibrateScores(projectDir, {
+    routes,
+    currentDate,
+    goldSet,
+    goldSetReview,
+    requireGoldSetReview,
+  });
   if (outPath) report.out = writeJson(projectDir, outPath, report);
 
   if (jsonMode) {

@@ -11,7 +11,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm --silent run agent:evidence -- --route /tools/cursor/ --json`: builds a compact read-only evidence bundle from the page, source registry, ledger, internal links, affiliate state, and parent-impact signals.
 - `npm --silent run agent:impact -- --route /tools/cursor/ --json`: detects parent hubs, top-layer routes, shared files, and likely route surfaces affected by a route or content file change.
 - `npm --silent run agent:score -- --route /tools/cursor/ --json`: computes a read-only page quality score from repository signals without live source verification.
-- `npm --silent run agent:score:calibrate -- --json`: compares score output with real repo signals across a small mixed-route baseline.
+- `npm --silent run agent:score:calibrate -- --json`: compares score output with real repo signals across a small mixed-route baseline. Use `--gold-set`, `--require-gold-set-review`, and `--gold-set-review <path>` when changing committed scoring baselines.
 - `npm --silent run agent:memory:record -- --route /tools/cursor/ --json`: writes JSONL-ready memory records with CPU lexical vectors.
 - `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory.jsonl --query "pricing source gaps" --json`: ranks memory records with the CPU lexical scorer.
 - `npm --silent run agent:system-progress -- --require-system-artifact --json`: fails content-only diffs when a loop claims operating-system progress.
@@ -31,7 +31,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run agent:evidence`: read-only evidence bundle builder for a single route or content path. It is the first deterministic handoff layer between raw repo state and Codex synthesis.
 - `npm run agent:impact`: read-only parent-surface impact detector for route/content changes. Use it before editing shared hubs, ledgers, search, or LLM surfaces.
 - `npm run agent:score`: read-only page quality scoring prototype. Use it for prioritization only; it does not replace current-source verification.
-- `npm run agent:score:calibrate`: score calibration receipt across real route signals. Use `--silent` for machine-readable JSON.
+- `npm run agent:score:calibrate`: score calibration receipt across real route signals. Gold-set runs emit `gold_set`, `gold_set_governance`, and `threshold_review`; use `--silent` for machine-readable JSON.
 - `npm run agent:memory:record`: JSONL memory record builder. Defaults to `local/tmp`; pass `--out .agent/memory/agent-memory.jsonl --append` only for durable memory.
 - `npm run agent:memory:query`: CPU lexical vector query over JSONL memory records.
 - `npm run agent:system-progress`: read-only system-progress checkpoint. Use `-- --require-system-artifact` before recording an agent-system loop so content-only changes cannot count as operating-system progress.

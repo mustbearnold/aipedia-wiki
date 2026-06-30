@@ -1585,3 +1585,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `node --check scripts/agent-input-freshness-receipt.mjs`, focused `node --test tests/scripts/agent-input-freshness-receipt.test.mjs`, scoped fresh workflow receipt, page-refresh stale receipt, all-workflow receipt generation, `audit:commands`, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, and JSON parse checks all passed.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-10.md`.
 - Next: Commit and push, then wire shared input-freshness receipts into runner closeouts or add safe auto-refresh policy where mutation is acceptable.
+
+### 2026-06-30: Agentic Tooling Meta Slice 13, Score Gold-Set Governance
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `gold_set_governance` to `agent:score:calibrate`, including normalized gold-set hashing, required case rationales, required categorical expectations, numeric bound checks, `--require-gold-set-review`, `--gold-set-review`, and review-lens validation for deliberate baseline changes.
+- System lesson: non-stale scoring baselines need change governance, not just passing numbers. Future scoring baseline changes can now fail closed unless the review record matches the normalized hash and names the changed cases.
+- Verification: `node --check scripts/agent-score-calibration.mjs`, focused `node --test tests/scripts/agent-memory-tools.test.mjs`, live gold-set calibration, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed. The live gold-set governance hash is `9c60469164410dd4076b95423fc1a6899733949f169f06cdd40a1ee73e44bd66`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-13.md`.
+- Next: Commit and push, then expand workflow-specific closeout policies before running another bounded production pilot.

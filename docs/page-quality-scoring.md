@@ -139,6 +139,7 @@ npm --silent run agent:score -- --route /tools/cursor/ --json
 npm --silent run agent:score -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
 npm --silent run agent:score:calibrate -- --json
 npm --silent run agent:score:calibrate -- --gold-set .agent/evals/score-calibration-goldset.json --current-date 2026-06-30 --out .agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json --json
+npm --silent run agent:score:calibrate -- --gold-set .agent/evals/score-calibration-goldset.json --require-gold-set-review --gold-set-review .agent/evals/score-goldset-change-reviews/<review>.json --json
 ```
 
 It consumes:
@@ -166,8 +167,11 @@ Gold-set calibration turns scoring expectations into a regression gate. The comm
 `agent:score:calibrate -- --gold-set <path>` emits:
 
 - `gold_set`: case count, mismatch count, per-case checks, actual labels, and threshold expectations.
+- `gold_set_governance`: normalized gold-set hash, required review schema, required review lenses, case-structure checks, and optional matching review record.
 - `threshold_review`: pass or review status for unsafe threshold combinations, including high-risk monitor actions, low-confidence weak remediation, high stale decay with high score, and gold-set mismatches.
 
-A scoring change is not ready if the gold-set receipt has `ok: false`, `gold_set.ok: false`, or `threshold_review.status: "review"` unless the change deliberately updates the baseline and the docs explain why.
+A scoring change is not ready if the gold-set receipt has `ok: false`, `gold_set.ok: false`, `gold_set_governance.ok: false`, or `threshold_review.status: "review"` unless the change deliberately updates the baseline and the matching review record explains why.
+
+Deliberate baseline changes should run with `--require-gold-set-review` and a JSON review file that uses `schema_version: "aipedia.score-goldset-review.v1"`, matches the normalized `gold_set_hash`, lists `changed_cases`, and covers the architecture, evaluation, editorial, risk-confidence, regression, and rollout review lenses.
 
 News scoring uses the news-specific bar from the daily workflow: currentness, source quality, buyer impact, affected-page linking, and readability. Inline article sources count as source coverage, but registered source IDs remain distinct for tool, guide, and pricing fact provenance.

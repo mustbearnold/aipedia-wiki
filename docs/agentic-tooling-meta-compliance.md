@@ -162,6 +162,18 @@ Generated planner inputs now have an explicit safe auto-refresh policy.
 - Focused tests prove blocked tracked refreshes without acknowledgement, successful decision backlog refresh, and successful page ledger refresh in fixture projects.
 - A live dry-run against the current stale page ledger produced a planned refresh without changing the separate Synthesia content WIP.
 
+## Thirteenth System Slice
+
+Score gold-set baseline changes now have explicit governance.
+
+- `agent:score:calibrate` emits `gold_set_governance` whenever a gold set is supplied.
+- The governance block includes a normalized gold-set hash, required review schema version, required review lenses, review policy, and issue list.
+- Gold-set cases must have unique IDs, unique routes, a rationale, required categorical expectations, and at least one numeric bound expectation.
+- `--require-gold-set-review` blocks deliberate baseline changes unless a matching `--gold-set-review` JSON record is supplied.
+- Gold-set review records must match the normalized hash, name changed cases, include reviewer, reason, expected effect, and cover architecture, evaluation, editorial, risk-confidence, regression, and rollout lenses.
+- Focused tests prove passing governance, a missing-review blocker, and a matching-review success path.
+- A live calibration against `.agent/evals/score-calibration-goldset.json` passed with governance hash `9c60469164410dd4076b95423fc1a6899733949f169f06cdd40a1ee73e44bd66`, threshold review `pass`, 3 passing routes, and 0 errors.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -172,7 +184,7 @@ Generated planner inputs now have an explicit safe auto-refresh policy.
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, `agent:closeout:check --require-trace-artifacts` | Expand trace refs into workflow-specific closeout policies and bounded production pilots. |
-| Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json` | Expand the gold set during real workload pilots and add governance for deliberate baseline changes. |
+| Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json` | Expand the reviewed gold set during real workload pilots and require matching review records before deliberate baseline changes land. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |
