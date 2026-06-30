@@ -19,6 +19,7 @@ const REQUIRED_OPERATOR_NPM_SCRIPTS = [
   'audit:provenance:changed',
   'agent:meta:closeout',
   'agent:meta:closeout:receipt',
+  'agent:meta:closeout:runner',
   'build',
   'build:fast',
   'check',
@@ -94,6 +95,7 @@ const REQUIRED_PACKAGE_COMMAND_PARTS = {
 const REQUIRED_EXACT_NPM_SCRIPT_COMMANDS = {
   'agent:meta:closeout': 'node scripts/agent-closeout-receipt-check.mjs --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
   'agent:meta:closeout:receipt': 'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
+  'agent:meta:closeout:runner': 'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof --require-workflow-policy',
   deploy: 'npx vercel build --prod && npx vercel deploy --prebuilt --prod',
   'guard:challenge': 'node scripts/guard-challenge.mjs',
   'guard:challenge:check': 'node scripts/guard-challenge.mjs --check',
