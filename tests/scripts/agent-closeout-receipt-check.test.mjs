@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
 
@@ -14,6 +14,25 @@ function runCheck(args = []) {
 
 function writeJson(path, value) {
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
+}
+
+function writeTrendSourceReceipts(projectDir, receipt, durations = [400, 500]) {
+  receipt.runs.forEach((run, index) => {
+    const sourcePath = join(projectDir, run.path);
+    mkdirSync(dirname(sourcePath), { recursive: true });
+    const source = validLoopReceipt();
+    source.generated_at = run.generated_at;
+    source.run_id = run.run_id;
+    source.efficiency_metrics.slowest_commands = [
+      {
+        loop_id: 'freshness',
+        label: 'freshness queue',
+        status: 'attention',
+        duration_ms: durations[index] || 0,
+      },
+    ];
+    writeJson(sourcePath, source);
+  });
 }
 
 function validLoopReceipt(overrides = {}) {
@@ -810,13 +829,54 @@ test('closeout receipt check validates loop efficiency trend receipts', () => {
   const path = join(dir, 'efficiency-trends.json');
 
   try {
-    writeJson(path, validLoopEfficiencyTrendReceipt());
-    const result = runCheck(['--receipt', path, '--json']);
+    const receipt = validLoopEfficiencyTrendReceipt();
+    writeTrendSourceReceipts(dir, receipt);
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
     assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
 
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.receipts[0].type, 'loop-efficiency-trends');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails loop efficiency trend slowest command drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-efficiency-trends-slowest-drift-'));
+  const path = join(dir, 'efficiency-trends.json');
+  const receipt = validLoopEfficiencyTrendReceipt();
+  receipt.slowest_commands[0].max_duration_ms = 1;
+  receipt.slowest_commands[0].median_duration_ms = 1;
+
+  try {
+    writeTrendSourceReceipts(dir, receipt);
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /slowest_commands\[0\]\.max_duration_ms/);
+    assert.match(details, /slowest_commands\[0\]\.median_duration_ms/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails loop efficiency trend missing source receipt', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-efficiency-trends-missing-source-'));
+  const path = join(dir, 'efficiency-trends.json');
+
+  try {
+    writeJson(path, validLoopEfficiencyTrendReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('loop-efficiency-trends-source-missing'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

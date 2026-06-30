@@ -333,7 +333,16 @@ function validTrendReceipt() {
       persistent_attention_commands: [],
       regressed_commands: [],
     },
-    slowest_commands: [],
+    slowest_commands: [
+      {
+        loop_id: 'decision-content',
+        label: 'fixture command',
+        occurrences: 1,
+        max_duration_ms: 10,
+        median_duration_ms: 10,
+        latest_status: 'ok',
+      },
+    ],
     next_actions: ['Keep measuring trend receipts.'],
   };
 }
@@ -479,6 +488,8 @@ test('meta closeout router adds workflow policy for runner receipts', () => {
 test('meta closeout router validates loop efficiency trend receipts', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-trend-'));
   try {
+    mkdirSync(join(root, '.agent/loop-runs/system'), { recursive: true });
+    writeJson(join(root, '.agent/loop-runs/system/fixture-loop-run.json'), validLoopReceipt());
     writeJson(join(root, 'trend.json'), validTrendReceipt());
 
     const result = runRouter(['--project-dir', root, '--receipt', 'trend.json', '--json']);

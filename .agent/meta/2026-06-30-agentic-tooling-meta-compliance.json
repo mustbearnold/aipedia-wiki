@@ -280,7 +280,12 @@
         "scripts/agent-closeout-receipt-check.mjs slowest command validation",
         "tests/scripts/agent-closeout-receipt-check.test.mjs slowest command drift coverage",
         ".agent/loop-runs/system/2026-06-30T23-16-28-940Z-loop-run.json",
-        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-60-final-efficiency-trends.json"
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-60-final-efficiency-trends.json",
+        "scripts/agent-closeout-receipt-check.mjs trend slowest command source validation",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs trend slowest command source coverage",
+        "tests/scripts/agent-meta-closeout.test.mjs source-backed trend router coverage",
+        ".agent/loop-runs/system/2026-06-30T23-24-44-236Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-61-final-efficiency-trends.json"
       ],
       "remaining": "Run positive bounded page/tool policy proofs after the separate stale ledger/content WIP is resolved, then track their proof receipts."
     },
@@ -424,7 +429,7 @@
     }
   ],
   "current_slice": {
-    "name": "Slowest command closeout validation",
+    "name": "Trend slowest command source validation",
     "system_artifacts": [
       "scripts/agent-closeout-receipt-check.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
@@ -434,18 +439,18 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-60.md",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-61.md",
       ".agent/loop-runs/system/latest.json",
-      ".agent/loop-runs/system/2026-06-30T23-16-28-940Z-loop-run.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-60-final-efficiency-trends.json"
+      ".agent/loop-runs/system/2026-06-30T23-24-44-236Z-loop-run.json",
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-61-final-efficiency-trends.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
-    "loop_receipt": ".agent/loop-runs/system/2026-06-30T23-16-28-940Z-loop-run.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-60-final-efficiency-trends.json",
-    "latest_wall_duration_ms": 4680,
-    "latest_estimated_full_receipt_tokens": 11437,
-    "latest_system_artifact_count": 9
+    "loop_receipt": ".agent/loop-runs/system/2026-06-30T23-24-44-236Z-loop-run.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-61-final-efficiency-trends.json",
+    "latest_wall_duration_ms": 4657,
+    "latest_estimated_full_receipt_tokens": 11498,
+    "latest_system_artifact_count": 10
   },
   "next_system_targets": [
     "Use AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT when running Rust runner closeouts in a dirty tree.",

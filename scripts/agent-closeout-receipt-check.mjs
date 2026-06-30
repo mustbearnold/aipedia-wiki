@@ -280,6 +280,7 @@ function validateLoopEfficiencyTrendReceipt(value, issues) {
   if (isObject(value.correction_summary)) validateLoopEfficiencyTrendCorrection(value.correction_summary, issues);
   if (Array.isArray(value.slowest_commands)) {
     value.slowest_commands.forEach((command, index) => validateLoopEfficiencyTrendSlowCommand(command, issues, `slowest_commands[${index}]`));
+    validateLoopEfficiencyTrendSlowestCommands(value, issues);
   }
 }
 
@@ -387,6 +388,78 @@ function validateLoopEfficiencyTrendSlowCommand(command, issues, path) {
   requireString(command, 'latest_status', issues, {
     path: `${path}.latest_status`,
     values: ['ok', 'attention', 'skipped'],
+  });
+}
+
+function validateLoopEfficiencyTrendSlowestCommands(receipt, issues) {
+  if (!Array.isArray(receipt.runs) || !Array.isArray(receipt.slowest_commands)) return;
+  const groups = new Map();
+  receipt.runs.forEach((run, runIndex) => {
+    if (!isObject(run) || run.has_efficiency_metrics !== true || typeof run.path !== 'string') return;
+    const sourcePath = resolve(PROJECT_DIR, run.path);
+    if (!existsSync(sourcePath)) {
+      issues.push(issue('loop-efficiency-trends-source-missing', `runs[${runIndex}].path source loop receipt does not exist: ${run.path}`));
+      return;
+    }
+    let source = null;
+    try {
+      source = JSON.parse(readFileSync(sourcePath, 'utf8'));
+    } catch (error) {
+      issues.push(issue('loop-efficiency-trends-source-invalid', `runs[${runIndex}].path source loop receipt could not parse: ${error.message}`));
+      return;
+    }
+    const sourceCommands = source?.efficiency_metrics?.slowest_commands;
+    if (!Array.isArray(sourceCommands)) {
+      issues.push(issue('loop-efficiency-trends-source-invalid', `runs[${runIndex}].path source loop receipt must include efficiency_metrics.slowest_commands.`));
+      return;
+    }
+    for (const command of sourceCommands) {
+      if (!isObject(command)) continue;
+      const loopId = typeof command.loop_id === 'string' ? command.loop_id : '';
+      const label = typeof command.label === 'string' ? command.label : '';
+      const key = `${loopId}::${label}`;
+      if (!groups.has(key)) {
+        groups.set(key, {
+          loop_id: loopId,
+          label,
+          occurrences: 0,
+          max_duration_ms: 0,
+          durations: [],
+          latest_status: '',
+        });
+      }
+      const group = groups.get(key);
+      const durationMs = nonNegativeMetric(command.duration_ms);
+      group.occurrences += 1;
+      group.latest_status = typeof command.status === 'string' && command.status ? command.status : group.latest_status;
+      group.max_duration_ms = Math.max(group.max_duration_ms, durationMs);
+      group.durations.push(durationMs);
+    }
+  });
+
+  const expected = [...groups.values()]
+    .map((group) => ({
+      loop_id: group.loop_id,
+      label: group.label,
+      occurrences: group.occurrences,
+      max_duration_ms: group.max_duration_ms,
+      median_duration_ms: medianMetric(group.durations),
+      latest_status: group.latest_status,
+    }))
+    .sort((left, right) => right.max_duration_ms - left.max_duration_ms || left.label.localeCompare(right.label))
+    .slice(0, 10);
+
+  if (receipt.slowest_commands.length !== expected.length) {
+    issues.push(issue('loop-efficiency-trends-slowest-mismatch', 'slowest_commands must match the top source loop receipt slow-command trends.'));
+    return;
+  }
+  expected.forEach((expectedCommand, index) => {
+    const actual = isObject(receipt.slowest_commands[index]) ? receipt.slowest_commands[index] : {};
+    for (const field of ['loop_id', 'label', 'occurrences', 'max_duration_ms', 'median_duration_ms', 'latest_status']) {
+      if (actual[field] !== expectedCommand[field]) {
+        issues.push(issue('loop-efficiency-trends-slowest-mismatch', `slowest_commands[${index}].${field} must match source loop receipt slow-command trends.`));
+      }
+    }
   });
 }
 
@@ -645,6 +718,18 @@ function metricRatio(count, total) {
 function roundMetric(value) {
   if (!Number.isFinite(value)) return 0;
   return Math.round(value * 1000) / 1000;
+}
+
+function medianMetric(values) {
+  const numbers = values.filter((value) => Number.isFinite(value)).sort((left, right) => left - right);
+  if (!numbers.length) return 0;
+  const midpoint = Math.floor(numbers.length / 2);
+  return numbers.length % 2 ? numbers[midpoint] : roundMetric((numbers[midpoint - 1] + numbers[midpoint]) / 2);
+}
+
+function nonNegativeMetric(value) {
+  const number = Number(value);
+  return Number.isFinite(number) && number > 0 ? number : 0;
 }
 
 function validateEfficiencySlowestCommands(metrics, receipt, issues) {
