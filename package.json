@@ -136,7 +136,8 @@
     "runner:affiliate-conversion:plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-plan",
     "runner:affiliate-conversion:reports": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-reports",
     "runner:affiliate-conversion:handoff": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- affiliate-handoff",
-    "runner:agent-plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- agent-plan"
+    "runner:agent-plan": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- agent-plan",
+    "runner:pause-receipt": "cargo run --manifest-path tools/aipedia-runner/Cargo.toml -- pause"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

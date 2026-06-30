@@ -290,6 +290,20 @@ Pause receipts now have schema validation and closeout recognition.
 - Enforced loop receipt `.agent/loop-runs/system/2026-06-30T06-47-49-517Z-loop-run.json` passed required system-progress, identity, trace-artifact, and efficiency-metric closeout validation.
 - The live two-run trend check saw 2 metric-aware receipts, 0 missing metrics, median wall duration 5175.5 ms, latest full receipt bytes 42907, 0 loop status changes, and 0 command status changes.
 
+## Twenty-Fifth System Slice
+
+Runner workflows now have an explicit validated pause path.
+
+- `npm run runner:pause-receipt` exposes a Rust runner `pause` subcommand for long-running handoffs.
+- The runner delegates receipt writing and schema ownership to `agent:pause-receipt`, checks that the writer emitted a valid `validation.ok` block, and then runs a separate `agent:pause-receipt --validate` pass before reporting success.
+- The command accepts goal, run, source-cutoff, safe-resume, in-progress, next-command, validation-done, validation-pending, must-not-repeat, observed-dirty-before-agent, open-question, blocked-on, and optional output path fields.
+- Default runner pause receipt paths include subsecond precision under `local/tmp/aipedia-runner/pauses/` so back-to-back pauses do not collide.
+- A focused Rust test proves the generated Node write and validate command arguments, including dirty-state separation flags.
+- A live smoke wrote `local/tmp/aipedia-runner/pauses/slice25-runner-pause.json`, validated it through the runner, and validated it again through `agent:closeout:check --receipt`.
+- The smoke preserved the separate Synthesia content WIP under `files_observed_dirty_before_agent` while limiting `files_touched_by_agent` to `package.json` and `tools/aipedia-runner/src/main.rs`.
+- Enforced loop receipt `.agent/loop-runs/system/2026-06-30T07-01-25-237Z-loop-run.json` passed required system-progress, identity, trace-artifact, and efficiency-metric closeout validation.
+- The live two-run trend check saw 2 metric-aware receipts, 0 missing metrics, median wall duration 5013 ms, latest full receipt bytes 42634, 0 loop status changes, and 0 command status changes.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -297,7 +311,7 @@ Pause receipts now have schema validation and closeout recognition.
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
 | Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness --refresh-stale`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Prove the refresh policy through one bounded runner or content pilot and decide which workflows should auto-apply in automation. |
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
-| Pause/resume receipts | Partial | `agent:pause-receipt`, `agent:pause-receipt --validate`, `agent:closeout:check` pause receipt validation, dirty-state separation for `--observed-dirty-before-agent`, focused pause and closeout tests, live `local/tmp/slice24-pause-receipt-v2.json` smoke | Add runner integration for automatic pause receipts around interrupted runner workflows. |
+| Pause/resume receipts | Partial | `agent:pause-receipt`, `agent:pause-receipt --validate`, `runner:pause-receipt`, `agent:closeout:check` pause receipt validation, dirty-state separation for `--observed-dirty-before-agent`, focused pause and closeout tests, live `local/tmp/slice24-pause-receipt-v2.json` smoke, live `local/tmp/aipedia-runner/pauses/slice25-runner-pause.json` smoke | Add trace/artifact refs to pause receipts and evaluate automatic signal-triggered runner pauses after the explicit runner path is used in a real workflow. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json` | Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |

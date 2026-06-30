@@ -49,6 +49,8 @@ enum Commands {
     AffiliateHandoff(AffiliateHandoffArgs),
     /// Write a generic agent task-DAG plan around evidence, score, impact, and memory commands.
     AgentPlan(AgentPlanArgs),
+    /// Write and validate a runner-scoped pause receipt through the shared Node pause tool.
+    Pause(PauseArgs),
 }
 
 #[derive(Parser, Debug, Clone)]
@@ -282,6 +284,38 @@ struct AgentPlanArgs {
     memory_out: PathBuf,
     #[arg(long)]
     current_date: Option<String>,
+}
+
+#[derive(Parser, Debug)]
+struct PauseArgs {
+    #[arg(long)]
+    safe_resume_step: String,
+    #[arg(long)]
+    in_progress_step: String,
+    #[arg(long, default_value = "handoff")]
+    reason: String,
+    #[arg(long)]
+    goal_id: Option<String>,
+    #[arg(long)]
+    run_id: Option<String>,
+    #[arg(long)]
+    source_cutoff: Option<String>,
+    #[arg(long)]
+    out: Option<PathBuf>,
+    #[arg(long)]
+    next_command: Vec<String>,
+    #[arg(long)]
+    validation_done: Vec<String>,
+    #[arg(long)]
+    validation_pending: Vec<String>,
+    #[arg(long)]
+    must_not_repeat: Vec<String>,
+    #[arg(long)]
+    observed_dirty_before_agent: Vec<String>,
+    #[arg(long)]
+    open_question: Vec<String>,
+    #[arg(long)]
+    blocked_on: Vec<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -680,6 +714,164 @@ fn main() -> Result<()> {
         }
         Commands::AffiliateHandoff(args) => write_affiliate_handoff_command(&project_dir, &args),
         Commands::AgentPlan(args) => write_agent_task_graph(&project_dir, &args, cli.dry_run),
+        Commands::Pause(args) => write_runner_pause_receipt(&project_dir, &args, cli.dry_run),
+    }
+}
+
+fn write_runner_pause_receipt(project_dir: &Path, args: &PauseArgs, dry_run: bool) -> Result<()> {
+    let generated_at = Utc::now().to_rfc3339();
+    let out_path = runner_pause_out_path(project_dir, args);
+    let out_display = display_path(project_dir, &out_path);
+    let goal_id = args.goal_id.clone().unwrap_or_else(closeout_goal_id);
+    let run_id = args
+        .run_id
+        .clone()
+        .unwrap_or_else(|| closeout_run_id("runner-pause", &generated_at));
+    let source_cutoff = args
+        .source_cutoff
+        .clone()
+        .or_else(|| closeout_env("AIPEDIA_CURRENT_DATE"))
+        .unwrap_or_else(|| Utc::now().date_naive().to_string());
+    let write_args = runner_pause_write_args(args, &goal_id, &run_id, &source_cutoff, &out_display);
+    let validate_args = runner_pause_validate_args(&out_display);
+
+    if dry_run {
+        println!("dry-run: npm {}", write_args.join(" "));
+        println!("dry-run: npm {}", validate_args.join(" "));
+        return Ok(());
+    }
+
+    ensure_parent(&out_path)?;
+    let write_output = Command::new(npm_bin())
+        .args(&write_args)
+        .current_dir(project_dir)
+        .output()
+        .context("failed to run agent pause receipt writer")?;
+    std::io::stdout().write_all(&write_output.stdout).ok();
+    std::io::stderr().write_all(&write_output.stderr).ok();
+    if !write_output.status.success() {
+        bail!(
+            "pause receipt writer failed with status {}",
+            status_text(write_output.status)
+        );
+    }
+    let write_report: serde_json::Value = serde_json::from_slice(&write_output.stdout)
+        .context("pause receipt writer did not emit parseable JSON")?;
+    if write_report
+        .get("validation")
+        .and_then(|value| value.get("ok"))
+        .and_then(|value| value.as_bool())
+        != Some(true)
+    {
+        bail!("pause receipt writer emitted a receipt with validation issues");
+    }
+
+    let validate_output = Command::new(npm_bin())
+        .args(&validate_args)
+        .current_dir(project_dir)
+        .output()
+        .context("failed to run agent pause receipt validator")?;
+    std::io::stdout().write_all(&validate_output.stdout).ok();
+    std::io::stderr().write_all(&validate_output.stderr).ok();
+    if !validate_output.status.success() {
+        bail!(
+            "pause receipt validation failed with status {}",
+            status_text(validate_output.status)
+        );
+    }
+
+    println!("Runner pause receipt: {}", out_display);
+    Ok(())
+}
+
+fn runner_pause_out_path(project_dir: &Path, args: &PauseArgs) -> PathBuf {
+    args.out
+        .as_ref()
+        .map(|path| resolve_project_path(project_dir, path))
+        .unwrap_or_else(|| {
+            resolve_project_path(
+                project_dir,
+                &PathBuf::from(format!(
+                    "local/tmp/aipedia-runner/pauses/{}-runner-pause-receipt.json",
+                    Utc::now().format("%Y-%m-%dT%H-%M-%S-%3fZ")
+                )),
+            )
+        })
+}
+
+fn runner_pause_write_args(
+    args: &PauseArgs,
+    goal_id: &str,
+    run_id: &str,
+    source_cutoff: &str,
+    out_display: &str,
+) -> Vec<String> {
+    let mut command_args = vec![
+        "--silent".to_string(),
+        "run".to_string(),
+        "agent:pause-receipt".to_string(),
+        "--".to_string(),
+        "--goal-id".to_string(),
+        goal_id.to_string(),
+        "--run-id".to_string(),
+        run_id.to_string(),
+        "--reason".to_string(),
+        args.reason.clone(),
+        "--safe-resume-step".to_string(),
+        args.safe_resume_step.clone(),
+        "--in-progress-step".to_string(),
+        args.in_progress_step.clone(),
+        "--source-cutoff".to_string(),
+        source_cutoff.to_string(),
+        "--out".to_string(),
+        out_display.to_string(),
+        "--json".to_string(),
+    ];
+    append_repeated(&mut command_args, "--next-command", &args.next_command);
+    append_repeated(
+        &mut command_args,
+        "--validation-done",
+        &args.validation_done,
+    );
+    append_repeated(
+        &mut command_args,
+        "--validation-pending",
+        &args.validation_pending,
+    );
+    append_repeated(
+        &mut command_args,
+        "--must-not-repeat",
+        &args.must_not_repeat,
+    );
+    append_repeated(
+        &mut command_args,
+        "--observed-dirty-before-agent",
+        &args.observed_dirty_before_agent,
+    );
+    append_repeated(&mut command_args, "--open-question", &args.open_question);
+    append_repeated(&mut command_args, "--blocked-on", &args.blocked_on);
+    command_args
+}
+
+fn runner_pause_validate_args(out_display: &str) -> Vec<String> {
+    vec![
+        "--silent".to_string(),
+        "run".to_string(),
+        "agent:pause-receipt".to_string(),
+        "--".to_string(),
+        "--validate".to_string(),
+        out_display.to_string(),
+        "--json".to_string(),
+    ]
+}
+
+fn append_repeated(command_args: &mut Vec<String>, flag: &str, values: &[String]) {
+    for value in values {
+        if value.trim().is_empty() {
+            continue;
+        }
+        command_args.push(flag.to_string());
+        command_args.push(value.to_string());
     }
 }
 
@@ -3881,6 +4073,69 @@ console.log(JSON.stringify({
             }],
             handoff_notes: "Worker done.".to_string(),
         }
+    }
+
+    #[test]
+    fn runner_pause_builds_validated_node_pause_commands() {
+        let dir = temp_runner_dir("pause-command");
+        let project_dir = dir.join("project");
+        fs::create_dir_all(&project_dir).expect("project dir should exist");
+        let args = PauseArgs {
+            safe_resume_step: "Read the runner pause receipt.".to_string(),
+            in_progress_step: "Wire runner pause command.".to_string(),
+            reason: "handoff".to_string(),
+            goal_id: Some("meta-goal".to_string()),
+            run_id: Some("pause-run".to_string()),
+            source_cutoff: Some("2026-06-30".to_string()),
+            out: Some(PathBuf::from("local/tmp/runner-pause.json")),
+            next_command: vec!["cargo test".to_string()],
+            validation_done: vec!["cargo fmt".to_string()],
+            validation_pending: vec!["check:quick".to_string()],
+            must_not_repeat: vec!["Do not stage unrelated content WIP.".to_string()],
+            observed_dirty_before_agent: vec!["src/content/tools/synthesia.md".to_string()],
+            open_question: vec!["Should runner pauses get trace refs later?".to_string()],
+            blocked_on: vec!["manual stop".to_string()],
+        };
+        let out_path = runner_pause_out_path(&project_dir, &args);
+        let out_display = display_path(&project_dir, &out_path);
+        let write_args =
+            runner_pause_write_args(&args, "meta-goal", "pause-run", "2026-06-30", &out_display);
+        let validate_args = runner_pause_validate_args(&out_display);
+        let has_write_pair = |flag: &str, value: &str| {
+            write_args
+                .windows(2)
+                .any(|pair| pair[0] == flag && pair[1] == value)
+        };
+
+        assert_eq!(out_display, "local/tmp/runner-pause.json");
+        assert!(has_write_pair("--goal-id", "meta-goal"));
+        assert!(has_write_pair(
+            "--safe-resume-step",
+            "Read the runner pause receipt."
+        ));
+        assert!(has_write_pair(
+            "--observed-dirty-before-agent",
+            "src/content/tools/synthesia.md"
+        ));
+        assert!(has_write_pair(
+            "--must-not-repeat",
+            "Do not stage unrelated content WIP."
+        ));
+        let expected_validate_args: Vec<String> = vec![
+            "--silent",
+            "run",
+            "agent:pause-receipt",
+            "--",
+            "--validate",
+            "local/tmp/runner-pause.json",
+            "--json",
+        ]
+        .into_iter()
+        .map(String::from)
+        .collect();
+        assert_eq!(validate_args, expected_validate_args);
+
+        fs::remove_dir_all(dir).ok();
     }
 
     #[test]
