@@ -963,9 +963,229 @@ fn write_agent_task_graph(project_dir: &Path, args: &AgentPlanArgs, dry_run: boo
     );
     let graph = serde_json::json!({
         "schema_version": "aipedia.agent-task-dag.v1",
+        "mode": "agent-task-dag",
         "generated_at": Utc::now().to_rfc3339(),
         "current_date": current_date,
         "route": route,
+        "graph_contract": {
+            "execution_status": "contract_only",
+            "required_node_fields": [
+                "id",
+                "label",
+                "phase",
+                "kind",
+                "depends_on",
+                "permissions",
+                "artifacts",
+                "validators",
+                "receipt_hooks"
+            ],
+            "required_receipt_hooks": [
+                "dag-node",
+                "node-output",
+                "node-validation"
+            ],
+            "notes": [
+                "Command nodes are deterministic Node CLI boundaries.",
+                "Manual nodes describe Codex-owned synthesis, patching, validation, and status updates."
+            ]
+        },
+        "nodes": [
+            {
+                "id": "evidence",
+                "label": "Evidence bundle",
+                "phase": "parallel",
+                "kind": "command",
+                "depends_on": [],
+                "permissions": {
+                    "filesystem": "read",
+                    "network": "none",
+                    "writes": []
+                },
+                "command": {
+                    "bin": "npm",
+                    "args": ["run", "--silent", "agent:evidence", "--", "--route", route, "--current-date", current_date, "--json"]
+                },
+                "artifacts": [
+                    {"role": "output", "kind": "node-output", "id": "evidence-json"}
+                ],
+                "validators": [
+                    {"id": "evidence-json-ok", "kind": "json-ok"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:evidence"},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:evidence-json-ok"}
+                ]
+            },
+            {
+                "id": "impact",
+                "label": "Parent impact report",
+                "phase": "parallel",
+                "kind": "command",
+                "depends_on": [],
+                "permissions": {
+                    "filesystem": "read",
+                    "network": "none",
+                    "writes": []
+                },
+                "command": {
+                    "bin": "npm",
+                    "args": ["run", "--silent", "agent:impact", "--", "--route", route, "--json"]
+                },
+                "artifacts": [
+                    {"role": "output", "kind": "node-output", "id": "impact-json"}
+                ],
+                "validators": [
+                    {"id": "impact-json-ok", "kind": "json-ok"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:impact"},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:impact-json-ok"}
+                ]
+            },
+            {
+                "id": "score",
+                "label": "Page quality score",
+                "phase": "parallel",
+                "kind": "command",
+                "depends_on": [],
+                "permissions": {
+                    "filesystem": "read",
+                    "network": "none",
+                    "writes": []
+                },
+                "command": {
+                    "bin": "npm",
+                    "args": ["run", "--silent", "agent:score", "--", "--route", route, "--current-date", current_date, "--json"]
+                },
+                "artifacts": [
+                    {"role": "output", "kind": "node-output", "id": "score-json"}
+                ],
+                "validators": [
+                    {"id": "score-json-ok", "kind": "json-ok"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:score"},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:score-json-ok"}
+                ]
+            },
+            {
+                "id": "memory_record",
+                "label": "Memory receipt",
+                "phase": "join",
+                "kind": "command",
+                "depends_on": ["evidence", "impact", "score"],
+                "permissions": {
+                    "filesystem": "write-local",
+                    "network": "none",
+                    "writes": [memory_out]
+                },
+                "command": {
+                    "bin": "npm",
+                    "args": ["run", "--silent", "agent:memory:record", "--", "--route", route, "--current-date", current_date, "--out", memory_out, "--json"]
+                },
+                "artifacts": [
+                    {"role": "output", "kind": "jsonl-receipt", "path": memory_out}
+                ],
+                "validators": [
+                    {"id": "memory-record-json-ok", "kind": "json-ok"},
+                    {"id": "memory-output-local", "kind": "local-output-path"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:memory_record"},
+                    {"role": "output", "kind": "node-output", "path": memory_out},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:memory-record-json-ok"}
+                ]
+            },
+            {
+                "id": "codex_synthesis",
+                "label": "Codex synthesis",
+                "phase": "synthesis",
+                "kind": "manual",
+                "depends_on": ["evidence", "impact", "score", "memory_record"],
+                "permissions": {
+                    "filesystem": "read",
+                    "network": "none",
+                    "writes": []
+                },
+                "artifacts": [
+                    {"role": "embedded", "kind": "analysis", "id": "codex-synthesis"}
+                ],
+                "validators": [
+                    {"id": "synthesis-uses-node-outputs", "kind": "review"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:codex_synthesis"},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:synthesis-uses-node-outputs"}
+                ]
+            },
+            {
+                "id": "patch_or_report",
+                "label": "Patch or report",
+                "phase": "patch",
+                "kind": "manual",
+                "depends_on": ["codex_synthesis"],
+                "permissions": {
+                    "filesystem": "write-tracked",
+                    "network": "none",
+                    "writes": ["repo-scoped-task-files"]
+                },
+                "artifacts": [
+                    {"role": "output", "kind": "changed-files", "id": "patch-or-report-output"}
+                ],
+                "validators": [
+                    {"id": "scoped-diff-review", "kind": "review"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:patch_or_report"},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:scoped-diff-review"}
+                ]
+            },
+            {
+                "id": "focused_validation",
+                "label": "Focused validation",
+                "phase": "validation",
+                "kind": "manual",
+                "depends_on": ["patch_or_report"],
+                "permissions": {
+                    "filesystem": "read",
+                    "network": "none",
+                    "writes": []
+                },
+                "artifacts": [
+                    {"role": "embedded", "kind": "validation-summary", "id": "focused-validation"}
+                ],
+                "validators": [
+                    {"id": "changed-surface-checks-pass", "kind": "command-review"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:focused_validation"},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:changed-surface-checks-pass"}
+                ]
+            },
+            {
+                "id": "update_status_docs",
+                "label": "Update status docs",
+                "phase": "closeout",
+                "kind": "manual",
+                "depends_on": ["focused_validation"],
+                "permissions": {
+                    "filesystem": "write-tracked",
+                    "network": "none",
+                    "writes": [".agent/CURRENT_STATUS.md", ".agent/PLANS.md", ".agent/WORK_LOG.md"]
+                },
+                "artifacts": [
+                    {"role": "output", "kind": "status-docs", "id": "agent-status-docs"}
+                ],
+                "validators": [
+                    {"id": "status-docs-current", "kind": "review"}
+                ],
+                "receipt_hooks": [
+                    {"role": "embedded", "kind": "dag-node", "id": "agent-plan:update_status_docs"},
+                    {"role": "embedded", "kind": "node-validation", "id": "agent-plan:status-docs-current"}
+                ]
+            }
+        ],
         "parallel": [
             {
                 "id": "evidence",
@@ -4361,6 +4581,48 @@ console.log(JSON.stringify({
             }],
             handoff_notes: "Worker done.".to_string(),
         }
+    }
+
+    #[test]
+    fn agent_plan_writes_validated_node_contract() {
+        let dir = temp_runner_dir("agent-plan-contract");
+        let project_dir = dir.join("project");
+        fs::create_dir_all(&project_dir).expect("project dir should exist");
+        let args = AgentPlanArgs {
+            route: "/tools/example/".to_string(),
+            out: PathBuf::from("local/tmp/agent-task-graph.json"),
+            memory_out: PathBuf::from("local/tmp/agent-memory.jsonl"),
+            current_date: Some("2026-06-30".to_string()),
+        };
+
+        write_agent_task_graph(&project_dir, &args, false).expect("agent graph should write");
+        let graph_path = project_dir.join("local/tmp/agent-task-graph.json");
+        let graph: serde_json::Value = serde_json::from_str(
+            &fs::read_to_string(&graph_path).expect("agent graph should be readable"),
+        )
+        .expect("agent graph should parse");
+        let nodes = graph["nodes"].as_array().expect("nodes should be an array");
+        let memory = nodes
+            .iter()
+            .find(|node| node["id"] == "memory_record")
+            .expect("memory node should exist");
+
+        assert_eq!(graph["mode"], "agent-task-dag");
+        assert_eq!(graph["graph_contract"]["execution_status"], "contract_only");
+        assert!(nodes.iter().any(|node| node["id"] == "evidence"));
+        assert!(memory["depends_on"]
+            .as_array()
+            .expect("memory depends_on should be an array")
+            .iter()
+            .any(|dependency| dependency == "score"));
+        assert_eq!(memory["permissions"]["filesystem"], "write-local");
+        assert!(memory["receipt_hooks"]
+            .as_array()
+            .expect("receipt hooks should be an array")
+            .iter()
+            .any(|hook| hook["kind"] == "node-validation"));
+
+        fs::remove_dir_all(dir).ok();
     }
 
     #[test]

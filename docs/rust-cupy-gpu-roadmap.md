@@ -96,10 +96,11 @@ The current branch uses `cpu-lexical-hash-v1` vectors from `scripts/lib/agent-cp
 The Rust runner has a bridge command:
 
 ```bash
-npm --silent run runner:agent-plan -- --route /tools/cursor/ --current-date 2026-06-29
+npm --silent run runner:agent-plan -- --route /tools/cursor/ --current-date 2026-06-30
+npm --silent run agent:dag:check -- --path local/tmp/aipedia-runner/agent-dag/agent-task-graph.json --json
 ```
 
-It writes a task-DAG contract for evidence, impact, score, and memory recording. It does not execute a generic DAG yet.
+It writes a validated `aipedia.agent-task-dag.v1` contract for evidence, impact, score, memory recording, synthesis, patch/report, validation, and closeout documentation. The contract includes node IDs, phases, dependencies, permissions, artifacts, validators, and receipt hooks. It does not execute a generic DAG yet.
 
 ## CuPy Gate
 

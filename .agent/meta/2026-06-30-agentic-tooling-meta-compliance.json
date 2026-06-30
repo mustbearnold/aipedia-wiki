@@ -108,9 +108,14 @@
       "status": "partial",
       "evidence": [
         "npm run runner:agent-plan existing DAG bridge",
+        "tools/aipedia-runner/src/main.rs aipedia.agent-task-dag.v1 node contract",
+        "npm run agent:dag:check",
+        "scripts/agent-task-dag-check.mjs",
+        "tests/scripts/agent-task-dag-check.test.mjs",
+        ".agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json",
         "docs/parallel-tooling-architecture.md"
       ],
-      "remaining": "Standardize node IDs, permissions, validators, traces, and artifact refs across tool refresh, page refresh, decision, affiliate, and news workflows."
+      "remaining": "Wire DAG validation into planner or closeout receipts so generated DAG validation is recorded automatically during real workflows."
     },
     {
       "id": "closeout-receipts-traces",
@@ -229,28 +234,28 @@
     }
   ],
   "current_slice": {
-    "name": "repeatable interrupted runner proof",
+    "name": "agent task DAG contract validation",
     "system_artifacts": [
       "package.json",
-      "scripts/runner-interrupt-proof.mjs",
-      "tests/scripts/runner-interrupt-proof.test.mjs",
-      ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-pause.json",
-      ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-closeout.json",
-      ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json",
+      "tools/aipedia-runner/src/main.rs",
+      "scripts/agent-task-dag-check.mjs",
+      "tests/scripts/agent-task-dag-check.test.mjs",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "docs/rust-cupy-gpu-roadmap.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-31.md",
-      ".agent/loop-runs/system/2026-06-30T08-10-26-335Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-33.md",
+      ".agent/loop-runs/system/2026-06-30T08-39-11-427Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Teach agent:closeout:check to recognize and validate aipedia.runner-interrupt-proof.v1 proof reports.",
+    "Wire agent:dag:check into runner:agent-plan or closeout receipts so DAG validation cannot be skipped.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",

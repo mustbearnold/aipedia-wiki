@@ -327,9 +327,20 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - A live strict proof is saved under `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-*` and passed direct `agent:closeout:check` validation.
 - Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-25-05-232Z-loop-run.json`.
 
+### Completed Slice 33
+
+- `runner:agent-plan` now writes a structured `aipedia.agent-task-dag.v1` contract with explicit `mode`, `graph_contract`, and node metadata.
+- The canonical node set covers evidence, impact, score, memory join, Codex synthesis, patch/report, focused validation, and status-doc update stages.
+- Each node carries phase, kind, dependencies, permissions, artifacts, validators, and receipt hooks so future orchestration has enforceable execution boundaries.
+- Added `agent:dag:check`, a deterministic validator for agent task DAG receipts and generated graph artifacts.
+- The validator rejects malformed graph fields, duplicate node IDs, bad node IDs, missing or self dependencies, cycles, invalid permissions, read-only writes, missing artifacts, missing validators, missing receipt hooks, malformed command payloads, and missing canonical memory dependencies.
+- Focused tests cover a passing graph and combined missing dependency, cycle, malformed permissions, and memory dependency failures.
+- A live `/tools/cursor/` DAG proof is saved at `.agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json`.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-39-11-427Z-loop-run.json`.
+
 ### Next Slice
 
-1. Harden `runner:agent-plan` DAG contracts with validated node metadata, permissions, artifacts, validators, and receipt hooks.
+1. Wire `agent:dag:check` into planner or closeout receipts so DAG validation cannot be skipped during real workflows.
 2. Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.
 3. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
 4. Add exact model-token usage and correction rate when reliable inputs are available.

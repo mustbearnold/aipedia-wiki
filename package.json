@@ -107,6 +107,7 @@
     "agent:closeout:check": "node scripts/agent-closeout-receipt-check.mjs",
     "agent:input-freshness": "node scripts/agent-input-freshness-receipt.mjs",
     "agent:efficiency:trends": "node scripts/agent-loop-efficiency-trends.mjs",
+    "agent:dag:check": "node scripts/agent-task-dag-check.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
     "check:security": "npm audit --audit-level=moderate",

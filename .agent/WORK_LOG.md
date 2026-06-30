@@ -1800,3 +1800,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-32.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-25-05-232Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 5.139s wall duration, 43,571 full receipt bytes, 25,027 latest receipt bytes, estimated full receipt tokens 10,893, and 12 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then harden `runner:agent-plan` DAG contracts with validated node metadata, permissions, artifacts, validators, and receipt hooks.
+
+### 2026-06-30: Agentic Tooling Meta Slice 33, Agent Task DAG Contract Validation
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Hardened `runner:agent-plan` from a loose planning bridge into a structured `aipedia.agent-task-dag.v1` graph contract. Generated graphs now expose `mode`, `graph_contract`, and eight canonical nodes for evidence, impact, score, memory join, synthesis, patch/report, validation, and status-doc update work.
+- Changed: Added `agent:dag:check`, with focused tests, to validate node IDs, phases, kinds, dependency references, cycle freedom, permissions, command payloads, artifacts, validators, receipt hooks, canonical node presence, and required memory dependencies.
+- System lesson: a DAG that future agents can trust needs to be machine-checkable before it can become executable. The validator creates that boundary now, while keeping generic execution deferred until the contract is stable.
+- Verification: focused syntax, focused DAG tests, Rust format/check/tests, live `/tools/cursor/` graph generation, live `agent:dag:check` validation, command-surface audit, JSON parse checks, em-dash guard, diff guard, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record`, efficiency trends, and required closeout validation passed.
+- Durable proof: `.agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-33.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-39-11-427Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 5.251s wall duration, 43,189 full receipt bytes, 24,623 latest receipt bytes, estimated full receipt tokens 10,798, and 12 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then wire DAG validation into planner or closeout receipts so it cannot be skipped.
