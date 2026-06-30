@@ -24,6 +24,8 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:quality -- --json`: run the Quality Pruning loop checks.
 - `npm run loop:performance -- --json`: run the Performance and UX loop checks.
 - `npm run loop:news -- --json`: run the News and Market Change loop checks.
+- `npm run agent:input-freshness -- --all --json`: write or inspect a shared freshness receipt for generated planner inputs before launching planner work.
+- `npm run agent:input-freshness -- --all --require-fresh --json`: fail fast when decision backlog, tool freshness, page ledger, or affiliate inventory inputs are stale, missing, invalid, or failed.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10`: plan the next batched oldest-first tool refresh.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`: emit the same batch plan in structured form, including `agent_briefs` for six shard workers, up to 10 tools per worker, and a single integrator.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents`: print shard-worker prompts and the integrator prompt for manual subagent fanout.
@@ -33,6 +35,8 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run page:refresh:batch -- --limit 60 --max-workers 6 --pages-per-worker 10 --write-agent-prompts local/tmp/page-refresh-prompts --json`: write exact prompt files and emit the planner JSON. Prefer this for subagent fanout.
 
 Built-output loops depend on fresh `dist-fast/client` output. If the runner skips conversion or performance, run `npm run build:fast`, then rerun the specific loop. If the runner marks built output as stale or unknown, do the same before trusting rendered-output audits.
+
+Generated planner inputs depend on fresh source data. Before launching tool-refresh, page-refresh, decision-content, or affiliate-conversion planner work, run `npm run agent:input-freshness -- --all --json`. Use `--require-fresh` in automation or meta-goal work. A stale page-refresh ledger should be fixed with `npm run ledger:pages && npm run ledger:pages:check`; a stale coverage backlog should be fixed with `npm run coverage:backlog`.
 
 ## What The Runner Reports
 

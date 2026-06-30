@@ -105,6 +105,7 @@
     "agent:system-progress": "node scripts/agent-system-progress-check.mjs",
     "agent:pause-receipt": "node scripts/agent-pause-receipt.mjs",
     "agent:closeout:check": "node scripts/agent-closeout-receipt-check.mjs",
+    "agent:input-freshness": "node scripts/agent-input-freshness-receipt.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
     "check:security": "npm audit --audit-level=moderate",

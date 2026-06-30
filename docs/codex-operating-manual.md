@@ -63,6 +63,7 @@ npm --silent run agent:impact -- --route /tools/cursor/ --json
 npm --silent run agent:score -- --route /tools/cursor/ --json
 npm --silent run agent:memory:record -- --route /tools/cursor/ --json
 npm --silent run agent:score:calibrate -- --json
+npm --silent run agent:input-freshness -- --all --json
 npm run check:quick
 git diff --check
 ```

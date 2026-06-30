@@ -1,0 +1,82 @@
+{
+  "ok": false,
+  "mode": "input-freshness-receipt",
+  "schema_version": "aipedia.input-freshness-receipt.v1",
+  "generated_at": "2026-06-30T04:23:29.202Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "require_fresh": false,
+  "max_generated_age_minutes": 10,
+  "max_backlog_age_days": 2,
+  "workflows": [
+    {
+      "id": "decision-content",
+      "kind": "coverage-backlog",
+      "input": "src/data/coverage-backlog.json",
+      "refresh_command": "npm run coverage:backlog",
+      "enforce_command": "npm run loop:next -- --fail-on-stale-backlog --json",
+      "max_age_days": 2,
+      "ok": true,
+      "status": "fresh",
+      "generated_at": "2026-06-29T11:00:58.059Z",
+      "age_days": 0.72,
+      "next_action": ""
+    },
+    {
+      "id": "tool-refresh",
+      "kind": "tool-refresh-freshness-report",
+      "ok": true,
+      "status": "fresh",
+      "generated_at": "2026-06-30T04:23:28.642Z",
+      "age_ms": 17,
+      "max_age_ms": 600000,
+      "command": "node scripts/audit-freshness-queue.mjs --json --project-dir .",
+      "refresh_command": "npm run audit:freshness -- --json",
+      "enforce_command": "npm run tool:refresh:batch -- --fail-on-stale-inputs --json",
+      "exit_code": 0,
+      "stdout_tail": "  },\n  \"source_registry\": {\n    \"invalid_urls\": [],\n    \"duplicate_ids\": [],\n    \"missing_trust_metadata\": [],\n    \"unknown_source_ids\": []\n  }\n}",
+      "stderr_tail": "",
+      "next_action": ""
+    },
+    {
+      "id": "page-refresh",
+      "kind": "page-refresh-ledger",
+      "ok": false,
+      "status": "stale",
+      "input": "PAGE_REFRESH_LEDGER.md",
+      "command": "node scripts/generate-page-refresh-ledger.mjs --check --json --project-dir .",
+      "refresh_command": "npm run ledger:pages && npm run ledger:pages:check",
+      "enforce_command": "npm run page:refresh:batch -- --fail-on-stale-ledger --json",
+      "exit_code": 1,
+      "changed": true,
+      "ledger_updated_through": "2026-06-30",
+      "stdout_tail": "  \"ledger_path\": \"/home/mustbearnold/Projects/aipedia-wiki-clean/PAGE_REFRESH_LEDGER.md\",\n  \"check_only\": true,\n  \"skipped\": false,\n  \"rows\": 610,\n  \"ledger_updated_through\": \"2026-06-30\",\n  \"changed\": true,\n  \"argument_issues\": []\n}",
+      "stderr_tail": "",
+      "next_action": "Run npm run ledger:pages && npm run ledger:pages:check, then rerun page refresh planning with --fail-on-stale-ledger."
+    },
+    {
+      "id": "affiliate-conversion",
+      "kind": "affiliate-conversion-inventory",
+      "ok": true,
+      "status": "fresh",
+      "generated_at": "2026-06-30T04:23:29.191Z",
+      "age_ms": 11,
+      "max_age_ms": 600000,
+      "command": "node scripts/affiliate-conversion-inventory.mjs --json",
+      "refresh_command": "npm run affiliate:conversion:inventory -- --json",
+      "enforce_command": "npm run affiliate:conversion:plan -- --fail-on-stale-inputs --json",
+      "exit_code": 0,
+      "stdout_tail": "        \"best-ai-landing-page-builder-for-ab-testing\",\n        \"best-ai-tool-for-conversion-rate-optimization\",\n        \"best-ai-tools-for-marketers\"\n      ],\n      \"source_file\": \"src/content/tools/unbounce.md\"\n    }\n  ]\n}",
+      "stderr_tail": "",
+      "next_action": ""
+    }
+  ],
+  "summary": {
+    "workflow_count": 4,
+    "ok_count": 3,
+    "attention_count": 1,
+    "stale_count": 1
+  },
+  "next_actions": [
+    "Run npm run ledger:pages && npm run ledger:pages:check, then rerun page refresh planning with --fail-on-stale-ledger."
+  ]
+}

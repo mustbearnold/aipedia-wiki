@@ -1555,3 +1555,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `node --check scripts/agent-score-calibration.mjs`, focused `node --test tests/scripts/agent-memory-tools.test.mjs`, gold-set calibration receipt generation, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, and JSON parse checks all passed.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-09.md`.
 - Next: Commit and push, then continue with stale generated-input auto-refresh or all-workflow enforcement receipts unless a fresh system review exposes a higher-risk slice.
+
+### 2026-06-30: Agentic Tooling Meta Slice 10, Input Freshness Receipt
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:input-freshness`, a shared `aipedia.input-freshness-receipt.v1` checker for generated planner inputs. It covers decision-content coverage backlog, tool-refresh freshness report, page-refresh ledger, and affiliate-conversion inventory, with `--all`, repeated `--workflow`, `--require-fresh`, and `--out` support.
+- System lesson: stale generated inputs now have one receipt surface with refresh and enforce commands. The first all-workflow receipt correctly marks decision-content, tool-refresh, and affiliate-conversion fresh, and page-refresh stale because the separate Synthesia content WIP has not had the ledger regenerated.
+- Verification: `node --check scripts/agent-input-freshness-receipt.mjs`, focused `node --test tests/scripts/agent-input-freshness-receipt.test.mjs`, scoped fresh workflow receipt, page-refresh stale receipt, all-workflow receipt generation, `audit:commands`, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, and JSON parse checks all passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-10.md`.
+- Next: Commit and push, then wire shared input-freshness receipts into runner closeouts or add safe auto-refresh policy where mutation is acceptable.
