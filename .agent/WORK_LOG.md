@@ -1625,3 +1625,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: focused Node syntax and policy tests, focused Rust handoff JSON test, runner help surface, scoped `check:smart`, `git diff --check`, `test:scripts`, `audit:commands`, `check:quick`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-16.md`.
 - Next: Commit and push, then prove page-refresh runner policy on a bounded receipt and prove affiliate handoff policy on a bounded runner-produced handoff JSON.
+
+### 2026-06-30: Agentic Tooling Meta Slice 17, Affiliate Handoff Policy Proof
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added a durable proof that the affiliate handoff policy gate passes on a runner-produced `aipedia.affiliate-handoff-receipt.v1` JSON handoff. The proof used a bounded Argil affiliate plan, a local complete worker report, strict report summary, handoff generation, and `agent:closeout:check --require-workflow-policy`.
+- System lesson: the affiliate policy is no longer only fixture-tested. It has now been exercised through the actual runner plan, reports, and handoff path without touching public pages.
+- Verification: bounded affiliate plan, strict reports, runner handoff, affiliate handoff policy check, JSON parse checks, scoped `check:smart`, and `git diff --check` passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-17.md`.
+- Next: Commit and push, then prove page-refresh runner policy when the stale ledger/content WIP is resolved, or expand reviewed scoring gold-set coverage during real workload pilots.

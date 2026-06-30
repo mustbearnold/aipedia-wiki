@@ -205,6 +205,17 @@ Affiliate conversion handoffs now produce and validate a machine-readable policy
 - Focused Rust tests prove the runner writes parseable JSON sidecars for reviewer-ready affiliate handoffs.
 - Focused Node tests prove valid affiliate handoff policy receipts pass and empty or under-evidenced affiliate handoffs fail.
 
+## Seventeenth System Slice
+
+Affiliate handoff policy validation now has a bounded runner-produced proof.
+
+- A one-cluster `runner:affiliate-conversion:plan` produced a live planner artifact for Argil under `local/tmp`.
+- A complete local worker report passed `runner:affiliate-conversion:reports -- --strict`.
+- `runner:affiliate-conversion:handoff` produced reviewer markdown plus `aipedia.affiliate-handoff-receipt.v1` JSON.
+- `agent:closeout:check -- --require-workflow-policy` passed against the generated affiliate handoff JSON with 1 checked receipt, 0 failures, and 0 issues.
+- The durable proof is `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`.
+- This proof validates handoff policy shape and implementation-readiness evidence. It does not publish or verify rendered affiliate content.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -214,7 +225,7 @@ Affiliate conversion handoffs now produce and validate a machine-readable policy
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json` | Prove page-refresh runner policy on a bounded receipt and prove affiliate handoff policy on a bounded runner-produced handoff JSON. |
+| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json` | Prove page-refresh runner policy on a bounded receipt. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json` | Expand the reviewed gold set during real workload pilots and require matching review records before deliberate baseline changes land. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |

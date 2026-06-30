@@ -105,9 +105,11 @@
         "bounded runner:tool-refresh dry-run policy proof",
         "tools/aipedia-runner/src/main.rs affiliate handoff JSON receipt",
         "scripts/agent-closeout-receipt-check.mjs affiliate handoff policy validation",
-        "tests/scripts/agent-closeout-receipt-check.test.mjs affiliate handoff policy tests"
+        "tests/scripts/agent-closeout-receipt-check.test.mjs affiliate handoff policy tests",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json",
+        "bounded runner:affiliate-conversion:handoff policy proof"
       ],
-      "remaining": "Prove page-refresh runner policy on a bounded receipt and prove affiliate handoff policy on a bounded runner-produced handoff JSON."
+      "remaining": "Prove page-refresh runner policy on a bounded receipt."
     },
     {
       "id": "non-stale-scoring",
@@ -162,25 +164,20 @@
     }
   ],
   "current_slice": {
-    "name": "affiliate handoff policy receipts",
+    "name": "bounded affiliate handoff policy proof",
     "system_artifacts": [
-      "tools/aipedia-runner/src/main.rs",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
-      ".agent/PLANS.md",
-      "scripts/README.md",
-      "workflows/affiliate-conversion-pages/README.md"
+      ".agent/PLANS.md"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
     "Prove page-refresh runner policy on a bounded receipt.",
-    "Prove affiliate handoff policy on a bounded runner-produced handoff JSON.",
     "Expand the reviewed scoring gold set during real workload pilots.",
-    "Pilot one bounded content workload only after page-refresh or affiliate closeout policy coverage is extended."
+    "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP."
   ]
 }

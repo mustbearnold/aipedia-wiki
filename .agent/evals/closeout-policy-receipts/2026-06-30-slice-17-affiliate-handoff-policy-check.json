@@ -1,0 +1,110 @@
+{
+  "schema_version": "aipedia.closeout-policy-proof.v1",
+  "date": "2026-06-30",
+  "slice": "17",
+  "workflow": "affiliate-conversion-handoff",
+  "proof_kind": "bounded-runner-produced-affiliate-handoff",
+  "local_artifacts": {
+    "plan": "local/tmp/slice17-affiliate-plan.json",
+    "worker_report_dir": "local/tmp/slice17-affiliate-reports",
+    "worker_report_summary": "local/tmp/slice17-affiliate-report-summary.md",
+    "markdown_handoff": "local/tmp/slice17-affiliate-handoff.md",
+    "json_handoff": "local/tmp/slice17-affiliate-handoff.json"
+  },
+  "commands": [
+    {
+      "label": "affiliate plan",
+      "command": "npm run runner:affiliate-conversion:plan -- --limit 1 --workers 1 --clusters-per-worker 1 --out local/tmp/slice17-affiliate-plan.json --worker-dir local/tmp/slice17-affiliate-workers --report-dir local/tmp/slice17-affiliate-reports",
+      "status": 0
+    },
+    {
+      "label": "affiliate reports strict",
+      "command": "npm run runner:affiliate-conversion:reports -- --plan local/tmp/slice17-affiliate-plan.json --report-dir local/tmp/slice17-affiliate-reports --out local/tmp/slice17-affiliate-report-summary.md --strict",
+      "status": 0
+    },
+    {
+      "label": "affiliate handoff",
+      "command": "npm run runner:affiliate-conversion:handoff -- --plan local/tmp/slice17-affiliate-plan.json --report-dir local/tmp/slice17-affiliate-reports --report-summary local/tmp/slice17-affiliate-report-summary.md --out local/tmp/slice17-affiliate-handoff.md --json-out local/tmp/slice17-affiliate-handoff.json",
+      "status": 0
+    },
+    {
+      "label": "affiliate handoff policy check",
+      "command": "npm --silent run agent:closeout:check -- --receipt local/tmp/slice17-affiliate-handoff.json --require-workflow-policy --json",
+      "status": 0
+    }
+  ],
+  "handoff_receipt_summary": {
+    "schema_version": "aipedia.affiliate-handoff-receipt.v1",
+    "workflow": "affiliate-conversion-handoff",
+    "status": "ready",
+    "current_date": "2026-06-30",
+    "selected_cluster_count": 1,
+    "selected_clusters": [
+      {
+        "id": "affiliate-argil",
+        "primary_tool": "argil"
+      }
+    ],
+    "claim_receipt_count": 1,
+    "source_url_count": 3,
+    "commercial_cta_note_count": 1,
+    "duplicate_intent_note_count": 1,
+    "parent_surface_note_count": 1,
+    "route_qa_routes": [
+      "/categories/",
+      "/categories/ai-video/",
+      "/guides/",
+      "/guides/argil-pricing-for-ugc-avatar-video-teams/",
+      "/guides/best-ai-avatar-video-generator/",
+      "/guides/synthesia-alternatives/",
+      "/tools/",
+      "/tools/argil/"
+    ],
+    "parent_surfaces": [
+      "/categories/",
+      "/categories/ai-video/",
+      "/guides/",
+      "/tools/"
+    ],
+    "verification_gate_substrings_proved": [
+      "runner:affiliate-conversion:reports -- --strict",
+      "affiliate:conversion:inventory",
+      "ledger:pages",
+      "typecheck",
+      "build:fast",
+      "CommercialCTA",
+      "live source"
+    ],
+    "no_edit_boundary_substrings_proved": [
+      "PAGE_REFRESH_LEDGER.md",
+      "src/data/source-registry.json",
+      "integrator owns"
+    ]
+  },
+  "validation_report": {
+    "ok": true,
+    "mode": "closeout-receipt-check",
+    "require_workflow_policy": true,
+    "totals": {
+      "receipts": 1,
+      "ok": 1,
+      "failed": 0,
+      "issues": 0
+    },
+    "receipts": [
+      {
+        "ok": true,
+        "path": "local/tmp/slice17-affiliate-handoff.json",
+        "type": "affiliate-handoff",
+        "issues": []
+      }
+    ]
+  },
+  "residual_risks": [
+    "This proof uses a local one-cluster worker report to validate runner-produced handoff policy shape. It does not publish or verify rendered affiliate content."
+  ],
+  "next_actions": [
+    "Prove page-refresh runner policy on a bounded receipt.",
+    "Expand reviewed scoring gold-set coverage during real workload pilots."
+  ]
+}

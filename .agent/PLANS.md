@@ -173,12 +173,20 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - `agent:closeout:check --require-workflow-policy` now validates affiliate handoff receipts and fails empty selected clusters, missing evidence, strict validation issues, non-passed checks, missing route QA scope, missing CommercialCTA or live-source gates, and missing shared-file no-edit boundaries.
 - Focused Rust and Node tests prove both the JSON sidecar and the policy pass/fail behavior.
 
+### Completed Slice 17
+
+- A bounded one-cluster `runner:affiliate-conversion:plan` produced a live Argil affiliate conversion planner artifact under `local/tmp`.
+- A complete local worker report passed `runner:affiliate-conversion:reports -- --strict`.
+- `runner:affiliate-conversion:handoff` generated both markdown and `aipedia.affiliate-handoff-receipt.v1` JSON.
+- `agent:closeout:check -- --require-workflow-policy` passed against that generated handoff JSON with 1 checked receipt, 0 failures, and 0 issues.
+- The durable proof is `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`.
+- This validates handoff policy shape and implementation-readiness evidence, not rendered affiliate content.
+
 ### Next Slice
 
 1. Prove page-refresh runner policy on a bounded receipt.
-2. Prove affiliate handoff policy on a bounded runner-produced handoff JSON.
-3. Expand the reviewed scoring gold set during real workload pilots.
-4. Run one bounded production pilot only after page-refresh or affiliate closeout policy coverage is extended, then record receipts and update memory.
+2. Expand the reviewed scoring gold set during real workload pilots.
+3. Run one bounded production pilot only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP, then record receipts and update memory.
 
 ### Required Closeout Before Completion
 
