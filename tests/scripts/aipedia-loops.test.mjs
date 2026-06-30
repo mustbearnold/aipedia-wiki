@@ -260,8 +260,10 @@ test('aipedia loops can write a machine-readable run ledger', () => {
     const timestampedRuns = readdirSync(ledgerDir).filter((name) => name.endsWith('-loop-run.json'));
     assert.equal(timestampedRuns.length, 1);
 
-    const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
-    const fullRun = JSON.parse(readFileSync(join(ledgerDir, timestampedRuns[0]), 'utf8'));
+    const latestText = readFileSync(join(ledgerDir, 'latest.json'), 'utf8');
+    const fullRunText = readFileSync(join(ledgerDir, timestampedRuns[0]), 'utf8');
+    const latest = JSON.parse(latestText);
+    const fullRun = JSON.parse(fullRunText);
     assert.equal(latest.totals.ok, 1);
     assert.equal(latest.goal_id, 'meta-goal');
     assert.equal(latest.run_id, 'run-001');
@@ -279,6 +281,12 @@ test('aipedia loops can write a machine-readable run ledger', () => {
     assert.equal(fullRun.goal_id, 'meta-goal');
     assert.equal(fullRun.run_id, 'run-001');
     assert.ok(fullRun.artifact_refs.some((ref) => ref.kind === 'loop-command' && ref.role === 'embedded'));
+    assert.equal(latest.efficiency_metrics.schema_version, 'aipedia.loop-efficiency-metrics.v1');
+    assert.equal(latest.efficiency_metrics.command_count, latest.totals.commands);
+    assert.equal(latest.efficiency_metrics.loop_count, latest.totals.loops);
+    assert.equal(latest.efficiency_metrics.persisted_latest_receipt_bytes, Buffer.byteLength(latestText, 'utf8'));
+    assert.equal(fullRun.efficiency_metrics.persisted_full_receipt_bytes, Buffer.byteLength(fullRunText, 'utf8'));
+    assert.equal(fullRun.efficiency_metrics.slowest_commands[0].label, 'clean command');
 
     rmSync(join(ledgerDir, timestampedRuns[0]), { force: true });
     const secondResult = runLoops(
@@ -330,6 +338,8 @@ test('aipedia loops records system progress in run ledgers', () => {
     const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
     assert.equal(latest.system_progress.has_system_artifact, true);
     assert.ok(latest.system_progress.system_artifacts.includes('.agent/WORK_LOG.md'));
+    assert.equal(latest.efficiency_metrics.system_artifact_count, latest.system_progress.system_artifacts.length);
+    assert.ok(latest.efficiency_metrics.system_artifact_count >= 1);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

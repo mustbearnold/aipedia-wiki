@@ -226,6 +226,16 @@ Reviewed scoring gold-set coverage now spans more page profiles.
 - Governed calibration with `--require-gold-set-review` passed with 6 cases, 0 mismatches, matching governance hash `5af262308abdf0e3e991aa4a49bfc84071c63c06fece0999ed6a517ecd9adadd`, and threshold review `pass`.
 - Durable receipt: `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`.
 
+## Nineteenth System Slice
+
+Loop closeouts now record speed and efficiency metrics as a validated receipt contract.
+
+- `loop:all:record` writes `efficiency_metrics` into the timestamped receipt and `latest.json`.
+- The metrics include wall duration, summed command duration, command and loop counts, attention and skipped rates, artifact counts, system artifacts per second, persisted receipt byte sizes, and the five slowest loop commands.
+- `agent:closeout:check --require-efficiency-metrics` fails loop receipts that omit the block or whose command counts, loop counts, status counts, wall duration, or total command duration do not match the receipt body.
+- Focused tests prove ledger emission, byte-size accounting, system-artifact counts, missing-metrics failure, and mismatch failure.
+- This is a deterministic token-efficiency proxy, not a real model-token meter. It measures receipt size and compactness until future agent runtimes expose exact token usage.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -237,7 +247,7 @@ Reviewed scoring gold-set coverage now spans more page profiles.
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json` | Prove page-refresh runner policy on a bounded receipt. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |
-| Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
+| Speed/token efficiency | Partial | six-worker workflows, timing receipts, loop `efficiency_metrics`, `agent:closeout:check --require-efficiency-metrics`, focused loop and closeout tests | Add exact model token usage, correction rate, flake rate, and benchmark trend summaries when the runtime exposes them. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |
 

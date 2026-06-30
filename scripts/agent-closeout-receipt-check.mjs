@@ -15,6 +15,7 @@ const REQUIRE_SYSTEM_PROGRESS = hasFlag('--require-system-progress');
 const REQUIRE_CLOSEOUT_IDENTITY = hasFlag('--require-closeout-identity');
 const REQUIRE_TRACE_ARTIFACTS = hasFlag('--require-trace-artifacts');
 const REQUIRE_WORKFLOW_POLICY = hasFlag('--require-workflow-policy');
+const REQUIRE_EFFICIENCY_METRICS = hasFlag('--require-efficiency-metrics');
 const EXPLICIT_RECEIPTS = valuesFor('--receipt').concat(valuesFor('--path'));
 const KNOWN_FLAGS = new Set([
   '--all-system',
@@ -25,6 +26,7 @@ const KNOWN_FLAGS = new Set([
   '--project-dir',
   '--receipt',
   '--require-closeout-identity',
+  '--require-efficiency-metrics',
   '--require-system-progress',
   '--require-trace-artifacts',
   '--require-workflow-policy',
@@ -101,6 +103,7 @@ const report = {
   require_closeout_identity: REQUIRE_CLOSEOUT_IDENTITY,
   require_trace_artifacts: REQUIRE_TRACE_ARTIFACTS,
   require_workflow_policy: REQUIRE_WORKFLOW_POLICY,
+  require_efficiency_metrics: REQUIRE_EFFICIENCY_METRICS,
   totals: {
     receipts: receipts.length,
     ok: receipts.filter((receipt) => receipt.ok).length,
@@ -126,6 +129,7 @@ function usage() {
     '  --all-system                  Validate every .agent/loop-runs/system/*.json receipt.',
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
     '  --require-closeout-identity   Require goal_id, run_id, residual_risks, and next_actions.',
+    '  --require-efficiency-metrics  Require loop receipts to include validated speed and efficiency metrics.',
     '  --require-trace-artifacts     Require trace and artifact_refs blocks.',
     '  --require-workflow-policy     Require workflow-specific runner closeout policy checks.',
     '  --project-dir <dir>           Project root. Alias: --root.',
@@ -223,6 +227,11 @@ function validateLoopReceipt(value, issues) {
     value.loops.forEach((loop, index) => validateLoopItem(loop, issues, `loops[${index}]`));
   }
 
+  if (value.efficiency_metrics != null) validateLoopEfficiencyMetrics(value.efficiency_metrics, value, issues);
+  else if (REQUIRE_EFFICIENCY_METRICS) {
+    issues.push(issue('efficiency-metrics-missing', 'Loop receipt must include efficiency_metrics when --require-efficiency-metrics is used.'));
+  }
+
   if (value.system_progress != null) validateSystemProgress(value.system_progress, value, issues);
   else if (REQUIRE_SYSTEM_PROGRESS) {
     issues.push(issue('system-progress-missing', 'Loop receipt must include system_progress when --require-system-progress is used.'));
@@ -254,6 +263,87 @@ function validateLoopCommand(command, issues, path) {
   requireString(command, 'status', issues, { path: `${path}.status`, values: ['ok', 'attention', 'skipped'] });
   requireNonNegativeNumber(command, 'duration_ms', issues, `${path}.duration_ms`);
   requireArray(command, 'attention_reasons', issues, `${path}.attention_reasons`);
+}
+
+function validateLoopEfficiencyMetrics(metrics, receipt, issues) {
+  if (!isObject(metrics)) {
+    issues.push(issue('efficiency-metrics-invalid', 'efficiency_metrics must be an object.'));
+    return;
+  }
+  requireString(metrics, 'schema_version', issues, {
+    path: 'efficiency_metrics.schema_version',
+    values: ['aipedia.loop-efficiency-metrics.v1'],
+  });
+  for (const field of [
+    'wall_duration_ms',
+    'total_command_duration_ms',
+    'command_count',
+    'loop_count',
+    'ok_loop_count',
+    'attention_loop_count',
+    'skipped_loop_count',
+    'average_command_duration_ms',
+    'commands_per_second',
+    'loops_per_second',
+    'attention_rate',
+    'skipped_rate',
+    'artifact_ref_count',
+    'embedded_command_artifact_count',
+    'system_artifact_count',
+    'content_artifact_count',
+    'other_artifact_count',
+    'system_artifacts_per_second',
+    'persisted_full_receipt_bytes',
+    'persisted_latest_receipt_bytes',
+  ]) {
+    requireNonNegativeNumber(metrics, field, issues, `efficiency_metrics.${field}`);
+  }
+  requireArray(metrics, 'slowest_commands', issues, 'efficiency_metrics.slowest_commands');
+
+  const totals = isObject(receipt.totals) ? receipt.totals : {};
+  if (typeof receipt.duration_ms === 'number' && metrics.wall_duration_ms !== receipt.duration_ms) {
+    issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.wall_duration_ms must match receipt.duration_ms.'));
+  }
+  if (typeof totals.commands === 'number' && metrics.command_count !== totals.commands) {
+    issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.command_count must match totals.commands.'));
+  }
+  if (typeof totals.loops === 'number' && metrics.loop_count !== totals.loops) {
+    issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.loop_count must match totals.loops.'));
+  }
+  if (typeof totals.ok === 'number' && metrics.ok_loop_count !== totals.ok) {
+    issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.ok_loop_count must match totals.ok.'));
+  }
+  if (typeof totals.attention === 'number' && metrics.attention_loop_count !== totals.attention) {
+    issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.attention_loop_count must match totals.attention.'));
+  }
+  if (typeof totals.skipped === 'number' && metrics.skipped_loop_count !== totals.skipped) {
+    issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.skipped_loop_count must match totals.skipped.'));
+  }
+  if (Array.isArray(receipt.loops)) {
+    const commandDurationMs = receipt.loops
+      .flatMap((loop) => (Array.isArray(loop.commands) ? loop.commands : []))
+      .reduce((sum, command) => sum + (typeof command.duration_ms === 'number' && command.duration_ms > 0 ? command.duration_ms : 0), 0);
+    if (metrics.total_command_duration_ms !== commandDurationMs) {
+      issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.total_command_duration_ms must equal the sum of loop command durations.'));
+    }
+  }
+  if (Array.isArray(metrics.slowest_commands)) {
+    metrics.slowest_commands.forEach((command, index) => validateSlowestCommand(command, issues, `efficiency_metrics.slowest_commands[${index}]`));
+    if (metrics.slowest_commands.length > 5) {
+      issues.push(issue('efficiency-metrics-invalid', 'efficiency_metrics.slowest_commands must contain at most five commands.'));
+    }
+  }
+}
+
+function validateSlowestCommand(command, issues, path) {
+  if (!isObject(command)) {
+    issues.push(issue('efficiency-metrics-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(command, 'loop_id', issues, { path: `${path}.loop_id` });
+  requireString(command, 'label', issues, { path: `${path}.label` });
+  requireString(command, 'status', issues, { path: `${path}.status`, values: ['ok', 'attention', 'skipped'] });
+  requireNonNegativeNumber(command, 'duration_ms', issues, `${path}.duration_ms`);
 }
 
 function validateSystemProgress(progress, receipt, issues) {

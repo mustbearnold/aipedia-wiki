@@ -1645,3 +1645,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: candidate route scores, unreviewed calibration for hash discovery, governed calibration with `--require-gold-set-review`, JSON parse checks, scoped `check:smart`, and `git diff --check` passed. Governed calibration passed with 6 cases, 0 mismatches, threshold review `pass`, and hash `5af262308abdf0e3e991aa4a49bfc84071c63c06fece0999ed6a517ecd9adadd`.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-18.md`.
 - Next: Commit and push, then add speed/token-efficiency metrics or prove page-refresh runner policy when the stale ledger/content WIP is resolved.
+
+### 2026-06-30: Agentic Tooling Meta Slice 19, Loop Efficiency Metrics
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `efficiency_metrics` to `loop:all:record` receipts and `latest.json`, covering wall duration, total command duration, command and loop counts, status rates, artifact counts, system artifacts per second, receipt byte sizes, and slowest commands. Added `agent:closeout:check --require-efficiency-metrics` validation for missing and mismatched metrics.
+- System lesson: speed and token efficiency need a receipt-level contract before they can become trend dashboards. Exact model-token usage is still future work, but receipt size and command timing are now deterministic and enforceable.
+- Verification: focused syntax checks, focused loop and closeout tests, scoped `check:smart`, `git diff --check`, em-dash scan, `test:scripts`, `audit:commands`, `check:quick`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check --require-efficiency-metrics` passed. The enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 5.05s wall duration, 42,911 full receipt bytes, 24,367 latest receipt bytes, and 11 system artifacts.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-19.md`.
+- Next: Commit and push, then prove page-refresh runner policy when the stale ledger/content WIP is resolved or expand reviewed scoring coverage during a real workload pilot.

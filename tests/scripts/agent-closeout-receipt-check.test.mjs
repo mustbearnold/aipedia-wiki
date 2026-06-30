@@ -52,6 +52,37 @@ function validLoopReceipt(overrides = {}) {
       },
     ],
     duration_ms: 123,
+    efficiency_metrics: {
+      schema_version: 'aipedia.loop-efficiency-metrics.v1',
+      wall_duration_ms: 123,
+      total_command_duration_ms: 10,
+      command_count: 1,
+      loop_count: 1,
+      ok_loop_count: 1,
+      attention_loop_count: 0,
+      skipped_loop_count: 0,
+      average_command_duration_ms: 10,
+      commands_per_second: 8.13,
+      loops_per_second: 8.13,
+      attention_rate: 0,
+      skipped_rate: 0,
+      artifact_ref_count: 2,
+      embedded_command_artifact_count: 0,
+      system_artifact_count: 1,
+      content_artifact_count: 0,
+      other_artifact_count: 0,
+      system_artifacts_per_second: 8.13,
+      persisted_full_receipt_bytes: 2048,
+      persisted_latest_receipt_bytes: 1024,
+      slowest_commands: [
+        {
+          loop_id: 'decision-content',
+          label: 'fixture command',
+          status: 'ok',
+          duration_ms: 10,
+        },
+      ],
+    },
     totals: {
       loops: 1,
       ok: 1,
@@ -354,13 +385,52 @@ test('closeout receipt check validates latest enforced loop receipt by default',
   try {
     mkdirSync(systemDir, { recursive: true });
     writeJson(join(systemDir, 'latest.json'), validLoopReceipt());
-    const result = runCheck(['--project-dir', dir, '--require-system-progress', '--json']);
+    const result = runCheck(['--project-dir', dir, '--require-system-progress', '--require-efficiency-metrics', '--json']);
     assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
 
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.totals.receipts, 1);
     assert.equal(report.receipts[0].type, 'loop-run');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails enforced loop receipts without efficiency metrics', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-missing-efficiency-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  delete receipt.efficiency_metrics;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.receipts[0].issues[0].code, 'efficiency-metrics-missing');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails mismatched efficiency metrics', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-efficiency-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.efficiency_metrics.command_count = 99;
+  receipt.efficiency_metrics.total_command_duration_ms = 999;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('efficiency-metrics-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

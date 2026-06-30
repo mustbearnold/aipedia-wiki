@@ -121,6 +121,7 @@ const report = RUN_MODE
   : briefReport(registry, selectedLoops);
 
 if (RUN_MODE && (WRITE_LEDGER || REQUIRE_SYSTEM_PROGRESS)) attachSystemProgress(report);
+if (RUN_MODE) attachEfficiencyMetrics(report);
 if (WRITE_LEDGER) writeLedger(report);
 emitReport(report);
 process.exit(report.ok ? 0 : 1);
@@ -240,6 +241,79 @@ function attachSystemProgress(reportData) {
       ],
     };
   }
+}
+
+function attachEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
+  reportData.efficiency_metrics = loopEfficiencyMetrics(reportData, persistedReceiptBytes);
+}
+
+function loopEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
+  const loops = Array.isArray(reportData.loops) ? reportData.loops : [];
+  const commands = loops.flatMap((loop) => (loop.commands || []).map((command) => ({ ...command, loop_id: loop.id })));
+  const durationMs = nonNegative(reportData.duration_ms);
+  const commandDurationMs = commands.reduce((sum, command) => sum + nonNegative(command.duration_ms), 0);
+  const commandCount = commands.length;
+  const loopCount = loops.length;
+  const totals = reportData.totals || {};
+  const artifactRefs = Array.isArray(reportData.artifact_refs) ? reportData.artifact_refs : [];
+  const progress = reportData.system_progress || {};
+  const systemArtifactCount = Array.isArray(progress.system_artifacts) ? progress.system_artifacts.length : 0;
+  const contentArtifactCount = Array.isArray(progress.content_artifacts) ? progress.content_artifacts.length : 0;
+  const otherArtifactCount = Array.isArray(progress.other_artifacts) ? progress.other_artifacts.length : 0;
+
+  return {
+    schema_version: 'aipedia.loop-efficiency-metrics.v1',
+    wall_duration_ms: durationMs,
+    total_command_duration_ms: commandDurationMs,
+    command_count: commandCount,
+    loop_count: loopCount,
+    ok_loop_count: nonNegative(totals.ok),
+    attention_loop_count: nonNegative(totals.attention),
+    skipped_loop_count: nonNegative(totals.skipped),
+    average_command_duration_ms: commandCount ? roundMetric(commandDurationMs / commandCount) : 0,
+    commands_per_second: rate(commandCount, durationMs),
+    loops_per_second: rate(loopCount, durationMs),
+    attention_rate: ratio(nonNegative(totals.attention), loopCount),
+    skipped_rate: ratio(nonNegative(totals.skipped), loopCount),
+    artifact_ref_count: artifactRefs.length,
+    embedded_command_artifact_count: artifactRefs.filter((artifact) => artifact.kind === 'loop-command').length,
+    system_artifact_count: systemArtifactCount,
+    content_artifact_count: contentArtifactCount,
+    other_artifact_count: otherArtifactCount,
+    system_artifacts_per_second: rate(systemArtifactCount, durationMs),
+    persisted_full_receipt_bytes: nonNegative(persistedReceiptBytes.full),
+    persisted_latest_receipt_bytes: nonNegative(persistedReceiptBytes.latest),
+    slowest_commands: commands
+      .slice()
+      .sort((left, right) => nonNegative(right.duration_ms) - nonNegative(left.duration_ms) || String(left.label || '').localeCompare(String(right.label || '')))
+      .slice(0, 5)
+      .map((command) => ({
+        loop_id: command.loop_id || '',
+        label: command.label || '',
+        status: command.status || '',
+        duration_ms: nonNegative(command.duration_ms),
+      })),
+  };
+}
+
+function rate(count, durationMs) {
+  if (!durationMs) return 0;
+  return roundMetric((count * 1000) / durationMs);
+}
+
+function ratio(count, total) {
+  if (!total) return 0;
+  return roundMetric(count / total);
+}
+
+function roundMetric(value) {
+  if (!Number.isFinite(value)) return 0;
+  return Math.round(value * 1000) / 1000;
+}
+
+function nonNegative(value) {
+  const number = Number(value);
+  return Number.isFinite(number) && number > 0 ? number : 0;
 }
 
 function systemProgressReport(requireSystemArtifact) {
@@ -630,10 +704,35 @@ function writeLedger(reportData) {
     artifactRef('output', 'loop-run-latest', projectPath(latestPath), '', 'Latest loop receipt summary JSON.'),
   ]);
 
-  const payload = `${JSON.stringify(persistableReport(reportData), null, 2)}\n`;
-  const latestPayload = `${JSON.stringify(latestLedgerSummary(reportData), null, 2)}\n`;
+  const { payload, latestPayload } = ledgerPayloads(reportData);
   writeFileSync(runPath, payload);
   writeFileSync(latestPath, latestPayload);
+}
+
+function ledgerPayloads(reportData) {
+  let receiptBytes = {
+    full: 0,
+    latest: 0,
+  };
+  let payload = '';
+  let latestPayload = '';
+
+  for (let index = 0; index < 6; index += 1) {
+    attachEfficiencyMetrics(reportData, receiptBytes);
+    payload = `${JSON.stringify(persistableReport(reportData), null, 2)}\n`;
+    latestPayload = `${JSON.stringify(latestLedgerSummary(reportData), null, 2)}\n`;
+    const nextReceiptBytes = {
+      full: Buffer.byteLength(payload, 'utf8'),
+      latest: Buffer.byteLength(latestPayload, 'utf8'),
+    };
+    if (nextReceiptBytes.full === receiptBytes.full && nextReceiptBytes.latest === receiptBytes.latest) break;
+    receiptBytes = nextReceiptBytes;
+  }
+
+  attachEfficiencyMetrics(reportData, receiptBytes);
+  payload = `${JSON.stringify(persistableReport(reportData), null, 2)}\n`;
+  latestPayload = `${JSON.stringify(latestLedgerSummary(reportData), null, 2)}\n`;
+  return { payload, latestPayload };
 }
 
 function persistableReport(reportData) {
@@ -659,6 +758,7 @@ function latestLedgerSummary(reportData) {
     trace: copy.trace || null,
     artifact_refs: copy.artifact_refs || [],
     duration_ms: copy.duration_ms,
+    efficiency_metrics: copy.efficiency_metrics || null,
     totals: copy.totals,
     review: copy.review,
     system_progress: copy.system_progress || null,
