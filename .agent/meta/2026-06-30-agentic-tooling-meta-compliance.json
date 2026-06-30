@@ -113,18 +113,22 @@
         "scripts/aipedia-loops.mjs --dag-graph",
         "scripts/aipedia-loops.mjs --dag-validation-report",
         "scripts/agent-closeout-receipt-check.mjs DAG artifact ref validation",
+        "tools/aipedia-runner/src/main.rs runner AIPEDIA_DAG_GRAPHS artifact refs",
+        "tools/aipedia-runner/src/main.rs runner AIPEDIA_DAG_VALIDATION_REPORTS artifact refs",
         "npm run agent:dag:check",
         "scripts/agent-task-dag-check.mjs",
         "tests/scripts/agent-task-dag-check.test.mjs",
         "tests/scripts/runner-agent-plan-checked.test.mjs",
         "tests/scripts/aipedia-loops.test.mjs DAG artifact ref coverage",
         "tests/scripts/agent-closeout-receipt-check.test.mjs DAG artifact ref coverage",
+        "tools/aipedia-runner/src/main.rs runner DAG artifact ref test",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json",
+        ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json",
         "docs/parallel-tooling-architecture.md"
       ],
-      "remaining": "Extend DAG validation report refs into runner closeouts or workflow-specific receipts."
+      "remaining": "Add an explicit closeout-check mode that requires checked DAG graph and validation refs when a workflow declares DAG planning."
     },
     {
       "id": "closeout-receipts-traces",
@@ -165,7 +169,8 @@
         "scripts/agent-closeout-receipt-check.mjs runner interrupt proof report validation",
         "tests/scripts/agent-closeout-receipt-check.test.mjs runner interrupt proof report coverage",
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json",
-        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-proof-report.json"
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-proof-report.json",
+        ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json"
       ],
       "remaining": "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved."
     },
@@ -243,26 +248,29 @@
     }
   ],
   "current_slice": {
-    "name": "DAG closeout artifact refs",
+    "name": "Runner DAG closeout refs",
     "system_artifacts": [
-      "scripts/aipedia-loops.mjs",
+      "tools/aipedia-runner/src/main.rs",
       "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/aipedia-loops.test.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
-    ".agent/PLANS.md",
-    ".agent/WORK_LOG.md",
-    ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-35.md",
-    ".agent/loop-runs/system/2026-06-30T08-57-20-080Z-loop-run.json",
-    ".agent/loop-runs/system/latest.json"
-  ],
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-36.md",
+      ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-tool-refresh-plan.json",
+      ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-route-args.txt",
+      ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.md",
+      ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json",
+      ".agent/loop-runs/system/2026-06-30T09-09-51-766Z-loop-run.json",
+      ".agent/loop-runs/system/latest.json"
+    ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Extend DAG validation refs into runner closeouts or workflow-specific receipts.",
+    "Add an explicit closeout-check mode that requires checked DAG graph and validation refs when a workflow declares DAG planning.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",

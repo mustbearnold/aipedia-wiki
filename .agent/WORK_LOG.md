@@ -1839,3 +1839,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/system/2026-06-30T08-57-20-080Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5571 ms, and latest estimated full receipt tokens 10876.
 - Next: Commit and push, then extend the same pattern into runner closeouts or workflow-specific receipts.
+
+### 2026-06-30: Agentic Tooling Meta Slice 36, Runner DAG Closeout Refs
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Runner closeout receipts now read `AIPEDIA_DAG_GRAPHS` and `AIPEDIA_DAG_VALIDATION_REPORTS` and attach typed `agent-task-dag` and `agent-task-dag-validation-report` output artifact refs.
+- Changed: `agent:closeout:check` now validates those DAG artifact refs on runner closeout receipts, not only loop receipts.
+- System lesson: loop closeouts and runner closeouts need the same DAG proof contract. A checked graph that is not represented in the runner receipt can still vanish from the audit trail.
+- Verification: focused Node closeout tests, Rust format, Rust check, Rust tests, dry-run runner closeout proof, strict closeout validation of the proof receipt, diff guard, em-dash guard, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record` with DAG refs, required closeout validation, and efficiency trends passed.
+- Durable runner proof: `.agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-36.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-09-51-766Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5381 ms, latest estimated full receipt tokens 11071, and latest system artifact count 13.
+- Next: Commit and push, then add an explicit closeout-check mode that requires checked DAG proof refs when a workflow declares DAG planning.

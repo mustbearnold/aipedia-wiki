@@ -393,6 +393,7 @@ function validateRunnerReceipt(value, issues) {
   requireArray(value, 'superseded_failures', issues);
   validateCloseoutIdentity(value, issues);
   validateTraceArtifacts(value, issues);
+  validateDagArtifactRefs(value, issues);
 
   if (value.workflow === 'tool-refresh') {
     requireString(value, 'route_args', issues);

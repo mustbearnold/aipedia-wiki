@@ -3909,6 +3909,24 @@ fn closeout_artifact_refs(inputs: CloseoutArtifactInputs<'_>) -> Vec<CloseoutArt
             Some("Pause receipt written after an interrupted closeout command."),
         ));
     }
+    for dag_graph in closeout_list("AIPEDIA_DAG_GRAPHS") {
+        refs.push(artifact_ref(
+            "output",
+            "agent-task-dag",
+            Some(dag_graph.as_str()),
+            None,
+            Some("Generated agent task DAG graph."),
+        ));
+    }
+    for dag_validation_report in closeout_list("AIPEDIA_DAG_VALIDATION_REPORTS") {
+        refs.push(artifact_ref(
+            "output",
+            "agent-task-dag-validation-report",
+            Some(dag_validation_report.as_str()),
+            None,
+            Some("agent:dag:check validation report for an agent task DAG."),
+        ));
+    }
     for route in inputs.changed_routes {
         refs.push(artifact_ref(
             "route",
@@ -4298,6 +4316,28 @@ mod tests {
         ));
         fs::create_dir_all(&path).expect("temp runner dir should be created");
         path
+    }
+
+    struct EnvGuard {
+        key: &'static str,
+        previous: Option<String>,
+    }
+
+    impl EnvGuard {
+        fn set(key: &'static str, value: &str) -> Self {
+            let previous = std::env::var(key).ok();
+            std::env::set_var(key, value);
+            Self { key, previous }
+        }
+    }
+
+    impl Drop for EnvGuard {
+        fn drop(&mut self) {
+            match &self.previous {
+                Some(value) => std::env::set_var(self.key, value),
+                None => std::env::remove_var(self.key),
+            }
+        }
     }
 
     fn write_system_progress_script(project_dir: &Path) {
@@ -4720,6 +4760,11 @@ console.log(JSON.stringify({
         write_input_freshness_script(&project_dir);
         let plan_path = project_dir.join("tool-refresh-batch.json");
         let route_args_path = project_dir.join("route-args.txt");
+        let dag_graph_path = ".agent/evals/runner-dag-closeouts/fixture-dag.json";
+        let dag_validation_path = ".agent/evals/runner-dag-closeouts/fixture-dag.validation.json";
+        let _dag_graphs = EnvGuard::set("AIPEDIA_DAG_GRAPHS", dag_graph_path);
+        let _dag_validation_reports =
+            EnvGuard::set("AIPEDIA_DAG_VALIDATION_REPORTS", dag_validation_path);
         fs::write(
             &route_args_path,
             "--route /tools/alpha-tool/ --route /categories/ai-automation/",
@@ -4794,6 +4839,22 @@ console.log(JSON.stringify({
             .expect("artifact refs should be an array")
             .iter()
             .any(|artifact| artifact["kind"] == "json-receipt" && artifact["role"] == "output"));
+        assert!(receipt["artifact_refs"]
+            .as_array()
+            .expect("artifact refs should be an array")
+            .iter()
+            .any(|artifact| artifact["kind"] == "agent-task-dag"
+                && artifact["role"] == "output"
+                && artifact["path"] == dag_graph_path));
+        assert!(receipt["artifact_refs"]
+            .as_array()
+            .expect("artifact refs should be an array")
+            .iter()
+            .any(
+                |artifact| artifact["kind"] == "agent-task-dag-validation-report"
+                    && artifact["role"] == "output"
+                    && artifact["path"] == dag_validation_path
+            ));
         assert_eq!(receipt["elapsed_ms"], 250);
         assert!(receipt["changed_routes"]
             .as_array()

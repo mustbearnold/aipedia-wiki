@@ -358,9 +358,20 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - Live enforced receipt: `.agent/loop-runs/system/2026-06-30T08-57-20-080Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5571 ms, and latest estimated full receipt tokens 10876.
 
+### Completed Slice 36
+
+- Runner closeout receipts attach checked DAG graph refs from `AIPEDIA_DAG_GRAPHS`.
+- Runner closeout receipts attach checked DAG validation report refs from `AIPEDIA_DAG_VALIDATION_REPORTS`.
+- Runner DAG refs use the same typed `agent-task-dag` and `agent-task-dag-validation-report` artifact kinds as loop receipts.
+- `agent:closeout:check` validates DAG artifact refs on runner closeout receipts.
+- Focused Rust tests prove runner receipt emission from env, and focused Node tests prove runner receipt validation fails closed on invalid DAG graph schema.
+- Live runner proof receipt: `.agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json`.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-09-51-766Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5381 ms, and latest estimated full receipt tokens 11071.
+
 ### Next Slice
 
-1. Extend checked DAG report refs into runner closeouts or workflow-specific receipts.
+1. Add an explicit closeout-check mode that requires checked DAG graph and validation refs when a workflow declares DAG planning.
 2. Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.
 3. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
 4. Add exact model-token usage and correction rate when reliable inputs are available.

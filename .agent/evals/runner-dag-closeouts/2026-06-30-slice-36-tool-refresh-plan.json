@@ -1,0 +1,14 @@
+{
+  "batch": [
+    {
+      "slug": "cursor",
+      "path": "src/content/tools/cursor.md",
+      "route": "/tools/cursor/",
+      "category_route": "/categories/ai-coding/",
+      "source_ids": [
+        "cursor-pricing"
+      ]
+    }
+  ],
+  "agent_briefs": null
+}
