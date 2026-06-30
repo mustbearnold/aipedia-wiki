@@ -80,9 +80,11 @@
         "tools/aipedia-runner/src/main.rs focused interrupt tests",
         "live local/tmp/slice24-pause-receipt-v2.json smoke",
         "live local/tmp/aipedia-runner/pauses/slice25-runner-pause.json smoke",
-        "live local/tmp/slice26-pause-trace-receipt.json smoke"
+        "live local/tmp/slice26-pause-trace-receipt.json smoke",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-28-interrupted-pause.json",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-28-interrupted-closeout.json"
       ],
-      "remaining": "Prove automatic pause capture on a deliberately interrupted safe long-running runner workflow."
+      "remaining": "Embed interrupted pause receipt paths into failed runner closeout receipts and artifact refs."
     },
     {
       "id": "dag-contracts",
@@ -202,25 +204,24 @@
     }
   ],
   "current_slice": {
-    "name": "automatic runner interrupted pause capture",
+    "name": "live interrupted runner pause capture proof",
     "system_artifacts": [
-      "tools/aipedia-runner/Cargo.toml",
-      "tools/aipedia-runner/Cargo.lock",
-      "tools/aipedia-runner/src/main.rs",
+      ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-28-interrupted-pause.json",
+      ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-28-interrupted-closeout.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-27.md",
-      ".agent/loop-runs/system/2026-06-30T07-29-33-698Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-28.md",
+      ".agent/loop-runs/system/2026-06-30T07-37-37-688Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Prove automatic pause capture on a deliberately interrupted safe long-running runner workflow.",
+    "Embed interrupted pause receipt paths into failed runner closeout receipts and artifact refs.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",

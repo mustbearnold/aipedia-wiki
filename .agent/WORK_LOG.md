@@ -1740,3 +1740,15 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-27.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-29-33-698Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.891s wall duration, 42,785 full receipt bytes, 24,241 latest receipt bytes, estimated full receipt tokens 10,697, and 9 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then prove automatic pause capture on a deliberately interrupted safe long-running runner workflow.
+
+### 2026-06-30: Agentic Tooling Meta Slice 28, Live Runner Interrupt Proof
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added durable proof receipts for a live interrupted runner closeout. A disposable fixture project ran real `runner closeout`; its `ledger:pages` script self-sent SIGINT and exited 130. The runner wrote a validated interrupted pause receipt, wrote a failed closeout receipt, and bailed with the pause path.
+- System lesson: the automatic pause path works in a real runner closeout, not just unit tests. The next gap is discoverability inside the failed closeout receipt itself.
+- Verification: raw fixture script exited 130; runner proof exited 1 after writing the pause and failed closeout receipts; copied proof receipts passed `agent:closeout:check` with trace artifacts required for the pause receipt and identity plus trace artifacts required for the runner closeout. JSON parse, scoped `check:smart --run`, em-dash guard, diff guard, `loop:system`, enforced `loop:all:record`, efficiency trends, and required closeout validation passed.
+- Durable proof: `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-28-interrupted-pause.json` and `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-28-interrupted-closeout.json`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-28.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-37-37-688Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.921s wall duration, 42,847 full receipt bytes, 24,303 latest receipt bytes, estimated full receipt tokens 10,712, and 8 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then embed interrupted pause receipt paths into failed runner closeout receipts and artifact refs.
