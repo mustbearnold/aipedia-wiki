@@ -415,12 +415,25 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-46-56-468Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 4925 ms, latest estimated full receipt tokens 10792, and latest system artifact count 9.
 
+### Completed Slice 41
+
+- Added `npm run agent:meta:closeout:auto` as the default strict June 30 meta-goal closeout router.
+- The router inspects receipt type before invoking `agent:closeout:check`.
+- Latest loop receipts and explicit loop receipts use strict system-progress, closeout identity, trace artifact, efficiency metric, and checked DAG proof flags.
+- Rust runner receipts add workflow-policy validation automatically.
+- Unsupported receipt types fail closed with a specialized-routing message so affiliate, pause, and interrupt proof receipts keep their dedicated validation paths.
+- Focused tests cover latest-loop routing, runner workflow-policy routing, and unsupported receipt rejection.
+- Live auto closeout passed on `.agent/loop-runs/system/latest.json`.
+- Live auto closeout passed on `.agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json`.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-55-29-691Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 4977 ms, latest estimated full receipt tokens 10808, and latest system artifact count 9.
+
 ### Next Slice
 
 1. Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.
 2. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
 3. Add exact model-token usage and correction rate when reliable inputs are available.
-4. Keep `npm run agent:meta:closeout -- --json` for latest loop receipts, `npm run agent:meta:closeout:receipt -- --receipt <path> --json` for explicit loop or eval receipts, and `npm run agent:meta:closeout:runner -- --receipt <path> --json` for runner receipts.
+4. Use `npm run agent:meta:closeout:auto -- --json` for latest loop receipts and `npm run agent:meta:closeout:auto -- --receipt <path> --json` for explicit loop or runner proof receipts.
 
 ### Required Closeout Before Completion
 
@@ -428,7 +441,7 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - `npm run check:smart` scoped to changed system files.
 - `npm run check:quick` when package scripts, test harnesses, or shared guards change.
 - `npm --silent run loop:system -- --json` and `npm --silent run loop:all:record -- --goal-id <id> --run-id <id> --risk <text> --next-action <text> --require-system-progress --json`.
-- `npm --silent run agent:meta:closeout -- --json` for latest loop receipts, `npm --silent run agent:meta:closeout:receipt -- --receipt <path> --json` for explicit loop or eval receipts, or `npm --silent run agent:meta:closeout:runner -- --receipt <path> --json` for runner receipts.
+- `npm --silent run agent:meta:closeout:auto -- --json` for latest loop receipts, or `npm --silent run agent:meta:closeout:auto -- --receipt <path> --json` for explicit loop or runner proof receipts.
 - Durable `.agent/loop-runs/` receipt and `.agent` memory updates.
 - Commit and push to remote.
 - Goal remains active until the operating system is materially implemented to the standard in `docs/agentic-tooling-meta-compliance.md`.
