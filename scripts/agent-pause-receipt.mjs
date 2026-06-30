@@ -14,6 +14,8 @@ const HELP_MODE = args.includes('--help') || args.includes('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || defaultProjectDir);
 const GOAL_ID = valueFor('--goal-id') || 'unspecified-goal';
 const RUN_ID = valueFor('--run-id') || timestampSlug(new Date());
+const TRACE_ID = valueFor('--trace-id') || process.env.AIPEDIA_TRACE_ID || '';
+const PARENT_SPAN_ID = valueFor('--parent-span-id') || process.env.AIPEDIA_PARENT_SPAN_ID || '';
 const PAUSE_REASON = valueFor('--reason') || 'handoff';
 const PAUSE_REASONS = new Set(['user', 'time', 'blocked', 'handoff']);
 const SAFE_RESUME_STEP = valueFor('--safe-resume-step') || '';
@@ -30,6 +32,8 @@ const KNOWN_FLAGS = new Set([
   '--root',
   '--goal-id',
   '--run-id',
+  '--trace-id',
+  '--parent-span-id',
   '--reason',
   '--safe-resume-step',
   '--in-progress-step',
@@ -85,9 +89,11 @@ if (VALIDATE_PATH) {
   process.exit(validation.ok ? 0 : 1);
 }
 
-const pausedAt = new Date().toISOString();
+const startedAt = new Date().toISOString();
 const dirtyTreeSummary = gitStatusShort();
+const pausedAt = new Date().toISOString();
 const filesObservedDirtyBeforeAgent = valuesFor('--observed-dirty-before-agent');
+const filesTouchedByAgent = touchedFilesFromStatus(dirtyTreeSummary, filesObservedDirtyBeforeAgent);
 const receipt = {
   schema_version: 'aipedia.pause-receipt.v1',
   goal_id: GOAL_ID,
@@ -97,7 +103,7 @@ const receipt = {
   latest_safe_resume_step: SAFE_RESUME_STEP,
   in_progress_step: IN_PROGRESS_STEP,
   dirty_tree_summary: dirtyTreeSummary,
-  files_touched_by_agent: touchedFilesFromStatus(dirtyTreeSummary, filesObservedDirtyBeforeAgent),
+  files_touched_by_agent: filesTouchedByAgent,
   files_observed_dirty_before_agent: filesObservedDirtyBeforeAgent,
   child_workers: [],
   open_questions: valuesFor('--open-question'),
@@ -107,6 +113,16 @@ const receipt = {
   validation_done: valuesFor('--validation-done'),
   validation_pending: valuesFor('--validation-pending'),
   source_cutoff: SOURCE_CUTOFF,
+  trace: traceBlock('pause-receipt', RUN_ID, startedAt, pausedAt),
+  artifact_refs: pauseArtifactRefs({
+    outPath: OUT_PATH,
+    dirtyTreeSummary,
+    filesTouchedByAgent,
+    filesObservedDirtyBeforeAgent,
+    nextCommands: valuesFor('--next-command'),
+    validationDone: valuesFor('--validation-done'),
+    validationPending: valuesFor('--validation-pending'),
+  }),
 };
 const validation = validatePauseReceipt(receipt, OUT_PATH);
 
@@ -134,6 +150,8 @@ function usage() {
     '  --dry-run                      Do not write the receipt file.',
     '  --goal-id <id>                 Stable goal ID.',
     '  --run-id <id>                  Run attempt ID. Defaults to timestamp.',
+    '  --trace-id <id>                Optional trace ID. Defaults to goal_id:run_id.',
+    '  --parent-span-id <id>          Optional parent span ID.',
     '  --reason <reason>              user, time, blocked, or handoff. Defaults to handoff.',
     '  --safe-resume-step <step>      Last known safe resume point. Required.',
     '  --in-progress-step <step>      The step that was active at pause time. Required.',
@@ -229,8 +247,163 @@ function validatePauseReceipt(receipt, path = '') {
   if (!Array.isArray(receipt.child_workers)) {
     issues.push({ code: 'pause-receipt-field-invalid', detail: 'child_workers must be an array.' });
   }
+  validateTraceArtifacts(receipt, issues);
 
   return validationResult(path, receipt, issues);
+}
+
+function traceBlock(name, runId, startedAt, endedAt) {
+  const durationMs = Math.max(0, Date.parse(endedAt) - Date.parse(startedAt));
+  return {
+    trace_id: TRACE_ID || stableTraceId([GOAL_ID, runId]),
+    span_id: stableTraceId(['span', name, runId, startedAt]),
+    parent_span_id: PARENT_SPAN_ID,
+    name,
+    started_at: startedAt,
+    ended_at: endedAt,
+    duration_ms: durationMs,
+  };
+}
+
+function stableTraceId(parts) {
+  return parts
+    .filter(Boolean)
+    .join(':')
+    .toLowerCase()
+    .replace(/[^a-z0-9:._/-]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 180) || 'unscoped-trace';
+}
+
+function pauseArtifactRefs({
+  outPath,
+  dirtyTreeSummary,
+  filesTouchedByAgent,
+  filesObservedDirtyBeforeAgent,
+  nextCommands,
+  validationDone,
+  validationPending,
+}) {
+  const refs = [
+    {
+      role: 'output',
+      kind: 'pause-receipt',
+      path: projectPath(outPath),
+      description: 'Written pause receipt JSON.',
+    },
+    {
+      role: 'input',
+      kind: 'git-status',
+      id: 'dirty-tree',
+      description: `Captured ${dirtyTreeSummary.length} git status entr${dirtyTreeSummary.length === 1 ? 'y' : 'ies'} at pause time.`,
+    },
+  ];
+  for (const path of filesTouchedByAgent) {
+    refs.push({
+      role: 'dirty',
+      kind: 'agent-touched-file',
+      path,
+      description: 'Dirty file attributed to this agent run.',
+    });
+  }
+  for (const path of filesObservedDirtyBeforeAgent) {
+    refs.push({
+      role: 'input',
+      kind: 'observed-dirty-before-agent',
+      path,
+      description: 'Dirty file observed before this agent run and excluded from touched files.',
+    });
+  }
+  nextCommands.forEach((command, index) => {
+    refs.push({
+      role: 'embedded',
+      kind: 'next-command',
+      id: `next-command:${index + 1}`,
+      description: command,
+    });
+  });
+  validationDone.forEach((item, index) => {
+    refs.push({
+      role: 'embedded',
+      kind: 'validation-done',
+      id: `validation-done:${index + 1}`,
+      description: item,
+    });
+  });
+  validationPending.forEach((item, index) => {
+    refs.push({
+      role: 'embedded',
+      kind: 'validation-pending',
+      id: `validation-pending:${index + 1}`,
+      description: item,
+    });
+  });
+  return dedupeArtifactRefs(refs);
+}
+
+function dedupeArtifactRefs(refs) {
+  const seen = new Set();
+  return refs.filter((ref) => {
+    const key = [ref.role, ref.kind, ref.path || '', ref.id || '', ref.description || ''].join('\0');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function validateTraceArtifacts(receipt, issues) {
+  const hasAny = receipt.trace != null || receipt.artifact_refs != null;
+  if (!hasAny) return;
+
+  if (!isObject(receipt.trace)) {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: 'trace must be an object when present.' });
+  } else {
+    requireString(receipt.trace, 'trace_id', issues);
+    requireString(receipt.trace, 'span_id', issues);
+    if (receipt.trace.parent_span_id != null && typeof receipt.trace.parent_span_id !== 'string') {
+      issues.push({ code: 'pause-receipt-field-invalid', detail: 'trace.parent_span_id must be a string when present.' });
+    }
+    requireString(receipt.trace, 'name', issues);
+    requireIsoString(receipt.trace, 'started_at', issues);
+    requireIsoString(receipt.trace, 'ended_at', issues);
+    requireNonNegativeNumber(receipt.trace, 'duration_ms', issues);
+  }
+
+  if (!Array.isArray(receipt.artifact_refs)) {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: 'artifact_refs must be an array when present.' });
+    return;
+  }
+  for (const [index, artifact] of receipt.artifact_refs.entries()) {
+    validateArtifactRef(artifact, issues, `artifact_refs[${index}]`);
+  }
+}
+
+function validateArtifactRef(artifact, issues, path) {
+  if (!isObject(artifact)) {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: `${path} must be an object.` });
+    return;
+  }
+  requireString(artifact, 'role', issues);
+  requireString(artifact, 'kind', issues);
+  if (artifact.path != null && typeof artifact.path !== 'string') {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: `${path}.path must be a string when present.` });
+  }
+  if (artifact.id != null && typeof artifact.id !== 'string') {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: `${path}.id must be a string when present.` });
+  }
+  if (artifact.description != null && typeof artifact.description !== 'string') {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: `${path}.description must be a string when present.` });
+  }
+  if (!artifact.path && !artifact.id) {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: `${path} must include path or id.` });
+  }
+}
+
+function requireNonNegativeNumber(value, field, issues) {
+  if (typeof value[field] !== 'number' || !Number.isFinite(value[field]) || value[field] < 0) {
+    issues.push({ code: 'pause-receipt-field-invalid', detail: `${field} must be a non-negative number.` });
+  }
 }
 
 function validationResult(path, receipt, issues) {

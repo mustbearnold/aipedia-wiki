@@ -398,6 +398,29 @@ function validPauseReceipt(overrides = {}) {
     validation_done: ['node --check scripts/agent-pause-receipt.mjs'],
     validation_pending: ['agent:closeout:check pause receipt'],
     source_cutoff: '2026-06-30',
+    trace: {
+      trace_id: 'trace:meta-goal:pause-fixture',
+      span_id: 'span:pause-receipt:pause-fixture',
+      parent_span_id: '',
+      name: 'pause-receipt',
+      started_at: '2026-06-30T03:01:47.000Z',
+      ended_at: '2026-06-30T03:01:47.100Z',
+      duration_ms: 100,
+    },
+    artifact_refs: [
+      {
+        role: 'output',
+        kind: 'pause-receipt',
+        path: '.agent/loop-runs/pauses/pause.json',
+        description: 'Written pause receipt JSON.',
+      },
+      {
+        role: 'dirty',
+        kind: 'agent-touched-file',
+        path: 'scripts/agent-pause-receipt.mjs',
+        description: 'Dirty file attributed to this agent run.',
+      },
+    ],
     ...overrides,
   };
 }
@@ -433,6 +456,32 @@ test('closeout receipt check validates pause receipts', () => {
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.receipts[0].type, 'pause-receipt');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check requires trace artifacts on pause receipts when requested', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-pause-trace-'));
+  const validPath = join(dir, 'pause-valid.json');
+  const invalidPath = join(dir, 'pause-invalid.json');
+  const invalidReceipt = validPauseReceipt();
+  delete invalidReceipt.trace;
+  delete invalidReceipt.artifact_refs;
+
+  try {
+    writeJson(validPath, validPauseReceipt());
+    writeJson(invalidPath, invalidReceipt);
+
+    const validResult = runCheck(['--receipt', validPath, '--require-trace-artifacts', '--json']);
+    assert.equal(validResult.status, 0, `${validResult.stdout}\n${validResult.stderr}`);
+
+    const invalidResult = runCheck(['--receipt', invalidPath, '--require-trace-artifacts', '--json']);
+    assert.equal(invalidResult.status, 1);
+    const report = JSON.parse(invalidResult.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('closeout-trace-invalid'));
+    assert.ok(codes.includes('closeout-artifact-refs-invalid'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

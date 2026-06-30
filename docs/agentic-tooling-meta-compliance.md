@@ -304,6 +304,19 @@ Runner workflows now have an explicit validated pause path.
 - Enforced loop receipt `.agent/loop-runs/system/2026-06-30T07-01-25-237Z-loop-run.json` passed required system-progress, identity, trace-artifact, and efficiency-metric closeout validation.
 - The live two-run trend check saw 2 metric-aware receipts, 0 missing metrics, median wall duration 5013 ms, latest full receipt bytes 42634, 0 loop status changes, and 0 command status changes.
 
+## Twenty-Sixth System Slice
+
+Pause receipts now carry trace and artifact lineage.
+
+- `agent:pause-receipt` writes a `trace` block with trace ID, span ID, parent span ID, start/end times, and duration.
+- `agent:pause-receipt` writes `artifact_refs` for the pause receipt output, captured git status, agent-touched dirty files, observed-before-agent dirty files, embedded next commands, validation done, and validation pending.
+- Pause receipt validation checks trace and artifact refs when present while remaining able to read older pause receipts unless trace artifacts are explicitly required.
+- `agent:closeout:check --require-trace-artifacts` now enforces trace and artifact refs on pause receipts as well as loop and runner closeouts.
+- Focused tests prove trace-aware pause writing, dirty-file artifact refs, malformed trace/artifact rejection, and required-trace closeout enforcement for pause receipts.
+- A live smoke wrote `local/tmp/slice26-pause-trace-receipt.json`, validated it with `agent:pause-receipt --validate`, and validated it with `agent:closeout:check --require-trace-artifacts --receipt`.
+- Enforced loop receipt `.agent/loop-runs/system/2026-06-30T07-13-28-570Z-loop-run.json` passed required system-progress, identity, trace-artifact, and efficiency-metric closeout validation.
+- The live two-run trend check saw 2 metric-aware receipts, 0 missing metrics, median wall duration 4900 ms, latest full receipt bytes 42933, 0 loop status changes, and 0 command status changes.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -311,7 +324,7 @@ Runner workflows now have an explicit validated pause path.
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
 | Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness --refresh-stale`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Prove the refresh policy through one bounded runner or content pilot and decide which workflows should auto-apply in automation. |
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
-| Pause/resume receipts | Partial | `agent:pause-receipt`, `agent:pause-receipt --validate`, `runner:pause-receipt`, `agent:closeout:check` pause receipt validation, dirty-state separation for `--observed-dirty-before-agent`, focused pause and closeout tests, live `local/tmp/slice24-pause-receipt-v2.json` smoke, live `local/tmp/aipedia-runner/pauses/slice25-runner-pause.json` smoke | Add trace/artifact refs to pause receipts and evaluate automatic signal-triggered runner pauses after the explicit runner path is used in a real workflow. |
+| Pause/resume receipts | Partial | `agent:pause-receipt`, `agent:pause-receipt --validate`, `runner:pause-receipt`, pause receipt `trace` and `artifact_refs`, `agent:closeout:check` pause receipt validation, `agent:closeout:check --require-trace-artifacts` for pause receipts, dirty-state separation for `--observed-dirty-before-agent`, focused pause and closeout tests, live `local/tmp/slice24-pause-receipt-v2.json` smoke, live `local/tmp/aipedia-runner/pauses/slice25-runner-pause.json` smoke, live `local/tmp/slice26-pause-trace-receipt.json` smoke | Evaluate automatic signal-triggered runner pauses after the explicit runner path is used in a real workflow. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json` | Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |

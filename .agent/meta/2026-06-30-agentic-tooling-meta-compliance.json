@@ -70,12 +70,15 @@
         "dirty-state separation for --observed-dirty-before-agent",
         "npm run runner:pause-receipt",
         "tools/aipedia-runner/src/main.rs runner pause subcommand",
+        "agent:pause-receipt trace and artifact_refs",
+        "agent:closeout:check --require-trace-artifacts for pause receipts",
         "tests/scripts/agent-pause-receipt.test.mjs",
         "tests/scripts/agent-closeout-receipt-check.test.mjs pause receipt coverage",
         "live local/tmp/slice24-pause-receipt-v2.json smoke",
-        "live local/tmp/aipedia-runner/pauses/slice25-runner-pause.json smoke"
+        "live local/tmp/aipedia-runner/pauses/slice25-runner-pause.json smoke",
+        "live local/tmp/slice26-pause-trace-receipt.json smoke"
       ],
-      "remaining": "Add trace and artifact refs to pause receipts, then evaluate automatic signal-triggered runner pauses after the explicit runner path is used in a real workflow."
+      "remaining": "Evaluate automatic signal-triggered runner pauses after the explicit runner path is used in a real workflow."
     },
     {
       "id": "dag-contracts",
@@ -195,25 +198,26 @@
     }
   ],
   "current_slice": {
-    "name": "runner pause receipt integration",
+    "name": "pause receipt trace and artifact lineage",
     "system_artifacts": [
-      "tools/aipedia-runner/src/main.rs",
-      "package.json",
+      "scripts/agent-pause-receipt.mjs",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/agent-pause-receipt.test.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "scripts/README.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-25.md",
-      ".agent/loop-runs/system/2026-06-30T07-01-25-237Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-26.md",
+      ".agent/loop-runs/system/2026-06-30T07-13-28-570Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Add trace and artifact refs to pause receipts if future handoffs need full closeout lineage.",
     "Evaluate automatic signal-triggered runner pauses after the explicit pause path is used in one real workflow.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",

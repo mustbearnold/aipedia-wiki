@@ -581,6 +581,7 @@ function validatePauseReceipt(value, issues) {
     requireStringArray(value, field, issues);
   }
   requireArray(value, 'child_workers', issues);
+  validateTraceArtifacts(value, issues);
 }
 
 function validateAffiliateSelectedCluster(cluster, issues, path) {

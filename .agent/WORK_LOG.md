@@ -1718,3 +1718,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-25.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-01-25-237Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.896s wall duration, 42,634 full receipt bytes, 24,090 latest receipt bytes, estimated full receipt tokens 10,659, and 9 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then continue with pause trace/artifact refs or another unblocked system target.
+
+### 2026-06-30: Agentic Tooling Meta Slice 26, Pause Trace And Artifact Lineage
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `trace` and `artifact_refs` to `agent:pause-receipt` output. Pause receipts now carry trace ID, span ID, parent span ID, start/end times, duration, output receipt refs, git-status refs, agent-touched dirty-file refs, observed-before-agent dirty-file refs, embedded next commands, validation done, and validation pending.
+- System lesson: pause receipts need the same lineage affordances as closeout receipts. A safe resume file should tell the next agent not only what to do, but which artifacts and dirty boundaries support that instruction.
+- Verification: focused syntax checks and focused pause/closeout tests passed. Live smoke wrote `local/tmp/slice26-pause-trace-receipt.json`; `agent:pause-receipt --validate` and `agent:closeout:check --require-trace-artifacts --receipt` both passed with 0 issues. Scoped `check:smart`, `check:quick`, em-dash guard, enforced `loop:all:record`, efficiency trends, and required closeout validation passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-26.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-13-28-570Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.904s wall duration, 42,933 full receipt bytes, 24,389 latest receipt bytes, estimated full receipt tokens 10,734, and 11 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then evaluate automatic runner pause capture after the explicit path is used in one real workflow.

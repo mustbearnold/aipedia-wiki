@@ -54,11 +54,24 @@ test('pause receipt writes a durable JSON resume contract', () => {
     assert.equal(report.receipt.latest_safe_resume_step, 'Read the pause receipt.');
     assert.deepEqual(report.receipt.validation_pending, ['focused tests']);
     assert.ok(report.receipt.dirty_tree_summary.some((line) => /scripts\/changed\.mjs/.test(line)));
+    assert.equal(report.receipt.trace.name, 'pause-receipt');
+    assert.equal(report.receipt.trace.trace_id, '2026-06-30-meta:run-1');
+    assert.ok(report.receipt.artifact_refs.some((artifact) => (
+      artifact.role === 'output'
+      && artifact.kind === 'pause-receipt'
+      && artifact.path === '.agent/loop-runs/pauses/pause.json'
+    )));
+    assert.ok(report.receipt.artifact_refs.some((artifact) => (
+      artifact.role === 'embedded'
+      && artifact.kind === 'next-command'
+      && artifact.description.includes('agent-pause-receipt.test.mjs')
+    )));
     assert.ok(existsSync(outPath));
 
     const written = JSON.parse(readFileSync(outPath, 'utf8'));
     assert.equal(written.schema_version, 'aipedia.pause-receipt.v1');
     assert.equal(written.pause_reason, 'user');
+    assert.equal(written.trace.span_id.startsWith('span:pause-receipt:run-1:'), true);
 
     const validation = runPauseReceipt('--json', '--project-dir', dir, '--validate', outPath);
     assert.equal(validation.status, 0, `${validation.stdout}\n${validation.stderr}`);
@@ -115,6 +128,14 @@ test('pause receipt separates observed dirty files from agent-touched files', ()
     assert.deepEqual(report.receipt.files_observed_dirty_before_agent, ['src/content/tools/synthesia.md']);
     assert.ok(!report.receipt.files_touched_by_agent.includes('src/content/tools/synthesia.md'));
     assert.ok(report.receipt.files_touched_by_agent.includes('scripts/agent-change.mjs'));
+    assert.ok(report.receipt.artifact_refs.some((artifact) => (
+      artifact.kind === 'observed-dirty-before-agent'
+      && artifact.path === 'src/content/tools/synthesia.md'
+    )));
+    assert.ok(report.receipt.artifact_refs.some((artifact) => (
+      artifact.kind === 'agent-touched-file'
+      && artifact.path === 'scripts/agent-change.mjs'
+    )));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -144,6 +165,21 @@ test('pause receipt validation fails malformed receipts', () => {
       validation_done: [],
       validation_pending: [],
       source_cutoff: '2026/06/30',
+      trace: {
+        trace_id: 'trace',
+        span_id: '',
+        parent_span_id: 123,
+        name: 'pause-receipt',
+        started_at: 'not-a-date',
+        ended_at: '2026-06-30T00:00:00.000Z',
+        duration_ms: -1,
+      },
+      artifact_refs: [
+        {
+          role: 'output',
+          kind: 'pause-receipt',
+        },
+      ],
     }, null, 2));
 
     const result = runPauseReceipt('--json', '--project-dir', dir, '--validate', path);
@@ -154,6 +190,8 @@ test('pause receipt validation fails malformed receipts', () => {
     assert.ok(report.validation.issue_count >= 4);
     assert.ok(report.validation.issues.some((issue) => /pause_reason/.test(issue.detail)));
     assert.ok(report.validation.issues.some((issue) => /source_cutoff/.test(issue.detail)));
+    assert.ok(report.validation.issues.some((issue) => /trace/.test(issue.detail)));
+    assert.ok(report.validation.issues.some((issue) => /artifact_refs/.test(issue.detail)));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
