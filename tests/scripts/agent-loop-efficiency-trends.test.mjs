@@ -31,6 +31,28 @@ function loopReceipt(overrides = {}) {
       skipped: 0,
       commands: 3,
     },
+    loops: [
+      {
+        id: 'freshness',
+        status: 'attention',
+        commands: [
+          {
+            label: 'freshness queue',
+            status: 'attention',
+          },
+        ],
+      },
+      {
+        id: 'performance-ux',
+        status: 'ok',
+        commands: [
+          {
+            label: 'indexability audit',
+            status: 'ok',
+          },
+        ],
+      },
+    ],
     efficiency_metrics: {
       schema_version: 'aipedia.loop-efficiency-metrics.v1',
       wall_duration_ms: 100,
@@ -80,6 +102,28 @@ test('loop efficiency trends summarize recent metric receipts', () => {
       generated_at: '2026-06-30T01:00:00.000Z',
       run_id: 'run-2',
       duration_ms: 80,
+      loops: [
+        {
+          id: 'freshness',
+          status: 'attention',
+          commands: [
+            {
+              label: 'freshness queue',
+              status: 'attention',
+            },
+          ],
+        },
+        {
+          id: 'performance-ux',
+          status: 'attention',
+          commands: [
+            {
+              label: 'indexability audit',
+              status: 'attention',
+            },
+          ],
+        },
+      ],
       efficiency_metrics: {
         ...loopReceipt().efficiency_metrics,
         wall_duration_ms: 80,
@@ -113,6 +157,13 @@ test('loop efficiency trends summarize recent metric receipts', () => {
     assert.equal(report.summary.latest.estimated_full_receipt_tokens, 900);
     assert.equal(report.summary.delta_from_previous.wall_duration_ms, -20);
     assert.equal(report.summary.delta_from_previous.persisted_full_receipt_bytes, -400);
+    assert.equal(report.stability_summary.loop_status_comparisons, 2);
+    assert.equal(report.stability_summary.loop_status_changes, 1);
+    assert.equal(report.stability_summary.loop_status_change_rate, 0.5);
+    assert.deepEqual(report.stability_summary.persistent_attention_loops, ['freshness']);
+    assert.deepEqual(report.stability_summary.new_attention_loops, ['performance-ux']);
+    assert.deepEqual(report.stability_summary.resolved_attention_loops, []);
+    assert.equal(report.stability_summary.command_status_changes, 1);
     assert.equal(report.slowest_commands[0].label, 'indexability audit');
   } finally {
     rmSync(dir, { recursive: true, force: true });

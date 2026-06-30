@@ -92,14 +92,16 @@ function buildTrendReport() {
 
   const metricsRecords = records.filter((record) => record.efficiency_metrics);
   const summary = trendSummary(records, metricsRecords);
+  const stability = stabilitySummary(records);
   const ok = !issues.some((item) => item.code !== 'missing-efficiency-metrics')
     && (!FAIL_ON_MISSING_METRICS || missingMetrics.length === 0);
 
   return {
     ...baseReport(ok, issues, records),
     summary,
+    stability_summary: stability,
     slowest_commands: slowestCommandTrends(metricsRecords),
-    next_actions: nextActions(issues, summary),
+    next_actions: nextActions(issues, summary, stability),
   };
 }
 
@@ -135,6 +137,7 @@ function readReceipt(path) {
       mode: receipt.mode || '',
       duration_ms: nonNegative(receipt.duration_ms),
       totals: receipt.totals && typeof receipt.totals === 'object' ? receipt.totals : {},
+      loops: Array.isArray(receipt.loops) ? receipt.loops.map(loopStatusSummary) : [],
       efficiency_metrics: receipt.efficiency_metrics && typeof receipt.efficiency_metrics === 'object'
         ? receipt.efficiency_metrics
         : null,
@@ -149,10 +152,24 @@ function readReceipt(path) {
       mode: 'invalid-json',
       duration_ms: 0,
       totals: {},
+      loops: [],
       efficiency_metrics: null,
       error: error.message,
     };
   }
+}
+
+function loopStatusSummary(loop) {
+  return {
+    id: loop?.id || '',
+    status: loop?.status || '',
+    commands: Array.isArray(loop?.commands)
+      ? loop.commands.map((command) => ({
+        label: command?.label || '',
+        status: command?.status || '',
+      }))
+      : [],
+  };
 }
 
 function runSummary(record) {
@@ -237,10 +254,86 @@ function slowestCommandTrends(records) {
     .slice(0, 10);
 }
 
-function nextActions(issues, summary) {
+function stabilitySummary(records) {
+  const loopStatuses = new Map();
+  const commandStatuses = new Map();
+  let loopStatusComparisons = 0;
+  let loopStatusChanges = 0;
+  let commandStatusComparisons = 0;
+  let commandStatusChanges = 0;
+
+  for (const record of records) {
+    for (const loop of record.loops || []) {
+      if (!loop.id) continue;
+      if (!loopStatuses.has(loop.id)) loopStatuses.set(loop.id, []);
+      loopStatuses.get(loop.id).push({ generated_at: record.generated_at, status: loop.status || '' });
+      for (const command of loop.commands || []) {
+        if (!command.label) continue;
+        const key = `${loop.id}::${command.label}`;
+        if (!commandStatuses.has(key)) {
+          commandStatuses.set(key, {
+            loop_id: loop.id,
+            label: command.label,
+            statuses: [],
+          });
+        }
+        commandStatuses.get(key).statuses.push({ generated_at: record.generated_at, status: command.status || '' });
+      }
+    }
+  }
+
+  for (const statuses of loopStatuses.values()) {
+    for (let index = 1; index < statuses.length; index += 1) {
+      loopStatusComparisons += 1;
+      if (statuses[index].status !== statuses[index - 1].status) loopStatusChanges += 1;
+    }
+  }
+  for (const command of commandStatuses.values()) {
+    for (let index = 1; index < command.statuses.length; index += 1) {
+      commandStatusComparisons += 1;
+      if (command.statuses[index].status !== command.statuses[index - 1].status) commandStatusChanges += 1;
+    }
+  }
+
+  const previous = records.length > 1 ? records.at(-2) : null;
+  const latest = records.at(-1) || null;
+  const previousLoopStatuses = new Map((previous?.loops || []).map((loop) => [loop.id, loop.status]));
+  const latestLoopStatuses = new Map((latest?.loops || []).map((loop) => [loop.id, loop.status]));
+  const latestAttention = [...latestLoopStatuses].filter(([, status]) => status === 'attention').map(([id]) => id).sort();
+  const previousAttention = [...previousLoopStatuses].filter(([, status]) => status === 'attention').map(([id]) => id).sort();
+
+  return {
+    loop_status_comparisons: loopStatusComparisons,
+    loop_status_changes: loopStatusChanges,
+    loop_status_change_rate: ratio(loopStatusChanges, loopStatusComparisons),
+    command_status_comparisons: commandStatusComparisons,
+    command_status_changes: commandStatusChanges,
+    command_status_change_rate: ratio(commandStatusChanges, commandStatusComparisons),
+    persistent_attention_loops: [...loopStatuses.entries()]
+      .filter(([, statuses]) => statuses.length === records.length && statuses.every((item) => item.status === 'attention'))
+      .map(([id]) => id)
+      .sort(),
+    latest_attention_loops: latestAttention,
+    new_attention_loops: latestAttention.filter((id) => !previousAttention.includes(id)),
+    resolved_attention_loops: previousAttention.filter((id) => latestLoopStatuses.get(id) !== 'attention'),
+    recent_loop_status_changes: [...latestLoopStatuses.entries()]
+      .filter(([id, status]) => previousLoopStatuses.has(id) && previousLoopStatuses.get(id) !== status)
+      .map(([id, status]) => ({
+        loop_id: id,
+        previous: previousLoopStatuses.get(id),
+        current: status,
+      }))
+      .sort((left, right) => left.loop_id.localeCompare(right.loop_id)),
+  };
+}
+
+function nextActions(issues, summary, stability) {
   const actions = [];
   if (issues.some((item) => item.code === 'missing-efficiency-metrics')) {
     actions.push('Run loop:all:record again so newer receipts include efficiency_metrics, or use --max-runs to scope to metric-aware receipts.');
+  }
+  if (stability?.command_status_change_rate > 0.2) {
+    actions.push('Inspect command status churn before treating the latest speed movement as stable.');
   }
   if (summary?.latest?.persisted_full_receipt_bytes > 50000) {
     actions.push('Review receipt size and decide whether summarized command tails can replace verbose embedded output.');

@@ -1665,3 +1665,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: focused syntax and trend tests, live `agent:efficiency:trends -- --max-runs 1 --fail-on-missing-metrics`, scoped `check:smart`, `audit:commands`, `git diff --check`, em-dash scan, `check:quick`, `loop:system`, enforced `loop:all:record`, two-run `agent:efficiency:trends -- --max-runs 2 --fail-on-missing-metrics`, and `agent:closeout:check --require-efficiency-metrics` passed. The live trend check saw two metric-aware receipts, 0 missing metrics, median wall duration 5030.5 ms, and latest-run deltas of -39 ms wall duration and -158 full receipt bytes.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-20.md`.
 - Next: Commit and push, then prove page-refresh runner policy when the stale ledger/content WIP is resolved or expand reviewed scoring coverage during a real workload pilot.
+
+### 2026-06-30: Agentic Tooling Meta Slice 21, Loop Trend Stability Signals
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Extended `agent:efficiency:trends` with `stability_summary` from loop and command statuses embedded in recorded loop receipts. The summary reports status comparisons, status changes, status change rates, persistent attention loops, latest attention loops, new attention loops, resolved attention loops, and recent loop status changes.
+- System lesson: speed and receipt-size trends need status stability context. A faster loop is less meaningful when command or loop statuses churn between runs.
+- Verification: focused syntax and trend tests, live trend checks, scoped `check:smart`, `test:scripts`, `audit:commands`, `check:quick`, `loop:system`, enforced `loop:all:record`, JSON parse checks, and `agent:closeout:check --require-efficiency-metrics` passed. The final live two-run trend check saw 7 loop comparisons, 0 loop status changes, 16 command comparisons, 0 command status changes, median wall duration 5098 ms, and latest-run deltas of +174 ms wall duration and -105 full receipt bytes.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-21.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T06-15-03-030Z-loop-run.json`.
+- Next: Commit and push, then prove page-refresh runner policy when the stale ledger/content WIP is resolved, expand reviewed scoring coverage during real workload pilots, or add exact token and correction-rate metrics when reliable inputs are available.

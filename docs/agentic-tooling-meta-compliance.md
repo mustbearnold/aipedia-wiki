@@ -246,6 +246,15 @@ Loop efficiency now has a trend summarizer.
 - A live run with `--max-runs 1 --fail-on-missing-metrics` passed against `.agent/loop-runs/system/2026-06-30T05-56-59-972Z-loop-run.json`.
 - A live two-run trend check passed with 2 metric-aware receipts, 0 missing metrics, median wall duration 5030.5 ms, and latest-run deltas of -39 ms wall duration and -158 full receipt bytes.
 
+## Twenty-First System Slice
+
+Loop trends now include receipt-derived stability signals.
+
+- `agent:efficiency:trends` emits `stability_summary` from loop and command statuses embedded in recorded loop receipts.
+- The summary includes loop status comparisons, loop status changes, loop status change rate, command status comparisons, command status changes, command status change rate, persistent attention loops, latest attention loops, new attention loops, resolved attention loops, and recent loop status changes.
+- Focused tests prove persistent attention detection, new attention detection, loop status change rate, command status change count, and unchanged missing-metrics behavior.
+- The final live two-run trend check compared Slice 20 to Slice 21 with 2 metric-aware receipts, 0 missing metrics, median wall duration 5098 ms, latest-run deltas of +174 ms wall duration and -105 full receipt bytes, 7 loop status comparisons, 0 loop status changes, 16 command status comparisons, 0 command status changes, and persistent attention in `freshness`, `performance-ux`, and `revenue-conversion`.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -257,7 +266,7 @@ Loop efficiency now has a trend summarizer.
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json` | Prove page-refresh runner policy on a bounded receipt. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |
-| Speed/token efficiency | Partial | six-worker workflows, timing receipts, loop `efficiency_metrics`, `agent:closeout:check --require-efficiency-metrics`, `agent:efficiency:trends`, focused loop, closeout, and trend tests | Add exact model token usage, correction rate, and flake rate when the runtime exposes them. |
+| Speed/token efficiency | Partial | six-worker workflows, timing receipts, loop `efficiency_metrics`, `agent:closeout:check --require-efficiency-metrics`, `agent:efficiency:trends`, `stability_summary`, focused loop, closeout, and trend tests | Add exact model token usage and correction rate when the runtime exposes them. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |
 
