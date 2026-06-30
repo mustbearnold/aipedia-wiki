@@ -133,6 +133,19 @@ function validLoopReceipt(overrides = {}) {
       other_artifacts: [],
       has_system_artifact: true,
       content_only: false,
+      observed_dirty_before_agent: [],
+      has_observed_dirty_baseline: false,
+      missing_observed_dirty_paths: [],
+      agent_changed_paths: ['scripts/example.mjs'],
+      agent_system_artifacts: ['scripts/example.mjs'],
+      agent_content_artifacts: [],
+      agent_other_artifacts: [],
+      has_agent_system_artifact: true,
+      agent_content_only: false,
+      preexisting_dirty_paths: [],
+      preexisting_system_artifacts: [],
+      preexisting_content_artifacts: [],
+      preexisting_other_artifacts: [],
       next_action: 'System artifact present or enforcement disabled.',
     },
     ledger: {
@@ -1085,6 +1098,89 @@ test('closeout receipt check fails enforced loop receipts without system progres
   }
 });
 
+test('closeout receipt check fails partial scoped system progress fields', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-partial-scoped-progress-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  delete receipt.system_progress.agent_changed_paths;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-system-progress', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /system_progress\.agent_changed_paths/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check rejects preexisting system artifacts as current-agent progress', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-preexisting-system-progress-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.system_progress = {
+    ...receipt.system_progress,
+    changed_paths: ['scripts/preexisting.mjs'],
+    system_artifacts: ['scripts/preexisting.mjs'],
+    content_artifacts: [],
+    other_artifacts: [],
+    has_system_artifact: true,
+    content_only: false,
+    observed_dirty_before_agent: ['scripts/preexisting.mjs'],
+    has_observed_dirty_baseline: true,
+    missing_observed_dirty_paths: [],
+    agent_changed_paths: [],
+    agent_system_artifacts: [],
+    agent_content_artifacts: [],
+    agent_other_artifacts: [],
+    has_agent_system_artifact: false,
+    agent_content_only: false,
+    preexisting_dirty_paths: ['scripts/preexisting.mjs'],
+    preexisting_system_artifacts: ['scripts/preexisting.mjs'],
+    preexisting_content_artifacts: [],
+    preexisting_other_artifacts: [],
+  };
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-system-progress', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('system-progress-no-agent-system-artifact'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates scoped system progress on runner receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-runner-scoped-progress-'));
+  const path = join(dir, 'runner.json');
+  const progress = {
+    ...validLoopReceipt().system_progress,
+    observed_dirty_before_agent: [],
+    has_observed_dirty_baseline: false,
+    preexisting_dirty_paths: ['src/content/tools/synthesia.md'],
+    preexisting_content_artifacts: ['src/content/tools/synthesia.md'],
+  };
+
+  try {
+    writeJson(path, validRunnerReceipt({ system_progress: progress }));
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('system-progress-scoped-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check fails receipts without required closeout identity', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-missing-identity-'));
   const path = join(dir, 'loop.json');
@@ -1182,6 +1278,19 @@ test('closeout receipt check validates DAG artifact refs on runner receipts', ()
       changed_paths: [],
       system_artifacts: [],
       has_system_artifact: false,
+      observed_dirty_before_agent: [],
+      has_observed_dirty_baseline: false,
+      missing_observed_dirty_paths: [],
+      agent_changed_paths: [],
+      agent_system_artifacts: [],
+      agent_content_artifacts: [],
+      agent_other_artifacts: [],
+      has_agent_system_artifact: false,
+      agent_content_only: false,
+      preexisting_dirty_paths: [],
+      preexisting_system_artifacts: [],
+      preexisting_content_artifacts: [],
+      preexisting_other_artifacts: [],
     };
     writeJson(receiptPath, validRunnerReceipt({
       system_progress: advisorySystemProgress,

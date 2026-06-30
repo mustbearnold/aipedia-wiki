@@ -76,6 +76,27 @@ const RUNNER_WORKFLOW_POLICIES = {
     required_fields: ['plan', 'report_dir', 'report_summary', 'markdown_receipt', 'current_date'],
   },
 };
+const SCOPED_SYSTEM_PROGRESS_ARRAY_FIELDS = [
+  'observed_dirty_before_agent',
+  'missing_observed_dirty_paths',
+  'agent_changed_paths',
+  'agent_system_artifacts',
+  'agent_content_artifacts',
+  'agent_other_artifacts',
+  'preexisting_dirty_paths',
+  'preexisting_system_artifacts',
+  'preexisting_content_artifacts',
+  'preexisting_other_artifacts',
+];
+const SCOPED_SYSTEM_PROGRESS_BOOLEAN_FIELDS = [
+  'has_observed_dirty_baseline',
+  'has_agent_system_artifact',
+  'agent_content_only',
+];
+const SCOPED_SYSTEM_PROGRESS_FIELDS = [
+  ...SCOPED_SYSTEM_PROGRESS_ARRAY_FIELDS,
+  ...SCOPED_SYSTEM_PROGRESS_BOOLEAN_FIELDS,
+];
 
 if (HELP_MODE) {
   console.log(usage());
@@ -536,6 +557,9 @@ function validateSystemProgress(progress, receipt, issues, options = {}) {
   requireBoolean(progress, 'has_system_artifact', issues, 'system_progress.has_system_artifact');
   requireBoolean(progress, 'content_only', issues, 'system_progress.content_only');
 
+  const hasScopedFields = hasScopedSystemProgress(progress);
+  if (hasScopedFields) validateScopedSystemProgress(progress, issues);
+
   if (enforce && progress.require_system_artifact !== true) {
     issues.push(issue('system-progress-not-enforced', 'system_progress.require_system_artifact must be true when --require-system-progress is used.'));
   }
@@ -544,6 +568,83 @@ function validateSystemProgress(progress, receipt, issues, options = {}) {
   }
   if (receipt.ok === true && enforce && progress.content_only === true) {
     issues.push(issue('system-progress-content-only', 'Passing enforced loop receipt cannot be content_only.'));
+  }
+  if (receipt.ok === true && enforce && hasScopedFields && progress.has_agent_system_artifact !== true) {
+    issues.push(issue('system-progress-no-agent-system-artifact', 'Passing enforced loop receipt with scoped system_progress must include at least one current-agent system artifact.'));
+  }
+  if (receipt.ok === true && enforce && hasScopedFields && progress.agent_content_only === true) {
+    issues.push(issue('system-progress-agent-content-only', 'Passing enforced loop receipt with scoped system_progress cannot be agent_content_only.'));
+  }
+}
+
+function hasScopedSystemProgress(progress) {
+  return SCOPED_SYSTEM_PROGRESS_FIELDS.some((field) => hasOwn(progress, field));
+}
+
+function validateScopedSystemProgress(progress, issues) {
+  for (const field of SCOPED_SYSTEM_PROGRESS_ARRAY_FIELDS) {
+    requireStringArray(progress, field, issues, `system_progress.${field}`);
+  }
+  for (const field of SCOPED_SYSTEM_PROGRESS_BOOLEAN_FIELDS) {
+    requireBoolean(progress, field, issues, `system_progress.${field}`);
+  }
+
+  const arrays = Object.fromEntries(SCOPED_SYSTEM_PROGRESS_ARRAY_FIELDS.map((field) => [field, stringArray(progress, field)]));
+  if (Object.values(arrays).some((value) => value == null)) return;
+  if (SCOPED_SYSTEM_PROGRESS_BOOLEAN_FIELDS.some((field) => typeof progress[field] !== 'boolean')) return;
+  const legacyChangedPaths = stringArray(progress, 'changed_paths');
+  if (!legacyChangedPaths) return;
+
+  for (const field of SCOPED_SYSTEM_PROGRESS_ARRAY_FIELDS) {
+    if (hasDuplicates(arrays[field])) {
+      issues.push(issue('system-progress-scoped-invalid', `system_progress.${field} must not contain duplicate paths.`));
+    }
+  }
+
+  const observed = arrays.observed_dirty_before_agent;
+  const missing = arrays.missing_observed_dirty_paths;
+  const agentChanged = arrays.agent_changed_paths;
+  const agentSystem = arrays.agent_system_artifacts;
+  const agentContent = arrays.agent_content_artifacts;
+  const agentOther = arrays.agent_other_artifacts;
+  const preexistingDirty = arrays.preexisting_dirty_paths;
+  const preexistingSystem = arrays.preexisting_system_artifacts;
+  const preexistingContent = arrays.preexisting_content_artifacts;
+  const preexistingOther = arrays.preexisting_other_artifacts;
+
+  if (progress.has_observed_dirty_baseline !== (observed.length > 0)) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.has_observed_dirty_baseline must match observed_dirty_before_agent length.'));
+  }
+  if (progress.has_agent_system_artifact !== (agentSystem.length > 0)) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.has_agent_system_artifact must match agent_system_artifacts length.'));
+  }
+  const expectedAgentContentOnly = agentChanged.length > 0 && agentSystem.length === 0 && agentContent.length > 0;
+  if (progress.agent_content_only !== expectedAgentContentOnly) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.agent_content_only must match current-agent changed path classification.'));
+  }
+  if (intersection(agentChanged, preexistingDirty).length > 0) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.agent_changed_paths and preexisting_dirty_paths must not overlap.'));
+  }
+  if (!sameMembers(legacyChangedPaths, agentChanged.concat(preexistingDirty))) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.changed_paths must equal agent_changed_paths plus preexisting_dirty_paths.'));
+  }
+  if (!sameMembers(agentChanged, agentSystem.concat(agentContent, agentOther))) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.agent_changed_paths must equal agent_system_artifacts plus agent_content_artifacts plus agent_other_artifacts.'));
+  }
+  if (!sameMembers(preexistingDirty, preexistingSystem.concat(preexistingContent, preexistingOther))) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.preexisting_dirty_paths must equal preexisting_system_artifacts plus preexisting_content_artifacts plus preexisting_other_artifacts.'));
+  }
+  if (!isSubset(preexistingDirty, observed)) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.preexisting_dirty_paths must be a subset of observed_dirty_before_agent.'));
+  }
+  if (!isSubset(missing, observed)) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.missing_observed_dirty_paths must be a subset of observed_dirty_before_agent.'));
+  }
+  if (intersection(missing, legacyChangedPaths).length > 0) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.missing_observed_dirty_paths must not include changed paths.'));
+  }
+  if (!sameMembers(observed, preexistingDirty.concat(missing))) {
+    issues.push(issue('system-progress-scoped-mismatch', 'system_progress.observed_dirty_before_agent must equal preexisting_dirty_paths plus missing_observed_dirty_paths.'));
   }
 }
 
@@ -1429,6 +1530,35 @@ function issue(code, detail) {
 
 function isObject(value) {
   return value != null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function stringArray(value, field) {
+  return Array.isArray(value[field]) && value[field].every((item) => typeof item === 'string') ? value[field] : null;
+}
+
+function hasDuplicates(values) {
+  return new Set(values).size !== values.length;
+}
+
+function sameMembers(left, right) {
+  if (left.length !== right.length) return false;
+  const sortedLeft = [...left].sort();
+  const sortedRight = [...right].sort();
+  return sortedLeft.every((value, index) => value === sortedRight[index]);
+}
+
+function isSubset(needles, haystack) {
+  const haystackSet = new Set(haystack);
+  return needles.every((item) => haystackSet.has(item));
+}
+
+function intersection(left, right) {
+  const rightSet = new Set(right);
+  return left.filter((item) => rightSet.has(item));
+}
+
+function hasOwn(value, field) {
+  return Object.prototype.hasOwnProperty.call(value, field);
 }
 
 function emitReport(report) {
