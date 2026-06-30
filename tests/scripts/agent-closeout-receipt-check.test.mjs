@@ -21,8 +21,10 @@ function writeTrendSourceReceipts(projectDir, receipt, durations = [400, 500]) {
     const sourcePath = join(projectDir, run.path);
     mkdirSync(dirname(sourcePath), { recursive: true });
     const source = validLoopReceipt();
+    source.ok = run.ok;
     source.generated_at = run.generated_at;
     source.run_id = run.run_id;
+    source.duration_ms = run.wall_duration_ms;
     source.totals = {
       loops: 7,
       ok: 6,
@@ -31,6 +33,16 @@ function writeTrendSourceReceipts(projectDir, receipt, durations = [400, 500]) {
       commands: 16,
     };
     source.loops = trendSourceLoops();
+    Object.assign(source.efficiency_metrics, {
+      wall_duration_ms: run.wall_duration_ms,
+      total_command_duration_ms: run.total_command_duration_ms,
+      command_count: run.command_count,
+      loop_count: run.loop_count,
+      attention_rate: run.attention_rate,
+      persisted_full_receipt_bytes: run.persisted_full_receipt_bytes,
+      persisted_latest_receipt_bytes: run.persisted_latest_receipt_bytes,
+      system_artifact_count: run.system_artifact_count,
+    });
     source.efficiency_metrics.slowest_commands = [
       {
         loop_id: 'freshness',
@@ -954,6 +966,28 @@ test('closeout receipt check fails loop efficiency trend summary drift', () => {
     assert.match(details, /summary\.median_wall_duration_ms/);
     assert.match(details, /summary\.latest\.wall_duration_ms/);
     assert.match(details, /summary\.delta_from_previous\.wall_duration_ms/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails loop efficiency trend run row drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-efficiency-trends-run-drift-'));
+  const path = join(dir, 'efficiency-trends.json');
+  const receipt = validLoopEfficiencyTrendReceipt();
+
+  try {
+    writeTrendSourceReceipts(dir, receipt);
+    receipt.runs[0].wall_duration_ms = 1;
+    receipt.runs[1].estimated_full_receipt_tokens = 1;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /runs\[0\]\.wall_duration_ms/);
+    assert.match(details, /runs\[1\]\.estimated_full_receipt_tokens/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

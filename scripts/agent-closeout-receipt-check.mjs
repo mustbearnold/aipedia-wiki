@@ -276,6 +276,7 @@ function validateLoopEfficiencyTrendReceipt(value, issues) {
     }
   }
   const sourceContext = loadLoopEfficiencyTrendSourceReceipts(value, issues);
+  if (Array.isArray(value.runs)) validateLoopEfficiencyTrendRunFacts(sourceContext, issues);
   if (isObject(value.summary)) {
     validateLoopEfficiencyTrendSummary(value.summary, issues);
     validateLoopEfficiencyTrendSummaryFacts(value, issues);
@@ -477,6 +478,39 @@ function validateLoopEfficiencyTrendCorrectionFacts(correction, sourceContext, i
   const records = sourceContext.records.map((item) => item.source);
   const expected = computeTrendCorrectionSummary(records);
   validateTrendFactsObject(correction, expected, 'correction_summary', 'loop-efficiency-trends-correction-mismatch', issues);
+}
+
+function validateLoopEfficiencyTrendRunFacts(sourceContext, issues) {
+  if (!sourceContext || sourceContext.had_issue) return;
+  for (const { run, run_index: runIndex, source } of sourceContext.records) {
+    const expected = computeTrendRunSummary(run.path, source);
+    for (const [field, value] of Object.entries(expected)) {
+      if (!deepTrendEqual(run[field], value)) {
+        issues.push(issue('loop-efficiency-trends-run-mismatch', `runs[${runIndex}].${field} must match source loop receipt facts.`));
+      }
+    }
+  }
+}
+
+function computeTrendRunSummary(path, source) {
+  const metrics = isObject(source.efficiency_metrics) ? source.efficiency_metrics : {};
+  const totals = isObject(source.totals) ? source.totals : {};
+  return {
+    path,
+    generated_at: typeof source.generated_at === 'string' ? source.generated_at : '',
+    run_id: typeof source.run_id === 'string' ? source.run_id : '',
+    ok: source.ok === true,
+    has_efficiency_metrics: isObject(source.efficiency_metrics),
+    wall_duration_ms: nonNegativeMetric(metrics.wall_duration_ms || source.duration_ms),
+    total_command_duration_ms: nonNegativeMetric(metrics.total_command_duration_ms),
+    command_count: nonNegativeMetric(metrics.command_count || totals.commands),
+    loop_count: nonNegativeMetric(metrics.loop_count || totals.loops),
+    attention_rate: metricNumber(metrics.attention_rate),
+    persisted_full_receipt_bytes: nonNegativeMetric(metrics.persisted_full_receipt_bytes),
+    persisted_latest_receipt_bytes: nonNegativeMetric(metrics.persisted_latest_receipt_bytes),
+    estimated_full_receipt_tokens: estimateMetricTokens(metrics.persisted_full_receipt_bytes),
+    system_artifact_count: nonNegativeMetric(metrics.system_artifact_count),
+  };
 }
 
 function computeTrendStabilitySummary(records) {
@@ -1051,6 +1085,16 @@ function medianMetric(values) {
 function nonNegativeMetric(value) {
   const number = Number(value);
   return Number.isFinite(number) && number > 0 ? number : 0;
+}
+
+function metricNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? roundMetric(number) : 0;
+}
+
+function estimateMetricTokens(bytes) {
+  const number = nonNegativeMetric(bytes);
+  return number ? Math.ceil(number / 4) : 0;
 }
 
 function validateEfficiencySlowestCommands(metrics, receipt, issues) {

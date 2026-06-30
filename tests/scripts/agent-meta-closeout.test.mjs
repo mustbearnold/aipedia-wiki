@@ -493,6 +493,18 @@ test('meta closeout router validates loop efficiency trend receipts', () => {
     const source = validLoopReceipt();
     source.generated_at = trend.runs[0].generated_at;
     source.run_id = trend.runs[0].run_id;
+    source.ok = trend.runs[0].ok;
+    source.duration_ms = trend.runs[0].wall_duration_ms;
+    Object.assign(source.efficiency_metrics, {
+      wall_duration_ms: trend.runs[0].wall_duration_ms,
+      total_command_duration_ms: trend.runs[0].total_command_duration_ms,
+      command_count: trend.runs[0].command_count,
+      loop_count: trend.runs[0].loop_count,
+      attention_rate: trend.runs[0].attention_rate,
+      persisted_full_receipt_bytes: trend.runs[0].persisted_full_receipt_bytes,
+      persisted_latest_receipt_bytes: trend.runs[0].persisted_latest_receipt_bytes,
+      system_artifact_count: trend.runs[0].system_artifact_count,
+    });
     writeJson(join(root, '.agent/loop-runs/system/fixture-loop-run.json'), source);
     writeJson(join(root, 'trend.json'), trend);
 
