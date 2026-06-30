@@ -17,6 +17,7 @@ const WORKFLOW_DIR = join(PROJECT_DIR, '.github', 'workflows');
 const REQUIRED_OPERATOR_NPM_SCRIPTS = [
   'audit:coverage-quality:changed',
   'audit:provenance:changed',
+  'agent:proof:readiness',
   'agent:meta:closeout',
   'agent:meta:closeout:receipt',
   'agent:meta:closeout:runner',
@@ -94,6 +95,7 @@ const REQUIRED_PACKAGE_COMMAND_PARTS = {
   prebuild: ['node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged'],
 };
 const REQUIRED_EXACT_NPM_SCRIPT_COMMANDS = {
+  'agent:proof:readiness': 'node scripts/agent-proof-readiness.mjs',
   'agent:meta:closeout': 'node scripts/agent-closeout-receipt-check.mjs --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
   'agent:meta:closeout:receipt': 'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
   'agent:meta:closeout:runner': 'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof --require-workflow-policy',

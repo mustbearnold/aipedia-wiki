@@ -8,6 +8,7 @@ import { test } from 'node:test';
 const REQUIRED_SCRIPTS = [
   'audit:coverage-quality:changed',
   'audit:provenance:changed',
+  'agent:proof:readiness',
   'agent:meta:closeout',
   'agent:meta:closeout:receipt',
   'agent:meta:closeout:runner',
@@ -60,6 +61,7 @@ function writeFixtureProject(workflows, scriptOverrides = {}) {
     'node scripts/guard-content.mjs && node scripts/guard-stale-facts.mjs && node scripts/guard-em-dashes.mjs && node scripts/audit-guide-picks.mjs && node scripts/audit-tool-logos.mjs && node scripts/audit-news-rendering.mjs && node scripts/audit-hosting-runtime.mjs && node scripts/generate-page-refresh-ledger.mjs --check && node scripts/audit-font-policy.mjs --source';
   scripts['guard:challenge'] = 'node scripts/guard-challenge.mjs';
   scripts['guard:challenge:check'] = 'node scripts/guard-challenge.mjs --check';
+  scripts['agent:proof:readiness'] = 'node scripts/agent-proof-readiness.mjs';
   scripts['agent:meta:closeout'] =
     'node scripts/agent-closeout-receipt-check.mjs --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof';
   scripts['agent:meta:closeout:receipt'] =
@@ -208,6 +210,7 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.equal(report.missing_script_paths.length, 0);
   assert.ok(report.required_operator_npm_scripts.includes('audit:coverage-quality:changed'));
   assert.ok(report.required_operator_npm_scripts.includes('audit:provenance:changed'));
+  assert.ok(report.required_operator_npm_scripts.includes('agent:proof:readiness'));
   assert.ok(report.required_operator_npm_scripts.includes('agent:meta:closeout'));
   assert.ok(report.required_operator_npm_scripts.includes('agent:meta:closeout:receipt'));
   assert.ok(report.required_operator_npm_scripts.includes('agent:meta:closeout:runner'));
@@ -282,6 +285,7 @@ test('command surface audit verifies documented npm scripts and script paths', (
     prebuild: ['node scripts/fetch-github-stats.mjs --output src/data/github-stats.build.json --skip-render-unchanged'],
   });
   assert.deepEqual(report.required_exact_npm_script_commands, {
+    'agent:proof:readiness': 'node scripts/agent-proof-readiness.mjs',
     'agent:meta:closeout': 'node scripts/agent-closeout-receipt-check.mjs --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
     'agent:meta:closeout:receipt': 'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
     'agent:meta:closeout:runner': 'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof --require-workflow-policy',

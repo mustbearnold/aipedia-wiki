@@ -553,12 +553,29 @@ Strict meta closeout routing is now deterministic.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 4977 ms, latest estimated full receipt tokens 10808, and latest system artifact count 9.
 - Remaining gap: use `agent:meta:closeout:auto` as the default closeout handoff command so future agents do not need to remember the command family.
 
+## Forty-Second System Slice
+
+Positive page-refresh proof readiness is now machine-readable.
+
+- `scripts/agent-proof-readiness.mjs` reports read-only readiness for bounded meta-goal proof pilots.
+- `package.json` exposes `agent:proof:readiness`.
+- The first target is `page-refresh-policy`, the positive bounded page-refresh runner policy proof.
+- The target requires fresh page-refresh input freshness and a clean content/content-support dirty boundary before the proof is considered ready.
+- Dirty blockers include `PAGE_REFRESH_LEDGER.md`, `src/content/**`, `src/data/source-registry.json`, and `src/data/coverage-backlog.json`.
+- Focused readiness tests cover ready state, stale-input plus dirty-content blockers, and unknown target rejection.
+- Live readiness check currently fails closed, as intended, on stale `PAGE_REFRESH_LEDGER.md` input plus separate Synthesia/content WIP.
+- The live blocker is specific: `input-freshness-stale` for `PAGE_REFRESH_LEDGER.md`, plus `dirty-content-wip` for `src/content/tools/synthesia.md`, `src/data/coverage-backlog.json`, `src/data/source-registry.json`, and `src/content/comparisons/captions-vs-synthesia.md`.
+- Scoped `check:smart`, `check:quick`, `audit:commands`, strict `agent:meta:closeout:auto`, and efficiency trends passed.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5008 ms, latest estimated full receipt tokens 10832, and latest system artifact count 9.
+- Remaining gap: after the separate content WIP is resolved, rerun `agent:proof:readiness` and then run the positive bounded page-refresh policy proof.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
-| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness --refresh-stale`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Prove the refresh policy through one bounded runner or content pilot and decide which workflows should auto-apply in automation. |
+| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness --refresh-stale`, `agent:proof:readiness`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Resolve separate content WIP, rerun proof readiness, then run the positive bounded page-refresh policy proof. |
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt`, `agent:pause-receipt --validate`, `runner:pause-receipt`, `runner:interrupt-proof`, pause receipt `trace` and `artifact_refs`, `agent:closeout:check` pause receipt validation, `agent:closeout:check --require-trace-artifacts` for pause receipts, dirty-state separation for `--observed-dirty-before-agent`, runner interrupted command detection, closeout command `interrupted` flags, closeout `interrupted_pause_receipt`, `interrupted-pause-receipt` artifact refs, `agent:closeout:check` interrupted pause link enforcement, `agent:closeout:check` runner interrupt proof report validation, focused pause and closeout tests, focused Rust interrupt tests, live `local/tmp/slice24-pause-receipt-v2.json` smoke, live `local/tmp/aipedia-runner/pauses/slice25-runner-pause.json` smoke, live `local/tmp/slice26-pause-trace-receipt.json` smoke, durable interrupted runner proof receipts and proof reports under `.agent/evals/runner-interrupt-proofs/` | Keep strict proof-report validation in the interrupt smoke and reuse the pattern for other pause/resume proofs. |
 | DAG contracts | Partial | `runner:agent-plan`, `scripts/runner-agent-plan-checked.mjs`, `agent:dag:check`, `loop:all:record --dag-graph`, `loop:all:record --dag-validation-report`, runner `AIPEDIA_DAG_GRAPHS`, runner `AIPEDIA_DAG_VALIDATION_REPORTS`, `agent:closeout:check --require-dag-proof`, `agent:meta:closeout`, `agent:meta:closeout:receipt`, `agent:meta:closeout:runner`, `agent:meta:closeout:auto`, command-surface exact invariants for strict meta closeout commands, closeout validation for `agent-task-dag-validation-report` refs, validation-report path matching, validated `aipedia.agent-task-dag.v1` node contract, focused DAG/wrapper/loop/runner/closeout/router tests, `.agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json`, `.agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json`, `.agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json`, `.agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json`, and architecture docs | Use strict auto closeout routing as the default handoff path, with exact underlying commands kept for specialized workflows. |

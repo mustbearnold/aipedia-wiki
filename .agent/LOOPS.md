@@ -21,6 +21,7 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run agent:meta:closeout:receipt -- --receipt <path> --json`: validate an explicit DAG-planned loop or runner receipt with the same June 30 strict proof contract.
 - `npm run agent:meta:closeout:runner -- --receipt <path> --json`: validate an explicit DAG-planned runner receipt with strict proof plus workflow-policy checks.
 - `npm run agent:meta:closeout:auto -- --receipt <path> --json`: route a latest loop, explicit loop, or Rust runner receipt to the correct strict June 30 closeout profile. Use this as the default when the receipt type is the only thing known.
+- `npm run agent:proof:readiness -- --target page-refresh-policy --json`: check whether a bounded proof target is safe to run. The page-refresh target fails closed on stale page ledger input and dirty content boundaries.
 - `npm run loop:decision -- --json`: run the Decision Content loop checks.
 - `npm run loop:freshness -- --json`: run the Freshness loop checks.
 - `npm run loop:trust -- --json`: run the Trust and Provenance loop checks.
