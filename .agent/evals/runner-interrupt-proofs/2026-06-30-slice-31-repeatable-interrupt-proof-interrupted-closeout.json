@@ -1,0 +1,107 @@
+{
+  "schema_version": "aipedia.closeout-receipt.v1",
+  "workflow": "tool-refresh",
+  "status": "failed",
+  "generated_at": "2026-06-30T08:06:42.877522001+00:00",
+  "goal_id": "2026-06-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-31-repeatable-interrupt-proof-run",
+  "residual_risks": [
+    "Repeatable interrupted runner proof validates pause capture, not rendered page quality."
+  ],
+  "next_actions": [
+    "Use copied proof receipts to confirm interrupted closeout pause linkage remains enforced."
+  ],
+  "trace": {
+    "trace_id": "2026-06-30-agentic-tooling-meta-os:2026-06-30-slice-31-repeatable-interrupt-proof-run",
+    "span_id": "span:tool-refresh:2026-06-30-slice-31-repeatable-interrupt-proof-run:2026-06-30T08:06:42.877522001-00:00",
+    "parent_span_id": "",
+    "name": "tool-refresh",
+    "started_at": "2026-06-30T08:06:42.877522001+00:00",
+    "ended_at": "2026-06-30T08:06:42.877579692+00:00",
+    "duration_ms": 1218
+  },
+  "artifact_refs": [
+    {
+      "role": "input",
+      "kind": "plan",
+      "path": "plan.json",
+      "description": "Planner JSON used for this closeout."
+    },
+    {
+      "role": "input",
+      "kind": "route-args",
+      "path": "route-args.txt",
+      "description": "Generated route QA argument file."
+    },
+    {
+      "role": "output",
+      "kind": "markdown-receipt",
+      "path": "receipts/2026-06-30T08-06-42Z-tool-refresh-closeout.md",
+      "description": "Human-readable closeout receipt."
+    },
+    {
+      "role": "output",
+      "kind": "json-receipt",
+      "path": "receipts/2026-06-30T08-06-42Z-tool-refresh-closeout.json",
+      "description": "Machine-readable closeout receipt."
+    },
+    {
+      "role": "output",
+      "kind": "interrupted-pause-receipt",
+      "path": "local/tmp/aipedia-runner/pauses/2026-06-30T08-06-42-058Z-tool-refresh-interrupted-pause.json",
+      "description": "Pause receipt written after an interrupted closeout command."
+    },
+    {
+      "role": "route",
+      "kind": "changed-route",
+      "id": "/categories/",
+      "description": "tool-refresh"
+    },
+    {
+      "role": "route",
+      "kind": "changed-route",
+      "id": "/tools/",
+      "description": "tool-refresh"
+    },
+    {
+      "role": "embedded",
+      "kind": "closeout-command",
+      "id": "tool-refresh:ledger-generate",
+      "description": "ledger generate"
+    }
+  ],
+  "current_date": null,
+  "elapsed_ms": 1218,
+  "plan": "plan.json",
+  "route_args": "route-args.txt",
+  "report_dir": null,
+  "report_summary": null,
+  "markdown_receipt": "receipts/2026-06-30T08-06-42Z-tool-refresh-closeout.md",
+  "changed_routes": [
+    "/categories/",
+    "/tools/"
+  ],
+  "source_ids": [],
+  "widths": [
+    319,
+    360,
+    390,
+    430,
+    768,
+    1024,
+    1366
+  ],
+  "commands": [
+    {
+      "label": "ledger generate",
+      "status": 130,
+      "interrupted": true,
+      "elapsed_ms": 399,
+      "details_path": null
+    }
+  ],
+  "superseded_failures": [],
+  "interrupted_pause_receipt": "local/tmp/aipedia-runner/pauses/2026-06-30T08-06-42-058Z-tool-refresh-interrupted-pause.json",
+  "system_progress": null,
+  "input_freshness": null
+}

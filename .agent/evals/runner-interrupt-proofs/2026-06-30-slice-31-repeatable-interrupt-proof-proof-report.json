@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "mode": "runner-interrupt-proof",
+  "schema_version": "aipedia.runner-interrupt-proof.v1",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "work_dir": "local/tmp/aipedia-runner-interrupt-proof",
+  "proof_dir": ".agent/evals/runner-interrupt-proofs",
+  "proof_prefix": "2026-06-30-slice-31-repeatable-interrupt-proof",
+  "goal_id": "2026-06-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-31-repeatable-interrupt-proof-run",
+  "current_date": "2026-06-30",
+  "fixture": {
+    "package_json": "local/tmp/aipedia-runner-interrupt-proof/package.json",
+    "plan": "local/tmp/aipedia-runner-interrupt-proof/plan.json",
+    "route_args": "local/tmp/aipedia-runner-interrupt-proof/route-args.txt",
+    "receipt_dir": "local/tmp/aipedia-runner-interrupt-proof/receipts",
+    "ledger_script": "node -e \"setTimeout(() => process.kill(process.pid, 'SIGINT'), 25); setTimeout(() => {}, 5000)\""
+  },
+  "runner": {
+    "status": 1,
+    "signal": "",
+    "expected_nonzero": true,
+    "stdout_tail": "     \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \"package.json\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \"src/content/tools/synthesia.md\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \"src/data/coverage-backlog.json\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \"src/data/source-registry.json\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-closeout.json\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-pause.json\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \"scripts/runner-interrupt-proof.mjs\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \"src/content/comparisons/captions-vs-synthesia.md\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"input\",\n        \"kind\": \"observed-dirty-before-agent\",\n        \"path\": \"tests/scripts/runner-interrupt-proof.test.mjs\",\n        \"description\": \"Dirty file observed before this agent run and excluded from touched files.\"\n      },\n      {\n        \"role\": \"embedded\",\n        \"kind\": \"next-command\",\n        \"id\": \"next-command:1\",\n        \"description\": \"npm run runner:tool-refresh:closeout\"\n      },\n      {\n        \"role\": \"embedded\",\n        \"kind\": \"validation-done\",\n        \"id\": \"validation-done:1\",\n        \"description\": \"Detected interrupted runner command: ledger generate.\"\n      },\n      {\n        \"role\": \"embedded\",\n        \"kind\": \"validation-pending\",\n        \"id\": \"validation-pending:1\",\n        \"description\": \"Review partial command output and any closeout receipt before retrying.\"\n      }\n    ]\n  }\n}\n{\n  \"ok\": true,\n  \"mode\": \"pause-receipt-validation\",\n  \"project_dir\": \"/home/mustbearnold/Projects/aipedia-wiki-clean\",\n  \"path\": \"local/tmp/aipedia-runner/pauses/2026-06-30T08-06-42-058Z-tool-refresh-interrupted-pause.json\",\n  \"validation\": {\n    \"schema_version\": \"aipedia.pause-receipt-validation.v1\",\n    \"ok\": true,\n    \"path\": \"local/tmp/aipedia-runner/pauses/2026-06-30T08-06-42-058Z-tool-refresh-interrupted-pause.json\",\n    \"receipt_schema_version\": \"aipedia.pause-receipt.v1\",\n    \"issues\": [],\n    \"issue_count\": 0\n  }\n}\nRunner pause receipt: local/tmp/aipedia-runner/pauses/2026-06-30T08-06-42-058Z-tool-refresh-interrupted-pause.json\nReceipt: receipts/2026-06-30T08-06-42Z-tool-refresh-closeout.md\nReceipt JSON: receipts/2026-06-30T08-06-42Z-tool-refresh-closeout.json\n",
+    "stderr_tail": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.02s\n     Running `tools/aipedia-runner/target/debug/aipedia-runner --project-dir local/tmp/aipedia-runner-interrupt-proof closeout --plan plan.json --route-args route-args.txt --receipt-dir receipts --skip-build --skip-route-qa`\nError: closeout stopped after interrupted command: ledger generate. Pause receipt: local/tmp/aipedia-runner/pauses/2026-06-30T08-06-42-058Z-tool-refresh-interrupted-pause.json\n"
+  },
+  "artifacts": {
+    "pause_receipt": "local/tmp/aipedia-runner/pauses/2026-06-30T08-06-42-058Z-tool-refresh-interrupted-pause.json",
+    "closeout_receipt": "local/tmp/aipedia-runner-interrupt-proof/receipts/2026-06-30T08-06-42Z-tool-refresh-closeout.json",
+    "copied_pause_receipt": ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-pause.json",
+    "copied_closeout_receipt": ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-closeout.json",
+    "proof_report": ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json"
+  },
+  "assertions": {
+    "closeout_failed": true,
+    "interrupted_command_recorded": true,
+    "interrupted_pause_receipt_linked": true,
+    "interrupted_pause_artifact_linked": true
+  },
+  "validations": [
+    {
+      "label": ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-pause.json",
+      "status": 0,
+      "ok": true,
+      "stdout_tail": "{\n  \"ok\": true,\n  \"mode\": \"closeout-receipt-check\",\n  \"project_dir\": \"/home/mustbearnold/Projects/aipedia-wiki-clean\",\n  \"require_system_progress\": false,\n  \"require_closeout_identity\": false,\n  \"require_trace_artifacts\": true,\n  \"require_workflow_policy\": false,\n  \"require_efficiency_metrics\": false,\n  \"totals\": {\n    \"receipts\": 1,\n    \"ok\": 1,\n    \"failed\": 0,\n    \"issues\": 0\n  },\n  \"receipts\": [\n    {\n      \"ok\": true,\n      \"path\": \".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-pause.json\",\n      \"type\": \"pause-receipt\",\n      \"issues\": []\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "label": ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-closeout.json",
+      "status": 0,
+      "ok": true,
+      "stdout_tail": "{\n  \"ok\": true,\n  \"mode\": \"closeout-receipt-check\",\n  \"project_dir\": \"/home/mustbearnold/Projects/aipedia-wiki-clean\",\n  \"require_system_progress\": false,\n  \"require_closeout_identity\": true,\n  \"require_trace_artifacts\": true,\n  \"require_workflow_policy\": false,\n  \"require_efficiency_metrics\": false,\n  \"totals\": {\n    \"receipts\": 1,\n    \"ok\": 1,\n    \"failed\": 0,\n    \"issues\": 0\n  },\n  \"receipts\": [\n    {\n      \"ok\": true,\n      \"path\": \".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-closeout.json\",\n      \"type\": \"runner-closeout\",\n      \"issues\": []\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    }
+  ],
+  "issues": [],
+  "next_actions": [
+    "Use the copied proof receipts in compliance docs and future regression checks."
+  ],
+  "report_path": ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json"
+}

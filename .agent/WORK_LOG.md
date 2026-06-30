@@ -1775,3 +1775,15 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-30.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-57-43-981Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.913s wall duration, 42,577 full receipt bytes, 24,033 latest receipt bytes, estimated full receipt tokens 10,645, and 6 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then package the live interrupted runner proof as a repeatable smoke command or script.
+
+### 2026-06-30: Agentic Tooling Meta Slice 31, Repeatable Runner Interrupt Proof
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `npm run runner:interrupt-proof`, backed by `scripts/runner-interrupt-proof.mjs`, plus focused tests. The command writes a disposable interrupt fixture, runs the real Rust tool-refresh closeout against a self-SIGINT `ledger:pages` script, expects the interrupted closeout failure, copies the generated pause and closeout receipts into `.agent/evals/runner-interrupt-proofs/`, validates those receipts, and writes an `aipedia.runner-interrupt-proof.v1` report.
+- System lesson: live proof should be executable from one command, not reconstructed from chat memory and ignored local files.
+- Verification: focused syntax, focused runner-interrupt-proof tests, dry-run proof, command-surface audit, live repeatable proof, copied receipt validation, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record`, efficiency trends, and required closeout validation passed.
+- Durable proof: `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-pause.json`, `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-interrupted-closeout.json`, and `.agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-31.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-10-26-335Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.886s wall duration, 43,501 full receipt bytes, 24,957 latest receipt bytes, estimated full receipt tokens 10,876, and 12 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then teach `agent:closeout:check` to validate `aipedia.runner-interrupt-proof.v1` reports directly.
