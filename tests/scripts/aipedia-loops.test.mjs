@@ -362,6 +362,52 @@ test('aipedia loops records system progress in run ledgers', () => {
   }
 });
 
+test('aipedia loops records current-agent progress separately from preexisting dirty work', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-preexisting-dirty-'));
+  const registry = writeRegistry(dir);
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+
+  try {
+    commitFixtureBaseline(dir);
+    mkdirSync(join(dir, 'src', 'content', 'tools'), { recursive: true });
+    mkdirSync(join(dir, '.agent'), { recursive: true });
+    writeFileSync(join(dir, 'src', 'content', 'tools', 'preexisting.md'), '# Preexisting\n');
+    writeFileSync(join(dir, '.agent', 'WORK_LOG.md'), '# Work Log\n');
+
+    const result = runLoops(
+      '--json',
+      '--run',
+      '--loop',
+      'clean-loop',
+      '--write-ledger',
+      '--require-system-progress',
+      '--observed-dirty-before-agent',
+      'src/content/tools/preexisting.md',
+      `--ledger-dir=${ledgerDir}`,
+      `--project-dir=${dir}`,
+      `--registry=${registry}`,
+    );
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.system_progress.has_system_artifact, true);
+    assert.equal(report.system_progress.has_agent_system_artifact, true);
+    assert.ok(report.system_progress.system_artifacts.includes('.agent/WORK_LOG.md'));
+    assert.ok(report.system_progress.content_artifacts.includes('src/content/tools/preexisting.md'));
+    assert.deepEqual(report.system_progress.preexisting_content_artifacts, ['src/content/tools/preexisting.md']);
+    assert.deepEqual(report.system_progress.agent_content_artifacts, []);
+    assert.ok(report.system_progress.agent_system_artifacts.includes('.agent/WORK_LOG.md'));
+
+    const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
+    assert.equal(latest.system_progress.has_agent_system_artifact, true);
+    assert.deepEqual(latest.system_progress.preexisting_content_artifacts, ['src/content/tools/preexisting.md']);
+    assert.equal(latest.efficiency_metrics.agent_system_artifact_count, latest.system_progress.agent_system_artifacts.length);
+    assert.equal(latest.efficiency_metrics.preexisting_dirty_count, 1);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('aipedia loops blocks system-progress closeout for content-only diffs', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-content-only-'));
   const registry = writeRegistry(dir);

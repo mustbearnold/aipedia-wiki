@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Read-only checkpoint that distinguishes system progress from content-only work.
 
+import { existsSync, readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,8 +13,37 @@ const HELP_MODE = args.includes('--help') || args.includes('-h');
 const REQUIRE_SYSTEM = args.includes('--require-system-artifact');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || defaultProjectDir);
 const EXPLICIT_PATHS = valuesFor('--path').concat(valuesFor('--paths'));
-const KNOWN_FLAGS = new Set(['--json', '--help', '-h', '--require-system-artifact', '--project-dir', '--root', '--path', '--paths']);
-const VALUE_FLAGS = new Set(['--project-dir', '--root', '--path', '--paths']);
+const OBSERVED_DIRTY_PATHS = valuesFor('--observed-dirty-before-agent')
+  .concat(valuesFor('--observed-dirty-before-agent-path'))
+  .concat(valuesFor('--preexisting-dirty'))
+  .concat(pathsFromFiles(valuesFor('--observed-dirty-before-agent-file').concat(valuesFor('--preexisting-dirty-file'))));
+const HAS_OBSERVED_DIRTY_BASELINE = OBSERVED_DIRTY_PATHS.length > 0;
+const KNOWN_FLAGS = new Set([
+  '--json',
+  '--help',
+  '-h',
+  '--require-system-artifact',
+  '--project-dir',
+  '--root',
+  '--path',
+  '--paths',
+  '--observed-dirty-before-agent',
+  '--observed-dirty-before-agent-path',
+  '--observed-dirty-before-agent-file',
+  '--preexisting-dirty',
+  '--preexisting-dirty-file',
+]);
+const VALUE_FLAGS = new Set([
+  '--project-dir',
+  '--root',
+  '--path',
+  '--paths',
+  '--observed-dirty-before-agent',
+  '--observed-dirty-before-agent-path',
+  '--observed-dirty-before-agent-file',
+  '--preexisting-dirty',
+  '--preexisting-dirty-file',
+]);
 
 const SYSTEM_PREFIXES = [
   '.agent/',
@@ -54,26 +84,58 @@ if (argumentIssues.length > 0) {
 }
 
 const changedPaths = [...new Set((EXPLICIT_PATHS.length ? EXPLICIT_PATHS : gitChangedPaths()).map(normalizePath))].sort();
+const observedDirtyBeforeAgent = [...new Set(OBSERVED_DIRTY_PATHS.map(normalizePath))].sort();
+const observedDirtySet = new Set(observedDirtyBeforeAgent);
+const agentChangedPaths = HAS_OBSERVED_DIRTY_BASELINE ? changedPaths.filter((path) => !observedDirtySet.has(path)) : changedPaths;
+const preexistingDirtyPaths = HAS_OBSERVED_DIRTY_BASELINE ? changedPaths.filter((path) => observedDirtySet.has(path)) : [];
+const missingObservedDirtyPaths = HAS_OBSERVED_DIRTY_BASELINE ? observedDirtyBeforeAgent.filter((path) => !changedPaths.includes(path)) : [];
 const classified = changedPaths.map((path) => ({ path, kind: classifyPath(path) }));
+const agentClassified = agentChangedPaths.map((path) => ({ path, kind: classifyPath(path) }));
+const preexistingClassified = preexistingDirtyPaths.map((path) => ({ path, kind: classifyPath(path) }));
 const system_artifacts = classified.filter((entry) => entry.kind === 'system').map((entry) => entry.path);
 const content_artifacts = classified.filter((entry) => entry.kind === 'content').map((entry) => entry.path);
 const other_artifacts = classified.filter((entry) => entry.kind === 'other').map((entry) => entry.path);
 const hasSystemArtifact = system_artifacts.length > 0;
 const contentOnly = changedPaths.length > 0 && !hasSystemArtifact && content_artifacts.length > 0;
-const mode = REQUIRE_SYSTEM && !hasSystemArtifact ? (contentOnly ? 'content-only-progress' : 'missing-system-progress') : 'system-progress-check';
-const ok = !(REQUIRE_SYSTEM && !hasSystemArtifact);
+const agent_system_artifacts = agentClassified.filter((entry) => entry.kind === 'system').map((entry) => entry.path);
+const agent_content_artifacts = agentClassified.filter((entry) => entry.kind === 'content').map((entry) => entry.path);
+const agent_other_artifacts = agentClassified.filter((entry) => entry.kind === 'other').map((entry) => entry.path);
+const preexisting_system_artifacts = preexistingClassified.filter((entry) => entry.kind === 'system').map((entry) => entry.path);
+const preexisting_content_artifacts = preexistingClassified.filter((entry) => entry.kind === 'content').map((entry) => entry.path);
+const preexisting_other_artifacts = preexistingClassified.filter((entry) => entry.kind === 'other').map((entry) => entry.path);
+const hasAgentSystemArtifact = agent_system_artifacts.length > 0;
+const agentContentOnly = agentChangedPaths.length > 0 && !hasAgentSystemArtifact && agent_content_artifacts.length > 0;
+const enforcedHasSystemArtifact = HAS_OBSERVED_DIRTY_BASELINE ? hasAgentSystemArtifact : hasSystemArtifact;
+const enforcedContentOnly = HAS_OBSERVED_DIRTY_BASELINE ? agentContentOnly : contentOnly;
+const mode = REQUIRE_SYSTEM && !enforcedHasSystemArtifact
+  ? (enforcedContentOnly ? 'content-only-progress' : 'missing-system-progress')
+  : 'system-progress-check';
+const ok = !(REQUIRE_SYSTEM && !enforcedHasSystemArtifact);
 
 emitReport({
   ok,
   mode,
   project_dir: PROJECT_DIR,
   require_system_artifact: REQUIRE_SYSTEM,
+  observed_dirty_before_agent: observedDirtyBeforeAgent,
+  has_observed_dirty_baseline: HAS_OBSERVED_DIRTY_BASELINE,
+  missing_observed_dirty_paths: missingObservedDirtyPaths,
   changed_paths: changedPaths,
   system_artifacts,
   content_artifacts,
   other_artifacts,
   has_system_artifact: hasSystemArtifact,
   content_only: contentOnly,
+  agent_changed_paths: agentChangedPaths,
+  agent_system_artifacts,
+  agent_content_artifacts,
+  agent_other_artifacts,
+  has_agent_system_artifact: hasAgentSystemArtifact,
+  agent_content_only: agentContentOnly,
+  preexisting_dirty_paths: preexistingDirtyPaths,
+  preexisting_system_artifacts,
+  preexisting_content_artifacts,
+  preexisting_other_artifacts,
   next_action: ok
     ? 'System artifact present or enforcement disabled.'
     : 'Add or validate a system artifact before recording this loop as operating-system progress.',
@@ -93,6 +155,8 @@ function usage() {
     '  --require-system-artifact    Exit non-zero unless at least one system artifact changed.',
     '  --path <path>                Classify an explicit path. Repeatable.',
     '  --paths <a,b>                Classify comma-separated paths.',
+    '  --observed-dirty-before-agent <path>  Existing dirty path to exclude from current-agent progress. Repeatable.',
+    '  --observed-dirty-before-agent-file <path>  File containing newline-delimited existing dirty paths.',
     '  --project-dir <dir>          Project root. Alias: --root.',
   ].join('\n');
 }
@@ -156,6 +220,16 @@ function valuesFor(flag) {
     }
   }
   return values.flatMap((value) => value.split(',')).map(normalizePath).filter(Boolean);
+}
+
+function pathsFromFiles(files) {
+  const paths = [];
+  for (const file of files.map(normalizePath).filter(Boolean)) {
+    const fullPath = resolve(PROJECT_DIR, file);
+    if (!existsSync(fullPath)) continue;
+    paths.push(...readFileSync(fullPath, 'utf8').split(/\r?\n/));
+  }
+  return paths.map(normalizePath).filter(Boolean);
 }
 
 function flagName(arg) {

@@ -28,6 +28,9 @@ const RESIDUAL_RISKS = valuesFor('--risk').concat(envList('AIPEDIA_RESIDUAL_RISK
 const EXTRA_NEXT_ACTIONS = valuesFor('--next-action').concat(envList('AIPEDIA_NEXT_ACTIONS'));
 const DAG_GRAPH_REFS = valuesFor('--dag-graph').concat(envList('AIPEDIA_DAG_GRAPHS'));
 const DAG_VALIDATION_REPORT_REFS = valuesFor('--dag-validation-report').concat(envList('AIPEDIA_DAG_VALIDATION_REPORTS'));
+const OBSERVED_DIRTY_BEFORE_AGENT = valuesFor('--observed-dirty-before-agent')
+  .concat(valuesFor('--observed-dirty-before-agent-path'))
+  .concat(pathsFromFiles(valuesFor('--observed-dirty-before-agent-file')));
 const LEDGER_DIR = resolve(PROJECT_DIR, valueFor('--ledger-dir') || '.agent/loop-runs/system');
 const KNOWN_FLAGS = new Set([
   '--all',
@@ -39,6 +42,9 @@ const KNOWN_FLAGS = new Set([
   '--json',
   '--loop',
   '--next-action',
+  '--observed-dirty-before-agent',
+  '--observed-dirty-before-agent-path',
+  '--observed-dirty-before-agent-file',
   '--parent-span-id',
   '--project-dir',
   '--registry',
@@ -61,6 +67,9 @@ const VALUE_FLAGS = new Set([
   '--ledger-dir',
   '--loop',
   '--next-action',
+  '--observed-dirty-before-agent',
+  '--observed-dirty-before-agent-path',
+  '--observed-dirty-before-agent-file',
   '--parent-span-id',
   '--project-dir',
   '--registry',
@@ -150,6 +159,8 @@ function usage() {
     '  --project-dir <dir>     Project root. Alias: --root.',
     '  --write-ledger          Persist this run under .agent/loop-runs/system/.',
     '  --require-system-progress  Fail this run if no system artifact changed.',
+    '  --observed-dirty-before-agent <path>  Existing dirty path to exclude from current-agent progress. Repeatable.',
+    '  --observed-dirty-before-agent-file <path>  File containing newline-delimited existing dirty paths.',
     '  --goal-id <id>          Attach a goal id to the closeout receipt.',
     '  --run-id <id>           Attach a run id. Defaults to loop-run:<generated_at>.',
     '  --trace-id <id>         Attach a trace id. Defaults to goal_id:run_id.',
@@ -268,6 +279,10 @@ function loopEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
   const systemArtifactCount = Array.isArray(progress.system_artifacts) ? progress.system_artifacts.length : 0;
   const contentArtifactCount = Array.isArray(progress.content_artifacts) ? progress.content_artifacts.length : 0;
   const otherArtifactCount = Array.isArray(progress.other_artifacts) ? progress.other_artifacts.length : 0;
+  const agentSystemArtifactCount = Array.isArray(progress.agent_system_artifacts) ? progress.agent_system_artifacts.length : systemArtifactCount;
+  const agentContentArtifactCount = Array.isArray(progress.agent_content_artifacts) ? progress.agent_content_artifacts.length : contentArtifactCount;
+  const agentOtherArtifactCount = Array.isArray(progress.agent_other_artifacts) ? progress.agent_other_artifacts.length : otherArtifactCount;
+  const preexistingDirtyCount = Array.isArray(progress.preexisting_dirty_paths) ? progress.preexisting_dirty_paths.length : 0;
 
   return {
     schema_version: 'aipedia.loop-efficiency-metrics.v1',
@@ -288,7 +303,12 @@ function loopEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
     system_artifact_count: systemArtifactCount,
     content_artifact_count: contentArtifactCount,
     other_artifact_count: otherArtifactCount,
+    agent_system_artifact_count: agentSystemArtifactCount,
+    agent_content_artifact_count: agentContentArtifactCount,
+    agent_other_artifact_count: agentOtherArtifactCount,
+    preexisting_dirty_count: preexistingDirtyCount,
     system_artifacts_per_second: rate(systemArtifactCount, durationMs),
+    agent_system_artifacts_per_second: rate(agentSystemArtifactCount, durationMs),
     persisted_full_receipt_bytes: nonNegative(persistedReceiptBytes.full),
     persisted_latest_receipt_bytes: nonNegative(persistedReceiptBytes.latest),
     slowest_commands: commands
@@ -340,6 +360,10 @@ function systemProgressReport(requireSystemArtifact) {
     commandArgs.push('--require-system-artifact');
     displayArgs.push('--require-system-artifact');
   }
+  for (const path of OBSERVED_DIRTY_BEFORE_AGENT.map(normalizeProjectPath).filter(Boolean)) {
+    commandArgs.push('--observed-dirty-before-agent', path);
+    displayArgs.push('--observed-dirty-before-agent', path);
+  }
   const child = spawnSync(process.execPath, commandArgs, {
     cwd: PROJECT_DIR,
     encoding: 'utf8',
@@ -364,12 +388,25 @@ function systemProgressReport(requireSystemArtifact) {
     command: commandLineText('node', displayArgs),
     exit_code: child.status,
     require_system_artifact: parsed.require_system_artifact === true,
+    observed_dirty_before_agent: parsed.observed_dirty_before_agent || [],
+    has_observed_dirty_baseline: parsed.has_observed_dirty_baseline === true,
+    missing_observed_dirty_paths: parsed.missing_observed_dirty_paths || [],
     changed_paths: parsed.changed_paths || [],
     system_artifacts: parsed.system_artifacts || [],
     content_artifacts: parsed.content_artifacts || [],
     other_artifacts: parsed.other_artifacts || [],
     has_system_artifact: parsed.has_system_artifact === true,
     content_only: parsed.content_only === true,
+    agent_changed_paths: parsed.agent_changed_paths || parsed.changed_paths || [],
+    agent_system_artifacts: parsed.agent_system_artifacts || parsed.system_artifacts || [],
+    agent_content_artifacts: parsed.agent_content_artifacts || parsed.content_artifacts || [],
+    agent_other_artifacts: parsed.agent_other_artifacts || parsed.other_artifacts || [],
+    has_agent_system_artifact: parsed.has_agent_system_artifact ?? parsed.has_system_artifact === true,
+    agent_content_only: parsed.agent_content_only ?? parsed.content_only === true,
+    preexisting_dirty_paths: parsed.preexisting_dirty_paths || [],
+    preexisting_system_artifacts: parsed.preexisting_system_artifacts || [],
+    preexisting_content_artifacts: parsed.preexisting_content_artifacts || [],
+    preexisting_other_artifacts: parsed.preexisting_other_artifacts || [],
     next_action: parsed.next_action || '',
   };
 }
@@ -1007,6 +1044,16 @@ function envList(name) {
     .split(/\r?\n|;;/)
     .map((part) => part.trim())
     .filter(Boolean);
+}
+
+function pathsFromFiles(files) {
+  const paths = [];
+  for (const file of files.map((path) => normalizeProjectPath(path)).filter(Boolean)) {
+    const fullPath = resolve(PROJECT_DIR, file);
+    if (!existsSync(fullPath)) continue;
+    paths.push(...readFileSync(fullPath, 'utf8').split(/\r?\n/));
+  }
+  return paths.map((path) => path.trim()).filter(Boolean);
 }
 
 function hasFlag(flag) {

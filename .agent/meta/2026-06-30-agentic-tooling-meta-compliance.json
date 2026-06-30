@@ -73,12 +73,20 @@
       "evidence": [
         "scripts/agent-system-progress-check.mjs",
         "npm run agent:system-progress",
+        "agent:system-progress --observed-dirty-before-agent",
+        "agent:system-progress agent_changed_paths",
+        "agent:system-progress preexisting_dirty_paths",
         "scripts/aipedia-loops.mjs system_progress receipt field",
         "npm run loop:all:record -- --require-system-progress --json",
+        "loop:all:record --observed-dirty-before-agent forwarding",
+        "loop efficiency agent_system_artifact_count",
+        "loop efficiency preexisting_dirty_count",
         "loop:all:record closeout identity fields",
         "tests/scripts/agent-system-progress-check.test.mjs",
         "tests/scripts/aipedia-loops.test.mjs",
         ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json",
+        ".agent/loop-runs/system/2026-06-30T22-31-34-283Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-55-final-efficiency-trends.json",
         "tools/aipedia-runner/src/main.rs runner system_progress closeout field"
       ],
       "remaining": "Keep system-progress enforcement attached to every meta closeout and bounded production pilot."
