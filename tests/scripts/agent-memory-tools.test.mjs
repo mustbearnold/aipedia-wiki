@@ -196,9 +196,15 @@ test('score calibration handles tools, comparisons, and static Astro routes', ()
 
     assert.equal(report.ok, true);
     assert.equal(report.summary.route_count, 3);
+    assert.ok(report.summary.risk_labels.low >= 1);
+    assert.ok(report.summary.confidence_labels);
+    assert.ok(report.summary.stale_decay_labels);
     const comparison = report.routes.find((route) => route.route === '/compare/example-vs-other/');
     assert.equal(comparison.calibration_label, 'source_coverage_gap');
     assert.equal(comparison.recommended_action, 'improve_source_coverage');
+    assert.equal(comparison.scoring_model.page_profile, 'comparison');
+    assert.equal(comparison.risk_profile.label, 'low');
+    assert.equal(comparison.confidence_profile.label, 'low');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -219,8 +225,12 @@ test('score calibration counts inline news sources as source coverage', () => {
     assert.equal(news.source_count, 2);
     assert.equal(news.registered_source_count, 0);
     assert.equal(news.inline_source_count, 2);
+    assert.equal(news.scoring_model.page_profile, 'news');
+    assert.equal(news.risk_profile.label, 'low');
+    assert.ok(['medium', 'high'].includes(news.confidence_profile.label));
     assert.notEqual(news.calibration_label, 'source_coverage_gap');
     assert.ok(news.calibration_notes.includes('2 inline source(s), 0 registered source IDs'));
+    assert.ok(news.calibration_notes.some((note) => /confidence$/.test(note)));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

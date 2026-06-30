@@ -10,6 +10,7 @@ import {
   daysOld,
   fileExists,
   hasFlag,
+  isoDate,
   loadSourceRegistry,
   projectPath,
   readMarkdownFile,
@@ -42,12 +43,13 @@ function usage() {
 }
 
 export function scorePage(projectDir, options = {}) {
+  const effectiveCurrentDate = options.currentDate || currentDate;
   const target = resolveTarget(projectDir, options);
   if (!target || !target.path || !fileExists(projectDir, target.path)) {
     return { ok: false, error: 'target route or path could not be resolved', project_dir: projectDir };
   }
   const markdown = readMarkdownFile(projectDir, target.path);
-  const evidence = buildEvidenceBundle(projectDir, { ...options, path: target.path, currentDate: options.currentDate });
+  const evidence = buildEvidenceBundle(projectDir, { ...options, path: target.path, currentDate: effectiveCurrentDate });
   const sourceRegistry = loadSourceRegistry(projectDir);
   const sourceIds = [...collectSourceIds(markdown.frontmatter)];
   const sourceRows = sourceIds.map((id) => sourceRegistry.get(id)).filter(Boolean);
@@ -57,7 +59,9 @@ export function scorePage(projectDir, options = {}) {
   const links = collectInternalLinks(body);
   const frontmatter = markdown.frontmatter;
   const sourceQuality = sourceQualityScore(sourceRows, sourceIds.length, inlineSourceCount);
-  const freshness = freshnessScore(frontmatter, evidence.stale_sections, options.currentDate);
+  const pageProfile = pageProfileFor(target, frontmatter, evidence);
+  const staleDecay = staleDecayProfile(frontmatter, evidence, sourceRows, pageProfile, effectiveCurrentDate);
+  const freshness = freshnessScore(frontmatter, evidence.stale_sections, effectiveCurrentDate, staleDecay);
   const scores = {
     freshness,
     source_quality: sourceQuality,
@@ -74,24 +78,18 @@ export function scorePage(projectDir, options = {}) {
     trustworthiness: clamp01((sourceQuality * 0.65) + (freshness * 0.35)),
     page_completeness: completenessScore(target.collection, frontmatter, body),
   };
-
-  const qualityScore = average([
-    scores.freshness,
-    scores.source_quality,
-    scores.seo,
-    scores.buyer_intent,
-    scores.internal_links,
-    scores.readability,
-    scores.unique_angle,
-    scores.trustworthiness,
-    scores.page_completeness,
-  ]);
+  const weights = scoreWeightsFor(pageProfile.profile);
+  const rawScore = weightedScore(scores, weights);
+  const qualityScore = clamp01(rawScore - staleDecay.score_penalty);
+  const riskProfile = riskProfileFor({ evidence, frontmatter, scores, staleDecay });
+  const confidenceProfile = confidenceProfileFor({ evidence, scores, staleDecay, riskProfile });
 
   return {
     ok: true,
+    schema_version: 'aipedia.page-quality-score.v2',
     project_dir: projectDir,
     generated_at: new Date().toISOString(),
-    current_date: options.currentDate,
+    current_date: effectiveCurrentDate,
     target: {
       route: evidence.target.route,
       path: projectPath(projectDir, target.path),
@@ -101,8 +99,21 @@ export function scorePage(projectDir, options = {}) {
       last_verified: evidence.target.last_verified,
     },
     score: round(qualityScore),
+    raw_score: round(rawScore),
     dimensions: Object.fromEntries(Object.entries(scores).map(([key, value]) => [key, round(value)])),
-    recommended_action: recommendAction(scores, evidence),
+    scoring_model: {
+      name: 'non-stale-page-quality',
+      version: '2026-06-30',
+      page_profile: pageProfile.profile,
+      freshness_window_days: staleDecay.freshness_window_days,
+      source_window_days: staleDecay.source_window_days,
+      weights,
+      score_penalty: staleDecay.score_penalty,
+    },
+    stale_decay: staleDecay,
+    risk_profile: riskProfile,
+    confidence_profile: confidenceProfile,
+    recommended_action: recommendAction(scores, evidence, riskProfile, confidenceProfile),
     evidence_summary: {
       sources: totalSourceCount,
       registered_sources: sourceRows.length,
@@ -110,6 +121,9 @@ export function scorePage(projectDir, options = {}) {
       internal_links: links.length,
       stale_signals: evidence.stale_sections.length,
       affiliate_state: evidence.affiliate_notes.state,
+      risk_label: riskProfile.label,
+      confidence_label: confidenceProfile.label,
+      stale_decay_label: staleDecay.label,
     },
     limitations: [
       'Read-only prototype based on repository signals.',
@@ -118,11 +132,89 @@ export function scorePage(projectDir, options = {}) {
   };
 }
 
-function freshnessScore(frontmatter, staleSections, currentDate) {
-  const age = daysOld(frontmatter.last_verified ?? frontmatter.last_updated, currentDate);
-  const base = age === Infinity ? 0.2 : clamp01(1 - (age / 45));
-  const penalty = Math.min(0.5, staleSections.length * 0.08);
+function pageProfileFor(target, frontmatter, evidence) {
+  if (target.collection === 'news') return { profile: 'news' };
+  if (target.collection === 'comparisons') return { profile: 'comparison' };
+  if (target.collection === 'use-cases') {
+    const hasAffiliateIntent = Boolean(frontmatter.affiliate_tools?.length || frontmatter.commercial_tools?.length || frontmatter.cta_plan);
+    return { profile: hasAffiliateIntent ? 'affiliate_buyer' : 'guide' };
+  }
+  if (target.collection === 'tools') {
+    const hasHighVolatility = evidence.current_page_claims.some((fact) => fact.volatility === 'high');
+    const isAffiliate = evidence.affiliate_notes.state !== 'none';
+    return { profile: hasHighVolatility || isAffiliate ? 'tool_high_volatility' : 'tool' };
+  }
+  return { profile: 'default' };
+}
+
+function freshnessScore(frontmatter, staleSections, currentDate, staleDecay) {
+  const sourceDate = staleDecay?.source_date || frontmatter.last_verified || frontmatter.last_updated || frontmatter.date;
+  const age = daysOld(sourceDate, currentDate);
+  const windowDays = staleDecay?.freshness_window_days || 45;
+  const base = age === Infinity ? 0.2 : clamp01(1 - (age / (windowDays * 1.5)));
+  const severityPenalty = staleSignalScore(staleSections) * 0.35;
+  const decayPenalty = (staleDecay?.score_penalty ?? 0) * 0.5;
+  const penalty = Math.min(0.65, severityPenalty + decayPenalty);
   return clamp01(base - penalty);
+}
+
+function staleDecayProfile(frontmatter, evidence, sourceRows, pageProfile, currentDate) {
+  const sourceDate = isoDate(frontmatter.last_verified || frontmatter.last_updated || frontmatter.date || evidence.target.last_verified || evidence.target.last_updated);
+  const pageAge = daysOld(sourceDate, currentDate);
+  const highVolatilityPage = pageProfile.profile === 'tool_high_volatility' || evidence.current_page_claims.some((fact) => fact.volatility === 'high');
+  const freshnessWindowDays = freshnessWindowFor(pageProfile.profile, highVolatilityPage);
+  const sourceWindowDays = highVolatilityPage ? 14 : pageProfile.profile === 'news' ? 7 : 45;
+  const sourceAges = sourceRows
+    .map((source) => daysOld(source.last_checked, currentDate))
+    .filter((age) => Number.isFinite(age));
+  const maxSourceAge = sourceAges.length ? Math.max(...sourceAges) : null;
+  const pageAgeDecay = pageAge === Infinity ? 1 : clamp01(pageAge / freshnessWindowDays);
+  const overdueDecay = pageAge === Infinity ? 1 : clamp01((pageAge - freshnessWindowDays) / freshnessWindowDays);
+  const sourceAgeDecay = maxSourceAge === null ? 0 : clamp01(maxSourceAge / sourceWindowDays);
+  const sourceOverdueDecay = maxSourceAge === null ? 0 : clamp01((maxSourceAge - sourceWindowDays) / sourceWindowDays);
+  const staleSectionDecay = staleSignalScore(evidence.stale_sections);
+  const decay = clamp01((pageAgeDecay * 0.45) + (sourceAgeDecay * 0.25) + (staleSectionDecay * 0.3));
+  const scorePenalty = round(clamp01((overdueDecay * 0.12) + (sourceOverdueDecay * 0.06) + (staleSectionDecay * 0.08)));
+
+  return {
+    label: decayLabel(decay, scorePenalty),
+    decay: round(decay),
+    score_penalty: scorePenalty,
+    age_days: Number.isFinite(pageAge) ? pageAge : null,
+    source_date: sourceDate || '',
+    freshness_window_days: freshnessWindowDays,
+    source_window_days: sourceWindowDays,
+    source_max_age_days: maxSourceAge,
+    page_age_decay: round(pageAgeDecay),
+    source_age_decay: round(sourceAgeDecay),
+    stale_signal_decay: round(staleSectionDecay),
+  };
+}
+
+function freshnessWindowFor(profile, highVolatilityPage) {
+  if (profile === 'news') return 7;
+  if (profile === 'tool_high_volatility' || highVolatilityPage) return 21;
+  if (profile === 'affiliate_buyer') return 21;
+  if (profile === 'comparison') return 30;
+  if (profile === 'guide') return 45;
+  if (profile === 'tool') return 30;
+  return 60;
+}
+
+function staleSignalScore(staleSections = []) {
+  const points = staleSections.reduce((sum, signal) => {
+    if (signal.severity === 'high') return sum + 0.5;
+    if (signal.severity === 'medium') return sum + 0.25;
+    return sum + 0.1;
+  }, 0);
+  return clamp01(points / 2);
+}
+
+function decayLabel(decay, scorePenalty) {
+  if (scorePenalty >= 0.15 || decay >= 0.75) return 'high';
+  if (scorePenalty >= 0.08 || decay >= 0.45) return 'medium';
+  if (decay >= 0.15) return 'low';
+  return 'fresh';
 }
 
 function sourceQualityScore(sourceRows, totalSourceIds, inlineSourceCount = 0) {
@@ -134,6 +226,171 @@ function sourceQualityScore(sourceRows, totalSourceIds, inlineSourceCount = 0) {
     : 0.7;
   const countScore = clamp01(totalSources / 4);
   return clamp01((registeredRatio * 0.3) + (primaryRatio * 0.4) + (countScore * 0.3));
+}
+
+function scoreWeightsFor(profile) {
+  const profiles = {
+    tool_high_volatility: {
+      freshness: 0.18,
+      source_quality: 0.18,
+      buyer_intent: 0.16,
+      page_completeness: 0.13,
+      trustworthiness: 0.1,
+      internal_links: 0.08,
+      cta_quality: 0.06,
+      affiliate: 0.04,
+      seo: 0.04,
+      readability: 0.02,
+      unique_angle: 0.01,
+    },
+    tool: {
+      freshness: 0.16,
+      source_quality: 0.17,
+      buyer_intent: 0.17,
+      page_completeness: 0.14,
+      trustworthiness: 0.1,
+      internal_links: 0.09,
+      cta_quality: 0.06,
+      affiliate: 0.04,
+      seo: 0.04,
+      readability: 0.02,
+      unique_angle: 0.01,
+    },
+    comparison: {
+      freshness: 0.14,
+      source_quality: 0.18,
+      comparison_usefulness: 0.18,
+      buyer_intent: 0.14,
+      internal_links: 0.12,
+      page_completeness: 0.1,
+      trustworthiness: 0.06,
+      seo: 0.04,
+      readability: 0.02,
+      unique_angle: 0.02,
+    },
+    guide: {
+      freshness: 0.13,
+      source_quality: 0.17,
+      buyer_intent: 0.19,
+      internal_links: 0.14,
+      page_completeness: 0.12,
+      trustworthiness: 0.09,
+      seo: 0.07,
+      cta_quality: 0.04,
+      readability: 0.03,
+      unique_angle: 0.02,
+    },
+    affiliate_buyer: {
+      buyer_intent: 0.2,
+      source_quality: 0.16,
+      trustworthiness: 0.13,
+      cta_quality: 0.12,
+      affiliate: 0.09,
+      unique_angle: 0.08,
+      freshness: 0.12,
+      internal_links: 0.06,
+      seo: 0.04,
+    },
+    news: {
+      freshness: 0.26,
+      source_quality: 0.24,
+      buyer_intent: 0.18,
+      internal_links: 0.1,
+      page_completeness: 0.08,
+      readability: 0.08,
+      seo: 0.06,
+    },
+    default: {
+      freshness: 0.14,
+      source_quality: 0.16,
+      seo: 0.12,
+      buyer_intent: 0.14,
+      internal_links: 0.12,
+      readability: 0.1,
+      unique_angle: 0.08,
+      trustworthiness: 0.1,
+      page_completeness: 0.04,
+    },
+  };
+  return profiles[profile] || profiles.default;
+}
+
+function weightedScore(scores, weights) {
+  let total = 0;
+  let weightTotal = 0;
+  for (const [dimension, weight] of Object.entries(weights)) {
+    if (!Number.isFinite(scores[dimension])) continue;
+    total += scores[dimension] * weight;
+    weightTotal += weight;
+  }
+  return weightTotal ? total / weightTotal : average(Object.values(scores));
+}
+
+function riskProfileFor({ evidence, frontmatter, scores, staleDecay }) {
+  const missingSourceCount = evidence.source_evidence.missing_source_ids.length;
+  const highSeverityCount = evidence.stale_sections.filter((signal) => signal.severity === 'high').length;
+  const lowConfidenceFacts = evidence.current_page_claims.filter((fact) => fact.confidence && !/^(high|primary-confirmed)$/i.test(fact.confidence));
+  const liveAffiliate = evidence.affiliate_notes.state === 'live_affiliate';
+  const noindex = Boolean(frontmatter.noindex || frontmatter.draft);
+  const riskScore = clamp01(
+    (staleDecay.decay * 0.34) +
+    (clamp01(highSeverityCount / 3) * 0.18) +
+    (clamp01(missingSourceCount / 3) * 0.18) +
+    ((1 - scores.source_quality) * 0.13) +
+    ((liveAffiliate && scores.cta_quality < 0.6 ? 1 : 0) * 0.08) +
+    (clamp01(lowConfidenceFacts.length / 3) * 0.06) +
+    ((noindex ? 1 : 0) * 0.03),
+  );
+  const factors = [];
+  if (staleDecay.label !== 'fresh') factors.push(`${staleDecay.label} stale decay`);
+  if (highSeverityCount) factors.push(`${highSeverityCount} high severity stale signal(s)`);
+  if (missingSourceCount) factors.push(`${missingSourceCount} missing source ID(s)`);
+  if (scores.source_quality < 0.55) factors.push('weak source quality');
+  if (liveAffiliate && scores.cta_quality < 0.6) factors.push('live affiliate page with weak CTA context');
+  if (lowConfidenceFacts.length) factors.push(`${lowConfidenceFacts.length} constrained fact(s) below high confidence`);
+  if (noindex) factors.push('noindex or draft flag present');
+
+  return {
+    label: riskLabel(riskScore),
+    score: round(riskScore),
+    factors,
+  };
+}
+
+function riskLabel(score) {
+  if (score >= 0.65) return 'high';
+  if (score >= 0.35) return 'medium';
+  return 'low';
+}
+
+function confidenceProfileFor({ evidence, scores, staleDecay, riskProfile }) {
+  const sourceCoverage = evidence.source_evidence.total_sources > 0 ? 1 : 0.35;
+  const confidenceScore = clamp01(
+    (scores.source_quality * 0.3) +
+    (scores.trustworthiness * 0.22) +
+    (scores.page_completeness * 0.16) +
+    (scores.freshness * 0.16) +
+    ((1 - riskProfile.score) * 0.1) +
+    (sourceCoverage * 0.06),
+  );
+  const reasons = [];
+  if (scores.source_quality >= 0.75) reasons.push('source quality is strong');
+  if (scores.freshness < 0.5 || staleDecay.label === 'high') reasons.push('freshness needs current-source review');
+  if (scores.page_completeness < 0.65) reasons.push('page completeness is below target');
+  if (riskProfile.label !== 'low') reasons.push(`${riskProfile.label} risk profile`);
+  if (evidence.source_evidence.total_sources === 0) reasons.push('no source coverage found');
+
+  return {
+    label: confidenceLabel(confidenceScore),
+    score: round(confidenceScore),
+    reasons,
+  };
+}
+
+function confidenceLabel(score) {
+  if (score >= 0.8) return 'high';
+  if (score >= 0.6) return 'medium';
+  return 'low';
 }
 
 function seoScore(frontmatter) {
@@ -262,10 +519,11 @@ function round(value) {
   return Math.round(clamp01(value) * 100) / 100;
 }
 
-function recommendAction(scores, evidence) {
+function recommendAction(scores, evidence, riskProfile = { label: 'low' }, confidenceProfile = { label: 'high' }) {
   if (evidence.source_evidence.missing_source_ids.length) return 'fix_missing_sources';
   if (scores.update_urgency >= 0.75) return 'refresh_current_facts';
   if (scores.source_quality < 0.45) return 'improve_source_coverage';
+  if (riskProfile.label === 'high' || confidenceProfile.label === 'low') return 'risk_confidence_review';
   if (scores.internal_links < 0.5) return 'improve_internal_links';
   if (scores.cta_quality < 0.6 && evidence.affiliate_notes.state !== 'none') return 'improve_cta_context';
   if (scores.buyer_intent < 0.65) return 'strengthen_buyer_decision_path';

@@ -94,6 +94,18 @@ Planner stale-input gates now cover the major refresh planners.
 - The Rust runner forwards strict stale-input flags for tool, page, and affiliate planning.
 - Focused planner tests cover passing live inputs and a stale default page-ledger blocker.
 
+## Seventh System Slice
+
+Non-stale scoring is now schema-versioned and decay-aware.
+
+- `agent-page-quality-score.mjs` emits `aipedia.page-quality-score.v2`.
+- Page-type profiles now control weights for high-volatility tools, tools, comparisons, guides, affiliate buyer pages, news, and default static routes.
+- `stale_decay` records page age, source age, stale-signal decay, freshness windows, source windows, labels, and score penalties.
+- The final page `score` is the `raw_score` minus the stale-decay score penalty, so old high historical scores cannot pass unchanged.
+- `risk_profile` and `confidence_profile` expose deterministic labels, scores, and reasons for loop routing.
+- `agent-score-calibration.mjs` carries the new fields into calibration output and summary label counts.
+- Focused tests prove high-volatility pages decay when stale and that calibration preserves risk, confidence, and stale-decay fields.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -104,7 +116,7 @@ Planner stale-input gates now cover the major refresh planners.
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | existing runner and loop receipts, `agent:closeout:check`, loop and runner closeout identity fields | Add trace/span refs and require identity in more closeout paths. |
-| Non-stale scoring | Partial | `agent:score`, calibration docs | Add risk/confidence fields, score decay tests, and gold-set calibration. |
+| Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries | Add gold-set calibration receipts and threshold review on real workload pilots. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |

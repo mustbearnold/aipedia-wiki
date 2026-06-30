@@ -92,9 +92,15 @@
       "evidence": [
         "scripts/agent-page-quality-score.mjs",
         "scripts/agent-score-calibration.mjs",
-        "docs/page-quality-scoring.md"
+        "docs/page-quality-scoring.md",
+        "schema_version aipedia.page-quality-score.v2",
+        "stale_decay score penalties",
+        "risk_profile labels",
+        "confidence_profile labels",
+        "tests/scripts/agent-workflow-tools.test.mjs stale high-volatility decay test",
+        "tests/scripts/agent-memory-tools.test.mjs calibration field tests"
       ],
-      "remaining": "Add explicit risk/confidence fields, page-type score schema, stale decay tests, and calibration gold-set receipts."
+      "remaining": "Add gold-set calibration receipts, threshold review, and real-workload calibration evidence after bounded pilots."
     },
     {
       "id": "speed-token-efficiency",
@@ -127,16 +133,13 @@
     }
   ],
   "current_slice": {
-    "name": "planner stale-input gates",
+    "name": "non-stale scoring v2",
     "system_artifacts": [
-      "tools/aipedia-runner/src/main.rs",
-      "scripts/tool-refresh-batch.mjs",
-      "scripts/page-refresh-batch.mjs",
-      "scripts/affiliate-conversion-plan.mjs",
-      "tests/scripts/tool-refresh-batch.test.mjs",
-      "tests/scripts/page-refresh-batch.test.mjs",
-      "tests/scripts/affiliate-conversion-plan.test.mjs",
-      "scripts/README.md",
+      "scripts/agent-page-quality-score.mjs",
+      "scripts/agent-score-calibration.mjs",
+      "tests/scripts/agent-workflow-tools.test.mjs",
+      "tests/scripts/agent-memory-tools.test.mjs",
+      "docs/page-quality-scoring.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
     ],
@@ -144,7 +147,8 @@
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Add non-stale scoring risk/confidence fields and stale-decay tests.",
+    "Add trace/span and artifact refs to closeout receipts.",
+    "Add gold-set calibration receipts and threshold review for scoring.",
     "Pilot one bounded content workload only after the system slice is verified."
   ]
 }

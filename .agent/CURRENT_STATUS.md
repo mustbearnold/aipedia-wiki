@@ -175,12 +175,12 @@ Do not return to one full build per tool unless a template, runtime, layout, gen
 
 ### June 30 Agentic Tooling Meta OS
 
-The current goal is to turn the June 30 meta spec into working AiPedia agent infrastructure, not just more content output. Slices 01 through 06 hardened stale planner input handling, system-progress checking, durable pause receipts, closeout validation, runner system-progress receipts, closeout identity fields, planner stale-input gates, docs, and tests. Keep the goal active until the operating system is materially implemented, tested on real workloads, documented, committed, pushed, and reviewed against the six lenses in `docs/agentic-tooling-meta-compliance.md`.
+The current goal is to turn the June 30 meta spec into working AiPedia agent infrastructure, not just more content output. Slices 01 through 07 hardened stale planner input handling, system-progress checking, durable pause receipts, closeout validation, runner system-progress receipts, closeout identity fields, planner stale-input gates, non-stale scoring v2, docs, and tests. Keep the goal active until the operating system is materially implemented, tested on real workloads, documented, committed, pushed, and reviewed against the six lenses in `docs/agentic-tooling-meta-compliance.md`.
 
 Next system actions:
 
-1. Add non-stale scoring fields, risk/confidence decay, calibration checks, and tests.
-2. Add trace/span and artifact refs to closeout receipts.
+1. Add trace/span and artifact refs to closeout receipts.
+2. Add gold-set calibration receipts and threshold review for non-stale scoring.
 3. Add safe auto-refresh or all-workflow enforcement receipts for stale generated planner inputs.
 4. Pilot one bounded real workload only after the next system hardening slice is verified.
 

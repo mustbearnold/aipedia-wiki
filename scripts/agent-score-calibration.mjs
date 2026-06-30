@@ -83,6 +83,10 @@ export function calibrateScores(projectDir, options = {}) {
       stale_signal_count: staleCount,
       parent_surface_count: parentSurfaceCount,
       dimensions: score.dimensions,
+      scoring_model: score.scoring_model,
+      stale_decay: score.stale_decay,
+      risk_profile: score.risk_profile,
+      confidence_profile: score.confidence_profile,
       calibration_label: label,
       calibration_notes: calibrationNotes({
         score,
@@ -109,6 +113,8 @@ export function calibrateScores(projectDir, options = {}) {
 function calibrationLabel({ score, ledgerAge, sourceCount, staleCount, parentSurfaceCount }) {
   if (staleCount > 0 || score.dimensions.update_urgency >= 0.75) return 'refresh_pressure';
   if (sourceCount === 0 || score.dimensions.source_quality < 0.45) return 'source_coverage_gap';
+  if (score.stale_decay?.label === 'high') return 'stale_score_decay';
+  if (score.risk_profile?.label === 'high' || score.confidence_profile?.label === 'low') return 'risk_confidence_review';
   if (score.dimensions.internal_links < 0.5) return 'internal_link_gap';
   if (parentSurfaceCount > 50) return 'broad_parent_impact';
   if (ledgerAge <= 7 && score.recommended_action === 'monitor') return 'recent_monitor_baseline';
@@ -129,6 +135,11 @@ function calibrationNotes({
   if (sourceCount === 0) notes.push('no source coverage found');
   if (registeredSourceCount === 0 && inlineSourceCount > 0) notes.push(`${inlineSourceCount} inline source(s), 0 registered source IDs`);
   if (staleCount > 0) notes.push(`${staleCount} stale signal(s)`);
+  if (score.stale_decay?.label && score.stale_decay.label !== 'fresh') {
+    notes.push(`${score.stale_decay.label} stale decay, ${score.stale_decay.score_penalty} score penalty`);
+  }
+  if (score.risk_profile?.label) notes.push(`${score.risk_profile.label} risk`);
+  if (score.confidence_profile?.label) notes.push(`${score.confidence_profile.label} confidence`);
   if (score.dimensions.source_quality < 0.45) notes.push('source_quality below 0.45');
   if (score.dimensions.internal_links < 0.5) notes.push('internal_links below 0.5');
   if (parentSurfaceCount > 50) notes.push('broad parent impact surface');
@@ -139,6 +150,9 @@ function summarize(results) {
   const okResults = results.filter((result) => result.ok);
   const actions = countBy(okResults, 'recommended_action');
   const labels = countBy(okResults, 'calibration_label');
+  const riskLabels = countNestedBy(okResults, 'risk_profile', 'label');
+  const confidenceLabels = countNestedBy(okResults, 'confidence_profile', 'label');
+  const staleDecayLabels = countNestedBy(okResults, 'stale_decay', 'label');
   const averageScore = okResults.length
     ? okResults.reduce((sum, result) => sum + result.score, 0) / okResults.length
     : 0;
@@ -149,12 +163,24 @@ function summarize(results) {
     average_score: Math.round(averageScore * 100) / 100,
     actions,
     labels,
+    risk_labels: riskLabels,
+    confidence_labels: confidenceLabels,
+    stale_decay_labels: staleDecayLabels,
   };
 }
 
 function countBy(items, key) {
   const counts = {};
   for (const item of items) counts[item[key]] = (counts[item[key]] ?? 0) + 1;
+  return counts;
+}
+
+function countNestedBy(items, objectKey, valueKey) {
+  const counts = {};
+  for (const item of items) {
+    const value = item[objectKey]?.[valueKey] ?? 'unknown';
+    counts[value] = (counts[value] ?? 0) + 1;
+  }
   return counts;
 }
 

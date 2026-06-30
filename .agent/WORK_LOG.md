@@ -1,5 +1,15 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta OS Slice 07
+
+- Status: Verified locally, pending commit and push.
+- Commit: this commit.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added non-stale page quality scoring v2. `agent:score` now emits `schema_version: aipedia.page-quality-score.v2`, page-type weights, `raw_score`, stale-decay score penalties, `risk_profile`, and `confidence_profile`. `agent:score:calibrate` now carries those fields into per-route calibration output and summarizes stale-decay, risk, and confidence labels. Docs, compliance JSON, and continuity notes now describe the implemented scoring contract.
+- Verification: `node --check scripts/agent-page-quality-score.mjs`; `node --check scripts/agent-score-calibration.mjs`; `node --test tests/scripts/agent-workflow-tools.test.mjs tests/scripts/agent-memory-tools.test.mjs`; `npm --silent run agent:score -- --route /tools/cursor/ --current-date 2026-06-30 --json`; `npm --silent run agent:score:calibrate -- --current-date 2026-06-30 --json`; JSON parse check for `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json`; `npm run check:smart -- --path scripts/agent-page-quality-score.mjs --path scripts/agent-score-calibration.mjs --path tests/scripts/agent-workflow-tools.test.mjs --path tests/scripts/agent-memory-tools.test.mjs --path docs/page-quality-scoring.md --path docs/agentic-tooling-meta-compliance.md --run --json`; `npm run check:quick`; `node scripts/guard-em-dashes.mjs`; `git diff --check`; `npm --silent run loop:system -- --json`; `npm --silent run loop:all:record -- --goal-id 2026-06-30-agentic-tooling-meta-os --run-id 2026-06-30-slice-07-scoring --risk "Score thresholds still need gold-set calibration receipts from bounded real workloads." --next-action "Add trace/span and artifact refs to closeout receipts." --next-action "Add gold-set calibration receipts and threshold review for scoring." --require-system-progress --json`; `npm --silent run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --json`.
+- Loop result: Focused score tests pass 12/12. Full script suite passes 472/472. `check:quick` passes script, command, and quick asset checks. Live Cursor scoring reports score 0.93, low stale decay, low risk, high confidence, and monitor action. Default calibration reports 3 ok routes with stale-decay labels low/fresh/medium and confidence labels high/high/low.
+- Next: Add trace/span and artifact refs to closeout receipts, then add gold-set calibration receipts and threshold review for scoring.
+
 ### 2026-06-30: Agentic Tooling Meta OS Slice 06
 
 - Status: Verified locally, pending commit and push.

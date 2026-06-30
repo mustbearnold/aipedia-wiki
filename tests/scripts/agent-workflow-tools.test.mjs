@@ -319,10 +319,38 @@ test('agent page quality score returns read-only dimensions and refresh action',
     });
 
     assert.equal(report.ok, true);
+    assert.equal(report.schema_version, 'aipedia.page-quality-score.v2');
     assert.equal(report.target.route, '/tools/example/');
     assert.ok(report.dimensions.source_quality > 0.8);
     assert.ok(report.dimensions.update_urgency > 0.5);
+    assert.equal(report.scoring_model.page_profile, 'tool_high_volatility');
+    assert.equal(report.stale_decay.label, 'high');
+    assert.ok(report.stale_decay.score_penalty > 0);
+    assert.notEqual(report.risk_profile.label, 'low');
+    assert.ok(['low', 'medium'].includes(report.confidence_profile.label));
     assert.equal(report.recommended_action, 'refresh_current_facts');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('agent page quality score decays stale high-volatility pages', () => {
+  const dir = writeFixture();
+  try {
+    const freshReport = scorePage(dir, {
+      route: '/tools/example/',
+      currentDate: '2026-06-10',
+    });
+    const staleReport = scorePage(dir, {
+      route: '/tools/example/',
+      currentDate: '2026-06-29',
+    });
+
+    assert.equal(freshReport.ok, true);
+    assert.equal(staleReport.ok, true);
+    assert.ok(staleReport.score < freshReport.score);
+    assert.ok(staleReport.stale_decay.score_penalty > freshReport.stale_decay.score_penalty);
+    assert.equal(staleReport.stale_decay.label, 'high');
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
