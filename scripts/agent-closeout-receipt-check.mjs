@@ -13,6 +13,7 @@ const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const ALL_SYSTEM = hasFlag('--all-system');
 const REQUIRE_SYSTEM_PROGRESS = hasFlag('--require-system-progress');
 const REQUIRE_CLOSEOUT_IDENTITY = hasFlag('--require-closeout-identity');
+const REQUIRE_TRACE_ARTIFACTS = hasFlag('--require-trace-artifacts');
 const EXPLICIT_RECEIPTS = valuesFor('--receipt').concat(valuesFor('--path'));
 const KNOWN_FLAGS = new Set([
   '--all-system',
@@ -24,6 +25,7 @@ const KNOWN_FLAGS = new Set([
   '--receipt',
   '--require-closeout-identity',
   '--require-system-progress',
+  '--require-trace-artifacts',
   '--root',
 ]);
 const VALUE_FLAGS = new Set(['--path', '--project-dir', '--receipt', '--root']);
@@ -54,6 +56,7 @@ const report = {
   project_dir: PROJECT_DIR,
   require_system_progress: REQUIRE_SYSTEM_PROGRESS,
   require_closeout_identity: REQUIRE_CLOSEOUT_IDENTITY,
+  require_trace_artifacts: REQUIRE_TRACE_ARTIFACTS,
   totals: {
     receipts: receipts.length,
     ok: receipts.filter((receipt) => receipt.ok).length,
@@ -79,6 +82,7 @@ function usage() {
     '  --all-system                  Validate every .agent/loop-runs/system/*.json receipt.',
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
     '  --require-closeout-identity   Require goal_id, run_id, residual_risks, and next_actions.',
+    '  --require-trace-artifacts     Require trace and artifact_refs blocks.',
     '  --project-dir <dir>           Project root. Alias: --root.',
     '  --json                        Emit a structured report.',
   ].join('\n');
@@ -146,6 +150,7 @@ function validateLoopReceipt(value, issues) {
   requireObject(value, 'review', issues);
   requireObject(value, 'ledger', issues);
   validateCloseoutIdentity(value, issues);
+  validateTraceArtifacts(value, issues);
 
   if (isObject(value.totals)) {
     for (const field of ['loops', 'ok', 'attention', 'skipped', 'commands']) {
@@ -245,6 +250,7 @@ function validateRunnerReceipt(value, issues) {
   requireArray(value, 'commands', issues);
   requireArray(value, 'superseded_failures', issues);
   validateCloseoutIdentity(value, issues);
+  validateTraceArtifacts(value, issues);
 
   if (value.workflow === 'tool-refresh') {
     requireString(value, 'route_args', issues);
@@ -291,6 +297,55 @@ function validateCloseoutIdentity(value, issues) {
   }
   if (!Array.isArray(value.next_actions)) {
     issues.push(issue('closeout-next-actions-invalid', 'next_actions must be an array.'));
+  }
+}
+
+function validateTraceArtifacts(value, issues) {
+  const hasAny = value.trace != null || value.artifact_refs != null;
+  if (!hasAny && !REQUIRE_TRACE_ARTIFACTS) return;
+
+  if (!isObject(value.trace)) {
+    issues.push(issue('closeout-trace-invalid', 'trace must be an object when trace artifacts are required or partially present.'));
+  } else {
+    requireString(value.trace, 'trace_id', issues, { path: 'trace.trace_id' });
+    requireString(value.trace, 'span_id', issues, { path: 'trace.span_id' });
+    if (value.trace.parent_span_id != null && typeof value.trace.parent_span_id !== 'string') {
+      issues.push(issue('closeout-trace-invalid', 'trace.parent_span_id must be a string when present.'));
+    }
+    requireString(value.trace, 'name', issues, { path: 'trace.name' });
+    requireIsoString(value.trace, 'started_at', issues, 'trace.started_at');
+    requireIsoString(value.trace, 'ended_at', issues, 'trace.ended_at');
+    requireNonNegativeNumber(value.trace, 'duration_ms', issues, 'trace.duration_ms');
+  }
+
+  if (!Array.isArray(value.artifact_refs)) {
+    issues.push(issue('closeout-artifact-refs-invalid', 'artifact_refs must be an array when trace artifacts are required or partially present.'));
+    return;
+  }
+  if (REQUIRE_TRACE_ARTIFACTS && value.artifact_refs.length === 0) {
+    issues.push(issue('closeout-artifact-refs-empty', 'artifact_refs must include at least one artifact when required.'));
+  }
+  value.artifact_refs.forEach((artifact, index) => validateArtifactRef(artifact, issues, `artifact_refs[${index}]`));
+}
+
+function validateArtifactRef(artifact, issues, path) {
+  if (!isObject(artifact)) {
+    issues.push(issue('closeout-artifact-ref-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(artifact, 'role', issues, { path: `${path}.role` });
+  requireString(artifact, 'kind', issues, { path: `${path}.kind` });
+  if (artifact.path != null && typeof artifact.path !== 'string') {
+    issues.push(issue('closeout-artifact-ref-invalid', `${path}.path must be a string when present.`));
+  }
+  if (artifact.id != null && typeof artifact.id !== 'string') {
+    issues.push(issue('closeout-artifact-ref-invalid', `${path}.id must be a string when present.`));
+  }
+  if (artifact.description != null && typeof artifact.description !== 'string') {
+    issues.push(issue('closeout-artifact-ref-invalid', `${path}.description must be a string when present.`));
+  }
+  if (!artifact.path && !artifact.id) {
+    issues.push(issue('closeout-artifact-ref-invalid', `${path} must include either path or id.`));
   }
 }
 

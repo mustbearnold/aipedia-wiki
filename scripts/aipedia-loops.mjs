@@ -22,6 +22,8 @@ const WRITE_LEDGER = hasFlag('--write-ledger');
 const REQUIRE_SYSTEM_PROGRESS = hasFlag('--require-system-progress');
 const GOAL_ID = valueFor('--goal-id') || process.env.AIPEDIA_GOAL_ID || 'unscoped-goal';
 const RUN_ID = valueFor('--run-id') || process.env.AIPEDIA_RUN_ID || '';
+const TRACE_ID = valueFor('--trace-id') || process.env.AIPEDIA_TRACE_ID || '';
+const PARENT_SPAN_ID = valueFor('--parent-span-id') || process.env.AIPEDIA_PARENT_SPAN_ID || '';
 const RESIDUAL_RISKS = valuesFor('--risk').concat(envList('AIPEDIA_RESIDUAL_RISKS'));
 const EXTRA_NEXT_ACTIONS = valuesFor('--next-action').concat(envList('AIPEDIA_NEXT_ACTIONS'));
 const LEDGER_DIR = resolve(PROJECT_DIR, valueFor('--ledger-dir') || '.agent/loop-runs/system');
@@ -33,6 +35,7 @@ const KNOWN_FLAGS = new Set([
   '--json',
   '--loop',
   '--next-action',
+  '--parent-span-id',
   '--project-dir',
   '--registry',
   '--root',
@@ -41,6 +44,7 @@ const KNOWN_FLAGS = new Set([
   '--risk',
   '--run-id',
   '--site-dir',
+  '--trace-id',
   '--write-ledger',
   '--help',
   '-h',
@@ -51,12 +55,14 @@ const VALUE_FLAGS = new Set([
   '--ledger-dir',
   '--loop',
   '--next-action',
+  '--parent-span-id',
   '--project-dir',
   '--registry',
   '--risk',
   '--root',
   '--run-id',
   '--site-dir',
+  '--trace-id',
 ]);
 const STALE_BUILD_GRACE_MS = 1000;
 
@@ -139,6 +145,8 @@ function usage() {
     '  --require-system-progress  Fail this run if no system artifact changed.',
     '  --goal-id <id>          Attach a goal id to the closeout receipt.',
     '  --run-id <id>           Attach a run id. Defaults to loop-run:<generated_at>.',
+    '  --trace-id <id>         Attach a trace id. Defaults to goal_id:run_id.',
+    '  --parent-span-id <id>   Attach a parent span id when resuming or nesting work.',
     '  --risk <text>           Residual risk. Repeatable.',
     '  --next-action <text>    Next action. Repeatable.',
     '  --ledger-dir <dir>      Override the loop-run ledger directory.',
@@ -169,7 +177,10 @@ function briefReport(registryData, loops) {
 function runLoopReport(registryData, loops) {
   const startedAt = performance.now();
   const generatedAt = new Date().toISOString();
+  const runId = RUN_ID || `loop-run:${generatedAt}`;
   const loopReports = loops.map(runLoop);
+  const durationMs = Math.round(performance.now() - startedAt);
+  const endedAt = new Date().toISOString();
   const totals = {
     loops: loopReports.length,
     ok: loopReports.filter((loop) => loop.status === 'ok').length,
@@ -187,10 +198,12 @@ function runLoopReport(registryData, loops) {
     default_site_dir: defaultSiteDir,
     generated_at: generatedAt,
     goal_id: GOAL_ID,
-    run_id: RUN_ID || `loop-run:${generatedAt}`,
+    run_id: runId,
     residual_risks: RESIDUAL_RISKS,
     next_actions: EXTRA_NEXT_ACTIONS,
-    duration_ms: Math.round(performance.now() - startedAt),
+    trace: traceBlock('loop-run', runId, generatedAt, endedAt, durationMs),
+    artifact_refs: loopArtifactRefs(loopReports),
+    duration_ms: durationMs,
     totals,
     loops: loopReports,
     review: reviewSummary(loopReports),
@@ -612,6 +625,10 @@ function writeLedger(reportData) {
     previous_file: previousFile,
     trend,
   };
+  reportData.artifact_refs = loopArtifactRefs(reportData.loops || [], [
+    artifactRef('output', 'loop-run-receipt', projectPath(runPath), '', 'Timestamped loop receipt JSON.'),
+    artifactRef('output', 'loop-run-latest', projectPath(latestPath), '', 'Latest loop receipt summary JSON.'),
+  ]);
 
   const payload = `${JSON.stringify(persistableReport(reportData), null, 2)}\n`;
   const latestPayload = `${JSON.stringify(latestLedgerSummary(reportData), null, 2)}\n`;
@@ -639,6 +656,8 @@ function latestLedgerSummary(reportData) {
     run_id: copy.run_id || '',
     residual_risks: copy.residual_risks || [],
     next_actions: copy.next_actions || [],
+    trace: copy.trace || null,
+    artifact_refs: copy.artifact_refs || [],
     duration_ms: copy.duration_ms,
     totals: copy.totals,
     review: copy.review,
@@ -660,6 +679,73 @@ function latestLedgerSummary(reportData) {
     })),
     ledger: copy.ledger,
   };
+}
+
+function traceBlock(name, runId, startedAt, endedAt, durationMs) {
+  const traceId = TRACE_ID || stableTraceId(GOAL_ID, runId);
+  return {
+    trace_id: traceId,
+    span_id: stableTraceId('span', name, runId, startedAt),
+    parent_span_id: PARENT_SPAN_ID,
+    name,
+    started_at: startedAt,
+    ended_at: endedAt,
+    duration_ms: durationMs,
+  };
+}
+
+function stableTraceId(...parts) {
+  return parts
+    .filter(Boolean)
+    .join(':')
+    .replace(/[^A-Za-z0-9_.:-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 180) || 'unscoped-trace';
+}
+
+function loopArtifactRefs(loopReports, extraRefs = []) {
+  const refs = [
+    artifactRef('input', 'loop-registry', projectPath(REGISTRY_PATH), '', 'Loop registry used for this run.'),
+    ...extraRefs,
+  ];
+  for (const loop of loopReports || []) {
+    for (const target of loop.record_targets || []) {
+      refs.push(artifactRef('declared-output', 'record-target', target, `${loop.id}:record-target:${target}`, `Declared record target for ${loop.id}.`));
+    }
+    for (const command of loop.commands || []) {
+      refs.push({
+        role: 'embedded',
+        kind: 'loop-command',
+        id: stableTraceId(loop.id, command.label),
+        description: command.command || command.label || 'Loop command.',
+        status: command.status || '',
+      });
+      if (command.build_freshness?.site_dir) {
+        refs.push(artifactRef('input', 'built-output', command.build_freshness.site_dir, `${loop.id}:built-output`, `Built output checked by ${loop.id}.`));
+      }
+    }
+  }
+  return dedupeArtifactRefs(refs);
+}
+
+function artifactRef(role, kind, path, id = '', description = '') {
+  const ref = { role, kind };
+  if (path) ref.path = normalizeProjectPath(path);
+  if (id) ref.id = id;
+  if (description) ref.description = description;
+  return ref;
+}
+
+function dedupeArtifactRefs(refs) {
+  const seen = new Set();
+  const deduped = [];
+  for (const ref of refs) {
+    const key = [ref.role, ref.kind, ref.path || '', ref.id || ''].join('|');
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(ref);
+  }
+  return deduped;
 }
 
 function readPreviousLedger(latestPath) {

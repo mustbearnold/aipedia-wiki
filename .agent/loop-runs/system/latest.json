@@ -5,17 +5,291 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-06-30T03:52:58.827Z",
+  "generated_at": "2026-06-30T04:04:49.363Z",
   "goal_id": "2026-06-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-07-scoring",
+  "run_id": "2026-06-30-slice-08-trace-artifacts",
   "residual_risks": [
-    "Score thresholds still need gold-set calibration receipts from bounded real workloads."
+    "Trace refs are now structural but workflow-specific policies still need production pilot evidence."
   ],
   "next_actions": [
-    "Add trace/span and artifact refs to closeout receipts.",
-    "Add gold-set calibration receipts and threshold review for scoring."
+    "Add gold-set calibration receipts and threshold review for scoring.",
+    "Add safe auto-refresh or all-workflow enforcement receipts for stale generated planner inputs."
   ],
-  "duration_ms": 5071,
+  "trace": {
+    "trace_id": "2026-06-30-agentic-tooling-meta-os:2026-06-30-slice-08-trace-artifacts",
+    "span_id": "span:loop-run:2026-06-30-slice-08-trace-artifacts:2026-06-30T04:04:49.363Z",
+    "parent_span_id": "",
+    "name": "loop-run",
+    "started_at": "2026-06-30T04:04:49.363Z",
+    "ended_at": "2026-06-30T04:04:54.340Z",
+    "duration_ms": 4977
+  },
+  "artifact_refs": [
+    {
+      "role": "input",
+      "kind": "loop-registry",
+      "path": "src/data/aipedia-loops.json",
+      "description": "Loop registry used for this run."
+    },
+    {
+      "role": "output",
+      "kind": "loop-run-receipt",
+      "path": ".agent/loop-runs/system/2026-06-30T04-04-49-363Z-loop-run.json",
+      "description": "Timestamped loop receipt JSON."
+    },
+    {
+      "role": "output",
+      "kind": "loop-run-latest",
+      "path": ".agent/loop-runs/system/latest.json",
+      "description": "Latest loop receipt summary JSON."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/loop-runs",
+      "id": "decision-content:record-target:.agent/loop-runs/",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/CURRENT_STATUS.md",
+      "id": "decision-content:record-target:.agent/CURRENT_STATUS.md",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/PLANS.md",
+      "id": "decision-content:record-target:.agent/PLANS.md",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md",
+      "id": "decision-content:record-target:.agent/WORK_LOG.md",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "decision-content:next-decision-cluster",
+      "description": "node scripts/decision-loop.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "decision-content:top-coverage-candidates",
+      "description": "node scripts/coverage-next.mjs --json --count 10",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "PAGE_REFRESH_LEDGER.md",
+      "id": "freshness:record-target:PAGE_REFRESH_LEDGER.md",
+      "description": "Declared record target for freshness."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major batches",
+      "id": "freshness:record-target:.agent/WORK_LOG.md for major batches",
+      "description": "Declared record target for freshness."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "freshness:freshness-queue",
+      "description": "node scripts/audit-freshness-queue.mjs --json",
+      "status": "attention"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "freshness:weekly-editorial-queue",
+      "description": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "src/data/source-registry.json",
+      "id": "trust-provenance:record-target:src/data/source-registry.json",
+      "description": "Declared record target for trust-provenance."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major provenance batches",
+      "id": "trust-provenance:record-target:.agent/WORK_LOG.md for major provenance batches",
+      "description": "Declared record target for trust-provenance."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "trust-provenance:provenance-and-pricing",
+      "description": "node scripts/audit-provenance-pricing.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "trust-provenance:source-registry-health",
+      "description": "node scripts/audit-source-health.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "trust-provenance:stale-facts-guard",
+      "description": "node scripts/guard-stale-facts.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "final report for changed commercial surfaces",
+      "id": "revenue-conversion:record-target:final report for changed commercial surfaces",
+      "description": "Declared record target for revenue-conversion."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major conversion batches",
+      "id": "revenue-conversion:record-target:.agent/WORK_LOG.md for major conversion batches",
+      "description": "Declared record target for revenue-conversion."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "revenue-conversion:commercial-CTA-audit",
+      "description": "node scripts/audit-commercial-cta.mjs --json --site-dir dist-fast/client",
+      "status": "attention"
+    },
+    {
+      "role": "input",
+      "kind": "built-output",
+      "path": "dist-fast/client",
+      "id": "revenue-conversion:built-output",
+      "description": "Built output checked by revenue-conversion."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "PAGE_REFRESH_LEDGER.md",
+      "id": "quality-pruning:record-target:PAGE_REFRESH_LEDGER.md",
+      "description": "Declared record target for quality-pruning."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for deletion or merge batches",
+      "id": "quality-pruning:record-target:.agent/WORK_LOG.md for deletion or merge batches",
+      "description": "Declared record target for quality-pruning."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "quality-pruning:site-KPI-audit",
+      "description": "node scripts/audit-site-kpis.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "quality-pruning:comparison-quality-audit",
+      "description": "node scripts/audit-coverage-quality.mjs --all --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "quality-pruning:internal-link-audit",
+      "description": "node scripts/audit-internal-links.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "loop receipt for rendered cycles",
+      "id": "performance-ux:record-target:loop receipt for rendered cycles",
+      "description": "Declared record target for performance-ux."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for performance changes",
+      "id": "performance-ux:record-target:.agent/WORK_LOG.md for performance changes",
+      "description": "Declared record target for performance-ux."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "performance-ux:dist-budget",
+      "description": "node scripts/check-dist-budget.mjs --json --site-dir dist-fast/client --mode fast",
+      "status": "attention"
+    },
+    {
+      "role": "input",
+      "kind": "built-output",
+      "path": "dist-fast/client",
+      "id": "performance-ux:built-output",
+      "description": "Built output checked by performance-ux."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "performance-ux:indexability-audit",
+      "description": "node scripts/audit-indexability.mjs --json --site-dir dist-fast/client",
+      "status": "attention"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "src/content/news",
+      "id": "news-market:record-target:src/content/news/",
+      "description": "Declared record target for news-market."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "PAGE_REFRESH_LEDGER.md for hubs and crawl surfaces",
+      "id": "news-market:record-target:PAGE_REFRESH_LEDGER.md for hubs and crawl surfaces",
+      "description": "Declared record target for news-market."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major news catch-ups",
+      "id": "news-market:record-target:.agent/WORK_LOG.md for major news catch-ups",
+      "description": "Declared record target for news-market."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "news-market:news-rendering-guard",
+      "description": "node scripts/audit-news-rendering.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "news-market:news-cross-reference-audit",
+      "description": "node scripts/audit-news-xrefs.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "news-market:weekly-editorial-queue",
+      "description": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+      "status": "ok"
+    }
+  ],
+  "duration_ms": 4977,
   "totals": {
     "loops": 7,
     "ok": 4,
@@ -123,15 +397,15 @@
       ".agent/WORK_LOG.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "docs/page-quality-scoring.md",
-      "scripts/agent-page-quality-score.mjs",
-      "scripts/agent-score-calibration.mjs",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/aipedia-loops.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
-      "tests/scripts/agent-memory-tools.test.mjs",
-      "tests/scripts/agent-workflow-tools.test.mjs"
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/aipedia-loops.test.mjs",
+      "tools/aipedia-runner/src/main.rs"
     ],
     "system_artifacts": [
       ".agent/CURRENT_STATUS.md",
@@ -139,11 +413,11 @@
       ".agent/WORK_LOG.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "docs/page-quality-scoring.md",
-      "scripts/agent-page-quality-score.mjs",
-      "scripts/agent-score-calibration.mjs",
-      "tests/scripts/agent-memory-tools.test.mjs",
-      "tests/scripts/agent-workflow-tools.test.mjs"
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/aipedia-loops.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/aipedia-loops.test.mjs",
+      "tools/aipedia-runner/src/main.rs"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -161,21 +435,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 208,
+      "duration_ms": 219,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 103,
+          "duration_ms": 107,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 104,
+          "duration_ms": 112,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -185,7 +459,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 558,
+      "duration_ms": 566,
       "attention_reasons": [
         "due_now=49"
       ],
@@ -194,7 +468,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 228,
+          "duration_ms": 230,
           "attention_reasons": [
             "due_now=49"
           ],
@@ -203,7 +477,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 329,
+          "duration_ms": 336,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -213,28 +487,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 399,
+      "duration_ms": 394,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 158,
+          "duration_ms": 150,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 114,
+          "duration_ms": 115,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 127,
+          "duration_ms": 128,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -244,7 +518,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 2033,
+      "duration_ms": 2004,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -253,7 +527,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 2033,
+          "duration_ms": 2004,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -277,28 +551,28 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 522,
+      "duration_ms": 489,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 255,
+          "duration_ms": 243,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 130,
+          "duration_ms": 119,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 137,
+          "duration_ms": 127,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -363,28 +637,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 564,
+      "duration_ms": 518,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 132,
+          "duration_ms": 105,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 107,
+          "duration_ms": 101,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 326,
+          "duration_ms": 312,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -393,13 +667,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-06-30T03-52-58-827Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-06-30T04-04-49-363Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-06-30T03-40-56-182Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-06-30T03-52-58-827Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-06-30T03:40:56.182Z",
+      "previous_run": "2026-06-30T03:52:58.827Z",
       "status_changes": [],
-      "duration_delta_ms": 245,
+      "duration_delta_ms": -94,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

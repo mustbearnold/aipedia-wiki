@@ -106,6 +106,17 @@ Non-stale scoring is now schema-versioned and decay-aware.
 - `agent-score-calibration.mjs` carries the new fields into calibration output and summary label counts.
 - Focused tests prove high-volatility pages decay when stale and that calibration preserves risk, confidence, and stale-decay fields.
 
+## Eighth System Slice
+
+Closeout receipts now carry trace and artifact references.
+
+- `loop:all:record` receipts include `trace` with trace ID, span ID, optional parent span ID, start/end times, and duration.
+- `loop:all:record` receipts include `artifact_refs` for the loop registry, timestamped receipt, latest receipt, declared record targets, embedded commands, and checked built output.
+- Rust runner tool-refresh and page-refresh closeout JSON includes matching `trace` and `artifact_refs` blocks.
+- Runner artifact refs cover plans, route args, worker report directories, worker report summaries, markdown receipts, JSON receipts, changed routes, source IDs, commands, and command detail outputs.
+- `agent:closeout:check --require-trace-artifacts` enforces the trace and artifact reference contract.
+- Focused Node and Rust tests prove the emitted fields and required-field failure path.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -115,7 +126,7 @@ Non-stale scoring is now schema-versioned and decay-aware.
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | existing runner and loop receipts, `agent:closeout:check`, loop and runner closeout identity fields | Add trace/span refs and require identity in more closeout paths. |
+| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, `agent:closeout:check --require-trace-artifacts` | Expand trace refs into workflow-specific closeout policies and bounded production pilots. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries | Add gold-set calibration receipts and threshold review on real workload pilots. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |

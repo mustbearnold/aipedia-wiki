@@ -334,6 +334,8 @@ struct CloseoutReceiptJson {
     run_id: String,
     residual_risks: Vec<String>,
     next_actions: Vec<String>,
+    trace: CloseoutTrace,
+    artifact_refs: Vec<CloseoutArtifactRef>,
     current_date: Option<String>,
     elapsed_ms: u64,
     plan: String,
@@ -347,6 +349,29 @@ struct CloseoutReceiptJson {
     commands: Vec<CloseoutReceiptCommand>,
     superseded_failures: Vec<SupersededFailureReceipt>,
     system_progress: Option<serde_json::Value>,
+}
+
+#[derive(Debug, Serialize)]
+struct CloseoutTrace {
+    trace_id: String,
+    span_id: String,
+    parent_span_id: String,
+    name: String,
+    started_at: String,
+    ended_at: String,
+    duration_ms: u64,
+}
+
+#[derive(Debug, Serialize)]
+struct CloseoutArtifactRef {
+    role: String,
+    kind: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    path: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    id: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    description: Option<String>,
 }
 
 #[derive(Debug, Serialize)]
@@ -2718,8 +2743,19 @@ fn write_receipt(
     let run_id = closeout_run_id("tool-refresh", &generated_at);
     let residual_risks = closeout_list("AIPEDIA_RESIDUAL_RISKS");
     let next_actions = closeout_list("AIPEDIA_NEXT_ACTIONS");
+    let trace = closeout_trace(
+        "tool-refresh",
+        &goal_id,
+        &run_id,
+        &generated_at,
+        total_duration_ms,
+    );
     let path = receipt_dir.join(format!("{}-tool-refresh-closeout.md", timestamp));
     let json_path = receipt_dir.join(format!("{}-tool-refresh-closeout.json", timestamp));
+    let plan_display = display_path(project_dir, plan_path);
+    let route_args_display = display_path(project_dir, route_args_path);
+    let markdown_receipt = display_path(project_dir, &path);
+    let json_receipt_path = display_path(project_dir, &json_path);
     let mut content = String::new();
     content.push_str("# AiPedia Runner Tool Refresh Closeout\n\n");
     content.push_str(&format!(
@@ -2729,14 +2765,10 @@ fn write_receipt(
     content.push_str(&format!("- Generated: {}\n", generated_at));
     content.push_str(&format!("- Goal ID: `{}`\n", goal_id));
     content.push_str(&format!("- Run ID: `{}`\n", run_id));
-    content.push_str(&format!(
-        "- Plan: `{}`\n",
-        display_path(project_dir, plan_path)
-    ));
-    content.push_str(&format!(
-        "- Route args: `{}`\n\n",
-        display_path(project_dir, route_args_path)
-    ));
+    content.push_str(&format!("- Trace ID: `{}`\n", trace.trace_id));
+    content.push_str(&format!("- Span ID: `{}`\n", trace.span_id));
+    content.push_str(&format!("- Plan: `{}`\n", plan_display));
+    content.push_str(&format!("- Route args: `{}`\n\n", route_args_display));
     content.push_str("## Timing\n\n");
     content.push_str(&format!("- Total closeout: {} ms\n", total_duration_ms));
     let cheap_ms: u128 = results
@@ -2784,6 +2816,26 @@ fn write_receipt(
             .flat_map(|tool| tool.source_ids.iter().cloned())
             .collect(),
     );
+    let changed_routes = routes_from_route_args(&route_args);
+    let widths = route_qa_widths();
+    let commands = receipt_commands(project_dir, results);
+    let superseded_failures = if ok {
+        superseded_failure_receipts(project_dir, receipt_dir, "tool-refresh", &json_path)
+    } else {
+        Vec::new()
+    };
+    let artifact_refs = closeout_artifact_refs(CloseoutArtifactInputs {
+        workflow: "tool-refresh",
+        plan: &plan_display,
+        route_args: Some(&route_args_display),
+        report_dir: None,
+        report_summary: None,
+        markdown_receipt: &markdown_receipt,
+        json_receipt: &json_receipt_path,
+        changed_routes: &changed_routes,
+        source_ids: &source_ids,
+        commands: &commands,
+    });
     let json_receipt = CloseoutReceiptJson {
         schema_version: "aipedia.closeout-receipt.v1".to_string(),
         workflow: "tool-refresh".to_string(),
@@ -2793,22 +2845,20 @@ fn write_receipt(
         run_id,
         residual_risks,
         next_actions,
+        trace,
+        artifact_refs,
         current_date: None,
         elapsed_ms: to_u64(total_duration_ms),
-        plan: display_path(project_dir, plan_path),
-        route_args: Some(display_path(project_dir, route_args_path)),
+        plan: plan_display,
+        route_args: Some(route_args_display),
         report_dir: None,
         report_summary: None,
-        markdown_receipt: display_path(project_dir, &path),
-        changed_routes: routes_from_route_args(&route_args),
+        markdown_receipt,
+        changed_routes,
         source_ids,
-        widths: route_qa_widths(),
-        commands: receipt_commands(project_dir, results),
-        superseded_failures: if ok {
-            superseded_failure_receipts(project_dir, receipt_dir, "tool-refresh", &json_path)
-        } else {
-            Vec::new()
-        },
+        widths,
+        commands,
+        superseded_failures,
         system_progress: runner_system_progress(project_dir),
     };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
@@ -2838,8 +2888,20 @@ fn write_page_receipt(
     let run_id = closeout_run_id("page-refresh", &generated_at);
     let residual_risks = closeout_list("AIPEDIA_RESIDUAL_RISKS");
     let next_actions = closeout_list("AIPEDIA_NEXT_ACTIONS");
+    let trace = closeout_trace(
+        "page-refresh",
+        &goal_id,
+        &run_id,
+        &generated_at,
+        total_duration_ms,
+    );
     let path = receipt_dir.join(format!("{}-page-refresh-closeout.md", timestamp));
     let json_path = receipt_dir.join(format!("{}-page-refresh-closeout.json", timestamp));
+    let plan_display = display_path(project_dir, plan_path);
+    let report_dir_display = display_path(project_dir, report_dir);
+    let report_summary_display = display_path(project_dir, report_summary_path);
+    let markdown_receipt = display_path(project_dir, &path);
+    let json_receipt_path = display_path(project_dir, &json_path);
     let mut content = String::new();
     content.push_str("# AiPedia Runner Page Refresh Closeout\n\n");
     content.push_str(&format!(
@@ -2849,18 +2911,14 @@ fn write_page_receipt(
     content.push_str(&format!("- Generated: {}\n", generated_at));
     content.push_str(&format!("- Goal ID: `{}`\n", goal_id));
     content.push_str(&format!("- Run ID: `{}`\n", run_id));
+    content.push_str(&format!("- Trace ID: `{}`\n", trace.trace_id));
+    content.push_str(&format!("- Span ID: `{}`\n", trace.span_id));
     content.push_str(&format!("- Current date: {}\n", plan.current_date));
-    content.push_str(&format!(
-        "- Plan: `{}`\n",
-        display_path(project_dir, plan_path)
-    ));
-    content.push_str(&format!(
-        "- Report dir: `{}`\n",
-        display_path(project_dir, report_dir)
-    ));
+    content.push_str(&format!("- Plan: `{}`\n", plan_display));
+    content.push_str(&format!("- Report dir: `{}`\n", report_dir_display));
     content.push_str(&format!(
         "- Worker report summary: `{}`\n\n",
-        display_path(project_dir, report_summary_path)
+        report_summary_display
     ));
 
     content.push_str("## Scope\n\n");
@@ -2942,6 +3000,39 @@ fn write_page_receipt(
         }
     }
 
+    let changed_routes = sorted_unique(
+        plan.commands
+            .content_routes
+            .iter()
+            .chain(plan.commands.interactive_routes.iter())
+            .cloned()
+            .collect(),
+    );
+    let source_ids = sorted_unique(
+        plan.batch
+            .iter()
+            .flat_map(|page| page.source_ids.iter().cloned())
+            .collect(),
+    );
+    let widths = route_qa_widths();
+    let commands = receipt_commands(project_dir, results);
+    let superseded_failures = if ok {
+        superseded_failure_receipts(project_dir, receipt_dir, "page-refresh", &json_path)
+    } else {
+        Vec::new()
+    };
+    let artifact_refs = closeout_artifact_refs(CloseoutArtifactInputs {
+        workflow: "page-refresh",
+        plan: &plan_display,
+        route_args: None,
+        report_dir: Some(&report_dir_display),
+        report_summary: Some(&report_summary_display),
+        markdown_receipt: &markdown_receipt,
+        json_receipt: &json_receipt_path,
+        changed_routes: &changed_routes,
+        source_ids: &source_ids,
+        commands: &commands,
+    });
     let json_receipt = CloseoutReceiptJson {
         schema_version: "aipedia.closeout-receipt.v1".to_string(),
         workflow: "page-refresh".to_string(),
@@ -2951,34 +3042,20 @@ fn write_page_receipt(
         run_id,
         residual_risks,
         next_actions,
+        trace,
+        artifact_refs,
         current_date: Some(plan.current_date.clone()),
         elapsed_ms: to_u64(total_duration_ms),
-        plan: display_path(project_dir, plan_path),
+        plan: plan_display,
         route_args: None,
-        report_dir: Some(display_path(project_dir, report_dir)),
-        report_summary: Some(display_path(project_dir, report_summary_path)),
-        markdown_receipt: display_path(project_dir, &path),
-        changed_routes: sorted_unique(
-            plan.commands
-                .content_routes
-                .iter()
-                .chain(plan.commands.interactive_routes.iter())
-                .cloned()
-                .collect(),
-        ),
-        source_ids: sorted_unique(
-            plan.batch
-                .iter()
-                .flat_map(|page| page.source_ids.iter().cloned())
-                .collect(),
-        ),
-        widths: route_qa_widths(),
-        commands: receipt_commands(project_dir, results),
-        superseded_failures: if ok {
-            superseded_failure_receipts(project_dir, receipt_dir, "page-refresh", &json_path)
-        } else {
-            Vec::new()
-        },
+        report_dir: Some(report_dir_display),
+        report_summary: Some(report_summary_display),
+        markdown_receipt,
+        changed_routes,
+        source_ids,
+        widths,
+        commands,
+        superseded_failures,
         system_progress: runner_system_progress(project_dir),
     };
     fs::write(&path, content).with_context(|| format!("could not write {}", path.display()))?;
@@ -3002,6 +3079,197 @@ fn receipt_commands(project_dir: &Path, results: &[CommandResult]) -> Vec<Closeo
                 .map(|path| display_path(project_dir, path)),
         })
         .collect()
+}
+
+struct CloseoutArtifactInputs<'a> {
+    workflow: &'a str,
+    plan: &'a str,
+    route_args: Option<&'a str>,
+    report_dir: Option<&'a str>,
+    report_summary: Option<&'a str>,
+    markdown_receipt: &'a str,
+    json_receipt: &'a str,
+    changed_routes: &'a [String],
+    source_ids: &'a [String],
+    commands: &'a [CloseoutReceiptCommand],
+}
+
+fn closeout_trace(
+    workflow: &str,
+    goal_id: &str,
+    run_id: &str,
+    generated_at: &str,
+    duration_ms: u128,
+) -> CloseoutTrace {
+    let trace_id =
+        closeout_env("AIPEDIA_TRACE_ID").unwrap_or_else(|| stable_trace_id(&[goal_id, run_id]));
+    CloseoutTrace {
+        trace_id,
+        span_id: stable_trace_id(&["span", workflow, run_id, generated_at]),
+        parent_span_id: closeout_env("AIPEDIA_PARENT_SPAN_ID").unwrap_or_default(),
+        name: workflow.to_string(),
+        started_at: generated_at.to_string(),
+        ended_at: Utc::now().to_rfc3339(),
+        duration_ms: to_u64(duration_ms),
+    }
+}
+
+fn stable_trace_id(parts: &[&str]) -> String {
+    let mut value = parts
+        .iter()
+        .filter(|part| !part.trim().is_empty())
+        .copied()
+        .collect::<Vec<_>>()
+        .join(":");
+    value = value
+        .chars()
+        .map(|ch| {
+            if ch.is_ascii_alphanumeric() || matches!(ch, '_' | '-' | '.' | ':') {
+                ch
+            } else {
+                '-'
+            }
+        })
+        .collect::<String>()
+        .trim_matches('-')
+        .chars()
+        .take(180)
+        .collect();
+    if value.is_empty() {
+        "unscoped-trace".to_string()
+    } else {
+        value
+    }
+}
+
+fn closeout_artifact_refs(inputs: CloseoutArtifactInputs<'_>) -> Vec<CloseoutArtifactRef> {
+    let mut refs = Vec::new();
+    refs.push(artifact_ref(
+        "input",
+        "plan",
+        Some(inputs.plan),
+        None,
+        Some("Planner JSON used for this closeout."),
+    ));
+    if let Some(route_args) = inputs.route_args {
+        refs.push(artifact_ref(
+            "input",
+            "route-args",
+            Some(route_args),
+            None,
+            Some("Generated route QA argument file."),
+        ));
+    }
+    if let Some(report_dir) = inputs.report_dir {
+        refs.push(artifact_ref(
+            "input",
+            "worker-report-dir",
+            Some(report_dir),
+            None,
+            Some("Worker report directory."),
+        ));
+    }
+    if let Some(report_summary) = inputs.report_summary {
+        refs.push(artifact_ref(
+            "input",
+            "worker-report-summary",
+            Some(report_summary),
+            None,
+            Some("Parsed worker report summary."),
+        ));
+    }
+    refs.push(artifact_ref(
+        "output",
+        "markdown-receipt",
+        Some(inputs.markdown_receipt),
+        None,
+        Some("Human-readable closeout receipt."),
+    ));
+    refs.push(artifact_ref(
+        "output",
+        "json-receipt",
+        Some(inputs.json_receipt),
+        None,
+        Some("Machine-readable closeout receipt."),
+    ));
+    for route in inputs.changed_routes {
+        refs.push(artifact_ref(
+            "route",
+            "changed-route",
+            None,
+            Some(route.as_str()),
+            Some(inputs.workflow),
+        ));
+    }
+    for source_id in inputs.source_ids {
+        refs.push(artifact_ref(
+            "source",
+            "source-id",
+            None,
+            Some(source_id.as_str()),
+            Some(inputs.workflow),
+        ));
+    }
+    for command in inputs.commands {
+        let command_id = stable_trace_id(&[inputs.workflow, &command.label]);
+        refs.push(artifact_ref(
+            "embedded",
+            "closeout-command",
+            None,
+            Some(command_id.as_str()),
+            Some(&command.label),
+        ));
+        if let Some(details_path) = command.details_path.as_deref() {
+            refs.push(artifact_ref(
+                "output",
+                "command-detail",
+                Some(details_path),
+                Some(command_id.as_str()),
+                Some(&command.label),
+            ));
+        }
+    }
+    dedupe_artifact_refs(refs)
+}
+
+fn artifact_ref(
+    role: &str,
+    kind: &str,
+    path: Option<&str>,
+    id: Option<&str>,
+    description: Option<&str>,
+) -> CloseoutArtifactRef {
+    CloseoutArtifactRef {
+        role: role.to_string(),
+        kind: kind.to_string(),
+        path: path
+            .filter(|value| !value.is_empty())
+            .map(|value| value.to_string()),
+        id: id
+            .filter(|value| !value.is_empty())
+            .map(|value| value.to_string()),
+        description: description
+            .filter(|value| !value.is_empty())
+            .map(|value| value.to_string()),
+    }
+}
+
+fn dedupe_artifact_refs(refs: Vec<CloseoutArtifactRef>) -> Vec<CloseoutArtifactRef> {
+    let mut seen = BTreeSet::new();
+    let mut deduped = Vec::new();
+    for artifact in refs {
+        let key = format!(
+            "{}|{}|{}|{}",
+            artifact.role,
+            artifact.kind,
+            artifact.path.clone().unwrap_or_default(),
+            artifact.id.clone().unwrap_or_default()
+        );
+        if seen.insert(key) {
+            deduped.push(artifact);
+        }
+    }
+    deduped
 }
 
 fn closeout_goal_id() -> String {
@@ -3483,6 +3751,21 @@ mod tests {
             .as_array()
             .expect("next actions should be an array")
             .is_empty());
+        assert_eq!(receipt["trace"]["name"], "tool-refresh");
+        assert!(receipt["trace"]["trace_id"]
+            .as_str()
+            .expect("trace id should be a string")
+            .contains("tool-refresh"));
+        assert!(receipt["artifact_refs"]
+            .as_array()
+            .expect("artifact refs should be an array")
+            .iter()
+            .any(|artifact| artifact["kind"] == "plan" && artifact["role"] == "input"));
+        assert!(receipt["artifact_refs"]
+            .as_array()
+            .expect("artifact refs should be an array")
+            .iter()
+            .any(|artifact| artifact["kind"] == "json-receipt" && artifact["role"] == "output"));
         assert_eq!(receipt["elapsed_ms"], 250);
         assert!(receipt["changed_routes"]
             .as_array()
@@ -3584,6 +3867,18 @@ mod tests {
             .as_array()
             .expect("next actions should be an array")
             .is_empty());
+        assert_eq!(receipt["trace"]["name"], "page-refresh");
+        assert!(receipt["artifact_refs"]
+            .as_array()
+            .expect("artifact refs should be an array")
+            .iter()
+            .any(|artifact| artifact["kind"] == "worker-report-summary"
+                && artifact["role"] == "input"));
+        assert!(receipt["artifact_refs"]
+            .as_array()
+            .expect("artifact refs should be an array")
+            .iter()
+            .any(|artifact| artifact["kind"] == "changed-route" && artifact["role"] == "route"));
         assert_eq!(receipt["current_date"], "2026-06-26");
         assert!(receipt["changed_routes"]
             .as_array()

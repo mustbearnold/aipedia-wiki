@@ -29,6 +29,28 @@ function validLoopReceipt(overrides = {}) {
     run_id: 'loop-run:fixture',
     residual_risks: [],
     next_actions: ['Continue the fixture.'],
+    trace: {
+      trace_id: 'trace:meta-goal:loop-run-fixture',
+      span_id: 'span:loop-run:fixture',
+      parent_span_id: '',
+      name: 'loop-run',
+      started_at: '2026-06-30T03:01:47.100Z',
+      ended_at: '2026-06-30T03:01:47.223Z',
+      duration_ms: 123,
+    },
+    artifact_refs: [
+      {
+        role: 'input',
+        kind: 'loop-registry',
+        path: 'src/data/aipedia-loops.json',
+        description: 'Loop registry used for this run.',
+      },
+      {
+        role: 'output',
+        kind: 'loop-run-receipt',
+        path: '.agent/loop-runs/system/fixture-loop-run.json',
+      },
+    ],
     duration_ms: 123,
     totals: {
       loops: 1,
@@ -108,6 +130,27 @@ function validRunnerReceipt(overrides = {}) {
     run_id: 'runner-run:fixture',
     residual_risks: [],
     next_actions: ['Continue the runner fixture.'],
+    trace: {
+      trace_id: 'trace:meta-goal:runner-fixture',
+      span_id: 'span:tool-refresh:fixture',
+      parent_span_id: '',
+      name: 'tool-refresh',
+      started_at: '2026-06-30T03:01:47Z',
+      ended_at: '2026-06-30T03:01:47Z',
+      duration_ms: 250,
+    },
+    artifact_refs: [
+      {
+        role: 'input',
+        kind: 'plan',
+        path: 'local/tmp/plan.json',
+      },
+      {
+        role: 'output',
+        kind: 'markdown-receipt',
+        path: 'local/tmp/receipt.md',
+      },
+    ],
     current_date: null,
     elapsed_ms: 250,
     plan: 'local/tmp/plan.json',
@@ -194,13 +237,35 @@ test('closeout receipt check fails receipts without required closeout identity',
   }
 });
 
+test('closeout receipt check fails receipts without required trace artifacts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-missing-trace-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  delete receipt.trace;
+  delete receipt.artifact_refs;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-trace-artifacts', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('closeout-trace-invalid'));
+    assert.ok(codes.includes('closeout-artifact-refs-invalid'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates runner closeout receipts', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-runner-'));
   const path = join(dir, 'runner.json');
 
   try {
     writeJson(path, validRunnerReceipt());
-    const result = runCheck(['--receipt', path, '--json']);
+    const result = runCheck(['--receipt', path, '--require-trace-artifacts', '--json']);
     assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
 
     const report = JSON.parse(result.stdout);

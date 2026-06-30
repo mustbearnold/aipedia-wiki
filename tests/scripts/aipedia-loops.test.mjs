@@ -267,12 +267,18 @@ test('aipedia loops can write a machine-readable run ledger', () => {
     assert.equal(latest.run_id, 'run-001');
     assert.deepEqual(latest.residual_risks, ['Fixture risk']);
     assert.deepEqual(latest.next_actions, ['Fixture next action']);
+    assert.equal(latest.trace.name, 'loop-run');
+    assert.ok(latest.trace.trace_id.includes('meta-goal'));
+    assert.ok(latest.trace.span_id.includes('run-001'));
+    assert.ok(latest.artifact_refs.some((ref) => ref.kind === 'loop-registry' && ref.role === 'input'));
+    assert.ok(latest.artifact_refs.some((ref) => ref.kind === 'loop-run-latest' && ref.role === 'output'));
     assert.deepEqual(latest.ledger.trend.status_changes, []);
     assert.equal(latest.project_dir, '.');
     assert.equal(JSON.stringify(latest).includes('stdout_tail'), false);
     assert.equal(JSON.stringify(fullRun).includes('stdout_tail'), true);
     assert.equal(fullRun.goal_id, 'meta-goal');
     assert.equal(fullRun.run_id, 'run-001');
+    assert.ok(fullRun.artifact_refs.some((ref) => ref.kind === 'loop-command' && ref.role === 'embedded'));
 
     rmSync(join(ledgerDir, timestampedRuns[0]), { force: true });
     const secondResult = runLoops(
