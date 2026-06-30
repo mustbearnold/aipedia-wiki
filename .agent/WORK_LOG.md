@@ -1852,3 +1852,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-36.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-09-51-766Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5381 ms, latest estimated full receipt tokens 11071, and latest system artifact count 13.
 - Next: Commit and push, then add an explicit closeout-check mode that requires checked DAG proof refs when a workflow declares DAG planning.
+
+### 2026-06-30: Agentic Tooling Meta Slice 37, Required DAG Proof Closeout Mode
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: `agent:closeout:check` now accepts `--require-dag-proof`.
+- Changed: Required DAG proof mode fails receipts that do not attach both an output `agent-task-dag` ref and an output `agent-task-dag-validation-report` ref.
+- Changed: Required DAG proof mode checks that the validation report references at least one attached DAG graph path, so an unrelated green report cannot satisfy the proof.
+- System lesson: validating optional DAG refs is not enough for DAG-planned workflows. The closeout command needs a hard mode that says the graph proof must be present and must match.
+- Verification: closeout checker syntax, focused closeout tests, live required-proof positive checks, live required-proof negative check, diff guard, em-dash guard, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record`, required DAG proof closeout validation, and efficiency trends passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-37.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-17-30-980Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5097 ms, latest estimated full receipt tokens 10845, and latest system artifact count 8.
+- Next: Commit and push, then wire this mode into the standard meta closeout command surface.

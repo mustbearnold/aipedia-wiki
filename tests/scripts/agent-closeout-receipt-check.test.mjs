@@ -567,6 +567,15 @@ test('closeout receipt check validates DAG artifact refs on loop receipts', () =
       totals: {
         issues: 0,
       },
+      receipts: [
+        {
+          ok: true,
+          path: dagPath,
+          schema_version: 'aipedia.agent-task-dag.v1',
+          node_count: 0,
+          issues: [],
+        },
+      ],
     });
     writeJson(receiptPath, validLoopReceipt({
       artifact_refs: [
@@ -590,6 +599,7 @@ test('closeout receipt check validates DAG artifact refs on loop receipts', () =
       '--require-closeout-identity',
       '--require-trace-artifacts',
       '--require-efficiency-metrics',
+      '--require-dag-proof',
       '--json',
     ]);
     assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
@@ -600,6 +610,15 @@ test('closeout receipt check validates DAG artifact refs on loop receipts', () =
       totals: {
         issues: 1,
       },
+      receipts: [
+        {
+          ok: false,
+          path: dagPath,
+          schema_version: 'aipedia.agent-task-dag.v1',
+          node_count: 0,
+          issues: [{ code: 'fixture', message: 'fixture' }],
+        },
+      ],
     });
     const failed = runCheck([
       '--receipt',
@@ -826,6 +845,15 @@ test('closeout receipt check validates DAG artifact refs on runner receipts', ()
       totals: {
         issues: 0,
       },
+      receipts: [
+        {
+          ok: true,
+          path: dagPath,
+          schema_version: 'aipedia.agent-task-dag.v1',
+          node_count: 0,
+          issues: [],
+        },
+      ],
     });
     writeJson(receiptPath, validRunnerReceipt({
       artifact_refs: [
@@ -848,6 +876,7 @@ test('closeout receipt check validates DAG artifact refs on runner receipts', ()
       receiptPath,
       '--require-closeout-identity',
       '--require-trace-artifacts',
+      '--require-dag-proof',
       '--json',
     ]);
     assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
@@ -867,6 +896,81 @@ test('closeout receipt check validates DAG artifact refs on runner receipts', ()
     const report = JSON.parse(failed.stdout);
     const codes = report.receipts[0].issues.map((item) => item.code);
     assert.ok(codes.includes('dag-artifact-invalid'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check requires checked DAG proof when requested', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-required-dag-proof-'));
+  const receiptPath = join(dir, 'runner.json');
+  const dagPath = join(dir, 'agent-task-graph.json');
+  const validationPath = join(dir, 'agent-task-graph.validation.json');
+
+  try {
+    writeJson(receiptPath, validRunnerReceipt());
+    const missing = runCheck([
+      '--receipt',
+      receiptPath,
+      '--require-closeout-identity',
+      '--require-trace-artifacts',
+      '--require-dag-proof',
+      '--json',
+    ]);
+    assert.equal(missing.status, 1);
+    const missingReport = JSON.parse(missing.stdout);
+    const missingCodes = missingReport.receipts[0].issues.map((item) => item.code);
+    assert.ok(missingCodes.includes('dag-proof-missing'));
+    assert.ok(missingCodes.includes('dag-proof-validation-missing'));
+
+    writeJson(dagPath, {
+      schema_version: 'aipedia.agent-task-dag.v1',
+      nodes: [],
+    });
+    writeJson(validationPath, {
+      ok: true,
+      schema_version: 'aipedia.agent-task-dag-check.v1',
+      totals: {
+        issues: 0,
+      },
+      receipts: [
+        {
+          ok: true,
+          path: join(dir, 'other-agent-task-graph.json'),
+          schema_version: 'aipedia.agent-task-dag.v1',
+          node_count: 0,
+          issues: [],
+        },
+      ],
+    });
+    writeJson(receiptPath, validRunnerReceipt({
+      artifact_refs: [
+        ...validRunnerReceipt().artifact_refs,
+        {
+          role: 'output',
+          kind: 'agent-task-dag',
+          path: dagPath,
+        },
+        {
+          role: 'output',
+          kind: 'agent-task-dag-validation-report',
+          path: validationPath,
+        },
+      ],
+    }));
+
+    const mismatched = runCheck([
+      '--receipt',
+      receiptPath,
+      '--require-closeout-identity',
+      '--require-trace-artifacts',
+      '--require-dag-proof',
+      '--json',
+    ]);
+    assert.equal(mismatched.status, 1);
+    const mismatchReport = JSON.parse(mismatched.stdout);
+    const mismatchCodes = mismatchReport.receipts[0].issues.map((item) => item.code);
+    assert.ok(mismatchCodes.includes('dag-proof-validation-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

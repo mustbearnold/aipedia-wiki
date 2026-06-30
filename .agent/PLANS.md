@@ -369,9 +369,21 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-09-51-766Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5381 ms, and latest estimated full receipt tokens 11071.
 
+### Completed Slice 37
+
+- `agent:closeout:check` exposes `--require-dag-proof`.
+- Required DAG proof mode requires an output `agent-task-dag` artifact ref.
+- Required DAG proof mode requires an output `agent-task-dag-validation-report` artifact ref.
+- The validation report must parse as `aipedia.agent-task-dag-check.v1`, have `ok: true`, report zero issues, and reference at least one attached DAG graph path.
+- Focused tests cover passing required DAG proof, missing DAG proof, and mismatched validation-report path failures.
+- Live required-proof checks pass on `.agent/loop-runs/system/latest.json` and `.agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json`.
+- Live required-proof negative check fails on `.agent/loop-runs/system/2026-06-30T08-48-03-374Z-loop-run.json` with missing graph and validation refs.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-17-30-980Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5097 ms, and latest estimated full receipt tokens 10845.
+
 ### Next Slice
 
-1. Add an explicit closeout-check mode that requires checked DAG graph and validation refs when a workflow declares DAG planning.
+1. Wire `--require-dag-proof` into the standard meta closeout command surface where DAG planning is expected.
 2. Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.
 3. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
 4. Add exact model-token usage and correction rate when reliable inputs are available.

@@ -16,6 +16,7 @@ const REQUIRE_CLOSEOUT_IDENTITY = hasFlag('--require-closeout-identity');
 const REQUIRE_TRACE_ARTIFACTS = hasFlag('--require-trace-artifacts');
 const REQUIRE_WORKFLOW_POLICY = hasFlag('--require-workflow-policy');
 const REQUIRE_EFFICIENCY_METRICS = hasFlag('--require-efficiency-metrics');
+const REQUIRE_DAG_PROOF = hasFlag('--require-dag-proof');
 const EXPLICIT_RECEIPTS = valuesFor('--receipt').concat(valuesFor('--path'));
 const KNOWN_FLAGS = new Set([
   '--all-system',
@@ -26,6 +27,7 @@ const KNOWN_FLAGS = new Set([
   '--project-dir',
   '--receipt',
   '--require-closeout-identity',
+  '--require-dag-proof',
   '--require-efficiency-metrics',
   '--require-system-progress',
   '--require-trace-artifacts',
@@ -104,6 +106,7 @@ const report = {
   require_trace_artifacts: REQUIRE_TRACE_ARTIFACTS,
   require_workflow_policy: REQUIRE_WORKFLOW_POLICY,
   require_efficiency_metrics: REQUIRE_EFFICIENCY_METRICS,
+  require_dag_proof: REQUIRE_DAG_PROOF,
   totals: {
     receipts: receipts.length,
     ok: receipts.filter((receipt) => receipt.ok).length,
@@ -130,6 +133,7 @@ function usage() {
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
     '  --require-closeout-identity   Require goal_id, run_id, residual_risks, and next_actions.',
     '  --require-efficiency-metrics  Require loop receipts to include validated speed and efficiency metrics.',
+    '  --require-dag-proof           Require checked agent DAG graph and validation-report artifact refs.',
     '  --require-trace-artifacts     Require trace and artifact_refs blocks.',
     '  --require-workflow-policy     Require workflow-specific runner closeout policy checks.',
     '  --project-dir <dir>           Project root. Alias: --root.',
@@ -961,11 +965,46 @@ function validateTraceArtifacts(value, issues) {
 }
 
 function validateDagArtifactRefs(value, issues) {
-  if (!Array.isArray(value.artifact_refs)) return;
+  if (!Array.isArray(value.artifact_refs)) {
+    if (REQUIRE_DAG_PROOF) {
+      issues.push(issue('dag-proof-artifact-refs-missing', 'Checked DAG proof requires artifact_refs.'));
+    }
+    return;
+  }
+  const dagPaths = [];
+  const validationReports = [];
   for (const artifact of value.artifact_refs) {
     if (!isObject(artifact)) continue;
-    if (artifact.kind === 'agent-task-dag') validateAgentTaskDagArtifact(artifact, issues);
-    if (artifact.kind === 'agent-task-dag-validation-report') validateAgentTaskDagValidationArtifact(artifact, issues);
+    if (artifact.kind === 'agent-task-dag') {
+      if (typeof artifact.path === 'string' && artifact.path.trim()) {
+        dagPaths.push(compareArtifactPath(artifact.path));
+      }
+      validateAgentTaskDagArtifact(artifact, issues);
+    }
+    if (artifact.kind === 'agent-task-dag-validation-report') {
+      const report = validateAgentTaskDagValidationArtifact(artifact, issues);
+      if (report) validationReports.push(report);
+    }
+  }
+  if (!REQUIRE_DAG_PROOF) return;
+  if (dagPaths.length === 0) {
+    issues.push(issue('dag-proof-missing', 'Checked DAG proof requires an output agent-task-dag artifact ref.'));
+  }
+  if (validationReports.length === 0) {
+    issues.push(issue('dag-proof-validation-missing', 'Checked DAG proof requires an output agent-task-dag-validation-report artifact ref.'));
+  }
+  if (dagPaths.length > 0 && validationReports.length > 0) {
+    const validatedPaths = new Set();
+    for (const report of validationReports) {
+      for (const receipt of Array.isArray(report.receipts) ? report.receipts : []) {
+        if (isObject(receipt) && typeof receipt.path === 'string' && receipt.path.trim()) {
+          validatedPaths.add(compareArtifactPath(receipt.path));
+        }
+      }
+    }
+    if (!dagPaths.some((path) => validatedPaths.has(path))) {
+      issues.push(issue('dag-proof-validation-mismatch', 'Checked DAG validation report must reference at least one attached agent-task-dag path.'));
+    }
   }
 }
 
@@ -996,6 +1035,11 @@ function validateAgentTaskDagValidationArtifact(artifact, issues) {
   if (typeof issuesCount === 'number' && issuesCount !== 0) {
     issues.push(issue('dag-validation-artifact-failed', 'DAG validation artifact must have zero issues.'));
   }
+  return value;
+}
+
+function compareArtifactPath(path) {
+  return resolve(PROJECT_DIR, path);
 }
 
 function readArtifactJson(artifact, issues, code) {
