@@ -5,20 +5,74 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-06-29T10:54:53.659Z",
-  "duration_ms": 4799,
+  "generated_at": "2026-06-30T03:01:47.100Z",
+  "duration_ms": 4904,
   "totals": {
     "loops": 7,
-    "ok": 7,
-    "attention": 0,
+    "ok": 4,
+    "attention": 3,
     "skipped": 0,
     "commands": 16
   },
   "review": {
-    "summary": "7 loop(s) ok; 0 attention; 0 skipped.",
-    "attention_loops": [],
+    "summary": "4 loop(s) ok; 3 attention; 0 skipped.",
+    "attention_loops": [
+      "freshness",
+      "revenue-conversion",
+      "performance-ux"
+    ],
     "skipped_loops": [],
     "recommendations": [
+      {
+        "loop_id": "performance-ux",
+        "title": "Performance And UX Loop",
+        "score": 95,
+        "severity": "blocker",
+        "confidence": "high",
+        "effort": "medium",
+        "action": "Run npm run build:fast, then rerun performance-ux because dist-fast/client is older than rendered inputs.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
+      {
+        "loop_id": "revenue-conversion",
+        "title": "Revenue And Conversion Loop",
+        "score": 95,
+        "severity": "blocker",
+        "confidence": "high",
+        "effort": "medium",
+        "action": "Run npm run build:fast, then rerun revenue-conversion because dist-fast/client is older than rendered inputs.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
+      {
+        "loop_id": "freshness",
+        "title": "Freshness Loop",
+        "score": 92,
+        "severity": "attention",
+        "confidence": "high",
+        "effort": "varies",
+        "action": "Review due_now=49 and classify as fix, queue, or loop noise.",
+        "reason": "due_now=49"
+      },
+      {
+        "loop_id": "performance-ux",
+        "title": "Performance And UX Loop",
+        "score": 90,
+        "severity": "attention",
+        "confidence": "high",
+        "effort": "varies",
+        "action": "Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
+      {
+        "loop_id": "revenue-conversion",
+        "title": "Revenue And Conversion Loop",
+        "score": 90,
+        "severity": "attention",
+        "confidence": "high",
+        "effort": "varies",
+        "action": "Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
       {
         "loop_id": "decision-content",
         "title": "Decision Content Flywheel",
@@ -26,7 +80,7 @@
         "severity": "next",
         "confidence": "medium",
         "effort": "large",
-        "action": "Begin the next buyer-decision cycle: captions-vs-synthesia.",
+        "action": "Begin the next buyer-decision cycle: cody-vs-github-copilot.",
         "reason": "top decision-content candidate"
       },
       {
@@ -37,27 +91,77 @@
         "confidence": "medium",
         "effort": "medium",
         "action": "Refresh due fact best_paid_tier on blackbox-ai.",
-        "reason": "freshness queue due in 0 day(s)"
+        "reason": "freshness queue due in -1 day(s)"
       }
     ],
     "next_actions": [
-      "decision-content: Begin the next buyer-decision cycle: captions-vs-synthesia.",
-      "freshness: Refresh due fact best_paid_tier on blackbox-ai."
+      "performance-ux: Run npm run build:fast, then rerun performance-ux because dist-fast/client is older than rendered inputs.",
+      "revenue-conversion: Run npm run build:fast, then rerun revenue-conversion because dist-fast/client is older than rendered inputs.",
+      "freshness: Review due_now=49 and classify as fix, queue, or loop noise.",
+      "performance-ux: Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise.",
+      "revenue-conversion: Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise."
     ]
+  },
+  "system_progress": {
+    "ok": true,
+    "mode": "system-progress-check",
+    "command": "node scripts/agent-system-progress-check.mjs --json --project-dir=. --require-system-artifact",
+    "exit_code": 0,
+    "require_system_artifact": true,
+    "changed_paths": [
+      ".agent/CURRENT_STATUS.md",
+      ".agent/LOOPS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-02.md",
+      ".agent/loop-runs/system/latest.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
+      "scripts/README.md",
+      "scripts/aipedia-loops.mjs",
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json",
+      "tests/scripts/aipedia-loops.test.mjs"
+    ],
+    "system_artifacts": [
+      ".agent/CURRENT_STATUS.md",
+      ".agent/LOOPS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-02.md",
+      ".agent/loop-runs/system/latest.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
+      "scripts/README.md",
+      "scripts/aipedia-loops.mjs",
+      "tests/scripts/aipedia-loops.test.mjs"
+    ],
+    "content_artifacts": [
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "other_artifacts": [],
+    "has_system_artifact": true,
+    "content_only": false,
+    "next_action": "System artifact present or enforcement disabled."
   },
   "loops": [
     {
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 218,
+      "duration_ms": 212,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 111,
+          "duration_ms": 106,
           "attention_reasons": [],
           "build_freshness": null
         },
@@ -73,22 +177,26 @@
     {
       "id": "freshness",
       "title": "Freshness Loop",
-      "status": "ok",
-      "duration_ms": 555,
-      "attention_reasons": [],
+      "status": "attention",
+      "duration_ms": 553,
+      "attention_reasons": [
+        "due_now=49"
+      ],
       "skip_reason": "",
       "commands": [
         {
           "label": "freshness queue",
-          "status": "ok",
-          "duration_ms": 229,
-          "attention_reasons": [],
+          "status": "attention",
+          "duration_ms": 232,
+          "attention_reasons": [
+            "due_now=49"
+          ],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 325,
+          "duration_ms": 320,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -98,28 +206,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 375,
+      "duration_ms": 397,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 145,
+          "duration_ms": 153,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 109,
+          "duration_ms": 114,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 121,
+          "duration_ms": 130,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -128,28 +236,32 @@
     {
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
-      "status": "ok",
-      "duration_ms": 1936,
-      "attention_reasons": [],
+      "status": "attention",
+      "duration_ms": 1974,
+      "attention_reasons": [
+        "built output stale: run npm run build:fast before trusting dist-fast/client"
+      ],
       "skip_reason": "",
       "commands": [
         {
           "label": "commercial CTA audit",
-          "status": "ok",
-          "duration_ms": 1935,
-          "attention_reasons": [],
+          "status": "attention",
+          "duration_ms": 1973,
+          "attention_reasons": [
+            "built output stale: run npm run build:fast before trusting dist-fast/client"
+          ],
           "build_freshness": {
-            "status": "fresh",
+            "status": "stale",
             "site_dir": "dist-fast/client",
             "newest_output": {
               "path": "dist-fast/client/sitemap-0.xml",
               "mtime": "2026-06-29T10:54:16.009Z"
             },
             "newest_input": {
-              "path": "src/data/source-registry.json",
-              "mtime": "2026-06-29T10:52:07.479Z"
+              "path": "src/content/tools/synthesia.md",
+              "mtime": "2026-06-29T11:03:48.040Z"
             },
-            "stale_by_ms": 0
+            "stale_by_ms": 572031
           }
         }
       ]
@@ -158,28 +270,28 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 486,
+      "duration_ms": 483,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 226,
+          "duration_ms": 236,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 136,
+          "duration_ms": 120,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 124,
+          "duration_ms": 126,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -188,47 +300,54 @@
     {
       "id": "performance-ux",
       "title": "Performance And UX Loop",
-      "status": "ok",
-      "duration_ms": 741,
-      "attention_reasons": [],
+      "status": "attention",
+      "duration_ms": 766,
+      "attention_reasons": [
+        "built output stale: run npm run build:fast before trusting dist-fast/client",
+        "built output stale: run npm run build:fast before trusting dist-fast/client"
+      ],
       "skip_reason": "",
       "commands": [
         {
           "label": "dist budget",
-          "status": "ok",
-          "duration_ms": 177,
-          "attention_reasons": [],
+          "status": "attention",
+          "duration_ms": 183,
+          "attention_reasons": [
+            "built output stale: run npm run build:fast before trusting dist-fast/client"
+          ],
           "build_freshness": {
-            "status": "fresh",
+            "status": "stale",
             "site_dir": "dist-fast/client",
             "newest_output": {
               "path": "dist-fast/client/sitemap-0.xml",
               "mtime": "2026-06-29T10:54:16.009Z"
             },
             "newest_input": {
-              "path": "src/data/source-registry.json",
-              "mtime": "2026-06-29T10:52:07.479Z"
+              "path": "src/content/tools/synthesia.md",
+              "mtime": "2026-06-29T11:03:48.040Z"
             },
-            "stale_by_ms": 0
+            "stale_by_ms": 572031
           }
         },
         {
           "label": "indexability audit",
-          "status": "ok",
-          "duration_ms": 564,
-          "attention_reasons": [],
+          "status": "attention",
+          "duration_ms": 584,
+          "attention_reasons": [
+            "built output stale: run npm run build:fast before trusting dist-fast/client"
+          ],
           "build_freshness": {
-            "status": "fresh",
+            "status": "stale",
             "site_dir": "dist-fast/client",
             "newest_output": {
               "path": "dist-fast/client/sitemap-0.xml",
               "mtime": "2026-06-29T10:54:16.009Z"
             },
             "newest_input": {
-              "path": "src/data/source-registry.json",
-              "mtime": "2026-06-29T10:52:07.479Z"
+              "path": "src/content/tools/synthesia.md",
+              "mtime": "2026-06-29T11:03:48.040Z"
             },
-            "stale_by_ms": 0
+            "stale_by_ms": 572031
           }
         }
       ]
@@ -237,28 +356,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 488,
+      "duration_ms": 520,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 100,
+          "duration_ms": 108,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 91,
+          "duration_ms": 97,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 298,
+          "duration_ms": 314,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -267,13 +386,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-06-29T10-54-53-659Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-06-29T10-36-48-548Z-loop-run.json",
+    "previous_file": "",
     "trend": {
-      "previous_run": "2026-06-29T10:36:48.548Z",
+      "previous_run": "2026-06-30T02:58:11.458Z",
       "status_changes": [],
-      "duration_delta_ms": -46,
+      "duration_delta_ms": -78,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

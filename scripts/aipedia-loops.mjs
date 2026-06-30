@@ -8,7 +8,8 @@ import { fileURLToPath } from 'node:url';
 import { performance } from 'node:perf_hooks';
 
 const args = process.argv.slice(2);
-const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
+const defaultProjectDir = dirname(SCRIPT_DIR);
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || defaultProjectDir);
 const REGISTRY_PATH = resolve(PROJECT_DIR, valueFor('--registry') || 'src/data/aipedia-loops.json');
 const JSON_MODE = hasFlag('--json');
@@ -18,6 +19,7 @@ const LOOP_IDS = valuesFor('--loop');
 const RUN_ALL = hasFlag('--all');
 const SITE_DIR_ARG = valueFor('--site-dir') || valueFor('--dist-dir') || '';
 const WRITE_LEDGER = hasFlag('--write-ledger');
+const REQUIRE_SYSTEM_PROGRESS = hasFlag('--require-system-progress');
 const LEDGER_DIR = resolve(PROJECT_DIR, valueFor('--ledger-dir') || '.agent/loop-runs/system');
 const KNOWN_FLAGS = new Set([
   '--all',
@@ -29,6 +31,7 @@ const KNOWN_FLAGS = new Set([
   '--registry',
   '--root',
   '--run',
+  '--require-system-progress',
   '--site-dir',
   '--write-ledger',
   '--help',
@@ -91,6 +94,7 @@ const report = RUN_MODE
   ? runLoopReport(registry, selectedLoops)
   : briefReport(registry, selectedLoops);
 
+if (RUN_MODE && (WRITE_LEDGER || REQUIRE_SYSTEM_PROGRESS)) attachSystemProgress(report);
 if (WRITE_LEDGER) writeLedger(report);
 emitReport(report);
 process.exit(report.ok ? 0 : 1);
@@ -112,6 +116,7 @@ function usage() {
     '  --site-dir <dir>        Built output used by built-site loops. Defaults to registry default_site_dir.',
     '  --project-dir <dir>     Project root. Alias: --root.',
     '  --write-ledger          Persist this run under .agent/loop-runs/system/.',
+    '  --require-system-progress  Fail this run if no system artifact changed.',
     '  --ledger-dir <dir>      Override the loop-run ledger directory.',
   ].join('\n');
 }
@@ -175,6 +180,73 @@ function reviewSummary(loopReports) {
     skipped_loops: skipped.map((loop) => loop.id),
     recommendations,
     next_actions: recommendations.slice(0, 5).map((item) => `${item.loop_id}: ${item.action}`),
+  };
+}
+
+function attachSystemProgress(reportData) {
+  const systemProgress = systemProgressReport(REQUIRE_SYSTEM_PROGRESS);
+  reportData.system_progress = systemProgress;
+  if (REQUIRE_SYSTEM_PROGRESS && systemProgress.ok === false) {
+    reportData.ok = false;
+    reportData.mode = 'loop-run-system-progress-blocked';
+    reportData.next_action = systemProgress.next_action || 'Add or validate a system artifact before recording operating-system progress.';
+    reportData.review = {
+      ...(reportData.review || {}),
+      next_actions: [
+        `system-progress: ${reportData.next_action}`,
+        ...((reportData.review && reportData.review.next_actions) || []),
+      ],
+    };
+  }
+}
+
+function systemProgressReport(requireSystemArtifact) {
+  const displayProjectDir = projectPath(PROJECT_DIR) || '.';
+  const displayArgs = [
+    'scripts/agent-system-progress-check.mjs',
+    '--json',
+    `--project-dir=${displayProjectDir}`,
+  ];
+  const commandArgs = [
+    join(SCRIPT_DIR, 'agent-system-progress-check.mjs'),
+    '--json',
+    `--project-dir=${PROJECT_DIR}`,
+  ];
+  if (requireSystemArtifact) {
+    commandArgs.push('--require-system-artifact');
+    displayArgs.push('--require-system-artifact');
+  }
+  const child = spawnSync(process.execPath, commandArgs, {
+    cwd: PROJECT_DIR,
+    encoding: 'utf8',
+    timeout: 30000,
+  });
+  const parsed = parseJson(child.stdout);
+  if (!parsed || typeof parsed !== 'object') {
+    return {
+      ok: false,
+      mode: 'system-progress-unreadable',
+      command: commandLineText('node', displayArgs),
+      exit_code: child.status,
+      signal: child.signal || '',
+      stdout_tail: tail(child.stdout),
+      stderr_tail: tail(child.stderr),
+      next_action: 'Run npm run agent:system-progress -- --json and fix the reported issue.',
+    };
+  }
+  return {
+    ok: parsed.ok === true,
+    mode: parsed.mode || 'system-progress-check',
+    command: commandLineText('node', displayArgs),
+    exit_code: child.status,
+    require_system_artifact: parsed.require_system_artifact === true,
+    changed_paths: parsed.changed_paths || [],
+    system_artifacts: parsed.system_artifacts || [],
+    content_artifacts: parsed.content_artifacts || [],
+    other_artifacts: parsed.other_artifacts || [],
+    has_system_artifact: parsed.has_system_artifact === true,
+    content_only: parsed.content_only === true,
+    next_action: parsed.next_action || '',
   };
 }
 
@@ -537,6 +609,7 @@ function latestLedgerSummary(reportData) {
     duration_ms: copy.duration_ms,
     totals: copy.totals,
     review: copy.review,
+    system_progress: copy.system_progress || null,
     loops: (copy.loops || []).map((loop) => ({
       id: loop.id,
       title: loop.title,
@@ -743,6 +816,9 @@ function collectArgumentIssues() {
   if (WRITE_LEDGER && !RUN_MODE) {
     issues.push({ code: 'argument-invalid', detail: '--write-ledger requires --run' });
   }
+  if (REQUIRE_SYSTEM_PROGRESS && !RUN_MODE) {
+    issues.push({ code: 'argument-invalid', detail: '--require-system-progress requires --run' });
+  }
 
   return issues;
 }
@@ -753,4 +829,8 @@ function projectPath(path) {
 
 function normalizeProjectPath(path) {
   return projectPath(resolve(PROJECT_DIR, path));
+}
+
+function commandLineText(command, commandArgs) {
+  return [command, ...commandArgs].join(' ');
 }

@@ -47,13 +47,22 @@ This slice hardens three failure points from the June 29 to June 30 overnight lo
    - `npm run agent:pause-receipt -- --goal-id <id> --safe-resume-step <step> --in-progress-step <step> --json`
    - Records dirty tree state, touched files, safe resume point, validation done, validation pending, must-not-repeat items, and next commands.
 
+## Second System Slice
+
+Loop receipts now carry the system-progress checkpoint directly.
+
+- `npm run loop:all:record -- --require-system-progress --json`
+- Writes `system_progress` into the timestamped loop receipt and `latest.json`.
+- Fails when no system artifact changed, so content-only diffs cannot be recorded as June 30 operating-system progress.
+- Verified by `.agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json`.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
 | Stale input handling | Partial | `decision-loop --fail-on-stale-backlog` | Extend to page/tool/affiliate planners. |
-| System-progress checkpoint | Partial | `agent:system-progress` | Wire into loop record and runner closeouts. |
+| System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress` | Extend to Rust runner closeouts and closeout schema validation. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | existing runner and loop receipts | Normalize `goal_id`, `run_id`, spans, source IDs, route widths, and supersession. |

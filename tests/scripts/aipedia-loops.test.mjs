@@ -12,6 +12,23 @@ function runLoops(...args) {
   });
 }
 
+function runGit(dir, ...args) {
+  const result = spawnSync('git', args, {
+    cwd: dir,
+    encoding: 'utf8',
+  });
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+  return result;
+}
+
+function commitFixtureBaseline(dir) {
+  runGit(dir, 'init');
+  runGit(dir, 'config', 'user.email', 'test@example.com');
+  runGit(dir, 'config', 'user.name', 'AiPedia Test');
+  runGit(dir, 'add', '.');
+  runGit(dir, 'commit', '-m', 'fixture baseline');
+}
+
 function writeRegistry(dir, options = {}) {
   mkdirSync(join(dir, 'src', 'data'), { recursive: true });
   const registryPath = join(dir, 'src', 'data', 'aipedia-loops.json');
@@ -257,6 +274,81 @@ test('aipedia loops can write a machine-readable run ledger', () => {
     assert.equal(secondResult.status, 0, secondResult.stderr);
     const secondLatest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
     assert.equal(secondLatest.ledger.previous_file, '');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('aipedia loops records system progress in run ledgers', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-system-ledger-'));
+  const registry = writeRegistry(dir);
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+
+  try {
+    runGit(dir, 'init');
+    mkdirSync(join(dir, '.agent'), { recursive: true });
+    writeFileSync(join(dir, '.agent', 'WORK_LOG.md'), '# Work Log\n');
+
+    const result = runLoops(
+      '--json',
+      '--run',
+      '--loop',
+      'clean-loop',
+      '--write-ledger',
+      '--require-system-progress',
+      `--ledger-dir=${ledgerDir}`,
+      `--project-dir=${dir}`,
+      `--registry=${registry}`,
+    );
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.system_progress.ok, true);
+    assert.equal(report.system_progress.has_system_artifact, true);
+    assert.ok(report.system_progress.system_artifacts.includes('.agent/WORK_LOG.md'));
+
+    const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
+    assert.equal(latest.system_progress.has_system_artifact, true);
+    assert.ok(latest.system_progress.system_artifacts.includes('.agent/WORK_LOG.md'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('aipedia loops blocks system-progress closeout for content-only diffs', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-content-only-'));
+  const registry = writeRegistry(dir);
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+
+  try {
+    commitFixtureBaseline(dir);
+    mkdirSync(join(dir, 'src', 'content', 'tools'), { recursive: true });
+    writeFileSync(join(dir, 'src', 'content', 'tools', 'example.md'), '# Example\n');
+
+    const result = runLoops(
+      '--json',
+      '--run',
+      '--loop',
+      'clean-loop',
+      '--write-ledger',
+      '--require-system-progress',
+      `--ledger-dir=${ledgerDir}`,
+      `--project-dir=${dir}`,
+      `--registry=${registry}`,
+    );
+    assert.equal(result.status, 1, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.mode, 'loop-run-system-progress-blocked');
+    assert.equal(report.system_progress.mode, 'content-only-progress');
+    assert.equal(report.system_progress.content_only, true);
+    assert.deepEqual(report.system_progress.system_artifacts, []);
+    assert.ok(report.system_progress.content_artifacts.includes('src/content/tools/example.md'));
+
+    const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
+    assert.equal(latest.ok, false);
+    assert.equal(latest.system_progress.content_only, true);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

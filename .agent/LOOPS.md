@@ -16,6 +16,7 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:system -- --json`: structured registry output.
 - `npm run loop:all -- --json`: run every loop read-only and return a status report.
 - `npm run loop:all:record -- --json`: run every loop and write a JSON receipt under `.agent/loop-runs/system/`.
+- `npm run loop:all:record -- --require-system-progress --json`: record a broad loop only if the dirty tree includes a system artifact. Use this for June 30 operating-system progress.
 - `npm run loop:decision -- --json`: run the Decision Content loop checks.
 - `npm run loop:freshness -- --json`: run the Freshness loop checks.
 - `npm run loop:trust -- --json`: run the Trust and Provenance loop checks.
@@ -44,7 +45,7 @@ Built-output loops depend on fresh `dist-fast/client` output. If the runner skip
 
 Stale or unknown built-output freshness is an `attention` signal. A rendered-output loop is only green when the command succeeds and the runner can prove the checked build is fresh.
 
-Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run. Do not use it for every casual check.
+Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run and a `system_progress` block from `agent:system-progress`. Do not use it for every casual check. Add `--require-system-progress` when the run is being counted toward the June 30 operating-system goal.
 
 Loop verification should stay focused on AiPedia work. `.agents/` and `skills-lock.json` are gitignored local tooling artifacts. `check-smart` also ignores them during default dirty-path discovery, but it still counts `.agent/` continuity docs and any explicitly passed paths.
 

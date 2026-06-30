@@ -33,9 +33,13 @@
       "evidence": [
         "scripts/agent-system-progress-check.mjs",
         "npm run agent:system-progress",
-        "tests/scripts/agent-system-progress-check.test.mjs"
+        "scripts/aipedia-loops.mjs system_progress receipt field",
+        "npm run loop:all:record -- --require-system-progress --json",
+        "tests/scripts/agent-system-progress-check.test.mjs",
+        "tests/scripts/aipedia-loops.test.mjs",
+        ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json"
       ],
-      "remaining": "Wire this checkpoint into loop closeout receipts and runner workflows so content-only cycles cannot be recorded as system progress."
+      "remaining": "Extend this checkpoint into Rust runner closeout receipts and add closeout receipt schema validation."
     },
     {
       "id": "pause-resume-receipts",
@@ -61,7 +65,8 @@
       "status": "partial",
       "evidence": [
         "existing runner closeout receipts",
-        "system loop JSON receipts"
+        "system loop JSON receipts",
+        ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json"
       ],
       "remaining": "Adopt goal_id, run_id, trace/span refs, supersession, source IDs, route widths, command timings, and residual risk fields consistently."
     },
@@ -106,24 +111,21 @@
     }
   ],
   "current_slice": {
-    "name": "stale input, system progress, and pause receipt hardening",
+    "name": "loop receipt system-progress enforcement",
     "system_artifacts": [
-      "scripts/decision-loop.mjs",
-      "scripts/agent-system-progress-check.mjs",
-      "scripts/agent-pause-receipt.mjs",
-      "tests/scripts/decision-loop.test.mjs",
-      "tests/scripts/agent-system-progress-check.test.mjs",
-      "tests/scripts/agent-pause-receipt.test.mjs",
-      "package.json",
+      "scripts/aipedia-loops.mjs",
+      "tests/scripts/aipedia-loops.test.mjs",
+      ".agent/LOOPS.md",
       "scripts/README.md",
-      "docs/agentic-tooling-meta-compliance.md"
+      "docs/agentic-tooling-meta-compliance.md",
+      ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Wire agent:system-progress into loop record or runner closeout receipts.",
     "Add closeout receipt schema validation.",
+    "Extend agent:system-progress into Rust runner closeout receipts.",
     "Extend stale-input policy to page/tool/affiliate planners.",
     "Add non-stale scoring risk/confidence fields and stale-decay tests.",
     "Pilot one bounded content workload only after the system slice is verified."
