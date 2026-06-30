@@ -107,9 +107,11 @@
         "scripts/agent-closeout-receipt-check.mjs affiliate handoff policy validation",
         "tests/scripts/agent-closeout-receipt-check.test.mjs affiliate handoff policy tests",
         ".agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json",
-        "bounded runner:affiliate-conversion:handoff policy proof"
+        "bounded runner:affiliate-conversion:handoff policy proof",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json",
+        "bounded runner:page-refresh stale-input policy blocker proof"
       ],
-      "remaining": "Prove page-refresh runner policy on a bounded receipt."
+      "remaining": "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved."
     },
     {
       "id": "non-stale-scoring",
@@ -176,24 +178,24 @@
     }
   ],
   "current_slice": {
-    "name": "loop trend stability signals",
+    "name": "page-refresh policy stale-input blocker proof",
     "system_artifacts": [
-      "scripts/agent-loop-efficiency-trends.mjs",
-      "tests/scripts/agent-loop-efficiency-trends.test.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-21.md",
-      ".agent/loop-runs/system/2026-06-30T06-15-03-030Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-22.md",
+      ".agent/loop-runs/system/2026-06-30T06-24-53-589Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Prove page-refresh runner policy on a bounded receipt.",
+    "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP."

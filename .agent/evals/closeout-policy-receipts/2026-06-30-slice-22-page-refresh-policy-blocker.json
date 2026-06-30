@@ -1,0 +1,106 @@
+{
+  "schema_version": "aipedia.closeout-policy-proof.v1",
+  "date": "2026-06-30",
+  "slice": "22",
+  "workflow": "page-refresh",
+  "proof_kind": "bounded-runner-produced-page-refresh-stale-input-blocker",
+  "local_artifacts": {
+    "plan": "local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json",
+    "worker_report_dir": "local/tmp/aipedia-runner/page-refresh/reports",
+    "worker_report_summary": "local/tmp/aipedia-runner/page-refresh/receipts-slice-22/2026-06-30T06-20-17Z-page-refresh-worker-report-summary.md",
+    "markdown_closeout": "local/tmp/aipedia-runner/page-refresh/receipts-slice-22/2026-06-30T06-20-17Z-page-refresh-closeout.md",
+    "json_closeout": "local/tmp/aipedia-runner/page-refresh/receipts-slice-22/2026-06-30T06-20-17Z-page-refresh-closeout.json"
+  },
+  "commands": [
+    {
+      "label": "page refresh dry-run closeout",
+      "command": "AIPEDIA_GOAL_ID=2026-06-30-agentic-tooling-meta-os AIPEDIA_RUN_ID=2026-06-30-slice-22-page-refresh-policy-blocker AIPEDIA_RESIDUAL_RISKS=\"Dry-run page-refresh closeout proves policy shape and stale-input blocking, not rendered page quality.\" AIPEDIA_NEXT_ACTIONS=\"Regenerate PAGE_REFRESH_LEDGER.md only when separate Synthesia content WIP is ready to be integrated.\" npm run runner:page-refresh:closeout -- --plan local/tmp/aipedia-runner/page-refresh/page-refresh-batch.json --report-dir local/tmp/aipedia-runner/page-refresh/reports --receipt-dir local/tmp/aipedia-runner/page-refresh/receipts-slice-22 --skip-build --skip-route-qa --skip-source-health --dry-run",
+      "status": 0
+    },
+    {
+      "label": "page refresh workflow policy check",
+      "command": "npm --silent run agent:closeout:check -- --receipt local/tmp/aipedia-runner/page-refresh/receipts-slice-22/2026-06-30T06-20-17Z-page-refresh-closeout.json --require-closeout-identity --require-trace-artifacts --require-workflow-policy --json",
+      "status": 1,
+      "expected_failure": true
+    }
+  ],
+  "runner_receipt_summary": {
+    "schema_version": "aipedia.closeout-receipt.v1",
+    "workflow": "page-refresh",
+    "status": "passed",
+    "generated_at": "2026-06-30T06:20:17.758725603+00:00",
+    "goal_id": "2026-06-30-agentic-tooling-meta-os",
+    "run_id": "2026-06-30-slice-22-page-refresh-policy-blocker",
+    "changed_route_count": 25,
+    "source_id_count": 0,
+    "widths": [
+      319,
+      360,
+      390,
+      430,
+      768,
+      1024,
+      1366
+    ],
+    "commands": [
+      "ledger generate",
+      "ledger check",
+      "frontmatter changed",
+      "date consistency changed",
+      "provenance changed",
+      "coverage quality changed",
+      "em dash guard",
+      "diff check",
+      "typecheck"
+    ],
+    "input_freshness": {
+      "ok": false,
+      "workflow": "page-refresh",
+      "status": "stale",
+      "input": "PAGE_REFRESH_LEDGER.md",
+      "changed": true,
+      "ledger_updated_through": "2026-06-30",
+      "next_action": "Run npm run ledger:pages && npm run ledger:pages:check, then rerun page refresh planning with --fail-on-stale-ledger."
+    },
+    "system_progress": {
+      "has_system_artifact": false,
+      "content_only": true,
+      "note": "Expected for a dry-run proof created before Slice 22 system edits were staged."
+    }
+  },
+  "validation_report": {
+    "ok": false,
+    "mode": "closeout-receipt-check",
+    "require_closeout_identity": true,
+    "require_trace_artifacts": true,
+    "require_workflow_policy": true,
+    "totals": {
+      "receipts": 1,
+      "ok": 0,
+      "failed": 1,
+      "issues": 1
+    },
+    "receipts": [
+      {
+        "ok": false,
+        "path": "local/tmp/aipedia-runner/page-refresh/receipts-slice-22/2026-06-30T06-20-17Z-page-refresh-closeout.json",
+        "type": "runner-closeout",
+        "issues": [
+          {
+            "code": "runner-workflow-policy-input-freshness-stale",
+            "detail": "page-refresh passed receipts require fresh input_freshness."
+          }
+        ]
+      }
+    ]
+  },
+  "residual_risks": [
+    "This is a negative policy proof. It proves runner-produced page-refresh receipts fail closed when input freshness is stale, not that a page-refresh closeout can pass on live content.",
+    "The live page-refresh ledger remains stale because separate Synthesia content WIP has not been integrated and should not be touched by this system slice.",
+    "Build, source-health, and route QA were intentionally skipped in dry-run mode, so this does not validate rendered page quality."
+  ],
+  "next_actions": [
+    "After the separate Synthesia content WIP is resolved, regenerate PAGE_REFRESH_LEDGER.md and run a positive bounded page-refresh policy proof.",
+    "Keep the page-refresh workflow policy stale-input regression test in the closeout validator."
+  ]
+}

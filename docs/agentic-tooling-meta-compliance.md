@@ -255,6 +255,16 @@ Loop trends now include receipt-derived stability signals.
 - Focused tests prove persistent attention detection, new attention detection, loop status change rate, command status change count, and unchanged missing-metrics behavior.
 - The final live two-run trend check compared Slice 20 to Slice 21 with 2 metric-aware receipts, 0 missing metrics, median wall duration 5098 ms, latest-run deltas of +174 ms wall duration and -105 full receipt bytes, 7 loop status comparisons, 0 loop status changes, 16 command status comparisons, 0 command status changes, and persistent attention in `freshness`, `performance-ux`, and `revenue-conversion`.
 
+## Twenty-Second System Slice
+
+Page-refresh workflow policy now has a runner-produced stale-input blocker proof.
+
+- A bounded `runner:page-refresh:closeout --dry-run` produced a structurally complete page-refresh closeout receipt from the existing local page-refresh plan and report directory.
+- `agent:closeout:check --require-workflow-policy` rejected that runner-produced receipt with exactly one issue: `runner-workflow-policy-input-freshness-stale`.
+- The durable proof is `.agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json`.
+- A focused page-refresh regression test proves that a passed page-refresh runner receipt with stale `input_freshness` fails only on `runner-workflow-policy-input-freshness-stale`.
+- This is a negative proof, not a positive rendered page-refresh proof. The positive proof remains blocked until the separate Synthesia content WIP is integrated and `PAGE_REFRESH_LEDGER.md` can be regenerated safely.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -264,7 +274,7 @@ Loop trends now include receipt-derived stability signals.
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json` | Prove page-refresh runner policy on a bounded receipt. |
+| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json` | Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts, loop `efficiency_metrics`, `agent:closeout:check --require-efficiency-metrics`, `agent:efficiency:trends`, `stability_summary`, focused loop, closeout, and trend tests | Add exact model token usage and correction rate when the runtime exposes them. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |

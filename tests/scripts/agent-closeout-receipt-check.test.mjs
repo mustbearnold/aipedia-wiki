@@ -613,6 +613,45 @@ test('closeout receipt check fails runner receipts that miss workflow policy art
   }
 });
 
+test('closeout receipt check fails passed page-refresh receipts with stale input freshness', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-page-policy-stale-input-'));
+  const path = join(dir, 'page-runner.json');
+  const receipt = validPageRunnerReceipt();
+  receipt.input_freshness = {
+    ...receipt.input_freshness,
+    ok: false,
+    command: 'node scripts/agent-input-freshness-receipt.mjs --workflow page-refresh --json --project-dir=.',
+    workflows: [
+      {
+        id: 'page-refresh',
+        kind: 'page-refresh-ledger',
+        ok: false,
+        status: 'stale',
+        next_action: 'Regenerate PAGE_REFRESH_LEDGER.md before planning page refresh work.',
+      },
+    ],
+    summary: {
+      workflow_count: 1,
+      ok_count: 0,
+      attention_count: 1,
+      stale_count: 1,
+    },
+    next_actions: ['Regenerate PAGE_REFRESH_LEDGER.md before planning page refresh work.'],
+  };
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-workflow-policy', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.deepEqual(codes, ['runner-workflow-policy-input-freshness-stale']);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check fails runner receipts with mismatched input freshness workflow', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-input-freshness-'));
   const path = join(dir, 'runner.json');
