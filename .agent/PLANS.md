@@ -338,9 +338,18 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - A live `/tools/cursor/` DAG proof is saved at `.agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json`.
 - Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-39-11-427Z-loop-run.json`.
 
+### Completed Slice 34
+
+- Canonical `npm run runner:agent-plan` now runs through `scripts/runner-agent-plan-checked.mjs`.
+- The wrapper delegates graph writing to the Rust `agent-plan` subcommand, then immediately runs `agent:dag:check` against the generated graph.
+- `--validation-out <path>` persists the DAG validator report beside a proof artifact.
+- Focused wrapper tests cover checked valid artifacts and fail-closed invalid artifacts without requiring Rust compilation inside the JavaScript script test suite.
+- A live `/tools/cursor/` checked DAG proof is saved at `.agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json` with validator report `.agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json`.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T08-48-03-374Z-loop-run.json`.
+
 ### Next Slice
 
-1. Wire `agent:dag:check` into planner or closeout receipts so DAG validation cannot be skipped during real workflows.
+1. Attach DAG validation reports to loop or runner closeout receipts so checked graph status is part of the standard closeout trail.
 2. Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.
 3. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
 4. Add exact model-token usage and correction rate when reliable inputs are available.
