@@ -182,11 +182,20 @@ Implement the June 30 meta spec as a working, measured, pause-safe, replayable A
 - The durable proof is `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`.
 - This validates handoff policy shape and implementation-readiness evidence, not rendered affiliate content.
 
+### Completed Slice 18
+
+- Expanded `.agent/evals/score-calibration-goldset.json` from 3 to 6 real-route cases.
+- Added cases for `/compare/argil-vs-synthesia/`, `/guides/argil-pricing-for-ugc-avatar-video-teams/`, and `/news/2026-06-29-google-ai-studio-gemini-api-key-incident/`.
+- Added review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json` with the required architecture, evaluation, editorial, risk-confidence, regression, and rollout lenses.
+- Governed calibration with `--require-gold-set-review` passed with 6 cases, 0 mismatches, governance hash `5af262308abdf0e3e991aa4a49bfc84071c63c06fece0999ed6a517ecd9adadd`, and threshold review `pass`.
+- Durable receipt: `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`.
+
 ### Next Slice
 
 1. Prove page-refresh runner policy on a bounded receipt.
-2. Expand the reviewed scoring gold set during real workload pilots.
-3. Run one bounded production pilot only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP, then record receipts and update memory.
+2. Add speed/token-efficiency metrics for loop or runner receipts.
+3. Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.
+4. Run one bounded production pilot only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP, then record receipts and update memory.
 
 ### Required Closeout Before Completion
 

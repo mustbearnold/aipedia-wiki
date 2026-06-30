@@ -1,0 +1,22 @@
+{
+  "schema_version": "aipedia.score-goldset-review.v1",
+  "gold_set_path": ".agent/evals/score-calibration-goldset.json",
+  "gold_set_hash": "5af262308abdf0e3e991aa4a49bfc84071c63c06fece0999ed6a517ecd9adadd",
+  "changed_cases": [
+    "argil-vs-synthesia-fresh-comparison",
+    "argil-pricing-affiliate-buyer-guide",
+    "gemini-api-key-news-current"
+  ],
+  "reviewer": "codex",
+  "reviewed_at": "2026-06-30",
+  "reason": "Expand the June 30 scoring baseline from three routes to six routes so calibration covers fresh comparisons, affiliate buyer guides, and current news in addition to the existing tool, internal-link-gap comparison, and stale static answer cases.",
+  "expected_effect": "Gold-set calibration should pass with 6 cases, 0 mismatches, page-type profile coverage for tool, comparison, affiliate buyer, news, and default static pages, and unchanged pass status for threshold review.",
+  "review_lenses": [
+    "architecture",
+    "evaluation",
+    "editorial",
+    "risk-confidence",
+    "regression",
+    "rollout"
+  ]
+}

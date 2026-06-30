@@ -1,7 +1,7 @@
 {
   "schema_version": "aipedia.score-goldset.v1",
   "name": "June 30 score calibration baseline",
-  "description": "Small real-route baseline for non-stale score thresholds, risk labels, confidence labels, stale decay, and recommended actions.",
+  "description": "Reviewed real-route baseline for non-stale score thresholds, page-type profiles, risk labels, confidence labels, stale decay, and recommended actions.",
   "cases": [
     {
       "id": "cursor-current-tool",
@@ -46,6 +46,54 @@
         "stale_decay_label": "medium",
         "score_max": 0.4,
         "stale_signal_count_max": 2
+      }
+    },
+    {
+      "id": "argil-vs-synthesia-fresh-comparison",
+      "route": "/compare/argil-vs-synthesia/",
+      "rationale": "Fresh same-workflow comparison with visible inline sources and strong internal links should stay a high-confidence monitor baseline.",
+      "expect": {
+        "recommended_action": "monitor",
+        "calibration_label": "recent_monitor_baseline",
+        "risk_label": "low",
+        "confidence_label": "high",
+        "stale_decay_label": "fresh",
+        "score_min": 0.9,
+        "source_count_min": 8,
+        "internal_links_min": 0.9,
+        "stale_signal_count_max": 0
+      }
+    },
+    {
+      "id": "argil-pricing-affiliate-buyer-guide",
+      "route": "/guides/argil-pricing-for-ugc-avatar-video-teams/",
+      "rationale": "Fresh affiliate buyer guide with current source coverage, clear CTA context, and a distinct buyer job should remain a high-confidence monitor baseline.",
+      "expect": {
+        "recommended_action": "monitor",
+        "calibration_label": "recent_monitor_baseline",
+        "risk_label": "low",
+        "confidence_label": "high",
+        "stale_decay_label": "fresh",
+        "score_min": 0.9,
+        "source_count_min": 8,
+        "internal_links_min": 0.8,
+        "stale_signal_count_max": 0
+      }
+    },
+    {
+      "id": "gemini-api-key-news-current",
+      "route": "/news/2026-06-29-google-ai-studio-gemini-api-key-incident/",
+      "rationale": "Current source-backed news with buyer impact and affected-page links should stay a high-confidence monitor baseline under the news profile.",
+      "expect": {
+        "recommended_action": "monitor",
+        "calibration_label": "review_calibration",
+        "risk_label": "low",
+        "confidence_label": "high",
+        "stale_decay_label": "fresh",
+        "score_min": 0.8,
+        "source_count_min": 3,
+        "internal_links_min": 0.5,
+        "stale_signal_count_max": 0
       }
     }
   ]

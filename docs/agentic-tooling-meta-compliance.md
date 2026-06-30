@@ -216,6 +216,16 @@ Affiliate handoff policy validation now has a bounded runner-produced proof.
 - The durable proof is `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json`.
 - This proof validates handoff policy shape and implementation-readiness evidence. It does not publish or verify rendered affiliate content.
 
+## Eighteenth System Slice
+
+Reviewed scoring gold-set coverage now spans more page profiles.
+
+- `.agent/evals/score-calibration-goldset.json` expanded from three to six real-route cases.
+- New cases cover a fresh same-workflow comparison, a fresh affiliate buyer guide, and a current news article.
+- The deliberate baseline change is reviewed in `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`.
+- Governed calibration with `--require-gold-set-review` passed with 6 cases, 0 mismatches, matching governance hash `5af262308abdf0e3e991aa4a49bfc84071c63c06fece0999ed6a517ecd9adadd`, and threshold review `pass`.
+- Durable receipt: `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -226,7 +236,7 @@ Affiliate handoff policy validation now has a bounded runner-produced proof.
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json` | Prove page-refresh runner policy on a bounded receipt. |
-| Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json` | Expand the reviewed gold set during real workload pilots and require matching review records before deliberate baseline changes land. |
+| Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |

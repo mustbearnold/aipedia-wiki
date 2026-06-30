@@ -1635,3 +1635,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: bounded affiliate plan, strict reports, runner handoff, affiliate handoff policy check, JSON parse checks, scoped `check:smart`, and `git diff --check` passed.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-17.md`.
 - Next: Commit and push, then prove page-refresh runner policy when the stale ledger/content WIP is resolved, or expand reviewed scoring gold-set coverage during real workload pilots.
+
+### 2026-06-30: Agentic Tooling Meta Slice 18, Reviewed Score Gold-Set Expansion
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Expanded `.agent/evals/score-calibration-goldset.json` from 3 to 6 real-route cases, adding fresh comparison, affiliate buyer guide, and current news calibration coverage. Added matching review record and governed calibration receipt.
+- System lesson: score calibration should cover page profiles, not only individual examples. The new baseline now covers tool, comparison, static answer, affiliate buyer guide, and news behavior under one reviewed gate.
+- Verification: candidate route scores, unreviewed calibration for hash discovery, governed calibration with `--require-gold-set-review`, JSON parse checks, scoped `check:smart`, and `git diff --check` passed. Governed calibration passed with 6 cases, 0 mismatches, threshold review `pass`, and hash `5af262308abdf0e3e991aa4a49bfc84071c63c06fece0999ed6a517ecd9adadd`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-18.md`.
+- Next: Commit and push, then add speed/token-efficiency metrics or prove page-refresh runner policy when the stale ledger/content WIP is resolved.

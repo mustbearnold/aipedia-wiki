@@ -158,11 +158,14 @@ Output JSON only. Do not make the score write pages directly. The scorer is a pr
 
 ## Gold-Set Calibration
 
-Gold-set calibration turns scoring expectations into a regression gate. The committed baseline lives at `.agent/evals/score-calibration-goldset.json` and covers three real routes:
+Gold-set calibration turns scoring expectations into a regression gate. The committed baseline lives at `.agent/evals/score-calibration-goldset.json` and covers six real routes:
 
 - `/tools/cursor/`: current high-volatility tool with broad parent impact should stay `monitor`, high confidence, low risk, and low stale decay.
 - `/compare/gemini-vs-grok/`: current inline-source comparison should stay high confidence, avoid a source-gap false positive, and keep the internal-link remediation.
 - `/answers/best-ai-for-writing-2026/`: stale static answer should stay a low-confidence `refresh_current_facts` candidate.
+- `/compare/argil-vs-synthesia/`: fresh same-workflow comparison should stay a high-confidence monitor baseline with strong inline-source and internal-link coverage.
+- `/guides/argil-pricing-for-ugc-avatar-video-teams/`: fresh affiliate buyer guide should stay a high-confidence monitor baseline with source coverage, CTA context, and a distinct buyer job.
+- `/news/2026-06-29-google-ai-studio-gemini-api-key-incident/`: current source-backed news should stay a high-confidence monitor baseline under the news profile.
 
 `agent:score:calibrate -- --gold-set <path>` emits:
 
@@ -172,6 +175,6 @@ Gold-set calibration turns scoring expectations into a regression gate. The comm
 
 A scoring change is not ready if the gold-set receipt has `ok: false`, `gold_set.ok: false`, `gold_set_governance.ok: false`, or `threshold_review.status: "review"` unless the change deliberately updates the baseline and the matching review record explains why.
 
-Deliberate baseline changes should run with `--require-gold-set-review` and a JSON review file that uses `schema_version: "aipedia.score-goldset-review.v1"`, matches the normalized `gold_set_hash`, lists `changed_cases`, and covers the architecture, evaluation, editorial, risk-confidence, regression, and rollout review lenses.
+Deliberate baseline changes should run with `--require-gold-set-review` and a JSON review file that uses `schema_version: "aipedia.score-goldset-review.v1"`, matches the normalized `gold_set_hash`, lists `changed_cases`, and covers the architecture, evaluation, editorial, risk-confidence, regression, and rollout review lenses. Slice 18 expanded the baseline with review record `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json` and governed receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json`.
 
 News scoring uses the news-specific bar from the daily workflow: currentness, source quality, buyer impact, affected-page linking, and readability. Inline article sources count as source coverage, but registered source IDs remain distinct for tool, guide, and pricing fact provenance.

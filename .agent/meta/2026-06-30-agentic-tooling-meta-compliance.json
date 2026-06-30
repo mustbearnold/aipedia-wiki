@@ -129,9 +129,12 @@
         "agent:score:calibrate --gold-set threshold_review",
         "agent:score:calibrate gold_set_governance",
         "agent:score:calibrate --require-gold-set-review",
-        "tests/scripts/agent-memory-tools.test.mjs gold-set governance review tests"
+        "tests/scripts/agent-memory-tools.test.mjs gold-set governance review tests",
+        ".agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json",
+        ".agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json",
+        "6-case reviewed score gold set"
       ],
-      "remaining": "Expand the reviewed gold set during real-workload pilots and require matching review records before deliberate baseline changes land."
+      "remaining": "Keep expanding reviewed gold-set coverage for stale high-risk tools, source-gap remediation, and future page profiles during real-workload pilots."
     },
     {
       "id": "speed-token-efficiency",
@@ -164,9 +167,12 @@
     }
   ],
   "current_slice": {
-    "name": "bounded affiliate handoff policy proof",
+    "name": "reviewed score gold-set expansion",
     "system_artifacts": [
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json",
+      ".agent/evals/score-calibration-goldset.json",
+      ".agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json",
+      ".agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json",
+      "docs/page-quality-scoring.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
@@ -177,7 +183,8 @@
   },
   "next_system_targets": [
     "Prove page-refresh runner policy on a bounded receipt.",
-    "Expand the reviewed scoring gold set during real workload pilots.",
+    "Add speed/token-efficiency metrics for loop or runner receipts.",
+    "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP."
   ]
 }
