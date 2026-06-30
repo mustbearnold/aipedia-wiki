@@ -1,0 +1,78 @@
+{
+  "blocked_or_deferred_count": 0,
+  "claim_receipt_count": 4,
+  "commercial_cta_note_count": 2,
+  "current_date": "2026-06-30",
+  "duplicate_intent_note_count": 2,
+  "expected_worker_reports": 1,
+  "generated_at": "2026-06-30T10:19:34.489135730+00:00",
+  "invalid_worker_reports": [],
+  "markdown_handoff": "local/tmp/aipedia-runner/affiliate-conversion/slice44-implementation-handoff.md",
+  "missing_worker_reports": [],
+  "no_edit_boundaries": [
+    "Workers may touch only explicitly assigned files.",
+    "Workers must not edit `PAGE_REFRESH_LEDGER.md`, `src/data/source-registry.json`, parent hubs, top-layer pages, `.agent/**`, `workflows/**`, runner code, audit scripts, or generated output.",
+    "The integrator owns shared files, route QA scope, final verification, and final receipts.",
+    "This handoff is no-content and does not authorize public page edits by itself."
+  ],
+  "non_passed_check_count": 0,
+  "parent_surface_note_count": 2,
+  "parent_surfaces": [
+    "/categories/",
+    "/categories/ai-video/",
+    "/guides/",
+    "/tools/"
+  ],
+  "parsed_worker_reports": 1,
+  "pending_count": 0,
+  "plan": "local/tmp/aipedia-runner/affiliate-conversion/slice44-plan.json",
+  "report_summary": "local/tmp/aipedia-runner/affiliate-conversion/slice44-report-summary.md",
+  "residual_risks": [
+    "This is a no-content implementation handoff and does not itself publish or verify rendered pages."
+  ],
+  "route_qa_routes": [
+    "/categories/",
+    "/categories/ai-video/",
+    "/guides/",
+    "/guides/argil-pricing-for-ugc-avatar-video-teams/",
+    "/guides/best-ai-avatar-video-generator/",
+    "/guides/synthesia-alternatives/",
+    "/tools/",
+    "/tools/argil/"
+  ],
+  "schema_version": "aipedia.affiliate-handoff-receipt.v1",
+  "selected_cluster_count": 1,
+  "selected_clusters": [
+    {
+      "buyer_job": "Find the next distinct buyer-intent page for Argil.",
+      "check_count": 2,
+      "claim_receipt_count": 4,
+      "commercial_cta_note_count": 2,
+      "duplicate_intent_note_count": 2,
+      "id": "affiliate-argil",
+      "parent_surface_note_count": 2,
+      "primary_tool": "argil",
+      "route_qa_risk_count": 1,
+      "source_file": "src/content/tools/argil.md",
+      "source_url_count": 4,
+      "worker_id": "affiliate-worker-1"
+    }
+  ],
+  "source_url_count": 4,
+  "status": "ready",
+  "strict_validation_issue_count": 0,
+  "verification_gates": [
+    "npm run runner:affiliate-conversion:reports -- --strict",
+    "npm run affiliate:conversion:inventory -- --json",
+    "npm run audit:affiliate-conversion -- --strict --json",
+    "npm run audit:provenance:changed -- --json",
+    "git diff --check",
+    "npm run ledger:pages && npm run ledger:pages:check",
+    "npm run typecheck",
+    "npm run build:fast",
+    "npm run qa:route -- --site-dir dist-fast/client --concurrency 6 --widths 319,360,390,430,768,1024,1366 --route <changed routes>",
+    "Inspect CommercialCTA usage and affiliate disclosure on every changed commercial page.",
+    "Run live source checks for every volatile source touched by the content slice."
+  ],
+  "workflow": "affiliate-conversion-handoff"
+}

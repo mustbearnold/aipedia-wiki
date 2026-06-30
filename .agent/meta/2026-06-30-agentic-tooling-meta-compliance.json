@@ -48,9 +48,10 @@
         "tests/scripts/agent-proof-readiness.test.mjs page-refresh proof readiness coverage",
         ".agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json",
         ".agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json",
         "tools/aipedia-runner/src/main.rs runner closeout input freshness tests"
       ],
-      "remaining": "Run the ready affiliate handoff proof, then resolve separate content WIP before page-refresh or tool-refresh positive policy proofs."
+      "remaining": "Add proof-completion tracking, then resolve separate content WIP before page-refresh or tool-refresh positive policy proofs."
     },
     {
       "id": "system-progress-checkpoint",
@@ -198,9 +199,10 @@
         "tests/scripts/agent-closeout-receipt-check.test.mjs runner interrupt proof report coverage",
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-31-repeatable-interrupt-proof-proof-report.json",
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-32-proof-report-closeout-check-proof-report.json",
-        ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json"
+        ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json"
       ],
-      "remaining": "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved."
+      "remaining": "Add proof-completion tracking, then run positive bounded page/tool policy proofs after the separate stale ledger/content WIP is resolved."
     },
     {
       "id": "non-stale-scoring",
@@ -276,26 +278,23 @@
     }
   ],
   "current_slice": {
-    "name": "Multi-target proof readiness routing",
+    "name": "Positive affiliate handoff policy proof",
     "system_artifacts": [
-      "scripts/agent-proof-readiness.mjs",
-      "tests/scripts/agent-proof-readiness.test.mjs",
-      "scripts/README.md",
-      ".agent/LOOPS.md",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-43.md",
-      ".agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-44.md",
+      ".agent/loop-runs/system/2026-06-30T10-20-24-776Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Run the bounded affiliate handoff policy proof because npm run agent:proof:readiness -- --target affiliate-handoff-policy --json reports ready.",
+    "Add proof-completion tracking so npm run agent:proof:readiness can distinguish ready lanes from lanes already proved in this goal cycle.",
     "Resolve separate content WIP, rerun npm run agent:proof:readiness -- --json, then run page-refresh and tool-refresh positive policy proofs.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",
