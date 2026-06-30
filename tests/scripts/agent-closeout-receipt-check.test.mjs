@@ -531,6 +531,102 @@ function validRunnerInterruptProof(overrides = {}) {
   };
 }
 
+function validMetaProofReadinessReceipt(overrides = {}) {
+  return {
+    ok: false,
+    mode: 'meta-proof-readiness',
+    schema_version: 'aipedia.meta-proof-readiness.v1',
+    generated_at: '2026-06-30T03:01:47Z',
+    project_dir: '.',
+    argument_issues: [],
+    selected_targets: ['page-refresh-policy', 'affiliate-handoff-policy'],
+    summary: {
+      target_count: 2,
+      ready_count: 0,
+      proved_count: 1,
+      blocked_count: 1,
+      unknown_count: 0,
+    },
+    inputs: {
+      input_freshness_source: 'node scripts/agent-input-freshness-receipt.mjs --workflow page-refresh --workflow affiliate-conversion --json',
+      input_freshness_exit_code: 0,
+      git_status_source: 'git status --short',
+      git_status_exit_code: 0,
+    },
+    targets: [
+      {
+        ok: false,
+        id: 'page-refresh-policy',
+        status: 'blocked',
+        workflow: 'page-refresh',
+        proof_goal: 'Positive bounded page-refresh runner policy proof.',
+        blockers: [
+          {
+            code: 'input-freshness-stale',
+            message: 'Run npm run ledger:pages, then rerun proof readiness.',
+          },
+        ],
+        proof_completion: {
+          status: 'untracked',
+          proved: false,
+          receipt_count: 0,
+          receipts: [],
+        },
+        readiness_checks: [
+          { id: 'proof-completion', ok: false, status: 'untracked', receipt_paths: [] },
+          { id: 'page-refresh-input-freshness', ok: false, status: 'stale' },
+        ],
+        recommended_commands: ['npm --silent run agent:proof:readiness -- --target page-refresh-policy --json'],
+        next_actions: ['Clear the listed blockers, then rerun proof readiness.'],
+      },
+      {
+        ok: true,
+        id: 'affiliate-handoff-policy',
+        status: 'proved',
+        workflow: 'affiliate-conversion',
+        proof_goal: 'Positive bounded affiliate handoff policy proof.',
+        blockers: [],
+        proof_completion: {
+          status: 'proved',
+          proved: true,
+          receipt_count: 1,
+          valid_count: 1,
+          receipts: [
+            {
+              path: '.agent/evals/closeout-policy-receipts/affiliate.json',
+              exists: true,
+              ok: true,
+              status: 'valid',
+              type: 'affiliate-handoff',
+              issue_count: 0,
+              issues: [],
+              exit_code: 0,
+              stderr_tail: '',
+              validation_command: 'node scripts/agent-closeout-receipt-check.mjs --receipt .agent/evals/closeout-policy-receipts/affiliate.json --require-workflow-policy --json',
+            },
+          ],
+        },
+        readiness_checks: [
+          {
+            id: 'proof-completion',
+            ok: true,
+            status: 'proved',
+            receipt_paths: ['.agent/evals/closeout-policy-receipts/affiliate.json'],
+          },
+        ],
+        recommended_commands: ['node scripts/agent-closeout-receipt-check.mjs --receipt .agent/evals/closeout-policy-receipts/affiliate.json --require-workflow-policy --json'],
+        next_actions: ['Use the durable affiliate handoff proof as the positive policy baseline.'],
+      },
+    ],
+    next_actions: [
+      'Clear the listed blockers, then rerun proof readiness.',
+      'Use the durable affiliate handoff proof as the positive policy baseline.',
+    ],
+    receipt_path: '.agent/evals/proof-readiness/fixture.json',
+    ...overrides,
+  };
+}
+
 test('closeout receipt check validates latest enforced loop receipt by default', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-loop-'));
   const systemDir = join(dir, '.agent', 'loop-runs', 'system');
@@ -545,6 +641,46 @@ test('closeout receipt check validates latest enforced loop receipt by default',
     assert.equal(report.ok, true);
     assert.equal(report.totals.receipts, 1);
     assert.equal(report.receipts[0].type, 'loop-run');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates meta proof readiness receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-proof-readiness-'));
+  const path = join(dir, 'proof-readiness.json');
+
+  try {
+    writeJson(path, validMetaProofReadinessReceipt());
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'meta-proof-readiness');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails malformed meta proof readiness receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-proof-readiness-'));
+  const path = join(dir, 'proof-readiness.json');
+  const receipt = validMetaProofReadinessReceipt();
+  receipt.summary.proved_count = 9;
+  receipt.targets[0].blockers = [];
+  receipt.targets[1].proof_completion.proved = false;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('meta-proof-readiness-summary-mismatch'));
+    assert.ok(codes.includes('meta-proof-readiness-blockers-missing'));
+    assert.ok(codes.includes('meta-proof-readiness-proof-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

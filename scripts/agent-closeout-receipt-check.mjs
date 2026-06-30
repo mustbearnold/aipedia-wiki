@@ -127,7 +127,7 @@ function usage() {
     '  node scripts/agent-closeout-receipt-check.mjs --all-system --json',
     '',
     'Options:',
-    '  --receipt <path>              Validate a loop, runner, proof, affiliate handoff, or pause receipt JSON file. Repeatable.',
+    '  --receipt <path>              Validate a loop, runner, proof, readiness, affiliate handoff, or pause receipt JSON file. Repeatable.',
     '  --path <path>                 Alias for --receipt.',
     '  --all-system                  Validate every .agent/loop-runs/system/*.json receipt.',
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
@@ -174,8 +174,9 @@ function validateReceiptFile(path) {
   else if (type === 'runner-closeout') validateRunnerReceipt(value, issues);
   else if (type === 'runner-interrupt-proof') validateRunnerInterruptProof(value, issues);
   else if (type === 'affiliate-handoff') validateAffiliateHandoffReceipt(value, issues);
+  else if (type === 'meta-proof-readiness') validateMetaProofReadinessReceipt(value, issues);
   else if (type === 'pause-receipt') validatePauseReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, nor aipedia.pause-receipt.v1.'));
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, nor aipedia.pause-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -194,6 +195,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.closeout-receipt.v1') return 'runner-closeout';
   if (value.schema_version === 'aipedia.runner-interrupt-proof.v1') return 'runner-interrupt-proof';
   if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
+  if (value.schema_version === 'aipedia.meta-proof-readiness.v1') return 'meta-proof-readiness';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';
@@ -842,6 +844,119 @@ function validateAffiliateHandoffPolicy(value, issues) {
     if (!boundaryText.includes(required)) {
       issues.push(issue('affiliate-handoff-policy-boundary-missing', `Affiliate handoff policy requires no-edit boundary containing ${required}.`));
     }
+  }
+}
+
+function validateMetaProofReadinessReceipt(value, issues) {
+  requireBoolean(value, 'ok', issues);
+  requireString(value, 'mode', issues, { values: ['meta-proof-readiness'] });
+  requireString(value, 'schema_version', issues, {
+    values: ['aipedia.meta-proof-readiness.v1'],
+  });
+  requireIsoString(value, 'generated_at', issues);
+  requireString(value, 'project_dir', issues);
+  requireArray(value, 'argument_issues', issues);
+  requireStringArray(value, 'selected_targets', issues);
+  requireObject(value, 'summary', issues);
+  requireObject(value, 'inputs', issues);
+  requireArray(value, 'targets', issues);
+  requireStringArray(value, 'next_actions', issues);
+  if (value.receipt_path != null) requireString(value, 'receipt_path', issues);
+
+  if (isObject(value.summary)) {
+    for (const field of ['target_count', 'ready_count', 'proved_count', 'blocked_count', 'unknown_count']) {
+      requireNonNegativeNumber(value.summary, field, issues, `summary.${field}`);
+    }
+  }
+  if (isObject(value.inputs)) {
+    requireString(value.inputs, 'input_freshness_source', issues, { path: 'inputs.input_freshness_source' });
+    requireNonNegativeNumber(value.inputs, 'input_freshness_exit_code', issues, 'inputs.input_freshness_exit_code');
+    requireString(value.inputs, 'git_status_source', issues, { path: 'inputs.git_status_source' });
+    requireNonNegativeNumber(value.inputs, 'git_status_exit_code', issues, 'inputs.git_status_exit_code');
+  }
+
+  if (Array.isArray(value.targets)) {
+    value.targets.forEach((target, index) => validateMetaProofReadinessTarget(target, issues, `targets[${index}]`));
+    if (isObject(value.summary)) {
+      const counts = {
+        target_count: value.targets.length,
+        ready_count: value.targets.filter((target) => isObject(target) && target.status === 'ready').length,
+        proved_count: value.targets.filter((target) => isObject(target) && target.status === 'proved').length,
+        blocked_count: value.targets.filter((target) => isObject(target) && target.status === 'blocked').length,
+        unknown_count: value.targets.filter((target) => isObject(target) && target.status === 'unknown').length,
+      };
+      for (const [field, expected] of Object.entries(counts)) {
+        if (typeof value.summary[field] === 'number' && value.summary[field] !== expected) {
+          issues.push(issue('meta-proof-readiness-summary-mismatch', `summary.${field} is ${value.summary[field]} but targets imply ${expected}.`));
+        }
+      }
+    }
+  }
+}
+
+function validateMetaProofReadinessTarget(target, issues, path) {
+  if (!isObject(target)) {
+    issues.push(issue('meta-proof-readiness-target-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireBoolean(target, 'ok', issues, `${path}.ok`);
+  requireString(target, 'id', issues, { path: `${path}.id` });
+  requireString(target, 'status', issues, {
+    path: `${path}.status`,
+    values: ['ready', 'proved', 'blocked', 'unknown'],
+  });
+  if (target.workflow != null && typeof target.workflow !== 'string') {
+    issues.push(issue('field-invalid', `${path}.workflow must be a string when present.`));
+  }
+  if (target.proof_goal != null && typeof target.proof_goal !== 'string') {
+    issues.push(issue('field-invalid', `${path}.proof_goal must be a string when present.`));
+  }
+  requireArray(target, 'blockers', issues, `${path}.blockers`);
+  requireArray(target, 'readiness_checks', issues, `${path}.readiness_checks`);
+  requireStringArray(target, 'recommended_commands', issues, `${path}.recommended_commands`);
+  requireStringArray(target, 'next_actions', issues, `${path}.next_actions`);
+  if (isObject(target.proof_completion)) {
+    validateMetaProofCompletion(target.proof_completion, issues, `${path}.proof_completion`);
+  } else if (target.proof_completion != null) {
+    issues.push(issue('field-invalid', `${path}.proof_completion must be an object when present.`));
+  }
+  if (target.status === 'blocked' && Array.isArray(target.blockers) && target.blockers.length === 0) {
+    issues.push(issue('meta-proof-readiness-blockers-missing', `${path} is blocked but has no blockers.`));
+  }
+  if ((target.status === 'ready' || target.status === 'proved') && target.ok !== true) {
+    issues.push(issue('meta-proof-readiness-ok-mismatch', `${path} is ${target.status} but ok is not true.`));
+  }
+  if ((target.status === 'blocked' || target.status === 'unknown') && target.ok !== false) {
+    issues.push(issue('meta-proof-readiness-ok-mismatch', `${path} is ${target.status} but ok is not false.`));
+  }
+}
+
+function validateMetaProofCompletion(value, issues, path) {
+  requireString(value, 'status', issues, {
+    path: `${path}.status`,
+    values: ['untracked', 'missing', 'invalid', 'proved'],
+  });
+  requireBoolean(value, 'proved', issues, `${path}.proved`);
+  requireNonNegativeNumber(value, 'receipt_count', issues, `${path}.receipt_count`);
+  if (value.valid_count != null) requireNonNegativeNumber(value, 'valid_count', issues, `${path}.valid_count`);
+  requireArray(value, 'receipts', issues, `${path}.receipts`);
+  if (value.status === 'proved' && value.proved !== true) {
+    issues.push(issue('meta-proof-readiness-proof-mismatch', `${path} has status proved but proved is not true.`));
+  }
+  if (Array.isArray(value.receipts)) {
+    value.receipts.forEach((receipt, index) => {
+      const receiptPath = `${path}.receipts[${index}]`;
+      if (!isObject(receipt)) {
+        issues.push(issue('meta-proof-readiness-proof-receipt-invalid', `${receiptPath} must be an object.`));
+        return;
+      }
+      requireString(receipt, 'path', issues, { path: `${receiptPath}.path` });
+      requireBoolean(receipt, 'ok', issues, `${receiptPath}.ok`);
+      requireString(receipt, 'status', issues, {
+        path: `${receiptPath}.status`,
+        values: ['missing', 'valid', 'invalid'],
+      });
+    });
   }
 }
 

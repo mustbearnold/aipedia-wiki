@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -156,6 +156,38 @@ test('proof readiness reports page-refresh policy ready when inputs are fresh an
     assert.equal(report.summary.ready_count, 1);
     assert.equal(report.targets[0].status, 'ready');
     assert.equal(report.targets[0].recommended_commands.at(-1), 'npm run agent:meta:closeout:auto -- --receipt <page-refresh-closeout.json> --json');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('proof readiness can write a durable readiness receipt', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-receipt-'));
+  try {
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'page-refresh': 'fresh' }));
+    writeFileSync(join(root, 'status.txt'), '');
+
+    const result = runReadiness([
+      '--project-dir',
+      root,
+      '--input-freshness',
+      'freshness.json',
+      '--git-status-file',
+      'status.txt',
+      '--target',
+      'page-refresh-policy',
+      '--out',
+      '.agent/evals/proof-readiness/fixture-readiness.json',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    const receiptPath = join(root, '.agent', 'evals', 'proof-readiness', 'fixture-readiness.json');
+    assert.equal(report.receipt_path, '.agent/evals/proof-readiness/fixture-readiness.json');
+    assert.equal(existsSync(receiptPath), true);
+    const receipt = JSON.parse(readFileSync(receiptPath, 'utf8'));
+    assert.equal(receipt.schema_version, 'aipedia.meta-proof-readiness.v1');
+    assert.equal(receipt.summary.ready_count, 1);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

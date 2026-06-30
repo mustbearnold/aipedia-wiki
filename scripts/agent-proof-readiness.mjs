@@ -2,7 +2,7 @@
 // Report whether bounded meta-goal proof pilots are ready to run.
 
 import { spawnSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -14,6 +14,7 @@ const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const INPUT_FRESHNESS_PATH = valueFor('--input-freshness');
 const GIT_STATUS_PATH = valueFor('--git-status-file');
+const OUT_PATH = valueFor('--out') || valueFor('--receipt-out');
 const TARGETS = {
   'page-refresh-policy': {
     id: 'page-refresh-policy',
@@ -88,11 +89,13 @@ const KNOWN_FLAGS = new Set([
   '-h',
   '--input-freshness',
   '--json',
+  '--out',
   '--project-dir',
+  '--receipt-out',
   '--root',
   '--target',
 ]);
-const VALUE_FLAGS = new Set(['--git-status-file', '--input-freshness', '--project-dir', '--root', '--target']);
+const VALUE_FLAGS = new Set(['--git-status-file', '--input-freshness', '--out', '--project-dir', '--receipt-out', '--root', '--target']);
 
 if (HELP_MODE) {
   console.log(usage());
@@ -141,6 +144,13 @@ const report = {
   targets,
   next_actions: [...new Set(targets.flatMap((target) => target.next_actions))],
 };
+const writeIssue = writeReadinessReceipt(report);
+if (writeIssue) {
+  report.ok = false;
+  report.write_issue = writeIssue;
+  emit(report);
+  process.exit(2);
+}
 
 emit(report);
 process.exit(report.ok ? 0 : 1);
@@ -161,10 +171,28 @@ function usage() {
     '  --target <id>              Target to check. Repeatable. Default: all known targets.',
     '  --input-freshness <path>   Read an existing input-freshness receipt instead of running one.',
     '  --git-status-file <path>   Read fixture git status text instead of running git status --short.',
+    '  --out <path>               Write the JSON readiness receipt to a file. Alias: --receipt-out.',
     '  --project-dir <dir>        Project root. Alias: --root.',
     '  --json                     Emit a structured report.',
     '  --help                     Show this help.',
   ].join('\n');
+}
+
+function writeReadinessReceipt(report) {
+  if (!OUT_PATH) return null;
+  const path = resolve(PROJECT_DIR, OUT_PATH);
+  report.receipt_path = projectPath(path);
+  try {
+    mkdirSync(dirname(path), { recursive: true });
+    writeFileSync(path, `${JSON.stringify(report, null, 2)}\n`);
+    return null;
+  } catch (error) {
+    return {
+      code: 'receipt-write-failed',
+      message: `Could not write readiness receipt: ${error.message}`,
+      path: projectPath(path),
+    };
+  }
 }
 
 function evaluateTarget(target, context) {
