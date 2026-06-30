@@ -66,9 +66,12 @@
       "evidence": [
         "existing runner closeout receipts",
         "system loop JSON receipts",
-        ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json"
+        ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json",
+        "scripts/agent-closeout-receipt-check.mjs",
+        "npm run agent:closeout:check",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs"
       ],
-      "remaining": "Adopt goal_id, run_id, trace/span refs, supersession, source IDs, route widths, command timings, and residual risk fields consistently."
+      "remaining": "Adopt goal_id, run_id, trace/span refs, supersession, source IDs, route widths, command timings, residual risk fields, and runner system-progress fields consistently."
     },
     {
       "id": "non-stale-scoring",
@@ -111,12 +114,13 @@
     }
   ],
   "current_slice": {
-    "name": "loop receipt system-progress enforcement",
+    "name": "closeout receipt schema validation",
     "system_artifacts": [
-      "scripts/aipedia-loops.mjs",
-      "tests/scripts/aipedia-loops.test.mjs",
-      ".agent/LOOPS.md",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "package.json",
       "scripts/README.md",
+      ".agent/LOOPS.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json"
     ],
@@ -124,8 +128,8 @@
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Add closeout receipt schema validation.",
     "Extend agent:system-progress into Rust runner closeout receipts.",
+    "Add goal_id, run_id, residual-risk, and next-action fields to closeout receipts.",
     "Extend stale-input policy to page/tool/affiliate planners.",
     "Add non-stale scoring risk/confidence fields and stale-decay tests.",
     "Pilot one bounded content workload only after the system slice is verified."

@@ -56,6 +56,15 @@ Loop receipts now carry the system-progress checkpoint directly.
 - Fails when no system artifact changed, so content-only diffs cannot be recorded as June 30 operating-system progress.
 - Verified by `.agent/loop-runs/system/2026-06-30T03-01-47-100Z-loop-run.json`.
 
+## Third System Slice
+
+Closeout receipts now have a deterministic validator.
+
+- `npm run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --json`
+- Validates loop-run receipts and Rust runner `aipedia.closeout-receipt.v1` JSON.
+- `--all-system` validated 22 existing system loop receipts with 0 issues.
+- Focused tests cover valid enforced loop receipts, missing system-progress failures, valid runner closeouts, and malformed runner commands.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -65,7 +74,7 @@ Loop receipts now carry the system-progress checkpoint directly.
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress` | Extend to Rust runner closeouts and closeout schema validation. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | existing runner and loop receipts | Normalize `goal_id`, `run_id`, spans, source IDs, route widths, and supersession. |
+| Closeout receipts/traces | Partial | existing runner and loop receipts, `agent:closeout:check` | Normalize `goal_id`, `run_id`, spans, source IDs, route widths, and supersession. |
 | Non-stale scoring | Partial | `agent:score`, calibration docs | Add risk/confidence fields, score decay tests, and gold-set calibration. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |

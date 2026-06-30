@@ -47,6 +47,8 @@ Stale or unknown built-output freshness is an `attention` signal. A rendered-out
 
 Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run and a `system_progress` block from `agent:system-progress`. Do not use it for every casual check. Add `--require-system-progress` when the run is being counted toward the June 30 operating-system goal.
 
+After recording a meta-goal closeout, validate the receipt contract with `npm run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --json`. Use `--all-system` for a backwards-compatible health check across historical system receipts.
+
 Loop verification should stay focused on AiPedia work. `.agents/` and `skills-lock.json` are gitignored local tooling artifacts. `check-smart` also ignores them during default dirty-path discovery, but it still counts `.agent/` continuity docs and any explicitly passed paths.
 
 ## Loops

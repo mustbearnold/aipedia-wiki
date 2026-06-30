@@ -16,6 +16,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm --silent run agent:memory:query -- --memory local/tmp/agent-memory.jsonl --query "pricing source gaps" --json`: ranks memory records with the CPU lexical scorer.
 - `npm --silent run agent:system-progress -- --require-system-artifact --json`: fails content-only diffs when a loop claims operating-system progress.
 - `npm --silent run agent:pause-receipt -- --goal-id <id> --safe-resume-step <step> --in-progress-step <step> --json`: writes a structured pause/resume receipt with dirty-tree state, validation done/pending, must-not-repeat items, and next commands.
+- `npm --silent run agent:closeout:check -- --receipt .agent/loop-runs/system/latest.json --require-system-progress --json`: validates loop or runner closeout receipt JSON contracts and can require enforced system-progress evidence.
 - `npm run check:quick`: established no-build loop for script/tooling changes.
 - `npm run lint`: source/content guard bundle used as the repo lint gate.
 - `npm run typecheck`: Astro typecheck gate for active Astro/server surfaces; `tsconfig.typecheck.json` keeps the legacy global search client scripts and archived `.legacy.astro` files as documented baseline debt until the search rewrite is typed.
@@ -35,6 +36,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `npm run agent:memory:query`: CPU lexical vector query over JSONL memory records.
 - `npm run agent:system-progress`: read-only system-progress checkpoint. Use `-- --require-system-artifact` before recording an agent-system loop so content-only changes cannot count as operating-system progress.
 - `npm run agent:pause-receipt`: writes `.agent/loop-runs/pauses/*-pause-receipt.json` unless `--out` is supplied. Long-running goals should use it before pausing or handing off.
+- `npm run agent:closeout:check`: validates loop-run and Rust runner closeout JSON receipts. Use `-- --require-system-progress` for June 30 meta-goal closeouts.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --json`: plans the next 60-tool freshness batch, including registered source metadata, scoped `audit:sources` commands, routes, parent hubs, closeout commands, and `agent_briefs` for six shard workers.
 - `npm run tool:refresh:batch -- --limit 60 --max-workers 6 --tools-per-worker 10 --agents`: prints one guarded shard-worker brief per 10-tool shard plus the single integrator brief.
 - `npm run check:frontmatter`: parses changed content frontmatter with `js-yaml` so malformed markdown metadata is caught before Astro typecheck/build.
@@ -63,6 +65,7 @@ Scripts are operator tools for keeping AiPedia current, source-backed, buildable
 - `loop-record.mjs`: creates `.agent/loop-runs/YYYY-MM-DD-slug.md` receipts for completed or attempted cycles.
 - `agent-system-progress-check.mjs`: classifies changed files as system, content, or other artifacts and can fail when no system artifact is present.
 - `agent-pause-receipt.mjs`: writes structured JSON pause receipts so future agents can resume from files rather than chat memory.
+- `agent-closeout-receipt-check.mjs`: validates system loop and Rust runner closeout receipts, including optional enforced system-progress fields.
 - `tool-refresh-batch.mjs`: plans grouped tool freshness work. Use `--limit 60 --max-workers 6 --tools-per-worker 10 --json` for machine-readable batch plans and `--agents` for six shard-worker prompts. Planner output includes scoped `audit:sources` commands so integrators can check registered source reachability, content-hash changes, and snapshot updates before manual review.
 - `check-frontmatter.mjs`: parses changed or explicit markdown frontmatter with `js-yaml` and reports file, line, and column for YAML syntax failures.
 - `tool-refresh-batch-check.mjs`: runs the cheap grouped tool gate. It accepts explicit `--file` values or a saved planner JSON through `--plan` or `--files-from`.
