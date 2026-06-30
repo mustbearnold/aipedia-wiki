@@ -275,7 +275,10 @@ function validateLoopEfficiencyTrendReceipt(value, issues) {
       }
     }
   }
-  if (isObject(value.summary)) validateLoopEfficiencyTrendSummary(value.summary, issues);
+  if (isObject(value.summary)) {
+    validateLoopEfficiencyTrendSummary(value.summary, issues);
+    validateLoopEfficiencyTrendSummaryFacts(value, issues);
+  }
   if (isObject(value.stability_summary)) validateLoopEfficiencyTrendStability(value.stability_summary, issues);
   if (isObject(value.correction_summary)) validateLoopEfficiencyTrendCorrection(value.correction_summary, issues);
   if (Array.isArray(value.slowest_commands)) {
@@ -328,6 +331,64 @@ function validateLoopEfficiencyTrendSummary(summary, issues) {
   }
   if (summary.delta_from_previous != null && !isObject(summary.delta_from_previous)) {
     issues.push(issue('loop-efficiency-trends-summary-invalid', 'summary.delta_from_previous must be an object when present.'));
+  }
+}
+
+function validateLoopEfficiencyTrendSummaryFacts(receipt, issues) {
+  if (!Array.isArray(receipt.runs) || !isObject(receipt.summary)) return;
+  const runs = receipt.runs.filter(isObject);
+  const metricRuns = runs.filter((run) => run.has_efficiency_metrics === true);
+  const latest = metricRuns.at(-1) || null;
+  const previous = metricRuns.length > 1 ? metricRuns.at(-2) : null;
+  const expected = {
+    first_run: typeof runs[0]?.generated_at === 'string' ? runs[0].generated_at : '',
+    latest_run: typeof runs.at(-1)?.generated_at === 'string' ? runs.at(-1).generated_at : '',
+    metrics_coverage_rate: metricRatio(metricRuns.length, runs.length),
+    median_wall_duration_ms: medianMetric(metricRuns.map((run) => run.wall_duration_ms)),
+    median_total_command_duration_ms: medianMetric(metricRuns.map((run) => run.total_command_duration_ms)),
+    median_attention_rate: medianMetric(metricRuns.map((run) => run.attention_rate)),
+    median_full_receipt_bytes: medianMetric(metricRuns.map((run) => run.persisted_full_receipt_bytes)),
+    median_latest_receipt_bytes: medianMetric(metricRuns.map((run) => run.persisted_latest_receipt_bytes)),
+    median_estimated_full_receipt_tokens: medianMetric(metricRuns.map((run) => run.estimated_full_receipt_tokens)),
+  };
+  for (const [field, value] of Object.entries(expected)) {
+    validateTrendSummaryValue(receipt.summary[field], value, `summary.${field}`, issues);
+  }
+
+  validateTrendSummaryObject(receipt.summary.latest, latest, 'summary.latest', issues);
+  const expectedDelta = latest && previous
+    ? {
+        wall_duration_ms: latest.wall_duration_ms - previous.wall_duration_ms,
+        total_command_duration_ms: latest.total_command_duration_ms - previous.total_command_duration_ms,
+        attention_rate: roundMetric(latest.attention_rate - previous.attention_rate),
+        persisted_full_receipt_bytes: latest.persisted_full_receipt_bytes - previous.persisted_full_receipt_bytes,
+        persisted_latest_receipt_bytes: latest.persisted_latest_receipt_bytes - previous.persisted_latest_receipt_bytes,
+        estimated_full_receipt_tokens: latest.estimated_full_receipt_tokens - previous.estimated_full_receipt_tokens,
+        system_artifact_count: latest.system_artifact_count - previous.system_artifact_count,
+      }
+    : null;
+  validateTrendSummaryObject(receipt.summary.delta_from_previous, expectedDelta, 'summary.delta_from_previous', issues);
+}
+
+function validateTrendSummaryObject(actual, expected, path, issues) {
+  if (expected == null) {
+    if (actual != null) {
+      issues.push(issue('loop-efficiency-trends-summary-mismatch', `${path} must be null when the runs do not imply a value.`));
+    }
+    return;
+  }
+  if (!isObject(actual)) {
+    issues.push(issue('loop-efficiency-trends-summary-mismatch', `${path} must match the run-derived object.`));
+    return;
+  }
+  for (const [field, value] of Object.entries(expected)) {
+    validateTrendSummaryValue(actual[field], value, `${path}.${field}`, issues);
+  }
+}
+
+function validateTrendSummaryValue(actual, expected, path, issues) {
+  if (actual !== expected) {
+    issues.push(issue('loop-efficiency-trends-summary-mismatch', `${path} must match the value derived from runs.`));
   }
 }
 

@@ -865,6 +865,30 @@ test('closeout receipt check fails loop efficiency trend slowest command drift',
   }
 });
 
+test('closeout receipt check fails loop efficiency trend summary drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-efficiency-trends-summary-drift-'));
+  const path = join(dir, 'efficiency-trends.json');
+  const receipt = validLoopEfficiencyTrendReceipt();
+  receipt.summary.median_wall_duration_ms = 1;
+  receipt.summary.latest.wall_duration_ms = 1;
+  receipt.summary.delta_from_previous.wall_duration_ms = 999;
+
+  try {
+    writeTrendSourceReceipts(dir, receipt);
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /summary\.median_wall_duration_ms/);
+    assert.match(details, /summary\.latest\.wall_duration_ms/);
+    assert.match(details, /summary\.delta_from_previous\.wall_duration_ms/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check fails loop efficiency trend missing source receipt', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-efficiency-trends-missing-source-'));
   const path = join(dir, 'efficiency-trends.json');
