@@ -1187,6 +1187,46 @@ test('closeout receipt check fails efficiency artifact ref count drift', () => {
   }
 });
 
+test('closeout receipt check fails efficiency slowest command drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-slowest-command-drift-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.efficiency_metrics.slowest_commands[0].label = 'different command';
+  receipt.efficiency_metrics.slowest_commands[0].duration_ms = 1;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /slowest_commands\[0\]\.label/);
+    assert.match(details, /slowest_commands\[0\]\.duration_ms/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails missing efficiency slowest command rows', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-missing-slowest-command-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.efficiency_metrics.slowest_commands = [];
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /top receipt commands/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check fails enforced loop receipts without system progress', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-missing-progress-'));
   const path = join(dir, 'loop.json');

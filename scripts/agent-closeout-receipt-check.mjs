@@ -538,6 +538,7 @@ function validateLoopEfficiencyMetrics(metrics, receipt, issues) {
     if (metrics.slowest_commands.length > 5) {
       issues.push(issue('efficiency-metrics-invalid', 'efficiency_metrics.slowest_commands must contain at most five commands.'));
     }
+    validateEfficiencySlowestCommands(metrics, receipt, issues);
   }
   validateEfficiencyArtifactCounts(metrics, receipt, issues, hasScopedEfficiencyMetrics);
   validateEfficiencyDerivedMetrics(metrics, receipt, issues, hasScopedEfficiencyMetrics);
@@ -644,6 +645,35 @@ function metricRatio(count, total) {
 function roundMetric(value) {
   if (!Number.isFinite(value)) return 0;
   return Math.round(value * 1000) / 1000;
+}
+
+function validateEfficiencySlowestCommands(metrics, receipt, issues) {
+  if (!Array.isArray(receipt.loops)) return;
+  const expected = receipt.loops
+    .flatMap((loop) =>
+      Array.isArray(loop.commands)
+        ? loop.commands.map((command) => ({
+            loop_id: typeof loop.id === 'string' ? loop.id : '',
+            label: isObject(command) && typeof command.label === 'string' ? command.label : '',
+            status: isObject(command) && typeof command.status === 'string' ? command.status : '',
+            duration_ms: isObject(command) && typeof command.duration_ms === 'number' && command.duration_ms > 0 ? command.duration_ms : 0,
+          }))
+        : [],
+    )
+    .sort((left, right) => right.duration_ms - left.duration_ms || String(left.label || '').localeCompare(String(right.label || '')))
+    .slice(0, 5);
+  if (metrics.slowest_commands.length !== expected.length) {
+    issues.push(issue('efficiency-metrics-mismatch', 'efficiency_metrics.slowest_commands must contain the top receipt commands by duration.'));
+    return;
+  }
+  expected.forEach((expectedCommand, index) => {
+    const actual = isObject(metrics.slowest_commands[index]) ? metrics.slowest_commands[index] : {};
+    for (const field of ['loop_id', 'label', 'status', 'duration_ms']) {
+      if (actual[field] !== expectedCommand[field]) {
+        issues.push(issue('efficiency-metrics-mismatch', `efficiency_metrics.slowest_commands[${index}].${field} must match the receipt command ranked by duration.`));
+      }
+    }
+  });
 }
 
 function validateSlowestCommand(command, issues, path) {
