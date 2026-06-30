@@ -97,6 +97,13 @@ const SCOPED_SYSTEM_PROGRESS_FIELDS = [
   ...SCOPED_SYSTEM_PROGRESS_ARRAY_FIELDS,
   ...SCOPED_SYSTEM_PROGRESS_BOOLEAN_FIELDS,
 ];
+const SCOPED_EFFICIENCY_METRIC_FIELDS = [
+  'agent_system_artifact_count',
+  'agent_content_artifact_count',
+  'agent_other_artifact_count',
+  'preexisting_dirty_count',
+  'agent_system_artifacts_per_second',
+];
 
 if (HELP_MODE) {
   console.log(usage());
@@ -491,6 +498,12 @@ function validateLoopEfficiencyMetrics(metrics, receipt, issues) {
   ]) {
     requireNonNegativeNumber(metrics, field, issues, `efficiency_metrics.${field}`);
   }
+  const hasScopedEfficiencyMetrics = SCOPED_EFFICIENCY_METRIC_FIELDS.some((field) => hasOwn(metrics, field));
+  if (hasScopedEfficiencyMetrics) {
+    for (const field of SCOPED_EFFICIENCY_METRIC_FIELDS) {
+      requireNonNegativeNumber(metrics, field, issues, `efficiency_metrics.${field}`);
+    }
+  }
   requireArray(metrics, 'slowest_commands', issues, 'efficiency_metrics.slowest_commands');
 
   const totals = isObject(receipt.totals) ? receipt.totals : {};
@@ -525,6 +538,31 @@ function validateLoopEfficiencyMetrics(metrics, receipt, issues) {
     if (metrics.slowest_commands.length > 5) {
       issues.push(issue('efficiency-metrics-invalid', 'efficiency_metrics.slowest_commands must contain at most five commands.'));
     }
+  }
+  validateEfficiencyArtifactCounts(metrics, receipt, issues, hasScopedEfficiencyMetrics);
+}
+
+function validateEfficiencyArtifactCounts(metrics, receipt, issues, hasScopedEfficiencyMetrics) {
+  const progress = isObject(receipt.system_progress) ? receipt.system_progress : null;
+  if (!progress) return;
+  validateMetricCount(metrics, 'system_artifact_count', arrayLength(progress.system_artifacts), issues, 'efficiency_metrics.system_artifact_count must match system_progress.system_artifacts length.');
+  validateMetricCount(metrics, 'content_artifact_count', arrayLength(progress.content_artifacts), issues, 'efficiency_metrics.content_artifact_count must match system_progress.content_artifacts length.');
+  validateMetricCount(metrics, 'other_artifact_count', arrayLength(progress.other_artifacts), issues, 'efficiency_metrics.other_artifact_count must match system_progress.other_artifacts length.');
+  if (!hasScopedEfficiencyMetrics) return;
+  if (!hasScopedSystemProgress(progress)) {
+    issues.push(issue('efficiency-metrics-mismatch', 'Scoped efficiency metrics require scoped system_progress fields.'));
+    return;
+  }
+  validateMetricCount(metrics, 'agent_system_artifact_count', arrayLength(progress.agent_system_artifacts), issues, 'efficiency_metrics.agent_system_artifact_count must match system_progress.agent_system_artifacts length.');
+  validateMetricCount(metrics, 'agent_content_artifact_count', arrayLength(progress.agent_content_artifacts), issues, 'efficiency_metrics.agent_content_artifact_count must match system_progress.agent_content_artifacts length.');
+  validateMetricCount(metrics, 'agent_other_artifact_count', arrayLength(progress.agent_other_artifacts), issues, 'efficiency_metrics.agent_other_artifact_count must match system_progress.agent_other_artifacts length.');
+  validateMetricCount(metrics, 'preexisting_dirty_count', arrayLength(progress.preexisting_dirty_paths), issues, 'efficiency_metrics.preexisting_dirty_count must match system_progress.preexisting_dirty_paths length.');
+}
+
+function validateMetricCount(metrics, field, expected, issues, detail) {
+  if (expected == null) return;
+  if (typeof metrics[field] === 'number' && metrics[field] !== expected) {
+    issues.push(issue('efficiency-metrics-mismatch', detail));
   }
 }
 
@@ -1534,6 +1572,10 @@ function isObject(value) {
 
 function stringArray(value, field) {
   return Array.isArray(value[field]) && value[field].every((item) => typeof item === 'string') ? value[field] : null;
+}
+
+function arrayLength(value) {
+  return Array.isArray(value) ? value.length : null;
 }
 
 function hasDuplicates(values) {

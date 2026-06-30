@@ -71,7 +71,12 @@ function validLoopReceipt(overrides = {}) {
       system_artifact_count: 1,
       content_artifact_count: 0,
       other_artifact_count: 0,
+      agent_system_artifact_count: 1,
+      agent_content_artifact_count: 0,
+      agent_other_artifact_count: 0,
+      preexisting_dirty_count: 0,
       system_artifacts_per_second: 8.13,
+      agent_system_artifacts_per_second: 8.13,
       persisted_full_receipt_bytes: 2048,
       persisted_latest_receipt_bytes: 1024,
       slowest_commands: [
@@ -1074,6 +1079,65 @@ test('closeout receipt check fails mismatched efficiency metrics', () => {
     const report = JSON.parse(result.stdout);
     const codes = report.receipts[0].issues.map((item) => item.code);
     assert.ok(codes.includes('efficiency-metrics-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails efficiency artifact count drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-artifact-count-drift-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.efficiency_metrics.system_artifact_count = 99;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /system_artifact_count/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails scoped efficiency count drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-scoped-artifact-count-drift-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  receipt.efficiency_metrics.agent_system_artifact_count = 99;
+  receipt.efficiency_metrics.preexisting_dirty_count = 2;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /agent_system_artifact_count/);
+    assert.match(details, /preexisting_dirty_count/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails partial scoped efficiency metrics', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-partial-scoped-efficiency-'));
+  const path = join(dir, 'loop.json');
+  const receipt = validLoopReceipt();
+  delete receipt.efficiency_metrics.agent_content_artifact_count;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-efficiency-metrics', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /agent_content_artifact_count/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
