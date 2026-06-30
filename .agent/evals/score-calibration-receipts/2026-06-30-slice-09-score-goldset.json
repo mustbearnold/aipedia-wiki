@@ -1,0 +1,507 @@
+{
+  "ok": true,
+  "schema_version": "aipedia.score-calibration.v1",
+  "generated_at": "2026-06-30T04:15:56.441Z",
+  "current_date": "2026-06-30",
+  "routes": [
+    {
+      "route": "/tools/cursor/",
+      "ok": true,
+      "collection": "tools",
+      "ledger_last_updated": "2026-06-29",
+      "ledger_age_days": 1,
+      "score": 0.93,
+      "recommended_action": "monitor",
+      "source_count": 9,
+      "registered_source_count": 9,
+      "inline_source_count": 0,
+      "stale_signal_count": 0,
+      "parent_surface_count": 132,
+      "dimensions": {
+        "freshness": 0.87,
+        "source_quality": 1,
+        "seo": 1,
+        "buyer_intent": 1,
+        "affiliate": 0.75,
+        "cta_quality": 0.75,
+        "comparison_usefulness": 0.75,
+        "internal_links": 1,
+        "readability": 0.28,
+        "unique_angle": 0.33,
+        "conversion_potential": 0,
+        "update_urgency": 0.13,
+        "trustworthiness": 0.96,
+        "page_completeness": 1
+      },
+      "scoring_model": {
+        "name": "non-stale-page-quality",
+        "version": "2026-06-30",
+        "page_profile": "tool_high_volatility",
+        "freshness_window_days": 21,
+        "source_window_days": 14,
+        "weights": {
+          "freshness": 0.18,
+          "source_quality": 0.18,
+          "buyer_intent": 0.16,
+          "page_completeness": 0.13,
+          "trustworthiness": 0.1,
+          "internal_links": 0.08,
+          "cta_quality": 0.06,
+          "affiliate": 0.04,
+          "seo": 0.04,
+          "readability": 0.02,
+          "unique_angle": 0.01
+        },
+        "score_penalty": 0
+      },
+      "stale_decay": {
+        "label": "low",
+        "decay": 0.19,
+        "score_penalty": 0,
+        "age_days": 4,
+        "source_date": "2026-06-26",
+        "freshness_window_days": 21,
+        "source_window_days": 14,
+        "source_max_age_days": 6,
+        "page_age_decay": 0.19,
+        "source_age_decay": 0.43,
+        "stale_signal_decay": 0
+      },
+      "risk_profile": {
+        "label": "low",
+        "score": 0.06,
+        "factors": [
+          "low stale decay"
+        ]
+      },
+      "confidence_profile": {
+        "label": "high",
+        "score": 0.96,
+        "reasons": [
+          "source quality is strong"
+        ]
+      },
+      "calibration_label": "broad_parent_impact",
+      "calibration_notes": [
+        "ledger age 1 day(s)",
+        "low stale decay, 0 score penalty",
+        "low risk",
+        "high confidence",
+        "broad parent impact surface"
+      ]
+    },
+    {
+      "route": "/compare/gemini-vs-grok/",
+      "ok": true,
+      "collection": "comparisons",
+      "ledger_last_updated": "2026-06-26",
+      "ledger_age_days": 4,
+      "score": 0.87,
+      "recommended_action": "improve_internal_links",
+      "source_count": 6,
+      "registered_source_count": 0,
+      "inline_source_count": 6,
+      "stale_signal_count": 0,
+      "parent_surface_count": 6,
+      "dimensions": {
+        "freshness": 0.91,
+        "source_quality": 0.88,
+        "seo": 1,
+        "buyer_intent": 1,
+        "affiliate": 0.75,
+        "cta_quality": 0.45,
+        "comparison_usefulness": 1,
+        "internal_links": 0.38,
+        "readability": 0.96,
+        "unique_angle": 0.33,
+        "conversion_potential": 0,
+        "update_urgency": 0.09,
+        "trustworthiness": 0.89,
+        "page_completeness": 1
+      },
+      "scoring_model": {
+        "name": "non-stale-page-quality",
+        "version": "2026-06-30",
+        "page_profile": "comparison",
+        "freshness_window_days": 30,
+        "source_window_days": 45,
+        "weights": {
+          "freshness": 0.14,
+          "source_quality": 0.18,
+          "comparison_usefulness": 0.18,
+          "buyer_intent": 0.14,
+          "internal_links": 0.12,
+          "page_completeness": 0.1,
+          "trustworthiness": 0.06,
+          "seo": 0.04,
+          "readability": 0.02,
+          "unique_angle": 0.02
+        },
+        "score_penalty": 0
+      },
+      "stale_decay": {
+        "label": "fresh",
+        "decay": 0.06,
+        "score_penalty": 0,
+        "age_days": 4,
+        "source_date": "2026-06-26",
+        "freshness_window_days": 30,
+        "source_window_days": 45,
+        "source_max_age_days": null,
+        "page_age_decay": 0.13,
+        "source_age_decay": 0,
+        "stale_signal_decay": 0
+      },
+      "risk_profile": {
+        "label": "low",
+        "score": 0.04,
+        "factors": []
+      },
+      "confidence_profile": {
+        "label": "high",
+        "score": 0.92,
+        "reasons": [
+          "source quality is strong"
+        ]
+      },
+      "calibration_label": "internal_link_gap",
+      "calibration_notes": [
+        "ledger age 4 day(s)",
+        "6 inline source(s), 0 registered source IDs",
+        "low risk",
+        "high confidence",
+        "internal_links below 0.5"
+      ]
+    },
+    {
+      "route": "/answers/best-ai-for-writing-2026/",
+      "ok": true,
+      "collection": "static",
+      "ledger_last_updated": "2026-06-26",
+      "ledger_age_days": 4,
+      "score": 0.25,
+      "recommended_action": "refresh_current_facts",
+      "source_count": 0,
+      "registered_source_count": 0,
+      "inline_source_count": 0,
+      "stale_signal_count": 1,
+      "parent_surface_count": 2,
+      "dimensions": {
+        "freshness": 0.09,
+        "source_quality": 0.2,
+        "seo": 0,
+        "buyer_intent": 0.5,
+        "affiliate": 0.75,
+        "cta_quality": 0.75,
+        "comparison_usefulness": 0.75,
+        "internal_links": 1,
+        "readability": 0.88,
+        "unique_angle": 0.33,
+        "conversion_potential": 0,
+        "update_urgency": 0.91,
+        "trustworthiness": 0.16,
+        "page_completeness": 0.25
+      },
+      "scoring_model": {
+        "name": "non-stale-page-quality",
+        "version": "2026-06-30",
+        "page_profile": "default",
+        "freshness_window_days": 60,
+        "source_window_days": 45,
+        "weights": {
+          "freshness": 0.14,
+          "source_quality": 0.16,
+          "seo": 0.12,
+          "buyer_intent": 0.14,
+          "internal_links": 0.12,
+          "readability": 0.1,
+          "unique_angle": 0.08,
+          "trustworthiness": 0.1,
+          "page_completeness": 0.04
+        },
+        "score_penalty": 0.13
+      },
+      "stale_decay": {
+        "label": "medium",
+        "decay": 0.49,
+        "score_penalty": 0.13,
+        "age_days": null,
+        "source_date": "",
+        "freshness_window_days": 60,
+        "source_window_days": 45,
+        "source_max_age_days": null,
+        "page_age_decay": 1,
+        "source_age_decay": 0,
+        "stale_signal_decay": 0.13
+      },
+      "risk_profile": {
+        "label": "low",
+        "score": 0.27,
+        "factors": [
+          "medium stale decay",
+          "weak source quality"
+        ]
+      },
+      "confidence_profile": {
+        "label": "low",
+        "score": 0.24,
+        "reasons": [
+          "freshness needs current-source review",
+          "page completeness is below target",
+          "no source coverage found"
+        ]
+      },
+      "calibration_label": "refresh_pressure",
+      "calibration_notes": [
+        "ledger age 4 day(s)",
+        "no source coverage found",
+        "1 stale signal(s)",
+        "medium stale decay, 0.13 score penalty",
+        "low risk",
+        "low confidence",
+        "source_quality below 0.45"
+      ]
+    }
+  ],
+  "gold_set": {
+    "ok": true,
+    "schema_version": "aipedia.score-goldset.v1",
+    "name": "June 30 score calibration baseline",
+    "description": "Small real-route baseline for non-stale score thresholds, risk labels, confidence labels, stale decay, and recommended actions.",
+    "path": ".agent/evals/score-calibration-goldset.json",
+    "case_count": 3,
+    "ok_count": 3,
+    "mismatch_count": 0,
+    "cases": [
+      {
+        "id": "cursor-current-tool",
+        "route": "/tools/cursor/",
+        "ok": true,
+        "rationale": "Current source-backed high-volatility tool should monitor with high confidence while broad parent impact stays visible.",
+        "actual": {
+          "score": 0.93,
+          "recommended_action": "monitor",
+          "calibration_label": "broad_parent_impact",
+          "risk_label": "low",
+          "confidence_label": "high",
+          "stale_decay_label": "low"
+        },
+        "checks": [
+          {
+            "field": "recommended_action",
+            "ok": true,
+            "expected": "monitor",
+            "actual": "monitor"
+          },
+          {
+            "field": "calibration_label",
+            "ok": true,
+            "expected": "broad_parent_impact",
+            "actual": "broad_parent_impact"
+          },
+          {
+            "field": "risk_label",
+            "ok": true,
+            "expected": "low",
+            "actual": "low"
+          },
+          {
+            "field": "confidence_label",
+            "ok": true,
+            "expected": "high",
+            "actual": "high"
+          },
+          {
+            "field": "stale_decay_label",
+            "ok": true,
+            "expected": "low",
+            "actual": "low"
+          },
+          {
+            "field": "score",
+            "ok": true,
+            "expected": ">= 0.85",
+            "actual": 0.93
+          },
+          {
+            "field": "source_count",
+            "ok": true,
+            "expected": ">= 4",
+            "actual": 9
+          },
+          {
+            "field": "parent_surface_count",
+            "ok": true,
+            "expected": ">= 50",
+            "actual": 132
+          },
+          {
+            "field": "stale_signal_count",
+            "ok": true,
+            "expected": "<= 0",
+            "actual": 0
+          }
+        ]
+      },
+      {
+        "id": "gemini-vs-grok-internal-link-gap",
+        "route": "/compare/gemini-vs-grok/",
+        "ok": true,
+        "rationale": "Current inline-source comparison should not be treated as a source gap, but should still flag weak internal-link coverage.",
+        "actual": {
+          "score": 0.87,
+          "recommended_action": "improve_internal_links",
+          "calibration_label": "internal_link_gap",
+          "risk_label": "low",
+          "confidence_label": "high",
+          "stale_decay_label": "fresh"
+        },
+        "checks": [
+          {
+            "field": "recommended_action",
+            "ok": true,
+            "expected": "improve_internal_links",
+            "actual": "improve_internal_links"
+          },
+          {
+            "field": "calibration_label",
+            "ok": true,
+            "expected": "internal_link_gap",
+            "actual": "internal_link_gap"
+          },
+          {
+            "field": "risk_label",
+            "ok": true,
+            "expected": "low",
+            "actual": "low"
+          },
+          {
+            "field": "confidence_label",
+            "ok": true,
+            "expected": "high",
+            "actual": "high"
+          },
+          {
+            "field": "stale_decay_label",
+            "ok": true,
+            "expected": "fresh",
+            "actual": "fresh"
+          },
+          {
+            "field": "score",
+            "ok": true,
+            "expected": ">= 0.8",
+            "actual": 0.87
+          },
+          {
+            "field": "source_count",
+            "ok": true,
+            "expected": ">= 2",
+            "actual": 6
+          },
+          {
+            "field": "internal_links",
+            "ok": true,
+            "expected": ">= 0.3",
+            "actual": 0.38
+          }
+        ]
+      },
+      {
+        "id": "writing-answer-refresh-pressure",
+        "route": "/answers/best-ai-for-writing-2026/",
+        "ok": true,
+        "rationale": "Static answer with stale signals and no source coverage should remain a low-confidence refresh candidate.",
+        "actual": {
+          "score": 0.25,
+          "recommended_action": "refresh_current_facts",
+          "calibration_label": "refresh_pressure",
+          "risk_label": "low",
+          "confidence_label": "low",
+          "stale_decay_label": "medium"
+        },
+        "checks": [
+          {
+            "field": "recommended_action",
+            "ok": true,
+            "expected": "refresh_current_facts",
+            "actual": "refresh_current_facts"
+          },
+          {
+            "field": "calibration_label",
+            "ok": true,
+            "expected": "refresh_pressure",
+            "actual": "refresh_pressure"
+          },
+          {
+            "field": "risk_label",
+            "ok": true,
+            "expected": "low",
+            "actual": "low"
+          },
+          {
+            "field": "confidence_label",
+            "ok": true,
+            "expected": "low",
+            "actual": "low"
+          },
+          {
+            "field": "stale_decay_label",
+            "ok": true,
+            "expected": "medium",
+            "actual": "medium"
+          },
+          {
+            "field": "score",
+            "ok": true,
+            "expected": "<= 0.4",
+            "actual": 0.25
+          },
+          {
+            "field": "stale_signal_count",
+            "ok": true,
+            "expected": "<= 2",
+            "actual": 1
+          }
+        ]
+      }
+    ]
+  },
+  "threshold_review": {
+    "status": "pass",
+    "notes": [],
+    "thresholds": {
+      "high_risk_requires_non_monitor_action": true,
+      "low_confidence_requires_remediation_action": true,
+      "high_stale_decay_high_score_requires_review": true
+    }
+  },
+  "summary": {
+    "route_count": 3,
+    "ok_count": 3,
+    "error_count": 0,
+    "average_score": 0.68,
+    "actions": {
+      "monitor": 1,
+      "improve_internal_links": 1,
+      "refresh_current_facts": 1
+    },
+    "labels": {
+      "broad_parent_impact": 1,
+      "internal_link_gap": 1,
+      "refresh_pressure": 1
+    },
+    "risk_labels": {
+      "low": 3
+    },
+    "confidence_labels": {
+      "high": 2,
+      "low": 1
+    },
+    "stale_decay_labels": {
+      "low": 1,
+      "fresh": 1,
+      "medium": 1
+    }
+  }
+}

@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
-import { mkdirSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { buildEvidenceBundle } from './agent-evidence-bundle.mjs';
 import { buildImpactReport } from './agent-parent-impact.mjs';
@@ -20,6 +19,7 @@ const args = process.argv.slice(2);
 const projectDir = resolve(valueFor(args, '--project-dir') || valueFor(args, '--root') || DEFAULT_PROJECT_DIR);
 const currentDate = valueFor(args, '--current-date') || process.env.AIPEDIA_CURRENT_DATE || new Date().toISOString().slice(0, 10);
 const outPath = valueFor(args, '--out');
+const goldSetPath = valueFor(args, '--gold-set');
 const jsonMode = hasFlag(args, '--json');
 const helpMode = hasFlag(args, '--help') || hasFlag(args, '-h');
 const isCli = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
@@ -34,6 +34,7 @@ function usage() {
     'Usage:',
     '  node scripts/agent-score-calibration.mjs --route /tools/cursor/ --route /compare/gemini-vs-grok/ --json',
     '  node scripts/agent-score-calibration.mjs --routes-file local/tmp/routes.txt --current-date 2026-06-29 --out local/tmp/calibration.json',
+    '  node scripts/agent-score-calibration.mjs --gold-set .agent/evals/score-calibration-goldset.json --json',
     '',
     'Compares read-only quality scores with ledger age, source coverage, stale signals, and impact breadth.',
   ].join('\n');
@@ -41,7 +42,12 @@ function usage() {
 
 export function calibrateScores(projectDir, options = {}) {
   const currentDate = options.currentDate || new Date().toISOString().slice(0, 10);
-  const routes = options.routes?.length ? options.routes : defaultRoutes();
+  const goldSet = normalizeGoldSet(options.goldSet);
+  const routes = options.routes?.length
+    ? options.routes
+    : goldSet?.cases.length
+      ? goldSet.cases.map((goldCase) => goldCase.route)
+      : defaultRoutes();
   const results = [];
 
   for (const route of routes) {
@@ -100,12 +106,16 @@ export function calibrateScores(projectDir, options = {}) {
     });
   }
 
+  const goldSetReport = evaluateGoldSet(goldSet, results);
+  const thresholdReview = thresholdReviewFor(results, goldSetReport);
   return {
-    ok: results.every((result) => result.ok),
+    ok: results.every((result) => result.ok) && (goldSetReport ? goldSetReport.ok : true) && thresholdReview.status === 'pass',
     schema_version: 'aipedia.score-calibration.v1',
     generated_at: new Date().toISOString(),
     current_date: currentDate,
     routes: results,
+    gold_set: goldSetReport,
+    threshold_review: thresholdReview,
     summary: summarize(results),
   };
 }
@@ -169,6 +179,150 @@ function summarize(results) {
   };
 }
 
+function normalizeGoldSet(goldSet) {
+  if (!goldSet) return null;
+  const cases = Array.isArray(goldSet.cases) ? goldSet.cases : [];
+  return {
+    schema_version: goldSet.schema_version || 'aipedia.score-goldset.v1',
+    name: goldSet.name || '',
+    description: goldSet.description || '',
+    path: goldSet.path || '',
+    cases: cases
+      .filter((goldCase) => goldCase?.route)
+      .map((goldCase) => ({
+        id: goldCase.id || goldCase.route,
+        route: goldCase.route,
+        rationale: goldCase.rationale || '',
+        expect: goldCase.expect || goldCase.expected || {},
+      })),
+  };
+}
+
+function evaluateGoldSet(goldSet, results) {
+  if (!goldSet) return null;
+  const byRoute = new Map(results.map((result) => [result.route, result]));
+  const cases = goldSet.cases.map((goldCase) => evaluateGoldCase(goldCase, byRoute.get(goldCase.route)));
+  const mismatchCount = cases.filter((goldCase) => !goldCase.ok).length;
+  return {
+    ok: mismatchCount === 0,
+    schema_version: goldSet.schema_version,
+    name: goldSet.name,
+    description: goldSet.description,
+    path: goldSet.path,
+    case_count: cases.length,
+    ok_count: cases.length - mismatchCount,
+    mismatch_count: mismatchCount,
+    cases,
+  };
+}
+
+function evaluateGoldCase(goldCase, result) {
+  const expectations = goldCase.expect || {};
+  const checks = [];
+  if (!result || result.ok !== true) {
+    return {
+      id: goldCase.id,
+      route: goldCase.route,
+      ok: false,
+      rationale: goldCase.rationale,
+      checks: [
+        {
+          field: 'route',
+          ok: false,
+          expected: 'calibration result',
+          actual: result?.errors || null,
+        },
+      ],
+    };
+  }
+
+  compareEqual(checks, 'recommended_action', expectations.recommended_action, result.recommended_action);
+  compareEqual(checks, 'calibration_label', expectations.calibration_label, result.calibration_label);
+  compareEqual(checks, 'risk_label', expectations.risk_label, result.risk_profile?.label);
+  compareEqual(checks, 'confidence_label', expectations.confidence_label, result.confidence_profile?.label);
+  compareEqual(checks, 'stale_decay_label', expectations.stale_decay_label, result.stale_decay?.label);
+  compareMin(checks, 'score', expectations.score_min, result.score);
+  compareMax(checks, 'score', expectations.score_max, result.score);
+  compareMin(checks, 'source_count', expectations.source_count_min, result.source_count);
+  compareMin(checks, 'parent_surface_count', expectations.parent_surface_count_min, result.parent_surface_count);
+  compareMax(checks, 'stale_signal_count', expectations.stale_signal_count_max, result.stale_signal_count);
+  compareMin(checks, 'internal_links', expectations.internal_links_min, result.dimensions?.internal_links);
+
+  return {
+    id: goldCase.id,
+    route: goldCase.route,
+    ok: checks.every((check) => check.ok),
+    rationale: goldCase.rationale,
+    actual: {
+      score: result.score,
+      recommended_action: result.recommended_action,
+      calibration_label: result.calibration_label,
+      risk_label: result.risk_profile?.label || '',
+      confidence_label: result.confidence_profile?.label || '',
+      stale_decay_label: result.stale_decay?.label || '',
+    },
+    checks,
+  };
+}
+
+function compareEqual(checks, field, expected, actual) {
+  if (expected == null || expected === '') return;
+  checks.push({
+    field,
+    ok: actual === expected,
+    expected,
+    actual,
+  });
+}
+
+function compareMin(checks, field, expected, actual) {
+  if (expected == null || expected === '') return;
+  const expectedNumber = Number(expected);
+  checks.push({
+    field,
+    ok: Number(actual) >= expectedNumber,
+    expected: `>= ${expectedNumber}`,
+    actual,
+  });
+}
+
+function compareMax(checks, field, expected, actual) {
+  if (expected == null || expected === '') return;
+  const expectedNumber = Number(expected);
+  checks.push({
+    field,
+    ok: Number(actual) <= expectedNumber,
+    expected: `<= ${expectedNumber}`,
+    actual,
+  });
+}
+
+function thresholdReviewFor(results, goldSetReport) {
+  const okResults = results.filter((result) => result.ok);
+  const notes = [];
+  for (const result of okResults) {
+    if (result.risk_profile?.label === 'high' && result.recommended_action === 'monitor') {
+      notes.push(`${result.route} has high risk but monitor action`);
+    }
+    if (result.confidence_profile?.label === 'low' && !['refresh_current_facts', 'improve_source_coverage', 'risk_confidence_review'].includes(result.recommended_action)) {
+      notes.push(`${result.route} has low confidence but weak remediation action`);
+    }
+    if (result.stale_decay?.label === 'high' && result.score >= 0.75) {
+      notes.push(`${result.route} has high stale decay but high score`);
+    }
+  }
+  if (goldSetReport && !goldSetReport.ok) notes.push(`${goldSetReport.mismatch_count} gold-set calibration mismatch(es)`);
+  return {
+    status: notes.length ? 'review' : 'pass',
+    notes,
+    thresholds: {
+      high_risk_requires_non_monitor_action: true,
+      low_confidence_requires_remediation_action: true,
+      high_stale_decay_high_score_requires_review: true,
+    },
+  };
+}
+
 function countBy(items, key) {
   const counts = {};
   for (const item of items) counts[item[key]] = (counts[item[key]] ?? 0) + 1;
@@ -196,6 +350,17 @@ function routesFromFile(path) {
     .filter((line) => line && !line.startsWith('#'));
 }
 
+function goldSetFromFile(projectDir, path) {
+  if (!path) return null;
+  const absolutePath = resolve(projectDir, path);
+  if (!existsSync(absolutePath)) {
+    throw new Error(`gold set file not found: ${projectPath(projectDir, absolutePath)}`);
+  }
+  const parsed = JSON.parse(readFileSync(absolutePath, 'utf8'));
+  parsed.path = projectPath(projectDir, absolutePath);
+  return parsed;
+}
+
 function writeJson(projectDir, outPath, report) {
   const absoluteOut = resolve(projectDir, outPath);
   mkdirSync(dirname(absoluteOut), { recursive: true });
@@ -208,7 +373,24 @@ if (isCli) {
     ...valuesFor(args, '--route'),
     ...routesFromFile(valueFor(args, '--routes-file')),
   ];
-  const report = calibrateScores(projectDir, { routes, currentDate });
+  let goldSet = null;
+  try {
+    goldSet = goldSetFromFile(projectDir, goldSetPath);
+  } catch (error) {
+    const report = {
+      ok: false,
+      mode: 'gold-set-error',
+      error: error.message,
+      project_dir: projectDir,
+    };
+    if (jsonMode) {
+      process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+    } else {
+      console.error(`[agent-score-calibration] ${error.message}`);
+    }
+    process.exit(2);
+  }
+  const report = calibrateScores(projectDir, { routes, currentDate, goldSet });
   if (outPath) report.out = writeJson(projectDir, outPath, report);
 
   if (jsonMode) {

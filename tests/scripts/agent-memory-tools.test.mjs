@@ -235,3 +235,83 @@ test('score calibration counts inline news sources as source coverage', () => {
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test('score calibration evaluates gold-set expectations', () => {
+  const dir = writeFixture();
+  try {
+    const report = calibrateScores(dir, {
+      currentDate: '2026-06-29',
+      goldSet: {
+        schema_version: 'aipedia.score-goldset.v1',
+        name: 'fixture gold set',
+        cases: [
+          {
+            id: 'fresh-tool-internal-link-gap',
+            route: '/tools/example/',
+            expect: {
+              recommended_action: 'improve_internal_links',
+              calibration_label: 'internal_link_gap',
+              risk_label: 'low',
+              confidence_label: 'high',
+              stale_decay_label: 'fresh',
+              score_min: 0.7,
+              source_count_min: 1,
+            },
+          },
+          {
+            id: 'comparison-source-gap',
+            route: '/compare/example-vs-other/',
+            expect: {
+              recommended_action: 'improve_source_coverage',
+              calibration_label: 'source_coverage_gap',
+              risk_label: 'low',
+              confidence_label: 'low',
+              stale_decay_label: 'fresh',
+              score_max: 0.75,
+            },
+          },
+        ],
+      },
+    });
+
+    assert.equal(report.ok, true);
+    assert.equal(report.gold_set.ok, true);
+    assert.equal(report.gold_set.case_count, 2);
+    assert.equal(report.gold_set.mismatch_count, 0);
+    assert.equal(report.threshold_review.status, 'pass');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('score calibration reports gold-set mismatches', () => {
+  const dir = writeFixture();
+  try {
+    const report = calibrateScores(dir, {
+      routes: ['/compare/example-vs-other/'],
+      currentDate: '2026-06-29',
+      goldSet: {
+        cases: [
+          {
+            id: 'bad-expectation',
+            route: '/compare/example-vs-other/',
+            expect: {
+              recommended_action: 'monitor',
+              confidence_label: 'high',
+            },
+          },
+        ],
+      },
+    });
+
+    assert.equal(report.ok, false);
+    assert.equal(report.gold_set.ok, false);
+    assert.equal(report.gold_set.mismatch_count, 1);
+    assert.equal(report.threshold_review.status, 'review');
+    const failedFields = report.gold_set.cases[0].checks.filter((check) => !check.ok).map((check) => check.field);
+    assert.ok(failedFields.includes('recommended_action'));
+    assert.ok(failedFields.includes('confidence_label'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});

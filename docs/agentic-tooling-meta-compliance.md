@@ -117,6 +117,17 @@ Closeout receipts now carry trace and artifact references.
 - `agent:closeout:check --require-trace-artifacts` enforces the trace and artifact reference contract.
 - Focused Node and Rust tests prove the emitted fields and required-field failure path.
 
+## Ninth System Slice
+
+Non-stale scoring now has a gold-set calibration gate and threshold review.
+
+- `agent:score:calibrate -- --gold-set .agent/evals/score-calibration-goldset.json --json` evaluates committed expectations against real routes.
+- Gold-set checks cover recommended action, calibration label, risk label, confidence label, stale-decay label, score bounds, source count, parent-surface count, stale-signal count, and internal-link bounds.
+- Calibration output includes a `gold_set` block with per-case pass or mismatch detail.
+- Calibration output includes a `threshold_review` block that flags unsafe threshold combinations such as high-risk monitor actions, low-confidence weak remediation, high stale decay with high score, and gold-set mismatches.
+- The first committed receipt is `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, with 3 passing cases, 0 mismatches, and threshold review `pass`.
+- Focused tests prove passing gold-set expectations and deliberate mismatch reporting.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -127,7 +138,7 @@ Closeout receipts now carry trace and artifact references.
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, `agent:closeout:check --require-trace-artifacts` | Expand trace refs into workflow-specific closeout policies and bounded production pilots. |
-| Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries | Add gold-set calibration receipts and threshold review on real workload pilots. |
+| Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json` | Expand the gold set during real workload pilots and add governance for deliberate baseline changes. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |

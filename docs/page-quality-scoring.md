@@ -112,17 +112,14 @@ For comparisons:
 
 ## Recommended Actions
 
-- `refresh_pricing`
-- `refresh_model_access`
-- `add_sources`
+- `refresh_current_facts`
+- `improve_source_coverage`
+- `fix_missing_sources`
+- `risk_confidence_review`
 - `improve_cta_context`
 - `improve_internal_links`
-- `rewrite_verdict`
-- `update_parent_hub`
-- `merge_or_noindex_duplicate`
-- `create_comparison`
-- `create_plan_guide`
-- `defer_no_current_source`
+- `strengthen_buyer_decision_path`
+- `monitor`
 
 ## How Codex Should Use Scores
 
@@ -141,6 +138,7 @@ The first read-only scorer is available:
 npm --silent run agent:score -- --route /tools/cursor/ --json
 npm --silent run agent:score -- --path src/content/tools/cursor.md --current-date 2026-06-29 --json
 npm --silent run agent:score:calibrate -- --json
+npm --silent run agent:score:calibrate -- --gold-set .agent/evals/score-calibration-goldset.json --current-date 2026-06-30 --out .agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json --json
 ```
 
 It consumes:
@@ -156,5 +154,20 @@ It consumes:
 Output JSON only. Do not make the score write pages directly. The scorer is a prioritization and guard signal. It does not perform live source verification.
 
 `agent:score:calibrate` compares score output with real repo signals: ledger age, source coverage, stale signals, parent-impact breadth, stale-decay labels, risk labels, and confidence labels. Use it after changing score weights or recommendation thresholds.
+
+## Gold-Set Calibration
+
+Gold-set calibration turns scoring expectations into a regression gate. The committed baseline lives at `.agent/evals/score-calibration-goldset.json` and covers three real routes:
+
+- `/tools/cursor/`: current high-volatility tool with broad parent impact should stay `monitor`, high confidence, low risk, and low stale decay.
+- `/compare/gemini-vs-grok/`: current inline-source comparison should stay high confidence, avoid a source-gap false positive, and keep the internal-link remediation.
+- `/answers/best-ai-for-writing-2026/`: stale static answer should stay a low-confidence `refresh_current_facts` candidate.
+
+`agent:score:calibrate -- --gold-set <path>` emits:
+
+- `gold_set`: case count, mismatch count, per-case checks, actual labels, and threshold expectations.
+- `threshold_review`: pass or review status for unsafe threshold combinations, including high-risk monitor actions, low-confidence weak remediation, high stale decay with high score, and gold-set mismatches.
+
+A scoring change is not ready if the gold-set receipt has `ok: false`, `gold_set.ok: false`, or `threshold_review.status: "review"` unless the change deliberately updates the baseline and the docs explain why.
 
 News scoring uses the news-specific bar from the daily workflow: currentness, source quality, buyer impact, affected-page linking, and readability. Inline article sources count as source coverage, but registered source IDs remain distinct for tool, guide, and pricing fact provenance.

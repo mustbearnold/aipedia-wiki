@@ -1545,3 +1545,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `agent:evidence`, `agent:score` at 0.89 monitor, `agent:impact`, changed frontmatter, changed coverage quality, selected live-source audits for 21 source IDs, runner agent plan, ledger generation and check, changed provenance, `check:links`, em-dash guard, `git diff --check`, `guard:check`, `typecheck`, `build:fast`, route QA across affected routes at 319, 360, 390, 430, 768, 1024, and 1366 px, memory recording, and broad loop recording passed.
 - Loop receipt: `.agent/loop-runs/system/2026-06-29T10-36-48-548Z-loop-run.json` with 7 ok, 0 attention, and 0 skipped.
 - Next: Commit and push, then continue with `captions-vs-heygen` unless a fresh `loop:next` result changes the ranking.
+
+### 2026-06-30: Agentic Tooling Meta Slice 09, Score Gold Set
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `--gold-set` support to `agent:score:calibrate`, including route selection from gold-set cases, per-case expectation checks, mismatch reporting, threshold review, and stricter report `ok` semantics when threshold review requires attention. Added the committed baseline `.agent/evals/score-calibration-goldset.json` and receipt `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`.
+- System lesson: non-stale scoring needs durable expected behavior, not just point-in-time scores. The baseline locks in three real route behaviors: Cursor as a current broad-parent monitor, Gemini vs Grok as a high-confidence internal-link remediation, and the writing answer as a low-confidence refresh candidate.
+- Verification: `node --check scripts/agent-score-calibration.mjs`, focused `node --test tests/scripts/agent-memory-tools.test.mjs`, gold-set calibration receipt generation, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, and JSON parse checks all passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-09.md`.
+- Next: Commit and push, then continue with stale generated-input auto-refresh or all-workflow enforcement receipts unless a fresh system review exposes a higher-risk slice.

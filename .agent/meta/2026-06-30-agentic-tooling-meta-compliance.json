@@ -101,9 +101,12 @@
         "risk_profile labels",
         "confidence_profile labels",
         "tests/scripts/agent-workflow-tools.test.mjs stale high-volatility decay test",
-        "tests/scripts/agent-memory-tools.test.mjs calibration field tests"
+        "tests/scripts/agent-memory-tools.test.mjs calibration field tests",
+        ".agent/evals/score-calibration-goldset.json",
+        ".agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json",
+        "agent:score:calibrate --gold-set threshold_review"
       ],
-      "remaining": "Add gold-set calibration receipts, threshold review, and real-workload calibration evidence after bounded pilots."
+      "remaining": "Expand the gold set during real-workload pilots and add governance for deliberate baseline changes."
     },
     {
       "id": "speed-token-efficiency",
@@ -136,13 +139,13 @@
     }
   ],
   "current_slice": {
-    "name": "closeout trace and artifact refs",
+    "name": "score gold-set calibration",
     "system_artifacts": [
-      "scripts/aipedia-loops.mjs",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tools/aipedia-runner/src/main.rs",
-      "tests/scripts/aipedia-loops.test.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "scripts/agent-score-calibration.mjs",
+      "tests/scripts/agent-memory-tools.test.mjs",
+      ".agent/evals/score-calibration-goldset.json",
+      ".agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json",
+      "docs/page-quality-scoring.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
     ],
@@ -150,8 +153,8 @@
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Add gold-set calibration receipts and threshold review for scoring.",
     "Add safe auto-refresh or all-workflow enforcement receipts for stale generated planner inputs.",
+    "Add governance for deliberate score gold-set baseline changes.",
     "Pilot one bounded content workload only after the next system slice is verified."
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "schema_version": "aipedia.score-goldset.v1",
+  "name": "June 30 score calibration baseline",
+  "description": "Small real-route baseline for non-stale score thresholds, risk labels, confidence labels, stale decay, and recommended actions.",
+  "cases": [
+    {
+      "id": "cursor-current-tool",
+      "route": "/tools/cursor/",
+      "rationale": "Current source-backed high-volatility tool should monitor with high confidence while broad parent impact stays visible.",
+      "expect": {
+        "recommended_action": "monitor",
+        "calibration_label": "broad_parent_impact",
+        "risk_label": "low",
+        "confidence_label": "high",
+        "stale_decay_label": "low",
+        "score_min": 0.85,
+        "source_count_min": 4,
+        "parent_surface_count_min": 50,
+        "stale_signal_count_max": 0
+      }
+    },
+    {
+      "id": "gemini-vs-grok-internal-link-gap",
+      "route": "/compare/gemini-vs-grok/",
+      "rationale": "Current inline-source comparison should not be treated as a source gap, but should still flag weak internal-link coverage.",
+      "expect": {
+        "recommended_action": "improve_internal_links",
+        "calibration_label": "internal_link_gap",
+        "risk_label": "low",
+        "confidence_label": "high",
+        "stale_decay_label": "fresh",
+        "score_min": 0.8,
+        "source_count_min": 2,
+        "internal_links_min": 0.3
+      }
+    },
+    {
+      "id": "writing-answer-refresh-pressure",
+      "route": "/answers/best-ai-for-writing-2026/",
+      "rationale": "Static answer with stale signals and no source coverage should remain a low-confidence refresh candidate.",
+      "expect": {
+        "recommended_action": "refresh_current_facts",
+        "calibration_label": "refresh_pressure",
+        "risk_label": "low",
+        "confidence_label": "low",
+        "stale_decay_label": "medium",
+        "score_max": 0.4,
+        "stale_signal_count_max": 2
+      }
+    }
+  ]
+}
