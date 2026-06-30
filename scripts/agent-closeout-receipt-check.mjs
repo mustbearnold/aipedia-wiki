@@ -175,8 +175,9 @@ function validateReceiptFile(path) {
   else if (type === 'runner-interrupt-proof') validateRunnerInterruptProof(value, issues);
   else if (type === 'affiliate-handoff') validateAffiliateHandoffReceipt(value, issues);
   else if (type === 'meta-proof-readiness') validateMetaProofReadinessReceipt(value, issues);
+  else if (type === 'loop-efficiency-trends') validateLoopEfficiencyTrendReceipt(value, issues);
   else if (type === 'pause-receipt') validatePauseReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, nor aipedia.pause-receipt.v1.'));
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, aipedia.loop-efficiency-trends.v1, nor aipedia.pause-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -196,9 +197,169 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.runner-interrupt-proof.v1') return 'runner-interrupt-proof';
   if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
   if (value.schema_version === 'aipedia.meta-proof-readiness.v1') return 'meta-proof-readiness';
+  if (value.schema_version === 'aipedia.loop-efficiency-trends.v1') return 'loop-efficiency-trends';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';
+}
+
+function validateLoopEfficiencyTrendReceipt(value, issues) {
+  requireBoolean(value, 'ok', issues);
+  requireString(value, 'mode', issues, {
+    values: ['loop-efficiency-trends', 'loop-efficiency-trends-attention'],
+  });
+  requireString(value, 'schema_version', issues, {
+    values: ['aipedia.loop-efficiency-trends.v1'],
+  });
+  requireIsoString(value, 'generated_at', issues);
+  requireString(value, 'project_dir', issues);
+  requireString(value, 'ledger_dir', issues);
+  if (value.receipt_path != null && value.receipt_path !== '') requireString(value, 'receipt_path', issues);
+  requireNonNegativeNumber(value, 'max_runs', issues);
+  requireBoolean(value, 'fail_on_missing_metrics', issues);
+  requireObject(value, 'totals', issues);
+  requireArray(value, 'issues', issues);
+  requireArray(value, 'runs', issues);
+  requireObject(value, 'summary', issues);
+  requireObject(value, 'stability_summary', issues);
+  requireObject(value, 'correction_summary', issues);
+  requireArray(value, 'slowest_commands', issues);
+  requireStringArray(value, 'next_actions', issues);
+
+  if (isObject(value.totals)) {
+    for (const field of ['analyzed_runs', 'metrics_runs', 'missing_metrics_runs']) {
+      requireNonNegativeNumber(value.totals, field, issues, `totals.${field}`);
+    }
+  }
+  if (Array.isArray(value.runs)) {
+    value.runs.forEach((run, index) => validateLoopEfficiencyTrendRun(run, issues, `runs[${index}]`));
+    if (isObject(value.totals)) {
+      const metricsRuns = value.runs.filter((run) => isObject(run) && run.has_efficiency_metrics === true).length;
+      const missingRuns = value.runs.filter((run) => isObject(run) && run.has_efficiency_metrics !== true).length;
+      if (typeof value.totals.analyzed_runs === 'number' && value.totals.analyzed_runs !== value.runs.length) {
+        issues.push(issue('loop-efficiency-trends-total-mismatch', `totals.analyzed_runs is ${value.totals.analyzed_runs} but runs has ${value.runs.length} item(s).`));
+      }
+      if (typeof value.totals.metrics_runs === 'number' && value.totals.metrics_runs !== metricsRuns) {
+        issues.push(issue('loop-efficiency-trends-total-mismatch', `totals.metrics_runs is ${value.totals.metrics_runs} but runs imply ${metricsRuns}.`));
+      }
+      if (typeof value.totals.missing_metrics_runs === 'number' && value.totals.missing_metrics_runs !== missingRuns) {
+        issues.push(issue('loop-efficiency-trends-total-mismatch', `totals.missing_metrics_runs is ${value.totals.missing_metrics_runs} but runs imply ${missingRuns}.`));
+      }
+    }
+  }
+  if (isObject(value.summary)) validateLoopEfficiencyTrendSummary(value.summary, issues);
+  if (isObject(value.stability_summary)) validateLoopEfficiencyTrendStability(value.stability_summary, issues);
+  if (isObject(value.correction_summary)) validateLoopEfficiencyTrendCorrection(value.correction_summary, issues);
+  if (Array.isArray(value.slowest_commands)) {
+    value.slowest_commands.forEach((command, index) => validateLoopEfficiencyTrendSlowCommand(command, issues, `slowest_commands[${index}]`));
+  }
+}
+
+function validateLoopEfficiencyTrendRun(run, issues, path) {
+  if (!isObject(run)) {
+    issues.push(issue('loop-efficiency-trends-run-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(run, 'path', issues, { path: `${path}.path` });
+  requireIsoString(run, 'generated_at', issues, `${path}.generated_at`);
+  requireString(run, 'run_id', issues, { path: `${path}.run_id` });
+  requireBoolean(run, 'ok', issues, `${path}.ok`);
+  requireBoolean(run, 'has_efficiency_metrics', issues, `${path}.has_efficiency_metrics`);
+  for (const field of [
+    'wall_duration_ms',
+    'total_command_duration_ms',
+    'command_count',
+    'loop_count',
+    'attention_rate',
+    'persisted_full_receipt_bytes',
+    'persisted_latest_receipt_bytes',
+    'estimated_full_receipt_tokens',
+    'system_artifact_count',
+  ]) {
+    requireNonNegativeNumber(run, field, issues, `${path}.${field}`);
+  }
+}
+
+function validateLoopEfficiencyTrendSummary(summary, issues) {
+  requireIsoString(summary, 'first_run', issues, 'summary.first_run');
+  requireIsoString(summary, 'latest_run', issues, 'summary.latest_run');
+  for (const field of [
+    'metrics_coverage_rate',
+    'median_wall_duration_ms',
+    'median_total_command_duration_ms',
+    'median_attention_rate',
+    'median_full_receipt_bytes',
+    'median_latest_receipt_bytes',
+    'median_estimated_full_receipt_tokens',
+  ]) {
+    requireNonNegativeNumber(summary, field, issues, `summary.${field}`);
+  }
+  if (summary.latest != null && !isObject(summary.latest)) {
+    issues.push(issue('loop-efficiency-trends-summary-invalid', 'summary.latest must be an object when present.'));
+  }
+  if (summary.delta_from_previous != null && !isObject(summary.delta_from_previous)) {
+    issues.push(issue('loop-efficiency-trends-summary-invalid', 'summary.delta_from_previous must be an object when present.'));
+  }
+}
+
+function validateLoopEfficiencyTrendStability(stability, issues) {
+  for (const field of [
+    'loop_status_comparisons',
+    'loop_status_changes',
+    'loop_status_change_rate',
+    'command_status_comparisons',
+    'command_status_changes',
+    'command_status_change_rate',
+  ]) {
+    requireNonNegativeNumber(stability, field, issues, `stability_summary.${field}`);
+  }
+  requireStringArray(stability, 'persistent_attention_loops', issues, 'stability_summary.persistent_attention_loops');
+  requireStringArray(stability, 'latest_attention_loops', issues, 'stability_summary.latest_attention_loops');
+  requireStringArray(stability, 'new_attention_loops', issues, 'stability_summary.new_attention_loops');
+  requireStringArray(stability, 'resolved_attention_loops', issues, 'stability_summary.resolved_attention_loops');
+  requireArray(stability, 'recent_loop_status_changes', issues, 'stability_summary.recent_loop_status_changes');
+}
+
+function validateLoopEfficiencyTrendCorrection(correction, issues) {
+  requireBoolean(correction, 'has_comparison', issues, 'correction_summary.has_comparison');
+  if (correction.previous_run) requireIsoString(correction, 'previous_run', issues, 'correction_summary.previous_run');
+  if (correction.latest_run) requireIsoString(correction, 'latest_run', issues, 'correction_summary.latest_run');
+  for (const field of [
+    'loop_previous_attention_count',
+    'loop_resolved_attention_count',
+    'loop_persistent_attention_count',
+    'loop_regressed_attention_count',
+    'loop_correction_rate',
+    'command_previous_attention_count',
+    'command_resolved_attention_count',
+    'command_persistent_attention_count',
+    'command_regressed_attention_count',
+    'command_correction_rate',
+  ]) {
+    requireNonNegativeNumber(correction, field, issues, `correction_summary.${field}`);
+  }
+  requireArray(correction, 'resolved_loops', issues, 'correction_summary.resolved_loops');
+  requireStringArray(correction, 'persistent_attention_loops', issues, 'correction_summary.persistent_attention_loops');
+  requireArray(correction, 'regressed_loops', issues, 'correction_summary.regressed_loops');
+  requireArray(correction, 'resolved_commands', issues, 'correction_summary.resolved_commands');
+  requireArray(correction, 'persistent_attention_commands', issues, 'correction_summary.persistent_attention_commands');
+  requireArray(correction, 'regressed_commands', issues, 'correction_summary.regressed_commands');
+}
+
+function validateLoopEfficiencyTrendSlowCommand(command, issues, path) {
+  if (!isObject(command)) {
+    issues.push(issue('loop-efficiency-trends-command-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(command, 'loop_id', issues, { path: `${path}.loop_id` });
+  requireString(command, 'label', issues, { path: `${path}.label` });
+  requireNonNegativeNumber(command, 'occurrences', issues, `${path}.occurrences`);
+  requireNonNegativeNumber(command, 'max_duration_ms', issues, `${path}.max_duration_ms`);
+  requireNonNegativeNumber(command, 'median_duration_ms', issues, `${path}.median_duration_ms`);
+  requireString(command, 'latest_status', issues, {
+    path: `${path}.latest_status`,
+    values: ['ok', 'attention', 'skipped'],
+  });
 }
 
 function validateLoopReceipt(value, issues) {

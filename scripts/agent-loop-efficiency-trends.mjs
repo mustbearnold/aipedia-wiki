@@ -1,18 +1,21 @@
 #!/usr/bin/env node
 // Aggregate loop efficiency metrics from recorded system loop receipts.
 
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
 const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
+const GENERATED_AT = new Date().toISOString();
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || defaultProjectDir);
 const LEDGER_DIR = resolve(PROJECT_DIR, valueFor('--ledger-dir') || '.agent/loop-runs/system');
 const MAX_RUNS = positiveInteger(valueFor('--max-runs'), 10);
 const FAIL_ON_MISSING_METRICS = hasFlag('--fail-on-missing-metrics');
+const OUT_PATH = valueFor('--out') || valueFor('--receipt-out') || '';
+const OUT_ABSOLUTE_PATH = OUT_PATH ? resolve(PROJECT_DIR, OUT_PATH) : '';
 const KNOWN_FLAGS = new Set([
   '--fail-on-missing-metrics',
   '--help',
@@ -20,10 +23,12 @@ const KNOWN_FLAGS = new Set([
   '--json',
   '--ledger-dir',
   '--max-runs',
+  '--out',
   '--project-dir',
+  '--receipt-out',
   '--root',
 ]);
-const VALUE_FLAGS = new Set(['--ledger-dir', '--max-runs', '--project-dir', '--root']);
+const VALUE_FLAGS = new Set(['--ledger-dir', '--max-runs', '--out', '--project-dir', '--receipt-out', '--root']);
 
 if (HELP_MODE) {
   console.log(usage());
@@ -44,6 +49,7 @@ if (argumentIssues.length) {
 }
 
 const report = buildTrendReport();
+writeReceipt(report);
 emitReport(report);
 process.exit(report.ok ? 0 : 1);
 
@@ -57,6 +63,7 @@ function usage() {
     '  --json                         Emit a structured report.',
     '  --ledger-dir <dir>             Loop receipt directory. Defaults to .agent/loop-runs/system.',
     '  --max-runs <n>                 Analyze the latest n timestamped loop receipts. Defaults to 10.',
+    '  --out <path>                   Write the trend report as a durable receipt. Alias: --receipt-out.',
     '  --fail-on-missing-metrics      Exit non-zero when analyzed loop receipts lack efficiency_metrics.',
     '  --project-dir <dir>            Project root. Alias: --root.',
   ].join('\n');
@@ -112,8 +119,10 @@ function baseReport(ok, issues, records) {
     ok,
     mode: ok ? 'loop-efficiency-trends' : 'loop-efficiency-trends-attention',
     schema_version: 'aipedia.loop-efficiency-trends.v1',
+    generated_at: GENERATED_AT,
     project_dir: PROJECT_DIR,
     ledger_dir: projectPath(LEDGER_DIR),
+    receipt_path: OUT_ABSOLUTE_PATH ? projectPath(OUT_ABSOLUTE_PATH) : '',
     max_runs: MAX_RUNS,
     fail_on_missing_metrics: FAIL_ON_MISSING_METRICS,
     totals: {
@@ -537,6 +546,19 @@ function emitReport(report) {
   console.log(`[agent-loop-efficiency-trends] ${report.totals.metrics_runs}/${report.totals.analyzed_runs} receipt(s) include metrics.`);
   console.log(`median wall duration: ${summary.median_wall_duration_ms || 0} ms`);
   console.log(`median full receipt bytes: ${summary.median_full_receipt_bytes || 0}`);
+}
+
+function writeReceipt(report) {
+  if (!OUT_ABSOLUTE_PATH) return;
+  try {
+    report.receipt_path = projectPath(OUT_ABSOLUTE_PATH);
+    mkdirSync(dirname(OUT_ABSOLUTE_PATH), { recursive: true });
+    writeFileSync(OUT_ABSOLUTE_PATH, `${JSON.stringify(report, null, 2)}\n`);
+  } catch (error) {
+    report.ok = false;
+    report.mode = 'loop-efficiency-trends-attention';
+    report.issues.push(issue('receipt-write-failed', `Could not write trend receipt: ${error.message}`));
+  }
 }
 
 function collectArgumentIssues() {

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
@@ -249,6 +249,35 @@ test('loop efficiency trends reports correction rates from resolved attention', 
     assert.deepEqual(report.correction_summary.resolved_loops.map((item) => item.loop_id), ['freshness']);
     assert.deepEqual(report.correction_summary.persistent_attention_loops, ['performance-ux']);
     assert.deepEqual(report.correction_summary.resolved_commands.map((item) => item.label), ['freshness queue']);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('loop efficiency trends can write a durable trend receipt', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-efficiency-receipt-'));
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+  const outPath = 'local/tmp/efficiency-trends.json';
+
+  try {
+    mkdirSync(ledgerDir, { recursive: true });
+    writeReceipt(ledgerDir, '2026-06-30T00-00-00-000Z-loop-run.json', loopReceipt({
+      generated_at: '2026-06-30T00:00:00.000Z',
+      run_id: 'receipt-run',
+    }));
+
+    const result = runTrends('--json', '--project-dir', dir, '--max-runs', '1', '--out', outPath);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    const receiptPath = join(dir, outPath);
+    assert.equal(existsSync(receiptPath), true);
+    assert.equal(report.receipt_path, outPath);
+    const receipt = JSON.parse(readFileSync(receiptPath, 'utf8'));
+    assert.equal(receipt.schema_version, 'aipedia.loop-efficiency-trends.v1');
+    assert.equal(receipt.receipt_path, outPath);
+    assert.equal(receipt.totals.analyzed_runs, 1);
+    assert.equal(receipt.correction_summary.has_comparison, false);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

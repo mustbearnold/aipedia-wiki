@@ -627,6 +627,147 @@ function validMetaProofReadinessReceipt(overrides = {}) {
   };
 }
 
+function validLoopEfficiencyTrendReceipt(overrides = {}) {
+  return {
+    ok: true,
+    mode: 'loop-efficiency-trends',
+    schema_version: 'aipedia.loop-efficiency-trends.v1',
+    generated_at: '2026-06-30T21:15:00.000Z',
+    project_dir: '.',
+    ledger_dir: '.agent/loop-runs/system',
+    receipt_path: '.agent/evals/efficiency-trends/fixture.json',
+    max_runs: 2,
+    fail_on_missing_metrics: true,
+    totals: {
+      analyzed_runs: 2,
+      metrics_runs: 2,
+      missing_metrics_runs: 0,
+    },
+    issues: [],
+    runs: [
+      {
+        path: '.agent/loop-runs/system/2026-06-30T20-00-00-000Z-loop-run.json',
+        generated_at: '2026-06-30T20:00:00.000Z',
+        run_id: 'previous-run',
+        ok: true,
+        has_efficiency_metrics: true,
+        wall_duration_ms: 5000,
+        total_command_duration_ms: 4900,
+        command_count: 16,
+        loop_count: 7,
+        attention_rate: 0.429,
+        persisted_full_receipt_bytes: 43000,
+        persisted_latest_receipt_bytes: 24000,
+        estimated_full_receipt_tokens: 10750,
+        system_artifact_count: 7,
+      },
+      {
+        path: '.agent/loop-runs/system/2026-06-30T21-00-00-000Z-loop-run.json',
+        generated_at: '2026-06-30T21:00:00.000Z',
+        run_id: 'latest-run',
+        ok: true,
+        has_efficiency_metrics: true,
+        wall_duration_ms: 4800,
+        total_command_duration_ms: 4700,
+        command_count: 16,
+        loop_count: 7,
+        attention_rate: 0.429,
+        persisted_full_receipt_bytes: 42000,
+        persisted_latest_receipt_bytes: 23000,
+        estimated_full_receipt_tokens: 10500,
+        system_artifact_count: 8,
+      },
+    ],
+    summary: {
+      first_run: '2026-06-30T20:00:00.000Z',
+      latest_run: '2026-06-30T21:00:00.000Z',
+      metrics_coverage_rate: 1,
+      median_wall_duration_ms: 4900,
+      median_total_command_duration_ms: 4800,
+      median_attention_rate: 0.429,
+      median_full_receipt_bytes: 42500,
+      median_latest_receipt_bytes: 23500,
+      median_estimated_full_receipt_tokens: 10625,
+      latest: {
+        path: '.agent/loop-runs/system/2026-06-30T21-00-00-000Z-loop-run.json',
+        generated_at: '2026-06-30T21:00:00.000Z',
+        run_id: 'latest-run',
+        ok: true,
+        has_efficiency_metrics: true,
+        wall_duration_ms: 4800,
+        total_command_duration_ms: 4700,
+        command_count: 16,
+        loop_count: 7,
+        attention_rate: 0.429,
+        persisted_full_receipt_bytes: 42000,
+        persisted_latest_receipt_bytes: 23000,
+        estimated_full_receipt_tokens: 10500,
+        system_artifact_count: 8,
+      },
+      delta_from_previous: {
+        wall_duration_ms: -200,
+        total_command_duration_ms: -200,
+        attention_rate: 0,
+        persisted_full_receipt_bytes: -1000,
+        persisted_latest_receipt_bytes: -1000,
+        estimated_full_receipt_tokens: -250,
+        system_artifact_count: 1,
+      },
+    },
+    stability_summary: {
+      loop_status_comparisons: 7,
+      loop_status_changes: 0,
+      loop_status_change_rate: 0,
+      command_status_comparisons: 16,
+      command_status_changes: 0,
+      command_status_change_rate: 0,
+      persistent_attention_loops: ['freshness'],
+      latest_attention_loops: ['freshness'],
+      new_attention_loops: [],
+      resolved_attention_loops: [],
+      recent_loop_status_changes: [],
+    },
+    correction_summary: {
+      has_comparison: true,
+      previous_run: '2026-06-30T20:00:00.000Z',
+      latest_run: '2026-06-30T21:00:00.000Z',
+      loop_previous_attention_count: 1,
+      loop_resolved_attention_count: 0,
+      loop_persistent_attention_count: 1,
+      loop_regressed_attention_count: 0,
+      loop_correction_rate: 0,
+      command_previous_attention_count: 1,
+      command_resolved_attention_count: 0,
+      command_persistent_attention_count: 1,
+      command_regressed_attention_count: 0,
+      command_correction_rate: 0,
+      resolved_loops: [],
+      persistent_attention_loops: ['freshness'],
+      regressed_loops: [],
+      resolved_commands: [],
+      persistent_attention_commands: [
+        {
+          loop_id: 'freshness',
+          label: 'freshness queue',
+        },
+      ],
+      regressed_commands: [],
+    },
+    slowest_commands: [
+      {
+        loop_id: 'freshness',
+        label: 'freshness queue',
+        occurrences: 2,
+        max_duration_ms: 500,
+        median_duration_ms: 450,
+        latest_status: 'attention',
+      },
+    ],
+    next_actions: ['Use this trend receipt in the next system closeout.'],
+    ...overrides,
+  };
+}
+
 test('closeout receipt check validates latest enforced loop receipt by default', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-loop-'));
   const systemDir = join(dir, '.agent', 'loop-runs', 'system');
@@ -641,6 +782,49 @@ test('closeout receipt check validates latest enforced loop receipt by default',
     assert.equal(report.ok, true);
     assert.equal(report.totals.receipts, 1);
     assert.equal(report.receipts[0].type, 'loop-run');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates loop efficiency trend receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-efficiency-trends-'));
+  const path = join(dir, 'efficiency-trends.json');
+
+  try {
+    writeJson(path, validLoopEfficiencyTrendReceipt());
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'loop-efficiency-trends');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails malformed loop efficiency trend receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-efficiency-trends-'));
+  const path = join(dir, 'efficiency-trends.json');
+  const receipt = validLoopEfficiencyTrendReceipt({
+    totals: {
+      analyzed_runs: 9,
+      metrics_runs: 9,
+      missing_metrics_runs: 0,
+    },
+  });
+  receipt.correction_summary.persistent_attention_loops = [{ id: 'freshness' }];
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('loop-efficiency-trends-total-mismatch'));
+    assert.ok(codes.includes('field-invalid'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
