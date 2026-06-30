@@ -1764,3 +1764,14 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-29.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-47-07-903Z-loop-run.json`.
 - Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.859s wall duration, 42,941 full receipt bytes, 24,397 latest receipt bytes, estimated full receipt tokens 10,736, and 9 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
 - Next: Commit and push, then enforce interrupted pause receipt links in `agent:closeout:check`.
+
+### 2026-06-30: Agentic Tooling Meta Slice 30, Interrupted Pause Link Enforcement
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: `agent:closeout:check` now requires runner closeout receipts with `commands[].interrupted: true` to include `interrupted_pause_receipt` and a matching `artifact_refs` entry with `role: output`, `kind: interrupted-pause-receipt`, and the same path. Runner command validation now rejects non-boolean `interrupted` fields.
+- System lesson: writing the pause link in the runner was not enough. The closeout validator must fail older or malformed interrupted receipts so pause/resume safety is preserved after artifacts are copied, reviewed, or replayed by future agents.
+- Verification: focused syntax, focused closeout tests, Slice 29 linked closeout validation, Slice 29 linked pause validation, intentional Slice 28 unlinked closeout rejection, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record`, efficiency trends, and required closeout validation passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-30.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T07-57-43-981Z-loop-run.json`.
+- Trend: latest enforced loop receipt recorded 4 ok loops, 3 attention loops, 0 skipped loops, 16 commands, 4.913s wall duration, 42,577 full receipt bytes, 24,033 latest receipt bytes, estimated full receipt tokens 10,645, and 6 system artifacts. Stability remained unchanged from the previous receipt with 0 loop status changes and 0 command status changes.
+- Next: Commit and push, then package the live interrupted runner proof as a repeatable smoke command or script.

@@ -77,6 +77,8 @@
         "runner closeout command interrupted flags",
         "runner closeout interrupted_pause_receipt field",
         "runner closeout interrupted-pause-receipt artifact refs",
+        "scripts/agent-closeout-receipt-check.mjs interrupted pause link enforcement",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs interrupted pause link coverage",
         "tests/scripts/agent-pause-receipt.test.mjs",
         "tests/scripts/agent-closeout-receipt-check.test.mjs pause receipt coverage",
         "tools/aipedia-runner/src/main.rs focused interrupt tests",
@@ -88,7 +90,7 @@
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-pause.json",
         ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-closeout.json"
       ],
-      "remaining": "Enforce interrupted pause receipt links in agent:closeout:check."
+      "remaining": "Package the live interrupted runner proof as a repeatable smoke command or fixture."
     },
     {
       "id": "dag-contracts",
@@ -130,7 +132,10 @@
         ".agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json",
         "bounded runner:affiliate-conversion:handoff policy proof",
         ".agent/evals/closeout-policy-receipts/2026-06-30-slice-22-page-refresh-policy-blocker.json",
-        "bounded runner:page-refresh stale-input policy blocker proof"
+        "bounded runner:page-refresh stale-input policy blocker proof",
+        "scripts/agent-closeout-receipt-check.mjs interrupted pause link enforcement",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs interrupted pause link tests",
+        ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-closeout.json"
       ],
       "remaining": "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved."
     },
@@ -208,25 +213,24 @@
     }
   ],
   "current_slice": {
-    "name": "interrupted closeout pause receipt linkage",
+    "name": "interrupted closeout pause link enforcement",
     "system_artifacts": [
-      "tools/aipedia-runner/src/main.rs",
-      ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-pause.json",
-      ".agent/evals/runner-interrupt-proofs/2026-06-30-slice-29-linked-interrupted-closeout.json",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-29.md",
-      ".agent/loop-runs/system/2026-06-30T07-47-07-903Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-30.md",
+      ".agent/loop-runs/system/2026-06-30T07-57-43-981Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Enforce interrupted pause receipt links in agent:closeout:check.",
+    "Package the live interrupted runner proof as a repeatable smoke command or fixture.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",

@@ -635,6 +635,34 @@ test('closeout receipt check validates runner closeout receipts', () => {
   }
 });
 
+test('closeout receipt check validates interrupted runner pause links', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-interrupted-runner-'));
+  const path = join(dir, 'runner.json');
+  const pausePath = 'local/tmp/aipedia-runner/pauses/interrupted-pause.json';
+  const receipt = validRunnerReceipt({
+    status: 'failed',
+    interrupted_pause_receipt: pausePath,
+    commands: [
+      { label: 'ledger generate', status: 130, interrupted: true, elapsed_ms: 130, details_path: null },
+    ],
+    artifact_refs: [
+      ...validRunnerReceipt().artifact_refs,
+      { role: 'output', kind: 'interrupted-pause-receipt', path: pausePath },
+    ],
+  });
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-trace-artifacts', '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates workflow-specific runner policies', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-workflow-policy-'));
   const toolPath = join(dir, 'tool-runner.json');
@@ -794,7 +822,7 @@ test('closeout receipt check fails malformed runner command receipts', () => {
   const path = join(dir, 'runner.json');
 
   try {
-    writeJson(path, validRunnerReceipt({ commands: [{ label: '', status: 'ok', elapsed_ms: -1 }] }));
+    writeJson(path, validRunnerReceipt({ commands: [{ label: '', status: 'ok', interrupted: 'yes', elapsed_ms: -1 }] }));
     const result = runCheck(['--receipt', path, '--json']);
     assert.equal(result.status, 1);
 
@@ -803,7 +831,37 @@ test('closeout receipt check fails malformed runner command receipts', () => {
     const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
     assert.match(details, /commands\[0\]\.label/);
     assert.match(details, /commands\[0\]\.status/);
+    assert.match(details, /commands\[0\]\.interrupted/);
     assert.match(details, /commands\[0\]\.elapsed_ms/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails interrupted runner receipts without pause links', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-interrupted-runner-'));
+  const missingFieldPath = join(dir, 'missing-field.json');
+  const missingArtifactPath = join(dir, 'missing-artifact.json');
+  const pausePath = 'local/tmp/aipedia-runner/pauses/interrupted-pause.json';
+  const interruptedCommand = { label: 'ledger generate', status: 130, interrupted: true, elapsed_ms: 130, details_path: null };
+
+  try {
+    writeJson(missingFieldPath, validRunnerReceipt({
+      status: 'failed',
+      commands: [interruptedCommand],
+    }));
+    writeJson(missingArtifactPath, validRunnerReceipt({
+      status: 'failed',
+      interrupted_pause_receipt: pausePath,
+      commands: [interruptedCommand],
+    }));
+    const result = runCheck(['--receipt', missingFieldPath, '--receipt', missingArtifactPath, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts.flatMap((receipt) => receipt.issues.map((item) => item.code));
+    assert.ok(codes.includes('runner-interrupted-pause-receipt-missing'));
+    assert.ok(codes.includes('runner-interrupted-pause-artifact-missing'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -405,6 +405,7 @@ function validateRunnerReceipt(value, issues) {
   if (Array.isArray(value.commands)) {
     value.commands.forEach((command, index) => validateRunnerCommand(command, issues, `commands[${index}]`));
   }
+  validateRunnerInterruptedPauseLink(value, issues);
   if (value.system_progress != null) {
     validateSystemProgress(value.system_progress, { ok: value.status === 'passed' }, issues);
   }
@@ -423,7 +424,32 @@ function validateRunnerCommand(command, issues, path) {
   if (!(typeof command.status === 'number' || command.status === null)) {
     issues.push(issue('runner-command-status-invalid', `${path}.status must be a number or null.`));
   }
+  if (command.interrupted != null && typeof command.interrupted !== 'boolean') {
+    issues.push(issue('runner-command-interrupted-invalid', `${path}.interrupted must be a boolean when present.`));
+  }
   requireNonNegativeNumber(command, 'elapsed_ms', issues, `${path}.elapsed_ms`);
+}
+
+function validateRunnerInterruptedPauseLink(receipt, issues) {
+  const commands = Array.isArray(receipt.commands) ? receipt.commands : [];
+  const hasInterruptedCommand = commands.some((command) => isObject(command) && command.interrupted === true);
+  if (!hasInterruptedCommand) return;
+
+  if (typeof receipt.interrupted_pause_receipt !== 'string' || !receipt.interrupted_pause_receipt.trim()) {
+    issues.push(issue('runner-interrupted-pause-receipt-missing', 'Runner closeout receipts with interrupted commands must include interrupted_pause_receipt.'));
+    return;
+  }
+
+  const artifactRefs = Array.isArray(receipt.artifact_refs) ? receipt.artifact_refs : [];
+  const hasPauseArtifact = artifactRefs.some((artifact) => (
+    isObject(artifact)
+    && artifact.role === 'output'
+    && artifact.kind === 'interrupted-pause-receipt'
+    && artifact.path === receipt.interrupted_pause_receipt
+  ));
+  if (!hasPauseArtifact) {
+    issues.push(issue('runner-interrupted-pause-artifact-missing', 'Runner closeout receipts with interrupted commands must include an output interrupted-pause-receipt artifact_ref matching interrupted_pause_receipt.'));
+  }
 }
 
 function validateInputFreshness(freshness, receipt, issues) {
