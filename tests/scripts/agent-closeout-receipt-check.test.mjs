@@ -121,9 +121,10 @@ function validLoopReceipt(overrides = {}) {
 }
 
 function validRunnerReceipt(overrides = {}) {
+  const workflow = overrides.workflow || 'tool-refresh';
   return {
     schema_version: 'aipedia.closeout-receipt.v1',
-    workflow: 'tool-refresh',
+    workflow,
     status: 'passed',
     generated_at: '2026-06-30T03:01:47Z',
     goal_id: 'meta-goal',
@@ -132,9 +133,9 @@ function validRunnerReceipt(overrides = {}) {
     next_actions: ['Continue the runner fixture.'],
     trace: {
       trace_id: 'trace:meta-goal:runner-fixture',
-      span_id: 'span:tool-refresh:fixture',
+      span_id: `span:${workflow}:fixture`,
       parent_span_id: '',
-      name: 'tool-refresh',
+      name: workflow,
       started_at: '2026-06-30T03:01:47Z',
       ended_at: '2026-06-30T03:01:47Z',
       duration_ms: 250,
@@ -146,9 +147,34 @@ function validRunnerReceipt(overrides = {}) {
         path: 'local/tmp/plan.json',
       },
       {
+        role: 'input',
+        kind: 'route-args',
+        path: 'local/tmp/routes.txt',
+      },
+      {
         role: 'output',
         kind: 'markdown-receipt',
         path: 'local/tmp/receipt.md',
+      },
+      {
+        role: 'output',
+        kind: 'json-receipt',
+        path: 'local/tmp/receipt.json',
+      },
+      {
+        role: 'route',
+        kind: 'changed-route',
+        id: '/tools/example/',
+      },
+      {
+        role: 'source',
+        kind: 'source-id',
+        id: 'example-pricing',
+      },
+      {
+        role: 'embedded',
+        kind: 'closeout-command',
+        id: 'tool-refresh:ledger-generate',
       },
     ],
     current_date: null,
@@ -160,8 +186,32 @@ function validRunnerReceipt(overrides = {}) {
     markdown_receipt: 'local/tmp/receipt.md',
     changed_routes: ['/tools/example/'],
     source_ids: ['example-pricing'],
-    widths: [360, 1024],
+    widths: [319, 360, 390, 430, 768, 1024, 1366],
     commands: [
+      {
+        label: 'ledger generate',
+        status: 0,
+        elapsed_ms: 50,
+        details_path: null,
+      },
+      {
+        label: 'ledger check',
+        status: 0,
+        elapsed_ms: 50,
+        details_path: null,
+      },
+      {
+        label: 'tool refresh grouped check',
+        status: 0,
+        elapsed_ms: 50,
+        details_path: null,
+      },
+      {
+        label: 'date consistency changed',
+        status: 0,
+        elapsed_ms: 50,
+        details_path: null,
+      },
       {
         label: 'typecheck',
         status: 0,
@@ -181,8 +231,8 @@ function validRunnerReceipt(overrides = {}) {
       require_fresh: false,
       workflows: [
         {
-          id: 'tool-refresh',
-          kind: 'tool-refresh-freshness-report',
+          id: workflow,
+          kind: `${workflow}-freshness-report`,
           ok: true,
           status: 'fresh',
           next_action: '',
@@ -198,6 +248,40 @@ function validRunnerReceipt(overrides = {}) {
     },
     ...overrides,
   };
+}
+
+function validPageRunnerReceipt(overrides = {}) {
+  const pageReceipt = validRunnerReceipt({
+    workflow: 'page-refresh',
+    current_date: '2026-06-30',
+    route_args: null,
+    report_dir: 'local/tmp/reports',
+    report_summary: 'local/tmp/report-summary.md',
+    changed_routes: ['/compare/example-vs-other/'],
+    source_ids: ['example-comparison-source'],
+    commands: [
+      { label: 'ledger generate', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'ledger check', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'frontmatter changed', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'date consistency changed', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'provenance changed', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'coverage quality changed', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'em dash guard', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'diff check', status: 0, elapsed_ms: 50, details_path: null },
+      { label: 'typecheck', status: 0, elapsed_ms: 50, details_path: null },
+    ],
+    artifact_refs: [
+      { role: 'input', kind: 'plan', path: 'local/tmp/page-plan.json' },
+      { role: 'input', kind: 'worker-report-dir', path: 'local/tmp/reports' },
+      { role: 'input', kind: 'worker-report-summary', path: 'local/tmp/report-summary.md' },
+      { role: 'output', kind: 'markdown-receipt', path: 'local/tmp/page-receipt.md' },
+      { role: 'output', kind: 'json-receipt', path: 'local/tmp/page-receipt.json' },
+      { role: 'route', kind: 'changed-route', id: '/compare/example-vs-other/' },
+      { role: 'source', kind: 'source-id', id: 'example-comparison-source' },
+      { role: 'embedded', kind: 'closeout-command', id: 'page-refresh:ledger-generate' },
+    ],
+  });
+  return { ...pageReceipt, ...overrides };
 }
 
 test('closeout receipt check validates latest enforced loop receipt by default', () => {
@@ -296,6 +380,57 @@ test('closeout receipt check validates runner closeout receipts', () => {
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.receipts[0].type, 'runner-closeout');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates workflow-specific runner policies', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-workflow-policy-'));
+  const toolPath = join(dir, 'tool-runner.json');
+  const pagePath = join(dir, 'page-runner.json');
+
+  try {
+    writeJson(toolPath, validRunnerReceipt());
+    writeJson(pagePath, validPageRunnerReceipt());
+    const result = runCheck([
+      '--receipt',
+      toolPath,
+      '--receipt',
+      pagePath,
+      '--require-workflow-policy',
+      '--require-trace-artifacts',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.require_workflow_policy, true);
+    assert.equal(report.totals.receipts, 2);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails runner receipts that miss workflow policy artifacts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-policy-artifacts-'));
+  const path = join(dir, 'runner.json');
+  const receipt = validRunnerReceipt();
+  receipt.artifact_refs = receipt.artifact_refs.filter((artifact) => artifact.kind !== 'route-args');
+  receipt.commands = receipt.commands.filter((command) => command.label !== 'tool refresh grouped check');
+  receipt.input_freshness.workflows[0].status = 'stale';
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--require-workflow-policy', '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('runner-workflow-policy-artifact-missing'));
+    assert.ok(codes.includes('runner-workflow-policy-command-missing'));
+    assert.ok(codes.includes('runner-workflow-policy-input-freshness-stale'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -129,6 +129,12 @@ npm run runner:page-refresh:closeout
 
 The runner executes the cheap gates, bounded page source health, typecheck, build, content route QA, interactive route QA, worker-report summary, per-command timing, and local Markdown plus JSON receipts in order. The JSON receipt records command statuses, elapsed time, route QA widths, changed routes, source IDs, timing artifact paths, and any earlier failed receipt that the passing run superseded. Use `-- --skip-build`, `-- --skip-route-qa`, or `-- --skip-source-health` only for scoped workflow testing.
 
+Validate the runner JSON receipt with the workflow policy gate before recording a production closeout:
+
+```bash
+npm --silent run agent:closeout:check -- --receipt <page-refresh-closeout.json> --require-closeout-identity --require-trace-artifacts --require-workflow-policy --json
+```
+
 Cheap gates:
 
 ```bash

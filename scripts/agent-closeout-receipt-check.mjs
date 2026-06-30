@@ -14,6 +14,7 @@ const ALL_SYSTEM = hasFlag('--all-system');
 const REQUIRE_SYSTEM_PROGRESS = hasFlag('--require-system-progress');
 const REQUIRE_CLOSEOUT_IDENTITY = hasFlag('--require-closeout-identity');
 const REQUIRE_TRACE_ARTIFACTS = hasFlag('--require-trace-artifacts');
+const REQUIRE_WORKFLOW_POLICY = hasFlag('--require-workflow-policy');
 const EXPLICIT_RECEIPTS = valuesFor('--receipt').concat(valuesFor('--path'));
 const KNOWN_FLAGS = new Set([
   '--all-system',
@@ -26,9 +27,51 @@ const KNOWN_FLAGS = new Set([
   '--require-closeout-identity',
   '--require-system-progress',
   '--require-trace-artifacts',
+  '--require-workflow-policy',
   '--root',
 ]);
 const VALUE_FLAGS = new Set(['--path', '--project-dir', '--receipt', '--root']);
+const RUNNER_WORKFLOW_POLICIES = {
+  'tool-refresh': {
+    required_commands: [
+      'ledger generate',
+      'ledger check',
+      'tool refresh grouped check',
+      'date consistency changed',
+      'typecheck',
+    ],
+    required_artifacts: [
+      ['input', 'plan'],
+      ['input', 'route-args'],
+      ['output', 'markdown-receipt'],
+      ['output', 'json-receipt'],
+      ['embedded', 'closeout-command'],
+    ],
+    required_fields: ['plan', 'route_args', 'markdown_receipt'],
+  },
+  'page-refresh': {
+    required_commands: [
+      'ledger generate',
+      'ledger check',
+      'frontmatter changed',
+      'date consistency changed',
+      'provenance changed',
+      'coverage quality changed',
+      'em dash guard',
+      'diff check',
+      'typecheck',
+    ],
+    required_artifacts: [
+      ['input', 'plan'],
+      ['input', 'worker-report-dir'],
+      ['input', 'worker-report-summary'],
+      ['output', 'markdown-receipt'],
+      ['output', 'json-receipt'],
+      ['embedded', 'closeout-command'],
+    ],
+    required_fields: ['plan', 'report_dir', 'report_summary', 'markdown_receipt', 'current_date'],
+  },
+};
 
 if (HELP_MODE) {
   console.log(usage());
@@ -57,6 +100,7 @@ const report = {
   require_system_progress: REQUIRE_SYSTEM_PROGRESS,
   require_closeout_identity: REQUIRE_CLOSEOUT_IDENTITY,
   require_trace_artifacts: REQUIRE_TRACE_ARTIFACTS,
+  require_workflow_policy: REQUIRE_WORKFLOW_POLICY,
   totals: {
     receipts: receipts.length,
     ok: receipts.filter((receipt) => receipt.ok).length,
@@ -83,6 +127,7 @@ function usage() {
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
     '  --require-closeout-identity   Require goal_id, run_id, residual_risks, and next_actions.',
     '  --require-trace-artifacts     Require trace and artifact_refs blocks.',
+    '  --require-workflow-policy     Require workflow-specific runner closeout policy checks.',
     '  --project-dir <dir>           Project root. Alias: --root.',
     '  --json                        Emit a structured report.',
   ].join('\n');
@@ -272,6 +317,7 @@ function validateRunnerReceipt(value, issues) {
   if (value.input_freshness != null) {
     validateInputFreshness(value.input_freshness, value, issues);
   }
+  if (REQUIRE_WORKFLOW_POLICY) validateRunnerWorkflowPolicy(value, issues);
 }
 
 function validateRunnerCommand(command, issues, path) {
@@ -333,6 +379,110 @@ function validateInputFreshnessWorkflow(workflow, issues, path) {
   if (workflow.next_action != null && typeof workflow.next_action !== 'string') {
     issues.push(issue('input-freshness-workflow-invalid', `${path}.next_action must be a string when present.`));
   }
+}
+
+function validateRunnerWorkflowPolicy(receipt, issues) {
+  const policy = RUNNER_WORKFLOW_POLICIES[receipt.workflow];
+  if (!policy) {
+    issues.push(issue('runner-workflow-policy-unknown', `No workflow policy is defined for ${receipt.workflow}.`));
+    return;
+  }
+
+  for (const field of policy.required_fields) {
+    if (typeof receipt[field] !== 'string' || !receipt[field].trim()) {
+      issues.push(issue('runner-workflow-policy-field-missing', `${receipt.workflow} policy requires ${field}.`));
+    }
+  }
+
+  if (!isObject(receipt.system_progress)) {
+    issues.push(issue('runner-workflow-policy-system-progress-missing', `${receipt.workflow} policy requires embedded system_progress.`));
+  }
+  if (isObject(receipt.trace) && receipt.trace.name !== receipt.workflow) {
+    issues.push(issue('runner-workflow-policy-trace-mismatch', `${receipt.workflow} policy requires trace.name to match workflow.`));
+  }
+  validatePolicyInputFreshness(receipt, issues);
+  validatePolicyCommands(receipt, policy, issues);
+  validatePolicyArtifacts(receipt, policy, issues);
+
+  if (receipt.status === 'passed') {
+    if (!Array.isArray(receipt.changed_routes) || receipt.changed_routes.length === 0) {
+      issues.push(issue('runner-workflow-policy-routes-empty', `${receipt.workflow} passed receipts require changed_routes.`));
+    }
+    if (!Array.isArray(receipt.widths) || !requiredRouteWidths().every((width) => receipt.widths.includes(width))) {
+      issues.push(issue('runner-workflow-policy-widths-missing', `${receipt.workflow} policy requires the standard route QA widths.`));
+    }
+  }
+}
+
+function validatePolicyInputFreshness(receipt, issues) {
+  if (!isObject(receipt.input_freshness)) {
+    issues.push(issue('runner-workflow-policy-input-freshness-missing', `${receipt.workflow} policy requires embedded input_freshness.`));
+    return;
+  }
+  const workflowFreshness = Array.isArray(receipt.input_freshness.workflows)
+    ? receipt.input_freshness.workflows.find((workflow) => isObject(workflow) && workflow.id === receipt.workflow)
+    : null;
+  if (!workflowFreshness) {
+    issues.push(issue('runner-workflow-policy-input-freshness-missing', `${receipt.workflow} policy requires matching input_freshness workflow.`));
+    return;
+  }
+  if (receipt.status === 'passed' && (workflowFreshness.ok !== true || workflowFreshness.status !== 'fresh')) {
+    issues.push(issue('runner-workflow-policy-input-freshness-stale', `${receipt.workflow} passed receipts require fresh input_freshness.`));
+  }
+}
+
+function validatePolicyCommands(receipt, policy, issues) {
+  const commands = Array.isArray(receipt.commands) ? receipt.commands : [];
+  const commandLabels = commands
+    .map((command) => (isObject(command) ? command.label : ''))
+    .filter(Boolean);
+  for (const label of policy.required_commands) {
+    if (!commandLabels.includes(label)) {
+      issues.push(issue('runner-workflow-policy-command-missing', `${receipt.workflow} policy requires command ${label}.`));
+    }
+  }
+  if (receipt.status === 'passed') {
+    for (const command of commands) {
+      if (isObject(command) && command.status !== 0) {
+        issues.push(issue('runner-workflow-policy-command-failed', `${receipt.workflow} passed receipt has non-zero command ${command.label || '<unknown>'}.`));
+      }
+    }
+  }
+}
+
+function validatePolicyArtifacts(receipt, policy, issues) {
+  const artifactRefs = Array.isArray(receipt.artifact_refs) ? receipt.artifact_refs : [];
+  for (const [role, kind] of policy.required_artifacts) {
+    if (!artifactRefs.some((artifact) => isObject(artifact) && artifact.role === role && artifact.kind === kind)) {
+      issues.push(issue('runner-workflow-policy-artifact-missing', `${receipt.workflow} policy requires ${role}/${kind} artifact_ref.`));
+    }
+  }
+  if (Array.isArray(receipt.changed_routes)) {
+    for (const route of receipt.changed_routes) {
+      if (!artifactRefs.some((artifact) => isObject(artifact) && artifact.kind === 'changed-route' && artifact.id === route)) {
+        issues.push(issue('runner-workflow-policy-route-artifact-missing', `${receipt.workflow} policy requires changed-route artifact_ref for ${route}.`));
+      }
+    }
+  }
+  if (Array.isArray(receipt.source_ids)) {
+    for (const sourceId of receipt.source_ids) {
+      if (!artifactRefs.some((artifact) => isObject(artifact) && artifact.kind === 'source-id' && artifact.id === sourceId)) {
+        issues.push(issue('runner-workflow-policy-source-artifact-missing', `${receipt.workflow} policy requires source-id artifact_ref for ${sourceId}.`));
+      }
+    }
+  }
+  if (Array.isArray(receipt.commands)) {
+    for (const command of receipt.commands) {
+      if (!isObject(command) || !command.details_path) continue;
+      if (!artifactRefs.some((artifact) => isObject(artifact) && artifact.kind === 'command-detail' && artifact.path === command.details_path)) {
+        issues.push(issue('runner-workflow-policy-command-detail-artifact-missing', `${receipt.workflow} policy requires command-detail artifact_ref for ${command.label}.`));
+      }
+    }
+  }
+}
+
+function requiredRouteWidths() {
+  return [319, 360, 390, 430, 768, 1024, 1366];
 }
 
 function validateCloseoutIdentity(value, issues) {

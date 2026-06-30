@@ -174,6 +174,16 @@ Score gold-set baseline changes now have explicit governance.
 - Focused tests prove passing governance, a missing-review blocker, and a matching-review success path.
 - A live calibration against `.agent/evals/score-calibration-goldset.json` passed with governance hash `9c60469164410dd4076b95423fc1a6899733949f169f06cdd40a1ee73e44bd66`, threshold review `pass`, 3 passing routes, and 0 errors.
 
+## Fourteenth System Slice
+
+Runner closeout receipts now have workflow-specific policy validation.
+
+- `agent:closeout:check --require-workflow-policy` adds opt-in policy checks for runner closeouts.
+- Tool-refresh runner receipts must include the required ledger, grouped-check, date-consistency, and typecheck command labels, plus plan, route-args, markdown receipt, JSON receipt, closeout-command, changed-route, and source-id artifact refs.
+- Page-refresh runner receipts must include required ledger, frontmatter, date-consistency, provenance, coverage-quality, em-dash, diff, and typecheck command labels, plus plan, worker report directory, worker report summary, markdown receipt, JSON receipt, closeout-command, changed-route, and source-id artifact refs.
+- Passed runner receipts must have standard route QA widths, changed routes, zero-status commands, embedded `system_progress`, and fresh matching `input_freshness`.
+- Focused tests prove valid tool-refresh and page-refresh policy receipts, plus failures for missing policy artifacts, missing commands, and stale input freshness.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -183,7 +193,7 @@ Score gold-set baseline changes now have explicit governance.
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt` | Add schema validation and runner integration. |
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
-| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, `agent:closeout:check --require-trace-artifacts` | Expand trace refs into workflow-specific closeout policies and bounded production pilots. |
+| Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy` | Prove workflow policy validation on bounded production runner receipts and extend the policy to affiliate handoff closeouts. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json` | Expand the reviewed gold set during real workload pilots and require matching review records before deliberate baseline changes land. |
 | Speed/token efficiency | Partial | six-worker workflows, timing receipts | Add context budget, correction rate, flake rate, and system-progress metrics. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |

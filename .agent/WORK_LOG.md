@@ -1595,3 +1595,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `node --check scripts/agent-score-calibration.mjs`, focused `node --test tests/scripts/agent-memory-tools.test.mjs`, live gold-set calibration, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed. The live gold-set governance hash is `9c60469164410dd4076b95423fc1a6899733949f169f06cdd40a1ee73e44bd66`.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-13.md`.
 - Next: Commit and push, then expand workflow-specific closeout policies before running another bounded production pilot.
+
+### 2026-06-30: Agentic Tooling Meta Slice 14, Workflow Closeout Policy
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:closeout:check --require-workflow-policy` for tool-refresh and page-refresh runner receipts. The policy validates required command labels, artifact refs, standard route QA widths, zero-status commands on passed receipts, matching trace names, embedded `system_progress`, and fresh matching `input_freshness`.
+- System lesson: generic receipt shape is not enough for production workflows. Tool-refresh and page-refresh now have workflow-specific closeout invariants that can fail missing evidence before a run is treated as complete.
+- Verification: `node --check scripts/agent-closeout-receipt-check.mjs`, focused `node --test tests/scripts/agent-closeout-receipt-check.test.mjs`, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-14.md`.
+- Next: Commit and push, then prove input refresh and workflow policy validation on bounded production runner receipts.

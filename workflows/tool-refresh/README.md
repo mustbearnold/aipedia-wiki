@@ -79,6 +79,12 @@ npm run runner:tool-refresh:closeout
 
 The runner executes the ledger precheck, grouped batch check, date consistency, typecheck, build, route-arg generation, route QA, and local Markdown plus JSON receipts in order. The JSON receipt records command statuses, elapsed time, route QA widths, changed routes, source IDs, timing artifact paths, and any earlier failed receipt that the passing run superseded.
 
+Validate the runner JSON receipt with the workflow policy gate before recording a production closeout:
+
+```bash
+npm --silent run agent:closeout:check -- --receipt <tool-refresh-closeout.json> --require-closeout-identity --require-trace-artifacts --require-workflow-policy --json
+```
+
 Then generate route QA args from the saved planner and run:
 
 ```bash
