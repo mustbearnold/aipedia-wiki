@@ -275,15 +275,22 @@ function validateLoopEfficiencyTrendReceipt(value, issues) {
       }
     }
   }
+  const sourceContext = loadLoopEfficiencyTrendSourceReceipts(value, issues);
   if (isObject(value.summary)) {
     validateLoopEfficiencyTrendSummary(value.summary, issues);
     validateLoopEfficiencyTrendSummaryFacts(value, issues);
   }
-  if (isObject(value.stability_summary)) validateLoopEfficiencyTrendStability(value.stability_summary, issues);
-  if (isObject(value.correction_summary)) validateLoopEfficiencyTrendCorrection(value.correction_summary, issues);
+  if (isObject(value.stability_summary)) {
+    validateLoopEfficiencyTrendStability(value.stability_summary, issues);
+    validateLoopEfficiencyTrendStabilityFacts(value.stability_summary, sourceContext, issues);
+  }
+  if (isObject(value.correction_summary)) {
+    validateLoopEfficiencyTrendCorrection(value.correction_summary, issues);
+    validateLoopEfficiencyTrendCorrectionFacts(value.correction_summary, sourceContext, issues);
+  }
   if (Array.isArray(value.slowest_commands)) {
     value.slowest_commands.forEach((command, index) => validateLoopEfficiencyTrendSlowCommand(command, issues, `slowest_commands[${index}]`));
-    validateLoopEfficiencyTrendSlowestCommands(value, issues);
+    validateLoopEfficiencyTrendSlowestCommands(value, sourceContext, issues);
   }
 }
 
@@ -436,6 +443,271 @@ function validateLoopEfficiencyTrendCorrection(correction, issues) {
   requireArray(correction, 'regressed_commands', issues, 'correction_summary.regressed_commands');
 }
 
+function loadLoopEfficiencyTrendSourceReceipts(receipt, issues) {
+  const context = { records: [], had_issue: false };
+  if (!Array.isArray(receipt.runs)) return context;
+  receipt.runs.forEach((run, runIndex) => {
+    if (!isObject(run) || typeof run.path !== 'string' || run.path === '') return;
+    const sourcePath = resolve(PROJECT_DIR, run.path);
+    if (!existsSync(sourcePath)) {
+      context.had_issue = true;
+      issues.push(issue('loop-efficiency-trends-source-missing', `runs[${runIndex}].path source loop receipt does not exist: ${run.path}`));
+      return;
+    }
+    try {
+      const source = JSON.parse(readFileSync(sourcePath, 'utf8'));
+      context.records.push({ run, run_index: runIndex, source });
+    } catch (error) {
+      context.had_issue = true;
+      issues.push(issue('loop-efficiency-trends-source-invalid', `runs[${runIndex}].path source loop receipt could not parse: ${error.message}`));
+    }
+  });
+  return context;
+}
+
+function validateLoopEfficiencyTrendStabilityFacts(stability, sourceContext, issues) {
+  if (!sourceContext || sourceContext.had_issue) return;
+  const records = sourceContext.records.map((item) => item.source);
+  const expected = computeTrendStabilitySummary(records);
+  validateTrendFactsObject(stability, expected, 'stability_summary', 'loop-efficiency-trends-stability-mismatch', issues);
+}
+
+function validateLoopEfficiencyTrendCorrectionFacts(correction, sourceContext, issues) {
+  if (!sourceContext || sourceContext.had_issue) return;
+  const records = sourceContext.records.map((item) => item.source);
+  const expected = computeTrendCorrectionSummary(records);
+  validateTrendFactsObject(correction, expected, 'correction_summary', 'loop-efficiency-trends-correction-mismatch', issues);
+}
+
+function computeTrendStabilitySummary(records) {
+  const loopStatuses = new Map();
+  const commandStatuses = new Map();
+  let loopStatusComparisons = 0;
+  let loopStatusChanges = 0;
+  let commandStatusComparisons = 0;
+  let commandStatusChanges = 0;
+
+  for (const record of records) {
+    for (const loop of Array.isArray(record.loops) ? record.loops : []) {
+      if (!isObject(loop) || !loop.id) continue;
+      if (!loopStatuses.has(loop.id)) loopStatuses.set(loop.id, []);
+      loopStatuses.get(loop.id).push({ generated_at: record.generated_at, status: loop.status || '' });
+      for (const command of Array.isArray(loop.commands) ? loop.commands : []) {
+        if (!isObject(command) || !command.label) continue;
+        const key = `${loop.id}::${command.label}`;
+        if (!commandStatuses.has(key)) {
+          commandStatuses.set(key, {
+            loop_id: loop.id,
+            label: command.label,
+            statuses: [],
+          });
+        }
+        commandStatuses.get(key).statuses.push({ generated_at: record.generated_at, status: command.status || '' });
+      }
+    }
+  }
+
+  for (const statuses of loopStatuses.values()) {
+    for (let index = 1; index < statuses.length; index += 1) {
+      loopStatusComparisons += 1;
+      if (statuses[index].status !== statuses[index - 1].status) loopStatusChanges += 1;
+    }
+  }
+  for (const command of commandStatuses.values()) {
+    for (let index = 1; index < command.statuses.length; index += 1) {
+      commandStatusComparisons += 1;
+      if (command.statuses[index].status !== command.statuses[index - 1].status) commandStatusChanges += 1;
+    }
+  }
+
+  const previous = records.length > 1 ? records.at(-2) : null;
+  const latest = records.at(-1) || null;
+  const previousLoopStatuses = new Map((previous?.loops || []).filter(isObject).map((loop) => [loop.id, loop.status]));
+  const latestLoopStatuses = new Map((latest?.loops || []).filter(isObject).map((loop) => [loop.id, loop.status]));
+  const latestAttention = [...latestLoopStatuses].filter(([, status]) => status === 'attention').map(([id]) => id).sort();
+  const previousAttention = [...previousLoopStatuses].filter(([, status]) => status === 'attention').map(([id]) => id).sort();
+
+  return {
+    loop_status_comparisons: loopStatusComparisons,
+    loop_status_changes: loopStatusChanges,
+    loop_status_change_rate: metricRatio(loopStatusChanges, loopStatusComparisons),
+    command_status_comparisons: commandStatusComparisons,
+    command_status_changes: commandStatusChanges,
+    command_status_change_rate: metricRatio(commandStatusChanges, commandStatusComparisons),
+    persistent_attention_loops: [...loopStatuses.entries()]
+      .filter(([, statuses]) => statuses.length === records.length && statuses.every((item) => item.status === 'attention'))
+      .map(([id]) => id)
+      .sort(),
+    latest_attention_loops: latestAttention,
+    new_attention_loops: latestAttention.filter((id) => !previousAttention.includes(id)),
+    resolved_attention_loops: previousAttention.filter((id) => latestLoopStatuses.get(id) !== 'attention'),
+    recent_loop_status_changes: [...latestLoopStatuses.entries()]
+      .filter(([id, status]) => previousLoopStatuses.has(id) && previousLoopStatuses.get(id) !== status)
+      .map(([id, status]) => ({
+        loop_id: id,
+        previous: previousLoopStatuses.get(id),
+        current: status,
+      }))
+      .sort((left, right) => left.loop_id.localeCompare(right.loop_id)),
+  };
+}
+
+function computeTrendCorrectionSummary(records) {
+  const previous = records.length > 1 ? records.at(-2) : null;
+  const latest = records.at(-1) || null;
+  if (!previous || !latest) {
+    return {
+      has_comparison: false,
+      previous_run: previous?.generated_at || '',
+      latest_run: latest?.generated_at || '',
+      loop_previous_attention_count: 0,
+      loop_resolved_attention_count: 0,
+      loop_persistent_attention_count: 0,
+      loop_regressed_attention_count: 0,
+      loop_correction_rate: 0,
+      command_previous_attention_count: 0,
+      command_resolved_attention_count: 0,
+      command_persistent_attention_count: 0,
+      command_regressed_attention_count: 0,
+      command_correction_rate: 0,
+      resolved_loops: [],
+      persistent_attention_loops: [],
+      regressed_loops: [],
+      resolved_commands: [],
+      persistent_attention_commands: [],
+      regressed_commands: [],
+    };
+  }
+
+  const previousLoopStatuses = new Map((previous.loops || []).filter(isObject).map((loop) => [loop.id, loop.status || '']));
+  const latestLoopStatuses = new Map((latest.loops || []).filter(isObject).map((loop) => [loop.id, loop.status || '']));
+  const previousCommandStatuses = trendCommandStatusMap(previous);
+  const latestCommandStatuses = trendCommandStatusMap(latest);
+
+  const loopPreviousAttention = [...previousLoopStatuses].filter(([, status]) => status === 'attention');
+  const resolvedLoops = loopPreviousAttention
+    .filter(([id]) => latestLoopStatuses.has(id) && latestLoopStatuses.get(id) !== 'attention')
+    .map(([id, previousStatus]) => ({
+      loop_id: id,
+      previous: previousStatus,
+      current: latestLoopStatuses.get(id),
+    }))
+    .sort((left, right) => left.loop_id.localeCompare(right.loop_id));
+  const persistentLoops = loopPreviousAttention
+    .filter(([id]) => latestLoopStatuses.get(id) === 'attention')
+    .map(([id]) => id)
+    .sort();
+  const regressedLoops = [...latestLoopStatuses]
+    .filter(([id, status]) => status === 'attention' && previousLoopStatuses.has(id) && previousLoopStatuses.get(id) !== 'attention')
+    .map(([id, currentStatus]) => ({
+      loop_id: id,
+      previous: previousLoopStatuses.get(id),
+      current: currentStatus,
+    }))
+    .sort((left, right) => left.loop_id.localeCompare(right.loop_id));
+
+  const commandPreviousAttention = [...previousCommandStatuses.values()].filter((command) => command.status === 'attention');
+  const resolvedCommands = commandPreviousAttention
+    .filter((command) => latestCommandStatuses.has(command.key) && latestCommandStatuses.get(command.key).status !== 'attention')
+    .map((command) => ({
+      loop_id: command.loop_id,
+      label: command.label,
+      previous: command.status,
+      current: latestCommandStatuses.get(command.key).status,
+    }))
+    .sort(sortTrendCommandChange);
+  const persistentCommands = commandPreviousAttention
+    .filter((command) => latestCommandStatuses.get(command.key)?.status === 'attention')
+    .map((command) => ({
+      loop_id: command.loop_id,
+      label: command.label,
+    }))
+    .sort(sortTrendCommandChange);
+  const regressedCommands = [...latestCommandStatuses.values()]
+    .filter((command) => command.status === 'attention'
+      && previousCommandStatuses.has(command.key)
+      && previousCommandStatuses.get(command.key).status !== 'attention')
+    .map((command) => ({
+      loop_id: command.loop_id,
+      label: command.label,
+      previous: previousCommandStatuses.get(command.key).status,
+      current: command.status,
+    }))
+    .sort(sortTrendCommandChange);
+
+  return {
+    has_comparison: true,
+    previous_run: previous.generated_at,
+    latest_run: latest.generated_at,
+    loop_previous_attention_count: loopPreviousAttention.length,
+    loop_resolved_attention_count: resolvedLoops.length,
+    loop_persistent_attention_count: persistentLoops.length,
+    loop_regressed_attention_count: regressedLoops.length,
+    loop_correction_rate: metricRatio(resolvedLoops.length, loopPreviousAttention.length),
+    command_previous_attention_count: commandPreviousAttention.length,
+    command_resolved_attention_count: resolvedCommands.length,
+    command_persistent_attention_count: persistentCommands.length,
+    command_regressed_attention_count: regressedCommands.length,
+    command_correction_rate: metricRatio(resolvedCommands.length, commandPreviousAttention.length),
+    resolved_loops: resolvedLoops,
+    persistent_attention_loops: persistentLoops,
+    regressed_loops: regressedLoops,
+    resolved_commands: resolvedCommands,
+    persistent_attention_commands: persistentCommands,
+    regressed_commands: regressedCommands,
+  };
+}
+
+function trendCommandStatusMap(record) {
+  const statuses = new Map();
+  for (const loop of Array.isArray(record.loops) ? record.loops : []) {
+    if (!isObject(loop)) continue;
+    for (const command of Array.isArray(loop.commands) ? loop.commands : []) {
+      if (!isObject(command)) continue;
+      const key = `${loop.id || ''}::${command.label || ''}`;
+      if (!loop.id || !command.label) continue;
+      statuses.set(key, {
+        key,
+        loop_id: loop.id,
+        label: command.label,
+        status: command.status || '',
+      });
+    }
+  }
+  return statuses;
+}
+
+function sortTrendCommandChange(left, right) {
+  return left.loop_id.localeCompare(right.loop_id) || left.label.localeCompare(right.label);
+}
+
+function validateTrendFactsObject(actual, expected, path, code, issues) {
+  if (!isObject(actual)) {
+    issues.push(issue(code, `${path} must match source loop receipts.`));
+    return;
+  }
+  for (const [field, value] of Object.entries(expected)) {
+    if (!deepTrendEqual(actual[field], value)) {
+      issues.push(issue(code, `${path}.${field} must match source loop receipts.`));
+    }
+  }
+}
+
+function deepTrendEqual(actual, expected) {
+  if (Array.isArray(expected)) {
+    if (!Array.isArray(actual) || actual.length !== expected.length) return false;
+    return expected.every((item, index) => deepTrendEqual(actual[index], item));
+  }
+  if (isObject(expected)) {
+    if (!isObject(actual)) return false;
+    const expectedKeys = Object.keys(expected).sort();
+    const actualKeys = Object.keys(actual).sort();
+    if (expectedKeys.length !== actualKeys.length) return false;
+    return expectedKeys.every((key, index) => key === actualKeys[index] && deepTrendEqual(actual[key], expected[key]));
+  }
+  return Object.is(actual, expected);
+}
+
 function validateLoopEfficiencyTrendSlowCommand(command, issues, path) {
   if (!isObject(command)) {
     issues.push(issue('loop-efficiency-trends-command-invalid', `${path} must be an object.`));
@@ -452,23 +724,11 @@ function validateLoopEfficiencyTrendSlowCommand(command, issues, path) {
   });
 }
 
-function validateLoopEfficiencyTrendSlowestCommands(receipt, issues) {
-  if (!Array.isArray(receipt.runs) || !Array.isArray(receipt.slowest_commands)) return;
+function validateLoopEfficiencyTrendSlowestCommands(receipt, sourceContext, issues) {
+  if (!Array.isArray(receipt.runs) || !Array.isArray(receipt.slowest_commands) || !sourceContext || sourceContext.had_issue) return;
   const groups = new Map();
-  receipt.runs.forEach((run, runIndex) => {
-    if (!isObject(run) || run.has_efficiency_metrics !== true || typeof run.path !== 'string') return;
-    const sourcePath = resolve(PROJECT_DIR, run.path);
-    if (!existsSync(sourcePath)) {
-      issues.push(issue('loop-efficiency-trends-source-missing', `runs[${runIndex}].path source loop receipt does not exist: ${run.path}`));
-      return;
-    }
-    let source = null;
-    try {
-      source = JSON.parse(readFileSync(sourcePath, 'utf8'));
-    } catch (error) {
-      issues.push(issue('loop-efficiency-trends-source-invalid', `runs[${runIndex}].path source loop receipt could not parse: ${error.message}`));
-      return;
-    }
+  sourceContext.records.forEach(({ run, run_index: runIndex, source }) => {
+    if (!isObject(run) || run.has_efficiency_metrics !== true) return;
     const sourceCommands = source?.efficiency_metrics?.slowest_commands;
     if (!Array.isArray(sourceCommands)) {
       issues.push(issue('loop-efficiency-trends-source-invalid', `runs[${runIndex}].path source loop receipt must include efficiency_metrics.slowest_commands.`));

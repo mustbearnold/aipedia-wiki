@@ -407,7 +407,14 @@
         ".agent/loop-runs/system/2026-06-30T23-32-30-759Z-loop-run.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-62-final-efficiency-trends.json",
         "agent:meta:closeout:auto validated Slice 62 efficiency trend receipt",
-        "Slice 62 trend proof latest wall duration 4635 ms and latest estimated full receipt tokens 11435"
+        "Slice 62 trend proof latest wall duration 4635 ms and latest estimated full receipt tokens 11435",
+        "scripts/agent-closeout-receipt-check.mjs trend stability and correction source validation",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs trend stability and correction drift coverage",
+        "tests/scripts/agent-meta-closeout.test.mjs source-backed trend router fixture coverage",
+        ".agent/loop-runs/system/2026-06-30T23-43-21-297Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-63-final-efficiency-trends.json",
+        "agent:meta:closeout:auto validated Slice 63 efficiency trend receipt",
+        "Slice 63 trend proof latest wall duration 4671 ms and latest estimated full receipt tokens 11510"
       ],
       "remaining": "Add exact model-token usage and exact correction counts when available from reliable runtime inputs."
     },
@@ -440,28 +447,29 @@
     }
   ],
   "current_slice": {
-    "name": "Trend summary fact validation",
+    "name": "Trend stability and correction source validation",
     "system_artifacts": [
       "scripts/agent-closeout-receipt-check.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
       "scripts/README.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-62.md",
-      ".agent/loop-runs/system/2026-06-30T23-32-30-759Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-63.md",
+      ".agent/loop-runs/system/2026-06-30T23-43-21-297Z-loop-run.json",
       ".agent/loop-runs/system/latest.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-62-final-efficiency-trends.json"
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-63-final-efficiency-trends.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
-    "loop_receipt": ".agent/loop-runs/system/2026-06-30T23-32-30-759Z-loop-run.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-62-final-efficiency-trends.json",
-    "latest_wall_duration_ms": 4635,
-    "latest_estimated_full_receipt_tokens": 11435,
-    "latest_system_artifact_count": 9
+    "loop_receipt": ".agent/loop-runs/system/2026-06-30T23-43-21-297Z-loop-run.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-63-final-efficiency-trends.json",
+    "latest_wall_duration_ms": 4671,
+    "latest_estimated_full_receipt_tokens": 11510,
+    "latest_system_artifact_count": 10
   },
   "next_system_targets": [
     "Use AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT when running Rust runner closeouts in a dirty tree.",

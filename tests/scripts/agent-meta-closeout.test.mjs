@@ -489,8 +489,12 @@ test('meta closeout router validates loop efficiency trend receipts', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-trend-'));
   try {
     mkdirSync(join(root, '.agent/loop-runs/system'), { recursive: true });
-    writeJson(join(root, '.agent/loop-runs/system/fixture-loop-run.json'), validLoopReceipt());
-    writeJson(join(root, 'trend.json'), validTrendReceipt());
+    const trend = validTrendReceipt();
+    const source = validLoopReceipt();
+    source.generated_at = trend.runs[0].generated_at;
+    source.run_id = trend.runs[0].run_id;
+    writeJson(join(root, '.agent/loop-runs/system/fixture-loop-run.json'), source);
+    writeJson(join(root, 'trend.json'), trend);
 
     const result = runRouter(['--project-dir', root, '--receipt', 'trend.json', '--json']);
     assert.equal(result.status, 0, result.stderr || result.stdout);

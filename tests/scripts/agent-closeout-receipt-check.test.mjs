@@ -23,6 +23,14 @@ function writeTrendSourceReceipts(projectDir, receipt, durations = [400, 500]) {
     const source = validLoopReceipt();
     source.generated_at = run.generated_at;
     source.run_id = run.run_id;
+    source.totals = {
+      loops: 7,
+      ok: 6,
+      attention: 1,
+      skipped: 0,
+      commands: 16,
+    };
+    source.loops = trendSourceLoops();
     source.efficiency_metrics.slowest_commands = [
       {
         loop_id: 'freshness',
@@ -33,6 +41,68 @@ function writeTrendSourceReceipts(projectDir, receipt, durations = [400, 500]) {
     ];
     writeJson(sourcePath, source);
   });
+}
+
+function trendCommand(label, status = 'ok') {
+  return {
+    label,
+    status,
+    command: `node fixture-${label.replaceAll(' ', '-')}.mjs`,
+    duration_ms: 10,
+    exit_code: 0,
+    signal: '',
+    attention_reasons: status === 'attention' ? ['fixture attention'] : [],
+  };
+}
+
+function trendLoop(id, status, commandSpecs) {
+  return {
+    id,
+    title: id,
+    status,
+    purpose: 'Fixture trend source loop.',
+    duration_ms: commandSpecs.length * 10,
+    commands: commandSpecs.map(([label, commandStatus]) => trendCommand(label, commandStatus)),
+    attention_reasons: status === 'attention' ? ['fixture attention'] : [],
+    skip_reason: '',
+    review_questions: [],
+    record_targets: [],
+  };
+}
+
+function trendSourceLoops() {
+  return [
+    trendLoop('decision-content', 'ok', [
+      ['next decision cluster', 'ok'],
+      ['top coverage candidates', 'ok'],
+    ]),
+    trendLoop('freshness', 'attention', [
+      ['freshness queue', 'attention'],
+      ['weekly editorial queue', 'ok'],
+    ]),
+    trendLoop('trust-provenance', 'ok', [
+      ['provenance and pricing', 'ok'],
+      ['source registry health', 'ok'],
+      ['stale facts guard', 'ok'],
+    ]),
+    trendLoop('revenue-conversion', 'ok', [
+      ['commercial CTA audit', 'ok'],
+    ]),
+    trendLoop('quality-pruning', 'ok', [
+      ['site KPI audit', 'ok'],
+      ['comparison quality audit', 'ok'],
+      ['internal link audit', 'ok'],
+    ]),
+    trendLoop('performance-ux', 'ok', [
+      ['dist budget', 'ok'],
+      ['indexability audit', 'ok'],
+    ]),
+    trendLoop('news-market', 'ok', [
+      ['news rendering guard', 'ok'],
+      ['news cross-reference audit', 'ok'],
+      ['weekly editorial queue', 'ok'],
+    ]),
+  ];
 }
 
 function validLoopReceipt(overrides = {}) {
@@ -884,6 +954,32 @@ test('closeout receipt check fails loop efficiency trend summary drift', () => {
     assert.match(details, /summary\.median_wall_duration_ms/);
     assert.match(details, /summary\.latest\.wall_duration_ms/);
     assert.match(details, /summary\.delta_from_previous\.wall_duration_ms/);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails loop efficiency trend stability and correction drift', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-efficiency-trends-quality-drift-'));
+  const path = join(dir, 'efficiency-trends.json');
+  const receipt = validLoopEfficiencyTrendReceipt();
+  receipt.stability_summary.loop_status_changes = 99;
+  receipt.stability_summary.latest_attention_loops = [];
+  receipt.correction_summary.loop_persistent_attention_count = 0;
+  receipt.correction_summary.persistent_attention_commands = [];
+
+  try {
+    writeTrendSourceReceipts(dir, receipt);
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const details = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(details, /stability_summary\.loop_status_changes/);
+    assert.match(details, /stability_summary\.latest_attention_loops/);
+    assert.match(details, /correction_summary\.loop_persistent_attention_count/);
+    assert.match(details, /correction_summary\.persistent_attention_commands/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
