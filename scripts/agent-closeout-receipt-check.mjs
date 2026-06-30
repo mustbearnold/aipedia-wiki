@@ -241,7 +241,7 @@ function validateLoopReceipt(value, issues) {
     issues.push(issue('efficiency-metrics-missing', 'Loop receipt must include efficiency_metrics when --require-efficiency-metrics is used.'));
   }
 
-  if (value.system_progress != null) validateSystemProgress(value.system_progress, value, issues);
+  if (value.system_progress != null) validateSystemProgress(value.system_progress, value, issues, { enforce: REQUIRE_SYSTEM_PROGRESS });
   else if (REQUIRE_SYSTEM_PROGRESS) {
     issues.push(issue('system-progress-missing', 'Loop receipt must include system_progress when --require-system-progress is used.'));
   }
@@ -355,7 +355,8 @@ function validateSlowestCommand(command, issues, path) {
   requireNonNegativeNumber(command, 'duration_ms', issues, `${path}.duration_ms`);
 }
 
-function validateSystemProgress(progress, receipt, issues) {
+function validateSystemProgress(progress, receipt, issues, options = {}) {
+  const enforce = options.enforce === true;
   if (!isObject(progress)) {
     issues.push(issue('system-progress-invalid', 'system_progress must be an object.'));
     return;
@@ -372,13 +373,13 @@ function validateSystemProgress(progress, receipt, issues) {
   requireBoolean(progress, 'has_system_artifact', issues, 'system_progress.has_system_artifact');
   requireBoolean(progress, 'content_only', issues, 'system_progress.content_only');
 
-  if (REQUIRE_SYSTEM_PROGRESS && progress.require_system_artifact !== true) {
+  if (enforce && progress.require_system_artifact !== true) {
     issues.push(issue('system-progress-not-enforced', 'system_progress.require_system_artifact must be true when --require-system-progress is used.'));
   }
-  if (receipt.ok === true && REQUIRE_SYSTEM_PROGRESS && progress.has_system_artifact !== true) {
+  if (receipt.ok === true && enforce && progress.has_system_artifact !== true) {
     issues.push(issue('system-progress-no-system-artifact', 'Passing enforced loop receipt must include at least one system artifact.'));
   }
-  if (receipt.ok === true && REQUIRE_SYSTEM_PROGRESS && progress.content_only === true) {
+  if (receipt.ok === true && enforce && progress.content_only === true) {
     issues.push(issue('system-progress-content-only', 'Passing enforced loop receipt cannot be content_only.'));
   }
 }

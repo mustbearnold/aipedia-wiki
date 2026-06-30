@@ -9,6 +9,7 @@ const REQUIRED_SCRIPTS = [
   'audit:coverage-quality:changed',
   'audit:provenance:changed',
   'agent:meta:closeout',
+  'agent:meta:closeout:receipt',
   'build',
   'build:fast',
   'check',
@@ -59,6 +60,8 @@ function writeFixtureProject(workflows, scriptOverrides = {}) {
   scripts['guard:challenge:check'] = 'node scripts/guard-challenge.mjs --check';
   scripts['agent:meta:closeout'] =
     'node scripts/agent-closeout-receipt-check.mjs --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof';
+  scripts['agent:meta:closeout:receipt'] =
+    'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof';
   scripts.check = 'npm run guard:check && npm run check:links && npm run check:news && npm run check:security';
   scripts.build =
     'node scripts/copy-content.mjs && npm exec --yes --package=node@24 -- node node_modules/astro/bin/astro.mjs build && node scripts/audit-indexability.mjs && node scripts/audit-commercial-cta.mjs && node scripts/build-pagefind.mjs && node scripts/check-dist-budget.mjs --mode full && node scripts/enforce-built-font-policy.mjs && node scripts/audit-font-policy.mjs --dist';
@@ -201,6 +204,7 @@ test('command surface audit verifies documented npm scripts and script paths', (
   assert.ok(report.required_operator_npm_scripts.includes('audit:coverage-quality:changed'));
   assert.ok(report.required_operator_npm_scripts.includes('audit:provenance:changed'));
   assert.ok(report.required_operator_npm_scripts.includes('agent:meta:closeout'));
+  assert.ok(report.required_operator_npm_scripts.includes('agent:meta:closeout:receipt'));
   assert.ok(report.required_operator_npm_scripts.includes('check:assets'));
   assert.ok(report.required_operator_npm_scripts.includes('check:assets:quick'));
   assert.ok(report.required_operator_npm_scripts.includes('build:fast'));
@@ -272,6 +276,7 @@ test('command surface audit verifies documented npm scripts and script paths', (
   });
   assert.deepEqual(report.required_exact_npm_script_commands, {
     'agent:meta:closeout': 'node scripts/agent-closeout-receipt-check.mjs --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
+    'agent:meta:closeout:receipt': 'node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof',
     deploy: 'npx vercel build --prod && npx vercel deploy --prebuilt --prod',
     'guard:challenge': 'node scripts/guard-challenge.mjs',
     'guard:challenge:check': 'node scripts/guard-challenge.mjs --check',

@@ -855,7 +855,16 @@ test('closeout receipt check validates DAG artifact refs on runner receipts', ()
         },
       ],
     });
+    const advisorySystemProgress = {
+      ...validLoopReceipt().system_progress,
+      command: 'node scripts/agent-system-progress-check.mjs --json --project-dir=.',
+      require_system_artifact: false,
+      changed_paths: [],
+      system_artifacts: [],
+      has_system_artifact: false,
+    };
     writeJson(receiptPath, validRunnerReceipt({
+      system_progress: advisorySystemProgress,
       artifact_refs: [
         ...validRunnerReceipt().artifact_refs,
         {
@@ -874,6 +883,7 @@ test('closeout receipt check validates DAG artifact refs on runner receipts', ()
     const result = runCheck([
       '--receipt',
       receiptPath,
+      '--require-system-progress',
       '--require-closeout-identity',
       '--require-trace-artifacts',
       '--require-dag-proof',

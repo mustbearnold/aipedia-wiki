@@ -1876,3 +1876,15 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-38.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-28-35-675Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5097 ms, latest estimated full receipt tokens 10785, and latest system artifact count 9.
 - Next: Commit and push, then use strict meta closeout for every continuing DAG-planned June 30 meta-goal closeout and move to the next system target.
+### 2026-06-30: Agentic Tooling Meta Slice 39, Strict Explicit Receipt Closeout
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `npm run agent:meta:closeout:receipt` for explicit DAG-planned loop, runner, or copied receipt paths.
+- Changed: `agent:closeout:check` now treats `--require-system-progress` as enforced loop-receipt policy, while still validating advisory runner `system_progress` shape when present.
+- Changed: `audit:commands` now requires the exact `agent:meta:closeout:receipt` command string, and docs explain latest-loop versus explicit-receipt closeout paths.
+- System lesson: strict latest-loop closeout does not cover runner receipts when those are the primary proof artifact. The explicit receipt command makes copied runner and eval receipts first-class in the meta closeout path.
+- Verification: focused command-surface tests, focused closeout tests, command audit, live latest-loop explicit receipt proof, live runner DAG receipt proof, stale no-DAG negative proof, JSON parse checks, em-dash guard, diff guard, scoped `check:smart --run`, `check:quick`, `loop:system`, enforced `loop:all:record`, strict closeout commands, and efficiency trends passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-39.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-38-06-448Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5107 ms, latest estimated full receipt tokens 10848, and latest system artifact count 11.
+- Next: Commit and push, then use strict explicit-receipt closeout for any copied runner or eval receipt and move to the next system target.

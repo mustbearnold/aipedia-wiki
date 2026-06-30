@@ -115,8 +115,11 @@
         "scripts/agent-closeout-receipt-check.mjs DAG artifact ref validation",
         "scripts/agent-closeout-receipt-check.mjs --require-dag-proof",
         "package.json agent:meta:closeout",
+        "package.json agent:meta:closeout:receipt",
         "scripts/audit-command-surface.mjs exact agent:meta:closeout invariant",
+        "scripts/audit-command-surface.mjs exact agent:meta:closeout:receipt invariant",
         "scripts/agent-closeout-receipt-check.mjs DAG validation-report path matching",
+        "scripts/agent-closeout-receipt-check.mjs type-aware runner system_progress enforcement",
         "tools/aipedia-runner/src/main.rs runner AIPEDIA_DAG_GRAPHS artifact refs",
         "tools/aipedia-runner/src/main.rs runner AIPEDIA_DAG_VALIDATION_REPORTS artifact refs",
         "npm run agent:dag:check",
@@ -127,6 +130,8 @@
         "tests/scripts/agent-closeout-receipt-check.test.mjs DAG artifact ref coverage",
         "tests/scripts/agent-closeout-receipt-check.test.mjs required DAG proof coverage",
         "tests/scripts/audit-command-surface.test.mjs agent:meta:closeout invariant",
+        "tests/scripts/audit-command-surface.test.mjs agent:meta:closeout:receipt invariant",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs runner advisory system_progress strict DAG receipt coverage",
         "tools/aipedia-runner/src/main.rs runner DAG artifact ref test",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
@@ -134,7 +139,7 @@
         ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json",
         "docs/parallel-tooling-architecture.md"
       ],
-      "remaining": "Use strict meta closeout on every continuing DAG-planned meta-goal closeout and keep the command-surface invariant enforced."
+      "remaining": "Use strict meta closeout on latest loop receipts and explicit runner or eval receipts, and keep the command-surface invariants enforced."
     },
     {
       "id": "closeout-receipts-traces",
@@ -254,10 +259,12 @@
     }
   ],
   "current_slice": {
-    "name": "Strict meta closeout command surface",
+    "name": "Strict explicit receipt meta closeout",
     "system_artifacts": [
       "package.json",
+      "scripts/agent-closeout-receipt-check.mjs",
       "scripts/audit-command-surface.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "tests/scripts/audit-command-surface.test.mjs",
       "scripts/README.md",
       ".agent/LOOPS.md",
@@ -266,15 +273,15 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-38.md",
-      ".agent/loop-runs/system/2026-06-30T09-28-35-675Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-39.md",
+      ".agent/loop-runs/system/2026-06-30T09-38-06-448Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Use npm run agent:meta:closeout -- --json for every continuing June 30 DAG-planned meta-goal closeout.",
+    "Use npm run agent:meta:closeout -- --json for latest loop receipts and npm run agent:meta:closeout:receipt -- --receipt <path> --json for explicit runner or eval receipts.",
     "Run a positive bounded page-refresh policy proof after the separate stale ledger/content WIP is resolved.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",

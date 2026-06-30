@@ -106,6 +106,7 @@
     "agent:pause-receipt": "node scripts/agent-pause-receipt.mjs",
     "agent:closeout:check": "node scripts/agent-closeout-receipt-check.mjs",
     "agent:meta:closeout": "node scripts/agent-closeout-receipt-check.mjs --receipt .agent/loop-runs/system/latest.json --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof",
+    "agent:meta:closeout:receipt": "node scripts/agent-closeout-receipt-check.mjs --require-system-progress --require-closeout-identity --require-trace-artifacts --require-efficiency-metrics --require-dag-proof",
     "agent:input-freshness": "node scripts/agent-input-freshness-receipt.mjs",
     "agent:efficiency:trends": "node scripts/agent-loop-efficiency-trends.mjs",
     "agent:dag:check": "node scripts/agent-task-dag-check.mjs",

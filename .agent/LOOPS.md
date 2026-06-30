@@ -18,6 +18,7 @@ Loops produce queues and attention signals. They do not replace current-source v
 - `npm run loop:all:record -- --json`: run every loop and write a JSON receipt under `.agent/loop-runs/system/`.
 - `npm run loop:all:record -- --require-system-progress --json`: record a broad loop only if the dirty tree includes a system artifact. Use this for June 30 operating-system progress.
 - `npm run agent:meta:closeout -- --json`: validate the latest June 30 meta-goal receipt with required system progress, closeout identity, trace artifacts, efficiency metrics, and checked DAG proof artifacts.
+- `npm run agent:meta:closeout:receipt -- --receipt <path> --json`: validate an explicit DAG-planned loop or runner receipt with the same June 30 strict proof contract.
 - `npm run loop:decision -- --json`: run the Decision Content loop checks.
 - `npm run loop:freshness -- --json`: run the Freshness loop checks.
 - `npm run loop:trust -- --json`: run the Trust and Provenance loop checks.
@@ -54,7 +55,7 @@ Stale or unknown built-output freshness is an `attention` signal. A rendered-out
 
 Use `npm run loop:all:record -- --json` after meaningful broad reviews. It writes a timestamped JSON receipt and `.agent/loop-runs/system/latest.json`, including deltas from the previous recorded run and a `system_progress` block from `agent:system-progress`. Do not use it for every casual check. Add `--require-system-progress` when the run is being counted toward the June 30 operating-system goal.
 
-After recording a meta-goal closeout, validate the receipt contract with `npm run agent:meta:closeout -- --json`. This is the required June 30 path for DAG-planned operating-system work because it fails closed on missing system progress, missing identity, missing trace artifacts, missing efficiency metrics, and missing checked DAG proof. Use `npm run agent:closeout:check -- --all-system --json` for a backwards-compatible health check across historical system receipts.
+After recording a meta-goal closeout, validate the receipt contract with `npm run agent:meta:closeout -- --json`. This is the required June 30 path for the latest DAG-planned operating-system loop receipt because it fails closed on missing system progress, missing identity, missing trace artifacts, missing efficiency metrics, and missing checked DAG proof. Use `npm run agent:meta:closeout:receipt -- --receipt <path> --json` when the primary closeout proof is an explicit runner or copied receipt. Use `npm run agent:closeout:check -- --all-system --json` for a backwards-compatible health check across historical system receipts.
 
 Loop verification should stay focused on AiPedia work. `.agents/` and `skills-lock.json` are gitignored local tooling artifacts. `check-smart` also ignores them during default dirty-path discovery, but it still counts `.agent/` continuity docs and any explicitly passed paths.
 
