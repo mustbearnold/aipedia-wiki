@@ -236,6 +236,16 @@ Loop closeouts now record speed and efficiency metrics as a validated receipt co
 - Focused tests prove ledger emission, byte-size accounting, system-artifact counts, missing-metrics failure, and mismatch failure.
 - This is a deterministic token-efficiency proxy, not a real model-token meter. It measures receipt size and compactness until future agent runtimes expose exact token usage.
 
+## Twentieth System Slice
+
+Loop efficiency now has a trend summarizer.
+
+- `agent:efficiency:trends -- --max-runs <n> --json` reads timestamped system loop receipts and summarizes metric coverage, median wall duration, median command duration, median attention rate, receipt byte sizes, estimated receipt-token proxy, latest run metrics, deltas from the previous metric-aware run, and repeated slow commands.
+- `--fail-on-missing-metrics` turns missing `efficiency_metrics` in the selected window into a non-zero gate, while the default mode can still analyze legacy receipt history.
+- Focused tests prove trend medians, latest-run deltas, slowest-command aggregation, missing-metrics failure, and invalid argument handling.
+- A live run with `--max-runs 1 --fail-on-missing-metrics` passed against `.agent/loop-runs/system/2026-06-30T05-56-59-972Z-loop-run.json`.
+- A live two-run trend check passed with 2 metric-aware receipts, 0 missing metrics, median wall duration 5030.5 ms, and latest-run deltas of -39 ms wall duration and -158 full receipt bytes.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
@@ -247,7 +257,7 @@ Loop closeouts now record speed and efficiency metrics as a validated receipt co
 | DAG contracts | Partial | `runner:agent-plan` and architecture docs | Standardize node IDs, permissions, validators, artifacts, and traces across workflows. |
 | Closeout receipts/traces | Partial | loop and runner `trace`, `artifact_refs`, closeout identity fields, runner `system_progress`, runner `input_freshness`, affiliate handoff JSON receipts, `agent:closeout:check --require-trace-artifacts`, `agent:closeout:check --require-workflow-policy`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json`, `.agent/evals/closeout-policy-receipts/2026-06-30-slice-17-affiliate-handoff-policy-check.json` | Prove page-refresh runner policy on a bounded receipt. |
 | Non-stale scoring | Partial | `agent:score` v2, `agent:score:calibrate`, `gold_set_governance`, `--require-gold-set-review`, `stale_decay`, `risk_profile`, `confidence_profile`, focused tests, calibration summaries, `.agent/evals/score-calibration-goldset.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-09-score-goldset.json`, `.agent/evals/score-goldset-change-reviews/2026-06-30-slice-18-goldset-expansion.json`, `.agent/evals/score-calibration-receipts/2026-06-30-slice-18-score-goldset-expansion.json` | Keep expanding the reviewed gold set during real workload pilots, especially stale high-risk tools and source-gap remediation cases. |
-| Speed/token efficiency | Partial | six-worker workflows, timing receipts, loop `efficiency_metrics`, `agent:closeout:check --require-efficiency-metrics`, focused loop and closeout tests | Add exact model token usage, correction rate, flake rate, and benchmark trend summaries when the runtime exposes them. |
+| Speed/token efficiency | Partial | six-worker workflows, timing receipts, loop `efficiency_metrics`, `agent:closeout:check --require-efficiency-metrics`, `agent:efficiency:trends`, focused loop, closeout, and trend tests | Add exact model token usage, correction rate, and flake rate when the runtime exposes them. |
 | Memory/retrieval | Partial | JSONL memory tools | Enforce expiration and promotion rules during retrieval. |
 | Rust/CuPy/GPU gating | Partial | roadmap and CPU memory baseline | Require measured hotspots before acceleration work. |
 

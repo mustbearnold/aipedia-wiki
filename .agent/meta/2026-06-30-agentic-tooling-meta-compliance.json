@@ -145,10 +145,13 @@
         "runner closeout timing receipts",
         "scripts/aipedia-loops.mjs efficiency_metrics receipt field",
         "scripts/agent-closeout-receipt-check.mjs --require-efficiency-metrics",
+        "scripts/agent-loop-efficiency-trends.mjs",
+        "npm run agent:efficiency:trends",
         "tests/scripts/aipedia-loops.test.mjs efficiency metrics ledger coverage",
-        "tests/scripts/agent-closeout-receipt-check.test.mjs efficiency metrics validation coverage"
+        "tests/scripts/agent-closeout-receipt-check.test.mjs efficiency metrics validation coverage",
+        "tests/scripts/agent-loop-efficiency-trends.test.mjs trend summary coverage"
       ],
-      "remaining": "Add exact model-token usage when available, correction rate, flake rate, and benchmark trend summaries."
+      "remaining": "Add exact model-token usage when available, correction rate, and flake rate."
     },
     {
       "id": "memory-retrieval",
@@ -171,20 +174,19 @@
     }
   ],
   "current_slice": {
-    "name": "loop efficiency metrics receipt contract",
+    "name": "loop efficiency trend summarizer",
     "system_artifacts": [
-      "scripts/aipedia-loops.mjs",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/aipedia-loops.test.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "scripts/agent-loop-efficiency-trends.mjs",
+      "tests/scripts/agent-loop-efficiency-trends.test.mjs",
+      "package.json",
       "scripts/README.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-19.md",
-      ".agent/loop-runs/system/2026-06-30T05-56-59-972Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-20.md",
+      ".agent/loop-runs/system/2026-06-30T06-05-43-634Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
@@ -193,7 +195,7 @@
   "next_system_targets": [
     "Prove page-refresh runner policy on a bounded receipt.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
-    "Add exact model-token usage, correction rate, flake rate, and benchmark trend summaries when measurable.",
+    "Add exact model-token usage, correction rate, and flake rate when measurable.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP."
   ]
 }
