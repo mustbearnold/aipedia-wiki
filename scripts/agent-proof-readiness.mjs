@@ -34,6 +34,7 @@ const TARGETS = {
       'Run the bounded page-refresh runner proof and validate the generated closeout with agent:meta:closeout:auto.',
     ],
     blocked_next_actions: pageRefreshBlockedActions,
+    proof_receipts: [],
   },
   'tool-refresh-policy': {
     id: 'tool-refresh-policy',
@@ -54,6 +55,7 @@ const TARGETS = {
       'Run the bounded tool-refresh runner proof and validate the generated closeout with agent:meta:closeout:auto.',
     ],
     blocked_next_actions: toolRefreshBlockedActions,
+    proof_receipts: [],
   },
   'affiliate-handoff-policy': {
     id: 'affiliate-handoff-policy',
@@ -71,6 +73,12 @@ const TARGETS = {
       'Run the bounded affiliate handoff proof and validate the handoff receipt with agent:closeout:check --require-workflow-policy.',
     ],
     blocked_next_actions: affiliateBlockedActions,
+    proof_receipts: [
+      '.agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json',
+    ],
+    proved_next_actions: [
+      'Use the durable affiliate handoff proof as the positive policy baseline and move to the next unproved proof target.',
+    ],
   },
 };
 const KNOWN_TARGETS = Object.keys(TARGETS);
@@ -120,6 +128,7 @@ const report = {
   summary: {
     target_count: targets.length,
     ready_count: targets.filter((target) => target.status === 'ready').length,
+    proved_count: targets.filter((target) => target.status === 'proved').length,
     blocked_count: targets.filter((target) => target.status === 'blocked').length,
     unknown_count: targets.filter((target) => target.status === 'unknown').length,
   },
@@ -143,6 +152,7 @@ function usage() {
     '  node scripts/agent-proof-readiness.mjs --target page-refresh-policy --json',
     '',
     'Read-only readiness checks for bounded June 30 meta-goal proof pilots.',
+    'Configured durable proof receipts are validated and reported as proved instead of ready.',
     '',
     'Targets:',
     ...KNOWN_TARGETS.map((target) => `  ${target.padEnd(25)} ${TARGETS[target].description}`),
@@ -167,6 +177,31 @@ function evaluateTarget(target, context) {
       workflow: '',
       blockers: [blocker('unknown-target', `Unknown proof target ${target}.`)],
       next_actions: [`Use one of: ${KNOWN_TARGETS.join(', ')}.`],
+    };
+  }
+
+  const proofCompletion = evaluateProofCompletion(config);
+  if (proofCompletion.status === 'proved') {
+    return {
+      ok: true,
+      id: config.id,
+      status: 'proved',
+      workflow: config.workflow,
+      proof_goal: config.proof_goal,
+      blockers: [],
+      proof_completion: proofCompletion,
+      readiness_checks: [
+        {
+          id: 'proof-completion',
+          ok: true,
+          status: proofCompletion.status,
+          receipt_paths: proofCompletion.receipts.filter((receipt) => receipt.ok).map((receipt) => receipt.path),
+        },
+      ],
+      recommended_commands: proofCompletion.receipts
+        .filter((receipt) => receipt.ok)
+        .map((receipt) => receipt.validation_command),
+      next_actions: config.proved_next_actions || [],
     };
   }
 
@@ -210,7 +245,14 @@ function evaluateTarget(target, context) {
     workflow: config.workflow,
     proof_goal: config.proof_goal,
     blockers,
+    proof_completion: proofCompletion,
     readiness_checks: [
+      {
+        id: 'proof-completion',
+        ok: false,
+        status: proofCompletion.status,
+        receipt_paths: proofCompletion.receipts.map((receipt) => receipt.path),
+      },
       {
         id: config.input_check_id,
         ok: freshnessWorkflow?.ok === true && freshnessWorkflow?.status === 'fresh',
@@ -226,6 +268,79 @@ function evaluateTarget(target, context) {
       ? config.recommended_ready_commands
       : [`npm --silent run agent:proof:readiness -- --target ${config.id} --json`],
     next_actions: ready ? config.ready_next_actions : config.blocked_next_actions(blockers),
+  };
+}
+
+function evaluateProofCompletion(config) {
+  const receiptPaths = Array.isArray(config.proof_receipts) ? config.proof_receipts : [];
+  if (!receiptPaths.length) {
+    return {
+      status: 'untracked',
+      proved: false,
+      receipt_count: 0,
+      receipts: [],
+    };
+  }
+
+  const receipts = receiptPaths.map((path) => checkProofReceipt(path));
+  const proved = receipts.some((receipt) => receipt.ok);
+  const status = proved
+    ? 'proved'
+    : receipts.some((receipt) => receipt.exists)
+      ? 'invalid'
+      : 'missing';
+  return {
+    status,
+    proved,
+    receipt_count: receipts.length,
+    valid_count: receipts.filter((receipt) => receipt.ok).length,
+    receipts,
+  };
+}
+
+function checkProofReceipt(path) {
+  const absolutePath = resolve(PROJECT_DIR, path);
+  const displayPath = projectPath(absolutePath);
+  const validationCommand = `node scripts/agent-closeout-receipt-check.mjs --receipt ${displayPath} --require-workflow-policy --json`;
+  if (!existsSync(absolutePath)) {
+    return {
+      path: displayPath,
+      exists: false,
+      ok: false,
+      status: 'missing',
+      validation_command: validationCommand,
+      issue_count: 0,
+      issues: [],
+    };
+  }
+
+  const result = spawnSync(process.execPath, [
+    resolve(SCRIPT_DIR, 'agent-closeout-receipt-check.mjs'),
+    '--project-dir',
+    PROJECT_DIR,
+    '--receipt',
+    absolutePath,
+    '--require-workflow-policy',
+    '--json',
+  ], {
+    cwd: DEFAULT_PROJECT_DIR,
+    encoding: 'utf8',
+  });
+  const report = parseJson(result.stdout);
+  const receipt = Array.isArray(report?.receipts) ? report.receipts[0] : null;
+  const issues = Array.isArray(receipt?.issues) ? receipt.issues : [];
+  const ok = result.status === 0 && report?.ok === true && receipt?.ok === true;
+  return {
+    path: displayPath,
+    exists: true,
+    ok,
+    status: ok ? 'valid' : 'invalid',
+    type: receipt?.type || '',
+    issue_count: issues.length,
+    issues,
+    exit_code: result.status ?? 1,
+    stderr_tail: tail(result.stderr),
+    validation_command: validationCommand,
   };
 }
 
