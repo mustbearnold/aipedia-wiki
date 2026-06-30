@@ -46,6 +46,8 @@ test('pause receipt writes a durable JSON resume contract', () => {
     assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
+    assert.equal(report.validation.ok, true);
+    assert.equal(report.validation.schema_version, 'aipedia.pause-receipt-validation.v1');
     assert.equal(report.receipt.schema_version, 'aipedia.pause-receipt.v1');
     assert.equal(report.receipt.goal_id, '2026-06-30-meta');
     assert.equal(report.receipt.run_id, 'run-1');
@@ -57,6 +59,12 @@ test('pause receipt writes a durable JSON resume contract', () => {
     const written = JSON.parse(readFileSync(outPath, 'utf8'));
     assert.equal(written.schema_version, 'aipedia.pause-receipt.v1');
     assert.equal(written.pause_reason, 'user');
+
+    const validation = runPauseReceipt('--json', '--project-dir', dir, '--validate', outPath);
+    assert.equal(validation.status, 0, `${validation.stdout}\n${validation.stderr}`);
+    const validationReport = JSON.parse(validation.stdout);
+    assert.equal(validationReport.mode, 'pause-receipt-validation');
+    assert.equal(validationReport.validation.ok, true);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -71,4 +79,82 @@ test('pause receipt requires explicit resume state', () => {
   assert.equal(report.mode, 'argument-error');
   assert.ok(report.argument_issues.some((issue) => /safe-resume-step/.test(issue.detail)));
   assert.ok(report.argument_issues.some((issue) => /in-progress-step/.test(issue.detail)));
+});
+
+test('pause receipt separates observed dirty files from agent-touched files', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-pause-dirty-separation-'));
+
+  try {
+    spawnSync('git', ['init'], { cwd: dir, encoding: 'utf8' });
+    mkdirSync(join(dir, 'src/content/tools'), { recursive: true });
+    mkdirSync(join(dir, 'scripts'), { recursive: true });
+    writeFileSync(join(dir, 'src/content/tools/synthesia.md'), 'pre-existing content work\n');
+    writeFileSync(join(dir, 'scripts/agent-change.mjs'), 'console.log("agent");\n');
+    const outPath = join(dir, '.agent', 'loop-runs', 'pauses', 'pause.json');
+
+    const result = runPauseReceipt(
+      '--json',
+      '--project-dir',
+      dir,
+      '--goal-id',
+      '2026-06-30-meta',
+      '--run-id',
+      'run-2',
+      '--safe-resume-step',
+      'Resume from the receipt.',
+      '--in-progress-step',
+      'Separate dirty state.',
+      '--observed-dirty-before-agent',
+      'src/content/tools/synthesia.md',
+      '--out',
+      outPath,
+    );
+
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+    const report = JSON.parse(result.stdout);
+    assert.deepEqual(report.receipt.files_observed_dirty_before_agent, ['src/content/tools/synthesia.md']);
+    assert.ok(!report.receipt.files_touched_by_agent.includes('src/content/tools/synthesia.md'));
+    assert.ok(report.receipt.files_touched_by_agent.includes('scripts/agent-change.mjs'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('pause receipt validation fails malformed receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-pause-invalid-'));
+  const path = join(dir, 'pause.json');
+
+  try {
+    writeFileSync(path, JSON.stringify({
+      schema_version: 'aipedia.pause-receipt.v1',
+      goal_id: 'goal',
+      run_id: '',
+      paused_at: 'not-a-date',
+      pause_reason: 'mystery',
+      latest_safe_resume_step: '',
+      in_progress_step: 'continue',
+      dirty_tree_summary: [],
+      files_touched_by_agent: [],
+      files_observed_dirty_before_agent: [],
+      child_workers: [],
+      open_questions: [],
+      blocked_on: [],
+      must_not_repeat: [],
+      next_commands: [],
+      validation_done: [],
+      validation_pending: [],
+      source_cutoff: '2026/06/30',
+    }, null, 2));
+
+    const result = runPauseReceipt('--json', '--project-dir', dir, '--validate', path);
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.equal(report.validation.ok, false);
+    assert.ok(report.validation.issue_count >= 4);
+    assert.ok(report.validation.issues.some((issue) => /pause_reason/.test(issue.detail)));
+    assert.ok(report.validation.issues.some((issue) => /source_cutoff/.test(issue.detail)));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

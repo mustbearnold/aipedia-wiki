@@ -378,6 +378,30 @@ function validAffiliateHandoffReceipt(overrides = {}) {
   };
 }
 
+function validPauseReceipt(overrides = {}) {
+  return {
+    schema_version: 'aipedia.pause-receipt.v1',
+    goal_id: '2026-06-30-agentic-tooling-meta-os',
+    run_id: 'pause-run:fixture',
+    paused_at: '2026-06-30T03:01:47.100Z',
+    pause_reason: 'handoff',
+    latest_safe_resume_step: 'Read the pause receipt and check git status.',
+    in_progress_step: 'Implementing pause receipt schema validation.',
+    dirty_tree_summary: [' M scripts/agent-pause-receipt.mjs'],
+    files_touched_by_agent: ['scripts/agent-pause-receipt.mjs'],
+    files_observed_dirty_before_agent: ['src/content/tools/synthesia.md'],
+    child_workers: [],
+    open_questions: [],
+    blocked_on: [],
+    must_not_repeat: ['Do not stage unrelated Synthesia content WIP.'],
+    next_commands: ['node --test tests/scripts/agent-pause-receipt.test.mjs'],
+    validation_done: ['node --check scripts/agent-pause-receipt.mjs'],
+    validation_pending: ['agent:closeout:check pause receipt'],
+    source_cutoff: '2026-06-30',
+    ...overrides,
+  };
+}
+
 test('closeout receipt check validates latest enforced loop receipt by default', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-loop-'));
   const systemDir = join(dir, '.agent', 'loop-runs', 'system');
@@ -392,6 +416,50 @@ test('closeout receipt check validates latest enforced loop receipt by default',
     assert.equal(report.ok, true);
     assert.equal(report.totals.receipts, 1);
     assert.equal(report.receipts[0].type, 'loop-run');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates pause receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-pause-'));
+  const path = join(dir, 'pause.json');
+
+  try {
+    writeJson(path, validPauseReceipt());
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'pause-receipt');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails malformed pause receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-pause-'));
+  const path = join(dir, 'pause.json');
+  const receipt = validPauseReceipt({
+    pause_reason: 'mystery',
+    latest_safe_resume_step: '',
+    files_touched_by_agent: ['scripts/agent-pause-receipt.mjs', 123],
+    source_cutoff: '2026/06/30',
+  });
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    const issueText = report.receipts[0].issues.map((item) => item.detail).join('\n');
+    assert.match(issueText, /pause_reason/);
+    assert.match(issueText, /latest_safe_resume_step/);
+    assert.match(issueText, /files_touched_by_agent/);
+    assert.match(issueText, /source_cutoff/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

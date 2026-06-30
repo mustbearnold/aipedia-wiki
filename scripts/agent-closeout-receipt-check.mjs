@@ -124,7 +124,7 @@ function usage() {
     '  node scripts/agent-closeout-receipt-check.mjs --all-system --json',
     '',
     'Options:',
-    '  --receipt <path>              Validate a receipt JSON file. Repeatable.',
+    '  --receipt <path>              Validate a loop, runner, affiliate handoff, or pause receipt JSON file. Repeatable.',
     '  --path <path>                 Alias for --receipt.',
     '  --all-system                  Validate every .agent/loop-runs/system/*.json receipt.',
     '  --require-system-progress     Require loop receipts to include enforced system_progress.',
@@ -169,7 +169,8 @@ function validateReceiptFile(path) {
   if (type === 'loop-run') validateLoopReceipt(value, issues);
   else if (type === 'runner-closeout') validateRunnerReceipt(value, issues);
   else if (type === 'affiliate-handoff') validateAffiliateHandoffReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, nor aipedia.affiliate-handoff-receipt.v1.'));
+  else if (type === 'pause-receipt') validatePauseReceipt(value, issues);
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.affiliate-handoff-receipt.v1, nor aipedia.pause-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -187,6 +188,7 @@ function receiptType(value) {
   if (!isObject(value)) return 'unknown';
   if (value.schema_version === 'aipedia.closeout-receipt.v1') return 'runner-closeout';
   if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
+  if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';
 }
@@ -553,6 +555,34 @@ function validateAffiliateHandoffReceipt(value, issues) {
   if (REQUIRE_WORKFLOW_POLICY) validateAffiliateHandoffPolicy(value, issues);
 }
 
+function validatePauseReceipt(value, issues) {
+  requireString(value, 'schema_version', issues, {
+    path: 'schema_version',
+    values: ['aipedia.pause-receipt.v1'],
+  });
+  requireString(value, 'goal_id', issues);
+  requireString(value, 'run_id', issues);
+  requireIsoString(value, 'paused_at', issues);
+  requireString(value, 'pause_reason', issues, { values: ['user', 'time', 'blocked', 'handoff'] });
+  requireString(value, 'latest_safe_resume_step', issues);
+  requireString(value, 'in_progress_step', issues);
+  requireIsoDateString(value, 'source_cutoff', issues);
+  for (const field of [
+    'dirty_tree_summary',
+    'files_touched_by_agent',
+    'files_observed_dirty_before_agent',
+    'open_questions',
+    'blocked_on',
+    'must_not_repeat',
+    'next_commands',
+    'validation_done',
+    'validation_pending',
+  ]) {
+    requireStringArray(value, field, issues);
+  }
+  requireArray(value, 'child_workers', issues);
+}
+
 function validateAffiliateSelectedCluster(cluster, issues, path) {
   if (!isObject(cluster)) {
     issues.push(issue('affiliate-handoff-cluster-invalid', `${path} must be an object.`));
@@ -778,6 +808,16 @@ function requireObject(value, field, issues, path = field) {
 
 function requireArray(value, field, issues, path = field) {
   if (!Array.isArray(value[field])) issues.push(issue('field-invalid', `${path} must be an array.`));
+}
+
+function requireStringArray(value, field, issues, path = field) {
+  if (!Array.isArray(value[field])) {
+    issues.push(issue('field-invalid', `${path} must be an array.`));
+    return;
+  }
+  if (value[field].some((item) => typeof item !== 'string')) {
+    issues.push(issue('field-invalid', `${path} must contain only strings.`));
+  }
 }
 
 function requireBoolean(value, field, issues, path = field) {

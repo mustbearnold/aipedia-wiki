@@ -65,9 +65,14 @@
       "evidence": [
         "scripts/agent-pause-receipt.mjs",
         "npm run agent:pause-receipt",
-        "tests/scripts/agent-pause-receipt.test.mjs"
+        "agent:pause-receipt --validate",
+        "agent:closeout:check pause receipt validation",
+        "dirty-state separation for --observed-dirty-before-agent",
+        "tests/scripts/agent-pause-receipt.test.mjs",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs pause receipt coverage",
+        "live local/tmp/slice24-pause-receipt-v2.json smoke"
       ],
-      "remaining": "Wire pause receipts into runner and goal closeout flows, and add schema validation for committed receipts."
+      "remaining": "Wire pause receipts into runner flows for automatic interruption handoffs."
     },
     {
       "id": "dag-contracts",
@@ -187,21 +192,20 @@
     }
   ],
   "current_slice": {
-    "name": "memory retrieval expiration and promotion policy",
+    "name": "pause receipt validation and dirty-state separation",
     "system_artifacts": [
-      "scripts/agent-memory-query.mjs",
-      "scripts/agent-memory-record.mjs",
-      "tests/scripts/agent-memory-tools.test.mjs",
-      ".agent/memory/schema.json",
-      "docs/agent-memory-system.md",
+      "scripts/agent-pause-receipt.mjs",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/agent-pause-receipt.test.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "scripts/README.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-23.md",
-      ".agent/loop-runs/system/2026-06-30T06-36-23-004Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-24.md",
+      ".agent/loop-runs/system/2026-06-30T06-47-49-517Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
