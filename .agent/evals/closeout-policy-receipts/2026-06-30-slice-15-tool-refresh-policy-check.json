@@ -1,0 +1,76 @@
+{
+  "schema_version": "aipedia.closeout-policy-proof.v1",
+  "slice": "2026-06-30-slice-15-tool-refresh-policy-proof",
+  "generated_at": "2026-06-30T05:12:12Z",
+  "proof_type": "bounded-runner-dry-run",
+  "runner_receipt": "local/tmp/slice15-tool-receipts/2026-06-30T05-12-11Z-tool-refresh-closeout.json",
+  "planner_receipt": "local/tmp/slice15-tool-plan.json",
+  "workflow": "tool-refresh",
+  "runner_summary": {
+    "status": "passed",
+    "goal_id": "2026-06-30-agentic-tooling-meta-os",
+    "run_id": "2026-06-30-slice-15-bounded-runner-policy-proof",
+    "changed_routes": [
+      "/categories/",
+      "/categories/ai-coding/",
+      "/tools/",
+      "/tools/blackbox-ai/"
+    ],
+    "source_ids": [
+      "blackbox-ai-best-for"
+    ],
+    "widths": [
+      319,
+      360,
+      390,
+      430,
+      768,
+      1024,
+      1366
+    ],
+    "commands": [
+      "ledger generate",
+      "ledger check",
+      "tool refresh grouped check",
+      "date consistency changed",
+      "typecheck"
+    ],
+    "input_freshness": {
+      "ok": true,
+      "workflow": "tool-refresh",
+      "status": "fresh",
+      "summary": {
+        "workflow_count": 1,
+        "ok_count": 1,
+        "attention_count": 0,
+        "stale_count": 0
+      }
+    },
+    "system_progress": {
+      "has_system_artifact": false,
+      "content_only": true,
+      "note": "Expected for a dry-run proof that did not change system files."
+    }
+  },
+  "policy_check": {
+    "command": "npm --silent run agent:closeout:check -- --receipt local/tmp/slice15-tool-receipts/2026-06-30T05-12-11Z-tool-refresh-closeout.json --require-closeout-identity --require-trace-artifacts --require-workflow-policy --json",
+    "ok": true,
+    "require_closeout_identity": true,
+    "require_trace_artifacts": true,
+    "require_workflow_policy": true,
+    "totals": {
+      "receipts": 1,
+      "ok": 1,
+      "failed": 0,
+      "issues": 0
+    }
+  },
+  "residual_risks": [
+    "This proof used runner dry-run mode and skipped build plus route QA, so it validates closeout shape and input freshness but not rendered page quality.",
+    "Page-refresh runner receipts and affiliate handoff receipts still need equivalent policy proof or implementation."
+  ],
+  "next_actions": [
+    "Prove page-refresh runner policy on a bounded receipt.",
+    "Extend closeout policy validation to affiliate handoff receipts."
+  ]
+}

@@ -100,9 +100,11 @@
         "tests/scripts/agent-closeout-receipt-check.test.mjs input_freshness workflow mismatch test",
         "agent:closeout:check --require-workflow-policy",
         "scripts/agent-closeout-receipt-check.mjs workflow policy validation",
-        "tests/scripts/agent-closeout-receipt-check.test.mjs workflow policy tests"
+        "tests/scripts/agent-closeout-receipt-check.test.mjs workflow policy tests",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json",
+        "bounded runner:tool-refresh dry-run policy proof"
       ],
-      "remaining": "Prove workflow policy validation on bounded production runner receipts and extend the policy to affiliate handoff closeouts."
+      "remaining": "Prove page-refresh runner policy on a bounded receipt and extend the policy to affiliate handoff closeouts."
     },
     {
       "id": "non-stale-scoring",
@@ -157,11 +159,9 @@
     }
   ],
   "current_slice": {
-    "name": "workflow-specific closeout policies",
+    "name": "bounded runner workflow-policy proof",
     "system_artifacts": [
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "scripts/README.md",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
     ],
@@ -169,10 +169,9 @@
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Prove the input refresh policy through one bounded runner or content pilot.",
-    "Prove workflow policy validation on bounded production runner receipts.",
+    "Prove page-refresh runner policy on a bounded receipt.",
     "Extend closeout policy validation to affiliate handoff receipts.",
     "Expand the reviewed scoring gold set during real workload pilots.",
-    "Pilot one bounded content workload only after workflow-policy validation is verified."
+    "Pilot one bounded content workload only after page-refresh or affiliate closeout policy coverage is extended."
   ]
 }

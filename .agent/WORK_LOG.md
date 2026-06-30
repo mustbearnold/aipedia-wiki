@@ -1605,3 +1605,13 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Verification: `node --check scripts/agent-closeout-receipt-check.mjs`, focused `node --test tests/scripts/agent-closeout-receipt-check.test.mjs`, scoped `check:smart`, `check:quick`, em-dash guard, `git diff --check`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed.
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-14.md`.
 - Next: Commit and push, then prove input refresh and workflow policy validation on bounded production runner receipts.
+
+### 2026-06-30: Agentic Tooling Meta Slice 15, Tool Runner Policy Proof
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added a durable closeout-policy proof receipt at `.agent/evals/closeout-policy-receipts/2026-06-30-slice-15-tool-refresh-policy-check.json` and updated meta/status docs.
+- System lesson: the workflow policy gate works on a runner-produced tool-refresh receipt, not only fixture JSON. The bounded proof also showed the right caveat: dry-run closeout proves receipt shape and fresh input checks, not rendered page quality.
+- Verification: one-tool `runner:tool-refresh:plan`, dry-run `runner:tool-refresh:closeout`, `agent:closeout:check --require-workflow-policy` against the runner JSON receipt, scoped `check:smart`, em-dash guard, `git diff --check`, `loop:system`, enforced `loop:all:record`, and `agent:closeout:check` all passed.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-15.md`.
+- Next: Commit and push, then prove page-refresh runner policy on a bounded receipt or extend the policy to affiliate handoff receipts.
