@@ -31,7 +31,10 @@
         "scripts/agent-input-freshness-receipt.mjs --refresh-stale",
         "scripts/agent-input-freshness-receipt.mjs --apply-refreshes --allow-tracked-mutations",
         "scripts/agent-proof-readiness.mjs page-refresh-policy readiness",
+        "scripts/agent-proof-readiness.mjs tool-refresh-policy readiness",
+        "scripts/agent-proof-readiness.mjs affiliate-handoff-policy readiness",
         "live agent:proof:readiness page-refresh-policy blocker report",
+        "live agent:proof:readiness affiliate-handoff-policy ready report",
         "npm run agent:input-freshness",
         "package.json agent:proof:readiness",
         ".agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json",
@@ -44,9 +47,10 @@
         "tests/scripts/agent-input-freshness-receipt.test.mjs safe refresh policy tests",
         "tests/scripts/agent-proof-readiness.test.mjs page-refresh proof readiness coverage",
         ".agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json",
+        ".agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json",
         "tools/aipedia-runner/src/main.rs runner closeout input freshness tests"
       ],
-      "remaining": "Resolve separate content WIP, rerun proof readiness, then run the positive bounded page-refresh policy proof."
+      "remaining": "Run the ready affiliate handoff proof, then resolve separate content WIP before page-refresh or tool-refresh positive policy proofs."
     },
     {
       "id": "system-progress-checkpoint",
@@ -272,13 +276,10 @@
     }
   ],
   "current_slice": {
-    "name": "Page-refresh proof readiness gate",
+    "name": "Multi-target proof readiness routing",
     "system_artifacts": [
-      "package.json",
       "scripts/agent-proof-readiness.mjs",
-      "scripts/audit-command-surface.mjs",
       "tests/scripts/agent-proof-readiness.test.mjs",
-      "tests/scripts/audit-command-surface.test.mjs",
       "scripts/README.md",
       ".agent/LOOPS.md",
       "docs/agentic-tooling-meta-compliance.md",
@@ -286,16 +287,16 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-42.md",
-      ".agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-43.md",
+      ".agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json",
       ".agent/loop-runs/system/latest.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false
   },
   "next_system_targets": [
-    "Use npm run agent:meta:closeout:auto -- --json for latest loop receipts and npm run agent:meta:closeout:auto -- --receipt <path> --json for explicit loop or runner receipts.",
-    "Resolve separate content WIP, rerun npm run agent:proof:readiness -- --target page-refresh-policy --json, then run the positive bounded page-refresh policy proof.",
+    "Run the bounded affiliate handoff policy proof because npm run agent:proof:readiness -- --target affiliate-handoff-policy --json reports ready.",
+    "Resolve separate content WIP, rerun npm run agent:proof:readiness -- --json, then run page-refresh and tool-refresh positive policy proofs.",
     "Expand reviewed scoring coverage for stale high-risk tools and source-gap remediation cases during real workload pilots.",
     "Add exact model-token usage and correction rate when measurable.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP."

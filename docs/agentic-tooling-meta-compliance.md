@@ -570,12 +570,28 @@ Positive page-refresh proof readiness is now machine-readable.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5008 ms, latest estimated full receipt tokens 10832, and latest system artifact count 9.
 - Remaining gap: after the separate content WIP is resolved, rerun `agent:proof:readiness` and then run the positive bounded page-refresh policy proof.
 
+## Forty-Third System Slice
+
+Proof readiness now routes multiple bounded policy proofs.
+
+- `agent:proof:readiness` checks `page-refresh-policy`, `tool-refresh-policy`, and `affiliate-handoff-policy`.
+- Page-refresh readiness requires fresh page-refresh input freshness plus a clean broad content/content-support dirty boundary.
+- Tool-refresh readiness requires fresh tool-refresh input freshness plus a clean tool/content-support dirty boundary.
+- Affiliate-handoff readiness requires fresh affiliate-conversion input freshness and is not blocked by unrelated public content WIP.
+- Focused readiness tests cover ready page-refresh state, stale page-refresh plus dirty-content blockers, independent tool-refresh and affiliate-handoff evaluation, and unknown target rejection.
+- Live all-target readiness currently reports 3 targets, 1 ready, and 2 blocked: page refresh blocked, tool refresh blocked, affiliate handoff ready.
+- Live `affiliate-handoff-policy` readiness passes with fresh affiliate-conversion inventory.
+- Scoped `check:smart`, `check:quick`, strict `agent:meta:closeout:auto`, and efficiency trends passed.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json`.
+- Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5092 ms, latest estimated full receipt tokens 10704, and latest system artifact count 4.
+- Remaining gap: run the bounded affiliate handoff policy proof, then rerun readiness before choosing page-refresh or tool-refresh proof work.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
 |---|---:|---|---|
 | Spec compliance audit | Partial | `.agent/meta/2026-06-30-agentic-tooling-meta-compliance.json` | Keep updated after each slice. |
-| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness --refresh-stale`, `agent:proof:readiness`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Resolve separate content WIP, rerun proof readiness, then run the positive bounded page-refresh policy proof. |
+| Stale input handling | Partial | `decision-loop --fail-on-stale-backlog`, tool/page/affiliate planner `input_freshness`, page `--fail-on-stale-ledger`, runner strict planner flags, `agent:input-freshness --refresh-stale`, multi-target `agent:proof:readiness`, runner `input_freshness` closeout field, `.agent/evals/input-freshness-receipts/2026-06-30-slice-10-input-freshness.json` | Run the ready affiliate handoff proof, then resolve separate content WIP before page/tool proofs. |
 | System-progress checkpoint | Partial | `agent:system-progress`, `loop:all:record --require-system-progress`, Rust runner `system_progress` closeout field | Keep enforcing on every meta closeout and pilot. |
 | Pause/resume receipts | Partial | `agent:pause-receipt`, `agent:pause-receipt --validate`, `runner:pause-receipt`, `runner:interrupt-proof`, pause receipt `trace` and `artifact_refs`, `agent:closeout:check` pause receipt validation, `agent:closeout:check --require-trace-artifacts` for pause receipts, dirty-state separation for `--observed-dirty-before-agent`, runner interrupted command detection, closeout command `interrupted` flags, closeout `interrupted_pause_receipt`, `interrupted-pause-receipt` artifact refs, `agent:closeout:check` interrupted pause link enforcement, `agent:closeout:check` runner interrupt proof report validation, focused pause and closeout tests, focused Rust interrupt tests, live `local/tmp/slice24-pause-receipt-v2.json` smoke, live `local/tmp/aipedia-runner/pauses/slice25-runner-pause.json` smoke, live `local/tmp/slice26-pause-trace-receipt.json` smoke, durable interrupted runner proof receipts and proof reports under `.agent/evals/runner-interrupt-proofs/` | Keep strict proof-report validation in the interrupt smoke and reuse the pattern for other pause/resume proofs. |
 | DAG contracts | Partial | `runner:agent-plan`, `scripts/runner-agent-plan-checked.mjs`, `agent:dag:check`, `loop:all:record --dag-graph`, `loop:all:record --dag-validation-report`, runner `AIPEDIA_DAG_GRAPHS`, runner `AIPEDIA_DAG_VALIDATION_REPORTS`, `agent:closeout:check --require-dag-proof`, `agent:meta:closeout`, `agent:meta:closeout:receipt`, `agent:meta:closeout:runner`, `agent:meta:closeout:auto`, command-surface exact invariants for strict meta closeout commands, closeout validation for `agent-task-dag-validation-report` refs, validation-report path matching, validated `aipedia.agent-task-dag.v1` node contract, focused DAG/wrapper/loop/runner/closeout/router tests, `.agent/evals/agent-dag-contracts/2026-06-30-slice-33-cursor-agent-task-graph.json`, `.agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json`, `.agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json`, `.agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json`, and architecture docs | Use strict auto closeout routing as the default handoff path, with exact underlying commands kept for specialized workflows. |

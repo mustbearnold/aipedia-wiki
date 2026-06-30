@@ -5,24 +5,24 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-06-30T10:05:55.533Z",
+  "generated_at": "2026-06-30T10:13:34.700Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-42-page-refresh-proof-readiness",
+  "run_id": "2026-06-30-slice-43-proof-readiness-targets",
   "residual_risks": [
-    "Proof readiness is read-only and intentionally blocks the positive page-refresh policy proof until separate content WIP and stale page-refresh ledger input are resolved."
+    "Page-refresh and tool-refresh positive policy proofs remain blocked by separate Synthesia/content WIP, but affiliate handoff policy proof readiness is now machine-readable and ready."
   ],
   "next_actions": [
-    "Resolve or explicitly set aside separate Synthesia/content WIP, regenerate PAGE_REFRESH_LEDGER.md, rerun agent:proof:readiness, then run the positive bounded page-refresh policy proof.",
-    "Keep proof readiness read-only so it can be used safely during long-running meta-goal loops."
+    "Run the bounded affiliate handoff policy proof because agent:proof:readiness reports affiliate-handoff-policy ready.",
+    "Resolve or explicitly set aside separate Synthesia/content WIP before page-refresh or tool-refresh positive policy proofs."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-42-page-refresh-proof-readiness",
-    "span_id": "span:loop-run:2026-06-30-slice-42-page-refresh-proof-readiness:2026-06-30T10:05:55.533Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-43-proof-readiness-targets",
+    "span_id": "span:loop-run:2026-06-30-slice-43-proof-readiness-targets:2026-06-30T10:13:34.700Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-06-30T10:05:55.533Z",
-    "ended_at": "2026-06-30T10:06:00.541Z",
-    "duration_ms": 5008
+    "started_at": "2026-06-30T10:13:34.700Z",
+    "ended_at": "2026-06-30T10:13:39.792Z",
+    "duration_ms": 5092
   },
   "artifact_refs": [
     {
@@ -46,7 +46,7 @@
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -301,59 +301,59 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 5008,
+  "duration_ms": 5092,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 5008,
-    "total_command_duration_ms": 5004,
+    "wall_duration_ms": 5092,
+    "total_command_duration_ms": 5092,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 312.75,
-    "commands_per_second": 3.195,
-    "loops_per_second": 1.398,
+    "average_command_duration_ms": 318.25,
+    "commands_per_second": 3.142,
+    "loops_per_second": 1.375,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
     "embedded_command_artifact_count": 16,
-    "system_artifact_count": 9,
+    "system_artifact_count": 4,
     "content_artifact_count": 4,
     "other_artifact_count": 0,
-    "system_artifacts_per_second": 1.797,
-    "persisted_full_receipt_bytes": 43328,
-    "persisted_latest_receipt_bytes": 24784,
+    "system_artifacts_per_second": 0.786,
+    "persisted_full_receipt_bytes": 42814,
+    "persisted_latest_receipt_bytes": 24270,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 2011
+        "duration_ms": 2044
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 610
+        "duration_ms": 621
       },
       {
         "loop_id": "freshness",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 326
+        "duration_ms": 329
       },
       {
         "loop_id": "news-market",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 314
+        "duration_ms": 328
       },
       {
         "loop_id": "quality-pruning",
         "label": "site KPI audit",
         "status": "ok",
-        "duration_ms": 248
+        "duration_ms": 255
       }
     ]
   },
@@ -460,29 +460,19 @@
     "require_system_artifact": true,
     "changed_paths": [
       ".agent/LOOPS.md",
-      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      "docs/agentic-tooling-meta-compliance.md",
-      "package.json",
       "scripts/README.md",
       "scripts/agent-proof-readiness.mjs",
-      "scripts/audit-command-surface.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
-      "tests/scripts/agent-proof-readiness.test.mjs",
-      "tests/scripts/audit-command-surface.test.mjs"
+      "tests/scripts/agent-proof-readiness.test.mjs"
     ],
     "system_artifacts": [
       ".agent/LOOPS.md",
-      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      "docs/agentic-tooling-meta-compliance.md",
-      "package.json",
       "scripts/README.md",
       "scripts/agent-proof-readiness.mjs",
-      "scripts/audit-command-surface.mjs",
-      "tests/scripts/agent-proof-readiness.test.mjs",
-      "tests/scripts/audit-command-surface.test.mjs"
+      "tests/scripts/agent-proof-readiness.test.mjs"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -500,7 +490,7 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 220,
+      "duration_ms": 221,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
@@ -524,7 +514,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 554,
+      "duration_ms": 568,
       "attention_reasons": [
         "due_now=49"
       ],
@@ -533,7 +523,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 227,
+          "duration_ms": 239,
           "attention_reasons": [
             "due_now=49"
           ],
@@ -542,7 +532,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 326,
+          "duration_ms": 329,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -552,28 +542,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 385,
+      "duration_ms": 401,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 149,
+          "duration_ms": 163,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 111,
+          "duration_ms": 115,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 124,
+          "duration_ms": 123,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -583,7 +573,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 2011,
+      "duration_ms": 2044,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -592,7 +582,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 2011,
+          "duration_ms": 2044,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -616,28 +606,28 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 513,
+      "duration_ms": 505,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 248,
+          "duration_ms": 255,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 135,
+          "duration_ms": 120,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 131,
+          "duration_ms": 130,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -647,7 +637,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 796,
+      "duration_ms": 815,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -657,7 +647,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 186,
+          "duration_ms": 195,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -678,7 +668,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 610,
+          "duration_ms": 621,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -702,28 +692,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 527,
+      "duration_ms": 538,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 108,
+          "duration_ms": 109,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 104,
+          "duration_ms": 101,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 314,
+          "duration_ms": 328,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -732,13 +722,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-06-30T10-13-34-700Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-06-30T09-55-29-691Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-06-30T10-05-55-533Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-06-30T09:55:29.691Z",
+      "previous_run": "2026-06-30T10:05:55.533Z",
       "status_changes": [],
-      "duration_delta_ms": 31,
+      "duration_delta_ms": 84,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

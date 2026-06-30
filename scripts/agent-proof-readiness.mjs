@@ -14,7 +14,66 @@ const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const INPUT_FRESHNESS_PATH = valueFor('--input-freshness');
 const GIT_STATUS_PATH = valueFor('--git-status-file');
-const KNOWN_TARGETS = ['page-refresh-policy'];
+const TARGETS = {
+  'page-refresh-policy': {
+    id: 'page-refresh-policy',
+    workflow: 'page-refresh',
+    proof_goal: 'Positive bounded page-refresh runner policy proof.',
+    description: 'Positive bounded page-refresh runner policy proof.',
+    input_check_id: 'page-refresh-input-freshness',
+    dirty_check_id: 'dirty-content-boundary',
+    dirty_blocker_code: 'dirty-content-wip',
+    dirty_blocker_message: 'Dirty content or generated content-support files make a positive page-refresh proof unsafe until ownership is resolved.',
+    dirty_path_predicate: isPageRefreshBlockingDirtyPath,
+    recommended_ready_commands: [
+      'npm run runner:page-refresh:plan -- --fail-on-stale-ledger',
+      'npm run runner:page-refresh:closeout',
+      'npm run agent:meta:closeout:auto -- --receipt <page-refresh-closeout.json> --json',
+    ],
+    ready_next_actions: [
+      'Run the bounded page-refresh runner proof and validate the generated closeout with agent:meta:closeout:auto.',
+    ],
+    blocked_next_actions: pageRefreshBlockedActions,
+  },
+  'tool-refresh-policy': {
+    id: 'tool-refresh-policy',
+    workflow: 'tool-refresh',
+    proof_goal: 'Positive bounded tool-refresh runner policy proof.',
+    description: 'Positive bounded tool-refresh runner policy proof.',
+    input_check_id: 'tool-refresh-input-freshness',
+    dirty_check_id: 'dirty-tool-refresh-boundary',
+    dirty_blocker_code: 'dirty-tool-refresh-wip',
+    dirty_blocker_message: 'Dirty tool content or generated content-support files make a positive tool-refresh proof unsafe until ownership is resolved.',
+    dirty_path_predicate: isToolRefreshBlockingDirtyPath,
+    recommended_ready_commands: [
+      'npm run runner:tool-refresh:plan -- --fail-on-stale-inputs',
+      'npm run runner:tool-refresh:closeout',
+      'npm run agent:meta:closeout:auto -- --receipt <tool-refresh-closeout.json> --json',
+    ],
+    ready_next_actions: [
+      'Run the bounded tool-refresh runner proof and validate the generated closeout with agent:meta:closeout:auto.',
+    ],
+    blocked_next_actions: toolRefreshBlockedActions,
+  },
+  'affiliate-handoff-policy': {
+    id: 'affiliate-handoff-policy',
+    workflow: 'affiliate-conversion',
+    proof_goal: 'Positive bounded affiliate handoff policy proof.',
+    description: 'Positive bounded affiliate handoff policy proof.',
+    input_check_id: 'affiliate-conversion-input-freshness',
+    recommended_ready_commands: [
+      'npm run runner:affiliate-conversion:plan -- --fail-on-stale-inputs',
+      'npm run runner:affiliate-conversion:reports -- --strict',
+      'npm run runner:affiliate-conversion:handoff',
+      'npm run agent:closeout:check -- --receipt <affiliate-handoff.json> --require-workflow-policy --json',
+    ],
+    ready_next_actions: [
+      'Run the bounded affiliate handoff proof and validate the handoff receipt with agent:closeout:check --require-workflow-policy.',
+    ],
+    blocked_next_actions: affiliateBlockedActions,
+  },
+};
+const KNOWN_TARGETS = Object.keys(TARGETS);
 const KNOWN_FLAGS = new Set([
   '--git-status-file',
   '--help',
@@ -46,8 +105,9 @@ if (argumentIssues.length) {
 }
 
 const selectedTargets = valuesFor('--target').length ? [...new Set(valuesFor('--target'))] : KNOWN_TARGETS;
+const selectedWorkflows = [...new Set(selectedTargets.map((target) => TARGETS[target]?.workflow).filter(Boolean))];
 const gitStatus = readGitStatus();
-const inputFreshness = readInputFreshness();
+const inputFreshness = readInputFreshness(selectedWorkflows);
 const targets = selectedTargets.map((target) => evaluateTarget(target, { gitStatus, inputFreshness }));
 const report = {
   ok: targets.every((target) => target.ok),
@@ -85,7 +145,7 @@ function usage() {
     'Read-only readiness checks for bounded June 30 meta-goal proof pilots.',
     '',
     'Targets:',
-    '  page-refresh-policy  Positive bounded page-refresh runner policy proof.',
+    ...KNOWN_TARGETS.map((target) => `  ${target.padEnd(25)} ${TARGETS[target].description}`),
     '',
     'Options:',
     '  --target <id>              Target to check. Repeatable. Default: all known targets.',
@@ -98,7 +158,8 @@ function usage() {
 }
 
 function evaluateTarget(target, context) {
-  if (target !== 'page-refresh-policy') {
+  const config = TARGETS[target];
+  if (!config) {
     return {
       ok: false,
       id: target,
@@ -110,11 +171,11 @@ function evaluateTarget(target, context) {
   }
 
   const blockers = [];
-  const freshnessWorkflow = findFreshnessWorkflow(context.inputFreshness.report, 'page-refresh');
+  const freshnessWorkflow = findFreshnessWorkflow(context.inputFreshness.report, config.workflow);
   if (!freshnessWorkflow) {
-    blockers.push(blocker('input-freshness-missing', 'Input freshness receipt does not include page-refresh.'));
+    blockers.push(blocker('input-freshness-missing', `Input freshness receipt does not include ${config.workflow}.`));
   } else if (freshnessWorkflow.ok !== true || freshnessWorkflow.status !== 'fresh') {
-    blockers.push(blocker('input-freshness-stale', freshnessWorkflow.next_action || 'Page-refresh input freshness is not fresh.', {
+    blockers.push(blocker('input-freshness-stale', freshnessWorkflow.next_action || `${config.workflow} input freshness is not fresh.`, {
       status: freshnessWorkflow.status || '',
       input: freshnessWorkflow.input || '',
       refresh_command: freshnessWorkflow.refresh_command || '',
@@ -128,11 +189,11 @@ function evaluateTarget(target, context) {
     }));
   }
 
-  const dirtyContentPaths = context.gitStatus.paths.filter(isProofBlockingDirtyPath);
-  if (dirtyContentPaths.length) {
-    blockers.push(blocker('dirty-content-wip', 'Dirty content or generated content-support files make a positive page-refresh proof unsafe until ownership is resolved.', {
-      paths: dirtyContentPaths,
-    }));
+  const dirtyPaths = config.dirty_path_predicate
+    ? context.gitStatus.paths.filter(config.dirty_path_predicate)
+    : [];
+  if (dirtyPaths.length) {
+    blockers.push(blocker(config.dirty_blocker_code, config.dirty_blocker_message, { paths: dirtyPaths }));
   }
   if (context.gitStatus.exit_code !== 0 && !GIT_STATUS_PATH) {
     blockers.push(blocker('git-status-failed', 'git status --short exited non-zero.', {
@@ -144,37 +205,31 @@ function evaluateTarget(target, context) {
   const ready = blockers.length === 0;
   return {
     ok: ready,
-    id: 'page-refresh-policy',
+    id: config.id,
     status: ready ? 'ready' : 'blocked',
-    workflow: 'page-refresh',
-    proof_goal: 'Positive bounded page-refresh runner policy proof.',
+    workflow: config.workflow,
+    proof_goal: config.proof_goal,
     blockers,
     readiness_checks: [
       {
-        id: 'page-refresh-input-freshness',
+        id: config.input_check_id,
         ok: freshnessWorkflow?.ok === true && freshnessWorkflow?.status === 'fresh',
         status: freshnessWorkflow?.status || 'missing',
       },
-      {
-        id: 'dirty-content-boundary',
-        ok: dirtyContentPaths.length === 0,
-        dirty_content_paths: dirtyContentPaths,
-      },
+      ...(config.dirty_check_id ? [{
+        id: config.dirty_check_id,
+        ok: dirtyPaths.length === 0,
+        dirty_paths: dirtyPaths,
+      }] : []),
     ],
-    recommended_commands: ready ? [
-      'npm run runner:page-refresh:plan -- --fail-on-stale-ledger',
-      'npm run runner:page-refresh:closeout',
-      'npm run agent:meta:closeout:auto -- --receipt <page-refresh-closeout.json> --json',
-    ] : [
-      'npm --silent run agent:proof:readiness -- --target page-refresh-policy --json',
-    ],
-    next_actions: ready ? [
-      'Run the bounded page-refresh runner proof and validate the generated closeout with agent:meta:closeout:auto.',
-    ] : nextActionsForBlockers(blockers),
+    recommended_commands: ready
+      ? config.recommended_ready_commands
+      : [`npm --silent run agent:proof:readiness -- --target ${config.id} --json`],
+    next_actions: ready ? config.ready_next_actions : config.blocked_next_actions(blockers),
   };
 }
 
-function readInputFreshness() {
+function readInputFreshness(workflows) {
   if (INPUT_FRESHNESS_PATH) {
     const path = resolve(PROJECT_DIR, INPUT_FRESHNESS_PATH);
     if (!existsSync(path)) {
@@ -203,8 +258,7 @@ function readInputFreshness() {
   }
   const result = spawnSync(process.execPath, [
     resolve(SCRIPT_DIR, 'agent-input-freshness-receipt.mjs'),
-    '--workflow',
-    'page-refresh',
+    ...workflows.flatMap((workflow) => ['--workflow', workflow]),
     '--json',
     '--project-dir',
     PROJECT_DIR,
@@ -212,8 +266,9 @@ function readInputFreshness() {
     cwd: DEFAULT_PROJECT_DIR,
     encoding: 'utf8',
   });
+  const workflowText = workflows.map((workflow) => `--workflow ${workflow}`).join(' ');
   return {
-    source: 'node scripts/agent-input-freshness-receipt.mjs --workflow page-refresh --json',
+    source: `node scripts/agent-input-freshness-receipt.mjs ${workflowText} --json`,
     exit_code: result.status ?? 1,
     stderr_tail: tail(result.stderr),
     report: parseJson(result.stdout),
@@ -262,11 +317,18 @@ function parseGitStatus(text) {
     .filter(Boolean);
 }
 
-function isProofBlockingDirtyPath(path) {
+function isPageRefreshBlockingDirtyPath(path) {
   return path === 'PAGE_REFRESH_LEDGER.md'
     || path === 'src/data/source-registry.json'
     || path === 'src/data/coverage-backlog.json'
     || path.startsWith('src/content/');
+}
+
+function isToolRefreshBlockingDirtyPath(path) {
+  return path === 'PAGE_REFRESH_LEDGER.md'
+    || path === 'src/data/source-registry.json'
+    || path === 'src/data/coverage-backlog.json'
+    || path.startsWith('src/content/tools/');
 }
 
 function findFreshnessWorkflow(receipt, workflow) {
@@ -274,13 +336,34 @@ function findFreshnessWorkflow(receipt, workflow) {
   return receipt.workflows.find((item) => item && item.id === workflow) || null;
 }
 
-function nextActionsForBlockers(blockers) {
+function pageRefreshBlockedActions(blockers) {
   const actions = [];
   if (blockers.some((item) => item.code === 'dirty-content-wip')) {
     actions.push('Resolve, commit, or explicitly set aside dirty content and content-support files before running the positive page-refresh policy proof.');
   }
   if (blockers.some((item) => item.code === 'input-freshness-stale')) {
     actions.push('Regenerate and check PAGE_REFRESH_LEDGER.md only after dirty content ownership is resolved, then rerun proof readiness.');
+  }
+  if (!actions.length) actions.push('Clear the listed blockers, then rerun proof readiness.');
+  return actions;
+}
+
+function toolRefreshBlockedActions(blockers) {
+  const actions = [];
+  if (blockers.some((item) => item.code === 'dirty-tool-refresh-wip')) {
+    actions.push('Resolve, commit, or explicitly set aside dirty tool content and content-support files before running the positive tool-refresh policy proof.');
+  }
+  if (blockers.some((item) => item.code === 'input-freshness-stale')) {
+    actions.push('Refresh the tool-refresh freshness report, rerun proof readiness, then run the bounded tool-refresh policy proof.');
+  }
+  if (!actions.length) actions.push('Clear the listed blockers, then rerun proof readiness.');
+  return actions;
+}
+
+function affiliateBlockedActions(blockers) {
+  const actions = [];
+  if (blockers.some((item) => item.code === 'input-freshness-stale')) {
+    actions.push('Refresh the affiliate conversion inventory, rerun proof readiness, then run the bounded affiliate handoff policy proof.');
   }
   if (!actions.length) actions.push('Clear the listed blockers, then rerun proof readiness.');
   return actions;

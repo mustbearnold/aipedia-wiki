@@ -16,38 +16,58 @@ function writeJson(path, value) {
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
 }
 
-function freshnessReceipt(status = 'fresh') {
+function workflowReceipt(id, status = 'fresh') {
   const ok = status === 'fresh';
+  const metadata = {
+    'page-refresh': {
+      kind: 'page-refresh-ledger',
+      input: 'PAGE_REFRESH_LEDGER.md',
+      refresh_command: 'npm run ledger:pages && npm run ledger:pages:check',
+      enforce_command: 'npm run page:refresh:batch -- --fail-on-stale-ledger --json',
+    },
+    'tool-refresh': {
+      kind: 'tool-refresh-freshness-report',
+      input: 'audit-freshness-queue',
+      refresh_command: 'npm run audit:freshness -- --json',
+      enforce_command: 'npm run tool:refresh:batch -- --fail-on-stale-inputs --json',
+    },
+    'affiliate-conversion': {
+      kind: 'affiliate-conversion-inventory',
+      input: 'affiliate-conversion-inventory',
+      refresh_command: 'npm run affiliate:conversion:inventory -- --json',
+      enforce_command: 'npm run affiliate:conversion:plan -- --fail-on-stale-inputs --json',
+    },
+  }[id];
   return {
+    id,
+    ...metadata,
     ok,
+    status,
+    next_action: ok ? '' : `Refresh ${id}.`,
+  };
+}
+
+function freshnessReceipt(workflows = { 'page-refresh': 'fresh' }) {
+  const entries = Object.entries(workflows).map(([id, status]) => workflowReceipt(id, status));
+  return {
+    ok: entries.every((entry) => entry.ok),
     mode: 'input-freshness-receipt',
     schema_version: 'aipedia.input-freshness-receipt.v1',
-    workflows: [
-      {
-        id: 'page-refresh',
-        kind: 'page-refresh-ledger',
-        ok,
-        status,
-        input: 'PAGE_REFRESH_LEDGER.md',
-        refresh_command: 'npm run ledger:pages && npm run ledger:pages:check',
-        enforce_command: 'npm run page:refresh:batch -- --fail-on-stale-ledger --json',
-        next_action: ok ? '' : 'Run npm run ledger:pages && npm run ledger:pages:check.',
-      },
-    ],
+    workflows: entries,
     summary: {
-      workflow_count: 1,
-      ok_count: ok ? 1 : 0,
-      attention_count: ok ? 0 : 1,
-      stale_count: ok ? 0 : 1,
+      workflow_count: entries.length,
+      ok_count: entries.filter((entry) => entry.ok).length,
+      attention_count: entries.filter((entry) => !entry.ok).length,
+      stale_count: entries.filter((entry) => entry.status === 'stale').length,
     },
-    next_actions: ok ? [] : ['Run npm run ledger:pages && npm run ledger:pages:check.'],
+    next_actions: entries.filter((entry) => !entry.ok).map((entry) => entry.next_action),
   };
 }
 
 test('proof readiness reports page-refresh policy ready when inputs are fresh and content tree is clean', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-ready-'));
   try {
-    writeJson(join(root, 'freshness.json'), freshnessReceipt('fresh'));
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'page-refresh': 'fresh' }));
     writeFileSync(join(root, 'status.txt'), '');
 
     const result = runReadiness([
@@ -75,7 +95,7 @@ test('proof readiness reports page-refresh policy ready when inputs are fresh an
 test('proof readiness blocks stale page-refresh inputs and dirty content WIP', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-blocked-'));
   try {
-    writeJson(join(root, 'freshness.json'), freshnessReceipt('stale'));
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'page-refresh': 'stale' }));
     writeFileSync(
       join(root, 'status.txt'),
       [
@@ -109,6 +129,64 @@ test('proof readiness blocks stale page-refresh inputs and dirty content WIP', (
       'src/data/source-registry.json',
       'src/content/comparisons/captions-vs-synthesia.md',
     ]);
+    assert.deepEqual(report.targets[0].readiness_checks[1].dirty_paths, [
+      'src/content/tools/synthesia.md',
+      'src/data/source-registry.json',
+      'src/content/comparisons/captions-vs-synthesia.md',
+    ]);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('proof readiness evaluates tool-refresh and affiliate handoff targets independently', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-multi-'));
+  try {
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({
+      'tool-refresh': 'fresh',
+      'affiliate-conversion': 'fresh',
+    }));
+    writeFileSync(
+      join(root, 'status.txt'),
+      [
+        ' M src/content/tools/synthesia.md',
+        ' M src/data/source-registry.json',
+        '?? src/content/comparisons/captions-vs-synthesia.md',
+      ].join('\n'),
+    );
+
+    const result = runReadiness([
+      '--project-dir',
+      root,
+      '--input-freshness',
+      'freshness.json',
+      '--git-status-file',
+      'status.txt',
+      '--target',
+      'tool-refresh-policy',
+      '--target',
+      'affiliate-handoff-policy',
+      '--json',
+    ]);
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.summary.target_count, 2);
+    assert.equal(report.summary.ready_count, 1);
+    assert.equal(report.summary.blocked_count, 1);
+
+    const toolTarget = report.targets.find((target) => target.id === 'tool-refresh-policy');
+    const affiliateTarget = report.targets.find((target) => target.id === 'affiliate-handoff-policy');
+    assert.equal(toolTarget.status, 'blocked');
+    assert.deepEqual(toolTarget.blockers.map((item) => item.code), ['dirty-tool-refresh-wip']);
+    assert.deepEqual(toolTarget.blockers[0].paths, [
+      'src/content/tools/synthesia.md',
+      'src/data/source-registry.json',
+    ]);
+    assert.equal(affiliateTarget.status, 'ready');
+    assert.equal(
+      affiliateTarget.recommended_commands.at(-1),
+      'npm run agent:closeout:check -- --receipt <affiliate-handoff.json> --require-workflow-policy --json',
+    );
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
