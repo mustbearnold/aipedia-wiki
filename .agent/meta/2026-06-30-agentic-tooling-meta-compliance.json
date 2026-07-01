@@ -811,7 +811,7 @@
       "strict_latest_loop_closeout_passed": true,
       "final_trend_closeout_passed": true
     },
-    "status": "verified-local-pending-commit",
+    "status": "verified-committed-pushed",
     "loop_receipt": ".agent/loop-runs/system/2026-07-01T07-39-47-550Z-loop-run.json",
     "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-89-final-efficiency-trends.json",
     "loop_summary": {
@@ -841,7 +841,7 @@
       "persistent_attention_loop_count": 3,
       "persistent_attention_command_count": 4
     },
-    "commit": null
+    "commit": "78528594"
   },
   "next_system_targets": [
     "Prepare runtime integration so deployed default routing policy changes must attach handoff and monitor-trend receipts before they can count as complete.",
@@ -863,5 +863,6 @@
     "slice_89_efficiency_trend_closeout_validated": true,
     "scoped_smart_passed": true,
     "quick_passed": true
-  }
+  },
+  "last_commit": "78528594"
 }
