@@ -815,7 +815,8 @@
       "persistent_attention_loop_count": 3,
       "persistent_attention_command_count": 4
     },
-    "status": "verified-pending-commit-push"
+    "status": "verified-committed-pushed",
+    "commit": "d2e6398a"
   },
   "next_system_targets": [
     "Collect post-canary exact token, correction, quality, accuracy, and wall-time receipts before any default-enabled rollout.",

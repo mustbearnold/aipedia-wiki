@@ -2,7 +2,7 @@
 
 ### 2026-06-30: Agentic Tooling Meta Slice 85, Canary Routing Rollout Proof
 
-- Status: Canary rollout proof and stage-guard tests pass focused validation, scoped smart/quick validation, strict loop closeout, and final trend closeout. Pending commit and push.
+- Status: Canary rollout proof and stage-guard tests pass focused validation, scoped smart/quick validation, strict loop closeout, and final trend closeout. Committed and pushed as `d2e6398a`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Expanded `tests/scripts/agent-routing-rollout.test.mjs` to cover canary-ready receipts, unsafe canary traffic rejection, and default-enabled full-traffic semantics.
 - Live telemetry proof: `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
@@ -12,7 +12,7 @@
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-85-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,932 ms, latest wall duration 5,069 ms, latest estimated full receipt tokens 11,959, latest system artifact count 13, 3 persistent attention loops, and 4 persistent attention commands.
 - Verification: syntax checks passed for the rollout CLI/library. Focused rollout, closeout, and router tests passed 82/82. Scoped `check:smart` passed with 617 script tests plus command audit. `check:quick` passed with 617 script tests, command audit, and quick assets. The canary telemetry, suite, rollout, latest loop, and trend receipts all passed auto-routed closeout.
 - Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time increased by 137 ms versus Slice 84, while estimated receipt tokens dropped by 328.
-- Next: Commit and push only Slice 85 system files, then collect post-canary exact token, correction, quality, accuracy, and wall-time receipts before any default-enabled rollout.
+- Next: Collect post-canary exact token, correction, quality, accuracy, and wall-time receipts before any default-enabled rollout.
 
 ### 2026-06-30: Agentic Tooling Meta Slice 84, Guarded Routing Rollout Receipts
 
