@@ -831,16 +831,15 @@
       "loop_status_changes": 0,
       "command_status_changes": 0
     },
-    "status": "validated-pending-push",
+    "status": "pushed",
     "previous_head_commit": "965a7dd3",
-    "commit": ""
+    "commit": "3bf2dc20"
   },
   "next_system_targets": [
-    "Commit and push Slice 95, then record the pushed commit hash.",
     "Use the runtime refresh planner on the next real model, prompt, policy, tool, workflow, router, or runtime drift event and add any missing command input fields exposed by that pilot.",
     "Attach real provider billing/runtime token exports when available instead of fixture usage payloads."
   ],
-  "last_updated": "2026-07-01T09:13:55.000Z",
+  "last_updated": "2026-07-01T09:16:24.000Z",
   "latest_receipts": {
     "routing_handoff": ".agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json",
     "routing_monitor_trends": ".agent/evals/routing-monitor-trends/2026-06-30-slice-94-second-window-monitor-trends.json",
@@ -888,7 +887,7 @@
     "slice_95_strict_latest_loop_closeout_validated": true,
     "slice_95_final_efficiency_trend_closeout_validated": true
   },
-  "last_commit": "2ed0ec6e",
+  "last_commit": "3bf2dc20",
   "compliance_notes": {
     "slice_93_runtime_rollup_required": true,
     "slice_93_live_strict_completion_closeout_validated": true,

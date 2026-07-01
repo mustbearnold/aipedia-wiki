@@ -1426,7 +1426,7 @@ Runtime routing evidence refresh now has its own closeout-checkable planner, so 
 - Scoped `check:smart --run`, `check:quick`, strict latest-loop closeout, and final efficiency-trend closeout passed.
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T09-13-02-337Z-loop-run.json` records exact model-token total 3,430, 18 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-95-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,091 ms, estimated full receipt tokens 13,007, exact model-token coverage 0.667, no loop or command status changes, wall time down 14 ms versus Slice 94, and estimated full receipt tokens down 383.
-- Commit and push are pending.
+- Slice 95 is committed and pushed as `3bf2dc20`.
 
 ## Compliance Matrix
 

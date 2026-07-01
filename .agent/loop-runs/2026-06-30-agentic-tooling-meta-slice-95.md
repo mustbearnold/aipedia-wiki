@@ -60,9 +60,9 @@ Make runtime routing drift refresh explicit, closeout-checkable, and replayable 
 - `npm --silent run agent:efficiency:trends -- --max-runs 3 --fail-on-missing-metrics --out .agent/evals/efficiency-trends-receipts/2026-06-30-slice-95-final-efficiency-trends.json --json`
 - `npm --silent run agent:meta:closeout:auto -- --receipt .agent/evals/efficiency-trends-receipts/2026-06-30-slice-95-final-efficiency-trends.json --json`
 
-## Pending
+## Status
 
-- Commit and push.
+- Committed and pushed as `3bf2dc20`.
 
 ## Boundary
 
