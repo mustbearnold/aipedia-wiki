@@ -100,6 +100,7 @@ function usage() {
     '  runner-closeout  Explicit Rust runner receipt strict proof plus workflow-policy checks.',
     '  efficiency-trends Durable loop efficiency trend receipt validation.',
     '  proof-readiness  Durable proof-readiness state receipt validation.',
+    '  routing-evaluation Durable orchestrator/subagent routing evaluation receipt validation.',
     '',
     'Options:',
     '  --receipt <path>     Receipt to validate. Repeatable. Alias: --path.',
@@ -115,7 +116,7 @@ function buildRoute() {
     : ['.agent/loop-runs/system/latest.json'];
   const receipts = rawPaths.map((rawPath) => inspectReceipt(rawPath));
   const routeIssues = receipts.flatMap((receipt) => receipt.route_issues);
-  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness']);
+  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-routing-evaluation']);
   const unsupported = receipts.filter((receipt) => !supportedTypes.has(receipt.type));
   for (const receipt of unsupported) {
     routeIssues.push(issue(
@@ -127,6 +128,7 @@ function buildRoute() {
   const hasLoop = receipts.some((receipt) => receipt.type === 'loop-run');
   const hasTrend = receipts.some((receipt) => receipt.type === 'loop-efficiency-trends');
   const hasReadiness = receipts.some((receipt) => receipt.type === 'meta-proof-readiness');
+  const hasRoutingEvaluation = receipts.some((receipt) => receipt.type === 'agent-routing-evaluation');
   const strictFlags = [
     ...(receipts.some((receipt) => STRICT_RECEIPT_TYPES.has(receipt.type)) ? STRICT_META_FLAGS : []),
     ...(hasRunner ? ['--require-workflow-policy'] : []),
@@ -137,6 +139,7 @@ function buildRoute() {
     hasLoop,
     hasTrend,
     hasReadiness,
+    hasRoutingEvaluation,
   });
   return {
     ok: routeIssues.length === 0,
@@ -175,10 +178,11 @@ function inspectReceipt(rawPath) {
   };
 }
 
-function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness }) {
+function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasRoutingEvaluation }) {
   const extraProfiles = [
     hasTrend ? 'trends' : '',
     hasReadiness ? 'readiness' : '',
+    hasRoutingEvaluation ? 'routing-evaluation' : '',
   ].filter(Boolean);
   if ((hasRunner || hasLoop) && extraProfiles.length) {
     const strictProfiles = [
@@ -187,6 +191,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness }) {
     ].filter(Boolean);
     return `mixed-${[...strictProfiles, ...extraProfiles].join('-')}`;
   }
+  if (hasRoutingEvaluation && (hasTrend || hasReadiness)) return `mixed-${extraProfiles.join('-')}`;
   if (hasTrend && hasReadiness) return 'mixed-trends-readiness';
   if (hasRunner && hasLoop) return 'mixed-loop-runner';
   if (hasRunner) return 'runner-closeout';
@@ -194,6 +199,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness }) {
   if (hasLoop) return 'latest-loop';
   if (hasTrend) return 'efficiency-trends';
   if (hasReadiness) return 'proof-readiness';
+  if (hasRoutingEvaluation) return 'routing-evaluation';
   return 'unsupported';
 }
 
@@ -204,6 +210,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
   if (value.schema_version === 'aipedia.meta-proof-readiness.v1') return 'meta-proof-readiness';
   if (value.schema_version === 'aipedia.loop-efficiency-trends.v1') return 'loop-efficiency-trends';
+  if (value.schema_version === 'aipedia.agent-routing-evaluation.v1') return 'agent-routing-evaluation';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';

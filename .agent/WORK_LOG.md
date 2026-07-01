@@ -2218,3 +2218,17 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-71.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T02-36-45-311Z-loop-run.json`.
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-71-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, exact model token coverage rate 1, latest exact total tokens 7,800, latest wall duration 4,865 ms, latest estimated full receipt tokens 12,383, and 2 exact subagent contexts.
 - Next: Commit and push, then add exact correction-count telemetry or run a bounded routing comparison only when exact token, quality, correction, wall-time, and accuracy fields are all available.
+
+### 2026-06-30: Agentic Tooling Meta Slice 72, Routing Evaluation Receipts
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:evaluate`, backed by `scripts/lib/routing-evaluation.mjs`, to compare orchestrator/subagent routing candidates only when exact token usage, subagent breakdowns, wall duration, quality score, accuracy score, correction outcomes, and task completion are present.
+- Changed: Added `aipedia.agent-routing-evaluation.v1` closeout validation. `agent:closeout:check` recomputes totals, weighted scores, winners, recommendations, and next actions, while `agent:meta:closeout:auto` now routes routing-evaluation receipts directly.
+- System lesson: exact subagent token accounting is useful only when paired with outcome evidence. Routing changes now need a receipt that weighs quality, accuracy, corrections, token cost, wall time, and task completion together.
+- Verification: routing evaluator syntax, closeout/router syntax, focused routing/closeout/router tests 59/59, live routing receipt generation, zero-request exact-token rejection, auto-routed closeout for the routing receipt, enforced `loop:all:record` with DAG refs, strict latest-loop auto closeout, final efficiency trend generation, and auto-routed trend closeout passed.
+- Durable proof: `.agent/evals/routing-evaluations/2026-06-30-slice-72-routing-eval-input.json`.
+- Durable receipt: `.agent/evals/routing-evaluations/2026-06-30-slice-72-routing-eval-receipt.json`; slice receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-72.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T02-58-33-672Z-loop-run.json`.
+- Routing proof: `orchestrated-specialists` is recommended over `single-agent` with 0.964 versus 0.913 weighted score, 5,200 versus 6,000 exact total tokens, 6,400 ms versus 7,000 ms wall time, and 0.051 improvement margin.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-72-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 4,934 ms, latest estimated full receipt tokens 12,074, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
+- Next: Commit and push, then add automatic exact correction-count telemetry or expand routing evaluation across multiple real task classes before changing default orchestration.

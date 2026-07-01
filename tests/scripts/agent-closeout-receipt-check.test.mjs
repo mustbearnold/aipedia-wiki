@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
+import { buildRoutingEvaluation } from '../../scripts/lib/routing-evaluation.mjs';
 
 function runCheck(args = []) {
   return spawnSync(process.execPath, ['scripts/agent-closeout-receipt-check.mjs', ...args], {
@@ -814,6 +815,128 @@ function validProofReadinessRefreshPlan() {
   };
 }
 
+function routingSubagent(id, { requestCount = 1, input, output, cached, reasoning }) {
+  return {
+    id,
+    request_count: requestCount,
+    input_tokens: input,
+    output_tokens: output,
+    cached_input_tokens: cached,
+    reasoning_tokens: reasoning,
+    total_tokens: input + output,
+  };
+}
+
+function routingTokens({ requestCount, input, output, cached, reasoning, subagents }) {
+  return {
+    request_count: requestCount,
+    input_tokens: input,
+    output_tokens: output,
+    cached_input_tokens: cached,
+    reasoning_tokens: reasoning,
+    total_tokens: input + output,
+    subagent_breakdown: subagents,
+  };
+}
+
+function validRoutingEvaluationReceipt() {
+  const input = {
+    goal_id: 'june-30-agentic-tooling-meta-os',
+    run_id: 'slice-72-routing-eval',
+    workflow: 'loop-system',
+    evaluation_task: 'Compare routing variants.',
+    candidates: [
+      {
+        id: 'single-agent',
+        label: 'Single agent',
+        strategy: 'single-agent',
+        model: 'gpt-5.5',
+        workflow: 'loop-system',
+        run_id: 'single-run',
+        orchestrator: 'single-agent',
+        exact_model_tokens: routingTokens({
+          requestCount: 1,
+          input: 4800,
+          output: 1200,
+          cached: 600,
+          reasoning: 300,
+          subagents: [
+            routingSubagent('single-agent', {
+              input: 4800,
+              output: 1200,
+              cached: 600,
+              reasoning: 300,
+            }),
+          ],
+        }),
+        wall_duration_ms: 7000,
+        quality_score: 0.9,
+        accuracy_score: 0.88,
+        correction_outcomes: {
+          findings_count: 2,
+          corrections_applied: 2,
+          residual_issue_count: 0,
+          regression_count: 0,
+        },
+        task_outcome: {
+          task_count: 1,
+          completed_count: 1,
+        },
+      },
+      {
+        id: 'orchestrated-specialists',
+        label: 'Orchestrated specialists',
+        strategy: 'orchestrator-plus-specialists',
+        model: 'gpt-5.5',
+        workflow: 'loop-system',
+        run_id: 'orchestrated-run',
+        orchestrator: 'meta-orchestrator',
+        exact_model_tokens: routingTokens({
+          requestCount: 2,
+          input: 4200,
+          output: 1000,
+          cached: 500,
+          reasoning: 250,
+          subagents: [
+            routingSubagent('evidence-agent', {
+              input: 3400,
+              output: 800,
+              cached: 400,
+              reasoning: 180,
+            }),
+            routingSubagent('validation-agent', {
+              input: 800,
+              output: 200,
+              cached: 100,
+              reasoning: 70,
+            }),
+          ],
+        }),
+        wall_duration_ms: 6400,
+        quality_score: 0.94,
+        accuracy_score: 0.93,
+        correction_outcomes: {
+          findings_count: 2,
+          corrections_applied: 2,
+          residual_issue_count: 0,
+          regression_count: 0,
+        },
+        task_outcome: {
+          task_count: 1,
+          completed_count: 1,
+        },
+      },
+    ],
+  };
+  const result = buildRoutingEvaluation(input, {
+    generatedAt: '2026-07-01T03:00:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing/fixture-input.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validLoopEfficiencyTrendReceipt(overrides = {}) {
   return {
     ok: true,
@@ -988,6 +1111,41 @@ test('closeout receipt check validates loop efficiency trend receipts', () => {
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.receipts[0].type, 'loop-efficiency-trends');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates agent routing evaluation receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-eval-'));
+  const path = join(dir, 'routing-evaluation.json');
+
+  try {
+    writeJson(path, validRoutingEvaluationReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-evaluation');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing evaluation scores', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-eval-'));
+  const path = join(dir, 'routing-evaluation.json');
+
+  try {
+    const receipt = validRoutingEvaluationReceipt();
+    receipt.candidates[1].overall_score = 0.001;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.notEqual(result.status, 0);
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((issue) => issue.code);
+    assert.ok(codes.includes('routing-evaluation-score-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

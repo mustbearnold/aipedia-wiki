@@ -4,6 +4,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateRoutingEvaluationReceipt } from './lib/routing-evaluation.mjs';
 
 const args = process.argv.slice(2);
 const defaultProjectDir = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -232,8 +233,9 @@ function validateReceiptFile(path) {
   else if (type === 'affiliate-handoff') validateAffiliateHandoffReceipt(value, issues);
   else if (type === 'meta-proof-readiness') validateMetaProofReadinessReceipt(value, issues);
   else if (type === 'loop-efficiency-trends') validateLoopEfficiencyTrendReceipt(value, issues);
+  else if (type === 'agent-routing-evaluation') issues.push(...validateRoutingEvaluationReceipt(value));
   else if (type === 'pause-receipt') validatePauseReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, aipedia.loop-efficiency-trends.v1, nor aipedia.pause-receipt.v1.'));
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, aipedia.loop-efficiency-trends.v1, aipedia.agent-routing-evaluation.v1, nor aipedia.pause-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -254,6 +256,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.affiliate-handoff-receipt.v1') return 'affiliate-handoff';
   if (value.schema_version === 'aipedia.meta-proof-readiness.v1') return 'meta-proof-readiness';
   if (value.schema_version === 'aipedia.loop-efficiency-trends.v1') return 'loop-efficiency-trends';
+  if (value.schema_version === 'aipedia.agent-routing-evaluation.v1') return 'agent-routing-evaluation';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';

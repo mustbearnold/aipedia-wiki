@@ -884,16 +884,17 @@ Continue implementing the agentic operating system itself. Tool pages and conten
 
 ### Current State
 
-- Slice 71 is complete locally: exact model-token usage now carries workflow, run, orchestrator, and subagent context through loop receipts, efficiency metrics, trend receipts, and closeout validation.
-- Live proof artifacts: `.agent/evals/model-token-usage/2026-06-30-slice-71-context-token-usage.json`, `.agent/loop-runs/system/2026-07-01T02-36-45-311Z-loop-run.json`, and `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-71-final-efficiency-trends.json`.
-- The latest trend proof reports 3 metric-aware runs, 0 missing metrics, exact token coverage rate 1, latest exact total tokens 7,800, latest wall duration 4,865 ms, and 2 exact subagent contexts.
+- Slice 72 is complete locally: `agent:routing:evaluate` now emits closeout-checkable routing-evaluation receipts for orchestrator/subagent comparisons.
+- Live proof artifacts: `.agent/evals/routing-evaluations/2026-06-30-slice-72-routing-eval-input.json`, `.agent/evals/routing-evaluations/2026-06-30-slice-72-routing-eval-receipt.json`, `.agent/loop-runs/system/2026-07-01T02-58-33-672Z-loop-run.json`, and `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-72-final-efficiency-trends.json`.
+- The routing proof recommends `orchestrated-specialists` over `single-agent`: 0.964 versus 0.913 weighted score, 5,200 versus 6,000 exact total tokens, 6,400 ms versus 7,000 ms wall time, and 0.051 improvement margin.
+- Auto-routed closeout passed for the routing receipt, and focused routing/closeout/router tests passed 59/59, including zero-request exact-token rejection.
 
 ### Next Implementation Slice
 
-1. Add exact correction-count telemetry once a reliable runtime or reviewer source exists.
-2. Evaluate orchestrator/subagent routing only when exact token cost, correction outcomes, wall time, accuracy, and quality are all recorded in receipts.
+1. Add exact correction-count telemetry once a reliable runtime or reviewer source exists, so routing receipts can be fed automatically instead of manually scored.
+2. Expand routing evaluations across multiple real task classes before changing default orchestration.
 3. Resolve or explicitly integrate the separate Captions/Synthesia content WIP, refresh page-ledger input, and rerun page-refresh proof readiness.
-4. Keep `loop:all:record --require-system-progress`, strict DAG closeout, and exact token usage where available on every meta-system closeout.
+4. Keep `loop:all:record --require-system-progress`, strict DAG closeout, exact token usage where available, and `agent:routing:evaluate` for routing changes on every meta-system closeout.
 
 ## Active: Decision Content Flywheel
 
