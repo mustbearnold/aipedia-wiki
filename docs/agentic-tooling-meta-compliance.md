@@ -1408,7 +1408,7 @@ The strict runtime-completion path now has a ready longer-window rollup proof in
 - Scoped `check:smart --run` passed with `git diff --check`. `check:quick` passed with 675 script tests, command audit, and quick assets.
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T08-53-30-585Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, exact model-token usage provided, 16 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-94-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,105 ms, estimated full receipt tokens 13,390, exact model-token coverage 0.333, no loop or command status changes, 3 persistent attention loops, and 4 persistent attention commands.
-- Commit and push are pending.
+- Slice 94 is committed and pushed as `2ed0ec6e`.
 
 ## Compliance Matrix
 

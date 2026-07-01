@@ -847,7 +847,7 @@
       "scoped_smart_passed": true,
       "quick_passed": true
     },
-    "status": "verified-local",
+    "status": "committed-and-pushed",
     "loop_receipt": ".agent/loop-runs/system/2026-07-01T08-53-30-585Z-loop-run.json",
     "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-94-final-efficiency-trends.json",
     "loop_summary": {
@@ -879,14 +879,14 @@
       "persistent_attention_command_count": 4
     },
     "previous_head_commit": "453cf5c13",
-    "commit": ""
+    "commit": "2ed0ec6e"
   },
   "next_system_targets": [
     "Automate or harden the future drift refresh path so routing monitor windows, trend rollups, and strict runtime completion checks regenerate in sequence after relevant model, prompt, policy, tool, workflow, or runtime changes.",
     "Attach real provider billing/runtime token exports when available instead of fixture usage payloads.",
     "Keep default orchestration changes behind runtime-completion, monitor-trend-rollup, exact token, handoff, monitor-trend, correction, quality, accuracy, wall-time, and rollback receipts."
   ],
-  "last_updated": "2026-07-01T09:01:20.000Z",
+  "last_updated": "2026-07-01T09:05:05.000Z",
   "latest_receipts": {
     "routing_handoff": ".agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json",
     "routing_monitor_trends": ".agent/evals/routing-monitor-trends/2026-06-30-slice-94-second-window-monitor-trends.json",
@@ -925,7 +925,7 @@
     "slice_94_scoped_smart_passed": true,
     "slice_94_quick_passed": true
   },
-  "last_commit": "",
+  "last_commit": "2ed0ec6e",
   "compliance_notes": {
     "slice_93_runtime_rollup_required": true,
     "slice_93_live_strict_completion_closeout_validated": true,
