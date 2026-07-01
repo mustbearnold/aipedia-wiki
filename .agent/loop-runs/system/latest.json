@@ -5,24 +5,24 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-07-01T06:38:44.414Z",
+  "generated_at": "2026-07-01T06:53:20.837Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-85-canary-rollout-proof",
+  "run_id": "2026-06-30-slice-86-post-canary-default-rollout-guard",
   "residual_risks": [
-    "Canary rollout receipts allow a bounded 5 percent canary, but default-change remains false until post-canary exact token, correction, quality, accuracy, and wall-time receipts pass."
+    "Default-enabled rollout receipts can now become default-ready, but actual runtime deployment still needs post-change monitoring and rollback receipts before the routing policy is treated as safely deployed."
   ],
   "next_actions": [
-    "Collect post-canary exact token, correction, quality, accuracy, and wall-time receipts before any default-enabled rollout.",
-    "Keep default-change allowed false unless routing-rollout receipts pass at the requested default-enabled stage with fresh post-canary evidence."
+    "Add post-default monitoring and rollback receipts after the default-ready guard, before treating any routing policy as safely deployed.",
+    "Keep default-enabled routing blocked unless --post-canary points at a matching canary-ready receipt and the default metrics suite is fresh from the canary suite."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-85-canary-rollout-proof",
-    "span_id": "span:loop-run:2026-06-30-slice-85-canary-rollout-proof:2026-07-01T06:38:44.414Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-86-post-canary-default-rollout-guard",
+    "span_id": "span:loop-run:2026-06-30-slice-86-post-canary-default-rollout-guard:2026-07-01T06:53:20.837Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-07-01T06:38:44.414Z",
-    "ended_at": "2026-07-01T06:38:49.482Z",
-    "duration_ms": 5069
+    "started_at": "2026-07-01T06:53:20.837Z",
+    "ended_at": "2026-07-01T06:53:26.061Z",
+    "duration_ms": 5224
   },
   "artifact_refs": [
     {
@@ -46,7 +46,7 @@
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-07-01T06-38-44-414Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-07-01T06-53-20-837Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -301,65 +301,65 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 5069,
+  "duration_ms": 5224,
   "model_token_usage": null,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 5069,
-    "total_command_duration_ms": 5065,
+    "wall_duration_ms": 5224,
+    "total_command_duration_ms": 5223,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 316.563,
-    "commands_per_second": 3.156,
-    "loops_per_second": 1.381,
+    "average_command_duration_ms": 326.438,
+    "commands_per_second": 3.063,
+    "loops_per_second": 1.34,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
     "embedded_command_artifact_count": 16,
-    "system_artifact_count": 13,
+    "system_artifact_count": 17,
     "content_artifact_count": 4,
     "other_artifact_count": 0,
-    "agent_system_artifact_count": 12,
+    "agent_system_artifact_count": 16,
     "agent_content_artifact_count": 0,
     "agent_other_artifact_count": 0,
     "preexisting_dirty_count": 5,
-    "system_artifacts_per_second": 2.565,
-    "agent_system_artifacts_per_second": 2.367,
-    "persisted_full_receipt_bytes": 47834,
-    "persisted_latest_receipt_bytes": 29316,
+    "system_artifacts_per_second": 3.254,
+    "agent_system_artifacts_per_second": 3.063,
+    "persisted_full_receipt_bytes": 48632,
+    "persisted_latest_receipt_bytes": 30114,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 2031
+        "duration_ms": 2048
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 606
+        "duration_ms": 633
       },
       {
         "loop_id": "freshness",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 331
+        "duration_ms": 347
       },
       {
         "loop_id": "news-market",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 327
+        "duration_ms": 325
       },
       {
-        "loop_id": "quality-pruning",
-        "label": "site KPI audit",
-        "status": "ok",
-        "duration_ms": 249
+        "loop_id": "freshness",
+        "label": "freshness queue",
+        "status": "attention",
+        "duration_ms": 252
       }
     ]
   },
@@ -477,15 +477,19 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-86-default-enabled-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-86.md",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "scripts/README.md",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
@@ -496,15 +500,19 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-86-default-enabled-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-86.md",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "scripts/README.md",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "content_artifacts": [
@@ -520,28 +528,36 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-86-default-enabled-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-86.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "scripts/README.md",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "agent_system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-86-default-enabled-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-86.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "scripts/README.md",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "agent_content_artifacts": [],
@@ -572,21 +588,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 233,
+      "duration_ms": 252,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 114,
+          "duration_ms": 127,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 118,
+          "duration_ms": 125,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -596,7 +612,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 580,
+      "duration_ms": 600,
       "attention_reasons": [
         "due_now=161"
       ],
@@ -605,7 +621,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 248,
+          "duration_ms": 252,
           "attention_reasons": [
             "due_now=161"
           ],
@@ -614,7 +630,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 331,
+          "duration_ms": 347,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -624,28 +640,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 401,
+      "duration_ms": 433,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 166,
+          "duration_ms": 173,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 108,
+          "duration_ms": 122,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 127,
+          "duration_ms": 138,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -655,7 +671,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 2031,
+      "duration_ms": 2048,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -664,7 +680,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 2031,
+          "duration_ms": 2048,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -688,7 +704,7 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 502,
+      "duration_ms": 513,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
@@ -702,14 +718,14 @@
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 120,
+          "duration_ms": 125,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 132,
+          "duration_ms": 139,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -719,7 +735,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 791,
+      "duration_ms": 837,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -729,7 +745,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 185,
+          "duration_ms": 204,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -750,7 +766,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 606,
+          "duration_ms": 633,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -774,28 +790,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 530,
+      "duration_ms": 541,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 104,
+          "duration_ms": 111,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 99,
+          "duration_ms": 105,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 327,
+          "duration_ms": 325,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -804,13 +820,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-07-01T06-38-44-414Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-07-01T06-53-20-837Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-07-01T05-33-26-436Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T06-38-44-414Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-07-01T05:33:26.436Z",
+      "previous_run": "2026-07-01T06:38:44.414Z",
       "status_changes": [],
-      "duration_delta_ms": 137,
+      "duration_delta_ms": 155,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

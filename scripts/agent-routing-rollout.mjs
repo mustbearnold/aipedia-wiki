@@ -9,13 +9,14 @@ import { buildRoutingRollout, routingRolloutIssue } from './lib/routing-rollout.
 const args = process.argv.slice(2);
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_PROJECT_DIR = dirname(SCRIPT_DIR);
-const KNOWN_FLAGS = new Set(['--help', '-h', '--input', '--json', '--out', '--project-dir', '--review', '--rollout-stage', '--rollout-task', '--root', '--stage', '--suite', '--traffic-percent']);
-const VALUE_FLAGS = new Set(['--input', '--out', '--project-dir', '--review', '--rollout-stage', '--rollout-task', '--root', '--stage', '--suite', '--traffic-percent']);
+const KNOWN_FLAGS = new Set(['--canary-rollout', '--help', '-h', '--input', '--json', '--out', '--post-canary', '--project-dir', '--review', '--rollout-stage', '--rollout-task', '--root', '--stage', '--suite', '--traffic-percent']);
+const VALUE_FLAGS = new Set(['--canary-rollout', '--input', '--out', '--post-canary', '--project-dir', '--review', '--rollout-stage', '--rollout-task', '--root', '--stage', '--suite', '--traffic-percent']);
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || DEFAULT_PROJECT_DIR);
 const REVIEW_PATH = valueFor('--review') || valueFor('--input');
 const SUITE_PATH = valueFor('--suite');
+const POST_CANARY_PATH = valueFor('--post-canary') || valueFor('--canary-rollout');
 const OUT_PATH = valueFor('--out');
 const ROLLOUT_STAGE = valueFor('--rollout-stage') || valueFor('--stage');
 const TRAFFIC_PERCENT = valueFor('--traffic-percent');
@@ -39,13 +40,16 @@ if (argumentIssues.length) {
 
 const reviewRead = readJsonFile(REVIEW_PATH, 'routing-rollout-review-missing', 'routing-rollout-review-invalid');
 const suiteRead = readJsonFile(SUITE_PATH, 'routing-rollout-suite-missing', 'routing-rollout-suite-invalid');
-const readIssues = [...reviewRead.issues, ...suiteRead.issues];
+const postCanaryRead = POST_CANARY_PATH
+  ? readJsonFile(POST_CANARY_PATH, 'routing-rollout-post-canary-missing', 'routing-rollout-post-canary-invalid')
+  : { absolutePath: '', value: null, issues: [] };
+const readIssues = [...reviewRead.issues, ...suiteRead.issues, ...postCanaryRead.issues];
 if (readIssues.length) {
   emit({
     ok: false,
     mode: 'agent-routing-rollout',
     project_dir: PROJECT_DIR,
-    source: [REVIEW_PATH, SUITE_PATH].filter(Boolean).join(' + '),
+    source: [REVIEW_PATH, SUITE_PATH, POST_CANARY_PATH].filter(Boolean).join(' + '),
     issues: readIssues,
   });
   process.exit(1);
@@ -54,6 +58,7 @@ if (readIssues.length) {
 const result = buildRoutingRollout({
   review: reviewRead.value,
   suite: suiteRead.value,
+  ...(postCanaryRead.value ? { post_canary: postCanaryRead.value } : {}),
   rollout: {
     stage: ROLLOUT_STAGE || 'shadow',
     ...(TRAFFIC_PERCENT ? { traffic_percent: Number(TRAFFIC_PERCENT) } : {}),
@@ -61,14 +66,14 @@ const result = buildRoutingRollout({
   ...(ROLLOUT_TASK ? { rollout_task: ROLLOUT_TASK } : {}),
 }, {
   projectDir: PROJECT_DIR,
-  source: `${projectPath(reviewRead.absolutePath)} + ${projectPath(suiteRead.absolutePath)}`,
+  source: [reviewRead.absolutePath, suiteRead.absolutePath, postCanaryRead.absolutePath].filter(Boolean).map(projectPath).join(' + '),
 });
 if (result.issues.length) {
   emit({
     ok: false,
     mode: 'agent-routing-rollout',
     project_dir: PROJECT_DIR,
-    source: `${projectPath(reviewRead.absolutePath)} + ${projectPath(suiteRead.absolutePath)}`,
+    source: [reviewRead.absolutePath, suiteRead.absolutePath, postCanaryRead.absolutePath].filter(Boolean).map(projectPath).join(' + '),
     issues: result.issues,
   });
   process.exit(1);
@@ -90,13 +95,16 @@ function usage() {
     'Usage:',
     '  node scripts/agent-routing-rollout.mjs --review <path> --suite <path> --stage shadow --json',
     '  node scripts/agent-routing-rollout.mjs --review <path> --suite <path> --stage canary --traffic-percent 5 --out <path> --json',
+    '  node scripts/agent-routing-rollout.mjs --review <path> --suite <path> --post-canary <path> --stage default-enabled --traffic-percent 100 --out <path> --json',
     '',
     'Builds an aipedia.agent-routing-rollout.v1 receipt from an accepted review and a fresh routing-suite metrics receipt.',
     'The gate requires exact tokens, correction telemetry, quality, accuracy, and wall-time evidence for every rollout scenario.',
+    'Default-enabled rollout also requires a matching canary-ready receipt plus a fresh post-canary metrics suite.',
     '',
     'Options:',
     '  --review <path>            Routing-policy-review receipt. Alias: --input.',
     '  --suite <path>             Fresh routing-evaluation-suite receipt for rollout metrics.',
+    '  --post-canary <path>       Required for default-enabled rollout. Alias: --canary-rollout.',
     '  --stage <name>             shadow, canary, or default-enabled. Alias: --rollout-stage.',
     '  --traffic-percent <value>  Required for canary or default-enabled stages.',
     '  --out <path>               Optional rollout receipt output path.',

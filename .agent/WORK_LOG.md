@@ -1,5 +1,21 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 86, Post-Canary Default Rollout Guard
+
+- Status: Default-enabled rollout now requires post-canary lineage and live default-ready proof passes focused validation, scoped smart/quick validation, strict loop closeout, and final trend closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: `agent:routing:rollout` accepts `--post-canary <path>` / `--canary-rollout <path>` and embeds a `post_canary` summary in default-enabled receipts.
+- Changed: Default-enabled rollout now fails closed unless the post-canary receipt is `canary-ready`, matches the same routing-policy-review lineage, still passes exact-token, correction, quality, accuracy, and wall-time gates, and uses a default metrics suite fresh from the canary suite.
+- Changed: Historical non-default v1 rollout receipts remain closeout-checkable when they predate the new post-canary evaluation fields.
+- Live telemetry proof: `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
+- Live suite proof: `.agent/evals/routing-suites/2026-06-30-slice-86-post-canary-suite-receipt.json` passed auto-routed closeout with 2 telemetry-backed scenarios, 2 recommendations, telemetry coverage 1.0, total exact-token delta 3,920, total wall-duration delta 3,400, and conditional task-class routing preserved.
+- Live rollout proof: `.agent/evals/routing-rollouts/2026-06-30-slice-86-default-enabled-rollout-receipt.json` passed auto-routed closeout with status `default-ready`, stage `default-enabled`, traffic percent 100, guard passed true, default-change allowed true, post-canary required true, post-canary ready true, review lineage match true, fresh default suite true, 2/2 scenarios passing, min quality 0.94, min accuracy 0.94, 0 residual issues, and 0 regressions.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T06-53-20-837Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-86-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,069 ms, latest wall duration 5,224 ms, latest estimated full receipt tokens 12,158, latest system artifact count 17, 3 persistent attention loops, and 4 persistent attention commands.
+- Verification: syntax checks passed for the rollout CLI/library. Focused routing-rollout, closeout, and router tests passed 86/86. Slice 85 historical canary rollout receipt still passes auto-routed closeout under the compatibility path. Scoped `check:smart` passed with 621 script tests plus command audit. `check:quick` passed with 621 script tests, command audit, and quick assets. The post-canary telemetry, suite, default rollout, latest loop, and trend receipts all passed auto-routed closeout.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 16 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time increased by 155 ms versus Slice 85, and estimated receipt tokens increased by 199 because the default-ready proof added receipt bytes.
+- Next: Commit and push only Slice 86 system files, then add post-default monitoring and rollback receipts before treating any policy as safely deployed.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 85, Canary Routing Rollout Proof
 
 - Status: Canary rollout proof and stage-guard tests pass focused validation, scoped smart/quick validation, strict loop closeout, and final trend closeout. Committed and pushed as `d2e6398a`.

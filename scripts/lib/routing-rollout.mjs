@@ -26,14 +26,20 @@ export function buildRoutingRollout(input, options = {}) {
   const sourceReview = normalizeSourceReview(input, issues);
   const rolloutSuite = normalizeRolloutSuite(input, issues);
   const rollout = normalizeRollout(input, issues);
+  const postCanary = normalizePostCanary(input, issues);
   const thresholds = normalizeThresholds(input.thresholds, issues);
   if (issues.length) return { receipt: null, issues };
 
   const scenarios = rolloutSuite.scenarios.map((scenario) => rolloutScenario(scenario, thresholds));
   const totals = rolloutTotals(scenarios);
-  const rolloutEvaluation = rolloutEvaluationSummary(sourceReview, rolloutSuite, rollout, thresholds, totals, scenarios);
+  const rolloutEvaluation = rolloutEvaluationSummary(sourceReview, rolloutSuite, rollout, thresholds, totals, scenarios, postCanary);
   const guardrails = rolloutGuardrails(sourceReview, rolloutSuite, rolloutEvaluation, scenarios);
   const nextActions = rolloutNextActions(rolloutEvaluation, rollout);
+  const source = options.source || input.source || [
+    sourceReview.receipt_path,
+    rolloutSuite.receipt_path,
+    postCanary.receipt_path,
+  ].filter(Boolean).join(' + ');
 
   return {
     receipt: {
@@ -42,13 +48,14 @@ export function buildRoutingRollout(input, options = {}) {
       schema_version: ROUTING_ROLLOUT_SCHEMA_VERSION,
       generated_at: options.generatedAt || input.generated_at || new Date().toISOString(),
       project_dir: options.projectDir || input.project_dir || '.',
-      source: options.source || input.source || [sourceReview.receipt_path, rolloutSuite.receipt_path].filter(Boolean).join(' + '),
+      source,
       goal_id: stringValue(input.goal_id) || sourceReview.goal_id || rolloutSuite.goal_id,
       run_id: stringValue(input.run_id) || `${sourceReview.run_id}:rollout:${rolloutSuite.run_id}`,
       workflow: stringValue(input.workflow) || sourceReview.workflow || rolloutSuite.workflow,
       rollout_task: stringValue(input.rollout_task || input.task) || `Guarded rollout for ${sourceReview.run_id}`,
       source_review: sourceReview,
       rollout,
+      post_canary: postCanary,
       thresholds,
       rollout_suite: rolloutSuite,
       totals,
@@ -83,6 +90,7 @@ export function validateRoutingRolloutReceipt(value) {
   }
   if (!isObject(value.source_review)) issues.push(routingRolloutIssue('routing-rollout-source-review-invalid', 'source_review must be an object.'));
   if (!isObject(value.rollout)) issues.push(routingRolloutIssue('routing-rollout-config-invalid', 'rollout must be an object.'));
+  if (value.post_canary != null && !isObject(value.post_canary)) issues.push(routingRolloutIssue('routing-rollout-post-canary-invalid', 'post_canary must be an object when present.'));
   if (!isObject(value.thresholds)) issues.push(routingRolloutIssue('routing-rollout-threshold-invalid', 'thresholds must be an object.'));
   if (!isObject(value.rollout_suite)) issues.push(routingRolloutIssue('routing-rollout-suite-invalid', 'rollout_suite must be an object.'));
   if (!isObject(value.totals)) issues.push(routingRolloutIssue('routing-rollout-total-mismatch', 'totals must be an object.'));
@@ -95,6 +103,7 @@ export function validateRoutingRolloutReceipt(value) {
   const rebuilt = buildRoutingRollout({
     source_review: value.source_review,
     rollout: value.rollout,
+    post_canary: value.post_canary,
     thresholds: value.thresholds,
     rollout_suite: value.rollout_suite,
     goal_id: value.goal_id,
@@ -109,8 +118,13 @@ export function validateRoutingRolloutReceipt(value) {
   if (rebuilt.issues.length) return rebuilt.issues;
 
   const expected = rebuilt.receipt;
-  for (const field of ['source_review', 'rollout', 'thresholds', 'rollout_suite', 'totals', 'scenarios', 'rollout_evaluation', 'guardrails', 'next_actions']) {
-    if (!deepEqual(value[field], expected[field])) {
+  const canonicalFields = ['source_review', 'rollout', 'thresholds', 'rollout_suite', 'totals', 'scenarios', 'rollout_evaluation', 'guardrails', 'next_actions'];
+  if (value.post_canary != null || value.rollout?.stage === 'default-enabled') canonicalFields.splice(2, 0, 'post_canary');
+  for (const field of canonicalFields) {
+    const expectedValue = historicalRolloutEvaluationCompatible(field, value)
+      ? withoutPostCanaryEvaluationFields(expected[field])
+      : expected[field];
+    if (!deepEqual(value[field], expectedValue)) {
       issues.push(routingRolloutIssue('routing-rollout-mismatch', `${field} must match canonical routing rollout computation.`));
     }
   }
@@ -122,6 +136,25 @@ export function validateRoutingRolloutReceipt(value) {
 
 export function routingRolloutIssue(code, message) {
   return { code, message };
+}
+
+function historicalRolloutEvaluationCompatible(field, value) {
+  return field === 'rollout_evaluation'
+    && value.rollout?.stage !== 'default-enabled'
+    && isObject(value.rollout_evaluation)
+    && value.rollout_evaluation.post_canary_required == null;
+}
+
+function withoutPostCanaryEvaluationFields(value) {
+  const copy = { ...value };
+  delete copy.post_canary_required;
+  delete copy.post_canary_ready;
+  delete copy.post_canary_present;
+  delete copy.post_canary_stage_ready;
+  delete copy.post_canary_review_lineage_match;
+  delete copy.post_canary_default_suite_fresh;
+  delete copy.post_canary_metrics_ready;
+  return copy;
 }
 
 function normalizeSourceReview(input, issues) {
@@ -260,6 +293,73 @@ function normalizeRollout(input, issues) {
   };
 }
 
+function normalizePostCanary(input, issues) {
+  const canary = input.post_canary || input.post_canary_rollout || input.canary_rollout || null;
+  if (canary == null) return emptyPostCanary();
+  if (isRoutingRolloutReceipt(canary)) {
+    if (canary.rollout?.stage === 'default-enabled') {
+      issues.push(routingRolloutIssue('routing-rollout-post-canary-invalid', 'post_canary must be a canary-stage routing rollout receipt.'));
+      return postCanaryFromReceipt(canary);
+    }
+    const receiptIssues = validateRoutingRolloutReceipt(canary);
+    for (const item of receiptIssues) {
+      issues.push(routingRolloutIssue('routing-rollout-post-canary-invalid', item.message));
+    }
+    return receiptIssues.length ? emptyPostCanary() : postCanaryFromReceipt(canary);
+  }
+  if (isObject(canary)) return postCanaryFromSummary(canary, issues);
+  issues.push(routingRolloutIssue('routing-rollout-post-canary-invalid', 'post_canary must be a routing rollout receipt or summary.'));
+  return emptyPostCanary();
+}
+
+function postCanaryFromReceipt(receipt) {
+  return {
+    provided: true,
+    receipt_path: stringValue(receipt.receipt_path),
+    schema_version: stringValue(receipt.schema_version),
+    generated_at: stringValue(receipt.generated_at),
+    source: stringValue(receipt.source),
+    goal_id: stringValue(receipt.goal_id),
+    run_id: stringValue(receipt.run_id),
+    workflow: stringValue(receipt.workflow),
+    source_review_receipt: stringValue(receipt.source_review?.receipt_path),
+    source_review_run_id: stringValue(receipt.source_review?.run_id),
+    rollout_suite_receipt: stringValue(receipt.rollout_suite?.receipt_path),
+    rollout_suite_run_id: stringValue(receipt.rollout_suite?.run_id),
+    rollout: rolloutConfigSummary(receipt.rollout),
+    rollout_evaluation: postCanaryEvaluationSummary(receipt.rollout_evaluation),
+    totals: postCanaryTotals(receipt.totals),
+  };
+}
+
+function postCanaryFromSummary(summary, issues) {
+  const normalized = {
+    provided: summary.provided !== false,
+    receipt_path: stringValue(summary.receipt_path),
+    schema_version: stringValue(summary.schema_version),
+    generated_at: stringValue(summary.generated_at),
+    source: stringValue(summary.source),
+    goal_id: stringValue(summary.goal_id),
+    run_id: stringValue(summary.run_id),
+    workflow: stringValue(summary.workflow),
+    source_review_receipt: stringValue(summary.source_review_receipt),
+    source_review_run_id: stringValue(summary.source_review_run_id),
+    rollout_suite_receipt: stringValue(summary.rollout_suite_receipt),
+    rollout_suite_run_id: stringValue(summary.rollout_suite_run_id),
+    rollout: rolloutConfigSummary(summary.rollout),
+    rollout_evaluation: postCanaryEvaluationSummary(summary.rollout_evaluation),
+    totals: postCanaryTotals(summary.totals),
+  };
+  if (!normalized.provided) return emptyPostCanary();
+  for (const field of ['schema_version', 'generated_at', 'goal_id', 'run_id', 'workflow']) {
+    if (!normalized[field]) issues.push(routingRolloutIssue('routing-rollout-post-canary-invalid', `post_canary.${field} is required.`));
+  }
+  if (normalized.schema_version && normalized.schema_version !== ROUTING_ROLLOUT_SCHEMA_VERSION) {
+    issues.push(routingRolloutIssue('routing-rollout-post-canary-invalid', `post_canary.schema_version must be ${ROUTING_ROLLOUT_SCHEMA_VERSION}.`));
+  }
+  return normalized;
+}
+
 function normalizeThresholds(value, issues) {
   const thresholds = { ...ROUTING_ROLLOUT_DEFAULT_THRESHOLDS };
   if (value == null) return thresholds;
@@ -336,7 +436,7 @@ function rolloutTotals(scenarios) {
   };
 }
 
-function rolloutEvaluationSummary(sourceReview, rolloutSuite, rollout, thresholds, totals, scenarios) {
+function rolloutEvaluationSummary(sourceReview, rolloutSuite, rollout, thresholds, totals, scenarios, postCanary) {
   const reviewReady = sourceReview.promotion_review.default_ready === true;
   const freshRolloutSuite = rolloutSuite.receipt_path !== '' && rolloutSuite.receipt_path !== sourceReview.source_pilot.suite_receipt;
   const scenarioCoverageRequired = Math.max(1, sourceReview.source_pilot.totals.policy_rule_count);
@@ -347,7 +447,8 @@ function rolloutEvaluationSummary(sourceReview, rolloutSuite, rollout, threshold
     && totals.exact_token_scenario_count === totals.scenario_count
     && telemetryCoverageRate >= thresholds.min_telemetry_coverage_rate
     && scenarioCoveragePassed;
-  const guardPassed = reviewReady && freshRolloutSuite && metricsReady;
+  const postCanaryReadiness = postCanaryReadinessSummary(sourceReview, rolloutSuite, rollout, thresholds, postCanary);
+  const guardPassed = reviewReady && freshRolloutSuite && metricsReady && postCanaryReadiness.ready;
   return {
     status: rolloutStatus(guardPassed, rollout),
     guard_passed: guardPassed,
@@ -356,12 +457,95 @@ function rolloutEvaluationSummary(sourceReview, rolloutSuite, rollout, threshold
     review_ready: reviewReady,
     fresh_rollout_suite: freshRolloutSuite,
     metrics_ready: metricsReady,
+    post_canary_required: postCanaryReadiness.required,
+    post_canary_ready: postCanaryReadiness.ready,
+    post_canary_present: postCanaryReadiness.present,
+    post_canary_stage_ready: postCanaryReadiness.stage_ready,
+    post_canary_review_lineage_match: postCanaryReadiness.review_lineage_match,
+    post_canary_default_suite_fresh: postCanaryReadiness.default_suite_fresh,
+    post_canary_metrics_ready: postCanaryReadiness.metrics_ready,
     scenario_coverage_required: scenarioCoverageRequired,
     scenario_coverage_passed: scenarioCoveragePassed,
     telemetry_coverage_rate: telemetryCoverageRate,
-    reason: rolloutReason({ guardPassed, reviewReady, freshRolloutSuite, metricsReady, scenarioCoveragePassed, rollout }),
+    reason: rolloutReason({ guardPassed, reviewReady, freshRolloutSuite, metricsReady, scenarioCoveragePassed, rollout, postCanaryReadiness }),
     failing_scenario_ids: scenarios.filter((scenario) => !scenario.passed).map((scenario) => scenario.id).sort(),
   };
+}
+
+function postCanaryReadinessSummary(sourceReview, rolloutSuite, rollout, thresholds, postCanary) {
+  const required = rollout.stage === 'default-enabled';
+  if (!required) {
+    return {
+      required,
+      ready: true,
+      present: postCanary.provided,
+      stage_ready: postCanary.provided ? postCanaryStageReady(postCanary) : true,
+      review_lineage_match: postCanary.provided ? postCanaryReviewLineageMatches(sourceReview, postCanary) : true,
+      default_suite_fresh: postCanary.provided ? postCanaryDefaultSuiteFresh(rolloutSuite, postCanary) : true,
+      metrics_ready: postCanary.provided ? postCanaryMetricsReady(postCanary, thresholds) : true,
+    };
+  }
+  const present = postCanary.provided === true;
+  const stageReady = present && postCanaryStageReady(postCanary);
+  const reviewLineageMatch = present && postCanaryReviewLineageMatches(sourceReview, postCanary);
+  const defaultSuiteFresh = present && postCanaryDefaultSuiteFresh(rolloutSuite, postCanary);
+  const metricsReady = present && postCanaryMetricsReady(postCanary, thresholds);
+  return {
+    required,
+    ready: present && stageReady && reviewLineageMatch && defaultSuiteFresh && metricsReady,
+    present,
+    stage_ready: stageReady,
+    review_lineage_match: reviewLineageMatch,
+    default_suite_fresh: defaultSuiteFresh,
+    metrics_ready: metricsReady,
+  };
+}
+
+function postCanaryStageReady(postCanary) {
+  return postCanary.rollout.stage === 'canary'
+    && postCanary.rollout.traffic_percent > 0
+    && postCanary.rollout.traffic_percent <= 10
+    && postCanary.rollout_evaluation.status === 'canary-ready'
+    && postCanary.rollout_evaluation.guard_passed === true
+    && postCanary.rollout_evaluation.default_change_allowed === false;
+}
+
+function postCanaryReviewLineageMatches(sourceReview, postCanary) {
+  return sameLineage(
+    sourceReview.receipt_path,
+    sourceReview.run_id,
+    postCanary.source_review_receipt,
+    postCanary.source_review_run_id,
+  );
+}
+
+function postCanaryDefaultSuiteFresh(rolloutSuite, postCanary) {
+  return !sameLineage(
+    rolloutSuite.receipt_path,
+    rolloutSuite.run_id,
+    postCanary.rollout_suite_receipt,
+    postCanary.rollout_suite_run_id,
+  );
+}
+
+function postCanaryMetricsReady(postCanary, thresholds) {
+  const totals = postCanary.totals;
+  const telemetryCoverageRate = totals.scenario_count ? round(totals.telemetry_backed_scenario_count / totals.scenario_count) : 0;
+  return postCanary.rollout_evaluation.metrics_ready === true
+    && totals.scenario_count > 0
+    && totals.failing_scenario_count === 0
+    && totals.exact_token_scenario_count === totals.scenario_count
+    && telemetryCoverageRate >= thresholds.min_telemetry_coverage_rate
+    && totals.min_quality_score >= thresholds.min_quality_score
+    && totals.min_accuracy_score >= thresholds.min_accuracy_score
+    && totals.max_residual_issue_count <= thresholds.max_residual_issue_count
+    && totals.max_regression_count <= thresholds.max_regression_count;
+}
+
+function sameLineage(leftReceipt, leftRunId, rightReceipt, rightRunId) {
+  const left = stringValue(leftReceipt) || stringValue(leftRunId);
+  const right = stringValue(rightReceipt) || stringValue(rightRunId);
+  return Boolean(left && right && left === right);
 }
 
 function rolloutStatus(guardPassed, rollout) {
@@ -371,7 +555,7 @@ function rolloutStatus(guardPassed, rollout) {
   return 'default-ready';
 }
 
-function rolloutReason({ guardPassed, reviewReady, freshRolloutSuite, metricsReady, scenarioCoveragePassed, rollout }) {
+function rolloutReason({ guardPassed, reviewReady, freshRolloutSuite, metricsReady, scenarioCoveragePassed, rollout, postCanaryReadiness }) {
   if (guardPassed && rollout.stage === 'shadow') return 'Accepted review and fresh rollout metrics allow shadow execution, but not a live default change.';
   if (guardPassed && rollout.stage === 'canary') return 'Accepted review and fresh rollout metrics allow a bounded canary.';
   if (guardPassed) return 'Accepted review and fresh rollout metrics allow the guarded default change.';
@@ -379,6 +563,7 @@ function rolloutReason({ guardPassed, reviewReady, freshRolloutSuite, metricsRea
   if (!freshRolloutSuite) return 'The rollout suite must be fresh and separate from the reviewed pilot suite.';
   if (!scenarioCoveragePassed) return 'The rollout suite does not cover enough policy scenarios.';
   if (!metricsReady) return 'One or more rollout scenarios failed exact token, correction, quality, accuracy, wall-time, or telemetry gates.';
+  if (postCanaryReadiness?.required && !postCanaryReadiness.ready) return 'Default-enabled rollout requires a matching canary-ready receipt plus a fresh post-canary metrics suite.';
   return 'The rollout guard did not pass.';
 }
 
@@ -387,6 +572,9 @@ function rolloutGuardrails(sourceReview, rolloutSuite, rolloutEvaluation, scenar
   if (!rolloutEvaluation.review_ready) guardrails.push('Do not roll out a routing policy until the reviewer-pass receipt is default-ready.');
   if (!rolloutEvaluation.fresh_rollout_suite) guardrails.push('Do not use the reviewed pilot suite as the rollout metrics suite.');
   if (!rolloutEvaluation.metrics_ready) guardrails.push('Do not roll out until every scenario has exact tokens, correction telemetry, quality, accuracy, and wall-time evidence.');
+  if (rolloutEvaluation.post_canary_required && !rolloutEvaluation.post_canary_ready) {
+    guardrails.push('Do not enable the routing policy by default until a matching canary-ready receipt and fresh post-canary metrics suite are attached.');
+  }
   if (!rolloutEvaluation.scenario_coverage_passed) guardrails.push('Do not roll out until the suite covers the reviewed policy rule count.');
   for (const scenario of scenarios.filter((row) => !row.passed)) {
     guardrails.push(`Scenario ${scenario.id} failed rollout checks: ${scenario.failure_reasons.join(', ')}.`);
@@ -554,6 +742,44 @@ function winnerSummary(value) {
   };
 }
 
+function rolloutConfigSummary(value) {
+  return {
+    stage: stringValue(value?.stage),
+    traffic_percent: numberValue(value?.traffic_percent),
+    policy_change_id: stringValue(value?.policy_change_id),
+    operator: stringValue(value?.operator),
+  };
+}
+
+function postCanaryEvaluationSummary(value) {
+  return {
+    status: stringValue(value?.status),
+    guard_passed: value?.guard_passed === true,
+    guarded_rollout_allowed: value?.guarded_rollout_allowed === true,
+    default_change_allowed: value?.default_change_allowed === true,
+    review_ready: value?.review_ready === true,
+    fresh_rollout_suite: value?.fresh_rollout_suite === true,
+    metrics_ready: value?.metrics_ready === true,
+    telemetry_coverage_rate: numberValue(value?.telemetry_coverage_rate),
+  };
+}
+
+function postCanaryTotals(value) {
+  return {
+    scenario_count: nonNegativeInteger(value?.scenario_count),
+    passing_scenario_count: nonNegativeInteger(value?.passing_scenario_count),
+    failing_scenario_count: nonNegativeInteger(value?.failing_scenario_count),
+    telemetry_backed_scenario_count: nonNegativeInteger(value?.telemetry_backed_scenario_count),
+    exact_token_scenario_count: nonNegativeInteger(value?.exact_token_scenario_count),
+    total_exact_model_token_delta: numberValue(value?.total_exact_model_token_delta),
+    total_wall_duration_delta_ms: numberValue(value?.total_wall_duration_delta_ms),
+    min_quality_score: numberValue(value?.min_quality_score),
+    min_accuracy_score: numberValue(value?.min_accuracy_score),
+    max_residual_issue_count: nonNegativeInteger(value?.max_residual_issue_count),
+    max_regression_count: nonNegativeInteger(value?.max_regression_count),
+  };
+}
+
 function suiteTelemetryRefs(value) {
   if (!Array.isArray(value)) return [];
   return value
@@ -600,6 +826,26 @@ function emptyRolloutSuite() {
   };
 }
 
+function emptyPostCanary() {
+  return {
+    provided: false,
+    receipt_path: '',
+    schema_version: '',
+    generated_at: '',
+    source: '',
+    goal_id: '',
+    run_id: '',
+    workflow: '',
+    source_review_receipt: '',
+    source_review_run_id: '',
+    rollout_suite_receipt: '',
+    rollout_suite_run_id: '',
+    rollout: rolloutConfigSummary({}),
+    rollout_evaluation: postCanaryEvaluationSummary({}),
+    totals: postCanaryTotals({}),
+  };
+}
+
 function defaultTrafficPercent(stage) {
   if (stage === 'canary') return 5;
   if (stage === 'default-enabled') return 100;
@@ -612,6 +858,10 @@ function isRoutingPolicyReviewReceipt(value) {
 
 function isRoutingSuiteReceipt(value) {
   return isObject(value) && value.mode === 'agent-routing-evaluation-suite' && typeof value.schema_version === 'string';
+}
+
+function isRoutingRolloutReceipt(value) {
+  return isObject(value) && value.mode === 'agent-routing-rollout' && typeof value.schema_version === 'string';
 }
 
 function isObject(value) {

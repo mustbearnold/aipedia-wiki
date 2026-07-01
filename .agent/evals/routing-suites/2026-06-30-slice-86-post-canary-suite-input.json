@@ -1,0 +1,199 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-86-post-canary-suite",
+  "workflow": "loop-system",
+  "suite_task": "Post-canary metrics for default-enabled guarded routing rollout.",
+  "correction_telemetry_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-86-post-canary-receipt.json",
+  "scenarios": [
+    {
+      "id": "post-canary-heavy-review",
+      "task_class": "jsonl-correction-heavy-review",
+      "task_label": "Post-canary JSONL heavy review routing",
+      "routing_input": {
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice86-post-canary-heavy-review-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 6750,
+              "output_tokens": 1450,
+              "cached_input_tokens": 760,
+              "reasoning_tokens": 310,
+              "total_tokens": 8200,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 6750,
+                  "output_tokens": 1450,
+                  "cached_input_tokens": 760,
+                  "reasoning_tokens": 310,
+                  "total_tokens": 8200
+                }
+              ]
+            },
+            "wall_duration_ms": 8200,
+            "quality_score": 0.9,
+            "accuracy_score": 0.9,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice86-post-canary-heavy-review-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 4980,
+              "output_tokens": 1120,
+              "cached_input_tokens": 640,
+              "reasoning_tokens": 230,
+              "total_tokens": 6100,
+              "subagent_breakdown": [
+                {
+                  "id": "post-canary-triage-agent",
+                  "request_count": 1,
+                  "input_tokens": 3050,
+                  "output_tokens": 680,
+                  "cached_input_tokens": 420,
+                  "reasoning_tokens": 135,
+                  "total_tokens": 3730
+                },
+                {
+                  "id": "post-canary-validation-agent",
+                  "request_count": 1,
+                  "input_tokens": 1930,
+                  "output_tokens": 440,
+                  "cached_input_tokens": 220,
+                  "reasoning_tokens": 95,
+                  "total_tokens": 2370
+                }
+              ]
+            },
+            "wall_duration_ms": 6300,
+            "quality_score": 0.96,
+            "accuracy_score": 0.95,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "post-canary-tiny-status",
+      "task_class": "jsonl-tiny-status-check",
+      "task_label": "Post-canary JSONL tiny status routing",
+      "routing_input": {
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice86-post-canary-tiny-status-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 850,
+              "output_tokens": 230,
+              "cached_input_tokens": 105,
+              "reasoning_tokens": 42,
+              "total_tokens": 1080,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 850,
+                  "output_tokens": 230,
+                  "cached_input_tokens": 105,
+                  "reasoning_tokens": 42,
+                  "total_tokens": 1080
+                }
+              ]
+            },
+            "wall_duration_ms": 950,
+            "quality_score": 0.94,
+            "accuracy_score": 0.94,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice86-post-canary-tiny-status-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 2350,
+              "output_tokens": 550,
+              "cached_input_tokens": 270,
+              "reasoning_tokens": 135,
+              "total_tokens": 2900,
+              "subagent_breakdown": [
+                {
+                  "id": "post-canary-planner-agent",
+                  "request_count": 1,
+                  "input_tokens": 1420,
+                  "output_tokens": 310,
+                  "cached_input_tokens": 155,
+                  "reasoning_tokens": 82,
+                  "total_tokens": 1730
+                },
+                {
+                  "id": "post-canary-validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 930,
+                  "output_tokens": 240,
+                  "cached_input_tokens": 115,
+                  "reasoning_tokens": 53,
+                  "total_tokens": 1170
+                }
+              ]
+            },
+            "wall_duration_ms": 2450,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
