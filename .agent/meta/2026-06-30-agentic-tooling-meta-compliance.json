@@ -494,26 +494,24 @@
     }
   ],
   "current_slice": {
-    "name": "Page refresh current status and stale refresh-plan proof readiness",
+    "name": "Proof-readiness refresh-plan count validation",
     "system_artifacts": [
-      "scripts/agent-proof-readiness.mjs",
       "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/agent-proof-readiness.test.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-67-page-refresh-current-status-and-refresh-plan.json",
+      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-68-refresh-plan-count-validated.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-67.md",
-      ".agent/loop-runs/system/2026-07-01T00-30-13-003Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-68.md",
+      ".agent/loop-runs/system/2026-07-01T00-41-55-651Z-loop-run.json",
       ".agent/loop-runs/system/latest.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-67-final-efficiency-trends.json"
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-68-final-efficiency-trends.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
-    "proof_readiness_receipt": ".agent/evals/proof-readiness-receipts/2026-06-30-slice-67-page-refresh-current-status-and-refresh-plan.json",
+    "proof_readiness_receipt": ".agent/evals/proof-readiness-receipts/2026-06-30-slice-68-refresh-plan-count-validated.json",
     "proof_readiness_summary": {
       "target_count": 3,
       "ready_count": 0,
@@ -542,26 +540,32 @@
         "Tracked generated-file mutations require --allow-tracked-mutations."
       ]
     },
-    "loop_receipt": ".agent/loop-runs/system/2026-07-01T00-30-13-003Z-loop-run.json",
+    "refresh_plan_count_validation": {
+      "requires_complete_input_summary": true,
+      "cross_checks_unique_embedded_plan_ids": true,
+      "validated_count": 1
+    },
+    "loop_receipt": ".agent/loop-runs/system/2026-07-01T00-41-55-651Z-loop-run.json",
     "latest_loop_receipt": ".agent/loop-runs/system/latest.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-67-final-efficiency-trends.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-68-final-efficiency-trends.json",
     "loop_summary": {
       "ok": 4,
       "attention": 3,
       "skipped": 0,
       "commands": 16,
-      "agent_system_artifact_count": 11,
-      "agent_content_artifact_count": 0,
-      "preexisting_dirty_count": 4
+      "current_agent_system_artifacts": 9,
+      "current_agent_content_artifacts": 0,
+      "preexisting_content_artifacts": 4,
+      "wall_duration_ms": 4602
     },
     "trend_summary": {
       "analyzed_runs": 3,
       "metrics_runs": 3,
       "missing_metrics_runs": 0,
-      "median_wall_duration_ms": 4681,
-      "latest_wall_duration_ms": 4678,
-      "latest_estimated_full_receipt_tokens": 11707,
-      "latest_system_artifact_count": 11,
+      "median_wall_duration_ms": 4678,
+      "latest_wall_duration_ms": 4602,
+      "latest_estimated_full_receipt_tokens": 11581,
+      "latest_system_artifact_count": 9,
       "persistent_attention_loops": 3,
       "resolved_attention_loops": 0,
       "regressed_attention_loops": 0,

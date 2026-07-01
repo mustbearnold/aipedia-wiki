@@ -1751,6 +1751,7 @@ function validateMetaProofReadinessReceipt(value, issues) {
     if (value.inputs.allow_observed_dirty_boundary != null) {
       requireBoolean(value.inputs, 'allow_observed_dirty_boundary', issues, 'inputs.allow_observed_dirty_boundary');
     }
+    validateMetaProofReadinessRefreshPlanInputs(value.inputs, issues);
   }
 
   if (Array.isArray(value.targets)) {
@@ -1769,6 +1770,48 @@ function validateMetaProofReadinessReceipt(value, issues) {
         }
       }
     }
+    validateMetaProofReadinessRefreshPlanSummary(value, issues);
+  }
+}
+
+function validateMetaProofReadinessRefreshPlanInputs(inputs, issues) {
+  const fields = ['input_refresh_plan_source', 'input_refresh_plan_exit_code', 'input_refresh_plan_status', 'input_refresh_plan_count'];
+  const present = fields.filter((field) => inputs[field] != null);
+  if (!present.length) return;
+  if (present.length !== fields.length) {
+    issues.push(issue('meta-proof-readiness-refresh-plan-inputs-partial', `inputs refresh-plan fields must be all present or all omitted; found ${present.join(', ')}.`));
+  }
+  requireString(inputs, 'input_refresh_plan_source', issues, { path: 'inputs.input_refresh_plan_source' });
+  requireNonNegativeNumber(inputs, 'input_refresh_plan_exit_code', issues, 'inputs.input_refresh_plan_exit_code');
+  requireString(inputs, 'input_refresh_plan_status', issues, {
+    path: 'inputs.input_refresh_plan_status',
+    values: ['skipped', 'from-input-freshness', 'missing-refresh-plan', 'planned', 'failed'],
+  });
+  requireNonNegativeNumber(inputs, 'input_refresh_plan_count', issues, 'inputs.input_refresh_plan_count');
+  if (inputs.input_refresh_plan_status === 'skipped' && inputs.input_refresh_plan_count !== 0) {
+    issues.push(issue('meta-proof-readiness-refresh-plan-count-mismatch', 'inputs.input_refresh_plan_status is skipped but input_refresh_plan_count is not 0.'));
+  }
+}
+
+function validateMetaProofReadinessRefreshPlanSummary(value, issues) {
+  const expectedCount = value.inputs?.input_refresh_plan_count;
+  if (typeof expectedCount !== 'number') return;
+  const planIds = new Set();
+  for (const target of value.targets || []) {
+    if (!isObject(target)) continue;
+    for (const blockerValue of target.blockers || []) {
+      if (isObject(blockerValue?.input_refresh_plan) && typeof blockerValue.input_refresh_plan.id === 'string') {
+        planIds.add(blockerValue.input_refresh_plan.id);
+      }
+    }
+    for (const check of target.readiness_checks || []) {
+      if (isObject(check?.input_refresh_plan) && typeof check.input_refresh_plan.id === 'string') {
+        planIds.add(check.input_refresh_plan.id);
+      }
+    }
+  }
+  if (planIds.size !== expectedCount) {
+    issues.push(issue('meta-proof-readiness-refresh-plan-count-mismatch', `inputs.input_refresh_plan_count is ${expectedCount} but receipt embeds ${planIds.size} unique input_refresh_plan id(s).`));
   }
 }
 

@@ -769,6 +769,27 @@ function validMetaProofReadinessReceipt(overrides = {}) {
   };
 }
 
+function validProofReadinessRefreshPlan() {
+  return {
+    id: 'page-refresh',
+    status: 'planned',
+    before_status: 'stale',
+    mutation_policy: 'tracked-generated',
+    requires_tracked_mutation_ack: true,
+    requires_explicit_workflow: true,
+    writes: ['PAGE_REFRESH_LEDGER.md'],
+    commands: [
+      {
+        label: 'page refresh ledger',
+        command: 'node scripts/generate-page-refresh-ledger.mjs --json --project-dir .',
+      },
+    ],
+    required_flags: ['Tracked generated-file mutations require --allow-tracked-mutations.'],
+    blocked_reasons: [],
+    next_action: 'Run npm run agent:input-freshness -- --workflow page-refresh --refresh-stale --apply-refreshes --allow-tracked-mutations --require-fresh --json.',
+  };
+}
+
 function validLoopEfficiencyTrendReceipt(overrides = {}) {
   return {
     ok: true,
@@ -1141,6 +1162,35 @@ test('closeout receipt check validates meta proof readiness refresh plans', () =
     const codes = report.receipts[0].issues.map((item) => item.code);
     assert.ok(codes.includes('meta-proof-readiness-refresh-plan-invalid'));
     assert.ok(codes.includes('field-invalid'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates meta proof readiness refresh plan counts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-proof-refresh-plan-count-'));
+  const path = join(dir, 'proof-readiness.json');
+  const receipt = validMetaProofReadinessReceipt();
+  const plan = validProofReadinessRefreshPlan();
+  receipt.inputs.input_refresh_plan_source = 'node scripts/agent-input-freshness-receipt.mjs --workflow page-refresh --refresh-stale --json';
+  receipt.inputs.input_refresh_plan_exit_code = 0;
+  receipt.inputs.input_refresh_plan_status = 'planned';
+  receipt.inputs.input_refresh_plan_count = 1;
+  receipt.targets[0].blockers[0].input_refresh_plan = plan;
+  receipt.targets[0].readiness_checks[1].input_refresh_plan = plan;
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    receipt.inputs.input_refresh_plan_count = 2;
+    writeJson(path, receipt);
+    const drift = runCheck(['--receipt', path, '--json']);
+    assert.equal(drift.status, 1);
+    const report = JSON.parse(drift.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('meta-proof-readiness-refresh-plan-count-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
