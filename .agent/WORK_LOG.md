@@ -1,8 +1,25 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 80, Routing Policy Pilot Receipts
+
+- Status: Verified locally through scoped `check:smart`, `check:quick`, enforced loop closeout, final trend closeout, and routing-policy-pilot closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:pilot` and `scripts/lib/routing-policy-pilot.mjs` to check a routing-policy receipt against a bounded routing-suite pilot receipt.
+- Changed: Policy-pilot receipts use `aipedia.agent-routing-policy-pilot.v1`, carry compact source-policy and pilot-suite summaries, compare expected task-class routes with actual suite recommendations, and report matched, mismatched, missing, blocked, not-recommended, and uncovered rules.
+- Changed: Source-suite replays are explicitly marked `replay-only` with `promotion_candidate: false`, so a policy cannot be mistaken for independently validated just because it matches its own source suite.
+- Changed: `agent:closeout:check` validates routing-policy-pilot receipts by recomputing the canonical pilot result, and `agent:meta:closeout:auto` routes them with a `routing-policy-pilot` profile.
+- System lesson: policy promotion needs a separate evidence layer from policy generation. The replay-only guard keeps the system honest by proving the policy is internally consistent while still blocking default-orchestration promotion until independent workload pilots exist.
+- Verification: syntax checks passed for the pilot CLI/library plus closeout and router scripts. Focused routing-pilot tests passed 3/3, closeout checker tests passed 59/59, and meta closeout router tests passed 10/10. The live policy-pilot receipt passed auto-routed closeout. Scoped `check:smart` passed with 599 script tests and command audit. `check:quick` passed with 599 script tests, command audit, and quick assets.
+- Durable pilot proof: `.agent/evals/routing-policy-pilots/2026-06-30-slice-80-policy-replay-pilot-receipt.json`.
+- Proof result: the policy-pilot status is `replay-only`, match rate is 1.0, promotion candidate is false, 2/2 policy rules are covered, 2/2 pilot scenarios match, and the guardrails warn that source-suite replay is not an independent workload pilot.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-80-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,009 ms, latest wall duration 5,039 ms, latest estimated full receipt tokens 11,812, latest system artifact count 16, 3 persistent attention loops, and 4 persistent attention commands.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 15 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time increased by 30 ms versus Slice 79, and estimated receipt tokens increased by 5 while system artifact count stayed flat.
+- Next: Commit and push only Slice 80 system files, then run an independent bounded routing-policy pilot before changing orchestration defaults.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 79, Conditional Routing Policy Receipts
 
-- Status: Verified locally through scoped `check:smart`, `check:quick`, enforced loop closeout, final trend closeout, and routing-policy closeout. Pending commit and push.
+- Status: Complete, verified, committed, and pushed as `1041f4bd`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Added `agent:routing:policy` and `scripts/lib/routing-policy.mjs` to convert validated routing-suite receipts into closeout-checkable `aipedia.agent-routing-policy.v1` receipts.
 - Changed: Routing policy receipts carry a compact source-suite summary, per-task-class routing rules, telemetry lineage refs, guardrails, promotion status, and next actions.

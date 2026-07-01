@@ -104,6 +104,7 @@ function usage() {
     '  routing-evaluation Durable orchestrator/subagent routing evaluation receipt validation.',
     '  routing-evaluation-suite Durable multi-scenario routing evaluation suite receipt validation.',
     '  routing-policy Durable orchestration routing policy receipt validation.',
+    '  routing-policy-pilot Durable routing policy pilot receipt validation.',
     '',
     'Options:',
     '  --receipt <path>     Receipt to validate. Repeatable. Alias: --path.',
@@ -119,7 +120,7 @@ function buildRoute() {
     : ['.agent/loop-runs/system/latest.json'];
   const receipts = rawPaths.map((rawPath) => inspectReceipt(rawPath));
   const routeIssues = receipts.flatMap((receipt) => receipt.route_issues);
-  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy']);
+  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy', 'agent-routing-policy-pilot']);
   const unsupported = receipts.filter((receipt) => !supportedTypes.has(receipt.type));
   for (const receipt of unsupported) {
     routeIssues.push(issue(
@@ -135,6 +136,7 @@ function buildRoute() {
   const hasRoutingEvaluation = receipts.some((receipt) => receipt.type === 'agent-routing-evaluation');
   const hasRoutingEvaluationSuite = receipts.some((receipt) => receipt.type === 'agent-routing-evaluation-suite');
   const hasRoutingPolicy = receipts.some((receipt) => receipt.type === 'agent-routing-policy');
+  const hasRoutingPolicyPilot = receipts.some((receipt) => receipt.type === 'agent-routing-policy-pilot');
   const strictFlags = [
     ...(receipts.some((receipt) => STRICT_RECEIPT_TYPES.has(receipt.type)) ? STRICT_META_FLAGS : []),
     ...(hasRunner ? ['--require-workflow-policy'] : []),
@@ -149,6 +151,7 @@ function buildRoute() {
     hasRoutingEvaluation,
     hasRoutingEvaluationSuite,
     hasRoutingPolicy,
+    hasRoutingPolicyPilot,
   });
   return {
     ok: routeIssues.length === 0,
@@ -187,7 +190,7 @@ function inspectReceipt(rawPath) {
   };
 }
 
-function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy }) {
+function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy, hasRoutingPolicyPilot }) {
   const extraProfiles = [
     hasTrend ? 'trends' : '',
     hasReadiness ? 'readiness' : '',
@@ -195,6 +198,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     hasRoutingEvaluation ? 'routing-evaluation' : '',
     hasRoutingEvaluationSuite ? 'routing-evaluation-suite' : '',
     hasRoutingPolicy ? 'routing-policy' : '',
+    hasRoutingPolicyPilot ? 'routing-policy-pilot' : '',
   ].filter(Boolean);
   if ((hasRunner || hasLoop) && extraProfiles.length) {
     const strictProfiles = [
@@ -203,6 +207,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     ].filter(Boolean);
     return `mixed-${[...strictProfiles, ...extraProfiles].join('-')}`;
   }
+  if (hasRoutingPolicyPilot && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingPolicy && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingEvaluationSuite && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingEvaluation && (hasTrend || hasReadiness)) return `mixed-${extraProfiles.join('-')}`;
@@ -218,6 +223,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
   if (hasRoutingEvaluation) return 'routing-evaluation';
   if (hasRoutingEvaluationSuite) return 'routing-evaluation-suite';
   if (hasRoutingPolicy) return 'routing-policy';
+  if (hasRoutingPolicyPilot) return 'routing-policy-pilot';
   return 'unsupported';
 }
 
@@ -232,6 +238,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.agent-routing-evaluation.v1') return 'agent-routing-evaluation';
   if (value.schema_version === 'aipedia.agent-routing-evaluation-suite.v1' || value.schema_version === 'aipedia.agent-routing-evaluation-suite.v2') return 'agent-routing-evaluation-suite';
   if (value.schema_version === 'aipedia.agent-routing-policy.v1') return 'agent-routing-policy';
+  if (value.schema_version === 'aipedia.agent-routing-policy-pilot.v1') return 'agent-routing-policy-pilot';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';
