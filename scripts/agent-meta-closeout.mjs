@@ -102,6 +102,7 @@ function usage() {
     '  proof-readiness  Durable proof-readiness state receipt validation.',
     '  correction-telemetry Durable exact correction telemetry receipt validation.',
     '  routing-evaluation Durable orchestrator/subagent routing evaluation receipt validation.',
+    '  routing-evaluation-suite Durable multi-scenario routing evaluation suite receipt validation.',
     '',
     'Options:',
     '  --receipt <path>     Receipt to validate. Repeatable. Alias: --path.',
@@ -117,7 +118,7 @@ function buildRoute() {
     : ['.agent/loop-runs/system/latest.json'];
   const receipts = rawPaths.map((rawPath) => inspectReceipt(rawPath));
   const routeIssues = receipts.flatMap((receipt) => receipt.route_issues);
-  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation']);
+  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite']);
   const unsupported = receipts.filter((receipt) => !supportedTypes.has(receipt.type));
   for (const receipt of unsupported) {
     routeIssues.push(issue(
@@ -131,6 +132,7 @@ function buildRoute() {
   const hasReadiness = receipts.some((receipt) => receipt.type === 'meta-proof-readiness');
   const hasCorrectionTelemetry = receipts.some((receipt) => receipt.type === 'agent-correction-telemetry');
   const hasRoutingEvaluation = receipts.some((receipt) => receipt.type === 'agent-routing-evaluation');
+  const hasRoutingEvaluationSuite = receipts.some((receipt) => receipt.type === 'agent-routing-evaluation-suite');
   const strictFlags = [
     ...(receipts.some((receipt) => STRICT_RECEIPT_TYPES.has(receipt.type)) ? STRICT_META_FLAGS : []),
     ...(hasRunner ? ['--require-workflow-policy'] : []),
@@ -143,6 +145,7 @@ function buildRoute() {
     hasReadiness,
     hasCorrectionTelemetry,
     hasRoutingEvaluation,
+    hasRoutingEvaluationSuite,
   });
   return {
     ok: routeIssues.length === 0,
@@ -181,12 +184,13 @@ function inspectReceipt(rawPath) {
   };
 }
 
-function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation }) {
+function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite }) {
   const extraProfiles = [
     hasTrend ? 'trends' : '',
     hasReadiness ? 'readiness' : '',
     hasCorrectionTelemetry ? 'correction-telemetry' : '',
     hasRoutingEvaluation ? 'routing-evaluation' : '',
+    hasRoutingEvaluationSuite ? 'routing-evaluation-suite' : '',
   ].filter(Boolean);
   if ((hasRunner || hasLoop) && extraProfiles.length) {
     const strictProfiles = [
@@ -195,6 +199,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     ].filter(Boolean);
     return `mixed-${[...strictProfiles, ...extraProfiles].join('-')}`;
   }
+  if (hasRoutingEvaluationSuite && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingEvaluation && (hasTrend || hasReadiness)) return `mixed-${extraProfiles.join('-')}`;
   if (hasCorrectionTelemetry && (hasTrend || hasReadiness || hasRoutingEvaluation)) return `mixed-${extraProfiles.join('-')}`;
   if (hasTrend && hasReadiness) return 'mixed-trends-readiness';
@@ -206,6 +211,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
   if (hasReadiness) return 'proof-readiness';
   if (hasCorrectionTelemetry) return 'correction-telemetry';
   if (hasRoutingEvaluation) return 'routing-evaluation';
+  if (hasRoutingEvaluationSuite) return 'routing-evaluation-suite';
   return 'unsupported';
 }
 
@@ -218,6 +224,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.loop-efficiency-trends.v1') return 'loop-efficiency-trends';
   if (value.schema_version === 'aipedia.correction-telemetry.v1') return 'agent-correction-telemetry';
   if (value.schema_version === 'aipedia.agent-routing-evaluation.v1') return 'agent-routing-evaluation';
+  if (value.schema_version === 'aipedia.agent-routing-evaluation-suite.v1') return 'agent-routing-evaluation-suite';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';

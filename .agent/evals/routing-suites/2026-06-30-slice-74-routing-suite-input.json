@@ -1,0 +1,719 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-74-routing-suite",
+  "workflow": "loop-system",
+  "suite_task": "Compare GPT-5.5 single-agent and orchestrated-specialist routing across task classes before changing orchestration defaults.",
+  "scenarios": [
+    {
+      "id": "evidence-heavy-refresh",
+      "task_class": "evidence-heavy-page-refresh",
+      "task_label": "Evidence-heavy page refresh routing",
+      "correction_telemetry": {
+        "ok": true,
+        "mode": "agent-correction-telemetry",
+        "schema_version": "aipedia.correction-telemetry.v1",
+        "generated_at": "2026-07-01T03:35:00.000Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-74-evidence-heavy-refresh-corrections.json",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-corrections",
+        "workflow": "loop-system",
+        "telemetry_source": {
+          "type": "reviewer",
+          "id": "slice-74-evidence-heavy-refresh-reviewer-events",
+          "confidence": "exact"
+        },
+        "totals": {
+          "candidate_count": 2,
+          "event_count": 12,
+          "findings_count": 6,
+          "corrections_applied": 6,
+          "residual_issue_count": 0,
+          "regression_count": 0
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-single-agent",
+            "orchestrator": "single-agent",
+            "subagent": "",
+            "event_count": 6,
+            "event_type_counts": {
+              "finding": 3,
+              "correction_applied": 3,
+              "residual_issue": 0,
+              "regression": 0
+            },
+            "correction_outcomes": {
+              "findings_count": 3,
+              "corrections_applied": 3,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "events": [
+              {
+                "id": "evidence-heavy-refresh-single-finding-1",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 1"
+              },
+              {
+                "id": "evidence-heavy-refresh-single-fix-1",
+                "type": "correction_applied",
+                "finding_id": "evidence-heavy-refresh-single-finding-1",
+                "severity": "medium",
+                "note": "Correction 1"
+              },
+              {
+                "id": "evidence-heavy-refresh-single-finding-2",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 2"
+              },
+              {
+                "id": "evidence-heavy-refresh-single-fix-2",
+                "type": "correction_applied",
+                "finding_id": "evidence-heavy-refresh-single-finding-2",
+                "severity": "medium",
+                "note": "Correction 2"
+              },
+              {
+                "id": "evidence-heavy-refresh-single-finding-3",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 3"
+              },
+              {
+                "id": "evidence-heavy-refresh-single-fix-3",
+                "type": "correction_applied",
+                "finding_id": "evidence-heavy-refresh-single-finding-3",
+                "severity": "medium",
+                "note": "Correction 3"
+              }
+            ]
+          },
+          {
+            "id": "orchestrated-specialists",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "subagent": "",
+            "event_count": 6,
+            "event_type_counts": {
+              "finding": 3,
+              "correction_applied": 3,
+              "residual_issue": 0,
+              "regression": 0
+            },
+            "correction_outcomes": {
+              "findings_count": 3,
+              "corrections_applied": 3,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "events": [
+              {
+                "id": "evidence-heavy-refresh-orchestrated-finding-1",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 1"
+              },
+              {
+                "id": "evidence-heavy-refresh-orchestrated-fix-1",
+                "type": "correction_applied",
+                "finding_id": "evidence-heavy-refresh-orchestrated-finding-1",
+                "severity": "medium",
+                "note": "Correction 1"
+              },
+              {
+                "id": "evidence-heavy-refresh-orchestrated-finding-2",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 2"
+              },
+              {
+                "id": "evidence-heavy-refresh-orchestrated-fix-2",
+                "type": "correction_applied",
+                "finding_id": "evidence-heavy-refresh-orchestrated-finding-2",
+                "severity": "medium",
+                "note": "Correction 2"
+              },
+              {
+                "id": "evidence-heavy-refresh-orchestrated-finding-3",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 3"
+              },
+              {
+                "id": "evidence-heavy-refresh-orchestrated-fix-3",
+                "type": "correction_applied",
+                "finding_id": "evidence-heavy-refresh-orchestrated-finding-3",
+                "severity": "medium",
+                "note": "Correction 3"
+              }
+            ]
+          }
+        ],
+        "routing_candidate_overrides": [
+          {
+            "id": "single-agent",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-single-agent",
+            "correction_outcomes": {
+              "findings_count": 3,
+              "corrections_applied": 3,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-orchestrated-specialists",
+            "correction_outcomes": {
+              "findings_count": 3,
+              "corrections_applied": 3,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            }
+          }
+        ]
+      },
+      "routing_input": {
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-evidence-heavy-refresh",
+        "workflow": "loop-system",
+        "evaluation_task": "Evidence-heavy page refresh routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single GPT-5.5 agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 7600,
+              "output_tokens": 1600,
+              "cached_input_tokens": 900,
+              "reasoning_tokens": 420,
+              "total_tokens": 9200,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 7600,
+                  "output_tokens": 1600,
+                  "cached_input_tokens": 900,
+                  "reasoning_tokens": 420,
+                  "total_tokens": 9200
+                }
+              ]
+            },
+            "wall_duration_ms": 9200,
+            "quality_score": 0.88,
+            "accuracy_score": 0.87,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated GPT-5.5 specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 6000,
+              "output_tokens": 1350,
+              "cached_input_tokens": 850,
+              "reasoning_tokens": 310,
+              "total_tokens": 7350,
+              "subagent_breakdown": [
+                {
+                  "id": "evidence-agent",
+                  "request_count": 1,
+                  "input_tokens": 4600,
+                  "output_tokens": 950,
+                  "cached_input_tokens": 650,
+                  "reasoning_tokens": 210,
+                  "total_tokens": 5550
+                },
+                {
+                  "id": "validation-agent",
+                  "request_count": 1,
+                  "input_tokens": 1400,
+                  "output_tokens": 400,
+                  "cached_input_tokens": 200,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 1800
+                }
+              ]
+            },
+            "wall_duration_ms": 7900,
+            "quality_score": 0.94,
+            "accuracy_score": 0.93,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "validation-heavy-closeout",
+      "task_class": "validation-heavy-closeout",
+      "task_label": "Validation-heavy closeout routing",
+      "correction_telemetry": {
+        "ok": true,
+        "mode": "agent-correction-telemetry",
+        "schema_version": "aipedia.correction-telemetry.v1",
+        "generated_at": "2026-07-01T03:35:00.000Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-74-validation-heavy-closeout-corrections.json",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-validation-heavy-closeout-corrections",
+        "workflow": "loop-system",
+        "telemetry_source": {
+          "type": "reviewer",
+          "id": "slice-74-validation-heavy-closeout-reviewer-events",
+          "confidence": "exact"
+        },
+        "totals": {
+          "candidate_count": 2,
+          "event_count": 8,
+          "findings_count": 4,
+          "corrections_applied": 4,
+          "residual_issue_count": 0,
+          "regression_count": 0
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-single-agent",
+            "orchestrator": "single-agent",
+            "subagent": "",
+            "event_count": 4,
+            "event_type_counts": {
+              "finding": 2,
+              "correction_applied": 2,
+              "residual_issue": 0,
+              "regression": 0
+            },
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "events": [
+              {
+                "id": "validation-heavy-closeout-single-finding-1",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 1"
+              },
+              {
+                "id": "validation-heavy-closeout-single-fix-1",
+                "type": "correction_applied",
+                "finding_id": "validation-heavy-closeout-single-finding-1",
+                "severity": "medium",
+                "note": "Correction 1"
+              },
+              {
+                "id": "validation-heavy-closeout-single-finding-2",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 2"
+              },
+              {
+                "id": "validation-heavy-closeout-single-fix-2",
+                "type": "correction_applied",
+                "finding_id": "validation-heavy-closeout-single-finding-2",
+                "severity": "medium",
+                "note": "Correction 2"
+              }
+            ]
+          },
+          {
+            "id": "orchestrated-specialists",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "subagent": "",
+            "event_count": 4,
+            "event_type_counts": {
+              "finding": 2,
+              "correction_applied": 2,
+              "residual_issue": 0,
+              "regression": 0
+            },
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "events": [
+              {
+                "id": "validation-heavy-closeout-orchestrated-finding-1",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 1"
+              },
+              {
+                "id": "validation-heavy-closeout-orchestrated-fix-1",
+                "type": "correction_applied",
+                "finding_id": "validation-heavy-closeout-orchestrated-finding-1",
+                "severity": "medium",
+                "note": "Correction 1"
+              },
+              {
+                "id": "validation-heavy-closeout-orchestrated-finding-2",
+                "type": "finding",
+                "finding_id": "",
+                "severity": "medium",
+                "note": "Finding 2"
+              },
+              {
+                "id": "validation-heavy-closeout-orchestrated-fix-2",
+                "type": "correction_applied",
+                "finding_id": "validation-heavy-closeout-orchestrated-finding-2",
+                "severity": "medium",
+                "note": "Correction 2"
+              }
+            ]
+          }
+        ],
+        "routing_candidate_overrides": [
+          {
+            "id": "single-agent",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-single-agent",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-orchestrated-specialists",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            }
+          }
+        ]
+      },
+      "routing_input": {
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-validation-heavy-closeout",
+        "workflow": "loop-system",
+        "evaluation_task": "Validation-heavy closeout routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single GPT-5.5 agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 6800,
+              "output_tokens": 1500,
+              "cached_input_tokens": 700,
+              "reasoning_tokens": 360,
+              "total_tokens": 8300,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 6800,
+                  "output_tokens": 1500,
+                  "cached_input_tokens": 700,
+                  "reasoning_tokens": 360,
+                  "total_tokens": 8300
+                }
+              ]
+            },
+            "wall_duration_ms": 8700,
+            "quality_score": 0.89,
+            "accuracy_score": 0.88,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated GPT-5.5 specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 5400,
+              "output_tokens": 1200,
+              "cached_input_tokens": 650,
+              "reasoning_tokens": 260,
+              "total_tokens": 6600,
+              "subagent_breakdown": [
+                {
+                  "id": "validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 3400,
+                  "output_tokens": 750,
+                  "cached_input_tokens": 400,
+                  "reasoning_tokens": 160,
+                  "total_tokens": 4150
+                },
+                {
+                  "id": "repair-agent",
+                  "request_count": 1,
+                  "input_tokens": 2000,
+                  "output_tokens": 450,
+                  "cached_input_tokens": 250,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 2450
+                }
+              ]
+            },
+            "wall_duration_ms": 7300,
+            "quality_score": 0.93,
+            "accuracy_score": 0.94,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "tiny-status-check",
+      "task_class": "tiny-status-check",
+      "task_label": "Tiny status check routing",
+      "correction_telemetry": {
+        "ok": true,
+        "mode": "agent-correction-telemetry",
+        "schema_version": "aipedia.correction-telemetry.v1",
+        "generated_at": "2026-07-01T03:35:00.000Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-74-tiny-status-check-corrections.json",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-tiny-status-check-corrections",
+        "workflow": "loop-system",
+        "telemetry_source": {
+          "type": "reviewer",
+          "id": "slice-74-tiny-status-check-reviewer-events",
+          "confidence": "exact"
+        },
+        "totals": {
+          "candidate_count": 2,
+          "event_count": 0,
+          "findings_count": 0,
+          "corrections_applied": 0,
+          "residual_issue_count": 0,
+          "regression_count": 0
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-single-agent",
+            "orchestrator": "single-agent",
+            "subagent": "",
+            "event_count": 0,
+            "event_type_counts": {
+              "finding": 0,
+              "correction_applied": 0,
+              "residual_issue": 0,
+              "regression": 0
+            },
+            "correction_outcomes": {
+              "findings_count": 0,
+              "corrections_applied": 0,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "events": []
+          },
+          {
+            "id": "orchestrated-specialists",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "subagent": "",
+            "event_count": 0,
+            "event_type_counts": {
+              "finding": 0,
+              "correction_applied": 0,
+              "residual_issue": 0,
+              "regression": 0
+            },
+            "correction_outcomes": {
+              "findings_count": 0,
+              "corrections_applied": 0,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "events": []
+          }
+        ],
+        "routing_candidate_overrides": [
+          {
+            "id": "single-agent",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-single-agent",
+            "correction_outcomes": {
+              "findings_count": 0,
+              "corrections_applied": 0,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-orchestrated-specialists",
+            "correction_outcomes": {
+              "findings_count": 0,
+              "corrections_applied": 0,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            }
+          }
+        ]
+      },
+      "routing_input": {
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-tiny-status-check",
+        "workflow": "loop-system",
+        "evaluation_task": "Tiny status check routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single GPT-5.5 agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 1000,
+              "output_tokens": 250,
+              "cached_input_tokens": 100,
+              "reasoning_tokens": 45,
+              "total_tokens": 1250,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 1000,
+                  "output_tokens": 250,
+                  "cached_input_tokens": 100,
+                  "reasoning_tokens": 45,
+                  "total_tokens": 1250
+                }
+              ]
+            },
+            "wall_duration_ms": 1200,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated GPT-5.5 specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 2100,
+              "output_tokens": 520,
+              "cached_input_tokens": 220,
+              "reasoning_tokens": 120,
+              "total_tokens": 2620,
+              "subagent_breakdown": [
+                {
+                  "id": "planner-agent",
+                  "request_count": 1,
+                  "input_tokens": 1200,
+                  "output_tokens": 300,
+                  "cached_input_tokens": 120,
+                  "reasoning_tokens": 70,
+                  "total_tokens": 1500
+                },
+                {
+                  "id": "validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 900,
+                  "output_tokens": 220,
+                  "cached_input_tokens": 100,
+                  "reasoning_tokens": 50,
+                  "total_tokens": 1120
+                }
+              ]
+            },
+            "wall_duration_ms": 2100,
+            "quality_score": 0.92,
+            "accuracy_score": 0.92,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

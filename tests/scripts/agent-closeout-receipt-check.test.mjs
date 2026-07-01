@@ -6,6 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
 import { buildCorrectionTelemetry } from '../../scripts/lib/correction-telemetry.mjs';
 import { buildRoutingEvaluation } from '../../scripts/lib/routing-evaluation.mjs';
+import { buildRoutingEvaluationSuite } from '../../scripts/lib/routing-evaluation-suite.mjs';
 
 function runCheck(args = []) {
   return spawnSync(process.execPath, ['scripts/agent-closeout-receipt-check.mjs', ...args], {
@@ -969,6 +970,38 @@ function validRoutingEvaluationReceipt() {
   return result.receipt;
 }
 
+function validRoutingEvaluationSuiteReceipt() {
+  const routing = validRoutingEvaluationReceipt();
+  const result = buildRoutingEvaluationSuite({
+    goal_id: 'june-30-agentic-tooling-meta-os',
+    run_id: 'slice-74-routing-suite',
+    workflow: 'loop-system',
+    suite_task: 'Compare routing variants across task classes.',
+    scenarios: [
+      {
+        id: 'evidence-heavy-refresh',
+        task_class: 'evidence-heavy-page-refresh',
+        routing_evaluation: routing,
+      },
+      {
+        id: 'validation-heavy-closeout',
+        task_class: 'validation-heavy-closeout',
+        routing_evaluation: {
+          ...routing,
+          run_id: 'slice-74-routing-suite-validation',
+          evaluation_task: 'Compare routing variants for validation-heavy closeout.',
+        },
+      },
+    ],
+  }, {
+    generatedAt: '2026-07-01T03:30:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-suites/fixture-input.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validLoopEfficiencyTrendReceipt(overrides = {}) {
   return {
     ok: true,
@@ -1165,6 +1198,23 @@ test('closeout receipt check validates agent routing evaluation receipts', () =>
   }
 });
 
+test('closeout receipt check validates agent routing evaluation suite receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-'));
+  const path = join(dir, 'routing-suite.json');
+
+  try {
+    writeJson(path, validRoutingEvaluationSuiteReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-evaluation-suite');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates correction telemetry receipts', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-correction-telemetry-'));
   const path = join(dir, 'correction-telemetry.json');
@@ -1195,6 +1245,24 @@ test('closeout receipt check fails tampered correction telemetry totals', () => 
     const report = JSON.parse(result.stdout);
     const codes = report.receipts[0].issues.map((issue) => issue.code);
     assert.ok(codes.includes('correction-telemetry-total-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing evaluation suite aggregates', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-suite-'));
+  const path = join(dir, 'routing-suite.json');
+
+  try {
+    const receipt = validRoutingEvaluationSuiteReceipt();
+    receipt.aggregate.dominant_recommended_candidate_count = 99;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.notEqual(result.status, 0);
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((issue) => issue.code);
+    assert.ok(codes.includes('routing-suite-aggregate-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

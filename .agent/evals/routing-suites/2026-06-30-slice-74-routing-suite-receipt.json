@@ -1,0 +1,587 @@
+{
+  "ok": true,
+  "mode": "agent-routing-evaluation-suite",
+  "schema_version": "aipedia.agent-routing-evaluation-suite.v1",
+  "generated_at": "2026-07-01T03:32:50.316Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-input.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-74-routing-suite",
+  "workflow": "loop-system",
+  "suite_task": "Compare GPT-5.5 single-agent and orchestrated-specialist routing across task classes before changing orchestration defaults.",
+  "totals": {
+    "scenario_count": 3,
+    "recommendation_count": 3,
+    "monitor_count": 0,
+    "blocked_count": 0,
+    "telemetry_backed_scenario_count": 3
+  },
+  "scenarios": [
+    {
+      "id": "evidence-heavy-refresh",
+      "task_class": "evidence-heavy-page-refresh",
+      "task_label": "Evidence-heavy page refresh routing",
+      "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "orchestrated-specialists",
+      "winner_id": "orchestrated-specialists",
+      "runner_up_id": "single-agent",
+      "improvement_margin": 0.073,
+      "winner_exact_model_total_tokens": 7350,
+      "runner_up_exact_model_total_tokens": 9200,
+      "exact_model_token_delta": 1850,
+      "winner_wall_duration_ms": 7900,
+      "runner_up_wall_duration_ms": 9200,
+      "wall_duration_delta_ms": 1300,
+      "routing_evaluation": {
+        "ok": true,
+        "mode": "agent-routing-evaluation",
+        "schema_version": "aipedia.agent-routing-evaluation.v1",
+        "generated_at": "2026-07-01T03:32:50.316Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-input.json#evidence-heavy-refresh",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-evidence-heavy-refresh",
+        "workflow": "loop-system",
+        "evaluation_task": "Evidence-heavy page refresh routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "weights": {
+          "quality": 0.28,
+          "accuracy": 0.28,
+          "correction": 0.18,
+          "token_efficiency": 0.14,
+          "speed": 0.08,
+          "task_completion": 0.04
+        },
+        "totals": {
+          "candidate_count": 2,
+          "eligible_candidate_count": 2,
+          "ineligible_candidate_count": 0
+        },
+        "candidates": [
+          {
+            "valid": true,
+            "id": "single-agent",
+            "label": "Single GPT-5.5 agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 7600,
+              "output_tokens": 1600,
+              "cached_input_tokens": 900,
+              "reasoning_tokens": 420,
+              "total_tokens": 9200,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 7600,
+                  "output_tokens": 1600,
+                  "cached_input_tokens": 900,
+                  "reasoning_tokens": 420,
+                  "total_tokens": 9200
+                }
+              ]
+            },
+            "wall_duration_ms": 9200,
+            "quality_score": 0.88,
+            "accuracy_score": 0.87,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "single-agent",
+            "correction_telemetry_receipt": ".agent/evals/routing-suites/2026-06-30-slice-74-evidence-heavy-refresh-corrections.json",
+            "correction_outcomes": {
+              "findings_count": 3,
+              "corrections_applied": 3,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 0.799,
+            "speed_score": 0.859,
+            "task_completion_rate": 1,
+            "overall_score": 0.891,
+            "tokens_per_quality_point": 10454.545,
+            "tokens_per_accuracy_point": 10574.713,
+            "eligible": true,
+            "ineligible_reasons": []
+          },
+          {
+            "valid": true,
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated GPT-5.5 specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-evidence-heavy-refresh-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 6000,
+              "output_tokens": 1350,
+              "cached_input_tokens": 850,
+              "reasoning_tokens": 310,
+              "total_tokens": 7350,
+              "subagent_breakdown": [
+                {
+                  "id": "evidence-agent",
+                  "request_count": 1,
+                  "input_tokens": 4600,
+                  "output_tokens": 950,
+                  "cached_input_tokens": 650,
+                  "reasoning_tokens": 210,
+                  "total_tokens": 5550
+                },
+                {
+                  "id": "validation-agent",
+                  "request_count": 1,
+                  "input_tokens": 1400,
+                  "output_tokens": 400,
+                  "cached_input_tokens": 200,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 1800
+                }
+              ]
+            },
+            "wall_duration_ms": 7900,
+            "quality_score": 0.94,
+            "accuracy_score": 0.93,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "orchestrated-specialists",
+            "correction_telemetry_receipt": ".agent/evals/routing-suites/2026-06-30-slice-74-evidence-heavy-refresh-corrections.json",
+            "correction_outcomes": {
+              "findings_count": 3,
+              "corrections_applied": 3,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 1,
+            "speed_score": 1,
+            "task_completion_rate": 1,
+            "overall_score": 0.964,
+            "tokens_per_quality_point": 7819.149,
+            "tokens_per_accuracy_point": 7903.226,
+            "eligible": true,
+            "ineligible_reasons": []
+          }
+        ],
+        "winner": {
+          "id": "orchestrated-specialists",
+          "overall_score": 0.964,
+          "exact_model_total_tokens": 7350,
+          "wall_duration_ms": 7900
+        },
+        "recommendation": {
+          "status": "recommend",
+          "candidate_id": "orchestrated-specialists",
+          "improvement_margin": 0.073,
+          "reason": "orchestrated-specialists has the highest weighted score while meeting exact token, quality, correction, wall-time, and accuracy gates."
+        },
+        "next_actions": [
+          "Use orchestrated-specialists only for matching tasks and keep collecting exact token, correction, wall-time, accuracy, and quality receipts."
+        ]
+      }
+    },
+    {
+      "id": "validation-heavy-closeout",
+      "task_class": "validation-heavy-closeout",
+      "task_label": "Validation-heavy closeout routing",
+      "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "orchestrated-specialists",
+      "winner_id": "orchestrated-specialists",
+      "runner_up_id": "single-agent",
+      "improvement_margin": 0.07,
+      "winner_exact_model_total_tokens": 6600,
+      "runner_up_exact_model_total_tokens": 8300,
+      "exact_model_token_delta": 1700,
+      "winner_wall_duration_ms": 7300,
+      "runner_up_wall_duration_ms": 8700,
+      "wall_duration_delta_ms": 1400,
+      "routing_evaluation": {
+        "ok": true,
+        "mode": "agent-routing-evaluation",
+        "schema_version": "aipedia.agent-routing-evaluation.v1",
+        "generated_at": "2026-07-01T03:32:50.316Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-input.json#validation-heavy-closeout",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-validation-heavy-closeout",
+        "workflow": "loop-system",
+        "evaluation_task": "Validation-heavy closeout routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "weights": {
+          "quality": 0.28,
+          "accuracy": 0.28,
+          "correction": 0.18,
+          "token_efficiency": 0.14,
+          "speed": 0.08,
+          "task_completion": 0.04
+        },
+        "totals": {
+          "candidate_count": 2,
+          "eligible_candidate_count": 2,
+          "ineligible_candidate_count": 0
+        },
+        "candidates": [
+          {
+            "valid": true,
+            "id": "single-agent",
+            "label": "Single GPT-5.5 agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 6800,
+              "output_tokens": 1500,
+              "cached_input_tokens": 700,
+              "reasoning_tokens": 360,
+              "total_tokens": 8300,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 6800,
+                  "output_tokens": 1500,
+                  "cached_input_tokens": 700,
+                  "reasoning_tokens": 360,
+                  "total_tokens": 8300
+                }
+              ]
+            },
+            "wall_duration_ms": 8700,
+            "quality_score": 0.89,
+            "accuracy_score": 0.88,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "single-agent",
+            "correction_telemetry_receipt": ".agent/evals/routing-suites/2026-06-30-slice-74-validation-heavy-closeout-corrections.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 0.795,
+            "speed_score": 0.839,
+            "task_completion_rate": 1,
+            "overall_score": 0.894,
+            "tokens_per_quality_point": 9325.843,
+            "tokens_per_accuracy_point": 9431.818,
+            "eligible": true,
+            "ineligible_reasons": []
+          },
+          {
+            "valid": true,
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated GPT-5.5 specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-validation-heavy-closeout-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 5400,
+              "output_tokens": 1200,
+              "cached_input_tokens": 650,
+              "reasoning_tokens": 260,
+              "total_tokens": 6600,
+              "subagent_breakdown": [
+                {
+                  "id": "validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 3400,
+                  "output_tokens": 750,
+                  "cached_input_tokens": 400,
+                  "reasoning_tokens": 160,
+                  "total_tokens": 4150
+                },
+                {
+                  "id": "repair-agent",
+                  "request_count": 1,
+                  "input_tokens": 2000,
+                  "output_tokens": 450,
+                  "cached_input_tokens": 250,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 2450
+                }
+              ]
+            },
+            "wall_duration_ms": 7300,
+            "quality_score": 0.93,
+            "accuracy_score": 0.94,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "orchestrated-specialists",
+            "correction_telemetry_receipt": ".agent/evals/routing-suites/2026-06-30-slice-74-validation-heavy-closeout-corrections.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 1,
+            "speed_score": 1,
+            "task_completion_rate": 1,
+            "overall_score": 0.964,
+            "tokens_per_quality_point": 7096.774,
+            "tokens_per_accuracy_point": 7021.277,
+            "eligible": true,
+            "ineligible_reasons": []
+          }
+        ],
+        "winner": {
+          "id": "orchestrated-specialists",
+          "overall_score": 0.964,
+          "exact_model_total_tokens": 6600,
+          "wall_duration_ms": 7300
+        },
+        "recommendation": {
+          "status": "recommend",
+          "candidate_id": "orchestrated-specialists",
+          "improvement_margin": 0.07,
+          "reason": "orchestrated-specialists has the highest weighted score while meeting exact token, quality, correction, wall-time, and accuracy gates."
+        },
+        "next_actions": [
+          "Use orchestrated-specialists only for matching tasks and keep collecting exact token, correction, wall-time, accuracy, and quality receipts."
+        ]
+      }
+    },
+    {
+      "id": "tiny-status-check",
+      "task_class": "tiny-status-check",
+      "task_label": "Tiny status check routing",
+      "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "single-agent",
+      "winner_id": "single-agent",
+      "runner_up_id": "orchestrated-specialists",
+      "improvement_margin": 0.102,
+      "winner_exact_model_total_tokens": 1250,
+      "runner_up_exact_model_total_tokens": 2620,
+      "exact_model_token_delta": 1370,
+      "winner_wall_duration_ms": 1200,
+      "runner_up_wall_duration_ms": 2100,
+      "wall_duration_delta_ms": 900,
+      "routing_evaluation": {
+        "ok": true,
+        "mode": "agent-routing-evaluation",
+        "schema_version": "aipedia.agent-routing-evaluation.v1",
+        "generated_at": "2026-07-01T03:32:50.316Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-input.json#tiny-status-check",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-74-tiny-status-check",
+        "workflow": "loop-system",
+        "evaluation_task": "Tiny status check routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "weights": {
+          "quality": 0.28,
+          "accuracy": 0.28,
+          "correction": 0.18,
+          "token_efficiency": 0.14,
+          "speed": 0.08,
+          "task_completion": 0.04
+        },
+        "totals": {
+          "candidate_count": 2,
+          "eligible_candidate_count": 2,
+          "ineligible_candidate_count": 0
+        },
+        "candidates": [
+          {
+            "valid": true,
+            "id": "single-agent",
+            "label": "Single GPT-5.5 agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 1000,
+              "output_tokens": 250,
+              "cached_input_tokens": 100,
+              "reasoning_tokens": 45,
+              "total_tokens": 1250,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 1000,
+                  "output_tokens": 250,
+                  "cached_input_tokens": 100,
+                  "reasoning_tokens": 45,
+                  "total_tokens": 1250
+                }
+              ]
+            },
+            "wall_duration_ms": 1200,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "single-agent",
+            "correction_telemetry_receipt": ".agent/evals/routing-suites/2026-06-30-slice-74-tiny-status-check-corrections.json",
+            "correction_outcomes": {
+              "findings_count": 0,
+              "corrections_applied": 0,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 1,
+            "speed_score": 1,
+            "task_completion_rate": 1,
+            "overall_score": 0.95,
+            "tokens_per_quality_point": 1373.626,
+            "tokens_per_accuracy_point": 1373.626,
+            "eligible": true,
+            "ineligible_reasons": []
+          },
+          {
+            "valid": true,
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated GPT-5.5 specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "2026-06-30-slice-74-tiny-status-check-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 2100,
+              "output_tokens": 520,
+              "cached_input_tokens": 220,
+              "reasoning_tokens": 120,
+              "total_tokens": 2620,
+              "subagent_breakdown": [
+                {
+                  "id": "planner-agent",
+                  "request_count": 1,
+                  "input_tokens": 1200,
+                  "output_tokens": 300,
+                  "cached_input_tokens": 120,
+                  "reasoning_tokens": 70,
+                  "total_tokens": 1500
+                },
+                {
+                  "id": "validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 900,
+                  "output_tokens": 220,
+                  "cached_input_tokens": 100,
+                  "reasoning_tokens": 50,
+                  "total_tokens": 1120
+                }
+              ]
+            },
+            "wall_duration_ms": 2100,
+            "quality_score": 0.92,
+            "accuracy_score": 0.92,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "orchestrated-specialists",
+            "correction_telemetry_receipt": ".agent/evals/routing-suites/2026-06-30-slice-74-tiny-status-check-corrections.json",
+            "correction_outcomes": {
+              "findings_count": 0,
+              "corrections_applied": 0,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 0.477,
+            "speed_score": 0.571,
+            "task_completion_rate": 1,
+            "overall_score": 0.848,
+            "tokens_per_quality_point": 2847.826,
+            "tokens_per_accuracy_point": 2847.826,
+            "eligible": true,
+            "ineligible_reasons": []
+          }
+        ],
+        "winner": {
+          "id": "single-agent",
+          "overall_score": 0.95,
+          "exact_model_total_tokens": 1250,
+          "wall_duration_ms": 1200
+        },
+        "recommendation": {
+          "status": "recommend",
+          "candidate_id": "single-agent",
+          "improvement_margin": 0.102,
+          "reason": "single-agent has the highest weighted score while meeting exact token, quality, correction, wall-time, and accuracy gates."
+        },
+        "next_actions": [
+          "Use single-agent only for matching tasks and keep collecting exact token, correction, wall-time, accuracy, and quality receipts."
+        ]
+      }
+    }
+  ],
+  "aggregate": {
+    "recommended_candidate_counts": {
+      "orchestrated-specialists": 2,
+      "single-agent": 1
+    },
+    "dominant_recommended_candidate_id": "orchestrated-specialists",
+    "dominant_recommended_candidate_count": 2,
+    "all_recommended_same_candidate": false,
+    "average_improvement_margin": 0.082,
+    "total_exact_model_token_delta": 4920,
+    "total_wall_duration_delta_ms": 3600,
+    "telemetry_coverage_rate": 1
+  },
+  "next_actions": [
+    "Keep orchestration routing conditional by task class because the suite does not recommend one candidate everywhere."
+  ],
+  "receipt_path": ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json"
+}
