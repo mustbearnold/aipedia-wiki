@@ -824,7 +824,7 @@
       "strict_latest_loop_closeout_passed": true,
       "final_trend_closeout_passed": true
     },
-    "status": "verified-local-pending-commit",
+    "status": "committed-and-pushed",
     "loop_receipt": ".agent/loop-runs/system/2026-07-01T08-43-28-915Z-loop-run.json",
     "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-93-final-efficiency-trends.json",
     "loop_summary": {
@@ -855,7 +855,7 @@
       "persistent_attention_command_count": 4
     },
     "previous_head_commit": "370d02eb8",
-    "commit": null
+    "commit": "9d0d3a7a"
   },
   "next_system_targets": [
     "Collect a second closeout-checked routing monitor trend after the next runtime or workflow change, regenerate the longer-window rollup, then rerun strict runtime completion.",
@@ -890,7 +890,7 @@
     "slice_92_efficiency_trend_closeout_validated": true,
     "slice_92_checked_dag_proof_attached": true
   },
-  "last_commit": "b37cc83a",
+  "last_commit": "9d0d3a7a",
   "compliance_notes": {
     "slice_93_runtime_rollup_required": true,
     "slice_93_live_strict_completion_closeout_validated": true,
