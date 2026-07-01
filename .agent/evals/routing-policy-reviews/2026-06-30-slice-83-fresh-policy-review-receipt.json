@@ -1,0 +1,169 @@
+{
+  "ok": true,
+  "mode": "agent-routing-policy-review",
+  "schema_version": "aipedia.agent-routing-policy-review.v1",
+  "generated_at": "2026-07-01T05:12:23.388Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review",
+  "workflow": "loop-system",
+  "review_task": "Reviewer pass for fresh independent routing policy pilot before default orchestration changes.",
+  "source_pilot": {
+    "receipt_path": ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+    "schema_version": "aipedia.agent-routing-policy-pilot.v2",
+    "generated_at": "2026-07-01T05:00:37.010Z",
+    "source": ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json + .agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json",
+    "goal_id": "june-30-agentic-tooling-meta-os",
+    "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite",
+    "workflow": "loop-system",
+    "pilot_task": "Validate conditional routing policy against fresh JSONL correction telemetry.",
+    "policy_receipt": ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+    "suite_receipt": ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json",
+    "policy_fit": {
+      "status": "pass",
+      "promotion_candidate": true,
+      "same_source_replay": false,
+      "shared_evidence_overlap": false,
+      "match_rate": 1,
+      "reason": "Pilot suite independently matches the policy rules."
+    },
+    "totals": {
+      "policy_rule_count": 2,
+      "pilot_scenario_count": 2,
+      "evaluated_scenario_count": 2,
+      "matched_rule_count": 2,
+      "mismatched_rule_count": 0,
+      "missing_rule_count": 0,
+      "blocked_scenario_count": 0,
+      "not_recommended_scenario_count": 0,
+      "telemetry_backed_scenario_count": 2,
+      "telemetry_ref_count": 1,
+      "covered_policy_rule_count": 2,
+      "uncovered_policy_rule_count": 0,
+      "same_source_replay": false,
+      "shared_telemetry_ref_count": 0,
+      "match_rate": 1,
+      "uncovered_task_classes": []
+    },
+    "guardrails": [
+      "Require exact model-token, correction, quality, accuracy, and wall-time receipts for every pilot suite."
+    ],
+    "next_actions": [
+      "Require one reviewer pass before applying the policy to default orchestration."
+    ]
+  },
+  "requirements": {
+    "pilot_status_required": "pass",
+    "promotion_candidate_required": true,
+    "evidence_independence_required": true,
+    "match_rate_min": 1,
+    "telemetry_coverage_required": true,
+    "all_policy_rules_covered_required": true,
+    "required_review_lenses": [
+      "architecture",
+      "eval-scoring",
+      "speed-token-efficiency",
+      "editorial-factuality",
+      "observability-pause-resume",
+      "rollout-governance"
+    ]
+  },
+  "reviews": [
+    {
+      "lens": "architecture",
+      "reviewer": "codex-routing-reviewer",
+      "status": "accepted",
+      "note": "Accepted after checking architecture, eval scoring, speed and token efficiency, editorial factuality, observability, pause resume, rollout, and governance guardrails.",
+      "reviewed_at": "",
+      "evidence_refs": [
+        ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+        ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json"
+      ]
+    },
+    {
+      "lens": "eval-scoring",
+      "reviewer": "codex-routing-reviewer",
+      "status": "accepted",
+      "note": "Accepted after checking architecture, eval scoring, speed and token efficiency, editorial factuality, observability, pause resume, rollout, and governance guardrails.",
+      "reviewed_at": "",
+      "evidence_refs": [
+        ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+        ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json"
+      ]
+    },
+    {
+      "lens": "speed-token-efficiency",
+      "reviewer": "codex-routing-reviewer",
+      "status": "accepted",
+      "note": "Accepted after checking architecture, eval scoring, speed and token efficiency, editorial factuality, observability, pause resume, rollout, and governance guardrails.",
+      "reviewed_at": "",
+      "evidence_refs": [
+        ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+        ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json"
+      ]
+    },
+    {
+      "lens": "editorial-factuality",
+      "reviewer": "codex-routing-reviewer",
+      "status": "accepted",
+      "note": "Accepted after checking architecture, eval scoring, speed and token efficiency, editorial factuality, observability, pause resume, rollout, and governance guardrails.",
+      "reviewed_at": "",
+      "evidence_refs": [
+        ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+        ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json"
+      ]
+    },
+    {
+      "lens": "observability-pause-resume",
+      "reviewer": "codex-routing-reviewer",
+      "status": "accepted",
+      "note": "Accepted after checking architecture, eval scoring, speed and token efficiency, editorial factuality, observability, pause resume, rollout, and governance guardrails.",
+      "reviewed_at": "",
+      "evidence_refs": [
+        ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+        ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json"
+      ]
+    },
+    {
+      "lens": "rollout-governance",
+      "reviewer": "codex-routing-reviewer",
+      "status": "accepted",
+      "note": "Accepted after checking architecture, eval scoring, speed and token efficiency, editorial factuality, observability, pause resume, rollout, and governance guardrails.",
+      "reviewed_at": "",
+      "evidence_refs": [
+        ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+        ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json"
+      ]
+    }
+  ],
+  "totals": {
+    "review_count": 6,
+    "required_lens_count": 6,
+    "accepted_required_lens_count": 6,
+    "rejected_review_count": 0,
+    "needs_work_review_count": 0,
+    "missing_required_lens_count": 0,
+    "missing_required_lenses": []
+  },
+  "promotion_review": {
+    "status": "accepted",
+    "default_ready": true,
+    "pilot_ready": true,
+    "reviewer_pass_complete": true,
+    "reason": "All required reviewer lenses accepted the fresh independent pilot."
+  },
+  "guardrails": [
+    "Re-run the routing suite, policy, pilot, and review receipts after material workflow, model, prompt, or guard changes."
+  ],
+  "next_actions": [
+    "Apply the routing policy only through a guarded rollout with exact token, correction, quality, accuracy, and wall-time receipts."
+  ],
+  "receipt_path": ".agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json"
+}

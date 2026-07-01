@@ -1,8 +1,23 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 83, Routing Policy Reviewer-Pass Receipts
+
+- Status: Verified locally through focused tests, scoped `check:smart`, `check:quick`, reviewer-pass closeout, enforced loop closeout, and final trend closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:review` and `scripts/lib/routing-policy-review.mjs` to build closeout-checkable `aipedia.agent-routing-policy-review.v1` receipts.
+- Changed: A review receipt now requires a fresh independent policy-pilot pass plus accepted review rows for architecture, eval-scoring, speed-token-efficiency, editorial-factuality, observability-pause-resume, and rollout-governance lenses before `promotion_review.default_ready` can be true.
+- Changed: `agent:closeout:check` and `agent:meta:closeout:auto` now recognize and validate routing-policy-review receipts under a dedicated `routing-policy-review` profile.
+- Changed: `scripts/README.md` and `package.json` now expose the new reviewer-pass command surface.
+- Live proof: `.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json` passed auto-routed closeout with status `accepted`, default-ready true, pilot-ready true, reviewer-pass complete true, 6/6 accepted lenses, 0 missing lenses, 0 rejected reviews, and 0 needs-work reviews.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T05-19-07-606Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-83-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,955 ms, latest wall duration 4,802 ms, latest estimated full receipt tokens 11,825, latest system artifact count 16, 3 persistent attention loops, and 4 persistent attention commands.
+- Verification: syntax checks passed for the new review CLI/library plus closeout and router scripts. Focused review, closeout, and router tests passed 76/76. Scoped `check:smart` passed with 607 script tests plus command audit. `check:quick` passed with 607 script tests, command audit, and quick assets. The reviewer-pass receipt, latest loop receipt, and trend receipt all passed auto-routed closeout.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 15 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time improved by 153 ms versus Slice 82, and estimated receipt tokens dropped by 94 while reviewer-pass promotion evidence became closeout-checkable.
+- Next: Commit and push only Slice 83 system files, then guard default orchestration rollout with exact token, correction, quality, accuracy, and wall-time receipts.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 82, Fresh-Telemetry Routing Policy Pilot
 
-- Status: Verified locally through scoped `check:smart`, `check:quick`, strict latest-loop closeout, final trend closeout, and all Slice 82 artifact closeouts. Pending commit and push.
+- Status: Complete, verified, committed, and pushed as `d7024a01`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Added a fresh JSONL correction telemetry pilot input that does not reuse the Slice 76 policy evidence.
 - Changed: Built a fresh correction telemetry receipt with 2 candidates, 8 events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
@@ -17,7 +32,7 @@
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-82-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,984 ms, latest wall duration 4,955 ms, latest estimated full receipt tokens 11,919, latest system artifact count 12, 3 persistent attention loops, and 4 persistent attention commands.
 - Verification: scoped `check:smart` passed with `git diff --check`. `check:quick` passed with 600 script tests, command audit, and quick assets. The fresh correction telemetry receipt, routing-suite receipt, policy-pilot receipt, latest loop receipt, and trend receipt all passed auto-routed closeout.
 - Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 11 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time improved by 29 ms versus Slice 81, while estimated receipt tokens increased by 130 because the fresh pilot proof added new evidence.
-- Next: Commit and push only Slice 82 system files, then run the required reviewer-pass receipt before applying the routing policy to default orchestration.
+- Next: Run the required reviewer-pass receipt before applying the routing policy to default orchestration.
 
 ### 2026-06-30: Agentic Tooling Meta Slice 81, Routing Policy Pilot Evidence-Overlap Guards
 

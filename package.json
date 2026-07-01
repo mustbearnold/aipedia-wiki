@@ -118,6 +118,7 @@
     "agent:routing:suite": "node scripts/agent-routing-suite.mjs",
     "agent:routing:policy": "node scripts/agent-routing-policy.mjs",
     "agent:routing:pilot": "node scripts/agent-routing-pilot.mjs",
+    "agent:routing:review": "node scripts/agent-routing-review.mjs",
     "agent:dag:check": "node scripts/agent-task-dag-check.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
