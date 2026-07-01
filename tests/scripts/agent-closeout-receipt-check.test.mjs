@@ -1196,6 +1196,39 @@ test('closeout receipt check validates meta proof readiness refresh plan counts'
   }
 });
 
+test('closeout receipt check validates meta proof readiness refresh plan status counts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-proof-refresh-plan-status-count-'));
+  const path = join(dir, 'proof-readiness.json');
+  const receipt = validMetaProofReadinessReceipt();
+
+  try {
+    receipt.inputs.input_refresh_plan_source = 'node scripts/agent-input-freshness-receipt.mjs --workflow page-refresh --refresh-stale --json';
+    receipt.inputs.input_refresh_plan_exit_code = 0;
+    receipt.inputs.input_refresh_plan_status = 'planned';
+    receipt.inputs.input_refresh_plan_count = 0;
+    writeJson(path, receipt);
+    const missingPlan = runCheck(['--receipt', path, '--json']);
+    assert.equal(missingPlan.status, 1);
+
+    let report = JSON.parse(missingPlan.stdout);
+    let codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('meta-proof-readiness-refresh-plan-status-count-mismatch'));
+
+    receipt.inputs.input_refresh_plan_status = 'missing-refresh-plan';
+    receipt.inputs.input_refresh_plan_count = 1;
+    receipt.targets[0].blockers[0].input_refresh_plan = validProofReadinessRefreshPlan();
+    writeJson(path, receipt);
+    const unexpectedPlan = runCheck(['--receipt', path, '--json']);
+    assert.equal(unexpectedPlan.status, 1);
+
+    report = JSON.parse(unexpectedPlan.stdout);
+    codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('meta-proof-readiness-refresh-plan-status-count-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates DAG artifact refs on loop receipts', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-dag-artifacts-'));
   const receiptPath = join(dir, 'receipt.json');

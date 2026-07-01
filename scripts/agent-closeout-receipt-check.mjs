@@ -1788,8 +1788,13 @@ function validateMetaProofReadinessRefreshPlanInputs(inputs, issues) {
     values: ['skipped', 'from-input-freshness', 'missing-refresh-plan', 'planned', 'failed'],
   });
   requireNonNegativeNumber(inputs, 'input_refresh_plan_count', issues, 'inputs.input_refresh_plan_count');
-  if (inputs.input_refresh_plan_status === 'skipped' && inputs.input_refresh_plan_count !== 0) {
-    issues.push(issue('meta-proof-readiness-refresh-plan-count-mismatch', 'inputs.input_refresh_plan_status is skipped but input_refresh_plan_count is not 0.'));
+  const status = inputs.input_refresh_plan_status;
+  const count = inputs.input_refresh_plan_count;
+  if (['skipped', 'missing-refresh-plan'].includes(status) && count !== 0) {
+    issues.push(issue('meta-proof-readiness-refresh-plan-status-count-mismatch', `inputs.input_refresh_plan_status is ${status} but input_refresh_plan_count is not 0.`));
+  }
+  if (['from-input-freshness', 'planned'].includes(status) && count === 0) {
+    issues.push(issue('meta-proof-readiness-refresh-plan-status-count-mismatch', `inputs.input_refresh_plan_status is ${status} but input_refresh_plan_count is 0.`));
   }
 }
 
