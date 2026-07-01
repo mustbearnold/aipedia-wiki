@@ -4,18 +4,20 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { CORRECTION_TELEMETRY_SCHEMA_VERSION } from './lib/correction-telemetry.mjs';
 import { buildRoutingEvaluationSuite, suiteIssue } from './lib/routing-evaluation-suite.mjs';
 
 const args = process.argv.slice(2);
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_PROJECT_DIR = dirname(SCRIPT_DIR);
-const KNOWN_FLAGS = new Set(['--help', '-h', '--input', '--json', '--out', '--project-dir', '--root']);
-const VALUE_FLAGS = new Set(['--input', '--out', '--project-dir', '--root']);
+const KNOWN_FLAGS = new Set(['--help', '-h', '--correction-telemetry', '--input', '--json', '--out', '--project-dir', '--root']);
+const VALUE_FLAGS = new Set(['--correction-telemetry', '--input', '--out', '--project-dir', '--root']);
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || DEFAULT_PROJECT_DIR);
 const INPUT_PATH = valueFor('--input');
 const OUT_PATH = valueFor('--out');
+const CORRECTION_TELEMETRY_PATH = valueFor('--correction-telemetry');
 
 if (HELP_MODE) {
   console.log(usage());
@@ -45,6 +47,19 @@ if (!existsSync(inputFile)) {
     issues.push(suiteIssue('routing-suite-input-invalid', `${projectPath(inputFile)} could not parse as JSON: ${error.message}`));
   }
 }
+
+if (issues.length) {
+  emit({
+    ok: false,
+    mode: 'agent-routing-evaluation-suite',
+    project_dir: PROJECT_DIR,
+    source: projectPath(inputFile),
+    issues,
+  });
+  process.exit(1);
+}
+
+hydrateCorrectionTelemetryPaths(input, issues);
 
 if (issues.length) {
   emit({
@@ -88,16 +103,18 @@ function usage() {
     'Usage:',
     '  node scripts/agent-routing-suite.mjs --input <path> --json',
     '  node scripts/agent-routing-suite.mjs --input <path> --out <path> --json',
+    '  node scripts/agent-routing-suite.mjs --input <path> --correction-telemetry <path> --out <path> --json',
     '',
     'Builds an aipedia.agent-routing-evaluation-suite.v1 receipt from multiple routing evaluation scenarios.',
     'Use it before claiming one orchestration route is broadly better across task classes.',
     '',
     'Options:',
-    '  --input <path>        Input JSON with routing evaluation scenarios.',
-    '  --out <path>          Optional receipt output path.',
-    '  --project-dir <dir>   Project root. Alias: --root.',
-    '  --json                Emit JSON. Human mode still prints compact JSON for receipt safety.',
-    '  --help                Show this help.',
+    '  --input <path>                  Input JSON with routing evaluation scenarios.',
+    '  --correction-telemetry <path>   Optional correction telemetry receipt used for scenarios without inline telemetry.',
+    '  --out <path>                    Optional receipt output path.',
+    '  --project-dir <dir>             Project root. Alias: --root.',
+    '  --json                          Emit JSON. Human mode still prints compact JSON for receipt safety.',
+    '  --help                          Show this help.',
   ].join('\n');
 }
 
@@ -122,6 +139,53 @@ function collectArgumentIssues() {
     issues.push(suiteIssue('argument-invalid', 'choose only one of --project-dir or --root.'));
   }
   return issues;
+}
+
+function hydrateCorrectionTelemetryPaths(input, issues) {
+  if (!input || typeof input !== 'object') return;
+  if (CORRECTION_TELEMETRY_PATH) {
+    const telemetry = readCorrectionTelemetry(CORRECTION_TELEMETRY_PATH, issues);
+    if (telemetry) input.correction_telemetry = telemetry;
+  }
+  if (input.correction_telemetry_path) {
+    const telemetry = readCorrectionTelemetry(input.correction_telemetry_path, issues);
+    if (telemetry) input.correction_telemetry = telemetry;
+  }
+  if (!Array.isArray(input.scenarios)) return;
+  for (const [index, scenario] of input.scenarios.entries()) {
+    if (!scenario || typeof scenario !== 'object') continue;
+    if (scenario.correction_telemetry_path) {
+      const telemetry = readCorrectionTelemetry(scenario.correction_telemetry_path, issues, `scenarios[${index}].correction_telemetry_path`);
+      if (telemetry) scenario.correction_telemetry = telemetry;
+    }
+    if (scenario.routing_input && typeof scenario.routing_input === 'object' && scenario.routing_input.correction_telemetry_path) {
+      const telemetry = readCorrectionTelemetry(scenario.routing_input.correction_telemetry_path, issues, `scenarios[${index}].routing_input.correction_telemetry_path`);
+      if (telemetry) scenario.routing_input.correction_telemetry = telemetry;
+    }
+  }
+}
+
+function readCorrectionTelemetry(path, issues, label = 'correction_telemetry_path') {
+  if (typeof path !== 'string' || !path.trim()) {
+    issues.push(suiteIssue('routing-suite-correction-telemetry-invalid', `${label} must be a path string.`));
+    return null;
+  }
+  const telemetryFile = resolve(PROJECT_DIR, path);
+  if (!existsSync(telemetryFile)) {
+    issues.push(suiteIssue('routing-suite-correction-telemetry-missing', `${projectPath(telemetryFile)} does not exist.`));
+    return null;
+  }
+  try {
+    const telemetry = JSON.parse(readFileSync(telemetryFile, 'utf8'));
+    if (telemetry.schema_version !== CORRECTION_TELEMETRY_SCHEMA_VERSION) {
+      issues.push(suiteIssue('routing-suite-correction-telemetry-invalid', `${projectPath(telemetryFile)} must be ${CORRECTION_TELEMETRY_SCHEMA_VERSION}.`));
+      return null;
+    }
+    return telemetry;
+  } catch (error) {
+    issues.push(suiteIssue('routing-suite-correction-telemetry-invalid', `${projectPath(telemetryFile)} could not parse as JSON: ${error.message}`));
+    return null;
+  }
 }
 
 function emit(value) {

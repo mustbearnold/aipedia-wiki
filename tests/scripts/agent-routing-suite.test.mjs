@@ -240,6 +240,63 @@ test('agent routing suite writes multi-task routing receipts', () => {
   }
 });
 
+test('agent routing suite hydrates correction telemetry from a receipt path', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-suite-telemetry-path-'));
+  try {
+    const input = suiteInput();
+    for (const scenarioInput of input.scenarios) {
+      delete scenarioInput.correction_telemetry;
+    }
+    writeJson(join(root, 'suite-input.json'), input);
+    writeJson(join(root, 'correction-telemetry.json'), correctionTelemetry({ runId: 'path-backed-jsonl-log' }));
+    const result = runRoutingSuite([
+      '--project-dir',
+      root,
+      '--input',
+      'suite-input.json',
+      '--correction-telemetry',
+      'correction-telemetry.json',
+      '--out',
+      '.agent/evals/routing-suites/path-backed.json',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const receipt = JSON.parse(result.stdout);
+    assert.equal(receipt.totals.telemetry_backed_scenario_count, 3);
+    assert.equal(receipt.aggregate.telemetry_coverage_rate, 1);
+    assert.equal(receipt.scenarios[0].routing_evaluation.candidates[0].correction_outcomes_source, 'correction-telemetry');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('agent routing suite hydrates scenario correction telemetry paths', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-suite-scenario-path-'));
+  try {
+    const input = suiteInput();
+    for (const [index, scenarioInput] of input.scenarios.entries()) {
+      const telemetryPath = `correction-telemetry-${index}.json`;
+      writeJson(join(root, telemetryPath), scenarioInput.correction_telemetry);
+      delete scenarioInput.correction_telemetry;
+      scenarioInput.correction_telemetry_path = telemetryPath;
+    }
+    writeJson(join(root, 'suite-input.json'), input);
+    const result = runRoutingSuite([
+      '--project-dir',
+      root,
+      '--input',
+      'suite-input.json',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const receipt = JSON.parse(result.stdout);
+    assert.equal(receipt.totals.telemetry_backed_scenario_count, 3);
+    assert.equal(receipt.scenarios[1].routing_evaluation.candidates[1].correction_telemetry_candidate_id, 'orchestrated-specialists');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('agent routing suite rejects duplicate scenario ids', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-suite-bad-'));
   try {

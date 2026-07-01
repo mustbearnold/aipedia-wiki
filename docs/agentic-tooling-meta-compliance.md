@@ -1115,6 +1115,22 @@ Correction telemetry can now be ingested from append-style runtime JSONL logs.
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T03-57-25-580Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-76-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,020 ms, latest wall duration 5,020 ms, latest estimated full receipt tokens 11,708, latest system artifact count 13, 3 persistent attention loops, 4 persistent attention commands, and estimated receipt tokens down 533 versus Slice 75.
 
+## Seventy-Seventh System Slice
+
+Routing suites can now consume durable correction telemetry receipt paths instead of embedded receipt objects.
+
+- Extended `agent:routing:suite` with `--correction-telemetry <path>` for a global correction telemetry receipt used by scenarios without inline telemetry.
+- Added `correction_telemetry_path` hydration for top-level suite input, individual scenarios, and nested `routing_input` objects.
+- The suite library now lets top-level correction telemetry flow into each scenario before building nested routing-evaluation receipts.
+- This makes JSONL-derived correction receipts from `agent:correction:adapt -- --events-jsonl` usable in multi-scenario routing suites without copying the full telemetry body into every scenario.
+- Focused suite, closeout, and router tests passed 65/65.
+- Live path-backed suite receipt `.agent/evals/routing-suites/2026-06-30-slice-77-jsonl-telemetry-suite-receipt.json` passed auto-routed closeout with 2 scenarios, 2 recommendations, 2/2 telemetry-backed scenarios, telemetry coverage 1.0, average improvement margin 0.082, total exact-token delta 2,850, and total wall-duration delta 2,300 ms.
+- The live suite keeps routing conditional: `orchestrated-specialists` wins the heavy review task, while `single-agent` wins the tiny status task.
+- Scoped `check:smart` passed with 584 script tests and command audit.
+- `check:quick` passed with 584 script tests, command audit, and quick assets.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T04-04-37-642Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 11 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-77-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,020 ms, latest wall duration 5,077 ms, latest estimated full receipt tokens 11,575, latest system artifact count 12, 3 persistent attention loops, 4 persistent attention commands, and estimated receipt tokens down 133 versus Slice 76.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

@@ -132,7 +132,7 @@ function normalizeScenario(scenario, index, scenarioIds, suiteInput, generatedAt
     return emptyScenario(id, taskClass);
   }
 
-  const correctionTelemetry = scenario.correction_telemetry || routingInput.correction_telemetry;
+  const correctionTelemetry = scenario.correction_telemetry || routingInput.correction_telemetry || suiteInput.correction_telemetry;
   const evaluationInput = {
     goal_id: stringValue(suiteInput.goal_id),
     run_id: `${stringValue(suiteInput.run_id)}:${id}`,

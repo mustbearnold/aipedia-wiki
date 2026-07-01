@@ -1,8 +1,23 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 77, Routing Suite Telemetry Paths
+
+- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, and path-backed routing-suite closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Extended `agent:routing:suite` so suite inputs can hydrate correction telemetry from durable receipt paths instead of embedding full telemetry objects.
+- Changed: `agent:routing:suite -- --correction-telemetry <path>` now provides a global correction-telemetry receipt for scenarios without inline telemetry, while `correction_telemetry_path` works at top-level, scenario-level, and nested routing-input level.
+- System lesson: path-backed telemetry keeps suite inputs compact and replayable. A JSONL-derived correction receipt can now flow into multi-scenario routing without copying the receipt body into every scenario.
+- Verification: syntax checks passed for the suite CLI/library. Focused suite/closeout/router tests passed 65/65. The live path-backed routing-suite receipt passed auto-routed closeout. Scoped `check:smart` passed with 584 script tests and command audit. `check:quick` passed with 584 script tests, command audit, and quick assets.
+- Durable suite proof: `.agent/evals/routing-suites/2026-06-30-slice-77-jsonl-telemetry-suite-input.json` and `.agent/evals/routing-suites/2026-06-30-slice-77-jsonl-telemetry-suite-receipt.json`.
+- Proof result: 2 scenarios, 2 recommendations, 2/2 telemetry-backed scenarios, telemetry coverage 1.0, average improvement margin 0.082, total exact-token delta 2,850, and total wall-duration delta 2,300 ms. `orchestrated-specialists` wins the heavy review task, while `single-agent` wins the tiny status task.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T04-04-37-642Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-77-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,020 ms, latest wall duration 5,077 ms, latest estimated full receipt tokens 11,575, latest system artifact count 12, 3 persistent attention loops, and 4 persistent attention commands.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 11 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time increased by 57 ms versus Slice 76, while estimated receipt tokens dropped by 133 and system artifact count dropped by 1.
+- Next: Commit and push only Slice 77 system files, then pilot path-backed routing suites on bounded real workloads.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 76, Runtime JSONL Correction Events
 
-- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, and JSONL correction-telemetry closeout. Pending commit and push.
+- Status: Complete, verified, committed, and pushed as `d3ef41cb`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Extended `agent:correction:adapt` with `--events-jsonl <path>` so append-style runtime logs can be converted into canonical `aipedia.correction-telemetry.v1` receipts without hand-building nested adapter JSON.
 - Changed: Added `adapterInputFromJsonlRows` to assemble meta, candidate, and event rows into the existing correction telemetry adapter input shape, preserving the same receipt schema and closeout route as Slice 75.
