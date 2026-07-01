@@ -116,6 +116,7 @@
     "agent:correction:telemetry": "node scripts/agent-correction-telemetry.mjs",
     "agent:routing:evaluate": "node scripts/agent-routing-evaluation.mjs",
     "agent:routing:suite": "node scripts/agent-routing-suite.mjs",
+    "agent:routing:policy": "node scripts/agent-routing-policy.mjs",
     "agent:dag:check": "node scripts/agent-task-dag-check.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",

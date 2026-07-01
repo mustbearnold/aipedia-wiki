@@ -7,6 +7,7 @@ import { test } from 'node:test';
 import { buildCorrectionTelemetry } from '../../scripts/lib/correction-telemetry.mjs';
 import { buildRoutingEvaluation } from '../../scripts/lib/routing-evaluation.mjs';
 import { buildRoutingEvaluationSuite } from '../../scripts/lib/routing-evaluation-suite.mjs';
+import { buildRoutingPolicy } from '../../scripts/lib/routing-policy.mjs';
 
 function runCheck(args = []) {
   return spawnSync(process.execPath, ['scripts/agent-closeout-receipt-check.mjs', ...args], {
@@ -1002,6 +1003,16 @@ function validRoutingEvaluationSuiteReceipt() {
   return result.receipt;
 }
 
+function validRoutingPolicyReceipt() {
+  const result = buildRoutingPolicy(validRoutingEvaluationSuiteReceipt(), {
+    generatedAt: '2026-07-01T04:30:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-policies/fixture-input.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validLoopEfficiencyTrendReceipt(overrides = {}) {
   return {
     ok: true,
@@ -1215,6 +1226,23 @@ test('closeout receipt check validates agent routing evaluation suite receipts',
   }
 });
 
+test('closeout receipt check validates agent routing policy receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-policy-'));
+  const path = join(dir, 'routing-policy.json');
+
+  try {
+    writeJson(path, validRoutingPolicyReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-policy');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check accepts historical v1 routing suite receipts without lineage refs', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-v1-'));
   const path = join(dir, 'routing-suite-v1.json');
@@ -1252,6 +1280,25 @@ test('closeout receipt check rejects v2 routing suite receipts without lineage r
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-suite-telemetry-lineage-invalid'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing policy rules', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-policy-'));
+  const path = join(dir, 'routing-policy.json');
+
+  try {
+    const receipt = validRoutingPolicyReceipt();
+    receipt.rules[0].route_candidate_id = 'single-agent';
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-policy-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

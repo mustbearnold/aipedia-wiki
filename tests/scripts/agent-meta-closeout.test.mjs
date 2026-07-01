@@ -7,6 +7,7 @@ import { test } from 'node:test';
 import { buildCorrectionTelemetry } from '../../scripts/lib/correction-telemetry.mjs';
 import { buildRoutingEvaluation } from '../../scripts/lib/routing-evaluation.mjs';
 import { buildRoutingEvaluationSuite } from '../../scripts/lib/routing-evaluation-suite.mjs';
+import { buildRoutingPolicy } from '../../scripts/lib/routing-policy.mjs';
 
 function runRouter(args = []) {
   return spawnSync(process.execPath, ['scripts/agent-meta-closeout.mjs', ...args], {
@@ -470,6 +471,16 @@ function validRoutingEvaluationSuiteReceipt() {
   return result.receipt;
 }
 
+function validRoutingPolicyReceipt() {
+  const result = buildRoutingPolicy(validRoutingEvaluationSuiteReceipt(), {
+    generatedAt: '2026-07-01T04:30:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-policies/fixture-input.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validCorrectionTelemetryReceipt() {
   const result = buildCorrectionTelemetry({
     goal_id: 'june-30-agentic-tooling-meta-os',
@@ -706,6 +717,24 @@ test('meta closeout router validates routing evaluation suite receipts', () => {
     assert.equal(report.requires_workflow_policy, false);
     assert.deepEqual(report.strict_flags, []);
     assert.equal(report.checker_report.receipts[0].type, 'agent-routing-evaluation-suite');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('meta closeout router validates routing policy receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-routing-policy-'));
+  try {
+    writeJson(join(root, 'routing-policy.json'), validRoutingPolicyReceipt());
+
+    const result = runRouter(['--project-dir', root, '--receipt', 'routing-policy.json', '--json']);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.closeout_profile, 'routing-policy');
+    assert.equal(report.requires_workflow_policy, false);
+    assert.deepEqual(report.strict_flags, []);
+    assert.equal(report.checker_report.receipts[0].type, 'agent-routing-policy');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

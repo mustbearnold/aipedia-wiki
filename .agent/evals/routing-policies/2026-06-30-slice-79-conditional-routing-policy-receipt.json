@@ -1,0 +1,189 @@
+{
+  "ok": true,
+  "mode": "agent-routing-policy",
+  "schema_version": "aipedia.agent-routing-policy.v1",
+  "generated_at": "2026-07-01T04:23:03.658Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/routing-suites/2026-06-30-slice-78-v2-telemetry-lineage-suite-receipt.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy",
+  "workflow": "loop-system",
+  "policy_task": "Conditional routing policy from Slice 78 telemetry lineage suite.",
+  "source_suite": {
+    "receipt_path": ".agent/evals/routing-suites/2026-06-30-slice-78-v2-telemetry-lineage-suite-receipt.json",
+    "schema_version": "aipedia.agent-routing-evaluation-suite.v2",
+    "generated_at": "2026-07-01T04:11:47.311Z",
+    "source": ".agent/evals/routing-suites/2026-06-30-slice-77-jsonl-telemetry-suite-input.json",
+    "goal_id": "june-30-agentic-tooling-meta-os",
+    "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite",
+    "workflow": "loop-system",
+    "suite_task": "Evaluate routing candidates using a JSONL-derived correction telemetry receipt path.",
+    "totals": {
+      "scenario_count": 2,
+      "recommendation_count": 2,
+      "monitor_count": 0,
+      "blocked_count": 0,
+      "telemetry_backed_scenario_count": 2
+    },
+    "aggregate": {
+      "recommended_candidate_counts": {
+        "orchestrated-specialists": 1,
+        "single-agent": 1
+      },
+      "dominant_recommended_candidate_id": "orchestrated-specialists",
+      "dominant_recommended_candidate_count": 1,
+      "all_recommended_same_candidate": false,
+      "average_improvement_margin": 0.082,
+      "total_exact_model_token_delta": 2850,
+      "total_wall_duration_delta_ms": 2300,
+      "telemetry_coverage_rate": 1
+    },
+    "correction_telemetry_refs": [
+      {
+        "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json",
+        "schema_version": "aipedia.correction-telemetry.v1",
+        "scenario_ids": [
+          "jsonl-heavy-review",
+          "jsonl-tiny-status"
+        ],
+        "candidate_ids": [
+          "orchestrated-specialists",
+          "single-agent"
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "jsonl-heavy-review",
+        "task_class": "jsonl-correction-heavy-review",
+        "task_label": "JSONL telemetry heavy review routing",
+        "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+        "correction_telemetry_refs": [
+          {
+            "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json",
+            "schema_version": "aipedia.correction-telemetry.v1",
+            "candidate_ids": [
+              "orchestrated-specialists",
+              "single-agent"
+            ]
+          }
+        ],
+        "recommendation_status": "recommend",
+        "recommended_candidate_id": "orchestrated-specialists",
+        "winner_id": "orchestrated-specialists",
+        "runner_up_id": "single-agent",
+        "improvement_margin": 0.063,
+        "winner_exact_model_total_tokens": 6300,
+        "runner_up_exact_model_total_tokens": 7800,
+        "exact_model_token_delta": 1500,
+        "winner_wall_duration_ms": 6800,
+        "runner_up_wall_duration_ms": 8200,
+        "wall_duration_delta_ms": 1400
+      },
+      {
+        "id": "jsonl-tiny-status",
+        "task_class": "jsonl-tiny-status-check",
+        "task_label": "JSONL telemetry tiny status routing",
+        "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+        "correction_telemetry_refs": [
+          {
+            "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json",
+            "schema_version": "aipedia.correction-telemetry.v1",
+            "candidate_ids": [
+              "orchestrated-specialists",
+              "single-agent"
+            ]
+          }
+        ],
+        "recommendation_status": "recommend",
+        "recommended_candidate_id": "single-agent",
+        "winner_id": "single-agent",
+        "runner_up_id": "orchestrated-specialists",
+        "improvement_margin": 0.102,
+        "winner_exact_model_total_tokens": 1250,
+        "runner_up_exact_model_total_tokens": 2600,
+        "exact_model_token_delta": 1350,
+        "winner_wall_duration_ms": 1200,
+        "runner_up_wall_duration_ms": 2100,
+        "wall_duration_delta_ms": 900
+      }
+    ]
+  },
+  "totals": {
+    "scenario_count": 2,
+    "rule_count": 2,
+    "conditional_rule_count": 2,
+    "blocked_scenario_count": 0,
+    "telemetry_ref_count": 1
+  },
+  "policy": {
+    "status": "conditional-by-task-class",
+    "default_candidate_id": "",
+    "conditional_routing_required": true,
+    "promotion_allowed": true,
+    "reason": "The suite recommends different candidates across task classes."
+  },
+  "rules": [
+    {
+      "id": "jsonl-heavy-review",
+      "task_class": "jsonl-correction-heavy-review",
+      "task_label": "JSONL telemetry heavy review routing",
+      "route_candidate_id": "orchestrated-specialists",
+      "winner_id": "orchestrated-specialists",
+      "runner_up_id": "single-agent",
+      "improvement_margin": 0.063,
+      "exact_model_token_delta": 1500,
+      "wall_duration_delta_ms": 1400,
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "evidence": {
+        "source_suite_receipt": ".agent/evals/routing-suites/2026-06-30-slice-78-v2-telemetry-lineage-suite-receipt.json",
+        "source_suite_schema_version": "aipedia.agent-routing-evaluation-suite.v2",
+        "telemetry_backed": true
+      }
+    },
+    {
+      "id": "jsonl-tiny-status",
+      "task_class": "jsonl-tiny-status-check",
+      "task_label": "JSONL telemetry tiny status routing",
+      "route_candidate_id": "single-agent",
+      "winner_id": "single-agent",
+      "runner_up_id": "orchestrated-specialists",
+      "improvement_margin": 0.102,
+      "exact_model_token_delta": 1350,
+      "wall_duration_delta_ms": 900,
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "evidence": {
+        "source_suite_receipt": ".agent/evals/routing-suites/2026-06-30-slice-78-v2-telemetry-lineage-suite-receipt.json",
+        "source_suite_schema_version": "aipedia.agent-routing-evaluation-suite.v2",
+        "telemetry_backed": true
+      }
+    }
+  ],
+  "guardrails": [
+    "Do not set a blanket default because the suite recommends different candidates by task class.",
+    "Require exact model-token, correction, quality, accuracy, and wall-time receipts before changing routing defaults.",
+    "Re-run agent:routing:suite and agent:routing:policy after material workflow, model, or prompt changes."
+  ],
+  "next_actions": [
+    "Pilot the per-task-class rules on bounded real workloads before changing orchestration defaults."
+  ],
+  "receipt_path": ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json"
+}

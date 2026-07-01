@@ -1,0 +1,1265 @@
+{
+  "ok": true,
+  "mode": "loop-run",
+  "project_dir": ".",
+  "registry_path": "src/data/aipedia-loops.json",
+  "schema_version": 1,
+  "default_site_dir": "dist-fast/client",
+  "generated_at": "2026-07-01T04:25:21.784Z",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-79-routing-policy-receipts",
+  "residual_risks": [
+    "Routing-policy receipts preserve conditional orchestration decisions, but policy promotion still needs bounded real workload pilots with exact token and correction telemetry."
+  ],
+  "next_actions": [
+    "Use agent:routing:policy receipts before changing orchestration defaults from routing-suite evidence.",
+    "Pilot conditional routing rules on bounded real workloads before changing default orchestration behavior."
+  ],
+  "trace": {
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-79-routing-policy-receipts",
+    "span_id": "span:loop-run:2026-06-30-slice-79-routing-policy-receipts:2026-07-01T04:25:21.784Z",
+    "parent_span_id": "",
+    "name": "loop-run",
+    "started_at": "2026-07-01T04:25:21.784Z",
+    "ended_at": "2026-07-01T04:25:26.793Z",
+    "duration_ms": 5009
+  },
+  "artifact_refs": [
+    {
+      "role": "input",
+      "kind": "loop-registry",
+      "path": "src/data/aipedia-loops.json",
+      "description": "Loop registry used for this run."
+    },
+    {
+      "role": "output",
+      "kind": "agent-task-dag",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
+      "description": "Generated agent task DAG graph."
+    },
+    {
+      "role": "output",
+      "kind": "agent-task-dag-validation-report",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json",
+      "description": "agent:dag:check validation report for an agent task DAG."
+    },
+    {
+      "role": "output",
+      "kind": "loop-run-receipt",
+      "path": ".agent/loop-runs/system/2026-07-01T04-25-21-784Z-loop-run.json",
+      "description": "Timestamped loop receipt JSON."
+    },
+    {
+      "role": "output",
+      "kind": "loop-run-latest",
+      "path": ".agent/loop-runs/system/latest.json",
+      "description": "Latest loop receipt summary JSON."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/loop-runs",
+      "id": "decision-content:record-target:.agent/loop-runs/",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/CURRENT_STATUS.md",
+      "id": "decision-content:record-target:.agent/CURRENT_STATUS.md",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/PLANS.md",
+      "id": "decision-content:record-target:.agent/PLANS.md",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md",
+      "id": "decision-content:record-target:.agent/WORK_LOG.md",
+      "description": "Declared record target for decision-content."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "decision-content:next-decision-cluster",
+      "description": "node scripts/decision-loop.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "decision-content:top-coverage-candidates",
+      "description": "node scripts/coverage-next.mjs --json --count 10",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "PAGE_REFRESH_LEDGER.md",
+      "id": "freshness:record-target:PAGE_REFRESH_LEDGER.md",
+      "description": "Declared record target for freshness."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major batches",
+      "id": "freshness:record-target:.agent/WORK_LOG.md for major batches",
+      "description": "Declared record target for freshness."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "freshness:freshness-queue",
+      "description": "node scripts/audit-freshness-queue.mjs --json",
+      "status": "attention"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "freshness:weekly-editorial-queue",
+      "description": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "src/data/source-registry.json",
+      "id": "trust-provenance:record-target:src/data/source-registry.json",
+      "description": "Declared record target for trust-provenance."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major provenance batches",
+      "id": "trust-provenance:record-target:.agent/WORK_LOG.md for major provenance batches",
+      "description": "Declared record target for trust-provenance."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "trust-provenance:provenance-and-pricing",
+      "description": "node scripts/audit-provenance-pricing.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "trust-provenance:source-registry-health",
+      "description": "node scripts/audit-source-health.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "trust-provenance:stale-facts-guard",
+      "description": "node scripts/guard-stale-facts.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "final report for changed commercial surfaces",
+      "id": "revenue-conversion:record-target:final report for changed commercial surfaces",
+      "description": "Declared record target for revenue-conversion."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major conversion batches",
+      "id": "revenue-conversion:record-target:.agent/WORK_LOG.md for major conversion batches",
+      "description": "Declared record target for revenue-conversion."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "revenue-conversion:commercial-CTA-audit",
+      "description": "node scripts/audit-commercial-cta.mjs --json --site-dir dist-fast/client",
+      "status": "attention"
+    },
+    {
+      "role": "input",
+      "kind": "built-output",
+      "path": "dist-fast/client",
+      "id": "revenue-conversion:built-output",
+      "description": "Built output checked by revenue-conversion."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "PAGE_REFRESH_LEDGER.md",
+      "id": "quality-pruning:record-target:PAGE_REFRESH_LEDGER.md",
+      "description": "Declared record target for quality-pruning."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for deletion or merge batches",
+      "id": "quality-pruning:record-target:.agent/WORK_LOG.md for deletion or merge batches",
+      "description": "Declared record target for quality-pruning."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "quality-pruning:site-KPI-audit",
+      "description": "node scripts/audit-site-kpis.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "quality-pruning:comparison-quality-audit",
+      "description": "node scripts/audit-coverage-quality.mjs --all --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "quality-pruning:internal-link-audit",
+      "description": "node scripts/audit-internal-links.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "loop receipt for rendered cycles",
+      "id": "performance-ux:record-target:loop receipt for rendered cycles",
+      "description": "Declared record target for performance-ux."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for performance changes",
+      "id": "performance-ux:record-target:.agent/WORK_LOG.md for performance changes",
+      "description": "Declared record target for performance-ux."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "performance-ux:dist-budget",
+      "description": "node scripts/check-dist-budget.mjs --json --site-dir dist-fast/client --mode fast",
+      "status": "attention"
+    },
+    {
+      "role": "input",
+      "kind": "built-output",
+      "path": "dist-fast/client",
+      "id": "performance-ux:built-output",
+      "description": "Built output checked by performance-ux."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "performance-ux:indexability-audit",
+      "description": "node scripts/audit-indexability.mjs --json --site-dir dist-fast/client",
+      "status": "attention"
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "src/content/news",
+      "id": "news-market:record-target:src/content/news/",
+      "description": "Declared record target for news-market."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": "PAGE_REFRESH_LEDGER.md for hubs and crawl surfaces",
+      "id": "news-market:record-target:PAGE_REFRESH_LEDGER.md for hubs and crawl surfaces",
+      "description": "Declared record target for news-market."
+    },
+    {
+      "role": "declared-output",
+      "kind": "record-target",
+      "path": ".agent/WORK_LOG.md for major news catch-ups",
+      "id": "news-market:record-target:.agent/WORK_LOG.md for major news catch-ups",
+      "description": "Declared record target for news-market."
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "news-market:news-rendering-guard",
+      "description": "node scripts/audit-news-rendering.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "news-market:news-cross-reference-audit",
+      "description": "node scripts/audit-news-xrefs.mjs --json",
+      "status": "ok"
+    },
+    {
+      "role": "embedded",
+      "kind": "loop-command",
+      "id": "news-market:weekly-editorial-queue",
+      "description": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+      "status": "ok"
+    }
+  ],
+  "duration_ms": 5009,
+  "totals": {
+    "loops": 7,
+    "ok": 4,
+    "attention": 3,
+    "skipped": 0,
+    "commands": 16
+  },
+  "loops": [
+    {
+      "id": "decision-content",
+      "title": "Decision Content Flywheel",
+      "status": "ok",
+      "purpose": "Pick and improve one real buyer-decision cluster at a time, usually a same-workflow comparison plus its tool pages and parent hubs.",
+      "duration_ms": 225,
+      "commands": [
+        {
+          "label": "next decision cluster",
+          "status": "ok",
+          "command": "node scripts/decision-loop.mjs --json",
+          "duration_ms": 111,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "decision-content-flywheel",
+            "count": 1,
+            "first_cluster": "cody-vs-github-copilot"
+          },
+          "stdout_tail": "        \"Parent hubs and top-layer surfaces do not contradict the refreshed child pages.\",\n        \"The page refresh ledger reflects the real editorial scope.\",\n        \"The next cycle can resume from .agent/CURRENT_STATUS.md and .agent/PLANS.md.\"\n      ]\n    }\n  ],\n  \"next_action\": \"Begin with cody-vs-github-copilot: verify current facts, write the decision page, update parent surfaces, check, record.\"\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "top coverage candidates",
+          "status": "ok",
+          "command": "node scripts/coverage-next.mjs --json --count 10",
+          "duration_ms": 114,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "count": 10
+          },
+          "stdout_tail": "      \"target_path\": \"src/content/comparisons/deepseek-vs-fireworks-ai.md\",\n      \"requires_canonical_fact_table\": true,\n      \"canonical_fact_tools\": [\n        \"deepseek\"\n      ]\n    }\n  ]\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Did the chosen pair share a real buyer job and workflow?",
+        "Did parent hubs and ledger rows move with the child page?",
+        "Did route QA cover mobile, tablet, and desktop?",
+        "Was the run recorded in .agent/loop-runs?"
+      ],
+      "record_targets": [
+        ".agent/loop-runs/",
+        ".agent/CURRENT_STATUS.md",
+        ".agent/PLANS.md",
+        ".agent/WORK_LOG.md"
+      ]
+    },
+    {
+      "id": "freshness",
+      "title": "Freshness Loop",
+      "status": "attention",
+      "purpose": "Turn stale verification dates, due review windows, and baseline pages into an oldest-first refresh queue.",
+      "duration_ms": 580,
+      "commands": [
+        {
+          "label": "freshness queue",
+          "status": "attention",
+          "command": "node scripts/audit-freshness-queue.mjs --json",
+          "duration_ms": 229,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [
+            "due_now=161"
+          ],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report",
+            "totals": {
+              "tools": 297,
+              "tools_dead": 4,
+              "facts": 1730,
+              "sources": 1698,
+              "baseline_generic_pages": 0,
+              "due_now": 161,
+              "due_soon": 441,
+              "high_volatility_missing_next_review": 0,
+              "source_registry_invalid_urls": 0,
+              "source_registry_duplicate_ids": 0,
+              "unknown_source_ids": 0,
+              "stale_verification_candidates": 0
+            },
+            "top_review_queue": [
+              {
+                "slug": "blackbox-ai",
+                "title": "BLACKBOX AI",
+                "key": "best_paid_tier",
+                "due_in_days": -2,
+                "path": "src/content/tools/blackbox-ai.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "best_for",
+                "due_in_days": -2,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "docs_surface",
+                "due_in_days": -2,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "open_source_or_local",
+                "due_in_days": -2,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "pricing_anchor",
+                "due_in_days": -2,
+                "path": "src/content/tools/cline.md"
+              }
+            ]
+          },
+          "stdout_tail": "  },\n  \"source_registry\": {\n    \"invalid_urls\": [],\n    \"duplicate_ids\": [],\n    \"missing_trust_metadata\": [],\n    \"unknown_source_ids\": []\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "weekly editorial queue",
+          "status": "ok",
+          "command": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+          "duration_ms": 350,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "weekly-queue",
+            "totals": {
+              "tools": 297,
+              "tools_dead": 4,
+              "facts": 1730,
+              "sources": 1698,
+              "baseline_generic_pages": 0,
+              "due_now": 161,
+              "due_soon": 441,
+              "high_volatility_missing_next_review": 0,
+              "source_registry_invalid_urls": 0,
+              "source_registry_duplicate_ids": 0,
+              "unknown_source_ids": 0,
+              "stale_verification_candidates": 0
+            },
+            "top_tools": [
+              {
+                "slug": "blackbox-ai",
+                "title": "BLACKBOX AI",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/blackbox-ai.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "coderabbit",
+                "title": "CodeRabbit",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/coderabbit.md"
+              },
+              {
+                "slug": "notebooklm",
+                "title": "Google NotebookLM",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/notebooklm.md"
+              },
+              {
+                "slug": "replit-agent",
+                "title": "Replit Agent",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/replit-agent.md"
+              }
+            ]
+          },
+          "stdout_tail": "          \"next_review_at\": \"2026-06-29\",\n          \"due_in_days\": -2,\n          \"source_id\": \"replit-agent-web-search\"\n        }\n      ]\n    }\n  ]\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [
+        "due_now=161"
+      ],
+      "skip_reason": "",
+      "review_questions": [
+        "Is the top queue item actually commercially or editorially important?",
+        "Can the facts be verified from current primary sources?",
+        "Did the ledger date represent the true refresh scope?"
+      ],
+      "record_targets": [
+        "PAGE_REFRESH_LEDGER.md",
+        ".agent/WORK_LOG.md for major batches"
+      ]
+    },
+    {
+      "id": "trust-provenance",
+      "title": "Trust And Provenance Loop",
+      "status": "ok",
+      "purpose": "Find unsupported claims, weak source metadata, pricing provenance gaps, stale facts, and source-registry drift.",
+      "duration_ms": 401,
+      "commands": [
+        {
+          "label": "provenance and pricing",
+          "status": "ok",
+          "command": "node scripts/audit-provenance-pricing.mjs --json",
+          "duration_ms": 163,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report-only",
+            "totals": {
+              "tools_scanned": 301,
+              "fact_records": 1749,
+              "price_history_records": 1385
+            }
+          },
+          "stdout_tail": "    \"high_volatility_missing_next_review\": []\n  },\n  \"pricing\": {\n    \"price_history_missing_source\": [],\n    \"price_history_missing_verified_at\": [],\n    \"price_history_unknown_source_ids\": []\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "source registry health",
+          "status": "ok",
+          "command": "node scripts/audit-source-health.mjs --json",
+          "duration_ms": 113,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report",
+            "totals": {
+              "registry_sources": 1698,
+              "sources_selected": 50,
+              "sources_checked_live": 0,
+              "http_ok": 0,
+              "http_unreachable": 0,
+              "content_changed": 0,
+              "content_unchanged": 0,
+              "missing_snapshots": 0,
+              "registry_issues": 0,
+              "duplicate_source_ids": 0
+            }
+          },
+          "stdout_tail": "        \"url\": \"https://docs.coderabbit.ai/management/plans\",\n        \"type\": \"pricing\",\n        \"volatility\": \"high\",\n        \"trust_tier\": \"primary\"\n      }\n    ]\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "stale facts guard",
+          "status": "ok",
+          "command": "node scripts/guard-stale-facts.mjs --json",
+          "duration_ms": 124,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "guard",
+            "totals": {
+              "required_tools": 10,
+              "comparisons_scanned": 57,
+              "failures": 0,
+              "warnings": 0
+            },
+            "failures_count": 0,
+            "sample_failures": []
+          },
+          "stdout_tail": "      \"coding_agent\",\n      \"best_paid_tier\",\n      \"best_for\"\n    ]\n  },\n  \"failures\": [],\n  \"warnings\": []\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Is each volatile claim tied to a source and date?",
+        "Are high-volatility facts scheduled for review?",
+        "Did any source URL or trust tier drift?"
+      ],
+      "record_targets": [
+        "src/data/source-registry.json",
+        ".agent/WORK_LOG.md for major provenance batches"
+      ]
+    },
+    {
+      "id": "revenue-conversion",
+      "title": "Revenue And Conversion Loop",
+      "status": "attention",
+      "purpose": "Verify commercial CTAs, affiliate disclosure, tracking attributes, CTA labels, and buyer-path clarity.",
+      "duration_ms": 1969,
+      "commands": [
+        {
+          "label": "commercial CTA audit",
+          "status": "attention",
+          "command": "node scripts/audit-commercial-cta.mjs --json --site-dir dist-fast/client",
+          "duration_ms": 1968,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [
+            "built output stale: run npm run build:fast before trusting dist-fast/client"
+          ],
+          "build_freshness": {
+            "status": "stale",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-29T10:54:16.009Z"
+            },
+            "newest_input": {
+              "path": "src/content/tools/synthesia.md",
+              "mtime": "2026-06-29T11:03:48.040Z"
+            },
+            "stale_by_ms": 572031
+          },
+          "parsed_summary": {},
+          "stdout_tail": "      \"route\": \"/tools/wan/\",\n      \"anchors\": 2,\n      \"page_type_anchors\": 2,\n      \"page_type\": \"any\",\n      \"discovered\": true,\n      \"placements\": [\n        \"tool_hero_primary\",\n        \"tool_s",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [
+        "built output stale: run npm run build:fast before trusting dist-fast/client"
+      ],
+      "skip_reason": "",
+      "review_questions": [
+        "Is every commercial CTA honest and useful?",
+        "Is the disclosure close to the buying decision?",
+        "Are placement, tool slug, page type, and event names tracked?"
+      ],
+      "record_targets": [
+        "final report for changed commercial surfaces",
+        ".agent/WORK_LOG.md for major conversion batches"
+      ]
+    },
+    {
+      "id": "quality-pruning",
+      "title": "Quality Pruning Loop",
+      "status": "ok",
+      "purpose": "Find thin content, duplicate pages, false-vs candidates, stale internal links, and pages that should be deleted, merged, or rebuilt.",
+      "duration_ms": 491,
+      "commands": [
+        {
+          "label": "site KPI audit",
+          "status": "ok",
+          "command": "node scripts/audit-site-kpis.mjs --json",
+          "duration_ms": 245,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "report"
+          },
+          "stdout_tail": "    \"public_pagefind_tracked\": false,\n    \"report_artifacts_should_stay_untracked\": [\n      \".hermes/\",\n      \"reports/\",\n      \"agent-runs/\"\n    ]\n  }\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "comparison quality audit",
+          "status": "ok",
+          "command": "node scripts/audit-coverage-quality.mjs --all --json",
+          "duration_ms": 118,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "all",
+            "failures_count": 0,
+            "sample_failures": []
+          },
+          "stdout_tail": "    \"src/content/comparisons/quillbot-vs-wordtune.md\",\n    \"src/content/comparisons/suno-vs-udio.md\",\n    \"src/content/comparisons/veo-vs-kling.md\",\n    \"src/content/comparisons/veo-vs-seedance.md\"\n  ],\n  \"failures\": [],\n  \"argument_issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "internal link audit",
+          "status": "ok",
+          "command": "node scripts/audit-internal-links.mjs --json",
+          "duration_ms": 128,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "audit",
+            "totals": {
+              "files_scanned": 1051,
+              "broken_tool_slugs": 0,
+              "broken_news_slugs": 0,
+              "broken_unique_slugs": 0,
+              "broken_unique_routes": 0,
+              "issues": 0
+            },
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "    \"reports\": [],\n    \"workflows\": [],\n    \"dead\": [],\n    \"glossary\": [],\n    \"answers\": []\n  },\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Should this page exist as a standalone route?",
+        "Does it satisfy a real buyer intent?",
+        "Would deletion improve the site more than a thin refresh?"
+      ],
+      "record_targets": [
+        "PAGE_REFRESH_LEDGER.md",
+        ".agent/WORK_LOG.md for deletion or merge batches"
+      ]
+    },
+    {
+      "id": "performance-ux",
+      "title": "Performance And UX Loop",
+      "status": "attention",
+      "purpose": "Check build output budgets, route indexability, commercial rendered output, overflow, and mobile/desktop layout precision risk.",
+      "duration_ms": 776,
+      "commands": [
+        {
+          "label": "dist budget",
+          "status": "attention",
+          "command": "node scripts/check-dist-budget.mjs --json --site-dir dist-fast/client --mode fast",
+          "duration_ms": 187,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [
+            "built output stale: run npm run build:fast before trusting dist-fast/client"
+          ],
+          "build_freshness": {
+            "status": "stale",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-29T10:54:16.009Z"
+            },
+            "newest_input": {
+              "path": "src/content/tools/synthesia.md",
+              "mtime": "2026-06-29T11:03:48.040Z"
+            },
+            "stale_by_ms": 572031
+          },
+          "parsed_summary": {
+            "ok": true,
+            "mode": "budget",
+            "totals": {
+              "budgets_checked": 3,
+              "issues": 0
+            },
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "      \"raw_mb\": 0.8897,\n      \"raw_max_mb\": 1.1,\n      \"gzip_mb\": 0.1676,\n      \"gzip_max_mb\": 0.18\n    }\n  ],\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "indexability audit",
+          "status": "attention",
+          "command": "node scripts/audit-indexability.mjs --json --site-dir dist-fast/client",
+          "duration_ms": 589,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [
+            "built output stale: run npm run build:fast before trusting dist-fast/client"
+          ],
+          "build_freshness": {
+            "status": "stale",
+            "site_dir": "dist-fast/client",
+            "newest_output": {
+              "path": "dist-fast/client/sitemap-0.xml",
+              "mtime": "2026-06-29T10:54:16.009Z"
+            },
+            "newest_input": {
+              "path": "src/content/tools/synthesia.md",
+              "mtime": "2026-06-29T11:03:48.040Z"
+            },
+            "stale_by_ms": 572031
+          },
+          "parsed_summary": {
+            "ok": true,
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "    \"/use-cases/best-ai-for-voice-agents/\"\n  ],\n  \"noindex_header_patterns\": [\n    \"/admin/(.*)\",\n    \"/api/(.*)\"\n  ],\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [
+        "built output stale: run npm run build:fast before trusting dist-fast/client",
+        "built output stale: run npm run build:fast before trusting dist-fast/client"
+      ],
+      "skip_reason": "",
+      "review_questions": [
+        "Did the affected routes pass mobile, tablet, and desktop QA?",
+        "Do card grids, gutters, text density, CTA placement, and repeated-card proportions look mathematically disciplined?",
+        "Did build output budgets or search payloads grow?",
+        "Is a full build justified or is exact route QA enough?"
+      ],
+      "record_targets": [
+        "loop receipt for rendered cycles",
+        ".agent/WORK_LOG.md for performance changes"
+      ]
+    },
+    {
+      "id": "news-market",
+      "title": "News And Market Change Loop",
+      "status": "ok",
+      "purpose": "Check news rendering, active-month date coverage, AI news and AI tools news catch-up, recent news cross-links, and market-change queues so product shifts reach affected tool and category pages.",
+      "duration_ms": 568,
+      "commands": [
+        {
+          "label": "news rendering guard",
+          "status": "ok",
+          "command": "node scripts/audit-news-rendering.mjs --json",
+          "duration_ms": 112,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "guard",
+            "totals": {
+              "files_checked": 431,
+              "issues": 0,
+              "min_stories_per_day": 2
+            },
+            "issues_count": 0,
+            "sample_issues": []
+          },
+          "stdout_tail": "  \"argument_issues\": [],\n  \"totals\": {\n    \"files_checked\": 431,\n    \"issues\": 0,\n    \"min_stories_per_day\": 2\n  },\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "news cross-reference audit",
+          "status": "ok",
+          "command": "node scripts/audit-news-xrefs.mjs --json",
+          "duration_ms": 115,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "audit",
+            "totals": {
+              "checked": 3,
+              "gaps": 0,
+              "issues": 0
+            },
+            "issues_count": 0,
+            "sample_issues": [],
+            "gaps_count": 0,
+            "sample_gaps": []
+          },
+          "stdout_tail": "  \"totals\": {\n    \"checked\": 3,\n    \"gaps\": 0,\n    \"issues\": 0\n  },\n  \"gaps\": [],\n  \"issues\": []\n}",
+          "stderr_tail": ""
+        },
+        {
+          "label": "weekly editorial queue",
+          "status": "ok",
+          "command": "node scripts/editorial-weekly-queue.mjs --json --limit 25",
+          "duration_ms": 342,
+          "exit_code": 0,
+          "signal": "",
+          "attention_reasons": [],
+          "build_freshness": null,
+          "parsed_summary": {
+            "ok": true,
+            "mode": "weekly-queue",
+            "totals": {
+              "tools": 297,
+              "tools_dead": 4,
+              "facts": 1730,
+              "sources": 1698,
+              "baseline_generic_pages": 0,
+              "due_now": 161,
+              "due_soon": 441,
+              "high_volatility_missing_next_review": 0,
+              "source_registry_invalid_urls": 0,
+              "source_registry_duplicate_ids": 0,
+              "unknown_source_ids": 0,
+              "stale_verification_candidates": 0
+            },
+            "top_tools": [
+              {
+                "slug": "blackbox-ai",
+                "title": "BLACKBOX AI",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/blackbox-ai.md"
+              },
+              {
+                "slug": "cline",
+                "title": "Cline",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/cline.md"
+              },
+              {
+                "slug": "coderabbit",
+                "title": "CodeRabbit",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/coderabbit.md"
+              },
+              {
+                "slug": "notebooklm",
+                "title": "Google NotebookLM",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/notebooklm.md"
+              },
+              {
+                "slug": "replit-agent",
+                "title": "Replit Agent",
+                "key": "",
+                "due_in_days": -2,
+                "path": "src/content/tools/replit-agent.md"
+              }
+            ]
+          },
+          "stdout_tail": "          \"next_review_at\": \"2026-06-29\",\n          \"due_in_days\": -2,\n          \"source_id\": \"replit-agent-web-search\"\n        }\n      ]\n    }\n  ]\n}",
+          "stderr_tail": ""
+        }
+      ],
+      "attention_reasons": [],
+      "skip_reason": "",
+      "review_questions": [
+        "Does every active catch-up date expose broad AI news and AI tools or tool-control news when the market produced both?",
+        "Does the market change affect a buying decision?",
+        "Which existing pages need updates beyond the news article?",
+        "Are /news/, homepage latest-news, OG assets, affected-tool links, and source lists complete?",
+        "Did /news/ pass mobile, tablet, desktop, and layout precision QA?"
+      ],
+      "record_targets": [
+        "src/content/news/",
+        "PAGE_REFRESH_LEDGER.md for hubs and crawl surfaces",
+        ".agent/WORK_LOG.md for major news catch-ups"
+      ]
+    }
+  ],
+  "review": {
+    "summary": "4 loop(s) ok; 3 attention; 0 skipped.",
+    "attention_loops": [
+      "freshness",
+      "revenue-conversion",
+      "performance-ux"
+    ],
+    "skipped_loops": [],
+    "recommendations": [
+      {
+        "loop_id": "performance-ux",
+        "title": "Performance And UX Loop",
+        "score": 95,
+        "severity": "blocker",
+        "confidence": "high",
+        "effort": "medium",
+        "action": "Run npm run build:fast, then rerun performance-ux because dist-fast/client is older than rendered inputs.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
+      {
+        "loop_id": "revenue-conversion",
+        "title": "Revenue And Conversion Loop",
+        "score": 95,
+        "severity": "blocker",
+        "confidence": "high",
+        "effort": "medium",
+        "action": "Run npm run build:fast, then rerun revenue-conversion because dist-fast/client is older than rendered inputs.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
+      {
+        "loop_id": "freshness",
+        "title": "Freshness Loop",
+        "score": 92,
+        "severity": "attention",
+        "confidence": "high",
+        "effort": "varies",
+        "action": "Review due_now=161 and classify as fix, queue, or loop noise.",
+        "reason": "due_now=161"
+      },
+      {
+        "loop_id": "performance-ux",
+        "title": "Performance And UX Loop",
+        "score": 90,
+        "severity": "attention",
+        "confidence": "high",
+        "effort": "varies",
+        "action": "Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
+      {
+        "loop_id": "revenue-conversion",
+        "title": "Revenue And Conversion Loop",
+        "score": 90,
+        "severity": "attention",
+        "confidence": "high",
+        "effort": "varies",
+        "action": "Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise.",
+        "reason": "built output stale: run npm run build:fast before trusting dist-fast/client"
+      },
+      {
+        "loop_id": "decision-content",
+        "title": "Decision Content Flywheel",
+        "score": 74,
+        "severity": "next",
+        "confidence": "medium",
+        "effort": "large",
+        "action": "Begin the next buyer-decision cycle: cody-vs-github-copilot.",
+        "reason": "top decision-content candidate"
+      },
+      {
+        "loop_id": "freshness",
+        "title": "Freshness Loop",
+        "score": 66,
+        "severity": "queue",
+        "confidence": "medium",
+        "effort": "medium",
+        "action": "Refresh due fact best_paid_tier on blackbox-ai.",
+        "reason": "freshness queue due in -2 day(s)"
+      }
+    ],
+    "next_actions": [
+      "performance-ux: Run npm run build:fast, then rerun performance-ux because dist-fast/client is older than rendered inputs.",
+      "revenue-conversion: Run npm run build:fast, then rerun revenue-conversion because dist-fast/client is older than rendered inputs.",
+      "freshness: Review due_now=161 and classify as fix, queue, or loop noise.",
+      "performance-ux: Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise.",
+      "revenue-conversion: Review built output stale: run npm run build:fast before trusting dist-fast/client and classify as fix, queue, or loop noise."
+    ]
+  },
+  "system_progress": {
+    "ok": true,
+    "mode": "system-progress-check",
+    "command": "node scripts/agent-system-progress-check.mjs --json --project-dir=. --require-system-artifact --observed-dirty-before-agent src/content/tools/synthesia.md --observed-dirty-before-agent src/data/coverage-backlog.json --observed-dirty-before-agent src/data/source-registry.json --observed-dirty-before-agent src/content/comparisons/captions-vs-synthesia.md --observed-dirty-before-agent .agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
+    "exit_code": 0,
+    "require_system_artifact": true,
+    "observed_dirty_before_agent": [
+      ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "has_observed_dirty_baseline": true,
+    "missing_observed_dirty_paths": [],
+    "changed_paths": [
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+      ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
+      "package.json",
+      "scripts/README.md",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-policy.mjs",
+      "scripts/lib/routing-policy.mjs",
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-policy.test.mjs"
+    ],
+    "system_artifacts": [
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+      ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
+      "package.json",
+      "scripts/README.md",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-policy.mjs",
+      "scripts/lib/routing-policy.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-policy.test.mjs"
+    ],
+    "content_artifacts": [
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "other_artifacts": [],
+    "has_system_artifact": true,
+    "content_only": false,
+    "agent_changed_paths": [
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
+      "package.json",
+      "scripts/README.md",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-policy.mjs",
+      "scripts/lib/routing-policy.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-policy.test.mjs"
+    ],
+    "agent_system_artifacts": [
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
+      "package.json",
+      "scripts/README.md",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-policy.mjs",
+      "scripts/lib/routing-policy.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-policy.test.mjs"
+    ],
+    "agent_content_artifacts": [],
+    "agent_other_artifacts": [],
+    "has_agent_system_artifact": true,
+    "agent_content_only": false,
+    "preexisting_dirty_paths": [
+      ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "preexisting_system_artifacts": [
+      ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json"
+    ],
+    "preexisting_content_artifacts": [
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "preexisting_other_artifacts": [],
+    "next_action": "System artifact present or enforcement disabled."
+  },
+  "efficiency_metrics": {
+    "schema_version": "aipedia.loop-efficiency-metrics.v1",
+    "wall_duration_ms": 5009,
+    "total_command_duration_ms": 5008,
+    "command_count": 16,
+    "loop_count": 7,
+    "ok_loop_count": 4,
+    "attention_loop_count": 3,
+    "skipped_loop_count": 0,
+    "average_command_duration_ms": 313,
+    "commands_per_second": 3.194,
+    "loops_per_second": 1.397,
+    "attention_rate": 0.429,
+    "skipped_rate": 0,
+    "artifact_ref_count": 40,
+    "embedded_command_artifact_count": 16,
+    "system_artifact_count": 16,
+    "content_artifact_count": 4,
+    "other_artifact_count": 0,
+    "agent_system_artifact_count": 15,
+    "agent_content_artifact_count": 0,
+    "agent_other_artifact_count": 0,
+    "preexisting_dirty_count": 5,
+    "system_artifacts_per_second": 3.194,
+    "agent_system_artifacts_per_second": 2.995,
+    "persisted_full_receipt_bytes": 47226,
+    "persisted_latest_receipt_bytes": 28708,
+    "slowest_commands": [
+      {
+        "loop_id": "revenue-conversion",
+        "label": "commercial CTA audit",
+        "status": "attention",
+        "duration_ms": 1968
+      },
+      {
+        "loop_id": "performance-ux",
+        "label": "indexability audit",
+        "status": "attention",
+        "duration_ms": 589
+      },
+      {
+        "loop_id": "freshness",
+        "label": "weekly editorial queue",
+        "status": "ok",
+        "duration_ms": 350
+      },
+      {
+        "loop_id": "news-market",
+        "label": "weekly editorial queue",
+        "status": "ok",
+        "duration_ms": 342
+      },
+      {
+        "loop_id": "quality-pruning",
+        "label": "site KPI audit",
+        "status": "ok",
+        "duration_ms": 245
+      }
+    ]
+  },
+  "ledger": {
+    "written": true,
+    "file": ".agent/loop-runs/system/2026-07-01T04-25-21-784Z-loop-run.json",
+    "latest_file": ".agent/loop-runs/system/latest.json",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T04-16-00-882Z-loop-run.json",
+    "trend": {
+      "previous_run": "2026-07-01T04:16:00.882Z",
+      "status_changes": [],
+      "duration_delta_ms": 53,
+      "totals_delta": {
+        "ok": 0,
+        "attention": 0,
+        "skipped": 0
+      }
+    }
+  }
+}

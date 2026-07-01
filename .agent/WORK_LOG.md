@@ -1,8 +1,24 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 79, Conditional Routing Policy Receipts
+
+- Status: Verified locally through scoped `check:smart`, `check:quick`, enforced loop closeout, final trend closeout, and routing-policy closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:policy` and `scripts/lib/routing-policy.mjs` to convert validated routing-suite receipts into closeout-checkable `aipedia.agent-routing-policy.v1` receipts.
+- Changed: Routing policy receipts carry a compact source-suite summary, per-task-class routing rules, telemetry lineage refs, guardrails, promotion status, and next actions.
+- Changed: `agent:closeout:check` validates routing-policy receipts by recomputing rules from the embedded source-suite summary, and `agent:meta:closeout:auto` now routes them with a `routing-policy` profile.
+- System lesson: a suite is evidence, not a routing policy. The new policy receipt forces the orchestration decision to stay explicit and conditional when the suite recommends different candidates for different task classes.
+- Verification: syntax checks passed for the policy CLI/library plus closeout and router scripts. Focused routing-policy tests passed 3/3, closeout checker tests passed 57/57, and meta closeout router tests passed 9/9. The live policy receipt passed auto-routed closeout. Scoped `check:smart` passed with 593 script tests and command audit. `check:quick` passed with 593 script tests, command audit, and quick assets.
+- Durable policy proof: `.agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json`.
+- Proof result: the policy status is `conditional-by-task-class`, with no default candidate. It emits two rules: `jsonl-correction-heavy-review` routes to `orchestrated-specialists`, while `jsonl-tiny-status-check` routes to `single-agent`. The policy carries one telemetry ref to `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json` and blocks blanket default promotion through guardrails.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T04-25-21-784Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-79-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,009 ms, latest wall duration 5,009 ms, latest estimated full receipt tokens 11,807, latest system artifact count 16, 3 persistent attention loops, and 4 persistent attention commands.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 15 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time increased by 53 ms versus Slice 78, and estimated receipt tokens increased by 65 because the policy proof adds an explicit closeout-checkable decision artifact.
+- Next: Commit and push only Slice 79 system files, then pilot conditional routing-policy receipts on bounded real workloads before changing orchestration defaults.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 78, Routing Suite Telemetry Lineage
 
-- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, v2 routing-suite closeout, and historical v1 compatibility closeout. Pending commit and push.
+- Status: Complete, verified, committed, and pushed as `d0b8e10b`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Upgraded new `agent:routing:suite` receipts to `aipedia.agent-routing-evaluation-suite.v2` with canonical top-level and per-scenario `correction_telemetry_refs`.
 - Changed: `agent:closeout:check` now requires v2 lineage refs, validates them through canonical rebuilds, rejects tampered lineage, and still accepts historical v1 routing-suite receipts without lineage refs.
