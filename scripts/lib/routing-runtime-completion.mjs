@@ -1,5 +1,6 @@
 import { validateRoutingHandoffReceipt } from './routing-handoff.mjs';
 import { validateRoutingMonitorTrendsReceipt } from './routing-monitor-trends.mjs';
+import { validateRoutingMonitorTrendRollupReceipt } from './routing-monitor-trend-rollup.mjs';
 import { normalizeModelTokenUsage, validateModelTokenUsageReport } from './model-token-usage.mjs';
 
 export const ROUTING_RUNTIME_COMPLETION_SCHEMA_VERSION = 'aipedia.agent-routing-runtime-completion.v1';
@@ -18,11 +19,15 @@ export function buildRoutingRuntimeCompletion(input, options = {}) {
   const handoff = normalizeHandoff(input, issues);
   const monitorTrends = normalizeMonitorTrends(input, issues);
   const runtimeCompletion = normalizeRuntimeCompletion(input, handoff, issues);
+  const monitorTrendRollup = normalizeMonitorTrendRollup(input, runtimeCompletion, issues);
   const modelTokenUsage = normalizeRuntimeModelTokenUsage(input, handoff, runtimeCompletion, issues, options);
   if (issues.length) return { receipt: null, issues };
 
   const requireModelTokenUsage = runtimeCompletion.require_model_token_usage === true;
+  const requireMonitorTrendRollup = runtimeCompletion.require_monitor_trend_rollup === true;
   const completionEvaluation = completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion, {
+    monitorTrendRollup,
+    requireMonitorTrendRollup,
     modelTokenUsage,
     requireModelTokenUsage,
   });
@@ -31,6 +36,7 @@ export function buildRoutingRuntimeCompletion(input, options = {}) {
   const source = options.source || input.source || [
     handoff.receipt_path,
     monitorTrends.receipt_path,
+    monitorTrendRollup?.receipt_path,
   ].filter(Boolean).join(' + ');
 
   const receipt = {
@@ -51,6 +57,7 @@ export function buildRoutingRuntimeCompletion(input, options = {}) {
     guardrails,
     next_actions: nextActions,
   };
+  if (monitorTrendRollup) receipt.monitor_trend_rollup = monitorTrendRollup;
   if (modelTokenUsage) receipt.model_token_usage = modelTokenUsage;
 
   return {
@@ -81,6 +88,9 @@ export function validateRoutingRuntimeCompletionReceipt(value) {
   }
   if (!isObject(value.handoff)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-handoff-invalid', 'handoff must be an object.'));
   if (!isObject(value.monitor_trends)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trends-invalid', 'monitor_trends must be an object.'));
+  if (value.monitor_trend_rollup != null && !isObject(value.monitor_trend_rollup)) {
+    issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trend-rollup-invalid', 'monitor_trend_rollup must be an object when present.'));
+  }
   if (!isObject(value.runtime_completion)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-runtime-invalid', 'runtime_completion must be an object.'));
   if (!isObject(value.completion_evaluation)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-evaluation-mismatch', 'completion_evaluation must be an object.'));
   if (!Array.isArray(value.guardrails)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-receipt-invalid', 'guardrails must be an array.'));
@@ -95,6 +105,7 @@ export function validateRoutingRuntimeCompletionReceipt(value) {
   const rebuilt = buildRoutingRuntimeCompletion({
     handoff: value.handoff,
     monitor_trends: value.monitor_trends,
+    monitor_trend_rollup: value.monitor_trend_rollup,
     runtime_completion: value.runtime_completion,
     goal_id: value.goal_id,
     run_id: value.run_id,
@@ -110,6 +121,7 @@ export function validateRoutingRuntimeCompletionReceipt(value) {
 
   const expected = rebuilt.receipt;
   const canonicalFields = ['handoff', 'monitor_trends', 'runtime_completion', 'completion_evaluation', 'guardrails', 'next_actions'];
+  if (value.monitor_trend_rollup != null || expected.monitor_trend_rollup != null) canonicalFields.push('monitor_trend_rollup');
   if (value.model_token_usage != null || expected.model_token_usage != null) canonicalFields.push('model_token_usage');
   for (const field of canonicalFields) {
     if (!deepEqual(value[field], expected[field])) {
@@ -180,6 +192,47 @@ function monitorTrendsSummaryFromObject(value, issues) {
   return normalized;
 }
 
+function normalizeMonitorTrendRollup(input, runtimeCompletion, issues) {
+  const required = runtimeCompletion.require_monitor_trend_rollup === true || input.require_monitor_trend_rollup === true;
+  const rollup = input.routing_monitor_trend_rollup
+    || input.monitor_trend_rollup_receipt
+    || input.monitor_trend_rollup
+    || input.trend_rollup
+    || input.rollup
+    || (isRoutingMonitorTrendRollupReceipt(input) ? input : null);
+  if (rollup) {
+    if (isRoutingMonitorTrendRollupReceipt(rollup)) {
+      const receiptIssues = validateRoutingMonitorTrendRollupReceipt(rollup);
+      for (const item of receiptIssues) {
+        issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trend-rollup-invalid', item.message));
+      }
+      return receiptIssues.length ? null : monitorTrendRollupSummary(rollup);
+    }
+    if (isObject(rollup)) return monitorTrendRollupSummaryFromObject(rollup, issues);
+  }
+  if (required) {
+    issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trend-rollup-missing', 'A closeout-checked routing monitor trend rollup is required for this runtime completion.'));
+  }
+  return null;
+}
+
+function monitorTrendRollupSummaryFromObject(value, issues) {
+  const normalized = monitorTrendRollupSummary(value);
+  for (const field of ['schema_version', 'generated_at', 'goal_id', 'run_id', 'workflow', 'rollup_task']) {
+    if (!normalized[field]) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trend-rollup-invalid', `monitor_trend_rollup.${field} is required.`));
+  }
+  if (normalized.schema_version && normalized.schema_version !== 'aipedia.agent-routing-monitor-trend-rollup.v1') {
+    issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trend-rollup-invalid', 'monitor_trend_rollup.schema_version must be aipedia.agent-routing-monitor-trend-rollup.v1.'));
+  }
+  if (normalized.trend_receipts.length === 0) {
+    issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trend-rollup-invalid', 'monitor_trend_rollup.trend_receipts must include at least one trend summary.'));
+  }
+  if (!normalized.rollup_evaluation.status) {
+    issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-monitor-trend-rollup-invalid', 'monitor_trend_rollup.rollup_evaluation.status is required.'));
+  }
+  return normalized;
+}
+
 function normalizeRuntimeCompletion(input, handoff, issues) {
   const source = isObject(input.runtime_completion) ? input.runtime_completion : input;
   const verificationStatus = stringValue(source.verification_status || source.status) || 'not-run';
@@ -199,6 +252,9 @@ function normalizeRuntimeCompletion(input, handoff, issues) {
   };
   if (source.require_model_token_usage === true || source.require_exact_model_tokens === true) {
     completion.require_model_token_usage = true;
+  }
+  if (source.require_monitor_trend_rollup === true) {
+    completion.require_monitor_trend_rollup = true;
   }
   completion.ready = Boolean(
     completion.runtime_system
@@ -256,6 +312,8 @@ function normalizeRuntimeModelTokenUsage(input, handoff, runtimeCompletion, issu
 function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion, options = {}) {
   const modelTokenUsage = options.modelTokenUsage || null;
   const requireModelTokenUsage = options.requireModelTokenUsage === true;
+  const monitorTrendRollup = options.monitorTrendRollup || null;
+  const requireMonitorTrendRollup = options.requireMonitorTrendRollup === true;
   const handoffReady = handoff.handoff_evaluation.handoff_ready === true
     && handoff.handoff_evaluation.status === 'handoff-ready';
   const handoffRuntimeMode = handoff.change_plan.mode === 'runtime';
@@ -300,6 +358,31 @@ function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion, 
     && runtimeApplyCommandMatch
     && runtimeVerificationCommandMatch
     && runtimeVerificationPassed;
+  const monitorTrendRollupAttached = Boolean(monitorTrendRollup);
+  const monitorTrendRollupReady = monitorTrendRollupAttached
+    && monitorTrendRollup.rollup_evaluation.status === 'rollup-ready'
+    && monitorTrendRollup.rollup_evaluation.rollup_ready === true
+    && monitorTrendRollup.rollup_evaluation.long_window_ready === true
+    && monitorTrendRollup.rollup_evaluation.all_trends_healthy === true
+    && monitorTrendRollup.rollup_evaluation.latest_trend_healthy === true
+    && monitorTrendRollup.rollup_evaluation.latest_no_failing_scenarios === true
+    && monitorTrendRollup.rollup_evaluation.no_new_failing_scenarios === true
+    && monitorTrendRollup.rollup_evaluation.quality_drop_passed === true
+    && monitorTrendRollup.rollup_evaluation.accuracy_drop_passed === true
+    && monitorTrendRollup.rollup_evaluation.exact_model_token_delta_drop_passed === true
+    && monitorTrendRollup.rollup_evaluation.wall_duration_delta_ms_drop_passed === true
+    && monitorTrendRollup.rollup_evaluation.scenario_coverage_stable === true
+    && monitorTrendRollup.rollup_evaluation.scenarios_comparable === true;
+  const monitorTrendRollupIncludesTrend = monitorTrendRollupAttached
+    && monitorTrendRollup.trend_receipts.some((trend) => sameLineage(
+      monitorTrends.receipt_path,
+      monitorTrends.run_id,
+      trend.receipt_path,
+      trend.run_id,
+    ));
+  const monitorTrendRollupGatePassed = monitorTrendRollupAttached || requireMonitorTrendRollup
+    ? monitorTrendRollupReady && monitorTrendRollupIncludesTrend
+    : true;
   const modelTokenUsageReady = Boolean(modelTokenUsage);
   const completionReady = handoffReady
     && handoffRuntimeMode
@@ -307,6 +390,7 @@ function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion, 
     && rolloutLineageMatch
     && handoffMonitorInTrend
     && runtimeCompletionReady
+    && monitorTrendRollupGatePassed
     && (!requireModelTokenUsage || modelTokenUsageReady);
   const evaluation = {
     status: completionReady ? 'completion-ready' : 'blocked',
@@ -335,10 +419,25 @@ function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion, 
       runtimeApplyCommandMatch,
       runtimeVerificationCommandMatch,
       runtimeVerificationPassed,
+      requireMonitorTrendRollup,
+      monitorTrendRollupAttached,
+      monitorTrendRollupReady,
+      monitorTrendRollupIncludesTrend,
+      monitorTrendRollupGatePassed,
       requireModelTokenUsage,
       modelTokenUsageReady,
     }),
   };
+  if (monitorTrendRollupAttached || requireMonitorTrendRollup) {
+    evaluation.monitor_trend_rollup_required = requireMonitorTrendRollup;
+    evaluation.monitor_trend_rollup_attached = monitorTrendRollupAttached;
+    evaluation.monitor_trend_rollup_ready = monitorTrendRollupReady;
+    evaluation.monitor_trend_rollup_includes_monitor_trend = monitorTrendRollupIncludesTrend;
+    evaluation.monitor_trend_rollup_gate_passed = monitorTrendRollupGatePassed;
+    evaluation.monitor_trend_rollup_status = monitorTrendRollup?.rollup_evaluation.status || '';
+    evaluation.monitor_trend_rollup_trend_count = monitorTrendRollup?.totals.trend_count || 0;
+    evaluation.monitor_trend_rollup_healthy_trend_count = monitorTrendRollup?.totals.healthy_trend_count || 0;
+  }
   if (modelTokenUsage || requireModelTokenUsage) {
     evaluation.model_token_usage_required = requireModelTokenUsage;
     evaluation.exact_model_tokens_attached = modelTokenUsageReady;
@@ -363,13 +462,23 @@ function completionReason({
   runtimeApplyCommandMatch,
   runtimeVerificationCommandMatch,
   runtimeVerificationPassed,
+  requireMonitorTrendRollup,
+  monitorTrendRollupAttached,
+  monitorTrendRollupReady,
+  monitorTrendRollupIncludesTrend,
+  monitorTrendRollupGatePassed,
   requireModelTokenUsage,
   modelTokenUsageReady,
 }) {
+  if (completionReady && monitorTrendRollupAttached) return 'Runtime default routing change is complete with attached handoff, repeated monitor-trend, and longer-window rollup receipts.';
   if (completionReady) return 'Runtime default routing change is complete with attached handoff and repeated monitor-trend receipts.';
   if (!handoffReady) return 'The handoff receipt is not ready.';
   if (!handoffRuntimeMode) return 'The handoff receipt must use runtime mode before a deployed default change can count as complete.';
   if (!monitorTrendHealthy) return 'The monitor-trend receipt is not healthy.';
+  if (requireMonitorTrendRollup && !monitorTrendRollupAttached) return 'The runtime completion requires a routing monitor trend rollup but none was attached.';
+  if ((monitorTrendRollupAttached || requireMonitorTrendRollup) && !monitorTrendRollupReady) return 'The monitor-trend rollup is not ready for longer-window runtime completion.';
+  if ((monitorTrendRollupAttached || requireMonitorTrendRollup) && !monitorTrendRollupIncludesTrend) return 'The monitor-trend rollup must include the attached monitor-trend receipt.';
+  if ((monitorTrendRollupAttached || requireMonitorTrendRollup) && !monitorTrendRollupGatePassed) return 'The monitor-trend rollup gate did not pass.';
   if (!rolloutLineageMatch) return 'The monitor-trend rollout lineage does not match the handoff default rollout.';
   if (!handoffMonitorInTrend) return 'The handoff monitor receipt must be included in the repeated monitor trend.';
   if (!runtimeChangeIdMatch) return 'The runtime completion change id does not match the handoff change id.';
@@ -387,6 +496,10 @@ function completionGuardrails(evaluation) {
   if (!evaluation.handoff_ready) guardrails.push('Do not count a runtime default routing change complete without a ready handoff receipt.');
   if (!evaluation.handoff_runtime_mode) guardrails.push('Record runtime handoff mode before counting a deployed default routing change complete.');
   if (!evaluation.monitor_trend_healthy) guardrails.push('Do not count runtime completion without a healthy repeated post-default monitor trend.');
+  if (evaluation.monitor_trend_rollup_required && !evaluation.monitor_trend_rollup_attached) guardrails.push('Attach a closeout-checked routing monitor trend rollup before counting this runtime completion complete.');
+  if (evaluation.monitor_trend_rollup_attached && !evaluation.monitor_trend_rollup_ready) guardrails.push('Do not count runtime completion complete while the attached longer-window routing rollup is not ready.');
+  if (evaluation.monitor_trend_rollup_attached && !evaluation.monitor_trend_rollup_includes_monitor_trend) guardrails.push('The routing monitor trend rollup must include the monitor-trend receipt used by this completion.');
+  if (evaluation.monitor_trend_rollup_ready) guardrails.push('Preserve the longer-window routing rollup with runtime completion evidence for future drift comparisons.');
   if (!evaluation.rollout_lineage_match) guardrails.push('Do not combine a handoff with monitor trends from another default rollout.');
   if (!evaluation.handoff_monitor_in_trend) guardrails.push('The repeated monitor trend must include the monitor receipt used by the handoff.');
   if (!evaluation.runtime_completion_ready) guardrails.push('Record matching runtime change id, operator, commands, ISO applied time, and a passed verification status.');
@@ -398,6 +511,12 @@ function completionGuardrails(evaluation) {
 
 function completionNextActions(evaluation) {
   if (evaluation.completion_ready) {
+    if (evaluation.monitor_trend_rollup_attached && evaluation.exact_model_tokens_attached) {
+      return ['Record this runtime completion receipt with exact model-token usage and longer-window rollup evidence, then rerun monitor trends after future model, prompt, policy, tool, or workflow changes.'];
+    }
+    if (evaluation.monitor_trend_rollup_attached) {
+      return ['Record this runtime completion receipt with longer-window rollup evidence and rerun monitor trends after future model, prompt, policy, tool, or workflow changes.'];
+    }
     if (evaluation.exact_model_tokens_attached) {
       return ['Record this runtime completion receipt with its exact model-token usage and rerun monitor trends after future model, prompt, policy, tool, or workflow changes.'];
     }
@@ -408,6 +527,15 @@ function completionNextActions(evaluation) {
   }
   if (!evaluation.monitor_trend_healthy) {
     return ['Regenerate repeated post-default monitoring until the monitor-trend receipt is healthy.'];
+  }
+  if (evaluation.monitor_trend_rollup_required && !evaluation.monitor_trend_rollup_attached) {
+    return ['Attach a closeout-checked routing monitor trend rollup and regenerate the completion receipt.'];
+  }
+  if (evaluation.monitor_trend_rollup_attached && !evaluation.monitor_trend_rollup_ready) {
+    return ['Collect another closeout-checked routing monitor trend window, regenerate the longer-window rollup, and rerun runtime completion.'];
+  }
+  if (evaluation.monitor_trend_rollup_attached && !evaluation.monitor_trend_rollup_includes_monitor_trend) {
+    return ['Regenerate the routing monitor trend rollup so it includes the monitor-trend receipt used by this runtime completion.'];
   }
   if (!evaluation.runtime_completion_ready) {
     return ['Record matching runtime completion fields and passed verification, then regenerate the receipt.'];
@@ -455,6 +583,107 @@ function monitorTrendsSummary(value) {
     baseline: monitorPointSummary(value?.baseline),
     latest: monitorPointSummary(value?.latest),
     drift_evaluation: driftEvaluationSummary(value?.drift_evaluation),
+  };
+}
+
+function monitorTrendRollupSummary(value) {
+  return {
+    receipt_path: stringValue(value?.receipt_path),
+    schema_version: stringValue(value?.schema_version),
+    generated_at: stringValue(value?.generated_at),
+    source: stringValue(value?.source),
+    goal_id: stringValue(value?.goal_id),
+    run_id: stringValue(value?.run_id),
+    workflow: stringValue(value?.workflow),
+    rollup_task: stringValue(value?.rollup_task),
+    trend_receipts: arrayValue(value?.trend_receipts).map(rollupTrendIdentitySummary).sort(compareMonitorIdentity),
+    totals: monitorTrendRollupTotalsSummary(value?.totals),
+    latest: monitorTrendRollupPointSummary(value?.latest),
+    rollup_evaluation: monitorTrendRollupEvaluationSummary(value?.rollup_evaluation),
+  };
+}
+
+function rollupTrendIdentitySummary(value) {
+  return {
+    receipt_path: stringValue(value?.receipt_path),
+    generated_at: stringValue(value?.generated_at),
+    run_id: stringValue(value?.run_id),
+    status: stringValue(value?.status),
+    trend_healthy: value?.trend_healthy === true,
+    latest_monitor_receipt: stringValue(value?.latest?.receipt_path || value?.latest_monitor_receipt),
+    latest_monitor_run_id: stringValue(value?.latest?.run_id || value?.latest_monitor_run_id),
+    source_rollout_receipt: stringValue(value?.latest?.source_rollout_receipt || value?.source_rollout_receipt),
+    source_rollout_run_id: stringValue(value?.latest?.source_rollout_run_id || value?.source_rollout_run_id),
+    source_rollout_policy_change_id: stringValue(value?.latest?.source_rollout_policy_change_id || value?.source_rollout_policy_change_id),
+  };
+}
+
+function monitorTrendRollupTotalsSummary(value) {
+  return {
+    trend_count: nonNegativeInteger(value?.trend_count),
+    healthy_trend_count: nonNegativeInteger(value?.healthy_trend_count),
+    attention_trend_count: nonNegativeInteger(value?.attention_trend_count),
+    unique_trend_receipt_count: nonNegativeInteger(value?.unique_trend_receipt_count),
+    unique_trend_run_id_count: nonNegativeInteger(value?.unique_trend_run_id_count),
+    source_rollout_count: nonNegativeInteger(value?.source_rollout_count),
+    source_rollout_policy_change_count: nonNegativeInteger(value?.source_rollout_policy_change_count),
+    monitor_window_count: nonNegativeInteger(value?.monitor_window_count),
+    scenario_window_observation_count: nonNegativeInteger(value?.scenario_window_observation_count),
+    compared_trend_window_count: nonNegativeInteger(value?.compared_trend_window_count),
+    latest_failing_scenario_count: nonNegativeInteger(value?.latest_failing_scenario_count),
+  };
+}
+
+function monitorTrendRollupPointSummary(value) {
+  return {
+    receipt_path: stringValue(value?.receipt_path),
+    generated_at: stringValue(value?.generated_at),
+    run_id: stringValue(value?.run_id),
+    status: stringValue(value?.status),
+    trend_healthy: value?.trend_healthy === true,
+    monitor_count: nonNegativeInteger(value?.monitor_count),
+    healthy_monitor_count: nonNegativeInteger(value?.healthy_monitor_count),
+    source_rollout_receipt: stringValue(value?.source_rollout_receipt),
+    source_rollout_run_id: stringValue(value?.source_rollout_run_id),
+    source_rollout_policy_change_id: stringValue(value?.source_rollout_policy_change_id),
+    latest_monitor_receipt: stringValue(value?.latest_monitor_receipt),
+    latest_monitor_run_id: stringValue(value?.latest_monitor_run_id),
+    latest_monitor_status: stringValue(value?.latest_monitor_status),
+    scenario_count: nonNegativeInteger(value?.scenario_count),
+    passing_scenario_count: nonNegativeInteger(value?.passing_scenario_count),
+    failing_scenario_count: nonNegativeInteger(value?.failing_scenario_count),
+    total_exact_model_token_delta: numberValue(value?.total_exact_model_token_delta),
+    total_wall_duration_delta_ms: numberValue(value?.total_wall_duration_delta_ms),
+    min_quality_score: numberValue(value?.min_quality_score),
+    min_accuracy_score: numberValue(value?.min_accuracy_score),
+    max_residual_issue_count: nonNegativeInteger(value?.max_residual_issue_count),
+    max_regression_count: nonNegativeInteger(value?.max_regression_count),
+  };
+}
+
+function monitorTrendRollupEvaluationSummary(value) {
+  return {
+    status: stringValue(value?.status),
+    rollup_ready: value?.rollup_ready === true,
+    long_window_ready: value?.long_window_ready === true,
+    all_trends_healthy: value?.all_trends_healthy === true,
+    latest_trend_healthy: value?.latest_trend_healthy === true,
+    unique_trend_receipts: value?.unique_trend_receipts === true,
+    unique_trend_run_ids: value?.unique_trend_run_ids === true,
+    latest_no_failing_scenarios: value?.latest_no_failing_scenarios === true,
+    scenario_coverage_stable: value?.scenario_coverage_stable === true,
+    scenarios_comparable: value?.scenarios_comparable === true,
+    new_failing_scenario_count: nonNegativeInteger(value?.new_failing_scenario_count),
+    no_new_failing_scenarios: value?.no_new_failing_scenarios === true,
+    quality_drop: numberValue(value?.quality_drop),
+    quality_drop_passed: value?.quality_drop_passed === true,
+    accuracy_drop: numberValue(value?.accuracy_drop),
+    accuracy_drop_passed: value?.accuracy_drop_passed === true,
+    exact_model_token_delta_drop: numberValue(value?.exact_model_token_delta_drop),
+    exact_model_token_delta_drop_passed: value?.exact_model_token_delta_drop_passed === true,
+    wall_duration_delta_ms_drop: numberValue(value?.wall_duration_delta_ms_drop),
+    wall_duration_delta_ms_drop_passed: value?.wall_duration_delta_ms_drop_passed === true,
+    reason: stringValue(value?.reason),
   };
 }
 
@@ -565,6 +794,10 @@ function isRoutingHandoffReceipt(value) {
 
 function isRoutingMonitorTrendsReceipt(value) {
   return isObject(value) && value.mode === 'agent-routing-monitor-trends' && typeof value.schema_version === 'string';
+}
+
+function isRoutingMonitorTrendRollupReceipt(value) {
+  return isObject(value) && value.mode === 'agent-routing-monitor-trend-rollup' && typeof value.schema_version === 'string';
 }
 
 function isModelTokenUsageReport(value) {

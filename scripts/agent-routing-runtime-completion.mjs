@@ -28,17 +28,21 @@ const KNOWN_FLAGS = new Set([
   '--model-token-subagent',
   '--model-token-usage',
   '--model-token-workflow',
+  '--monitor-trend-rollup',
   '--monitor-trends',
   '--operator',
   '--out',
   '--project-dir',
   '--require-exact-model-tokens',
   '--require-model-token-usage',
+  '--require-monitor-trend-rollup',
   '--root',
   '--runtime-system',
   '--system',
   '--trend',
+  '--trend-rollup',
   '--trends',
+  '--rollup',
   '--verification-command',
   '--verification-status',
   '--verify-command',
@@ -59,6 +63,7 @@ const VALUE_FLAGS = new Set([
   '--model-token-subagent',
   '--model-token-usage',
   '--model-token-workflow',
+  '--monitor-trend-rollup',
   '--monitor-trends',
   '--operator',
   '--out',
@@ -67,7 +72,9 @@ const VALUE_FLAGS = new Set([
   '--runtime-system',
   '--system',
   '--trend',
+  '--trend-rollup',
   '--trends',
+  '--rollup',
   '--verification-command',
   '--verification-status',
   '--verify-command',
@@ -77,6 +84,7 @@ const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || DEFAULT_PROJECT_DIR);
 const HANDOFF_PATH = valueFor('--handoff') || valueFor('--handoff-receipt') || valueFor('--input');
 const TRENDS_PATH = valueFor('--monitor-trends') || valueFor('--trends') || valueFor('--trend');
+const ROLLUP_PATH = valueFor('--monitor-trend-rollup') || valueFor('--trend-rollup') || valueFor('--rollup') || process.env.AIPEDIA_ROUTING_MONITOR_TREND_ROLLUP_FILE || '';
 const OUT_PATH = valueFor('--out');
 const COMPLETION_TASK = valueFor('--completion-task');
 const RUNTIME_SYSTEM = valueFor('--runtime-system') || valueFor('--system');
@@ -90,6 +98,7 @@ const EVIDENCE_NOTE = valueFor('--evidence-note');
 const MODEL_TOKEN_USAGE_PATH = valueFor('--model-token-usage') || process.env.AIPEDIA_MODEL_TOKEN_USAGE_FILE || '';
 const MODEL_TOKEN_USAGE_JSON = process.env.AIPEDIA_MODEL_TOKEN_USAGE_JSON || '';
 const REQUIRE_MODEL_TOKEN_USAGE = hasFlag('--require-model-token-usage') || hasFlag('--require-exact-model-tokens');
+const REQUIRE_MONITOR_TREND_ROLLUP = hasFlag('--require-monitor-trend-rollup') || process.env.AIPEDIA_REQUIRE_MONITOR_TREND_ROLLUP === '1';
 const MODEL_TOKEN_CONTEXT = {
   workflow: valueFor('--model-token-workflow') || process.env.AIPEDIA_MODEL_TOKEN_WORKFLOW || '',
   run_id: valueFor('--model-token-run-id') || process.env.AIPEDIA_MODEL_TOKEN_RUN_ID || '',
@@ -115,14 +124,15 @@ if (argumentIssues.length) {
 
 const handoffRead = readJsonFile(HANDOFF_PATH, 'routing-runtime-completion-handoff-missing', 'routing-runtime-completion-handoff-invalid');
 const trendsRead = readJsonFile(TRENDS_PATH, 'routing-runtime-completion-monitor-trends-missing', 'routing-runtime-completion-monitor-trends-invalid');
+const rollupRead = readOptionalJsonFile(ROLLUP_PATH, 'routing-runtime-completion-monitor-trend-rollup-missing', 'routing-runtime-completion-monitor-trend-rollup-invalid');
 const modelTokenUsageRead = readModelTokenUsageInput();
-const readIssues = [...handoffRead.issues, ...trendsRead.issues, ...modelTokenUsageRead.issues];
+const readIssues = [...handoffRead.issues, ...trendsRead.issues, ...rollupRead.issues, ...modelTokenUsageRead.issues];
 if (readIssues.length) {
   emit({
     ok: false,
     mode: 'agent-routing-runtime-completion',
     project_dir: PROJECT_DIR,
-    source: [HANDOFF_PATH, TRENDS_PATH].filter(Boolean).join(' + '),
+    source: [HANDOFF_PATH, TRENDS_PATH, ROLLUP_PATH].filter(Boolean).join(' + '),
     issues: readIssues,
   });
   process.exit(1);
@@ -131,6 +141,7 @@ if (readIssues.length) {
 const result = buildRoutingRuntimeCompletion({
   handoff: handoffRead.value,
   monitor_trends: trendsRead.value,
+  ...(rollupRead.value ? { monitor_trend_rollup: rollupRead.value } : {}),
   runtime_completion: {
     runtime_system: RUNTIME_SYSTEM,
     change_id: CHANGE_ID,
@@ -141,6 +152,7 @@ const result = buildRoutingRuntimeCompletion({
     verification_status: VERIFICATION_STATUS || 'not-run',
     evidence_note: EVIDENCE_NOTE,
     require_model_token_usage: REQUIRE_MODEL_TOKEN_USAGE,
+    require_monitor_trend_rollup: REQUIRE_MONITOR_TREND_ROLLUP,
   },
   ...(modelTokenUsageRead.value ? {
     model_token_usage: modelTokenUsageRead.value,
@@ -150,14 +162,14 @@ const result = buildRoutingRuntimeCompletion({
   ...(COMPLETION_TASK ? { completion_task: COMPLETION_TASK } : {}),
 }, {
   projectDir: PROJECT_DIR,
-  source: [handoffRead.absolutePath, trendsRead.absolutePath].filter(Boolean).map(projectPath).join(' + '),
+  source: [handoffRead.absolutePath, trendsRead.absolutePath, rollupRead.absolutePath].filter(Boolean).map(projectPath).join(' + '),
 });
 if (result.issues.length) {
   emit({
     ok: false,
     mode: 'agent-routing-runtime-completion',
     project_dir: PROJECT_DIR,
-    source: [handoffRead.absolutePath, trendsRead.absolutePath].filter(Boolean).map(projectPath).join(' + '),
+    source: [handoffRead.absolutePath, trendsRead.absolutePath, rollupRead.absolutePath].filter(Boolean).map(projectPath).join(' + '),
     issues: result.issues,
   });
   process.exit(1);
@@ -186,6 +198,8 @@ function usage() {
     'Options:',
     '  --handoff <path>                Runtime-mode routing handoff receipt. Aliases: --handoff-receipt, --input.',
     '  --monitor-trends <path>        Routing monitor-trends receipt. Aliases: --trend, --trends.',
+    '  --monitor-trend-rollup <path>  Optional longer-window routing monitor trend rollup. Aliases: --trend-rollup, --rollup.',
+    '  --require-monitor-trend-rollup Fail unless an attached rollup is ready and includes the monitor-trend receipt.',
     '  --runtime-system <id>          Runtime system or router identifier. Alias: --system.',
     '  --applied-at <iso>             ISO timestamp for the runtime completion. Alias: --completed-at.',
     '  --verification-status <status> passed, failed, or not-run.',
@@ -228,6 +242,7 @@ function collectArgumentIssues() {
   }
   if (!HANDOFF_PATH) issues.push(routingRuntimeCompletionIssue('argument-invalid', '--handoff, --handoff-receipt, or --input is required.'));
   if (!TRENDS_PATH) issues.push(routingRuntimeCompletionIssue('argument-invalid', '--monitor-trends, --trend, or --trends is required.'));
+  if (REQUIRE_MONITOR_TREND_ROLLUP && !ROLLUP_PATH) issues.push(routingRuntimeCompletionIssue('argument-invalid', '--monitor-trend-rollup is required when --require-monitor-trend-rollup is set.'));
   if (hasFlag('--project-dir') && hasFlag('--root')) {
     issues.push(routingRuntimeCompletionIssue('argument-invalid', 'choose only one of --project-dir or --root.'));
   }
@@ -235,6 +250,11 @@ function collectArgumentIssues() {
     issues.push(routingRuntimeCompletionIssue('argument-invalid', 'Use either --model-token-usage/AIPEDIA_MODEL_TOKEN_USAGE_FILE or AIPEDIA_MODEL_TOKEN_USAGE_JSON, not both.'));
   }
   return issues;
+}
+
+function readOptionalJsonFile(path, missingCode, invalidCode) {
+  if (!path) return { absolutePath: '', value: null, issues: [] };
+  return readJsonFile(path, missingCode, invalidCode);
 }
 
 function readModelTokenUsageInput() {

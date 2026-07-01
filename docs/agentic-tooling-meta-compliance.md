@@ -1374,6 +1374,24 @@ Routing monitor trend windows can now be summarized across a longer window, and 
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-92-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,170 ms, estimated full receipt tokens down 902 versus Slice 91, no loop or command status changes, 3 persistent attention loops, and 4 persistent attention commands.
 - Slice 92 is committed and pushed as `b37cc83a`.
 
+## Ninety-Third System Slice
+
+Runtime completion can now require the longer-window monitor trend rollup before a deployed default routing change counts as complete.
+
+- Extended `scripts/lib/routing-runtime-completion.mjs` so runtime completion receipts can attach a `monitor_trend_rollup` summary.
+- Extended `agent:routing:runtime:complete` with `--monitor-trend-rollup`, `--trend-rollup`, `--rollup`, `AIPEDIA_ROUTING_MONITOR_TREND_ROLLUP_FILE`, `--require-monitor-trend-rollup`, and `AIPEDIA_REQUIRE_MONITOR_TREND_ROLLUP=1`.
+- `completion_evaluation` now records whether a rollup is required, attached, ready, includes the attached monitor-trend receipt, passes the gate, plus rollup status, trend count, and healthy trend count.
+- Strict runtime completion blocks when a required rollup is missing, when an attached rollup is not `rollup-ready`, or when a ready rollup does not include the monitor-trend receipt used by runtime completion.
+- Focused runtime-completion tests passed 14/14.
+- Focused runtime-completion, routing-monitor-trend-rollup, closeout, and meta-router tests passed 110/110.
+- Live strict runtime-completion receipt `.agent/evals/routing-runtime-completions/2026-06-30-slice-93-runtime-rollup-required-attention-receipt.json` passed auto-routed closeout with profile `routing-runtime-completion`.
+- The live strict receipt is intentionally blocked, not invalid: receipt `ok` false, completion status `blocked`, rollup required true, rollup attached true, rollup ready false, rollup includes the attached trend true, rollup trend count 1, exact total tokens 3,430, and next action to collect another closeout-checked monitor-trend window.
+- Checked DAG proof `.agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.validation.json` validate with 8 DAG nodes.
+- Scoped `check:smart --run` passed with 675 script tests plus command audit.
+- `check:quick` passed with 675 script tests, command audit, and quick assets.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T08-43-28-915Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 13 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-93-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,070 ms, estimated full receipt tokens up 164 versus Slice 92, no loop or command status changes, exact model-token coverage 0.333, 3 persistent attention loops, and 4 persistent attention commands.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

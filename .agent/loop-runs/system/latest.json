@@ -5,23 +5,25 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-07-01T08:26:15.215Z",
+  "generated_at": "2026-07-01T08:43:28.915Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-92-monitor-trend-rollup",
+  "run_id": "2026-06-30-slice-93-runtime-completion-rollup-enforcement",
   "residual_risks": [
-    "Live rollup is intentionally attention because only one routing monitor trend window exists."
+    "Strict runtime completion can now require longer-window rollup evidence, but the live receipt remains blocked until a second monitor-trend window exists."
   ],
   "next_actions": [
-    "Collect a second closeout-checked routing monitor trend after the next runtime or workflow change, then regenerate the rollup."
+    "Collect a second closeout-checked routing monitor trend after the next runtime or workflow change, regenerate the longer-window rollup, and rerun strict runtime completion.",
+    "Keep exact model-token usage attached to runtime completion receipts when runtime usage is available.",
+    "Preserve the separate Captions/Synthesia content WIP and pause receipt outside this system commit."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-92-monitor-trend-rollup",
-    "span_id": "span:loop-run:2026-06-30-slice-92-monitor-trend-rollup:2026-07-01T08:26:15.215Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-93-runtime-completion-rollup-enforcement",
+    "span_id": "span:loop-run:2026-06-30-slice-93-runtime-completion-rollup-enforcement:2026-07-01T08:43:28.915Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-07-01T08:26:15.215Z",
-    "ended_at": "2026-07-01T08:26:20.384Z",
-    "duration_ms": 5170
+    "started_at": "2026-07-01T08:43:28.915Z",
+    "ended_at": "2026-07-01T08:43:33.984Z",
+    "duration_ms": 5070
   },
   "artifact_refs": [
     {
@@ -33,19 +35,19 @@
     {
       "role": "output",
       "kind": "agent-task-dag",
-      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.json",
       "description": "Generated agent task DAG graph."
     },
     {
       "role": "output",
       "kind": "agent-task-dag-validation-report",
-      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.validation.json",
       "description": "agent:dag:check validation report for an agent task DAG."
     },
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-07-01T08-26-15-215Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-07-01T08-43-28-915Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -300,47 +302,47 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 5170,
+  "duration_ms": 5070,
   "model_token_usage": null,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 5170,
-    "total_command_duration_ms": 5168,
+    "wall_duration_ms": 5070,
+    "total_command_duration_ms": 5066,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 323,
-    "commands_per_second": 3.095,
-    "loops_per_second": 1.354,
+    "average_command_duration_ms": 316.625,
+    "commands_per_second": 3.156,
+    "loops_per_second": 1.381,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
     "embedded_command_artifact_count": 16,
-    "system_artifact_count": 13,
+    "system_artifact_count": 14,
     "content_artifact_count": 4,
     "other_artifact_count": 0,
-    "agent_system_artifact_count": 12,
+    "agent_system_artifact_count": 13,
     "agent_content_artifact_count": 0,
     "agent_other_artifact_count": 0,
     "preexisting_dirty_count": 5,
-    "system_artifacts_per_second": 2.515,
-    "agent_system_artifacts_per_second": 2.321,
-    "persisted_full_receipt_bytes": 47304,
-    "persisted_latest_receipt_bytes": 28786,
+    "system_artifacts_per_second": 2.761,
+    "agent_system_artifacts_per_second": 2.564,
+    "persisted_full_receipt_bytes": 47959,
+    "persisted_latest_receipt_bytes": 29441,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 2011
+        "duration_ms": 2027
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 658
+        "duration_ms": 591
       },
       {
         "loop_id": "news-market",
@@ -352,13 +354,13 @@
         "loop_id": "freshness",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 328
+        "duration_ms": 329
       },
       {
         "loop_id": "quality-pruning",
         "label": "site KPI audit",
         "status": "ok",
-        "duration_ms": 247
+        "duration_ms": 243
       }
     ]
   },
@@ -473,38 +475,40 @@
     "has_observed_dirty_baseline": true,
     "missing_observed_dirty_paths": [],
     "changed_paths": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
-      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.validation.json",
+      ".agent/evals/routing-runtime-completions/2026-06-30-slice-93-runtime-rollup-required-attention-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-93.md",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
-      "package.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
       "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-monitor-trend-rollup.mjs",
-      "scripts/lib/routing-monitor-trend-rollup.mjs",
+      "scripts/agent-routing-runtime-completion.mjs",
+      "scripts/lib/routing-runtime-completion.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
+      "tests/scripts/agent-routing-runtime-completion.test.mjs"
     ],
     "system_artifacts": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
-      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.validation.json",
+      ".agent/evals/routing-runtime-completions/2026-06-30-slice-93-runtime-rollup-required-attention-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-93.md",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
-      "package.json",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
       "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-monitor-trend-rollup.mjs",
-      "scripts/lib/routing-monitor-trend-rollup.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
+      "scripts/agent-routing-runtime-completion.mjs",
+      "scripts/lib/routing-runtime-completion.mjs",
+      "tests/scripts/agent-routing-runtime-completion.test.mjs"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -516,32 +520,34 @@
     "has_system_artifact": true,
     "content_only": false,
     "agent_changed_paths": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
-      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
-      "package.json",
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.validation.json",
+      ".agent/evals/routing-runtime-completions/2026-06-30-slice-93-runtime-rollup-required-attention-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-93.md",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
       "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-monitor-trend-rollup.mjs",
-      "scripts/lib/routing-monitor-trend-rollup.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
+      "scripts/agent-routing-runtime-completion.mjs",
+      "scripts/lib/routing-runtime-completion.mjs",
+      "tests/scripts/agent-routing-runtime-completion.test.mjs"
     ],
     "agent_system_artifacts": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
-      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
-      "package.json",
+      ".agent/CURRENT_STATUS.md",
+      ".agent/PLANS.md",
+      ".agent/WORK_LOG.md",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.validation.json",
+      ".agent/evals/routing-runtime-completions/2026-06-30-slice-93-runtime-rollup-required-attention-receipt.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-93.md",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      "docs/agentic-tooling-meta-compliance.md",
       "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-monitor-trend-rollup.mjs",
-      "scripts/lib/routing-monitor-trend-rollup.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
+      "scripts/agent-routing-runtime-completion.mjs",
+      "scripts/lib/routing-runtime-completion.mjs",
+      "tests/scripts/agent-routing-runtime-completion.test.mjs"
     ],
     "agent_content_artifacts": [],
     "agent_other_artifacts": [],
@@ -571,21 +577,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 223,
+      "duration_ms": 233,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 112,
+          "duration_ms": 129,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 110,
+          "duration_ms": 104,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -595,7 +601,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 563,
+      "duration_ms": 564,
       "attention_reasons": [
         "due_now=161"
       ],
@@ -604,7 +610,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 234,
+          "duration_ms": 235,
           "attention_reasons": [
             "due_now=161"
           ],
@@ -613,7 +619,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 328,
+          "duration_ms": 329,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -630,21 +636,21 @@
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 158,
+          "duration_ms": 154,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 117,
+          "duration_ms": 121,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 131,
+          "duration_ms": 130,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -654,7 +660,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 2012,
+      "duration_ms": 2028,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -663,7 +669,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 2011,
+          "duration_ms": 2027,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -687,28 +693,28 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 516,
+      "duration_ms": 500,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 247,
+          "duration_ms": 243,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 130,
+          "duration_ms": 120,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 140,
+          "duration_ms": 137,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -718,7 +724,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 879,
+      "duration_ms": 783,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -728,7 +734,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 221,
+          "duration_ms": 191,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -749,7 +755,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 658,
+          "duration_ms": 591,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -773,21 +779,21 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 571,
+      "duration_ms": 555,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 117,
+          "duration_ms": 111,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 109,
+          "duration_ms": 99,
           "attention_reasons": [],
           "build_freshness": null
         },
@@ -803,13 +809,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-07-01T08-26-15-215Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-07-01T08-43-28-915Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T08-26-15-215Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-07-01T08:10:18.658Z",
+      "previous_run": "2026-07-01T08:26:15.215Z",
       "status_changes": [],
-      "duration_delta_ms": -41,
+      "duration_delta_ms": -100,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

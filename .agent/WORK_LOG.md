@@ -2546,3 +2546,18 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - DAG proof: `.agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json`.
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-92-final-efficiency-trends.json` reports 3 metric-aware receipts, latest wall duration 5,170 ms, estimated full receipt tokens down 902 versus Slice 91, no loop or command status changes, 3 persistent attention loops, and 4 persistent attention commands.
 - Next: Collect a second closeout-checked routing monitor trend after the next runtime or workflow change, then regenerate the rollup.
+
+### 2026-07-01: Agentic Tooling Meta Slice 93, Runtime Completion Rollup Enforcement
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Extended `agent:routing:runtime:complete`, backed by `scripts/lib/routing-runtime-completion.mjs`, so runtime completion receipts can attach and require longer-window routing monitor trend rollups.
+- Changed: Added `--monitor-trend-rollup`, `--trend-rollup`, `--rollup`, `AIPEDIA_ROUTING_MONITOR_TREND_ROLLUP_FILE`, `--require-monitor-trend-rollup`, and `AIPEDIA_REQUIRE_MONITOR_TREND_ROLLUP=1`.
+- System lesson: a runtime default routing completion should not treat a single healthy monitor-trend window as long-window proof when strict completion requires rollup evidence. The completion gate now blocks when a required rollup is missing, not ready, or does not include the same monitor-trend receipt.
+- Verification: syntax checks passed. Focused runtime-completion tests passed 14/14. Focused runtime-completion, routing-monitor-trend-rollup, closeout, and meta-router tests passed 110/110. Live strict runtime-completion receipt passed auto-routed closeout with profile `routing-runtime-completion`. Checked DAG proof validates with 8 DAG nodes. Scoped `check:smart --run` passed with 675 script tests plus command audit. `check:quick` passed with 675 script tests, command audit, and quick assets. Strict latest-loop closeout passed after attaching checked DAG refs. Final efficiency trend receipt passed auto-routed closeout.
+- Durable proof: `.agent/evals/routing-runtime-completions/2026-06-30-slice-93-runtime-rollup-required-attention-receipt.json` is intentionally blocked with rollup required true, rollup attached true, rollup ready false, rollup includes the attached trend true, rollup trend count 1, exact total tokens 3,430, and next action to collect another closeout-checked monitor-trend window.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-93.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T08-43-28-915Z-loop-run.json`.
+- DAG proof: `.agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-93-runtime-rollup-required-agent-task-graph.validation.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-93-final-efficiency-trends.json` reports 3 metric-aware receipts, latest wall duration 5,070 ms, estimated full receipt tokens up 164 versus Slice 92, no loop or command status changes, exact model-token coverage 0.333, 3 persistent attention loops, and 4 persistent attention commands.
+- Boundary: no content pages were edited. Pre-existing Captions/Synthesia content WIP and the prior pause receipt remain separate.
+- Next: Commit and push, then collect a second closeout-checked monitor-trend window after the next runtime or workflow change.
