@@ -5,26 +5,26 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-07-01T00:16:36.264Z",
+  "generated_at": "2026-07-01T00:30:13.003Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-66-tool-refresh-observed-dirty-policy-proof",
+  "run_id": "2026-06-30-slice-67-page-refresh-current-status-refresh-plan",
   "residual_risks": [
-    "Tool-refresh and affiliate-handoff policy proofs are now registered as proved, but page-refresh remains blocked until stale page-ledger input is refreshed or resolved.",
-    "The Slice 66 tool-refresh proof is a dry-run policy proof and does not validate rendered page quality or real content edits."
+    "Page-refresh remains blocked until PAGE_REFRESH_LEDGER.md is refreshed after the separate content WIP is resolved or intentionally integrated.",
+    "Slice 67 fixes proof and closeout semantics plus blocker actionability, but it does not itself run the positive page-refresh content proof."
   ],
   "next_actions": [
-    "Refresh or resolve stale page-ledger input, then run the bounded page-refresh positive policy proof and register its durable receipt.",
-    "Use the Slice 66 runner dry-run behavior as the baseline: dry-run command rows must not claim unwritten timing detail artifacts.",
-    "Continue exact token/correction metric work only when runtime inputs are reliable."
+    "Resolve or explicitly integrate the separate Captions/Synthesia content WIP, refresh PAGE_REFRESH_LEDGER.md with the receipt-visible tracked-mutation acknowledgement, then rerun proof readiness.",
+    "Run the bounded page-refresh positive policy proof once proof readiness reports page-refresh ready, then register its durable receipt in .agent/meta/proof-readiness-targets.json.",
+    "Keep using page-refresh status current as valid input freshness in proof readiness and runner policy validation."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-66-tool-refresh-observed-dirty-policy-proof",
-    "span_id": "span:loop-run:2026-06-30-slice-66-tool-refresh-observed-dirty-policy-proof:2026-07-01T00:16:36.264Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-67-page-refresh-current-status-refresh-plan",
+    "span_id": "span:loop-run:2026-06-30-slice-67-page-refresh-current-status-refresh-plan:2026-07-01T00:30:13.003Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-07-01T00:16:36.264Z",
-    "ended_at": "2026-07-01T00:16:40.945Z",
-    "duration_ms": 4681
+    "started_at": "2026-07-01T00:30:13.003Z",
+    "ended_at": "2026-07-01T00:30:17.682Z",
+    "duration_ms": 4678
   },
   "artifact_refs": [
     {
@@ -48,7 +48,7 @@
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-07-01T00-16-36-264Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-07-01T00-30-13-003Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -303,46 +303,46 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 4681,
+  "duration_ms": 4678,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 4681,
-    "total_command_duration_ms": 4682,
+    "wall_duration_ms": 4678,
+    "total_command_duration_ms": 4677,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 292.625,
-    "commands_per_second": 3.418,
-    "loops_per_second": 1.495,
+    "average_command_duration_ms": 292.313,
+    "commands_per_second": 3.42,
+    "loops_per_second": 1.496,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
     "embedded_command_artifact_count": 16,
-    "system_artifact_count": 13,
+    "system_artifact_count": 11,
     "content_artifact_count": 4,
     "other_artifact_count": 0,
-    "agent_system_artifact_count": 13,
+    "agent_system_artifact_count": 11,
     "agent_content_artifact_count": 0,
     "agent_other_artifact_count": 0,
     "preexisting_dirty_count": 4,
-    "system_artifacts_per_second": 2.777,
-    "agent_system_artifacts_per_second": 2.777,
-    "persisted_full_receipt_bytes": 47979,
-    "persisted_latest_receipt_bytes": 29432,
+    "system_artifacts_per_second": 2.351,
+    "agent_system_artifacts_per_second": 2.351,
+    "persisted_full_receipt_bytes": 46827,
+    "persisted_latest_receipt_bytes": 28280,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 1893
+        "duration_ms": 1868
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 545
+        "duration_ms": 552
       },
       {
         "loop_id": "freshness",
@@ -354,13 +354,13 @@
         "loop_id": "news-market",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 301
+        "duration_ms": 304
       },
       {
-        "loop_id": "quality-pruning",
-        "label": "site KPI audit",
-        "status": "ok",
-        "duration_ms": 226
+        "loop_id": "freshness",
+        "label": "freshness queue",
+        "status": "attention",
+        "duration_ms": 230
       }
     ]
   },
@@ -477,35 +477,31 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-66.md",
+      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-67-page-refresh-current-status-and-refresh-plan.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-67.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      ".agent/meta/proof-readiness-targets.json",
       "docs/agentic-tooling-meta-compliance.md",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-proof-readiness.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
-      "tools/aipedia-runner/src/main.rs"
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-proof-readiness.test.mjs"
     ],
     "system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-66.md",
+      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-67-page-refresh-current-status-and-refresh-plan.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-67.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      ".agent/meta/proof-readiness-targets.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "tools/aipedia-runner/src/main.rs"
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-proof-readiness.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-proof-readiness.test.mjs"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -520,31 +516,27 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-66.md",
+      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-67-page-refresh-current-status-and-refresh-plan.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-67.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      ".agent/meta/proof-readiness-targets.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "tools/aipedia-runner/src/main.rs"
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-proof-readiness.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-proof-readiness.test.mjs"
     ],
     "agent_system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.md",
-      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-66.md",
+      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-67-page-refresh-current-status-and-refresh-plan.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-67.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      ".agent/meta/proof-readiness-targets.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "tools/aipedia-runner/src/main.rs"
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-proof-readiness.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-proof-readiness.test.mjs"
     ],
     "agent_content_artifacts": [],
     "agent_other_artifacts": [],
@@ -571,21 +563,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 221,
+      "duration_ms": 208,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 112,
+          "duration_ms": 105,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 109,
+          "duration_ms": 103,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -595,7 +587,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 525,
+      "duration_ms": 541,
       "attention_reasons": [
         "due_now=161"
       ],
@@ -604,7 +596,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 214,
+          "duration_ms": 230,
           "attention_reasons": [
             "due_now=161"
           ],
@@ -623,21 +615,21 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 379,
+      "duration_ms": 376,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 151,
+          "duration_ms": 147,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 107,
+          "duration_ms": 108,
           "attention_reasons": [],
           "build_freshness": null
         },
@@ -654,7 +646,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 1893,
+      "duration_ms": 1868,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -663,7 +655,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 1893,
+          "duration_ms": 1868,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -694,21 +686,21 @@
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 226,
+          "duration_ms": 227,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 110,
+          "duration_ms": 109,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 118,
+          "duration_ms": 119,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -718,7 +710,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 719,
+      "duration_ms": 729,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -728,7 +720,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 174,
+          "duration_ms": 177,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -749,7 +741,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 545,
+          "duration_ms": 552,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -773,28 +765,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 491,
+      "duration_ms": 501,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 97,
+          "duration_ms": 104,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 94,
+          "duration_ms": 93,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 301,
+          "duration_ms": 304,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -803,13 +795,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-07-01T00-16-36-264Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-07-01T00-30-13-003Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-07-01T00-05-01-388Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T00-16-36-264Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-07-01T00:05:01.388Z",
+      "previous_run": "2026-07-01T00:16:36.264Z",
       "status_changes": [],
-      "duration_delta_ms": -29,
+      "duration_delta_ms": -3,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

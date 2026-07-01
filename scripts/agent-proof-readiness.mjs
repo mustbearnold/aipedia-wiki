@@ -148,7 +148,8 @@ const selectedTargets = valuesFor('--target').length ? [...new Set(valuesFor('--
 const selectedWorkflows = [...new Set(selectedTargets.map((target) => TARGETS[target]?.workflow).filter(Boolean))];
 const gitStatus = readGitStatus();
 const inputFreshness = readInputFreshness(selectedWorkflows);
-const targets = selectedTargets.map((target) => evaluateTarget(target, { gitStatus, inputFreshness }));
+const inputRefreshPlan = readInputRefreshPlan(selectedWorkflows, inputFreshness);
+const targets = selectedTargets.map((target) => evaluateTarget(target, { gitStatus, inputFreshness, inputRefreshPlan }));
 const report = {
   ok: targets.every((target) => target.ok),
   mode: 'meta-proof-readiness',
@@ -167,6 +168,10 @@ const report = {
   inputs: {
     input_freshness_source: inputFreshness.source,
     input_freshness_exit_code: inputFreshness.exit_code,
+    input_refresh_plan_source: inputRefreshPlan.source,
+    input_refresh_plan_exit_code: inputRefreshPlan.exit_code,
+    input_refresh_plan_status: inputRefreshPlan.status,
+    input_refresh_plan_count: inputRefreshPlan.count,
     git_status_source: gitStatus.source,
     git_status_exit_code: gitStatus.exit_code,
     proof_target_registry_source: proofTargetRegistry.source,
@@ -367,14 +372,18 @@ function evaluateTarget(target, context) {
 
   const blockers = [];
   const freshnessWorkflow = findFreshnessWorkflow(context.inputFreshness.report, config.workflow);
+  const freshnessOk = isFreshnessWorkflowOk(freshnessWorkflow, config.workflow);
+  const refreshPlan = findInputRefreshPlan(context.inputRefreshPlan.report, config.workflow);
+  const summarizedRefreshPlan = summarizeInputRefreshPlan(refreshPlan);
   if (!freshnessWorkflow) {
     blockers.push(blocker('input-freshness-missing', `Input freshness receipt does not include ${config.workflow}.`));
-  } else if (freshnessWorkflow.ok !== true || freshnessWorkflow.status !== 'fresh') {
+  } else if (!freshnessOk) {
     blockers.push(blocker('input-freshness-stale', freshnessWorkflow.next_action || `${config.workflow} input freshness is not fresh.`, {
       status: freshnessWorkflow.status || '',
       input: freshnessWorkflow.input || '',
       refresh_command: freshnessWorkflow.refresh_command || '',
       enforce_command: freshnessWorkflow.enforce_command || '',
+      ...(summarizedRefreshPlan ? { input_refresh_plan: summarizedRefreshPlan } : {}),
     }));
   }
   if (context.inputFreshness.exit_code !== 0 && !INPUT_FRESHNESS_PATH) {
@@ -424,8 +433,9 @@ function evaluateTarget(target, context) {
       },
       {
         id: config.input_check_id,
-        ok: freshnessWorkflow?.ok === true && freshnessWorkflow?.status === 'fresh',
+        ok: freshnessOk,
         status: freshnessWorkflow?.status || 'missing',
+        ...(summarizedRefreshPlan ? { input_refresh_plan: summarizedRefreshPlan } : {}),
       },
       ...(config.dirty_check_id ? [{
         id: config.dirty_check_id,
@@ -570,6 +580,56 @@ function readInputFreshness(workflows) {
   };
 }
 
+function readInputRefreshPlan(workflows, inputFreshness) {
+  const staleWorkflows = workflows
+    .filter((workflow) => !isFreshnessWorkflowOk(findFreshnessWorkflow(inputFreshness.report, workflow), workflow));
+  if (!staleWorkflows.length) {
+    return {
+      source: 'not-run:no-stale-inputs',
+      exit_code: 0,
+      status: 'skipped',
+      count: 0,
+      stderr_tail: '',
+      report: { refresh_plan: [] },
+    };
+  }
+
+  if (INPUT_FRESHNESS_PATH) {
+    const plans = Array.isArray(inputFreshness.report?.refresh_plan) ? inputFreshness.report.refresh_plan : [];
+    return {
+      source: inputFreshness.source,
+      exit_code: inputFreshness.exit_code,
+      status: plans.length ? 'from-input-freshness' : 'missing-refresh-plan',
+      count: plans.length,
+      stderr_tail: inputFreshness.stderr_tail,
+      report: inputFreshness.report,
+    };
+  }
+
+  const result = spawnSync(process.execPath, [
+    resolve(SCRIPT_DIR, 'agent-input-freshness-receipt.mjs'),
+    ...staleWorkflows.flatMap((workflow) => ['--workflow', workflow]),
+    '--refresh-stale',
+    '--json',
+    '--project-dir',
+    PROJECT_DIR,
+  ], {
+    cwd: DEFAULT_PROJECT_DIR,
+    encoding: 'utf8',
+  });
+  const report = parseJson(result.stdout);
+  const workflowText = staleWorkflows.map((workflow) => `--workflow ${workflow}`).join(' ');
+  const plans = Array.isArray(report?.refresh_plan) ? report.refresh_plan : [];
+  return {
+    source: `node scripts/agent-input-freshness-receipt.mjs ${workflowText} --refresh-stale --json`,
+    exit_code: result.status ?? 1,
+    status: result.status === 0 && report ? 'planned' : 'failed',
+    count: plans.length,
+    stderr_tail: tail(result.stderr),
+    report,
+  };
+}
+
 function readGitStatus() {
   if (GIT_STATUS_PATH) {
     const path = resolve(PROJECT_DIR, GIT_STATUS_PATH);
@@ -629,6 +689,41 @@ function isToolRefreshBlockingDirtyPath(path) {
 function findFreshnessWorkflow(receipt, workflow) {
   if (!receipt || !Array.isArray(receipt.workflows)) return null;
   return receipt.workflows.find((item) => item && item.id === workflow) || null;
+}
+
+function isFreshnessWorkflowOk(workflow, workflowId) {
+  if (!workflow || workflow.ok !== true) return false;
+  if (workflowId === 'page-refresh') return workflow.status === 'current' || workflow.status === 'fresh';
+  return workflow.status === 'fresh';
+}
+
+function findInputRefreshPlan(receipt, workflow) {
+  if (!receipt || !Array.isArray(receipt.refresh_plan)) return null;
+  return receipt.refresh_plan.find((item) => item && item.id === workflow) || null;
+}
+
+function summarizeInputRefreshPlan(plan) {
+  if (!plan || typeof plan !== 'object' || Array.isArray(plan)) return null;
+  return {
+    id: typeof plan.id === 'string' ? plan.id : '',
+    status: typeof plan.status === 'string' ? plan.status : '',
+    before_status: typeof plan.before_status === 'string' ? plan.before_status : '',
+    mutation_policy: typeof plan.mutation_policy === 'string' ? plan.mutation_policy : '',
+    requires_tracked_mutation_ack: plan.requires_tracked_mutation_ack === true,
+    requires_explicit_workflow: plan.requires_explicit_workflow === true,
+    writes: Array.isArray(plan.writes) ? plan.writes.filter((item) => typeof item === 'string') : [],
+    commands: Array.isArray(plan.commands)
+      ? plan.commands
+        .filter((command) => command && typeof command === 'object' && !Array.isArray(command))
+        .map((command) => ({
+          label: typeof command.label === 'string' ? command.label : '',
+          command: typeof command.command === 'string' ? command.command : '',
+        }))
+      : [],
+    required_flags: Array.isArray(plan.required_flags) ? plan.required_flags.filter((item) => typeof item === 'string') : [],
+    blocked_reasons: Array.isArray(plan.blocked_reasons) ? plan.blocked_reasons.filter((item) => typeof item === 'string') : [],
+    next_action: typeof plan.next_action === 'string' ? plan.next_action : '',
+  };
 }
 
 function pageRefreshBlockedActions(blockers) {

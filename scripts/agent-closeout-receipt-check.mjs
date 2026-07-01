@@ -1790,6 +1790,9 @@ function validateMetaProofReadinessTarget(target, issues, path) {
     issues.push(issue('field-invalid', `${path}.proof_goal must be a string when present.`));
   }
   requireArray(target, 'blockers', issues, `${path}.blockers`);
+  if (Array.isArray(target.blockers)) {
+    target.blockers.forEach((blockerValue, index) => validateMetaProofReadinessBlocker(blockerValue, issues, `${path}.blockers[${index}]`));
+  }
   requireArray(target, 'readiness_checks', issues, `${path}.readiness_checks`);
   if (Array.isArray(target.readiness_checks)) {
     target.readiness_checks.forEach((check, index) => validateMetaProofReadinessCheck(check, issues, `${path}.readiness_checks[${index}]`));
@@ -1824,6 +1827,45 @@ function validateMetaProofReadinessCheck(check, issues, path) {
     if (check[field] != null) requireStringArray(check, field, issues, `${path}.${field}`);
   }
   if (check.observed_dirty_allowed != null) requireBoolean(check, 'observed_dirty_allowed', issues, `${path}.observed_dirty_allowed`);
+  if (check.input_refresh_plan != null) validateMetaInputRefreshPlan(check.input_refresh_plan, issues, `${path}.input_refresh_plan`);
+}
+
+function validateMetaProofReadinessBlocker(blockerValue, issues, path) {
+  if (!isObject(blockerValue)) {
+    issues.push(issue('meta-proof-readiness-blocker-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(blockerValue, 'code', issues, { path: `${path}.code` });
+  requireString(blockerValue, 'message', issues, { path: `${path}.message` });
+  if (blockerValue.input_refresh_plan != null) validateMetaInputRefreshPlan(blockerValue.input_refresh_plan, issues, `${path}.input_refresh_plan`);
+}
+
+function validateMetaInputRefreshPlan(value, issues, path) {
+  if (!isObject(value)) {
+    issues.push(issue('meta-proof-readiness-refresh-plan-invalid', `${path} must be an object.`));
+    return;
+  }
+  for (const field of ['id', 'status', 'mutation_policy', 'next_action']) {
+    requireString(value, field, issues, { path: `${path}.${field}` });
+  }
+  if (value.before_status != null) requireString(value, 'before_status', issues, { path: `${path}.before_status` });
+  requireBoolean(value, 'requires_tracked_mutation_ack', issues, `${path}.requires_tracked_mutation_ack`);
+  requireBoolean(value, 'requires_explicit_workflow', issues, `${path}.requires_explicit_workflow`);
+  for (const field of ['writes', 'required_flags', 'blocked_reasons']) {
+    requireStringArray(value, field, issues, `${path}.${field}`);
+  }
+  requireArray(value, 'commands', issues, `${path}.commands`);
+  if (Array.isArray(value.commands)) {
+    value.commands.forEach((command, index) => {
+      const commandPath = `${path}.commands[${index}]`;
+      if (!isObject(command)) {
+        issues.push(issue('meta-proof-readiness-refresh-plan-invalid', `${commandPath} must be an object.`));
+        return;
+      }
+      requireString(command, 'label', issues, { path: `${commandPath}.label` });
+      requireString(command, 'command', issues, { path: `${commandPath}.command` });
+    });
+  }
 }
 
 function validateMetaProofCompletion(value, issues, path) {
@@ -1867,9 +1909,15 @@ function validatePolicyInputFreshness(receipt, issues) {
     issues.push(issue('runner-workflow-policy-input-freshness-missing', `${receipt.workflow} policy requires matching input_freshness workflow.`));
     return;
   }
-  if (receipt.status === 'passed' && (workflowFreshness.ok !== true || workflowFreshness.status !== 'fresh')) {
+  if (receipt.status === 'passed' && !isWorkflowFreshnessOk(workflowFreshness, receipt.workflow)) {
     issues.push(issue('runner-workflow-policy-input-freshness-stale', `${receipt.workflow} passed receipts require fresh input_freshness.`));
   }
+}
+
+function isWorkflowFreshnessOk(workflowFreshness, workflowId) {
+  if (!isObject(workflowFreshness) || workflowFreshness.ok !== true) return false;
+  if (workflowId === 'page-refresh') return workflowFreshness.status === 'current' || workflowFreshness.status === 'fresh';
+  return workflowFreshness.status === 'fresh';
 }
 
 function validatePolicyCommands(receipt, policy, issues) {

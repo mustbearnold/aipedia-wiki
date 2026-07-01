@@ -431,6 +431,19 @@ function validPageRunnerReceipt(overrides = {}) {
       { role: 'embedded', kind: 'closeout-command', id: 'page-refresh:ledger-generate' },
     ],
   });
+  pageReceipt.input_freshness = {
+    ...pageReceipt.input_freshness,
+    command: 'node scripts/agent-input-freshness-receipt.mjs --workflow page-refresh --json --project-dir=.',
+    workflows: [
+      {
+        id: 'page-refresh',
+        kind: 'page-refresh-ledger',
+        ok: true,
+        status: 'current',
+        next_action: '',
+      },
+    ],
+  };
   return { ...pageReceipt, ...overrides };
 }
 
@@ -1107,6 +1120,27 @@ test('closeout receipt check fails malformed meta proof readiness receipts', () 
     assert.ok(codes.includes('meta-proof-readiness-summary-mismatch'));
     assert.ok(codes.includes('meta-proof-readiness-blockers-missing'));
     assert.ok(codes.includes('meta-proof-readiness-proof-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates meta proof readiness refresh plans', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-proof-refresh-plan-'));
+  const path = join(dir, 'proof-readiness.json');
+  const receipt = validMetaProofReadinessReceipt();
+  receipt.targets[0].blockers[0].input_refresh_plan = 'not-a-plan';
+  receipt.targets[0].readiness_checks[1].input_refresh_plan = { id: 'page-refresh' };
+
+  try {
+    writeJson(path, receipt);
+    const result = runCheck(['--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('meta-proof-readiness-refresh-plan-invalid'));
+    assert.ok(codes.includes('field-invalid'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

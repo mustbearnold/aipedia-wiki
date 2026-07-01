@@ -17,7 +17,7 @@ function writeJson(path, value) {
 }
 
 function workflowReceipt(id, status = 'fresh') {
-  const ok = status === 'fresh';
+  const ok = status === 'fresh' || status === 'current';
   const metadata = {
     'page-refresh': {
       kind: 'page-refresh-ledger',
@@ -54,6 +54,7 @@ function freshnessReceipt(workflows = { 'page-refresh': 'fresh' }) {
     mode: 'input-freshness-receipt',
     schema_version: 'aipedia.input-freshness-receipt.v1',
     workflows: entries,
+    refresh_plan: entries.filter((entry) => !entry.ok).map((entry) => refreshPlanFor(entry)).filter(Boolean),
     summary: {
       workflow_count: entries.length,
       ok_count: entries.filter((entry) => entry.ok).length,
@@ -61,6 +62,28 @@ function freshnessReceipt(workflows = { 'page-refresh': 'fresh' }) {
       stale_count: entries.filter((entry) => entry.status === 'stale').length,
     },
     next_actions: entries.filter((entry) => !entry.ok).map((entry) => entry.next_action),
+  };
+}
+
+function refreshPlanFor(entry) {
+  if (entry.id !== 'page-refresh') return null;
+  return {
+    id: 'page-refresh',
+    status: 'planned',
+    before_status: entry.status,
+    mutation_policy: 'tracked-generated',
+    requires_tracked_mutation_ack: true,
+    requires_explicit_workflow: true,
+    writes: ['PAGE_REFRESH_LEDGER.md'],
+    commands: [
+      {
+        label: 'page refresh ledger',
+        command: 'node scripts/generate-page-refresh-ledger.mjs --json --project-dir .',
+      },
+    ],
+    required_flags: [],
+    blocked_reasons: [],
+    next_action: 'Run npm run agent:input-freshness -- --workflow page-refresh --refresh-stale --apply-refreshes --allow-tracked-mutations --require-fresh --json.',
   };
 }
 
@@ -153,10 +176,10 @@ function writeProofTargetRegistry(root, overrides = {}) {
   });
 }
 
-test('proof readiness reports page-refresh policy ready when inputs are fresh and content tree is clean', () => {
+test('proof readiness reports page-refresh policy ready when ledger input is current and content tree is clean', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-ready-'));
   try {
-    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'page-refresh': 'fresh' }));
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'page-refresh': 'current' }));
     writeFileSync(join(root, 'status.txt'), '');
 
     const result = runReadiness([
@@ -175,6 +198,7 @@ test('proof readiness reports page-refresh policy ready when inputs are fresh an
     assert.equal(report.ok, true);
     assert.equal(report.summary.ready_count, 1);
     assert.equal(report.targets[0].status, 'ready');
+    assert.equal(report.targets[0].readiness_checks.find((check) => check.id === 'page-refresh-input-freshness').status, 'current');
     assert.equal(report.targets[0].recommended_commands.at(-1), 'npm run agent:meta:closeout:auto -- --receipt <page-refresh-closeout.json> --json');
   } finally {
     rmSync(root, { recursive: true, force: true });
@@ -240,16 +264,27 @@ test('proof readiness blocks stale page-refresh inputs and dirty content WIP', (
     assert.equal(result.status, 1);
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
+    assert.equal(report.inputs.input_refresh_plan_status, 'from-input-freshness');
+    assert.equal(report.inputs.input_refresh_plan_count, 1);
     assert.equal(report.summary.blocked_count, 1);
     assert.deepEqual(
       report.targets[0].blockers.map((item) => item.code),
       ['input-freshness-stale', 'dirty-content-wip'],
+    );
+    assert.equal(report.targets[0].blockers[0].input_refresh_plan.id, 'page-refresh');
+    assert.equal(report.targets[0].blockers[0].input_refresh_plan.mutation_policy, 'tracked-generated');
+    assert.deepEqual(report.targets[0].blockers[0].input_refresh_plan.writes, ['PAGE_REFRESH_LEDGER.md']);
+    assert.equal(
+      report.targets[0].blockers[0].input_refresh_plan.commands[0].command,
+      'node scripts/generate-page-refresh-ledger.mjs --json --project-dir .',
     );
     assert.deepEqual(report.targets[0].blockers[1].paths, [
       'src/content/tools/synthesia.md',
       'src/data/source-registry.json',
       'src/content/comparisons/captions-vs-synthesia.md',
     ]);
+    const inputCheck = report.targets[0].readiness_checks.find((check) => check.id === 'page-refresh-input-freshness');
+    assert.equal(inputCheck.input_refresh_plan.status, 'planned');
     const dirtyCheck = report.targets[0].readiness_checks.find((check) => check.id === 'dirty-content-boundary');
     assert.deepEqual(dirtyCheck.dirty_paths, [
       'src/content/tools/synthesia.md',
