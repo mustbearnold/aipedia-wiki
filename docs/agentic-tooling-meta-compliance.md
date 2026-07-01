@@ -1355,6 +1355,7 @@ Runtime completion receipts now ingest exact model-token usage through the same 
 - Checked DAG proof `.agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json` were attached to the enforced loop receipt.
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, exact model-token usage provided, latest exact total tokens 3,430, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,211 ms, exact model-token coverage 0.333 across the 3-run window, latest exact total tokens 3,430, no loop or command status changes, and estimated receipt tokens up 811 because the slice added token and DAG proof payloads.
+- Slice 91 is committed and pushed as `96742204`.
 
 ## Compliance Matrix
 

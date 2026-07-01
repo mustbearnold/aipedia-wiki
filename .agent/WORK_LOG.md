@@ -2520,7 +2520,7 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 
 ### 2026-07-01: Agentic Tooling Meta Slice 91, Runtime Exact Token Ingestion
 
-- Status: Verified locally, pending commit and push.
+- Status: Committed and pushed as `96742204`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Added shared exact model-token normalization in `scripts/lib/model-token-usage.mjs` and switched `scripts/aipedia-loops.mjs` to use it without changing loop receipt token fields.
 - Changed: Extended `agent:routing:runtime:complete` with `--model-token-usage`, `AIPEDIA_MODEL_TOKEN_USAGE_FILE`, `AIPEDIA_MODEL_TOKEN_USAGE_JSON`, model-token context defaults, and strict `--require-model-token-usage` / `--require-exact-model-tokens`.

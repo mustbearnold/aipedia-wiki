@@ -818,7 +818,7 @@
       "scoped_smart_passed": true,
       "quick_passed": true
     },
-    "status": "verified-local-pending-commit",
+    "status": "committed-and-pushed",
     "loop_receipt": ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
     "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json",
     "loop_summary": {
@@ -851,7 +851,7 @@
       "persistent_attention_loop_count": 3,
       "persistent_attention_command_count": 4
     },
-    "commit": null
+    "commit": "96742204"
   },
   "next_system_targets": [
     "Add longer-window monitor trend summaries after future model, prompt, policy, tool, workflow, or runtime default-change updates.",
@@ -881,5 +881,5 @@
     "slice_91_efficiency_trend_closeout_validated": true,
     "slice_91_checked_dag_proof_attached": true
   },
-  "last_commit": "5716a3cb"
+  "last_commit": "96742204"
 }
