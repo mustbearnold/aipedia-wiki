@@ -57,6 +57,33 @@ function runtimeCompletionFields(overrides = {}) {
   };
 }
 
+function modelTokenUsageFixture() {
+  return {
+    entries: [
+      {
+        model: 'gpt-5.5',
+        usage: {
+          input_tokens: 1200,
+          output_tokens: 300,
+          total_tokens: 1500,
+          input_token_details: { cached_tokens: 200 },
+          output_token_details: { reasoning_tokens: 90 },
+        },
+      },
+      {
+        model: 'gpt-5.5',
+        usage: {
+          input_tokens: 800,
+          output_tokens: 200,
+          total_tokens: 1000,
+          input_token_details: { cached_tokens: 100 },
+          output_token_details: { reasoning_tokens: 40 },
+        },
+      },
+    ],
+  };
+}
+
 function readyCompletionReceipt() {
   const result = buildRoutingRuntimeCompletion({
     handoff: runtimeHandoffFixture('runtime'),
@@ -138,6 +165,53 @@ test('agent routing runtime completion blocks failed runtime verification', () =
   assert.equal(result.receipt.completion_evaluation.runtime_verification_passed, false);
 });
 
+test('agent routing runtime completion records required exact model token usage', () => {
+  const result = buildRoutingRuntimeCompletion({
+    handoff: runtimeHandoffFixture('runtime'),
+    monitor_trends: healthyTrendFixture(),
+    runtime_completion: runtimeCompletionFields({ require_model_token_usage: true }),
+    model_token_usage: modelTokenUsageFixture(),
+    model_token_usage_source: 'fixture-runtime-token-usage.json',
+    model_token_context: {
+      workflow: 'routing-runtime-completion',
+      run_id: 'runtime-token-run',
+      orchestrator: 'meta-orchestrator',
+      subagent: 'runtime-router',
+    },
+  }, {
+    generatedAt: '2026-07-01T08:27:00.000Z',
+    projectDir: '.',
+    source: 'fixture-runtime-handoff.json + fixture-monitor-trends.json',
+  });
+  assert.deepEqual(result.issues, []);
+  const receipt = result.receipt;
+  assert.equal(receipt.ok, true);
+  assert.equal(receipt.model_token_usage.schema_version, 'aipedia.model-token-usage.v1');
+  assert.equal(receipt.model_token_usage.total_tokens, 2500);
+  assert.equal(receipt.model_token_usage.cached_input_tokens, 300);
+  assert.equal(receipt.model_token_usage.reasoning_tokens, 130);
+  assert.equal(receipt.model_token_usage.workflow_breakdown[0].id, 'routing-runtime-completion');
+  assert.equal(receipt.model_token_usage.subagent_breakdown[0].id, 'runtime-router');
+  assert.equal(receipt.completion_evaluation.model_token_usage_required, true);
+  assert.equal(receipt.completion_evaluation.exact_model_tokens_attached, true);
+  assert.equal(receipt.completion_evaluation.exact_model_total_tokens, 2500);
+  assert.deepEqual(validateRoutingRuntimeCompletionReceipt(receipt), []);
+});
+
+test('agent routing runtime completion blocks required missing exact model token usage', () => {
+  const result = buildRoutingRuntimeCompletion({
+    handoff: runtimeHandoffFixture('runtime'),
+    monitor_trends: healthyTrendFixture(),
+    runtime_completion: runtimeCompletionFields({ require_model_token_usage: true }),
+  }, {
+    generatedAt: '2026-07-01T08:28:00.000Z',
+    projectDir: '.',
+    source: 'fixture-runtime-handoff.json + fixture-monitor-trends.json',
+  });
+  assert.equal(result.receipt, null);
+  assert.ok(result.issues.some((issue) => issue.code === 'routing-runtime-completion-model-token-missing'));
+});
+
 test('routing runtime completion validation rejects tampered readiness state', () => {
   const receipt = readyCompletionReceipt();
   receipt.completion_evaluation.runtime_verification_passed = false;
@@ -172,6 +246,52 @@ test('agent routing runtime completion CLI writes ready receipts', () => {
     assert.equal(receipt.ok, true);
     assert.equal(receipt.receipt_path, 'completion.json');
     assert.equal(receipt.completion_evaluation.status, 'completion-ready');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('agent routing runtime completion CLI attaches exact model token usage from file', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-runtime-completion-token-'));
+  try {
+    writeJson(join(root, 'handoff.json'), runtimeHandoffFixture('runtime'));
+    writeJson(join(root, 'trend.json'), healthyTrendFixture());
+    writeJson(join(root, 'token-usage.json'), modelTokenUsageFixture());
+    const result = runRuntimeCompletion([
+      '--project-dir',
+      root,
+      '--handoff',
+      'handoff.json',
+      '--monitor-trends',
+      'trend.json',
+      '--runtime-system',
+      'aipedia-agent-router',
+      '--applied-at',
+      '2026-07-01T08:35:00.000Z',
+      '--verification-status',
+      'passed',
+      '--model-token-usage',
+      'token-usage.json',
+      '--require-model-token-usage',
+      '--model-token-workflow',
+      'routing-runtime-completion',
+      '--model-token-run-id',
+      'runtime-token-run',
+      '--model-token-orchestrator',
+      'meta-orchestrator',
+      '--model-token-subagent',
+      'runtime-router',
+      '--out',
+      'completion.json',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const receipt = JSON.parse(readFileSync(join(root, 'completion.json'), 'utf8'));
+    assert.equal(receipt.ok, true);
+    assert.equal(receipt.model_token_usage.source, 'token-usage.json');
+    assert.equal(receipt.model_token_usage.total_tokens, 2500);
+    assert.equal(receipt.completion_evaluation.exact_model_tokens_attached, true);
+    assert.equal(receipt.runtime_completion.require_model_token_usage, true);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

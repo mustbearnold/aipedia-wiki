@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "mode": "agent-task-dag-check",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "schema_version": "aipedia.agent-task-dag-check.v1",
+  "totals": {
+    "receipts": 1,
+    "ok": 1,
+    "failed": 0,
+    "issues": 0
+  },
+  "receipts": [
+    {
+      "ok": true,
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
+      "schema_version": "aipedia.agent-task-dag.v1",
+      "node_count": 8,
+      "issues": []
+    }
+  ]
+}

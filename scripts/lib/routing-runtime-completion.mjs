@@ -1,5 +1,6 @@
 import { validateRoutingHandoffReceipt } from './routing-handoff.mjs';
 import { validateRoutingMonitorTrendsReceipt } from './routing-monitor-trends.mjs';
+import { normalizeModelTokenUsage, validateModelTokenUsageReport } from './model-token-usage.mjs';
 
 export const ROUTING_RUNTIME_COMPLETION_SCHEMA_VERSION = 'aipedia.agent-routing-runtime-completion.v1';
 
@@ -17,9 +18,14 @@ export function buildRoutingRuntimeCompletion(input, options = {}) {
   const handoff = normalizeHandoff(input, issues);
   const monitorTrends = normalizeMonitorTrends(input, issues);
   const runtimeCompletion = normalizeRuntimeCompletion(input, handoff, issues);
+  const modelTokenUsage = normalizeRuntimeModelTokenUsage(input, handoff, runtimeCompletion, issues, options);
   if (issues.length) return { receipt: null, issues };
 
-  const completionEvaluation = completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion);
+  const requireModelTokenUsage = runtimeCompletion.require_model_token_usage === true;
+  const completionEvaluation = completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion, {
+    modelTokenUsage,
+    requireModelTokenUsage,
+  });
   const guardrails = completionGuardrails(completionEvaluation);
   const nextActions = completionNextActions(completionEvaluation);
   const source = options.source || input.source || [
@@ -27,25 +33,28 @@ export function buildRoutingRuntimeCompletion(input, options = {}) {
     monitorTrends.receipt_path,
   ].filter(Boolean).join(' + ');
 
+  const receipt = {
+    ok: completionEvaluation.completion_ready,
+    mode: 'agent-routing-runtime-completion',
+    schema_version: ROUTING_RUNTIME_COMPLETION_SCHEMA_VERSION,
+    generated_at: options.generatedAt || input.generated_at || new Date().toISOString(),
+    project_dir: options.projectDir || input.project_dir || '.',
+    source,
+    goal_id: stringValue(input.goal_id) || handoff.goal_id || monitorTrends.goal_id,
+    run_id: stringValue(input.run_id) || `${handoff.run_id}:runtime-completion:${monitorTrends.run_id}`,
+    workflow: stringValue(input.workflow) || handoff.workflow || monitorTrends.workflow,
+    completion_task: stringValue(input.completion_task || input.task) || `Runtime routing completion for ${handoff.change_plan.change_id || handoff.run_id}`,
+    handoff,
+    monitor_trends: monitorTrends,
+    runtime_completion: runtimeCompletion,
+    completion_evaluation: completionEvaluation,
+    guardrails,
+    next_actions: nextActions,
+  };
+  if (modelTokenUsage) receipt.model_token_usage = modelTokenUsage;
+
   return {
-    receipt: {
-      ok: completionEvaluation.completion_ready,
-      mode: 'agent-routing-runtime-completion',
-      schema_version: ROUTING_RUNTIME_COMPLETION_SCHEMA_VERSION,
-      generated_at: options.generatedAt || input.generated_at || new Date().toISOString(),
-      project_dir: options.projectDir || input.project_dir || '.',
-      source,
-      goal_id: stringValue(input.goal_id) || handoff.goal_id || monitorTrends.goal_id,
-      run_id: stringValue(input.run_id) || `${handoff.run_id}:runtime-completion:${monitorTrends.run_id}`,
-      workflow: stringValue(input.workflow) || handoff.workflow || monitorTrends.workflow,
-      completion_task: stringValue(input.completion_task || input.task) || `Runtime routing completion for ${handoff.change_plan.change_id || handoff.run_id}`,
-      handoff,
-      monitor_trends: monitorTrends,
-      runtime_completion: runtimeCompletion,
-      completion_evaluation: completionEvaluation,
-      guardrails,
-      next_actions: nextActions,
-    },
+    receipt,
     issues,
   };
 }
@@ -76,6 +85,11 @@ export function validateRoutingRuntimeCompletionReceipt(value) {
   if (!isObject(value.completion_evaluation)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-evaluation-mismatch', 'completion_evaluation must be an object.'));
   if (!Array.isArray(value.guardrails)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-receipt-invalid', 'guardrails must be an array.'));
   if (!Array.isArray(value.next_actions)) issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-receipt-invalid', 'next_actions must be an array.'));
+  if (value.model_token_usage != null) {
+    for (const item of validateModelTokenUsageReport(value.model_token_usage, 'model_token_usage')) {
+      issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-model-token-invalid', item.message));
+    }
+  }
   if (issues.length) return issues;
 
   const rebuilt = buildRoutingRuntimeCompletion({
@@ -86,6 +100,7 @@ export function validateRoutingRuntimeCompletionReceipt(value) {
     run_id: value.run_id,
     workflow: value.workflow,
     completion_task: value.completion_task,
+    model_token_usage: value.model_token_usage,
   }, {
     generatedAt: value.generated_at,
     projectDir: value.project_dir,
@@ -94,7 +109,9 @@ export function validateRoutingRuntimeCompletionReceipt(value) {
   if (rebuilt.issues.length) return rebuilt.issues;
 
   const expected = rebuilt.receipt;
-  for (const field of ['handoff', 'monitor_trends', 'runtime_completion', 'completion_evaluation', 'guardrails', 'next_actions']) {
+  const canonicalFields = ['handoff', 'monitor_trends', 'runtime_completion', 'completion_evaluation', 'guardrails', 'next_actions'];
+  if (value.model_token_usage != null || expected.model_token_usage != null) canonicalFields.push('model_token_usage');
+  for (const field of canonicalFields) {
     if (!deepEqual(value[field], expected[field])) {
       issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-mismatch', `${field} must match canonical routing runtime completion computation.`));
     }
@@ -180,6 +197,9 @@ function normalizeRuntimeCompletion(input, handoff, issues) {
     verification_status: verificationStatus,
     evidence_note: stringValue(source.evidence_note || source.note) || 'Runtime completion must be backed by the attached handoff and monitor-trend receipts.',
   };
+  if (source.require_model_token_usage === true || source.require_exact_model_tokens === true) {
+    completion.require_model_token_usage = true;
+  }
   completion.ready = Boolean(
     completion.runtime_system
     && completion.change_id
@@ -193,7 +213,49 @@ function normalizeRuntimeCompletion(input, handoff, issues) {
   return completion;
 }
 
-function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion) {
+function normalizeRuntimeModelTokenUsage(input, handoff, runtimeCompletion, issues, options) {
+  const source = isObject(input.runtime_completion) ? input.runtime_completion : {};
+  const candidate = input.model_token_usage
+    || input.modelTokenUsage
+    || input.runtime_model_token_usage
+    || source.model_token_usage
+    || source.modelTokenUsage
+    || source.token_usage
+    || null;
+  const required = runtimeCompletion.require_model_token_usage === true
+    || input.require_model_token_usage === true
+    || input.require_exact_model_tokens === true;
+  if (!candidate) {
+    if (required) {
+      issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-model-token-missing', 'Exact model-token usage is required for this runtime completion.'));
+    }
+    return null;
+  }
+  if (isModelTokenUsageReport(candidate)) {
+    const reportIssues = validateModelTokenUsageReport(candidate, 'model_token_usage');
+    for (const item of reportIssues) {
+      issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-model-token-invalid', item.message));
+    }
+    return reportIssues.length ? null : cloneJson(candidate);
+  }
+  const normalized = normalizeModelTokenUsage(candidate, {
+    source: stringValue(input.model_token_usage_source || source.model_token_usage_source || options.modelTokenUsageSource) || 'embedded:runtime-completion-model-token-usage',
+    defaults: {
+      workflow: stringValue(input.model_token_context?.workflow) || stringValue(input.workflow) || handoff.workflow,
+      run_id: stringValue(input.model_token_context?.run_id) || stringValue(input.run_id) || handoff.run_id,
+      orchestrator: stringValue(input.model_token_context?.orchestrator) || stringValue(input.orchestrator || source.orchestrator) || runtimeCompletion.runtime_system,
+      subagent: stringValue(input.model_token_context?.subagent) || stringValue(input.subagent || source.subagent) || 'runtime-router',
+    },
+  });
+  for (const item of normalized.issues) {
+    issues.push(routingRuntimeCompletionIssue('routing-runtime-completion-model-token-invalid', item.message || item.detail));
+  }
+  return normalized.report;
+}
+
+function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion, options = {}) {
+  const modelTokenUsage = options.modelTokenUsage || null;
+  const requireModelTokenUsage = options.requireModelTokenUsage === true;
   const handoffReady = handoff.handoff_evaluation.handoff_ready === true
     && handoff.handoff_evaluation.status === 'handoff-ready';
   const handoffRuntimeMode = handoff.change_plan.mode === 'runtime';
@@ -238,13 +300,15 @@ function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion) 
     && runtimeApplyCommandMatch
     && runtimeVerificationCommandMatch
     && runtimeVerificationPassed;
+  const modelTokenUsageReady = Boolean(modelTokenUsage);
   const completionReady = handoffReady
     && handoffRuntimeMode
     && monitorTrendHealthy
     && rolloutLineageMatch
     && handoffMonitorInTrend
-    && runtimeCompletionReady;
-  return {
+    && runtimeCompletionReady
+    && (!requireModelTokenUsage || modelTokenUsageReady);
+  const evaluation = {
     status: completionReady ? 'completion-ready' : 'blocked',
     completion_ready: completionReady,
     handoff_ready: handoffReady,
@@ -271,8 +335,19 @@ function completionEvaluationSummary(handoff, monitorTrends, runtimeCompletion) 
       runtimeApplyCommandMatch,
       runtimeVerificationCommandMatch,
       runtimeVerificationPassed,
+      requireModelTokenUsage,
+      modelTokenUsageReady,
     }),
   };
+  if (modelTokenUsage || requireModelTokenUsage) {
+    evaluation.model_token_usage_required = requireModelTokenUsage;
+    evaluation.exact_model_tokens_attached = modelTokenUsageReady;
+    evaluation.model_token_usage_ready = modelTokenUsageReady || !requireModelTokenUsage;
+    evaluation.exact_model_request_count = modelTokenUsage ? modelTokenUsage.request_count : 0;
+    evaluation.exact_model_total_tokens = modelTokenUsage ? modelTokenUsage.total_tokens : 0;
+    evaluation.exact_model_subagent_context_count = modelTokenUsage ? modelTokenUsage.subagent_context_count : 0;
+  }
+  return evaluation;
 }
 
 function completionReason({
@@ -288,6 +363,8 @@ function completionReason({
   runtimeApplyCommandMatch,
   runtimeVerificationCommandMatch,
   runtimeVerificationPassed,
+  requireModelTokenUsage,
+  modelTokenUsageReady,
 }) {
   if (completionReady) return 'Runtime default routing change is complete with attached handoff and repeated monitor-trend receipts.';
   if (!handoffReady) return 'The handoff receipt is not ready.';
@@ -300,6 +377,7 @@ function completionReason({
   if (!runtimeApplyCommandMatch) return 'The runtime completion apply command does not match the handoff apply command.';
   if (!runtimeVerificationCommandMatch) return 'The runtime completion verification command does not match the handoff verification command.';
   if (!runtimeVerificationPassed) return 'The runtime completion verification status must be passed.';
+  if (requireModelTokenUsage && !modelTokenUsageReady) return 'The runtime completion requires exact model-token usage but none was attached.';
   if (!runtimeCompletionReady) return 'The runtime completion must include runtime system, change id, operator, ISO applied time, apply command, verification command, and verification status.';
   return 'The runtime routing completion did not pass.';
 }
@@ -312,12 +390,17 @@ function completionGuardrails(evaluation) {
   if (!evaluation.rollout_lineage_match) guardrails.push('Do not combine a handoff with monitor trends from another default rollout.');
   if (!evaluation.handoff_monitor_in_trend) guardrails.push('The repeated monitor trend must include the monitor receipt used by the handoff.');
   if (!evaluation.runtime_completion_ready) guardrails.push('Record matching runtime change id, operator, commands, ISO applied time, and a passed verification status.');
+  if (evaluation.model_token_usage_required && !evaluation.exact_model_tokens_attached) guardrails.push('Attach exact model-token usage before counting this runtime completion complete.');
+  if (evaluation.exact_model_tokens_attached) guardrails.push('Preserve exact model-token usage with runtime completion evidence for future routing drift comparisons.');
   guardrails.push('Attach this runtime completion receipt to any deployed default routing change record.');
   return guardrails;
 }
 
 function completionNextActions(evaluation) {
   if (evaluation.completion_ready) {
+    if (evaluation.exact_model_tokens_attached) {
+      return ['Record this runtime completion receipt with its exact model-token usage and rerun monitor trends after future model, prompt, policy, tool, or workflow changes.'];
+    }
     return ['Record this runtime completion receipt with the deployed default routing change and rerun monitor trends after future model, prompt, policy, tool, or workflow changes.'];
   }
   if (!evaluation.handoff_runtime_mode) {
@@ -328,6 +411,9 @@ function completionNextActions(evaluation) {
   }
   if (!evaluation.runtime_completion_ready) {
     return ['Record matching runtime completion fields and passed verification, then regenerate the receipt.'];
+  }
+  if (evaluation.model_token_usage_required && !evaluation.exact_model_tokens_attached) {
+    return ['Attach exact model-token usage from the runtime and regenerate the completion receipt.'];
   }
   return ['Regenerate the handoff, monitor trend, or runtime completion evidence until every completion gate passes.'];
 }
@@ -479,6 +565,14 @@ function isRoutingHandoffReceipt(value) {
 
 function isRoutingMonitorTrendsReceipt(value) {
   return isObject(value) && value.mode === 'agent-routing-monitor-trends' && typeof value.schema_version === 'string';
+}
+
+function isModelTokenUsageReport(value) {
+  return isObject(value) && value.schema_version === 'aipedia.model-token-usage.v1';
+}
+
+function cloneJson(value) {
+  return JSON.parse(JSON.stringify(value));
 }
 
 function sameLineage(leftReceipt, leftRunId, rightReceipt, rightRunId) {

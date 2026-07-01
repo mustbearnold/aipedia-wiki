@@ -269,7 +269,9 @@
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
         ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json",
         ".agent/evals/runner-dag-closeouts/2026-06-30-slice-36-receipts/2026-06-30T09-05-41Z-tool-refresh-closeout.json",
-        "docs/parallel-tooling-architecture.md"
+        "docs/parallel-tooling-architecture.md",
+        ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
+        ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json"
       ],
       "remaining": "Use strict auto closeout routing as the default handoff path, with exact underlying commands kept for specialized workflows."
     },
@@ -470,7 +472,14 @@
         "scripts/agent-routing-handoff.mjs",
         "agent:closeout:check routing-handoff validation",
         "agent:meta:closeout:auto routing-handoff profile",
-        ".agent/evals/routing-handoffs/2026-06-30-slice-88-default-change-handoff-receipt.json"
+        ".agent/evals/routing-handoffs/2026-06-30-slice-88-default-change-handoff-receipt.json",
+        "scripts/lib/model-token-usage.mjs",
+        "agent:routing:runtime:complete --model-token-usage",
+        "agent:routing:runtime:complete --require-model-token-usage",
+        ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+        ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
+        ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json"
       ],
       "remaining": "Run one reviewer-pass receipt before applying the routing policy to default orchestration, then run positive page proof after stale inputs are ready."
     },
@@ -715,7 +724,12 @@
         "agent:routing:handoff --out",
         "durable aipedia.agent-routing-handoff.v1 receipts",
         ".agent/evals/routing-handoffs/2026-06-30-slice-88-default-change-handoff-receipt.json",
-        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-88-final-efficiency-trends.json"
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-88-final-efficiency-trends.json",
+        "scripts/lib/model-token-usage.mjs shared exact token normalizer",
+        "agent:routing:runtime:complete exact runtime token ingestion",
+        ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+        ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json"
       ],
       "remaining": "Add reviewer-pass evidence for the fresh-telemetry routing policy pilot before changing defaults."
     },
@@ -748,104 +762,112 @@
     }
   ],
   "current_slice": {
-    "name": "Runtime routing completion receipts",
+    "name": "Runtime exact token ingestion",
     "system_artifacts": [
+      "scripts/lib/model-token-usage.mjs",
+      "scripts/aipedia-loops.mjs",
       "scripts/lib/routing-runtime-completion.mjs",
       "scripts/agent-routing-runtime-completion.mjs",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
       "tests/scripts/agent-routing-runtime-completion.test.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
-      "package.json",
       "scripts/README.md",
-      ".agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json",
-      ".agent/evals/routing-runtime-completions/2026-06-30-slice-90-runtime-default-completion-receipt.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-90.md",
-      ".agent/loop-runs/system/2026-07-01T07-56-52-885Z-loop-run.json",
-      ".agent/loop-runs/system/latest.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-90-final-efficiency-trends.json",
       "docs/agentic-tooling-meta-compliance.md",
-      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
+      ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+      ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-91.md",
+      ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
+      ".agent/loop-runs/system/latest.json",
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
-      ".agent/WORK_LOG.md"
+      ".agent/WORK_LOG.md",
+      ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
+    "shared_model_token_usage_library": "scripts/lib/model-token-usage.mjs",
+    "model_token_usage_fixture": ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+    "routing_runtime_completion_receipt": ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
+    "dag_graph": ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
+    "dag_validation_report": ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json",
     "source_runtime_handoff_receipt": ".agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json",
     "source_monitor_trends_receipt": ".agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json",
-    "routing_runtime_completion_receipt": ".agent/evals/routing-runtime-completions/2026-06-30-slice-90-runtime-default-completion-receipt.json",
     "runtime_completion_summary": {
       "schema_version": "aipedia.agent-routing-runtime-completion.v1",
       "status": "completion-ready",
       "completion_ready": true,
-      "handoff_ready": true,
-      "handoff_runtime_mode": true,
-      "monitor_trend_healthy": true,
-      "rollout_lineage_match": true,
-      "handoff_monitor_in_trend": true,
-      "runtime_completion_ready": true,
-      "runtime_change_id_match": true,
-      "runtime_operator_match": true,
-      "runtime_apply_command_match": true,
-      "runtime_verification_command_match": true,
-      "runtime_verification_passed": true
+      "model_token_usage_required": true,
+      "exact_model_tokens_attached": true,
+      "exact_model_request_count": 2,
+      "exact_model_input_tokens": 2750,
+      "exact_model_output_tokens": 680,
+      "exact_model_cached_input_tokens": 420,
+      "exact_model_reasoning_tokens": 200,
+      "exact_model_total_tokens": 3430,
+      "exact_model_subagent_context_count": 1
     },
     "validation": {
       "syntax_passed": true,
       "focused_runtime_completion_tests_passed": true,
-      "live_runtime_completion_closeout_validated": true,
-      "live_mixed_closeout_validated": true,
-      "scoped_smart_passed": true,
-      "quick_passed": true,
+      "focused_loop_closeout_router_trend_tests_passed": true,
+      "live_runtime_token_completion_closeout_validated": true,
       "strict_latest_loop_closeout_passed": true,
-      "final_trend_closeout_passed": true
+      "final_trend_closeout_passed": true,
+      "checked_dag_proof_attached": true,
+      "scoped_smart_passed": true,
+      "quick_passed": true
     },
-    "status": "verified-committed-pushed",
-    "loop_receipt": ".agent/loop-runs/system/2026-07-01T07-56-52-885Z-loop-run.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-90-final-efficiency-trends.json",
+    "status": "verified-local-pending-commit",
+    "loop_receipt": ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json",
     "loop_summary": {
       "loops_ok": 4,
       "loops_attention": 3,
       "loops_skipped": 0,
       "command_count": 16,
-      "agent_system_artifact_count": 15,
+      "agent_system_artifact_count": 12,
       "agent_content_artifact_count": 0,
       "preexisting_dirty_count": 5,
-      "wall_duration_ms": 5078
+      "wall_duration_ms": 5211,
+      "exact_model_total_tokens": 3430
     },
     "trend_summary": {
       "analyzed_runs": 3,
       "metrics_runs": 3,
       "missing_metrics_runs": 0,
-      "median_wall_duration_ms": 5081,
-      "latest_wall_duration_ms": 5078,
-      "latest_estimated_full_receipt_tokens": 11917,
-      "latest_system_artifact_count": 16,
-      "wall_duration_delta_from_previous_ms": -150,
-      "estimated_full_receipt_tokens_delta_from_previous": -487,
-      "system_artifact_count_delta_from_previous": -5,
+      "median_wall_duration_ms": 5211,
+      "latest_wall_duration_ms": 5211,
+      "latest_estimated_full_receipt_tokens": 12728,
+      "latest_system_artifact_count": 13,
+      "exact_model_token_coverage_rate": 0.333,
+      "latest_exact_model_total_tokens": 3430,
+      "wall_duration_delta_from_previous_ms": 133,
+      "estimated_full_receipt_tokens_delta_from_previous": 811,
+      "system_artifact_count_delta_from_previous": -3,
       "loop_status_changes": 0,
       "command_status_changes": 0,
       "new_attention_loop_count": 0,
       "persistent_attention_loop_count": 3,
       "persistent_attention_command_count": 4
     },
-    "commit": "2d97e2b4"
+    "commit": null
   },
   "next_system_targets": [
-    "Add longer-window monitor trend summaries after future model, prompt, policy, tool, or workflow changes.",
-    "Attach runtime usage ingestion and exact model-token telemetry automatically when future deployed routing changes execute in a real runtime.",
-    "Keep default orchestration changes behind runtime-completion, handoff, monitor-trend, exact token, correction, quality, accuracy, wall-time, and rollback receipts."
+    "Add longer-window monitor trend summaries after future model, prompt, policy, tool, workflow, or runtime default-change updates.",
+    "Attach real provider billing/runtime token exports when available instead of fixture usage payloads.",
+    "Keep default orchestration changes behind runtime-completion, exact token, handoff, monitor-trend, correction, quality, accuracy, wall-time, and rollback receipts."
   ],
-  "last_updated": "2026-07-01T07:56:52.885Z",
+  "last_updated": "2026-07-01T08:10:36.068Z",
   "latest_receipts": {
     "routing_handoff": ".agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json",
     "routing_monitor_trends": ".agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json",
-    "routing_runtime_completion": ".agent/evals/routing-runtime-completions/2026-06-30-slice-90-runtime-default-completion-receipt.json",
-    "loop": ".agent/loop-runs/system/2026-07-01T07-56-52-885Z-loop-run.json",
-    "efficiency_trends": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-90-final-efficiency-trends.json"
+    "routing_runtime_completion": ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
+    "loop": ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
+    "efficiency_trends": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json",
+    "model_token_usage": ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+    "dag_graph": ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
+    "dag_validation_report": ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json"
   },
   "validation": {
     "slice_90_runtime_completion_closeout_validated": true,
@@ -853,7 +875,11 @@
     "slice_90_loop_closeout_validated": true,
     "slice_90_efficiency_trend_closeout_validated": true,
     "scoped_smart_passed": true,
-    "quick_passed": true
+    "quick_passed": true,
+    "slice_91_runtime_token_completion_closeout_validated": true,
+    "slice_91_loop_closeout_validated": true,
+    "slice_91_efficiency_trend_closeout_validated": true,
+    "slice_91_checked_dag_proof_attached": true
   },
-  "last_commit": "2d97e2b4"
+  "last_commit": "5716a3cb"
 }

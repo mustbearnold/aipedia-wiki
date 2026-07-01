@@ -23,10 +23,17 @@ const KNOWN_FLAGS = new Set([
   '-h',
   '--input',
   '--json',
+  '--model-token-orchestrator',
+  '--model-token-run-id',
+  '--model-token-subagent',
+  '--model-token-usage',
+  '--model-token-workflow',
   '--monitor-trends',
   '--operator',
   '--out',
   '--project-dir',
+  '--require-exact-model-tokens',
+  '--require-model-token-usage',
   '--root',
   '--runtime-system',
   '--system',
@@ -47,6 +54,11 @@ const VALUE_FLAGS = new Set([
   '--handoff',
   '--handoff-receipt',
   '--input',
+  '--model-token-orchestrator',
+  '--model-token-run-id',
+  '--model-token-subagent',
+  '--model-token-usage',
+  '--model-token-workflow',
   '--monitor-trends',
   '--operator',
   '--out',
@@ -75,6 +87,15 @@ const APPLY_COMMAND = valueFor('--apply-command') || valueFor('--change-command'
 const VERIFICATION_COMMAND = valueFor('--verification-command') || valueFor('--verify-command');
 const VERIFICATION_STATUS = valueFor('--verification-status');
 const EVIDENCE_NOTE = valueFor('--evidence-note');
+const MODEL_TOKEN_USAGE_PATH = valueFor('--model-token-usage') || process.env.AIPEDIA_MODEL_TOKEN_USAGE_FILE || '';
+const MODEL_TOKEN_USAGE_JSON = process.env.AIPEDIA_MODEL_TOKEN_USAGE_JSON || '';
+const REQUIRE_MODEL_TOKEN_USAGE = hasFlag('--require-model-token-usage') || hasFlag('--require-exact-model-tokens');
+const MODEL_TOKEN_CONTEXT = {
+  workflow: valueFor('--model-token-workflow') || process.env.AIPEDIA_MODEL_TOKEN_WORKFLOW || '',
+  run_id: valueFor('--model-token-run-id') || process.env.AIPEDIA_MODEL_TOKEN_RUN_ID || '',
+  orchestrator: valueFor('--model-token-orchestrator') || process.env.AIPEDIA_MODEL_TOKEN_ORCHESTRATOR || '',
+  subagent: valueFor('--model-token-subagent') || process.env.AIPEDIA_MODEL_TOKEN_SUBAGENT || '',
+};
 
 if (HELP_MODE) {
   console.log(usage());
@@ -94,7 +115,8 @@ if (argumentIssues.length) {
 
 const handoffRead = readJsonFile(HANDOFF_PATH, 'routing-runtime-completion-handoff-missing', 'routing-runtime-completion-handoff-invalid');
 const trendsRead = readJsonFile(TRENDS_PATH, 'routing-runtime-completion-monitor-trends-missing', 'routing-runtime-completion-monitor-trends-invalid');
-const readIssues = [...handoffRead.issues, ...trendsRead.issues];
+const modelTokenUsageRead = readModelTokenUsageInput();
+const readIssues = [...handoffRead.issues, ...trendsRead.issues, ...modelTokenUsageRead.issues];
 if (readIssues.length) {
   emit({
     ok: false,
@@ -118,7 +140,13 @@ const result = buildRoutingRuntimeCompletion({
     verification_command: VERIFICATION_COMMAND,
     verification_status: VERIFICATION_STATUS || 'not-run',
     evidence_note: EVIDENCE_NOTE,
+    require_model_token_usage: REQUIRE_MODEL_TOKEN_USAGE,
   },
+  ...(modelTokenUsageRead.value ? {
+    model_token_usage: modelTokenUsageRead.value,
+    model_token_usage_source: modelTokenUsageRead.source,
+    model_token_context: MODEL_TOKEN_CONTEXT,
+  } : {}),
   ...(COMPLETION_TASK ? { completion_task: COMPLETION_TASK } : {}),
 }, {
   projectDir: PROJECT_DIR,
@@ -169,6 +197,12 @@ function usage() {
     '  --verify-command <cmd>         Alias for --verification-command.',
     '  --evidence-note <text>         Optional runtime evidence note.',
     '  --completion-task <text>       Optional completion task label.',
+    '  --model-token-usage <path>     Attach exact runtime model token usage JSON when available.',
+    '  --require-model-token-usage    Fail unless exact runtime model token usage is attached. Alias: --require-exact-model-tokens.',
+    '  --model-token-workflow <id>    Default workflow context for model token usage entries.',
+    '  --model-token-run-id <id>      Default run context for model token usage entries.',
+    '  --model-token-orchestrator <id> Default orchestrator context for model token usage entries.',
+    '  --model-token-subagent <id>    Default subagent context for model token usage entries.',
     '  --out <path>                   Optional runtime completion receipt output path.',
     '  --project-dir <dir>            Project root. Alias: --root.',
     '  --json                         Emit JSON. Human mode still prints compact JSON for receipt safety.',
@@ -197,7 +231,35 @@ function collectArgumentIssues() {
   if (hasFlag('--project-dir') && hasFlag('--root')) {
     issues.push(routingRuntimeCompletionIssue('argument-invalid', 'choose only one of --project-dir or --root.'));
   }
+  if (MODEL_TOKEN_USAGE_PATH && MODEL_TOKEN_USAGE_JSON) {
+    issues.push(routingRuntimeCompletionIssue('argument-invalid', 'Use either --model-token-usage/AIPEDIA_MODEL_TOKEN_USAGE_FILE or AIPEDIA_MODEL_TOKEN_USAGE_JSON, not both.'));
+  }
   return issues;
+}
+
+function readModelTokenUsageInput() {
+  if (!MODEL_TOKEN_USAGE_PATH && !MODEL_TOKEN_USAGE_JSON) return { value: null, source: '', issues: [] };
+  if (MODEL_TOKEN_USAGE_PATH) {
+    const read = readJsonFile(MODEL_TOKEN_USAGE_PATH, 'routing-runtime-completion-model-token-missing', 'routing-runtime-completion-model-token-invalid');
+    return {
+      value: read.value,
+      source: read.absolutePath ? projectPath(read.absolutePath) : '',
+      issues: read.issues,
+    };
+  }
+  try {
+    return {
+      value: JSON.parse(MODEL_TOKEN_USAGE_JSON),
+      source: 'env:AIPEDIA_MODEL_TOKEN_USAGE_JSON',
+      issues: [],
+    };
+  } catch (error) {
+    return {
+      value: null,
+      source: 'env:AIPEDIA_MODEL_TOKEN_USAGE_JSON',
+      issues: [routingRuntimeCompletionIssue('routing-runtime-completion-model-token-invalid', `AIPEDIA_MODEL_TOKEN_USAGE_JSON could not parse as JSON: ${error.message}`)],
+    };
+  }
 }
 
 function readJsonFile(path, missingCode, invalidCode) {

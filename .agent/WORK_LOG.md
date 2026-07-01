@@ -2517,3 +2517,18 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-90.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T07-56-52-885Z-loop-run.json`.
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-90-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 5,078 ms, latest estimated full receipt tokens 11,917, latest system artifact count 16, no loop or command status changes, no new attention loops, wall time down 150 ms versus Slice 89, and estimated receipt tokens down 487.
 - Next: Add longer-window monitor trend summaries or runtime usage ingestion after future model, prompt, policy, tool, or workflow changes.
+
+### 2026-07-01: Agentic Tooling Meta Slice 91, Runtime Exact Token Ingestion
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added shared exact model-token normalization in `scripts/lib/model-token-usage.mjs` and switched `scripts/aipedia-loops.mjs` to use it without changing loop receipt token fields.
+- Changed: Extended `agent:routing:runtime:complete` with `--model-token-usage`, `AIPEDIA_MODEL_TOKEN_USAGE_FILE`, `AIPEDIA_MODEL_TOKEN_USAGE_JSON`, model-token context defaults, and strict `--require-model-token-usage` / `--require-exact-model-tokens`.
+- System lesson: runtime default-completion proof should not stop at "verification passed" when exact runtime usage is available. The completion receipt now carries the token evidence needed to judge cost, context routing, and future drift.
+- Verification: syntax checks passed. Focused loop, runtime-completion, closeout, router, and efficiency-trend tests passed 115/115. Runtime token completion, strict latest loop, and final trend receipts all passed auto-routed closeout. Scoped `check:smart --run` passed with 661 script tests plus command audit. `check:quick` passed with 661 script tests, command audit, and quick assets.
+- Durable proof: `.agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json` is `completion-ready` with model token usage required true, exact model tokens attached true, 2 exact requests, 2,750 input tokens, 680 output tokens, 420 cached input tokens, 200 reasoning tokens, 3,430 total tokens, and 1 subagent context.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-91.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json`.
+- DAG proof: `.agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json` reports 3 metric-aware receipts, exact model-token coverage 0.333, latest exact total tokens 3,430, latest wall duration 5,211 ms, no loop or command status changes, and estimated receipt tokens up 811 because token and DAG proof payloads were added.
+- Boundary: the token fixture proves ingestion and validation shape, not live provider billing export. Pre-existing Captions/Synthesia content WIP and the prior pause receipt remain separate.
+- Next: Add longer-window monitor trend summaries after future model, prompt, policy, tool, workflow, or runtime default-change updates.

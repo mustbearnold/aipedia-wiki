@@ -6,6 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { performance } from 'node:perf_hooks';
+import { modelTokenUsageEfficiencyFields, normalizeModelTokenUsage } from './lib/model-token-usage.mjs';
 
 const args = process.argv.slice(2);
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -349,24 +350,7 @@ function loopEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
       })),
   };
   if (isObject(reportData.model_token_usage) && reportData.model_token_usage.status === 'provided') {
-    Object.assign(metrics, {
-      model_token_usage_status: 'provided',
-      model_token_usage_source: reportData.model_token_usage.source || '',
-      exact_model_request_count: nonNegative(reportData.model_token_usage.request_count),
-      exact_model_input_tokens: nonNegative(reportData.model_token_usage.input_tokens),
-      exact_model_output_tokens: nonNegative(reportData.model_token_usage.output_tokens),
-      exact_model_cached_input_tokens: nonNegative(reportData.model_token_usage.cached_input_tokens),
-      exact_model_reasoning_tokens: nonNegative(reportData.model_token_usage.reasoning_tokens),
-      exact_model_total_tokens: nonNegative(reportData.model_token_usage.total_tokens),
-      exact_model_workflow_context_count: nonNegative(reportData.model_token_usage.workflow_context_count),
-      exact_model_run_context_count: nonNegative(reportData.model_token_usage.run_context_count),
-      exact_model_orchestrator_context_count: nonNegative(reportData.model_token_usage.orchestrator_context_count),
-      exact_model_subagent_context_count: nonNegative(reportData.model_token_usage.subagent_context_count),
-      exact_model_workflow_breakdown: reportData.model_token_usage.workflow_breakdown || [],
-      exact_model_run_breakdown: reportData.model_token_usage.run_breakdown || [],
-      exact_model_orchestrator_breakdown: reportData.model_token_usage.orchestrator_breakdown || [],
-      exact_model_subagent_breakdown: reportData.model_token_usage.subagent_breakdown || [],
-    });
+    Object.assign(metrics, modelTokenUsageEfficiencyFields(reportData.model_token_usage));
   }
   return metrics;
 }
@@ -388,7 +372,10 @@ function readModelTokenUsageInput() {
       ? readFileSync(resolve(PROJECT_DIR, MODEL_TOKEN_USAGE_PATH), 'utf8')
       : MODEL_TOKEN_USAGE_JSON;
     const parsed = JSON.parse(raw);
-    const normalized = normalizeModelTokenUsage(parsed, source);
+    const normalized = normalizeModelTokenUsage(parsed, {
+      source,
+      defaults: MODEL_TOKEN_CONTEXT_DEFAULTS,
+    });
     return normalized.report
       ? { report: normalized.report, issues: [] }
       : { report: null, issues: normalized.issues };
@@ -398,253 +385,6 @@ function readModelTokenUsageInput() {
       issues: [{ code: 'argument-invalid', detail: `Could not read model token usage from ${source}: ${error.message}` }],
     };
   }
-}
-
-function normalizeModelTokenUsage(value, source) {
-  const entries = modelTokenUsageEntries(value);
-  const defaultContext = modelTokenUsageContext(
-    isObject(value) ? value : {},
-    isObject(value?.usage) ? value.usage : {},
-    MODEL_TOKEN_CONTEXT_DEFAULTS,
-  );
-  const workflowBreakdown = new Map();
-  const runBreakdown = new Map();
-  const orchestratorBreakdown = new Map();
-  const subagentBreakdown = new Map();
-  const models = new Set();
-  let requestCount = 0;
-  let inputTokens = 0;
-  let outputTokens = 0;
-  let cachedInputTokens = 0;
-  let reasoningTokens = 0;
-  let providedTotalTokens = 0;
-  let tokenBearingEntries = 0;
-
-  for (const entry of entries) {
-    if (!isObject(entry)) continue;
-    const usage = isObject(entry.usage) ? entry.usage : entry;
-    const model = stringPath(entry, 'model') || stringPath(usage, 'model');
-    if (model) models.add(model);
-    const context = modelTokenUsageContext(entry, usage, defaultContext);
-
-    const entryInput = tokenValue(usage, ['input_tokens', 'prompt_tokens', 'inputTokens', 'promptTokens']);
-    const entryOutput = tokenValue(usage, ['output_tokens', 'completion_tokens', 'outputTokens', 'completionTokens']);
-    const entryCached = tokenValue(usage, [
-      'cached_input_tokens',
-      'cached_tokens',
-      'cachedTokens',
-      'input_token_details.cached_tokens',
-      'input_tokens_details.cached_tokens',
-      'prompt_tokens_details.cached_tokens',
-    ]);
-    const entryReasoning = tokenValue(usage, [
-      'reasoning_tokens',
-      'reasoningTokens',
-      'output_token_details.reasoning_tokens',
-      'output_tokens_details.reasoning_tokens',
-      'completion_tokens_details.reasoning_tokens',
-    ]);
-    const entryTotal = tokenValue(usage, ['total_tokens', 'totalTokens']);
-    const entryRequestCount = tokenValue(entry, ['request_count', 'requests', 'requestCount'])
-      || tokenValue(usage, ['request_count', 'requests', 'requestCount'])
-      || 1;
-    const entryComputedTotal = entryTotal || entryInput + entryOutput;
-
-    inputTokens += entryInput;
-    outputTokens += entryOutput;
-    cachedInputTokens += entryCached;
-    reasoningTokens += entryReasoning;
-    providedTotalTokens += entryTotal;
-    if (entryInput || entryOutput || entryTotal) {
-      tokenBearingEntries += 1;
-      requestCount += entryRequestCount;
-      const tokenSummary = {
-        request_count: entryRequestCount,
-        input_tokens: entryInput,
-        output_tokens: entryOutput,
-        cached_input_tokens: entryCached,
-        reasoning_tokens: entryReasoning,
-        total_tokens: entryComputedTotal,
-      };
-      addTokenBreakdown(workflowBreakdown, context.workflow, tokenSummary);
-      addTokenBreakdown(runBreakdown, context.run_id, tokenSummary);
-      addTokenBreakdown(orchestratorBreakdown, context.orchestrator, tokenSummary);
-      addTokenBreakdown(subagentBreakdown, context.subagent, tokenSummary);
-    }
-  }
-
-  const computedTotalTokens = inputTokens + outputTokens;
-  const totalTokens = providedTotalTokens || computedTotalTokens;
-  const issues = [];
-  if (!totalTokens) {
-    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} did not include any token counts.` });
-  }
-  if (providedTotalTokens && computedTotalTokens && providedTotalTokens !== computedTotalTokens) {
-    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} has total_tokens ${providedTotalTokens} but input plus output is ${computedTotalTokens}.` });
-  }
-  if (cachedInputTokens > inputTokens) {
-    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} has cached input tokens greater than input tokens.` });
-  }
-  if (reasoningTokens > outputTokens) {
-    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} has reasoning tokens greater than output tokens.` });
-  }
-  if (issues.length) return { report: null, issues };
-
-  const sortedModels = [...models].sort();
-  const workflowRows = sortedTokenBreakdown(workflowBreakdown);
-  const runRows = sortedTokenBreakdown(runBreakdown);
-  const orchestratorRows = sortedTokenBreakdown(orchestratorBreakdown);
-  const subagentRows = sortedTokenBreakdown(subagentBreakdown);
-  return {
-    report: {
-      schema_version: 'aipedia.model-token-usage.v1',
-      source,
-      status: 'provided',
-      models: sortedModels,
-      model: sortedModels[0] || '',
-      entry_count: entries.length,
-      token_bearing_entry_count: tokenBearingEntries,
-      request_count: requestCount || tokenBearingEntries,
-      input_tokens: inputTokens,
-      output_tokens: outputTokens,
-      cached_input_tokens: cachedInputTokens,
-      reasoning_tokens: reasoningTokens,
-      total_tokens: totalTokens,
-      workflow_context_count: workflowRows.length,
-      run_context_count: runRows.length,
-      orchestrator_context_count: orchestratorRows.length,
-      subagent_context_count: subagentRows.length,
-      workflow_breakdown: workflowRows,
-      run_breakdown: runRows,
-      orchestrator_breakdown: orchestratorRows,
-      subagent_breakdown: subagentRows,
-    },
-    issues: [],
-  };
-}
-
-function modelTokenUsageContext(entry, usage, defaults = {}) {
-  const workflow = firstStringPath([entry, usage], [
-    'workflow',
-    'workflow_id',
-    'workflowId',
-    'workflow.name',
-    'context.workflow',
-    'context.workflow_id',
-    'context.workflowId',
-    'metadata.workflow',
-    'metadata.workflow_id',
-    'metadata.workflowId',
-  ]) || defaults.workflow || 'unknown';
-  const runId = firstStringPath([entry, usage], [
-    'run_id',
-    'runId',
-    'run',
-    'trace.run_id',
-    'context.run_id',
-    'context.runId',
-    'metadata.run_id',
-    'metadata.runId',
-  ]) || defaults.run_id || 'unknown';
-  const orchestrator = firstStringPath([entry, usage], [
-    'orchestrator',
-    'orchestrator_id',
-    'orchestratorId',
-    'orchestrator.name',
-    'context.orchestrator',
-    'context.orchestrator_id',
-    'context.orchestratorId',
-    'metadata.orchestrator',
-    'metadata.orchestrator_id',
-    'metadata.orchestratorId',
-  ]) || defaults.orchestrator || 'unknown';
-  const subagent = firstStringPath([entry, usage], [
-    'subagent',
-    'subagent_id',
-    'subagentId',
-    'agent',
-    'agent_id',
-    'agentId',
-    'agent.name',
-    'context.subagent',
-    'context.subagent_id',
-    'context.subagentId',
-    'context.agent',
-    'context.agent_id',
-    'context.agentId',
-    'metadata.subagent',
-    'metadata.subagent_id',
-    'metadata.subagentId',
-    'metadata.agent',
-    'metadata.agent_id',
-    'metadata.agentId',
-  ]) || defaults.subagent || 'unknown';
-  return { workflow, run_id: runId, orchestrator, subagent };
-}
-
-function addTokenBreakdown(map, id, tokens) {
-  const key = id || 'unknown';
-  if (!map.has(key)) {
-    map.set(key, {
-      id: key,
-      request_count: 0,
-      input_tokens: 0,
-      output_tokens: 0,
-      cached_input_tokens: 0,
-      reasoning_tokens: 0,
-      total_tokens: 0,
-    });
-  }
-  const row = map.get(key);
-  row.request_count += tokens.request_count;
-  row.input_tokens += tokens.input_tokens;
-  row.output_tokens += tokens.output_tokens;
-  row.cached_input_tokens += tokens.cached_input_tokens;
-  row.reasoning_tokens += tokens.reasoning_tokens;
-  row.total_tokens += tokens.total_tokens;
-}
-
-function sortedTokenBreakdown(map) {
-  return [...map.values()].sort((left, right) => right.total_tokens - left.total_tokens || left.id.localeCompare(right.id));
-}
-
-function modelTokenUsageEntries(value) {
-  if (Array.isArray(value)) return value;
-  if (!isObject(value)) return [];
-  for (const key of ['entries', 'records', 'calls', 'events']) {
-    if (Array.isArray(value[key])) return value[key];
-  }
-  if (Array.isArray(value.requests)) return value.requests;
-  return [value];
-}
-
-function tokenValue(object, paths) {
-  for (const path of paths) {
-    const value = valueAtPath(object, path);
-    const number = Number(value);
-    if (Number.isFinite(number) && number > 0) return Math.round(number);
-  }
-  return 0;
-}
-
-function stringPath(object, path) {
-  const value = valueAtPath(object, path);
-  return typeof value === 'string' ? value : '';
-}
-
-function firstStringPath(objects, paths) {
-  for (const object of objects) {
-    for (const path of paths) {
-      const value = stringPath(object, path);
-      if (value) return value;
-    }
-  }
-  return '';
-}
-
-function valueAtPath(object, path) {
-  if (!isObject(object)) return undefined;
-  return path.split('.').reduce((current, key) => (isObject(current) ? current[key] : undefined), object);
 }
 
 function isObject(value) {

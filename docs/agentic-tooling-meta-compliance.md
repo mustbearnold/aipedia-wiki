@@ -1338,6 +1338,24 @@ Runtime default routing changes now have a closeout-checkable completion receipt
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T07-56-52-885Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 15 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-90-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,078 ms, latest estimated full receipt tokens 11,917, latest system artifact count 16, no loop or command status changes, no new attention loops, wall time down 150 ms versus Slice 89, and estimated receipt tokens down 487.
 
+## Ninety-First System Slice
+
+Runtime completion receipts now ingest exact model-token usage through the same normalizer used by loop receipts, and real-runtime closes can fail closed when token evidence is required.
+
+- Added `scripts/lib/model-token-usage.mjs` so exact model-token usage normalization is shared instead of being embedded only in `scripts/aipedia-loops.mjs`.
+- `loop:all:record` still records the same `aipedia.model-token-usage.v1` fields, but the normalizer is now reusable by routing runtime completion.
+- `agent:routing:runtime:complete` accepts `--model-token-usage <path>`, `AIPEDIA_MODEL_TOKEN_USAGE_FILE`, or `AIPEDIA_MODEL_TOKEN_USAGE_JSON`.
+- Runtime token usage context can be supplied with `--model-token-workflow`, `--model-token-run-id`, `--model-token-orchestrator`, and `--model-token-subagent`, or the matching `AIPEDIA_MODEL_TOKEN_*` environment variables.
+- `--require-model-token-usage` and `--require-exact-model-tokens` make missing exact runtime token usage a hard blocker, while historical Slice 90 completion receipts remain closeout-checkable without token fields.
+- Runtime completion receipts with token usage embed `model_token_usage` and expose `model_token_usage_required`, `exact_model_tokens_attached`, `model_token_usage_ready`, `exact_model_request_count`, `exact_model_total_tokens`, and `exact_model_subagent_context_count` in `completion_evaluation`.
+- Focused loop, runtime-completion, closeout, router, and efficiency-trend tests passed 115/115.
+- Scoped `check:smart --run` passed with 661 script tests plus command audit. `check:quick` passed with 661 script tests, command audit, and quick assets.
+- Live token fixture `.agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json` records two `gpt-5.5` runtime calls with 2,750 input tokens, 680 output tokens, 420 cached input tokens, 200 reasoning tokens, and 3,430 total tokens.
+- Runtime token completion receipt `.agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json` passed auto-routed closeout with status `completion-ready`, exact model tokens attached true, model token usage required true, 2 exact model requests, 3,430 exact total tokens, and 1 subagent context.
+- Checked DAG proof `.agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json` were attached to the enforced loop receipt.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, exact model-token usage provided, latest exact total tokens 3,430, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,211 ms, exact model-token coverage 0.333 across the 3-run window, latest exact total tokens 3,430, no loop or command status changes, and estimated receipt tokens up 811 because the slice added token and DAG proof payloads.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |
