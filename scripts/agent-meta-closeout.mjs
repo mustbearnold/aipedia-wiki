@@ -109,6 +109,7 @@ function usage() {
     '  routing-rollout Durable guarded routing rollout receipt validation.',
     '  routing-monitor Durable post-default routing monitoring and rollback receipt validation.',
     '  routing-monitor-trends Durable repeated post-default routing monitor trend validation.',
+    '  routing-monitor-trend-rollup Durable longer-window routing monitor trend rollup validation.',
     '  routing-handoff Durable default routing handoff receipt validation.',
     '  routing-runtime-completion Durable runtime default routing completion receipt validation.',
     '',
@@ -126,7 +127,7 @@ function buildRoute() {
     : ['.agent/loop-runs/system/latest.json'];
   const receipts = rawPaths.map((rawPath) => inspectReceipt(rawPath));
   const routeIssues = receipts.flatMap((receipt) => receipt.route_issues);
-  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy', 'agent-routing-policy-pilot', 'agent-routing-policy-review', 'agent-routing-rollout', 'agent-routing-monitor', 'agent-routing-monitor-trends', 'agent-routing-handoff', 'agent-routing-runtime-completion']);
+  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy', 'agent-routing-policy-pilot', 'agent-routing-policy-review', 'agent-routing-rollout', 'agent-routing-monitor', 'agent-routing-monitor-trends', 'agent-routing-monitor-trend-rollup', 'agent-routing-handoff', 'agent-routing-runtime-completion']);
   const unsupported = receipts.filter((receipt) => !supportedTypes.has(receipt.type));
   for (const receipt of unsupported) {
     routeIssues.push(issue(
@@ -147,6 +148,7 @@ function buildRoute() {
   const hasRoutingRollout = receipts.some((receipt) => receipt.type === 'agent-routing-rollout');
   const hasRoutingMonitor = receipts.some((receipt) => receipt.type === 'agent-routing-monitor');
   const hasRoutingMonitorTrends = receipts.some((receipt) => receipt.type === 'agent-routing-monitor-trends');
+  const hasRoutingMonitorTrendRollup = receipts.some((receipt) => receipt.type === 'agent-routing-monitor-trend-rollup');
   const hasRoutingHandoff = receipts.some((receipt) => receipt.type === 'agent-routing-handoff');
   const hasRoutingRuntimeCompletion = receipts.some((receipt) => receipt.type === 'agent-routing-runtime-completion');
   const strictFlags = [
@@ -168,6 +170,7 @@ function buildRoute() {
     hasRoutingRollout,
     hasRoutingMonitor,
     hasRoutingMonitorTrends,
+    hasRoutingMonitorTrendRollup,
     hasRoutingHandoff,
     hasRoutingRuntimeCompletion,
   });
@@ -208,7 +211,7 @@ function inspectReceipt(rawPath) {
   };
 }
 
-function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy, hasRoutingPolicyPilot, hasRoutingPolicyReview, hasRoutingRollout, hasRoutingMonitor, hasRoutingMonitorTrends, hasRoutingHandoff, hasRoutingRuntimeCompletion }) {
+function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy, hasRoutingPolicyPilot, hasRoutingPolicyReview, hasRoutingRollout, hasRoutingMonitor, hasRoutingMonitorTrends, hasRoutingMonitorTrendRollup, hasRoutingHandoff, hasRoutingRuntimeCompletion }) {
   const extraProfiles = [
     hasTrend ? 'trends' : '',
     hasReadiness ? 'readiness' : '',
@@ -221,6 +224,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     hasRoutingRollout ? 'routing-rollout' : '',
     hasRoutingMonitor ? 'routing-monitor' : '',
     hasRoutingMonitorTrends ? 'routing-monitor-trends' : '',
+    hasRoutingMonitorTrendRollup ? 'routing-monitor-trend-rollup' : '',
     hasRoutingHandoff ? 'routing-handoff' : '',
     hasRoutingRuntimeCompletion ? 'routing-runtime-completion' : '',
   ].filter(Boolean);
@@ -231,8 +235,9 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     ].filter(Boolean);
     return `mixed-${[...strictProfiles, ...extraProfiles].join('-')}`;
   }
-  if (hasRoutingRuntimeCompletion && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor || hasRoutingMonitorTrends || hasRoutingHandoff)) return `mixed-${extraProfiles.join('-')}`;
-  if (hasRoutingHandoff && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor || hasRoutingMonitorTrends)) return `mixed-${extraProfiles.join('-')}`;
+  if (hasRoutingRuntimeCompletion && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor || hasRoutingMonitorTrends || hasRoutingMonitorTrendRollup || hasRoutingHandoff)) return `mixed-${extraProfiles.join('-')}`;
+  if (hasRoutingHandoff && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor || hasRoutingMonitorTrends || hasRoutingMonitorTrendRollup)) return `mixed-${extraProfiles.join('-')}`;
+  if (hasRoutingMonitorTrendRollup && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor || hasRoutingMonitorTrends)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingMonitorTrends && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingMonitor && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingRollout && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview)) return `mixed-${extraProfiles.join('-')}`;
@@ -258,6 +263,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
   if (hasRoutingRollout) return 'routing-rollout';
   if (hasRoutingMonitor) return 'routing-monitor';
   if (hasRoutingMonitorTrends) return 'routing-monitor-trends';
+  if (hasRoutingMonitorTrendRollup) return 'routing-monitor-trend-rollup';
   if (hasRoutingHandoff) return 'routing-handoff';
   if (hasRoutingRuntimeCompletion) return 'routing-runtime-completion';
   return 'unsupported';
@@ -279,6 +285,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.agent-routing-rollout.v1') return 'agent-routing-rollout';
   if (value.schema_version === 'aipedia.agent-routing-monitor.v1') return 'agent-routing-monitor';
   if (value.schema_version === 'aipedia.agent-routing-monitor-trends.v1') return 'agent-routing-monitor-trends';
+  if (value.schema_version === 'aipedia.agent-routing-monitor-trend-rollup.v1') return 'agent-routing-monitor-trend-rollup';
   if (value.schema_version === 'aipedia.agent-routing-handoff.v1') return 'agent-routing-handoff';
   if (value.schema_version === 'aipedia.agent-routing-runtime-completion.v1') return 'agent-routing-runtime-completion';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';

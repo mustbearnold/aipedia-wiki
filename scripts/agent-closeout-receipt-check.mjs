@@ -13,6 +13,7 @@ import { validateRoutingPolicyReviewReceipt } from './lib/routing-policy-review.
 import { validateRoutingRolloutReceipt } from './lib/routing-rollout.mjs';
 import { validateRoutingMonitorReceipt } from './lib/routing-monitor.mjs';
 import { validateRoutingMonitorTrendsReceipt } from './lib/routing-monitor-trends.mjs';
+import { validateRoutingMonitorTrendRollupReceipt } from './lib/routing-monitor-trend-rollup.mjs';
 import { validateRoutingHandoffReceipt } from './lib/routing-handoff.mjs';
 import { validateRoutingRuntimeCompletionReceipt } from './lib/routing-runtime-completion.mjs';
 
@@ -252,10 +253,11 @@ function validateReceiptFile(path) {
   else if (type === 'agent-routing-rollout') issues.push(...validateRoutingRolloutReceipt(value));
   else if (type === 'agent-routing-monitor') issues.push(...validateRoutingMonitorReceipt(value));
   else if (type === 'agent-routing-monitor-trends') issues.push(...validateRoutingMonitorTrendsReceipt(value));
+  else if (type === 'agent-routing-monitor-trend-rollup') issues.push(...validateRoutingMonitorTrendRollupReceipt(value));
   else if (type === 'agent-routing-handoff') issues.push(...validateRoutingHandoffReceipt(value));
   else if (type === 'agent-routing-runtime-completion') issues.push(...validateRoutingRuntimeCompletionReceipt(value));
   else if (type === 'pause-receipt') validatePauseReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, aipedia.loop-efficiency-trends.v1, aipedia.correction-telemetry.v1, aipedia.agent-routing-evaluation.v1, aipedia.agent-routing-evaluation-suite.v1/v2, aipedia.agent-routing-policy.v1, aipedia.agent-routing-policy-pilot.v1/v2, aipedia.agent-routing-policy-review.v1, aipedia.agent-routing-rollout.v1, aipedia.agent-routing-monitor.v1, aipedia.agent-routing-monitor-trends.v1, aipedia.agent-routing-handoff.v1, aipedia.agent-routing-runtime-completion.v1, nor aipedia.pause-receipt.v1.'));
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, aipedia.loop-efficiency-trends.v1, aipedia.correction-telemetry.v1, aipedia.agent-routing-evaluation.v1, aipedia.agent-routing-evaluation-suite.v1/v2, aipedia.agent-routing-policy.v1, aipedia.agent-routing-policy-pilot.v1/v2, aipedia.agent-routing-policy-review.v1, aipedia.agent-routing-rollout.v1, aipedia.agent-routing-monitor.v1, aipedia.agent-routing-monitor-trends.v1, aipedia.agent-routing-monitor-trend-rollup.v1, aipedia.agent-routing-handoff.v1, aipedia.agent-routing-runtime-completion.v1, nor aipedia.pause-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -285,6 +287,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.agent-routing-rollout.v1') return 'agent-routing-rollout';
   if (value.schema_version === 'aipedia.agent-routing-monitor.v1') return 'agent-routing-monitor';
   if (value.schema_version === 'aipedia.agent-routing-monitor-trends.v1') return 'agent-routing-monitor-trends';
+  if (value.schema_version === 'aipedia.agent-routing-monitor-trend-rollup.v1') return 'agent-routing-monitor-trend-rollup';
   if (value.schema_version === 'aipedia.agent-routing-handoff.v1') return 'agent-routing-handoff';
   if (value.schema_version === 'aipedia.agent-routing-runtime-completion.v1') return 'agent-routing-runtime-completion';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';

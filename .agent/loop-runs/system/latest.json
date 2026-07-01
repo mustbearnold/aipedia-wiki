@@ -5,23 +5,23 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-07-01T08:10:18.658Z",
+  "generated_at": "2026-07-01T08:26:15.215Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-91-runtime-token-ingestion",
+  "run_id": "2026-06-30-slice-92-monitor-trend-rollup",
   "residual_risks": [
-    "Runtime token fixture proves ingestion shape, not live provider billing export."
+    "Live rollup is intentionally attention because only one routing monitor trend window exists."
   ],
   "next_actions": [
-    "Add longer-window monitor trend summaries after future runtime changes."
+    "Collect a second closeout-checked routing monitor trend after the next runtime or workflow change, then regenerate the rollup."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-91-runtime-token-ingestion",
-    "span_id": "span:loop-run:2026-06-30-slice-91-runtime-token-ingestion:2026-07-01T08:10:18.658Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-92-monitor-trend-rollup",
+    "span_id": "span:loop-run:2026-06-30-slice-92-monitor-trend-rollup:2026-07-01T08:26:15.215Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-07-01T08:10:18.658Z",
-    "ended_at": "2026-07-01T08:10:23.869Z",
-    "duration_ms": 5211
+    "started_at": "2026-07-01T08:26:15.215Z",
+    "ended_at": "2026-07-01T08:26:20.384Z",
+    "duration_ms": 5170
   },
   "artifact_refs": [
     {
@@ -33,19 +33,19 @@
     {
       "role": "output",
       "kind": "agent-task-dag",
-      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
       "description": "Generated agent task DAG graph."
     },
     {
       "role": "output",
       "kind": "agent-task-dag-validation-report",
-      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
       "description": "agent:dag:check validation report for an agent task DAG."
     },
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-07-01T08-26-15-215Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -300,84 +300,20 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 5211,
-  "model_token_usage": {
-    "schema_version": "aipedia.model-token-usage.v1",
-    "source": ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
-    "status": "provided",
-    "models": [
-      "gpt-5.5"
-    ],
-    "model": "gpt-5.5",
-    "entry_count": 2,
-    "token_bearing_entry_count": 2,
-    "request_count": 2,
-    "input_tokens": 2750,
-    "output_tokens": 680,
-    "cached_input_tokens": 420,
-    "reasoning_tokens": 200,
-    "total_tokens": 3430,
-    "workflow_context_count": 1,
-    "run_context_count": 1,
-    "orchestrator_context_count": 1,
-    "subagent_context_count": 1,
-    "workflow_breakdown": [
-      {
-        "id": "agentic-tooling-meta",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
-      }
-    ],
-    "run_breakdown": [
-      {
-        "id": "2026-06-30-slice-91-runtime-token-ingestion",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
-      }
-    ],
-    "orchestrator_breakdown": [
-      {
-        "id": "codex-meta-orchestrator",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
-      }
-    ],
-    "subagent_breakdown": [
-      {
-        "id": "runtime-token-ingestion",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
-      }
-    ]
-  },
+  "duration_ms": 5170,
+  "model_token_usage": null,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 5211,
-    "total_command_duration_ms": 5205,
+    "wall_duration_ms": 5170,
+    "total_command_duration_ms": 5168,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 325.313,
-    "commands_per_second": 3.07,
-    "loops_per_second": 1.343,
+    "average_command_duration_ms": 323,
+    "commands_per_second": 3.095,
+    "loops_per_second": 1.354,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
@@ -389,96 +325,40 @@
     "agent_content_artifact_count": 0,
     "agent_other_artifact_count": 0,
     "preexisting_dirty_count": 5,
-    "system_artifacts_per_second": 2.495,
-    "agent_system_artifacts_per_second": 2.303,
-    "persisted_full_receipt_bytes": 50911,
-    "persisted_latest_receipt_bytes": 32364,
+    "system_artifacts_per_second": 2.515,
+    "agent_system_artifacts_per_second": 2.321,
+    "persisted_full_receipt_bytes": 47304,
+    "persisted_latest_receipt_bytes": 28786,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 2130
+        "duration_ms": 2011
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 603
+        "duration_ms": 658
       },
       {
         "loop_id": "news-market",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 333
+        "duration_ms": 345
       },
       {
         "loop_id": "freshness",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 327
+        "duration_ms": 328
       },
       {
         "loop_id": "quality-pruning",
         "label": "site KPI audit",
         "status": "ok",
-        "duration_ms": 250
-      }
-    ],
-    "model_token_usage_status": "provided",
-    "model_token_usage_source": ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
-    "exact_model_request_count": 2,
-    "exact_model_input_tokens": 2750,
-    "exact_model_output_tokens": 680,
-    "exact_model_cached_input_tokens": 420,
-    "exact_model_reasoning_tokens": 200,
-    "exact_model_total_tokens": 3430,
-    "exact_model_workflow_context_count": 1,
-    "exact_model_run_context_count": 1,
-    "exact_model_orchestrator_context_count": 1,
-    "exact_model_subagent_context_count": 1,
-    "exact_model_workflow_breakdown": [
-      {
-        "id": "agentic-tooling-meta",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
-      }
-    ],
-    "exact_model_run_breakdown": [
-      {
-        "id": "2026-06-30-slice-91-runtime-token-ingestion",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
-      }
-    ],
-    "exact_model_orchestrator_breakdown": [
-      {
-        "id": "codex-meta-orchestrator",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
-      }
-    ],
-    "exact_model_subagent_breakdown": [
-      {
-        "id": "runtime-token-ingestion",
-        "request_count": 2,
-        "input_tokens": 2750,
-        "output_tokens": 680,
-        "cached_input_tokens": 420,
-        "reasoning_tokens": 200,
-        "total_tokens": 3430
+        "duration_ms": 247
       }
     ]
   },
@@ -593,38 +473,38 @@
     "has_observed_dirty_baseline": true,
     "missing_observed_dirty_paths": [],
     "changed_paths": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json",
-      ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
-      ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
+      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
-      ".agent/loop-runs/system/latest.json",
-      "docs/agentic-tooling-meta-compliance.md",
+      "package.json",
       "scripts/README.md",
-      "scripts/agent-routing-runtime-completion.mjs",
-      "scripts/aipedia-loops.mjs",
-      "scripts/lib/model-token-usage.mjs",
-      "scripts/lib/routing-runtime-completion.mjs",
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-monitor-trend-rollup.mjs",
+      "scripts/lib/routing-monitor-trend-rollup.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
-      "tests/scripts/agent-routing-runtime-completion.test.mjs"
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
     ],
     "system_artifacts": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json",
-      ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
-      ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
+      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
-      ".agent/loop-runs/system/latest.json",
-      "docs/agentic-tooling-meta-compliance.md",
+      "package.json",
       "scripts/README.md",
-      "scripts/agent-routing-runtime-completion.mjs",
-      "scripts/aipedia-loops.mjs",
-      "scripts/lib/model-token-usage.mjs",
-      "scripts/lib/routing-runtime-completion.mjs",
-      "tests/scripts/agent-routing-runtime-completion.test.mjs"
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-monitor-trend-rollup.mjs",
+      "scripts/lib/routing-monitor-trend-rollup.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -636,32 +516,32 @@
     "has_system_artifact": true,
     "content_only": false,
     "agent_changed_paths": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json",
-      ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
-      ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
-      ".agent/loop-runs/system/latest.json",
-      "docs/agentic-tooling-meta-compliance.md",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
+      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
+      "package.json",
       "scripts/README.md",
-      "scripts/agent-routing-runtime-completion.mjs",
-      "scripts/aipedia-loops.mjs",
-      "scripts/lib/model-token-usage.mjs",
-      "scripts/lib/routing-runtime-completion.mjs",
-      "tests/scripts/agent-routing-runtime-completion.test.mjs"
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-monitor-trend-rollup.mjs",
+      "scripts/lib/routing-monitor-trend-rollup.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
     ],
     "agent_system_artifacts": [
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.json",
-      ".agent/evals/agent-dag-contracts/2026-06-30-slice-91-runtime-token-ingestion-agent-task-graph.validation.json",
-      ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
-      ".agent/evals/routing-runtime-completions/2026-06-30-slice-91-runtime-token-completion-receipt.json",
-      ".agent/loop-runs/system/latest.json",
-      "docs/agentic-tooling-meta-compliance.md",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json",
+      ".agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json",
+      ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json",
+      "package.json",
       "scripts/README.md",
-      "scripts/agent-routing-runtime-completion.mjs",
-      "scripts/aipedia-loops.mjs",
-      "scripts/lib/model-token-usage.mjs",
-      "scripts/lib/routing-runtime-completion.mjs",
-      "tests/scripts/agent-routing-runtime-completion.test.mjs"
+      "scripts/agent-closeout-receipt-check.mjs",
+      "scripts/agent-meta-closeout.mjs",
+      "scripts/agent-routing-monitor-trend-rollup.mjs",
+      "scripts/lib/routing-monitor-trend-rollup.mjs",
+      "tests/scripts/agent-closeout-receipt-check.test.mjs",
+      "tests/scripts/agent-meta-closeout.test.mjs",
+      "tests/scripts/agent-routing-monitor-trend-rollup.test.mjs"
     ],
     "agent_content_artifacts": [],
     "agent_other_artifacts": [],
@@ -691,21 +571,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 228,
+      "duration_ms": 223,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 115,
+          "duration_ms": 112,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 112,
+          "duration_ms": 110,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -715,7 +595,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 561,
+      "duration_ms": 563,
       "attention_reasons": [
         "due_now=161"
       ],
@@ -724,7 +604,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 232,
+          "duration_ms": 234,
           "attention_reasons": [
             "due_now=161"
           ],
@@ -733,7 +613,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 327,
+          "duration_ms": 328,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -743,28 +623,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 407,
+      "duration_ms": 406,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 157,
+          "duration_ms": 158,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 119,
+          "duration_ms": 117,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 130,
+          "duration_ms": 131,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -774,7 +654,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 2131,
+      "duration_ms": 2012,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -783,7 +663,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 2130,
+          "duration_ms": 2011,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -807,28 +687,28 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 530,
+      "duration_ms": 516,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 250,
+          "duration_ms": 247,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 128,
+          "duration_ms": 130,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 151,
+          "duration_ms": 140,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -838,7 +718,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 808,
+      "duration_ms": 879,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -848,7 +728,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 204,
+          "duration_ms": 221,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -869,7 +749,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 603,
+          "duration_ms": 658,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -893,28 +773,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 547,
+      "duration_ms": 571,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 111,
+          "duration_ms": 117,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 103,
+          "duration_ms": 109,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 333,
+          "duration_ms": 345,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -923,13 +803,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-07-01T08-26-15-215Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": "",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T08-10-18-658Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-07-01T08:09:27.347Z",
+      "previous_run": "2026-07-01T08:10:18.658Z",
       "status_changes": [],
-      "duration_delta_ms": 26,
+      "duration_delta_ms": -41,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

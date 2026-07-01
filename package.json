@@ -122,6 +122,7 @@
     "agent:routing:rollout": "node scripts/agent-routing-rollout.mjs",
     "agent:routing:monitor": "node scripts/agent-routing-monitor.mjs",
     "agent:routing:monitor:trends": "node scripts/agent-routing-monitor-trends.mjs",
+    "agent:routing:monitor:trend-rollup": "node scripts/agent-routing-monitor-trend-rollup.mjs",
     "agent:routing:handoff": "node scripts/agent-routing-handoff.mjs",
     "agent:routing:runtime:complete": "node scripts/agent-routing-runtime-completion.mjs",
     "agent:dag:check": "node scripts/agent-task-dag-check.mjs",

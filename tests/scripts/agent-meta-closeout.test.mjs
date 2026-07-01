@@ -13,6 +13,7 @@ import { buildRoutingPolicyReview } from '../../scripts/lib/routing-policy-revie
 import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
 import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
 import { buildRoutingMonitorTrends } from '../../scripts/lib/routing-monitor-trends.mjs';
+import { buildRoutingMonitorTrendRollup } from '../../scripts/lib/routing-monitor-trend-rollup.mjs';
 import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
 import { buildRoutingRuntimeCompletion } from '../../scripts/lib/routing-runtime-completion.mjs';
 
@@ -620,6 +621,26 @@ function validRoutingMonitorTrendsReceipt() {
   return result.receipt;
 }
 
+function validRoutingMonitorTrendRollupReceipt() {
+  const first = validRoutingMonitorTrendsReceipt();
+  first.receipt_path = '.agent/evals/routing-monitor-trends/fixture-trend-a.json';
+  first.run_id = 'fixture-routing-monitor-trend-a';
+  const second = validRoutingMonitorTrendsReceipt();
+  second.receipt_path = '.agent/evals/routing-monitor-trends/fixture-trend-b.json';
+  second.run_id = 'fixture-routing-monitor-trend-b';
+  second.generated_at = '2026-07-01T08:05:00.000Z';
+  const result = buildRoutingMonitorTrendRollup({
+    trend_receipts: [first, second],
+    rollup_task: 'Fixture longer-window routing monitor trend rollup.',
+  }, {
+    generatedAt: '2026-07-01T08:10:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-monitor-trends/fixture-trend-a.json + .agent/evals/routing-monitor-trends/fixture-trend-b.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validRoutingHandoffReceipt(overrides = {}) {
   const defaultRollout = validRoutingDefaultRolloutReceipt();
   const monitor = validRoutingMonitorReceipt({
@@ -1006,6 +1027,24 @@ test('meta closeout router validates routing monitor trend receipts', () => {
     assert.equal(report.requires_workflow_policy, false);
     assert.deepEqual(report.strict_flags, []);
     assert.equal(report.checker_report.receipts[0].type, 'agent-routing-monitor-trends');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('meta closeout router validates routing monitor trend rollup receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-routing-monitor-trend-rollup-'));
+  try {
+    writeJson(join(root, 'routing-monitor-trend-rollup.json'), validRoutingMonitorTrendRollupReceipt());
+
+    const result = runRouter(['--project-dir', root, '--receipt', 'routing-monitor-trend-rollup.json', '--json']);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.closeout_profile, 'routing-monitor-trend-rollup');
+    assert.equal(report.requires_workflow_policy, false);
+    assert.deepEqual(report.strict_flags, []);
+    assert.equal(report.checker_report.receipts[0].type, 'agent-routing-monitor-trend-rollup');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

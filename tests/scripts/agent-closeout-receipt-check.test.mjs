@@ -13,6 +13,7 @@ import { buildRoutingPolicyReview } from '../../scripts/lib/routing-policy-revie
 import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
 import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
 import { buildRoutingMonitorTrends } from '../../scripts/lib/routing-monitor-trends.mjs';
+import { buildRoutingMonitorTrendRollup } from '../../scripts/lib/routing-monitor-trend-rollup.mjs';
 import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
 import { buildRoutingRuntimeCompletion } from '../../scripts/lib/routing-runtime-completion.mjs';
 
@@ -1152,6 +1153,26 @@ function validRoutingMonitorTrendsReceipt() {
   return result.receipt;
 }
 
+function validRoutingMonitorTrendRollupReceipt() {
+  const first = validRoutingMonitorTrendsReceipt();
+  first.receipt_path = '.agent/evals/routing-monitor-trends/fixture-trend-a.json';
+  first.run_id = 'fixture-routing-monitor-trend-a';
+  const second = validRoutingMonitorTrendsReceipt();
+  second.receipt_path = '.agent/evals/routing-monitor-trends/fixture-trend-b.json';
+  second.run_id = 'fixture-routing-monitor-trend-b';
+  second.generated_at = '2026-07-01T08:05:00.000Z';
+  const result = buildRoutingMonitorTrendRollup({
+    trend_receipts: [first, second],
+    rollup_task: 'Fixture longer-window routing monitor trend rollup.',
+  }, {
+    generatedAt: '2026-07-01T08:10:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-monitor-trends/fixture-trend-a.json + .agent/evals/routing-monitor-trends/fixture-trend-b.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validRoutingHandoffReceipt(overrides = {}) {
   const defaultRollout = validRoutingDefaultRolloutReceipt();
   const monitor = validRoutingMonitorReceipt({
@@ -1509,6 +1530,23 @@ test('closeout receipt check validates agent routing monitor trend receipts', ()
   }
 });
 
+test('closeout receipt check validates agent routing monitor trend rollup receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-monitor-trend-rollup-'));
+  const path = join(dir, 'routing-monitor-trend-rollup.json');
+
+  try {
+    writeJson(path, validRoutingMonitorTrendRollupReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-monitor-trend-rollup');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates agent routing handoff receipts', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-handoff-'));
   const path = join(dir, 'routing-handoff.json');
@@ -1694,6 +1732,25 @@ test('closeout receipt check fails tampered agent routing monitor trend readines
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-monitor-trends-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing monitor trend rollup readiness', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-monitor-trend-rollup-'));
+  const path = join(dir, 'routing-monitor-trend-rollup.json');
+
+  try {
+    const receipt = validRoutingMonitorTrendRollupReceipt();
+    receipt.rollup_evaluation.rollup_ready = !receipt.rollup_evaluation.rollup_ready;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-monitor-trend-rollup-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

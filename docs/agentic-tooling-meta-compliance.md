@@ -1357,6 +1357,22 @@ Runtime completion receipts now ingest exact model-token usage through the same 
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,211 ms, exact model-token coverage 0.333 across the 3-run window, latest exact total tokens 3,430, no loop or command status changes, and estimated receipt tokens up 811 because the slice added token and DAG proof payloads.
 - Slice 91 is committed and pushed as `96742204`.
 
+## Ninety-Second System Slice
+
+Routing monitor trend windows can now be summarized across a longer window, and the summary is closeout-checkable before it is used in routing promotion or runtime-completion reviews.
+
+- Added `scripts/lib/routing-monitor-trend-rollup.mjs` to normalize routing monitor trend receipts or compact summaries, compute longer-window totals, baseline/previous/latest points, scenario rollups, stability summaries, and pass/fail evaluation.
+- Added `agent:routing:monitor:trend-rollup` with `--trend`, `--receipt`, `--path`, `--input`, `--rollup-task`, and `--out` support.
+- Added `aipedia.agent-routing-monitor-trend-rollup.v1` validation to `agent:closeout:check`.
+- Added `routing-monitor-trend-rollup` auto-routing to `agent:meta:closeout:auto`.
+- The rollup stays attention until at least two unique, healthy trend windows are present, scenario coverage is comparable, and longer-window quality, accuracy, exact-token, wall-time, and failure drift stay within thresholds.
+- Focused routing monitor trend rollup, routing monitor trends, closeout, and meta-router tests passed 103/103.
+- Scoped `check:smart --run` passed with 670 script tests plus command audit. `check:quick` passed with 670 script tests, command audit, and quick assets.
+- Live rollup `.agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json` passed auto-routed closeout with status `rollup-attention`, 1 healthy trend window, 2 monitor windows, 2 scenario observations, 0 latest failing scenarios, and a clear blocker that at least two trend receipts are required.
+- Checked DAG proof `.agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json` were attached to the enforced loop receipt.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T08-26-15-215Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-92-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,170 ms, estimated full receipt tokens down 902 versus Slice 91, no loop or command status changes, 3 persistent attention loops, and 4 persistent attention commands.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

@@ -2532,3 +2532,17 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-91-final-efficiency-trends.json` reports 3 metric-aware receipts, exact model-token coverage 0.333, latest exact total tokens 3,430, latest wall duration 5,211 ms, no loop or command status changes, and estimated receipt tokens up 811 because token and DAG proof payloads were added.
 - Boundary: the token fixture proves ingestion and validation shape, not live provider billing export. Pre-existing Captions/Synthesia content WIP and the prior pause receipt remain separate.
 - Next: Add longer-window monitor trend summaries after future model, prompt, policy, tool, workflow, or runtime default-change updates.
+
+### 2026-07-01: Agentic Tooling Meta Slice 92, Routing Monitor Trend Rollups
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:monitor:trend-rollup`, backed by `scripts/lib/routing-monitor-trend-rollup.mjs`, to build closeout-checkable `aipedia.agent-routing-monitor-trend-rollup.v1` receipts across routing monitor trend windows.
+- Changed: `agent:closeout:check` now validates routing monitor trend rollup receipts, and `agent:meta:closeout:auto` routes them with the `routing-monitor-trend-rollup` profile.
+- System lesson: a single healthy monitor trend proves one repeated-monitor window, not longer-window routing stability. The new rollup records the difference explicitly and stays in attention until at least two unique healthy trend windows exist.
+- Verification: syntax checks passed. Focused routing monitor trend rollup, routing monitor trends, closeout, and meta-router tests passed 103/103. Live rollup, strict latest loop, and final trend receipts all passed auto-routed closeout. Scoped `check:smart --run` passed with 670 script tests plus command audit. `check:quick` passed with 670 script tests, command audit, and quick assets.
+- Durable proof: `.agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-92-single-window-rollup.json` is `rollup-attention` with 1 healthy trend window, 2 monitor windows, 2 scenario observations, 0 latest failing scenarios, and the required next action to collect another closeout-checked monitor trend.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-92.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T08-26-15-215Z-loop-run.json`.
+- DAG proof: `.agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-92-monitor-trend-rollup-agent-task-graph.validation.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-92-final-efficiency-trends.json` reports 3 metric-aware receipts, latest wall duration 5,170 ms, estimated full receipt tokens down 902 versus Slice 91, no loop or command status changes, 3 persistent attention loops, and 4 persistent attention commands.
+- Next: Collect a second closeout-checked routing monitor trend after the next runtime or workflow change, then regenerate the rollup.
