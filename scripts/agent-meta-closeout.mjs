@@ -112,6 +112,7 @@ function usage() {
     '  routing-monitor-trend-rollup Durable longer-window routing monitor trend rollup validation.',
     '  routing-handoff Durable default routing handoff receipt validation.',
     '  routing-runtime-completion Durable runtime default routing completion receipt validation.',
+    '  routing-runtime-refresh-plan Durable runtime routing evidence refresh-plan receipt validation.',
     '',
     'Options:',
     '  --receipt <path>     Receipt to validate. Repeatable. Alias: --path.',
@@ -127,7 +128,7 @@ function buildRoute() {
     : ['.agent/loop-runs/system/latest.json'];
   const receipts = rawPaths.map((rawPath) => inspectReceipt(rawPath));
   const routeIssues = receipts.flatMap((receipt) => receipt.route_issues);
-  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy', 'agent-routing-policy-pilot', 'agent-routing-policy-review', 'agent-routing-rollout', 'agent-routing-monitor', 'agent-routing-monitor-trends', 'agent-routing-monitor-trend-rollup', 'agent-routing-handoff', 'agent-routing-runtime-completion']);
+  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy', 'agent-routing-policy-pilot', 'agent-routing-policy-review', 'agent-routing-rollout', 'agent-routing-monitor', 'agent-routing-monitor-trends', 'agent-routing-monitor-trend-rollup', 'agent-routing-handoff', 'agent-routing-runtime-completion', 'agent-routing-runtime-refresh-plan']);
   const unsupported = receipts.filter((receipt) => !supportedTypes.has(receipt.type));
   for (const receipt of unsupported) {
     routeIssues.push(issue(
@@ -151,6 +152,7 @@ function buildRoute() {
   const hasRoutingMonitorTrendRollup = receipts.some((receipt) => receipt.type === 'agent-routing-monitor-trend-rollup');
   const hasRoutingHandoff = receipts.some((receipt) => receipt.type === 'agent-routing-handoff');
   const hasRoutingRuntimeCompletion = receipts.some((receipt) => receipt.type === 'agent-routing-runtime-completion');
+  const hasRoutingRuntimeRefreshPlan = receipts.some((receipt) => receipt.type === 'agent-routing-runtime-refresh-plan');
   const strictFlags = [
     ...(receipts.some((receipt) => STRICT_RECEIPT_TYPES.has(receipt.type)) ? STRICT_META_FLAGS : []),
     ...(hasRunner ? ['--require-workflow-policy'] : []),
@@ -173,6 +175,7 @@ function buildRoute() {
     hasRoutingMonitorTrendRollup,
     hasRoutingHandoff,
     hasRoutingRuntimeCompletion,
+    hasRoutingRuntimeRefreshPlan,
   });
   return {
     ok: routeIssues.length === 0,
@@ -211,7 +214,7 @@ function inspectReceipt(rawPath) {
   };
 }
 
-function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy, hasRoutingPolicyPilot, hasRoutingPolicyReview, hasRoutingRollout, hasRoutingMonitor, hasRoutingMonitorTrends, hasRoutingMonitorTrendRollup, hasRoutingHandoff, hasRoutingRuntimeCompletion }) {
+function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy, hasRoutingPolicyPilot, hasRoutingPolicyReview, hasRoutingRollout, hasRoutingMonitor, hasRoutingMonitorTrends, hasRoutingMonitorTrendRollup, hasRoutingHandoff, hasRoutingRuntimeCompletion, hasRoutingRuntimeRefreshPlan }) {
   const extraProfiles = [
     hasTrend ? 'trends' : '',
     hasReadiness ? 'readiness' : '',
@@ -227,7 +230,9 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     hasRoutingMonitorTrendRollup ? 'routing-monitor-trend-rollup' : '',
     hasRoutingHandoff ? 'routing-handoff' : '',
     hasRoutingRuntimeCompletion ? 'routing-runtime-completion' : '',
+    hasRoutingRuntimeRefreshPlan ? 'routing-runtime-refresh-plan' : '',
   ].filter(Boolean);
+  if (hasRoutingRuntimeRefreshPlan && extraProfiles.length > 1) return `mixed-${extraProfiles.join('-')}`;
   if ((hasRunner || hasLoop) && extraProfiles.length) {
     const strictProfiles = [
       hasLoop ? 'loop' : '',
@@ -266,6 +271,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
   if (hasRoutingMonitorTrendRollup) return 'routing-monitor-trend-rollup';
   if (hasRoutingHandoff) return 'routing-handoff';
   if (hasRoutingRuntimeCompletion) return 'routing-runtime-completion';
+  if (hasRoutingRuntimeRefreshPlan) return 'routing-runtime-refresh-plan';
   return 'unsupported';
 }
 
@@ -288,6 +294,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.agent-routing-monitor-trend-rollup.v1') return 'agent-routing-monitor-trend-rollup';
   if (value.schema_version === 'aipedia.agent-routing-handoff.v1') return 'agent-routing-handoff';
   if (value.schema_version === 'aipedia.agent-routing-runtime-completion.v1') return 'agent-routing-runtime-completion';
+  if (value.schema_version === 'aipedia.agent-routing-runtime-refresh-plan.v1') return 'agent-routing-runtime-refresh-plan';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';

@@ -1410,6 +1410,24 @@ The strict runtime-completion path now has a ready longer-window rollup proof in
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-94-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,105 ms, estimated full receipt tokens 13,390, exact model-token coverage 0.333, no loop or command status changes, 3 persistent attention loops, and 4 persistent attention commands.
 - Slice 94 is committed and pushed as `2ed0ec6e`.
 
+## Ninety-Fifth System Slice
+
+Runtime routing evidence refresh now has its own closeout-checkable planner, so future drift does not depend on an agent remembering the monitor, trend, rollup, and runtime-completion sequence.
+
+- Added `scripts/lib/routing-runtime-refresh-plan.mjs` and `agent:routing:runtime:refresh-plan`.
+- The planner emits `aipedia.agent-routing-runtime-refresh-plan.v1` receipts with normalized handoff, monitor-trends, monitor-trend-rollup, runtime-completion, and exact model-token evidence.
+- Relevant model, prompt, policy, tool, workflow, router, and runtime changes require `changed_at` before evidence can pass as current.
+- Receipts classify evidence as `ready-current`, `refresh-required`, or `blocked`, and carry the ordered correction telemetry, routing suite, monitor, monitor-trends, trend-rollup, and strict runtime-completion commands.
+- `agent:closeout:check` validates refresh-plan receipts, and `agent:meta:closeout:auto` routes them with the `routing-runtime-refresh-plan` profile.
+- Focused refresh-plan, closeout, and meta-router tests passed 98/98.
+- `audit:commands` passed with 97 script paths resolved.
+- Live refresh-plan receipt `.agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-current-refresh-plan.json` passed auto-routed closeout with status `ready-current`, exact model-token total 3,430, and all six refresh commands marked `not-required` for the current evidence chain.
+- Checked DAG proof `.agent/evals/agent-dag-contracts/2026-06-30-slice-95-runtime-refresh-plan-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-95-runtime-refresh-plan-agent-task-graph.validation.json` validate with 8 DAG nodes.
+- Scoped `check:smart --run`, `check:quick`, strict latest-loop closeout, and final efficiency-trend closeout passed.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T09-13-02-337Z-loop-run.json` records exact model-token total 3,430, 18 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-95-final-efficiency-trends.json` passed auto-routed closeout with latest wall duration 5,091 ms, estimated full receipt tokens 13,007, exact model-token coverage 0.667, no loop or command status changes, wall time down 14 ms versus Slice 94, and estimated full receipt tokens down 383.
+- Commit and push are pending.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

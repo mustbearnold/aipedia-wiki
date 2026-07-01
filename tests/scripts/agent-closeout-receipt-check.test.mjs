@@ -16,6 +16,7 @@ import { buildRoutingMonitorTrends } from '../../scripts/lib/routing-monitor-tre
 import { buildRoutingMonitorTrendRollup } from '../../scripts/lib/routing-monitor-trend-rollup.mjs';
 import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
 import { buildRoutingRuntimeCompletion } from '../../scripts/lib/routing-runtime-completion.mjs';
+import { buildRoutingRuntimeRefreshPlan } from '../../scripts/lib/routing-runtime-refresh-plan.mjs';
 
 const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
 const ROUTING_SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
@@ -1215,6 +1216,34 @@ function validRoutingRuntimeCompletionReceipt() {
   return result.receipt;
 }
 
+function validRoutingRuntimeRefreshPlanReceipt() {
+  const result = buildRoutingRuntimeRefreshPlan({
+    change: {
+      change_id: 'fixture-routing-runtime-refresh-plan',
+      change_kinds: ['workflow'],
+      changed_at: '2026-07-01T06:00:00.000Z',
+    },
+    requirements: {
+      require_monitor_trend_rollup: false,
+      require_model_token_usage: false,
+    },
+    evidence_chain: {
+      handoff: validRoutingHandoffReceipt({ mode: 'runtime' }),
+      monitor_trends: validRoutingMonitorTrendsReceipt(),
+      runtime_completion: validRoutingRuntimeCompletionReceipt(),
+    },
+    goal_id: 'june-30-agentic-tooling-meta-os',
+    run_id: 'fixture-routing-runtime-refresh-plan',
+    workflow: 'loop-system',
+  }, {
+    generatedAt: '2026-07-01T08:40:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-handoffs/fixture-runtime-handoff.json + .agent/evals/routing-runtime-completions/fixture-runtime-completion.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validLoopEfficiencyTrendReceipt(overrides = {}) {
   return {
     ok: true,
@@ -1581,6 +1610,23 @@ test('closeout receipt check validates agent routing runtime completion receipts
   }
 });
 
+test('closeout receipt check validates agent routing runtime refresh plan receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-runtime-refresh-plan-'));
+  const path = join(dir, 'routing-runtime-refresh-plan.json');
+
+  try {
+    writeJson(path, validRoutingRuntimeRefreshPlanReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-runtime-refresh-plan');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check accepts historical v1 routing suite receipts without lineage refs', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-v1-'));
   const path = join(dir, 'routing-suite-v1.json');
@@ -1789,6 +1835,25 @@ test('closeout receipt check fails tampered agent routing runtime completion rea
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-runtime-completion-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing runtime refresh plan readiness', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-runtime-refresh-plan-'));
+  const path = join(dir, 'routing-runtime-refresh-plan.json');
+
+  try {
+    const receipt = validRoutingRuntimeRefreshPlanReceipt();
+    receipt.refresh_evaluation.ready_current = !receipt.refresh_evaluation.ready_current;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-runtime-refresh-plan-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

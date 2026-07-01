@@ -1,0 +1,236 @@
+{
+  "ok": true,
+  "mode": "agent-routing-runtime-refresh-plan",
+  "schema_version": "aipedia.agent-routing-runtime-refresh-plan.v1",
+  "generated_at": "2026-07-01T09:07:32.748Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json + .agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json + .agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-94-two-window-rollup.json + .agent/evals/routing-runtime-completions/2026-06-30-slice-94-runtime-rollup-ready-completion-receipt.json + .agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-95-runtime-refresh-plan-current",
+  "workflow": "loop-system",
+  "refresh_task": "Runtime routing refresh plan for 2026-06-30-slice-95-runtime-refresh-plan-current",
+  "change": {
+    "change_id": "2026-06-30-slice-95-runtime-refresh-plan-current",
+    "changed_at": "2026-07-01T00:00:00.000Z",
+    "kinds": [
+      "workflow"
+    ],
+    "relevant_to_runtime_refresh": true,
+    "summary": "Slice 95 planner proof against current rollup-ready runtime evidence",
+    "changed_artifacts": []
+  },
+  "requirements": {
+    "require_monitor_trend_rollup": true,
+    "require_model_token_usage": true,
+    "require_changed_at_for_relevant_changes": true
+  },
+  "evidence_chain": {
+    "handoff": {
+      "kind": "handoff",
+      "provided": true,
+      "valid": true,
+      "ready": true,
+      "stale": false,
+      "status": "handoff-ready",
+      "generated_at": "2026-07-01T07:53:28.512Z",
+      "receipt_path": ".agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json",
+      "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:handoff:2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-87-post-default-monitor-suite",
+      "workflow": "loop-system",
+      "goal_id": "june-30-agentic-tooling-meta-os",
+      "issues": [],
+      "facts": {
+        "apply_command": "runtime: apply the reviewed default routing policy only with attached handoff and monitor-trend receipts",
+        "change_id": "2026-06-30-slice-90-runtime-default-routing-completion",
+        "change_mode": "runtime",
+        "default_rollout_receipt": ".agent/evals/routing-rollouts/2026-06-30-slice-86-default-enabled-rollout-receipt.json",
+        "monitor_receipt": ".agent/evals/routing-monitors/2026-06-30-slice-87-post-default-monitor-receipt.json",
+        "verification_command": "npm --silent run agent:meta:closeout:auto -- --receipt .agent/evals/routing-runtime-completions/2026-06-30-slice-90-runtime-default-completion-receipt.json --json"
+      },
+      "stale_reason": ""
+    },
+    "monitor_trends": {
+      "kind": "monitor_trends",
+      "provided": true,
+      "valid": true,
+      "ready": true,
+      "stale": false,
+      "status": "trend-healthy",
+      "generated_at": "2026-07-01T07:34:46.448Z",
+      "receipt_path": ".agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json",
+      "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-87-post-default-monitor-suite:trend:2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-89-repeat-post-default-monitor-suite",
+      "workflow": "loop-system",
+      "goal_id": "june-30-agentic-tooling-meta-os",
+      "issues": [],
+      "facts": {
+        "healthy_monitor_count": 2,
+        "latest_failing_scenario_count": 0,
+        "latest_monitor_receipt": ".agent/evals/routing-monitors/2026-06-30-slice-89-repeat-post-default-monitor-receipt.json",
+        "monitor_count": 2
+      },
+      "stale_reason": ""
+    },
+    "monitor_trend_rollup": {
+      "kind": "monitor_trend_rollup",
+      "provided": true,
+      "valid": true,
+      "ready": true,
+      "stale": false,
+      "status": "rollup-ready",
+      "generated_at": "2026-07-01T08:50:12.926Z",
+      "receipt_path": ".agent/evals/routing-monitor-trend-rollups/2026-06-30-slice-94-two-window-rollup.json",
+      "run_id": "routing-monitor-trend-rollup:2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-89-repeat-post-default-monitor-suite:trend:2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-94-second-window-monitor-suite",
+      "workflow": "loop-system",
+      "goal_id": "june-30-agentic-tooling-meta-os",
+      "issues": [],
+      "facts": {
+        "healthy_trend_count": 2,
+        "latest_failing_scenario_count": 0,
+        "monitor_window_count": 4,
+        "trend_count": 2,
+        "trend_receipts": [
+          ".agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json",
+          ".agent/evals/routing-monitor-trends/2026-06-30-slice-94-second-window-monitor-trends.json"
+        ]
+      },
+      "stale_reason": ""
+    },
+    "runtime_completion": {
+      "kind": "runtime_completion",
+      "provided": true,
+      "valid": true,
+      "ready": true,
+      "stale": false,
+      "status": "completion-ready",
+      "generated_at": "2026-07-01T08:50:33.611Z",
+      "receipt_path": ".agent/evals/routing-runtime-completions/2026-06-30-slice-94-runtime-rollup-ready-completion-receipt.json",
+      "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:handoff:2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-87-post-default-monitor-suite:runtime-completion:2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-87-post-default-monitor-suite:trend:2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-86-post-canary-suite:monitor:2026-06-30-slice-89-repeat-post-default-monitor-suite",
+      "workflow": "loop-system",
+      "goal_id": "june-30-agentic-tooling-meta-os",
+      "issues": [],
+      "facts": {
+        "change_id": "2026-06-30-slice-90-runtime-default-routing-completion",
+        "exact_model_request_count": 2,
+        "exact_model_total_tokens": 3430,
+        "model_token_usage_ready": true,
+        "monitor_trend_rollup_ready": true
+      },
+      "stale_reason": ""
+    },
+    "model_token_usage": {
+      "kind": "model_token_usage",
+      "provided": true,
+      "valid": true,
+      "ready": true,
+      "stale": false,
+      "status": "exact-token-ready",
+      "generated_at": "",
+      "receipt_path": ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+      "run_id": "",
+      "workflow": "",
+      "goal_id": "",
+      "issues": [],
+      "facts": {
+        "request_count": 2,
+        "subagent_context_count": 1,
+        "total_tokens": 3430
+      },
+      "stale_reason": ""
+    }
+  },
+  "command_inputs": {
+    "run_id": "2026-06-30-slice-95-runtime-refresh-plan-current",
+    "output_prefix": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current",
+    "events_jsonl": "",
+    "routing_suite_input": "",
+    "default_rollout": "",
+    "baseline_monitor": "",
+    "baseline_monitor_trends": ".agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json",
+    "model_token_usage": ".agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json",
+    "rollback_command": "",
+    "rollback_verification_command": "",
+    "runtime_system": "",
+    "runtime_applied_at": "",
+    "runtime_verification_status": "passed",
+    "runtime_evidence_note": ""
+  },
+  "command_plan": [
+    {
+      "sequence": 1,
+      "id": "correction-telemetry",
+      "title": "Capture fresh correction telemetry",
+      "status": "not-required",
+      "command": "npm --silent run agent:correction:adapt -- --events-jsonl <events-jsonl> --normalized-out .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-correction-normalized.json --out .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-correction-telemetry.json --json",
+      "output": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-correction-telemetry.json",
+      "missing_inputs": []
+    },
+    {
+      "sequence": 2,
+      "id": "routing-suite",
+      "title": "Build a fresh routing evaluation suite",
+      "status": "not-required",
+      "command": "npm --silent run agent:routing:suite -- --input <routing-suite-input> --out .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-routing-suite.json --json",
+      "output": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-routing-suite.json",
+      "missing_inputs": []
+    },
+    {
+      "sequence": 3,
+      "id": "routing-monitor",
+      "title": "Build a fresh post-default routing monitor",
+      "status": "not-required",
+      "command": "npm --silent run agent:routing:monitor -- --default-rollout .agent/evals/routing-rollouts/2026-06-30-slice-86-default-enabled-rollout-receipt.json --suite .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-routing-suite.json --rollback-command <rollback-command> --rollback-verify <rollback-verification-command> --out .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-routing-monitor.json --json",
+      "output": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-routing-monitor.json",
+      "missing_inputs": []
+    },
+    {
+      "sequence": 4,
+      "id": "routing-monitor-trends",
+      "title": "Regenerate repeated monitor trend evidence",
+      "status": "not-required",
+      "command": "npm --silent run agent:routing:monitor:trends -- --monitor .agent/evals/routing-monitors/2026-06-30-slice-87-post-default-monitor-receipt.json --monitor .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-routing-monitor.json --out .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-monitor-trends.json --json",
+      "output": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-monitor-trends.json",
+      "missing_inputs": []
+    },
+    {
+      "sequence": 5,
+      "id": "routing-monitor-trend-rollup",
+      "title": "Regenerate longer-window monitor trend rollup",
+      "status": "not-required",
+      "command": "npm --silent run agent:routing:monitor:trend-rollup -- --trend .agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json --trend .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-monitor-trends.json --out .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-monitor-trend-rollup.json --json",
+      "output": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-monitor-trend-rollup.json",
+      "missing_inputs": []
+    },
+    {
+      "sequence": 6,
+      "id": "routing-runtime-completion",
+      "title": "Rerun strict runtime completion",
+      "status": "not-required",
+      "command": "npm --silent run agent:routing:runtime:complete -- --handoff .agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json --monitor-trends .agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json --monitor-trend-rollup .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-monitor-trend-rollup.json --require-monitor-trend-rollup --model-token-usage .agent/evals/model-token-usage/2026-06-30-slice-91-runtime-completion-token-usage.json --require-model-token-usage --runtime-system aipedia-agent-router --applied-at 2026-07-01T00:00:00.000Z --verification-status passed --out .agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-runtime-completion.json --json",
+      "output": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-runtime-refresh-plan-current-runtime-completion.json",
+      "missing_inputs": []
+    }
+  ],
+  "refresh_evaluation": {
+    "status": "ready-current",
+    "ready_current": true,
+    "refresh_required": false,
+    "blocked": false,
+    "relevant_change": true,
+    "missing_changed_at": false,
+    "missing_evidence": [],
+    "invalid_evidence": [],
+    "not_ready_evidence": [],
+    "stale_evidence": [],
+    "input_blockers": [],
+    "command_plan_complete": true,
+    "reason": "Runtime routing evidence is current, closeout-checkable, and ready for the declared change."
+  },
+  "guardrails": [
+    "Run this plan after every model, prompt, policy, tool, workflow, router, or runtime default-change update.",
+    "Do not mark a runtime default routing change complete until the refresh plan is ready-current or the ordered refresh commands have produced closeout-checked evidence.",
+    "Attach exact model-token usage whenever runtime usage is available; receipt-size estimates are not a replacement for exact usage."
+  ],
+  "next_actions": [
+    "No refresh commands are required for the declared change."
+  ],
+  "receipt_path": ".agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-current-refresh-plan.json"
+}

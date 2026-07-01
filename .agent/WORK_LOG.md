@@ -2578,3 +2578,19 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-94.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T08-53-30-585Z-loop-run.json`.
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-94-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 5,105 ms, latest estimated full receipt tokens 13,390, exact model-token coverage 0.333, latest exact total tokens 3,430, no loop or command status changes, 3 persistent attention loops, and 4 persistent attention commands.
 - Next: Harden the future drift refresh path so agents do not have to infer the monitor-trend-rollup-runtime sequence.
+
+### 2026-07-01: Agentic Tooling Meta Slice 95, Runtime Refresh Plan Receipts
+
+- Status: Validated locally; commit and push pending.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:runtime:refresh-plan`, backed by `scripts/lib/routing-runtime-refresh-plan.mjs`, to build closeout-checkable `aipedia.agent-routing-runtime-refresh-plan.v1` receipts.
+- Changed: The planner normalizes handoff, monitor-trends, monitor-trend-rollup, runtime-completion, and exact model-token evidence into one `evidence_chain`, requires `changed_at` for relevant model, prompt, policy, tool, workflow, router, or runtime drift checks, and classifies the chain as `ready-current`, `refresh-required`, or `blocked`.
+- Changed: `agent:closeout:check` validates refresh-plan receipts and `agent:meta:closeout:auto` routes them with the `routing-runtime-refresh-plan` profile.
+- System lesson: strict runtime completion is safer when the future refresh sequence is itself a durable receipt. The next agent no longer has to infer the order: correction telemetry, routing suite, monitor, monitor-trends, trend-rollup, then strict runtime completion.
+- Durable proof: `.agent/evals/routing-runtime-refresh-plans/2026-06-30-slice-95-current-refresh-plan.json` is `ready-current`, carries exact model-token total 3,430, and marks all six refresh commands `not-required` against the current rollup-ready evidence.
+- Verification: focused refresh-plan, closeout, and meta-router tests passed 98/98. `audit:commands` passed. The live refresh-plan receipt passed auto-routed closeout under `routing-runtime-refresh-plan`. Scoped `check:smart --run` passed with 683 script tests plus command audit. `check:quick` passed with 683 script tests, command audit, and quick assets. Strict latest-loop closeout and final efficiency-trend closeout both passed.
+- DAG proof: `.agent/evals/agent-dag-contracts/2026-06-30-slice-95-runtime-refresh-plan-agent-task-graph.json` and `.agent/evals/agent-dag-contracts/2026-06-30-slice-95-runtime-refresh-plan-agent-task-graph.validation.json` validate with 8 DAG nodes.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-95.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T09-13-02-337Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-95-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 5,091 ms, estimated full receipt tokens 13,007, exact model-token coverage 0.667, latest exact total tokens 3,430, no loop or command status changes, wall time down 14 ms versus Slice 94, and estimated full receipt tokens down 383.
+- Boundary: no content pages were edited. Pre-existing Captions/Synthesia content WIP and the prior pause receipt remain separate.
+- Next: Commit and push, then use the refresh planner on the next real routing drift event.
