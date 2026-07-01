@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T06:35:30.311Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-85-canary-rollout-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-85-canary-rollout-jsonl",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 8,
+    "findings_count": 4,
+    "corrections_applied": 4,
+    "residual_issue_count": 0,
+    "regression_count": 0
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-85-canary-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice85-single-heavy-evidence-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Canary rollout log found a heavy-review evidence packaging gap in the single-agent pass."
+        },
+        {
+          "id": "slice85-single-heavy-evidence-fix",
+          "type": "correction_applied",
+          "finding_id": "slice85-single-heavy-evidence-gap",
+          "severity": "",
+          "note": "Canary rollout log recorded the evidence packaging correction."
+        },
+        {
+          "id": "slice85-single-status-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Canary rollout log found a compact-status summary gap in the single-agent pass."
+        },
+        {
+          "id": "slice85-single-status-fix",
+          "type": "correction_applied",
+          "finding_id": "slice85-single-status-gap",
+          "severity": "",
+          "note": "Canary rollout log recorded the compact-status summary correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-85-canary-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "canary-rollout-reviewer",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice85-orch-heavy-routing-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Canary rollout log found a specialist handoff note that needed stronger routing evidence."
+        },
+        {
+          "id": "slice85-orch-heavy-routing-fix",
+          "type": "correction_applied",
+          "finding_id": "slice85-orch-heavy-routing-gap",
+          "severity": "",
+          "note": "Canary rollout log recorded the specialist routing evidence correction."
+        },
+        {
+          "id": "slice85-orch-status-cost-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Canary rollout log found an over-orchestration cost note that needed clearer wording."
+        },
+        {
+          "id": "slice85-orch-status-cost-fix",
+          "type": "correction_applied",
+          "finding_id": "slice85-orch-status-cost-gap",
+          "severity": "",
+          "note": "Canary rollout log recorded the over-orchestration cost wording correction."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-85-canary-single-agent",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-85-canary-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json"
+}

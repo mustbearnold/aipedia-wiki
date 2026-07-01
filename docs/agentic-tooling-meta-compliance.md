@@ -1244,6 +1244,20 @@ Routing policy rollout now has a closeout-checkable gate after reviewer-pass pro
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-84-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,932 ms, latest wall duration 4,932 ms, latest estimated full receipt tokens 12,287, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
 - Durable slice report: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-84.md`.
 
+## Eighty-Fifth System Slice
+
+Canary rollout proof now validates the reviewed conditional routing policy at a bounded live-traffic stage while keeping default changes blocked.
+
+- Expanded rollout-stage test coverage so canary-ready receipts, unsafe canary traffic, and default-enabled full-traffic semantics are deterministic.
+- Fresh canary correction telemetry `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
+- Fresh canary rollout suite `.agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json` passed auto-routed closeout with 2 telemetry-backed scenarios, telemetry coverage 1.0, total exact-token delta 3,400, total wall-duration delta 3,000, and conditional task-class routing preserved.
+- Canary rollout receipt `.agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json` passed auto-routed closeout with status `canary-ready`, stage `canary`, traffic percent 5, guard passed true, review-ready true, fresh rollout suite true, metrics-ready true, default-change allowed false, 2/2 scenarios passing, min quality 0.93, min accuracy 0.93, 0 residual issues, and 0 regressions.
+- Focused routing-rollout, closeout, and router tests passed 82/82.
+- Scoped `check:smart` passed with 617 script tests plus command audit. `check:quick` passed with 617 script tests, command audit, and quick assets.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T06-38-44-414Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-85-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,932 ms, latest wall duration 5,069 ms, latest estimated full receipt tokens 11,959, latest system artifact count 13, 3 persistent attention loops, and 4 persistent attention commands.
+- Durable slice report: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-85.md`.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

@@ -1,0 +1,438 @@
+{
+  "ok": true,
+  "mode": "agent-routing-evaluation-suite",
+  "schema_version": "aipedia.agent-routing-evaluation-suite.v2",
+  "generated_at": "2026-07-01T06:35:35.880Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-85-canary-rollout-suite",
+  "workflow": "loop-system",
+  "suite_task": "Canary rollout metrics for the reviewed conditional routing policy.",
+  "totals": {
+    "scenario_count": 2,
+    "recommendation_count": 2,
+    "monitor_count": 0,
+    "blocked_count": 0,
+    "telemetry_backed_scenario_count": 2
+  },
+  "correction_telemetry_refs": [
+    {
+      "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+      "schema_version": "aipedia.correction-telemetry.v1",
+      "scenario_ids": [
+        "canary-jsonl-heavy-review",
+        "canary-jsonl-tiny-status"
+      ],
+      "candidate_ids": [
+        "orchestrated-specialists",
+        "single-agent"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "canary-jsonl-heavy-review",
+      "task_class": "jsonl-correction-heavy-review",
+      "task_label": "Canary rollout JSONL heavy review routing",
+      "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "orchestrated-specialists",
+      "winner_id": "orchestrated-specialists",
+      "runner_up_id": "single-agent",
+      "improvement_margin": 0.072,
+      "winner_exact_model_total_tokens": 6350,
+      "runner_up_exact_model_total_tokens": 8150,
+      "exact_model_token_delta": 1800,
+      "winner_wall_duration_ms": 6600,
+      "runner_up_wall_duration_ms": 8300,
+      "wall_duration_delta_ms": 1700,
+      "routing_evaluation": {
+        "ok": true,
+        "mode": "agent-routing-evaluation",
+        "schema_version": "aipedia.agent-routing-evaluation.v1",
+        "generated_at": "2026-07-01T06:35:35.880Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json#canary-jsonl-heavy-review",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-85-canary-rollout-suite:canary-jsonl-heavy-review",
+        "workflow": "loop-system",
+        "evaluation_task": "Canary rollout JSONL heavy review routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "weights": {
+          "quality": 0.28,
+          "accuracy": 0.28,
+          "correction": 0.18,
+          "token_efficiency": 0.14,
+          "speed": 0.08,
+          "task_completion": 0.04
+        },
+        "totals": {
+          "candidate_count": 2,
+          "eligible_candidate_count": 2,
+          "ineligible_candidate_count": 0
+        },
+        "candidates": [
+          {
+            "valid": true,
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice85-canary-heavy-review-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 6700,
+              "output_tokens": 1450,
+              "cached_input_tokens": 740,
+              "reasoning_tokens": 320,
+              "total_tokens": 8150,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 6700,
+                  "output_tokens": 1450,
+                  "cached_input_tokens": 740,
+                  "reasoning_tokens": 320,
+                  "total_tokens": 8150
+                }
+              ]
+            },
+            "wall_duration_ms": 8300,
+            "quality_score": 0.9,
+            "accuracy_score": 0.9,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "single-agent",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 0.779,
+            "speed_score": 0.795,
+            "task_completion_rate": 1,
+            "overall_score": 0.897,
+            "tokens_per_quality_point": 9055.556,
+            "tokens_per_accuracy_point": 9055.556,
+            "eligible": true,
+            "ineligible_reasons": []
+          },
+          {
+            "valid": true,
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice85-canary-heavy-review-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 5150,
+              "output_tokens": 1200,
+              "cached_input_tokens": 650,
+              "reasoning_tokens": 240,
+              "total_tokens": 6350,
+              "subagent_breakdown": [
+                {
+                  "id": "canary-triage-agent",
+                  "request_count": 1,
+                  "input_tokens": 3150,
+                  "output_tokens": 720,
+                  "cached_input_tokens": 430,
+                  "reasoning_tokens": 140,
+                  "total_tokens": 3870
+                },
+                {
+                  "id": "canary-validation-agent",
+                  "request_count": 1,
+                  "input_tokens": 2000,
+                  "output_tokens": 480,
+                  "cached_input_tokens": 220,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 2480
+                }
+              ]
+            },
+            "wall_duration_ms": 6600,
+            "quality_score": 0.95,
+            "accuracy_score": 0.94,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "orchestrated-specialists",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 1,
+            "speed_score": 1,
+            "task_completion_rate": 1,
+            "overall_score": 0.969,
+            "tokens_per_quality_point": 6684.211,
+            "tokens_per_accuracy_point": 6755.319,
+            "eligible": true,
+            "ineligible_reasons": []
+          }
+        ],
+        "winner": {
+          "id": "orchestrated-specialists",
+          "overall_score": 0.969,
+          "exact_model_total_tokens": 6350,
+          "wall_duration_ms": 6600
+        },
+        "recommendation": {
+          "status": "recommend",
+          "candidate_id": "orchestrated-specialists",
+          "improvement_margin": 0.072,
+          "reason": "orchestrated-specialists has the highest weighted score while meeting exact token, quality, correction, wall-time, and accuracy gates."
+        },
+        "next_actions": [
+          "Use orchestrated-specialists only for matching tasks and keep collecting exact token, correction, wall-time, accuracy, and quality receipts."
+        ]
+      }
+    },
+    {
+      "id": "canary-jsonl-tiny-status",
+      "task_class": "jsonl-tiny-status-check",
+      "task_label": "Canary rollout JSONL tiny status routing",
+      "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "single-agent",
+      "winner_id": "single-agent",
+      "runner_up_id": "orchestrated-specialists",
+      "improvement_margin": 0.138,
+      "winner_exact_model_total_tokens": 1150,
+      "runner_up_exact_model_total_tokens": 2750,
+      "exact_model_token_delta": 1600,
+      "winner_wall_duration_ms": 1000,
+      "runner_up_wall_duration_ms": 2300,
+      "wall_duration_delta_ms": 1300,
+      "routing_evaluation": {
+        "ok": true,
+        "mode": "agent-routing-evaluation",
+        "schema_version": "aipedia.agent-routing-evaluation.v1",
+        "generated_at": "2026-07-01T06:35:35.880Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json#canary-jsonl-tiny-status",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-85-canary-rollout-suite:canary-jsonl-tiny-status",
+        "workflow": "loop-system",
+        "evaluation_task": "Canary rollout JSONL tiny status routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "weights": {
+          "quality": 0.28,
+          "accuracy": 0.28,
+          "correction": 0.18,
+          "token_efficiency": 0.14,
+          "speed": 0.08,
+          "task_completion": 0.04
+        },
+        "totals": {
+          "candidate_count": 2,
+          "eligible_candidate_count": 2,
+          "ineligible_candidate_count": 0
+        },
+        "candidates": [
+          {
+            "valid": true,
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice85-canary-tiny-status-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 900,
+              "output_tokens": 250,
+              "cached_input_tokens": 110,
+              "reasoning_tokens": 45,
+              "total_tokens": 1150,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 900,
+                  "output_tokens": 250,
+                  "cached_input_tokens": 110,
+                  "reasoning_tokens": 45,
+                  "total_tokens": 1150
+                }
+              ]
+            },
+            "wall_duration_ms": 1000,
+            "quality_score": 0.93,
+            "accuracy_score": 0.93,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "single-agent",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 1,
+            "speed_score": 1,
+            "task_completion_rate": 1,
+            "overall_score": 0.961,
+            "tokens_per_quality_point": 1236.559,
+            "tokens_per_accuracy_point": 1236.559,
+            "eligible": true,
+            "ineligible_reasons": []
+          },
+          {
+            "valid": true,
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice85-canary-tiny-status-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 2250,
+              "output_tokens": 500,
+              "cached_input_tokens": 260,
+              "reasoning_tokens": 130,
+              "total_tokens": 2750,
+              "subagent_breakdown": [
+                {
+                  "id": "canary-planner-agent",
+                  "request_count": 1,
+                  "input_tokens": 1350,
+                  "output_tokens": 280,
+                  "cached_input_tokens": 150,
+                  "reasoning_tokens": 80,
+                  "total_tokens": 1630
+                },
+                {
+                  "id": "canary-validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 900,
+                  "output_tokens": 220,
+                  "cached_input_tokens": 110,
+                  "reasoning_tokens": 50,
+                  "total_tokens": 1120
+                }
+              ]
+            },
+            "wall_duration_ms": 2300,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "orchestrated-specialists",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 0.418,
+            "speed_score": 0.435,
+            "task_completion_rate": 1,
+            "overall_score": 0.823,
+            "tokens_per_quality_point": 3021.978,
+            "tokens_per_accuracy_point": 3021.978,
+            "eligible": true,
+            "ineligible_reasons": []
+          }
+        ],
+        "winner": {
+          "id": "single-agent",
+          "overall_score": 0.961,
+          "exact_model_total_tokens": 1150,
+          "wall_duration_ms": 1000
+        },
+        "recommendation": {
+          "status": "recommend",
+          "candidate_id": "single-agent",
+          "improvement_margin": 0.138,
+          "reason": "single-agent has the highest weighted score while meeting exact token, quality, correction, wall-time, and accuracy gates."
+        },
+        "next_actions": [
+          "Use single-agent only for matching tasks and keep collecting exact token, correction, wall-time, accuracy, and quality receipts."
+        ]
+      }
+    }
+  ],
+  "aggregate": {
+    "recommended_candidate_counts": {
+      "orchestrated-specialists": 1,
+      "single-agent": 1
+    },
+    "dominant_recommended_candidate_id": "orchestrated-specialists",
+    "dominant_recommended_candidate_count": 1,
+    "all_recommended_same_candidate": false,
+    "average_improvement_margin": 0.105,
+    "total_exact_model_token_delta": 3400,
+    "total_wall_duration_delta_ms": 3000,
+    "telemetry_coverage_rate": 1
+  },
+  "next_actions": [
+    "Keep orchestration routing conditional by task class because the suite does not recommend one candidate everywhere."
+  ],
+  "receipt_path": ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json"
+}

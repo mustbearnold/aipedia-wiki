@@ -5,24 +5,24 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-07-01T05:33:26.436Z",
+  "generated_at": "2026-07-01T06:38:44.414Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-84-routing-rollout-guard",
+  "run_id": "2026-06-30-slice-85-canary-rollout-proof",
   "residual_risks": [
-    "Routing-rollout receipts gate shadow, canary, and default-enabled routing policy rollout, but canary and default-enabled stages still need fresh post-shadow rollout suites before any live default change."
+    "Canary rollout receipts allow a bounded 5 percent canary, but default-change remains false until post-canary exact token, correction, quality, accuracy, and wall-time receipts pass."
   ],
   "next_actions": [
-    "Collect a fresh canary rollout suite before promoting the reviewed routing policy beyond shadow mode.",
-    "Keep default-change allowed false unless routing-rollout receipts pass at the requested rollout stage."
+    "Collect post-canary exact token, correction, quality, accuracy, and wall-time receipts before any default-enabled rollout.",
+    "Keep default-change allowed false unless routing-rollout receipts pass at the requested default-enabled stage with fresh post-canary evidence."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-84-routing-rollout-guard",
-    "span_id": "span:loop-run:2026-06-30-slice-84-routing-rollout-guard:2026-07-01T05:33:26.436Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-85-canary-rollout-proof",
+    "span_id": "span:loop-run:2026-06-30-slice-85-canary-rollout-proof:2026-07-01T06:38:44.414Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-07-01T05:33:26.436Z",
-    "ended_at": "2026-07-01T05:33:31.368Z",
-    "duration_ms": 4932
+    "started_at": "2026-07-01T06:38:44.414Z",
+    "ended_at": "2026-07-01T06:38:49.482Z",
+    "duration_ms": 5069
   },
   "artifact_refs": [
     {
@@ -46,7 +46,7 @@
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-07-01T05-33-26-436Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-07-01T06-38-44-414Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -301,65 +301,65 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 4932,
+  "duration_ms": 5069,
   "model_token_usage": null,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 4932,
-    "total_command_duration_ms": 4929,
+    "wall_duration_ms": 5069,
+    "total_command_duration_ms": 5065,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 308.063,
-    "commands_per_second": 3.244,
-    "loops_per_second": 1.419,
+    "average_command_duration_ms": 316.563,
+    "commands_per_second": 3.156,
+    "loops_per_second": 1.381,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
     "embedded_command_artifact_count": 16,
-    "system_artifact_count": 21,
+    "system_artifact_count": 13,
     "content_artifact_count": 4,
     "other_artifact_count": 0,
-    "agent_system_artifact_count": 20,
+    "agent_system_artifact_count": 12,
     "agent_content_artifact_count": 0,
     "agent_other_artifact_count": 0,
     "preexisting_dirty_count": 5,
-    "system_artifacts_per_second": 4.258,
-    "agent_system_artifacts_per_second": 4.055,
-    "persisted_full_receipt_bytes": 49147,
-    "persisted_latest_receipt_bytes": 30629,
+    "system_artifacts_per_second": 2.565,
+    "agent_system_artifacts_per_second": 2.367,
+    "persisted_full_receipt_bytes": 47834,
+    "persisted_latest_receipt_bytes": 29316,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 1951
+        "duration_ms": 2031
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 599
-      },
-      {
-        "loop_id": "news-market",
-        "label": "weekly editorial queue",
-        "status": "ok",
-        "duration_ms": 328
+        "duration_ms": 606
       },
       {
         "loop_id": "freshness",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 314
+        "duration_ms": 331
+      },
+      {
+        "loop_id": "news-market",
+        "label": "weekly editorial queue",
+        "status": "ok",
+        "duration_ms": 327
       },
       {
         "loop_id": "quality-pruning",
         "label": "site KPI audit",
         "status": "ok",
-        "duration_ms": 236
+        "duration_ms": 249
       }
     ]
   },
@@ -477,50 +477,34 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "package.json",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-rollout.mjs",
-      "scripts/lib/routing-rollout.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
       "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "package.json",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-rollout.mjs",
-      "scripts/lib/routing-rollout.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
       "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "content_artifacts": [
@@ -536,44 +520,28 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "package.json",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-rollout.mjs",
-      "scripts/lib/routing-rollout.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
       "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "agent_system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
-      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "package.json",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-rollout.mjs",
-      "scripts/lib/routing-rollout.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
       "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "agent_content_artifacts": [],
@@ -604,21 +572,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 210,
+      "duration_ms": 233,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 104,
+          "duration_ms": 114,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 106,
+          "duration_ms": 118,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -628,7 +596,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 536,
+      "duration_ms": 580,
       "attention_reasons": [
         "due_now=161"
       ],
@@ -637,7 +605,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 222,
+          "duration_ms": 248,
           "attention_reasons": [
             "due_now=161"
           ],
@@ -646,7 +614,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 314,
+          "duration_ms": 331,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -656,28 +624,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 415,
+      "duration_ms": 401,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 157,
+          "duration_ms": 166,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 122,
+          "duration_ms": 108,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 135,
+          "duration_ms": 127,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -687,7 +655,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 1951,
+      "duration_ms": 2031,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -696,7 +664,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 1951,
+          "duration_ms": 2031,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -720,14 +688,14 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 487,
+      "duration_ms": 502,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 236,
+          "duration_ms": 249,
           "attention_reasons": [],
           "build_freshness": null
         },
@@ -741,7 +709,7 @@
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 130,
+          "duration_ms": 132,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -751,7 +719,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 790,
+      "duration_ms": 791,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -761,7 +729,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 191,
+          "duration_ms": 185,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -782,7 +750,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 599,
+          "duration_ms": 606,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -806,28 +774,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 543,
+      "duration_ms": 530,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 110,
+          "duration_ms": 104,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 104,
+          "duration_ms": 99,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 328,
+          "duration_ms": 327,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -836,13 +804,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-07-01T05-33-26-436Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-07-01T06-38-44-414Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-07-01T05-19-07-606Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T05-33-26-436Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-07-01T05:19:07.606Z",
+      "previous_run": "2026-07-01T05:33:26.436Z",
       "status_changes": [],
-      "duration_delta_ms": 130,
+      "duration_delta_ms": 137,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

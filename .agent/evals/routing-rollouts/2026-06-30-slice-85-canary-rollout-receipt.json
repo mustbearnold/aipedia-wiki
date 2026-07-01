@@ -1,0 +1,323 @@
+{
+  "ok": true,
+  "mode": "agent-routing-rollout",
+  "schema_version": "aipedia.agent-routing-rollout.v1",
+  "generated_at": "2026-07-01T06:35:42.686Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json + .agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review:rollout:2026-06-30-slice-85-canary-rollout-suite",
+  "workflow": "loop-system",
+  "rollout_task": "Guarded rollout for 2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review",
+  "source_review": {
+    "receipt_path": ".agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json",
+    "schema_version": "aipedia.agent-routing-policy-review.v1",
+    "generated_at": "2026-07-01T05:12:23.388Z",
+    "source": ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+    "goal_id": "june-30-agentic-tooling-meta-os",
+    "run_id": "2026-06-30-slice-77-jsonl-telemetry-routing-suite:routing-policy:pilot:2026-06-30-slice-82-fresh-policy-pilot-suite:routing-policy-review",
+    "workflow": "loop-system",
+    "review_task": "Reviewer pass for fresh independent routing policy pilot before default orchestration changes.",
+    "promotion_review": {
+      "status": "accepted",
+      "default_ready": true,
+      "pilot_ready": true,
+      "reviewer_pass_complete": true,
+      "reason": "All required reviewer lenses accepted the fresh independent pilot."
+    },
+    "totals": {
+      "review_count": 6,
+      "required_lens_count": 6,
+      "accepted_required_lens_count": 6,
+      "rejected_review_count": 0,
+      "needs_work_review_count": 0,
+      "missing_required_lens_count": 0
+    },
+    "source_pilot": {
+      "receipt_path": ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+      "policy_receipt": ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
+      "suite_receipt": ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json",
+      "policy_fit": {
+        "status": "pass",
+        "promotion_candidate": true,
+        "same_source_replay": false,
+        "shared_evidence_overlap": false,
+        "match_rate": 1
+      },
+      "totals": {
+        "policy_rule_count": 2,
+        "pilot_scenario_count": 2,
+        "matched_rule_count": 2,
+        "mismatched_rule_count": 0,
+        "missing_rule_count": 0,
+        "blocked_scenario_count": 0,
+        "not_recommended_scenario_count": 0,
+        "telemetry_backed_scenario_count": 2,
+        "covered_policy_rule_count": 2,
+        "uncovered_policy_rule_count": 0,
+        "shared_telemetry_ref_count": 0
+      }
+    }
+  },
+  "rollout": {
+    "stage": "canary",
+    "traffic_percent": 5,
+    "policy_change_id": "",
+    "operator": ""
+  },
+  "thresholds": {
+    "min_quality_score": 0.85,
+    "min_accuracy_score": 0.85,
+    "minimum_improvement_margin": 0.02,
+    "max_residual_issue_count": 0,
+    "max_regression_count": 0,
+    "min_telemetry_coverage_rate": 1
+  },
+  "rollout_suite": {
+    "receipt_path": ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-receipt.json",
+    "schema_version": "aipedia.agent-routing-evaluation-suite.v2",
+    "generated_at": "2026-07-01T06:35:35.880Z",
+    "source": ".agent/evals/routing-suites/2026-06-30-slice-85-canary-rollout-suite-input.json",
+    "goal_id": "june-30-agentic-tooling-meta-os",
+    "run_id": "2026-06-30-slice-85-canary-rollout-suite",
+    "workflow": "loop-system",
+    "suite_task": "Canary rollout metrics for the reviewed conditional routing policy.",
+    "totals": {
+      "scenario_count": 2,
+      "recommendation_count": 2,
+      "monitor_count": 0,
+      "blocked_count": 0,
+      "telemetry_backed_scenario_count": 2
+    },
+    "aggregate": {
+      "dominant_recommended_candidate_id": "orchestrated-specialists",
+      "all_recommended_same_candidate": false,
+      "average_improvement_margin": 0.105,
+      "total_exact_model_token_delta": 3400,
+      "total_wall_duration_delta_ms": 3000,
+      "telemetry_coverage_rate": 1
+    },
+    "correction_telemetry_refs": [
+      {
+        "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+        "schema_version": "aipedia.correction-telemetry.v1",
+        "scenario_ids": [
+          "canary-jsonl-heavy-review",
+          "canary-jsonl-tiny-status"
+        ],
+        "candidate_ids": [
+          "orchestrated-specialists",
+          "single-agent"
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "canary-jsonl-heavy-review",
+        "task_class": "jsonl-correction-heavy-review",
+        "task_label": "Canary rollout JSONL heavy review routing",
+        "recommendation_status": "recommend",
+        "recommended_candidate_id": "orchestrated-specialists",
+        "improvement_margin": 0.072,
+        "exact_model_token_delta": 1800,
+        "wall_duration_delta_ms": 1700,
+        "correction_telemetry_refs": [
+          {
+            "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+            "schema_version": "aipedia.correction-telemetry.v1",
+            "scenario_ids": [],
+            "candidate_ids": [
+              "orchestrated-specialists",
+              "single-agent"
+            ]
+          }
+        ],
+        "winner": {
+          "id": "orchestrated-specialists",
+          "exact_model_total_tokens": 6350,
+          "exact_model_request_count": 2,
+          "wall_duration_ms": 6600,
+          "quality_score": 0.95,
+          "accuracy_score": 0.94,
+          "correction_outcomes_source": "correction-telemetry",
+          "correction_outcomes": {
+            "findings_count": 2,
+            "corrections_applied": 2,
+            "residual_issue_count": 0,
+            "regression_count": 0
+          }
+        }
+      },
+      {
+        "id": "canary-jsonl-tiny-status",
+        "task_class": "jsonl-tiny-status-check",
+        "task_label": "Canary rollout JSONL tiny status routing",
+        "recommendation_status": "recommend",
+        "recommended_candidate_id": "single-agent",
+        "improvement_margin": 0.138,
+        "exact_model_token_delta": 1600,
+        "wall_duration_delta_ms": 1300,
+        "correction_telemetry_refs": [
+          {
+            "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+            "schema_version": "aipedia.correction-telemetry.v1",
+            "scenario_ids": [],
+            "candidate_ids": [
+              "orchestrated-specialists",
+              "single-agent"
+            ]
+          }
+        ],
+        "winner": {
+          "id": "single-agent",
+          "exact_model_total_tokens": 1150,
+          "exact_model_request_count": 1,
+          "wall_duration_ms": 1000,
+          "quality_score": 0.93,
+          "accuracy_score": 0.93,
+          "correction_outcomes_source": "correction-telemetry",
+          "correction_outcomes": {
+            "findings_count": 2,
+            "corrections_applied": 2,
+            "residual_issue_count": 0,
+            "regression_count": 0
+          }
+        }
+      }
+    ]
+  },
+  "totals": {
+    "scenario_count": 2,
+    "recommended_scenario_count": 2,
+    "passing_scenario_count": 2,
+    "failing_scenario_count": 0,
+    "telemetry_backed_scenario_count": 2,
+    "exact_token_scenario_count": 2,
+    "total_exact_model_token_delta": 3400,
+    "total_wall_duration_delta_ms": 3000,
+    "min_quality_score": 0.93,
+    "min_accuracy_score": 0.93,
+    "max_residual_issue_count": 0,
+    "max_regression_count": 0
+  },
+  "scenarios": [
+    {
+      "id": "canary-jsonl-heavy-review",
+      "task_class": "jsonl-correction-heavy-review",
+      "task_label": "Canary rollout JSONL heavy review routing",
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "orchestrated-specialists",
+      "improvement_margin": 0.072,
+      "exact_model_token_delta": 1800,
+      "wall_duration_delta_ms": 1700,
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "scenario_ids": [],
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "winner": {
+        "id": "orchestrated-specialists",
+        "exact_model_total_tokens": 6350,
+        "exact_model_request_count": 2,
+        "wall_duration_ms": 6600,
+        "quality_score": 0.95,
+        "accuracy_score": 0.94,
+        "correction_outcomes_source": "correction-telemetry",
+        "correction_outcomes": {
+          "findings_count": 2,
+          "corrections_applied": 2,
+          "residual_issue_count": 0,
+          "regression_count": 0
+        }
+      },
+      "checks": {
+        "recommended": true,
+        "exact_tokens_present": true,
+        "correction_telemetry_present": true,
+        "quality_passed": true,
+        "accuracy_passed": true,
+        "correction_passed": true,
+        "wall_time_present": true,
+        "improvement_passed": true
+      },
+      "passed": true,
+      "failure_reasons": []
+    },
+    {
+      "id": "canary-jsonl-tiny-status",
+      "task_class": "jsonl-tiny-status-check",
+      "task_label": "Canary rollout JSONL tiny status routing",
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "single-agent",
+      "improvement_margin": 0.138,
+      "exact_model_token_delta": 1600,
+      "wall_duration_delta_ms": 1300,
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-85-canary-rollout-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "scenario_ids": [],
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "winner": {
+        "id": "single-agent",
+        "exact_model_total_tokens": 1150,
+        "exact_model_request_count": 1,
+        "wall_duration_ms": 1000,
+        "quality_score": 0.93,
+        "accuracy_score": 0.93,
+        "correction_outcomes_source": "correction-telemetry",
+        "correction_outcomes": {
+          "findings_count": 2,
+          "corrections_applied": 2,
+          "residual_issue_count": 0,
+          "regression_count": 0
+        }
+      },
+      "checks": {
+        "recommended": true,
+        "exact_tokens_present": true,
+        "correction_telemetry_present": true,
+        "quality_passed": true,
+        "accuracy_passed": true,
+        "correction_passed": true,
+        "wall_time_present": true,
+        "improvement_passed": true
+      },
+      "passed": true,
+      "failure_reasons": []
+    }
+  ],
+  "rollout_evaluation": {
+    "status": "canary-ready",
+    "guard_passed": true,
+    "guarded_rollout_allowed": true,
+    "default_change_allowed": false,
+    "review_ready": true,
+    "fresh_rollout_suite": true,
+    "metrics_ready": true,
+    "scenario_coverage_required": 2,
+    "scenario_coverage_passed": true,
+    "telemetry_coverage_rate": 1,
+    "reason": "Accepted review and fresh rollout metrics allow a bounded canary.",
+    "failing_scenario_ids": []
+  },
+  "guardrails": [
+    "Keep default orchestration changes behind rollout receipts and re-run this gate after model, prompt, policy, or workflow changes.",
+    "Preserve the reviewed pilot suite and rollout suite as separate evidence layers."
+  ],
+  "next_actions": [
+    "Run the canary within the recorded traffic limit and collect post-canary exact token, correction, quality, accuracy, and wall-time receipts."
+  ],
+  "receipt_path": ".agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json"
+}

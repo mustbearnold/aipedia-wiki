@@ -63,6 +63,67 @@ test('agent routing rollout writes shadow-ready receipts for accepted reviews an
   }
 });
 
+test('agent routing rollout writes canary-ready receipts for bounded traffic', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-rollout-canary-'));
+  try {
+    writeJson(join(root, 'review.json'), reviewFixture());
+    writeJson(join(root, 'suite.json'), rolloutSuiteFixture());
+    const result = runRoutingRollout([
+      '--project-dir',
+      root,
+      '--review',
+      'review.json',
+      '--suite',
+      'suite.json',
+      '--stage',
+      'canary',
+      '--traffic-percent',
+      '5',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const receipt = JSON.parse(result.stdout);
+    assert.equal(receipt.ok, true);
+    assert.equal(receipt.rollout.stage, 'canary');
+    assert.equal(receipt.rollout.traffic_percent, 5);
+    assert.equal(receipt.rollout_evaluation.status, 'canary-ready');
+    assert.equal(receipt.rollout_evaluation.guarded_rollout_allowed, true);
+    assert.equal(receipt.rollout_evaluation.default_change_allowed, false);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('agent routing rollout rejects unsafe canary traffic limits', () => {
+  const result = buildRoutingRollout({
+    review: reviewFixture(),
+    suite: rolloutSuiteFixture(),
+    rollout: { stage: 'canary', traffic_percent: 25 },
+  }, {
+    generatedAt: '2026-07-01T05:45:00.000Z',
+    projectDir: '.',
+    source: `${REVIEW_FIXTURE_PATH} + ${SUITE_FIXTURE_PATH}`,
+  });
+  assert.equal(result.receipt, null);
+  assert.ok(result.issues.some((issue) => issue.code === 'routing-rollout-config-invalid'));
+});
+
+test('agent routing rollout allows default-enabled only at full traffic after gates pass', () => {
+  const result = buildRoutingRollout({
+    review: reviewFixture(),
+    suite: rolloutSuiteFixture(),
+    rollout: { stage: 'default-enabled', traffic_percent: 100 },
+  }, {
+    generatedAt: '2026-07-01T05:45:00.000Z',
+    projectDir: '.',
+    source: `${REVIEW_FIXTURE_PATH} + ${SUITE_FIXTURE_PATH}`,
+  });
+  assert.deepEqual(result.issues, []);
+  assert.equal(result.receipt.ok, true);
+  assert.equal(result.receipt.rollout_evaluation.status, 'default-ready');
+  assert.equal(result.receipt.rollout_evaluation.default_change_allowed, true);
+});
+
 test('agent routing rollout blocks reuse of the reviewed pilot suite as rollout metrics', () => {
   const result = buildRoutingRollout({
     review: reviewFixture(),
