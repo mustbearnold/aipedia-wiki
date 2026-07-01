@@ -1,0 +1,86 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-94-post-default-monitor-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-94-post-default-monitor-jsonl",
+    "confidence": "exact"
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-94-post-default-monitor-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "events": [
+        {
+          "id": "slice94-single-heavy-context-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Second post-default monitor found a heavy-review context packing gap in the single-agent route."
+        },
+        {
+          "id": "slice94-single-heavy-context-fix",
+          "type": "correction_applied",
+          "finding_id": "slice94-single-heavy-context-gap",
+          "severity": "",
+          "note": "Second post-default monitor recorded the context packing correction."
+        },
+        {
+          "id": "slice94-single-status-handoff-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Second post-default monitor found a compact-status handoff label that needed clearer token accounting."
+        },
+        {
+          "id": "slice94-single-status-handoff-fix",
+          "type": "correction_applied",
+          "finding_id": "slice94-single-status-handoff-gap",
+          "severity": "",
+          "note": "Second post-default monitor recorded the token accounting correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-94-post-default-monitor-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "post-default-routing-reviewer",
+      "events": [
+        {
+          "id": "slice94-orch-heavy-validation-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Second post-default monitor found a heavy-review validator note that needed tighter rollback wording."
+        },
+        {
+          "id": "slice94-orch-heavy-validation-fix",
+          "type": "correction_applied",
+          "finding_id": "slice94-orch-heavy-validation-gap",
+          "severity": "",
+          "note": "Second post-default monitor recorded the rollback wording correction."
+        },
+        {
+          "id": "slice94-orch-status-route-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Second post-default monitor found a tiny-status route explanation that needed stricter single-agent preference language."
+        },
+        {
+          "id": "slice94-orch-status-route-fix",
+          "type": "correction_applied",
+          "finding_id": "slice94-orch-status-route-gap",
+          "severity": "",
+          "note": "Second post-default monitor recorded the single-agent preference correction."
+        }
+      ]
+    }
+  ]
+}
