@@ -1215,6 +1215,48 @@ test('closeout receipt check validates agent routing evaluation suite receipts',
   }
 });
 
+test('closeout receipt check accepts historical v1 routing suite receipts without lineage refs', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-v1-'));
+  const path = join(dir, 'routing-suite-v1.json');
+
+  try {
+    const receipt = validRoutingEvaluationSuiteReceipt();
+    receipt.schema_version = 'aipedia.agent-routing-evaluation-suite.v1';
+    delete receipt.correction_telemetry_refs;
+    for (const scenario of receipt.scenarios) {
+      delete scenario.correction_telemetry_refs;
+    }
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-evaluation-suite');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check rejects v2 routing suite receipts without lineage refs', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-missing-lineage-'));
+  const path = join(dir, 'routing-suite-missing-lineage.json');
+
+  try {
+    const receipt = validRoutingEvaluationSuiteReceipt();
+    delete receipt.correction_telemetry_refs;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-suite-telemetry-lineage-invalid'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates correction telemetry receipts', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-correction-telemetry-'));
   const path = join(dir, 'correction-telemetry.json');

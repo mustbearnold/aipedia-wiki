@@ -1,8 +1,24 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 78, Routing Suite Telemetry Lineage
+
+- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, v2 routing-suite closeout, and historical v1 compatibility closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Upgraded new `agent:routing:suite` receipts to `aipedia.agent-routing-evaluation-suite.v2` with canonical top-level and per-scenario `correction_telemetry_refs`.
+- Changed: `agent:closeout:check` now requires v2 lineage refs, validates them through canonical rebuilds, rejects tampered lineage, and still accepts historical v1 routing-suite receipts without lineage refs.
+- Changed: Path-hydrated correction telemetry receipts now get a `receipt_path` from the loaded file when the receipt does not already carry one, so suite lineage points at the durable input path.
+- System lesson: telemetry-backed routing proof needs a visible chain of custody. V2 suite receipts now show which correction telemetry receipt influenced which scenarios and candidates, without invalidating older durable v1 proofs.
+- Verification: syntax checks passed for the suite CLI/library plus closeout and router scripts. Focused routing-suite tests passed 5/5, closeout checker tests passed 55/55, and meta closeout router tests passed 8/8. The live v2 suite receipt passed auto-routed closeout, and the historical Slice 74 v1 suite receipt still passed auto-routed closeout. Scoped `check:smart` passed with 587 script tests and command audit. `check:quick` passed with 587 script tests, command audit, and quick assets.
+- Durable suite proof: `.agent/evals/routing-suites/2026-06-30-slice-78-v2-telemetry-lineage-suite-receipt.json`.
+- Proof result: the v2 receipt records 2 scenarios, 2 recommendations, 2/2 telemetry-backed scenarios, telemetry coverage 1.0, one canonical telemetry ref to `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json`, average improvement margin 0.082, total exact-token delta 2,850, and total wall-duration delta 2,300 ms. Routing remains conditional: `orchestrated-specialists` wins the heavy review task and `single-agent` wins the tiny status task.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T04-16-00-882Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-78-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,020 ms, latest wall duration 4,956 ms, latest estimated full receipt tokens 11,742, latest system artifact count 14, 3 persistent attention loops, and 4 persistent attention commands.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 13 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time improved by 121 ms versus Slice 77, while estimated receipt tokens increased by 167 because the v2 lineage proof added explicit refs and compatibility artifacts.
+- Next: Commit and push only Slice 78 system files, then use v2 lineage refs for future routing-suite orchestration proofs.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 77, Routing Suite Telemetry Paths
 
-- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, and path-backed routing-suite closeout. Pending commit and push.
+- Status: Complete, verified, committed, and pushed as `9a22480d`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Extended `agent:routing:suite` so suite inputs can hydrate correction telemetry from durable receipt paths instead of embedding full telemetry objects.
 - Changed: `agent:routing:suite -- --correction-telemetry <path>` now provides a global correction-telemetry receipt for scenarios without inline telemetry, while `correction_telemetry_path` works at top-level, scenario-level, and nested routing-input level.

@@ -224,7 +224,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.loop-efficiency-trends.v1') return 'loop-efficiency-trends';
   if (value.schema_version === 'aipedia.correction-telemetry.v1') return 'agent-correction-telemetry';
   if (value.schema_version === 'aipedia.agent-routing-evaluation.v1') return 'agent-routing-evaluation';
-  if (value.schema_version === 'aipedia.agent-routing-evaluation-suite.v1') return 'agent-routing-evaluation-suite';
+  if (value.schema_version === 'aipedia.agent-routing-evaluation-suite.v1' || value.schema_version === 'aipedia.agent-routing-evaluation-suite.v2') return 'agent-routing-evaluation-suite';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';

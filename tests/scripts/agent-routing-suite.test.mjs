@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
 import { buildCorrectionTelemetry } from '../../scripts/lib/correction-telemetry.mjs';
+import { buildRoutingEvaluationSuite, validateRoutingEvaluationSuiteReceipt } from '../../scripts/lib/routing-evaluation-suite.mjs';
 
 function runRoutingSuite(args = []) {
   return spawnSync(process.execPath, ['scripts/agent-routing-suite.mjs', ...args], {
@@ -226,13 +227,15 @@ test('agent routing suite writes multi-task routing receipts', () => {
     ]);
     assert.equal(result.status, 0, result.stderr || result.stdout);
     const receipt = JSON.parse(result.stdout);
-    assert.equal(receipt.schema_version, 'aipedia.agent-routing-evaluation-suite.v1');
+    assert.equal(receipt.schema_version, 'aipedia.agent-routing-evaluation-suite.v2');
     assert.equal(receipt.totals.scenario_count, 3);
     assert.equal(receipt.totals.telemetry_backed_scenario_count, 3);
     assert.equal(receipt.aggregate.dominant_recommended_candidate_id, 'orchestrated-specialists');
     assert.equal(receipt.aggregate.dominant_recommended_candidate_count, 2);
     assert.equal(receipt.aggregate.all_recommended_same_candidate, false);
+    assert.equal(receipt.correction_telemetry_refs.length, 3);
     assert.equal(receipt.scenarios[2].recommended_candidate_id, 'single-agent');
+    assert.equal(receipt.scenarios[2].correction_telemetry_refs[0].schema_version, 'aipedia.correction-telemetry.v1');
     assert.ok(receipt.next_actions.some((action) => action.includes('conditional')));
     assert.equal(receipt.receipt_path, '.agent/evals/routing-suites/fixture.json');
   } finally {
@@ -264,6 +267,15 @@ test('agent routing suite hydrates correction telemetry from a receipt path', ()
     const receipt = JSON.parse(result.stdout);
     assert.equal(receipt.totals.telemetry_backed_scenario_count, 3);
     assert.equal(receipt.aggregate.telemetry_coverage_rate, 1);
+    assert.deepEqual(receipt.correction_telemetry_refs, [
+      {
+        receipt_path: 'correction-telemetry.json',
+        schema_version: 'aipedia.correction-telemetry.v1',
+        scenario_ids: ['evidence-heavy-refresh', 'tiny-status-check', 'validation-heavy-closeout'],
+        candidate_ids: ['orchestrated-specialists', 'single-agent'],
+      },
+    ]);
+    assert.equal(receipt.scenarios[0].correction_telemetry_refs[0].receipt_path, 'correction-telemetry.json');
     assert.equal(receipt.scenarios[0].routing_evaluation.candidates[0].correction_outcomes_source, 'correction-telemetry');
   } finally {
     rmSync(root, { recursive: true, force: true });
@@ -291,10 +303,25 @@ test('agent routing suite hydrates scenario correction telemetry paths', () => {
     assert.equal(result.status, 0, result.stderr || result.stdout);
     const receipt = JSON.parse(result.stdout);
     assert.equal(receipt.totals.telemetry_backed_scenario_count, 3);
+    assert.equal(receipt.correction_telemetry_refs.length, 3);
+    assert.equal(receipt.correction_telemetry_refs[1].receipt_path, 'correction-telemetry-1.json');
     assert.equal(receipt.scenarios[1].routing_evaluation.candidates[1].correction_telemetry_candidate_id, 'orchestrated-specialists');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
+});
+
+test('routing suite validation rejects tampered telemetry lineage refs', () => {
+  const result = buildRoutingEvaluationSuite(suiteInput(), {
+    generatedAt: '2026-07-01T03:30:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-suites/fixture-input.json',
+  });
+  assert.deepEqual(result.issues, []);
+  const receipt = structuredClone(result.receipt);
+  receipt.correction_telemetry_refs[0].candidate_ids = ['single-agent'];
+  const issues = validateRoutingEvaluationSuiteReceipt(receipt);
+  assert.ok(issues.some((issue) => issue.code === 'routing-suite-aggregate-mismatch'));
 });
 
 test('agent routing suite rejects duplicate scenario ids', () => {

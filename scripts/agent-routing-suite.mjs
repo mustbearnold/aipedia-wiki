@@ -105,7 +105,7 @@ function usage() {
     '  node scripts/agent-routing-suite.mjs --input <path> --out <path> --json',
     '  node scripts/agent-routing-suite.mjs --input <path> --correction-telemetry <path> --out <path> --json',
     '',
-    'Builds an aipedia.agent-routing-evaluation-suite.v1 receipt from multiple routing evaluation scenarios.',
+    'Builds an aipedia.agent-routing-evaluation-suite.v2 receipt from multiple routing evaluation scenarios.',
     'Use it before claiming one orchestration route is broadly better across task classes.',
     '',
     'Options:',
@@ -181,6 +181,7 @@ function readCorrectionTelemetry(path, issues, label = 'correction_telemetry_pat
       issues.push(suiteIssue('routing-suite-correction-telemetry-invalid', `${projectPath(telemetryFile)} must be ${CORRECTION_TELEMETRY_SCHEMA_VERSION}.`));
       return null;
     }
+    telemetry.receipt_path = stringValue(telemetry.receipt_path) || projectPath(telemetryFile);
     return telemetry;
   } catch (error) {
     issues.push(suiteIssue('routing-suite-correction-telemetry-invalid', `${projectPath(telemetryFile)} could not parse as JSON: ${error.message}`));
@@ -211,6 +212,10 @@ function hasFlag(flag) {
 function flagName(arg) {
   const equalsIndex = arg.indexOf('=');
   return equalsIndex >= 0 ? arg.slice(0, equalsIndex) : arg;
+}
+
+function stringValue(value) {
+  return typeof value === 'string' ? value.trim() : '';
 }
 
 function projectPath(path) {

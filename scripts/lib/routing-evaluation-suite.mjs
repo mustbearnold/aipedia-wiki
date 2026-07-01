@@ -1,7 +1,13 @@
 import { buildRoutingEvaluation, validateRoutingEvaluationReceipt, routingIssue } from './routing-evaluation.mjs';
 import { CORRECTION_TELEMETRY_SCHEMA_VERSION } from './correction-telemetry.mjs';
 
-export const ROUTING_EVALUATION_SUITE_SCHEMA_VERSION = 'aipedia.agent-routing-evaluation-suite.v1';
+export const ROUTING_EVALUATION_SUITE_SCHEMA_V1 = 'aipedia.agent-routing-evaluation-suite.v1';
+export const ROUTING_EVALUATION_SUITE_SCHEMA_VERSION = 'aipedia.agent-routing-evaluation-suite.v2';
+
+const SUPPORTED_ROUTING_EVALUATION_SUITE_SCHEMA_VERSIONS = new Set([
+  ROUTING_EVALUATION_SUITE_SCHEMA_V1,
+  ROUTING_EVALUATION_SUITE_SCHEMA_VERSION,
+]);
 
 export function buildRoutingEvaluationSuite(input, options = {}) {
   const issues = [];
@@ -31,6 +37,7 @@ export function buildRoutingEvaluationSuite(input, options = {}) {
 
   const totals = suiteTotals(scenarios);
   const aggregate = suiteAggregate(scenarios);
+  const correctionTelemetryRefs = suiteCorrectionTelemetryRefs(scenarios);
   const nextActions = suiteNextActions(totals, aggregate);
 
   return {
@@ -46,6 +53,7 @@ export function buildRoutingEvaluationSuite(input, options = {}) {
       workflow: stringValue(input.workflow),
       suite_task: stringValue(input.suite_task),
       totals,
+      correction_telemetry_refs: correctionTelemetryRefs,
       scenarios,
       aggregate,
       next_actions: nextActions,
@@ -59,12 +67,13 @@ export function validateRoutingEvaluationSuiteReceipt(value) {
   if (!isObject(value)) {
     return [suiteIssue('routing-suite-receipt-invalid', 'Receipt must be an object.')];
   }
-  for (const [field, expected] of [
-    ['mode', 'agent-routing-evaluation-suite'],
-    ['schema_version', ROUTING_EVALUATION_SUITE_SCHEMA_VERSION],
-  ]) {
-    if (value[field] !== expected) issues.push(suiteIssue('routing-suite-receipt-invalid', `${field} must be ${expected}.`));
+  if (value.mode !== 'agent-routing-evaluation-suite') {
+    issues.push(suiteIssue('routing-suite-receipt-invalid', 'mode must be agent-routing-evaluation-suite.'));
   }
+  if (!SUPPORTED_ROUTING_EVALUATION_SUITE_SCHEMA_VERSIONS.has(value.schema_version)) {
+    issues.push(suiteIssue('routing-suite-receipt-invalid', `schema_version must be ${ROUTING_EVALUATION_SUITE_SCHEMA_VERSION} or ${ROUTING_EVALUATION_SUITE_SCHEMA_V1}.`));
+  }
+  const requiresLineageRefs = value.schema_version === ROUTING_EVALUATION_SUITE_SCHEMA_VERSION;
   for (const field of ['generated_at', 'project_dir', 'source', 'goal_id', 'run_id', 'workflow', 'suite_task']) {
     if (typeof value[field] !== 'string') issues.push(suiteIssue('routing-suite-receipt-invalid', `${field} must be a string.`));
   }
@@ -72,6 +81,8 @@ export function validateRoutingEvaluationSuiteReceipt(value) {
     if (!stringValue(value[field])) issues.push(suiteIssue('routing-suite-identity-invalid', `${field} is required.`));
   }
   if (!isObject(value.totals)) issues.push(suiteIssue('routing-suite-total-mismatch', 'totals must be an object.'));
+  if (requiresLineageRefs && !Array.isArray(value.correction_telemetry_refs)) issues.push(suiteIssue('routing-suite-telemetry-lineage-invalid', 'correction_telemetry_refs must be an array.'));
+  if (!requiresLineageRefs && value.correction_telemetry_refs != null && !Array.isArray(value.correction_telemetry_refs)) issues.push(suiteIssue('routing-suite-telemetry-lineage-invalid', 'correction_telemetry_refs must be an array when supplied.'));
   if (!Array.isArray(value.scenarios)) issues.push(suiteIssue('routing-suite-scenarios-invalid', 'scenarios must be an array.'));
   if (!isObject(value.aggregate)) issues.push(suiteIssue('routing-suite-aggregate-mismatch', 'aggregate must be an object.'));
   if (!Array.isArray(value.next_actions)) issues.push(suiteIssue('routing-suite-receipt-invalid', 'next_actions must be an array.'));
@@ -97,10 +108,15 @@ export function validateRoutingEvaluationSuiteReceipt(value) {
   if (rebuilt.issues.length) return rebuilt.issues;
 
   const expected = rebuilt.receipt;
-  for (const field of ['totals', 'scenarios', 'aggregate', 'next_actions']) {
+  for (const field of requiresLineageRefs ? ['totals', 'correction_telemetry_refs', 'aggregate', 'next_actions'] : ['totals', 'aggregate', 'next_actions']) {
     if (!deepEqual(value[field], expected[field])) {
       issues.push(suiteIssue('routing-suite-aggregate-mismatch', `${field} must match canonical routing suite computation.`));
     }
+  }
+  const actualScenarios = requiresLineageRefs ? value.scenarios : value.scenarios.map(stripScenarioLineageRefs);
+  const expectedScenarios = requiresLineageRefs ? expected.scenarios : expected.scenarios.map(stripScenarioLineageRefs);
+  if (!deepEqual(actualScenarios, expectedScenarios)) {
+    issues.push(suiteIssue('routing-suite-aggregate-mismatch', 'scenarios must match canonical routing suite computation.'));
   }
   if (value.ok !== expected.ok) {
     issues.push(suiteIssue('routing-suite-aggregate-mismatch', 'ok must match canonical routing suite computation.'));
@@ -158,11 +174,16 @@ function normalizeScenario(scenario, index, scenarioIds, suiteInput, generatedAt
   const winner = ranked[0] || null;
   const runnerUp = ranked[1] || null;
   const telemetryBacked = receipt.candidates.some((candidate) => candidate.correction_outcomes_source === 'correction-telemetry');
+  const correctionTelemetryRefs = scenarioCorrectionTelemetryRefs(receipt);
+  if (telemetryBacked && correctionTelemetryRefs.length === 0) {
+    issues.push(suiteIssue('routing-suite-telemetry-lineage-missing', `${path} uses correction telemetry but no correction telemetry receipt/source path is recorded.`));
+  }
   return {
     id,
     task_class: taskClass,
     task_label: stringValue(scenario.task_label) || taskClass,
     correction_telemetry_schema: telemetryBacked ? CORRECTION_TELEMETRY_SCHEMA_VERSION : '',
+    correction_telemetry_refs: correctionTelemetryRefs,
     recommendation_status: receipt.recommendation.status,
     recommended_candidate_id: stringValue(receipt.recommendation.candidate_id),
     winner_id: winner?.id || '',
@@ -210,6 +231,66 @@ function suiteAggregate(scenarios) {
   };
 }
 
+function suiteCorrectionTelemetryRefs(scenarios) {
+  const refs = new Map();
+  for (const scenario of scenarios) {
+    for (const ref of scenario.correction_telemetry_refs || []) {
+      const receiptPath = stringValue(ref.receipt_path);
+      if (!receiptPath) continue;
+      if (!refs.has(receiptPath)) {
+        refs.set(receiptPath, {
+          receipt_path: receiptPath,
+          schema_version: CORRECTION_TELEMETRY_SCHEMA_VERSION,
+          scenario_ids: new Set(),
+          candidate_ids: new Set(),
+        });
+      }
+      const row = refs.get(receiptPath);
+      const scenarioId = stringValue(scenario.id);
+      if (scenarioId) row.scenario_ids.add(scenarioId);
+      for (const candidateId of ref.candidate_ids || []) {
+        const normalizedCandidateId = stringValue(candidateId);
+        if (normalizedCandidateId) row.candidate_ids.add(normalizedCandidateId);
+      }
+    }
+  }
+  return [...refs.values()]
+    .sort((left, right) => left.receipt_path.localeCompare(right.receipt_path))
+    .map((row) => ({
+      receipt_path: row.receipt_path,
+      schema_version: row.schema_version,
+      scenario_ids: [...row.scenario_ids].sort(),
+      candidate_ids: [...row.candidate_ids].sort(),
+    }));
+}
+
+function scenarioCorrectionTelemetryRefs(receipt) {
+  const refs = new Map();
+  if (!isObject(receipt) || !Array.isArray(receipt.candidates)) return [];
+  for (const candidate of receipt.candidates) {
+    if (candidate.correction_outcomes_source !== 'correction-telemetry') continue;
+    const receiptPath = stringValue(candidate.correction_telemetry_receipt);
+    if (!receiptPath) continue;
+    if (!refs.has(receiptPath)) {
+      refs.set(receiptPath, {
+        receipt_path: receiptPath,
+        schema_version: CORRECTION_TELEMETRY_SCHEMA_VERSION,
+        candidate_ids: new Set(),
+      });
+    }
+    const row = refs.get(receiptPath);
+    const candidateId = stringValue(candidate.correction_telemetry_candidate_id) || stringValue(candidate.id);
+    if (candidateId) row.candidate_ids.add(candidateId);
+  }
+  return [...refs.values()]
+    .sort((left, right) => left.receipt_path.localeCompare(right.receipt_path))
+    .map((row) => ({
+      receipt_path: row.receipt_path,
+      schema_version: row.schema_version,
+      candidate_ids: [...row.candidate_ids].sort(),
+    }));
+}
+
 function suiteNextActions(totals, aggregate) {
   const actions = [];
   if (totals.blocked_count > 0) actions.push('Inspect blocked routing scenarios before using this suite to change orchestration defaults.');
@@ -238,6 +319,7 @@ function emptyScenario(id = '', taskClass = '') {
     task_class: taskClass,
     task_label: taskClass,
     correction_telemetry_schema: '',
+    correction_telemetry_refs: [],
     recommendation_status: '',
     recommended_candidate_id: '',
     winner_id: '',
@@ -251,6 +333,12 @@ function emptyScenario(id = '', taskClass = '') {
     wall_duration_delta_ms: 0,
     routing_evaluation: null,
   };
+}
+
+function stripScenarioLineageRefs(scenario) {
+  if (!isObject(scenario)) return scenario;
+  const { correction_telemetry_refs: _correctionTelemetryRefs, ...rest } = scenario;
+  return rest;
 }
 
 function countBy(values) {

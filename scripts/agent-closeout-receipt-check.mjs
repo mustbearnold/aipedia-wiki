@@ -239,7 +239,7 @@ function validateReceiptFile(path) {
   else if (type === 'agent-routing-evaluation') issues.push(...validateRoutingEvaluationReceipt(value));
   else if (type === 'agent-routing-evaluation-suite') issues.push(...validateRoutingEvaluationSuiteReceipt(value));
   else if (type === 'pause-receipt') validatePauseReceipt(value, issues);
-  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, aipedia.loop-efficiency-trends.v1, aipedia.correction-telemetry.v1, aipedia.agent-routing-evaluation.v1, aipedia.agent-routing-evaluation-suite.v1, nor aipedia.pause-receipt.v1.'));
+  else issues.push(issue('receipt-unknown-type', 'Receipt is neither a loop-run receipt, aipedia.closeout-receipt.v1, aipedia.runner-interrupt-proof.v1, aipedia.affiliate-handoff-receipt.v1, aipedia.meta-proof-readiness.v1, aipedia.loop-efficiency-trends.v1, aipedia.correction-telemetry.v1, aipedia.agent-routing-evaluation.v1, aipedia.agent-routing-evaluation-suite.v1/v2, nor aipedia.pause-receipt.v1.'));
 
   return receiptResult(path, type, issues);
 }
@@ -262,7 +262,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.loop-efficiency-trends.v1') return 'loop-efficiency-trends';
   if (value.schema_version === 'aipedia.correction-telemetry.v1') return 'agent-correction-telemetry';
   if (value.schema_version === 'aipedia.agent-routing-evaluation.v1') return 'agent-routing-evaluation';
-  if (value.schema_version === 'aipedia.agent-routing-evaluation-suite.v1') return 'agent-routing-evaluation-suite';
+  if (value.schema_version === 'aipedia.agent-routing-evaluation-suite.v1' || value.schema_version === 'aipedia.agent-routing-evaluation-suite.v2') return 'agent-routing-evaluation-suite';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';
   return 'unknown';
