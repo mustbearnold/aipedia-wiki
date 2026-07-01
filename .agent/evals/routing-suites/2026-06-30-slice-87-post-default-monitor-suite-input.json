@@ -1,0 +1,199 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-87-post-default-monitor-suite",
+  "workflow": "loop-system",
+  "suite_task": "Post-default monitoring metrics for guarded routing rollout.",
+  "correction_telemetry_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-87-post-default-monitor-receipt.json",
+  "scenarios": [
+    {
+      "id": "post-default-heavy-review",
+      "task_class": "jsonl-correction-heavy-review",
+      "task_label": "Post-default JSONL heavy review routing",
+      "routing_input": {
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice87-post-default-heavy-review-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 6900,
+              "output_tokens": 1500,
+              "cached_input_tokens": 790,
+              "reasoning_tokens": 330,
+              "total_tokens": 8400,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 6900,
+                  "output_tokens": 1500,
+                  "cached_input_tokens": 790,
+                  "reasoning_tokens": 330,
+                  "total_tokens": 8400
+                }
+              ]
+            },
+            "wall_duration_ms": 8400,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice87-post-default-heavy-review-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 4850,
+              "output_tokens": 1150,
+              "cached_input_tokens": 650,
+              "reasoning_tokens": 245,
+              "total_tokens": 6000,
+              "subagent_breakdown": [
+                {
+                  "id": "post-default-triage-agent",
+                  "request_count": 1,
+                  "input_tokens": 2920,
+                  "output_tokens": 690,
+                  "cached_input_tokens": 425,
+                  "reasoning_tokens": 145,
+                  "total_tokens": 3610
+                },
+                {
+                  "id": "post-default-validation-agent",
+                  "request_count": 1,
+                  "input_tokens": 1930,
+                  "output_tokens": 460,
+                  "cached_input_tokens": 225,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 2390
+                }
+              ]
+            },
+            "wall_duration_ms": 6100,
+            "quality_score": 0.97,
+            "accuracy_score": 0.96,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "post-default-tiny-status",
+      "task_class": "jsonl-tiny-status-check",
+      "task_label": "Post-default JSONL tiny status routing",
+      "routing_input": {
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice87-post-default-tiny-status-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 820,
+              "output_tokens": 230,
+              "cached_input_tokens": 105,
+              "reasoning_tokens": 42,
+              "total_tokens": 1050,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 820,
+                  "output_tokens": 230,
+                  "cached_input_tokens": 105,
+                  "reasoning_tokens": 42,
+                  "total_tokens": 1050
+                }
+              ]
+            },
+            "wall_duration_ms": 920,
+            "quality_score": 0.95,
+            "accuracy_score": 0.95,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice87-post-default-tiny-status-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 2430,
+              "output_tokens": 570,
+              "cached_input_tokens": 280,
+              "reasoning_tokens": 140,
+              "total_tokens": 3000,
+              "subagent_breakdown": [
+                {
+                  "id": "post-default-planner-agent",
+                  "request_count": 1,
+                  "input_tokens": 1450,
+                  "output_tokens": 330,
+                  "cached_input_tokens": 165,
+                  "reasoning_tokens": 86,
+                  "total_tokens": 1780
+                },
+                {
+                  "id": "post-default-validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 980,
+                  "output_tokens": 240,
+                  "cached_input_tokens": 115,
+                  "reasoning_tokens": 54,
+                  "total_tokens": 1220
+                }
+              ]
+            },
+            "wall_duration_ms": 2520,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

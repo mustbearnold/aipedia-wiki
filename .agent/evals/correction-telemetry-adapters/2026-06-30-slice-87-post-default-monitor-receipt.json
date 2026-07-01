@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T07:04:12.250Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-87-post-default-monitor-events.jsonl",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-87-post-default-monitor-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-87-post-default-monitor-jsonl",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 8,
+    "findings_count": 4,
+    "corrections_applied": 4,
+    "residual_issue_count": 0,
+    "regression_count": 0
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-87-post-default-monitor-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice87-single-heavy-summary-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Post-default monitor found a heavy-review summary gap in the single-agent route."
+        },
+        {
+          "id": "slice87-single-heavy-summary-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-single-heavy-summary-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the summary correction."
+        },
+        {
+          "id": "slice87-single-status-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Post-default monitor found a compact-status proof wording gap in the single-agent route."
+        },
+        {
+          "id": "slice87-single-status-proof-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-single-status-proof-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the proof wording correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-87-post-default-monitor-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "post-default-routing-reviewer",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice87-orch-heavy-lineage-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Post-default monitor found a heavy-review lineage explanation that needed clearer source separation."
+        },
+        {
+          "id": "slice87-orch-heavy-lineage-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-orch-heavy-lineage-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the lineage explanation correction."
+        },
+        {
+          "id": "slice87-orch-status-cost-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Post-default monitor found a tiny-status over-orchestration cost note that needed trimming."
+        },
+        {
+          "id": "slice87-orch-status-cost-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-orch-status-cost-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the cost note correction."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-87-post-default-monitor-single-agent",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-87-post-default-monitor-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-87-post-default-monitor-receipt.json"
+}

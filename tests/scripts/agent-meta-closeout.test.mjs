@@ -11,6 +11,7 @@ import { buildRoutingPolicy } from '../../scripts/lib/routing-policy.mjs';
 import { buildRoutingPolicyPilot } from '../../scripts/lib/routing-policy-pilot.mjs';
 import { buildRoutingPolicyReview } from '../../scripts/lib/routing-policy-review.mjs';
 import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
+import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
 
 const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
 const ROUTING_SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
@@ -533,6 +534,62 @@ function validRoutingRolloutReceipt() {
   return result.receipt;
 }
 
+function validRoutingDefaultRolloutReceipt() {
+  const review = JSON.parse(readFileSync(ROUTING_REVIEW_FIXTURE_PATH, 'utf8'));
+  const canarySuite = JSON.parse(readFileSync(ROUTING_SUITE_FIXTURE_PATH, 'utf8'));
+  canarySuite.receipt_path = '.agent/evals/routing-suites/fixture-canary-rollout-suite.json';
+  canarySuite.run_id = 'fixture-canary-rollout-suite';
+  const canary = buildRoutingRollout({
+    review,
+    suite: canarySuite,
+    rollout: { stage: 'canary', traffic_percent: 5 },
+  }, {
+    generatedAt: '2026-07-01T06:00:00.000Z',
+    projectDir: '.',
+    source: `${ROUTING_REVIEW_FIXTURE_PATH} + .agent/evals/routing-suites/fixture-canary-rollout-suite.json`,
+  });
+  assert.deepEqual(canary.issues, []);
+  canary.receipt.receipt_path = '.agent/evals/routing-rollouts/fixture-canary-rollout.json';
+
+  const defaultSuite = JSON.parse(readFileSync(ROUTING_SUITE_FIXTURE_PATH, 'utf8'));
+  defaultSuite.receipt_path = '.agent/evals/routing-suites/fixture-default-rollout-suite.json';
+  defaultSuite.run_id = 'fixture-default-rollout-suite';
+  const result = buildRoutingRollout({
+    review,
+    suite: defaultSuite,
+    post_canary: canary.receipt,
+    rollout: { stage: 'default-enabled', traffic_percent: 100 },
+  }, {
+    generatedAt: '2026-07-01T06:05:00.000Z',
+    projectDir: '.',
+    source: `${ROUTING_REVIEW_FIXTURE_PATH} + .agent/evals/routing-suites/fixture-default-rollout-suite.json + .agent/evals/routing-rollouts/fixture-canary-rollout.json`,
+  });
+  assert.deepEqual(result.issues, []);
+  result.receipt.receipt_path = '.agent/evals/routing-rollouts/fixture-default-rollout.json';
+  return result.receipt;
+}
+
+function validRoutingMonitorReceipt() {
+  const suite = JSON.parse(readFileSync(ROUTING_SUITE_FIXTURE_PATH, 'utf8'));
+  suite.receipt_path = '.agent/evals/routing-suites/fixture-post-default-monitoring-suite.json';
+  suite.run_id = 'fixture-post-default-monitoring-suite';
+  const result = buildRoutingMonitor({
+    default_rollout: validRoutingDefaultRolloutReceipt(),
+    suite,
+    rollback_plan: {
+      owner: 'codex-routing-operator',
+      rollback_command: 'npm --silent run agent:routing:policy -- --rollback fixture-default-routing --json',
+      verification_command: 'npm --silent run agent:routing:monitor -- --default-rollout fixture-rollback.json --suite fixture-rollback-suite.json --json',
+    },
+  }, {
+    generatedAt: '2026-07-01T06:30:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-rollouts/fixture-default-rollout.json + .agent/evals/routing-suites/fixture-post-default-monitoring-suite.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validCorrectionTelemetryReceipt() {
   const result = buildCorrectionTelemetry({
     goal_id: 'june-30-agentic-tooling-meta-os',
@@ -841,6 +898,24 @@ test('meta closeout router validates routing rollout receipts', () => {
     assert.equal(report.requires_workflow_policy, false);
     assert.deepEqual(report.strict_flags, []);
     assert.equal(report.checker_report.receipts[0].type, 'agent-routing-rollout');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('meta closeout router validates routing monitor receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-routing-monitor-'));
+  try {
+    writeJson(join(root, 'routing-monitor.json'), validRoutingMonitorReceipt());
+
+    const result = runRouter(['--project-dir', root, '--receipt', 'routing-monitor.json', '--json']);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.closeout_profile, 'routing-monitor');
+    assert.equal(report.requires_workflow_policy, false);
+    assert.deepEqual(report.strict_flags, []);
+    assert.equal(report.checker_report.receipts[0].type, 'agent-routing-monitor');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

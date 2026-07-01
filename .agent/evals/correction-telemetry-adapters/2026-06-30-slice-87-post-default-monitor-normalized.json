@@ -1,0 +1,86 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-87-post-default-monitor-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-87-post-default-monitor-jsonl",
+    "confidence": "exact"
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-87-post-default-monitor-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "events": [
+        {
+          "id": "slice87-single-heavy-summary-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Post-default monitor found a heavy-review summary gap in the single-agent route."
+        },
+        {
+          "id": "slice87-single-heavy-summary-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-single-heavy-summary-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the summary correction."
+        },
+        {
+          "id": "slice87-single-status-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Post-default monitor found a compact-status proof wording gap in the single-agent route."
+        },
+        {
+          "id": "slice87-single-status-proof-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-single-status-proof-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the proof wording correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-87-post-default-monitor-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "post-default-routing-reviewer",
+      "events": [
+        {
+          "id": "slice87-orch-heavy-lineage-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Post-default monitor found a heavy-review lineage explanation that needed clearer source separation."
+        },
+        {
+          "id": "slice87-orch-heavy-lineage-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-orch-heavy-lineage-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the lineage explanation correction."
+        },
+        {
+          "id": "slice87-orch-status-cost-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Post-default monitor found a tiny-status over-orchestration cost note that needed trimming."
+        },
+        {
+          "id": "slice87-orch-status-cost-fix",
+          "type": "correction_applied",
+          "finding_id": "slice87-orch-status-cost-gap",
+          "severity": "",
+          "note": "Post-default monitor recorded the cost note correction."
+        }
+      ]
+    }
+  ]
+}

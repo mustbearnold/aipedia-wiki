@@ -1,0 +1,219 @@
+{
+  "ok": true,
+  "mode": "loop-efficiency-trends",
+  "schema_version": "aipedia.loop-efficiency-trends.v1",
+  "generated_at": "2026-07-01T07:08:42.512Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "ledger_dir": ".agent/loop-runs/system",
+  "receipt_path": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-87-final-efficiency-trends.json",
+  "max_runs": 3,
+  "fail_on_missing_metrics": true,
+  "totals": {
+    "analyzed_runs": 3,
+    "metrics_runs": 3,
+    "missing_metrics_runs": 0
+  },
+  "issues": [],
+  "runs": [
+    {
+      "path": ".agent/loop-runs/system/2026-07-01T06-38-44-414Z-loop-run.json",
+      "generated_at": "2026-07-01T06:38:44.414Z",
+      "run_id": "2026-06-30-slice-85-canary-rollout-proof",
+      "ok": true,
+      "has_efficiency_metrics": true,
+      "wall_duration_ms": 5069,
+      "total_command_duration_ms": 5065,
+      "command_count": 16,
+      "loop_count": 7,
+      "attention_rate": 0.429,
+      "persisted_full_receipt_bytes": 47834,
+      "persisted_latest_receipt_bytes": 29316,
+      "estimated_full_receipt_tokens": 11959,
+      "system_artifact_count": 13
+    },
+    {
+      "path": ".agent/loop-runs/system/2026-07-01T06-53-20-837Z-loop-run.json",
+      "generated_at": "2026-07-01T06:53:20.837Z",
+      "run_id": "2026-06-30-slice-86-post-canary-default-rollout-guard",
+      "ok": true,
+      "has_efficiency_metrics": true,
+      "wall_duration_ms": 5224,
+      "total_command_duration_ms": 5223,
+      "command_count": 16,
+      "loop_count": 7,
+      "attention_rate": 0.429,
+      "persisted_full_receipt_bytes": 48632,
+      "persisted_latest_receipt_bytes": 30114,
+      "estimated_full_receipt_tokens": 12158,
+      "system_artifact_count": 17
+    },
+    {
+      "path": ".agent/loop-runs/system/2026-07-01T07-08-29-702Z-loop-run.json",
+      "generated_at": "2026-07-01T07:08:29.702Z",
+      "run_id": "2026-06-30-slice-87-post-default-routing-monitor",
+      "ok": true,
+      "has_efficiency_metrics": true,
+      "wall_duration_ms": 5189,
+      "total_command_duration_ms": 5186,
+      "command_count": 16,
+      "loop_count": 7,
+      "attention_rate": 0.429,
+      "persisted_full_receipt_bytes": 49402,
+      "persisted_latest_receipt_bytes": 30884,
+      "estimated_full_receipt_tokens": 12351,
+      "system_artifact_count": 21
+    }
+  ],
+  "summary": {
+    "first_run": "2026-07-01T06:38:44.414Z",
+    "latest_run": "2026-07-01T07:08:29.702Z",
+    "metrics_coverage_rate": 1,
+    "median_wall_duration_ms": 5189,
+    "median_total_command_duration_ms": 5186,
+    "median_attention_rate": 0.429,
+    "median_full_receipt_bytes": 48632,
+    "median_latest_receipt_bytes": 30114,
+    "median_estimated_full_receipt_tokens": 12158,
+    "latest": {
+      "path": ".agent/loop-runs/system/2026-07-01T07-08-29-702Z-loop-run.json",
+      "generated_at": "2026-07-01T07:08:29.702Z",
+      "run_id": "2026-06-30-slice-87-post-default-routing-monitor",
+      "ok": true,
+      "has_efficiency_metrics": true,
+      "wall_duration_ms": 5189,
+      "total_command_duration_ms": 5186,
+      "command_count": 16,
+      "loop_count": 7,
+      "attention_rate": 0.429,
+      "persisted_full_receipt_bytes": 49402,
+      "persisted_latest_receipt_bytes": 30884,
+      "estimated_full_receipt_tokens": 12351,
+      "system_artifact_count": 21
+    },
+    "delta_from_previous": {
+      "wall_duration_ms": -35,
+      "total_command_duration_ms": -37,
+      "attention_rate": 0,
+      "persisted_full_receipt_bytes": 770,
+      "persisted_latest_receipt_bytes": 770,
+      "estimated_full_receipt_tokens": 193,
+      "system_artifact_count": 4
+    }
+  },
+  "stability_summary": {
+    "loop_status_comparisons": 14,
+    "loop_status_changes": 0,
+    "loop_status_change_rate": 0,
+    "command_status_comparisons": 32,
+    "command_status_changes": 0,
+    "command_status_change_rate": 0,
+    "persistent_attention_loops": [
+      "freshness",
+      "performance-ux",
+      "revenue-conversion"
+    ],
+    "latest_attention_loops": [
+      "freshness",
+      "performance-ux",
+      "revenue-conversion"
+    ],
+    "new_attention_loops": [],
+    "resolved_attention_loops": [],
+    "recent_loop_status_changes": []
+  },
+  "correction_summary": {
+    "has_comparison": true,
+    "previous_run": "2026-07-01T06:53:20.837Z",
+    "latest_run": "2026-07-01T07:08:29.702Z",
+    "loop_previous_attention_count": 3,
+    "loop_resolved_attention_count": 0,
+    "loop_persistent_attention_count": 3,
+    "loop_regressed_attention_count": 0,
+    "loop_correction_rate": 0,
+    "command_previous_attention_count": 4,
+    "command_resolved_attention_count": 0,
+    "command_persistent_attention_count": 4,
+    "command_regressed_attention_count": 0,
+    "command_correction_rate": 0,
+    "resolved_loops": [],
+    "persistent_attention_loops": [
+      "freshness",
+      "performance-ux",
+      "revenue-conversion"
+    ],
+    "regressed_loops": [],
+    "resolved_commands": [],
+    "persistent_attention_commands": [
+      {
+        "loop_id": "freshness",
+        "label": "freshness queue"
+      },
+      {
+        "loop_id": "performance-ux",
+        "label": "dist budget"
+      },
+      {
+        "loop_id": "performance-ux",
+        "label": "indexability audit"
+      },
+      {
+        "loop_id": "revenue-conversion",
+        "label": "commercial CTA audit"
+      }
+    ],
+    "regressed_commands": []
+  },
+  "slowest_commands": [
+    {
+      "loop_id": "revenue-conversion",
+      "label": "commercial CTA audit",
+      "occurrences": 3,
+      "max_duration_ms": 2074,
+      "median_duration_ms": 2048,
+      "latest_status": "attention"
+    },
+    {
+      "loop_id": "performance-ux",
+      "label": "indexability audit",
+      "occurrences": 3,
+      "max_duration_ms": 633,
+      "median_duration_ms": 623,
+      "latest_status": "attention"
+    },
+    {
+      "loop_id": "freshness",
+      "label": "weekly editorial queue",
+      "occurrences": 3,
+      "max_duration_ms": 347,
+      "median_duration_ms": 344,
+      "latest_status": "ok"
+    },
+    {
+      "loop_id": "news-market",
+      "label": "weekly editorial queue",
+      "occurrences": 3,
+      "max_duration_ms": 327,
+      "median_duration_ms": 326,
+      "latest_status": "ok"
+    },
+    {
+      "loop_id": "quality-pruning",
+      "label": "site KPI audit",
+      "occurrences": 2,
+      "max_duration_ms": 259,
+      "median_duration_ms": 254,
+      "latest_status": "ok"
+    },
+    {
+      "loop_id": "freshness",
+      "label": "freshness queue",
+      "occurrences": 1,
+      "max_duration_ms": 252,
+      "median_duration_ms": 252,
+      "latest_status": "attention"
+    }
+  ],
+  "next_actions": [
+    "Use this trend receipt in the next system closeout to compare speed and receipt-size movement."
+  ]
+}

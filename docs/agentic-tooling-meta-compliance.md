@@ -1273,6 +1273,23 @@ Default-enabled routing rollout now fails closed unless it carries post-canary l
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T06-53-20-837Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 16 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-86-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,069 ms, latest wall duration 5,224 ms, latest estimated full receipt tokens 12,158, latest system artifact count 17, 3 persistent attention loops, and 4 persistent attention commands.
 
+## Eighty-Seventh System Slice
+
+Post-default routing rollout now has closeout-checkable monitoring and rollback receipts.
+
+- Added `agent:routing:monitor`, backed by `scripts/lib/routing-monitor.mjs`, to emit `aipedia.agent-routing-monitor.v1` receipts after a default-ready routing rollout.
+- The monitor gate requires a default-enabled source rollout with post-canary evidence, a fresh post-default routing suite separate from the default rollout suite, exact model-token usage, correction telemetry, quality, accuracy, wall-time evidence, full telemetry coverage, scenario coverage, and recorded rollback plus rollback-verification commands.
+- `agent:closeout:check` validates routing-monitor receipts by recomputing post-default scenario checks, totals, rollback readiness, monitoring health, guardrails, and next actions.
+- `agent:meta:closeout:auto` routes routing-monitor receipts under a dedicated `routing-monitor` profile.
+- Focused routing-monitor, routing-rollout, closeout, and router tests passed 95/95.
+- Fresh post-default correction telemetry `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-87-post-default-monitor-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
+- Fresh post-default monitoring suite `.agent/evals/routing-suites/2026-06-30-slice-87-post-default-monitor-suite-receipt.json` passed auto-routed closeout with 2 telemetry-backed scenarios, telemetry coverage 1.0, total exact-token delta 4,350, total wall-duration delta 3,900, and conditional task-class routing preserved.
+- Post-default monitor receipt `.agent/evals/routing-monitors/2026-06-30-slice-87-post-default-monitor-receipt.json` passed auto-routed closeout with status `monitoring-healthy`, rollback required false, source default-ready true, fresh monitoring suite true, rollback plan ready true, 2/2 scenarios passing, min quality 0.95, min accuracy 0.95, 0 residual issues, and 0 regressions.
+- The recorded rollback verification path, `agent:meta:closeout:auto -- --receipt .agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json --json`, passed auto-routed closeout.
+- Scoped `check:smart` passed with 630 script tests plus command audit. `check:quick` passed with 630 script tests, command audit, and quick assets.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T07-08-29-702Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 20 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-87-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,189 ms, latest wall duration 5,189 ms, latest estimated full receipt tokens 12,351, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

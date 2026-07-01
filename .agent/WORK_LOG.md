@@ -1,5 +1,22 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 87, Post-Default Routing Monitor And Rollback Receipts
+
+- Status: Post-default monitor receipts pass focused validation, scoped smart/quick validation, strict loop closeout, and final trend closeout. Not yet committed or pushed.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:monitor` and `scripts/lib/routing-monitor.mjs` to build closeout-checkable `aipedia.agent-routing-monitor.v1` receipts after default-ready routing rollout.
+- Changed: `agent:closeout:check` and `agent:meta:closeout:auto` now recognize and validate routing-monitor receipts under a dedicated `routing-monitor` profile.
+- Changed: The monitor gate fails closed unless the source rollout is default-enabled with post-canary evidence, the monitoring suite is fresh from the default rollout suite, exact-token/correction/quality/accuracy/wall-time/telemetry/scenario-coverage checks pass, and rollback plus rollback-verification commands are recorded.
+- Live telemetry proof: `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-87-post-default-monitor-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
+- Live suite proof: `.agent/evals/routing-suites/2026-06-30-slice-87-post-default-monitor-suite-receipt.json` passed auto-routed closeout with 2 telemetry-backed scenarios, 2 recommendations, telemetry coverage 1.0, total exact-token delta 4,350, total wall-duration delta 3,900, and conditional task-class routing preserved.
+- Live monitor proof: `.agent/evals/routing-monitors/2026-06-30-slice-87-post-default-monitor-receipt.json` passed auto-routed closeout with status `monitoring-healthy`, rollback required false, source default-ready true, fresh monitoring suite true, rollback plan ready true, 2/2 scenarios passing, min quality 0.95, min accuracy 0.95, 0 residual issues, and 0 regressions.
+- Rollback verification: `agent:meta:closeout:auto -- --receipt .agent/evals/routing-rollouts/2026-06-30-slice-85-canary-rollout-receipt.json --json` passed.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T07-08-29-702Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-87-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,189 ms, latest wall duration 5,189 ms, latest estimated full receipt tokens 12,351, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
+- Verification: syntax checks passed for the monitor CLI/library plus closeout and router scripts. Focused routing-monitor, routing-rollout, closeout, and router tests passed 95/95. Scoped `check:smart` passed with 630 script tests plus command audit. `check:quick` passed with 630 script tests, command audit, and quick assets. The post-default telemetry, suite, monitor, rollback verification, latest loop, and trend receipts all passed auto-routed closeout.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 20 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time decreased by 35 ms versus Slice 86, and estimated receipt tokens increased by 193 because monitor proof evidence added receipt bytes.
+- Next: Commit and push Slice 87 system files, then integrate routing-monitor receipts into runtime default-change handoff.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 86, Post-Canary Default Rollout Guard
 
 - Status: Default-enabled rollout now requires post-canary lineage and live default-ready proof passes focused validation, scoped smart/quick validation, strict loop closeout, and final trend closeout. Committed and pushed as `98da366e`.
