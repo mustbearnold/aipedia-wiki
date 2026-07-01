@@ -261,6 +261,103 @@ test('proof readiness blocks stale page-refresh inputs and dirty content WIP', (
   }
 });
 
+test('proof readiness can explicitly set aside observed dirty content boundaries', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-observed-dirty-'));
+  try {
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'page-refresh': 'fresh' }));
+    writeFileSync(
+      join(root, 'status.txt'),
+      [
+        ' M src/content/tools/synthesia.md',
+        ' M src/data/source-registry.json',
+        '?? src/content/comparisons/captions-vs-synthesia.md',
+      ].join('\n'),
+    );
+
+    const result = runReadiness([
+      '--project-dir',
+      root,
+      '--input-freshness',
+      'freshness.json',
+      '--git-status-file',
+      'status.txt',
+      '--target',
+      'page-refresh-policy',
+      '--observed-dirty-before-agent',
+      'src/content/tools/synthesia.md',
+      '--observed-dirty-before-agent',
+      'src/data/source-registry.json',
+      '--observed-dirty-before-agent',
+      'src/content/comparisons/captions-vs-synthesia.md',
+      '--allow-observed-dirty-boundary',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.inputs.allow_observed_dirty_boundary, true);
+    assert.deepEqual(report.inputs.observed_dirty_before_agent, [
+      'src/content/tools/synthesia.md',
+      'src/data/source-registry.json',
+      'src/content/comparisons/captions-vs-synthesia.md',
+    ]);
+    assert.equal(report.summary.ready_count, 1);
+    assert.equal(report.targets[0].status, 'ready');
+    assert.match(report.targets[0].next_actions.at(-1), /AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT=/);
+    const dirtyCheck = report.targets[0].readiness_checks.find((check) => check.id === 'dirty-content-boundary');
+    assert.equal(dirtyCheck.ok, true);
+    assert.equal(dirtyCheck.observed_dirty_allowed, true);
+    assert.deepEqual(dirtyCheck.observed_dirty_paths, [
+      'src/content/tools/synthesia.md',
+      'src/data/source-registry.json',
+      'src/content/comparisons/captions-vs-synthesia.md',
+    ]);
+    assert.deepEqual(dirtyCheck.unobserved_dirty_paths, []);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('proof readiness still blocks unobserved dirty paths when observed boundaries are allowed', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-unobserved-dirty-'));
+  try {
+    writeJson(join(root, 'freshness.json'), freshnessReceipt({ 'page-refresh': 'fresh' }));
+    writeFileSync(
+      join(root, 'status.txt'),
+      [
+        ' M src/content/tools/synthesia.md',
+        ' M src/data/source-registry.json',
+      ].join('\n'),
+    );
+
+    const result = runReadiness([
+      '--project-dir',
+      root,
+      '--input-freshness',
+      'freshness.json',
+      '--git-status-file',
+      'status.txt',
+      '--target',
+      'page-refresh-policy',
+      '--observed-dirty-before-agent',
+      'src/content/tools/synthesia.md',
+      '--allow-observed-dirty-boundary',
+      '--json',
+    ]);
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.summary.blocked_count, 1);
+    assert.deepEqual(report.targets[0].blockers.map((item) => item.code), ['dirty-content-wip']);
+    assert.deepEqual(report.targets[0].blockers[0].paths, ['src/data/source-registry.json']);
+    const dirtyCheck = report.targets[0].readiness_checks.find((check) => check.id === 'dirty-content-boundary');
+    assert.equal(dirtyCheck.ok, false);
+    assert.deepEqual(dirtyCheck.observed_dirty_paths, ['src/content/tools/synthesia.md']);
+    assert.deepEqual(dirtyCheck.unobserved_dirty_paths, ['src/data/source-registry.json']);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('proof readiness evaluates tool-refresh and affiliate handoff targets independently', () => {
   const root = mkdtempSync(join(tmpdir(), 'aipedia-proof-multi-'));
   try {

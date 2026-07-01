@@ -671,6 +671,8 @@ function validMetaProofReadinessReceipt(overrides = {}) {
       input_freshness_exit_code: 0,
       git_status_source: 'git status --short',
       git_status_exit_code: 0,
+      observed_dirty_before_agent: ['src/content/tools/synthesia.md'],
+      allow_observed_dirty_boundary: true,
     },
     targets: [
       {
@@ -694,6 +696,14 @@ function validMetaProofReadinessReceipt(overrides = {}) {
         readiness_checks: [
           { id: 'proof-completion', ok: false, status: 'untracked', receipt_paths: [] },
           { id: 'page-refresh-input-freshness', ok: false, status: 'stale' },
+          {
+            id: 'dirty-content-boundary',
+            ok: true,
+            dirty_paths: ['src/content/tools/synthesia.md'],
+            observed_dirty_paths: ['src/content/tools/synthesia.md'],
+            unobserved_dirty_paths: [],
+            observed_dirty_allowed: true,
+          },
         ],
         recommended_commands: ['npm --silent run agent:proof:readiness -- --target page-refresh-policy --json'],
         next_actions: ['Clear the listed blockers, then rerun proof readiness.'],

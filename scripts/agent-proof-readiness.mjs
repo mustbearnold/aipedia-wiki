@@ -17,6 +17,9 @@ const GIT_STATUS_PATH = valueFor('--git-status-file');
 const OUT_PATH = valueFor('--out') || valueFor('--receipt-out');
 const PROOF_TARGETS_PATH = valueFor('--proof-targets') || '.agent/meta/proof-readiness-targets.json';
 const PROOF_TARGETS_EXPLICIT = hasFlag('--proof-targets');
+const OBSERVED_DIRTY_BEFORE_AGENT = [...new Set(valuesFor('--observed-dirty-before-agent'))];
+const OBSERVED_DIRTY_BEFORE_AGENT_SET = new Set(OBSERVED_DIRTY_BEFORE_AGENT);
+const ALLOW_OBSERVED_DIRTY_BOUNDARY = hasFlag('--allow-observed-dirty-boundary');
 const DEFAULT_TARGETS = {
   'page-refresh-policy': {
     id: 'page-refresh-policy',
@@ -85,11 +88,13 @@ const DEFAULT_TARGETS = {
 let TARGETS = DEFAULT_TARGETS;
 const KNOWN_TARGETS = Object.keys(DEFAULT_TARGETS);
 const KNOWN_FLAGS = new Set([
+  '--allow-observed-dirty-boundary',
   '--git-status-file',
   '--help',
   '-h',
   '--input-freshness',
   '--json',
+  '--observed-dirty-before-agent',
   '--out',
   '--project-dir',
   '--proof-targets',
@@ -97,7 +102,7 @@ const KNOWN_FLAGS = new Set([
   '--root',
   '--target',
 ]);
-const VALUE_FLAGS = new Set(['--git-status-file', '--input-freshness', '--out', '--project-dir', '--proof-targets', '--receipt-out', '--root', '--target']);
+const VALUE_FLAGS = new Set(['--git-status-file', '--input-freshness', '--observed-dirty-before-agent', '--out', '--project-dir', '--proof-targets', '--receipt-out', '--root', '--target']);
 
 if (HELP_MODE) {
   console.log(usage());
@@ -167,6 +172,8 @@ const report = {
     proof_target_registry_source: proofTargetRegistry.source,
     proof_target_registry_status: proofTargetRegistry.status,
     proof_target_registry_issue_count: proofTargetRegistry.issues.length,
+    observed_dirty_before_agent: OBSERVED_DIRTY_BEFORE_AGENT,
+    allow_observed_dirty_boundary: ALLOW_OBSERVED_DIRTY_BOUNDARY,
   },
   targets,
   next_actions: [...new Set(targets.flatMap((target) => target.next_actions))],
@@ -198,6 +205,10 @@ function usage() {
     '  --target <id>              Target to check. Repeatable. Default: all known targets.',
     '  --input-freshness <path>   Read an existing input-freshness receipt instead of running one.',
     '  --git-status-file <path>   Read fixture git status text instead of running git status --short.',
+    '  --observed-dirty-before-agent <path>',
+    '                              Repeatable dirty path to record as pre-existing work.',
+    '  --allow-observed-dirty-boundary',
+    '                              Let declared pre-existing dirty paths pass dirty-boundary checks.',
     '  --out <path>               Write the JSON readiness receipt to a file. Alias: --receipt-out.',
     '  --proof-targets <path>     Read configured durable proof receipts. Default: .agent/meta/proof-readiness-targets.json.',
     '  --project-dir <dir>        Project root. Alias: --root.',
@@ -376,8 +387,17 @@ function evaluateTarget(target, context) {
   const dirtyPaths = config.dirty_path_predicate
     ? context.gitStatus.paths.filter(config.dirty_path_predicate)
     : [];
-  if (dirtyPaths.length) {
-    blockers.push(blocker(config.dirty_blocker_code, config.dirty_blocker_message, { paths: dirtyPaths }));
+  const observedDirtyPaths = dirtyPaths.filter((path) => OBSERVED_DIRTY_BEFORE_AGENT_SET.has(path));
+  const unobservedDirtyPaths = dirtyPaths.filter((path) => !OBSERVED_DIRTY_BEFORE_AGENT_SET.has(path));
+  const blockingDirtyPaths = ALLOW_OBSERVED_DIRTY_BOUNDARY ? unobservedDirtyPaths : dirtyPaths;
+  if (blockingDirtyPaths.length) {
+    blockers.push(blocker(config.dirty_blocker_code, config.dirty_blocker_message, {
+      paths: blockingDirtyPaths,
+      dirty_paths: dirtyPaths,
+      observed_dirty_paths: observedDirtyPaths,
+      unobserved_dirty_paths: unobservedDirtyPaths,
+      observed_dirty_allowed: ALLOW_OBSERVED_DIRTY_BOUNDARY,
+    }));
   }
   if (context.gitStatus.exit_code !== 0 && !GIT_STATUS_PATH) {
     blockers.push(blocker('git-status-failed', 'git status --short exited non-zero.', {
@@ -409,15 +429,26 @@ function evaluateTarget(target, context) {
       },
       ...(config.dirty_check_id ? [{
         id: config.dirty_check_id,
-        ok: dirtyPaths.length === 0,
+        ok: blockingDirtyPaths.length === 0,
         dirty_paths: dirtyPaths,
+        observed_dirty_paths: observedDirtyPaths,
+        unobserved_dirty_paths: unobservedDirtyPaths,
+        observed_dirty_allowed: ALLOW_OBSERVED_DIRTY_BOUNDARY,
       }] : []),
     ],
     recommended_commands: ready
       ? config.recommended_ready_commands
       : [`npm --silent run agent:proof:readiness -- --target ${config.id} --json`],
-    next_actions: ready ? config.ready_next_actions : config.blocked_next_actions(blockers),
+    next_actions: ready ? readyNextActions(config, observedDirtyPaths) : config.blocked_next_actions(blockers),
   };
+}
+
+function readyNextActions(config, observedDirtyPaths) {
+  const actions = [...config.ready_next_actions];
+  if (ALLOW_OBSERVED_DIRTY_BOUNDARY && observedDirtyPaths.length) {
+    actions.push(`Preserve the declared dirty boundary in downstream closeouts with AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT=${observedDirtyPaths.join(';;')}.`);
+  }
+  return actions;
 }
 
 function evaluateProofCompletion(config) {

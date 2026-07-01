@@ -1745,6 +1745,12 @@ function validateMetaProofReadinessReceipt(value, issues) {
     if (value.inputs.proof_target_registry_issue_count != null) {
       requireNonNegativeNumber(value.inputs, 'proof_target_registry_issue_count', issues, 'inputs.proof_target_registry_issue_count');
     }
+    if (value.inputs.observed_dirty_before_agent != null) {
+      requireStringArray(value.inputs, 'observed_dirty_before_agent', issues, 'inputs.observed_dirty_before_agent');
+    }
+    if (value.inputs.allow_observed_dirty_boundary != null) {
+      requireBoolean(value.inputs, 'allow_observed_dirty_boundary', issues, 'inputs.allow_observed_dirty_boundary');
+    }
   }
 
   if (Array.isArray(value.targets)) {
@@ -1785,6 +1791,9 @@ function validateMetaProofReadinessTarget(target, issues, path) {
   }
   requireArray(target, 'blockers', issues, `${path}.blockers`);
   requireArray(target, 'readiness_checks', issues, `${path}.readiness_checks`);
+  if (Array.isArray(target.readiness_checks)) {
+    target.readiness_checks.forEach((check, index) => validateMetaProofReadinessCheck(check, issues, `${path}.readiness_checks[${index}]`));
+  }
   requireStringArray(target, 'recommended_commands', issues, `${path}.recommended_commands`);
   requireStringArray(target, 'next_actions', issues, `${path}.next_actions`);
   if (isObject(target.proof_completion)) {
@@ -1801,6 +1810,20 @@ function validateMetaProofReadinessTarget(target, issues, path) {
   if ((target.status === 'blocked' || target.status === 'unknown') && target.ok !== false) {
     issues.push(issue('meta-proof-readiness-ok-mismatch', `${path} is ${target.status} but ok is not false.`));
   }
+}
+
+function validateMetaProofReadinessCheck(check, issues, path) {
+  if (!isObject(check)) {
+    issues.push(issue('meta-proof-readiness-check-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(check, 'id', issues, { path: `${path}.id` });
+  requireBoolean(check, 'ok', issues, `${path}.ok`);
+  if (check.status != null) requireString(check, 'status', issues, { path: `${path}.status` });
+  for (const field of ['receipt_paths', 'dirty_paths', 'observed_dirty_paths', 'unobserved_dirty_paths']) {
+    if (check[field] != null) requireStringArray(check, field, issues, `${path}.${field}`);
+  }
+  if (check.observed_dirty_allowed != null) requireBoolean(check, 'observed_dirty_allowed', issues, `${path}.observed_dirty_allowed`);
 }
 
 function validateMetaProofCompletion(value, issues, path) {
