@@ -12,6 +12,7 @@ import { buildRoutingPolicyPilot } from '../../scripts/lib/routing-policy-pilot.
 import { buildRoutingPolicyReview } from '../../scripts/lib/routing-policy-review.mjs';
 import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
 import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
+import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
 
 const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
 const ROUTING_SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
@@ -1122,6 +1123,28 @@ function validRoutingMonitorReceipt() {
   return result.receipt;
 }
 
+function validRoutingHandoffReceipt() {
+  const defaultRollout = validRoutingDefaultRolloutReceipt();
+  const monitor = validRoutingMonitorReceipt();
+  const result = buildRoutingHandoff({
+    default_rollout: defaultRollout,
+    monitor,
+    change_plan: {
+      mode: 'record-only',
+      change_id: 'fixture-default-routing',
+      operator: 'codex-routing-operator',
+      apply_command: 'npm --silent run agent:routing:handoff -- --default-rollout fixture-default-rollout.json --monitor fixture-monitor.json --json',
+      verification_command: 'npm --silent run agent:meta:closeout:auto -- --receipt fixture-handoff.json --json',
+    },
+  }, {
+    generatedAt: '2026-07-01T06:35:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-rollouts/fixture-default-rollout.json + .agent/evals/routing-monitors/fixture-monitor.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validLoopEfficiencyTrendReceipt(overrides = {}) {
   return {
     ok: true,
@@ -1420,6 +1443,23 @@ test('closeout receipt check validates agent routing monitor receipts', () => {
   }
 });
 
+test('closeout receipt check validates agent routing handoff receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-handoff-'));
+  const path = join(dir, 'routing-handoff.json');
+
+  try {
+    writeJson(path, validRoutingHandoffReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-handoff');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check accepts historical v1 routing suite receipts without lineage refs', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-v1-'));
   const path = join(dir, 'routing-suite-v1.json');
@@ -1552,6 +1592,25 @@ test('closeout receipt check fails tampered agent routing monitor readiness', ()
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-monitor-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing handoff readiness', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-handoff-'));
+  const path = join(dir, 'routing-handoff.json');
+
+  try {
+    const receipt = validRoutingHandoffReceipt();
+    receipt.handoff_evaluation.handoff_ready = !receipt.handoff_evaluation.handoff_ready;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-handoff-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

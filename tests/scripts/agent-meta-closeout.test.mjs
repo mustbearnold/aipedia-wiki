@@ -12,6 +12,7 @@ import { buildRoutingPolicyPilot } from '../../scripts/lib/routing-policy-pilot.
 import { buildRoutingPolicyReview } from '../../scripts/lib/routing-policy-review.mjs';
 import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
 import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
+import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
 
 const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
 const ROUTING_SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
@@ -590,6 +591,28 @@ function validRoutingMonitorReceipt() {
   return result.receipt;
 }
 
+function validRoutingHandoffReceipt() {
+  const defaultRollout = validRoutingDefaultRolloutReceipt();
+  const monitor = validRoutingMonitorReceipt();
+  const result = buildRoutingHandoff({
+    default_rollout: defaultRollout,
+    monitor,
+    change_plan: {
+      mode: 'record-only',
+      change_id: 'fixture-default-routing',
+      operator: 'codex-routing-operator',
+      apply_command: 'npm --silent run agent:routing:handoff -- --default-rollout fixture-default-rollout.json --monitor fixture-monitor.json --json',
+      verification_command: 'npm --silent run agent:meta:closeout:auto -- --receipt fixture-handoff.json --json',
+    },
+  }, {
+    generatedAt: '2026-07-01T06:35:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-rollouts/fixture-default-rollout.json + .agent/evals/routing-monitors/fixture-monitor.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validCorrectionTelemetryReceipt() {
   const result = buildCorrectionTelemetry({
     goal_id: 'june-30-agentic-tooling-meta-os',
@@ -916,6 +939,24 @@ test('meta closeout router validates routing monitor receipts', () => {
     assert.equal(report.requires_workflow_policy, false);
     assert.deepEqual(report.strict_flags, []);
     assert.equal(report.checker_report.receipts[0].type, 'agent-routing-monitor');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('meta closeout router validates routing handoff receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-routing-handoff-'));
+  try {
+    writeJson(join(root, 'routing-handoff.json'), validRoutingHandoffReceipt());
+
+    const result = runRouter(['--project-dir', root, '--receipt', 'routing-handoff.json', '--json']);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.closeout_profile, 'routing-handoff');
+    assert.equal(report.requires_workflow_policy, false);
+    assert.deepEqual(report.strict_flags, []);
+    assert.equal(report.checker_report.receipts[0].type, 'agent-routing-handoff');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
