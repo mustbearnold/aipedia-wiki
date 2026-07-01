@@ -1,8 +1,25 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 75, Correction Telemetry Adapters
+
+- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, and adapter/routing closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:correction:adapt` and `scripts/lib/correction-telemetry-adapter.mjs` to normalize reviewer finding packets and runtime event rows into canonical `aipedia.correction-telemetry.v1` receipts.
+- Changed: The adapter supports reviewer findings with fixed, open, residual, and regression statuses; explicit corrections, residuals, and regressions; and top-level runtime event rows keyed by candidate.
+- System lesson: correction telemetry should enter through narrow adapters and still land in the existing receipt schema, so closeout validation and routing evaluation do not need another parallel contract.
+- Verification: syntax checks passed for the adapter CLI/library. Focused adapter/correction/routing/closeout/router tests passed 72/72. Scoped `check:smart` passed with 581 script tests and command audit. `check:quick` passed with 581 script tests, command audit, and quick assets.
+- Durable reviewer proof: `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-input.json`, `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-normalized.json`, and `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-receipt.json`.
+- Durable runtime proof: `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-input.json`, `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-normalized.json`, and `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-receipt.json`.
+- Durable routing proof: `.agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-input.json` and `.agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-receipt.json`.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T03-47-32-192Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-75-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,968 ms, latest wall duration 4,923 ms, latest estimated full receipt tokens 12,241, latest system artifact count 19, 3 persistent attention loops, and 4 persistent attention commands.
+- Proof result: reviewer adapter receipt records 2 candidates, 8 events, 4 findings, 3 corrections applied, 1 residual issue, and 0 regressions; runtime adapter receipt records 2 candidates, 4 events, 2 findings, 1 correction applied, 1 residual issue, and 0 regressions; adapter-fed routing recommends `orchestrated-specialists` with 0.964 versus 0.732 weighted score and a 0.232 margin.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 18 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time improved by 729 ms versus Slice 74 while receipt tokens increased by 468 because the adapter proof added new artifacts.
+- Next: Commit and push only Slice 75 system files, then pilot adapter-fed routing on a bounded real workload.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 74, Routing Evaluation Suite
 
-- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, and routing-suite closeout. Pending commit and push.
+- Status: Complete, verified, committed, and pushed as `6b9bc45e`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Added `agent:routing:suite` and `scripts/lib/routing-evaluation-suite.mjs` to write closeout-checkable `aipedia.agent-routing-evaluation-suite.v1` receipts across multiple routing evaluation scenarios.
 - Changed: `agent:closeout:check` validates suite totals, embedded routing evaluations, aggregate recommendation counts, token deltas, wall-time deltas, telemetry coverage, and next actions.

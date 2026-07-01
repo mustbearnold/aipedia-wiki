@@ -1,0 +1,58 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-75-runtime-adapter",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-75-runtime-event-log",
+    "confidence": "exact"
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-runtime-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "events": [
+        {
+          "id": "runtime-single-finding-1",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Runtime reviewer event found a source proof gap."
+        },
+        {
+          "id": "runtime-single-fix-1",
+          "type": "correction_applied",
+          "finding_id": "runtime-single-finding-1",
+          "severity": "",
+          "note": "Runtime event records the applied correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-runtime-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "reviewer",
+      "events": [
+        {
+          "id": "runtime-orch-finding-1",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Runtime reviewer event found extra receipt verbosity."
+        },
+        {
+          "id": "runtime-orch-residual-1",
+          "type": "residual_issue",
+          "finding_id": "runtime-orch-finding-1",
+          "severity": "",
+          "note": "Runtime event records the residual issue."
+        }
+      ]
+    }
+  ]
+}

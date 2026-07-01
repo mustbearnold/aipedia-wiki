@@ -16,7 +16,10 @@
         ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
         "docs/agentic-tooling-meta-compliance.md",
         "Slice 74 routing evaluation suite documented in docs/agentic-tooling-meta-compliance.md",
-        ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json"
+        ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json",
+        "Slice 75 correction telemetry adapters documented in docs/agentic-tooling-meta-compliance.md",
+        ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-receipt.json",
+        ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-receipt.json"
       ],
       "remaining": "Keep updated after each slice."
     },
@@ -121,7 +124,9 @@
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-73-final-efficiency-trends.json",
         "Slice 73 enforced loop receipt with 20 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths",
         ".agent/loop-runs/system/2026-07-01T03-38-20-297Z-loop-run.json",
-        "Slice 74 loop receipt records 16 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths"
+        "Slice 74 loop receipt records 16 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths",
+        ".agent/loop-runs/system/2026-07-01T03-47-32-192Z-loop-run.json",
+        "Slice 75 loop receipt records 18 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths"
       ],
       "remaining": "Keep enforcing on every meta closeout and pilot."
     },
@@ -355,9 +360,17 @@
         ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json",
         ".agent/loop-runs/system/2026-07-01T03-38-20-297Z-loop-run.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-74-final-efficiency-trends.json",
-        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-74.md"
+        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-74.md",
+        "correction telemetry adapter receipts",
+        "agent:correction:adapt --out",
+        ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-receipt.json",
+        ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-receipt.json",
+        ".agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-receipt.json",
+        ".agent/loop-runs/system/2026-07-01T03-47-32-192Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-75-final-efficiency-trends.json",
+        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-75.md"
       ],
-      "remaining": "Add runtime/reviewer adapters that emit correction events directly, then run positive page proof after stale inputs are ready."
+      "remaining": "Pilot adapter-fed routing on bounded real workloads, then run positive page proof after stale inputs are ready."
     },
     {
       "id": "non-stale-scoring",
@@ -551,9 +564,13 @@
         "durable aipedia.agent-routing-evaluation-suite.v1 receipts",
         ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-74-final-efficiency-trends.json",
-        "Slice 74 final trend receipt shows latest estimated full receipt tokens 11773, down 348 from the prior run"
+        "Slice 74 final trend receipt shows latest estimated full receipt tokens 11773, down 348 from the prior run",
+        "adapter-fed routing evaluation without hand-entered correction counts",
+        ".agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-receipt.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-75-final-efficiency-trends.json",
+        "Slice 75 final trend receipt shows latest wall duration 4923 ms, down 729 ms from Slice 74"
       ],
-      "remaining": "Add runtime/reviewer adapters so events do not require manual fixtures, then validate task-class routing policy on real workloads before changing defaults."
+      "remaining": "Validate task-class routing policy on real workloads before changing defaults."
     },
     {
       "id": "memory-retrieval",
@@ -584,118 +601,123 @@
     }
   ],
   "current_slice": {
-    "name": "Routing evaluation suite",
+    "name": "Correction telemetry adapters",
     "system_artifacts": [
-      "scripts/lib/routing-evaluation-suite.mjs",
-      "scripts/agent-routing-suite.mjs",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
+      "scripts/lib/correction-telemetry-adapter.mjs",
+      "scripts/agent-correction-adapter.mjs",
       "package.json",
       "scripts/README.md",
-      "tests/scripts/agent-routing-suite.test.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "tests/scripts/agent-meta-closeout.test.mjs",
-      ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-input.json",
-      ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json",
+      "tests/scripts/agent-correction-adapter.test.mjs",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-input.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-input.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-receipt.json",
+      ".agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-input.json",
+      ".agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-receipt.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/system/2026-07-01T03-38-20-297Z-loop-run.json",
+      ".agent/loop-runs/system/2026-07-01T03-47-32-192Z-loop-run.json",
       ".agent/loop-runs/system/latest.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-74-final-efficiency-trends.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-74.md"
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-75-final-efficiency-trends.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-75.md"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
-    "routing_suite_input": ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-input.json",
-    "routing_suite_receipt": ".agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json",
-    "routing_suite_summary": {
-      "schema_version": "aipedia.agent-routing-evaluation-suite.v1",
-      "scenario_count": 3,
-      "recommendation_count": 3,
-      "monitor_count": 0,
-      "blocked_count": 0,
-      "telemetry_backed_scenario_count": 3,
-      "telemetry_coverage_rate": 1,
-      "dominant_recommended_candidate_id": "orchestrated-specialists",
-      "dominant_recommended_candidate_count": 2,
-      "recommended_candidate_counts": {
-        "orchestrated-specialists": 2,
-        "single-agent": 1
-      },
-      "all_recommended_same_candidate": false,
-      "average_improvement_margin": 0.082,
-      "total_exact_model_token_delta": 4920,
-      "total_wall_duration_delta_ms": 3600,
-      "task_class_policy": {
-        "evidence-heavy-page-refresh": "orchestrated-specialists",
-        "validation-heavy-closeout": "orchestrated-specialists",
-        "tiny-status-check": "single-agent"
-      }
+    "reviewer_adapter_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-receipt.json",
+    "runtime_adapter_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-receipt.json",
+    "adapter_fed_routing_receipt": ".agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-receipt.json",
+    "reviewer_adapter_summary": {
+      "candidate_count": 2,
+      "event_count": 8,
+      "findings_count": 4,
+      "corrections_applied": 3,
+      "residual_issue_count": 1,
+      "regression_count": 0
+    },
+    "runtime_adapter_summary": {
+      "candidate_count": 2,
+      "event_count": 4,
+      "findings_count": 2,
+      "corrections_applied": 1,
+      "residual_issue_count": 1,
+      "regression_count": 0
+    },
+    "adapter_fed_routing_summary": {
+      "schema_version": "aipedia.agent-routing-evaluation.v1",
+      "candidate_count": 2,
+      "eligible_candidate_count": 2,
+      "winner": "orchestrated-specialists",
+      "recommendation_status": "recommend",
+      "improvement_margin": 0.232,
+      "winner_score": 0.964,
+      "runner_up_score": 0.732,
+      "winner_exact_model_total_tokens": 5400,
+      "runner_up_exact_model_total_tokens": 6200,
+      "winner_wall_duration_ms": 6600,
+      "runner_up_wall_duration_ms": 7100,
+      "correction_outcomes_source": "correction-telemetry-adapter"
     },
     "validation": {
-      "routing_suite_cli_receipt_generated": true,
-      "routing_suite_closeout_validated": true,
-      "meta_router_validated": true,
-      "exact_token_usage_required": true,
-      "correction_telemetry_required_for_quality_claims": true,
-      "focused_tests_passed": "71/71",
+      "adapter_cli_receipts_generated": true,
+      "reviewer_adapter_closeout_validated": true,
+      "runtime_adapter_closeout_validated": true,
+      "adapter_fed_routing_closeout_validated": true,
+      "focused_tests_passed": "72/72",
       "scoped_smart_passed": true,
-      "script_tests_passed": 578,
+      "script_tests_passed": 581,
       "command_audit_passed": true,
       "quick_passed": true,
       "strict_latest_loop_closeout_passed": true,
       "final_trend_closeout_passed": true,
-      "quick_assets_passed": true,
-      "suite_receipt_auto_closeout_passed": true
+      "quick_assets_passed": true
     },
     "status": "verified-locally-pending-commit-push",
     "loop_closeout": {
-      "latest_receipt": ".agent/loop-runs/system/2026-07-01T03-38-20-297Z-loop-run.json",
+      "latest_receipt": ".agent/loop-runs/system/2026-07-01T03-47-32-192Z-loop-run.json",
       "strict_auto_closeout_passed": true,
       "ok_loop_count": 4,
       "attention_loop_count": 3,
       "skipped_loop_count": 0,
       "command_count": 16,
-      "current_agent_system_artifact_count": 16,
+      "current_agent_system_artifact_count": 18,
       "current_agent_content_artifact_count": 0,
       "preexisting_dirty_count": 5
     },
     "trend_proof": {
-      "receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-74-final-efficiency-trends.json",
+      "receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-75-final-efficiency-trends.json",
       "auto_closeout_passed": true,
       "metrics_runs": 3,
       "missing_metrics_runs": 0,
       "median_wall_duration_ms": 4968,
-      "latest_wall_duration_ms": 5652,
-      "latest_estimated_full_receipt_tokens": 11773,
-      "latest_system_artifact_count": 17,
+      "latest_wall_duration_ms": 4923,
+      "latest_estimated_full_receipt_tokens": 12241,
+      "latest_system_artifact_count": 19,
       "persistent_attention_loop_count": 3,
       "persistent_attention_command_count": 4,
       "delta_from_previous": {
-        "wall_duration_ms": 684,
-        "total_command_duration_ms": 685,
+        "wall_duration_ms": -729,
+        "total_command_duration_ms": -731,
         "attention_rate": 0,
-        "persisted_full_receipt_bytes": -1389,
-        "persisted_latest_receipt_bytes": -1389,
-        "estimated_full_receipt_tokens": -348,
-        "system_artifact_count": -4
+        "persisted_full_receipt_bytes": 1871,
+        "persisted_latest_receipt_bytes": 1871,
+        "estimated_full_receipt_tokens": 468,
+        "system_artifact_count": 2
       }
     }
   },
   "next_system_targets": [
-    "Add runtime/reviewer adapters that export correction telemetry events without manual fixture construction.",
-    "Validate the routing suite on bounded real workloads before changing default orchestration policy.",
-    "Use agent:routing:suite and validate .agent/evals/routing-suites/2026-06-30-slice-74-routing-suite-receipt.json style receipts before any task-class routing policy change.",
+    "Pilot adapter-fed routing on bounded real workloads before changing default orchestration policy.",
+    "Add direct runtime exporters when orchestrator and reviewer agents can write event rows without an intermediate JSON fixture.",
+    "Use agent:correction:adapt for reviewer packets or runtime event rows, then validate the emitted correction telemetry receipt with agent:meta:closeout:auto -- --receipt <path> --json.",
+    "Use agent:routing:suite for task-class routing changes and keep decisions conditional until real workload pilots confirm the suite result.",
     "Use AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT when running Rust runner closeouts in a dirty tree.",
     "Collect real runtime usage payloads from any orchestrator or subagent execution and pass them through --model-token-usage, AIPEDIA_MODEL_TOKEN_USAGE_FILE, or AIPEDIA_MODEL_TOKEN_USAGE_JSON.",
-    "Use agent:correction:telemetry for exact finding, correction, residual, and regression event counts before routing changes claim quality or correction improvements.",
-    "Use agent:efficiency:trends -- --out <path> and validate the resulting receipt with agent:meta:closeout:auto -- --receipt <path> --json before citing trend proof in closeouts.",
     "Resolve separate content WIP, refresh page-ledger input with the receipt-visible refresh plan, rerun npm run agent:proof:readiness -- --json, then run the page-refresh positive policy proof.",
-    "Add the configured proof receipt path for page-refresh to .agent/meta/proof-readiness-targets.json when the positive proof is complete.",
-    "Pilot bounded content workloads only when they prove system behavior, not as content-only progress.",
     "Defer Rust expansion, CuPy, or GPU acceleration until measured hotspots justify them."
   ]
 }

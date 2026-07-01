@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T03:44:22.130Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-input.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-75-reviewer-adapter",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "reviewer",
+    "id": "slice-75-reviewer-packet",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 8,
+    "findings_count": 4,
+    "corrections_applied": 3,
+    "residual_issue_count": 1,
+    "regression_count": 0
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-reviewer-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 1,
+        "residual_issue": 1,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 1,
+        "residual_issue_count": 1,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "single-source-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Reviewer found a missing source-backed caveat and the single agent corrected it."
+        },
+        {
+          "id": "single-source-gap-correction",
+          "type": "correction_applied",
+          "finding_id": "single-source-gap",
+          "severity": "medium",
+          "note": "Reviewer found a missing source-backed caveat and the single agent corrected it."
+        },
+        {
+          "id": "single-next-action-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Reviewer left a residual next-action clarity issue."
+        },
+        {
+          "id": "single-next-action-gap-residual",
+          "type": "residual_issue",
+          "finding_id": "single-next-action-gap",
+          "severity": "low",
+          "note": "Reviewer left a residual next-action clarity issue."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-reviewer-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "reviewer",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "orch-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Reviewer found a missing closeout proof reference and the validation specialist corrected it."
+        },
+        {
+          "id": "orch-proof-gap-correction",
+          "type": "correction_applied",
+          "finding_id": "orch-proof-gap",
+          "severity": "medium",
+          "note": "Reviewer found a missing closeout proof reference and the validation specialist corrected it."
+        },
+        {
+          "id": "orch-wording-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Reviewer found a wording issue and the editor specialist corrected it."
+        },
+        {
+          "id": "orch-wording-gap-correction",
+          "type": "correction_applied",
+          "finding_id": "orch-wording-gap",
+          "severity": "",
+          "note": "Editor specialist tightened the wording."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-75-reviewer-single-agent",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 1,
+        "residual_issue_count": 1,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-75-reviewer-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-receipt.json"
+}

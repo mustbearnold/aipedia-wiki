@@ -1,0 +1,94 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-75-routing-from-reviewer-adapter",
+  "workflow": "loop-system",
+  "evaluation_task": "Compare routing variants using reviewer-adapter correction telemetry.",
+  "thresholds": {
+    "min_quality_score": 0.85,
+    "min_accuracy_score": 0.85,
+    "max_residual_issue_count": 1,
+    "max_regression_count": 0,
+    "minimum_improvement_margin": 0.02
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "label": "Single GPT-5.5 agent",
+      "strategy": "single-agent",
+      "model": "gpt-5.5",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-reviewer-single-agent",
+      "orchestrator": "single-agent",
+      "exact_model_tokens": {
+        "request_count": 1,
+        "input_tokens": 5000,
+        "output_tokens": 1200,
+        "cached_input_tokens": 600,
+        "reasoning_tokens": 260,
+        "total_tokens": 6200,
+        "subagent_breakdown": [
+          {
+            "id": "single-agent",
+            "request_count": 1,
+            "input_tokens": 5000,
+            "output_tokens": 1200,
+            "cached_input_tokens": 600,
+            "reasoning_tokens": 260,
+            "total_tokens": 6200
+          }
+        ]
+      },
+      "wall_duration_ms": 7100,
+      "quality_score": 0.89,
+      "accuracy_score": 0.88,
+      "task_outcome": {
+        "task_count": 1,
+        "completed_count": 1
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "label": "Orchestrated GPT-5.5 specialists",
+      "strategy": "orchestrator-plus-specialists",
+      "model": "gpt-5.5",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-reviewer-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "exact_model_tokens": {
+        "request_count": 2,
+        "input_tokens": 4300,
+        "output_tokens": 1100,
+        "cached_input_tokens": 700,
+        "reasoning_tokens": 240,
+        "total_tokens": 5400,
+        "subagent_breakdown": [
+          {
+            "id": "evidence-agent",
+            "request_count": 1,
+            "input_tokens": 3000,
+            "output_tokens": 700,
+            "cached_input_tokens": 500,
+            "reasoning_tokens": 150,
+            "total_tokens": 3700
+          },
+          {
+            "id": "reviewer-agent",
+            "request_count": 1,
+            "input_tokens": 1300,
+            "output_tokens": 400,
+            "cached_input_tokens": 200,
+            "reasoning_tokens": 90,
+            "total_tokens": 1700
+          }
+        ]
+      },
+      "wall_duration_ms": 6600,
+      "quality_score": 0.94,
+      "accuracy_score": 0.93,
+      "task_outcome": {
+        "task_count": 1,
+        "completed_count": 1
+      }
+    }
+  ]
+}

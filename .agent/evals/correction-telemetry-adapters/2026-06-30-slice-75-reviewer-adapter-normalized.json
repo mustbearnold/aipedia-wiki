@@ -1,0 +1,86 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-75-reviewer-adapter",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "reviewer",
+    "id": "slice-75-reviewer-packet",
+    "confidence": "exact"
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-reviewer-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "events": [
+        {
+          "id": "single-source-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Reviewer found a missing source-backed caveat and the single agent corrected it."
+        },
+        {
+          "id": "single-source-gap-correction",
+          "type": "correction_applied",
+          "finding_id": "single-source-gap",
+          "severity": "medium",
+          "note": "Reviewer found a missing source-backed caveat and the single agent corrected it."
+        },
+        {
+          "id": "single-next-action-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Reviewer left a residual next-action clarity issue."
+        },
+        {
+          "id": "single-next-action-gap-residual",
+          "type": "residual_issue",
+          "finding_id": "single-next-action-gap",
+          "severity": "low",
+          "note": "Reviewer left a residual next-action clarity issue."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-reviewer-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "reviewer",
+      "events": [
+        {
+          "id": "orch-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Reviewer found a missing closeout proof reference and the validation specialist corrected it."
+        },
+        {
+          "id": "orch-proof-gap-correction",
+          "type": "correction_applied",
+          "finding_id": "orch-proof-gap",
+          "severity": "medium",
+          "note": "Reviewer found a missing closeout proof reference and the validation specialist corrected it."
+        },
+        {
+          "id": "orch-wording-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Reviewer found a wording issue and the editor specialist corrected it."
+        },
+        {
+          "id": "orch-wording-gap-correction",
+          "type": "correction_applied",
+          "finding_id": "orch-wording-gap",
+          "severity": "",
+          "note": "Editor specialist tightened the wording."
+        }
+      ]
+    }
+  ]
+}

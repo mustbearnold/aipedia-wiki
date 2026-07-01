@@ -1081,6 +1081,23 @@ Routing decisions can now be evaluated across multiple task classes before chang
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T03-38-20-297Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 16 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-74-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,968 ms, latest wall duration 5,652 ms, latest estimated full receipt tokens 11,773, latest system artifact count 17, 3 persistent attention loops, and 4 persistent attention commands.
 
+## Seventy-Fifth System Slice
+
+Correction telemetry can now be generated from reviewer packets and runtime event rows instead of hand-built canonical fixtures.
+
+- Added `agent:correction:adapt`, backed by `scripts/lib/correction-telemetry-adapter.mjs`, to normalize reviewer findings and runtime events into existing `aipedia.correction-telemetry.v1` receipts.
+- The adapter keeps the existing correction telemetry schema as the output contract, so `agent:closeout:check`, `agent:meta:closeout:auto`, and `agent:routing:evaluate -- --correction-telemetry <path>` work without a parallel receipt type.
+- Reviewer packets can carry finding statuses, explicit corrections, residual issues, regressions, and per-candidate metadata.
+- Runtime event rows can carry top-level candidate-keyed finding, fix, residual, and regression aliases.
+- Focused adapter, correction, routing, closeout, and router tests passed 72/72.
+- Scoped `check:smart` passed with 581 script tests and command audit.
+- `check:quick` passed with 581 script tests, command audit, and quick assets.
+- Live reviewer adapter receipt `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-reviewer-adapter-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 3 corrections applied, 1 residual issue, and 0 regressions.
+- Live runtime adapter receipt `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-receipt.json` passed auto-routed closeout with 2 candidates, 4 events, 2 findings, 1 correction applied, 1 residual issue, and 0 regressions.
+- Adapter-fed routing receipt `.agent/evals/routing-evaluations/2026-06-30-slice-75-routing-from-reviewer-adapter-receipt.json` passed auto-routed closeout and recommends `orchestrated-specialists` with a 0.964 score versus 0.732 for `single-agent`, 5,400 exact total tokens versus 6,200, 6,600 ms wall time versus 7,100 ms, and a 0.232 improvement margin.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T03-47-32-192Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 18 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-75-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,968 ms, latest wall duration 4,923 ms, latest estimated full receipt tokens 12,241, latest system artifact count 19, 3 persistent attention loops, and 4 persistent attention commands.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

@@ -112,6 +112,7 @@
     "agent:meta:closeout:auto": "node scripts/agent-meta-closeout.mjs",
     "agent:input-freshness": "node scripts/agent-input-freshness-receipt.mjs",
     "agent:efficiency:trends": "node scripts/agent-loop-efficiency-trends.mjs",
+    "agent:correction:adapt": "node scripts/agent-correction-adapter.mjs",
     "agent:correction:telemetry": "node scripts/agent-correction-telemetry.mjs",
     "agent:routing:evaluate": "node scripts/agent-routing-evaluation.mjs",
     "agent:routing:suite": "node scripts/agent-routing-suite.mjs",

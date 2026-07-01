@@ -1,0 +1,121 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T03:44:22.182Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-input.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-75-runtime-adapter",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-75-runtime-event-log",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 4,
+    "findings_count": 2,
+    "corrections_applied": 1,
+    "residual_issue_count": 1,
+    "regression_count": 0
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-runtime-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 2,
+      "event_type_counts": {
+        "finding": 1,
+        "correction_applied": 1,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 1,
+        "corrections_applied": 1,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "runtime-single-finding-1",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Runtime reviewer event found a source proof gap."
+        },
+        {
+          "id": "runtime-single-fix-1",
+          "type": "correction_applied",
+          "finding_id": "runtime-single-finding-1",
+          "severity": "",
+          "note": "Runtime event records the applied correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-75-runtime-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "reviewer",
+      "event_count": 2,
+      "event_type_counts": {
+        "finding": 1,
+        "correction_applied": 0,
+        "residual_issue": 1,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 1,
+        "corrections_applied": 0,
+        "residual_issue_count": 1,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "runtime-orch-finding-1",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Runtime reviewer event found extra receipt verbosity."
+        },
+        {
+          "id": "runtime-orch-residual-1",
+          "type": "residual_issue",
+          "finding_id": "runtime-orch-finding-1",
+          "severity": "",
+          "note": "Runtime event records the residual issue."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-75-runtime-single-agent",
+      "correction_outcomes": {
+        "findings_count": 1,
+        "corrections_applied": 1,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-75-runtime-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 1,
+        "corrections_applied": 0,
+        "residual_issue_count": 1,
+        "regression_count": 0
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-75-runtime-adapter-receipt.json"
+}
