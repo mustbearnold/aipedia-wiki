@@ -1,8 +1,26 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 81, Routing Policy Pilot Evidence-Overlap Guards
+
+- Status: Verified locally through scoped `check:smart`, `check:quick`, enforced loop closeout, final trend closeout, and routing-policy-pilot overlap closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Upgraded new `agent:routing:pilot` receipts to `aipedia.agent-routing-policy-pilot.v2`.
+- Changed: Policy-pilot receipts now carry compact source-policy correction telemetry refs, compute shared telemetry overlap with the pilot suite, and report `shared_telemetry_ref_count`, `shared_telemetry_refs`, and `policy_fit.shared_evidence_overlap`.
+- Changed: A pilot suite with a distinct suite identity but reused correction telemetry now returns status `evidence-overlap` and `promotion_candidate: false`, rather than looking independent.
+- Changed: `agent:closeout:check` and `agent:meta:closeout:auto` accept both historical v1 and new v2 policy-pilot receipts.
+- System lesson: independent pilot validation needs evidence independence, not just a different suite id. Shared telemetry is useful for replay and guard testing, but it must not unlock routing-default promotion.
+- Verification: syntax checks passed for the pilot CLI/library plus closeout and router scripts. Focused routing-pilot tests passed 4/4, closeout checker tests passed 59/59, and meta closeout router tests passed 10/10. The live shared-telemetry overlap receipt passed auto-routed closeout. Scoped `check:smart` passed with 600 script tests and command audit. `check:quick` passed with 600 script tests, command audit, and quick assets.
+- Durable overlap input: `.agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json`.
+- Durable overlap proof: `.agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json`.
+- Proof result: the policy-pilot status is `evidence-overlap`, match rate is 1.0, promotion candidate is false, 2/2 policy rules are covered, 2/2 pilot scenarios match, and `shared_telemetry_ref_count` is 1 for the Slice 76 JSONL correction telemetry receipt.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-81-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,009 ms, latest wall duration 4,984 ms, latest estimated full receipt tokens 11,789, latest system artifact count 14, 3 persistent attention loops, and 4 persistent attention commands.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 13 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time improved by 55 ms versus Slice 80, and estimated receipt tokens dropped by 23 while the evidence-overlap guard became explicit.
+- Next: Commit and push only Slice 81 system files, then run a fresh-telemetry routing-policy pilot before changing orchestration defaults.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 80, Routing Policy Pilot Receipts
 
-- Status: Verified locally through scoped `check:smart`, `check:quick`, enforced loop closeout, final trend closeout, and routing-policy-pilot closeout. Pending commit and push.
+- Status: Complete, verified, committed, and pushed as `784cfb6c`.
 - Branch: `agent-os-absolute-meta-2026-06-30`.
 - Changed: Added `agent:routing:pilot` and `scripts/lib/routing-policy-pilot.mjs` to check a routing-policy receipt against a bounded routing-suite pilot receipt.
 - Changed: Policy-pilot receipts use `aipedia.agent-routing-policy-pilot.v1`, carry compact source-policy and pilot-suite summaries, compare expected task-class routes with actual suite recommendations, and report matched, mismatched, missing, blocked, not-recommended, and uncovered rules.

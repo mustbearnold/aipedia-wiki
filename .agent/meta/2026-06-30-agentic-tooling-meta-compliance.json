@@ -44,7 +44,13 @@
         ".agent/evals/routing-policy-pilots/2026-06-30-slice-80-policy-replay-pilot-receipt.json",
         ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-80.md",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-80-final-efficiency-trends.json",
-        ".agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json"
+        ".agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json",
+        "Slice 81 routing policy pilot evidence-overlap guards documented in docs/agentic-tooling-meta-compliance.md",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-81.md",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-81-final-efficiency-trends.json",
+        ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json"
       ],
       "remaining": "Keep updated after each slice."
     },
@@ -157,7 +163,9 @@
         ".agent/loop-runs/system/2026-07-01T04-25-21-784Z-loop-run.json",
         "Slice 79 loop receipt records 15 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths",
         ".agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json",
-        "Slice 80 loop receipt records 15 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths"
+        "Slice 80 loop receipt records 15 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths",
+        ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
+        "Slice 81 loop receipt records 13 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths"
       ],
       "remaining": "Keep enforcing on every meta closeout and pilot."
     },
@@ -430,9 +438,17 @@
         ".agent/evals/routing-policy-pilots/2026-06-30-slice-80-policy-replay-pilot-receipt.json",
         ".agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-80-final-efficiency-trends.json",
-        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-80.md"
+        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-80.md",
+        "routing-policy-pilot v2 evidence-overlap validation",
+        "agent:closeout:check routing-policy-pilot v1/v2 compatibility",
+        "agent:meta:closeout:auto routing-policy-pilot v2 profile compatibility",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+        ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-81-final-efficiency-trends.json",
+        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-81.md",
+        "agent:meta:closeout:auto validated Slice 81 latest loop and final trend receipts"
       ],
-      "remaining": "Run independent bounded routing-policy pilots before changing orchestration defaults, then run positive page proof after stale inputs are ready."
+      "remaining": "Run a fresh-telemetry bounded routing-policy pilot before changing orchestration defaults, then run positive page proof after stale inputs are ready."
     },
     {
       "id": "non-stale-scoring",
@@ -659,9 +675,17 @@
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-80-final-efficiency-trends.json",
         ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-80.md",
         "Slice 80 policy replay proof reports match rate 1.0 but promotion_candidate false",
-        "Slice 80 final trend receipt shows latest wall duration 5039 ms and latest estimated full receipt tokens 11812"
+        "Slice 80 final trend receipt shows latest wall duration 5039 ms and latest estimated full receipt tokens 11812",
+        "routing-policy-pilot shared telemetry overlap guardrails",
+        "durable aipedia.agent-routing-policy-pilot.v2 receipts",
+        ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+        "Slice 81 shared telemetry overlap proof reports match rate 1.0 but promotion_candidate false",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-81-final-efficiency-trends.json",
+        ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
+        ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-81.md",
+        "Slice 81 final trend receipt shows latest wall duration 4984 ms and latest estimated full receipt tokens 11789"
       ],
-      "remaining": "Run independent bounded routing-policy pilots before changing defaults."
+      "remaining": "Run a fresh-telemetry bounded routing-policy pilot before changing defaults."
     },
     {
       "id": "memory-retrieval",
@@ -692,40 +716,41 @@
     }
   ],
   "current_slice": {
-    "name": "Routing policy pilot receipts",
+    "name": "Routing policy pilot evidence-overlap guards",
     "system_artifacts": [
-      "scripts/agent-routing-pilot.mjs",
       "scripts/lib/routing-policy-pilot.mjs",
+      "scripts/agent-routing-pilot.mjs",
       "scripts/agent-closeout-receipt-check.mjs",
       "scripts/agent-meta-closeout.mjs",
       "tests/scripts/agent-routing-pilot.test.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "tests/scripts/agent-meta-closeout.test.mjs",
-      "package.json",
       "scripts/README.md",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-80-policy-replay-pilot-receipt.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-80-final-efficiency-trends.json",
-      ".agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json",
-      ".agent/loop-runs/system/latest.json",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-80.md",
+      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json",
+      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
-      ".agent/WORK_LOG.md"
+      ".agent/WORK_LOG.md",
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-81-final-efficiency-trends.json",
+      ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
+      ".agent/loop-runs/system/latest.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-81.md"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
     "policy_receipt": ".agent/evals/routing-policies/2026-06-30-slice-79-conditional-routing-policy-receipt.json",
-    "pilot_suite_receipt": ".agent/evals/routing-suites/2026-06-30-slice-78-v2-telemetry-lineage-suite-receipt.json",
-    "policy_pilot_receipt": ".agent/evals/routing-policy-pilots/2026-06-30-slice-80-policy-replay-pilot-receipt.json",
-    "loop_receipt": ".agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-80-final-efficiency-trends.json",
+    "pilot_suite_receipt": ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json",
+    "policy_pilot_receipt": ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+    "loop_receipt": ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-81-final-efficiency-trends.json",
     "pilot_summary": {
-      "schema_version": "aipedia.agent-routing-policy-pilot.v1",
-      "status": "replay-only",
+      "schema_version": "aipedia.agent-routing-policy-pilot.v2",
+      "status": "evidence-overlap",
       "promotion_candidate": false,
-      "same_source_replay": true,
+      "same_source_replay": false,
+      "shared_evidence_overlap": true,
       "match_rate": 1,
       "policy_rule_count": 2,
       "pilot_scenario_count": 2,
@@ -733,19 +758,20 @@
       "mismatched_rule_count": 0,
       "missing_rule_count": 0,
       "blocked_scenario_count": 0,
+      "shared_telemetry_ref_count": 1,
       "covered_policy_rule_count": 2,
       "uncovered_policy_rule_count": 0
     },
     "validation": {
       "syntax_checks_passed": true,
-      "routing_pilot_tests_passed": "3/3",
+      "routing_pilot_tests_passed": "4/4",
       "closeout_checker_tests_passed": "59/59",
       "meta_closeout_router_tests_passed": "10/10",
       "policy_pilot_closeout_validated": true,
       "scoped_smart_passed": true,
-      "scoped_smart_script_tests": 599,
+      "scoped_smart_script_tests": 600,
       "quick_passed": true,
-      "quick_script_tests": 599,
+      "quick_script_tests": 600,
       "strict_latest_loop_closeout_passed": true,
       "final_trend_closeout_passed": true
     },
@@ -754,7 +780,7 @@
       "attention": 3,
       "skipped": 0,
       "commands": 16,
-      "current_agent_system_artifacts": 15,
+      "current_agent_system_artifacts": 13,
       "current_agent_content_artifacts": 0,
       "preexisting_dirty_paths": 5
     },
@@ -762,16 +788,17 @@
       "metrics_runs": 3,
       "missing_metrics_runs": 0,
       "median_wall_duration_ms": 5009,
-      "latest_wall_duration_ms": 5039,
-      "latest_estimated_full_receipt_tokens": 11812,
-      "latest_system_artifact_count": 16,
-      "wall_duration_delta_ms": 30,
-      "estimated_full_receipt_tokens_delta": 5
+      "latest_wall_duration_ms": 4984,
+      "latest_estimated_full_receipt_tokens": 11789,
+      "latest_system_artifact_count": 14,
+      "wall_duration_delta_ms": -55,
+      "estimated_full_receipt_tokens_delta": -23
     },
     "status": "verified-pending-commit-push"
   },
   "next_system_targets": [
-    "Run agent:routing:pilot against an independent bounded routing-suite workload before changing orchestration defaults.",
+    "Run agent:routing:pilot against a pilot suite with fresh correction telemetry before changing orchestration defaults.",
+    "Keep evidence-overlap and replay-only policy-pilot receipts non-promotable.",
     "Use agent:routing:policy receipts before changing orchestration defaults from routing-suite evidence.",
     "Keep routing policy promotion conditional until independent workload pilots validate exact token, correction, speed, accuracy, and quality outcomes.",
     "Use v2 routing-suite telemetry lineage refs for every future orchestration routing proof.",

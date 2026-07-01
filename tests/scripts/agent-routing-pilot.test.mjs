@@ -24,6 +24,19 @@ function suiteFixture() {
   return JSON.parse(readFileSync(SUITE_FIXTURE_PATH, 'utf8'));
 }
 
+function overlappingSuiteSummary() {
+  const suite = suiteFixture();
+  return {
+    ...suite,
+    mode: undefined,
+    receipt_path: '.agent/evals/routing-suites/independent-overlap-suite.json',
+    run_id: 'independent-overlap-suite',
+    source: '.agent/evals/routing-suites/independent-overlap-input.json',
+    correction_telemetry_refs: [...suite.correction_telemetry_refs, ...suite.correction_telemetry_refs],
+    scenarios: suite.scenarios.map(({ routing_evaluation, ...scenario }) => scenario),
+  };
+}
+
 function writeJson(path, value) {
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
 }
@@ -46,10 +59,12 @@ test('agent routing pilot writes replay-only receipts from source-suite replays'
     ]);
     assert.equal(result.status, 0, result.stderr || result.stdout);
     const receipt = JSON.parse(result.stdout);
-    assert.equal(receipt.schema_version, 'aipedia.agent-routing-policy-pilot.v1');
+    assert.equal(receipt.schema_version, 'aipedia.agent-routing-policy-pilot.v2');
     assert.equal(receipt.policy_fit.status, 'replay-only');
     assert.equal(receipt.policy_fit.promotion_candidate, false);
+    assert.equal(receipt.policy_fit.shared_evidence_overlap, true);
     assert.equal(receipt.totals.same_source_replay, true);
+    assert.equal(receipt.totals.shared_telemetry_ref_count, 1);
     assert.equal(receipt.totals.policy_rule_count, 2);
     assert.equal(receipt.totals.pilot_scenario_count, 2);
     assert.equal(receipt.totals.matched_rule_count, 2);
@@ -61,6 +76,26 @@ test('agent routing pilot writes replay-only receipts from source-suite replays'
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
+});
+
+test('agent routing pilot marks shared telemetry suites as evidence overlap', () => {
+  const result = buildRoutingPolicyPilot({
+    policy: policyFixture(),
+    pilot_suite: overlappingSuiteSummary(),
+  }, {
+    generatedAt: '2026-07-01T04:50:00.000Z',
+    projectDir: '.',
+    source: `${POLICY_FIXTURE_PATH} + overlap-suite-summary.json`,
+  });
+  assert.deepEqual(result.issues, []);
+  assert.equal(result.receipt.schema_version, 'aipedia.agent-routing-policy-pilot.v2');
+  assert.equal(result.receipt.policy_fit.status, 'evidence-overlap');
+  assert.equal(result.receipt.policy_fit.promotion_candidate, false);
+  assert.equal(result.receipt.policy_fit.same_source_replay, false);
+  assert.equal(result.receipt.policy_fit.shared_evidence_overlap, true);
+  assert.equal(result.receipt.totals.shared_telemetry_ref_count, 1);
+  assert.equal(result.receipt.totals.matched_rule_count, 2);
+  assert.ok(result.receipt.guardrails.some((guardrail) => guardrail.includes('shared correction telemetry')));
 });
 
 test('routing policy pilot validation rejects tampered scenario decisions', () => {

@@ -1,6 +1,12 @@
 import { buildRoutingPolicy, validateRoutingPolicyReceipt } from './routing-policy.mjs';
 
-export const ROUTING_POLICY_PILOT_SCHEMA_VERSION = 'aipedia.agent-routing-policy-pilot.v1';
+export const ROUTING_POLICY_PILOT_SCHEMA_V1 = 'aipedia.agent-routing-policy-pilot.v1';
+export const ROUTING_POLICY_PILOT_SCHEMA_VERSION = 'aipedia.agent-routing-policy-pilot.v2';
+
+const SUPPORTED_ROUTING_POLICY_PILOT_SCHEMA_VERSIONS = new Set([
+  ROUTING_POLICY_PILOT_SCHEMA_V1,
+  ROUTING_POLICY_PILOT_SCHEMA_VERSION,
+]);
 
 export function buildRoutingPolicyPilot(input, options = {}) {
   const issues = [];
@@ -52,9 +58,11 @@ export function validateRoutingPolicyPilotReceipt(value) {
   }
   for (const [field, expected] of [
     ['mode', 'agent-routing-policy-pilot'],
-    ['schema_version', ROUTING_POLICY_PILOT_SCHEMA_VERSION],
   ]) {
     if (value[field] !== expected) issues.push(routingPolicyPilotIssue('routing-policy-pilot-receipt-invalid', `${field} must be ${expected}.`));
+  }
+  if (!SUPPORTED_ROUTING_POLICY_PILOT_SCHEMA_VERSIONS.has(value.schema_version)) {
+    issues.push(routingPolicyPilotIssue('routing-policy-pilot-receipt-invalid', `schema_version must be ${ROUTING_POLICY_PILOT_SCHEMA_VERSION} or ${ROUTING_POLICY_PILOT_SCHEMA_V1}.`));
   }
   for (const field of ['generated_at', 'project_dir', 'source', 'goal_id', 'run_id', 'workflow', 'pilot_task']) {
     if (typeof value[field] !== 'string') issues.push(routingPolicyPilotIssue('routing-policy-pilot-receipt-invalid', `${field} must be a string.`));
@@ -85,13 +93,16 @@ export function validateRoutingPolicyPilotReceipt(value) {
   });
   if (rebuilt.issues.length) return rebuilt.issues;
 
-  const expected = rebuilt.receipt;
+  const expected = value.schema_version === ROUTING_POLICY_PILOT_SCHEMA_V1
+    ? stripV2PilotFields({ ...rebuilt.receipt, schema_version: ROUTING_POLICY_PILOT_SCHEMA_V1 })
+    : rebuilt.receipt;
+  const actual = value.schema_version === ROUTING_POLICY_PILOT_SCHEMA_V1 ? stripV2PilotFields(value) : value;
   for (const field of ['source_policy', 'pilot_suite', 'totals', 'policy_fit', 'scenarios', 'guardrails', 'next_actions']) {
-    if (!deepEqual(value[field], expected[field])) {
+    if (!deepEqual(actual[field], expected[field])) {
       issues.push(routingPolicyPilotIssue('routing-policy-pilot-mismatch', `${field} must match canonical routing policy pilot computation.`));
     }
   }
-  if (value.ok !== expected.ok) {
+  if (actual.ok !== expected.ok) {
     issues.push(routingPolicyPilotIssue('routing-policy-pilot-mismatch', 'ok must match canonical routing policy pilot computation.'));
   }
   return issues;
@@ -147,6 +158,7 @@ function sourcePolicyFromReceipt(policy) {
     policy_task: stringValue(policy.policy_task),
     source_suite_receipt: stringValue(policy.source_suite?.receipt_path),
     source_suite_run_id: stringValue(policy.source_suite?.run_id),
+    correction_telemetry_refs: sourcePolicyTelemetryRefs(policy),
     totals: policyTotals(policy.totals),
     policy: policyState(policy.policy),
     rules: policyRules(policy.rules),
@@ -165,6 +177,7 @@ function sourcePolicyFromSummary(summary, issues) {
     policy_task: stringValue(summary.policy_task),
     source_suite_receipt: stringValue(summary.source_suite_receipt),
     source_suite_run_id: stringValue(summary.source_suite_run_id),
+    correction_telemetry_refs: mergeTelemetryRefs(telemetryRefs(summary.correction_telemetry_refs)),
     totals: policyTotals(summary.totals),
     policy: policyState(summary.policy),
     rules: policyRules(summary.rules),
@@ -261,6 +274,7 @@ function pilotTotals(sourcePolicy, pilotSuite, scenarios) {
   const policyTaskClasses = new Set(sourcePolicy.rules.map((rule) => rule.task_class).filter(Boolean));
   const coveredTaskClasses = new Set(scenarios.filter((scenario) => scenario.expected_source === 'task-class-rule').map((scenario) => scenario.task_class));
   const uncoveredTaskClasses = [...policyTaskClasses].filter((taskClass) => !coveredTaskClasses.has(taskClass)).sort();
+  const sharedTelemetryRefs = sharedTelemetryRefsFor(sourcePolicy, pilotSuite);
   return {
     policy_rule_count: sourcePolicy.rules.length,
     pilot_scenario_count: scenarios.length,
@@ -275,6 +289,8 @@ function pilotTotals(sourcePolicy, pilotSuite, scenarios) {
     covered_policy_rule_count: coveredTaskClasses.size,
     uncovered_policy_rule_count: uncoveredTaskClasses.length,
     same_source_replay: samePolicySourceReplay(sourcePolicy, pilotSuite),
+    shared_telemetry_ref_count: sharedTelemetryRefs.length,
+    shared_telemetry_refs: sharedTelemetryRefs,
     match_rate: scenarios.length ? round(scenarios.filter((scenario) => scenario.match_status === 'matched').length / scenarios.length) : 0,
     uncovered_task_classes: uncoveredTaskClasses,
   };
@@ -286,6 +302,7 @@ function policyFitSummary(sourcePolicy, pilotSuite, totals) {
     status,
     promotion_candidate: status === 'pass' && pilotSuite.aggregate.telemetry_coverage_rate === 1,
     same_source_replay: totals.same_source_replay,
+    shared_evidence_overlap: totals.shared_telemetry_ref_count > 0,
     match_rate: totals.match_rate,
     reason: policyFitReason(status, totals),
   };
@@ -294,6 +311,7 @@ function policyFitSummary(sourcePolicy, pilotSuite, totals) {
 function policyFitStatus(sourcePolicy, totals) {
   if (sourcePolicy.policy.status === 'blocked' || totals.blocked_scenario_count > 0) return 'blocked';
   if (totals.mismatched_rule_count > 0 || totals.missing_rule_count > 0 || totals.not_recommended_scenario_count > 0 || totals.uncovered_policy_rule_count > 0) return 'attention';
+  if (!totals.same_source_replay && totals.shared_telemetry_ref_count > 0) return 'evidence-overlap';
   if (totals.same_source_replay) return 'replay-only';
   return 'pass';
 }
@@ -301,6 +319,7 @@ function policyFitStatus(sourcePolicy, totals) {
 function policyFitReason(status, totals) {
   if (status === 'blocked') return 'Policy or pilot suite has blocked scenarios.';
   if (status === 'attention') return 'Pilot suite has mismatched, missing, not-recommended, or uncovered policy rules.';
+  if (status === 'evidence-overlap') return 'Pilot suite matches the policy but reuses correction telemetry from the policy evidence, so it is not independent.';
   if (status === 'replay-only') return 'Pilot suite matches the policy but reuses the source suite evidence, so it is not an independent workload pilot.';
   return 'Pilot suite independently matches the policy rules.';
 }
@@ -308,6 +327,7 @@ function policyFitReason(status, totals) {
 function pilotGuardrails(sourcePolicy, pilotSuite, totals, policyFit) {
   const guardrails = [];
   if (policyFit.same_source_replay) guardrails.push('Do not treat source-suite replay as an independent workload pilot.');
+  if (!policyFit.same_source_replay && policyFit.shared_evidence_overlap) guardrails.push('Do not treat a pilot with shared correction telemetry as independent workload validation.');
   if (totals.uncovered_policy_rule_count > 0) guardrails.push('Cover every policy task-class rule before promoting orchestration defaults.');
   if (totals.mismatched_rule_count > 0 || totals.missing_rule_count > 0) guardrails.push('Do not promote a policy with missing or mismatched pilot rules.');
   if (pilotSuite.aggregate.telemetry_coverage_rate < 1) guardrails.push('Collect correction telemetry for every pilot scenario before promotion.');
@@ -318,6 +338,7 @@ function pilotGuardrails(sourcePolicy, pilotSuite, totals, policyFit) {
 
 function pilotNextActions(policyFit, totals) {
   if (policyFit.status === 'replay-only') return ['Run the policy against an independent bounded workload suite before changing orchestration defaults.'];
+  if (policyFit.status === 'evidence-overlap') return ['Run the policy against a pilot suite with fresh correction telemetry before changing orchestration defaults.'];
   if (policyFit.status === 'blocked') return ['Resolve blocked pilot scenarios, then regenerate the suite and pilot receipts.'];
   if (policyFit.status === 'attention') return ['Review mismatched, missing, not-recommended, or uncovered policy rules before changing orchestration defaults.'];
   if (totals.same_source_replay) return ['Run an independent pilot suite before promotion.'];
@@ -328,6 +349,51 @@ function samePolicySourceReplay(sourcePolicy, pilotSuite) {
   if (sourcePolicy.source_suite_receipt && pilotSuite.receipt_path && sourcePolicy.source_suite_receipt === pilotSuite.receipt_path) return true;
   if (sourcePolicy.source_suite_run_id && pilotSuite.run_id && sourcePolicy.source_suite_run_id === pilotSuite.run_id) return true;
   return false;
+}
+
+function sourcePolicyTelemetryRefs(policy) {
+  return mergeTelemetryRefs(telemetryRefs([
+    ...(Array.isArray(policy.source_suite?.correction_telemetry_refs) ? policy.source_suite.correction_telemetry_refs : []),
+    ...(Array.isArray(policy.rules) ? policy.rules.flatMap((rule) => Array.isArray(rule.correction_telemetry_refs) ? rule.correction_telemetry_refs : []) : []),
+  ]));
+}
+
+function sharedTelemetryRefsFor(sourcePolicy, pilotSuite) {
+  const policyPaths = new Set(telemetryRefs(sourcePolicy.correction_telemetry_refs).map((ref) => ref.receipt_path));
+  return [...new Set(telemetryRefs(pilotSuite.correction_telemetry_refs)
+    .filter((ref) => policyPaths.has(ref.receipt_path))
+    .map((ref) => ref.receipt_path))].sort();
+}
+
+function mergeTelemetryRefs(refs) {
+  const rows = new Map();
+  for (const ref of refs) {
+    if (!ref.receipt_path) continue;
+    if (!rows.has(ref.receipt_path)) {
+      rows.set(ref.receipt_path, {
+        receipt_path: ref.receipt_path,
+        schema_version: ref.schema_version,
+        scenario_ids: new Set(),
+        candidate_ids: new Set(),
+      });
+    }
+    const row = rows.get(ref.receipt_path);
+    if (ref.schema_version && !row.schema_version) row.schema_version = ref.schema_version;
+    for (const scenarioId of ref.scenario_ids || []) {
+      if (scenarioId) row.scenario_ids.add(scenarioId);
+    }
+    for (const candidateId of ref.candidate_ids || []) {
+      if (candidateId) row.candidate_ids.add(candidateId);
+    }
+  }
+  return [...rows.values()]
+    .sort((left, right) => left.receipt_path.localeCompare(right.receipt_path))
+    .map((row) => ({
+      receipt_path: row.receipt_path,
+      schema_version: row.schema_version,
+      ...(row.scenario_ids.size ? { scenario_ids: [...row.scenario_ids].sort() } : {}),
+      candidate_ids: [...row.candidate_ids].sort(),
+    }));
 }
 
 function telemetryRefs(refs) {
@@ -355,6 +421,7 @@ function emptySourcePolicy() {
     policy_task: '',
     source_suite_receipt: '',
     source_suite_run_id: '',
+    correction_telemetry_refs: [],
     totals: policyTotals({}),
     policy: policyState({}),
     rules: [],
@@ -399,6 +466,17 @@ function isRoutingPolicyReceipt(value) {
 
 function isRoutingSuiteReceipt(value) {
   return isObject(value) && value.mode === 'agent-routing-evaluation-suite' && typeof value.schema_version === 'string';
+}
+
+function stripV2PilotFields(value) {
+  const clone = structuredClone(value);
+  if (clone.source_policy) delete clone.source_policy.correction_telemetry_refs;
+  if (clone.totals) {
+    delete clone.totals.shared_telemetry_ref_count;
+    delete clone.totals.shared_telemetry_refs;
+  }
+  if (clone.policy_fit) delete clone.policy_fit.shared_evidence_overlap;
+  return clone;
 }
 
 function duplicates(values) {
