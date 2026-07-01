@@ -1,0 +1,80 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-73-correction-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "reviewer",
+    "id": "slice-73-routing-review",
+    "confidence": "exact"
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-73-single-agent",
+      "orchestrator": "single-agent",
+      "events": [
+        {
+          "id": "single-finding-1",
+          "type": "finding",
+          "severity": "medium",
+          "note": "Reviewer found one missing validation edge case."
+        },
+        {
+          "id": "single-fix-1",
+          "type": "correction_applied",
+          "finding_id": "single-finding-1",
+          "severity": "medium",
+          "note": "Applied validation edge-case fix."
+        },
+        {
+          "id": "single-finding-2",
+          "type": "finding",
+          "severity": "low",
+          "note": "Reviewer found one unclear handoff note."
+        },
+        {
+          "id": "single-fix-2",
+          "type": "correction_applied",
+          "finding_id": "single-finding-2",
+          "severity": "low",
+          "note": "Applied handoff note fix."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-73-orchestrated-specialists",
+      "orchestrator": "meta-orchestrator",
+      "events": [
+        {
+          "id": "orchestrated-finding-1",
+          "type": "finding",
+          "severity": "medium",
+          "note": "Reviewer found one missing validation edge case."
+        },
+        {
+          "id": "orchestrated-fix-1",
+          "type": "correction_applied",
+          "finding_id": "orchestrated-finding-1",
+          "severity": "medium",
+          "note": "Applied validation edge-case fix."
+        },
+        {
+          "id": "orchestrated-finding-2",
+          "type": "finding",
+          "severity": "low",
+          "note": "Reviewer found one unclear handoff note."
+        },
+        {
+          "id": "orchestrated-fix-2",
+          "type": "correction_applied",
+          "finding_id": "orchestrated-finding-2",
+          "severity": "low",
+          "note": "Applied handoff note fix."
+        }
+      ]
+    }
+  ]
+}

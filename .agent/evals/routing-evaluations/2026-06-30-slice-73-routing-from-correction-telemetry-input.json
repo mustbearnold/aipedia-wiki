@@ -1,0 +1,94 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-73-routing-from-correction-telemetry",
+  "workflow": "loop-system",
+  "evaluation_task": "Compare a single general agent against an orchestrated evidence plus validation specialist route while loading correction outcomes from telemetry.",
+  "thresholds": {
+    "min_quality_score": 0.85,
+    "min_accuracy_score": 0.85,
+    "max_residual_issue_count": 0,
+    "max_regression_count": 0,
+    "minimum_improvement_margin": 0.02
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "label": "Single agent",
+      "strategy": "single-agent",
+      "model": "gpt-5.5",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-73-single-agent",
+      "orchestrator": "single-agent",
+      "exact_model_tokens": {
+        "request_count": 1,
+        "input_tokens": 4800,
+        "output_tokens": 1200,
+        "cached_input_tokens": 600,
+        "reasoning_tokens": 300,
+        "total_tokens": 6000,
+        "subagent_breakdown": [
+          {
+            "id": "single-agent",
+            "request_count": 1,
+            "input_tokens": 4800,
+            "output_tokens": 1200,
+            "cached_input_tokens": 600,
+            "reasoning_tokens": 300,
+            "total_tokens": 6000
+          }
+        ]
+      },
+      "wall_duration_ms": 7000,
+      "quality_score": 0.9,
+      "accuracy_score": 0.88,
+      "task_outcome": {
+        "task_count": 1,
+        "completed_count": 1
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "label": "Orchestrated specialists",
+      "strategy": "orchestrator-plus-specialists",
+      "model": "gpt-5.5",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-73-orchestrated-specialists",
+      "orchestrator": "meta-orchestrator",
+      "exact_model_tokens": {
+        "request_count": 2,
+        "input_tokens": 4200,
+        "output_tokens": 1000,
+        "cached_input_tokens": 500,
+        "reasoning_tokens": 250,
+        "total_tokens": 5200,
+        "subagent_breakdown": [
+          {
+            "id": "evidence-agent",
+            "request_count": 1,
+            "input_tokens": 3400,
+            "output_tokens": 800,
+            "cached_input_tokens": 400,
+            "reasoning_tokens": 180,
+            "total_tokens": 4200
+          },
+          {
+            "id": "validation-agent",
+            "request_count": 1,
+            "input_tokens": 800,
+            "output_tokens": 200,
+            "cached_input_tokens": 100,
+            "reasoning_tokens": 70,
+            "total_tokens": 1000
+          }
+        ]
+      },
+      "wall_duration_ms": 6400,
+      "quality_score": 0.94,
+      "accuracy_score": 0.93,
+      "task_outcome": {
+        "task_count": 1,
+        "completed_count": 1
+      }
+    }
+  ]
+}

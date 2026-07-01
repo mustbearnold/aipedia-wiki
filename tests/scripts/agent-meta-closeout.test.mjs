@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
+import { buildCorrectionTelemetry } from '../../scripts/lib/correction-telemetry.mjs';
 import { buildRoutingEvaluation } from '../../scripts/lib/routing-evaluation.mjs';
 
 function runRouter(args = []) {
@@ -436,6 +437,37 @@ function validRoutingEvaluationReceipt() {
   return result.receipt;
 }
 
+function validCorrectionTelemetryReceipt() {
+  const result = buildCorrectionTelemetry({
+    goal_id: 'june-30-agentic-tooling-meta-os',
+    run_id: 'slice-73-correction-telemetry',
+    workflow: 'loop-system',
+    telemetry_source: {
+      type: 'reviewer',
+      id: 'slice-73-fixture-review',
+      confidence: 'exact',
+    },
+    candidates: [
+      {
+        id: 'single-agent',
+        workflow: 'loop-system',
+        run_id: 'single-run',
+        orchestrator: 'single-agent',
+        events: [
+          { id: 'single-finding-1', type: 'finding', severity: 'medium' },
+          { id: 'single-fix-1', type: 'correction_applied', finding_id: 'single-finding-1' },
+        ],
+      },
+    ],
+  }, {
+    generatedAt: '2026-07-01T03:20:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/corrections/fixture-input.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validProofReadinessReceipt() {
   return {
     ok: false,
@@ -623,6 +655,24 @@ test('meta closeout router validates routing evaluation receipts', () => {
     assert.equal(report.requires_workflow_policy, false);
     assert.deepEqual(report.strict_flags, []);
     assert.equal(report.checker_report.receipts[0].type, 'agent-routing-evaluation');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('meta closeout router validates correction telemetry receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-corrections-'));
+  try {
+    writeJson(join(root, 'correction-telemetry.json'), validCorrectionTelemetryReceipt());
+
+    const result = runRouter(['--project-dir', root, '--receipt', 'correction-telemetry.json', '--json']);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.closeout_profile, 'correction-telemetry');
+    assert.equal(report.requires_workflow_policy, false);
+    assert.deepEqual(report.strict_flags, []);
+    assert.equal(report.checker_report.receipts[0].type, 'agent-correction-telemetry');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

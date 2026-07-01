@@ -1,5 +1,21 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 73, Exact Correction Telemetry
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:correction:telemetry` and `scripts/lib/correction-telemetry.mjs` to write closeout-checkable `aipedia.correction-telemetry.v1` receipts from exact finding, correction-applied, residual-issue, and regression events.
+- Changed: `agent:closeout:check` validates correction telemetry receipts, and `agent:meta:closeout:auto` routes them under the `correction-telemetry` profile.
+- Changed: `agent:routing:evaluate -- --correction-telemetry <path>` can now fill candidate correction outcomes from a telemetry receipt, so routing comparisons no longer need manual correction counts when event telemetry exists.
+- System lesson: exact token routing needs exact correction evidence too. The route is only useful if quality and correction costs are measured from receipts instead of typed into candidate rows.
+- Verification: syntax checks passed for the correction telemetry CLI/library and affected routing/closeout/router scripts. Focused correction, routing, closeout, and router tests passed 66/66 after adding missing-identity coverage. Scoped `check:smart` and `check:quick` passed 573 script tests, command audit, and quick assets.
+- Durable telemetry proof: `.agent/evals/correction-telemetry/2026-06-30-slice-73-correction-telemetry-input.json` and `.agent/evals/correction-telemetry/2026-06-30-slice-73-correction-telemetry-receipt.json`.
+- Durable routing proof: `.agent/evals/routing-evaluations/2026-06-30-slice-73-routing-from-correction-telemetry-input.json` and `.agent/evals/routing-evaluations/2026-06-30-slice-73-routing-from-correction-telemetry-receipt.json`.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T03-14-19-238Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-73-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,937 ms, latest wall duration 4,968 ms, latest estimated full receipt tokens 12,121, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
+- Proof result: the telemetry receipt records 2 candidates, 8 exact events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions. The telemetry-fed routing receipt recommends `orchestrated-specialists` over `single-agent`: 0.964 versus 0.913 weighted score, 5,200 versus 6,000 exact total tokens, 6,400 ms versus 7,000 ms wall time, and 0.051 improvement margin.
+- Next: Commit and push, then expand telemetry-fed routing evaluations across multiple real task classes and add runtime/reviewer event adapters.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 70, Exact Model Token Tracking
 
 - Status: Complete locally, verified, pending commit and push.

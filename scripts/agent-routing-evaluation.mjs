@@ -5,17 +5,19 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildRoutingEvaluation, routingIssue } from './lib/routing-evaluation.mjs';
+import { CORRECTION_TELEMETRY_SCHEMA_VERSION } from './lib/correction-telemetry.mjs';
 
 const args = process.argv.slice(2);
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_PROJECT_DIR = dirname(SCRIPT_DIR);
-const KNOWN_FLAGS = new Set(['--help', '-h', '--input', '--json', '--out', '--project-dir', '--root']);
-const VALUE_FLAGS = new Set(['--input', '--out', '--project-dir', '--root']);
+const KNOWN_FLAGS = new Set(['--help', '-h', '--correction-telemetry', '--input', '--json', '--out', '--project-dir', '--root']);
+const VALUE_FLAGS = new Set(['--correction-telemetry', '--input', '--out', '--project-dir', '--root']);
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || DEFAULT_PROJECT_DIR);
 const INPUT_PATH = valueFor('--input');
 const OUT_PATH = valueFor('--out');
+const CORRECTION_TELEMETRY_PATH = valueFor('--correction-telemetry');
 
 if (HELP_MODE) {
   console.log(usage());
@@ -43,6 +45,35 @@ if (!existsSync(inputFile)) {
     input = JSON.parse(readFileSync(inputFile, 'utf8'));
   } catch (error) {
     issues.push(routingIssue('routing-evaluation-input-invalid', `${projectPath(inputFile)} could not parse as JSON: ${error.message}`));
+  }
+}
+
+if (issues.length) {
+  emit({
+    ok: false,
+    mode: 'agent-routing-evaluation',
+    project_dir: PROJECT_DIR,
+    source: projectPath(inputFile),
+    issues,
+  });
+  process.exit(1);
+}
+
+if (CORRECTION_TELEMETRY_PATH) {
+  const telemetryFile = resolve(PROJECT_DIR, CORRECTION_TELEMETRY_PATH);
+  if (!existsSync(telemetryFile)) {
+    issues.push(routingIssue('routing-evaluation-correction-telemetry-missing', `${projectPath(telemetryFile)} does not exist.`));
+  } else {
+    try {
+      const telemetry = JSON.parse(readFileSync(telemetryFile, 'utf8'));
+      if (telemetry.schema_version !== CORRECTION_TELEMETRY_SCHEMA_VERSION) {
+        issues.push(routingIssue('routing-evaluation-correction-telemetry-invalid', `${projectPath(telemetryFile)} must be ${CORRECTION_TELEMETRY_SCHEMA_VERSION}.`));
+      } else {
+        input.correction_telemetry = telemetry;
+      }
+    } catch (error) {
+      issues.push(routingIssue('routing-evaluation-correction-telemetry-invalid', `${projectPath(telemetryFile)} could not parse as JSON: ${error.message}`));
+    }
   }
 }
 
@@ -88,12 +119,15 @@ function usage() {
     'Usage:',
     '  node scripts/agent-routing-evaluation.mjs --input <path> --json',
     '  node scripts/agent-routing-evaluation.mjs --input <path> --out <path> --json',
+    '  node scripts/agent-routing-evaluation.mjs --input <path> --correction-telemetry <path> --out <path> --json',
     '',
     'Builds an aipedia.agent-routing-evaluation.v1 receipt for comparing agent routing candidates.',
-    'Every candidate must include exact model-token usage, quality, accuracy, correction outcomes, wall time, and task completion.',
+    'Every candidate must include exact model-token usage, quality, accuracy, wall time, and task completion.',
+    'Correction outcomes can be inline on candidates or supplied by an aipedia.correction-telemetry.v1 receipt.',
     '',
     'Options:',
     '  --input <path>        Input JSON with candidates to evaluate.',
+    '  --correction-telemetry <path>  Optional correction telemetry receipt used to fill candidate correction_outcomes.',
     '  --out <path>          Optional receipt output path.',
     '  --project-dir <dir>   Project root. Alias: --root.',
     '  --json                Emit JSON. Human mode still prints compact JSON for receipt safety.',

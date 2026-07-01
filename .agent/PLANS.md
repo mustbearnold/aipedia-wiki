@@ -884,15 +884,18 @@ Continue implementing the agentic operating system itself. Tool pages and conten
 
 ### Current State
 
-- Slice 72 is complete locally: `agent:routing:evaluate` now emits closeout-checkable routing-evaluation receipts for orchestrator/subagent comparisons.
-- Live proof artifacts: `.agent/evals/routing-evaluations/2026-06-30-slice-72-routing-eval-input.json`, `.agent/evals/routing-evaluations/2026-06-30-slice-72-routing-eval-receipt.json`, `.agent/loop-runs/system/2026-07-01T02-58-33-672Z-loop-run.json`, and `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-72-final-efficiency-trends.json`.
-- The routing proof recommends `orchestrated-specialists` over `single-agent`: 0.964 versus 0.913 weighted score, 5,200 versus 6,000 exact total tokens, 6,400 ms versus 7,000 ms wall time, and 0.051 improvement margin.
-- Auto-routed closeout passed for the routing receipt, and focused routing/closeout/router tests passed 59/59, including zero-request exact-token rejection.
+- Slice 73 is complete locally: `agent:correction:telemetry` now emits closeout-checkable exact correction telemetry receipts, and `agent:routing:evaluate -- --correction-telemetry <path>` can consume those receipts instead of manual candidate correction counts.
+- Live proof artifacts: `.agent/evals/correction-telemetry/2026-06-30-slice-73-correction-telemetry-input.json`, `.agent/evals/correction-telemetry/2026-06-30-slice-73-correction-telemetry-receipt.json`, `.agent/evals/routing-evaluations/2026-06-30-slice-73-routing-from-correction-telemetry-input.json`, and `.agent/evals/routing-evaluations/2026-06-30-slice-73-routing-from-correction-telemetry-receipt.json`.
+- The correction telemetry proof records 8 exact events across 2 candidates: 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
+- The telemetry-fed routing proof recommends `orchestrated-specialists` over `single-agent`: 0.964 versus 0.913 weighted score, 5,200 versus 6,000 exact total tokens, 6,400 ms versus 7,000 ms wall time, and 0.051 improvement margin.
+- Auto-routed closeout passed for both new receipts, focused correction/routing/closeout/router tests passed 66/66, and scoped smart plus quick gates passed 573 script tests.
+- Enforced Slice 73 loop receipt `.agent/loop-runs/system/2026-07-01T03-14-19-238Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 20 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final Slice 73 trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-73-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,937 ms, latest wall duration 4,968 ms, latest estimated full receipt tokens 12,121, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
 
 ### Next Implementation Slice
 
-1. Add exact correction-count telemetry once a reliable runtime or reviewer source exists, so routing receipts can be fed automatically instead of manually scored.
-2. Expand routing evaluations across multiple real task classes before changing default orchestration.
+1. Expand correction-telemetry-fed routing evaluations across multiple real task classes before changing default orchestration.
+2. Add runtime/reviewer adapters that can export real correction events without manual fixture construction.
 3. Resolve or explicitly integrate the separate Captions/Synthesia content WIP, refresh page-ledger input, and rerun page-refresh proof readiness.
 4. Keep `loop:all:record --require-system-progress`, strict DAG closeout, exact token usage where available, and `agent:routing:evaluate` for routing changes on every meta-system closeout.
 

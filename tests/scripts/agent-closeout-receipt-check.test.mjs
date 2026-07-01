@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
+import { buildCorrectionTelemetry } from '../../scripts/lib/correction-telemetry.mjs';
 import { buildRoutingEvaluation } from '../../scripts/lib/routing-evaluation.mjs';
 
 function runCheck(args = []) {
@@ -815,6 +816,37 @@ function validProofReadinessRefreshPlan() {
   };
 }
 
+function validCorrectionTelemetryReceipt() {
+  const result = buildCorrectionTelemetry({
+    goal_id: 'june-30-agentic-tooling-meta-os',
+    run_id: 'slice-73-correction-telemetry',
+    workflow: 'loop-system',
+    telemetry_source: {
+      type: 'reviewer',
+      id: 'slice-73-fixture-review',
+      confidence: 'exact',
+    },
+    candidates: [
+      {
+        id: 'single-agent',
+        workflow: 'loop-system',
+        run_id: 'single-run',
+        orchestrator: 'single-agent',
+        events: [
+          { id: 'single-finding-1', type: 'finding', severity: 'medium' },
+          { id: 'single-fix-1', type: 'correction_applied', finding_id: 'single-finding-1' },
+        ],
+      },
+    ],
+  }, {
+    generatedAt: '2026-07-01T03:20:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/corrections/fixture-input.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function routingSubagent(id, { requestCount = 1, input, output, cached, reasoning }) {
   return {
     id,
@@ -1128,6 +1160,41 @@ test('closeout receipt check validates agent routing evaluation receipts', () =>
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.receipts[0].type, 'agent-routing-evaluation');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates correction telemetry receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-correction-telemetry-'));
+  const path = join(dir, 'correction-telemetry.json');
+
+  try {
+    writeJson(path, validCorrectionTelemetryReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-correction-telemetry');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered correction telemetry totals', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-correction-telemetry-'));
+  const path = join(dir, 'correction-telemetry.json');
+
+  try {
+    const receipt = validCorrectionTelemetryReceipt();
+    receipt.totals.corrections_applied = 99;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.notEqual(result.status, 0);
+    const report = JSON.parse(result.stdout);
+    const codes = report.receipts[0].issues.map((issue) => issue.code);
+    assert.ok(codes.includes('correction-telemetry-total-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

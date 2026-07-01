@@ -1,3 +1,5 @@
+import { correctionOutcomeForCandidate, validateCorrectionTelemetryReceipt } from './correction-telemetry.mjs';
+
 export const ROUTING_EVALUATION_SCHEMA_VERSION = 'aipedia.agent-routing-evaluation.v1';
 
 export const ROUTING_EVALUATION_WEIGHTS = {
@@ -42,6 +44,7 @@ export function buildRoutingEvaluation(input, options = {}) {
     };
   }
 
+  const correctionTelemetry = normalizeCorrectionTelemetry(input.correction_telemetry, issues);
   const thresholds = normalizeThresholds(input.thresholds, issues);
   const candidatesInput = Array.isArray(input.candidates) ? input.candidates : [];
   if (!Array.isArray(input.candidates)) {
@@ -52,7 +55,7 @@ export function buildRoutingEvaluation(input, options = {}) {
   }
 
   const candidateIds = new Set();
-  const rawCandidates = candidatesInput.map((candidate, index) => normalizeCandidate(candidate, index, candidateIds, issues));
+  const rawCandidates = candidatesInput.map((candidate, index) => normalizeCandidate(candidate, index, candidateIds, issues, correctionTelemetry));
   const validForScoring = rawCandidates.filter((candidate) => candidate.valid);
   const minTokens = Math.min(...validForScoring.map((candidate) => candidate.exact_model_tokens.total_tokens));
   const minWall = Math.min(...validForScoring.map((candidate) => candidate.wall_duration_ms));
@@ -175,7 +178,7 @@ function normalizeThresholds(value, issues) {
   return thresholds;
 }
 
-function normalizeCandidate(candidate, index, candidateIds, issues) {
+function normalizeCandidate(candidate, index, candidateIds, issues, correctionTelemetry) {
   const path = `candidates[${index}]`;
   if (!isObject(candidate)) {
     issues.push(routingIssue('routing-evaluation-candidate-invalid', `${path} must be an object.`));
@@ -187,7 +190,12 @@ function normalizeCandidate(candidate, index, candidateIds, issues) {
   if (id) candidateIds.add(id);
 
   const exactTokens = normalizeExactTokens(candidate.exact_model_tokens || candidate.model_token_usage || candidate.token_usage, `${path}.exact_model_tokens`, issues);
-  const correctionOutcomes = normalizeCorrectionOutcomes(candidate.correction_outcomes, `${path}.correction_outcomes`, issues);
+  const telemetryOutcome = candidate.correction_outcomes ? null : correctionOutcomeForCandidate(correctionTelemetry, candidate);
+  const correctionOutcomes = normalizeCorrectionOutcomes(
+    candidate.correction_outcomes || telemetryOutcome?.outcomes,
+    `${path}.correction_outcomes`,
+    issues,
+  );
   const taskOutcome = normalizeTaskOutcome(candidate.task_outcome, `${path}.task_outcome`, issues);
   const qualityScore = ratioField(candidate, 'quality_score', path, issues);
   const accuracyScore = ratioField(candidate, 'accuracy_score', path, issues);
@@ -210,9 +218,26 @@ function normalizeCandidate(candidate, index, candidateIds, issues) {
     wall_duration_ms: wallDuration,
     quality_score: qualityScore,
     accuracy_score: accuracyScore,
+    correction_outcomes_source: stringValue(candidate.correction_outcomes_source)
+      || (telemetryOutcome ? 'correction-telemetry' : 'candidate'),
+    correction_telemetry_candidate_id: stringValue(candidate.correction_telemetry_candidate_id) || telemetryOutcome?.candidate_id || '',
+    correction_telemetry_receipt: stringValue(candidate.correction_telemetry_receipt) || telemetryOutcome?.receipt_path || '',
     correction_outcomes: correctionOutcomes,
     task_outcome: taskOutcome,
   };
+}
+
+function normalizeCorrectionTelemetry(value, issues) {
+  if (value == null) return null;
+  if (!isObject(value)) {
+    issues.push(routingIssue('routing-evaluation-correction-telemetry-invalid', 'correction_telemetry must be an object when supplied.'));
+    return null;
+  }
+  const telemetryIssues = validateCorrectionTelemetryReceipt(value);
+  for (const item of telemetryIssues) {
+    issues.push(routingIssue('routing-evaluation-correction-telemetry-invalid', item.message));
+  }
+  return telemetryIssues.length ? null : value;
 }
 
 function normalizeExactTokens(value, path, issues) {
