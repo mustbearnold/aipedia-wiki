@@ -1,0 +1,199 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-84-shadow-rollout-suite",
+  "workflow": "loop-system",
+  "suite_task": "Shadow rollout metrics for the reviewed conditional routing policy.",
+  "correction_telemetry_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
+  "scenarios": [
+    {
+      "id": "shadow-jsonl-heavy-review",
+      "task_class": "jsonl-correction-heavy-review",
+      "task_label": "Shadow rollout JSONL heavy review routing",
+      "routing_input": {
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice84-shadow-heavy-review-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 6500,
+              "output_tokens": 1400,
+              "cached_input_tokens": 720,
+              "reasoning_tokens": 310,
+              "total_tokens": 7900,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 6500,
+                  "output_tokens": 1400,
+                  "cached_input_tokens": 720,
+                  "reasoning_tokens": 310,
+                  "total_tokens": 7900
+                }
+              ]
+            },
+            "wall_duration_ms": 8100,
+            "quality_score": 0.9,
+            "accuracy_score": 0.89,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice84-shadow-heavy-review-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 5100,
+              "output_tokens": 1100,
+              "cached_input_tokens": 640,
+              "reasoning_tokens": 230,
+              "total_tokens": 6200,
+              "subagent_breakdown": [
+                {
+                  "id": "triage-agent",
+                  "request_count": 1,
+                  "input_tokens": 3100,
+                  "output_tokens": 650,
+                  "cached_input_tokens": 420,
+                  "reasoning_tokens": 130,
+                  "total_tokens": 3750
+                },
+                {
+                  "id": "rollout-validation-agent",
+                  "request_count": 1,
+                  "input_tokens": 2000,
+                  "output_tokens": 450,
+                  "cached_input_tokens": 220,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 2450
+                }
+              ]
+            },
+            "wall_duration_ms": 6600,
+            "quality_score": 0.94,
+            "accuracy_score": 0.93,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "shadow-jsonl-tiny-status",
+      "task_class": "jsonl-tiny-status-check",
+      "task_label": "Shadow rollout JSONL tiny status routing",
+      "routing_input": {
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 0,
+          "max_regression_count": 0,
+          "minimum_improvement_margin": 0.02
+        },
+        "candidates": [
+          {
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice84-shadow-tiny-status-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 950,
+              "output_tokens": 250,
+              "cached_input_tokens": 120,
+              "reasoning_tokens": 40,
+              "total_tokens": 1200,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 950,
+                  "output_tokens": 250,
+                  "cached_input_tokens": 120,
+                  "reasoning_tokens": 40,
+                  "total_tokens": 1200
+                }
+              ]
+            },
+            "wall_duration_ms": 1100,
+            "quality_score": 0.92,
+            "accuracy_score": 0.92,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          },
+          {
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice84-shadow-tiny-status-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 2200,
+              "output_tokens": 500,
+              "cached_input_tokens": 260,
+              "reasoning_tokens": 130,
+              "total_tokens": 2700,
+              "subagent_breakdown": [
+                {
+                  "id": "planner-agent",
+                  "request_count": 1,
+                  "input_tokens": 1300,
+                  "output_tokens": 280,
+                  "cached_input_tokens": 150,
+                  "reasoning_tokens": 80,
+                  "total_tokens": 1580
+                },
+                {
+                  "id": "validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 900,
+                  "output_tokens": 220,
+                  "cached_input_tokens": 110,
+                  "reasoning_tokens": 50,
+                  "total_tokens": 1120
+                }
+              ]
+            },
+            "wall_duration_ms": 2200,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

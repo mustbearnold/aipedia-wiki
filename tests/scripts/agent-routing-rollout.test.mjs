@@ -1,0 +1,126 @@
+import assert from 'node:assert/strict';
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { test } from 'node:test';
+import { buildRoutingRollout, validateRoutingRolloutReceipt } from '../../scripts/lib/routing-rollout.mjs';
+
+const REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
+const SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
+
+function runRoutingRollout(args = []) {
+  return spawnSync(process.execPath, ['scripts/agent-routing-rollout.mjs', ...args], {
+    cwd: process.cwd(),
+    encoding: 'utf8',
+  });
+}
+
+function reviewFixture() {
+  return JSON.parse(readFileSync(REVIEW_FIXTURE_PATH, 'utf8'));
+}
+
+function rolloutSuiteFixture() {
+  const suite = JSON.parse(readFileSync(SUITE_FIXTURE_PATH, 'utf8'));
+  suite.receipt_path = '.agent/evals/routing-suites/fixture-fresh-rollout-suite.json';
+  suite.run_id = 'fixture-fresh-rollout-suite';
+  return suite;
+}
+
+function writeJson(path, value) {
+  writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
+}
+
+test('agent routing rollout writes shadow-ready receipts for accepted reviews and fresh metrics suites', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-rollout-'));
+  try {
+    writeJson(join(root, 'review.json'), reviewFixture());
+    writeJson(join(root, 'suite.json'), rolloutSuiteFixture());
+    const result = runRoutingRollout([
+      '--project-dir',
+      root,
+      '--review',
+      'review.json',
+      '--suite',
+      'suite.json',
+      '--stage',
+      'shadow',
+      '--out',
+      '.agent/evals/routing-rollouts/fixture-rollout.json',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const receipt = JSON.parse(result.stdout);
+    assert.equal(receipt.schema_version, 'aipedia.agent-routing-rollout.v1');
+    assert.equal(receipt.ok, true);
+    assert.equal(receipt.rollout_evaluation.status, 'shadow-ready');
+    assert.equal(receipt.rollout_evaluation.guard_passed, true);
+    assert.equal(receipt.rollout_evaluation.default_change_allowed, false);
+    assert.equal(receipt.totals.passing_scenario_count, receipt.totals.scenario_count);
+    assert.equal(receipt.receipt_path, '.agent/evals/routing-rollouts/fixture-rollout.json');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('agent routing rollout blocks reuse of the reviewed pilot suite as rollout metrics', () => {
+  const result = buildRoutingRollout({
+    review: reviewFixture(),
+    suite: JSON.parse(readFileSync(SUITE_FIXTURE_PATH, 'utf8')),
+    rollout: { stage: 'shadow' },
+  }, {
+    generatedAt: '2026-07-01T05:40:00.000Z',
+    projectDir: '.',
+    source: `${REVIEW_FIXTURE_PATH} + ${SUITE_FIXTURE_PATH}`,
+  });
+  assert.deepEqual(result.issues, []);
+  assert.equal(result.receipt.ok, false);
+  assert.equal(result.receipt.rollout_evaluation.status, 'blocked');
+  assert.equal(result.receipt.rollout_evaluation.fresh_rollout_suite, false);
+});
+
+test('routing rollout validation rejects tampered guard state', () => {
+  const result = buildRoutingRollout({
+    review: reviewFixture(),
+    suite: rolloutSuiteFixture(),
+    rollout: { stage: 'shadow' },
+  }, {
+    generatedAt: '2026-07-01T05:40:00.000Z',
+    projectDir: '.',
+    source: `${REVIEW_FIXTURE_PATH} + ${SUITE_FIXTURE_PATH}`,
+  });
+  assert.deepEqual(result.issues, []);
+  const receipt = structuredClone(result.receipt);
+  receipt.rollout_evaluation.guard_passed = false;
+  const issues = validateRoutingRolloutReceipt(receipt);
+  assert.ok(issues.some((issue) => issue.code === 'routing-rollout-mismatch'));
+});
+
+test('agent routing rollout rejects malformed review receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-rollout-invalid-'));
+  try {
+    writeJson(join(root, 'review.json'), {
+      ok: true,
+      mode: 'agent-routing-policy-review',
+      schema_version: 'aipedia.agent-routing-policy-review.v1',
+    });
+    writeJson(join(root, 'suite.json'), rolloutSuiteFixture());
+    const result = runRoutingRollout([
+      '--project-dir',
+      root,
+      '--review',
+      'review.json',
+      '--suite',
+      'suite.json',
+      '--stage',
+      'shadow',
+      '--json',
+    ]);
+    assert.equal(result.status, 1);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.issues.some((issue) => issue.code === 'routing-rollout-source-review-invalid'));
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});

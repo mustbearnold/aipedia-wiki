@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T05:30:25.298Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-84-shadow-rollout-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-84-shadow-rollout-jsonl",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 8,
+    "findings_count": 4,
+    "corrections_applied": 4,
+    "residual_issue_count": 0,
+    "regression_count": 0
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-84-shadow-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice84-single-evidence-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Shadow rollout log found an evidence handoff gap in the single-agent heavy-review pass."
+        },
+        {
+          "id": "slice84-single-evidence-fix",
+          "type": "correction_applied",
+          "finding_id": "slice84-single-evidence-gap",
+          "severity": "",
+          "note": "Shadow rollout log recorded the evidence handoff correction."
+        },
+        {
+          "id": "slice84-single-status-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Shadow rollout log found a tiny-status wording gap in the single-agent pass."
+        },
+        {
+          "id": "slice84-single-status-fix",
+          "type": "correction_applied",
+          "finding_id": "slice84-single-status-gap",
+          "severity": "",
+          "note": "Shadow rollout log recorded the tiny-status wording correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-84-shadow-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "rollout-reviewer",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice84-orch-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Shadow rollout log found a proof-packaging gap in the orchestrated heavy-review pass."
+        },
+        {
+          "id": "slice84-orch-proof-fix",
+          "type": "correction_applied",
+          "finding_id": "slice84-orch-proof-gap",
+          "severity": "",
+          "note": "Shadow rollout log recorded the proof-packaging correction."
+        },
+        {
+          "id": "slice84-orch-canary-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Shadow rollout log found a canary-limit note that needed clearer wording."
+        },
+        {
+          "id": "slice84-orch-canary-fix",
+          "type": "correction_applied",
+          "finding_id": "slice84-orch-canary-gap",
+          "severity": "",
+          "note": "Shadow rollout log recorded the canary-limit wording correction."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-84-shadow-single-agent",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-84-shadow-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json"
+}

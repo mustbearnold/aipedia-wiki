@@ -5,24 +5,24 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-07-01T05:19:07.606Z",
+  "generated_at": "2026-07-01T05:33:26.436Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-83-routing-policy-review-receipts",
+  "run_id": "2026-06-30-slice-84-routing-rollout-guard",
   "residual_risks": [
-    "Routing-policy review receipts make the fresh pilot default-ready, but any real default orchestration rollout still needs guarded runtime receipts for exact tokens, corrections, quality, accuracy, and wall time."
+    "Routing-rollout receipts gate shadow, canary, and default-enabled routing policy rollout, but canary and default-enabled stages still need fresh post-shadow rollout suites before any live default change."
   ],
   "next_actions": [
-    "Guard default orchestration rollout with exact token, correction, quality, accuracy, and wall-time receipts.",
-    "Keep routing-policy-review receipts required before default orchestration changes."
+    "Collect a fresh canary rollout suite before promoting the reviewed routing policy beyond shadow mode.",
+    "Keep default-change allowed false unless routing-rollout receipts pass at the requested rollout stage."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-83-routing-policy-review-receipts",
-    "span_id": "span:loop-run:2026-06-30-slice-83-routing-policy-review-receipts:2026-07-01T05:19:07.606Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-84-routing-rollout-guard",
+    "span_id": "span:loop-run:2026-06-30-slice-84-routing-rollout-guard:2026-07-01T05:33:26.436Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-07-01T05:19:07.606Z",
-    "ended_at": "2026-07-01T05:19:12.408Z",
-    "duration_ms": 4802
+    "started_at": "2026-07-01T05:33:26.436Z",
+    "ended_at": "2026-07-01T05:33:31.368Z",
+    "duration_ms": 4932
   },
   "artifact_refs": [
     {
@@ -46,7 +46,7 @@
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-07-01T05-19-07-606Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-07-01T05-33-26-436Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -301,65 +301,65 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 4802,
+  "duration_ms": 4932,
   "model_token_usage": null,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 4802,
-    "total_command_duration_ms": 4799,
+    "wall_duration_ms": 4932,
+    "total_command_duration_ms": 4929,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 299.938,
-    "commands_per_second": 3.332,
-    "loops_per_second": 1.458,
+    "average_command_duration_ms": 308.063,
+    "commands_per_second": 3.244,
+    "loops_per_second": 1.419,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
     "embedded_command_artifact_count": 16,
-    "system_artifact_count": 16,
+    "system_artifact_count": 21,
     "content_artifact_count": 4,
     "other_artifact_count": 0,
-    "agent_system_artifact_count": 15,
+    "agent_system_artifact_count": 20,
     "agent_content_artifact_count": 0,
     "agent_other_artifact_count": 0,
     "preexisting_dirty_count": 5,
-    "system_artifacts_per_second": 3.332,
-    "agent_system_artifacts_per_second": 3.124,
-    "persisted_full_receipt_bytes": 47298,
-    "persisted_latest_receipt_bytes": 28780,
+    "system_artifacts_per_second": 4.258,
+    "agent_system_artifacts_per_second": 4.055,
+    "persisted_full_receipt_bytes": 49147,
+    "persisted_latest_receipt_bytes": 30629,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 1950
+        "duration_ms": 1951
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 574
+        "duration_ms": 599
       },
       {
         "loop_id": "news-market",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 314
+        "duration_ms": 328
       },
       {
         "loop_id": "freshness",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 311
+        "duration_ms": 314
       },
       {
         "loop_id": "quality-pruning",
         "label": "site KPI audit",
         "status": "ok",
-        "duration_ms": 227
+        "duration_ms": 236
       }
     ]
   },
@@ -477,7 +477,12 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
@@ -485,21 +490,26 @@
       "scripts/README.md",
       "scripts/agent-closeout-receipt-check.mjs",
       "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-review.mjs",
-      "scripts/lib/routing-policy-review.mjs",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
       "src/data/source-registry.json",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-review.test.mjs"
+      "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
@@ -507,11 +517,11 @@
       "scripts/README.md",
       "scripts/agent-closeout-receipt-check.mjs",
       "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-review.mjs",
-      "scripts/lib/routing-policy-review.mjs",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-review.test.mjs"
+      "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -526,35 +536,45 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
       "package.json",
       "scripts/README.md",
       "scripts/agent-closeout-receipt-check.mjs",
       "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-review.mjs",
-      "scripts/lib/routing-policy-review.mjs",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-review.test.mjs"
+      "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "agent_system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
       "package.json",
       "scripts/README.md",
       "scripts/agent-closeout-receipt-check.mjs",
       "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-review.mjs",
-      "scripts/lib/routing-policy-review.mjs",
+      "scripts/agent-routing-rollout.mjs",
+      "scripts/lib/routing-rollout.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
       "tests/scripts/agent-meta-closeout.test.mjs",
-      "tests/scripts/agent-routing-review.test.mjs"
+      "tests/scripts/agent-routing-rollout.test.mjs"
     ],
     "agent_content_artifacts": [],
     "agent_other_artifacts": [],
@@ -584,7 +604,7 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 205,
+      "duration_ms": 210,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
@@ -598,7 +618,7 @@
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 100,
+          "duration_ms": 106,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -608,7 +628,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 533,
+      "duration_ms": 536,
       "attention_reasons": [
         "due_now=161"
       ],
@@ -626,7 +646,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 311,
+          "duration_ms": 314,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -636,28 +656,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 376,
+      "duration_ms": 415,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 145,
+          "duration_ms": 157,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 110,
+          "duration_ms": 122,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 121,
+          "duration_ms": 135,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -676,7 +696,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 1950,
+          "duration_ms": 1951,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -700,28 +720,28 @@
       "id": "quality-pruning",
       "title": "Quality Pruning Loop",
       "status": "ok",
-      "duration_ms": 466,
+      "duration_ms": 487,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 227,
+          "duration_ms": 236,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 114,
+          "duration_ms": 120,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 125,
+          "duration_ms": 130,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -731,7 +751,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 753,
+      "duration_ms": 790,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -741,7 +761,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 179,
+          "duration_ms": 191,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -762,7 +782,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 574,
+          "duration_ms": 599,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -786,28 +806,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 518,
+      "duration_ms": 543,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 103,
+          "duration_ms": 110,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 100,
+          "duration_ms": 104,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 314,
+          "duration_ms": 328,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -816,13 +836,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-07-01T05-19-07-606Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-07-01T05-33-26-436Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-07-01T05-04-07-521Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T05-19-07-606Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-07-01T05:04:07.521Z",
+      "previous_run": "2026-07-01T05:19:07.606Z",
       "status_changes": [],
-      "duration_delta_ms": -153,
+      "duration_delta_ms": 130,
       "totals_delta": {
         "ok": 0,
         "attention": 0,

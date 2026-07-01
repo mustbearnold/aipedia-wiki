@@ -1,5 +1,22 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 84, Guarded Routing Rollout Receipts
+
+- Status: Guarded rollout receipt implementation and live shadow proof pass focused tests, scoped smart/quick validation, strict loop closeout, and final trend closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:rollout` and `scripts/lib/routing-rollout.mjs` to build closeout-checkable `aipedia.agent-routing-rollout.v1` receipts after reviewer-pass promotion and before any default orchestration change.
+- Changed: A rollout receipt now requires an accepted routing-policy-review receipt, a fresh routing-suite metrics receipt separate from the reviewed pilot suite, exact model-token usage, correction telemetry, quality, accuracy, wall-time evidence, full telemetry coverage, and scenario coverage for the reviewed policy rule count.
+- Changed: `agent:closeout:check` and `agent:meta:closeout:auto` now recognize and validate routing-rollout receipts under a dedicated `routing-rollout` profile.
+- Changed: `scripts/README.md` and `package.json` now expose the rollout gate command surface.
+- Live telemetry proof: `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-84-shadow-rollout-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 4 corrections applied, 0 residual issues, and 0 regressions.
+- Live suite proof: `.agent/evals/routing-suites/2026-06-30-slice-84-shadow-rollout-suite-receipt.json` passed auto-routed closeout with 2 telemetry-backed scenarios, 2 recommendations, telemetry coverage 1.0, total exact-token delta 3,200, total wall-duration delta 2,600, and conditional task-class routing preserved.
+- Live rollout proof: `.agent/evals/routing-rollouts/2026-06-30-slice-84-shadow-rollout-receipt.json` passed auto-routed closeout with status `shadow-ready`, guard passed true, review-ready true, fresh rollout suite true, metrics-ready true, default-change allowed false, 2/2 scenarios passing, min quality 0.92, min accuracy 0.92, 0 residual issues, and 0 regressions.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T05-33-26-436Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-84-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,932 ms, latest wall duration 4,932 ms, latest estimated full receipt tokens 12,287, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
+- Verification: syntax checks passed for the new rollout CLI/library plus closeout and router scripts. Focused rollout, closeout, and router tests passed 79/79. Scoped `check:smart` passed with 614 script tests plus command audit. `check:quick` passed with 614 script tests, command audit, and quick assets. The correction telemetry, rollout suite, rollout, latest loop, and trend receipts all passed auto-routed closeout.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 20 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time increased by 130 ms versus Slice 83, and estimated receipt tokens increased by 462 while guarded rollout evidence became closeout-checkable.
+- Next: Commit and push only Slice 84 system files, then collect a fresh canary rollout suite before promoting the reviewed routing policy beyond shadow mode.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 83, Routing Policy Reviewer-Pass Receipts
 
 - Status: Complete, verified, committed, and pushed as `18f3e4eb`.

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -10,6 +10,10 @@ import { buildRoutingEvaluationSuite } from '../../scripts/lib/routing-evaluatio
 import { buildRoutingPolicy } from '../../scripts/lib/routing-policy.mjs';
 import { buildRoutingPolicyPilot } from '../../scripts/lib/routing-policy-pilot.mjs';
 import { buildRoutingPolicyReview } from '../../scripts/lib/routing-policy-review.mjs';
+import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
+
+const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
+const ROUTING_SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
 
 function runCheck(args = []) {
   return spawnSync(process.execPath, ['scripts/agent-closeout-receipt-check.mjs', ...args], {
@@ -1043,6 +1047,24 @@ function validRoutingPolicyReviewReceipt() {
   return result.receipt;
 }
 
+function validRoutingRolloutReceipt() {
+  const review = JSON.parse(readFileSync(ROUTING_REVIEW_FIXTURE_PATH, 'utf8'));
+  const suite = JSON.parse(readFileSync(ROUTING_SUITE_FIXTURE_PATH, 'utf8'));
+  suite.receipt_path = '.agent/evals/routing-suites/fixture-fresh-rollout-suite.json';
+  suite.run_id = 'fixture-fresh-rollout-suite';
+  const result = buildRoutingRollout({
+    review,
+    suite,
+    rollout: { stage: 'shadow' },
+  }, {
+    generatedAt: '2026-07-01T05:40:00.000Z',
+    projectDir: '.',
+    source: `${ROUTING_REVIEW_FIXTURE_PATH} + ${ROUTING_SUITE_FIXTURE_PATH}`,
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
 function validLoopEfficiencyTrendReceipt(overrides = {}) {
   return {
     ok: true,
@@ -1307,6 +1329,23 @@ test('closeout receipt check validates agent routing policy review receipts', ()
   }
 });
 
+test('closeout receipt check validates agent routing rollout receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-rollout-'));
+  const path = join(dir, 'routing-rollout.json');
+
+  try {
+    writeJson(path, validRoutingRolloutReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-rollout');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check accepts historical v1 routing suite receipts without lineage refs', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-v1-'));
   const path = join(dir, 'routing-suite-v1.json');
@@ -1401,6 +1440,25 @@ test('closeout receipt check fails tampered agent routing policy review readines
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-policy-review-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing rollout readiness', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-rollout-'));
+  const path = join(dir, 'routing-rollout.json');
+
+  try {
+    const receipt = validRoutingRolloutReceipt();
+    receipt.rollout_evaluation.guard_passed = !receipt.rollout_evaluation.guard_passed;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-rollout-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
