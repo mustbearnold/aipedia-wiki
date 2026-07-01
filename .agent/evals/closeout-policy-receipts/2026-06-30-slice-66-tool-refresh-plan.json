@@ -1,0 +1,179 @@
+{
+  "ok": true,
+  "generated_at": "2026-07-01T00:10:24.832Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "limit": 1,
+  "window_days": 365,
+  "fail_on_stale_inputs": true,
+  "input_freshness": {
+    "ok": true,
+    "kind": "tool-refresh-freshness-report",
+    "generated_at": "2026-07-01T00:10:24.768Z",
+    "age_ms": 18,
+    "max_age_ms": 600000,
+    "stale": false,
+    "source": "live audit-freshness-queue report",
+    "next_action": ""
+  },
+  "tools_per_worker": 1,
+  "exclude_recent_days": 1,
+  "exclude_verified_date": "2026-06-30",
+  "totals": {
+    "tools": 297,
+    "tools_dead": 4,
+    "facts": 1730,
+    "sources": 1698,
+    "baseline_generic_pages": 0,
+    "due_now": 161,
+    "due_soon": 1041,
+    "high_volatility_missing_next_review": 0,
+    "source_registry_invalid_urls": 0,
+    "source_registry_duplicate_ids": 0,
+    "unknown_source_ids": 0,
+    "stale_verification_candidates": 0
+  },
+  "batch": [
+    {
+      "slug": "blackbox-ai",
+      "title": "BLACKBOX AI",
+      "path": "src/content/tools/blackbox-ai.md",
+      "route": "/tools/blackbox-ai/",
+      "category": "ai-coding",
+      "category_route": "/categories/ai-coding/",
+      "last_verified": "2026-06-26",
+      "last_updated": "2026-06-29",
+      "due_in_days": -2,
+      "comparison_mentions": 1,
+      "facts": [
+        "best_paid_tier"
+      ],
+      "source_ids": [
+        "blackbox-ai-best-for"
+      ],
+      "sources": [
+        {
+          "id": "blackbox-ai-best-for",
+          "label": "BLACKBOX AI pricing",
+          "url": "https://www.blackbox.ai/pricing",
+          "type": "pricing",
+          "trust_tier": "primary",
+          "volatility": "high",
+          "last_checked": "2026-06-29"
+        }
+      ]
+    }
+  ],
+  "commands": {
+    "per_tool_quality": [
+      "npm run audit:tool-quality -- --file src\\content\\tools\\blackbox-ai.md"
+    ],
+    "batch_fast_check": [
+      "npm run ledger:pages && npm run ledger:pages:check",
+      "npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json",
+      "npm run audit:date-consistency -- --changed"
+    ],
+    "source_health": [
+      "npm run audit:sources -- --json --limit 0 --source-id blackbox-ai-best-for",
+      "npm run audit:sources -- --live --limit 0 --source-id blackbox-ai-best-for",
+      "npm run audit:sources -- --live --update-snapshots --limit 0 --source-id blackbox-ai-best-for"
+    ],
+    "batch_close": [
+      "npm run ledger:pages && npm run ledger:pages:check",
+      "npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json",
+      "npm run audit:date-consistency -- --changed",
+      "npm run typecheck",
+      "npm run build:fast",
+      "npm run qa:route -- --route /tools/blackbox-ai/ --route /categories/ai-coding/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4"
+    ],
+    "routes": [
+      "/tools/blackbox-ai/",
+      "/categories/ai-coding/",
+      "/tools/",
+      "/categories/"
+    ],
+    "tool_files": [
+      "src/content/tools/blackbox-ai.md"
+    ],
+    "source_ids": [
+      "blackbox-ai-best-for"
+    ]
+  },
+  "agent_briefs": {
+    "strategy": "1 parallel shard worker(s), up to 1 tool(s) per worker, one integrator for shared files and final gates",
+    "batch_size": 1,
+    "tools_per_worker": 1,
+    "max_parallel_workers": 1,
+    "worker_waves": [
+      [
+        "tool-refresh-shard-01"
+      ]
+    ],
+    "worker_write_rule": "Each worker owns only the tool markdown files listed in its shard. Shared ledgers, registries, hubs, and builds stay with the integrator.",
+    "worker_briefs": [
+      {
+        "id": "tool-refresh-shard-01",
+        "agent_type": "worker",
+        "title": "Refresh shard 1: blackbox-ai",
+        "tool_slugs": [
+          "blackbox-ai"
+        ],
+        "owned_paths": [
+          "src/content/tools/blackbox-ai.md"
+        ],
+        "source_ids": [
+          "blackbox-ai-best-for"
+        ],
+        "read_context": [
+          "AGENTS.md",
+          ".agent/CURRENT_STATUS.md",
+          ".agent/OPERATING_RULES.md",
+          ".agent/LOOPS.md",
+          "src/content/tools/blackbox-ai.md"
+        ],
+        "do_not_edit": [
+          "PAGE_REFRESH_LEDGER.md",
+          "src/data/source-registry.json",
+          "src/content/categories/*.md",
+          "src/pages/index.astro",
+          "src/pages/tools/index.astro",
+          "src/pages/categories/index.astro",
+          "src/pages/llms*.txt.ts",
+          "src/pages/news/rss.xml.ts"
+        ],
+        "routes": [
+          "/tools/blackbox-ai/"
+        ],
+        "parent_routes": [
+          "/categories/ai-coding/"
+        ],
+        "prompt": "You are shard worker 1 in a parallel AiPedia tool-refresh batch. Refresh only this 1-tool shard:\n1. BLACKBOX AI (blackbox-ai): src/content/tools/blackbox-ai.md\n\nCurrent date: 2026-07-01. Every web search for AI, company, product, pricing, model, or news facts must include \"July 2026\". Verify volatile facts against current primary sources or named reporting before editing.\n\nOwnership:\n- You may edit only these files: src/content/tools/blackbox-ai.md.\n- Do not edit shared files: PAGE_REFRESH_LEDGER.md, src/data/source-registry.json, src/content/categories/*.md, src/pages/index.astro, src/pages/tools/index.astro, src/pages/categories/index.astro, src/pages/llms*.txt.ts, src/pages/news/rss.xml.ts.\n- Do not run typecheck, build, or route QA. The integrator will run shared gates once for the whole batch.\n\nRequired work:\n- Refresh current pricing, plan, API/model/access, affiliate, recent-change, best-plan, watch-out, and alternative guidance for each tool when supported by sources.\n- Keep the tool page in the shared decision-spine format: fast verdict, best plan, fit, watch-out, alternatives, recent changes, pricing, sources.\n- Update last_verified, fact verified_at fields, and price_history verified_at fields to the current date only for facts or commercial rows you actually checked.\n- If you need a new source-registry row, do not edit the registry. Include the proposed source id, title, URL, type, trust tier, volatility, and last_checked in your final report.\n- Classify each unresolved or constrained source claim as one of: primary-confirmed, primary-conflict, account-gated, checkout-gated, region-rendered, blocked-live-check, secondary-only.\n\nWorker verification:\n- npm run audit:tool-quality -- --file src\\content\\tools\\blackbox-ai.md\n- node scripts\\audit-provenance-pricing.mjs --changed-file src\\content\\tools\\blackbox-ai.md --json\n- npm run audit:sources -- --json --limit 0 --source-id blackbox-ai-best-for\n- node scripts\\guard-em-dashes.mjs\n\nFinal report:\n- Changed file paths, grouped by tool.\n- Source URLs checked and any source-registry rows the integrator must add or update, grouped by tool.\n- Fact/source confidence labels, grouped by tool: primary-confirmed, primary-conflict, account-gated, checkout-gated, region-rendered, blocked-live-check, or secondary-only.\n- Parent/category/top-layer surfaces the integrator must inspect, grouped by tool. If you changed a tool primary category, call that out explicitly so the integrator can refresh planner routes before QA.\n- Verification commands run and results.\n- Anything blocked or not verified."
+      }
+    ],
+    "integrator_brief": {
+      "id": "tool-refresh-integrator",
+      "agent_type": "main",
+      "title": "Integrate 1 refreshed tool page(s)",
+      "owned_paths": [
+        "src/content/tools/blackbox-ai.md",
+        "PAGE_REFRESH_LEDGER.md",
+        "src/data/source-registry.json",
+        "src/content/categories/ai-coding.md",
+        ".agent/CURRENT_STATUS.md",
+        ".agent/PLANS.md",
+        ".agent/WORK_LOG.md",
+        ".agent/loop-runs/"
+      ],
+      "prompt": "Integrate the 1 parallel tool-refresh worker result(s).\n\nWorker fanout: launch at most 1 worker subagent(s) at once. Each worker owns up to 1 tool files. Wait for workers, close completed agents so they stop counting against the app limit, then launch any remaining shard or finish remaining tool files in-thread with the same write boundary.\n\nMerge policy:\n- Review each worker diff and source list before accepting it.\n- Add or update shared source-registry rows once, after deduplicating IDs and URLs.\n- Preserve worker source-confidence labels in content caveats where facts are primary-conflict, account-gated, checkout-gated, region-rendered, blocked-live-check, or secondary-only.\n- Use the source-health commands to check registered source reachability and snapshot changes before deciding which facts need deeper refresh.\n- Update affected parent category hubs, /tools/, /categories/, top-layer summaries, internal links, and PAGE_REFRESH_LEDGER.md only after all worker tool edits are integrated.\n- If any tool primary category changed, regenerate or patch .tmp-tool-refresh-batch.json and .tmp-route-qa-args.txt from current frontmatter before route QA.\n- Run npm run ledger:pages && npm run ledger:pages:check before the grouped batch checker so a stale ledger does not waste a full validation pass.\n- Keep one final verification closeout. Do not run one build per tool.\n\nOptional source-health commands:\n- npm run audit:sources -- --json --limit 0 --source-id blackbox-ai-best-for\n- npm run audit:sources -- --live --limit 0 --source-id blackbox-ai-best-for\n- npm run audit:sources -- --live --update-snapshots --limit 0 --source-id blackbox-ai-best-for\n\nCloseout commands:\n- npm run ledger:pages && npm run ledger:pages:check\n- npm run tool:refresh:batch:check -- --plan .tmp-tool-refresh-batch.json\n- npm run audit:date-consistency -- --changed\n- npm run typecheck\n- npm run build:fast\n- npm run qa:route -- --route /tools/blackbox-ai/ --route /categories/ai-coding/ --route /tools/ --route /categories/ --widths 319,360,390,430,768,1024,1366 --site-dir dist-fast/client --concurrency 4"
+    }
+  },
+  "protocol": [
+    "Verify current sources for every tool in the batch before editing.",
+    "Use the scoped source-health commands when registered source hashes or reachability can reduce unnecessary manual review.",
+    "Update tool pages, affected parent hubs, source registry rows, and PAGE_REFRESH_LEDGER.md together.",
+    "If using subagents, launch at most 1 shard worker(s) at once, with up to 1 tool(s) per worker.",
+    "Run per-tool quality checks while editing.",
+    "Run the changed parent-hub freshness audit before build so refreshed tools do not leave stale or missing category hubs.",
+    "Run npm run ledger:pages && npm run ledger:pages:check before npm run tool:refresh:batch:check, then one expensive typecheck/build/route-QA closeout for the batch.",
+    "If one tool blocks on source access, remove it from the batch and continue with the rest."
+  ]
+}

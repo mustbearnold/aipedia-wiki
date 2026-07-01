@@ -8,7 +8,12 @@
     },
     {
       "id": "tool-refresh-policy",
-      "proof_receipts": []
+      "proof_receipts": [
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json"
+      ],
+      "proved_next_actions": [
+        "Use the durable tool-refresh runner proof as the positive policy baseline and move to the next unproved proof target."
+      ]
     },
     {
       "id": "affiliate-handoff-policy",

@@ -1950,7 +1950,7 @@ fn run_command_with_env(
             status: Some(0),
             interrupted: false,
             duration_ms: 0,
-            details_path,
+            details_path: None,
         });
     }
 
@@ -4536,6 +4536,31 @@ console.log(JSON.stringify({
 
         assert_eq!(result.status, None);
         assert!(result.interrupted);
+
+        fs::remove_dir_all(dir).ok();
+    }
+
+    #[test]
+    fn dry_run_command_does_not_claim_unwritten_detail_file() {
+        let dir = temp_runner_dir("dry-run-command-detail");
+        let project_dir = dir.join("project");
+        fs::create_dir_all(&project_dir).expect("project dir should exist");
+        let detail_path = project_dir.join("timings/grouped-check.json");
+
+        let result = run_command(
+            &project_dir,
+            "tool refresh grouped check",
+            "npm",
+            &["run".to_string(), "tool:refresh:batch:check".to_string()],
+            Some(detail_path),
+            true,
+        )
+        .expect("dry-run command should be recorded");
+
+        assert_eq!(result.status, Some(0));
+        assert!(!result.interrupted);
+        assert_eq!(result.duration_ms, 0);
+        assert_eq!(result.details_path, None);
 
         fs::remove_dir_all(dir).ok();
     }

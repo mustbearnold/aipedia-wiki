@@ -68,7 +68,10 @@
         "scripts/agent-proof-readiness.mjs --allow-observed-dirty-boundary",
         "tests/scripts/agent-proof-readiness.test.mjs observed dirty boundary coverage",
         ".agent/evals/proof-readiness-receipts/2026-06-30-slice-65-observed-dirty-boundary.json",
-        "Slice 65 proof-readiness receipt: tool-refresh ready, page-refresh blocked by stale page ledger"
+        "Slice 65 proof-readiness receipt: tool-refresh ready, page-refresh blocked by stale page ledger",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
+        ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
+        "Slice 66 proof-readiness receipt: tool-refresh proved, affiliate-handoff proved, page-refresh blocked by stale page ledger"
       ],
       "remaining": "Refresh or resolve stale page-ledger input before page-refresh proof, then run the ready tool-refresh proof with the observed dirty boundary preserved in runner closeouts."
     },
@@ -109,7 +112,9 @@
         "Slice 64 enforced loop receipt with 10 current-agent system artifacts and 4 pre-existing content artifacts",
         ".agent/loop-runs/system/2026-07-01T00-05-01-388Z-loop-run.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-65-final-efficiency-trends.json",
-        "Slice 65 enforced loop receipt with 12 current-agent system artifacts and 4 pre-existing content artifacts"
+        "Slice 65 enforced loop receipt with 12 current-agent system artifacts and 4 pre-existing content artifacts",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
+        "Slice 66 runner receipt with observed dirty system_progress, 3 current-agent system artifacts, 0 current-agent content artifacts, and 4 pre-existing content artifacts"
       ],
       "remaining": "Keep system-progress enforcement attached to every meta closeout and bounded production pilot."
     },
@@ -309,7 +314,14 @@
         "agent:meta:closeout:auto validated Slice 65 proof-readiness receipt",
         ".agent/loop-runs/system/2026-07-01T00-05-01-388Z-loop-run.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-65-final-efficiency-trends.json",
-        "agent:meta:closeout:auto validated Slice 65 latest loop and efficiency trend receipts"
+        "agent:meta:closeout:auto validated Slice 65 latest loop and efficiency trend receipts",
+        "tools/aipedia-runner/src/main.rs dry-run details_path suppression",
+        "tools/aipedia-runner/src/main.rs dry-run command detail test",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+        ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
+        ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
+        "agent:meta:closeout:auto validated Slice 66 runner receipt and proof-readiness receipt"
       ],
       "remaining": "Run positive page/tool proofs after stale inputs are ready, then track their proof receipts in the registry."
     },
@@ -482,48 +494,64 @@
     }
   ],
   "current_slice": {
-    "name": "Proof readiness observed dirty boundary",
+    "name": "Tool refresh observed dirty policy proof",
     "system_artifacts": [
-      "scripts/agent-proof-readiness.mjs",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "tests/scripts/agent-proof-readiness.test.mjs",
-      "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      "scripts/README.md",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-65-observed-dirty-boundary.json",
+      "tools/aipedia-runner/src/main.rs",
+      ".agent/meta/proof-readiness-targets.json",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.md",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
+      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-65.md",
-      ".agent/loop-runs/system/2026-07-01T00-05-01-388Z-loop-run.json",
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-66.md",
+      ".agent/loop-runs/system/2026-07-01T00-16-36-264Z-loop-run.json",
       ".agent/loop-runs/system/latest.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-65-final-efficiency-trends.json"
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-66-final-efficiency-trends.json"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
-    "proof_readiness_receipt": ".agent/evals/proof-readiness-receipts/2026-06-30-slice-65-observed-dirty-boundary.json",
+    "runner_receipt": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
+    "proof_readiness_receipt": ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json",
     "proof_readiness_summary": {
-      "target_count": 2,
-      "ready_count": 1,
-      "proved_count": 0,
+      "target_count": 3,
+      "ready_count": 0,
+      "proved_count": 2,
       "blocked_count": 1
     },
-    "ready_targets": [
-      "tool-refresh-policy"
+    "proved_targets": [
+      "tool-refresh-policy",
+      "affiliate-handoff-policy"
     ],
     "blocked_targets": [
       "page-refresh-policy"
     ],
-    "loop_receipt": ".agent/loop-runs/system/2026-07-01T00-05-01-388Z-loop-run.json",
+    "runner_summary": {
+      "workflow": "tool-refresh",
+      "status": "passed",
+      "dry_run": true,
+      "changed_routes": 4,
+      "source_ids": 1,
+      "commands": 5,
+      "command_detail_refs": 0,
+      "agent_system_artifact_count": 3,
+      "agent_content_artifact_count": 0,
+      "preexisting_dirty_count": 4,
+      "input_freshness_status": "fresh"
+    },
+    "loop_receipt": ".agent/loop-runs/system/2026-07-01T00-16-36-264Z-loop-run.json",
     "latest_loop_receipt": ".agent/loop-runs/system/latest.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-65-final-efficiency-trends.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-66-final-efficiency-trends.json",
     "loop_summary": {
       "ok": 4,
       "attention": 3,
       "skipped": 0,
       "commands": 16,
-      "agent_system_artifact_count": 12,
+      "agent_system_artifact_count": 13,
       "agent_content_artifact_count": 0,
       "preexisting_dirty_count": 4
     },
@@ -531,10 +559,10 @@
       "analyzed_runs": 3,
       "metrics_runs": 3,
       "missing_metrics_runs": 0,
-      "median_wall_duration_ms": 4671,
-      "latest_wall_duration_ms": 4710,
-      "latest_estimated_full_receipt_tokens": 11655,
-      "latest_system_artifact_count": 12,
+      "median_wall_duration_ms": 4681,
+      "latest_wall_duration_ms": 4681,
+      "latest_estimated_full_receipt_tokens": 11995,
+      "latest_system_artifact_count": 13,
       "persistent_attention_loops": 3,
       "resolved_attention_loops": 0,
       "regressed_attention_loops": 0,
@@ -547,8 +575,8 @@
     "Use AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT when running Rust runner closeouts in a dirty tree.",
     "Use agent:efficiency:trends -- --out <path> and validate the resulting receipt with agent:meta:closeout:auto -- --receipt <path> --json before citing trend proof in closeouts.",
     "Use correction_summary in trend receipts before claiming quality improved from a speed or receipt-size movement.",
-    "Resolve separate content WIP, rerun npm run agent:proof:readiness -- --json, then run page-refresh and tool-refresh positive policy proofs.",
-    "Add configured proof receipt paths for page-refresh and tool-refresh to .agent/meta/proof-readiness-targets.json when those positive proofs are complete.",
+    "Resolve separate content WIP, refresh page-ledger input, rerun npm run agent:proof:readiness -- --json, then run the page-refresh positive policy proof.",
+    "Add the configured proof receipt path for page-refresh to .agent/meta/proof-readiness-targets.json when the positive proof is complete.",
     "Add exact model-token usage and exact correction counts when measurable.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP.",
     "Run the bounded tool-refresh policy proof with AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT preserving the declared Captions/Synthesia dirty boundary.",

@@ -1,0 +1,293 @@
+{
+  "schema_version": "aipedia.closeout-receipt.v1",
+  "workflow": "tool-refresh",
+  "status": "passed",
+  "generated_at": "2026-07-01T00:12:05.867525663+00:00",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-66-tool-refresh-observed-dirty-policy-proof",
+  "residual_risks": [
+    "Dry-run proof validates runner policy shape, input freshness, observed dirty system_progress, DAG refs, and closeout validation, but not rendered page quality or real content edits."
+  ],
+  "next_actions": [
+    "Register this durable tool-refresh proof receipt, then rerun proof readiness so tool-refresh-policy reports proved."
+  ],
+  "trace": {
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-66-tool-refresh-observed-dirty-policy-proof",
+    "span_id": "span:tool-refresh:2026-06-30-slice-66-tool-refresh-observed-dirty-policy-proof:2026-07-01T00:12:05.867525663-00:00",
+    "parent_span_id": "",
+    "name": "tool-refresh",
+    "started_at": "2026-07-01T00:12:05.867525663+00:00",
+    "ended_at": "2026-07-01T00:12:05.867556134+00:00",
+    "duration_ms": 0
+  },
+  "artifact_refs": [
+    {
+      "role": "input",
+      "kind": "plan",
+      "path": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+      "description": "Planner JSON used for this closeout."
+    },
+    {
+      "role": "input",
+      "kind": "route-args",
+      "path": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+      "description": "Generated route QA argument file."
+    },
+    {
+      "role": "output",
+      "kind": "markdown-receipt",
+      "path": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.md",
+      "description": "Human-readable closeout receipt."
+    },
+    {
+      "role": "output",
+      "kind": "json-receipt",
+      "path": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
+      "description": "Machine-readable closeout receipt."
+    },
+    {
+      "role": "output",
+      "kind": "agent-task-dag",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.json",
+      "description": "Generated agent task DAG graph."
+    },
+    {
+      "role": "output",
+      "kind": "agent-task-dag-validation-report",
+      "path": ".agent/evals/agent-dag-contracts/2026-06-30-slice-34-cursor-agent-task-graph.validation.json",
+      "description": "agent:dag:check validation report for an agent task DAG."
+    },
+    {
+      "role": "route",
+      "kind": "changed-route",
+      "id": "/categories/",
+      "description": "tool-refresh"
+    },
+    {
+      "role": "route",
+      "kind": "changed-route",
+      "id": "/categories/ai-coding/",
+      "description": "tool-refresh"
+    },
+    {
+      "role": "route",
+      "kind": "changed-route",
+      "id": "/tools/",
+      "description": "tool-refresh"
+    },
+    {
+      "role": "route",
+      "kind": "changed-route",
+      "id": "/tools/blackbox-ai/",
+      "description": "tool-refresh"
+    },
+    {
+      "role": "source",
+      "kind": "source-id",
+      "id": "blackbox-ai-best-for",
+      "description": "tool-refresh"
+    },
+    {
+      "role": "embedded",
+      "kind": "closeout-command",
+      "id": "tool-refresh:ledger-generate",
+      "description": "ledger generate"
+    },
+    {
+      "role": "embedded",
+      "kind": "closeout-command",
+      "id": "tool-refresh:ledger-check",
+      "description": "ledger check"
+    },
+    {
+      "role": "embedded",
+      "kind": "closeout-command",
+      "id": "tool-refresh:tool-refresh-grouped-check",
+      "description": "tool refresh grouped check"
+    },
+    {
+      "role": "embedded",
+      "kind": "closeout-command",
+      "id": "tool-refresh:date-consistency-changed",
+      "description": "date consistency changed"
+    },
+    {
+      "role": "embedded",
+      "kind": "closeout-command",
+      "id": "tool-refresh:typecheck",
+      "description": "typecheck"
+    }
+  ],
+  "current_date": null,
+  "elapsed_ms": 0,
+  "plan": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+  "route_args": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+  "report_dir": null,
+  "report_summary": null,
+  "markdown_receipt": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.md",
+  "changed_routes": [
+    "/categories/",
+    "/categories/ai-coding/",
+    "/tools/",
+    "/tools/blackbox-ai/"
+  ],
+  "source_ids": [
+    "blackbox-ai-best-for"
+  ],
+  "widths": [
+    319,
+    360,
+    390,
+    430,
+    768,
+    1024,
+    1366
+  ],
+  "commands": [
+    {
+      "label": "ledger generate",
+      "status": 0,
+      "interrupted": false,
+      "elapsed_ms": 0,
+      "details_path": null
+    },
+    {
+      "label": "ledger check",
+      "status": 0,
+      "interrupted": false,
+      "elapsed_ms": 0,
+      "details_path": null
+    },
+    {
+      "label": "tool refresh grouped check",
+      "status": 0,
+      "interrupted": false,
+      "elapsed_ms": 0,
+      "details_path": null
+    },
+    {
+      "label": "date consistency changed",
+      "status": 0,
+      "interrupted": false,
+      "elapsed_ms": 0,
+      "details_path": null
+    },
+    {
+      "label": "typecheck",
+      "status": 0,
+      "interrupted": false,
+      "elapsed_ms": 0,
+      "details_path": null
+    }
+  ],
+  "superseded_failures": [],
+  "system_progress": {
+    "agent_changed_paths": [
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+      "tools/aipedia-runner/src/main.rs"
+    ],
+    "agent_content_artifacts": [],
+    "agent_content_only": false,
+    "agent_other_artifacts": [],
+    "agent_system_artifacts": [
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+      "tools/aipedia-runner/src/main.rs"
+    ],
+    "changed_paths": [
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json",
+      "tools/aipedia-runner/src/main.rs"
+    ],
+    "command": "node scripts/agent-system-progress-check.mjs --json --project-dir=. --observed-dirty-before-agent src/content/tools/synthesia.md --observed-dirty-before-agent src/data/coverage-backlog.json --observed-dirty-before-agent src/data/source-registry.json --observed-dirty-before-agent src/content/comparisons/captions-vs-synthesia.md",
+    "content_artifacts": [
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "content_only": false,
+    "exit_code": 0,
+    "has_agent_system_artifact": true,
+    "has_observed_dirty_baseline": true,
+    "has_system_artifact": true,
+    "missing_observed_dirty_paths": [],
+    "mode": "system-progress-check",
+    "next_action": "System artifact present or enforcement disabled.",
+    "observed_dirty_before_agent": [
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "ok": true,
+    "other_artifacts": [],
+    "preexisting_content_artifacts": [
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "preexisting_dirty_paths": [
+      "src/content/comparisons/captions-vs-synthesia.md",
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json"
+    ],
+    "preexisting_other_artifacts": [],
+    "preexisting_system_artifacts": [],
+    "project_dir": ".",
+    "require_system_artifact": false,
+    "system_artifacts": [
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-plan.json",
+      ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-route-args.txt",
+      "tools/aipedia-runner/src/main.rs"
+    ]
+  },
+  "input_freshness": {
+    "allow_tracked_mutations": false,
+    "apply_refreshes": false,
+    "command": "node scripts/agent-input-freshness-receipt.mjs --workflow tool-refresh --json --project-dir=.",
+    "exit_code": 0,
+    "generated_at": "2026-07-01T00:12:06.274Z",
+    "max_backlog_age_days": 2,
+    "max_generated_age_minutes": 10,
+    "mode": "input-freshness-receipt",
+    "next_actions": [],
+    "ok": true,
+    "project_dir": ".",
+    "refresh_plan": [],
+    "refresh_stale": false,
+    "require_fresh": false,
+    "schema_version": "aipedia.input-freshness-receipt.v1",
+    "summary": {
+      "attention_count": 0,
+      "ok_count": 1,
+      "stale_count": 0,
+      "workflow_count": 1
+    },
+    "workflows": [
+      {
+        "age_ms": 16,
+        "command": "node scripts/audit-freshness-queue.mjs --json --project-dir .",
+        "enforce_command": "npm run tool:refresh:batch -- --fail-on-stale-inputs --json",
+        "exit_code": 0,
+        "generated_at": "2026-07-01T00:12:06.258Z",
+        "id": "tool-refresh",
+        "kind": "tool-refresh-freshness-report",
+        "max_age_ms": 600000,
+        "next_action": "",
+        "ok": true,
+        "refresh_command": "npm run audit:freshness -- --json",
+        "status": "fresh",
+        "stderr_tail": "",
+        "stdout_tail": "  },\n  \"source_registry\": {\n    \"invalid_urls\": [],\n    \"duplicate_ids\": [],\n    \"missing_trust_metadata\": [],\n    \"unknown_source_ids\": []\n  }\n}"
+      }
+    ]
+  }
+}

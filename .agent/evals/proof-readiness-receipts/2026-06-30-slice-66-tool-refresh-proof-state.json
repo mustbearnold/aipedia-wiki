@@ -1,0 +1,192 @@
+{
+  "ok": false,
+  "mode": "meta-proof-readiness",
+  "schema_version": "aipedia.meta-proof-readiness.v1",
+  "generated_at": "2026-07-01T00:12:29.318Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "argument_issues": [],
+  "selected_targets": [
+    "page-refresh-policy",
+    "tool-refresh-policy",
+    "affiliate-handoff-policy"
+  ],
+  "summary": {
+    "target_count": 3,
+    "ready_count": 0,
+    "proved_count": 2,
+    "blocked_count": 1,
+    "unknown_count": 0
+  },
+  "inputs": {
+    "input_freshness_source": "node scripts/agent-input-freshness-receipt.mjs --workflow page-refresh --workflow tool-refresh --workflow affiliate-conversion --json",
+    "input_freshness_exit_code": 0,
+    "git_status_source": "git status --short",
+    "git_status_exit_code": 0,
+    "proof_target_registry_source": ".agent/meta/proof-readiness-targets.json",
+    "proof_target_registry_status": "loaded",
+    "proof_target_registry_issue_count": 0,
+    "observed_dirty_before_agent": [
+      "src/content/tools/synthesia.md",
+      "src/data/coverage-backlog.json",
+      "src/data/source-registry.json",
+      "src/content/comparisons/captions-vs-synthesia.md"
+    ],
+    "allow_observed_dirty_boundary": true
+  },
+  "targets": [
+    {
+      "ok": false,
+      "id": "page-refresh-policy",
+      "status": "blocked",
+      "workflow": "page-refresh",
+      "proof_goal": "Positive bounded page-refresh runner policy proof.",
+      "blockers": [
+        {
+          "code": "input-freshness-stale",
+          "message": "Run npm run ledger:pages && npm run ledger:pages:check, then rerun page refresh planning with --fail-on-stale-ledger.",
+          "status": "stale",
+          "input": "PAGE_REFRESH_LEDGER.md",
+          "refresh_command": "npm run ledger:pages && npm run ledger:pages:check",
+          "enforce_command": "npm run page:refresh:batch -- --fail-on-stale-ledger --json"
+        }
+      ],
+      "proof_completion": {
+        "status": "untracked",
+        "proved": false,
+        "receipt_count": 0,
+        "receipts": []
+      },
+      "readiness_checks": [
+        {
+          "id": "proof-completion",
+          "ok": false,
+          "status": "untracked",
+          "receipt_paths": []
+        },
+        {
+          "id": "page-refresh-input-freshness",
+          "ok": false,
+          "status": "stale"
+        },
+        {
+          "id": "dirty-content-boundary",
+          "ok": true,
+          "dirty_paths": [
+            "src/content/tools/synthesia.md",
+            "src/data/coverage-backlog.json",
+            "src/data/source-registry.json",
+            "src/content/comparisons/captions-vs-synthesia.md"
+          ],
+          "observed_dirty_paths": [
+            "src/content/tools/synthesia.md",
+            "src/data/coverage-backlog.json",
+            "src/data/source-registry.json",
+            "src/content/comparisons/captions-vs-synthesia.md"
+          ],
+          "unobserved_dirty_paths": [],
+          "observed_dirty_allowed": true
+        }
+      ],
+      "recommended_commands": [
+        "npm --silent run agent:proof:readiness -- --target page-refresh-policy --json"
+      ],
+      "next_actions": [
+        "Regenerate and check PAGE_REFRESH_LEDGER.md only after dirty content ownership is resolved, then rerun proof readiness."
+      ]
+    },
+    {
+      "ok": true,
+      "id": "tool-refresh-policy",
+      "status": "proved",
+      "workflow": "tool-refresh",
+      "proof_goal": "Positive bounded tool-refresh runner policy proof.",
+      "blockers": [],
+      "proof_completion": {
+        "status": "proved",
+        "proved": true,
+        "receipt_count": 1,
+        "valid_count": 1,
+        "receipts": [
+          {
+            "path": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json",
+            "exists": true,
+            "ok": true,
+            "status": "valid",
+            "type": "runner-closeout",
+            "issue_count": 0,
+            "issues": [],
+            "exit_code": 0,
+            "stderr_tail": "",
+            "validation_command": "node scripts/agent-closeout-receipt-check.mjs --receipt .agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json --require-workflow-policy --json"
+          }
+        ]
+      },
+      "readiness_checks": [
+        {
+          "id": "proof-completion",
+          "ok": true,
+          "status": "proved",
+          "receipt_paths": [
+            ".agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json"
+          ]
+        }
+      ],
+      "recommended_commands": [
+        "node scripts/agent-closeout-receipt-check.mjs --receipt .agent/evals/closeout-policy-receipts/2026-06-30-slice-66-tool-refresh-receipts/2026-07-01T00-12-05Z-tool-refresh-closeout.json --require-workflow-policy --json"
+      ],
+      "next_actions": [
+        "Use the durable tool-refresh runner proof as the positive policy baseline and move to the next unproved proof target."
+      ]
+    },
+    {
+      "ok": true,
+      "id": "affiliate-handoff-policy",
+      "status": "proved",
+      "workflow": "affiliate-conversion",
+      "proof_goal": "Positive bounded affiliate handoff policy proof.",
+      "blockers": [],
+      "proof_completion": {
+        "status": "proved",
+        "proved": true,
+        "receipt_count": 1,
+        "valid_count": 1,
+        "receipts": [
+          {
+            "path": ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json",
+            "exists": true,
+            "ok": true,
+            "status": "valid",
+            "type": "affiliate-handoff",
+            "issue_count": 0,
+            "issues": [],
+            "exit_code": 0,
+            "stderr_tail": "",
+            "validation_command": "node scripts/agent-closeout-receipt-check.mjs --receipt .agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json --require-workflow-policy --json"
+          }
+        ]
+      },
+      "readiness_checks": [
+        {
+          "id": "proof-completion",
+          "ok": true,
+          "status": "proved",
+          "receipt_paths": [
+            ".agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json"
+          ]
+        }
+      ],
+      "recommended_commands": [
+        "node scripts/agent-closeout-receipt-check.mjs --receipt .agent/evals/closeout-policy-receipts/2026-06-30-slice-44-affiliate-handoff-policy-proof.json --require-workflow-policy --json"
+      ],
+      "next_actions": [
+        "Use the durable affiliate handoff proof as the positive policy baseline and move to the next unproved proof target."
+      ]
+    }
+  ],
+  "next_actions": [
+    "Regenerate and check PAGE_REFRESH_LEDGER.md only after dirty content ownership is resolved, then rerun proof readiness.",
+    "Use the durable tool-refresh runner proof as the positive policy baseline and move to the next unproved proof target.",
+    "Use the durable affiliate handoff proof as the positive policy baseline and move to the next unproved proof target."
+  ],
+  "receipt_path": ".agent/evals/proof-readiness-receipts/2026-06-30-slice-66-tool-refresh-proof-state.json"
+}
