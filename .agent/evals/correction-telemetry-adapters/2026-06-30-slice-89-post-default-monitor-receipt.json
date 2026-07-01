@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T07:34:11.452Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-89-post-default-monitor-events.jsonl",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-89-post-default-monitor-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-89-post-default-monitor-jsonl",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 8,
+    "findings_count": 4,
+    "corrections_applied": 4,
+    "residual_issue_count": 0,
+    "regression_count": 0
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-89-post-default-monitor-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice89-single-heavy-context-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Repeat post-default monitor found a heavy-review context compression gap in the single-agent route."
+        },
+        {
+          "id": "slice89-single-heavy-context-fix",
+          "type": "correction_applied",
+          "finding_id": "slice89-single-heavy-context-gap",
+          "severity": "",
+          "note": "Repeat post-default monitor recorded the context compression correction."
+        },
+        {
+          "id": "slice89-single-status-handoff-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Repeat post-default monitor found a compact-status handoff wording gap in the single-agent route."
+        },
+        {
+          "id": "slice89-single-status-handoff-fix",
+          "type": "correction_applied",
+          "finding_id": "slice89-single-status-handoff-gap",
+          "severity": "",
+          "note": "Repeat post-default monitor recorded the handoff wording correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-89-post-default-monitor-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "post-default-routing-reviewer",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice89-orch-heavy-validation-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Repeat post-default monitor found a heavy-review validator summary that needed clearer token accounting."
+        },
+        {
+          "id": "slice89-orch-heavy-validation-fix",
+          "type": "correction_applied",
+          "finding_id": "slice89-orch-heavy-validation-gap",
+          "severity": "",
+          "note": "Repeat post-default monitor recorded the token accounting correction."
+        },
+        {
+          "id": "slice89-orch-status-route-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Repeat post-default monitor found a tiny-status routing note that needed a stricter single-agent preference."
+        },
+        {
+          "id": "slice89-orch-status-route-fix",
+          "type": "correction_applied",
+          "finding_id": "slice89-orch-status-route-gap",
+          "severity": "",
+          "note": "Repeat post-default monitor recorded the single-agent preference correction."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-89-post-default-monitor-single-agent",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-89-post-default-monitor-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-89-post-default-monitor-receipt.json"
+}

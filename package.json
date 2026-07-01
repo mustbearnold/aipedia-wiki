@@ -121,6 +121,7 @@
     "agent:routing:review": "node scripts/agent-routing-review.mjs",
     "agent:routing:rollout": "node scripts/agent-routing-rollout.mjs",
     "agent:routing:monitor": "node scripts/agent-routing-monitor.mjs",
+    "agent:routing:monitor:trends": "node scripts/agent-routing-monitor-trends.mjs",
     "agent:routing:handoff": "node scripts/agent-routing-handoff.mjs",
     "agent:dag:check": "node scripts/agent-task-dag-check.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",

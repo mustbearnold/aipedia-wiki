@@ -2491,3 +2491,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Routing proof: `orchestrated-specialists` is recommended over `single-agent` with 0.964 versus 0.913 weighted score, 5,200 versus 6,000 exact total tokens, 6,400 ms versus 7,000 ms wall time, and 0.051 improvement margin.
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-72-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 4,934 ms, latest estimated full receipt tokens 12,074, latest system artifact count 21, 3 persistent attention loops, and 4 persistent attention commands.
 - Next: Commit and push, then add automatic exact correction-count telemetry or expand routing evaluation across multiple real task classes before changing default orchestration.
+
+### 2026-07-01: Agentic Tooling Meta Slice 89, Repeated Routing Monitor Trends
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:monitor:trends`, backed by `scripts/lib/routing-monitor-trends.mjs`, to build closeout-checkable `aipedia.agent-routing-monitor-trends.v1` receipts from repeated post-default routing monitor receipts.
+- Changed: `agent:closeout:check` now recomputes monitor-trend summaries and fails drifted receipts. `agent:meta:closeout:auto` now routes monitor-trend receipts with the `routing-monitor-trends` profile.
+- System lesson: one healthy post-default monitor is not enough proof for a default routing policy. Repeated monitors now have to prove one rollout lineage, fresh distinct monitoring suites, stable scenario coverage, no new failures, and bounded quality, accuracy, exact-token, and wall-time drift.
+- Verification: focused routing-monitor-trends, routing-monitor, routing-handoff, routing-rollout, closeout, and router tests passed 114/114. Scoped `check:smart --run` passed with 649 script tests plus command audit. `check:quick` passed with 649 script tests, command audit, and quick assets.
+- Durable proof: `.agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json` is `trend-healthy` with 2/2 healthy monitors, rollback required count 0, same source rollout true, unique monitoring suites true, all suites fresh true, no new failing scenarios, exact-token delta improved by 110, wall-time delta improved by 140, quality drop 0, and accuracy drop 0.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-89.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T07-39-47-550Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-89-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 5,228 ms, latest estimated full receipt tokens 12,404, latest system artifact count 21, no loop or command status changes, and no new attention loops.
+- Next: Commit and push, then require runtime default routing integrations to attach handoff and monitor-trend receipts before a default change can count as complete.

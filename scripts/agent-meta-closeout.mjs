@@ -108,6 +108,7 @@ function usage() {
     '  routing-policy-review Durable routing policy reviewer-pass receipt validation.',
     '  routing-rollout Durable guarded routing rollout receipt validation.',
     '  routing-monitor Durable post-default routing monitoring and rollback receipt validation.',
+    '  routing-monitor-trends Durable repeated post-default routing monitor trend validation.',
     '  routing-handoff Durable default routing handoff receipt validation.',
     '',
     'Options:',
@@ -124,7 +125,7 @@ function buildRoute() {
     : ['.agent/loop-runs/system/latest.json'];
   const receipts = rawPaths.map((rawPath) => inspectReceipt(rawPath));
   const routeIssues = receipts.flatMap((receipt) => receipt.route_issues);
-  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy', 'agent-routing-policy-pilot', 'agent-routing-policy-review', 'agent-routing-rollout', 'agent-routing-monitor', 'agent-routing-handoff']);
+  const supportedTypes = new Set(['loop-run', 'runner-closeout', 'loop-efficiency-trends', 'meta-proof-readiness', 'agent-correction-telemetry', 'agent-routing-evaluation', 'agent-routing-evaluation-suite', 'agent-routing-policy', 'agent-routing-policy-pilot', 'agent-routing-policy-review', 'agent-routing-rollout', 'agent-routing-monitor', 'agent-routing-monitor-trends', 'agent-routing-handoff']);
   const unsupported = receipts.filter((receipt) => !supportedTypes.has(receipt.type));
   for (const receipt of unsupported) {
     routeIssues.push(issue(
@@ -144,6 +145,7 @@ function buildRoute() {
   const hasRoutingPolicyReview = receipts.some((receipt) => receipt.type === 'agent-routing-policy-review');
   const hasRoutingRollout = receipts.some((receipt) => receipt.type === 'agent-routing-rollout');
   const hasRoutingMonitor = receipts.some((receipt) => receipt.type === 'agent-routing-monitor');
+  const hasRoutingMonitorTrends = receipts.some((receipt) => receipt.type === 'agent-routing-monitor-trends');
   const hasRoutingHandoff = receipts.some((receipt) => receipt.type === 'agent-routing-handoff');
   const strictFlags = [
     ...(receipts.some((receipt) => STRICT_RECEIPT_TYPES.has(receipt.type)) ? STRICT_META_FLAGS : []),
@@ -163,6 +165,7 @@ function buildRoute() {
     hasRoutingPolicyReview,
     hasRoutingRollout,
     hasRoutingMonitor,
+    hasRoutingMonitorTrends,
     hasRoutingHandoff,
   });
   return {
@@ -202,7 +205,7 @@ function inspectReceipt(rawPath) {
   };
 }
 
-function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy, hasRoutingPolicyPilot, hasRoutingPolicyReview, hasRoutingRollout, hasRoutingMonitor, hasRoutingHandoff }) {
+function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasCorrectionTelemetry, hasRoutingEvaluation, hasRoutingEvaluationSuite, hasRoutingPolicy, hasRoutingPolicyPilot, hasRoutingPolicyReview, hasRoutingRollout, hasRoutingMonitor, hasRoutingMonitorTrends, hasRoutingHandoff }) {
   const extraProfiles = [
     hasTrend ? 'trends' : '',
     hasReadiness ? 'readiness' : '',
@@ -214,6 +217,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     hasRoutingPolicyReview ? 'routing-policy-review' : '',
     hasRoutingRollout ? 'routing-rollout' : '',
     hasRoutingMonitor ? 'routing-monitor' : '',
+    hasRoutingMonitorTrends ? 'routing-monitor-trends' : '',
     hasRoutingHandoff ? 'routing-handoff' : '',
   ].filter(Boolean);
   if ((hasRunner || hasLoop) && extraProfiles.length) {
@@ -223,7 +227,8 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
     ].filter(Boolean);
     return `mixed-${[...strictProfiles, ...extraProfiles].join('-')}`;
   }
-  if (hasRoutingHandoff && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor)) return `mixed-${extraProfiles.join('-')}`;
+  if (hasRoutingHandoff && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor || hasRoutingMonitorTrends)) return `mixed-${extraProfiles.join('-')}`;
+  if (hasRoutingMonitorTrends && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout || hasRoutingMonitor)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingMonitor && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview || hasRoutingRollout)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingRollout && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot || hasRoutingPolicyReview)) return `mixed-${extraProfiles.join('-')}`;
   if (hasRoutingPolicyReview && (hasTrend || hasReadiness || hasCorrectionTelemetry || hasRoutingEvaluation || hasRoutingEvaluationSuite || hasRoutingPolicy || hasRoutingPolicyPilot)) return `mixed-${extraProfiles.join('-')}`;
@@ -247,6 +252,7 @@ function profileFor({ explicit, hasRunner, hasLoop, hasTrend, hasReadiness, hasC
   if (hasRoutingPolicyReview) return 'routing-policy-review';
   if (hasRoutingRollout) return 'routing-rollout';
   if (hasRoutingMonitor) return 'routing-monitor';
+  if (hasRoutingMonitorTrends) return 'routing-monitor-trends';
   if (hasRoutingHandoff) return 'routing-handoff';
   return 'unsupported';
 }
@@ -266,6 +272,7 @@ function receiptType(value) {
   if (value.schema_version === 'aipedia.agent-routing-policy-review.v1') return 'agent-routing-policy-review';
   if (value.schema_version === 'aipedia.agent-routing-rollout.v1') return 'agent-routing-rollout';
   if (value.schema_version === 'aipedia.agent-routing-monitor.v1') return 'agent-routing-monitor';
+  if (value.schema_version === 'aipedia.agent-routing-monitor-trends.v1') return 'agent-routing-monitor-trends';
   if (value.schema_version === 'aipedia.agent-routing-handoff.v1') return 'agent-routing-handoff';
   if (value.schema_version === 'aipedia.pause-receipt.v1') return 'pause-receipt';
   if (typeof value.mode === 'string' && value.mode.startsWith('loop-run')) return 'loop-run';

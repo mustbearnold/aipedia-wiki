@@ -12,6 +12,7 @@ import { buildRoutingPolicyPilot } from '../../scripts/lib/routing-policy-pilot.
 import { buildRoutingPolicyReview } from '../../scripts/lib/routing-policy-review.mjs';
 import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
 import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
+import { buildRoutingMonitorTrends } from '../../scripts/lib/routing-monitor-trends.mjs';
 import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
 
 const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
@@ -1102,10 +1103,10 @@ function validRoutingDefaultRolloutReceipt() {
   return result.receipt;
 }
 
-function validRoutingMonitorReceipt() {
+function validRoutingMonitorReceipt(overrides = {}) {
   const suite = JSON.parse(readFileSync(ROUTING_SUITE_FIXTURE_PATH, 'utf8'));
-  suite.receipt_path = '.agent/evals/routing-suites/fixture-post-default-monitoring-suite.json';
-  suite.run_id = 'fixture-post-default-monitoring-suite';
+  suite.receipt_path = overrides.suitePath || '.agent/evals/routing-suites/fixture-post-default-monitoring-suite.json';
+  suite.run_id = overrides.suiteRunId || 'fixture-post-default-monitoring-suite';
   const result = buildRoutingMonitor({
     default_rollout: validRoutingDefaultRolloutReceipt(),
     suite,
@@ -1115,9 +1116,36 @@ function validRoutingMonitorReceipt() {
       verification_command: 'npm --silent run agent:routing:monitor -- --default-rollout fixture-rollback.json --suite fixture-rollback-suite.json --json',
     },
   }, {
-    generatedAt: '2026-07-01T06:30:00.000Z',
+    generatedAt: overrides.generatedAt || '2026-07-01T06:30:00.000Z',
     projectDir: '.',
-    source: '.agent/evals/routing-rollouts/fixture-default-rollout.json + .agent/evals/routing-suites/fixture-post-default-monitoring-suite.json',
+    source: `.agent/evals/routing-rollouts/fixture-default-rollout.json + ${suite.receipt_path}`,
+  });
+  assert.deepEqual(result.issues, []);
+  if (overrides.receiptPath) result.receipt.receipt_path = overrides.receiptPath;
+  return result.receipt;
+}
+
+function validRoutingMonitorTrendsReceipt() {
+  const result = buildRoutingMonitorTrends({
+    monitor_receipts: [
+      validRoutingMonitorReceipt({
+        generatedAt: '2026-07-01T06:30:00.000Z',
+        suitePath: '.agent/evals/routing-suites/fixture-post-default-monitoring-suite-a.json',
+        suiteRunId: 'fixture-post-default-monitoring-suite-a',
+        receiptPath: '.agent/evals/routing-monitors/fixture-monitor-a.json',
+      }),
+      validRoutingMonitorReceipt({
+        generatedAt: '2026-07-01T07:00:00.000Z',
+        suitePath: '.agent/evals/routing-suites/fixture-post-default-monitoring-suite-b.json',
+        suiteRunId: 'fixture-post-default-monitoring-suite-b',
+        receiptPath: '.agent/evals/routing-monitors/fixture-monitor-b.json',
+      }),
+    ],
+    trend_task: 'Fixture repeated post-default routing monitor trend.',
+  }, {
+    generatedAt: '2026-07-01T07:05:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-monitors/fixture-monitor-a.json + .agent/evals/routing-monitors/fixture-monitor-b.json',
   });
   assert.deepEqual(result.issues, []);
   return result.receipt;
@@ -1443,6 +1471,23 @@ test('closeout receipt check validates agent routing monitor receipts', () => {
   }
 });
 
+test('closeout receipt check validates agent routing monitor trend receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-monitor-trends-'));
+  const path = join(dir, 'routing-monitor-trends.json');
+
+  try {
+    writeJson(path, validRoutingMonitorTrendsReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-monitor-trends');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check validates agent routing handoff receipts', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-handoff-'));
   const path = join(dir, 'routing-handoff.json');
@@ -1592,6 +1637,25 @@ test('closeout receipt check fails tampered agent routing monitor readiness', ()
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-monitor-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing monitor trend readiness', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-monitor-trends-'));
+  const path = join(dir, 'routing-monitor-trends.json');
+
+  try {
+    const receipt = validRoutingMonitorTrendsReceipt();
+    receipt.drift_evaluation.trend_healthy = !receipt.drift_evaluation.trend_healthy;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-monitor-trends-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
