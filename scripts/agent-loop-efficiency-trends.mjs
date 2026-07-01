@@ -185,7 +185,7 @@ function loopStatusSummary(loop) {
 
 function runSummary(record) {
   const metrics = record.efficiency_metrics || {};
-  return {
+  const summary = {
     path: record.path,
     generated_at: record.generated_at,
     run_id: record.run_id,
@@ -201,13 +201,16 @@ function runSummary(record) {
     estimated_full_receipt_tokens: estimateTokens(metrics.persisted_full_receipt_bytes),
     system_artifact_count: nonNegative(metrics.system_artifact_count),
   };
+  const exactTokens = exactModelTokenSummary(metrics);
+  if (exactTokens) Object.assign(summary, exactTokens);
+  return summary;
 }
 
 function trendSummary(records, metricsRecords) {
   const runs = metricsRecords.map(runSummary);
   const latest = runs.at(-1) || null;
   const previous = runs.length > 1 ? runs.at(-2) : null;
-  return {
+  const summary = {
     first_run: records[0]?.generated_at || '',
     latest_run: records.at(-1)?.generated_at || '',
     metrics_coverage_rate: ratio(metricsRecords.length, records.length),
@@ -227,6 +230,33 @@ function trendSummary(records, metricsRecords) {
       estimated_full_receipt_tokens: latest.estimated_full_receipt_tokens - previous.estimated_full_receipt_tokens,
       system_artifact_count: latest.system_artifact_count - previous.system_artifact_count,
     } : null,
+  };
+  const exactRuns = runs.filter((run) => run.has_exact_model_tokens === true);
+  if (exactRuns.length) {
+    const latestExact = exactRuns.at(-1);
+    const previousExact = exactRuns.length > 1 ? exactRuns.at(-2) : null;
+    Object.assign(summary, {
+      exact_model_token_coverage_rate: ratio(exactRuns.length, runs.length),
+      median_exact_model_total_tokens: median(exactRuns.map((run) => run.exact_model_total_tokens)),
+      latest_exact_model_total_tokens: latestExact.exact_model_total_tokens,
+      delta_exact_model_total_tokens_from_previous: previousExact
+        ? latestExact.exact_model_total_tokens - previousExact.exact_model_total_tokens
+        : 0,
+    });
+  }
+  return summary;
+}
+
+function exactModelTokenSummary(metrics) {
+  if (!metrics || metrics.model_token_usage_status !== 'provided') return null;
+  return {
+    has_exact_model_tokens: true,
+    exact_model_request_count: nonNegative(metrics.exact_model_request_count),
+    exact_model_input_tokens: nonNegative(metrics.exact_model_input_tokens),
+    exact_model_output_tokens: nonNegative(metrics.exact_model_output_tokens),
+    exact_model_cached_input_tokens: nonNegative(metrics.exact_model_cached_input_tokens),
+    exact_model_reasoning_tokens: nonNegative(metrics.exact_model_reasoning_tokens),
+    exact_model_total_tokens: nonNegative(metrics.exact_model_total_tokens),
   };
 }
 

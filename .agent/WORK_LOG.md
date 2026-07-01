@@ -1,5 +1,18 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 70, Exact Model Token Tracking
+
+- Status: Complete locally, verified, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: `loop:all:record` now accepts exact runtime model token usage through `--model-token-usage`, `AIPEDIA_MODEL_TOKEN_USAGE_FILE`, or `AIPEDIA_MODEL_TOKEN_USAGE_JSON`, normalizes the payload into `aipedia.model-token-usage.v1`, and mirrors exact request, input, output, cached-input, reasoning, and total token counts into loop `efficiency_metrics`.
+- Changed: `agent:efficiency:trends` now summarizes exact model-token fields across recent loop receipts, and `agent:closeout:check` validates loop token usage, exact token efficiency metrics, and trend exact-token rows against source loop receipts.
+- System lesson: token efficiency needs exact runtime usage where available, not only receipt-size proxies. The new fields make orchestrator and subagent routing strategies measurable by exact tokens per run instead of intuition.
+- Verification: syntax checks passed for the three changed scripts. Focused loop, trend, closeout, and router tests passed 71/71. A live token-aware `loop:all:record` receipt passed strict latest-loop closeout, and the final token-aware trend receipt passed auto-routed closeout.
+- Durable token fixture: `.agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-70.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T01-05-45-179Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json` passed with 3 metric-aware receipts, exact token coverage 0.667, median exact total tokens 5,100, latest exact total tokens 5,100, median wall duration 4,697 ms, latest wall duration 4,674 ms, and latest estimated full receipt tokens 11,735.
+- Next: Commit and push, then use exact model-token fields to evaluate orchestrator/subagent routing strategies when real runtime token payloads are available.
+
 ### 2026-06-30: Agentic Tooling Meta OS Slice 69
 
 - Status: Verified locally and ready for the Slice 69 system commit.

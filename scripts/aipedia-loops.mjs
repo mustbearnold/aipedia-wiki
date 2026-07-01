@@ -28,6 +28,8 @@ const RESIDUAL_RISKS = valuesFor('--risk').concat(envList('AIPEDIA_RESIDUAL_RISK
 const EXTRA_NEXT_ACTIONS = valuesFor('--next-action').concat(envList('AIPEDIA_NEXT_ACTIONS'));
 const DAG_GRAPH_REFS = valuesFor('--dag-graph').concat(envList('AIPEDIA_DAG_GRAPHS'));
 const DAG_VALIDATION_REPORT_REFS = valuesFor('--dag-validation-report').concat(envList('AIPEDIA_DAG_VALIDATION_REPORTS'));
+const MODEL_TOKEN_USAGE_PATH = valueFor('--model-token-usage') || process.env.AIPEDIA_MODEL_TOKEN_USAGE_FILE || '';
+const MODEL_TOKEN_USAGE_JSON = process.env.AIPEDIA_MODEL_TOKEN_USAGE_JSON || '';
 const OBSERVED_DIRTY_BEFORE_AGENT = valuesFor('--observed-dirty-before-agent')
   .concat(valuesFor('--observed-dirty-before-agent-path'))
   .concat(pathsFromFiles(valuesFor('--observed-dirty-before-agent-file')));
@@ -39,6 +41,7 @@ const KNOWN_FLAGS = new Set([
   '--dist-dir',
   '--goal-id',
   '--ledger-dir',
+  '--model-token-usage',
   '--json',
   '--loop',
   '--next-action',
@@ -65,6 +68,7 @@ const VALUE_FLAGS = new Set([
   '--dag-validation-report',
   '--goal-id',
   '--ledger-dir',
+  '--model-token-usage',
   '--loop',
   '--next-action',
   '--observed-dirty-before-agent',
@@ -86,7 +90,8 @@ if (HELP_MODE) {
   process.exit(0);
 }
 
-const argumentIssues = collectArgumentIssues();
+const modelTokenUsageInput = readModelTokenUsageInput();
+const argumentIssues = collectArgumentIssues().concat(modelTokenUsageInput.issues);
 if (argumentIssues.length) {
   emitReport({
     ok: false,
@@ -169,6 +174,7 @@ function usage() {
     '  --next-action <text>    Next action. Repeatable.',
     '  --dag-graph <path>      Attach a generated agent task DAG artifact. Repeatable.',
     '  --dag-validation-report <path>  Attach an agent:dag:check validation report. Repeatable.',
+    '  --model-token-usage <path>  Attach exact runtime model token usage JSON when available.',
     '  --ledger-dir <dir>      Override the loop-run ledger directory.',
   ].join('\n');
 }
@@ -209,7 +215,7 @@ function runLoopReport(registryData, loops) {
     commands: loopReports.reduce((sum, loop) => sum + loop.commands.length, 0),
   };
 
-  return {
+  const report = {
     ok: true,
     mode: 'loop-run',
     project_dir: PROJECT_DIR,
@@ -228,6 +234,8 @@ function runLoopReport(registryData, loops) {
     loops: loopReports,
     review: reviewSummary(loopReports),
   };
+  if (modelTokenUsageInput.report) report.model_token_usage = modelTokenUsageInput.report;
+  return report;
 }
 
 function reviewSummary(loopReports) {
@@ -284,7 +292,7 @@ function loopEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
   const agentOtherArtifactCount = Array.isArray(progress.agent_other_artifacts) ? progress.agent_other_artifacts.length : otherArtifactCount;
   const preexistingDirtyCount = Array.isArray(progress.preexisting_dirty_paths) ? progress.preexisting_dirty_paths.length : 0;
 
-  return {
+  const metrics = {
     schema_version: 'aipedia.loop-efficiency-metrics.v1',
     wall_duration_ms: durationMs,
     total_command_duration_ms: commandDurationMs,
@@ -322,6 +330,166 @@ function loopEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
         duration_ms: nonNegative(command.duration_ms),
       })),
   };
+  if (isObject(reportData.model_token_usage) && reportData.model_token_usage.status === 'provided') {
+    Object.assign(metrics, {
+      model_token_usage_status: 'provided',
+      model_token_usage_source: reportData.model_token_usage.source || '',
+      exact_model_request_count: nonNegative(reportData.model_token_usage.request_count),
+      exact_model_input_tokens: nonNegative(reportData.model_token_usage.input_tokens),
+      exact_model_output_tokens: nonNegative(reportData.model_token_usage.output_tokens),
+      exact_model_cached_input_tokens: nonNegative(reportData.model_token_usage.cached_input_tokens),
+      exact_model_reasoning_tokens: nonNegative(reportData.model_token_usage.reasoning_tokens),
+      exact_model_total_tokens: nonNegative(reportData.model_token_usage.total_tokens),
+    });
+  }
+  return metrics;
+}
+
+function readModelTokenUsageInput() {
+  if (MODEL_TOKEN_USAGE_PATH && MODEL_TOKEN_USAGE_JSON) {
+    return {
+      report: null,
+      issues: [{ code: 'argument-invalid', detail: 'Use either --model-token-usage/AIPEDIA_MODEL_TOKEN_USAGE_FILE or AIPEDIA_MODEL_TOKEN_USAGE_JSON, not both.' }],
+    };
+  }
+  if (!MODEL_TOKEN_USAGE_PATH && !MODEL_TOKEN_USAGE_JSON) return { report: null, issues: [] };
+
+  const source = MODEL_TOKEN_USAGE_PATH
+    ? projectPath(resolve(PROJECT_DIR, MODEL_TOKEN_USAGE_PATH))
+    : 'env:AIPEDIA_MODEL_TOKEN_USAGE_JSON';
+  try {
+    const raw = MODEL_TOKEN_USAGE_PATH
+      ? readFileSync(resolve(PROJECT_DIR, MODEL_TOKEN_USAGE_PATH), 'utf8')
+      : MODEL_TOKEN_USAGE_JSON;
+    const parsed = JSON.parse(raw);
+    const normalized = normalizeModelTokenUsage(parsed, source);
+    return normalized.report
+      ? { report: normalized.report, issues: [] }
+      : { report: null, issues: normalized.issues };
+  } catch (error) {
+    return {
+      report: null,
+      issues: [{ code: 'argument-invalid', detail: `Could not read model token usage from ${source}: ${error.message}` }],
+    };
+  }
+}
+
+function normalizeModelTokenUsage(value, source) {
+  const entries = modelTokenUsageEntries(value);
+  const models = new Set();
+  let requestCount = 0;
+  let inputTokens = 0;
+  let outputTokens = 0;
+  let cachedInputTokens = 0;
+  let reasoningTokens = 0;
+  let providedTotalTokens = 0;
+  let tokenBearingEntries = 0;
+
+  for (const entry of entries) {
+    if (!isObject(entry)) continue;
+    const usage = isObject(entry.usage) ? entry.usage : entry;
+    const model = stringPath(entry, 'model') || stringPath(usage, 'model');
+    if (model) models.add(model);
+
+    const entryInput = tokenValue(usage, ['input_tokens', 'prompt_tokens', 'inputTokens', 'promptTokens']);
+    const entryOutput = tokenValue(usage, ['output_tokens', 'completion_tokens', 'outputTokens', 'completionTokens']);
+    const entryCached = tokenValue(usage, [
+      'cached_input_tokens',
+      'cached_tokens',
+      'cachedTokens',
+      'input_token_details.cached_tokens',
+      'input_tokens_details.cached_tokens',
+      'prompt_tokens_details.cached_tokens',
+    ]);
+    const entryReasoning = tokenValue(usage, [
+      'reasoning_tokens',
+      'reasoningTokens',
+      'output_token_details.reasoning_tokens',
+      'output_tokens_details.reasoning_tokens',
+      'completion_tokens_details.reasoning_tokens',
+    ]);
+    const entryTotal = tokenValue(usage, ['total_tokens', 'totalTokens']);
+
+    inputTokens += entryInput;
+    outputTokens += entryOutput;
+    cachedInputTokens += entryCached;
+    reasoningTokens += entryReasoning;
+    providedTotalTokens += entryTotal;
+    if (entryInput || entryOutput || entryTotal) {
+      tokenBearingEntries += 1;
+      requestCount += tokenValue(entry, ['request_count', 'requests', 'requestCount']) || 1;
+    }
+  }
+
+  const computedTotalTokens = inputTokens + outputTokens;
+  const totalTokens = providedTotalTokens || computedTotalTokens;
+  const issues = [];
+  if (!totalTokens) {
+    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} did not include any token counts.` });
+  }
+  if (providedTotalTokens && computedTotalTokens && providedTotalTokens !== computedTotalTokens) {
+    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} has total_tokens ${providedTotalTokens} but input plus output is ${computedTotalTokens}.` });
+  }
+  if (cachedInputTokens > inputTokens) {
+    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} has cached input tokens greater than input tokens.` });
+  }
+  if (reasoningTokens > outputTokens) {
+    issues.push({ code: 'argument-invalid', detail: `Model token usage from ${source} has reasoning tokens greater than output tokens.` });
+  }
+  if (issues.length) return { report: null, issues };
+
+  const sortedModels = [...models].sort();
+  return {
+    report: {
+      schema_version: 'aipedia.model-token-usage.v1',
+      source,
+      status: 'provided',
+      models: sortedModels,
+      model: sortedModels[0] || '',
+      entry_count: entries.length,
+      token_bearing_entry_count: tokenBearingEntries,
+      request_count: requestCount || tokenBearingEntries,
+      input_tokens: inputTokens,
+      output_tokens: outputTokens,
+      cached_input_tokens: cachedInputTokens,
+      reasoning_tokens: reasoningTokens,
+      total_tokens: totalTokens,
+    },
+    issues: [],
+  };
+}
+
+function modelTokenUsageEntries(value) {
+  if (Array.isArray(value)) return value;
+  if (!isObject(value)) return [];
+  for (const key of ['entries', 'records', 'calls', 'events']) {
+    if (Array.isArray(value[key])) return value[key];
+  }
+  if (Array.isArray(value.requests)) return value.requests;
+  return [value];
+}
+
+function tokenValue(object, paths) {
+  for (const path of paths) {
+    const value = valueAtPath(object, path);
+    const number = Number(value);
+    if (Number.isFinite(number) && number > 0) return Math.round(number);
+  }
+  return 0;
+}
+
+function stringPath(object, path) {
+  const value = valueAtPath(object, path);
+  return typeof value === 'string' ? value : '';
+}
+
+function valueAtPath(object, path) {
+  if (!isObject(object)) return undefined;
+  return path.split('.').reduce((current, key) => (isObject(current) ? current[key] : undefined), object);
+}
+
+function isObject(value) {
+  return value != null && typeof value === 'object' && !Array.isArray(value);
 }
 
 function rate(count, durationMs) {
@@ -804,6 +972,7 @@ function latestLedgerSummary(reportData) {
     trace: copy.trace || null,
     artifact_refs: copy.artifact_refs || [],
     duration_ms: copy.duration_ms,
+    model_token_usage: copy.model_token_usage || null,
     efficiency_metrics: copy.efficiency_metrics || null,
     totals: copy.totals,
     review: copy.review,

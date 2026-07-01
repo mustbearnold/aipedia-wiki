@@ -104,6 +104,14 @@ const SCOPED_EFFICIENCY_METRIC_FIELDS = [
   'preexisting_dirty_count',
   'agent_system_artifacts_per_second',
 ];
+const EXACT_MODEL_TOKEN_METRIC_FIELDS = [
+  'exact_model_request_count',
+  'exact_model_input_tokens',
+  'exact_model_output_tokens',
+  'exact_model_cached_input_tokens',
+  'exact_model_reasoning_tokens',
+  'exact_model_total_tokens',
+];
 
 if (HELP_MODE) {
   console.log(usage());
@@ -318,6 +326,14 @@ function validateLoopEfficiencyTrendRun(run, issues, path) {
   ]) {
     requireNonNegativeNumber(run, field, issues, `${path}.${field}`);
   }
+  const hasExactModelTokenRun = hasOwn(run, 'has_exact_model_tokens')
+    || EXACT_MODEL_TOKEN_METRIC_FIELDS.some((field) => hasOwn(run, field));
+  if (hasExactModelTokenRun) {
+    requireBoolean(run, 'has_exact_model_tokens', issues, `${path}.has_exact_model_tokens`);
+    for (const field of EXACT_MODEL_TOKEN_METRIC_FIELDS) {
+      requireNonNegativeNumber(run, field, issues, `${path}.${field}`);
+    }
+  }
 }
 
 function validateLoopEfficiencyTrendSummary(summary, issues) {
@@ -333,6 +349,17 @@ function validateLoopEfficiencyTrendSummary(summary, issues) {
     'median_estimated_full_receipt_tokens',
   ]) {
     requireNonNegativeNumber(summary, field, issues, `summary.${field}`);
+  }
+  const exactSummaryFields = [
+    'exact_model_token_coverage_rate',
+    'median_exact_model_total_tokens',
+    'latest_exact_model_total_tokens',
+    'delta_exact_model_total_tokens_from_previous',
+  ];
+  if (exactSummaryFields.some((field) => hasOwn(summary, field))) {
+    for (const field of exactSummaryFields) {
+      requireNumber(summary, field, issues, `summary.${field}`);
+    }
   }
   if (summary.latest != null && !isObject(summary.latest)) {
     issues.push(issue('loop-efficiency-trends-summary-invalid', 'summary.latest must be an object when present.'));
@@ -359,6 +386,19 @@ function validateLoopEfficiencyTrendSummaryFacts(receipt, issues) {
     median_latest_receipt_bytes: medianMetric(metricRuns.map((run) => run.persisted_latest_receipt_bytes)),
     median_estimated_full_receipt_tokens: medianMetric(metricRuns.map((run) => run.estimated_full_receipt_tokens)),
   };
+  const exactRuns = metricRuns.filter((run) => run.has_exact_model_tokens === true);
+  if (exactRuns.length) {
+    const latestExact = exactRuns.at(-1);
+    const previousExact = exactRuns.length > 1 ? exactRuns.at(-2) : null;
+    Object.assign(expected, {
+      exact_model_token_coverage_rate: metricRatio(exactRuns.length, metricRuns.length),
+      median_exact_model_total_tokens: medianMetric(exactRuns.map((run) => run.exact_model_total_tokens)),
+      latest_exact_model_total_tokens: latestExact.exact_model_total_tokens,
+      delta_exact_model_total_tokens_from_previous: previousExact
+        ? latestExact.exact_model_total_tokens - previousExact.exact_model_total_tokens
+        : 0,
+    });
+  }
   for (const [field, value] of Object.entries(expected)) {
     validateTrendSummaryValue(receipt.summary[field], value, `summary.${field}`, issues);
   }
@@ -495,7 +535,7 @@ function validateLoopEfficiencyTrendRunFacts(sourceContext, issues) {
 function computeTrendRunSummary(path, source) {
   const metrics = isObject(source.efficiency_metrics) ? source.efficiency_metrics : {};
   const totals = isObject(source.totals) ? source.totals : {};
-  return {
+  const summary = {
     path,
     generated_at: typeof source.generated_at === 'string' ? source.generated_at : '',
     run_id: typeof source.run_id === 'string' ? source.run_id : '',
@@ -511,6 +551,18 @@ function computeTrendRunSummary(path, source) {
     estimated_full_receipt_tokens: estimateMetricTokens(metrics.persisted_full_receipt_bytes),
     system_artifact_count: nonNegativeMetric(metrics.system_artifact_count),
   };
+  if (metrics.model_token_usage_status === 'provided') {
+    Object.assign(summary, {
+      has_exact_model_tokens: true,
+      exact_model_request_count: nonNegativeMetric(metrics.exact_model_request_count),
+      exact_model_input_tokens: nonNegativeMetric(metrics.exact_model_input_tokens),
+      exact_model_output_tokens: nonNegativeMetric(metrics.exact_model_output_tokens),
+      exact_model_cached_input_tokens: nonNegativeMetric(metrics.exact_model_cached_input_tokens),
+      exact_model_reasoning_tokens: nonNegativeMetric(metrics.exact_model_reasoning_tokens),
+      exact_model_total_tokens: nonNegativeMetric(metrics.exact_model_total_tokens),
+    });
+  }
+  return summary;
 }
 
 function computeTrendStabilitySummary(records) {
@@ -855,6 +907,7 @@ function validateLoopReceipt(value, issues) {
     value.loops.forEach((loop, index) => validateLoopItem(loop, issues, `loops[${index}]`));
   }
 
+  if (value.model_token_usage != null) validateModelTokenUsage(value.model_token_usage, issues, 'model_token_usage');
   if (value.efficiency_metrics != null) validateLoopEfficiencyMetrics(value.efficiency_metrics, value, issues);
   else if (REQUIRE_EFFICIENCY_METRICS) {
     issues.push(issue('efficiency-metrics-missing', 'Loop receipt must include efficiency_metrics when --require-efficiency-metrics is used.'));
@@ -932,6 +985,10 @@ function validateLoopEfficiencyMetrics(metrics, receipt, issues) {
       requireNonNegativeNumber(metrics, field, issues, `efficiency_metrics.${field}`);
     }
   }
+  const hasExactModelTokenMetrics = EXACT_MODEL_TOKEN_METRIC_FIELDS.some((field) => hasOwn(metrics, field))
+    || hasOwn(metrics, 'model_token_usage_status')
+    || hasOwn(metrics, 'model_token_usage_source');
+  if (hasExactModelTokenMetrics) validateEfficiencyModelTokenMetrics(metrics, receipt, issues);
   requireArray(metrics, 'slowest_commands', issues, 'efficiency_metrics.slowest_commands');
 
   const totals = isObject(receipt.totals) ? receipt.totals : {};
@@ -970,6 +1027,84 @@ function validateLoopEfficiencyMetrics(metrics, receipt, issues) {
   }
   validateEfficiencyArtifactCounts(metrics, receipt, issues, hasScopedEfficiencyMetrics);
   validateEfficiencyDerivedMetrics(metrics, receipt, issues, hasScopedEfficiencyMetrics);
+}
+
+function validateModelTokenUsage(value, issues, path) {
+  if (!isObject(value)) {
+    issues.push(issue('model-token-usage-invalid', `${path} must be an object.`));
+    return;
+  }
+  requireString(value, 'schema_version', issues, {
+    path: `${path}.schema_version`,
+    values: ['aipedia.model-token-usage.v1'],
+  });
+  requireString(value, 'source', issues, { path: `${path}.source` });
+  requireString(value, 'status', issues, { path: `${path}.status`, values: ['provided'] });
+  if (value.model != null) requireString(value, 'model', issues, { path: `${path}.model` });
+  if (value.models != null) requireStringArray(value, 'models', issues, `${path}.models`);
+  for (const field of [
+    'entry_count',
+    'token_bearing_entry_count',
+    'request_count',
+    'input_tokens',
+    'output_tokens',
+    'cached_input_tokens',
+    'reasoning_tokens',
+    'total_tokens',
+  ]) {
+    requireNonNegativeNumber(value, field, issues, `${path}.${field}`);
+  }
+  if (typeof value.input_tokens === 'number' && typeof value.output_tokens === 'number' && typeof value.total_tokens === 'number'
+    && value.total_tokens !== value.input_tokens + value.output_tokens) {
+    issues.push(issue('model-token-usage-mismatch', `${path}.total_tokens must equal input_tokens plus output_tokens.`));
+  }
+  if (typeof value.cached_input_tokens === 'number' && typeof value.input_tokens === 'number' && value.cached_input_tokens > value.input_tokens) {
+    issues.push(issue('model-token-usage-mismatch', `${path}.cached_input_tokens cannot exceed input_tokens.`));
+  }
+  if (typeof value.reasoning_tokens === 'number' && typeof value.output_tokens === 'number' && value.reasoning_tokens > value.output_tokens) {
+    issues.push(issue('model-token-usage-mismatch', `${path}.reasoning_tokens cannot exceed output_tokens.`));
+  }
+}
+
+function validateEfficiencyModelTokenMetrics(metrics, receipt, issues) {
+  requireString(metrics, 'model_token_usage_status', issues, {
+    path: 'efficiency_metrics.model_token_usage_status',
+    values: ['provided'],
+  });
+  requireString(metrics, 'model_token_usage_source', issues, { path: 'efficiency_metrics.model_token_usage_source' });
+  for (const field of EXACT_MODEL_TOKEN_METRIC_FIELDS) {
+    requireNonNegativeNumber(metrics, field, issues, `efficiency_metrics.${field}`);
+  }
+  if (typeof metrics.exact_model_total_tokens === 'number'
+    && typeof metrics.exact_model_input_tokens === 'number'
+    && typeof metrics.exact_model_output_tokens === 'number'
+    && metrics.exact_model_total_tokens !== metrics.exact_model_input_tokens + metrics.exact_model_output_tokens) {
+    issues.push(issue('efficiency-model-token-mismatch', 'efficiency_metrics.exact_model_total_tokens must equal exact_model_input_tokens plus exact_model_output_tokens.'));
+  }
+  if (typeof metrics.exact_model_cached_input_tokens === 'number'
+    && typeof metrics.exact_model_input_tokens === 'number'
+    && metrics.exact_model_cached_input_tokens > metrics.exact_model_input_tokens) {
+    issues.push(issue('efficiency-model-token-mismatch', 'efficiency_metrics.exact_model_cached_input_tokens cannot exceed exact_model_input_tokens.'));
+  }
+  if (typeof metrics.exact_model_reasoning_tokens === 'number'
+    && typeof metrics.exact_model_output_tokens === 'number'
+    && metrics.exact_model_reasoning_tokens > metrics.exact_model_output_tokens) {
+    issues.push(issue('efficiency-model-token-mismatch', 'efficiency_metrics.exact_model_reasoning_tokens cannot exceed exact_model_output_tokens.'));
+  }
+  if (isObject(receipt.model_token_usage)) {
+    const expected = {
+      model_token_usage_source: receipt.model_token_usage.source,
+      exact_model_request_count: receipt.model_token_usage.request_count,
+      exact_model_input_tokens: receipt.model_token_usage.input_tokens,
+      exact_model_output_tokens: receipt.model_token_usage.output_tokens,
+      exact_model_cached_input_tokens: receipt.model_token_usage.cached_input_tokens,
+      exact_model_reasoning_tokens: receipt.model_token_usage.reasoning_tokens,
+      exact_model_total_tokens: receipt.model_token_usage.total_tokens,
+    };
+    for (const [field, value] of Object.entries(expected)) {
+      validateMetricCount(metrics, field, value, issues, `efficiency_metrics.${field} must match model_token_usage.${field.replace(/^exact_model_/, '').replace('model_token_usage_', '')}.`);
+    }
+  }
 }
 
 function validateEfficiencyArtifactCounts(metrics, receipt, issues, hasScopedEfficiencyMetrics) {
@@ -2238,6 +2373,12 @@ function requireIsoDateString(value, field, issues, path = field) {
 function requireNonNegativeNumber(value, field, issues, path = field) {
   if (typeof value[field] !== 'number' || !Number.isFinite(value[field]) || value[field] < 0) {
     issues.push(issue('field-invalid', `${path} must be a non-negative number.`));
+  }
+}
+
+function requireNumber(value, field, issues, path = field) {
+  if (typeof value[field] !== 'number' || !Number.isFinite(value[field])) {
+    issues.push(issue('field-invalid', `${path} must be a finite number.`));
   }
 }
 

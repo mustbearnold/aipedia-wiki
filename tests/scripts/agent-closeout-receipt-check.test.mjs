@@ -43,6 +43,18 @@ function writeTrendSourceReceipts(projectDir, receipt, durations = [400, 500]) {
       persisted_latest_receipt_bytes: run.persisted_latest_receipt_bytes,
       system_artifact_count: run.system_artifact_count,
     });
+    if (run.has_exact_model_tokens) {
+      Object.assign(source.efficiency_metrics, {
+        model_token_usage_status: 'provided',
+        model_token_usage_source: 'local/token-usage.json',
+        exact_model_request_count: run.exact_model_request_count,
+        exact_model_input_tokens: run.exact_model_input_tokens,
+        exact_model_output_tokens: run.exact_model_output_tokens,
+        exact_model_cached_input_tokens: run.exact_model_cached_input_tokens,
+        exact_model_reasoning_tokens: run.exact_model_reasoning_tokens,
+        exact_model_total_tokens: run.exact_model_total_tokens,
+      });
+    }
     source.efficiency_metrics.slowest_commands = [
       {
         loop_id: 'freshness',
@@ -964,6 +976,92 @@ test('closeout receipt check validates loop efficiency trend receipts', () => {
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, true);
     assert.equal(report.receipts[0].type, 'loop-efficiency-trends');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check validates exact model token usage on loop and trend receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-model-tokens-'));
+  const loopPath = join(dir, 'loop.json');
+  const trendPath = join(dir, 'trend.json');
+
+  try {
+    const loopReceipt = validLoopReceipt();
+    loopReceipt.model_token_usage = {
+      schema_version: 'aipedia.model-token-usage.v1',
+      source: 'local/token-usage.json',
+      status: 'provided',
+      models: ['gpt-5.5'],
+      model: 'gpt-5.5',
+      entry_count: 1,
+      token_bearing_entry_count: 1,
+      request_count: 1,
+      input_tokens: 1000,
+      output_tokens: 250,
+      cached_input_tokens: 200,
+      reasoning_tokens: 75,
+      total_tokens: 1250,
+    };
+    Object.assign(loopReceipt.efficiency_metrics, {
+      model_token_usage_status: 'provided',
+      model_token_usage_source: 'local/token-usage.json',
+      exact_model_request_count: 1,
+      exact_model_input_tokens: 1000,
+      exact_model_output_tokens: 250,
+      exact_model_cached_input_tokens: 200,
+      exact_model_reasoning_tokens: 75,
+      exact_model_total_tokens: 1250,
+    });
+    writeJson(loopPath, loopReceipt);
+    const loopResult = runCheck(['--receipt', loopPath, '--json']);
+    assert.equal(loopResult.status, 0, `${loopResult.stdout}\n${loopResult.stderr}`);
+
+    loopReceipt.efficiency_metrics.exact_model_total_tokens = 1200;
+    writeJson(loopPath, loopReceipt);
+    const drift = runCheck(['--receipt', loopPath, '--json']);
+    assert.equal(drift.status, 1);
+    let report = JSON.parse(drift.stdout);
+    let codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('efficiency-model-token-mismatch'));
+
+    const trendReceipt = validLoopEfficiencyTrendReceipt();
+    Object.assign(trendReceipt.runs[1], {
+      has_exact_model_tokens: true,
+      exact_model_request_count: 1,
+      exact_model_input_tokens: 900,
+      exact_model_output_tokens: 300,
+      exact_model_cached_input_tokens: 120,
+      exact_model_reasoning_tokens: 80,
+      exact_model_total_tokens: 1200,
+    });
+    Object.assign(trendReceipt.summary, {
+      exact_model_token_coverage_rate: 0.5,
+      median_exact_model_total_tokens: 1200,
+      latest_exact_model_total_tokens: 1200,
+      delta_exact_model_total_tokens_from_previous: 0,
+    });
+    Object.assign(trendReceipt.summary.latest, {
+      has_exact_model_tokens: true,
+      exact_model_request_count: 1,
+      exact_model_input_tokens: 900,
+      exact_model_output_tokens: 300,
+      exact_model_cached_input_tokens: 120,
+      exact_model_reasoning_tokens: 80,
+      exact_model_total_tokens: 1200,
+    });
+    writeTrendSourceReceipts(dir, trendReceipt);
+    writeJson(trendPath, trendReceipt);
+    const trendResult = runCheck(['--project-dir', dir, '--receipt', trendPath, '--json']);
+    assert.equal(trendResult.status, 0, `${trendResult.stdout}\n${trendResult.stderr}`);
+
+    trendReceipt.runs[1].exact_model_total_tokens = 1;
+    writeJson(trendPath, trendReceipt);
+    const trendDrift = runCheck(['--project-dir', dir, '--receipt', trendPath, '--json']);
+    assert.equal(trendDrift.status, 1);
+    report = JSON.parse(trendDrift.stdout);
+    codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('loop-efficiency-trends-run-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

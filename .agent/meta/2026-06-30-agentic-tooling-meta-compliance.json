@@ -461,9 +461,23 @@
         ".agent/loop-runs/system/2026-07-01T00-05-01-388Z-loop-run.json",
         ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-65-final-efficiency-trends.json",
         "agent:meta:closeout:auto validated Slice 65 efficiency trend receipt",
-        "Slice 65 trend proof latest wall duration 4710 ms and latest estimated full receipt tokens 11655"
+        "Slice 65 trend proof latest wall duration 4710 ms and latest estimated full receipt tokens 11655",
+        "scripts/aipedia-loops.mjs --model-token-usage",
+        "AIPEDIA_MODEL_TOKEN_USAGE_FILE",
+        "AIPEDIA_MODEL_TOKEN_USAGE_JSON",
+        "aipedia.model-token-usage.v1 loop receipt field",
+        "loop efficiency exact_model_* token fields",
+        "agent:efficiency:trends exact model token summaries",
+        "agent:closeout:check model_token_usage validation",
+        "agent:closeout:check trend exact model token source validation",
+        "tests/scripts/aipedia-loops.test.mjs exact token ledger coverage",
+        "tests/scripts/agent-loop-efficiency-trends.test.mjs exact token trend coverage",
+        "tests/scripts/agent-closeout-receipt-check.test.mjs exact token closeout coverage",
+        ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
+        ".agent/loop-runs/system/2026-07-01T01-05-45-179Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json"
       ],
-      "remaining": "Add exact model-token usage and exact correction counts when available from reliable runtime inputs."
+      "remaining": "Add exact correction counts when available from reliable runtime inputs; exact model-token usage is available when a runtime usage payload is supplied."
     },
     {
       "id": "memory-retrieval",
@@ -494,90 +508,75 @@
     }
   ],
   "current_slice": {
-    "name": "Proof-readiness refresh-plan status/count validation",
+    "name": "Exact model token tracking",
     "system_artifacts": [
+      "scripts/aipedia-loops.mjs",
+      "scripts/agent-loop-efficiency-trends.mjs",
       "scripts/agent-closeout-receipt-check.mjs",
+      "tests/scripts/aipedia-loops.test.mjs",
+      "tests/scripts/agent-loop-efficiency-trends.test.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      ".agent/evals/proof-readiness-receipts/2026-06-30-slice-69-refresh-plan-status-count-validated.json",
+      ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
+      ".agent/loop-runs/system/2026-07-01T01-05-24-545Z-loop-run.json",
+      ".agent/loop-runs/system/2026-07-01T01-05-45-179Z-loop-run.json",
+      ".agent/loop-runs/system/latest.json",
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json",
+      "scripts/README.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-69.md",
-      ".agent/loop-runs/system/2026-07-01T00-47-58-869Z-loop-run.json",
-      ".agent/loop-runs/system/latest.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-69-final-efficiency-trends.json"
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-70.md"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
-    "proof_readiness_receipt": ".agent/evals/proof-readiness-receipts/2026-06-30-slice-69-refresh-plan-status-count-validated.json",
-    "proof_readiness_summary": {
-      "target_count": 3,
-      "ready_count": 0,
-      "proved_count": 2,
-      "blocked_count": 1,
-      "input_refresh_plan_count": 1
+    "model_token_usage_fixture": ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
+    "model_token_usage_summary": {
+      "schema_version": "aipedia.model-token-usage.v1",
+      "source": ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
+      "model": "gpt-5.5",
+      "request_count": 1,
+      "input_tokens": 4200,
+      "output_tokens": 900,
+      "cached_input_tokens": 600,
+      "reasoning_tokens": 240,
+      "total_tokens": 5100
     },
-    "proved_targets": [
-      "tool-refresh-policy",
-      "affiliate-handoff-policy"
-    ],
-    "blocked_targets": [
-      "page-refresh-policy"
-    ],
-    "stale_input_refresh_plan": {
-      "workflow": "page-refresh",
-      "status": "planned",
-      "mutation_policy": "tracked-generated",
-      "writes": [
-        "PAGE_REFRESH_LEDGER.md"
-      ],
-      "commands": [
-        "node scripts/generate-page-refresh-ledger.mjs --json --project-dir ."
-      ],
-      "required_flags": [
-        "Tracked generated-file mutations require --allow-tracked-mutations."
-      ]
+    "token_tracking_validation": {
+      "loop_receipt_schema_validated": true,
+      "efficiency_metric_fields_validated": true,
+      "trend_row_source_validation": true,
+      "total_equals_input_plus_output": true,
+      "cached_input_not_greater_than_input": true,
+      "reasoning_not_greater_than_output": true
     },
-    "refresh_plan_count_validation": {
-      "requires_complete_input_summary": true,
-      "cross_checks_unique_embedded_plan_ids": true,
-      "validated_count": 1
-    },
-    "refresh_plan_status_count_validation": {
-      "zero_count_statuses": [
-        "skipped",
-        "missing-refresh-plan"
-      ],
-      "nonzero_count_statuses": [
-        "from-input-freshness",
-        "planned"
-      ],
-      "validated_status": "planned",
-      "validated_count": 1
-    },
-    "loop_receipt": ".agent/loop-runs/system/2026-07-01T00-47-58-869Z-loop-run.json",
+    "loop_receipt": ".agent/loop-runs/system/2026-07-01T01-05-45-179Z-loop-run.json",
     "latest_loop_receipt": ".agent/loop-runs/system/latest.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-69-final-efficiency-trends.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json",
     "loop_summary": {
       "ok": 4,
       "attention": 3,
       "skipped": 0,
       "commands": 16,
-      "current_agent_system_artifacts": 3,
+      "current_agent_system_artifacts": 9,
       "current_agent_content_artifacts": 0,
-      "preexisting_content_artifacts": 4,
-      "wall_duration_ms": 4697
+      "preexisting_dirty_paths": 5,
+      "wall_duration_ms": 4674,
+      "exact_model_total_tokens": 5100
     },
     "trend_summary": {
       "analyzed_runs": 3,
       "metrics_runs": 3,
       "missing_metrics_runs": 0,
-      "median_wall_duration_ms": 4678,
-      "latest_wall_duration_ms": 4697,
-      "latest_estimated_full_receipt_tokens": 11326,
-      "latest_system_artifact_count": 3,
+      "exact_model_token_coverage_rate": 0.667,
+      "median_exact_model_total_tokens": 5100,
+      "latest_exact_model_total_tokens": 5100,
+      "delta_exact_model_total_tokens_from_previous": 0,
+      "median_wall_duration_ms": 4697,
+      "latest_wall_duration_ms": 4674,
+      "latest_estimated_full_receipt_tokens": 11735,
+      "latest_system_artifact_count": 10,
       "persistent_attention_loops": 3,
       "resolved_attention_loops": 0,
       "regressed_attention_loops": 0,
@@ -592,7 +591,7 @@
     "Use correction_summary in trend receipts before claiming quality improved from a speed or receipt-size movement.",
     "Resolve separate content WIP, refresh page-ledger input with the receipt-visible refresh plan, rerun npm run agent:proof:readiness -- --json, then run the page-refresh positive policy proof.",
     "Add the configured proof receipt path for page-refresh to .agent/meta/proof-readiness-targets.json when the positive proof is complete.",
-    "Add exact model-token usage and exact correction counts when measurable.",
+    "Add exact correction counts when measurable; exact model-token usage is now recorded when supplied by runtime payloads.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP.",
     "Refresh or resolve stale page-ledger input before attempting the page-refresh positive policy proof; page-refresh current input now satisfies proof readiness and runner workflow policy validation."
   ]

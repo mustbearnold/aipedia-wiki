@@ -174,6 +174,58 @@ test('loop efficiency trends summarize recent metric receipts', () => {
   }
 });
 
+test('loop efficiency trends summarize exact model token usage when present', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-efficiency-token-trends-'));
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+
+  try {
+    mkdirSync(ledgerDir, { recursive: true });
+    writeReceipt(ledgerDir, '2026-06-30T00-00-00-000Z-loop-run.json', loopReceipt({
+      generated_at: '2026-06-30T00:00:00.000Z',
+      run_id: 'token-run-1',
+      efficiency_metrics: {
+        ...loopReceipt().efficiency_metrics,
+        model_token_usage_status: 'provided',
+        model_token_usage_source: 'local/token-usage-1.json',
+        exact_model_request_count: 1,
+        exact_model_input_tokens: 800,
+        exact_model_output_tokens: 200,
+        exact_model_cached_input_tokens: 100,
+        exact_model_reasoning_tokens: 50,
+        exact_model_total_tokens: 1000,
+      },
+    }));
+    writeReceipt(ledgerDir, '2026-06-30T01-00-00-000Z-loop-run.json', loopReceipt({
+      generated_at: '2026-06-30T01:00:00.000Z',
+      run_id: 'token-run-2',
+      efficiency_metrics: {
+        ...loopReceipt().efficiency_metrics,
+        model_token_usage_status: 'provided',
+        model_token_usage_source: 'local/token-usage-2.json',
+        exact_model_request_count: 2,
+        exact_model_input_tokens: 900,
+        exact_model_output_tokens: 300,
+        exact_model_cached_input_tokens: 120,
+        exact_model_reasoning_tokens: 80,
+        exact_model_total_tokens: 1200,
+      },
+    }));
+
+    const result = runTrends('--json', '--project-dir', dir, '--max-runs', '2');
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.runs[1].has_exact_model_tokens, true);
+    assert.equal(report.runs[1].exact_model_total_tokens, 1200);
+    assert.equal(report.summary.exact_model_token_coverage_rate, 1);
+    assert.equal(report.summary.median_exact_model_total_tokens, 1100);
+    assert.equal(report.summary.latest_exact_model_total_tokens, 1200);
+    assert.equal(report.summary.delta_exact_model_total_tokens_from_previous, 200);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('loop efficiency trends reports correction rates from resolved attention', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-efficiency-corrections-'));
   const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');

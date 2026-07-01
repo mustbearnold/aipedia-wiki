@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "model": "gpt-5.5",
+      "usage": {
+        "input_tokens": 4200,
+        "output_tokens": 900,
+        "total_tokens": 5100,
+        "input_tokens_details": {
+          "cached_tokens": 600
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 240
+        }
+      }
+    }
+  ]
+}

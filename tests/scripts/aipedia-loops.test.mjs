@@ -324,6 +324,64 @@ test('aipedia loops can write a machine-readable run ledger', () => {
   }
 });
 
+test('aipedia loops records exact model token usage in run ledgers', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-token-ledger-'));
+  const registry = writeRegistry(dir);
+  const ledgerDir = join(dir, '.agent', 'loop-runs', 'system');
+  const tokenUsagePath = join(dir, 'local-token-usage.json');
+
+  try {
+    writeFileSync(
+      tokenUsagePath,
+      `${JSON.stringify({
+        entries: [
+          {
+            model: 'gpt-5.5',
+            usage: {
+              input_tokens: 1000,
+              output_tokens: 250,
+              total_tokens: 1250,
+              input_token_details: { cached_tokens: 200 },
+              output_token_details: { reasoning_tokens: 75 },
+            },
+          },
+        ],
+      }, null, 2)}\n`,
+    );
+
+    const result = runLoops(
+      '--json',
+      '--run',
+      '--loop',
+      'clean-loop',
+      '--write-ledger',
+      '--model-token-usage',
+      tokenUsagePath,
+      `--ledger-dir=${ledgerDir}`,
+      `--project-dir=${dir}`,
+      `--registry=${registry}`,
+    );
+    assert.equal(result.status, 0, result.stderr);
+
+    const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
+    assert.equal(latest.model_token_usage.schema_version, 'aipedia.model-token-usage.v1');
+    assert.deepEqual(latest.model_token_usage.models, ['gpt-5.5']);
+    assert.equal(latest.model_token_usage.input_tokens, 1000);
+    assert.equal(latest.model_token_usage.output_tokens, 250);
+    assert.equal(latest.model_token_usage.cached_input_tokens, 200);
+    assert.equal(latest.model_token_usage.reasoning_tokens, 75);
+    assert.equal(latest.model_token_usage.total_tokens, 1250);
+    assert.equal(latest.efficiency_metrics.model_token_usage_status, 'provided');
+    assert.equal(latest.efficiency_metrics.exact_model_input_tokens, 1000);
+    assert.equal(latest.efficiency_metrics.exact_model_output_tokens, 250);
+    assert.equal(latest.efficiency_metrics.exact_model_cached_input_tokens, 200);
+    assert.equal(latest.efficiency_metrics.exact_model_reasoning_tokens, 75);
+    assert.equal(latest.efficiency_metrics.exact_model_total_tokens, 1250);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('aipedia loops records system progress in run ledgers', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-loops-system-ledger-'));
   const registry = writeRegistry(dir);
