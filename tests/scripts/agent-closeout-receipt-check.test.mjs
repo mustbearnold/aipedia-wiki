@@ -14,6 +14,7 @@ import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
 import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
 import { buildRoutingMonitorTrends } from '../../scripts/lib/routing-monitor-trends.mjs';
 import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
+import { buildRoutingRuntimeCompletion } from '../../scripts/lib/routing-runtime-completion.mjs';
 
 const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
 const ROUTING_SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
@@ -1151,14 +1152,16 @@ function validRoutingMonitorTrendsReceipt() {
   return result.receipt;
 }
 
-function validRoutingHandoffReceipt() {
+function validRoutingHandoffReceipt(overrides = {}) {
   const defaultRollout = validRoutingDefaultRolloutReceipt();
-  const monitor = validRoutingMonitorReceipt();
+  const monitor = validRoutingMonitorReceipt({
+    receiptPath: overrides.monitorReceiptPath || '.agent/evals/routing-monitors/fixture-monitor-a.json',
+  });
   const result = buildRoutingHandoff({
     default_rollout: defaultRollout,
     monitor,
     change_plan: {
-      mode: 'record-only',
+      mode: overrides.mode || 'record-only',
       change_id: 'fixture-default-routing',
       operator: 'codex-routing-operator',
       apply_command: 'npm --silent run agent:routing:handoff -- --default-rollout fixture-default-rollout.json --monitor fixture-monitor.json --json',
@@ -1168,6 +1171,24 @@ function validRoutingHandoffReceipt() {
     generatedAt: '2026-07-01T06:35:00.000Z',
     projectDir: '.',
     source: '.agent/evals/routing-rollouts/fixture-default-rollout.json + .agent/evals/routing-monitors/fixture-monitor.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
+function validRoutingRuntimeCompletionReceipt() {
+  const result = buildRoutingRuntimeCompletion({
+    handoff: validRoutingHandoffReceipt({ mode: 'runtime' }),
+    monitor_trends: validRoutingMonitorTrendsReceipt(),
+    runtime_completion: {
+      runtime_system: 'aipedia-agent-router',
+      applied_at: '2026-07-01T08:30:00.000Z',
+      verification_status: 'passed',
+    },
+  }, {
+    generatedAt: '2026-07-01T08:35:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-handoffs/fixture-runtime-handoff.json + .agent/evals/routing-monitor-trends/fixture-runtime-trends.json',
   });
   assert.deepEqual(result.issues, []);
   return result.receipt;
@@ -1505,6 +1526,23 @@ test('closeout receipt check validates agent routing handoff receipts', () => {
   }
 });
 
+test('closeout receipt check validates agent routing runtime completion receipts', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-runtime-completion-'));
+  const path = join(dir, 'routing-runtime-completion.json');
+
+  try {
+    writeJson(path, validRoutingRuntimeCompletionReceipt());
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.receipts[0].type, 'agent-routing-runtime-completion');
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 test('closeout receipt check accepts historical v1 routing suite receipts without lineage refs', () => {
   const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-routing-suite-v1-'));
   const path = join(dir, 'routing-suite-v1.json');
@@ -1675,6 +1713,25 @@ test('closeout receipt check fails tampered agent routing handoff readiness', ()
     const report = JSON.parse(result.stdout);
     assert.equal(report.ok, false);
     assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-handoff-mismatch'));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('closeout receipt check fails tampered agent routing runtime completion readiness', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aipedia-closeout-bad-routing-runtime-completion-'));
+  const path = join(dir, 'routing-runtime-completion.json');
+
+  try {
+    const receipt = validRoutingRuntimeCompletionReceipt();
+    receipt.completion_evaluation.runtime_verification_passed = !receipt.completion_evaluation.runtime_verification_passed;
+    writeJson(path, receipt);
+    const result = runCheck(['--project-dir', dir, '--receipt', path, '--json']);
+    assert.equal(result.status, 1);
+
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, false);
+    assert.ok(report.receipts[0].issues.some((issue) => issue.code === 'routing-runtime-completion-mismatch'));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

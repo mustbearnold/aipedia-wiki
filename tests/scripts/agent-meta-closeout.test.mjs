@@ -14,6 +14,7 @@ import { buildRoutingRollout } from '../../scripts/lib/routing-rollout.mjs';
 import { buildRoutingMonitor } from '../../scripts/lib/routing-monitor.mjs';
 import { buildRoutingMonitorTrends } from '../../scripts/lib/routing-monitor-trends.mjs';
 import { buildRoutingHandoff } from '../../scripts/lib/routing-handoff.mjs';
+import { buildRoutingRuntimeCompletion } from '../../scripts/lib/routing-runtime-completion.mjs';
 
 const ROUTING_REVIEW_FIXTURE_PATH = '.agent/evals/routing-policy-reviews/2026-06-30-slice-83-fresh-policy-review-receipt.json';
 const ROUTING_SUITE_FIXTURE_PATH = '.agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json';
@@ -619,14 +620,16 @@ function validRoutingMonitorTrendsReceipt() {
   return result.receipt;
 }
 
-function validRoutingHandoffReceipt() {
+function validRoutingHandoffReceipt(overrides = {}) {
   const defaultRollout = validRoutingDefaultRolloutReceipt();
-  const monitor = validRoutingMonitorReceipt();
+  const monitor = validRoutingMonitorReceipt({
+    receiptPath: overrides.monitorReceiptPath || '.agent/evals/routing-monitors/fixture-monitor-a.json',
+  });
   const result = buildRoutingHandoff({
     default_rollout: defaultRollout,
     monitor,
     change_plan: {
-      mode: 'record-only',
+      mode: overrides.mode || 'record-only',
       change_id: 'fixture-default-routing',
       operator: 'codex-routing-operator',
       apply_command: 'npm --silent run agent:routing:handoff -- --default-rollout fixture-default-rollout.json --monitor fixture-monitor.json --json',
@@ -636,6 +639,24 @@ function validRoutingHandoffReceipt() {
     generatedAt: '2026-07-01T06:35:00.000Z',
     projectDir: '.',
     source: '.agent/evals/routing-rollouts/fixture-default-rollout.json + .agent/evals/routing-monitors/fixture-monitor.json',
+  });
+  assert.deepEqual(result.issues, []);
+  return result.receipt;
+}
+
+function validRoutingRuntimeCompletionReceipt() {
+  const result = buildRoutingRuntimeCompletion({
+    handoff: validRoutingHandoffReceipt({ mode: 'runtime' }),
+    monitor_trends: validRoutingMonitorTrendsReceipt(),
+    runtime_completion: {
+      runtime_system: 'aipedia-agent-router',
+      applied_at: '2026-07-01T08:30:00.000Z',
+      verification_status: 'passed',
+    },
+  }, {
+    generatedAt: '2026-07-01T08:35:00.000Z',
+    projectDir: '.',
+    source: '.agent/evals/routing-handoffs/fixture-runtime-handoff.json + .agent/evals/routing-monitor-trends/fixture-runtime-trends.json',
   });
   assert.deepEqual(result.issues, []);
   return result.receipt;
@@ -1003,6 +1024,24 @@ test('meta closeout router validates routing handoff receipts', () => {
     assert.equal(report.requires_workflow_policy, false);
     assert.deepEqual(report.strict_flags, []);
     assert.equal(report.checker_report.receipts[0].type, 'agent-routing-handoff');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('meta closeout router validates routing runtime completion receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-meta-closeout-routing-runtime-completion-'));
+  try {
+    writeJson(join(root, 'routing-runtime-completion.json'), validRoutingRuntimeCompletionReceipt());
+
+    const result = runRouter(['--project-dir', root, '--receipt', 'routing-runtime-completion.json', '--json']);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const report = JSON.parse(result.stdout);
+    assert.equal(report.ok, true);
+    assert.equal(report.closeout_profile, 'routing-runtime-completion');
+    assert.equal(report.requires_workflow_policy, false);
+    assert.deepEqual(report.strict_flags, []);
+    assert.equal(report.checker_report.receipts[0].type, 'agent-routing-runtime-completion');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

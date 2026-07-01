@@ -2504,3 +2504,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-89.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T07-39-47-550Z-loop-run.json`.
 - Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-89-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 5,228 ms, latest estimated full receipt tokens 12,404, latest system artifact count 21, no loop or command status changes, and no new attention loops.
 - Next: Require runtime default routing integrations to attach handoff and monitor-trend receipts before a default change can count as complete.
+
+### 2026-07-01: Agentic Tooling Meta Slice 90, Runtime Routing Completion Receipts
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Added `agent:routing:runtime:complete`, backed by `scripts/lib/routing-runtime-completion.mjs`, to build closeout-checkable `aipedia.agent-routing-runtime-completion.v1` receipts for deployed default routing changes.
+- Changed: `agent:closeout:check` now validates routing-runtime-completion receipts, and `agent:meta:closeout:auto` routes them with the `routing-runtime-completion` profile.
+- System lesson: a handoff alone is not enough to mark runtime default routing complete. Completion now requires runtime-mode handoff evidence, healthy repeated monitor-trend evidence, matching default-rollout lineage, the handoff monitor included in the trend, matching runtime change fields, and passed verification.
+- Verification: focused runtime-completion, closeout, and router tests passed 93/93. Scoped `check:smart --run` passed with 658 script tests plus command audit. `check:quick` passed with 658 script tests, command audit, and quick assets.
+- Durable proof: `.agent/evals/routing-runtime-completions/2026-06-30-slice-90-runtime-default-completion-receipt.json` is `completion-ready` with handoff ready true, runtime mode true, monitor trend healthy true, rollout lineage match true, handoff monitor in trend true, runtime completion ready true, matching change id, operator, apply command, and verification command, and runtime verification passed true.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-90.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T07-56-52-885Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-90-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, latest wall duration 5,078 ms, latest estimated full receipt tokens 11,917, latest system artifact count 16, no loop or command status changes, no new attention loops, wall time down 150 ms versus Slice 89, and estimated receipt tokens down 487.
+- Next: Add longer-window monitor trend summaries or runtime usage ingestion after future model, prompt, policy, tool, or workflow changes.

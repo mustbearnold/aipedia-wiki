@@ -123,6 +123,7 @@
     "agent:routing:monitor": "node scripts/agent-routing-monitor.mjs",
     "agent:routing:monitor:trends": "node scripts/agent-routing-monitor-trends.mjs",
     "agent:routing:handoff": "node scripts/agent-routing-handoff.mjs",
+    "agent:routing:runtime:complete": "node scripts/agent-routing-runtime-completion.mjs",
     "agent:dag:check": "node scripts/agent-task-dag-check.mjs",
     "check:fast": "node scripts/guard-em-dashes.mjs && npm run audit:commands",
     "check:fonts": "node scripts/audit-font-policy.mjs --source",
