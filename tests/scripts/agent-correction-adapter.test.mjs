@@ -23,6 +23,10 @@ function writeJson(path, value) {
   writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
 }
 
+function writeJsonl(path, rows) {
+  writeFileSync(path, `${rows.map((row) => JSON.stringify(row)).join('\n')}\n`);
+}
+
 function baseCandidate(id, overrides = {}) {
   return {
     id,
@@ -127,6 +131,49 @@ test('agent correction adapter converts runtime event rows into telemetry receip
     assert.equal(receipt.totals.residual_issue_count, 1);
     assert.equal(receipt.candidates[0].events[1].type, 'correction_applied');
     assert.equal(receipt.candidates[1].events[1].type, 'residual_issue');
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('agent correction adapter converts runtime JSONL logs into telemetry receipts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-correction-adapter-jsonl-'));
+  try {
+    writeJsonl(join(root, 'events.jsonl'), [
+      {
+        record_type: 'meta',
+        goal_id: 'june-30-agentic-tooling-meta-os',
+        run_id: 'slice-76-jsonl-adapter',
+        workflow: 'loop-system',
+        telemetry_source: { type: 'runtime', id: 'jsonl-event-log', confidence: 'exact' },
+      },
+      baseCandidate('single-agent', { record_type: 'candidate' }),
+      baseCandidate('orchestrated-specialists', { record_type: 'candidate' }),
+      { record_type: 'event', candidate_id: 'single-agent', id: 'jsonl-single-finding', type: 'finding', severity: 'medium' },
+      { record_type: 'event', candidate_id: 'single-agent', id: 'jsonl-single-fix', type: 'fix', finding_id: 'jsonl-single-finding' },
+      { record_type: 'event', candidate_id: 'orchestrated-specialists', id: 'jsonl-orch-finding', type: 'issue', severity: 'low' },
+      { record_type: 'event', candidate_id: 'orchestrated-specialists', id: 'jsonl-orch-regression', type: 'regression', finding_id: 'jsonl-orch-finding' },
+    ]);
+    const result = runAdapter([
+      '--project-dir',
+      root,
+      '--events-jsonl',
+      'events.jsonl',
+      '--out',
+      'jsonl-receipt.json',
+      '--normalized-out',
+      'jsonl-normalized.json',
+      '--json',
+    ]);
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    const receipt = JSON.parse(result.stdout);
+    assert.equal(receipt.telemetry_source.id, 'jsonl-event-log');
+    assert.equal(receipt.totals.findings_count, 2);
+    assert.equal(receipt.totals.corrections_applied, 1);
+    assert.equal(receipt.totals.regression_count, 1);
+    const normalized = JSON.parse(readFileSync(join(root, 'jsonl-normalized.json'), 'utf8'));
+    assert.equal(normalized.candidates[0].events.length, 2);
+    assert.equal(normalized.candidates[1].events[1].type, 'regression');
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

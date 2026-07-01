@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T03:52:51.324Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-events.jsonl",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-76-runtime-jsonl-adapter",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-76-runtime-jsonl-log",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 8,
+    "findings_count": 4,
+    "corrections_applied": 2,
+    "residual_issue_count": 1,
+    "regression_count": 1
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-76-jsonl-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 1,
+        "residual_issue": 1,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 1,
+        "residual_issue_count": 1,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "jsonl-single-source-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Runtime log found a source proof gap."
+        },
+        {
+          "id": "jsonl-single-source-fix",
+          "type": "correction_applied",
+          "finding_id": "jsonl-single-source-gap",
+          "severity": "",
+          "note": "Runtime log recorded the applied source proof correction."
+        },
+        {
+          "id": "jsonl-single-residual-finding",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Runtime log found a residual routing-policy wording issue."
+        },
+        {
+          "id": "jsonl-single-residual",
+          "type": "residual_issue",
+          "finding_id": "jsonl-single-residual-finding",
+          "severity": "",
+          "note": "Runtime log recorded the residual issue."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-76-jsonl-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "reviewer",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 1,
+        "residual_issue": 0,
+        "regression": 1
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 1,
+        "residual_issue_count": 0,
+        "regression_count": 1
+      },
+      "events": [
+        {
+          "id": "jsonl-orch-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Runtime log found a missing proof handoff."
+        },
+        {
+          "id": "jsonl-orch-proof-fix",
+          "type": "correction_applied",
+          "finding_id": "jsonl-orch-proof-gap",
+          "severity": "",
+          "note": "Runtime log recorded the proof handoff correction."
+        },
+        {
+          "id": "jsonl-orch-noise-finding",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Runtime log found extra receipt verbosity."
+        },
+        {
+          "id": "jsonl-orch-noise-regression",
+          "type": "regression",
+          "finding_id": "jsonl-orch-noise-finding",
+          "severity": "",
+          "note": "Runtime log recorded the verbosity regression."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-76-jsonl-single-agent",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 1,
+        "residual_issue_count": 1,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-76-jsonl-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 1,
+        "residual_issue_count": 0,
+        "regression_count": 1
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json"
+}

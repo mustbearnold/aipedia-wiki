@@ -72,6 +72,76 @@ export function buildCorrectionTelemetryFromAdapter(input, options = {}) {
   };
 }
 
+export function adapterInputFromJsonlRows(rows, options = {}) {
+  const issues = [];
+  if (!Array.isArray(rows)) {
+    return {
+      input: null,
+      issues: [correctionIssue('correction-adapter-jsonl-invalid', 'JSONL rows must be an array.')],
+    };
+  }
+  const input = {
+    goal_id: stringValue(options.goal_id || options.goalId),
+    run_id: stringValue(options.run_id || options.runId),
+    workflow: stringValue(options.workflow),
+    telemetry_source: null,
+    candidates: [],
+    runtime_events: [],
+  };
+  const candidateMap = new Map();
+
+  for (const [index, row] of rows.entries()) {
+    const path = `jsonl[${index + 1}]`;
+    if (!isObject(row)) {
+      issues.push(correctionIssue('correction-adapter-jsonl-invalid', `${path} must be an object.`));
+      continue;
+    }
+    const recordType = recordTypeFor(row);
+    if (recordType === 'meta') {
+      if (stringValue(row.goal_id)) input.goal_id = stringValue(row.goal_id);
+      if (stringValue(row.run_id)) input.run_id = stringValue(row.run_id);
+      if (stringValue(row.workflow)) input.workflow = stringValue(row.workflow);
+      if (isObject(row.telemetry_source)) input.telemetry_source = row.telemetry_source;
+      continue;
+    }
+    if (recordType === 'candidate') {
+      const candidate = candidateFromRow(row, path, issues);
+      if (candidate?.id) candidateMap.set(candidate.id, { ...candidateMap.get(candidate.id), ...candidate });
+      continue;
+    }
+    if (recordType === 'event') {
+      const candidateId = stringValue(row.candidate_id || row.candidate || row.routing_candidate_id);
+      if (!candidateId) {
+        issues.push(correctionIssue('correction-adapter-jsonl-invalid', `${path} event row needs candidate_id.`));
+        continue;
+      }
+      const inlineCandidate = candidateFromEventRow(row, candidateId);
+      if (inlineCandidate) candidateMap.set(candidateId, { ...candidateMap.get(candidateId), ...inlineCandidate });
+      input.runtime_events.push({
+        id: row.id || row.event_id,
+        type: row.type || row.event_type || row.event_kind,
+        event_type: row.event_type,
+        finding_id: row.finding_id || row.finding || row.parent_finding_id,
+        severity: row.severity,
+        note: row.note || row.summary || row.message,
+        candidate_id: candidateId,
+      });
+      continue;
+    }
+    issues.push(correctionIssue('correction-adapter-jsonl-invalid', `${path} record_type must be meta, candidate, or event.`));
+  }
+
+  input.candidates = [...candidateMap.values()];
+  if (!input.telemetry_source) {
+    input.telemetry_source = {
+      type: 'runtime',
+      id: stringValue(options.source_id || options.sourceId) || 'correction-event-jsonl',
+      confidence: 'exact',
+    };
+  }
+  return { input, issues };
+}
+
 function normalizeCandidate(candidate, index, topLevelEvents, issues) {
   const path = `candidates[${index}]`;
   const id = stringValue(candidate?.id);
@@ -197,6 +267,43 @@ function normalizeEvent(event, fallbackSeed, usedIds, issues) {
     severity: stringValue(event.severity),
     note: stringValue(event.note || event.summary || event.message),
   };
+}
+
+function recordTypeFor(row) {
+  const explicit = normalizedStatus(row.record_type || row.row_type);
+  if (explicit) return explicit;
+  const kind = normalizedStatus(row.kind);
+  if (['meta', 'candidate', 'event'].includes(kind)) return kind;
+  if (stringValue(row.candidate_id || row.candidate || row.routing_candidate_id)) return 'event';
+  if (stringValue(row.id) && stringValue(row.orchestrator)) return 'candidate';
+  return '';
+}
+
+function candidateFromRow(row, path, issues) {
+  const id = stringValue(row.id || row.candidate_id);
+  if (!id) {
+    issues.push(correctionIssue('correction-adapter-jsonl-invalid', `${path} candidate row needs id.`));
+    return null;
+  }
+  return {
+    id,
+    workflow: stringValue(row.workflow || row.candidate_workflow),
+    run_id: stringValue(row.run_id || row.candidate_run_id),
+    orchestrator: stringValue(row.orchestrator || row.candidate_orchestrator),
+    subagent: stringValue(row.subagent || row.candidate_subagent),
+  };
+}
+
+function candidateFromEventRow(row, candidateId) {
+  const candidate = {
+    id: candidateId,
+    workflow: stringValue(row.candidate_workflow),
+    run_id: stringValue(row.candidate_run_id),
+    orchestrator: stringValue(row.candidate_orchestrator),
+    subagent: stringValue(row.candidate_subagent),
+  };
+  if (!candidate.workflow && !candidate.run_id && !candidate.orchestrator && !candidate.subagent) return null;
+  return candidate;
 }
 
 function normalizeTelemetrySource(value, input) {

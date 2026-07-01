@@ -1098,6 +1098,23 @@ Correction telemetry can now be generated from reviewer packets and runtime even
 - Enforced loop receipt `.agent/loop-runs/system/2026-07-01T03-47-32-192Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 18 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
 - Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-75-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 4,968 ms, latest wall duration 4,923 ms, latest estimated full receipt tokens 12,241, latest system artifact count 19, 3 persistent attention loops, and 4 persistent attention commands.
 
+## Seventy-Sixth System Slice
+
+Correction telemetry can now be ingested from append-style runtime JSONL logs.
+
+- Extended `agent:correction:adapt` with `--events-jsonl <path>` so runtime systems can append compact meta, candidate, and event rows instead of assembling nested adapter JSON.
+- Added `adapterInputFromJsonlRows` in `scripts/lib/correction-telemetry-adapter.mjs` to convert JSONL rows into the same canonical adapter input used by reviewer packets and runtime event arrays.
+- JSONL meta rows can provide `goal_id`, `run_id`, `workflow`, and `telemetry_source`.
+- JSONL candidate rows can provide candidate metadata once, while event rows can carry `candidate_id`, event aliases, finding links, severity, and notes.
+- Event rows can also infer candidate metadata from inline `candidate_workflow`, `candidate_run_id`, `candidate_orchestrator`, and `candidate_subagent` fields.
+- The output remains the existing `aipedia.correction-telemetry.v1` receipt, so `agent:closeout:check`, `agent:meta:closeout:auto`, and routing evaluation keep one correction telemetry contract.
+- Focused adapter, correction, closeout, and router tests passed 69/69.
+- Scoped `check:smart` passed with 582 script tests and command audit.
+- Live JSONL receipt `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json` passed auto-routed closeout with 2 candidates, 8 events, 4 findings, 2 corrections applied, 1 residual issue, and 1 regression.
+- `check:quick` passed with 582 script tests, command audit, and quick assets.
+- Enforced loop receipt `.agent/loop-runs/system/2026-07-01T03-57-25-580Z-loop-run.json` passed strict latest-loop closeout with 4 ok, 3 attention, 0 skipped, 16 commands, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths.
+- Final trend receipt `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-76-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,020 ms, latest wall duration 5,020 ms, latest estimated full receipt tokens 11,708, latest system artifact count 13, 3 persistent attention loops, 4 persistent attention commands, and estimated receipt tokens down 533 versus Slice 75.
+
 ## Compliance Matrix
 
 | Workstream | Status | Evidence | Next System Target |

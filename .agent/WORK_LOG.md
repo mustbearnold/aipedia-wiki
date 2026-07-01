@@ -1,5 +1,20 @@
 # AiPedia Work Log
 
+### 2026-06-30: Agentic Tooling Meta Slice 76, Runtime JSONL Correction Events
+
+- Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, and JSONL correction-telemetry closeout. Pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Extended `agent:correction:adapt` with `--events-jsonl <path>` so append-style runtime logs can be converted into canonical `aipedia.correction-telemetry.v1` receipts without hand-building nested adapter JSON.
+- Changed: Added `adapterInputFromJsonlRows` to assemble meta, candidate, and event rows into the existing correction telemetry adapter input shape, preserving the same receipt schema and closeout route as Slice 75.
+- System lesson: runtime telemetry is easier to collect reliably when the writer can append one row at a time. The adapter now lets orchestrators, reviewers, and validators emit compact JSONL events while the durable closeout contract stays unchanged.
+- Verification: syntax checks passed for the adapter CLI/library. Focused adapter/correction/closeout/router tests passed 69/69. The live JSONL receipt passed auto-routed correction-telemetry closeout. Scoped `check:smart` passed with 582 script tests and command audit. `check:quick` passed with 582 script tests, command audit, and quick assets.
+- Durable JSONL proof: `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-events.jsonl`, `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-normalized.json`, and `.agent/evals/correction-telemetry-adapters/2026-06-30-slice-76-runtime-jsonl-receipt.json`.
+- Proof result: the JSONL adapter receipt records 2 candidates, 8 events, 4 findings, 2 corrections applied, 1 residual issue, and 1 regression.
+- Durable loop receipt: `.agent/loop-runs/system/2026-07-01T03-57-25-580Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-76-final-efficiency-trends.json` passed auto-routed closeout with 3 metric-aware receipts, 0 missing metrics, median wall duration 5,020 ms, latest wall duration 5,020 ms, latest estimated full receipt tokens 11,708, latest system artifact count 13, 3 persistent attention loops, and 4 persistent attention commands.
+- Loop result: Enforced loop closeout passed with 4 ok, 3 attention, 0 skipped, 16 commands, 12 current-agent system artifacts, 0 current-agent content artifacts, and 5 pre-existing dirty paths. Latest loop wall time increased by 97 ms versus Slice 75, while estimated receipt tokens dropped by 533 and system artifact count dropped by 6.
+- Next: Commit and push only Slice 76 system files, then feed runtime JSONL correction receipts into routing suites from bounded real workloads.
+
 ### 2026-06-30: Agentic Tooling Meta Slice 75, Correction Telemetry Adapters
 
 - Status: Verified locally through `check:quick`, enforced loop closeout, final trend closeout, and adapter/routing closeout. Pending commit and push.

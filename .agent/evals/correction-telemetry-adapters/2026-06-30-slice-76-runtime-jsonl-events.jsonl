@@ -1,0 +1,11 @@
+{"record_type":"meta","goal_id":"june-30-agentic-tooling-meta-os","run_id":"2026-06-30-slice-76-runtime-jsonl-adapter","workflow":"loop-system","telemetry_source":{"type":"runtime","id":"slice-76-runtime-jsonl-log","confidence":"exact"}}
+{"record_type":"candidate","id":"single-agent","workflow":"loop-system","run_id":"2026-06-30-slice-76-jsonl-single-agent","orchestrator":"single-agent"}
+{"record_type":"candidate","id":"orchestrated-specialists","workflow":"loop-system","run_id":"2026-06-30-slice-76-jsonl-orchestrated","orchestrator":"meta-orchestrator","subagent":"reviewer"}
+{"record_type":"event","candidate_id":"single-agent","id":"jsonl-single-source-gap","type":"finding","severity":"medium","note":"Runtime log found a source proof gap."}
+{"record_type":"event","candidate_id":"single-agent","id":"jsonl-single-source-fix","type":"fix","finding_id":"jsonl-single-source-gap","note":"Runtime log recorded the applied source proof correction."}
+{"record_type":"event","candidate_id":"single-agent","id":"jsonl-single-residual-finding","type":"finding","severity":"low","note":"Runtime log found a residual routing-policy wording issue."}
+{"record_type":"event","candidate_id":"single-agent","id":"jsonl-single-residual","type":"residual","finding_id":"jsonl-single-residual-finding","note":"Runtime log recorded the residual issue."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"jsonl-orch-proof-gap","type":"issue","severity":"medium","note":"Runtime log found a missing proof handoff."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"jsonl-orch-proof-fix","type":"correction","finding_id":"jsonl-orch-proof-gap","note":"Runtime log recorded the proof handoff correction."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"jsonl-orch-noise-finding","type":"finding","severity":"low","note":"Runtime log found extra receipt verbosity."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"jsonl-orch-noise-regression","type":"regression","finding_id":"jsonl-orch-noise-finding","note":"Runtime log recorded the verbosity regression."}

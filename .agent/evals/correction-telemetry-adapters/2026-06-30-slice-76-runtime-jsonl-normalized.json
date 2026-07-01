@@ -1,0 +1,86 @@
+{
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-76-runtime-jsonl-adapter",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-76-runtime-jsonl-log",
+    "confidence": "exact"
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-76-jsonl-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "events": [
+        {
+          "id": "jsonl-single-source-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Runtime log found a source proof gap."
+        },
+        {
+          "id": "jsonl-single-source-fix",
+          "type": "correction_applied",
+          "finding_id": "jsonl-single-source-gap",
+          "severity": "",
+          "note": "Runtime log recorded the applied source proof correction."
+        },
+        {
+          "id": "jsonl-single-residual-finding",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Runtime log found a residual routing-policy wording issue."
+        },
+        {
+          "id": "jsonl-single-residual",
+          "type": "residual_issue",
+          "finding_id": "jsonl-single-residual-finding",
+          "severity": "",
+          "note": "Runtime log recorded the residual issue."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-76-jsonl-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "reviewer",
+      "events": [
+        {
+          "id": "jsonl-orch-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Runtime log found a missing proof handoff."
+        },
+        {
+          "id": "jsonl-orch-proof-fix",
+          "type": "correction_applied",
+          "finding_id": "jsonl-orch-proof-gap",
+          "severity": "",
+          "note": "Runtime log recorded the proof handoff correction."
+        },
+        {
+          "id": "jsonl-orch-noise-finding",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Runtime log found extra receipt verbosity."
+        },
+        {
+          "id": "jsonl-orch-noise-regression",
+          "type": "regression",
+          "finding_id": "jsonl-orch-noise-finding",
+          "severity": "",
+          "note": "Runtime log recorded the verbosity regression."
+        }
+      ]
+    }
+  ]
+}

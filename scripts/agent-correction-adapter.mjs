@@ -4,18 +4,19 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildCorrectionTelemetryFromAdapter } from './lib/correction-telemetry-adapter.mjs';
+import { adapterInputFromJsonlRows, buildCorrectionTelemetryFromAdapter } from './lib/correction-telemetry-adapter.mjs';
 import { correctionIssue } from './lib/correction-telemetry.mjs';
 
 const args = process.argv.slice(2);
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_PROJECT_DIR = dirname(SCRIPT_DIR);
-const KNOWN_FLAGS = new Set(['--help', '-h', '--input', '--json', '--out', '--normalized-out', '--project-dir', '--root']);
-const VALUE_FLAGS = new Set(['--input', '--out', '--normalized-out', '--project-dir', '--root']);
+const KNOWN_FLAGS = new Set(['--help', '-h', '--input', '--events-jsonl', '--json', '--out', '--normalized-out', '--project-dir', '--root']);
+const VALUE_FLAGS = new Set(['--input', '--events-jsonl', '--out', '--normalized-out', '--project-dir', '--root']);
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || DEFAULT_PROJECT_DIR);
 const INPUT_PATH = valueFor('--input');
+const EVENTS_JSONL_PATH = valueFor('--events-jsonl');
 const OUT_PATH = valueFor('--out');
 const NORMALIZED_OUT_PATH = valueFor('--normalized-out');
 
@@ -35,14 +36,23 @@ if (argumentIssues.length) {
   process.exit(2);
 }
 
-const inputFile = resolve(PROJECT_DIR, INPUT_PATH);
+const inputFile = INPUT_PATH ? resolve(PROJECT_DIR, INPUT_PATH) : resolve(PROJECT_DIR, EVENTS_JSONL_PATH);
 const issues = [];
 let input = null;
 if (!existsSync(inputFile)) {
   issues.push(correctionIssue('correction-adapter-input-missing', `${projectPath(inputFile)} does not exist.`));
 } else {
   try {
-    input = JSON.parse(readFileSync(inputFile, 'utf8'));
+    if (EVENTS_JSONL_PATH) {
+      const rows = parseJsonl(readFileSync(inputFile, 'utf8'), projectPath(inputFile), issues);
+      if (!issues.length) {
+        const assembled = adapterInputFromJsonlRows(rows);
+        input = assembled.input;
+        issues.push(...assembled.issues);
+      }
+    } else {
+      input = JSON.parse(readFileSync(inputFile, 'utf8'));
+    }
   } catch (error) {
     issues.push(correctionIssue('correction-adapter-input-invalid', `${projectPath(inputFile)} could not parse as JSON: ${error.message}`));
   }
@@ -95,6 +105,7 @@ function usage() {
   return [
     'Usage:',
     '  node scripts/agent-correction-adapter.mjs --input <path> --out <path> --json',
+    '  node scripts/agent-correction-adapter.mjs --events-jsonl <path> --out <path> --json',
     '  node scripts/agent-correction-adapter.mjs --input <path> --normalized-out <path> --json',
     '',
     'Normalizes reviewer finding packets or runtime event rows into aipedia.correction-telemetry.v1 receipts.',
@@ -102,6 +113,7 @@ function usage() {
     '',
     'Options:',
     '  --input <path>           Adapter input JSON.',
+    '  --events-jsonl <path>    JSONL rows with meta, candidate, and event records.',
     '  --out <path>             Optional correction telemetry receipt output path.',
     '  --normalized-out <path>  Optional canonical correction telemetry input output path.',
     '  --project-dir <dir>      Project root. Alias: --root.',
@@ -126,11 +138,26 @@ function collectArgumentIssues() {
     const value = valueFor(flag);
     if (!value || value.startsWith('-')) issues.push(correctionIssue('argument-invalid', `${flag} requires a value.`));
   }
-  if (!INPUT_PATH) issues.push(correctionIssue('argument-invalid', '--input is required.'));
+  if (!INPUT_PATH && !EVENTS_JSONL_PATH) issues.push(correctionIssue('argument-invalid', '--input or --events-jsonl is required.'));
+  if (INPUT_PATH && EVENTS_JSONL_PATH) issues.push(correctionIssue('argument-invalid', 'choose only one of --input or --events-jsonl.'));
   if (hasFlag('--project-dir') && hasFlag('--root')) {
     issues.push(correctionIssue('argument-invalid', 'choose only one of --project-dir or --root.'));
   }
   return issues;
+}
+
+function parseJsonl(text, path, issues) {
+  const rows = [];
+  for (const [index, line] of text.split(/\r?\n/).entries()) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    try {
+      rows.push(JSON.parse(trimmed));
+    } catch (error) {
+      issues.push(correctionIssue('correction-adapter-jsonl-invalid', `${path}:${index + 1} could not parse as JSON: ${error.message}`));
+    }
+  }
+  return rows;
 }
 
 function emit(value) {
