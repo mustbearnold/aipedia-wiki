@@ -54,6 +54,18 @@ function writeTrendSourceReceipts(projectDir, receipt, durations = [400, 500]) {
         exact_model_reasoning_tokens: run.exact_model_reasoning_tokens,
         exact_model_total_tokens: run.exact_model_total_tokens,
       });
+      for (const field of [
+        'exact_model_workflow_context_count',
+        'exact_model_run_context_count',
+        'exact_model_orchestrator_context_count',
+        'exact_model_subagent_context_count',
+        'exact_model_workflow_breakdown',
+        'exact_model_run_breakdown',
+        'exact_model_orchestrator_breakdown',
+        'exact_model_subagent_breakdown',
+      ]) {
+        if (run[field] != null) source.efficiency_metrics[field] = run[field];
+      }
     }
     source.efficiency_metrics.slowest_commands = [
       {
@@ -996,33 +1008,67 @@ test('closeout receipt check validates exact model token usage on loop and trend
       model: 'gpt-5.5',
       entry_count: 1,
       token_bearing_entry_count: 1,
-      request_count: 1,
+      request_count: 2,
       input_tokens: 1000,
       output_tokens: 250,
       cached_input_tokens: 200,
       reasoning_tokens: 75,
       total_tokens: 1250,
+      workflow_context_count: 1,
+      run_context_count: 1,
+      orchestrator_context_count: 1,
+      subagent_context_count: 2,
+      workflow_breakdown: [
+        { id: 'loop-system', request_count: 2, input_tokens: 1000, output_tokens: 250, cached_input_tokens: 200, reasoning_tokens: 75, total_tokens: 1250 },
+      ],
+      run_breakdown: [
+        { id: 'token-run-1', request_count: 2, input_tokens: 1000, output_tokens: 250, cached_input_tokens: 200, reasoning_tokens: 75, total_tokens: 1250 },
+      ],
+      orchestrator_breakdown: [
+        { id: 'meta-orchestrator', request_count: 2, input_tokens: 1000, output_tokens: 250, cached_input_tokens: 200, reasoning_tokens: 75, total_tokens: 1250 },
+      ],
+      subagent_breakdown: [
+        { id: 'evidence-agent', request_count: 1, input_tokens: 700, output_tokens: 175, cached_input_tokens: 150, reasoning_tokens: 50, total_tokens: 875 },
+        { id: 'validation-agent', request_count: 1, input_tokens: 300, output_tokens: 75, cached_input_tokens: 50, reasoning_tokens: 25, total_tokens: 375 },
+      ],
     };
     Object.assign(loopReceipt.efficiency_metrics, {
       model_token_usage_status: 'provided',
       model_token_usage_source: 'local/token-usage.json',
-      exact_model_request_count: 1,
+      exact_model_request_count: 2,
       exact_model_input_tokens: 1000,
       exact_model_output_tokens: 250,
       exact_model_cached_input_tokens: 200,
       exact_model_reasoning_tokens: 75,
       exact_model_total_tokens: 1250,
+      exact_model_workflow_context_count: 1,
+      exact_model_run_context_count: 1,
+      exact_model_orchestrator_context_count: 1,
+      exact_model_subagent_context_count: 2,
+      exact_model_workflow_breakdown: loopReceipt.model_token_usage.workflow_breakdown,
+      exact_model_run_breakdown: loopReceipt.model_token_usage.run_breakdown,
+      exact_model_orchestrator_breakdown: loopReceipt.model_token_usage.orchestrator_breakdown,
+      exact_model_subagent_breakdown: loopReceipt.model_token_usage.subagent_breakdown,
     });
     writeJson(loopPath, loopReceipt);
     const loopResult = runCheck(['--receipt', loopPath, '--json']);
     assert.equal(loopResult.status, 0, `${loopResult.stdout}\n${loopResult.stderr}`);
 
+    loopReceipt.model_token_usage.subagent_breakdown[0].total_tokens = 1;
+    writeJson(loopPath, loopReceipt);
+    const contextDrift = runCheck(['--receipt', loopPath, '--json']);
+    assert.equal(contextDrift.status, 1);
+    let report = JSON.parse(contextDrift.stdout);
+    let codes = report.receipts[0].issues.map((item) => item.code);
+    assert.ok(codes.includes('model-token-usage-breakdown-mismatch'));
+    loopReceipt.model_token_usage.subagent_breakdown[0].total_tokens = 875;
+
     loopReceipt.efficiency_metrics.exact_model_total_tokens = 1200;
     writeJson(loopPath, loopReceipt);
     const drift = runCheck(['--receipt', loopPath, '--json']);
     assert.equal(drift.status, 1);
-    let report = JSON.parse(drift.stdout);
-    let codes = report.receipts[0].issues.map((item) => item.code);
+    report = JSON.parse(drift.stdout);
+    codes = report.receipts[0].issues.map((item) => item.code);
     assert.ok(codes.includes('efficiency-model-token-mismatch'));
 
     const trendReceipt = validLoopEfficiencyTrendReceipt();
@@ -1034,6 +1080,22 @@ test('closeout receipt check validates exact model token usage on loop and trend
       exact_model_cached_input_tokens: 120,
       exact_model_reasoning_tokens: 80,
       exact_model_total_tokens: 1200,
+      exact_model_workflow_context_count: 1,
+      exact_model_run_context_count: 1,
+      exact_model_orchestrator_context_count: 1,
+      exact_model_subagent_context_count: 1,
+      exact_model_workflow_breakdown: [
+        { id: 'loop-system', request_count: 1, input_tokens: 900, output_tokens: 300, cached_input_tokens: 120, reasoning_tokens: 80, total_tokens: 1200 },
+      ],
+      exact_model_run_breakdown: [
+        { id: 'token-run-2', request_count: 1, input_tokens: 900, output_tokens: 300, cached_input_tokens: 120, reasoning_tokens: 80, total_tokens: 1200 },
+      ],
+      exact_model_orchestrator_breakdown: [
+        { id: 'meta-orchestrator', request_count: 1, input_tokens: 900, output_tokens: 300, cached_input_tokens: 120, reasoning_tokens: 80, total_tokens: 1200 },
+      ],
+      exact_model_subagent_breakdown: [
+        { id: 'validation-agent', request_count: 1, input_tokens: 900, output_tokens: 300, cached_input_tokens: 120, reasoning_tokens: 80, total_tokens: 1200 },
+      ],
     });
     Object.assign(trendReceipt.summary, {
       exact_model_token_coverage_rate: 0.5,
@@ -1049,6 +1111,14 @@ test('closeout receipt check validates exact model token usage on loop and trend
       exact_model_cached_input_tokens: 120,
       exact_model_reasoning_tokens: 80,
       exact_model_total_tokens: 1200,
+      exact_model_workflow_context_count: 1,
+      exact_model_run_context_count: 1,
+      exact_model_orchestrator_context_count: 1,
+      exact_model_subagent_context_count: 1,
+      exact_model_workflow_breakdown: trendReceipt.runs[1].exact_model_workflow_breakdown,
+      exact_model_run_breakdown: trendReceipt.runs[1].exact_model_run_breakdown,
+      exact_model_orchestrator_breakdown: trendReceipt.runs[1].exact_model_orchestrator_breakdown,
+      exact_model_subagent_breakdown: trendReceipt.runs[1].exact_model_subagent_breakdown,
     });
     writeTrendSourceReceipts(dir, trendReceipt);
     writeJson(trendPath, trendReceipt);

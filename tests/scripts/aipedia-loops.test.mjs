@@ -337,12 +337,30 @@ test('aipedia loops records exact model token usage in run ledgers', () => {
         entries: [
           {
             model: 'gpt-5.5',
+            workflow: 'loop-system',
+            run_id: 'token-run-1',
+            orchestrator: 'meta-orchestrator',
+            subagent: 'evidence-agent',
             usage: {
               input_tokens: 1000,
               output_tokens: 250,
               total_tokens: 1250,
               input_token_details: { cached_tokens: 200 },
               output_token_details: { reasoning_tokens: 75 },
+            },
+          },
+          {
+            model: 'gpt-5.5',
+            workflow: 'loop-system',
+            run_id: 'token-run-1',
+            orchestrator: 'meta-orchestrator',
+            subagent: 'validation-agent',
+            usage: {
+              input_tokens: 400,
+              output_tokens: 100,
+              total_tokens: 500,
+              input_token_details: { cached_tokens: 50 },
+              output_token_details: { reasoning_tokens: 20 },
             },
           },
         ],
@@ -366,17 +384,35 @@ test('aipedia loops records exact model token usage in run ledgers', () => {
     const latest = JSON.parse(readFileSync(join(ledgerDir, 'latest.json'), 'utf8'));
     assert.equal(latest.model_token_usage.schema_version, 'aipedia.model-token-usage.v1');
     assert.deepEqual(latest.model_token_usage.models, ['gpt-5.5']);
-    assert.equal(latest.model_token_usage.input_tokens, 1000);
-    assert.equal(latest.model_token_usage.output_tokens, 250);
-    assert.equal(latest.model_token_usage.cached_input_tokens, 200);
-    assert.equal(latest.model_token_usage.reasoning_tokens, 75);
-    assert.equal(latest.model_token_usage.total_tokens, 1250);
+    assert.equal(latest.model_token_usage.input_tokens, 1400);
+    assert.equal(latest.model_token_usage.output_tokens, 350);
+    assert.equal(latest.model_token_usage.cached_input_tokens, 250);
+    assert.equal(latest.model_token_usage.reasoning_tokens, 95);
+    assert.equal(latest.model_token_usage.total_tokens, 1750);
+    assert.equal(latest.model_token_usage.workflow_context_count, 1);
+    assert.equal(latest.model_token_usage.run_context_count, 1);
+    assert.equal(latest.model_token_usage.orchestrator_context_count, 1);
+    assert.equal(latest.model_token_usage.subagent_context_count, 2);
+    assert.deepEqual(latest.model_token_usage.workflow_breakdown, [
+      {
+        id: 'loop-system',
+        request_count: 2,
+        input_tokens: 1400,
+        output_tokens: 350,
+        cached_input_tokens: 250,
+        reasoning_tokens: 95,
+        total_tokens: 1750,
+      },
+    ]);
+    assert.deepEqual(latest.model_token_usage.subagent_breakdown.map((row) => row.id), ['evidence-agent', 'validation-agent']);
     assert.equal(latest.efficiency_metrics.model_token_usage_status, 'provided');
-    assert.equal(latest.efficiency_metrics.exact_model_input_tokens, 1000);
-    assert.equal(latest.efficiency_metrics.exact_model_output_tokens, 250);
-    assert.equal(latest.efficiency_metrics.exact_model_cached_input_tokens, 200);
-    assert.equal(latest.efficiency_metrics.exact_model_reasoning_tokens, 75);
-    assert.equal(latest.efficiency_metrics.exact_model_total_tokens, 1250);
+    assert.equal(latest.efficiency_metrics.exact_model_input_tokens, 1400);
+    assert.equal(latest.efficiency_metrics.exact_model_output_tokens, 350);
+    assert.equal(latest.efficiency_metrics.exact_model_cached_input_tokens, 250);
+    assert.equal(latest.efficiency_metrics.exact_model_reasoning_tokens, 95);
+    assert.equal(latest.efficiency_metrics.exact_model_total_tokens, 1750);
+    assert.equal(latest.efficiency_metrics.exact_model_subagent_context_count, 2);
+    assert.deepEqual(latest.efficiency_metrics.exact_model_subagent_breakdown, latest.model_token_usage.subagent_breakdown);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

@@ -30,6 +30,12 @@ const DAG_GRAPH_REFS = valuesFor('--dag-graph').concat(envList('AIPEDIA_DAG_GRAP
 const DAG_VALIDATION_REPORT_REFS = valuesFor('--dag-validation-report').concat(envList('AIPEDIA_DAG_VALIDATION_REPORTS'));
 const MODEL_TOKEN_USAGE_PATH = valueFor('--model-token-usage') || process.env.AIPEDIA_MODEL_TOKEN_USAGE_FILE || '';
 const MODEL_TOKEN_USAGE_JSON = process.env.AIPEDIA_MODEL_TOKEN_USAGE_JSON || '';
+const MODEL_TOKEN_CONTEXT_DEFAULTS = {
+  workflow: valueFor('--model-token-workflow') || process.env.AIPEDIA_MODEL_TOKEN_WORKFLOW || '',
+  run_id: valueFor('--model-token-run-id') || process.env.AIPEDIA_MODEL_TOKEN_RUN_ID || RUN_ID || '',
+  orchestrator: valueFor('--model-token-orchestrator') || process.env.AIPEDIA_MODEL_TOKEN_ORCHESTRATOR || '',
+  subagent: valueFor('--model-token-subagent') || process.env.AIPEDIA_MODEL_TOKEN_SUBAGENT || '',
+};
 const OBSERVED_DIRTY_BEFORE_AGENT = valuesFor('--observed-dirty-before-agent')
   .concat(valuesFor('--observed-dirty-before-agent-path'))
   .concat(pathsFromFiles(valuesFor('--observed-dirty-before-agent-file')));
@@ -42,6 +48,10 @@ const KNOWN_FLAGS = new Set([
   '--goal-id',
   '--ledger-dir',
   '--model-token-usage',
+  '--model-token-workflow',
+  '--model-token-run-id',
+  '--model-token-orchestrator',
+  '--model-token-subagent',
   '--json',
   '--loop',
   '--next-action',
@@ -69,6 +79,10 @@ const VALUE_FLAGS = new Set([
   '--goal-id',
   '--ledger-dir',
   '--model-token-usage',
+  '--model-token-workflow',
+  '--model-token-run-id',
+  '--model-token-orchestrator',
+  '--model-token-subagent',
   '--loop',
   '--next-action',
   '--observed-dirty-before-agent',
@@ -175,6 +189,10 @@ function usage() {
     '  --dag-graph <path>      Attach a generated agent task DAG artifact. Repeatable.',
     '  --dag-validation-report <path>  Attach an agent:dag:check validation report. Repeatable.',
     '  --model-token-usage <path>  Attach exact runtime model token usage JSON when available.',
+    '  --model-token-workflow <id>  Default workflow context for model token usage entries.',
+    '  --model-token-run-id <id>  Default run context for model token usage entries.',
+    '  --model-token-orchestrator <id>  Default orchestrator context for model token usage entries.',
+    '  --model-token-subagent <id>  Default subagent context for model token usage entries.',
     '  --ledger-dir <dir>      Override the loop-run ledger directory.',
   ].join('\n');
 }
@@ -340,6 +358,14 @@ function loopEfficiencyMetrics(reportData, persistedReceiptBytes = {}) {
       exact_model_cached_input_tokens: nonNegative(reportData.model_token_usage.cached_input_tokens),
       exact_model_reasoning_tokens: nonNegative(reportData.model_token_usage.reasoning_tokens),
       exact_model_total_tokens: nonNegative(reportData.model_token_usage.total_tokens),
+      exact_model_workflow_context_count: nonNegative(reportData.model_token_usage.workflow_context_count),
+      exact_model_run_context_count: nonNegative(reportData.model_token_usage.run_context_count),
+      exact_model_orchestrator_context_count: nonNegative(reportData.model_token_usage.orchestrator_context_count),
+      exact_model_subagent_context_count: nonNegative(reportData.model_token_usage.subagent_context_count),
+      exact_model_workflow_breakdown: reportData.model_token_usage.workflow_breakdown || [],
+      exact_model_run_breakdown: reportData.model_token_usage.run_breakdown || [],
+      exact_model_orchestrator_breakdown: reportData.model_token_usage.orchestrator_breakdown || [],
+      exact_model_subagent_breakdown: reportData.model_token_usage.subagent_breakdown || [],
     });
   }
   return metrics;
@@ -376,6 +402,15 @@ function readModelTokenUsageInput() {
 
 function normalizeModelTokenUsage(value, source) {
   const entries = modelTokenUsageEntries(value);
+  const defaultContext = modelTokenUsageContext(
+    isObject(value) ? value : {},
+    isObject(value?.usage) ? value.usage : {},
+    MODEL_TOKEN_CONTEXT_DEFAULTS,
+  );
+  const workflowBreakdown = new Map();
+  const runBreakdown = new Map();
+  const orchestratorBreakdown = new Map();
+  const subagentBreakdown = new Map();
   const models = new Set();
   let requestCount = 0;
   let inputTokens = 0;
@@ -390,6 +425,7 @@ function normalizeModelTokenUsage(value, source) {
     const usage = isObject(entry.usage) ? entry.usage : entry;
     const model = stringPath(entry, 'model') || stringPath(usage, 'model');
     if (model) models.add(model);
+    const context = modelTokenUsageContext(entry, usage, defaultContext);
 
     const entryInput = tokenValue(usage, ['input_tokens', 'prompt_tokens', 'inputTokens', 'promptTokens']);
     const entryOutput = tokenValue(usage, ['output_tokens', 'completion_tokens', 'outputTokens', 'completionTokens']);
@@ -409,6 +445,10 @@ function normalizeModelTokenUsage(value, source) {
       'completion_tokens_details.reasoning_tokens',
     ]);
     const entryTotal = tokenValue(usage, ['total_tokens', 'totalTokens']);
+    const entryRequestCount = tokenValue(entry, ['request_count', 'requests', 'requestCount'])
+      || tokenValue(usage, ['request_count', 'requests', 'requestCount'])
+      || 1;
+    const entryComputedTotal = entryTotal || entryInput + entryOutput;
 
     inputTokens += entryInput;
     outputTokens += entryOutput;
@@ -417,7 +457,19 @@ function normalizeModelTokenUsage(value, source) {
     providedTotalTokens += entryTotal;
     if (entryInput || entryOutput || entryTotal) {
       tokenBearingEntries += 1;
-      requestCount += tokenValue(entry, ['request_count', 'requests', 'requestCount']) || 1;
+      requestCount += entryRequestCount;
+      const tokenSummary = {
+        request_count: entryRequestCount,
+        input_tokens: entryInput,
+        output_tokens: entryOutput,
+        cached_input_tokens: entryCached,
+        reasoning_tokens: entryReasoning,
+        total_tokens: entryComputedTotal,
+      };
+      addTokenBreakdown(workflowBreakdown, context.workflow, tokenSummary);
+      addTokenBreakdown(runBreakdown, context.run_id, tokenSummary);
+      addTokenBreakdown(orchestratorBreakdown, context.orchestrator, tokenSummary);
+      addTokenBreakdown(subagentBreakdown, context.subagent, tokenSummary);
     }
   }
 
@@ -439,6 +491,10 @@ function normalizeModelTokenUsage(value, source) {
   if (issues.length) return { report: null, issues };
 
   const sortedModels = [...models].sort();
+  const workflowRows = sortedTokenBreakdown(workflowBreakdown);
+  const runRows = sortedTokenBreakdown(runBreakdown);
+  const orchestratorRows = sortedTokenBreakdown(orchestratorBreakdown);
+  const subagentRows = sortedTokenBreakdown(subagentBreakdown);
   return {
     report: {
       schema_version: 'aipedia.model-token-usage.v1',
@@ -454,9 +510,102 @@ function normalizeModelTokenUsage(value, source) {
       cached_input_tokens: cachedInputTokens,
       reasoning_tokens: reasoningTokens,
       total_tokens: totalTokens,
+      workflow_context_count: workflowRows.length,
+      run_context_count: runRows.length,
+      orchestrator_context_count: orchestratorRows.length,
+      subagent_context_count: subagentRows.length,
+      workflow_breakdown: workflowRows,
+      run_breakdown: runRows,
+      orchestrator_breakdown: orchestratorRows,
+      subagent_breakdown: subagentRows,
     },
     issues: [],
   };
+}
+
+function modelTokenUsageContext(entry, usage, defaults = {}) {
+  const workflow = firstStringPath([entry, usage], [
+    'workflow',
+    'workflow_id',
+    'workflowId',
+    'workflow.name',
+    'context.workflow',
+    'context.workflow_id',
+    'context.workflowId',
+    'metadata.workflow',
+    'metadata.workflow_id',
+    'metadata.workflowId',
+  ]) || defaults.workflow || 'unknown';
+  const runId = firstStringPath([entry, usage], [
+    'run_id',
+    'runId',
+    'run',
+    'trace.run_id',
+    'context.run_id',
+    'context.runId',
+    'metadata.run_id',
+    'metadata.runId',
+  ]) || defaults.run_id || 'unknown';
+  const orchestrator = firstStringPath([entry, usage], [
+    'orchestrator',
+    'orchestrator_id',
+    'orchestratorId',
+    'orchestrator.name',
+    'context.orchestrator',
+    'context.orchestrator_id',
+    'context.orchestratorId',
+    'metadata.orchestrator',
+    'metadata.orchestrator_id',
+    'metadata.orchestratorId',
+  ]) || defaults.orchestrator || 'unknown';
+  const subagent = firstStringPath([entry, usage], [
+    'subagent',
+    'subagent_id',
+    'subagentId',
+    'agent',
+    'agent_id',
+    'agentId',
+    'agent.name',
+    'context.subagent',
+    'context.subagent_id',
+    'context.subagentId',
+    'context.agent',
+    'context.agent_id',
+    'context.agentId',
+    'metadata.subagent',
+    'metadata.subagent_id',
+    'metadata.subagentId',
+    'metadata.agent',
+    'metadata.agent_id',
+    'metadata.agentId',
+  ]) || defaults.subagent || 'unknown';
+  return { workflow, run_id: runId, orchestrator, subagent };
+}
+
+function addTokenBreakdown(map, id, tokens) {
+  const key = id || 'unknown';
+  if (!map.has(key)) {
+    map.set(key, {
+      id: key,
+      request_count: 0,
+      input_tokens: 0,
+      output_tokens: 0,
+      cached_input_tokens: 0,
+      reasoning_tokens: 0,
+      total_tokens: 0,
+    });
+  }
+  const row = map.get(key);
+  row.request_count += tokens.request_count;
+  row.input_tokens += tokens.input_tokens;
+  row.output_tokens += tokens.output_tokens;
+  row.cached_input_tokens += tokens.cached_input_tokens;
+  row.reasoning_tokens += tokens.reasoning_tokens;
+  row.total_tokens += tokens.total_tokens;
+}
+
+function sortedTokenBreakdown(map) {
+  return [...map.values()].sort((left, right) => right.total_tokens - left.total_tokens || left.id.localeCompare(right.id));
 }
 
 function modelTokenUsageEntries(value) {
@@ -481,6 +630,16 @@ function tokenValue(object, paths) {
 function stringPath(object, path) {
   const value = valueAtPath(object, path);
   return typeof value === 'string' ? value : '';
+}
+
+function firstStringPath(objects, paths) {
+  for (const object of objects) {
+    for (const path of paths) {
+      const value = stringPath(object, path);
+      if (value) return value;
+    }
+  }
+  return '';
 }
 
 function valueAtPath(object, path) {

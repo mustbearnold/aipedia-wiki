@@ -2205,3 +2205,16 @@ Use this file to answer "what got done?" Use `.agent/CURRENT_STATUS.md` to answe
 - Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-39.md`; enforced loop receipt: `.agent/loop-runs/system/2026-06-30T09-38-06-448Z-loop-run.json`.
 - Trend proof: 2 metric-aware receipts, 0 missing metrics, 0 loop status changes, 0 command status changes, latest wall duration 5107 ms, latest estimated full receipt tokens 10848, and latest system artifact count 11.
 - Next: Commit and push, then use strict explicit-receipt closeout for any copied runner or eval receipt and move to the next system target.
+
+### 2026-06-30: Agentic Tooling Meta Slice 71, Exact Token Context Breakdowns
+
+- Status: Verified locally, pending commit and push.
+- Branch: `agent-os-absolute-meta-2026-06-30`.
+- Changed: Extended exact model-token usage from aggregate loop totals into workflow, run, orchestrator, and subagent context dimensions. Runtime entries can provide context directly or through `context`/`metadata`, and the loop recorder also accepts default `--model-token-workflow`, `--model-token-run-id`, `--model-token-orchestrator`, and `--model-token-subagent` flags.
+- Changed: `model_token_usage` now emits context counts and `*_breakdown` arrays; `efficiency_metrics` mirrors those values as `exact_model_*`; `agent:efficiency:trends` carries them into run rows and `summary.latest`; `agent:closeout:check` validates counts, row totals, duplicate IDs, sum drift, metric mirroring, and trend source drift.
+- System lesson: orchestrated expert subagents can only be judged as token-efficient if receipts preserve the cost split by orchestrator and subagent. Receipt-size estimates are now fallback proxies, not the primary token-efficiency signal when runtime usage is available.
+- Verification: syntax checks, focused Node loop/trend/closeout/router tests 71/71, enforced `loop:all:record` with DAG refs and exact context token fixture, strict latest-loop auto closeout, trend receipt generation, and auto-routed trend closeout passed.
+- Durable proof: `.agent/evals/model-token-usage/2026-06-30-slice-71-context-token-usage.json`.
+- Durable receipt: `.agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-71.md`; enforced loop receipt: `.agent/loop-runs/system/2026-07-01T02-36-45-311Z-loop-run.json`.
+- Trend proof: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-71-final-efficiency-trends.json` reports 3 metric-aware receipts, 0 missing metrics, exact model token coverage rate 1, latest exact total tokens 7,800, latest wall duration 4,865 ms, latest estimated full receipt tokens 12,383, and 2 exact subagent contexts.
+- Next: Commit and push, then add exact correction-count telemetry or run a bounded routing comparison only when exact token, quality, correction, wall-time, and accuracy fields are all available.

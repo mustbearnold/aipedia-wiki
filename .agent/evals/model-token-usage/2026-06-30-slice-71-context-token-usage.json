@@ -1,0 +1,42 @@
+{
+  "entries": [
+    {
+      "model": "gpt-5.5",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-71-token-context-breakdowns",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "evidence-agent",
+      "usage": {
+        "input_tokens": 4800,
+        "output_tokens": 1000,
+        "total_tokens": 5800,
+        "input_tokens_details": {
+          "cached_tokens": 720
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 260
+        }
+      }
+    },
+    {
+      "model": "gpt-5.5",
+      "context": {
+        "workflow": "loop-system",
+        "run_id": "2026-06-30-slice-71-token-context-breakdowns",
+        "orchestrator": "meta-orchestrator",
+        "subagent": "validation-agent"
+      },
+      "usage": {
+        "input_tokens": 1600,
+        "output_tokens": 400,
+        "total_tokens": 2000,
+        "input_tokens_details": {
+          "cached_tokens": 180
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 90
+        }
+      }
+    }
+  ]
+}

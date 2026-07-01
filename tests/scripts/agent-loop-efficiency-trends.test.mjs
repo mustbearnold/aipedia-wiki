@@ -193,6 +193,22 @@ test('loop efficiency trends summarize exact model token usage when present', ()
         exact_model_cached_input_tokens: 100,
         exact_model_reasoning_tokens: 50,
         exact_model_total_tokens: 1000,
+        exact_model_workflow_context_count: 1,
+        exact_model_run_context_count: 1,
+        exact_model_orchestrator_context_count: 1,
+        exact_model_subagent_context_count: 1,
+        exact_model_workflow_breakdown: [
+          { id: 'loop-system', request_count: 1, input_tokens: 800, output_tokens: 200, cached_input_tokens: 100, reasoning_tokens: 50, total_tokens: 1000 },
+        ],
+        exact_model_run_breakdown: [
+          { id: 'token-run-1', request_count: 1, input_tokens: 800, output_tokens: 200, cached_input_tokens: 100, reasoning_tokens: 50, total_tokens: 1000 },
+        ],
+        exact_model_orchestrator_breakdown: [
+          { id: 'meta-orchestrator', request_count: 1, input_tokens: 800, output_tokens: 200, cached_input_tokens: 100, reasoning_tokens: 50, total_tokens: 1000 },
+        ],
+        exact_model_subagent_breakdown: [
+          { id: 'evidence-agent', request_count: 1, input_tokens: 800, output_tokens: 200, cached_input_tokens: 100, reasoning_tokens: 50, total_tokens: 1000 },
+        ],
       },
     }));
     writeReceipt(ledgerDir, '2026-06-30T01-00-00-000Z-loop-run.json', loopReceipt({
@@ -208,6 +224,23 @@ test('loop efficiency trends summarize exact model token usage when present', ()
         exact_model_cached_input_tokens: 120,
         exact_model_reasoning_tokens: 80,
         exact_model_total_tokens: 1200,
+        exact_model_workflow_context_count: 1,
+        exact_model_run_context_count: 1,
+        exact_model_orchestrator_context_count: 1,
+        exact_model_subagent_context_count: 2,
+        exact_model_workflow_breakdown: [
+          { id: 'loop-system', request_count: 2, input_tokens: 900, output_tokens: 300, cached_input_tokens: 120, reasoning_tokens: 80, total_tokens: 1200 },
+        ],
+        exact_model_run_breakdown: [
+          { id: 'token-run-2', request_count: 2, input_tokens: 900, output_tokens: 300, cached_input_tokens: 120, reasoning_tokens: 80, total_tokens: 1200 },
+        ],
+        exact_model_orchestrator_breakdown: [
+          { id: 'meta-orchestrator', request_count: 2, input_tokens: 900, output_tokens: 300, cached_input_tokens: 120, reasoning_tokens: 80, total_tokens: 1200 },
+        ],
+        exact_model_subagent_breakdown: [
+          { id: 'evidence-agent', request_count: 1, input_tokens: 500, output_tokens: 160, cached_input_tokens: 80, reasoning_tokens: 40, total_tokens: 660 },
+          { id: 'validation-agent', request_count: 1, input_tokens: 400, output_tokens: 140, cached_input_tokens: 40, reasoning_tokens: 40, total_tokens: 540 },
+        ],
       },
     }));
 
@@ -217,6 +250,9 @@ test('loop efficiency trends summarize exact model token usage when present', ()
     const report = JSON.parse(result.stdout);
     assert.equal(report.runs[1].has_exact_model_tokens, true);
     assert.equal(report.runs[1].exact_model_total_tokens, 1200);
+    assert.equal(report.runs[1].exact_model_subagent_context_count, 2);
+    assert.deepEqual(report.runs[1].exact_model_subagent_breakdown.map((row) => row.id), ['evidence-agent', 'validation-agent']);
+    assert.deepEqual(report.summary.latest.exact_model_subagent_breakdown, report.runs[1].exact_model_subagent_breakdown);
     assert.equal(report.summary.exact_model_token_coverage_rate, 1);
     assert.equal(report.summary.median_exact_model_total_tokens, 1100);
     assert.equal(report.summary.latest_exact_model_total_tokens, 1200);

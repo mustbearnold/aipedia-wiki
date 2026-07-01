@@ -249,7 +249,7 @@ function trendSummary(records, metricsRecords) {
 
 function exactModelTokenSummary(metrics) {
   if (!metrics || metrics.model_token_usage_status !== 'provided') return null;
-  return {
+  const summary = {
     has_exact_model_tokens: true,
     exact_model_request_count: nonNegative(metrics.exact_model_request_count),
     exact_model_input_tokens: nonNegative(metrics.exact_model_input_tokens),
@@ -258,6 +258,32 @@ function exactModelTokenSummary(metrics) {
     exact_model_reasoning_tokens: nonNegative(metrics.exact_model_reasoning_tokens),
     exact_model_total_tokens: nonNegative(metrics.exact_model_total_tokens),
   };
+  if (hasExactModelContextMetrics(metrics)) {
+    Object.assign(summary, {
+      exact_model_workflow_context_count: nonNegative(metrics.exact_model_workflow_context_count),
+      exact_model_run_context_count: nonNegative(metrics.exact_model_run_context_count),
+      exact_model_orchestrator_context_count: nonNegative(metrics.exact_model_orchestrator_context_count),
+      exact_model_subagent_context_count: nonNegative(metrics.exact_model_subagent_context_count),
+      exact_model_workflow_breakdown: Array.isArray(metrics.exact_model_workflow_breakdown) ? metrics.exact_model_workflow_breakdown : [],
+      exact_model_run_breakdown: Array.isArray(metrics.exact_model_run_breakdown) ? metrics.exact_model_run_breakdown : [],
+      exact_model_orchestrator_breakdown: Array.isArray(metrics.exact_model_orchestrator_breakdown) ? metrics.exact_model_orchestrator_breakdown : [],
+      exact_model_subagent_breakdown: Array.isArray(metrics.exact_model_subagent_breakdown) ? metrics.exact_model_subagent_breakdown : [],
+    });
+  }
+  return summary;
+}
+
+function hasExactModelContextMetrics(metrics) {
+  return [
+    'exact_model_workflow_context_count',
+    'exact_model_run_context_count',
+    'exact_model_orchestrator_context_count',
+    'exact_model_subagent_context_count',
+    'exact_model_workflow_breakdown',
+    'exact_model_run_breakdown',
+    'exact_model_orchestrator_breakdown',
+    'exact_model_subagent_breakdown',
+  ].some((field) => Object.prototype.hasOwnProperty.call(metrics, field));
 }
 
 function slowestCommandTrends(records) {

@@ -470,14 +470,20 @@
         "agent:efficiency:trends exact model token summaries",
         "agent:closeout:check model_token_usage validation",
         "agent:closeout:check trend exact model token source validation",
+        "loop model-token workflow/run/orchestrator/subagent context breakdowns",
+        "agent:efficiency:trends exact model-token context breakdown summaries",
+        "agent:closeout:check model-token context breakdown validation",
         "tests/scripts/aipedia-loops.test.mjs exact token ledger coverage",
         "tests/scripts/agent-loop-efficiency-trends.test.mjs exact token trend coverage",
         "tests/scripts/agent-closeout-receipt-check.test.mjs exact token closeout coverage",
         ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
         ".agent/loop-runs/system/2026-07-01T01-05-45-179Z-loop-run.json",
-        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json"
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json",
+        ".agent/evals/model-token-usage/2026-06-30-slice-71-context-token-usage.json",
+        ".agent/loop-runs/system/2026-07-01T02-36-45-311Z-loop-run.json",
+        ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-71-final-efficiency-trends.json"
       ],
-      "remaining": "Add exact correction counts when available from reliable runtime inputs; exact model-token usage is available when a runtime usage payload is supplied."
+      "remaining": "Add exact correction counts when available from reliable runtime inputs; exact model-token usage now includes workflow, run, orchestrator, and subagent dimensions when a runtime usage payload is supplied."
     },
     {
       "id": "memory-retrieval",
@@ -508,7 +514,7 @@
     }
   ],
   "current_slice": {
-    "name": "Exact model token tracking",
+    "name": "Exact model token context breakdowns",
     "system_artifacts": [
       "scripts/aipedia-loops.mjs",
       "scripts/agent-loop-efficiency-trends.mjs",
@@ -516,67 +522,86 @@
       "tests/scripts/aipedia-loops.test.mjs",
       "tests/scripts/agent-loop-efficiency-trends.test.mjs",
       "tests/scripts/agent-closeout-receipt-check.test.mjs",
-      ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
-      ".agent/loop-runs/system/2026-07-01T01-05-24-545Z-loop-run.json",
-      ".agent/loop-runs/system/2026-07-01T01-05-45-179Z-loop-run.json",
+      ".agent/evals/model-token-usage/2026-06-30-slice-71-context-token-usage.json",
+      ".agent/loop-runs/system/2026-07-01T02-36-45-311Z-loop-run.json",
       ".agent/loop-runs/system/latest.json",
-      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json",
+      ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-71-final-efficiency-trends.json",
       "scripts/README.md",
       "docs/agentic-tooling-meta-compliance.md",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-70.md"
+      ".agent/loop-runs/2026-06-30-agentic-tooling-meta-slice-71.md"
     ],
     "content_artifacts": [],
     "content_only_progress": false,
-    "model_token_usage_fixture": ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
+    "model_token_usage_fixture": ".agent/evals/model-token-usage/2026-06-30-slice-71-context-token-usage.json",
     "model_token_usage_summary": {
       "schema_version": "aipedia.model-token-usage.v1",
-      "source": ".agent/evals/model-token-usage/2026-06-30-slice-70-loop-token-usage.json",
+      "source": ".agent/evals/model-token-usage/2026-06-30-slice-71-context-token-usage.json",
       "model": "gpt-5.5",
-      "request_count": 1,
-      "input_tokens": 4200,
-      "output_tokens": 900,
-      "cached_input_tokens": 600,
-      "reasoning_tokens": 240,
-      "total_tokens": 5100
+      "request_count": 2,
+      "input_tokens": 6400,
+      "output_tokens": 1400,
+      "cached_input_tokens": 900,
+      "reasoning_tokens": 350,
+      "total_tokens": 7800,
+      "workflow_context_count": 1,
+      "run_context_count": 1,
+      "orchestrator_context_count": 1,
+      "subagent_context_count": 2,
+      "subagent_breakdown": [
+        {
+          "id": "evidence-agent",
+          "request_count": 1,
+          "total_tokens": 5800
+        },
+        {
+          "id": "validation-agent",
+          "request_count": 1,
+          "total_tokens": 2000
+        }
+      ]
     },
     "token_tracking_validation": {
       "loop_receipt_schema_validated": true,
       "efficiency_metric_fields_validated": true,
       "trend_row_source_validation": true,
+      "context_breakdown_validation": true,
+      "trend_summary_context_breakdown_validation": true,
       "total_equals_input_plus_output": true,
       "cached_input_not_greater_than_input": true,
       "reasoning_not_greater_than_output": true
     },
-    "loop_receipt": ".agent/loop-runs/system/2026-07-01T01-05-45-179Z-loop-run.json",
+    "loop_receipt": ".agent/loop-runs/system/2026-07-01T02-36-45-311Z-loop-run.json",
     "latest_loop_receipt": ".agent/loop-runs/system/latest.json",
-    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-70-final-efficiency-trends.json",
+    "trend_receipt": ".agent/evals/efficiency-trends-receipts/2026-06-30-slice-71-final-efficiency-trends.json",
     "loop_summary": {
       "ok": 4,
       "attention": 3,
       "skipped": 0,
       "commands": 16,
-      "current_agent_system_artifacts": 9,
+      "current_agent_system_artifacts": 7,
       "current_agent_content_artifacts": 0,
       "preexisting_dirty_paths": 5,
-      "wall_duration_ms": 4674,
-      "exact_model_total_tokens": 5100
+      "wall_duration_ms": 4865,
+      "exact_model_total_tokens": 7800,
+      "exact_model_subagent_context_count": 2
     },
     "trend_summary": {
       "analyzed_runs": 3,
       "metrics_runs": 3,
       "missing_metrics_runs": 0,
-      "exact_model_token_coverage_rate": 0.667,
+      "exact_model_token_coverage_rate": 1,
       "median_exact_model_total_tokens": 5100,
-      "latest_exact_model_total_tokens": 5100,
-      "delta_exact_model_total_tokens_from_previous": 0,
-      "median_wall_duration_ms": 4697,
-      "latest_wall_duration_ms": 4674,
-      "latest_estimated_full_receipt_tokens": 11735,
-      "latest_system_artifact_count": 10,
+      "latest_exact_model_total_tokens": 7800,
+      "delta_exact_model_total_tokens_from_previous": 2700,
+      "latest_exact_model_subagent_context_count": 2,
+      "median_wall_duration_ms": 4699,
+      "latest_wall_duration_ms": 4865,
+      "latest_estimated_full_receipt_tokens": 12383,
+      "latest_system_artifact_count": 8,
       "persistent_attention_loops": 3,
       "resolved_attention_loops": 0,
       "regressed_attention_loops": 0,
@@ -587,11 +612,13 @@
   },
   "next_system_targets": [
     "Use AIPEDIA_OBSERVED_DIRTY_BEFORE_AGENT when running Rust runner closeouts in a dirty tree.",
+    "Collect real runtime usage payloads from any orchestrator or subagent execution and pass them through --model-token-usage, AIPEDIA_MODEL_TOKEN_USAGE_FILE, or AIPEDIA_MODEL_TOKEN_USAGE_JSON.",
+    "Compare orchestrator and specialized-subagent routing strategies only against exact token cost, correction outcomes, wall time, and accuracy when those payloads are available.",
     "Use agent:efficiency:trends -- --out <path> and validate the resulting receipt with agent:meta:closeout:auto -- --receipt <path> --json before citing trend proof in closeouts.",
     "Use correction_summary in trend receipts before claiming quality improved from a speed or receipt-size movement.",
     "Resolve separate content WIP, refresh page-ledger input with the receipt-visible refresh plan, rerun npm run agent:proof:readiness -- --json, then run the page-refresh positive policy proof.",
     "Add the configured proof receipt path for page-refresh to .agent/meta/proof-readiness-targets.json when the positive proof is complete.",
-    "Add exact correction counts when measurable; exact model-token usage is now recorded when supplied by runtime payloads.",
+    "Add exact correction counts when measurable; exact model-token usage is now recorded with workflow, run, orchestrator, and subagent dimensions when supplied by runtime payloads.",
     "Pilot one bounded content workload only after page-refresh closeout policy proof is no longer blocked by the separate stale ledger/content WIP.",
     "Refresh or resolve stale page-ledger input before attempting the page-refresh positive policy proof; page-refresh current input now satisfies proof readiness and runner workflow policy validation."
   ]

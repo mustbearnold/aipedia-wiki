@@ -438,6 +438,22 @@ Latest completed tool-page template migration passed:
 - `node scripts\guard-em-dashes.mjs`
 - `git diff --check`
 
+## Current Meta-System State
+
+The active June 30 agentic tooling goal is system-first. Content work is only a bounded pilot workload until the operating system is done.
+
+Latest completed slice: Slice 71, exact model-token context breakdowns. `loop:all:record` now accepts runtime token usage plus default context flags for workflow, run id, orchestrator, and subagent. Receipts normalize those dimensions into `model_token_usage`, mirror them into `efficiency_metrics`, carry them through `agent:efficiency:trends`, and validate the loop and trend receipts through `agent:closeout:check`.
+
+Verified live proof:
+
+- Model token fixture: `.agent/evals/model-token-usage/2026-06-30-slice-71-context-token-usage.json`.
+- Enforced loop receipt: `.agent/loop-runs/system/2026-07-01T02-36-45-311Z-loop-run.json`.
+- Trend receipt: `.agent/evals/efficiency-trends-receipts/2026-06-30-slice-71-final-efficiency-trends.json`.
+- Latest exact usage: 2 `gpt-5.5` requests, 6,400 input tokens, 1,400 output tokens, 900 cached input tokens, 350 reasoning tokens, and 7,800 total tokens.
+- Context split: 1 workflow, 1 run, 1 orchestrator, and 2 subagents (`evidence-agent` 5,800 total tokens, `validation-agent` 2,000 total tokens).
+
+Current blocker before declaring the meta-system complete: exact correction counts are still not available from a reliable runtime/reviewer telemetry source, and page-refresh positive proof remains blocked by the separate stale ledger/content WIP. Orchestrator/subagent routing experiments should now be evaluated only when exact token payloads, quality/correction results, wall time, and accuracy are recorded together.
+
 ## Known Caveats
 
 - Freshness is green for due-now items and high-volatility scheduling metadata. The planner now skips yesterday's refreshed tools by default, but due-soon facts still need continued current-source review.

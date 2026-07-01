@@ -112,6 +112,26 @@ const EXACT_MODEL_TOKEN_METRIC_FIELDS = [
   'exact_model_reasoning_tokens',
   'exact_model_total_tokens',
 ];
+const EXACT_MODEL_TOKEN_CONTEXT_COUNT_FIELDS = [
+  'exact_model_workflow_context_count',
+  'exact_model_run_context_count',
+  'exact_model_orchestrator_context_count',
+  'exact_model_subagent_context_count',
+];
+const MODEL_TOKEN_BREAKDOWN_FIELDS = [
+  'request_count',
+  'input_tokens',
+  'output_tokens',
+  'cached_input_tokens',
+  'reasoning_tokens',
+  'total_tokens',
+];
+const MODEL_TOKEN_BREAKDOWN_DIMENSIONS = [
+  ['workflow', 'workflow_breakdown', 'workflow_context_count', 'exact_model_workflow_breakdown', 'exact_model_workflow_context_count'],
+  ['run', 'run_breakdown', 'run_context_count', 'exact_model_run_breakdown', 'exact_model_run_context_count'],
+  ['orchestrator', 'orchestrator_breakdown', 'orchestrator_context_count', 'exact_model_orchestrator_breakdown', 'exact_model_orchestrator_context_count'],
+  ['subagent', 'subagent_breakdown', 'subagent_context_count', 'exact_model_subagent_breakdown', 'exact_model_subagent_context_count'],
+];
 
 if (HELP_MODE) {
   console.log(usage());
@@ -333,6 +353,12 @@ function validateLoopEfficiencyTrendRun(run, issues, path) {
     for (const field of EXACT_MODEL_TOKEN_METRIC_FIELDS) {
       requireNonNegativeNumber(run, field, issues, `${path}.${field}`);
     }
+    for (const field of EXACT_MODEL_TOKEN_CONTEXT_COUNT_FIELDS) {
+      if (hasOwn(run, field)) requireNonNegativeNumber(run, field, issues, `${path}.${field}`);
+    }
+    for (const [, , , runBreakdownField] of MODEL_TOKEN_BREAKDOWN_DIMENSIONS) {
+      if (hasOwn(run, runBreakdownField)) validateTokenBreakdownArray(run, runBreakdownField, issues, `${path}.${runBreakdownField}`, null);
+    }
   }
 }
 
@@ -435,7 +461,7 @@ function validateTrendSummaryObject(actual, expected, path, issues) {
 }
 
 function validateTrendSummaryValue(actual, expected, path, issues) {
-  if (actual !== expected) {
+  if (!deepTrendEqual(actual, expected)) {
     issues.push(issue('loop-efficiency-trends-summary-mismatch', `${path} must match the value derived from runs.`));
   }
 }
@@ -552,7 +578,7 @@ function computeTrendRunSummary(path, source) {
     system_artifact_count: nonNegativeMetric(metrics.system_artifact_count),
   };
   if (metrics.model_token_usage_status === 'provided') {
-    Object.assign(summary, {
+    const exactSummary = {
       has_exact_model_tokens: true,
       exact_model_request_count: nonNegativeMetric(metrics.exact_model_request_count),
       exact_model_input_tokens: nonNegativeMetric(metrics.exact_model_input_tokens),
@@ -560,9 +586,29 @@ function computeTrendRunSummary(path, source) {
       exact_model_cached_input_tokens: nonNegativeMetric(metrics.exact_model_cached_input_tokens),
       exact_model_reasoning_tokens: nonNegativeMetric(metrics.exact_model_reasoning_tokens),
       exact_model_total_tokens: nonNegativeMetric(metrics.exact_model_total_tokens),
-    });
+    };
+    if (hasExactModelContextMetrics(metrics)) {
+      Object.assign(exactSummary, {
+        exact_model_workflow_context_count: nonNegativeMetric(metrics.exact_model_workflow_context_count),
+        exact_model_run_context_count: nonNegativeMetric(metrics.exact_model_run_context_count),
+        exact_model_orchestrator_context_count: nonNegativeMetric(metrics.exact_model_orchestrator_context_count),
+        exact_model_subagent_context_count: nonNegativeMetric(metrics.exact_model_subagent_context_count),
+        exact_model_workflow_breakdown: Array.isArray(metrics.exact_model_workflow_breakdown) ? metrics.exact_model_workflow_breakdown : [],
+        exact_model_run_breakdown: Array.isArray(metrics.exact_model_run_breakdown) ? metrics.exact_model_run_breakdown : [],
+        exact_model_orchestrator_breakdown: Array.isArray(metrics.exact_model_orchestrator_breakdown) ? metrics.exact_model_orchestrator_breakdown : [],
+        exact_model_subagent_breakdown: Array.isArray(metrics.exact_model_subagent_breakdown) ? metrics.exact_model_subagent_breakdown : [],
+      });
+    }
+    Object.assign(summary, exactSummary);
   }
   return summary;
+}
+
+function hasExactModelContextMetrics(metrics) {
+  return [
+    ...EXACT_MODEL_TOKEN_CONTEXT_COUNT_FIELDS,
+    ...MODEL_TOKEN_BREAKDOWN_DIMENSIONS.map(([, , , metricBreakdownField]) => metricBreakdownField),
+  ].some((field) => hasOwn(metrics, field));
 }
 
 function computeTrendStabilitySummary(records) {
@@ -1042,6 +1088,9 @@ function validateModelTokenUsage(value, issues, path) {
   requireString(value, 'status', issues, { path: `${path}.status`, values: ['provided'] });
   if (value.model != null) requireString(value, 'model', issues, { path: `${path}.model` });
   if (value.models != null) requireStringArray(value, 'models', issues, `${path}.models`);
+  for (const [, , countField] of MODEL_TOKEN_BREAKDOWN_DIMENSIONS) {
+    if (value[countField] != null) requireNonNegativeNumber(value, countField, issues, `${path}.${countField}`);
+  }
   for (const field of [
     'entry_count',
     'token_bearing_entry_count',
@@ -1064,6 +1113,12 @@ function validateModelTokenUsage(value, issues, path) {
   if (typeof value.reasoning_tokens === 'number' && typeof value.output_tokens === 'number' && value.reasoning_tokens > value.output_tokens) {
     issues.push(issue('model-token-usage-mismatch', `${path}.reasoning_tokens cannot exceed output_tokens.`));
   }
+  for (const [, breakdownField, countField] of MODEL_TOKEN_BREAKDOWN_DIMENSIONS) {
+    if (value[breakdownField] != null) {
+      validateTokenBreakdownArray(value, breakdownField, issues, `${path}.${breakdownField}`, value);
+      validateMetricCount(value, countField, arrayLength(value[breakdownField]), issues, `${path}.${countField} must match ${path}.${breakdownField} length.`);
+    }
+  }
 }
 
 function validateEfficiencyModelTokenMetrics(metrics, receipt, issues) {
@@ -1074,6 +1129,14 @@ function validateEfficiencyModelTokenMetrics(metrics, receipt, issues) {
   requireString(metrics, 'model_token_usage_source', issues, { path: 'efficiency_metrics.model_token_usage_source' });
   for (const field of EXACT_MODEL_TOKEN_METRIC_FIELDS) {
     requireNonNegativeNumber(metrics, field, issues, `efficiency_metrics.${field}`);
+  }
+  for (const field of EXACT_MODEL_TOKEN_CONTEXT_COUNT_FIELDS) {
+    if (hasOwn(metrics, field)) requireNonNegativeNumber(metrics, field, issues, `efficiency_metrics.${field}`);
+  }
+  for (const [, , , metricBreakdownField] of MODEL_TOKEN_BREAKDOWN_DIMENSIONS) {
+    if (hasOwn(metrics, metricBreakdownField)) {
+      validateTokenBreakdownArray(metrics, metricBreakdownField, issues, `efficiency_metrics.${metricBreakdownField}`, null);
+    }
   }
   if (typeof metrics.exact_model_total_tokens === 'number'
     && typeof metrics.exact_model_input_tokens === 'number'
@@ -1101,8 +1164,59 @@ function validateEfficiencyModelTokenMetrics(metrics, receipt, issues) {
       exact_model_reasoning_tokens: receipt.model_token_usage.reasoning_tokens,
       exact_model_total_tokens: receipt.model_token_usage.total_tokens,
     };
+    for (const [, breakdownField, countField, metricBreakdownField, metricCountField] of MODEL_TOKEN_BREAKDOWN_DIMENSIONS) {
+      if (receipt.model_token_usage[breakdownField] != null) {
+        expected[metricCountField] = receipt.model_token_usage[countField];
+      }
+    }
     for (const [field, value] of Object.entries(expected)) {
       validateMetricCount(metrics, field, value, issues, `efficiency_metrics.${field} must match model_token_usage.${field.replace(/^exact_model_/, '').replace('model_token_usage_', '')}.`);
+    }
+    for (const [, breakdownField, , metricBreakdownField] of MODEL_TOKEN_BREAKDOWN_DIMENSIONS) {
+      if (receipt.model_token_usage[breakdownField] != null && !deepTrendEqual(metrics[metricBreakdownField], receipt.model_token_usage[breakdownField])) {
+        issues.push(issue('efficiency-model-token-mismatch', `efficiency_metrics.${metricBreakdownField} must match model_token_usage.${breakdownField}.`));
+      }
+    }
+  }
+}
+
+function validateTokenBreakdownArray(parent, field, issues, path, expectedTotals) {
+  if (!Array.isArray(parent[field])) {
+    issues.push(issue('model-token-usage-breakdown-invalid', `${path} must be an array.`));
+    return;
+  }
+  const seen = new Set();
+  const sums = Object.fromEntries(MODEL_TOKEN_BREAKDOWN_FIELDS.map((tokenField) => [tokenField, 0]));
+  parent[field].forEach((row, index) => {
+    const rowPath = `${path}[${index}]`;
+    if (!isObject(row)) {
+      issues.push(issue('model-token-usage-breakdown-invalid', `${rowPath} must be an object.`));
+      return;
+    }
+    requireString(row, 'id', issues, { path: `${rowPath}.id` });
+    if (typeof row.id === 'string' && row.id) {
+      if (seen.has(row.id)) issues.push(issue('model-token-usage-breakdown-invalid', `${rowPath}.id must be unique within ${path}.`));
+      seen.add(row.id);
+    }
+    for (const tokenField of MODEL_TOKEN_BREAKDOWN_FIELDS) {
+      requireNonNegativeNumber(row, tokenField, issues, `${rowPath}.${tokenField}`);
+      if (typeof row[tokenField] === 'number' && Number.isFinite(row[tokenField])) sums[tokenField] += row[tokenField];
+    }
+    if (typeof row.input_tokens === 'number' && typeof row.output_tokens === 'number' && typeof row.total_tokens === 'number'
+      && row.total_tokens !== row.input_tokens + row.output_tokens) {
+      issues.push(issue('model-token-usage-breakdown-mismatch', `${rowPath}.total_tokens must equal input_tokens plus output_tokens.`));
+    }
+    if (typeof row.cached_input_tokens === 'number' && typeof row.input_tokens === 'number' && row.cached_input_tokens > row.input_tokens) {
+      issues.push(issue('model-token-usage-breakdown-mismatch', `${rowPath}.cached_input_tokens cannot exceed input_tokens.`));
+    }
+    if (typeof row.reasoning_tokens === 'number' && typeof row.output_tokens === 'number' && row.reasoning_tokens > row.output_tokens) {
+      issues.push(issue('model-token-usage-breakdown-mismatch', `${rowPath}.reasoning_tokens cannot exceed output_tokens.`));
+    }
+  });
+  if (!expectedTotals) return;
+  for (const tokenField of MODEL_TOKEN_BREAKDOWN_FIELDS) {
+    if (typeof expectedTotals[tokenField] === 'number' && sums[tokenField] !== expectedTotals[tokenField]) {
+      issues.push(issue('model-token-usage-breakdown-mismatch', `${path} ${tokenField} must sum to model_token_usage.${tokenField}.`));
     }
   }
 }
