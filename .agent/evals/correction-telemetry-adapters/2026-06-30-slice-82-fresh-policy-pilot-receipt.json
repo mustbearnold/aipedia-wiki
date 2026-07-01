@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "mode": "agent-correction-telemetry",
+  "schema_version": "aipedia.correction-telemetry.v1",
+  "generated_at": "2026-07-01T05:00:21.535Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-events.jsonl",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-82-fresh-policy-pilot-telemetry",
+  "workflow": "loop-system",
+  "telemetry_source": {
+    "type": "runtime",
+    "id": "slice-82-fresh-policy-pilot-jsonl",
+    "confidence": "exact"
+  },
+  "totals": {
+    "candidate_count": 2,
+    "event_count": 8,
+    "findings_count": 4,
+    "corrections_applied": 4,
+    "residual_issue_count": 0,
+    "regression_count": 0
+  },
+  "candidates": [
+    {
+      "id": "single-agent",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-82-fresh-single-agent",
+      "orchestrator": "single-agent",
+      "subagent": "",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice82-single-link-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Fresh pilot log found an unresolved handoff link gap in the single-agent pass."
+        },
+        {
+          "id": "slice82-single-link-fix",
+          "type": "correction_applied",
+          "finding_id": "slice82-single-link-gap",
+          "severity": "",
+          "note": "Fresh pilot log recorded the applied handoff link correction."
+        },
+        {
+          "id": "slice82-single-verification-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Fresh pilot log found one remaining verification wording gap."
+        },
+        {
+          "id": "slice82-single-verification-fix",
+          "type": "correction_applied",
+          "finding_id": "slice82-single-verification-gap",
+          "severity": "",
+          "note": "Fresh pilot log recorded the wording gap correction."
+        }
+      ]
+    },
+    {
+      "id": "orchestrated-specialists",
+      "workflow": "loop-system",
+      "run_id": "2026-06-30-slice-82-fresh-orchestrated",
+      "orchestrator": "meta-orchestrator",
+      "subagent": "reviewer",
+      "event_count": 4,
+      "event_type_counts": {
+        "finding": 2,
+        "correction_applied": 2,
+        "residual_issue": 0,
+        "regression": 0
+      },
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      },
+      "events": [
+        {
+          "id": "slice82-orch-proof-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "medium",
+          "note": "Fresh pilot log found a proof bundle handoff gap in the orchestrated pass."
+        },
+        {
+          "id": "slice82-orch-proof-fix",
+          "type": "correction_applied",
+          "finding_id": "slice82-orch-proof-gap",
+          "severity": "",
+          "note": "Fresh pilot log recorded the proof bundle handoff correction."
+        },
+        {
+          "id": "slice82-orch-routing-gap",
+          "type": "finding",
+          "finding_id": "",
+          "severity": "low",
+          "note": "Fresh pilot log found a routing note that needed a clearer next-action clause."
+        },
+        {
+          "id": "slice82-orch-routing-fix",
+          "type": "correction_applied",
+          "finding_id": "slice82-orch-routing-gap",
+          "severity": "",
+          "note": "Fresh pilot log recorded the next-action clause correction."
+        }
+      ]
+    }
+  ],
+  "routing_candidate_overrides": [
+    {
+      "id": "single-agent",
+      "run_id": "2026-06-30-slice-82-fresh-single-agent",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    },
+    {
+      "id": "orchestrated-specialists",
+      "run_id": "2026-06-30-slice-82-fresh-orchestrated",
+      "correction_outcomes": {
+        "findings_count": 2,
+        "corrections_applied": 2,
+        "residual_issue_count": 0,
+        "regression_count": 0
+      }
+    }
+  ],
+  "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json"
+}

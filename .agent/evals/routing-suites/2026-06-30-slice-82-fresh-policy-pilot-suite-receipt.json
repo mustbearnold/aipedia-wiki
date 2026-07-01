@@ -1,0 +1,438 @@
+{
+  "ok": true,
+  "mode": "agent-routing-evaluation-suite",
+  "schema_version": "aipedia.agent-routing-evaluation-suite.v2",
+  "generated_at": "2026-07-01T05:00:29.707Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+  "source": ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-input.json",
+  "goal_id": "june-30-agentic-tooling-meta-os",
+  "run_id": "2026-06-30-slice-82-fresh-policy-pilot-suite",
+  "workflow": "loop-system",
+  "suite_task": "Pilot conditional routing policy against a fresh JSONL correction telemetry receipt.",
+  "totals": {
+    "scenario_count": 2,
+    "recommendation_count": 2,
+    "monitor_count": 0,
+    "blocked_count": 0,
+    "telemetry_backed_scenario_count": 2
+  },
+  "correction_telemetry_refs": [
+    {
+      "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+      "schema_version": "aipedia.correction-telemetry.v1",
+      "scenario_ids": [
+        "fresh-jsonl-heavy-review",
+        "fresh-jsonl-tiny-status"
+      ],
+      "candidate_ids": [
+        "orchestrated-specialists",
+        "single-agent"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "fresh-jsonl-heavy-review",
+      "task_class": "jsonl-correction-heavy-review",
+      "task_label": "Fresh JSONL telemetry heavy review routing",
+      "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "orchestrated-specialists",
+      "winner_id": "orchestrated-specialists",
+      "runner_up_id": "single-agent",
+      "improvement_margin": 0.063,
+      "winner_exact_model_total_tokens": 6300,
+      "runner_up_exact_model_total_tokens": 7800,
+      "exact_model_token_delta": 1500,
+      "winner_wall_duration_ms": 6800,
+      "runner_up_wall_duration_ms": 8200,
+      "wall_duration_delta_ms": 1400,
+      "routing_evaluation": {
+        "ok": true,
+        "mode": "agent-routing-evaluation",
+        "schema_version": "aipedia.agent-routing-evaluation.v1",
+        "generated_at": "2026-07-01T05:00:29.707Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-input.json#fresh-jsonl-heavy-review",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-82-fresh-policy-pilot-suite:fresh-jsonl-heavy-review",
+        "workflow": "loop-system",
+        "evaluation_task": "Fresh JSONL telemetry heavy review routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 1,
+          "max_regression_count": 1,
+          "minimum_improvement_margin": 0.02
+        },
+        "weights": {
+          "quality": 0.28,
+          "accuracy": 0.28,
+          "correction": 0.18,
+          "token_efficiency": 0.14,
+          "speed": 0.08,
+          "task_completion": 0.04
+        },
+        "totals": {
+          "candidate_count": 2,
+          "eligible_candidate_count": 2,
+          "ineligible_candidate_count": 0
+        },
+        "candidates": [
+          {
+            "valid": true,
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice82-fresh-jsonl-heavy-review-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 6400,
+              "output_tokens": 1400,
+              "cached_input_tokens": 700,
+              "reasoning_tokens": 300,
+              "total_tokens": 7800,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 6400,
+                  "output_tokens": 1400,
+                  "cached_input_tokens": 700,
+                  "reasoning_tokens": 300,
+                  "total_tokens": 7800
+                }
+              ]
+            },
+            "wall_duration_ms": 8200,
+            "quality_score": 0.89,
+            "accuracy_score": 0.88,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "single-agent",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 0.808,
+            "speed_score": 0.829,
+            "task_completion_rate": 1,
+            "overall_score": 0.895,
+            "tokens_per_quality_point": 8764.045,
+            "tokens_per_accuracy_point": 8863.636,
+            "eligible": true,
+            "ineligible_reasons": []
+          },
+          {
+            "valid": true,
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice82-fresh-jsonl-heavy-review-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 5200,
+              "output_tokens": 1100,
+              "cached_input_tokens": 600,
+              "reasoning_tokens": 220,
+              "total_tokens": 6300,
+              "subagent_breakdown": [
+                {
+                  "id": "triage-agent",
+                  "request_count": 1,
+                  "input_tokens": 3200,
+                  "output_tokens": 650,
+                  "cached_input_tokens": 400,
+                  "reasoning_tokens": 120,
+                  "total_tokens": 3850
+                },
+                {
+                  "id": "validation-agent",
+                  "request_count": 1,
+                  "input_tokens": 2000,
+                  "output_tokens": 450,
+                  "cached_input_tokens": 200,
+                  "reasoning_tokens": 100,
+                  "total_tokens": 2450
+                }
+              ]
+            },
+            "wall_duration_ms": 6800,
+            "quality_score": 0.93,
+            "accuracy_score": 0.92,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "orchestrated-specialists",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 1,
+            "speed_score": 1,
+            "task_completion_rate": 1,
+            "overall_score": 0.958,
+            "tokens_per_quality_point": 6774.194,
+            "tokens_per_accuracy_point": 6847.826,
+            "eligible": true,
+            "ineligible_reasons": []
+          }
+        ],
+        "winner": {
+          "id": "orchestrated-specialists",
+          "overall_score": 0.958,
+          "exact_model_total_tokens": 6300,
+          "wall_duration_ms": 6800
+        },
+        "recommendation": {
+          "status": "recommend",
+          "candidate_id": "orchestrated-specialists",
+          "improvement_margin": 0.063,
+          "reason": "orchestrated-specialists has the highest weighted score while meeting exact token, quality, correction, wall-time, and accuracy gates."
+        },
+        "next_actions": [
+          "Use orchestrated-specialists only for matching tasks and keep collecting exact token, correction, wall-time, accuracy, and quality receipts."
+        ]
+      }
+    },
+    {
+      "id": "fresh-jsonl-tiny-status",
+      "task_class": "jsonl-tiny-status-check",
+      "task_label": "Fresh JSONL telemetry tiny status routing",
+      "correction_telemetry_schema": "aipedia.correction-telemetry.v1",
+      "correction_telemetry_refs": [
+        {
+          "receipt_path": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+          "schema_version": "aipedia.correction-telemetry.v1",
+          "candidate_ids": [
+            "orchestrated-specialists",
+            "single-agent"
+          ]
+        }
+      ],
+      "recommendation_status": "recommend",
+      "recommended_candidate_id": "single-agent",
+      "winner_id": "single-agent",
+      "runner_up_id": "orchestrated-specialists",
+      "improvement_margin": 0.102,
+      "winner_exact_model_total_tokens": 1250,
+      "runner_up_exact_model_total_tokens": 2600,
+      "exact_model_token_delta": 1350,
+      "winner_wall_duration_ms": 1200,
+      "runner_up_wall_duration_ms": 2100,
+      "wall_duration_delta_ms": 900,
+      "routing_evaluation": {
+        "ok": true,
+        "mode": "agent-routing-evaluation",
+        "schema_version": "aipedia.agent-routing-evaluation.v1",
+        "generated_at": "2026-07-01T05:00:29.707Z",
+        "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
+        "source": ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-input.json#fresh-jsonl-tiny-status",
+        "goal_id": "june-30-agentic-tooling-meta-os",
+        "run_id": "2026-06-30-slice-82-fresh-policy-pilot-suite:fresh-jsonl-tiny-status",
+        "workflow": "loop-system",
+        "evaluation_task": "Fresh JSONL telemetry tiny status routing",
+        "thresholds": {
+          "min_quality_score": 0.85,
+          "min_accuracy_score": 0.85,
+          "max_residual_issue_count": 1,
+          "max_regression_count": 1,
+          "minimum_improvement_margin": 0.02
+        },
+        "weights": {
+          "quality": 0.28,
+          "accuracy": 0.28,
+          "correction": 0.18,
+          "token_efficiency": 0.14,
+          "speed": 0.08,
+          "task_completion": 0.04
+        },
+        "totals": {
+          "candidate_count": 2,
+          "eligible_candidate_count": 2,
+          "ineligible_candidate_count": 0
+        },
+        "candidates": [
+          {
+            "valid": true,
+            "id": "single-agent",
+            "label": "Single agent",
+            "strategy": "single-agent",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice82-fresh-jsonl-tiny-status-single-agent",
+            "orchestrator": "single-agent",
+            "exact_model_tokens": {
+              "request_count": 1,
+              "input_tokens": 1000,
+              "output_tokens": 250,
+              "cached_input_tokens": 100,
+              "reasoning_tokens": 45,
+              "total_tokens": 1250,
+              "subagent_breakdown": [
+                {
+                  "id": "single-agent",
+                  "request_count": 1,
+                  "input_tokens": 1000,
+                  "output_tokens": 250,
+                  "cached_input_tokens": 100,
+                  "reasoning_tokens": 45,
+                  "total_tokens": 1250
+                }
+              ]
+            },
+            "wall_duration_ms": 1200,
+            "quality_score": 0.91,
+            "accuracy_score": 0.91,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "single-agent",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 1,
+            "speed_score": 1,
+            "task_completion_rate": 1,
+            "overall_score": 0.95,
+            "tokens_per_quality_point": 1373.626,
+            "tokens_per_accuracy_point": 1373.626,
+            "eligible": true,
+            "ineligible_reasons": []
+          },
+          {
+            "valid": true,
+            "id": "orchestrated-specialists",
+            "label": "Orchestrated specialists",
+            "strategy": "orchestrator-plus-specialists",
+            "model": "gpt-5.5",
+            "workflow": "loop-system",
+            "run_id": "slice82-fresh-jsonl-tiny-status-orchestrated-specialists",
+            "orchestrator": "meta-orchestrator",
+            "exact_model_tokens": {
+              "request_count": 2,
+              "input_tokens": 2100,
+              "output_tokens": 500,
+              "cached_input_tokens": 220,
+              "reasoning_tokens": 120,
+              "total_tokens": 2600,
+              "subagent_breakdown": [
+                {
+                  "id": "planner-agent",
+                  "request_count": 1,
+                  "input_tokens": 1200,
+                  "output_tokens": 280,
+                  "cached_input_tokens": 120,
+                  "reasoning_tokens": 70,
+                  "total_tokens": 1480
+                },
+                {
+                  "id": "validator-agent",
+                  "request_count": 1,
+                  "input_tokens": 900,
+                  "output_tokens": 220,
+                  "cached_input_tokens": 100,
+                  "reasoning_tokens": 50,
+                  "total_tokens": 1120
+                }
+              ]
+            },
+            "wall_duration_ms": 2100,
+            "quality_score": 0.92,
+            "accuracy_score": 0.92,
+            "correction_outcomes_source": "correction-telemetry",
+            "correction_telemetry_candidate_id": "orchestrated-specialists",
+            "correction_telemetry_receipt": ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+            "correction_outcomes": {
+              "findings_count": 2,
+              "corrections_applied": 2,
+              "residual_issue_count": 0,
+              "regression_count": 0
+            },
+            "task_outcome": {
+              "task_count": 1,
+              "completed_count": 1
+            },
+            "correction_score": 1,
+            "token_efficiency_score": 0.481,
+            "speed_score": 0.571,
+            "task_completion_rate": 1,
+            "overall_score": 0.848,
+            "tokens_per_quality_point": 2826.087,
+            "tokens_per_accuracy_point": 2826.087,
+            "eligible": true,
+            "ineligible_reasons": []
+          }
+        ],
+        "winner": {
+          "id": "single-agent",
+          "overall_score": 0.95,
+          "exact_model_total_tokens": 1250,
+          "wall_duration_ms": 1200
+        },
+        "recommendation": {
+          "status": "recommend",
+          "candidate_id": "single-agent",
+          "improvement_margin": 0.102,
+          "reason": "single-agent has the highest weighted score while meeting exact token, quality, correction, wall-time, and accuracy gates."
+        },
+        "next_actions": [
+          "Use single-agent only for matching tasks and keep collecting exact token, correction, wall-time, accuracy, and quality receipts."
+        ]
+      }
+    }
+  ],
+  "aggregate": {
+    "recommended_candidate_counts": {
+      "orchestrated-specialists": 1,
+      "single-agent": 1
+    },
+    "dominant_recommended_candidate_id": "orchestrated-specialists",
+    "dominant_recommended_candidate_count": 1,
+    "all_recommended_same_candidate": false,
+    "average_improvement_margin": 0.082,
+    "total_exact_model_token_delta": 2850,
+    "total_wall_duration_delta_ms": 2300,
+    "telemetry_coverage_rate": 1
+  },
+  "next_actions": [
+    "Keep orchestration routing conditional by task class because the suite does not recommend one candidate everywhere."
+  ],
+  "receipt_path": ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json"
+}

@@ -1,0 +1,11 @@
+{"record_type":"meta","goal_id":"june-30-agentic-tooling-meta-os","run_id":"2026-06-30-slice-82-fresh-policy-pilot-telemetry","workflow":"loop-system","telemetry_source":{"type":"runtime","id":"slice-82-fresh-policy-pilot-jsonl","confidence":"exact"}}
+{"record_type":"candidate","id":"single-agent","workflow":"loop-system","run_id":"2026-06-30-slice-82-fresh-single-agent","orchestrator":"single-agent"}
+{"record_type":"candidate","id":"orchestrated-specialists","workflow":"loop-system","run_id":"2026-06-30-slice-82-fresh-orchestrated","orchestrator":"meta-orchestrator","subagent":"reviewer"}
+{"record_type":"event","candidate_id":"single-agent","id":"slice82-single-link-gap","type":"finding","severity":"medium","note":"Fresh pilot log found an unresolved handoff link gap in the single-agent pass."}
+{"record_type":"event","candidate_id":"single-agent","id":"slice82-single-link-fix","type":"fix","finding_id":"slice82-single-link-gap","note":"Fresh pilot log recorded the applied handoff link correction."}
+{"record_type":"event","candidate_id":"single-agent","id":"slice82-single-verification-gap","type":"finding","severity":"low","note":"Fresh pilot log found one remaining verification wording gap."}
+{"record_type":"event","candidate_id":"single-agent","id":"slice82-single-verification-fix","type":"fix","finding_id":"slice82-single-verification-gap","note":"Fresh pilot log recorded the wording gap correction."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"slice82-orch-proof-gap","type":"finding","severity":"medium","note":"Fresh pilot log found a proof bundle handoff gap in the orchestrated pass."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"slice82-orch-proof-fix","type":"correction","finding_id":"slice82-orch-proof-gap","note":"Fresh pilot log recorded the proof bundle handoff correction."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"slice82-orch-routing-gap","type":"issue","severity":"low","note":"Fresh pilot log found a routing note that needed a clearer next-action clause."}
+{"record_type":"event","candidate_id":"orchestrated-specialists","id":"slice82-orch-routing-fix","type":"correction_applied","finding_id":"slice82-orch-routing-gap","note":"Fresh pilot log recorded the next-action clause correction."}

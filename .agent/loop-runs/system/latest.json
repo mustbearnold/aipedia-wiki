@@ -5,24 +5,24 @@
   "registry_path": "src/data/aipedia-loops.json",
   "schema_version": 1,
   "default_site_dir": "dist-fast/client",
-  "generated_at": "2026-07-01T04:55:20.171Z",
+  "generated_at": "2026-07-01T05:04:07.521Z",
   "goal_id": "june-30-agentic-tooling-meta-os",
-  "run_id": "2026-06-30-slice-81-routing-policy-pilot-evidence-overlap",
+  "run_id": "2026-06-30-slice-82-fresh-telemetry-policy-pilot",
   "residual_risks": [
-    "Routing-policy pilot v2 blocks shared-telemetry overlap from counting as independent validation, but a fresh independent workload pilot is still required before changing orchestration defaults."
+    "Fresh-telemetry routing-policy pilot passes and is a promotion candidate, but one reviewer-pass receipt is still required before changing default orchestration."
   ],
   "next_actions": [
-    "Run agent:routing:pilot against a pilot suite with fresh correction telemetry before changing orchestration defaults.",
-    "Keep evidence-overlap and replay-only policy-pilot receipts non-promotable."
+    "Run one reviewer-pass receipt before applying the routing policy to default orchestration.",
+    "Keep replay-only and evidence-overlap policy-pilot receipts non-promotable."
   ],
   "trace": {
-    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-81-routing-policy-pilot-evidence-overlap",
-    "span_id": "span:loop-run:2026-06-30-slice-81-routing-policy-pilot-evidence-overlap:2026-07-01T04:55:20.171Z",
+    "trace_id": "june-30-agentic-tooling-meta-os:2026-06-30-slice-82-fresh-telemetry-policy-pilot",
+    "span_id": "span:loop-run:2026-06-30-slice-82-fresh-telemetry-policy-pilot:2026-07-01T05:04:07.521Z",
     "parent_span_id": "",
     "name": "loop-run",
-    "started_at": "2026-07-01T04:55:20.171Z",
-    "ended_at": "2026-07-01T04:55:25.156Z",
-    "duration_ms": 4984
+    "started_at": "2026-07-01T05:04:07.521Z",
+    "ended_at": "2026-07-01T05:04:12.476Z",
+    "duration_ms": 4955
   },
   "artifact_refs": [
     {
@@ -46,7 +46,7 @@
     {
       "role": "output",
       "kind": "loop-run-receipt",
-      "path": ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
+      "path": ".agent/loop-runs/system/2026-07-01T05-04-07-521Z-loop-run.json",
       "description": "Timestamped loop receipt JSON."
     },
     {
@@ -301,65 +301,65 @@
       "status": "ok"
     }
   ],
-  "duration_ms": 4984,
+  "duration_ms": 4955,
   "model_token_usage": null,
   "efficiency_metrics": {
     "schema_version": "aipedia.loop-efficiency-metrics.v1",
-    "wall_duration_ms": 4984,
-    "total_command_duration_ms": 4982,
+    "wall_duration_ms": 4955,
+    "total_command_duration_ms": 4952,
     "command_count": 16,
     "loop_count": 7,
     "ok_loop_count": 4,
     "attention_loop_count": 3,
     "skipped_loop_count": 0,
-    "average_command_duration_ms": 311.375,
-    "commands_per_second": 3.21,
-    "loops_per_second": 1.404,
+    "average_command_duration_ms": 309.5,
+    "commands_per_second": 3.229,
+    "loops_per_second": 1.413,
     "attention_rate": 0.429,
     "skipped_rate": 0,
     "artifact_ref_count": 40,
     "embedded_command_artifact_count": 16,
-    "system_artifact_count": 14,
+    "system_artifact_count": 12,
     "content_artifact_count": 4,
     "other_artifact_count": 0,
-    "agent_system_artifact_count": 13,
+    "agent_system_artifact_count": 11,
     "agent_content_artifact_count": 0,
     "agent_other_artifact_count": 0,
     "preexisting_dirty_count": 5,
-    "system_artifacts_per_second": 2.809,
-    "agent_system_artifacts_per_second": 2.608,
-    "persisted_full_receipt_bytes": 47153,
-    "persisted_latest_receipt_bytes": 28635,
+    "system_artifacts_per_second": 2.422,
+    "agent_system_artifacts_per_second": 2.22,
+    "persisted_full_receipt_bytes": 47676,
+    "persisted_latest_receipt_bytes": 29158,
     "slowest_commands": [
       {
         "loop_id": "revenue-conversion",
         "label": "commercial CTA audit",
         "status": "attention",
-        "duration_ms": 1965
+        "duration_ms": 1980
       },
       {
         "loop_id": "performance-ux",
         "label": "indexability audit",
         "status": "attention",
-        "duration_ms": 604
-      },
-      {
-        "loop_id": "freshness",
-        "label": "weekly editorial queue",
-        "status": "ok",
-        "duration_ms": 345
+        "duration_ms": 581
       },
       {
         "loop_id": "news-market",
         "label": "weekly editorial queue",
         "status": "ok",
-        "duration_ms": 333
+        "duration_ms": 342
+      },
+      {
+        "loop_id": "freshness",
+        "label": "weekly editorial queue",
+        "status": "ok",
+        "duration_ms": 328
       },
       {
         "loop_id": "quality-pruning",
         "label": "site KPI audit",
         "status": "ok",
-        "duration_ms": 239
+        "duration_ms": 236
       }
     ]
   },
@@ -477,37 +477,33 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+      ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
       "docs/agentic-tooling-meta-compliance.md",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-pilot.mjs",
-      "scripts/lib/routing-policy-pilot.mjs",
       "src/content/comparisons/captions-vs-synthesia.md",
       "src/content/tools/synthesia.md",
       "src/data/coverage-backlog.json",
-      "src/data/source-registry.json",
-      "tests/scripts/agent-routing-pilot.test.mjs"
+      "src/data/source-registry.json"
     ],
     "system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+      ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json",
       ".agent/loop-runs/pauses/2026-07-01T00-48-37-257Z-pause-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      "docs/agentic-tooling-meta-compliance.md",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-pilot.mjs",
-      "scripts/lib/routing-policy-pilot.mjs",
-      "tests/scripts/agent-routing-pilot.test.mjs"
+      "docs/agentic-tooling-meta-compliance.md"
     ],
     "content_artifacts": [
       "src/content/comparisons/captions-vs-synthesia.md",
@@ -522,31 +518,27 @@
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+      ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      "docs/agentic-tooling-meta-compliance.md",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-pilot.mjs",
-      "scripts/lib/routing-policy-pilot.mjs",
-      "tests/scripts/agent-routing-pilot.test.mjs"
+      "docs/agentic-tooling-meta-compliance.md"
     ],
     "agent_system_artifacts": [
       ".agent/CURRENT_STATUS.md",
       ".agent/PLANS.md",
       ".agent/WORK_LOG.md",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-overlap-suite-summary.json",
-      ".agent/evals/routing-policy-pilots/2026-06-30-slice-81-shared-telemetry-overlap-pilot-receipt.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-events.jsonl",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-normalized.json",
+      ".agent/evals/correction-telemetry-adapters/2026-06-30-slice-82-fresh-policy-pilot-receipt.json",
+      ".agent/evals/routing-policy-pilots/2026-06-30-slice-82-fresh-telemetry-policy-pilot-receipt.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-input.json",
+      ".agent/evals/routing-suites/2026-06-30-slice-82-fresh-policy-pilot-suite-receipt.json",
       ".agent/meta/2026-06-30-agentic-tooling-meta-compliance.json",
-      "docs/agentic-tooling-meta-compliance.md",
-      "scripts/README.md",
-      "scripts/agent-closeout-receipt-check.mjs",
-      "scripts/agent-meta-closeout.mjs",
-      "scripts/agent-routing-pilot.mjs",
-      "scripts/lib/routing-policy-pilot.mjs",
-      "tests/scripts/agent-routing-pilot.test.mjs"
+      "docs/agentic-tooling-meta-compliance.md"
     ],
     "agent_content_artifacts": [],
     "agent_other_artifacts": [],
@@ -576,21 +568,21 @@
       "id": "decision-content",
       "title": "Decision Content Flywheel",
       "status": "ok",
-      "duration_ms": 223,
+      "duration_ms": 218,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "next decision cluster",
           "status": "ok",
-          "duration_ms": 112,
+          "duration_ms": 108,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "top coverage candidates",
           "status": "ok",
-          "duration_ms": 111,
+          "duration_ms": 110,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -600,7 +592,7 @@
       "id": "freshness",
       "title": "Freshness Loop",
       "status": "attention",
-      "duration_ms": 579,
+      "duration_ms": 554,
       "attention_reasons": [
         "due_now=161"
       ],
@@ -609,7 +601,7 @@
         {
           "label": "freshness queue",
           "status": "attention",
-          "duration_ms": 233,
+          "duration_ms": 225,
           "attention_reasons": [
             "due_now=161"
           ],
@@ -618,7 +610,7 @@
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 345,
+          "duration_ms": 328,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -628,28 +620,28 @@
       "id": "trust-provenance",
       "title": "Trust And Provenance Loop",
       "status": "ok",
-      "duration_ms": 401,
+      "duration_ms": 396,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "provenance and pricing",
           "status": "ok",
-          "duration_ms": 159,
+          "duration_ms": 157,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "source registry health",
           "status": "ok",
-          "duration_ms": 115,
+          "duration_ms": 113,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "stale facts guard",
           "status": "ok",
-          "duration_ms": 127,
+          "duration_ms": 126,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -659,7 +651,7 @@
       "id": "revenue-conversion",
       "title": "Revenue And Conversion Loop",
       "status": "attention",
-      "duration_ms": 1965,
+      "duration_ms": 1980,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client"
       ],
@@ -668,7 +660,7 @@
         {
           "label": "commercial CTA audit",
           "status": "attention",
-          "duration_ms": 1965,
+          "duration_ms": 1980,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -699,21 +691,21 @@
         {
           "label": "site KPI audit",
           "status": "ok",
-          "duration_ms": 239,
+          "duration_ms": 236,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "comparison quality audit",
           "status": "ok",
-          "duration_ms": 118,
+          "duration_ms": 117,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "internal link audit",
           "status": "ok",
-          "duration_ms": 126,
+          "duration_ms": 130,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -723,7 +715,7 @@
       "id": "performance-ux",
       "title": "Performance And UX Loop",
       "status": "attention",
-      "duration_ms": 789,
+      "duration_ms": 774,
       "attention_reasons": [
         "built output stale: run npm run build:fast before trusting dist-fast/client",
         "built output stale: run npm run build:fast before trusting dist-fast/client"
@@ -733,7 +725,7 @@
         {
           "label": "dist budget",
           "status": "attention",
-          "duration_ms": 185,
+          "duration_ms": 192,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -754,7 +746,7 @@
         {
           "label": "indexability audit",
           "status": "attention",
-          "duration_ms": 604,
+          "duration_ms": 581,
           "attention_reasons": [
             "built output stale: run npm run build:fast before trusting dist-fast/client"
           ],
@@ -778,28 +770,28 @@
       "id": "news-market",
       "title": "News And Market Change Loop",
       "status": "ok",
-      "duration_ms": 542,
+      "duration_ms": 550,
       "attention_reasons": [],
       "skip_reason": "",
       "commands": [
         {
           "label": "news rendering guard",
           "status": "ok",
-          "duration_ms": 106,
+          "duration_ms": 104,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "news cross-reference audit",
           "status": "ok",
-          "duration_ms": 104,
+          "duration_ms": 103,
           "attention_reasons": [],
           "build_freshness": null
         },
         {
           "label": "weekly editorial queue",
           "status": "ok",
-          "duration_ms": 333,
+          "duration_ms": 342,
           "attention_reasons": [],
           "build_freshness": null
         }
@@ -808,13 +800,13 @@
   ],
   "ledger": {
     "written": true,
-    "file": ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
+    "file": ".agent/loop-runs/system/2026-07-01T05-04-07-521Z-loop-run.json",
     "latest_file": ".agent/loop-runs/system/latest.json",
-    "previous_file": ".agent/loop-runs/system/2026-07-01T04-41-36-061Z-loop-run.json",
+    "previous_file": ".agent/loop-runs/system/2026-07-01T04-55-20-171Z-loop-run.json",
     "trend": {
-      "previous_run": "2026-07-01T04:41:36.061Z",
+      "previous_run": "2026-07-01T04:55:20.171Z",
       "status_changes": [],
-      "duration_delta_ms": -55,
+      "duration_delta_ms": -29,
       "totals_delta": {
         "ok": 0,
         "attention": 0,
