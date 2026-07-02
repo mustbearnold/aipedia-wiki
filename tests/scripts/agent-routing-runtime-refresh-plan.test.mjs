@@ -4,7 +4,11 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
-import { buildRoutingRuntimeRefreshPlan, validateRoutingRuntimeRefreshPlanReceipt } from '../../scripts/lib/routing-runtime-refresh-plan.mjs';
+import {
+  buildRoutingRuntimeRefreshCommandPlanArtifact,
+  buildRoutingRuntimeRefreshPlan,
+  validateRoutingRuntimeRefreshPlanReceipt,
+} from '../../scripts/lib/routing-runtime-refresh-plan.mjs';
 
 const HANDOFF_PATH = '.agent/evals/routing-handoffs/2026-06-30-slice-90-runtime-default-change-handoff-receipt.json';
 const MONITOR_TRENDS_PATH = '.agent/evals/routing-monitor-trends/2026-06-30-slice-89-post-default-monitor-trends.json';
@@ -139,6 +143,8 @@ test('routing runtime refresh plan emits ordered commands for stale evidence', (
   ]);
   assert.equal(receipt.command_plan.every((step) => step.status === 'ready-to-run'), true);
   assert.match(receipt.command_plan.at(-1).command, /agent:routing:runtime:complete/);
+  const artifact = buildRoutingRuntimeRefreshCommandPlanArtifact(receipt.command_plan, 'local/tmp/fixture-stale-runtime-routing.sh');
+  receipt.command_plan_artifact = artifact;
   assert.deepEqual(validateRoutingRuntimeRefreshPlanReceipt(receipt), []);
 });
 
@@ -185,6 +191,107 @@ test('routing runtime refresh plan CLI writes ready-current receipts', () => {
     assert.equal(receipt.ok, true);
     assert.equal(receipt.refresh_evaluation.status, 'ready-current');
     assert.equal(receipt.receipt_path, outPath);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('routing runtime refresh plan validation rejects tampered command plan artifact counts', () => {
+  const result = buildRoutingRuntimeRefreshPlan(readyPlanInput(), {
+    generatedAt: '2026-07-01T09:30:00.000Z',
+    projectDir: '.',
+    source: HANDOFF_PATH,
+  });
+  const receipt = result.receipt;
+  receipt.command_plan_artifact = buildRoutingRuntimeRefreshCommandPlanArtifact(receipt.command_plan, 'local/tmp/ready-runtime-refresh.sh');
+  receipt.command_plan_artifact.command_count += 1;
+  const issues = validateRoutingRuntimeRefreshPlanReceipt(receipt);
+  assert.ok(issues.some((issue) => issue.code === 'routing-runtime-refresh-plan-command-artifact-invalid'));
+});
+
+test('routing runtime refresh plan CLI can disable default rollup requirement', () => {
+  const result = runRefreshPlan([
+    '--change-id',
+    'fixture-no-rollup-cli',
+    '--change-kind',
+    'workflow',
+    '--changed-at',
+    '2026-07-01T00:00:00.000Z',
+    '--handoff',
+    HANDOFF_PATH,
+    '--monitor-trends',
+    MONITOR_TRENDS_PATH,
+    '--runtime-completion',
+    RUNTIME_COMPLETION_PATH,
+    '--no-require-monitor-trend-rollup',
+    '--json',
+  ]);
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  const receipt = JSON.parse(result.stdout);
+  assert.equal(receipt.ok, true);
+  assert.equal(receipt.requirements.require_monitor_trend_rollup, false);
+  assert.equal(receipt.refresh_evaluation.status, 'ready-current');
+});
+
+test('routing runtime refresh plan CLI writes a shell runbook for refresh-required commands', () => {
+  const root = mkdtempSync(join(tmpdir(), 'aipedia-routing-runtime-refresh-runbook-'));
+  try {
+    const outPath = join(root, 'refresh-plan.json');
+    const runbookPath = join(root, 'refresh-plan.sh');
+    const result = runRefreshPlan([
+      '--change-id',
+      'fixture-stale-runtime-routing-cli',
+      '--change-kind',
+      'workflow',
+      '--changed-at',
+      '2026-07-02T00:00:00.000Z',
+      '--handoff',
+      HANDOFF_PATH,
+      '--monitor-trends',
+      MONITOR_TRENDS_PATH,
+      '--trend-rollup',
+      ROLLUP_PATH,
+      '--runtime-completion',
+      RUNTIME_COMPLETION_PATH,
+      '--model-token-usage',
+      MODEL_TOKEN_USAGE_PATH,
+      '--require-model-token-usage',
+      '--events-jsonl',
+      '.agent/evals/correction-telemetry-adapters/fixture-stale-events.jsonl',
+      '--routing-suite-input',
+      '.agent/evals/routing-suites/fixture-stale-suite-input.json',
+      '--default-rollout',
+      DEFAULT_ROLLOUT_PATH,
+      '--baseline-monitor',
+      BASELINE_MONITOR_PATH,
+      '--baseline-monitor-trends',
+      MONITOR_TRENDS_PATH,
+      '--rollback-command',
+      'npm --silent run agent:routing:policy -- --rollback fixture --json',
+      '--rollback-verify',
+      'npm --silent run agent:meta:closeout:auto -- --receipt fixture-rollback-monitor.json --json',
+      '--runtime-system',
+      'aipedia-agent-router',
+      '--applied-at',
+      '2026-07-02T00:05:00.000Z',
+      '--out',
+      outPath,
+      '--commands-out',
+      runbookPath,
+      '--json',
+    ]);
+    assert.equal(result.status, 1, result.stderr || result.stdout);
+    const receipt = JSON.parse(readFileSync(outPath, 'utf8'));
+    assert.equal(receipt.refresh_evaluation.status, 'refresh-required');
+    assert.equal(receipt.command_plan_artifact.path, runbookPath);
+    assert.equal(receipt.command_plan_artifact.status, 'ready-to-run');
+    assert.equal(receipt.command_plan_artifact.ready_to_run_count, 6);
+    assert.deepEqual(validateRoutingRuntimeRefreshPlanReceipt(receipt), []);
+    const runbook = readFileSync(runbookPath, 'utf8');
+    assert.match(runbook, /^#!\/usr\/bin\/env bash/);
+    assert.match(runbook, /agent:correction:adapt/);
+    assert.match(runbook, /agent:routing:runtime:complete/);
+    assert.doesNotMatch(runbook, /<events-jsonl>/);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

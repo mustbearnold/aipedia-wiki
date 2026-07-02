@@ -5,6 +5,7 @@ import { validateRoutingMonitorTrendRollupReceipt } from './routing-monitor-tren
 import { validateRoutingRuntimeCompletionReceipt } from './routing-runtime-completion.mjs';
 
 export const ROUTING_RUNTIME_REFRESH_PLAN_SCHEMA_VERSION = 'aipedia.agent-routing-runtime-refresh-plan.v1';
+export const ROUTING_RUNTIME_REFRESH_COMMAND_PLAN_ARTIFACT_SCHEMA_VERSION = 'aipedia.agent-routing-runtime-refresh-command-plan-artifact.v1';
 
 const RELEVANT_CHANGE_KINDS = new Set(['model', 'prompt', 'policy', 'routing-policy', 'tool', 'workflow', 'runtime', 'router', 'default-routing']);
 const HandoffRefreshKinds = new Set(['policy', 'routing-policy', 'runtime', 'router', 'default-routing']);
@@ -119,6 +120,41 @@ export function validateRoutingRuntimeRefreshPlanReceipt(value) {
   }
   if (value.ok !== expected.ok) {
     issues.push(routingRuntimeRefreshPlanIssue('routing-runtime-refresh-plan-mismatch', 'ok must match canonical routing runtime refresh plan computation.'));
+  }
+  if (value.command_plan_artifact != null) {
+    issues.push(...validateRoutingRuntimeRefreshCommandPlanArtifact(value.command_plan_artifact, value.command_plan));
+  }
+  return issues;
+}
+
+export function buildRoutingRuntimeRefreshCommandPlanArtifact(commandPlan, artifactPath, format = 'shell') {
+  const steps = Array.isArray(commandPlan) ? commandPlan : [];
+  const readyToRunCount = steps.filter((step) => step.status === 'ready-to-run').length;
+  const blockedInputCount = steps.filter((step) => step.status === 'blocked-input').length;
+  const notRequiredCount = steps.filter((step) => step.status === 'not-required').length;
+  return {
+    schema_version: ROUTING_RUNTIME_REFRESH_COMMAND_PLAN_ARTIFACT_SCHEMA_VERSION,
+    path: stringValue(artifactPath),
+    format: stringValue(format) || 'shell',
+    status: blockedInputCount > 0 ? 'blocked-input' : readyToRunCount > 0 ? 'ready-to-run' : notRequiredCount === steps.length ? 'not-required' : 'mixed',
+    command_count: steps.length,
+    ready_to_run_count: readyToRunCount,
+    blocked_input_count: blockedInputCount,
+    not_required_count: notRequiredCount,
+  };
+}
+
+export function validateRoutingRuntimeRefreshCommandPlanArtifact(artifact, commandPlan) {
+  const issues = [];
+  if (!isObject(artifact)) {
+    return [routingRuntimeRefreshPlanIssue('routing-runtime-refresh-plan-command-artifact-invalid', 'command_plan_artifact must be an object.')];
+  }
+  const expected = buildRoutingRuntimeRefreshCommandPlanArtifact(commandPlan, artifact.path, artifact.format);
+  for (const field of ['schema_version', 'path', 'format', 'status']) {
+    if (artifact[field] !== expected[field]) issues.push(routingRuntimeRefreshPlanIssue('routing-runtime-refresh-plan-command-artifact-invalid', `${field} must be ${expected[field]}.`));
+  }
+  for (const field of ['command_count', 'ready_to_run_count', 'blocked_input_count', 'not_required_count']) {
+    if (artifact[field] !== expected[field]) issues.push(routingRuntimeRefreshPlanIssue('routing-runtime-refresh-plan-command-artifact-invalid', `${field} must be ${expected[field]}.`));
   }
   return issues;
 }
@@ -409,7 +445,13 @@ function refreshReason(status, facts) {
 
 function buildCommandPlan(chain, change, requirements, input) {
   const outputs = commandOutputs(input.output_prefix);
-  const refreshNeeded = Object.values(chain).some((item) => !item.provided || !item.valid || !item.ready || item.stale);
+  const refreshKinds = ['handoff', 'monitor_trends', 'runtime_completion'];
+  if (requirements.require_monitor_trend_rollup) refreshKinds.push('monitor_trend_rollup');
+  if (requirements.require_model_token_usage) refreshKinds.push('model_token_usage');
+  const refreshNeeded = refreshKinds.some((kind) => {
+    const item = chain[kind];
+    return !item.provided || !item.valid || !item.ready || item.stale;
+  });
   const notRequired = refreshNeeded ? false : true;
   const defaultRollout = input.default_rollout || chain.handoff.facts.default_rollout_receipt || '';
   const baselineMonitor = input.baseline_monitor || chain.handoff.facts.monitor_receipt || chain.monitor_trends.facts.latest_monitor_receipt || '';

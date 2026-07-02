@@ -3968,7 +3968,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-29"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "cursor-cli",
@@ -3977,7 +3977,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "cursor-composer-25",
@@ -3986,7 +3986,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-29"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "cursor-data-use",
@@ -3995,7 +3995,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "cursor-docs",
@@ -4004,7 +4004,7 @@
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "cursor-enterprise",
@@ -4013,7 +4013,7 @@
       "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "cursor-enterprise-orgs",
@@ -4040,7 +4040,7 @@
       "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-29"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "cursor-pricing-policy",
@@ -4067,7 +4067,7 @@
       "type": "blog",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-23"
+      "last_checked": "2026-07-02"
     },
     {
       "id": "d-id-affiliate-terms",
@@ -13613,7 +13613,16 @@
       "type": "affiliate",
       "trust_tier": "primary",
       "volatility": "high",
-      "last_checked": "2026-06-24"
+      "last_checked": "2026-06-29"
+    },
+    {
+      "id": "synthesia-credits-help",
+      "label": "Synthesia self-serve credits guide",
+      "url": "https://help.synthesia.io/en/articles/11972627-self-serve-users-guide-to-credits",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-29"
     },
     {
       "id": "synthesia-avatar-docs",
@@ -13691,6 +13700,15 @@
       "id": "synthesia-security-practices",
       "label": "Synthesia security practices",
       "url": "https://www.synthesia.io/legal/security-practices",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-06-29"
+    },
+    {
+      "id": "synthesia-studio-express-1-help",
+      "label": "Synthesia Studio Express-1 avatar help",
+      "url": "https://help.synthesia.io/en/articles/9680757-how-do-i-create-a-studio-express-1-avatar",
       "type": "docs",
       "trust_tier": "primary",
       "volatility": "medium",

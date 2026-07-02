@@ -1,225 +1,18 @@
 {
   "ok": true,
-  "generated_at": "2026-06-21T08:02:30.135Z",
-  "project_dir": "C:\\Users\\mustb\\Projects\\aipedia-wiki-clean",
+  "generated_at": "2026-06-29T11:00:58.059Z",
+  "project_dir": "/home/mustbearnold/Projects/aipedia-wiki-clean",
   "totals": {
-    "tools_active": 260,
-    "tools_notable": 260,
-    "comparisons_existing": 46,
+    "tools_active": 296,
+    "tools_notable": 296,
+    "comparisons_existing": 56,
     "answers_existing": 12,
-    "comparison_gaps": 455,
-    "review_only_comparison_gaps": 2655,
+    "comparison_gaps": 945,
+    "review_only_comparison_gaps": 3081,
     "answer_gaps": 56
   },
   "backlog": {
     "comparisons": [
-      {
-        "kind": "comparison",
-        "slug": "amazon-q-vs-github-copilot",
-        "tools": [
-          "amazon-q",
-          "github-copilot"
-        ],
-        "shared_categories": [
-          "ai-coding"
-        ],
-        "primary_categories": [
-          "ai-coding",
-          "ai-coding"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "ide_copilot_extensions",
-        "policy_reason": "same primary category and workflow lane: ide_copilot_extensions",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "antigravity-vs-cursor",
-        "tools": [
-          "antigravity",
-          "cursor"
-        ],
-        "shared_categories": [
-          "ai-coding"
-        ],
-        "primary_categories": [
-          "ai-coding",
-          "ai-coding"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "ai_native_ide_agents",
-        "policy_reason": "same primary category and workflow lane: ai_native_ide_agents",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "argil-vs-heygen",
-        "tools": [
-          "argil",
-          "heygen"
-        ],
-        "shared_categories": [
-          "ai-video"
-        ],
-        "primary_categories": [
-          "ai-video",
-          "ai-video"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "avatar_and_presenter_video",
-        "policy_reason": "same primary category and workflow lane: avatar_and_presenter_video",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "argil-vs-synthesia",
-        "tools": [
-          "argil",
-          "synthesia"
-        ],
-        "shared_categories": [
-          "ai-video"
-        ],
-        "primary_categories": [
-          "ai-video",
-          "ai-video"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "avatar_and_presenter_video",
-        "policy_reason": "same primary category and workflow lane: avatar_and_presenter_video",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "blackbox-ai-vs-replit-agent",
-        "tools": [
-          "blackbox-ai",
-          "replit-agent"
-        ],
-        "shared_categories": [
-          "ai-coding"
-        ],
-        "primary_categories": [
-          "ai-coding",
-          "ai-coding"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "browser_app_builders",
-        "policy_reason": "same primary category and workflow lane: browser_app_builders",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "boomy-vs-suno",
-        "tools": [
-          "boomy",
-          "suno"
-        ],
-        "shared_categories": [
-          "ai-music"
-        ],
-        "primary_categories": [
-          "ai-music",
-          "ai-music"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "full_song_generation",
-        "policy_reason": "same primary category and workflow lane: full_song_generation",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "boomy-vs-udio",
-        "tools": [
-          "boomy",
-          "udio"
-        ],
-        "shared_categories": [
-          "ai-music"
-        ],
-        "primary_categories": [
-          "ai-music",
-          "ai-music"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "full_song_generation",
-        "policy_reason": "same primary category and workflow lane: full_song_generation",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "capacities-vs-notion-ai",
-        "tools": [
-          "capacities",
-          "notion-ai"
-        ],
-        "shared_categories": [
-          "ai-notes"
-        ],
-        "primary_categories": [
-          "ai-notes",
-          "ai-notes"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "personal_knowledge_workspace",
-        "policy_reason": "same primary category and workflow lane: personal_knowledge_workspace",
-        "score": 6
-      },
-      {
-        "kind": "comparison",
-        "slug": "captions-vs-heygen",
-        "tools": [
-          "captions",
-          "heygen"
-        ],
-        "shared_categories": [
-          "ai-video"
-        ],
-        "primary_categories": [
-          "ai-video",
-          "ai-video"
-        ],
-        "both_tier1": false,
-        "same_category": true,
-        "comparison_mode": "direct",
-        "selectable": true,
-        "requires_asymmetric_framing": false,
-        "workflow_family": "avatar_and_presenter_video",
-        "policy_reason": "same primary category and workflow lane: avatar_and_presenter_video",
-        "score": 6
-      },
       {
         "kind": "comparison",
         "slug": "captions-vs-synthesia",
@@ -1392,6 +1185,213 @@
         "workflow_family": "multi_model_chat_frontends",
         "policy_reason": "same primary category and workflow lane: multi_model_chat_frontends",
         "score": 6
+      },
+      {
+        "kind": "comparison",
+        "slug": "replit-agent-vs-same-dev",
+        "tools": [
+          "replit-agent",
+          "same-dev"
+        ],
+        "shared_categories": [
+          "ai-coding"
+        ],
+        "primary_categories": [
+          "ai-coding",
+          "ai-coding"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "browser_app_builders",
+        "policy_reason": "same primary category and workflow lane: browser_app_builders",
+        "score": 6
+      },
+      {
+        "kind": "comparison",
+        "slug": "runway-vs-vidu",
+        "tools": [
+          "runway",
+          "vidu"
+        ],
+        "shared_categories": [
+          "ai-video"
+        ],
+        "primary_categories": [
+          "ai-video",
+          "ai-video"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "raw_video_generation_models",
+        "policy_reason": "same primary category and workflow lane: raw_video_generation_models",
+        "score": 6
+      },
+      {
+        "kind": "comparison",
+        "slug": "runway-vs-wan",
+        "tools": [
+          "runway",
+          "wan"
+        ],
+        "shared_categories": [
+          "ai-video"
+        ],
+        "primary_categories": [
+          "ai-video",
+          "ai-video"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "raw_video_generation_models",
+        "policy_reason": "same primary category and workflow lane: raw_video_generation_models",
+        "score": 6
+      },
+      {
+        "kind": "comparison",
+        "slug": "synthesia-vs-tavus",
+        "tools": [
+          "synthesia",
+          "tavus"
+        ],
+        "shared_categories": [
+          "ai-video"
+        ],
+        "primary_categories": [
+          "ai-video",
+          "ai-video"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "avatar_and_presenter_video",
+        "policy_reason": "same primary category and workflow lane: avatar_and_presenter_video",
+        "score": 6
+      },
+      {
+        "kind": "comparison",
+        "slug": "workato-vs-zapier",
+        "tools": [
+          "workato",
+          "zapier"
+        ],
+        "shared_categories": [
+          "ai-automation"
+        ],
+        "primary_categories": [
+          "ai-automation",
+          "ai-automation"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "general_app_automation",
+        "policy_reason": "same primary category and workflow lane: general_app_automation",
+        "score": 6
+      },
+      {
+        "kind": "comparison",
+        "slug": "activepieces-vs-make",
+        "tools": [
+          "activepieces",
+          "make"
+        ],
+        "shared_categories": [
+          "ai-automation"
+        ],
+        "primary_categories": [
+          "ai-automation",
+          "ai-automation"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "general_app_automation",
+        "policy_reason": "same primary category and workflow lane: general_app_automation",
+        "score": 4
+      },
+      {
+        "kind": "comparison",
+        "slug": "activepieces-vs-pipedream",
+        "tools": [
+          "activepieces",
+          "pipedream"
+        ],
+        "shared_categories": [
+          "ai-automation"
+        ],
+        "primary_categories": [
+          "ai-automation",
+          "ai-automation"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "general_app_automation",
+        "policy_reason": "same primary category and workflow lane: general_app_automation",
+        "score": 4
+      },
+      {
+        "kind": "comparison",
+        "slug": "activepieces-vs-workato",
+        "tools": [
+          "activepieces",
+          "workato"
+        ],
+        "shared_categories": [
+          "ai-automation"
+        ],
+        "primary_categories": [
+          "ai-automation",
+          "ai-automation"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "general_app_automation",
+        "policy_reason": "same primary category and workflow lane: general_app_automation",
+        "score": 4
+      },
+      {
+        "kind": "comparison",
+        "slug": "ada-vs-intercom",
+        "tools": [
+          "ada",
+          "intercom"
+        ],
+        "shared_categories": [
+          "ai-automation"
+        ],
+        "primary_categories": [
+          "ai-automation",
+          "ai-automation"
+        ],
+        "both_tier1": false,
+        "same_category": true,
+        "comparison_mode": "direct",
+        "selectable": true,
+        "requires_asymmetric_framing": false,
+        "workflow_family": "customer_support_automation",
+        "policy_reason": "same primary category and workflow lane: customer_support_automation",
+        "score": 4
       }
     ],
     "review_only_comparisons": [

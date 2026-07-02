@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en" data-astryx-theme="neutral" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>aipedia.wiki × Astryx — design-system demo</title>
+<meta name="description" content="aipedia.wiki homepage re-skinned in the Astryx (facebook/astryx) open-source design system. Live theme switcher across 7 Astryx themes plus light/dark toggle.">
+
+<!-- ============================================================
+     OFFLINE FALLBACK — Astryx "neutral" theme tokens, unlayered
+     so it always applies. Real CDN layers below win when reachable
+     because @layer rules always lose to unlayered rules UNLESS we
+     wrap this fallback in a named layer declared first. We do that
+     here, and declare the layer order explicitly so CDN layers
+     (reset, astryx-base, astryx-theme) outrank this fallback when
+     present, while this fallback still themes the page with zero
+     network access.
+     ============================================================ -->
+<style>
+@layer astryx-fallback, reset, astryx-base, astryx-theme;
+
+@layer astryx-fallback {
+  :root {
+    /* ---- typography ---- */
+    --font-family-heading: Figtree, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-family-body: Figtree, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-family-code: ui-monospace, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --font-size-4xs: 0.375rem;
+    --font-size-3xs: 0.4375rem;
+    --font-size-2xs: 0.5rem;
+    --font-size-xs: 0.625rem;
+    --font-size-sm: 0.75rem;
+    --font-size-base: 0.875rem;
+    --font-size-lg: 1.0625rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.8125rem;
+    --font-size-4xl: 2.1875rem;
+    --font-size-5xl: 2.625rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --text-label-size: var(--font-size-base);
+    --text-label-leading: 1.4286;
+    --text-supporting-size: var(--font-size-sm);
+
+    /* ---- spacing ---- */
+    --spacing-0: 0px;
+    --spacing-0-5: 2px;
+    --spacing-1: 4px;
+    --spacing-1-5: 6px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-7: 28px;
+    --spacing-8: 32px;
+    --spacing-9: 36px;
+    --spacing-10: 40px;
+    --spacing-11: 44px;
+    --spacing-12: 48px;
+
+    /* ---- radius ---- */
+    --radius-none: 0.25rem;
+    --radius-inner: 0.375rem;
+    --radius-element: 0.625rem;
+    --radius-container: 0.75rem;
+    --radius-page: 1.75rem;
+    --radius-full: 9999px;
+
+    /* ---- element size ramp ---- */
+    --size-element-sm: 28px;
+    --size-element-md: 32px;
+    --size-element-lg: 36px;
+
+    /* ---- duration (matches astryx-theme's values, which win once the
+       CDN loads, so hover/press speed doesn't shift when network arrives) ---- */
+    --duration-fast: 125ms;
+    --duration-fast-min: 95ms;
+    --duration-medium: 300ms;
+    --ease-standard: cubic-bezier(0.24,1,0.4,1);
+
+    /* ---- shadow (light values) ---- */
+    --shadow-low: 0 2px 4px rgba(0,0,0,.05), 0 4px 8px rgba(0,0,0,.10), inset 0 0 0 1px transparent;
+    --shadow-med: 0 2px 4px rgba(0,0,0,.05), 0 4px 12px rgba(0,0,0,.10), inset 0 0 0 1px transparent;
+    --shadow-high: 0 4px 6px rgba(0,0,0,.10), 0 12px 24px rgba(0,0,0,.15), inset 0 0 0 1px transparent;
+    --shadow-inset-hover: inset 0px 0px 0px 2px #0074e24D;
+    --shadow-inset-selected: inset 0px 0px 0px 2px #0074e280;
+    --shadow-inset-success: inset 0px 0px 0px 2px #1981004D;
+    --shadow-inset-warning: inset 0px 0px 0px 2px #ffce2f4D;
+    --shadow-inset-error: inset 0px 0px 0px 2px #e33f4a4D;
+
+    /* ---- color: LIGHT values ---- */
+    --color-background-surface: #ffffff;
+    --color-background-body: #f1f1f1;
+    --color-background-card: #ffffff;
+    --color-background-popover: #ffffff;
+    --color-background-muted: #f1f1f1;
+
+    --color-accent: #262626;
+    --color-accent-muted: #f1f1f1;
+    --color-on-accent: #ffffff;
+    --color-on-dark: #ffffff;
+    --color-on-light: #171717;
+
+    --color-neutral: #0000000F;
+    --color-overlay: #00000080;
+    --color-overlay-hover: #0000000D;
+    --color-overlay-pressed: #0000001A;
+    --color-tint-hover: black;
+
+    --color-text-primary: #171717;
+    --color-text-secondary: #737373;
+    --color-text-disabled: #a3a3a3;
+    --color-text-accent: #262626;
+
+    --color-icon-accent: #262626;
+    --color-icon-primary: #171717;
+    --color-icon-secondary: #737373;
+    --color-icon-disabled: #a3a3a3;
+
+    --color-success: #007004;
+    --color-error: #a50c25;
+    --color-warning: #745b00;
+    --color-success-muted: #c5e5c0;
+    --color-error-muted: #facecb;
+    --color-warning-muted: #f8da9d;
+    --color-on-success: #ffffff;
+    --color-on-error: #ffffff;
+    --color-on-warning: #171717;
+
+    --color-border: #ebebeb;
+    --color-border-emphasized: #d4d4d4;
+    --color-skeleton: #ebebeb;
+    --color-shadow: #0000001A;
+
+    /* ---- component tokens ---- */
+    --astryx-card-padding: var(--spacing-3);
+    --astryx-section-padding: var(--spacing-3);
+    --border-width: 1px;
+
+    color-scheme: light;
+  }
+
+  /* ---- DARK override, driven by data-astryx-media on <html> for this demo ----
+     NOTE ON FIDELITY: real theme.css only patches 3 tokens on
+     [data-astryx-media="dark"] (--color-text-primary, --color-icon-primary,
+     --color-accent) and otherwise relies on `light-dark()` against
+     `color-scheme` for the rest of the palette. This offline-only fallback
+     block intentionally redefines the full palette here instead, because
+     there is no light-dark()-driven CSS to fall back on when the CDN
+     (astryx-theme layer) fails to load. This is a deliberate simplification
+     for the no-network path only; the CDN-loaded page does not use this
+     block (it loses to the real astryx-theme layer). ---- */
+  :root[data-astryx-media="dark"],
+  html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-background-surface: #262626;
+    --color-background-body: #1b1b1b;
+    --color-background-card: #1b1b1b;
+    --color-background-popover: #1b1b1b;
+    --color-background-muted: #1b1b1b;
+
+    --color-accent: #ebebeb;
+    --color-accent-muted: #262626;
+    --color-on-accent: #171717;
+
+    --color-neutral: #FFFFFF1A;
+    --color-overlay: #000000CC;
+    --color-overlay-hover: #FFFFFF0D;
+    --color-overlay-pressed: #FFFFFF1A;
+    --color-tint-hover: white;
+
+    --color-text-primary: #fafafa;
+    --color-text-secondary: #a3a3a3;
+    --color-text-disabled: #525252;
+    --color-text-accent: #ebebeb;
+
+    --color-icon-accent: #ebebeb;
+    --color-icon-primary: #fafafa;
+    --color-icon-secondary: #a3a3a3;
+    --color-icon-disabled: #525252;
+
+    --color-success: #9fe59b;
+    --color-error: #ffc6c1;
+    --color-warning: #fdcf4f;
+    --color-success-muted: #84c9803D;
+    --color-error-muted: #ff9e973D;
+    --color-warning-muted: #deb4333D;
+    --color-on-success: #171717;
+    --color-on-error: #171717;
+
+    --color-border: #FFFFFF1A;
+    --color-border-emphasized: #525252;
+    --color-skeleton: #525252;
+    --color-shadow: #0000004D;
+
+    --shadow-low: 0 2px 4px rgba(0,0,0,.25), 0 4px 8px rgba(0,0,0,.40), inset 0 0 0 1px rgba(255,255,255,.08);
+    --shadow-med: 0 2px 4px rgba(0,0,0,.35), 0 4px 12px rgba(0,0,0,.50), inset 0 0 0 1px rgba(255,255,255,.12);
+    --shadow-high: 0 4px 6px rgba(0,0,0,.50), 0 12px 24px rgba(0,0,0,.70), inset 0 0 0 1px rgba(255,255,255,.15);
+  }
+}
+</style>
+
+<!-- ============================================================
+     GENUINE ASTRYX CDN CSS — load order matters: reset -> base -> theme.
+     If the CDN is blocked these simply fail to load and the offline
+     fallback @layer above (which is unlayered-priority-corrected via
+     the explicit @layer order statement) keeps the page fully themed.
+     ============================================================ -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@astryxdesign/core@0.1.2/src/reset.css" id="astryx-reset-link">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@astryxdesign/core@0.1.2/dist/astryx.css" id="astryx-base-link">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@astryxdesign/theme-neutral@0.1.2/dist/theme.css" id="astryx-theme-link" data-theme-name="neutral">
+
+<!-- ============================================================
+     DEMO-SPECIFIC STYLES — token-driven, zero hardcoded palette.
+     Component language follows SPEC B (Astryx style guide).
+
+     NOTE: the `.astryx-*` class names below (astryx-badge-info,
+     astryx-btn-primary, astryx-card, astryx-row, astryx-field,
+     astryx-list, etc.) are demo-authored CSS built on real Astryx
+     design tokens — they are NOT literal Astryx package classnames.
+     The real astryx.css component layer is StyleX-compiled atomic CSS
+     (e.g. .x1rj2uvf) emitted by React components at build time, which
+     isn't reproducible in static HTML; theme.css additionally exposes
+     only a small set of compound modifier classes (e.g. .astryx-badge.info)
+     meant to pair with those React components. This section is "Astryx
+     tokens, hand-built components," not a literal reproduction of the
+     package's own selectors.
+     ============================================================ -->
+<style>
+  * { box-sizing: border-box; }
+
+  /* ------------------------------------------------------------
+     Force color-scheme from data-theme, unlayered so it always
+     outranks the CDN theme's own `@layer astryx-theme { :root {
+     color-scheme: light dark; } }` rule (a real quirk in the
+     shipped theme-neutral.css that otherwise causes light-dark()
+     to follow the OS preference even when data-theme="light" is
+     set). Unlayered CSS always wins over any @layer, regardless
+     of load order, so this guarantees the toggle is authoritative.
+     ------------------------------------------------------------ */
+  html[data-theme="light"] { color-scheme: light; }
+  html[data-theme="dark"] { color-scheme: dark; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-background-body);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-base);
+    line-height: 1.4286;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- layout shell ---------- */
+  .gt-canvas { max-width: 1180px; margin: 0 auto; padding: 0 var(--spacing-5); }
+  @media (max-width: 720px) {
+    .gt-canvas { padding: 0 var(--spacing-4); }
+  }
+
+  /* ==========================================================
+     CONTROL BAR — theme switcher + light/dark toggle
+     ========================================================== */
+  .astryx-controlbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    flex-wrap: wrap;
+    padding: var(--spacing-2) var(--spacing-5);
+    background: var(--color-background-surface);
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--font-size-sm);
+  }
+  .astryx-controlbar .cb-label {
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+  }
+  .astryx-controlbar .cb-themes {
+    display: flex;
+    gap: var(--spacing-1);
+    flex-wrap: wrap;
+  }
+  @media (max-width: 720px) {
+    /* 7 theme swatches will still wrap at narrow widths, but drop the
+       sticky pin so a multi-row bar doesn't permanently occupy viewport
+       height while scrolling, and hide the non-essential status text. */
+    .astryx-controlbar {
+      position: static;
+      padding: var(--spacing-2) var(--spacing-4);
+    }
+    .astryx-controlbar #theme-load-status {
+      display: none;
+    }
+  }
+  .theme-swatch {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    height: var(--size-element-sm);
+    padding: 0 var(--spacing-2);
+    border-radius: var(--radius-element);
+    border: 1px solid var(--color-border-emphasized);
+    background: var(--color-background-card);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+  }
+  .theme-swatch:hover { background: var(--color-overlay-hover); }
+  .theme-swatch:active { background: var(--color-overlay-pressed); transform: scale(0.98); }
+  .theme-swatch[aria-pressed="true"] {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+    border-color: var(--color-accent);
+  }
+  .theme-swatch:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .theme-swatch .dot {
+    width: 10px; height: 10px; border-radius: var(--radius-full);
+    background: var(--swatch-color, currentColor);
+    border: 1px solid var(--color-border-emphasized);
+    flex-shrink: 0;
+  }
+
+  .cb-spacer { flex: 1 1 auto; }
+
+  .astryx-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    height: var(--size-element-md);
+    padding: var(--spacing-2) var(--spacing-3);
+    border: none;
+    border-radius: var(--radius-element);
+    font-size: var(--text-label-size, var(--font-size-base));
+    font-weight: var(--font-weight-medium);
+    line-height: var(--text-label-leading, 1.4286);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
+  }
+  .astryx-btn:active { transform: scale(0.98); }
+  .astryx-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+  .astryx-btn-primary { background: var(--color-accent); color: var(--color-on-accent); }
+  .astryx-btn-primary:hover { background-image: linear-gradient(var(--color-overlay-hover), var(--color-overlay-hover)); }
+  .astryx-btn-secondary { background: var(--color-neutral); color: var(--color-text-primary); }
+  .astryx-btn-secondary:hover { background-image: linear-gradient(var(--color-overlay-hover), var(--color-overlay-hover)); }
+  .astryx-btn-ghost { background: transparent; color: var(--color-text-primary); border: 1px solid var(--color-border-emphasized); }
+  .astryx-btn-ghost:hover { background: var(--color-overlay-hover); }
+  .astryx-btn-sm { height: var(--size-element-sm); padding: var(--spacing-1) var(--spacing-2); font-size: var(--font-size-sm); }
+  .astryx-btn-icon { aspect-ratio: 1/1; padding: 0; }
+
+  /* ==========================================================
+     HEADER / NAV
+     ========================================================== */
+  .site-header {
+    background: var(--color-background-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-6);
+    padding: var(--spacing-3) 0;
+  }
+  .nav-brand { display: flex; align-items: center; gap: var(--spacing-2); font-family: var(--font-family-heading); }
+  .nav-brand img { width: 26px; height: 26px; border-radius: var(--radius-inner); }
+  .nav-wordmark { font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); display: flex; align-items: baseline; gap: 1px; }
+  .nav-wordmark-tld { color: var(--color-text-secondary); font-weight: var(--font-weight-medium); }
+  .nav-livedot {
+    width: 7px; height: 7px; border-radius: var(--radius-full);
+    background: var(--color-success); margin-left: 2px;
+    box-shadow: 0 0 0 3px var(--color-success-muted);
+  }
+  .nav-links { display: flex; gap: var(--spacing-1); flex: 1 1 auto; }
+  .nav-links a {
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-element);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    transition: background-color var(--duration-fast-min) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+  }
+  .nav-links a:hover { background: var(--color-overlay-hover); color: var(--color-text-primary); }
+  .nav-search-trigger {
+    display: flex; align-items: center; gap: var(--spacing-2);
+    height: var(--size-element-sm);
+    padding: 0 var(--spacing-2) 0 var(--spacing-3);
+    border-radius: var(--radius-element);
+    border: 1px solid var(--color-border-emphasized);
+    background: var(--color-background-body);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+  .kbd-hint {
+    font-family: var(--font-family-code);
+    font-size: var(--font-size-2xs);
+    background: var(--color-background-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-inner);
+    padding: 1px 5px;
+    color: var(--color-text-secondary);
+  }
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* ==========================================================
+     SECTION RHYTHM (Astryx "Section" primitive)
+     ========================================================== */
+  .astryx-section {
+    padding: var(--spacing-8) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .astryx-section:last-of-type { border-bottom: none; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-5);
+    flex-wrap: wrap;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-accent);
+    margin-bottom: var(--spacing-2);
+  }
+  h2 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+  .section-sub {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    margin: var(--spacing-1) 0 0;
+  }
+  .section-action {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-accent);
+    white-space: nowrap;
+  }
+  .section-action:hover { text-decoration: underline; }
+
+  /* ==========================================================
+     CARD / SURFACE primitive (SPEC B section 3)
+     ========================================================== */
+  .astryx-card {
+    border-radius: var(--radius-container);
+    border: var(--border-width) solid var(--color-border-emphasized);
+    background: var(--color-background-card);
+    overflow: clip;
+    padding: var(--astryx-card-padding, var(--spacing-4));
+  }
+  .astryx-card.transparent { background: transparent; border-color: transparent; }
+  .astryx-card.muted { background: var(--color-background-muted); border-color: transparent; }
+  .astryx-card-clickable {
+    position: relative;
+    display: block;
+    transition: background-color var(--duration-fast) var(--ease-standard);
+  }
+  .astryx-card-clickable:hover { background: color-mix(in srgb, currentColor 5%, var(--color-background-card)); }
+  .astryx-card-clickable:active { background: color-mix(in srgb, currentColor 10%, var(--color-background-card)); }
+  .astryx-card-clickable:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+  /* ==========================================================
+     BADGE / TAG (SPEC B section 5)
+     ========================================================== */
+  .astryx-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+    height: var(--spacing-5);
+    padding: 0 var(--spacing-2);
+    border-radius: var(--radius-full);
+    font-size: var(--text-supporting-size, var(--font-size-sm));
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+  }
+  .astryx-badge-neutral { background: var(--color-neutral); color: var(--color-text-primary); }
+  /* Real Astryx .astryx-badge.info is a hardcoded blue regardless of theme;
+     this demo intentionally uses --color-accent instead so the badge stays
+     theme-coordinated across the live theme switcher. */
+  .astryx-badge-info { background: var(--color-accent); color: var(--color-on-accent); }
+  .astryx-badge-success { background: var(--color-success-muted); color: var(--color-success); }
+  .astryx-badge-warning { background: var(--color-warning-muted); color: var(--color-warning); }
+
+  /* ==========================================================
+     INPUT / SEARCH FIELD (SPEC B section 4)
+     ========================================================== */
+  .astryx-field {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    height: var(--size-element-lg);
+    padding: var(--spacing-1) var(--spacing-2);
+    border: var(--border-width) solid var(--color-border-emphasized);
+    border-radius: var(--radius-element);
+    background: var(--color-background-surface);
+    transition: border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
+  }
+  .astryx-field:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: inset 0 0 0 2px var(--color-accent-muted);
+  }
+  .astryx-field input {
+    border: none; outline: none; background: transparent; flex: 1 1 auto;
+    color: var(--color-text-primary); font-size: var(--font-size-base); font-family: var(--font-family-body);
+  }
+  .astryx-field input::placeholder { color: var(--color-text-disabled); }
+
+  /* ==========================================================
+     LIST ROWS (Item primitive, SPEC B section 6)
+     ========================================================== */
+  .astryx-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2);
+    border-radius: var(--radius-element);
+    transition: background-color var(--duration-fast-min) var(--ease-standard);
+  }
+  .astryx-row:hover { background: var(--color-overlay-hover); }
+  .astryx-row:active { background: var(--color-overlay-pressed); }
+  .astryx-row:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .astryx-list { display: flex; flex-direction: column; gap: var(--spacing-0-5); }
+  .astryx-list.dividers { gap: 0; }
+  .astryx-list.dividers .astryx-row { border-bottom: 1px solid var(--color-border); border-radius: 0; padding-left: 0; padding-right: 0; }
+  .astryx-list.dividers .astryx-row:last-child { border-bottom: none; }
+
+  /* ==========================================================
+     HERO
+     ========================================================== */
+  .gt-wiki-front { padding-top: var(--spacing-8); padding-bottom: var(--spacing-8); }
+  .freshness-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+  .freshness-bar .dot-sep { width: 3px; height: 3px; border-radius: 50%; background: var(--color-text-disabled); }
+  .freshness-bar a { color: var(--color-text-accent); font-weight: var(--font-weight-medium); }
+  .freshness-bar a:hover { text-decoration: underline; }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--spacing-8);
+    align-items: start;
+  }
+  h1 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    margin: 0 0 var(--spacing-3);
+    letter-spacing: -0.01em;
+  }
+  .hero-tagline {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.4118;
+    margin: 0 0 var(--spacing-6);
+    max-width: 46ch;
+  }
+  .hero-search-form { display: flex; gap: var(--spacing-2); max-width: 480px; margin-bottom: var(--spacing-6); }
+  .hero-search-form .astryx-field { flex: 1 1 auto; height: var(--size-element-lg); }
+
+  .gt-wiki-side { display: flex; flex-direction: column; gap: var(--spacing-3); }
+  .stat-link {
+    display: flex; align-items: baseline; justify-content: space-between; gap: var(--spacing-3);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-container);
+    border: 1px solid var(--color-border);
+    background: var(--color-background-card);
+    transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+  }
+  .stat-link:hover { border-color: var(--color-border-emphasized); background: var(--color-overlay-hover); }
+  .stat-num { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); font-family: var(--font-family-heading); }
+  .stat-label { font-size: var(--font-size-xs); color: var(--color-text-secondary); text-align: right; }
+  .stat-callout {
+    padding: var(--spacing-3);
+    border-radius: var(--radius-container);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+  .stat-callout .callout-kicker { font-size: var(--font-size-xs); opacity: 0.8; margin-bottom: 2px; }
+  .stat-callout .callout-main { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); }
+
+  .gt-wiki-portals {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-3);
+    margin-top: var(--spacing-8);
+  }
+  .portal-card {
+    padding: var(--spacing-3);
+    border-radius: var(--radius-container);
+    border: 1px solid var(--color-border);
+    background: var(--color-background-card);
+    transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
+  }
+  .portal-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+  .portal-kicker { font-size: var(--font-size-2xs); font-weight: var(--font-weight-semibold); color: var(--color-text-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--spacing-1); }
+  .portal-label { font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .gt-wiki-portals { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 720px) {
+    h1 { font-size: var(--font-size-3xl); }
+    .gt-wiki-portals { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ==========================================================
+     BUYER ROUTER
+     ========================================================== */
+  .router-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-4);
+  }
+  .router-card { display: flex; flex-direction: column; gap: var(--spacing-2); }
+  .router-tag { align-self: flex-start; }
+  .router-q { font-size: var(--font-size-base); font-weight: var(--font-weight-bold); line-height: 1.4286; margin: 0; }
+  .router-desc { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin: 0; }
+  .router-evidence {
+    margin-top: var(--spacing-2);
+    padding-top: var(--spacing-2);
+    border-top: 1px solid var(--color-border);
+    display: flex; flex-direction: column; gap: var(--spacing-1);
+  }
+  .router-evidence-src { font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+  .router-evidence-src strong { color: var(--color-text-primary); font-weight: var(--font-weight-medium); }
+  .router-metrics { display: flex; gap: var(--spacing-1); flex-wrap: wrap; }
+  .router-cta {
+    margin-top: var(--spacing-2);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-accent);
+  }
+  .router-cta:hover { text-decoration: underline; }
+
+  /* ==========================================================
+     CATEGORIES
+     ========================================================== */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-3);
+  }
+  .cat-card { display: flex; flex-direction: column; gap: var(--spacing-1); }
+  .cat-name { font-size: var(--font-size-base); font-weight: var(--font-weight-bold); }
+  .cat-meta { font-size: var(--font-size-xs); color: var(--color-text-secondary); display: flex; align-items: center; gap: var(--spacing-1); }
+  @media (max-width: 900px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .cat-grid { grid-template-columns: 1fr; } }
+
+  /* ==========================================================
+     TOP TOOLS
+     ========================================================== */
+  .tool-rank { width: 22px; text-align: center; font-weight: var(--font-weight-bold); color: var(--color-text-secondary); font-size: var(--font-size-sm); }
+  .tool-logo { width: 36px; height: 36px; border-radius: var(--radius-inner); border: 1px solid var(--color-border); object-fit: cover; background: var(--color-background-surface); }
+  .tool-info { flex: 1 1 auto; min-width: 0; }
+  .tool-name { font-weight: var(--font-weight-semibold); font-size: var(--font-size-base); }
+  .tool-cat { font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+  .tool-score { font-weight: var(--font-weight-bold); font-size: var(--font-size-base); color: var(--color-text-accent); }
+
+  /* ==========================================================
+     NEWS
+     ========================================================== */
+  .news-date {
+    flex-shrink: 0;
+    width: 58px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+  }
+  .news-headline { font-size: var(--font-size-base); font-weight: var(--font-weight-medium); line-height: 1.4286; }
+
+  /* ==========================================================
+     GUIDE LANES
+     ========================================================== */
+  .lane-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-4); }
+  .lane-label { font-size: var(--font-size-xs); color: var(--color-text-secondary); margin-bottom: var(--spacing-1); }
+  .lane-title { font-size: var(--font-size-base); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-1); }
+  .lane-detail { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
+  @media (max-width: 720px) { .lane-grid { grid-template-columns: 1fr; } }
+
+  /* ==========================================================
+     TRUST STRIP
+     ========================================================== */
+  .gt-trust { padding: var(--spacing-8) 0; }
+  .trust-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-2); margin-top: var(--spacing-4); }
+  .trust-item {
+    display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-2);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-container);
+    border: 1px solid var(--color-border);
+    background: var(--color-background-card);
+  }
+  .trust-item:hover { border-color: var(--color-border-emphasized); }
+  .trust-name { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); }
+  .trust-date { font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+  @media (max-width: 720px) { .trust-list { grid-template-columns: 1fr; } }
+
+  /* ==========================================================
+     FOOTER
+     ========================================================== */
+  .site-footer {
+    background: var(--color-background-surface);
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-10) 0 var(--spacing-6);
+  }
+  .footer-top { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: var(--spacing-6); margin-bottom: var(--spacing-8); }
+  .footer-brand-tagline { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--spacing-3); max-width: 34ch; }
+  .footer-col-title { font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary); margin-bottom: var(--spacing-3); }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+  .footer-col a { font-size: var(--font-size-sm); color: var(--color-text-primary); }
+  .footer-col a:hover { color: var(--color-text-accent); text-decoration: underline; }
+  .footer-legal {
+    display: flex; gap: var(--spacing-4); flex-wrap: wrap;
+    padding: var(--spacing-4) 0;
+    border-top: 1px solid var(--color-border);
+    font-size: var(--font-size-xs);
+  }
+  .footer-legal a { color: var(--color-text-secondary); }
+  .footer-legal a:hover { color: var(--color-text-accent); }
+  .footer-standards { display: flex; gap: var(--spacing-2); flex-wrap: wrap; margin: var(--spacing-2) 0 var(--spacing-4); }
+  .footer-disclosure { font-size: var(--font-size-xs); color: var(--color-text-secondary); max-width: 70ch; line-height: 1.6; }
+  .footer-copy { font-size: var(--font-size-xs); color: var(--color-text-disabled); margin-top: var(--spacing-4); }
+  .footer-copy a { color: var(--color-text-secondary); }
+  @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
+
+  /* ==========================================================
+     DEMO BANNER
+     ========================================================== */
+  .demo-banner {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+    text-align: center;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-1) var(--spacing-3);
+  }
+  .demo-banner strong { font-weight: var(--font-weight-bold); }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">This is an unofficial fan-made demo re-skinning the aipedia.wiki homepage with the open-source <strong>Astryx</strong> design system (facebook/astryx). Not affiliated with Meta.</div>
+
+<!-- ============================================================
+     CONTROL BAR — theme switcher (7 Astryx themes) + light/dark
+     ============================================================ -->
+<div class="astryx-controlbar" role="toolbar" aria-label="Astryx theme controls">
+  <span class="cb-label">Astryx theme</span>
+  <div class="cb-themes" id="theme-switcher">
+    <button type="button" class="theme-swatch" data-theme="neutral" aria-pressed="true" style="--swatch-color:#262626"><span class="dot"></span>Neutral</button>
+    <button type="button" class="theme-swatch" data-theme="butter" aria-pressed="false" style="--swatch-color:#caa53a"><span class="dot"></span>Butter</button>
+    <button type="button" class="theme-swatch" data-theme="chocolate" aria-pressed="false" style="--swatch-color:#7b4a2b"><span class="dot"></span>Chocolate</button>
+    <button type="button" class="theme-swatch" data-theme="matcha" aria-pressed="false" style="--swatch-color:#5c7a4a"><span class="dot"></span>Matcha</button>
+    <button type="button" class="theme-swatch" data-theme="stone" aria-pressed="false" style="--swatch-color:#78716c"><span class="dot"></span>Stone</button>
+    <button type="button" class="theme-swatch" data-theme="gothic" aria-pressed="false" style="--swatch-color:#4b2e83"><span class="dot"></span>Gothic</button>
+    <button type="button" class="theme-swatch" data-theme="y2k" aria-pressed="false" style="--swatch-color:#ff6ec7"><span class="dot"></span>Y2K</button>
+  </div>
+  <div class="cb-spacer"></div>
+  <span class="cb-label" id="theme-load-status"></span>
+  <button type="button" class="astryx-btn astryx-btn-ghost astryx-btn-sm" id="mode-toggle" aria-pressed="false">
+    <span id="mode-toggle-icon">&#9789;</span> <span id="mode-toggle-label">Dark mode</span>
+  </button>
+</div>
+
+<!-- ============================================================
+     HEADER / NAV
+     ============================================================ -->
+<header class="site-header" id="site-nav">
+  <div class="gt-canvas">
+    <div class="nav-row">
+      <a href="#" class="nav-brand" aria-label="aipedia.wiki home">
+        <img src="assets/aipedia-logo-lantern-48.png" alt="aipedia.wiki logo" width="26" height="26">
+        <span class="nav-wordmark">aipedia<span class="nav-wordmark-tld">.wiki</span></span>
+        <span class="nav-livedot" title="Freshness tracked"></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/tools/">All Tools</a>
+        <a href="/explore/">Explore</a>
+        <a href="/categories/">Categories</a>
+        <a href="/compare/">Compare</a>
+        <a href="/news/">News</a>
+      </nav>
+      <button type="button" class="nav-search-trigger">
+        <span>&#128269; Search 296 tools</span>
+        <span class="kbd-hint">Ctrl K</span>
+      </button>
+      <button type="button" class="astryx-btn astryx-btn-ghost astryx-btn-icon astryx-btn-sm" aria-label="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="gt-canvas">
+
+  <!-- ============================================================
+       1. HERO — "Wiki front"
+       ============================================================ -->
+  <section class="gt-wiki-front">
+    <div class="freshness-bar">
+      <span>Page refreshed Jun 28</span>
+      <span class="dot-sep"></span>
+      <span>3 new stories today</span>
+      <span class="dot-sep"></span>
+      <a href="/about/editorial/">Independent editorial wiki</a>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1>aipedia.wiki</h1>
+        <p class="hero-tagline">Independent AI tool records for deciding what to use, buy, or avoid.</p>
+        <form class="hero-search-form" role="search">
+          <div class="astryx-field">
+            <span>&#128269;</span>
+            <input type="search" placeholder="Search wiki" aria-label="Search wiki">
+          </div>
+          <button type="submit" class="astryx-btn astryx-btn-primary">Search</button>
+        </form>
+
+        <nav class="gt-wiki-portals" aria-label="Browse portals">
+          <a class="portal-card" href="/tools/">
+            <div class="portal-kicker">296 scored</div>
+            <div class="portal-label">Find a tool</div>
+          </a>
+          <a class="portal-card" href="/categories/">
+            <div class="portal-kicker">15 lanes</div>
+            <div class="portal-label">Pick a job</div>
+          </a>
+          <a class="portal-card" href="/compare/">
+            <div class="portal-kicker">56 matchups</div>
+            <div class="portal-label">Compare tools</div>
+          </a>
+          <a class="portal-card" href="/guides/">
+            <div class="portal-kicker">125 guides</div>
+            <div class="portal-label">Choose a plan</div>
+          </a>
+          <a class="portal-card" href="/answers/">
+            <div class="portal-kicker">Fast answers</div>
+            <div class="portal-label">Get best pick</div>
+          </a>
+          <a class="portal-card" href="/news/">
+            <div class="portal-kicker">401 updates</div>
+            <div class="portal-label">Check changes</div>
+          </a>
+        </nav>
+      </div>
+
+      <aside class="gt-wiki-side">
+        <a class="stat-link" href="/tools/">
+          <span class="stat-num">296</span>
+          <span class="stat-label">active tool records</span>
+        </a>
+        <a class="stat-link" href="/compare/">
+          <span class="stat-num">56</span>
+          <span class="stat-label">comparison pages</span>
+        </a>
+        <a class="stat-link" href="/guides/">
+          <span class="stat-num">125</span>
+          <span class="stat-label">buyer guides</span>
+        </a>
+        <a class="stat-callout" href="/about/scoring/">
+          <div class="callout-kicker">No paid rankings</div>
+          <div class="callout-main">Source-backed scores.</div>
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. BUYER ROUTER — "Start here"
+       ============================================================ -->
+  <section class="astryx-section gt-buyer-router">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Start here</span>
+        <h2>What do you need AI to do?</h2>
+        <p class="section-sub">Pick a route. Every card opens a sourced shortlist.</p>
+      </div>
+    </div>
+
+    <div class="router-grid">
+      <div class="astryx-card router-card">
+        <span class="astryx-badge astryx-badge-neutral router-tag">Coding agent</span>
+        <p class="router-q">I need an AI coding agent</p>
+        <p class="router-desc">Editor-native coding with sources and pricing checked.</p>
+        <div class="router-evidence">
+          <div class="router-evidence-src"><strong>Source:</strong> Cursor pricing (cursor.com/pricing) &middot; verified Jun 24, 2026 &middot; 42 sources</div>
+          <div class="router-metrics">
+            <span class="astryx-badge astryx-badge-neutral">Registered source</span>
+            <span class="astryx-badge astryx-badge-success">Current</span>
+            <span class="astryx-badge astryx-badge-info">High confidence</span>
+          </div>
+        </div>
+        <a class="router-cta" href="/categories/ai-coding/">Open buyer shortlist &rarr;</a>
+      </div>
+
+      <div class="astryx-card router-card">
+        <span class="astryx-badge astryx-badge-neutral router-tag">Local/open model</span>
+        <p class="router-q">I need a local or open model</p>
+        <p class="router-desc">Local testing before hosted inference.</p>
+        <div class="router-evidence">
+          <div class="router-evidence-src"><strong>Source:</strong> LM Studio OpenAI-compatible endpoints docs &middot; verified Jun 22, 2026 &middot; 61 sources</div>
+          <div class="router-metrics">
+            <span class="astryx-badge astryx-badge-neutral">Registered source</span>
+            <span class="astryx-badge astryx-badge-success">Current</span>
+            <span class="astryx-badge astryx-badge-info">High confidence</span>
+          </div>
+        </div>
+        <a class="router-cta" href="/categories/ai-infrastructure/">Open buyer shortlist &rarr;</a>
+      </div>
+
+      <div class="astryx-card router-card">
+        <span class="astryx-badge astryx-badge-neutral router-tag">Marketing stack</span>
+        <p class="router-q">I need a marketing or automation stack</p>
+        <p class="router-desc">Automation picks with source-backed limits.</p>
+        <div class="router-evidence">
+          <div class="router-evidence-src"><strong>Source:</strong> n8n pricing &middot; verified Jun 22, 2026 &middot; 17 sources</div>
+          <div class="router-metrics">
+            <span class="astryx-badge astryx-badge-neutral">Registered source</span>
+            <span class="astryx-badge astryx-badge-success">Current</span>
+            <span class="astryx-badge astryx-badge-info">High confidence</span>
+          </div>
+        </div>
+        <a class="router-cta" href="/categories/ai-automation/">Open buyer shortlist &rarr;</a>
+      </div>
+
+      <div class="astryx-card router-card">
+        <span class="astryx-badge astryx-badge-neutral router-tag">High-value tool</span>
+        <p class="router-q">I need a high-confidence tool pick</p>
+        <p class="router-desc">Current pick with source, price, and fit checked.</p>
+        <div class="router-evidence">
+          <div class="router-evidence-src"><strong>Source:</strong> Cursor documentation &middot; verified Jun 23, 2026 &middot; 7 sources</div>
+          <div class="router-metrics">
+            <span class="astryx-badge astryx-badge-neutral">Registered source</span>
+            <span class="astryx-badge astryx-badge-success">Current</span>
+            <span class="astryx-badge astryx-badge-info">High confidence</span>
+          </div>
+        </div>
+        <a class="router-cta" href="/tools/cursor/">Review tool record &rarr;</a>
+      </div>
+
+      <div class="astryx-card router-card">
+        <span class="astryx-badge astryx-badge-neutral router-tag">Fast answer</span>
+        <p class="router-q">I need a general AI assistant</p>
+        <p class="router-desc">General assistant pick with current sources.</p>
+        <div class="router-evidence">
+          <div class="router-evidence-src"><strong>Source:</strong> OpenAI GPT-5.5 announcement &middot; verified Jun 22, 2026 &middot; 5 sources</div>
+          <div class="router-metrics">
+            <span class="astryx-badge astryx-badge-neutral">Registered source</span>
+            <span class="astryx-badge astryx-badge-success">Current</span>
+            <span class="astryx-badge astryx-badge-info">High confidence</span>
+          </div>
+        </div>
+        <a class="router-cta" href="/answers/best-ai-chatbot-2026/">Open fast answer &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. BROWSE BY CATEGORY
+       ============================================================ -->
+  <section class="astryx-section gt-categories">
+    <div class="section-head">
+      <h2>Browse by category</h2>
+      <a class="section-action" href="/categories/">All categories &rarr;</a>
+    </div>
+
+    <div class="cat-grid">
+      <a class="astryx-card cat-card" href="/categories/ai-chatbots/">
+        <span class="cat-name">AI Chatbots &amp; LLMs</span>
+        <span class="cat-meta">26 tools &middot; Top 9.5/10</span>
+      </a>
+      <a class="astryx-card cat-card" href="/categories/ai-coding/">
+        <span class="cat-name">AI Coding Assistants</span>
+        <span class="cat-meta">37 tools &middot; Top 9.3/10</span>
+      </a>
+      <a class="astryx-card cat-card" href="/categories/ai-image/">
+        <span class="cat-name">AI Image Generation</span>
+        <span class="cat-meta">20 tools &middot; Top 9.3/10</span>
+      </a>
+      <a class="astryx-card cat-card" href="/categories/ai-infrastructure/">
+        <span class="cat-name">AI Infrastructure &amp; Model APIs</span>
+        <span class="cat-meta">33 tools &middot; Top 9.3/10</span>
+      </a>
+      <a class="astryx-card cat-card" href="/categories/ai-voice/">
+        <span class="cat-name">AI Voice Tools</span>
+        <span class="cat-meta">21 tools &middot; Top 9.3/10</span>
+      </a>
+      <a class="astryx-card cat-card" href="/categories/ai-automation/">
+        <span class="cat-name">AI Automation &amp; Agents</span>
+        <span class="cat-meta">49 tools &middot; Top 9/10</span>
+      </a>
+      <a class="astryx-card cat-card" href="/categories/ai-seo/">
+        <span class="cat-name">AI SEO Tools</span>
+        <span class="cat-meta">9 tools &middot; Top 9/10</span>
+      </a>
+      <a class="astryx-card cat-card" href="/categories/ai-research/">
+        <span class="cat-name">AI Research Tools</span>
+        <span class="cat-meta">10 tools &middot; Top 8.8/10</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. HIGHEST-RATED TOOL RECORDS
+       ============================================================ -->
+  <section class="astryx-section gt-top-tools">
+    <div class="section-head">
+      <h2>Highest-rated tool records</h2>
+      <a class="section-action" href="/tools/">Tool index &rarr;</a>
+    </div>
+
+    <div class="astryx-list dividers">
+      <a class="astryx-row" href="/tools/chatgpt/">
+        <span class="tool-rank">1</span>
+        <img class="tool-logo" src="assets/chatgpt.png" alt="ChatGPT logo">
+        <span class="tool-info">
+          <div class="tool-name">ChatGPT</div>
+          <div class="tool-cat">Chatbots &middot; 9.5/10</div>
+        </span>
+        <span class="tool-score">9.5</span>
+      </a>
+      <a class="astryx-row" href="/tools/claude/">
+        <span class="tool-rank">2</span>
+        <img class="tool-logo" src="assets/claude.png" alt="Claude logo">
+        <span class="tool-info">
+          <div class="tool-name">Claude</div>
+          <div class="tool-cat">Chatbots &middot; 9.3/10</div>
+        </span>
+        <span class="tool-score">9.3</span>
+      </a>
+      <a class="astryx-row" href="/tools/elevenlabs/">
+        <span class="tool-rank">3</span>
+        <img class="tool-logo" src="assets/elevenlabs.png" alt="ElevenLabs logo">
+        <span class="tool-info">
+          <div class="tool-name">ElevenLabs</div>
+          <div class="tool-cat">Voice &middot; 9.3/10</div>
+        </span>
+        <span class="tool-score">9.3</span>
+      </a>
+      <a class="astryx-row" href="/tools/github-copilot/">
+        <span class="tool-rank">4</span>
+        <img class="tool-logo" src="assets/github-copilot.svg" alt="GitHub Copilot logo">
+        <span class="tool-info">
+          <div class="tool-name">GitHub Copilot</div>
+          <div class="tool-cat">Coding &middot; 9.3/10</div>
+        </span>
+        <span class="tool-score">9.3</span>
+      </a>
+      <a class="astryx-row" href="/tools/gpt-image-2/">
+        <span class="tool-rank">5</span>
+        <img class="tool-logo" src="assets/gpt-image-2.png" alt="GPT Image 2 logo">
+        <span class="tool-info">
+          <div class="tool-name">GPT Image 2</div>
+          <div class="tool-cat">Image &middot; 9.3/10</div>
+        </span>
+        <span class="tool-score">9.3</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. LATEST AI NEWS
+       ============================================================ -->
+  <section class="astryx-section gt-news">
+    <div class="section-head">
+      <div>
+        <h2>Latest AI news</h2>
+        <p class="section-sub">Latest archive entry: Jun 29. Changes that affect tool choice.</p>
+      </div>
+      <a class="section-action" href="/news/">All news &rarr;</a>
+    </div>
+
+    <div class="astryx-list dividers">
+      <a class="astryx-row" href="/news/2026-06-29-openai-hp-frontier-enterprise-rollout/">
+        <span class="news-date">Jun 29</span>
+        <span class="news-headline">HP's OpenAI Frontier rollout turns pilots into an enterprise-agent test case</span>
+      </a>
+      <a class="astryx-row" href="/news/2026-06-29-grok-45-private-beta-benchmark-caution/">
+        <span class="news-date">Jun 29</span>
+        <span class="news-headline">Grok 4.5 private beta needs buyer caution before benchmark claims matter</span>
+      </a>
+      <a class="astryx-row" href="/news/2026-06-29-google-ai-studio-gemini-api-key-incident/">
+        <span class="news-date">Jun 29</span>
+        <span class="news-headline">Gemini API key incident exposes a fragile OpenAI-compatible path</span>
+      </a>
+      <a class="astryx-row" href="/news/2026-06-28-veo-vertex-ai-endpoint-deadline/">
+        <span class="news-date">Jun 28</span>
+        <span class="news-headline">Veo API users have two days to migrate old Vertex AI video endpoints</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. BUYER GUIDES CHECKED THIS WEEK
+       ============================================================ -->
+  <section class="astryx-section gt-home-refresh">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Recently verified</span>
+        <h2>Buyer guides checked this week</h2>
+        <p class="section-sub">Checked June 28, 2026 against vendor sources before recommending swaps.</p>
+      </div>
+      <a class="section-action" href="/answers/best-ai-video-generator-2026/">Best AI video answer &rarr;</a>
+    </div>
+
+    <div class="lane-grid">
+      <a class="astryx-card" href="/guides/consensus-pricing-for-students-and-researchers/">
+        <div class="lane-label">Research plan math</div>
+        <div class="lane-title">Consensus pricing</div>
+        <div class="lane-detail">Free, Pro, Deep, Teams</div>
+      </a>
+      <a class="astryx-card" href="/guides/hume-ai-pricing-for-emotion-aware-voice-apps/">
+        <div class="lane-label">Emotion-aware voice math</div>
+        <div class="lane-title">Hume AI pricing</div>
+        <div class="lane-detail">EVI, Octave, concurrency</div>
+      </a>
+      <a class="astryx-card" href="/guides/gamma-pricing-for-founders-and-consultants/">
+        <div class="lane-label">Presentation plan math</div>
+        <div class="lane-title">Gamma pricing</div>
+        <div class="lane-detail">Free, Plus, Pro, Ultra</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. EDITORIAL STANDARDS / TRUST STRIP
+       ============================================================ -->
+  <aside class="gt-trust">
+    <h2>Editorial standards</h2>
+    <p class="section-sub">Independent scores, cited facts, disclosed affiliate links, and no paid rankings.</p>
+    <div class="trust-list">
+      <a class="trust-item" href="/about/scoring/" target="_blank" rel="noopener">
+        <span class="trust-name">Scoring methodology</span>
+        <span class="trust-date">verified 2026-06-12</span>
+      </a>
+      <a class="trust-item" href="/about/editorial/" target="_blank" rel="noopener">
+        <span class="trust-name">Editorial policy</span>
+        <span class="trust-date">verified 2026-06-12</span>
+      </a>
+      <a class="trust-item" href="/about/" target="_blank" rel="noopener">
+        <span class="trust-name">How we verify facts</span>
+        <span class="trust-date">verified 2026-06-12</span>
+      </a>
+      <a class="trust-item" href="/disclosure/" target="_blank" rel="noopener">
+        <span class="trust-name">Affiliate disclosure</span>
+        <span class="trust-date">verified 2026-06-06</span>
+      </a>
+    </div>
+  </aside>
+
+</div>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="gt-canvas">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-brand">
+          <img src="assets/aipedia-logo-lantern-48.png" alt="aipedia.wiki logo" width="26" height="26">
+          <span class="nav-wordmark">aipedia<span class="nav-wordmark-tld">.wiki</span></span>
+        </div>
+        <p class="footer-brand-tagline">The AI tools encyclopedia and buyer decision engine. Independent reviews, comparisons, guides, and scoring across 14 categories.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Categories</div>
+        <ul>
+          <li><a href="/categories/ai-chatbots/">AI Chatbots</a></li>
+          <li><a href="/categories/ai-coding/">AI Coding</a></li>
+          <li><a href="/categories/ai-writing/">AI Writing</a></li>
+          <li><a href="/categories/ai-image/">AI Image</a></li>
+          <li><a href="/categories/ai-video/">AI Video</a></li>
+          <li><a href="/categories/ai-voice/">AI Voice</a></li>
+          <li><a href="/categories/ai-music/">AI Music</a></li>
+          <li><a href="/categories/ai-automation/">AI Automation</a></li>
+          <li><a href="/categories/ai-search/">AI Search</a></li>
+          <li><a href="/categories/ai-research/">AI Research</a></li>
+          <li><a href="/categories/ai-seo/">AI SEO</a></li>
+          <li><a href="/categories/ai-design/">AI Design</a></li>
+          <li><a href="/categories/ai-notes/">AI Notes</a></li>
+          <li><a href="/categories/ai-presentation/">AI Presentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Explore</div>
+        <ul>
+          <li><a href="/explore/">Explore hub</a></li>
+          <li><a href="/categories/">Categories</a></li>
+          <li><a href="/tools/">All Tools</a></li>
+          <li><a href="/compare/">Comparisons</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/tool-set-builder/">Tool Set Builder</a></li>
+          <li><a href="/trending/">Trending</a></li>
+          <li><a href="/dead-tools/">Dead Tools</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Editorial</div>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/about/editorial/">Editorial Policy</a></li>
+          <li><a href="/about/scoring/">Scoring Methodology</a></li>
+          <li><a href="/media-kit/">Media Kit</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/terms/">Terms of Service</a>
+      <a href="/disclosure/">Affiliate Disclosure</a>
+    </div>
+
+    <div class="footer-standards">
+      <span class="astryx-badge astryx-badge-success">&#10003; No paid placements</span>
+      <span class="astryx-badge astryx-badge-success">&#10003; Monthly verification</span>
+      <span class="astryx-badge astryx-badge-success">&#10003; Independent editorial</span>
+      <span class="astryx-badge astryx-badge-success">&#10003; Cited sources</span>
+    </div>
+
+    <p class="footer-disclosure">Some links on aipedia.wiki are affiliate links. If you click through and purchase, we may earn a commission at no extra cost to you. Affiliate relationships do not influence our editorial scores, rankings, or reviews.</p>
+
+    <p class="footer-copy">&copy; 2026 aipedia.wiki &middot; Agentically operated. Standards-governed. Source-aware. Correction-friendly. See <a href="/about/editorial/">editorial policy</a>.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     VANILLA JS — theme switcher (lazy CDN load per theme) +
+     light/dark toggle (data-astryx-media). Dependency-free, guarded.
+     ============================================================ -->
+<script>
+(function () {
+  "use strict";
+
+  var CORE_VERSION = "0.1.2";
+  var THEME_CDN = function (name) {
+    return "https://cdn.jsdelivr.net/npm/@astryxdesign/theme-" + name + "@" + CORE_VERSION + "/dist/theme.css";
+  };
+
+  var html = document.documentElement;
+  var themeLinkEl = document.getElementById("astryx-theme-link");
+  var statusEl = document.getElementById("theme-load-status");
+  var switcherEl = document.getElementById("theme-switcher");
+  var loadedThemes = { neutral: true }; // neutral is already linked in <head>
+
+  function setStatus(msg, isError) {
+    if (!statusEl) return;
+    statusEl.textContent = msg || "";
+    statusEl.style.color = isError ? "var(--color-error)" : "var(--color-text-secondary)";
+  }
+
+  function activateTheme(name) {
+    if (!name) return;
+    html.setAttribute("data-astryx-theme", name);
+    if (switcherEl) {
+      var buttons = switcherEl.querySelectorAll(".theme-swatch");
+      for (var i = 0; i < buttons.length; i++) {
+        var match = buttons[i].getAttribute("data-theme") === name;
+        buttons[i].setAttribute("aria-pressed", match ? "true" : "false");
+      }
+    }
+  }
+
+  function loadTheme(name, cb) {
+    if (loadedThemes[name]) {
+      // Already fetched once — just swap the stylesheet href to this theme
+      // (guarded: only re-point the link, do not re-insert duplicate tags).
+      if (themeLinkEl.getAttribute("data-theme-name") !== name) {
+        themeLinkEl.setAttribute("href", THEME_CDN(name));
+        themeLinkEl.setAttribute("data-theme-name", name);
+      }
+      cb(true);
+      return;
+    }
+    setStatus("Loading " + name + " theme…");
+    // Use a real <link> load/error guard via a temporary element to confirm
+    // the CDN theme actually resolves before swapping the live stylesheet.
+    var testLink = document.createElement("link");
+    testLink.rel = "stylesheet";
+    testLink.href = THEME_CDN(name);
+    var settled = false;
+    var timeout = setTimeout(function () {
+      if (settled) return;
+      settled = true;
+      setStatus("Theme “" + name + "” timed out — staying on current theme.", true);
+      testLink.remove();
+      cb(false);
+    }, 6000);
+
+    testLink.onload = function () {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timeout);
+      loadedThemes[name] = true;
+      themeLinkEl.setAttribute("href", THEME_CDN(name));
+      themeLinkEl.setAttribute("data-theme-name", name);
+      testLink.remove();
+      setStatus("");
+      cb(true);
+    };
+    testLink.onerror = function () {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timeout);
+      setStatus("Could not reach CDN for “" + name + "” — staying on current theme.", true);
+      testLink.remove();
+      cb(false);
+    };
+    document.head.appendChild(testLink);
+  }
+
+  if (switcherEl) {
+    switcherEl.addEventListener("click", function (e) {
+      var btn = e.target.closest ? e.target.closest(".theme-swatch") : null;
+      if (!btn || !switcherEl.contains(btn)) return;
+      var name = btn.getAttribute("data-theme");
+      if (!name) return;
+      loadTheme(name, function (ok) {
+        if (ok) activateTheme(name);
+      });
+    });
+  }
+
+  // ---------------- Light / dark toggle ----------------
+  var modeBtn = document.getElementById("mode-toggle");
+  var modeIcon = document.getElementById("mode-toggle-icon");
+  var modeLabel = document.getElementById("mode-toggle-label");
+
+  function applyMode(mode) {
+    // mode: "light" | "dark"
+    html.setAttribute("data-theme", mode);
+    html.setAttribute("data-astryx-media", mode);
+    if (modeBtn) modeBtn.setAttribute("aria-pressed", mode === "dark" ? "true" : "false");
+    if (modeIcon) modeIcon.textContent = mode === "dark" ? "☀" : "☽";
+    if (modeLabel) modeLabel.textContent = mode === "dark" ? "Light mode" : "Dark mode";
+  }
+
+  if (modeBtn) {
+    modeBtn.addEventListener("click", function () {
+      var current = html.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      applyMode(current === "dark" ? "light" : "dark");
+    });
+  }
+
+  // Initialize explicit state (matches head defaults: neutral + light).
+  activateTheme("neutral");
+  applyMode("light");
+})();
+</script>
+
+</body>
+</html>

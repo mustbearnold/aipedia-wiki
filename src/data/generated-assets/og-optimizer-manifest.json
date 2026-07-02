@@ -1,10 +1,10 @@
 {
   "version": 1,
   "kind": "og-png-optimizer",
-  "source_hash": "bc1158a31268a569af711efbeff17ee0db57e6e733dbd244ba9fb8697653dacc",
+  "source_hash": "079cad9f36c6d7346bf58c2dbbea1c2f0a6797a5de504518ed4b3a45df87a41a",
   "generated_at": "deterministic",
   "meta": {
-    "files": 1018
+    "files": 1118
   },
   "outputs": [
     {
@@ -31,8 +31,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 52347,
-      "sha256": "8ec0441f0e0362c026417bc8b9c00bbc6c2c98f8b7258fbc3efc205b8fd07edc"
+      "bytes": 52042,
+      "sha256": "c20fce50c943480856aee9cbd2581a480eb73d07aec84772c109e6a490aa2aaf"
     },
     {
       "file": "public/og/news/2026-03-15-pixverse-300m-series-c.png",
@@ -58,8 +58,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 46408,
-      "sha256": "ec53fc5890fb749d5c27412513b886c99fb57f554031ed8af991cbe65b4d70da"
+      "bytes": 45926,
+      "sha256": "8868f5c74dc7402925778519be2be615364cfb12ccfef6a3dc2b441006741471"
     },
     {
       "file": "public/og/news/2026-03-30-harvey-200m-at-11b-valuation.png",
@@ -103,8 +103,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 41376,
-      "sha256": "27938c3d8ae2ce9295e0a45f460920dccd856331f885a0a440b7ba3dc210f297"
+      "bytes": 41366,
+      "sha256": "a8dfcc1b73413125f18c1463313e0542bc8b9e9dd13bcf5b2282980c00e17cab"
     },
     {
       "file": "public/og/news/2026-04-07-anthropic-google-broadcom-tpu-deal.png",
@@ -157,8 +157,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 47221,
-      "sha256": "8486d2b906e273830cc027964544f3f86119143b93d67af306876b8a19f1fc72"
+      "bytes": 46692,
+      "sha256": "54a2473d8d874d24d1170ccd3fe97b574011b7d32c15c8145bb84a74a6f9cc07"
     },
     {
       "file": "public/og/news/2026-04-14-anthropic-800b-valuation-offers.png",
@@ -346,8 +346,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 49068,
-      "sha256": "e531e153aba1b49bef43799ae0dcb117eaf06d8c229b437469a5112f43737159"
+      "bytes": 45948,
+      "sha256": "7b4a3b9e12b188387e0b158686029ec3bf41f2376fc9c8927808c46e0108cdaf"
     },
     {
       "file": "public/og/news/2026-04-17-amodei-white-house-mythos.png",
@@ -373,8 +373,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 56979,
-      "sha256": "850ce8c9f7cf69ffd66a4ebd29048c8511266fdc3616fd32fdfc4c65d2f60ed6"
+      "bytes": 55260,
+      "sha256": "c572d225feddd4cb32b41b7fc0cb587a62bdb71b406c7a50b7f72d2136aa33dc"
     },
     {
       "file": "public/og/news/2026-04-17-cursor-2b-at-50b-valuation.png",
@@ -409,8 +409,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 54927,
-      "sha256": "968be6e80a6bdab1b146df4b18218d65605c2e7f9b3f21683ea15d3c20a9f051"
+      "bytes": 51112,
+      "sha256": "faef6315613103f09bf0fe1f3a7ba734c34615494b54845220647c85fa91344b"
     },
     {
       "file": "public/og/news/2026-04-17-mozilla-thunderbolt-self-hosted-ai.png",
@@ -553,8 +553,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 49465,
-      "sha256": "94a56c8a6632823fe3f8d4100d48632a1cfcea5abe75fab990e1e137b59f6a0a"
+      "bytes": 49367,
+      "sha256": "362743b1ffa4a7b33505f628a29ad51b9aa67c8e02c3589613ab68b9397f726c"
     },
     {
       "file": "public/og/news/2026-04-20-vercel-security-breach-shinyhunters.png",
@@ -778,8 +778,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 51974,
-      "sha256": "ee1165a7b2c58b5c95eff5bdebd38273152c3106c9f0ccdb135a4b6272254adf"
+      "bytes": 48393,
+      "sha256": "2c9f0685daec93052df308fc0af2822237919c3f3d4e1f967a8fe92e7738c37f"
     },
     {
       "file": "public/og/news/2026-04-23-google-agentic-data-cloud-knowledge-catalog.png",
@@ -859,8 +859,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 51779,
-      "sha256": "7f0aff96674700cb1a2f019270e080e79177277646d1c67263290ee68a2538ad"
+      "bytes": 50872,
+      "sha256": "e77685f1841ad8216eb10a0c0d8a5f7b7c9a92a95a1945897ba4ea5862ce01e2"
     },
     {
       "file": "public/og/news/2026-04-24-anthropic-nec-ai-engineering-workforce.png",
@@ -913,8 +913,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 55580,
-      "sha256": "7c2c72ccb9101d730d39efe91f7ddfb141af2a5bf954015032439859e1007c77"
+      "bytes": 50804,
+      "sha256": "de0afbc521ba04530be19985ba2f4a59f363c940fa33b8f042514d56a2cbfde6"
     },
     {
       "file": "public/og/news/2026-04-24-google-anthropic-40b-investment.png",
@@ -994,8 +994,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 47933,
-      "sha256": "9e7009849c82e8e8d13f0fda3f787f4325b84b2e0a084a062c32d6c2af7c1f55"
+      "bytes": 47246,
+      "sha256": "994994ef66e4e4d48c7c435a341daf6a36bf798e1ab420c63811d809c34b0ebd"
     },
     {
       "file": "public/og/news/2026-04-26-forbes-ai-50-2026.png",
@@ -1003,8 +1003,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 44427,
-      "sha256": "1cdd3dc640e014f6897bd9ce08803bb4ad2375a526d5e9a2120c1cb75f27e10a"
+      "bytes": 44318,
+      "sha256": "2b77727b6423a81c31e4c33e0b31828610b4b639e390ff17b2aea212b74b3b37"
     },
     {
       "file": "public/og/news/2026-04-26-gemini-embedding-2-ga.png",
@@ -1030,8 +1030,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 46354,
-      "sha256": "310a80c9350e0832aa8f2c3775d326606caa801f3bad04c7c44c9f43c93bfded"
+      "bytes": 45862,
+      "sha256": "8fdd6ef06bbeda3f103466688a07ec2d7d33aa2f24e91b13423a1f580f9070b4"
     },
     {
       "file": "public/og/news/2026-04-26-github-copilot-jira-agent-controls.png",
@@ -1048,8 +1048,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 46122,
-      "sha256": "eba0f0485129747937c328c8d2bed399230b441e1ce05a2371f5e82617c427e8"
+      "bytes": 46107,
+      "sha256": "7dd4bcc551bf2cd7c70234ffeb2de66219ad42f57574eb313e39d4c4ed224224"
     },
     {
       "file": "public/og/news/2026-04-26-github-copilot-web-debugging.png",
@@ -1093,8 +1093,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 47682,
-      "sha256": "3ecc608f5a217e1b0480c474fc18b1854da4aa3d51a9afca38cf6a95505ac50f"
+      "bytes": 47495,
+      "sha256": "1bdf2c1fd17c3d6c02b6b1df9156af9f8b62b921e88da785e8a8b2b2916cc31c"
     },
     {
       "file": "public/og/news/2026-04-26-openai-tumbler-ridge-apology.png",
@@ -1129,8 +1129,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 49999,
-      "sha256": "f51d33a68ac95a7428dafd86d0b4fe5eea946ccaebf132671ef0bc1753480f9d"
+      "bytes": 45901,
+      "sha256": "f9c297cbcd0e38bbf54211e9d99600d88079c164087d2f4d11dec698b15d7313"
     },
     {
       "file": "public/og/news/2026-04-27-accenture-microsoft-365-copilot-rollout.png",
@@ -1174,8 +1174,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 54516,
-      "sha256": "1dcdc1699c0d12390b550acc27f962171138b93244735e58855e8ff3947e3782"
+      "bytes": 54475,
+      "sha256": "8a1df99f88dbba78a8522698b3b14d84fff3b61bba94d2408029f9a24136a2a0"
     },
     {
       "file": "public/og/news/2026-04-27-github-copilot-cloud-agent-faster-start.png",
@@ -1228,8 +1228,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 51485,
-      "sha256": "90145199e351b65d21bcb2852d71cef1eaf1a1d8c1fd28dbcfea71ff8755307a"
+      "bytes": 51434,
+      "sha256": "fabce1d02e542c573bc7c61584e9fb43b3227670b800020f1f6a1f32a4c03ca0"
     },
     {
       "file": "public/og/news/2026-04-27-openai-ai-phone-2028-report.png",
@@ -1291,8 +1291,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 43152,
-      "sha256": "0adbeb3453765c8e4b722915848c55ba83da2da0c68ba64c0aa262d7bf4f0109"
+      "bytes": 43115,
+      "sha256": "e347c4d25466af7e1217a14b5e04ea9ff885613d24bedd996b09267e1e449604"
     },
     {
       "file": "public/og/news/2026-04-28-amazon-quick-desktop-ai-assistant.png",
@@ -1354,8 +1354,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 51201,
-      "sha256": "b12ddf72713c13bc38db51ec8e963eaa9a46365e3390aaeb121564e5e33bb19d"
+      "bytes": 49740,
+      "sha256": "0c18063e7613cc0cb6b41cfb3eba01902381522d100bc259900e15147a8af500"
     },
     {
       "file": "public/og/news/2026-04-28-mistral-3-open-model-release.png",
@@ -1381,8 +1381,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 58078,
-      "sha256": "357d801a55e51e7502b0036a06f5e0469c4108ef1f51692795fd265f33b95426"
+      "bytes": 51727,
+      "sha256": "5cb7165a73456674a6ee64a5f2e285ac85d283f23fc4ef750c7909f4f22002be"
     },
     {
       "file": "public/og/news/2026-04-28-sage-aws-agentic-ai-finance.png",
@@ -1453,8 +1453,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 53358,
-      "sha256": "07dc7e2a5fdd8b027937a17cc2e74727180d318c25105dd58631ffb2171d553a"
+      "bytes": 53149,
+      "sha256": "f1a61ee6e7802581e31e285f92b137e56e04c28c429ee9c74393fa5407bfba7b"
     },
     {
       "file": "public/og/news/2026-04-30-claude-security-public-beta.png",
@@ -1471,8 +1471,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 41532,
-      "sha256": "844aebebcb1047cb9bf759e978a393fca0ce2ef6eeeb4a864ecdbf2ca6b022af"
+      "bytes": 41190,
+      "sha256": "0a90da2539c20a79a28ede5923bd24caab8d474a4ddf8eb86e40872ab7947eaf"
     },
     {
       "file": "public/og/news/2026-04-30-gemini-google-built-in-cars-rollout.png",
@@ -1588,8 +1588,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 46400,
-      "sha256": "459e387eef1b640a196a78762a9b051c31bd0a9bc21e2a32746a778726efd9e4"
+      "bytes": 45950,
+      "sha256": "3424acbda2f76cf7103b09b4870c4d8d7bb8653cc7212f1c3f7e9351ef255d6f"
     },
     {
       "file": "public/og/news/2026-04-30-stripe-link-agent-wallet.png",
@@ -1597,8 +1597,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 54482,
-      "sha256": "6bec3326ae80bebdb31e71703f16438131c6cc49fdf6c396bba5f3a31b0b8da3"
+      "bytes": 53674,
+      "sha256": "d36ae2d720a49ce583eef54045662d4021d1181cbc3234a0ebe58118d3227fb9"
     },
     {
       "file": "public/og/news/2026-04-30-warp-open-source-agentic-dev-environment.png",
@@ -1768,8 +1768,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 50338,
-      "sha256": "d4cfeb2dc8e8f92102c13b55be8bfcaa187bb272ffa9acd96f0725a8b2d92ee5"
+      "bytes": 49791,
+      "sha256": "68b24ba926cf219a0cca581b00d87addf607ac928ebe4c98e0869f7614a513f7"
     },
     {
       "file": "public/og/news/2026-05-04-sierra-950m-enterprise-ai-agents.png",
@@ -1822,8 +1822,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 49591,
-      "sha256": "de066ec5271ccaa521e91284c0f99ff26322c8717ccafc6341e0e30f29dc03b7"
+      "bytes": 49565,
+      "sha256": "f76d02ac48ac9916abe7d3338e33f1286a4f4b838440a0d3c402555544a8964e"
     },
     {
       "file": "public/og/news/2026-05-05-gemma-4-mtp-drafters-inference.png",
@@ -1858,8 +1858,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 48213,
-      "sha256": "2a89c840f993e09a7e0b0eab5f7b0be8f56979ab82cab1d40f96f6633f65e908"
+      "bytes": 47191,
+      "sha256": "7ff01a6c558766eb5f48d80e48da985f3c0482d28a9a6700b70e367d0741ad0e"
     },
     {
       "file": "public/og/news/2026-05-05-pwc-openai-ai-native-finance-function.png",
@@ -1876,8 +1876,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 47818,
-      "sha256": "b641bbbbeb05e8307b349a450365d8ef667c8540f244e3cfa9f8a4c2e71ad035"
+      "bytes": 47281,
+      "sha256": "ab576c8445253eadb383f7b5c949cffc5e04457c79acc9fe8dcc8541bbaa4a8b"
     },
     {
       "file": "public/og/news/2026-05-05-servicenow-otto-knowledge-2026.png",
@@ -2119,8 +2119,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 47484,
-      "sha256": "fe3ad31c3b7de96e6573484b1d18944cdddf287b9c77228a9249712d170d7ffd"
+      "bytes": 47455,
+      "sha256": "06ceef0cfbed2b87e3f71f4062a52716cc80bad934622b65bde99bb1fa181fe1"
     },
     {
       "file": "public/og/news/2026-05-11-google-ai-generated-zero-day-thwarted.png",
@@ -2146,8 +2146,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 55693,
-      "sha256": "5f9e2ebe2c805af269841a61ec81546b259205c5d1aee16e2f30a829cfea320d"
+      "bytes": 55655,
+      "sha256": "0d4d4f2a0804037d56c31137eb205acbaf7a9da5a9748ca8f3b0a505bfc596d7"
     },
     {
       "file": "public/og/news/2026-05-11-openai-gpt-55-cyber-eu-preview.png",
@@ -2254,8 +2254,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 49469,
-      "sha256": "36e16655585ca375849c9274ac846d540951bdffa8021af95cc1d253da9032ee"
+      "bytes": 49309,
+      "sha256": "c5728ab5e83b90a7f6485c323dfa152af5999f50b20907ef8be28677d1c1157b"
     },
     {
       "file": "public/og/news/2026-05-13-openai-codex-windows-sandbox-launch.png",
@@ -2263,8 +2263,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 48181,
-      "sha256": "c425b67c99db0e8c0f0b66e3b4211365bbfe0f8252f54d03cd5ed928b0abe821"
+      "bytes": 47538,
+      "sha256": "00542a6986311764c5bdeea1814690d833ed4e72cfa5fc7374adcca9d99fe26e"
     },
     {
       "file": "public/og/news/2026-05-13-runway-agent-conversational-video-launch.png",
@@ -2371,8 +2371,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 58560,
-      "sha256": "cfcb11db5f4f3525c0a48c4e6c847a1f49c7f0e293d0d10b62e164244f39bfcb"
+      "bytes": 54535,
+      "sha256": "eb1aaeed15c0c1a1c316d6000fe7c0e71591f169d14738ae74bddf900befbf98"
     },
     {
       "file": "public/og/news/2026-05-17-apple-siri-revamp-auto-delete-chats.png",
@@ -2722,8 +2722,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 50753,
-      "sha256": "f3b26ee0027adde6b7f722a27f7b83cf0b4082e9d84ee2f0be2390e7b15448f6"
+      "bytes": 50270,
+      "sha256": "ed7d665ff41920ab328bbc591bc5a9ee767932893a41118ebcd1a8a82965fbe9"
     },
     {
       "file": "public/og/news/2026-05-26-ai-news-desk.png",
@@ -2875,8 +2875,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 58979,
-      "sha256": "4e2b8c31d744960149b3becbbcc2e9de0165b2c98f10fbd3e58ff6ad2f8c497e"
+      "bytes": 55968,
+      "sha256": "ea0aa7a368cc8ca3e973dec03666e8cfdaf246cd43cb85e659eba11d604fcb13"
     },
     {
       "file": "public/og/news/2026-05-28-wetour-orchestra-physical-ai-os.png",
@@ -3001,8 +3001,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 51191,
-      "sha256": "0e77ebd3e93f615162ea54da43a317cbedc512fa64ef7a2e8ab06815081a204e"
+      "bytes": 50679,
+      "sha256": "ea5fe56ba76e44c973ca1f04a23e1a9b00f92d1d9c2abc1aa15d521f3627f19a"
     },
     {
       "file": "public/og/news/2026-05-31-sysdig-llm-agent-intrusion-agent-security.png",
@@ -3217,8 +3217,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 48769,
-      "sha256": "6846828103b04ecc579ace0cd9b3059e19ce07e023070b4d5a08db89a7b7a42b"
+      "bytes": 48299,
+      "sha256": "61404d5f12af3c8999b02c45cb509a25751b406e3aeec79ed4543b521b8fe991"
     },
     {
       "file": "public/og/news/2026-06-06-google-search-profiles-publishers.png",
@@ -3253,8 +3253,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 55012,
-      "sha256": "b3dfc141461de32bb10ddffd3c25eebfc73ec148c42ecb0f47811afc6c9ff85f"
+      "bytes": 50850,
+      "sha256": "b9e1bc1383aff1d234981c9b5433e863ca310a0cdc3e408b2e58aedc22ccc721"
     },
     {
       "file": "public/og/news/2026-06-08-apple-third-generation-foundation-models.png",
@@ -3316,8 +3316,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 50744,
-      "sha256": "8ffa099c69f40748eae59a9830bb404d6aa93dd5d02bc18b73950a82920e3e5f"
+      "bytes": 48999,
+      "sha256": "6a152dcf7d9e7cf8180f9e04d5383eaa1ff8aa17f376e6b6ab46e3790917a1fd"
     },
     {
       "file": "public/og/news/2026-06-09-coding-agent-control-plane-weekly-reset.png",
@@ -3523,8 +3523,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 52024,
-      "sha256": "3f35be14f9471ee33cb7ffc104aa5df25c6ac2c6aad0621701b8dba49f3a415b"
+      "bytes": 51456,
+      "sha256": "ecc608656524f40654fc784a77709b93502ca97b5cfe8f790a2b61ca76dc8da8"
     },
     {
       "file": "public/og/news/2026-06-16-ai-news-desk.png",
@@ -3597,6 +3597,294 @@
       "target": "public/og/news",
       "bytes": 48564,
       "sha256": "f1922d7496f996392fb229605248be50dfd21027ea8ed2f0b574215a56503400"
+    },
+    {
+      "file": "public/og/news/2026-06-18-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 58030,
+      "sha256": "d45d0cf6a7a5e4f5147041f664667cb0d54d2f66c806f9fee3409bad13895361"
+    },
+    {
+      "file": "public/og/news/2026-06-18-openai-chatgpt-health-spend-controls.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 43414,
+      "sha256": "46554abbea26e4ddbf52a29600946c0f10641f99798d2d5c851c7770f8cd6569"
+    },
+    {
+      "file": "public/og/news/2026-06-18-shopify-agentic-commerce-ai-channels.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 52515,
+      "sha256": "cab415a5cc58000ae0557d9b8937617ae2d864f2ef4b74f15623302f90d075bc"
+    },
+    {
+      "file": "public/og/news/2026-06-19-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 46089,
+      "sha256": "f5b01386cb4c3f6889f9acbb1787ddba1ac96b6929607beef75fcaa39f208ff2"
+    },
+    {
+      "file": "public/og/news/2026-06-19-john-jumper-anthropic-ai-talent.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 53632,
+      "sha256": "b32fb721c13379433999e567edf316c9599eee8e692a60ae1d523db3bc3a06e0"
+    },
+    {
+      "file": "public/og/news/2026-06-20-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 45931,
+      "sha256": "8363021670edf89060e3b4d5906a09ce194b6adf2cd8fd57daa3b94e788caacd"
+    },
+    {
+      "file": "public/og/news/2026-06-20-g7-ai-ceos-model-access-standards.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 48650,
+      "sha256": "d8323349fea905ed0c56da9432bb3695114bae07576f2c9f49391972d86a07fe"
+    },
+    {
+      "file": "public/og/news/2026-06-21-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 56174,
+      "sha256": "aff5121b11baa979a59e116dea330df5a39e49fe81af6dc527b73ff1c0e09b9a"
+    },
+    {
+      "file": "public/og/news/2026-06-21-ai-tools-control-plane-checklist.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 54942,
+      "sha256": "a78da8852f1d3358f89258a95f2a06a0ee308ae20472a7a138eaa8b424963457"
+    },
+    {
+      "file": "public/og/news/2026-06-22-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 51776,
+      "sha256": "eeae39eddb4488fdd1fbc41943207bec20e1e202c0c322af80758881f07f6d64"
+    },
+    {
+      "file": "public/og/news/2026-06-22-openai-bio-bounty-codex-community.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 55671,
+      "sha256": "8b8f2f414a76b7c6544df01374a5c23b3d809892c8c425b5836b82ffcab5a499"
+    },
+    {
+      "file": "public/og/news/2026-06-23-claude-error-rate-fallback-planning.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 53721,
+      "sha256": "40167254dbc212e56368a0a9b6ebbd70e8b58d513d56a5658cd77f1fa1c6e358"
+    },
+    {
+      "file": "public/og/news/2026-06-23-openai-daybreak-codex-security.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 57037,
+      "sha256": "fe7c0c6bf5df9a9b82500fdecfa028f47c6e9d0119077e6fda77e94fc4ac2c0d"
+    },
+    {
+      "file": "public/og/news/2026-06-23-samsung-chatgpt-codex-enterprise.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 53504,
+      "sha256": "a54191e4b4d68ae5820d2e900a95c40210337bb30146e304117592bb38b9abcb"
+    },
+    {
+      "file": "public/og/news/2026-06-24-google-ai-talent-openai-anthropic.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 51577,
+      "sha256": "e3896659c9e5b729fbca5658ca3681bfab8a4d86b1395fe979d952961e14f941"
+    },
+    {
+      "file": "public/og/news/2026-06-24-google-gemini-computer-use-preview.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 51587,
+      "sha256": "c2a2bdfa26fd4baf547b352a39245fb4576396c9e7f7ac6de5146fbece8115ba"
+    },
+    {
+      "file": "public/og/news/2026-06-24-zai-glm-52-open-model-pressure.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 43417,
+      "sha256": "43934aaf563301141ea80e010586857fedb75cbe3582b69c7d8c13b68cf7a79d"
+    },
+    {
+      "file": "public/og/news/2026-06-25-github-copilot-best-month-ai-coding-demand.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 54699,
+      "sha256": "4026bc30933952099ec4c57d323ebef350c95c014e291472f264d4b19da83926"
+    },
+    {
+      "file": "public/og/news/2026-06-25-google-gemini-35-pro-delay-buyer-risk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 44457,
+      "sha256": "04d6b0571dc959e5af528b51d1357520cc3557ae8e829fc9ad13c709e05cf957"
+    },
+    {
+      "file": "public/og/news/2026-06-25-openai-anthropic-raise-us-workforce-push.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 49611,
+      "sha256": "956a05ab28d70e855f045df7f9b4cfc24fd41eb616a512423db8ffa11f28b327"
+    },
+    {
+      "file": "public/og/news/2026-06-26-gemini-sheets-formula-fixes.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 52876,
+      "sha256": "d3251b3a7595a395a6fca7fe94b09b8ab89e6697b43882e4d48594c65900c2d9"
+    },
+    {
+      "file": "public/og/news/2026-06-26-newegg-ai-shopping-mode.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 56560,
+      "sha256": "aa19585594f5f248c316db601b38244214d8ff30fde2ad641855ac5956148d1d"
+    },
+    {
+      "file": "public/og/news/2026-06-26-openai-gpt-56-sol-preview-access-risk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 42383,
+      "sha256": "302b712062f287773d72290bf7387cd5a4e38d5eb51829ddfc1ee994dec156e7"
+    },
+    {
+      "file": "public/og/news/2026-06-27-claude-mythos-critical-infrastructure-return.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 51184,
+      "sha256": "a240b150090d5ece13cbf812a638435394cff5cab5f9561ae07c243d3562d9b2"
+    },
+    {
+      "file": "public/og/news/2026-06-27-fable-5-stays-offline.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 60977,
+      "sha256": "9acea7616d5bf616fb2c02c0354eaa9d5c61a53f89965f47c581b61388d9bcbc"
+    },
+    {
+      "file": "public/og/news/2026-06-27-sail-research-agent-inference-costs.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 57927,
+      "sha256": "d8bd32b8f518269df60fe5628c18676a7adeb7e300a268c092e72c219cdf1a41"
+    },
+    {
+      "file": "public/og/news/2026-06-28-claude-opus-47-fast-mode-deadline.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 55542,
+      "sha256": "a279ef2a744adc4d63851da9eb4635267daf4fe8b1605bc097123f248b0d86b3"
+    },
+    {
+      "file": "public/og/news/2026-06-28-gpt-56-sol-cheating-benchmark-risk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 48075,
+      "sha256": "b02628b06a9de31bb8a47bfd8b0520ef6aa551ac4f79c43fec9348445de3e2e2"
+    },
+    {
+      "file": "public/og/news/2026-06-28-veo-vertex-ai-endpoint-deadline.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 49774,
+      "sha256": "759682b7c96b22624349450b29e30dffa78627012d808c8f1a3b362fc12732bf"
+    },
+    {
+      "file": "public/og/news/2026-06-29-google-ai-studio-gemini-api-key-incident.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 51640,
+      "sha256": "4c0b612a92272a3af390da1b3f2d2e6f6ec58bb9458ca0181751a136b22a7bb4"
+    },
+    {
+      "file": "public/og/news/2026-06-29-grok-45-private-beta-benchmark-caution.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 52200,
+      "sha256": "331f90096444769f001d582a7672ef77a220891b42b8a989f665ba23249220a7"
+    },
+    {
+      "file": "public/og/news/2026-06-29-openai-hp-frontier-enterprise-rollout.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 44580,
+      "sha256": "5dcb64d18015885c1a5ba8b97917a508dfa70f61ca2d2de5fdfe6f07339703a3"
     },
     {
       "file": "public/og/news/light/2026-02-18-trae-pricing-revamp.png",
@@ -3856,8 +4144,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 47063,
-      "sha256": "6f12187ae9fd672274ac5cca3751c70ed56267d9fe775deb1eedde61f042ec69"
+      "bytes": 46603,
+      "sha256": "5a866585cb7549d595c7c7f0656ad6e07ad7e9791062b90a020ab6ae10763b22"
     },
     {
       "file": "public/og/news/light/2026-04-16-google-pentagon-gemini-classified.png",
@@ -4324,8 +4612,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 42678,
-      "sha256": "2983cd3600465254e803d35a3007277d54373d65c390eed3e05dbb1bdb6ce10f"
+      "bytes": 42523,
+      "sha256": "a1e842430a17f5ce5a89f2c07a560f620444a449b0e77f8f080785fce5ef2d8d"
     },
     {
       "file": "public/og/news/light/2026-04-23-ai-industry-roundup.png",
@@ -4513,8 +4801,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 41369,
-      "sha256": "1f578d6384c04161fa777fa48e95ee3867199030543fd5094f589b1c3423938b"
+      "bytes": 41261,
+      "sha256": "8f92cfc3e907f95e060518bed721de6de08975653798202fd7647c6a93dfcb8e"
     },
     {
       "file": "public/og/news/light/2026-04-24-meta-aws-graviton-agentic-ai.png",
@@ -4954,8 +5242,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 53414,
-      "sha256": "305ff77197d433deec4f087067676df54f31d57eeacfa15574fd24b406a7dc45"
+      "bytes": 52659,
+      "sha256": "15e733d391c2d5db6174fbecb0cb1a905ffb17661e5860c8a542c8945c6cb04b"
     },
     {
       "file": "public/og/news/light/2026-04-28-nvidia-nemotron-3-nano-omni.png",
@@ -5809,8 +6097,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 49128,
-      "sha256": "e7a479e88ab3ba9f13552facbbd49fa6f83dc3c2b8b8f818bf698f0f2e42303b"
+      "bytes": 48329,
+      "sha256": "07c64a213a8ea5262640a9e7b97233bef90bc4d999abeaf3357c46bc0417db36"
     },
     {
       "file": "public/og/news/light/2026-05-13-anthropic-50b-round-950b-valuation-eclipses-openai.png",
@@ -5953,8 +6241,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 44811,
-      "sha256": "ec7c51839cd4a60f6eec82562e7fb2ab883189bb6cbdbadc8cd3bf8a5e2bac3d"
+      "bytes": 44211,
+      "sha256": "8b7cba9e3da79cb115b8a76976c8911c03adf3f5d37c703a1cc926e30c2d4f50"
     },
     {
       "file": "public/og/news/light/2026-05-16-openai-brockman-chatgpt-codex-product-strategy.png",
@@ -6214,8 +6502,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 43456,
-      "sha256": "49ccabb2f0182a5073936a72b80305d4876f97fddc7e2e7fb76aef27aab3ccd6"
+      "bytes": 43017,
+      "sha256": "9c055029d4a2ad328738fcfde1b06f979d2c10dbea2ccb48c94fa027917cf7b9"
     },
     {
       "file": "public/og/news/light/2026-05-22-bing-ai-guided-image-search.png",
@@ -6331,8 +6619,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 44692,
-      "sha256": "72e9dd7c6c1ed35b0a75e823b54d9090b4047f7ed3ae36e2341ef7a53b423048"
+      "bytes": 44547,
+      "sha256": "e2a40a81158ecfd74b923daf90af50d1171d7cfe250a5651fb51bb9c5bd3bec5"
     },
     {
       "file": "public/og/news/light/2026-05-27-ai-news-desk.png",
@@ -6601,8 +6889,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 42216,
-      "sha256": "339c4d0131190788296298c7a95ecdf35d1a85f53f214115014a0a825f8bfc6e"
+      "bytes": 42081,
+      "sha256": "60bd7d880eb06342551e1648ced42dde47bab976f30a429c3101ea354938bc77"
     },
     {
       "file": "public/og/news/light/2026-06-01-ai-news-desk.png",
@@ -6889,8 +7177,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/news",
-      "bytes": 36511,
-      "sha256": "d1dab333fd413598bbd7976d897b1680f5b7d69ff78b6e0fc3314aa220770354"
+      "bytes": 36255,
+      "sha256": "ff95b9b0b4e852cdaa0fdf0c1b04dff64b64cca6a49ea9f8680a5d6fe18b7322"
     },
     {
       "file": "public/og/news/light/2026-06-09-anthropic-cowork-foundations-workshop.png",
@@ -7190,6 +7478,294 @@
       "sha256": "380cf1f67af666d786ac2d1169b075abe263c38f8e06c523b22a3f2a4f3f4b12"
     },
     {
+      "file": "public/og/news/light/2026-06-18-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 38327,
+      "sha256": "653685407869b10838c049d93fcde098dbc816dad45a372a125361f3edf62d55"
+    },
+    {
+      "file": "public/og/news/light/2026-06-18-openai-chatgpt-health-spend-controls.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 47643,
+      "sha256": "88d4ce56ccbeccadcb7bf7f9d6537eb939ea8d893e579c58ce7b5413a5af231a"
+    },
+    {
+      "file": "public/og/news/light/2026-06-18-shopify-agentic-commerce-ai-channels.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 41281,
+      "sha256": "397d1a045389bdb4dcd5c889fcca91a5f6797cf18385500b84224c4c424552fc"
+    },
+    {
+      "file": "public/og/news/light/2026-06-19-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 39532,
+      "sha256": "a7abad35850f92cfd3cdcd4428b6c3ea402b30184dacbd1063e045449822ebbb"
+    },
+    {
+      "file": "public/og/news/light/2026-06-19-john-jumper-anthropic-ai-talent.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 36722,
+      "sha256": "4742597e270d79089dc3b3456920c4848841adb2c14a0d8fa7fc0cf50eb21899"
+    },
+    {
+      "file": "public/og/news/light/2026-06-20-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 38175,
+      "sha256": "3f54361c18fac4ae0cffaf353d7792f80db4047de4e36e29335a5b740a87927e"
+    },
+    {
+      "file": "public/og/news/light/2026-06-20-g7-ai-ceos-model-access-standards.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 38053,
+      "sha256": "a57f1414f4aee298184ac365b970b94ad5d6680f50b9ac3c7f94a662ec1b5c49"
+    },
+    {
+      "file": "public/og/news/light/2026-06-21-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 43156,
+      "sha256": "186d46a2f27fef6bd60103303d2379f2c6426c6310e08596e9f390eba1283d41"
+    },
+    {
+      "file": "public/og/news/light/2026-06-21-ai-tools-control-plane-checklist.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 45348,
+      "sha256": "5f848c054d0d70746662df97ebaf0b40a97219ad2c716ab66c56e134adf34b57"
+    },
+    {
+      "file": "public/og/news/light/2026-06-22-ai-news-desk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 37899,
+      "sha256": "bc9dca04843ad4a0dfef80fe1ffba166c64c452d38b4bdb9fc5bee04de45d6f1"
+    },
+    {
+      "file": "public/og/news/light/2026-06-22-openai-bio-bounty-codex-community.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 40591,
+      "sha256": "a2a4b47bc44265e6082c5320ab409c84bef5cb9094fe115fbcf0ee777e55e1e8"
+    },
+    {
+      "file": "public/og/news/light/2026-06-23-claude-error-rate-fallback-planning.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 43590,
+      "sha256": "fadedcc4fb4d968fc0fa75d79a77088eda3555018686149a12c3cb69628b7bc1"
+    },
+    {
+      "file": "public/og/news/light/2026-06-23-openai-daybreak-codex-security.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 40845,
+      "sha256": "96d292b57598a58b16c8f150172b84c39fe4d581e875e712397f485149769822"
+    },
+    {
+      "file": "public/og/news/light/2026-06-23-samsung-chatgpt-codex-enterprise.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 38342,
+      "sha256": "1171787c1551cea183978e5a07996ccc3dfede1824210298205dfe73ecba1a24"
+    },
+    {
+      "file": "public/og/news/light/2026-06-24-google-ai-talent-openai-anthropic.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 35781,
+      "sha256": "198ab3e6b17a4804f528330be6a1e0639596796fe19fe0e51fbd5d10e5e1b603"
+    },
+    {
+      "file": "public/og/news/light/2026-06-24-google-gemini-computer-use-preview.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 35798,
+      "sha256": "a63c7f50ecdeaf21d0ab0cef3eab17c7b34e80781fbb8488a9e020ce5a9e1053"
+    },
+    {
+      "file": "public/og/news/light/2026-06-24-zai-glm-52-open-model-pressure.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 41190,
+      "sha256": "383e18c26de96481299ce0c44044e3c37e09a3bc4c2da8451e0cb329e6e565fa"
+    },
+    {
+      "file": "public/og/news/light/2026-06-25-github-copilot-best-month-ai-coding-demand.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 46278,
+      "sha256": "cfa04df2171c40c5abe3e5b66bdb960c96b4b1e00060a93e7e40e2146494cf6f"
+    },
+    {
+      "file": "public/og/news/light/2026-06-25-google-gemini-35-pro-delay-buyer-risk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 37664,
+      "sha256": "14958289afbed4a4adf527a2c6f04fa906190b6b8c53b3a5165f551a80653866"
+    },
+    {
+      "file": "public/og/news/light/2026-06-25-openai-anthropic-raise-us-workforce-push.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 45276,
+      "sha256": "ed3c4c733c78cea50ed4b19f41b0ba9b160e719b7abbbfcc031c582a6314bd34"
+    },
+    {
+      "file": "public/og/news/light/2026-06-26-gemini-sheets-formula-fixes.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 33055,
+      "sha256": "9c92a365daa70974cdd491e22de5c35bc8498710be24edac160f1742116298df"
+    },
+    {
+      "file": "public/og/news/light/2026-06-26-newegg-ai-shopping-mode.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 36356,
+      "sha256": "51c25b61b3a4c3d5dbfa7a45664160afa36c2c3182006e152cefccb8083492f7"
+    },
+    {
+      "file": "public/og/news/light/2026-06-26-openai-gpt-56-sol-preview-access-risk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 44344,
+      "sha256": "630efb4d0abb62247453a4cf216768dc83e99bb742a777b79dd0b46971bb0836"
+    },
+    {
+      "file": "public/og/news/light/2026-06-27-claude-mythos-critical-infrastructure-return.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 42107,
+      "sha256": "cd74ca5ec133529f84418c7617a84a78278adaa4e8a2f3e4d42cd7c90e0b157e"
+    },
+    {
+      "file": "public/og/news/light/2026-06-27-fable-5-stays-offline.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 33433,
+      "sha256": "c1672c8fbec930f1bdcb2449f3a3a5cc6ac2a08428c065b1abed80e07193a093"
+    },
+    {
+      "file": "public/og/news/light/2026-06-27-sail-research-agent-inference-costs.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 38584,
+      "sha256": "844917041b148f8ff814fdf3bd1f1e1eccb9edd694b321e23b274679b95e1d11"
+    },
+    {
+      "file": "public/og/news/light/2026-06-28-claude-opus-47-fast-mode-deadline.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 36864,
+      "sha256": "76b65aedf12d4cbff52d796a7c151e1538b4ba684d2e641352c0bb3ff39db739"
+    },
+    {
+      "file": "public/og/news/light/2026-06-28-gpt-56-sol-cheating-benchmark-risk.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 37627,
+      "sha256": "2534c86c26fc841b99c4d07985807e4e7d0965e0019f19242f8b869338cb8dc2"
+    },
+    {
+      "file": "public/og/news/light/2026-06-28-veo-vertex-ai-endpoint-deadline.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 35452,
+      "sha256": "b4b84cabeb8b623c39c3fd068ffd36d7022cec9eb9dde42711d73742db49b386"
+    },
+    {
+      "file": "public/og/news/light/2026-06-29-google-ai-studio-gemini-api-key-incident.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 38732,
+      "sha256": "e366a31c54724cecbac240a3b6f0ccb1eb9e4e78c75b0021f020d43fcc956264"
+    },
+    {
+      "file": "public/og/news/light/2026-06-29-grok-45-private-beta-benchmark-caution.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 37308,
+      "sha256": "f936b4c1dc4b6e89f6050a086fe6cc2d05117542670804dd2ea89c69a965b797"
+    },
+    {
+      "file": "public/og/news/light/2026-06-29-openai-hp-frontier-enterprise-rollout.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/news",
+      "bytes": 36660,
+      "sha256": "33d9e1cd54390f5356b228f80212eeab84932fd76aa9ccaf2d57b9f7ddb5b769"
+    },
+    {
       "file": "public/og/tools/activepieces.png",
       "kind": null,
       "slug": null,
@@ -7235,6 +7811,15 @@
       "sha256": "705327caadcf513a6487dd5e8945a599d84078b1436b6b7c3d4b67624030546d"
     },
     {
+      "file": "public/og/tools/agno.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 28854,
+      "sha256": "7e2515216ae28b49649a8fe768e4199aaa4f6dcdec118a655cf32bac536e4b78"
+    },
+    {
       "file": "public/og/tools/ahrefs.png",
       "kind": null,
       "slug": null,
@@ -7249,8 +7834,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 22857,
-      "sha256": "ffda42b4330aa3079cfbda9ff34401d202f70e2c47bfe5201fe065850cbbb5d9"
+      "bytes": 22655,
+      "sha256": "efe905f65ac3c7b71056686266b2026f1613bfcb2af0efd84d5fefadc7c84cc6"
     },
     {
       "file": "public/og/tools/aiva.png",
@@ -7267,8 +7852,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 32782,
-      "sha256": "70e6bfd9e62e1924736bb8d22094e7f36b7f60b5a3ffaf3e66c6a705440c5049"
+      "bytes": 27716,
+      "sha256": "255b8373db57d02750af8bedb829cfa4c509a8eca8f2ed022c88b51d8e96e77c"
     },
     {
       "file": "public/og/tools/amplemarket.png",
@@ -7285,8 +7870,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 26065,
-      "sha256": "bb83fbfcd80923990ed477f2bae396c03f66b7b213380738721fc0585894b470"
+      "bytes": 25317,
+      "sha256": "05e1cb5b5ea9736cea362e0e9fb6434b197199ab9800482e2d27dabefa11898f"
     },
     {
       "file": "public/og/tools/anythingllm.png",
@@ -7303,8 +7888,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 25278,
-      "sha256": "f69e8fcf6126cf067f3c0980bec925a9afba788213f503f050425c96cf2e8f7a"
+      "bytes": 25082,
+      "sha256": "dd5a23eb83c09e99bd644ce2d63b9d148fa87d87baa2bd1884b7088062154098"
     },
     {
       "file": "public/og/tools/argil.png",
@@ -7314,6 +7899,24 @@
       "target": "public/og/tools",
       "bytes": 21756,
       "sha256": "c3331601f818a3dbb8cac653353694e70bf4352a6520c8b13bf09c39e17b2cec"
+    },
+    {
+      "file": "public/og/tools/arize-phoenix.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 27378,
+      "sha256": "04397a3d576049709d832fac09973d1851deb0d63ee370484fab66def6d2e3b6"
+    },
+    {
+      "file": "public/og/tools/baml.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 25899,
+      "sha256": "be6c9250b4299687d2abd7054d5a6ccb73ec5fe09fd7d2cc4f37ae4f2696f7f8"
     },
     {
       "file": "public/og/tools/beautiful-ai.png",
@@ -7330,8 +7933,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 25798,
-      "sha256": "fadd952ab463bfd8caf67f16c3c1a183b7770001b65b36d245c234403dc48506"
+      "bytes": 31106,
+      "sha256": "d76a07f45296d367b132b2536a3072f46467409e5edc4b7d4fce70c8858efb97"
     },
     {
       "file": "public/og/tools/bolt.png",
@@ -7352,6 +7955,15 @@
       "sha256": "3c012aac576e2ee551a5f99b5e1876106c63d79a87ba62999a02695aa9edb9bf"
     },
     {
+      "file": "public/og/tools/braintrust.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 27700,
+      "sha256": "38d83853421ad7c2858a84781174853a555126676ebdfc021100f4ab7340f9b7"
+    },
+    {
       "file": "public/og/tools/canva.png",
       "kind": null,
       "slug": null,
@@ -7366,8 +7978,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 27755,
-      "sha256": "b4d8a9b6af0983427fcbea545755a9bd29c93e88281f2698647f3623fc4efc38"
+      "bytes": 27561,
+      "sha256": "f1c1c68d8341af72ab9f9db3c44207e3c2b487f98727313e55f44b84bda5684b"
     },
     {
       "file": "public/og/tools/captions.png",
@@ -7384,8 +7996,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 27590,
-      "sha256": "de7d6131c4afb3ef98a7a46cbe0d4b69f35264159c2f20120d812fa6fca2b4dd"
+      "bytes": 26249,
+      "sha256": "6f2ece3556490e0c5ed8424f5470dc3b92f49854a81d447af90e61e90c17c7d9"
     },
     {
       "file": "public/og/tools/castmagic.png",
@@ -7395,6 +8007,15 @@
       "target": "public/og/tools",
       "bytes": 25327,
       "sha256": "ccdbe5b900b484bfa062ae4a0cdb80b59dde84bd2294c14bed1c31d7e6d80b01"
+    },
+    {
+      "file": "public/og/tools/chainlit.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 26223,
+      "sha256": "858357a0ac63ff51133e4e6ee76c5af16397853c58210345d79b0d3e9c1ce3dc"
     },
     {
       "file": "public/og/tools/character-ai.png",
@@ -7429,8 +8050,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 25836,
-      "sha256": "8e1455dbb4e6967e69af12f81b9e00d9e1785d3f3a8213090c3c8247e002d6be"
+      "bytes": 25619,
+      "sha256": "eb631417d74af750152e9e49e1a5449f2d2f79662f0afc6e26b23f0bc59bffc8"
     },
     {
       "file": "public/og/tools/claude-design.png",
@@ -7456,8 +8077,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 23264,
-      "sha256": "675099ab3553a6cfafd575d9c56a29fb1328aa6d26f9cd5cf3df1e7fb218f7cb"
+      "bytes": 22405,
+      "sha256": "6297d05b75744de32dd7a04d8272d17cb30b5312078ade8658a92a76e40b9114"
     },
     {
       "file": "public/og/tools/clearscope.png",
@@ -7532,6 +8153,15 @@
       "sha256": "554052dc1e1a4040b51495107919d85aed147536a662ea11b4052deab5e687cf"
     },
     {
+      "file": "public/og/tools/composio.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 27172,
+      "sha256": "3c7075c792cf2391ba3829c4bf01989c1e05b8f36e7c45f1606b734bfdde152c"
+    },
+    {
       "file": "public/og/tools/connected-papers.png",
       "kind": null,
       "slug": null,
@@ -7546,8 +8176,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28948,
-      "sha256": "f57121156fa59cbbc92a5543a68832d47a9c9506b0e96746165262e413afb2ba"
+      "bytes": 26143,
+      "sha256": "be2e18cd82304be12ffc841c9a023a5baa0bbfa2c2ca98e7440d60a5d89a69c3"
     },
     {
       "file": "public/og/tools/continue.png",
@@ -7555,8 +8185,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28554,
-      "sha256": "e4501cf3c44160607fdd0f10175b23a83dfbf73e39dbdd5e46f851b08f533080"
+      "bytes": 29272,
+      "sha256": "d5f0126450b2068df4060b4e42d3387819092875675f9d61cd610798425cfc81"
     },
     {
       "file": "public/og/tools/copy-ai.png",
@@ -7604,6 +8234,15 @@
       "sha256": "60703f71abce378a96b2ed20c1927aa66d99cc9f823d9a8fb523fb25c3b25a8d"
     },
     {
+      "file": "public/og/tools/deepeval.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 25992,
+      "sha256": "5202b590833bee7c6e6156cd3a2dd3b8055bd6f2b201cc76a89aafcd9e1283d4"
+    },
+    {
       "file": "public/og/tools/deepl.png",
       "kind": null,
       "slug": null,
@@ -7640,6 +8279,15 @@
       "sha256": "ceb16862ac81b3a5ccf9b0e9e7e3f8f746870ba3a69cba8bd3fcc13e21aa6a9b"
     },
     {
+      "file": "public/og/tools/dify.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 28524,
+      "sha256": "6521dd00e1aa0df5666fd8a3f5b8fd71ddf3c7b69258b9014cc36ccb2a8b279c"
+    },
+    {
       "file": "public/og/tools/doubao.png",
       "kind": null,
       "slug": null,
@@ -7647,6 +8295,15 @@
       "target": "public/og/tools",
       "bytes": 26918,
       "sha256": "7f9feefda45107987c17fe56e90060f5695a899e5b526d224c5cdfa790d85eb8"
+    },
+    {
+      "file": "public/og/tools/dspy.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 29181,
+      "sha256": "0c062a2b6859d695c150fcb324f38640cfa4e9f8139ae9e5bfbfb9150f330027"
     },
     {
       "file": "public/og/tools/elevenlabs.png",
@@ -7690,8 +8347,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28306,
-      "sha256": "d8e48b751ae5c2157e32c0754ea9bea7b4532477afffebadb31a19601f3a0d03"
+      "bytes": 27817,
+      "sha256": "cc9f85f07103c02e89e24f5eef2e1b3aa90d2f30b5ac5d02deb3af25788af691"
     },
     {
       "file": "public/og/tools/figma.png",
@@ -7703,13 +8360,22 @@
       "sha256": "f97655898af4491ca6a8415dc1a8a25c902429aeb3492ecd7c3fdcb278299cc2"
     },
     {
+      "file": "public/og/tools/firecrawl.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 30061,
+      "sha256": "01828457eaae189ca77e8f8786e498355c4134f2be8516b609f902edc69978c1"
+    },
+    {
       "file": "public/og/tools/fireflies.png",
       "kind": null,
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 24532,
-      "sha256": "8e50ffade8961c44991015a5bf354884050fa2075a489cbaa678f301ef91a29d"
+      "bytes": 24100,
+      "sha256": "9a34b2b3986f5a5ac5c45b05a37417dd8c0b3377bd934f03e21c3feb2a8a40d6"
     },
     {
       "file": "public/og/tools/fireworks-ai.png",
@@ -7726,8 +8392,17 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28939,
-      "sha256": "23ef64fee4451ce36449b85ea6079d2f2593cbd45e5780d0d1d722a574e6d740"
+      "bytes": 29906,
+      "sha256": "218d18f7d8fcbba276a3c0e77c4813ae7bb09fbea9f807aa6329a3a442610c91"
+    },
+    {
+      "file": "public/og/tools/flowise.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 24877,
+      "sha256": "db12dc9998febc998a5491b45a298165e1c2ce313a1b81145e564e2f1f1a8db2"
     },
     {
       "file": "public/og/tools/flux.png",
@@ -7744,8 +8419,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 26512,
-      "sha256": "b0f8720943e4f7a7950b2082ddfe585e7e97d1fa5ad4a3aada10289eaad77c6e"
+      "bytes": 26529,
+      "sha256": "2635297bfb90c6bb6fb1358d9631558a0b6500b0382bd09ac67ecf987c4df422"
     },
     {
       "file": "public/og/tools/frase.png",
@@ -7780,8 +8455,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 21834,
-      "sha256": "19392b36061caf730970320359edcad9612d6cec90059cec3cb900cc89497c19"
+      "bytes": 21819,
+      "sha256": "fa06d804b99a4c997445aae6ad524db5cac18adcc2617536d5778af3809881ff"
     },
     {
       "file": "public/og/tools/gemini-omni.png",
@@ -7861,8 +8536,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28720,
-      "sha256": "891e5f0d60f345e405be2ae57a2f5d86ecff01a3d424183c7a6dacb2e6cabacd"
+      "bytes": 29604,
+      "sha256": "ae9cfe8d06efb9b81ecfbcba2953260ff347b87eb38baa860bba91c1c14369f8"
     },
     {
       "file": "public/og/tools/grammarly.png",
@@ -7870,8 +8545,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 26860,
-      "sha256": "ab06d77d2bff2382f3975e6fa3b8eb29382ea0bd785a15588755b06ccbc6789d"
+      "bytes": 26808,
+      "sha256": "9fb2731e5051d28ea302bec6a43979d23d7e0cb302afbe07a5679cc60a2cb550"
     },
     {
       "file": "public/og/tools/granola.png",
@@ -7879,8 +8554,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 26733,
-      "sha256": "28a73f318daeabdb374a8be244667d7a96e389b1d337ee15e42efd0937b1f006"
+      "bytes": 25746,
+      "sha256": "bfe3123a7832a280b16fe1ee0c0f1cf62af6c3636bf5745f8436f03f90cf45ab"
     },
     {
       "file": "public/og/tools/grok.png",
@@ -7899,6 +8574,15 @@
       "target": "public/og/tools",
       "bytes": 24310,
       "sha256": "901aa905ce160a5d05dc5880aca764fe958818211bb073da5d9c9e036a562824"
+    },
+    {
+      "file": "public/og/tools/guardrails-ai.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 30623,
+      "sha256": "0886cfccf98348a12cdff251c8b5d9459a44a912b234df2f7194ce14d40fdef9"
     },
     {
       "file": "public/og/tools/gumloop.png",
@@ -7928,6 +8612,15 @@
       "sha256": "f68cfeb0b4e7f51eb53a9c4ff1d1f54b72260a981db7f6074e1f0633cb91f373"
     },
     {
+      "file": "public/og/tools/haystack.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 28532,
+      "sha256": "0e8b0b6505b75da3d804d14c8cfb49c0e68b1a393fb643c18b0d513fcf0a2ccd"
+    },
+    {
       "file": "public/og/tools/hedra.png",
       "kind": null,
       "slug": null,
@@ -7951,8 +8644,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 27597,
-      "sha256": "76d3aa112f5a02c46ccce6d76ece8132dcbee61ee176b3e6ef6094e651cfad37"
+      "bytes": 31053,
+      "sha256": "79024e2c563e640bf18e1f0fd2c25a269530996ec161019d1cff2758189d00af"
     },
     {
       "file": "public/og/tools/hex.png",
@@ -7996,8 +8689,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 27953,
-      "sha256": "78a1d5dce19366dd34ff1acb2d85528d16f3e8bf49794a39926607b5abc94230"
+      "bytes": 27940,
+      "sha256": "d129cc01e9fc10488febad6269d8b34fc9f3fffb4169b75cf25bdc944e32e095"
     },
     {
       "file": "public/og/tools/hunyuan.png",
@@ -8032,8 +8725,17 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 27347,
-      "sha256": "e5708dffd71b75a235d8fae62782bdb4e9b43ad33c784b7a7b4a5cf8aee66401"
+      "bytes": 30503,
+      "sha256": "5cf310dbb00911dffc2e7d1325d38963beb28f2b818c54279ec89e5a7f7f5840"
+    },
+    {
+      "file": "public/og/tools/inspect-ai.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 30226,
+      "sha256": "cb7a0e19e6220b541b076211969712871238e6c1749b5c93f9a8bcfda0ba05a1"
     },
     {
       "file": "public/og/tools/instantly.png",
@@ -8043,6 +8745,15 @@
       "target": "public/og/tools",
       "bytes": 24874,
       "sha256": "51ae8f0cb56b2a5f4b04c76636f1aa0e0e2c7b1fb0f2b648bdd602d75539af07"
+    },
+    {
+      "file": "public/og/tools/instructor.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 26013,
+      "sha256": "1448a7bcad2412f2f0e6caeaa6f6564bd23d781b9bf003a3d94fa24f1cba8d4e"
     },
     {
       "file": "public/og/tools/intercom.png",
@@ -8059,8 +8770,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 29254,
-      "sha256": "74f1b5b9089e0b970ee9c8a854f99eb96674877daf7c136df4f7555320c905cd"
+      "bytes": 27754,
+      "sha256": "a4416ed6bb793872ecb623e3a6b95c122a5454560b0746cea79e93b8da018f85"
     },
     {
       "file": "public/og/tools/jan-ai.png",
@@ -8068,8 +8779,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 27404,
-      "sha256": "b86ff945d207040e8f2a624d5443e01d4f4525ddf258ac30f780ae04db01c5b8"
+      "bytes": 27855,
+      "sha256": "2681cb915ac86d06f4e2dda0bd1dd450dac44fffd23a1e25f0cd2d2827ddd880"
     },
     {
       "file": "public/og/tools/jasper.png",
@@ -8180,6 +8891,24 @@
       "sha256": "de77e2467817eb4803795eb339e457100a036211f02a2078765d1c47aefca4f4"
     },
     {
+      "file": "public/og/tools/langsmith.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 30563,
+      "sha256": "f552d9145174f6bcf4178881c7dc5ea0cecdd435161874f1c4488dbd74c691e0"
+    },
+    {
+      "file": "public/og/tools/langwatch.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 23952,
+      "sha256": "f342df15d63f2df7d964591db4ec336b9b87fef46a53fd80beebda03baba2f83"
+    },
+    {
       "file": "public/og/tools/leonardo.png",
       "kind": null,
       "slug": null,
@@ -8207,6 +8936,15 @@
       "sha256": "8e235bf2b46f9e7484d7c706b12a86164cd3e7bfeb3dc76bc093bdf510190b8e"
     },
     {
+      "file": "public/og/tools/litellm.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 26077,
+      "sha256": "a1b5057c9c35b0aca4883be0caebfbd194a44caffbfe63c313bb3d301884ecd8"
+    },
+    {
       "file": "public/og/tools/llama.png",
       "kind": null,
       "slug": null,
@@ -8214,6 +8952,24 @@
       "target": "public/og/tools",
       "bytes": 23955,
       "sha256": "49d248bb85eeb8e3942167aca297e4202867398fcc3403d19e91cca6ed0c71f6"
+    },
+    {
+      "file": "public/og/tools/llamaindex.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 33934,
+      "sha256": "0c939eb3385ccb87587965e090262d9d2ab88c3755383f0a7ca65bcb3c350944"
+    },
+    {
+      "file": "public/og/tools/lm-evaluation-harness.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 30717,
+      "sha256": "62054896c3abd0430be644fe2cfb25d3c90e7ba15368f28c94521d56dea4121a"
     },
     {
       "file": "public/og/tools/lm-studio.png",
@@ -8248,8 +9004,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 26586,
-      "sha256": "839e71fa77996ded74f674a8a51a0ba2fab9d0b72a8c497c103002cea5801af0"
+      "bytes": 24219,
+      "sha256": "09c1db20ba59b41638ca56b6c1696af3d43a24573dfb5b52e5efdc1f4da909dc"
     },
     {
       "file": "public/og/tools/luma.png",
@@ -8257,8 +9013,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28499,
-      "sha256": "fdfc7ee47fa2ab650af4c90a25107edfd99bcd6a46e4d879249462327042d71c"
+      "bytes": 28831,
+      "sha256": "115f9dab99f7353e69223f2da829b55e24cc37f1427b5aa105fa38e8d210d3fd"
     },
     {
       "file": "public/og/tools/magnific.png",
@@ -8324,6 +9080,15 @@
       "sha256": "ede56c830bbfcf3d935f12a37a50a297b19974a66828738ca0d464d4281bb320"
     },
     {
+      "file": "public/og/tools/mem0.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 24282,
+      "sha256": "bc9053ca35e216243cc1f5a3297dd12ac26a8642b5e071129e9e74f9a5365f65"
+    },
+    {
       "file": "public/og/tools/meshy.png",
       "kind": null,
       "slug": null,
@@ -8369,13 +9134,22 @@
       "sha256": "f744f496801c6e69cc26225f48877b914abfc538b76bbb1c44527b48ed6e86bf"
     },
     {
+      "file": "public/og/tools/mirascope.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 26595,
+      "sha256": "209aefa65de6a597b6cbc4d713bc91ce62064cb8731a28a30b963508df55a9b0"
+    },
+    {
       "file": "public/og/tools/mistral-ai.png",
       "kind": null,
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 24694,
-      "sha256": "a45207986afcfb3bdc2a00155c50975837c4d923f3d7b11eda52bc82d032f821"
+      "bytes": 22445,
+      "sha256": "c5e1b39f21bb4c9b23e7c0e0801022477a576563eabe43503c38665390906c32"
     },
     {
       "file": "public/og/tools/morphic.png",
@@ -8455,8 +9229,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 25731,
-      "sha256": "b9fb798cd5c9a5c558d1aa1f803b7cec8f85d6d5a5b02e61b44ab2b94d9d6166"
+      "bytes": 27654,
+      "sha256": "ae6612f9ec7668a3b91df94f980c51e74ad57dafc429d1b0a1bdb8f20583f8b9"
     },
     {
       "file": "public/og/tools/obsidian.png",
@@ -8473,8 +9247,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 24908,
-      "sha256": "44956c06284d6efcdaba8df25d2788668ee566ff35cd26b9e3b4067a368a8a64"
+      "bytes": 22949,
+      "sha256": "8cc0c00f3a9f7f3b9211786555c826e64376ac74e1bbec234334660a9c80f69f"
     },
     {
       "file": "public/og/tools/omniseo.png",
@@ -8491,8 +9265,17 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 25968,
-      "sha256": "fa6a6974956e9c2138f27fba6cb29fec11a5727af595ead1c2e812baf8aae57b"
+      "bytes": 25723,
+      "sha256": "0bef5fdb4f2a91a6cda1516ab0669f67b2ad5e9dbf6de185616476b1cedf04f1"
+    },
+    {
+      "file": "public/og/tools/openai-evals.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 29359,
+      "sha256": "e5da596b617aa00a37acfd2185008c72d30028e4fcf65952a54c2c314f573cdd"
     },
     {
       "file": "public/og/tools/openclaw.png",
@@ -8513,6 +9296,33 @@
       "sha256": "ada54bf44249b41f6246ab6fc48836ecbcf075dd52bd5bc86389c230da97879c"
     },
     {
+      "file": "public/og/tools/openlit.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 25396,
+      "sha256": "b06a85e5e3acbdb931030bd06e0171aa1aa3ca7f4b67cf2310c09bc72c08f725"
+    },
+    {
+      "file": "public/og/tools/openpipe.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 24632,
+      "sha256": "ee3543d5dbabd0b63501692f47133e9bfb89688860395a44671b77e1c4e51ad2"
+    },
+    {
+      "file": "public/og/tools/opik.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 29052,
+      "sha256": "9bdfbfd9e99758697dc6789e7f5595d9fd9d3cd66c4432408a6967edf75754e2"
+    },
+    {
       "file": "public/og/tools/opusclip.png",
       "kind": null,
       "slug": null,
@@ -8529,6 +9339,24 @@
       "target": "public/og/tools",
       "bytes": 25456,
       "sha256": "9bf652ff3df0a8219c96ac1cf39867970281753646b6abf58046a01df88a5e18"
+    },
+    {
+      "file": "public/og/tools/outlines.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 24437,
+      "sha256": "83c45a5dd129e078460e9a063f3fef0da2402da21cedc31dd13abd151f7e9ee0"
+    },
+    {
+      "file": "public/og/tools/patronus-ai.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 30301,
+      "sha256": "da811646576bb0f7fcfebd1e964287a17c07a13a0798a050bfe3dc3279e74e4e"
     },
     {
       "file": "public/og/tools/perplexity.png",
@@ -8554,8 +9382,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 24058,
-      "sha256": "a10d7d17ec99838b5ab3ce56a085bae58252b3d1a8aa867bc4a0db52992be868"
+      "bytes": 31052,
+      "sha256": "ce2f2fdfb08215286a925ad47be09245ee25e20cd0f8c5d248add28b3edb5318"
     },
     {
       "file": "public/og/tools/pipedream.png",
@@ -8581,8 +9409,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 26941,
-      "sha256": "564c7014d32cd121600a76ce26240d455b299777b1dec9584daf5933c420d3df"
+      "bytes": 26660,
+      "sha256": "f9fea3a8b5beb9d0011440b73ff6425b9f6f3390773f0e9bf1f72dd890b443f8"
     },
     {
       "file": "public/og/tools/playground-ai.png",
@@ -8603,6 +9431,15 @@
       "sha256": "554d0b439016493866ba50f460f6033a4e1e34dafd1e0267014a71a658de4a1a"
     },
     {
+      "file": "public/og/tools/portkey.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 26457,
+      "sha256": "d8c3e8f65f2f7dd658854ce2d7cc2d4eed47d2cb4ec8c57d8c23f2fc5680f415"
+    },
+    {
       "file": "public/og/tools/presentations-ai.png",
       "kind": null,
       "slug": null,
@@ -8621,6 +9458,24 @@
       "sha256": "4b8529295d375696a37f532fa567d454ed2a99ef90f57e4f8410f8ab76b27662"
     },
     {
+      "file": "public/og/tools/promptfoo.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 28324,
+      "sha256": "913dace8c278b0cca05195df576cea0ae208d4fd427b6457daf677f5690020b6"
+    },
+    {
+      "file": "public/og/tools/pydantic-ai.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 29292,
+      "sha256": "c46dd2b157a9c1cd603942eaf3fda63e8c64d69ac724cd179e7c50e25cbbf6f8"
+    },
+    {
       "file": "public/og/tools/quillbot.png",
       "kind": null,
       "slug": null,
@@ -8635,8 +9490,17 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 26756,
-      "sha256": "52d73a696d754c7e3565bff653ad0d4209752e47e25c2302834defebf8556df8"
+      "bytes": 27358,
+      "sha256": "8ac82f74d1fa696daada1ffc6e59f2562cf944cf19946ed875d8f80b03f2f585"
+    },
+    {
+      "file": "public/og/tools/ragas.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 24131,
+      "sha256": "eba0851c5a4451d9bcb2c3454c3ff97cb88b4e9d07ca5bcde0442d283bd73b79"
     },
     {
       "file": "public/og/tools/readwise.png",
@@ -8680,8 +9544,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 23476,
-      "sha256": "9e5b1942fd2a8d27ad9b4fe3cc0a1679ee521f95f32486421f44a8d666bad118"
+      "bytes": 23241,
+      "sha256": "3411c559698f0f4e6b6ef2a1b4f750a0f4fc4ac1a26f2bfce94a488cea6d731a"
     },
     {
       "file": "public/og/tools/relevance-ai.png",
@@ -8689,8 +9553,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 24591,
-      "sha256": "ad70f30c939679167bbd76c26cfdcab6fb1cf8490a59d6e9810f97555bdc6ee2"
+      "bytes": 24108,
+      "sha256": "7314c2c47d1b5e62a8e8a9a849c666556f3b9bec4507dea8971335f7eff4ba17"
     },
     {
       "file": "public/og/tools/replit-agent.png",
@@ -8707,8 +9571,17 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 25700,
-      "sha256": "8b09632443732fd6b05c92adda6a963a8ab46395c9bda84765812cf403215cfe"
+      "bytes": 24749,
+      "sha256": "1e3228020fc08da6c64ea8b75bbea7e5154e2030f53e3c962542ff7ed125e33e"
+    },
+    {
+      "file": "public/og/tools/respan.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 37154,
+      "sha256": "6236fb7faed109721b169f0ce46993eca8796b3319e53b097a07fe6d277e5406"
     },
     {
       "file": "public/og/tools/riverside.png",
@@ -8725,8 +9598,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28114,
-      "sha256": "a8aa1bd50f0eca8643847714510bae909d8a90f53c57695aacc40bfaa20dc026"
+      "bytes": 29516,
+      "sha256": "04a2d9448bafcb5652aed5337f168a36730dcc352f8edc04c201e2257089c195"
     },
     {
       "file": "public/og/tools/rows.png",
@@ -8842,8 +9715,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 31838,
-      "sha256": "fc02e527061037f0610b2c4c3798207a05e190c7fd945d8ca565e8d2ca4d4cfd"
+      "bytes": 26836,
+      "sha256": "8697fd7859051815fa4935d359d451d487b486de1b423e81c51c9f2224064964"
     },
     {
       "file": "public/og/tools/sudowrite.png",
@@ -8869,8 +9742,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 23551,
-      "sha256": "02eea9b7103bcded2308644f07e9bd5221604c225d672018cee470326e1485be"
+      "bytes": 23222,
+      "sha256": "7b4332075deef90b9d6a1792313cb850f3420c502859dcfcdd246dbb22d26928"
     },
     {
       "file": "public/og/tools/surfer-seo.png",
@@ -8878,8 +9751,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 28338,
-      "sha256": "867448b49e761fcdb24f0170040cd72cd6700fd36f93135382a0de7c5a461e9e"
+      "bytes": 27947,
+      "sha256": "a11ad3f84ea8b4d9a05254c1cb3b07ae2e33ec09f52e8b859ca8818cddec1211"
     },
     {
       "file": "public/og/tools/synthesia.png",
@@ -8918,6 +9791,15 @@
       "sha256": "35105163b100ae3dafc5bbdf5bbec9eabefd12260dc0be29163ac7b9eda96125"
     },
     {
+      "file": "public/og/tools/tavily.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 22711,
+      "sha256": "a5bddcd9863058b246c014e4384efdab22708843ed6e40a2629ff40fd9d8c1f1"
+    },
+    {
       "file": "public/og/tools/tavus.png",
       "kind": null,
       "slug": null,
@@ -8943,6 +9825,15 @@
       "target": "public/og/tools",
       "bytes": 29030,
       "sha256": "7cf6fb3774e03fd7fe376f2803db881e7e386f10effd5ac5aa0591cb17427105"
+    },
+    {
+      "file": "public/og/tools/traceloop.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 23970,
+      "sha256": "185c285563fb4d48784a4a2d3edd54a775b4e3973ab0ceaf71096b76467188d0"
     },
     {
       "file": "public/og/tools/trae.png",
@@ -8986,8 +9877,8 @@
       "slug": null,
       "theme": null,
       "target": "public/og/tools",
-      "bytes": 23373,
-      "sha256": "471b5567feb03f4b63ce6418cb2716a1dd04e3c44bf1ffe98864772b2ead151f"
+      "bytes": 22770,
+      "sha256": "6c06ed03fb4fae7f7132fa48a6de100699a8a9f9e11779d08480323a4f81a2f3"
     },
     {
       "file": "public/og/tools/uizard.png",
@@ -9168,6 +10059,15 @@
       "target": "public/og/tools",
       "bytes": 22441,
       "sha256": "04221a138ce5bf7b51852e924d7b0fab2cc6bf3f1847ba296533de213518d1d0"
+    },
+    {
+      "file": "public/og/tools/zep.png",
+      "kind": null,
+      "slug": null,
+      "theme": null,
+      "target": "public/og/tools",
+      "bytes": 37573,
+      "sha256": "d8b85fbdc8b8de3185e8652cf504d83348ec9180cadc611b3984ec410b8dbd3a"
     }
   ]
 }

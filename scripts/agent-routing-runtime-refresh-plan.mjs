@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 // Build an ordered refresh plan for runtime routing evidence after relevant changes.
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { chmodSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildRoutingRuntimeRefreshPlan, routingRuntimeRefreshPlanIssue } from './lib/routing-runtime-refresh-plan.mjs';
+import {
+  buildRoutingRuntimeRefreshCommandPlanArtifact,
+  buildRoutingRuntimeRefreshPlan,
+  routingRuntimeRefreshPlanIssue,
+} from './lib/routing-runtime-refresh-plan.mjs';
 
 const args = process.argv.slice(2);
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -18,6 +22,8 @@ const KNOWN_FLAGS = new Set([
   '--change-summary',
   '--changed-artifact',
   '--changed-at',
+  '--command-plan-out',
+  '--commands-out',
   '--completion',
   '--correction-events-jsonl',
   '--default-rollout',
@@ -29,6 +35,7 @@ const KNOWN_FLAGS = new Set([
   '--model-token-usage',
   '--monitor',
   '--monitor-trends',
+  '--no-require-monitor-trend-rollup',
   '--out',
   '--out-prefix',
   '--output-prefix',
@@ -40,6 +47,7 @@ const KNOWN_FLAGS = new Set([
   '--rollback-verification-command',
   '--rollback-verify',
   '--root',
+  '--runbook-out',
   '--routing-suite-input',
   '--runtime-completion',
   '--runtime-system',
@@ -49,11 +57,12 @@ const KNOWN_FLAGS = new Set([
   '--trend-rollup',
   '--verification-status',
 ]);
-const VALUE_FLAGS = new Set([...KNOWN_FLAGS].filter((flag) => !['--help', '-h', '--json', '--require-exact-model-tokens', '--require-model-token-usage', '--require-monitor-trend-rollup'].includes(flag)));
+const VALUE_FLAGS = new Set([...KNOWN_FLAGS].filter((flag) => !['--help', '-h', '--json', '--require-exact-model-tokens', '--require-model-token-usage', '--require-monitor-trend-rollup', '--no-require-monitor-trend-rollup'].includes(flag)));
 const JSON_MODE = hasFlag('--json');
 const HELP_MODE = hasFlag('--help') || hasFlag('-h');
 const PROJECT_DIR = resolve(valueFor('--project-dir') || valueFor('--root') || DEFAULT_PROJECT_DIR);
 const OUT_PATH = valueFor('--out');
+const COMMAND_PLAN_OUT_PATH = valueFor('--commands-out') || valueFor('--runbook-out') || valueFor('--command-plan-out');
 
 if (HELP_MODE) {
   console.log(usage());
@@ -88,7 +97,7 @@ const result = buildRoutingRuntimeRefreshPlan({
     changed_artifacts: valuesFor('--changed-artifact'),
   },
   requirements: {
-    require_monitor_trend_rollup: hasFlag('--require-monitor-trend-rollup') || true,
+    require_monitor_trend_rollup: !hasFlag('--no-require-monitor-trend-rollup'),
     require_model_token_usage: hasFlag('--require-model-token-usage') || hasFlag('--require-exact-model-tokens'),
   },
   evidence_chain: evidence,
@@ -124,8 +133,18 @@ if (result.issues.length) {
 const receipt = result.receipt;
 if (OUT_PATH) {
   const outFile = resolve(PROJECT_DIR, OUT_PATH);
-  mkdirSync(dirname(outFile), { recursive: true });
   receipt.receipt_path = projectPath(outFile);
+}
+if (COMMAND_PLAN_OUT_PATH) {
+  const commandPlanFile = resolve(PROJECT_DIR, COMMAND_PLAN_OUT_PATH);
+  mkdirSync(dirname(commandPlanFile), { recursive: true });
+  receipt.command_plan_artifact = buildRoutingRuntimeRefreshCommandPlanArtifact(receipt.command_plan, projectPath(commandPlanFile), 'shell');
+  writeFileSync(commandPlanFile, renderCommandPlanRunbook(receipt));
+  chmodSync(commandPlanFile, 0o755);
+}
+if (OUT_PATH) {
+  const outFile = resolve(PROJECT_DIR, OUT_PATH);
+  mkdirSync(dirname(outFile), { recursive: true });
   writeFileSync(outFile, `${JSON.stringify(receipt, null, 2)}\n`);
 }
 
@@ -151,6 +170,7 @@ function usage() {
     '  --runtime-completion <path>   Routing runtime-completion receipt.',
     '  --model-token-usage <path>    Exact model-token usage receipt or report.',
     '  --require-monitor-trend-rollup Require ready longer-window rollup evidence. Enabled by default.',
+    '  --no-require-monitor-trend-rollup Disable the default longer-window rollup requirement.',
     '  --require-model-token-usage   Require exact model-token usage evidence.',
     '  --events-jsonl <path>         Fresh correction telemetry events input for generated command plan.',
     '  --routing-suite-input <path>  Fresh routing suite input for generated command plan.',
@@ -161,6 +181,7 @@ function usage() {
     '  --runtime-system <id>         Runtime system for generated completion command.',
     '  --applied-at <iso>            Runtime completion timestamp for generated completion command.',
     '  --output-prefix <path>        Prefix for generated command outputs. Alias: --out-prefix.',
+    '  --commands-out <path>         Optional shell runbook for ready-to-run refresh commands. Aliases: --runbook-out, --command-plan-out.',
     '  --out <path>                  Optional refresh-plan receipt output path.',
     '  --project-dir <dir>           Project root. Alias: --root.',
     '  --json                        Emit JSON.',
@@ -190,7 +211,37 @@ function collectArgumentIssues() {
   if (hasFlag('--project-dir') && hasFlag('--root')) {
     issues.push(routingRuntimeRefreshPlanIssue('argument-invalid', 'choose only one of --project-dir or --root.'));
   }
+  if (hasFlag('--require-monitor-trend-rollup') && hasFlag('--no-require-monitor-trend-rollup')) {
+    issues.push(routingRuntimeRefreshPlanIssue('argument-invalid', 'choose only one of --require-monitor-trend-rollup or --no-require-monitor-trend-rollup.'));
+  }
   return issues;
+}
+
+function renderCommandPlanRunbook(receipt) {
+  const lines = [
+    '#!/usr/bin/env bash',
+    'set -euo pipefail',
+    '',
+    '# AiPedia routing runtime refresh command plan',
+    `# Receipt: ${receipt.receipt_path || '<stdout>'}`,
+    `# Run id: ${receipt.run_id}`,
+    `# Status: ${receipt.refresh_evaluation?.status || 'unknown'}`,
+    `# Generated at: ${receipt.generated_at}`,
+    `# Change id: ${receipt.change?.change_id || ''}`,
+    '',
+  ];
+  for (const step of receipt.command_plan || []) {
+    lines.push(`# Step ${step.sequence}: ${step.title}`);
+    if (step.status === 'ready-to-run') {
+      lines.push(step.command);
+    } else if (step.status === 'blocked-input') {
+      lines.push(`# blocked-input: supply ${step.missing_inputs.join(', ')}`);
+    } else {
+      lines.push(`# not-required: ${step.id}`);
+    }
+    lines.push('');
+  }
+  return `${lines.join('\n')}\n`;
 }
 
 function readOptionalJsonEvidence(rawPath, kind) {

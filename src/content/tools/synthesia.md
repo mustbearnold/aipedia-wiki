@@ -10,8 +10,8 @@ pricing_model: freemium
 price_range: "Basic free, Starter $29/mo monthly or $18/mo annual, Creator $89/mo monthly or $64/mo annual, Enterprise custom"
 status: active
 launched: 2017-01
-last_updated: 2026-06-29
-last_verified: 2026-06-26
+last_updated: 2026-07-02
+last_verified: 2026-07-02
 update_frequency: weekly
 affiliate:
   has_program: true
@@ -19,7 +19,7 @@ affiliate:
   cookie_days: 60
   network: direct
   link: null
-  notes: "Official Synthesia affiliate page verified 2026-06-24: 25% commission on Starter and Creator plan payments with a 60-day cookie."
+  notes: "Official Synthesia affiliate page verified 2026-06-29: 25% commission on Starter and Creator plan payments with a 60-day cookie."
 scores:
   utility: 8
   value: 7
@@ -31,7 +31,7 @@ facts:
     source: "https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars"
     source_label: "Synthesia Express-2 announcement"
     source_id: synthesia-express-2
-    verified_at: 2026-06-12
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
     next_review_at: 2026-07-06
@@ -40,7 +40,7 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   pricing_anchor:
@@ -48,70 +48,70 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   free_plan:
     value: "Basic is free and includes 1,200 credits/month, usable for up to 10 minutes of video/month or 25 AI-generated video assets, with 9 stock avatars and no Personal Avatar slots."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   best_paid_tier:
     value: "Creator is the practical production tier for regular teams; Enterprise is the safer path for unlimited minutes, SAML/SSO, live collaboration, brand kits, SCORM export, onboarding, and governance."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   api_available:
     value: "Creator and Enterprise include Synthesia API access, with listed annual video-minute allowances and additional usage available on Enterprise."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   image_generation:
-    value: "Limited supporting asset generation: Synthesia pricing says credits can be used for AI-generated video assets, while the product remains focused on avatar-led video rather than general image generation."
+    value: "Limited supporting asset generation: Synthesia pricing and credit guidance say credits can be used for AI-generated video or media assets, while the product remains focused on avatar-led video rather than general image generation."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   video_generation:
     value: "Synthesia focuses on avatar-led presenter video, AI dubbing, localization, PowerPoint-to-video, templates, interactivity, API automation, and SCORM-ready publishing."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   real_time_voice:
     value: "No primary real-time voice-agent product is listed; Synthesia's public pricing positions the platform around generated avatar videos, AI Dubbing, interactive videos, API access, and enterprise publishing."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   web_browsing:
     value: "No web-browsing assistant is listed; Synthesia is a business video, avatar, dubbing, localization, API, and SCORM publishing platform."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   coding_agent:
@@ -119,7 +119,7 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   enterprise_controls:
@@ -136,7 +136,7 @@ facts:
     source: "https://www.synthesia.io/legal/security-practices"
     source_label: "Synthesia security practices"
     source_id: synthesia-security-practices
-    verified_at: 2026-06-12
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
     next_review_at: 2026-07-06
@@ -145,7 +145,7 @@ facts:
     source: "https://www.synthesia.io/legal/security-practices"
     source_label: "Synthesia security practices"
     source_id: synthesia-security-practices
-    verified_at: 2026-06-12
+    verified_at: 2026-06-29
     volatility: low
     confidence: high
   avatar_library:
@@ -153,7 +153,7 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-26
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
     next_review_at: 2026-07-08
@@ -162,19 +162,19 @@ facts:
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: medium
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
   watch_out_for:
     value: "Credits, AI asset generation, API allowances, AI dubbing, Veo/Sora integration, and enterprise-only controls can change quickly and should be checked before procurement."
     source: "https://www.synthesia.io/pricing"
     source_label: "Synthesia pricing"
     source_id: synthesia-pricing
-    verified_at: 2026-06-24
+    verified_at: 2026-06-29
     volatility: high
     confidence: high
-    next_review_at: 2026-07-08
+    next_review_at: 2026-07-06
 tags: [ai-video, ai-avatar, talking-head, training-video, corporate-video, e-learning, express-2, scorm, video-localization]
 best_for:
   - corporate training, onboarding, compliance, and enablement teams
@@ -187,11 +187,19 @@ not_best_for:
   - cinematic scene generation or motion-first creative video
   - teams that need simple unlimited usage without credit planning
 seo_title: "Synthesia Review: Pricing, Express-2 & Best Uses (June 2026)"
-meta_description: "Synthesia review updated June 26, 2026. Compare Basic, Starter, Creator, Enterprise, Express-2 avatars, API access, SCORM export, and alternatives."
+meta_description: "Synthesia review updated June 29, 2026. Compare Basic, Starter, Creator, Enterprise, Express-2 avatars, API access, SCORM export, and alternatives."
 author: "aipedia.wiki Editorial"
 quick_answer: >-
-  Synthesia is the enterprise AI avatar video pick when the job is training, onboarding, compliance, sales enablement, PowerPoint-to-video, localization, or SCORM-ready presenter content. As of June 26, 2026, Express-2 is the current avatar engine story, Creator matters because API access (360 minutes/year) appears on public pricing, and Enterprise is still the safer path for governance, unlimited minutes, SAML/SSO, brand kits, and SCORM workflows. Studio Express-1 avatar creation is listed as a $1,000/year paid add-on for annual plan users, so verify eligibility and processing terms during procurement.
+  Synthesia is the enterprise AI avatar video pick when the job is training, onboarding, compliance, sales enablement, PowerPoint-to-video, localization, or SCORM-ready presenter content. As of June 29, 2026, Express-2 is the current avatar engine story, Creator matters because API access (360 minutes/year) appears on public pricing, and Enterprise is still the safer path for governance, unlimited minutes, SAML/SSO, brand kits, and SCORM workflows. Studio Express-1 avatar creation is listed as a $1,000/year paid add-on for annual plan users, so verify eligibility and processing terms during procurement.
 price_history:
+  - date: 2026-06-29
+    plan: "Basic / Starter / Creator / Enterprise"
+    price: "Basic free; Starter $29 monthly or $18 annual; Creator $89 monthly or $64 annual; Enterprise custom"
+    source: "https://www.synthesia.io/pricing"
+    source_label: "Synthesia pricing"
+    source_id: synthesia-pricing
+    verified_at: 2026-06-29
+    note: "Rechecked public pricing, self-serve credits, Creator API access, Personal Avatar allowances, Studio Express-1 annual add-on language, and Enterprise SCORM/SAML controls."
   - date: 2026-06-26
     plan: "Basic / Starter / Creator / Enterprise"
     price: "Basic free; Starter $29 monthly or $18 annual; Creator $89 monthly or $64 annual; Enterprise custom"
