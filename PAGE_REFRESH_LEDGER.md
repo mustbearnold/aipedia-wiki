@@ -1,7 +1,7 @@
 # AiPedia Page Refresh Ledger
 
 Ledger updated through: 2026-07-02
-Tracked public pages and crawl surfaces: 610
+Tracked public pages and crawl surfaces: 632
 
 Hard rule: every time a tracked website page is edited, refreshed, materially re-ranked, or has volatile facts re-verified, update that page row in this file on the same change. If a child page update affects a parent hub, archive, internal-link block, sitemap, or LLM surface, update those affected rows too.
 
@@ -618,6 +618,28 @@ Use `npm run ledger:pages` to regenerate this file from route files and content 
 | 2026-06-29 | /tools/replit-agent/ | Tool | Yes | frontmatter | src/content/tools/replit-agent.md |
 | 2026-06-29 | /tools/suno/ | Tool | Yes | frontmatter | src/content/tools/suno.md |
 | 2026-06-29 | /tools/udio/ | Tool | Yes | frontmatter | src/content/tools/udio.md |
-| 2026-07-02 | /compare/captions-vs-synthesia/ | Comparison | Yes | working tree | src/content/comparisons/captions-vs-synthesia.md |
-| 2026-07-02 | /tools/cursor/ | Tool | Yes | working tree | src/content/tools/cursor.md |
-| 2026-07-02 | /tools/synthesia/ | Tool | Yes | working tree | src/content/tools/synthesia.md |
+| 2026-07-02 | /compare/captions-vs-synthesia/ | Comparison | Yes | frontmatter | src/content/comparisons/captions-vs-synthesia.md |
+| 2026-07-02 | /tools/anyword/ | Tool | Yes | working tree | src/content/tools/anyword.md |
+| 2026-07-02 | /tools/bland-ai/ | Tool | Yes | working tree | src/content/tools/bland-ai.md |
+| 2026-07-02 | /tools/craft-do/ | Tool | Yes | working tree | src/content/tools/craft-do.md |
+| 2026-07-02 | /tools/cursor/ | Tool | Yes | frontmatter | src/content/tools/cursor.md |
+| 2026-07-02 | /tools/felo/ | Tool | Yes | working tree | src/content/tools/felo.md |
+| 2026-07-02 | /tools/genmo/ | Tool | Yes | working tree | src/content/tools/genmo.md |
+| 2026-07-02 | /tools/heptabase/ | Tool | Yes | working tree | src/content/tools/heptabase.md |
+| 2026-07-02 | /tools/koala-ai/ | Tool | Yes | working tree | src/content/tools/koala-ai.md |
+| 2026-07-02 | /tools/landr/ | Tool | Yes | working tree | src/content/tools/landr.md |
+| 2026-07-02 | /tools/locofy/ | Tool | Yes | working tree | src/content/tools/locofy.md |
+| 2026-07-02 | /tools/loudly/ | Tool | Yes | working tree | src/content/tools/loudly.md |
+| 2026-07-02 | /tools/moonvalley/ | Tool | Yes | working tree | src/content/tools/moonvalley.md |
+| 2026-07-02 | /tools/mureka/ | Tool | Yes | working tree | src/content/tools/mureka.md |
+| 2026-07-02 | /tools/orkes/ | Tool | Yes | working tree | src/content/tools/orkes.md |
+| 2026-07-02 | /tools/plus-ai/ | Tool | Yes | working tree | src/content/tools/plus-ai.md |
+| 2026-07-02 | /tools/prowritingaid/ | Tool | Yes | working tree | src/content/tools/prowritingaid.md |
+| 2026-07-02 | /tools/relume/ | Tool | Yes | working tree | src/content/tools/relume.md |
+| 2026-07-02 | /tools/reve/ | Tool | Yes | working tree | src/content/tools/reve.md |
+| 2026-07-02 | /tools/rime/ | Tool | Yes | working tree | src/content/tools/rime.md |
+| 2026-07-02 | /tools/scispace/ | Tool | Yes | working tree | src/content/tools/scispace.md |
+| 2026-07-02 | /tools/se-ranking/ | Tool | Yes | working tree | src/content/tools/se-ranking.md |
+| 2026-07-02 | /tools/synthesia/ | Tool | Yes | frontmatter | src/content/tools/synthesia.md |
+| 2026-07-02 | /tools/undermind/ | Tool | Yes | working tree | src/content/tools/undermind.md |
+| 2026-07-02 | /tools/visily/ | Tool | Yes | working tree | src/content/tools/visily.md |

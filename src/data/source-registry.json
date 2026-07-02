@@ -1623,15 +1623,6 @@
       "last_checked": "2026-06-24"
     },
     {
-      "id": "blackbox-ai-best-for",
-      "label": "BLACKBOX AI pricing",
-      "url": "https://www.blackbox.ai/pricing",
-      "type": "pricing",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-29"
-    },
-    {
       "id": "blackbox-ai-api",
       "label": "BLACKBOX AI Agent API",
       "url": "https://www.blackbox.ai/api",
@@ -1641,19 +1632,10 @@
       "last_checked": "2026-06-29"
     },
     {
-      "id": "blackbox-ai-cli",
-      "label": "BLACKBOX AI CLI",
-      "url": "https://www.blackbox.ai/cli",
-      "type": "official",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-29"
-    },
-    {
-      "id": "blackbox-ai-remote-agent",
-      "label": "BLACKBOX AI Remote Agent",
-      "url": "https://www.blackbox.ai/agents",
-      "type": "official",
+      "id": "blackbox-ai-best-for",
+      "label": "BLACKBOX AI pricing",
+      "url": "https://www.blackbox.ai/pricing",
+      "type": "pricing",
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-29"
@@ -1663,6 +1645,15 @@
       "label": "BLACKBOX AI blog",
       "url": "https://www.blackbox.ai/blog",
       "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-29"
+    },
+    {
+      "id": "blackbox-ai-cli",
+      "label": "BLACKBOX AI CLI",
+      "url": "https://www.blackbox.ai/cli",
+      "type": "official",
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-29"
@@ -1686,6 +1677,15 @@
       "last_checked": "2026-06-24"
     },
     {
+      "id": "blackbox-ai-remote-agent",
+      "label": "BLACKBOX AI Remote Agent",
+      "url": "https://www.blackbox.ai/agents",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-29"
+    },
+    {
       "id": "blackbox-ai-security",
       "label": "BLACKBOX AI security",
       "url": "https://www.blackbox.ai/security",
@@ -1693,6 +1693,42 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-24"
+    },
+    {
+      "id": "bland-ai-blog",
+      "label": "Bland AI blog",
+      "url": "https://www.bland.ai/blog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "bland-ai-docs",
+      "label": "Bland AI billing docs",
+      "url": "https://docs.bland.ai/platform/billing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "bland-ai-homepage",
+      "label": "Bland AI homepage",
+      "url": "https://www.bland.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "bland-ai-pricing",
+      "label": "Bland AI pricing",
+      "url": "https://www.bland.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "bolt-database",
@@ -4970,6 +5006,33 @@
       "last_checked": "2026-06-23"
     },
     {
+      "id": "felo-about",
+      "label": "Source",
+      "url": "https://felo.ai/blog/about-us/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "felo-points-model",
+      "label": "Source",
+      "url": "https://felo.ai/blog/felo-new-points-subscription-model/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "felo-pricing",
+      "label": "Source",
+      "url": "https://felo.ai/en/faq/felo-search-pro",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
       "id": "figma-ai-credit-terms",
       "label": "Figma AI Credit Terms",
       "url": "https://www.figma.com/legal/ai-credit-terms/",
@@ -5643,6 +5706,33 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "genmo-homepage",
+      "label": "Source",
+      "url": "https://www.genmo.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "genmo-mochi",
+      "label": "Source",
+      "url": "https://www.genmo.ai/blog/mochi-1-a-new-sota-in-open-text-to-video",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "genmo-pricing",
+      "label": "Source",
+      "url": "https://www.genmo.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "genspark-agents",
@@ -6803,6 +6893,33 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "heptabase-pricing",
+      "label": "Source",
+      "url": "https://heptabase.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "heptabase-pricing-faq",
+      "label": "Source",
+      "url": "https://support.heptabase.com/en/articles/12990121-pro-premium-and-premium-plans-pricing-faq",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "heptabase-product",
+      "label": "Source",
+      "url": "https://heptabase.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "hermes-agent-docs",
@@ -8056,6 +8173,42 @@
       "last_checked": "2026-06-26"
     },
     {
+      "id": "koala-ai-blog",
+      "label": "Koala AI blog",
+      "url": "https://koala.sh/blog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "koala-ai-changelog",
+      "label": "Koala AI changelog",
+      "url": "https://koala.sh/changelog",
+      "type": "release_notes",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "koala-ai-official",
+      "label": "Koala AI official site",
+      "url": "https://koala.sh/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "koala-ai-pricing",
+      "label": "Koala AI pricing",
+      "url": "https://koala.sh/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
       "id": "kokoro-model",
       "label": "Kokoro model card",
       "url": "https://huggingface.co/hexgrad/Kokoro-82M",
@@ -8970,6 +9123,33 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-23"
+    },
+    {
+      "id": "loudly-distribution",
+      "label": "Loudly music distribution",
+      "url": "https://www.loudly.com/music-distribution",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "loudly-license",
+      "label": "Loudly license agreement",
+      "url": "https://www.loudly.com/license-agreement",
+      "type": "legal",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "loudly-pricing",
+      "label": "Loudly pricing",
+      "url": "https://www.loudly.com/music/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "lovable-cloud",
@@ -11174,6 +11354,33 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "orkes-funding",
+      "label": "Source",
+      "url": "https://www.finsmes.com/2026/04/orkes-raises-60m-in-series-b-funding.html",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "orkes-platform",
+      "label": "Source",
+      "url": "https://orkes.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "orkes-pricing",
+      "label": "Source",
+      "url": "https://orkes.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
       "id": "otter-ai-pricing",
       "label": "Source",
       "url": "https://otter.ai/pricing",
@@ -11641,6 +11848,51 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "plus-ai-billing",
+      "label": "Plus AI plans and billing guide",
+      "url": "https://guide.plusai.com/plus-ai/plans-and-billing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "plus-ai-blog",
+      "label": "Plus AI blog",
+      "url": "https://plusai.com/blog",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "plus-ai-company",
+      "label": "Plus AI company page",
+      "url": "https://plusai.com/company",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "plus-ai-pricing",
+      "label": "Plus AI pricing",
+      "url": "https://plusai.com/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "plus-ai-slides",
+      "label": "Plus AI for Google Slides",
+      "url": "https://plusai.com/google-slides-ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
       "id": "poe-about",
       "label": "Poe about page",
       "url": "https://poe.com/about",
@@ -11855,6 +12107,33 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-28"
+    },
+    {
+      "id": "prowritingaid-business",
+      "label": "Source",
+      "url": "https://prowritingaid.com/business",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "prowritingaid-home",
+      "label": "Source",
+      "url": "https://prowritingaid.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "prowritingaid-pricing",
+      "label": "Source",
+      "url": "https://prowritingaid.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "pydantic-ai-docs",
@@ -12379,6 +12658,51 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "relume-claude-design-export",
+      "label": "Source",
+      "url": "https://www.relume.io/claude-design-export",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "relume-community-starter-allocation",
+      "label": "Source",
+      "url": "https://community.relume.io/understanding-the-starter-plans-project-allocation-FFhKYMn65KGp",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "relume-homepage",
+      "label": "Source",
+      "url": "https://www.relume.io/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "relume-pricing",
+      "label": "Source",
+      "url": "https://www.relume.io/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "relume-whats-new",
+      "label": "Source",
+      "url": "https://www.relume.io/whats-new",
+      "type": "release_notes",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
       "id": "replicate-custom-models",
       "label": "Replicate custom model deployment docs",
       "url": "https://replicate.com/docs/guides/deploy-a-custom-model",
@@ -12647,6 +12971,42 @@
       "trust_tier": "primary",
       "volatility": "medium",
       "last_checked": "2026-06-09"
+    },
+    {
+      "id": "reve-blog-video",
+      "label": "Source",
+      "url": "https://blog.reve.com/posts/bring-images-to-life-with-video/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "reve-help",
+      "label": "Source",
+      "url": "https://help.reve.com/hc/en-us/articles/46732445465108-Subscription-plans-overview",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "reve-startupfortune",
+      "label": "Source",
+      "url": "https://startupfortune.com/reve-20-shows-image-generation-is-still-open-for-startups/",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "reve-venturebeat-launch",
+      "label": "Source",
+      "url": "https://venturebeat.com/ai/the-new-best-ai-image-generation-model-is-here-say-hello-to-reve-image-1-0",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "riverside-4k-recording",
@@ -13005,6 +13365,24 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-27"
+    },
+    {
+      "id": "scispace-ai-writer",
+      "label": "SciSpace AI writer",
+      "url": "https://scispace.com/ai-writer",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "scispace-pricing",
+      "label": "SciSpace Typeset pricing",
+      "url": "https://scispace.com/typeset-pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "scite-mcp-announcement",
@@ -13616,15 +13994,6 @@
       "last_checked": "2026-06-29"
     },
     {
-      "id": "synthesia-credits-help",
-      "label": "Synthesia self-serve credits guide",
-      "url": "https://help.synthesia.io/en/articles/11972627-self-serve-users-guide-to-credits",
-      "type": "docs",
-      "trust_tier": "primary",
-      "volatility": "high",
-      "last_checked": "2026-06-29"
-    },
-    {
       "id": "synthesia-avatar-docs",
       "label": "Synthesia avatar docs",
       "url": "https://docs.synthesia.io/docs/synthesia-avatars",
@@ -13638,6 +14007,15 @@
       "label": "Synthesia avatar product page",
       "url": "https://www.synthesia.io/features/avatars",
       "type": "official",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-06-29"
+    },
+    {
+      "id": "synthesia-credits-help",
+      "label": "Synthesia self-serve credits guide",
+      "url": "https://help.synthesia.io/en/articles/11972627-self-serve-users-guide-to-credits",
+      "type": "docs",
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-29"
@@ -14314,6 +14692,33 @@
       "last_checked": "2026-06-25"
     },
     {
+      "id": "undermind-enterprise",
+      "label": "Source",
+      "url": "https://www.undermind.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "undermind-home",
+      "label": "Source",
+      "url": "https://www.undermind.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "undermind-pricing",
+      "label": "Source",
+      "url": "https://www.undermind.ai/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
       "id": "v0-changelog",
       "label": "v0 changelog",
       "url": "https://v0.app/changelog",
@@ -14510,6 +14915,51 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-10"
+    },
+    {
+      "id": "visily-blog",
+      "label": "Visily blog",
+      "url": "https://www.visily.ai/blog/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "visily-help-center",
+      "label": "Visily help center",
+      "url": "https://www.visily.ai/help-center/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "visily-homepage",
+      "label": "Visily homepage",
+      "url": "https://www.visily.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "visily-pricing",
+      "label": "Visily pricing",
+      "url": "https://www.visily.ai/pricing/",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "visily-release-notes",
+      "label": "Visily release notes",
+      "url": "https://www.visily.ai/release-notes/",
+      "type": "release_notes",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
     },
     {
       "id": "voiceflow-pricing",
@@ -15292,6 +15742,303 @@
       "trust_tier": "primary",
       "volatility": "high",
       "last_checked": "2026-06-28"
+    },
+    {
+      "id": "locofy-home",
+      "label": "Locofy homepage",
+      "url": "https://www.locofy.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "locofy-pricing",
+      "label": "Locofy pricing",
+      "url": "https://www.locofy.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "locofy-mcp-docs",
+      "label": "Locofy MCP documentation",
+      "url": "https://www.locofy.ai/docs/export-and-deployment/locofy-mcp/",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "locofy-techcrunch-lightning",
+      "label": "Locofy Lightning launch, TechCrunch",
+      "url": "https://techcrunch.com/2024/01/15/locofy-lightning/",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "moonvalley-marey",
+      "label": "Moonvalley Marey product page",
+      "url": "https://www.moonvalley.com/marey",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "moonvalley-help-pricing",
+      "label": "Moonvalley help center: Marey costs and subscription options",
+      "url": "https://help.moonvalley.com/en/articles/11787654-what-are-the-costs-and-subscription-options-for-using-marey-to-generate-videos",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "moonvalley-api",
+      "label": "Moonvalley API waitlist page",
+      "url": "https://www.moonvalley.com/api",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "moonvalley-techcrunch-launch",
+      "label": "TechCrunch: Moonvalley's ethical AI video model publicly available",
+      "url": "https://techcrunch.com/2025/07/08/moonvalleys-ethical-ai-video-model-for-filmmakers-is-now-publicly-available/",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "moonvalley-funding",
+      "label": "Businesswire: Moonvalley raises additional $84M",
+      "url": "https://www.businesswire.com/news/home/20250714518340/en/Moonvalley-Raises-Additional-$84-Million-to-Scale-Ambitious-Vision-for-Licensed-AI-Video-Model",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "moonvalley-adobe-partnership",
+      "label": "Forbes: Adobe partnership for commercially safe AI video with Moonvalley",
+      "url": "https://www.forbes.com/sites/marksparrow/2025/07/17/adobe-announces-ai-partnership-for--commercially-safe-ai-generated-video-with-moonvalley/",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "moonvalley-firefly-boards",
+      "label": "Adobe Blog: Firefly Boards launches globally with Runway Aleph, Moonvalley Marey",
+      "url": "https://blog.adobe.com/en/publish/2025/09/24/firefly-boards-launches-globally-now-with-runway-aleph-moonvalley-marey-models-new-powerful-ideation-features-flexible-offers",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "craft-do-home",
+      "label": "Craft homepage",
+      "url": "https://www.craft.do",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "craft-do-pricing",
+      "label": "Craft subscription plans and pricing (help center)",
+      "url": "https://support.craft.do/hc/en-us/articles/12463480608540-Craft-Subscription-Plans-and-Pricing",
+      "type": "docs",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "craft-do-pricing-live",
+      "label": "Craft pricing (live marketing page)",
+      "url": "https://www.craft.do/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "craft-do-funding",
+      "label": "Craft raises $12m in Series B round",
+      "url": "https://www.craft.do/blog/craft-raises-12m-series-b-round",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "craft-do-ai",
+      "label": "Introducing on-device AI capabilities inside the Craft Assistant",
+      "url": "https://www.craft.do/blog/deepseek-r1-in-craft-assistant",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "craft-do-agents-acquisition",
+      "label": "Polymarket acquires Craft Agents, names co-founder Viktor Páli as CEO",
+      "url": "https://www.cryptopolitan.com/polymarket-craft-agents-viktor-pali-ceo/",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "anyword-homepage",
+      "label": "Anyword homepage",
+      "url": "https://www.anyword.com",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "anyword-pricing",
+      "label": "Anyword pricing",
+      "url": "https://www.anyword.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "se-ranking-pricing",
+      "label": "SE Ranking subscription and pricing",
+      "url": "https://seranking.com/subscription.html",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "se-ranking-ai-visibility",
+      "label": "SE Ranking AI Visibility Tracker",
+      "url": "https://seranking.com/ai-visibility-tracker.html",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "se-ranking-mcp",
+      "label": "SE Ranking MCP Server",
+      "url": "https://seranking.com/mcp.html",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "rime-vs-elevenlabs",
+      "label": "Rime vs ElevenLabs comparison",
+      "url": "https://rime.ai/resources/elevenlabs-vs-rime-the-best-tts-solution-for-businesses",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "rime-pricing",
+      "label": "Rime pricing",
+      "url": "https://rime.ai/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "rime-coda",
+      "label": "Rime Coda product page",
+      "url": "https://rime.ai/coda",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "rime-tracxn",
+      "label": "Tracxn: Rime company profile",
+      "url": "https://tracxn.com/d/companies/rime/__qK5utQN4vOGPpgPbQYXPoBWHE1tpYdt7e8PwSaXh0oc",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "rime-pricing-blog-2025",
+      "label": "Rime: Introducing New Pricing (Dec 2025)",
+      "url": "https://www.rime.ai/blog/introducing-new-pricing/",
+      "type": "blog",
+      "trust_tier": "primary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "landr-studio-pricing",
+      "label": "LANDR Studio pricing",
+      "url": "https://www.landr.com/pricing/studio",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "landr-pricing",
+      "label": "LANDR pricing",
+      "url": "https://www.landr.com/pricing",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "landr-reason",
+      "label": "Music Business Worldwide: LANDR acquires Reason Studios",
+      "url": "https://www.musicbusinessworldwide.com/ai-powered-music-production-platform-landr-acquires-stockholm-based-daw-developer-reason-studios/",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "low",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "landr-funding",
+      "label": "Crunchbase: LANDR / MixGenius funding",
+      "url": "https://www.crunchbase.com/organization/mixgenius/company_financials",
+      "type": "third_party",
+      "trust_tier": "secondary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "mureka-home",
+      "label": "Mureka homepage",
+      "url": "https://www.mureka.ai/",
+      "type": "official",
+      "trust_tier": "primary",
+      "volatility": "medium",
+      "last_checked": "2026-07-02"
+    },
+    {
+      "id": "mureka-pricing",
+      "label": "Mureka subscribe / pricing",
+      "url": "https://www.mureka.ai/subscribe",
+      "type": "pricing",
+      "trust_tier": "primary",
+      "volatility": "high",
+      "last_checked": "2026-07-02"
     }
   ]
 }
